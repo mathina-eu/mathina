@@ -259,7 +259,6 @@ export default {
     },
     activeLocale: {
       get() {
-        console.log(this.$i18n.locale);
         return this.$i18n.locale;
       }
     }

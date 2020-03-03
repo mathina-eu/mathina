@@ -279,7 +279,6 @@ export default {
         return false;
       }
 
-      console.log(this.currentLocation.x, this.currentLocation.y, x, y);
       if (!this.currentLocation) {
         if (x !== 0 || y !== 2) {
           return false;
@@ -352,7 +351,7 @@ export default {
     opacity: 0;
 
     &--active {
-      opacity: 100%;
+      opacity: 100;
       transform: scale(1, 1);
       z-index: 200;
       transition: all 120ms ease-in;
