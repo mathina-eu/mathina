@@ -6,7 +6,7 @@
     >
       <h2>{{ story.title }}.</h2>
       <iframe
-        :src="`/example-app?locale=${$i18n.locale}`"
+        :src="`/example-app/?locale=${$i18n.locale}`"
         class="app"
       />
       <v-btn
@@ -36,7 +36,7 @@ export default {
   .app {
     border: none;
     width: 900px;
-    height: 400px;
+    height: 440px;
     overflow: hidden;
     display: block;
     margin: 10px auto;

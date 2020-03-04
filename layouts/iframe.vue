@@ -4,6 +4,6 @@
 
 <style>
   html {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 </style>
