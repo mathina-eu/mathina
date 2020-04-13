@@ -1,5 +1,6 @@
 <template>
   <v-row align="center">
+    <example-animation />
     <v-col
       class="text-center"
       cols="12"
@@ -30,8 +31,10 @@
 
 <script>
 import constants from '~/constants';
+import ExampleAnimation from '~/components/example-animation';
 
 export default {
+  components: { ExampleAnimation },
   data() {
     return {
       constants,
