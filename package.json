@@ -16,6 +16,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "gsap": "^3.2.6",
     "nuxt": "^2.0.0",
     "nuxt-i18n": "^6.5.0",
     "stylelint-config-standard": "^19.0.0"
