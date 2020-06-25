@@ -6,7 +6,7 @@ module.exports = {
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
-    "parser": "babel-eslint",
+    'parser': 'babel-eslint',
   },
   extends: [
     'plugin:vue/recommended',
@@ -26,12 +26,12 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
     'object-curly-spacing': ['error', 'always'],
     'keyword-spacing': ['error'],
-    'quotes': ['warn', 'single', {'allowTemplateLiterals': true}],
+    'quotes': ['warn', 'single', { 'allowTemplateLiterals': true }],
     'camelcase': 'error',
     'curly': ['error', 'all'],
     'prefer-template': 'error',
     'linebreak-style': ['error', 'unix'],
-    'indent': ['error', 2, {SwitchCase: 1}],
+    'indent': ['error', 2, { SwitchCase: 1 }],
     'import/extensions': [2, {
       'js': 'never',
       'vue': 'never',
