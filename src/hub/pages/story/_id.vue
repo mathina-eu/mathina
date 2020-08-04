@@ -40,9 +40,9 @@ import constants from '~/constants';
 import yaml from 'js-yaml';
 
 export default {
-  async asyncData({ app, params }) {
+  async asyncData({ $axios, params }) {
     const story = constants.STORIES.find(({ slug }) => slug === params.id);
-    const { data } = await app.$axios.get(`/stories/${story.id}/chapters.yaml`);
+    const { data } = await $axios.get(`/stories/${story.id}/chapters.yaml`);
     const { chapters } = yaml.load(data);
     return {
       story,

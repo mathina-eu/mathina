@@ -136,9 +136,9 @@ export default {
   components: {
     StoryDialog,
   },
-  async asyncData({ app, params }) {
+  async asyncData({ $axios, params }) {
     // Note: app used instead of 'this' as, 'this' is not available yet in asyncData
-    const { data } = await app.$axios.get('/stories/sym-4-6/chapters.yaml');
+    const { data } = await $axios.get('/stories/sym-4-6/chapters.yaml');
     const { metaData, chapters } = yaml.load(data);
     const chapter = chapters.find(({ slug }) => slug === params.chapter);
 

@@ -8,6 +8,7 @@ export default {
   mode: 'spa',
   env: {
     IS_DEV,
+    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://dev.zabkar.net'
   },
 
   /*
@@ -55,7 +56,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
     [
       'nuxt-i18n', {
         // vueI18nLoader: true
@@ -66,7 +66,9 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL,
+  },
   i18n: {
     locales: [
       // ISO 639-1
