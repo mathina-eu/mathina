@@ -40,6 +40,9 @@ export default {
       constants,
     };
   },
+  mounted() {
+    this.$store.dispatch('setBreadcrumbs', []);
+  },
   methods: {
     setAgeGroupAndEnterWorld(ageGroupId) {
       this.$store.dispatch('setAgeGroup', ageGroupId);

@@ -32,9 +32,10 @@ module.exports = {
     'prefer-template': 'error',
     'linebreak-style': ['error', 'unix'],
     'indent': ['error', 2, { SwitchCase: 1 }],
-    'import/extensions': [2, {
+    'import/extensions': [0, {
       'js': 'never',
       'vue': 'never',
+      'yaml': 'never',
       'svg': 'always',
       'png': 'always'
     }],

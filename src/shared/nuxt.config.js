@@ -89,6 +89,13 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      // TODO: Not sure if we need .yaml webpack loader support if loading stories via ajax
+      config.resolve.extensions.push('.yaml');
+      config.module.rules.push({
+        test: /\.ya?ml$/,
+        type: 'json',
+        use: 'yaml-loader',
+      });
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',

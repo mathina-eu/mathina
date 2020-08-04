@@ -5,6 +5,7 @@ export const state = () => ({
   ageGroup: '0',
   city: null,
   story: null,
+  breadcrumbs: [],
 });
 
 export const getters = {
@@ -25,6 +26,10 @@ export const mutations = {
   },
   SET_STORY(state, story) {
     state.story = story;
+  },
+  SET_BREADCRUMBS(state, breadcrumbs) {
+    console.log(breadcrumbs);
+    state.breadcrumbs = breadcrumbs;
   }
 };
 
@@ -44,5 +49,13 @@ export const actions = {
   },
   setStory({ commit }, story) {
     commit('SET_STORY', story);
+  },
+  /**
+   *
+   * @param commit
+   * @param breadcrumbs {{path: string, text: string}[]}
+   */
+  setBreadcrumbs({ commit }, breadcrumbs) {
+    commit('SET_BREADCRUMBS', breadcrumbs);
   },
 };

@@ -15,13 +15,12 @@
         class="citymap pa-4"
       >
         <div
-          v-for="(story, i) in stories"
-          :key="i"
+          v-for="story in stories"
+          :key="story.id"
           class="my-2"
         >
           <v-btn
-            :to="localePath({ name: 'story-id', params: { id: story.id } })"
-            style="width: 200px;"
+            :to="localePath({ name: 'story-id', params: { id: story.slug } })"
             link
             nuxt
           >
@@ -54,12 +53,15 @@ export default {
     stories() {
       return this.city.stories.map(storyId => {
         return {
-          id: storyId,
-          ...this.constants.STORIES[storyId],
+          ...constants.STORIES.find(({ id }) => storyId === id),
         };
       });
     }
   },
+  mounted() {
+    this.$store.dispatch('setBreadcrumbs', [{ path: `/city/${this.city?.slug}`, text: this.city?.name }]);
+    this.$store.dispatch('setCity', this.city);
+  }
 };
 </script>
 

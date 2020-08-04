@@ -17,28 +17,32 @@ export default {
     'island': {
       name: 'Buccaneer Island',
       slug: 'island',
-      stories: ['story-1'],
+      stories: ['sym-4-6'],
     },
     'logicity': {
       name: 'Logicity',
       slug: 'logicity',
-      stories: ['story-1'],
+      stories: ['sym-4-6'],
     },
     'birds-of-fire': {
       name: 'Birds of Fire',
       slug: 'birds-of-fire',
-      stories: ['story-1'],
+      stories: ['sym-4-6'],
     },
     'symmetry-fair': {
       name: 'Symmetry Fair',
       slug: 'symmetry-fair',
-      stories: ['story-1'],
+      stories: ['sym-4-6'],
     }
   },
-  STORIES: {
-    'story-1': {
-      app: 'app-1',
-      title: 'App 1'
-    }
-  }
+  STORIES: [
+    {
+      title: 'Mathina in Symmetry Fair',
+      slug: 'mathina-in-symmetry-fair',
+      id: 'sym-4-6',
+      chapters: {
+        'mathina-wins-a-lot-of-new-toys': 'Mathina wins a lot of new toys'
+      }
+    },
+  ]
 };

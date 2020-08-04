@@ -5,13 +5,29 @@
       cols="12"
     >
       <h2>{{ story.title }}.</h2>
-      <iframe
-        :src="`http://localhost:3001/?locale=${$i18n.locale}`"
-        class="app"
-      />
+      <!--      <iframe-->
+      <!--        :src="`http://localhost:3001/?locale=${$i18n.locale}`"-->
+      <!--        class="app"-->
+      <!--      />-->
+      <h3>Choose a chapter:</h3>
+      <div
+        v-for="{ title, slug } in chapters"
+        :key="slug"
+        class="my-4"
+      >
+        <v-btn
+          :to="localePath(`/story/${story.slug}/${slug}`)"
+          color="primary"
+          link
+          nuxt
+        >
+          {{ title }}
+        </v-btn>
+      </div>
       <v-btn
         link
-        @click="$router.back()"
+        nuxt
+        :to="finishStoryLink"
       >
         Finish story
       </v-btn>
@@ -21,14 +37,26 @@
 
 <script>
 import constants from '~/constants';
+import yaml from 'js-yaml';
 
 export default {
-  data() {
+  async asyncData({ app, params }) {
+    const story = constants.STORIES.find(({ slug }) => slug === params.id);
+    const { data } = await app.$axios.get(`/stories/${story.id}/chapters.yaml`);
+    const { chapters } = yaml.load(data);
     return {
-      constants,
-      story: constants.STORIES[this.$route.params.id],
+      story,
+      chapters: chapters.map(({ title, slug }) => ({ title, slug })),
     };
   },
+  computed: {
+    finishStoryLink() {
+      return this.$store.state.city ? `/city/${this.$store.state.city.slug}` : '/';
+    }
+  },
+  mounted() {
+    this.$store.dispatch('setBreadcrumbs', [{ path: `/story/${this.story?.slug}`, text: this.story?.title }]);
+  }
 };
 </script>
 

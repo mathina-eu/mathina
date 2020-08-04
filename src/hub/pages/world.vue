@@ -35,6 +35,9 @@ export default {
       constants,
     };
   },
+  mounted() {
+    this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: 'World Map' }]);
+  },
 };
 </script>
 

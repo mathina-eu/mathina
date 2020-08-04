@@ -1,5 +1,5 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="app">
     <v-navigation-drawer
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
@@ -43,7 +43,6 @@
           <v-row
             v-if="item.heading"
             :key="item.heading"
-            align="center"
           >
             <v-col cols="6">
               <v-subheader v-if="item.heading">
@@ -131,7 +130,6 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title
         :to="localePath('/')"
-        style="width: 300px;"
         class="ml-0 pl-4"
       >
         <span class="hidden-sm-and-down">
@@ -142,6 +140,14 @@
           >
             Mathina
           </v-btn>
+          <v-btn
+            v-for="({ path, text }, iteration) in $store.state.breadcrumbs"
+            :key="path"
+            :to="localePath(path)"
+            :class="{'ml-4': iteration > 0}"
+            text
+            nuxt
+          >{{ text }}</v-btn>
         </span>
       </v-toolbar-title>
       <v-spacer />
@@ -152,19 +158,19 @@
         <v-icon>mdi-bell</v-icon>
       </v-btn>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container
-        class="fill-height align-start"
+        class="fill-height align-start pa-0"
         fluid
       >
         <v-row
-          align="center"
           justify="center"
+          style="height: 100%;"
         >
           <nuxt />
         </v-row>
       </v-container>
-    </v-content>
+    </v-main>
     <v-btn
       v-if="$store.state.isAssistModeOn"
       bottom
@@ -233,7 +239,7 @@ export default {
   data() {
     return {
       dialog: false,
-      drawer: null,
+      drawer: false,
       items: [
         { icon: 'mdi-contacts', text: this.$t('menu.select-age'), to: '/' },
         // {
