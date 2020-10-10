@@ -5,7 +5,10 @@ const srcDir = path.join(__dirname, 'src');
 const rootDir = __dirname;
 
 export default {
-  mode: 'spa',
+  // mode: 'spa',
+  // target: 'spa',
+  ssr: false,
+  target: 'static',
   env: {
     IS_DEV,
     BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://dev.zabkar.net'
