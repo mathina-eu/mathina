@@ -28,7 +28,6 @@ export const mutations = {
     state.story = story;
   },
   SET_BREADCRUMBS(state, breadcrumbs) {
-    console.log(breadcrumbs);
     state.breadcrumbs = breadcrumbs;
   }
 };

@@ -5,12 +5,12 @@
   "author": "Seven",
   "private": true,
   "scripts": {
-    "hub:dev": "nuxt --config-file src/hub/nuxt.config.js -p=3000",
-    "hub:build": "nuxt build --config-file src/hub/nuxt.config.js",
+    "dev": "nuxt --config-file src/hub/nuxt.config.js -p=3000",
+    "generate": "nuxt generate --config-file src/hub/nuxt.config.js -p=3000",
+    "hub:dev": "yarn run dev",
+    "hub:generate": "yarn run generate",
     "app:dev": "nuxt --config-file src/app/nuxt.config.js -p=3001",
-    "app:build": "nuxt build --config-file src/app/nuxt.config.js",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
+    "app:generate": "nuxt generate --config-file src/app/nuxt.config.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
