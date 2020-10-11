@@ -138,27 +138,32 @@ export default {
   },
   async asyncData({ $axios, params }) {
     // Note: app used instead of 'this' as, 'this' is not available yet in asyncData
-    const { data } = await $axios.get('/stories/sym-4-6/chapters.yaml');
-    const { metaData, chapters } = yaml.load(data);
-    const chapter = chapters.find(({ slug }) => slug === params.chapter);
+    const story = constants.STORIES.find(({ slug }) => slug === params.story);
+    let chapterId = null;
+    for (let i = 0; i < story.chapters.length; i++) {
+      if (story.chapters[i]['slug'] === params.chapter) {
+        chapterId = i;
+        break;
+      }
+    }
 
-    if (!chapter) {
+    if (chapterId === null || !story.chapters[chapterId]) {
       console.error(`Could not load chapter ${params.chapter}`);
     }
 
-    let { actions, ...chapterMeta } = chapter;
+    const { data } = await $axios.get(`/stories/${story.id}/ch${chapterId+1}.yaml`);
+    const { actions } = yaml.load(data);
 
     return {
       actions: actions.map(action => ActionFactory.create(action)),
-      chapter: Object.freeze(chapterMeta),
-      metaData: Object.freeze(metaData),
+      chapter: Object.freeze(story.chapters[chapterId]),
+      story: Object.freeze(story),
     };
   },
   data() {
     return {
       constants,
       currentActionId: 0,
-      story: constants.STORIES.find(({ slug }) => slug === this.$route.params.story),
       actionExecutor: null,
       images: [],
       mode: null,
@@ -168,7 +173,7 @@ export default {
       },
       devDirection: this.next,
       showGameDialog: false,
-      isLastGameFinished: false,
+      isLastGameFinished: true,
     };
   },
   computed: {
@@ -176,6 +181,9 @@ export default {
       return this.actions[this.currentActionId];
     },
     hasMoreActions() {
+      if (this.isDialogMode) {
+        return true;
+      }
       return this.currentActionId < this.actions.length - 1;
     },
     activeDialog() {
@@ -218,7 +226,7 @@ export default {
         this.devPrev();
       }
     },
-    // NOTE: A bit broken likely, for dev purposes only
+    // TODO: Backwards direction is a bit broken for some actions. Use for dev purposes only for now.
     devPrev() {
       this.devDirection = this.devPrev;
 

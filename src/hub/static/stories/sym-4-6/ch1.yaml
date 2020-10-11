@@ -1,0 +1,122 @@
+  actions:
+    - type: background
+      src: c1-bg1.jpg
+    - type: image
+      src: c1-1.png
+      align: right
+    - type: sceneText
+      text: >
+        <p>Mathina arrives at Symmetry Fair, where she finds a huge fun fair: there are roller coasters,
+        carousels and many stalls, all with countless games and challenges. Mathina is fascinated with so many
+        amusements and activities and is eager to try them all! </p>
+        <p>Right next to her there is a stall that sells cuddly toys! And it is full of all kinds of toys:
+        puppies, teddy bears, ladybugs, ...</p>
+    - type: image
+      src: c1-2.png
+      style: "top: 60%; right: 10%;"
+      align: right
+    - type: sceneText
+      text: At the stall, Mathina is greeted by a smiling wizard.
+    - type: dialog
+      avatarAlign:
+        - wizard: right
+        - mathina: left
+      entries:
+        - text: "I love these toys!"
+          char: mathina
+          mood: happy
+        - text: "Some have defects!"
+          char: wizard
+          mood: sad
+        - text: "Really! Why?"
+          char: mathina
+          mood: surprised
+        - text: "Here at Symmetry Fair we just want toys ... with symmetry! Only these toys are good for us!"
+          char: wizard
+        - text: "But today I’ve received these toys from the Symmetry Industries and some don’t have symmetry!
+                  This is not acceptable in Symmetry Fair!"
+          char: wizard
+          mood: angry
+        - text: "Well, they all look lovely to me!"
+          char: mathina
+        - text: "I have an idea! Why don't you help me, by choosing the good toys?"
+          char: wizard
+          mood: excited
+        - text: "I can stow them on the stall and you can keep the remaining toys!"
+          char: wizard
+          mood: excited
+        - text: "I’d love to get new toys! But I don't know how to choose them!"
+          char: mathina
+          mood: sad
+        - text: "Here, let me help you! I'll show you pictures of cuddly toys. And you have to choose the symmetric images."
+          char: wizard
+    - type: dialog
+      entries:
+        - text: "I’ll show you an example! Look at this image."
+          char: wizard
+    - type: image
+      src: c1-3.png
+      id: c1-3
+      align: center
+    - type: dialog
+      entries:
+        - text: "If we fold the image in a certain way, the two parts overlap!"
+          char: wizard
+    - type: game
+      text: "Is the following image good (i.e. symmetric)?"
+      cta: "Try it yourself!"
+      url: https://www.atractor.pt/temp/apps-tests/dobrar_1.html
+    - type: clearImage
+      id: c1-3
+    - type: dialog
+      entries:
+        - text: "The teddy bear image has a symmetry axis. It’s a good toy!"
+          char: wizard
+        - text: "I'll show you another example! Now look at this bee image!"
+          char: wizard
+    - type: image
+      src: c1-4.png
+      id: c1-4
+      position: center
+    - type: game
+      text: "Is the following image good (i.e. symmetric)?"
+      cta: "Try it yourself!"
+      url: https://www.atractor.pt/temp/apps-tests/dobrar_2.html
+    - type: clearImage
+      id: c1-4
+    - type: dialog
+      entries:
+        - text: "The image of this bee also has a symmetry axis."
+          char: wizard
+        - text: "Now look at the image of a cat."
+          char: wizard
+    - type: image
+      src: c1-5.png
+      id: c1-5
+      position: center
+    - type: game
+      text: "Is the following image good (i.e. symmetric)?"
+      cta: "Try it yourself!"
+      url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    - type: clearImage
+      id: c1-5
+    - type: dialog
+      avatarAlign:
+        - mathina: left
+        - wizard: right
+      entries:
+        - text: "It's not a good toy! –  explains the wizard."
+          char: wizard
+        - text: "I think I know how to choose the good toys! Can I help you?"
+          char: mathina
+        - text: "Of course, Mathina! The good images should go into this box!"
+          char: wizard
+        - text: "And at the end, can I have the remaining toys?"
+          char: mathina
+          mood: excited
+        - text: "Yes, Mathina! It's a promise!"
+          char: wizard
+          mood: happy
+    - type: game
+      text: "Put the \"good\" toys in the box"
+      url: https://www.atractor.pt/temp/apps-tests/arrumar_figuras-_en.html

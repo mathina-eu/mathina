@@ -61,6 +61,7 @@ export default {
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [{ path: `/city/${this.city?.slug}`, text: this.city?.name }]);
     this.$store.dispatch('setCity', this.city);
+    console.log(this.stories);
   }
 };
 </script>

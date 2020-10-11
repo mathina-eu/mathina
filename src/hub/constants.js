@@ -1,3 +1,5 @@
+import STORIES from './story-meta';
+
 export default {
   AGE_GROUPS: {
     '0': {
@@ -17,7 +19,7 @@ export default {
     'island': {
       name: 'Buccaneer Island',
       slug: 'island',
-      stories: ['sym-4-6'],
+      stories: ['sym-4-6', 'demo-story'],
     },
     'logicity': {
       name: 'Logicity',
@@ -35,14 +37,5 @@ export default {
       stories: ['sym-4-6'],
     }
   },
-  STORIES: [
-    {
-      title: 'Mathina in Symmetry Fair',
-      slug: 'mathina-in-symmetry-fair',
-      id: 'sym-4-6',
-      chapters: {
-        'mathina-wins-a-lot-of-new-toys': 'Mathina wins a lot of new toys'
-      }
-    },
-  ]
+  STORIES,
 };

@@ -1,0 +1,16 @@
+actions:
+  - type: sceneText
+    text: >
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum dolores est</p>
+  - type: dialog
+    avatarAlign:
+      - wizard: right
+      - mathina: left
+    entries:
+      - text: "I love these toys!"
+        char: mathina
+        mood: happy
+      - text: "Some have defects!"
+        char: wizard
+        mood: sad

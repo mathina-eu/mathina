@@ -11,7 +11,7 @@
       <!--      />-->
       <h3>Choose a chapter:</h3>
       <div
-        v-for="{ title, slug } in chapters"
+        v-for="{ title, slug } in story.chapters"
         :key="slug"
         class="my-4"
       >
@@ -37,25 +37,21 @@
 
 <script>
 import constants from '~/constants';
-import yaml from 'js-yaml';
 
 export default {
-  async asyncData({ $axios, params }) {
-    const story = constants.STORIES.find(({ slug }) => slug === params.id);
-    const { data } = await $axios.get(`/stories/${story.id}/chapters.yaml`);
-    const { chapters } = yaml.load(data);
+  data() {
     return {
-      story,
-      chapters: chapters.map(({ title, slug }) => ({ title, slug })),
+      story: constants.STORIES.find(({ slug }) => slug === this.$route.params.id),
     };
   },
   computed: {
     finishStoryLink() {
       return this.$store.state.city ? `/city/${this.$store.state.city.slug}` : '/';
-    }
+    },
   },
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [{ path: `/story/${this.story?.slug}`, text: this.story?.title }]);
+    console.log(this.story);
   }
 };
 </script>
