@@ -85,12 +85,14 @@ export default {
 
 .front {
   position: absolute;
-  bottom: 0;
+  bottom: -5%;
+  left: -2%;
+  right: -2%;
 }
 
 .mid {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   right: -5%;
 }
 
