@@ -1,52 +1,87 @@
 <template>
-  <v-row align="center">
-    <v-col
-      class="text-center"
-      cols="12"
-    >
-      <h1 class="headline">
-        {{ $t('world.title') }}
-      </h1>
-      <h2 class="subtitle-1">
-        {{ $t('world.help') }}
-      </h2>
-      <div class="worldmap">
-        <v-btn
-          v-for="[id, city] in Object.entries(constants.CITIES)"
-          :key="id"
-          :class="`worldmap__city--${id}`"
-          :to="localePath({ name: 'city-id', params: { id } })"
-          class="worldmap__city"
-          nuxt
+  <GameView>
+    <div class="worldmap">
+      <v-menu
+        v-for="city in cities"
+        :key="city.id"
+        rounded="b x1"
+        offset-y
+      >
+        <template v-slot:activator="{ attrs, on }">
+          <v-btn
+            :class="`white--text worldmap__city--${city.id}`"
+            :color="city.colorScheme"
+            elevation="1"
+            class="worldmap__city"
+            v-bind="attrs"
+            v-on="on"
+          >
+            {{ city.name }}
+          </v-btn>
+        </template>
+        <v-list
+          class="blue--background"
+          nav
+          dense
         >
-          {{ city.name }}
-        </v-btn>
-      </div>
-    </v-col>
-  </v-row>
+          <v-subheader>Stories</v-subheader>
+          <v-list-item
+            v-for="story in city.stories"
+            :key="story.id"
+            :to="localePath({ name: 'story-slug', params: { slug: story.slug } })"
+            :ripple="true"
+            link
+            nuxt
+          >
+            <v-list-item-icon>
+              <v-icon small>
+                {{ `mdi-numeric-${story.ageMeta.icon}-circle` }}
+              </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title v-text="story.title" />
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </div>
+  </GameView>
 </template>
 
 <script>
 import constants from '~/constants';
+import GameView from '~/components/GameView';
 
 export default {
-  data() {
-    return {
-      constants,
-    };
+  components: {
+    GameView
+  },
+  computed: {
+    cities() {
+      return Object.values(constants.CITIES).map(city => {
+        return {
+          ...city,
+          stories: city.stories.map(storyId => this.getStoryData(storyId))
+        };
+      });
+    }
   },
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: 'World Map' }]);
+  },
+  methods: {
+    getStoryData(storyId) {
+      return { ...constants.STORIES.find(({ id }) => storyId === id) };
+    }
   },
 };
 </script>
 
 <style scoped>
 .worldmap {
-  margin: 16px auto;
   position: relative;
-  width: 800px;
-  height: 500px;
+  width: 100%;
+  height: 100%;
   background: url('~assets/worldmap.png');
   background-size: cover;
 
@@ -55,23 +90,23 @@ export default {
     z-index: 10;
 
     &--island {
-      bottom: 60px;
-      right: 60px;
+      bottom: 22%;
+      right: 3%;
     }
 
     &--logicity {
-      left: 395px;
-      top: 240px;
+      left: 45.5%;
+      top: 51%;
     }
 
     &--birds-of-fire {
-      top: 100px;
-      right: 50px;
+      top: 24%;
+      right: 17%;
     }
 
     &--symmetry-fair {
-      top: 100px;
-      left: 140px;
+      top: 21%;
+      left: 17%;
     }
   }
 }

@@ -1,127 +1,130 @@
 <template>
-  <div
-    ref="storyRoot"
-    class="root"
-  >
-    <div class="images-wrapper">
-      <transition-group
-        appear
-        name="fade"
-        tag="div"
-      >
-        <img
-          v-for="image in images"
-          :key="image.src"
-          :src="image.src"
-          :class="`images-wrapper__image--${image.position.horizontal} images-wrapper__image--vertical-${image.position.vertical}`"
-          class="images-wrapper__image"
-          :style="image.style"
+  <GameView>
+    <div
+      ref="storyRoot"
+      class="root"
+    >
+      <div class="images-wrapper">
+        <transition-group
+          appear
+          name="fade"
+          tag="div"
         >
-      </transition-group>
-    </div>
-    <div class="text-wrapper mt-16">
-      <div
-        v-if="isDialogMode"
-        class="dialog"
-      >
-        <StoryDialog v-bind="activeDialog" />
-      </div>
-      <div v-if="isSceneTextMode">
-        <v-card max-width="600">
-          <v-card-text class="text-body-1">
-            <div v-html="action.text" />
-          </v-card-text>
-        </v-card>
-      </div>
-      <div
-        v-if="isGameMode"
-        class="game-overview"
-      >
-        <v-card width="600">
-          <v-toolbar
-            color="primary"
-            dark
+          <img
+            v-for="image in images"
+            :key="image.src"
+            :src="image.src"
+            :class="`images-wrapper__image--${image.position.horizontal} images-wrapper__image--vertical-${image.position.vertical}`"
+            class="images-wrapper__image"
+            :style="image.style"
           >
-            <v-spacer />
-            <v-toolbar-title>{{ action.text }}</v-toolbar-title>
-            <v-spacer />
-          </v-toolbar>
-          <v-card-actions class="py-8">
-            <v-spacer />
-            <v-dialog
-              v-model="showGameDialog"
-              fullscreen
-              hide-overlay
-              transition="dialog-bottom-transition"
+        </transition-group>
+      </div>
+      <div class="text-wrapper mt-16">
+        <div
+          v-if="isDialogMode"
+          class="dialog"
+        >
+          <StoryDialog v-bind="activeDialog" />
+        </div>
+        <div v-if="isSceneTextMode">
+          <v-card max-width="600">
+            <v-card-text class="text-body-1">
+              <div v-html="action.text" />
+            </v-card-text>
+          </v-card>
+        </div>
+        <div
+          v-if="isGameMode"
+          class="game-overview"
+        >
+          <v-card width="600">
+            <v-toolbar
+              color="primary"
+              dark
             >
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  color="primary"
-                  dark
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  {{ action.cta }}
-                </v-btn>
-              </template>
-              <v-card>
-                <v-toolbar
-                  dark
-                  color="primary"
-                >
+              <v-spacer />
+              <v-toolbar-title>{{ action.text }}</v-toolbar-title>
+              <v-spacer />
+            </v-toolbar>
+            <v-card-actions class="py-8">
+              <v-spacer />
+              <v-dialog
+                v-model="showGameDialog"
+                fullscreen
+                hide-overlay
+                transition="dialog-bottom-transition"
+              >
+                <template v-slot:activator="{ on, attrs }">
                   <v-btn
-                    icon
+                    color="primary"
                     dark
-                    @click="showGameDialog=false;isLastGameFinished=true;"
+                    v-bind="attrs"
+                    v-on="on"
                   >
-                    <v-icon>mdi-close</v-icon>
+                    {{ action.cta }}
                   </v-btn>
-                  <v-toolbar-title>{{ action.text }}</v-toolbar-title>
-                  <v-spacer />
-                  <v-toolbar-items>
+                </template>
+                <v-card>
+                  <v-toolbar
+                    dark
+                    color="primary"
+                  >
                     <v-btn
+                      icon
                       dark
-                      text
                       @click="showGameDialog=false;isLastGameFinished=true;"
                     >
-                      Finish
+                      <v-icon>mdi-close</v-icon>
                     </v-btn>
-                  </v-toolbar-items>
-                </v-toolbar>
-                <iframe
-                  v-if="showGameDialog"
-                  :src="action.url"
-                  class="game"
-                />
-              </v-card>
-            </v-dialog>
-            <v-spacer />
-          </v-card-actions>
-        </v-card>
+                    <v-toolbar-title>{{ action.text }}</v-toolbar-title>
+                    <v-spacer />
+                    <v-toolbar-items>
+                      <v-btn
+                        dark
+                        text
+                        @click="showGameDialog=false;isLastGameFinished=true;"
+                      >
+                        Finish
+                      </v-btn>
+                    </v-toolbar-items>
+                  </v-toolbar>
+                  <iframe
+                    v-if="showGameDialog"
+                    :src="action.url"
+                    class="game"
+                  />
+                </v-card>
+              </v-dialog>
+              <v-spacer />
+            </v-card-actions>
+          </v-card>
+        </div>
+        <v-btn
+          v-if="hasMoreActions"
+          class="mt-12"
+          title="You can use the right arrow on your keyboard as well!"
+          @click="next"
+        >
+          Next
+        </v-btn>
+        <v-btn
+          v-else-if="isLastGameFinished"
+          class="mt-12"
+          @click="$router.back()"
+        >
+          All done!
+        </v-btn>
       </div>
-      <v-btn
-        v-if="hasMoreActions"
-        class="mt-12"
-        title="You can use the right arrow on your keyboard as well!"
-        @click="next"
-      >
-        Next
-      </v-btn>
-      <v-btn
-        v-else-if="isLastGameFinished"
-        class="mt-12"
-        @click="$router.back()"
-      >
-        All done!
-      </v-btn>
     </div>
-  </div>
+  </GameView>
 </template>
 
 <script>
 import yaml from 'js-yaml';
 import constants from '~/constants';
 import StoryDialog from '~/components/story/StoryDialog';
+import GameView from '~/components/GameView';
 import {
   ActionFactory,
   BackgroundAction,
@@ -134,29 +137,17 @@ import {
 
 export default {
   components: {
+    GameView,
     StoryDialog,
   },
   async asyncData({ $axios, params }) {
     // Note: app used instead of 'this' as, 'this' is not available yet in asyncData
-    const story = constants.STORIES.find(({ slug }) => slug === params.story);
-    let chapterId = null;
-    for (let i = 0; i < story.chapters.length; i++) {
-      if (story.chapters[i]['slug'] === params.chapter) {
-        chapterId = i;
-        break;
-      }
-    }
-
-    if (chapterId === null || !story.chapters[chapterId]) {
-      console.error(`Could not load chapter ${params.chapter}`);
-    }
-
-    const { data } = await $axios.get(`/stories/${story.id}/ch${chapterId+1}.yaml`);
+    const story = constants.STORIES.find(({ slug }) => slug === params.slug);
+    const { data } = await $axios.get(`/stories/${story.id}/actions.yaml`);
     const { actions } = yaml.load(data);
 
     return {
       actions: actions.map(action => ActionFactory.create(action)),
-      chapter: Object.freeze(story.chapters[chapterId]),
       story: Object.freeze(story),
     };
   },
@@ -207,8 +198,8 @@ export default {
   },
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [
+      { path: `/world/`, text: 'World Map' },
       { path: `/story/${this.story?.slug}/`, text: this.story?.title },
-      { path: `/story/${this.story?.slug}/${this.chapter?.slug}/`, text: this.chapter?.title },
     ]);
 
     document.addEventListener('keydown', this.keydownListener);

@@ -13,13 +13,8 @@ const generateRoutes = () => {
     ({ slug }) => `/city/${slug}/`
   );
   let stories = constants.STORIES.map(
-    ({ slug, chapters }) => {
-      let storyRoute = `/story/${slug}`;
-      let chapterSlugs = Object.keys(chapters).map(chapterSlug => `${storyRoute}/${chapterSlug}`);
-      return [storyRoute, ...chapterSlugs];
-    }
+    ({ slug }) => `/story/${slug}`
   );
-  stories = stories.reduce((acc, storySlugs) => [...acc, ...storySlugs], []);
   return [...stories, ...cities];
 };
 

@@ -56,23 +56,20 @@ For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxt
 stories/
     sym-4-6/
         img/
-        ch1.yaml
-        ch2.yaml
+        actions.yaml
 ```
 
 ### Adding a new story
 
 Let's define a story with id `demo-story`
 
-**NOTE:** For now all stories should have at least one chapter. Could change this default later, but seems to work for now.
-
 #### Definitions
 $STORY_DIR = `src/hub/static/stories/demo-story`
 
 #### Procedure
 1. Create `$STORY_DIR`
-2. Create a *chapter actions* file in `$STORY_DIR/ch1.yaml`. You can use a template file from `src/hub/static/stories/_templates/ as a starting point.
-3. Add some actions to your new chapter file:
+2. Create an *actions* file in `$STORY_DIR/actions.yaml`. You can use a template file from `src/hub/static/stories/_templates/ as a starting point.
+3. Add some actions to your new actions file:
 
 ```yaml
 actions:
@@ -93,7 +90,7 @@ actions:
           mood: sad
 ```
 
-4. Register your story and chapters in `src/hub/story-meta.js`
+4. Register your story in `src/hub/story-meta.js`
 
 Add an entry such as:
 
@@ -110,9 +107,7 @@ export default [
     title: 'Demo Story',
     slug: 'demo-story-url-path',
     id: 'demo-story',
-    chapters: [
-      { title: 'Demo Chapter', slug: 'demo-chapter' },
-    ]
+    ageMeta: AGE_GROUP[0],
   },
 ];
 ```
@@ -143,11 +138,11 @@ CITIES: {
 }
 ```
 
-### Supported Chapter (Story) Actions
+### Supported Story Actions
 
 #### Set background
 
-Sets full screen background for chapter, replacing any previous backgrounds.
+Sets full screen background for story, replacing any previous backgrounds.
 
 **Example**
 
@@ -182,7 +177,7 @@ Display an image.
 | --- | --- | --- |
 | **type** | `image` | action type |
 | **src** | <string> path | Filename. File should be located in `$STORY_DIR/img/` |
-| id | <string> with no spaces | Set an optional unique per chapter id for image, useful for `clear`-ing the image later. |
+| id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
 | position | center, left, right | Horizontal alignment of image (*WIP*: Subject to change) |
 
 #### Clear image

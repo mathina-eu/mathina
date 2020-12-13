@@ -1,18 +1,16 @@
+import AGE_GROUPS from './age-groups';
+
 export default [
   {
-    title: 'Mathina in Symmetry Fair',
-    slug: 'mathina-in-symmetry-fair',
+    title: 'Mathina wins a lot of new toys',
+    slug: 'mathina-wins-a-lot-of-new-toys',
     id: 'sym-4-6',
-    chapters: [
-      { title: 'Mathina wins a lot of new toys', slug: 'mathina-wins-a-lot-of-new-toys' },
-    ]
+    ageMeta: AGE_GROUPS['0'],
   },
   {
     title: 'Demo Story',
     slug: 'demo-story-url-path',
     id: 'demo-story',
-    chapters: [
-      { title: 'Demo Chapter', slug: 'demo-chapter' },
-    ]
+    ageMeta: AGE_GROUPS['1'],
   },
 ];

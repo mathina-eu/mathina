@@ -3,6 +3,8 @@
     <v-navigation-drawer
       v-model="drawer"
       :clipped="$vuetify.breakpoint.lgAndUp"
+      disable-resize-watcher
+      disable-route-watcher
       app
     >
       <v-list>
