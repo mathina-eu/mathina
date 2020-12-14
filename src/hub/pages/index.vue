@@ -5,26 +5,19 @@
       class="text-center"
       cols="12"
     >
-      <h1 class="headline">
+      <h1 class="splash-title">
         {{ $t('index.title') }}
       </h1>
-      <h2 class="subtitle-1">
-        {{ $t('index.subtitle') }}
-      </h2>
-      <div
-        v-for="[id, group] in Object.entries(constants.AGE_GROUPS)"
-        :key="id"
-        class="my-2"
+      <v-btn
+        class="mt-12"
+        color="primary white--text"
+        rounded
+        x-large
+        link
+        @click="setAgeGroupAndEnterWorld(0)"
       >
-        <v-btn
-          :color="`${$store.state.ageGroup === id ? 'primary' : 'default'}`"
-          style="width: 200px;"
-          link
-          @click="setAgeGroupAndEnterWorld(id)"
-        >
-          {{ group.title }}
-        </v-btn>
-      </div>
+        Start Exploring!
+      </v-btn>
     </v-col>
   </v-row>
 </template>
@@ -34,7 +27,9 @@ import constants from '~/constants';
 import ExampleAnimation from '~/components/example-animation';
 
 export default {
-  components: { ExampleAnimation },
+  components: {
+    ExampleAnimation
+  },
   data() {
     return {
       constants,
@@ -53,3 +48,22 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.splash-title {
+  font-size: 4rem;
+  text-align: center;
+  color: #fcedd8;
+  font-family: 'Niconne', cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0 #eb452b,
+    10px 10px 0 #efa032,
+    15px 15px 0 #46b59b,
+    20px 20px 0 #017e7f,
+    25px 25px 0 #052939,
+    30px 30px 0 #c11a2b,
+    35px 35px 0 #cf5965,
+    40px 40px 0 #d8848b,
+    45px 45px 0 #e1d2d2;
+}
+</style>

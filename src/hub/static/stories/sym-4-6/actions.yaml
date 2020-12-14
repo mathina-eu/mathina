@@ -1,8 +1,16 @@
   actions:
     - type: background
       src: c1-bg1.jpg
+      style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    - type: background
+      src: c1-bg2.png
+      style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+    - type: background
+      src: c1-bg3.png
+      style: "position: absolute; left: 0; bottom: 10%; width: 30%; z-index: 2;"
     - type: image
       src: c1-1.png
+      style: "width: 20%; top: 60%; right: 30%;"
       align: right
     - type: sceneText
       text: >
@@ -13,7 +21,7 @@
         puppies, teddy bears, ladybugs, ...</p>
     - type: image
       src: c1-2.png
-      style: "top: 60%; right: 10%;"
+      style: "width: 20%; top: 75%; right: 35%;"
       align: right
     - type: sceneText
       text: At the stall, Mathina is greeted by a smiling wizard.

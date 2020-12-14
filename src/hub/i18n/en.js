@@ -7,7 +7,7 @@ export default {
     'help': 'Visit a city!',
   },
   index: {
-    title: 'Welcome to Mathina',
+    title: 'Adventures of Mathina',
     subtitle: 'Select an age group to start!',
   },
   menu: {

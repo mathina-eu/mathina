@@ -5,8 +5,9 @@ class Action {
 }
 
 export class BackgroundAction extends Action {
-  constructor({ src, ...rest }) {
+  constructor({ src, style, ...rest }) {
     super(rest);
+    this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;

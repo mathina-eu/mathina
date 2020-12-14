@@ -4,6 +4,16 @@
       ref="storyRoot"
       class="root"
     >
+      <div class="backgrounds">
+        <div class="backgrounds__images">
+          <img
+            v-for="bg in backgrounds"
+            :key="bg.src"
+            :src="bg.src"
+            :style="bg.style"
+          >
+        </div>
+      </div>
       <div class="images-wrapper">
         <transition-group
           appear
@@ -162,6 +172,7 @@ export default {
         entries: [],
         current: null,
       },
+      backgrounds: [],
       devDirection: this.next,
       showGameDialog: false,
       isLastGameFinished: true,
@@ -211,7 +222,7 @@ export default {
   methods: {
     keydownListener({ key, keyCode }) {
       // TODO: debounce?
-      if (key === 'ArrowRight' || keyCode === 39 ) {
+      if (key === 'ArrowRight' || keyCode === 39) {
         this.next();
       } else if (key === 'ArrowLeft') {
         this.devPrev();
@@ -287,9 +298,9 @@ export default {
       this.dialog.current++;
       return true;
     },
-    setBackground({ src }) {
+    setBackground({ src, style }) {
       const path = `${this.imgRoot}/bg/${src}`;
-      this.$refs['storyRoot'].style.backgroundImage = `url(${path})`;
+      this.backgrounds = [...this.backgrounds, { src: path, style }];
     },
     setImage({ id, src, align = 'center', style = '' }) {
       const images = this.images.filter(img => !img.id || img.id !== id);
@@ -312,73 +323,86 @@ export default {
 </script>
 
 <style scoped>
-  .root {
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
+.root {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
 
-  .images-wrapper {
+.images-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  &__image {
+    max-width: 450px;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+    top: 30%;
 
-    &__image {
-      max-width: 450px;
-      position: absolute;
-      top: 30%;
+    &--left {
+      left: 1rem;
+    }
 
-      &--left {
-        left: 1rem;
-      }
+    &--center {
+      left: 40%;
+    }
 
-      &--center {
-        left: 40%;
-      }
+    &--right {
+      right: 1rem;
+    }
 
-      &--right {
-        right: 1rem;
-      }
+    &--vertical-bottom {
+      bottom: 1rem;
+    }
 
-      &--vertical-bottom {
-        bottom: 1rem;
-      }
+    &--vertical-center {
+      top: 40%;
+    }
 
-      &--vertical-center {
-        top: 40%;
-      }
-
-      &--vertical-top {
-        top: 1rem;
-      }
+    &--vertical-top {
+      top: 1rem;
     }
   }
+}
 
-  .text-wrapper {
-    position: absolute;
+.text-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 500ms;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.game {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 64px);
+  overflow: hidden;
+}
+
+.backgrounds {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  &__images {
+    position: relative;
     width: 100%;
     height: 100%;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 500ms;
-  }
-
-  .fade-enter,
-  .fade-leave-to {
-    opacity: 0;
-  }
-
-  .game {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 64px);
-    overflow: hidden;
-  }
+}
 </style>

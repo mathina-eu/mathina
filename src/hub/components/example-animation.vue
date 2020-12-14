@@ -73,78 +73,78 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  min-width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
 
-  .container {
-    min-width: 800px;
-    height: 800px;
-    margin: 0 auto;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-
-    &__mask {
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      position: relative;
-    }
-  }
-
-  .layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  &__mask {
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    position: relative;
   }
+}
 
-  .front {
-    background: url('~assets/images/front.png') no-repeat center bottom;
+.layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.front {
+  background: url('~assets/images/front.png') no-repeat center bottom;
+  background-size: contain;
+}
+
+.mid {
+  background: url('~assets/images/mid.png') no-repeat center bottom;
+  background-size: contain;
+  bottom: 5%;
+}
+
+.back {
+  background: url('~assets/images/back.png') no-repeat center bottom;
+  background-size: 110%;
+  bottom: 15%;
+}
+
+.sun {
+  width: 30%;
+  height: 30%;
+  max-width: 250px;
+  max-height: 250px;
+  background-color: #fff8e5;
+  border-radius: 50%;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.clouds {
+  bottom: 45%;
+  height: 55%;
+  overflow: visible;
+
+  &__cloud {
+    background: url('~assets/images/clouds.png') no-repeat center bottom;
     background-size: contain;
-  }
+    width: 100%;
+    height: 100%;
 
-  .mid {
-    background: url('~assets/images/mid.png') no-repeat center bottom;
-    background-size: contain;
-    bottom: 5%;
-  }
-
-  .back {
-    background: url('~assets/images/back.png') no-repeat center bottom;
-    background-size: 110%;
-    bottom: 15%;
-  }
-
-  .sun {
-    width: 30%;
-    height: 30%;
-    max-width: 250px;
-    max-height: 250px;
-    background-color: #fff8e5;
-    border-radius: 50%;
-    bottom: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .clouds {
-    bottom: 45%;
-    height: 55%;
-    overflow: visible;
-
-    &__cloud {
-      background: url('~assets/images/clouds.png') no-repeat center bottom;
-      background-size: contain;
-      width: 100%;
-      height: 100%;
-
-      &--offset {
-        transform: translateY(-80%) translateX(-100%) scaleX(-1);
-        background-size: 80%;
-      }
+    &--offset {
+      transform: translateY(-80%) translateX(-100%) scaleX(-1);
+      background-size: 80%;
     }
   }
+}
 </style>
