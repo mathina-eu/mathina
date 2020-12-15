@@ -22,6 +22,7 @@
         >
           <img
             v-for="image in images"
+            :id="image.id"
             :key="image.src"
             :src="image.src"
             :class="`images-wrapper__image--${image.position.horizontal} images-wrapper__image--vertical-${image.position.vertical}`"
@@ -110,16 +111,36 @@
             </v-card-actions>
           </v-card>
         </div>
+        <div>
+          <v-btn
+            v-if="!isFirstAction"
+            class="mt-12"
+            title="You can use the right arrow on your keyboard as well!"
+            @click="devPrev"
+          >
+            <v-icon
+              class="mr-1"
+              small
+            >
+              mdi-arrow-left-circle-outline
+            </v-icon> Back
+          </v-btn>
+          <v-btn
+            v-if="hasMoreActions"
+            class="mt-12"
+            title="You can use the right arrow on your keyboard as well!"
+            @click="next"
+          >
+            Next <v-icon
+              class="ml-1"
+              small
+            >
+              mdi-arrow-right-circle-outline
+            </v-icon>
+          </v-btn>
+        </div>
         <v-btn
-          v-if="hasMoreActions"
-          class="mt-12"
-          title="You can use the right arrow on your keyboard as well!"
-          @click="next"
-        >
-          Next
-        </v-btn>
-        <v-btn
-          v-else-if="isLastGameFinished"
+          v-if="!hasMoreActions && isLastGameFinished"
           class="mt-12"
           @click="$router.back()"
         >
@@ -131,6 +152,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import yaml from 'js-yaml';
 import constants from '~/constants';
 import StoryDialog from '~/components/story/StoryDialog';
@@ -143,7 +165,11 @@ import {
   DialogAction,
   GameAction,
   ClearImageAction,
+  AnimationAction,
 } from '~/components/story/action-types';
+
+const BACK = 'back';
+const NEXT = 'next';
 
 export default {
   components: {
@@ -174,6 +200,7 @@ export default {
       },
       backgrounds: [],
       devDirection: this.next,
+      activeDirection: NEXT,
       showGameDialog: false,
       isLastGameFinished: true,
     };
@@ -206,6 +233,11 @@ export default {
     imgRoot() {
       return `/stories/${this.story.id}/img`;
     },
+    isFirstAction() {
+      // Find first action without auto progress
+      let firstActionWithoutAuto = this.actions.findIndex(action => !action.autoProgress);
+      return this.currentActionId === firstActionWithoutAuto;
+    },
   },
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [
@@ -231,6 +263,7 @@ export default {
     // TODO: Backwards direction is a bit broken for some actions. Use for dev purposes only for now.
     devPrev() {
       this.devDirection = this.devPrev;
+      this.activeDirection = BACK;
 
       if (this.action instanceof DialogAction) {
         this.dialog.current--;
@@ -240,6 +273,7 @@ export default {
       }
 
       if (this.currentActionId <= 0) {
+        this.next();
         return;
       }
 
@@ -248,6 +282,7 @@ export default {
     },
     next() {
       this.devDirection = this.next;
+      this.activeDirection = NEXT;
 
       if (this.action instanceof DialogAction) {
         if (this.progressDialog()) {
@@ -272,7 +307,11 @@ export default {
         // auto progress
         this.devDirection();
       } else if (this.action instanceof ImageAction) {
-        this.setImage(this.action);
+        if (this.activeDirection === BACK) {
+          this.clearImage({ src: this.action.src });
+        } else {
+          this.setImage(this.action);
+        }
         // auto progress
         this.devDirection();
       } else if (this.action instanceof ClearImageAction) {
@@ -283,6 +322,10 @@ export default {
         this.setSceneText(this.action);
       } else if (this.action instanceof GameAction) {
         this.showGame(this.action);
+      } else if (this.action instanceof AnimationAction) {
+        this.executeAnimation(this.action);
+        // auto progress
+        this.devDirection();
       }
     },
     actionDialog({ entries }) {
@@ -300,20 +343,29 @@ export default {
     },
     setBackground({ src, style }) {
       const path = `${this.imgRoot}/bg/${src}`;
-      this.backgrounds = [...this.backgrounds, { src: path, style }];
+      const bgs = this.backgrounds.filter(bg => bg.src !== path);
+      this.backgrounds = [...bgs, { src: path, style }];
     },
     setImage({ id, src, align = 'center', style = '' }) {
-      const images = this.images.filter(img => !img.id || img.id !== id);
       const path = `${this.imgRoot}/${src}`;
+      const images = this.images.filter(img => img.src !== path && (!img.id || img.id !== id));
       // TODO: Vertical align...
       images.push({ id, src: path, style, position: { vertical: 'center', horizontal: align } });
       this.images = images;
     },
-    clearImage({ id }) {
-      this.images = this.images.filter(img => img.id !== id);
+    clearImage({ id, src }) {
+      if (src) {
+        const path = `${this.imgRoot}/${src}`;
+        this.images = this.images.filter(img => img.src !== path);
+      } else {
+        this.images = this.images.filter(img => img.id !== id);
+      }
     },
     setSceneText({ text }) {
       // todo?
+    },
+    executeAnimation({ target, vars }) {
+      gsap.to(`#${target}`, vars);
     },
     showGame({ text, url, cta }) {
       this.isLastGameFinished = false;

@@ -4,6 +4,16 @@ class Action {
   }
 }
 
+export class AnimationAction extends Action {
+  constructor({ vars, target, ...rest }) {
+    super(rest);
+    this.target = target;
+    this.type = 'animation';
+    this.vars = vars;
+    this.autoProgress = true;
+  }
+}
+
 export class BackgroundAction extends Action {
   constructor({ src, style, ...rest }) {
     super(rest);
@@ -83,6 +93,7 @@ export class ActionFactory {
     DialogAction,
     GameAction,
     ClearImageAction,
+    AnimationAction,
   }
 
   static create({ type, ...props }) {
