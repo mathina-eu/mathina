@@ -157,6 +157,14 @@ export default {
 
     document.addEventListener('keydown', this.keydownListener);
     this.executeCurrentAction();
+
+    // If there's an action link (eg url query has ?actionLink=5), execute up to actionLink
+    const actionLink = this.$route.query['actionLink'];
+    if (actionLink && actionLink < this.actions.length) {
+      while (this.currentActionId < actionLink) {
+        this.next();
+      }
+    }
   },
   destroyed() {
     document.removeEventListener('keydown', this.keydownListener);
