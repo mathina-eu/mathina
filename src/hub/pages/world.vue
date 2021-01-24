@@ -1,5 +1,5 @@
 <template>
-  <GameView>
+  <StoryView>
     <div class="worldmap">
       <v-menu
         v-for="city in cities"
@@ -45,16 +45,16 @@
         </v-list>
       </v-menu>
     </div>
-  </GameView>
+  </StoryView>
 </template>
 
 <script>
 import constants from '~/constants';
-import GameView from '~/components/GameView';
+import StoryView from '~/components/StoryView';
 
 export default {
   components: {
-    GameView
+    StoryView,
   },
   computed: {
     cities() {

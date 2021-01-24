@@ -1,7 +1,11 @@
+import { gsap } from 'gsap';
+
 class Action {
   constructor(props) {
     this.autoProgress = false;
   }
+
+  execute() {}
 }
 
 export class AnimationAction extends Action {
@@ -11,6 +15,11 @@ export class AnimationAction extends Action {
     this.type = 'animation';
     this.vars = vars;
     this.autoProgress = true;
+  }
+
+  execute() {
+    super.execute();
+    gsap.to(`#${this.target}`, this.vars);
   }
 }
 
@@ -22,18 +31,44 @@ export class BackgroundAction extends Action {
     this.src = src;
     this.autoProgress = true;
   }
+
+  execute(context) {
+    super.execute();
+    const path = `${context.imgRoot}/bg/${this.src}`;
+    const bgs = context.backgrounds.filter(bg => bg.src !== path);
+    context.backgrounds = [...bgs, { src: path, style: this.style }];
+  }
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, style, autoProgress, ...rest }) {
+  constructor({ id, src, align, valign, style, autoProgress, ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
     this.src = src;
     this.align = align ? align : 'center';
+    this.valign = valign ? valign : 'center';
     this.style = style;
-    console.log('Auto Progress', autoProgress, true, false, 'true');
     this.autoProgress = autoProgress !== 'false';
+  }
+
+  execute(context) {
+    super.execute();
+    const path = `${context.imgRoot}/${this.src}`;
+
+    if (context.activeDirection === 'back') {
+      context.images = context.images.filter(img => img.src !== path);
+      return;
+    }
+
+    const images = context.images.filter(img => img.src !== path && (!img.id || img.id !== this.id));
+    images.push({
+      id: this.id,
+      src: path,
+      style: this.style,
+      position: { vertical: this.valign, horizontal: this.align }
+    });
+    context.images = images;
   }
 }
 
@@ -65,6 +100,12 @@ export class DialogAction extends Action {
 
     this.avatarAlign = avatarAlign;
   }
+
+  execute(context) {
+    super.execute();
+    context.dialog.entries = this.entries;
+    context.dialog.current = 0;
+  }
 }
 
 export class GameAction extends Action {
@@ -75,6 +116,11 @@ export class GameAction extends Action {
     this.cta = cta;
     this.url = url;
   }
+
+  execute(context) {
+    super.execute();
+    context.isLastGameFinished = false;
+  }
 }
 
 export class ClearImageAction extends Action {
@@ -82,6 +128,18 @@ export class ClearImageAction extends Action {
     super(rest);
     this.type = 'clearImage';
     this.id = id;
+    this.autoProgress = true;
+  }
+
+  execute(context) {
+    super.execute();
+
+    if (this.src) {
+      const path = `${context.imgRoot}/${this.src}`;
+      context.images = context.images.filter(img => img.src !== path);
+    } else {
+      context.images = context.images.filter(img => img.id !== this.id);
+    }
   }
 }
 

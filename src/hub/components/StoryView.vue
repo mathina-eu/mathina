@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'GameView'
+  name: 'StoryView'
 };
 </script>
 

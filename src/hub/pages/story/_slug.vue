@@ -1,122 +1,30 @@
 <template>
-  <GameView>
-    <div
-      ref="storyRoot"
-      class="root"
-    >
-      <div class="backgrounds">
-        <div class="backgrounds__images">
-          <img
-            v-for="bg in backgrounds"
-            :key="bg.src"
-            :src="bg.src"
-            :style="bg.style"
-          >
-        </div>
-      </div>
-      <div class="images-wrapper">
-        <transition-group
-          appear
-          name="fade"
-          tag="div"
-        >
-          <img
-            v-for="image in images"
-            :id="image.id"
-            :key="image.src"
-            :src="image.src"
-            :class="`images-wrapper__image--${image.position.horizontal} images-wrapper__image--vertical-${image.position.vertical}`"
-            class="images-wrapper__image"
-            :style="image.style"
-          >
-        </transition-group>
-      </div>
+  <StoryView>
+    <div class="root">
+      <StoryBackgrounds :backgrounds="backgrounds" />
+      <StoryImages :images="images" />
       <div class="text-wrapper mt-16">
-        <div
+        <StoryDialog
           v-if="isDialogMode"
-          class="dialog"
-        >
-          <StoryDialog v-bind="activeDialog" />
-        </div>
-        <div v-if="isSceneTextMode">
-          <v-card max-width="600">
-            <v-card-text class="text-body-1">
-              <div v-html="action.text" />
-            </v-card-text>
-          </v-card>
-        </div>
-        <div
-          v-if="isGameMode"
-          class="game-overview"
-        >
-          <v-card width="600">
-            <v-toolbar
-              color="primary"
-              dark
-            >
-              <v-spacer />
-              <v-toolbar-title>{{ action.text }}</v-toolbar-title>
-              <v-spacer />
-            </v-toolbar>
-            <v-card-actions class="py-8">
-              <v-spacer />
-              <v-dialog
-                v-model="showGameDialog"
-                fullscreen
-                hide-overlay
-                transition="dialog-bottom-transition"
-              >
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn
-                    color="primary"
-                    dark
-                    v-bind="attrs"
-                    v-on="on"
-                  >
-                    {{ action.cta }}
-                  </v-btn>
-                </template>
-                <v-card>
-                  <v-toolbar
-                    dark
-                    color="primary"
-                  >
-                    <v-btn
-                      icon
-                      dark
-                      @click="showGameDialog=false;isLastGameFinished=true;"
-                    >
-                      <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                    <v-toolbar-title>{{ action.text }}</v-toolbar-title>
-                    <v-spacer />
-                    <v-toolbar-items>
-                      <v-btn
-                        dark
-                        text
-                        @click="showGameDialog=false;isLastGameFinished=true;"
-                      >
-                        Finish
-                      </v-btn>
-                    </v-toolbar-items>
-                  </v-toolbar>
-                  <iframe
-                    v-if="showGameDialog"
-                    :src="action.url"
-                    class="game"
-                  />
-                </v-card>
-              </v-dialog>
-              <v-spacer />
-            </v-card-actions>
-          </v-card>
-        </div>
+          v-bind="activeDialog"
+        />
+        <SceneText
+          v-else-if="isSceneTextAction"
+          :text="action.text"
+        />
+        <GameView
+          v-else-if="isGameMode"
+          :text="action.text"
+          :url="action.url"
+          :cta="action.cta"
+          @lastGameFinished="isLastGameFinished=true"
+        />
         <div>
           <v-btn
             v-if="!isFirstAction"
             class="mt-12"
-            title="You can use the right arrow on your keyboard as well!"
-            @click="devPrev"
+            title="You can use the left arrow on your keyboard as well!"
+            @click="back"
           >
             <v-icon
               class="mr-1"
@@ -148,24 +56,23 @@
         </v-btn>
       </div>
     </div>
-  </GameView>
+  </StoryView>
 </template>
 
 <script>
-import { gsap } from 'gsap';
 import yaml from 'js-yaml';
 import constants from '~/constants';
+import StoryView from '~/components/StoryView';
 import StoryDialog from '~/components/story/StoryDialog';
-import GameView from '~/components/GameView';
+import SceneText from '~/components/story/SceneText';
+import GameView from '~/components/story/GameView';
+import StoryBackgrounds from '~/components/story/StoryBackgrounds';
+import StoryImages from '~/components/story/StoryImages';
 import {
   ActionFactory,
-  BackgroundAction,
-  ImageAction,
   SceneTextAction,
   DialogAction,
   GameAction,
-  ClearImageAction,
-  AnimationAction,
 } from '~/components/story/action-types';
 
 const BACK = 'back';
@@ -173,6 +80,10 @@ const NEXT = 'next';
 
 export default {
   components: {
+    StoryImages,
+    StoryBackgrounds,
+    StoryView,
+    SceneText,
     GameView,
     StoryDialog,
   },
@@ -199,7 +110,6 @@ export default {
         current: null,
       },
       backgrounds: [],
-      devDirection: this.next,
       activeDirection: NEXT,
       showGameDialog: false,
       isLastGameFinished: true,
@@ -221,7 +131,7 @@ export default {
       }
       return {};
     },
-    isSceneTextMode() {
+    isSceneTextAction() {
       return this.action instanceof SceneTextAction;
     },
     isDialogMode() {
@@ -257,12 +167,10 @@ export default {
       if (key === 'ArrowRight' || keyCode === 39) {
         this.next();
       } else if (key === 'ArrowLeft') {
-        this.devPrev();
+        this.back();
       }
     },
-    // TODO: Backwards direction is a bit broken for some actions. Use for dev purposes only for now.
-    devPrev() {
-      this.devDirection = this.devPrev;
+    back() {
       this.activeDirection = BACK;
 
       if (this.action instanceof DialogAction) {
@@ -281,7 +189,6 @@ export default {
       this.executeCurrentAction();
     },
     next() {
-      this.devDirection = this.next;
       this.activeDirection = NEXT;
 
       if (this.action instanceof DialogAction) {
@@ -296,41 +203,19 @@ export default {
       this.currentActionId++;
       this.executeCurrentAction();
     },
-    executeCurrentAction() {
-      console.info('Executing:', this.action);
-
-      // TODO: This can be refactor to something reasonable...
-      if (this.action instanceof DialogAction) {
-        this.actionDialog(this.action);
-      } else if (this.action instanceof BackgroundAction) {
-        this.setBackground(this.action);
-        // auto progress
-        this.devDirection();
-      } else if (this.action instanceof ImageAction) {
-        if (this.activeDirection === BACK) {
-          this.clearImage({ src: this.action.src });
-        } else {
-          this.setImage(this.action);
-        }
-        // auto progress
-        this.devDirection();
-      } else if (this.action instanceof ClearImageAction) {
-        this.clearImage(this.action);
-        // auto progress
-        this.devDirection();
-      } else if (this.action instanceof SceneTextAction) {
-        this.setSceneText(this.action);
-      } else if (this.action instanceof GameAction) {
-        this.showGame(this.action);
-      } else if (this.action instanceof AnimationAction) {
-        this.executeAnimation(this.action);
-        // auto progress
-        this.devDirection();
+    autoProgress() {
+      if (this.activeDirection === NEXT) {
+        this.next();
+      } else {
+        this.back();
       }
     },
-    actionDialog({ entries }) {
-      this.dialog.entries = entries;
-      this.dialog.current = 0;
+    executeCurrentAction() {
+      // TODO: Back action for "Clear image"...
+      this.action.execute(this);
+      if (this.action.autoProgress) {
+        this.autoProgress();
+      }
     },
     progressDialog() {
       if (this.dialog.current + 1 >= this.dialog.entries.length) {
@@ -340,35 +225,6 @@ export default {
       // Progress dialog
       this.dialog.current++;
       return true;
-    },
-    setBackground({ src, style }) {
-      const path = `${this.imgRoot}/bg/${src}`;
-      const bgs = this.backgrounds.filter(bg => bg.src !== path);
-      this.backgrounds = [...bgs, { src: path, style }];
-    },
-    setImage({ id, src, align = 'center', style = '' }) {
-      const path = `${this.imgRoot}/${src}`;
-      const images = this.images.filter(img => img.src !== path && (!img.id || img.id !== id));
-      // TODO: Vertical align...
-      images.push({ id, src: path, style, position: { vertical: 'center', horizontal: align } });
-      this.images = images;
-    },
-    clearImage({ id, src }) {
-      if (src) {
-        const path = `${this.imgRoot}/${src}`;
-        this.images = this.images.filter(img => img.src !== path);
-      } else {
-        this.images = this.images.filter(img => img.id !== id);
-      }
-    },
-    setSceneText({ text }) {
-      // todo?
-    },
-    executeAnimation({ target, vars }) {
-      gsap.to(`#${target}`, vars);
-    },
-    showGame({ text, url, cta }) {
-      this.isLastGameFinished = false;
     },
   },
 };
@@ -381,43 +237,6 @@ export default {
   position: relative;
 }
 
-.images-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-
-  &__image {
-    max-width: 450px;
-    position: absolute;
-    top: 30%;
-
-    &--left {
-      left: 1rem;
-    }
-
-    &--center {
-      left: 40%;
-    }
-
-    &--right {
-      right: 1rem;
-    }
-
-    &--vertical-bottom {
-      bottom: 1rem;
-    }
-
-    &--vertical-center {
-      top: 40%;
-    }
-
-    &--vertical-top {
-      top: 1rem;
-    }
-  }
-}
-
 .text-wrapper {
   position: absolute;
   width: 100%;
@@ -426,35 +245,5 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 500ms;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.game {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 64px);
-  overflow: hidden;
-}
-
-.backgrounds {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-
-  &__images {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
 }
 </style>
