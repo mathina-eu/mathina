@@ -84,10 +84,10 @@ export class DialogAction extends Action {
   /**
    *
    * @param {{text: String, char: String, [mood]: String}[]} entries
-   * @param {Object} avatarAlign - { mathina: 'right', wizard: 'left', ... }
+   * @param {Object}
    * @param rest
    */
-  constructor({ entries, avatarAlign, ...rest }) {
+  constructor({ entries, ...rest }) {
     super(rest);
     this.type = 'dialog';
     this.entries = entries.map(({ text, char, mood }) => {
@@ -97,8 +97,6 @@ export class DialogAction extends Action {
         mood: mood ? mood : 'normal',
       };
     });
-
-    this.avatarAlign = avatarAlign;
   }
 
   execute(context) {

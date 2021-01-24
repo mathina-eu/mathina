@@ -34,9 +34,6 @@ actions:
       yPercent: -10
       ease: power3.out
   - type: dialog
-    avatarAlign:
-      - wizard: right
-      - mathina: left
     entries:
       - text: "I love these toys!"
         char: mathina
@@ -117,9 +114,6 @@ actions:
   - type: clearImage
     id: c1-5
   - type: dialog
-    avatarAlign:
-      - mathina: left
-      - wizard: right
     entries:
       - text: "It's not a good toy! –  explains the wizard."
         char: wizard

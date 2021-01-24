@@ -4,9 +4,6 @@ actions:
       <p>Lorem ipsum</p>
       <p>Lorem ipsum dolores est</p>
   - type: dialog
-    avatarAlign:
-      - wizard: right
-      - mathina: left
     entries:
       - text: "I love these toys!"
         char: mathina

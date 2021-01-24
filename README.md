@@ -78,9 +78,6 @@ actions:
         <p>Lorem ipsum</p>
         <p>Lorem ipsum dolores est</p>
     - type: dialog
-      avatarAlign:
-        - wizard: right
-        - mathina: left
       entries:
         - text: "I love these toys!"
           char: mathina
@@ -140,15 +137,19 @@ CITIES: {
 
 ### Supported Story Actions
 
+*NOTE*: **BOLD** properties are required.
+
 #### Set background
 
-Sets full screen background for story, replacing any previous backgrounds.
+Sets a background image. Multiple background images can be set. Use the **style** property to set 
+z-index, positioning and other attributes for each layer if needed.
 
 **Example**
 
 ```yaml
 - type: background
   src: c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
 ```
 
 **Params**
@@ -156,7 +157,8 @@ Sets full screen background for story, replacing any previous backgrounds.
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `background` | action type |
-| **src** | <string> path | Filename. File should be located in `$STORY_DIR/img/bg/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
+| style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
 
 #### Set image
 
@@ -168,7 +170,9 @@ Display an image.
 - type: image
   src: c1-5.png
   id: c1-5
-  position: center
+  align: center
+  valign: bottom
+  style: "width: 20%;"
 ```
 
 **Params**
@@ -176,9 +180,36 @@ Display an image.
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `image` | action type |
-| **src** | <string> path | Filename. File should be located in `$STORY_DIR/img/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/` |
 | id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
-| position | center, left, right | Horizontal alignment of image (*WIP*: Subject to change) |
+| align | center, left, right | Horizontal alignment of image |
+| valign | bottom, center, left | Vertical alignment of image |
+| style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
+
+#### Animate Image
+
+Animate an image using [gsap to()](https://greensock.com/docs/v3/GSAP/gsap.to()). 
+Specify gsap animation properties as the vars property.
+
+**Example**
+
+```yaml
+- type: animation
+  target: c1-5
+  vars:
+    duration: 3
+    xPercent: 85
+    yPercent: -10
+    ease: power3.out
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `animation` | action type |
+| **target** | Valid id `<string>` | id of the image to animate. Should be set as `id` param when adding image via image action type. |
+| **vars** | gsap to() params `<object>` | See GSAP documentation for possible values https://greensock.com/docs/v3/GSAP/gsap.to() |
 
 #### Clear image
 
@@ -196,7 +227,7 @@ Remove an image.
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `clearImage` | action type |
-| **id** | Valid id <string> | id of image to remove. Should be set as `id` param when adding image. |
+| **id** | Valid id `<string>` | id of image to remove. Should be set as `id` param when adding image. |
 
 #### Set Scene Description Text
 
@@ -214,7 +245,7 @@ Display a passive text, that's meant to describe what's happening and set up a g
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `sceneText` | action type |
-| **text** | Any <string> | Text which can also include html tags like <p></p>, etc |
+| **text** | Any `<string>` | Text which can also include html tags like <p></p>, etc |
 
 #### Display Dialog
 
@@ -232,9 +263,6 @@ Dialog entries support various moods which use images defined in `src/hub/static
     - text: "Some have defects!"
       char: wizard
       mood: sad
-  avatarAlign:
-    - wizard: right
-    - mathina: left
 ```
 
 **Params**
@@ -242,14 +270,13 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `dialog` | action type |
-| **entries** | <array of Entries> | Dialog entries |
-| avatarAlign (Not implemented yet!) | <obj> {char: direction} | Direction the character's avatar is facing |
+| **entries** | `<array>` of Entries | Dialog entries |
 
 **Entries**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
-| **text** | Any <string> | action type |
+| **text** | Any `<string>` | action type |
 | **char** | mathina, wizard, ... | id of a supported character |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
 
@@ -269,6 +296,6 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `game` | action type |
-| **text** | Any <string> | Game description |
+| **text** | Any `<string>` | Game description |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
-| cta | A short <string> | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
+| cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
