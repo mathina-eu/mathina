@@ -88,7 +88,6 @@ export default {
     StoryDialog,
   },
   async asyncData({ $axios, params }) {
-    // Note: app used instead of 'this' as, 'this' is not available yet in asyncData
     const story = constants.STORIES.find(({ slug }) => slug === params.slug);
     const { data } = await $axios.get(`/stories/${story.id}/actions.yaml`);
     const { actions } = yaml.load(data);

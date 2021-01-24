@@ -9,6 +9,8 @@
     "generate": "nuxt generate --config-file src/hub/nuxt.config.js -p=3000",
     "hub:dev": "yarn run dev",
     "hub:generate": "yarn run generate",
+    "edu:dev": "nuxt --config-file src/educators/nuxt.config.js -p=3002",
+    "edu:generate": "nuxt generate --config-file src/educators/nuxt.config.js -p=3002",
     "app:dev": "nuxt --config-file src/app/nuxt.config.js -p=3001",
     "app:generate": "nuxt generate --config-file src/app/nuxt.config.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",

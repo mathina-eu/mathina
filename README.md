@@ -31,7 +31,17 @@ $ npx http-server dist/hub
 
 ## Other Options
 
-POC: Working with Apps
+### Proof of Concept (POC): Educator's Repository
+
+```bash
+# dev
+yarn edu:dev
+# prod
+yarn edu:generate
+npx http-server dist/edu
+```
+
+### POC: Working with Apps
 
 ```bash
 # dev
