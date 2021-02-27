@@ -108,6 +108,23 @@ export default {
           name: '[path][name].[ext]'
         }
       });
+      // TODO: If we want to load .md files at build time, but current method loads async
+      // config.module.rules.push({
+      //   test: /\.md$/,
+      //   loaders: [
+      //     'vue-loader',
+      //     {
+      //       loader: 'vue-md-loader',
+      //       options: {
+      //         plugins: [
+      //           // require('markdown-it-html5-media'),
+      //           require('markdown-it-table-of-contents'),
+      //         ]
+      //         // your preferred options
+      //       }
+      //     }
+      //   ],
+      // });
     },
     postcss: {
       plugins: {

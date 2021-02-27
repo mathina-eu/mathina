@@ -112,7 +112,7 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="blue darken-3"
+      color="purple darken-3"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -126,7 +126,7 @@
             text
             nuxt
           >
-            Mathina
+            Mathina Educator Repository
           </v-btn>
           <v-btn
             v-for="({ path, text }, iteration) in $store.state.breadcrumbs"

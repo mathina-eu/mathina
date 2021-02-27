@@ -1,24 +1,29 @@
 <template>
-  <v-row align="center">
+  <v-row>
     <v-col
-      class="text-center"
       cols="8"
       offset="2"
     >
-      <v-card>
-        <v-card-title>
-          Educator View
-        </v-card-title>
-        <v-card-text>
-          Some Text
-          <a
-            href="https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12"
-            target="_blank"
-          >
-            Link to First Game in Story
-          </a>
-        </v-card-text>
-      </v-card>
+      <MarkdownView :md-path="mdPath" />
     </v-col>
   </v-row>
 </template>
+
+<script>
+import MarkdownView from '@/components/MarkdownView';
+import constants from '~/constants';
+
+export default {
+  components: {
+    MarkdownView
+  },
+  data() {
+    const story = constants.STORIES.find(({ slug }) => slug === this.$route.params.slug);
+
+    return {
+      mdPath: `/stories/${story.id}/content.md`,
+    };
+  },
+};
+
+</script>
