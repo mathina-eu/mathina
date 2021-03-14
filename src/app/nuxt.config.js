@@ -4,7 +4,7 @@ import sharedConfig from '../shared/nuxt.config';
 // TODO: fix no .env file found error
 // const BASE_PATH = '/';
 // const PUBLIC_PATH = '/';
-const distFolder = 'app';
+const distFolder = 'example-app';
 
 // const IS_DEV = process.env.NODE_ENV !== 'production';
 
@@ -18,5 +18,6 @@ export default {
   globalName: 'app',
   build: {
     ...sharedConfig.build,
+    publicPath: '/apps/example-app/',
   }
 };

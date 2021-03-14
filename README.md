@@ -421,4 +421,8 @@ yarn app:generate
 npx http-server dist/app
 ```
 
+If you want to use the example app, you should run `yarn app:generate`, then move `dist/example-app/` to 
+`src/hub/static/apps/example-app/`. You can then use this app in stories' **yaml** files with url `/apps/example-app/`.
+
+
 For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).
