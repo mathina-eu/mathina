@@ -1,18 +1,18 @@
 export default {
   '0': {
     title: '4-6',
-    icon: '4',
+    icon: '1',
   },
   '1': {
     title: '7-10',
-    icon: '7',
+    icon: '2',
   },
   '2': {
     title: '11-14',
-    icon: '11',
+    icon: '3',
   },
   '3': {
     title: '15-19+',
-    icon: '15',
+    icon: '4',
   },
 };

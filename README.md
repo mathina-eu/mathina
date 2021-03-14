@@ -72,11 +72,11 @@ $ npx http-server dist/hub
 **Story definitions** are located in `src/hub/static/stories/`
 **Per story assets** such as backgrounds, sprites, ... are located in the story's directory such as `img/`
 
-> Example structure for story with id `sym-4-6`
+> Example structure for story with id `symm-1`
 
 ```
 stories/
-    sym-4-6/
+    symm-1/
         img/
         actions.yaml
 ```
@@ -141,7 +141,7 @@ CITIES: {
   'island': {
     name: 'Buccaneer Island',
     slug: 'island',
-    stories: ['sym-4-6'],
+    stories: ['symm-1'],
   },
   // ...
 }
@@ -151,7 +151,7 @@ CITIES: {
   'island': {
     name: 'Buccaneer Island',
     slug: 'island',
-    stories: ['sym-4-6', 'demo-story'],
+    stories: ['symm-1', 'demo-story'],
   },
   // ...
 }
@@ -367,6 +367,8 @@ For supported syntax see this [example](https://raw.githubusercontent.com/mathin
 
 ### Example: Adding Story Educator guides
 
+Story ID's should be based on the ID in [Story Index Document](https://docs.google.com/spreadsheets/d/1UEhZXMXJSGjwBbRu_AKIY0BM1-qVh2dfz4ZcU8Cr5zs/edit#gid=0)
+
 1. Identify the **id** of the story you're working with. You can find it in `src/hub/story-meta.js`.
 2. Create a directory in `src/educators/static/stories/<story-id>/`
 3. Create a `content.md` file and write some Markdown.
@@ -418,5 +420,9 @@ yarn app:dev
 yarn app:generate
 npx http-server dist/app
 ```
+
+If you want to use the example app, you should run `yarn app:generate`, then move `dist/example-app/` to 
+`src/hub/static/apps/example-app/`. You can then use this app in stories' **yaml** files with url `/apps/example-app/`.
+
 
 For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).

@@ -87,7 +87,7 @@ export default {
 
   &__city {
     position: absolute;
-    z-index: 10;
+    z-index: 7;
 
     &--island {
       bottom: 22%;
