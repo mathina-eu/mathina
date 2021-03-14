@@ -1,64 +1,76 @@
-# mathina
+* [Summary](#summary)
+  * [Mathian Hub Summary](#mathina-hub-summary)
+  * [Standalone Apps Summary](#standalone-apps-summary)
+  * [The Educator's Repository Summary](#the-educators-repository-summary)
+* [Mathina Hub](#mathina-hub)
+  * [Quick Start](#quick-start)
+  * [Working with stories](#working-with-stories)
+  * [Supported Actions](#supported-story-actions)
+* [Educator's Repository](#educators-repository)
+  * [Quick Start - Edu](#quick-start---edu)
+  * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
+* [Standalone Apps](#standalone-apps)
+* [Extra: Example App](#extra-demo-app)
 
-## Mathina Hub
+# Summary
 
-The Hub is the main mathina web interface which implements:
-* Interface
+The three main components of this repository are:
+* Mathina Hub
+* Standalone Apps
+* The Educator's Repository
+
+## Mathina Hub Summary
+
+The Hub is the main Mathina web page, meant to be used by students, which implements:
+* The Mathina World webpage interface
 * Stories
 * Cities
-* ...
 
-## Mathina Apps
+The source code is located in `/src/hub/`.
 
-*NOTE*: Just a proof of concept for project setup for now.
-An example standalone app's structure is in `/src/app/`
+For development guidelines [see here](#mathina-hub).
 
-## Basic Usage
+## Standalone Apps Summary
 
-You'll need [node](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+Stories in Mathina include standalone apps via iframe. 
 
+These apps are located in `/src/hub/static/apps/`. For working with apps [see here](#working-with-apps)
+
+## The Educator's Repository Summary
+
+The educator's repository is an instructional tool for educator's to help students use the Hub.
+
+The source code is located in `src/educators/`. For working with the edu repository [see here](#educators-repository)
+
+# Mathina Hub
+
+## Quick start
+
+You'll need to set up [node](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+
+Then install dependencies (You generally only need to do this once):
 ``` bash
-# install dependencies
 $ yarn install
+```
 
-# Development: serve with hot reload at localhost:3000
+To start a development server on port **3000** (localhost:3000) use:
+``` bash
 $ yarn dev
+```
 
-# Production: build for production and launch local server (to test locally)
+To generate or preview production builds you can use:
+``` bash
 $ yarn generate
+# launch local server
 $ npx http-server dist/hub
 ```
-
-## Other Options
-
-### Proof of Concept (POC): Educator's Repository
-
-```bash
-# dev
-yarn edu:dev
-# prod
-yarn edu:generate
-npx http-server dist/edu
-```
-
-### POC: Working with Apps
-
-```bash
-# dev
-yarn app:dev
-# prod
-yarn app:generate
-npx http-server dist/app
-```
-
-For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 ## Working with Stories
 
 ### File Location
 
 **Story definitions** are located in `src/hub/static/stories/`
-**Per story assets** such as backgrounds, sprites, ... are located in the story's subfolders such as `img/`
+**Per story assets** such as backgrounds, sprites, ... are located in the story's directory such as `img/`
 
 > Example structure for story with id `sym-4-6`
 
@@ -145,11 +157,11 @@ CITIES: {
 }
 ```
 
-### Supported Story Actions
+## Supported Story Actions
 
 *NOTE*: **BOLD** properties are required.
 
-#### Set background
+## Set background
 
 Sets a background image. Multiple background images can be set. Use the **style** property to set 
 z-index, positioning and other attributes for each layer if needed.
@@ -170,7 +182,7 @@ z-index, positioning and other attributes for each layer if needed.
 | **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
 
-#### Set image
+### Set image
 
 Display an image.
 
@@ -196,7 +208,7 @@ Display an image.
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
 
-#### Animate Image
+### Animate Image
 
 Animate an image using [gsap to()](https://greensock.com/docs/v3/GSAP/gsap.to()). 
 Specify gsap animation properties as the vars property.
@@ -221,7 +233,7 @@ Specify gsap animation properties as the vars property.
 | **target** | Valid id `<string>` | id of the image to animate. Should be set as `id` param when adding image via image action type. |
 | **vars** | gsap to() params `<object>` | See GSAP documentation for possible values https://greensock.com/docs/v3/GSAP/gsap.to() |
 
-#### Clear image
+### Clear image
 
 Remove an image.
 
@@ -239,7 +251,7 @@ Remove an image.
 | **type** | `clearImage` | action type |
 | **id** | Valid id `<string>` | id of image to remove. Should be set as `id` param when adding image. |
 
-#### Set Scene Description Text
+### Set Scene Description Text
 
 Display a passive text, that's meant to describe what's happening and set up a game or dialog.
 
@@ -257,7 +269,7 @@ Display a passive text, that's meant to describe what's happening and set up a g
 | **type** | `sceneText` | action type |
 | **text** | Any `<string>` | Text which can also include html tags like <p></p>, etc |
 
-#### Display Dialog
+### Display Dialog
 
 Display Dialog between characters.
 
@@ -290,7 +302,7 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | **char** | mathina, wizard, ... | id of a supported character |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
 
-#### Game
+### Game
 
 **Example**
 
@@ -309,3 +321,102 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | **text** | Any `<string>` | Game description |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
+
+
+# Educator's Repository
+
+The Educator's repository is code dependant on the Hub to allow for a single point of entry when
+defining cities, stories, urls etc.
+
+## Quick start - Edu
+
+You'll need to set up [node](https://nodejs.org/en/download/) and [yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+
+Then install dependencies (You generally only need to do this once):
+``` bash
+$ yarn install
+```
+
+To start a development server on port **3002** (localhost:3002) use:
+``` bash
+$ yarn edu:dev
+```
+
+To generate or preview production builds you can use:
+``` bash
+$ yarn edu:generate
+# launch local server
+$ npx http-server dist/hub
+```
+```bash
+# dev
+yarn edu:dev
+# prod
+yarn edu:generate
+npx http-server dist/edu
+```
+
+## Working with Content in Educator's Repository
+
+Adding content to the Repository is done by adding
+[Markdown](https://www.markdownguide.org/) files to the appropriate directory.
+
+### Supported Syntax
+
+For supported syntax see this [example](https://raw.githubusercontent.com/mathina-eu/mathina/master/src/educators/static/stories/demo-story/content.md).
+
+### Example: Adding Story Educator guides
+
+1. Identify the **id** of the story you're working with. You can find it in `src/hub/story-meta.js`.
+2. Create a directory in `src/educators/static/stories/<story-id>/`
+3. Create a `content.md` file and write some Markdown.
+
+You can see some example content for the `demo-story` at
+https://edu.zabkar.net/story/demo-story-url-path/
+
+### Images
+
+As a convention you should add images to the story's `img` subdirectory.
+
+### Videos
+
+As a convention you should add videos to the story's `video` subdirectory.
+
+# Standalone Apps
+
+Standalone Apps are prepackaged bundles meant to be executed within Hub stories via iframes.
+
+Apps should be added to `/src/hub/static/apps/<app-id>`. 
+The app id should be unique, containing only small letters, numbers, hyphens and underscores.
+
+An App is used within a Hub's story via a [Game Action](#game) definition.
+
+## Example
+
+Let's say you're adding an App, and you choose the id `demo-app`.
+1. Create a directory `/src/hub/static/apps/demo-app/`
+2. Add your app bundle. It's recommended the app can be started via an index.html in the root of `demo-app/`
+3. Use your app in a story's `actions.yaml` file.
+
+```yaml
+  - type: game
+    text: "Is the following image good (i.e. symmetric)?"
+    cta: "Try it yourself!"
+    url: /apps/demo-app/
+```
+
+The **url** can be either a relative path (recommended) or an absolute path. If relative, start with /apps/...
+
+# Extra: Example App
+
+To use the example app, see:
+
+```bash
+# dev
+yarn app:dev
+# prod
+yarn app:generate
+npx http-server dist/app
+```
+
+For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).
