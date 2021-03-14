@@ -346,7 +346,7 @@ To generate or preview production builds you can use:
 ``` bash
 $ yarn edu:generate
 # launch local server
-$ npx http-server dist/hub
+$ npx http-server dist/edu
 ```
 ```bash
 # dev
@@ -418,7 +418,7 @@ To use the example app, see:
 yarn app:dev
 # prod
 yarn app:generate
-npx http-server dist/app
+npx http-server dist/example-app
 ```
 
 If you want to use the example app, you should run `yarn app:generate`, then move `dist/example-app/` to 
