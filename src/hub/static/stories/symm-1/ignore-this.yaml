@@ -1,5 +1,5 @@
 actions:
-# TODO: Need to adapt chapter2 to proper formatting / properties (remove script:, etc)
+# TODO: Just a temporary leftover from an outdated implementation, needs to be refactored to a chapterless setup, remove script:, etc
 #  - title: "Building toys"
 #    script:
 #      actions:
