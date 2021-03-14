@@ -12,7 +12,7 @@
     "edu:dev": "nuxt --config-file src/educators/nuxt.config.js -p=3002",
     "edu:generate": "nuxt generate --config-file src/educators/nuxt.config.js -p=3002",
     "app:dev": "nuxt --config-file src/app/nuxt.config.js -p=3001",
-    "app:generate": "nuxt generate --config-file src/app/nuxt.config.js",
+    "app:generate": "nuxt generate --config-file src/app/nuxt.config.js && src/app/build-mod.sh",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },

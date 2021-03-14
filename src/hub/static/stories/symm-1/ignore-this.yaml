@@ -1,0 +1,97 @@
+actions:
+# TODO: Just a temporary leftover from an outdated implementation, needs to be refactored to a chapterless setup, remove script:, etc
+#  - title: "Building toys"
+#    script:
+#      actions:
+#        - type: background
+#          asset: c2-bg1.jpg
+#        - type: sceneText
+#          text: >
+#            After the game, Mathina puts her toys in another box. She gained so many new cuddly toys, that she is having
+#            a hard time carrying them! When she is trying to drag the box out of the stall, Mathina hears her name!
+#        - type: dialog
+#          cls: True
+#          text: "Mathina, Mathina! –  Leo has just arrived at Symmetry Fair!"
+#          img: c2-1.png
+#        - type: dialog
+#          texts:
+#            - "Leo, you won't believe it! I just got a lot of new toys! –  says Mathina."
+#            - "Really?? –  asks Leo."
+#            - "Yes, I just had to help the wizard choosing some toys! –  explains to Mathina."
+#        - type: dialog
+#          cls: True
+#          img: c2-2.png
+#          texts:
+#            - "The wizard, who is listening to their conversation, exclaims:
+#                And you can get a lot more new toys if you want!"
+#            - "Really?? – Mathina and Leo ask at the same time."
+#            - "Yes! You just have to help me finish the toys which I'm building! – explains the wizard  – and you can
+#                get half of the toys at the end!"
+#            - "The wizard continues: There are two types of toys: some of them are more difficult to build than the
+#                others. Which do you prefer?"
+#            - "The difficult ones – exclaims Leo immediately."
+#            - "The easier ones – says Mathina."
+#            - "Ok, Leo, please go to the next stall, where you can build the toys. Mathina, please stay with me – says the wizard."
+#        - type: dialog
+#          cls: True
+#          texts:
+#            - "The wizard continues: Look, Mathina, I’m building a dollhouse!"
+#            - Can you continue? – asks the wizard.
+#          img: c2-3.png
+#        - type: sceneText
+#          text: Mathina tries to finish the dollhouse, but whenever she drags a piece and places it in a square, the piece just runs away!
+#        - type: dialog
+#          texts:
+#            - What am I doing wrong? – Mathina is feeling sad!
+#            - Mathina, never forget that in Symmetry Fair … everything must be symmetric!
+#        - type: dialog
+#          text: "The wizard continues: Let me help you!"
+#        - type: animation
+#          variant: image
+#          src: c2-anim-1.png
+#        - type: dialog
+#          text: "Ok, I got it! – exclaims Mathina excitedly – I’m going to finish the toys!"
+#        - type: game
+#          instructions: >
+#            Instruction for the user: “How can Mathina finish the toys? You just need to drag some of
+#            the colored figures and put them in the adequate gray squares.”
+#          cta: "Try it yourself!"
+#          preview: c2-g1-prev.png
+#          src: https://www.atractor.pt/temp/apps-tests/geoplano_polys0.html
+#        - type: dialog
+#          cls: true
+#          text: "I’ve done it! – exclaims Mathina while gathering all the new toys she collected. – I wonder how Leo is getting along!"
+#        - type: sceneText
+#          text: >
+#            Mathina crosses the door and enters the room where Leo is trying, in vain, to finish his toys. Leo is
+#            talking loudly, and she seems angry!
+#        - type: dialog
+#          texts:
+#            - "Why isn’t this working? Why isn’t this working? – Leo asks while trying to finish a toy, but always failing."
+#            - "What’s the matter, Leo? – asks Mathina."
+#            - "Mathina, I’m trying to finish this boat, but it’s not possible! – Leo shows Mathina what he is doing:"
+#          img: c2-3.png
+#        - type: dialog
+#          texts:
+#            - "I can help you! – exclaims Mathina."
+#            - "Leo, notice that, here, in Symmetry Fair, everything has to be symmetric! – says Mathina, repeating
+#                the wizard words - Let me help you! This is how you should make it:"
+#        - type: animation
+#          variant: image
+#          src: c2-anim-2.png
+#        - type: dialog
+#          text: "I think I understand now! – says Leo – Let’s move on to the other toys!!"
+#        - type: game
+#          description: How can Mathina and Leo finish the toys? You just need to draw the missing lines.
+#          cta: "Try it yourself!"
+#          preview: c2-g2-prev.png
+#          src: https://www.atractor.pt/temp/apps-tests/geoplano_lin1.html
+#        - type: dialog
+#          cls: true
+#          texts:
+#            - "Wow, we gained so many new toys! – Leo is jumping up and down with happiness."
+#            - "And it was easy to get them! I wonder how I was having so much trouble before Mathina came along …
+#                – Leo mumbles to herself."
+#            - "Well Leo, next time you should listen to the wizard and try first the easiest tasks! – Mathina advises Leo."
+#            - "Let’s go Mathina, I want to play with my new toys – Leo grabs Mathina’s hand and they both start
+#                running through Symmetry Fair, dragging their toys behind."
