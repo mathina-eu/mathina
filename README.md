@@ -10,7 +10,7 @@
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
 * [Standalone Apps](#standalone-apps)
-* [Extra: Example App](#extra-demo-app)
+* [Extra: Example App](#extra-example-app)
 
 # Summary
 
@@ -34,7 +34,7 @@ For development guidelines [see here](#mathina-hub).
 
 Stories in Mathina include standalone apps via iframe. 
 
-These apps are located in `/src/hub/static/apps/`. For working with apps [see here](#working-with-apps)
+These apps are located in `/src/hub/static/apps/`. For working with apps [see here](#standalone-apps)
 
 ## The Educator's Repository Summary
 
