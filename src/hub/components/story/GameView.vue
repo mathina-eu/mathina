@@ -1,14 +1,22 @@
 <template>
-  <v-card width="600">
-    <v-toolbar
-      color="primary"
-      dark
+  <v-card
+    width="600"
+    elevation="5"
+  >
+    <v-card-title>{{ text }}</v-card-title>
+    <div
+      v-if="imgPath"
+      class="d-flex flex-column justify-space-between align-center"
     >
-      <v-spacer />
-      <v-toolbar-title>{{ text }}</v-toolbar-title>
-      <v-spacer />
-    </v-toolbar>
-    <v-card-actions class="py-8">
+      <v-img
+        :height="img.height"
+        :width="img.width"
+        :src="imgPath"
+      />
+    </div>
+    <v-card-actions
+      class="py-8"
+    >
       <v-spacer />
       <v-dialog
         v-model="showGameDialog"
@@ -77,6 +85,16 @@ export default {
     cta: {
       type: String,
       required: true,
+    },
+    img: {
+      type: Object,
+      required: false,
+      default: () => {},
+    },
+    imgRoot: {
+      type: String,
+      required: false,
+      default: '',
     }
   },
   data() {
@@ -84,6 +102,14 @@ export default {
       showGameDialog: false,
     };
   },
+  computed: {
+    imgPath() {
+      if (!this.img?.src) {
+        return '';
+      }
+      return `${this.imgRoot}/${this.img.src}`;
+    }
+  }
 };
 </script>
 

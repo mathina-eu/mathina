@@ -107,12 +107,13 @@ export class DialogAction extends Action {
 }
 
 export class GameAction extends Action {
-  constructor({ text, cta = 'Try it yourself!', url, ...rest }) {
+  constructor({ text, cta = 'Try it yourself!', url, img, ...rest }) {
     super(rest);
     this.type = 'game';
     this.text = text;
     this.cta = cta;
     this.url = url;
+    this.img = img;
   }
 
   execute(context) {

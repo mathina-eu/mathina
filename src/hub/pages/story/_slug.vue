@@ -1,6 +1,6 @@
 <template>
   <StoryView>
-    <div class="root">
+    <div class="root text-left">
       <StoryBackgrounds :backgrounds="backgrounds" />
       <StoryImages :images="images" />
       <div class="text-wrapper mt-16">
@@ -17,6 +17,8 @@
           :text="action.text"
           :url="action.url"
           :cta="action.cta"
+          :img="action.img"
+          :img-root="imgRoot"
           @lastGameFinished="isLastGameFinished=true"
         />
         <div>
