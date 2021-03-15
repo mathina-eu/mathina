@@ -115,6 +115,15 @@ export default {
     };
   },
   computed: {
+    firstInteractiveActionId() {
+      for (let [id, action] of this.actions.entries()) {
+        if (action.autoProgress) {
+          console.log('first interactive action', id);
+          return id;
+        }
+      }
+      return 0;
+    },
     action() {
       return this.actions[this.currentActionId];
     },
@@ -187,7 +196,7 @@ export default {
         }
       }
 
-      if (this.currentActionId <= 0) {
+      if (this.currentActionId < this.firstInteractiveActionId || this.currentActionId <= 0) {
         this.next();
         return;
       }
@@ -218,7 +227,6 @@ export default {
       }
     },
     executeCurrentAction() {
-      // TODO: Back action for "Clear image"...
       this.action.execute(this);
       if (this.action.autoProgress) {
         this.autoProgress();
