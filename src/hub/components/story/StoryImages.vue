@@ -38,9 +38,7 @@ export default {
   z-index: 2;
 
   &__image {
-    max-width: 450px;
     position: absolute;
-    top: 30%;
 
     &--left {
       left: 1rem;
