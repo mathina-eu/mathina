@@ -377,6 +377,18 @@ Adding content to the Repository is done by adding
 
 For supported syntax see this [example](https://raw.githubusercontent.com/mathina-eu/mathina/master/src/educators/static/stories/demo-story/content.md).
 
+### Using HTML instead of Markdown
+
+You can also use HTML directly instead of markdown for more flexibility. 
+In that case your content.md file should start with `!HTML!`.
+
+Example:
+```
+!HTML!
+
+<img src='/stories/demo-story/img/test.png' style="display: block; margin: 0 auto;">
+```
+
 ### Example: Adding Story Educator guides
 
 Story ID's should be based on the ID in [Story Index Document](https://docs.google.com/spreadsheets/d/1UEhZXMXJSGjwBbRu_AKIY0BM1-qVh2dfz4ZcU8Cr5zs/edit#gid=0)

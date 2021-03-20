@@ -12,6 +12,10 @@
 
 ![Some text](/stories/demo-story/video/video.mp4)
 
+You can set a video's dimensions by adding `=300x170` (width x height)
+
+![Some text](/stories/demo-story/video/video.mp4 =300x170)
+
 Note that this video should be added to `static/stories/<story-id>/video/<filename>` 
 but **static** is not used in the url itself.
 
@@ -22,6 +26,10 @@ but **static** is not used in the url itself.
 ## Images
 
 ![Some alt text](/stories/demo-story/img/test.png)
+
+You can set an image's dimensions by adding `=300x300` (width x height)
+
+![Some alt text](/stories/demo-story/img/test.png =300x300)
 
 ## h2 Heading
 ### h3 Heading
