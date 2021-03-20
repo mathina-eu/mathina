@@ -38,16 +38,15 @@ export default {
   z-index: 2;
 
   &__image {
-    max-width: 450px;
     position: absolute;
-    top: 30%;
 
     &--left {
       left: 1rem;
     }
 
     &--center {
-      left: 40%;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     &--right {
@@ -59,13 +58,18 @@ export default {
     }
 
     &--vertical-center {
-      top: 40%;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     &--vertical-top {
       top: 1rem;
     }
   }
+}
+
+.images-wrapper__image--center.images-wrapper__image--vertical-center {
+  transform: translate(-50%, -50%);
 }
 
 .fade-enter-active,

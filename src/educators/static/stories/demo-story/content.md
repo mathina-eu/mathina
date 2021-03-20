@@ -4,13 +4,21 @@
 
 [[toc]]
 
-## Link to a specific point of a story
+## Link to a specific point of a story using tags
 
-[First Game in Story](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[First Game in Story](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+
+For how to add a tag see README.md or https://github.com/mathina-eu/mathina#using-tags-to-link-directly-to-an-action
+
+NOTE: For now use absolute URLs pointed to `https://mathina-hub.netlify.app/`
 
 ## How to include a video
 
 ![Some text](/stories/demo-story/video/video.mp4)
+
+You can set a video's dimensions by adding `=300x170` (width x height)
+
+![Some text](/stories/demo-story/video/video.mp4 =300x170)
 
 Note that this video should be added to `static/stories/<story-id>/video/<filename>` 
 but **static** is not used in the url itself.
@@ -22,6 +30,10 @@ but **static** is not used in the url itself.
 ## Images
 
 ![Some alt text](/stories/demo-story/img/test.png)
+
+You can set an image's dimensions by adding `=300x300` (width x height)
+
+![Some alt text](/stories/demo-story/img/test.png =300x300)
 
 ## h2 Heading
 ### h3 Heading

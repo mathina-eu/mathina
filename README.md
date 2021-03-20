@@ -10,7 +10,7 @@
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
 * [Standalone Apps](#standalone-apps)
-* [Extra: Example App](#extra-demo-app)
+* [Extra: Example App](#extra-example-app)
 
 # Summary
 
@@ -34,7 +34,7 @@ For development guidelines [see here](#mathina-hub).
 
 Stories in Mathina include standalone apps via iframe. 
 
-These apps are located in `/src/hub/static/apps/`. For working with apps [see here](#working-with-apps)
+These apps are located in `/src/hub/static/apps/`. For working with apps [see here](#standalone-apps)
 
 ## The Educator's Repository Summary
 
@@ -309,8 +309,17 @@ Dialog entries support various moods which use images defined in `src/hub/static
 ```yaml
 - type: game
   text: "Is the following image good (i.e. symmetric)?"
+  toolbarText: "Is the following image good (i.e. symmetric)?"
   cta: "Try it yourself!"
   url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+  img:
+    src: c1-2.png
+    height: 200
+    width: 200
+  toolbarImg:
+    src: c1-2.png
+    height: 200
+    width: 200
 ```
 
 **Params**
@@ -319,9 +328,30 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `game` | action type |
 | **text** | Any `<string>` | Game description |
+| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
+| img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
+| toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
 
+## Using tags to link directly to an action
+
+You can add a `tag` property to any interactive action to support directly linking and fast forwarding to that action.
+
+Example:
+
+```yaml
+- type: dialog
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+- type: sceneText
+  tag: someTagName
+  text: At the stall, Mathina is greeted by a smiling wizard.
+```
+
+Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
+the story will be fast-forwarded to the sceneText instead of the dialog action.
 
 # Educator's Repository
 
@@ -346,7 +376,7 @@ To generate or preview production builds you can use:
 ``` bash
 $ yarn edu:generate
 # launch local server
-$ npx http-server dist/hub
+$ npx http-server dist/edu
 ```
 ```bash
 # dev
@@ -364,6 +394,18 @@ Adding content to the Repository is done by adding
 ### Supported Syntax
 
 For supported syntax see this [example](https://raw.githubusercontent.com/mathina-eu/mathina/master/src/educators/static/stories/demo-story/content.md).
+
+### Using HTML instead of Markdown
+
+You can also use HTML directly instead of markdown for more flexibility. 
+In that case your content.md file should start with `!HTML!`.
+
+Example:
+```
+!HTML!
+
+<img src='/stories/demo-story/img/test.png' style="display: block; margin: 0 auto;">
+```
 
 ### Example: Adding Story Educator guides
 
@@ -418,7 +460,7 @@ To use the example app, see:
 yarn app:dev
 # prod
 yarn app:generate
-npx http-server dist/app
+npx http-server dist/example-app
 ```
 
 If you want to use the example app, you should run `yarn app:generate`, then move `dist/example-app/` to 
