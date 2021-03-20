@@ -334,6 +334,24 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
 | toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
 
+## Using tags to link directly to an action
+
+You can add a `tag` property to any interactive action to support directly linking and fast forwarding to that action.
+
+Example:
+
+```yaml
+- type: dialog
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+- type: sceneText
+  tag: someTagName
+  text: At the stall, Mathina is greeted by a smiling wizard.
+```
+
+Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
+the story will be fast-forwarded to the sceneText instead of the dialog action.
 
 # Educator's Repository
 

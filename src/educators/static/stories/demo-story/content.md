@@ -4,9 +4,13 @@
 
 [[toc]]
 
-## Link to a specific point of a story
+## Link to a specific point of a story using tags
 
-[First Game in Story](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[First Game in Story](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+
+For how to add a tag see README.md or https://github.com/mathina-eu/mathina#using-tags-to-link-directly-to-an-action
+
+NOTE: For now use absolute URLs pointed to `https://mathina-hub.netlify.app/`
 
 ## How to include a video
 

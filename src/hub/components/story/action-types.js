@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 class Action {
   constructor(props) {
     this.autoProgress = false;
+    this.tag = props.tag || '';
   }
 
   execute() {}

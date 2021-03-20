@@ -169,10 +169,10 @@ export default {
     document.addEventListener('keydown', this.keydownListener);
     this.executeCurrentAction();
 
-    // If there's an action link (eg url query has ?actionLink=5), execute up to actionLink
-    const actionLink = this.$route.query['actionLink'];
-    if (actionLink && actionLink < this.actions.length) {
-      while (this.currentActionId < actionLink) {
+    // If there's an action link (eg url query has ?actionLink=tagName), execute up to action with tag: tagName
+    const tag = this.$route.query['actionLink'];
+    if (tag) {
+      while (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
         this.next();
       }
     }
