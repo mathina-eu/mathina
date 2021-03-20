@@ -309,9 +309,14 @@ Dialog entries support various moods which use images defined in `src/hub/static
 ```yaml
 - type: game
   text: "Is the following image good (i.e. symmetric)?"
+  toolbarText: "Is the following image good (i.e. symmetric)?"
   cta: "Try it yourself!"
   url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
   img:
+    src: c1-2.png
+    height: 200
+    width: 200
+  toolbarImg:
     src: c1-2.png
     height: 200
     width: 200
@@ -323,9 +328,11 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `game` | action type |
 | **text** | Any `<string>` | Game description |
+| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
 | img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
+| toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
 
 
 # Educator's Repository
