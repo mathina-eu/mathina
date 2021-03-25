@@ -35,6 +35,11 @@ You can set an image's dimensions by adding `=300x300` (width x height)
 
 ![Some alt text](/stories/demo-story/img/test.png =300x300)
 
+You can center an image by including `_align-center_` in the image's path (filename or create a subdirectory).
+Note that the actual filename or directory should include the string `_align-center_`.
+
+![Some alt text](/stories/demo-story/img/_align-center_test.png)
+
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading

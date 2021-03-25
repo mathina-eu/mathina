@@ -8,7 +8,7 @@ We start by exploring the concept of reflection symmetry: first, by using images
 
 When speaking about symmetries, it is natural to introduce the concept of isometry. An **isometry** is a function which preserves distances: if two points *A* and *B* are transformed into *A’* and *B’*, then *dist(A,B)=dist(A’,B’)*.
 
-![Isometry](/stories/symm-2/img/iso.png =360x300)
+![Isometry](/stories/symm-2/img/_align-center_/iso.png =360x300)
 
 A **symmetry of a figure** is an isometry that maps the figure exactly onto itself, so that it looks the same before and after the mapping: it should not be possible to distinguish the initial figure from the final one (either by shape, position, or colour).
 
@@ -21,7 +21,7 @@ In the story, a
  is available (link to the IO3 Repository).
 By using this tool, the user gets acquainted with: 1) the fact that the segment joining a point *A* and its reflected image *A’* is perpendicular to the reflection line *r* and 2) both points (*A* and *A’*) are at equal distance from *r*.
 
-![Reflection](/stories/symm-2/img/AA1.jpg =360x169)
+![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
 
 ## Rotation symmetry
 
@@ -33,7 +33,7 @@ In the story, a
 [“half-turn maze”](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 is also available (link to the IO3 Repository). By exploring this tool, the user becomes more familiar to a specific kind of rotation, the one of *180* degrees. In particular, he/she may observe that the rotation center *O* is the midpoint of *[AA’]*.
 
-![Reflection](/stories/symm-2/img/AOA1.jpg =360x136)
+![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
 
 &nbsp;
 

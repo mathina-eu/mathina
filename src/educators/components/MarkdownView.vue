@@ -67,3 +67,10 @@ export default {
 };
 
 </script>
+
+<style>
+.markdown-body img[src*="_align-center_"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
