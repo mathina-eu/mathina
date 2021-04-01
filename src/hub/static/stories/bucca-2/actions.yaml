@@ -1,17 +1,15 @@
 actions:
-  - type: sceneText
-    text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
   - type: dialog
     entries:
-      - text: "I love these toys!"
-        char: mathina
+      - text: "Ok, so! I’ll count to 10 and then come to find you all! Start hiding!"
+        char: leo
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
-  - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+      - text: "One!"
+        char: leo
+        mood: happy
+      - text: "Two!"
+        char: leo
+        mood: happy
+  - type: sceneText
+    text: >
+      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history</p>
