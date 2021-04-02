@@ -6,7 +6,7 @@ actions:
 
   - type: sceneText
     text: >
-      <h1>Mathina and the talking parrot</h1>
+      <h1>The talking parrot</h1>
       
           
 
@@ -104,7 +104,7 @@ actions:
       </p>
   - type: sceneText
     text: >
-      <p>A girl arrived near the stand and greeted Mathina.
+      <p>A lady arrived near the stand and greeted Mathina.
       </p>
   - type: dialog
     entries:
@@ -257,13 +257,13 @@ actions:
         mood: happy
   - type: dialog
     entries:
-      - text: "Remember, move from the outside to the inside to decrypt."
+      - text: "Remember, move from the outside to the inside to decode."
         char: Angela
         mood: normal
   - type: clearImage
     id: CaesarJewel
   - type: game
-    text: "Remember: to decrypt you have to start from the outer circle"
+    text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Select the correct word"
     cta: "Try it yourself!"
     url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html

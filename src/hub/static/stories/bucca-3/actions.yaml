@@ -1,17 +1,317 @@
 actions:
+  - type: background
+    src: bg_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+
+
   - type: sceneText
     text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+      <h1>The lost treasure</h1>
+      
+          
+  - type: sceneText
+    text: >
+      <p>No school this week. Mathina was already thinking about what to do during the holiday. Her mind was wandering around some nice adventures and new discoveries when a sudden noise echoed from outside the windows. In the garden, an envelope attached to a piece of wood. 
+      </br >
+      </br >
+      Mathina ran out and opened the envelope carefully. There was a letter inside.</p>
+  - type: sceneText
+    text: >
+      <p>“<i>Dear Mathina,</br>
+        I hope you remember me. We met some times ago at the market on Buccaneer’s island, with John the parrot. If I recall well, you liked the adventures on the island a lot. If you wish, I could have a little help on a new adventure. I fear that somebody is spying on me, so I prepared a coded message for you. The message behind this letter will tell you where and when to meet. I did not specify the key, but I am sure you will find the right one with just a few trials. Oh, I also added a little twist to avoid spies. If you want a hint, you will find a nice wooden art inside the envelope.
+        </br>
+        </br>
+        Best,</br>
+        Angela</i>“</p>
+  - type: sceneText
+    text: >
+      <p>A short message was written on the back, clearly encoded in some way:  
+      </br >
+      </br >
+      YIVGNDZCOIJFXJYZCOMVZIMVWZCOOVBIDIMJHRJMMJHJOZHOZZH</p>
+  - type: image
+    id: CaesarJewel
+    src: CaesarJewel.png
+    style: "height: 50%; top: 45%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p>Mathina's mind immediately returned to that day at the market. She went to her room and found the jewel that Angela had given her. It was a brass pendant engraved with the letters of the alphabet shown in two concentric circles that could be rotated.</p>
+  - type: animation
+    target: CaesarJewel
+    vars:
+      duration: 3
+      xPercent: -150
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: >
+      <p>Thanks to that jewel, Mathina had learned one of the methods that the pirates of Buccaneer’s Island used to encrypt messages. It was, after all, very simple: each letter of the message to be deciphered has to be searched for in the inner circle and replaced with the corresponding letter in the outer circle.</p>
+  - type: sceneText
+    text: >
+      <p>Since the two circles could rotate, it was important to position them in a way agreed with who was supposed to decipher the message: for example, at the market with Angela they had agreed so that the "A" of the inner circle corresponded with the "B" of the outer circle.
+      </p>
   - type: dialog
     entries:
-      - text: "I love these toys!"
-        char: mathina
-        mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
+      - text: "Let's see if I still remember how to do it..."
+        char: Mathina
+        mood: normal
+
+  - type: clearImage
+    id: CaesarJewel
+
   - type: game
-    text: "Want to hop around?"
+    text: "Remember: to decode you have to start from the outer circle"
+    toolbarText: "Try to decode some words using the suggested key"
     cta: "Try it yourself!"
-    url: /apps/example-app/
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+
+  - type: dialog
+    entries:
+      - text: "I would say that I remember very well how this method works! Now let's go back to Angela's message..."
+        char: Mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>Before starting to decode the message, she looked carefully at the piece of wood that came with the letter. It was a small cylinder, probably a key ring. It had many nice inlays, which resembled the decorations of the jewel, maybe they have been made by the same artist. 
+      </p>
+  - type: sceneText
+    text: >
+      <p>Two words were visible: “FORWARD DRAWKCAB”. The letters of the second word appear… funny, as they were written with a different alphabet. </p>
+
+  - type: dialog
+    entries:
+      - text: "This is strange - thought Mathina."
+        char: Mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>What does the second word mean? While she was thinking the keyring fell on the bed and flipped over. In a moment Mathina realizes why the word seems so strange. I got it!! It says… “BACKWARD” but… <i>backwards</i>! I wonder what does this mean… Is it supposed to be a hint? Well… time to discover that! 
+      </p>
+
+  - type: game
+    text: "Select the plaintext. Remember the hint “BACKWARD”..."
+    toolbarText: "Try to select the correct plaintext"
+    cta: "Try it yourself!"
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+
+  - type: dialog
+    entries:
+      - text: "Well… that was harder than expected, but now I am very curious to see what the lady has to tell me!"
+        char: Mathina
+        mood: normal
+ 
+  - type: sceneText
+    text: >
+      <p>The next day, after a nice trip on the ferry, Mathina once again wandered around the island. What a nice way to spend the holiday! She entered the bar near the dock and located the lady, who was sitting at a table studying some documents. 
+      </p>
+
+  - type: dialog
+    entries:
+      - text: "Hi again, and welcome back to Buccaneer’s Island!" 
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Hi! I was very surprised to get your message yesterday! Why all these secrecy? I’m wondering why we are in this place, it is quite crowded, don’t you fear somebody can overhear us?" 
+        char: Mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "The best place to talk in secret is where everybody can hear you - replied the old lady."
+        char: Angela
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>"Is this another riddle?" Mathina replied, a bit confused.</p>
+  - type: dialog
+    entries:
+      - text: "Hahaha!! No, no! Too many riddles all together! But tell me, how did you find my twist to our old cypher, in the message I sent to you?"
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "That was very clever! Even if… it becomes very complicated if everybody has to figure out the code every time. Also, if I succeeded, others could have figured out the meaning of the message as well." 
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "You are correct! You know, we have a saying: “Share the method you use, keep the code for the crew”!"
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "What does this mean?"
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "It means that if you want to communicate in secret, you shall always say the rules you are using when ciphering the message. Then you just have to keep the key secret."
+        char: Angela
+        mood: normale
+
+  - type: dialog
+    entries:
+      - text: "That’s funny! I discussed with my little brother about a very similar topic, some time ago."
+        char: Mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "It is common knowledge between pirates! You know, keeping secret just the key is one thing, keeping secret a lot of information is way more complicated, in particular after a long night at the bar. Oh, by the way, you already ordered something? I’m very curious to try the new ice cream flavour: pearls and salty coconut."
+        char: Angela
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "Seems good! Make it two."
+        char: Mathina
+        mood: happy
+
+
+
+
+
+
+  - type: sceneText
+    text: >
+      <p>The ice cream was tasty indeed, not only the flavour but also to the eyes: the topping made of small pearls of sugar shined along with the light in the room. The necklace shined as well while being there on the table.</p>
+
+  - type: dialog
+    entries:
+      - text: "This necklace is beautiful: the artist was able to wrap the alphabet in a circle to obtain this effect. I’m wondering… How do you manage to write and read coded messages without it? Do you have another one?"
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Actually, the necklace is unique, but after using it for quite a long time, I notice that there is a simple rule which helps a lot if you want to encode or decode something. Would you like to know it?"
+        char: Angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "Yes, please!"
+        char: Mathina
+        mood: happy
+
+  - type: image
+    id: CaesarJewel2
+    src: CaesarJewelAD.png
+    style: "width: 25%; top: 45%; left: 20%"
+
+  - type: sceneText
+    text: >
+      <p>Angela looked at the necklace on the table. It was positioned such that the A in the inner disk corresponded to the D in the outer one.</p>
+
+  - type: dialog
+    entries:
+      - text: "Have a look: A goes to D, B goes to E, and so on. Right? Now notice that the space between the letters is always the same: three."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "So it is like a rotation: each step is a fraction of a whole turn, and then you move each letter forward of three steps. Right?"
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Correct, but look: you are focused on describing the necklace but you can describe this… operation in an even simpler way: try to use numbers instead of letters."
+        char: Angela
+        mood: normal
+
+  - type: image
+    id: CaesarJewel3
+    src: CaesarJewelAD.png
+    style: "width: 25%; top: 45%; right: 80%"
+
+  - type: sceneText
+    text: >
+      <p>Angela used a pen and one of the paper napkins of the ice cream and quickly drew a sketch of the jewel. This time instead of the letters she wrote numbers.</p>
+
+
+
+  - type: dialog
+    entries:
+      - text: ""
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Angela
+        mood: normal
+
+
+
+
+  - type: dialog
+    entries:
+      - text: ""
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: ""
+        char: Angela
+        mood: normal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
