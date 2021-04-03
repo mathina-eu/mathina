@@ -282,6 +282,12 @@ Dialog entries support various moods which use images defined in `src/hub/static
   entries:
     - text: "I love these toys!"
       char: mathina
+      exposition: "A wild Anna appears!"
+      mood: happy
+    - text: "Some have defects!"
+      char: generic-char
+      charName: Anna
+    - text: "Hey, you there!"
     - text: "Some have defects!"
       char: wizard
       mood: sad
@@ -299,8 +305,10 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **text** | Any `<string>` | action type |
-| **char** | mathina, wizard, ... | id of a supported character |
+| char| mathina, wizard, ... | id of a supported character, defaults to **generic**  |
+| charName | `<string>` | An optional replacement character name. Especially useful when used with generic characters. |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
+| exposition | `<string>` | An optional narrative description of the events of a scene, written in the present tense. Will be displayed in cursive |
 
 ### Game
 
@@ -416,7 +424,7 @@ Story ID's should be based on the ID in [Story Index Document](https://docs.goog
 3. Create a `content.md` file and write some Markdown.
 
 You can see some example content for the `demo-story` at
-https://edu.zabkar.net/story/demo-story-url-path/
+https://mathina-edu.netlify.app/story/demo-story-url-path
 
 ### Images
 

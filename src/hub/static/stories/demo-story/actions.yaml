@@ -7,7 +7,12 @@ actions:
     entries:
       - text: "I love these toys!"
         char: mathina
+        exposition: "A wild Anna appears!"
         mood: happy
+      - text: "Some have defects!"
+        char: generic-char
+        charName: Anna
+      - text: "Hey, you there!"
       - text: "Some have defects!"
         char: wizard
         mood: sad

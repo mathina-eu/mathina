@@ -1,5 +1,7 @@
 import { gsap } from 'gsap';
 
+export const GENERIC_CHAR = 'generic-char';
+
 class Action {
   constructor(props) {
     this.autoProgress = false;
@@ -91,11 +93,15 @@ export class DialogAction extends Action {
   constructor({ entries, ...rest }) {
     super(rest);
     this.type = 'dialog';
-    this.entries = entries.map(({ text, char, mood }) => {
+    this.entries = entries.map((
+      { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
+    ) => {
       return {
         text,
         char,
-        mood: mood ? mood : 'normal',
+        charName,
+        mood,
+        exposition,
       };
     });
   }
