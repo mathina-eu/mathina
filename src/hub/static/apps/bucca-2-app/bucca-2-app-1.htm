@@ -520,7 +520,7 @@ function Cesare(Str,Alfabeto,T) {
 	return StrTr;
 }
 
-ElencoParole=["LIMONE", "ARMADIO", "RAGNO", "ERBA", "GATTO", "CANE"];
+ElencoParole=["LEMON", "CASE", "SPIDER", "GRASS", "MILK", "STARS"];
 
 function GenerateEx() {
 	CorrectAnswer=Math.floor(Math.random()*4+1);
@@ -547,7 +547,7 @@ function Check(N) {
 <body onload="Init()">
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="Partenza"><p>Prova a <b id="TextAction">cifrare</b> questa parola, ricordandoti che il pappagallo manda la lettera S nella lettera T:</p>
+<div id="Partenza"><p>Try to <b id="TextAction">cipher</b> this word, keeping in mind that the parrot sends the letter S to the letter T:</p>
 <p id="paroladatradurre"></p></div>
 <div id="Arrivo"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
 <button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
