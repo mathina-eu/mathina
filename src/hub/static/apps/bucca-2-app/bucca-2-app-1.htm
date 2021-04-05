@@ -18,6 +18,11 @@
 }
 
 .PartContainer {
+	position: absolute;
+  top: 50%;
+	width:95%;
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
 	padding:15px;
 	text-align:center;
 }
@@ -51,6 +56,7 @@
 	height:100%;
 	z-index:2;
 	visibility:visible;
+
 }
 #successMessage {
   position: absolute;
@@ -128,6 +134,8 @@ Number.prototype.mod = function(n) {
 function Init() {	
 	window.CanvasMathina=document.getElementById('CanvasMathina');
 	window.ctxMathina = CanvasMathina.getContext('2d');
+	
+	
 
 	CanvasMathina.addEventListener('mousedown', Down, false);
 	CanvasMathina.addEventListener('mouseup', Up, false);
@@ -213,12 +221,18 @@ function LoadGraphics() {
 function Draw(X0,Y0,A1,A2,Scale) {
 ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 
-	
+
+
 	let CX=X0-necklace_dimension[0]/(2*Scale);
 	let CY=Y0-necklace_dimension[1]/(2*Scale);
 	
+	
+	ctxMathina.shadowColor = 'rgb(38, 57, 77)';
+	ctxMathina.shadowBlur = 15;
     ctxMathina.drawImage(bottom_necklace, CX, CY, necklace_dimension[0]/Scale, necklace_dimension[1]/Scale);
-
+	ctxMathina.shadowBlur = 0;
+	
+	
 	ctxMathina.beginPath();
 	ctxMathina.strokeStyle = "rgb(177,133,91)";
 	ctxMathina.lineWidth=90/Scale;
