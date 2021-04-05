@@ -542,7 +542,25 @@ function shuffle(array) {
   return array;
 }
 
-ElencoParole=["Sto cercando il tesoro dei pirati e non ho nascosto niente","Non troverai mai i diamanti e i rubini che ho nascosto al parco","Una mappa del tesoro dei pirati si trova nel bosco","Per trovare il tesoro dovrai prima trovare la mappa dei pirati","Tre passi a destra e tre passi in avanti devi fare","Sta nascosto dentro a un albero particolare", "Chi ha preso tre dobloni ha dimenticato il tesoro vero", "Sul nascondiglio scelto non ho niente da rivelare"];
+ElencoParoleIta=[
+"Sto cercando il tesoro dei pirati e non ho nascosto niente",
+"Non troverai mai i diamanti e i rubini che ho nascosto al parco",
+"Una mappa del tesoro dei pirati si trova nel bosco",
+"Per trovare il tesoro dovrai prima trovare la mappa dei pirati",
+"Tre passi a destra e tre passi in avanti devi fare",
+"Sta nascosto dentro a un albero particolare", 
+"Chi ha preso tre dobloni ha dimenticato il tesoro vero", 
+"Sul nascondiglio scelto non ho niente da rivelare"
+];
+
+ElencoParole=[
+"I am looking for the treasure of the pirates",
+"I do have a strange sense of humor",
+"I am very happy when someone smiles at me",
+"A good pirate has good dialogue skills",
+"A very nice tree is planted in the garden"
+];
+
 
 
 function GenerateEx() {
@@ -578,7 +596,7 @@ function Link() {
 <body onload="Init()">
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="Partenza"><p>Prova a <b id="TextAction">decifrare</b> questa parola senza conoscere la chiave:</p>
+<div id="Partenza"><p>Try to <b id="TextAction">decode</b> this sentence without knowing the key:</p>
 <p id="paroladatradurre" style="word-break:break-all;"></p></div>
 <div id="Arrivo"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
 <button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
