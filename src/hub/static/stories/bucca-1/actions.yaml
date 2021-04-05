@@ -10,6 +10,9 @@ actions:
       - text: "Two!"
         char: leo
         mood: happy
+      - type: sceneText
+        text: >
+          <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     text: >
       <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
