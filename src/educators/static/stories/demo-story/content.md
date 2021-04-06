@@ -36,6 +36,13 @@ You can center a youtube video by including `?_align-center_` after the video ID
 
 @[youtube](Jo_-KoBiBG0?_align-center_)
 
+
+## Note on including transcripts
+
+Transcripts can be added as links to files. Add the files to the stories /transcript/ directory (you'll probably need to create it).
+
+Example: [Transcript (PDF)](/stories/demo-story/transcripts/video1.pdf)
+
 ## Images
 
 ![Some alt text](/stories/demo-story/img/test.png)
