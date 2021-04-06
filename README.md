@@ -161,7 +161,7 @@ CITIES: {
 
 *NOTE*: **BOLD** properties are required.
 
-## Set background
+### Set background
 
 Sets a background image. Multiple background images can be set. Use the **style** property to set 
 z-index, positioning and other attributes for each layer if needed.
@@ -181,6 +181,25 @@ z-index, positioning and other attributes for each layer if needed.
 | **type** | `background` | action type |
 | **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
+| id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
+
+### Clear background
+
+Remove a background
+
+**Example**
+
+```yaml
+- type: clearBackground
+  id: bg1
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `clearBackground` | action type |
+| **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
 
 ### Set image
 

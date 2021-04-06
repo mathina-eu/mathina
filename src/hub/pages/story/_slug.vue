@@ -206,6 +206,7 @@ export default {
       }
 
       if (this.currentActionId <= 0) {
+        this.currentActionId--;
         this.next();
         return;
       }
