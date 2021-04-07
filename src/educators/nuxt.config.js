@@ -11,12 +11,21 @@ const distFolder = 'educators';
 
 // const IS_DEV = process.env.NODE_ENV !== 'production';
 const generateRoutes = () => {
-  let cities = Object.values(constants.CITIES).map(
-    ({ slug }) => `/city/${slug}/`
-  );
-  let stories = constants.STORIES.map(
-    ({ slug }) => `/story/${slug}`
-  );
+  // TODO: add other locales / dedup
+  const locales = ['de/', ''];
+
+  let cities = [];
+  let stories = [];
+  for (let locale of locales) {
+    let localCities = Object.values(constants.CITIES).map(
+      ({ slug }) => `/${locale}city/${slug}/`
+    );
+    let localStories = constants.STORIES.map(
+      ({ slug }) => `/${locale}story/${slug}`
+    );
+    cities = [...cities, ...localCities];
+    stories = [...stories, ...localStories];
+  }
   return [...stories, ...cities];
 };
 
