@@ -27,19 +27,56 @@ export class AnimationAction extends Action {
 }
 
 export class BackgroundAction extends Action {
-  constructor({ src, style, ...rest }) {
+  constructor({ id, src, style, ...rest }) {
     super(rest);
     this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;
+    this.id = id;
   }
 
   execute(context) {
     super.execute();
     const path = `${context.imgRoot}/bg/${this.src}`;
+
+    if (context.activeDirection === 'back') {
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+      return;
+    }
+
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
-    context.backgrounds = [...bgs, { src: path, style: this.style }];
+    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style }];
+  }
+}
+
+export class ClearBackgroundAction extends Action {
+  constructor({ id, ...rest }) {
+    super(rest);
+    this.type = 'clearBackground';
+    this.id = id;
+    this.autoProgress = true;
+    this.historyStack = [];
+  }
+
+  execute(context) {
+    super.execute();
+
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.backgrounds = [...context.backgrounds, this.historyStack.pop()];
+      }
+      return;
+    }
+
+    if (this.src) {
+      const path = `${context.imgRoot}/bg/${this.src}`;
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+    } else {
+      const bg = context.backgrounds.find(bg => bg.id === this.id);
+      this.historyStack.push(bg);
+      context.backgrounds = context.backgrounds.filter(bg => bg.id !== this.id);
+    }
   }
 }
 
@@ -145,15 +182,25 @@ export class ClearImageAction extends Action {
     this.type = 'clearImage';
     this.id = id;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
   execute(context) {
     super.execute();
 
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.images = [...context.images, this.historyStack.pop()];
+      }
+      return;
+    }
+
     if (this.src) {
       const path = `${context.imgRoot}/${this.src}`;
       context.images = context.images.filter(img => img.src !== path);
     } else {
+      const img = context.images.find(img => img.id === this.id);
+      this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }
   }
@@ -168,6 +215,7 @@ export class ActionFactory {
     GameAction,
     ClearImageAction,
     AnimationAction,
+    ClearBackgroundAction,
   }
 
   static create({ type, ...props }) {

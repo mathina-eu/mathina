@@ -6,9 +6,11 @@
   * [Quick Start](#quick-start)
   * [Working with stories](#working-with-stories)
   * [Supported Actions](#supported-story-actions)
+  * [Story localization](#story-localization)
 * [Educator's Repository](#educators-repository)
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
+  * [Educator content localization](#educator-content-localization)
 * [Standalone Apps](#standalone-apps)
 * [Extra: Example App](#extra-example-app)
 
@@ -161,7 +163,7 @@ CITIES: {
 
 *NOTE*: **BOLD** properties are required.
 
-## Set background
+### Set background
 
 Sets a background image. Multiple background images can be set. Use the **style** property to set 
 z-index, positioning and other attributes for each layer if needed.
@@ -181,6 +183,25 @@ z-index, positioning and other attributes for each layer if needed.
 | **type** | `background` | action type |
 | **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
+| id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
+
+### Clear background
+
+Remove a background
+
+**Example**
+
+```yaml
+- type: clearBackground
+  id: bg1
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `clearBackground` | action type |
+| **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
 
 ### Set image
 
@@ -361,6 +382,21 @@ Example:
 Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
 the story will be fast-forwarded to the sceneText instead of the dialog action.
 
+## Story localization
+
+To prepare a localized version of a story add a `actions-<locale>.yaml` file.
+
+For example to add a german file, add `actions-de.yaml` to `/src/hub/static/stories/demo-story/`
+
+For localized images it's recommended to group them in a `<locale>` subdirectory. For instance put images specific to a
+german story to `/src/hub/static/stories/demo-story/img/de/some-german-specific-image.png` 
+
+### Supported locales
+
+* `de` - German
+* `en` - English (Do not create an actions-en.yaml file as the default actions.yaml file will be used for english)
+* ...
+
 # Educator's Repository
 
 The Educator's repository is code dependant on the Hub to allow for a single point of entry when
@@ -433,6 +469,14 @@ As a convention you should add images to the story's `img` subdirectory.
 ### Videos
 
 As a convention you should add videos to the story's `video` subdirectory.
+
+## Educator content localization
+
+To prepare a localized version of a story add a `content-<locale>.md` file.
+
+For example to add a german file, add `content-de.md` to `/src/educators/static/stories/demo-story/`
+
+For supported locales see [here](#supported-locales)
 
 # Standalone Apps
 

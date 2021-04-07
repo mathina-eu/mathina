@@ -19,9 +19,10 @@ export default {
   },
   data() {
     const story = constants.STORIES.find(({ slug }) => slug === this.$route.params.slug);
+    const locale = this.$i18n.locale === this.$i18n.defaultLocale ? '' : `-${this.$i18n.locale}`;
 
     return {
-      mdPath: `/stories/${story.id}/content.md`,
+      mdPath: `/stories/${story.id}/content${locale}.md`,
     };
   },
 };

@@ -16,6 +16,11 @@ NOTE: For now use absolute URLs pointed to `https://mathina-hub.netlify.app/`
 
 ![Some text](/stories/demo-story/video/video.mp4)
 
+You can center a video by either adding `?_align-center_` after the video path 
+or adding `_align-center_` to the video path itself.
+
+![Some text](/stories/demo-story/video/video.mp4?_align-center_)
+
 You can set a video's dimensions by adding `=300x170` (width x height)
 
 ![Some text](/stories/demo-story/video/video.mp4 =300x170)
@@ -26,6 +31,17 @@ but **static** is not used in the url itself.
 ## Youtube Video
 
 @[youtube](Jo_-KoBiBG0)
+
+You can center a youtube video by including `?_align-center_` after the video ID
+
+@[youtube](Jo_-KoBiBG0?_align-center_)
+
+
+## Note on including transcripts
+
+Transcripts can be added as links to files. Add the files to the stories /transcript/ directory (you'll probably need to create it).
+
+Example: [Transcript (PDF)](/stories/demo-story/transcripts/video1.pdf)
 
 ## Images
 

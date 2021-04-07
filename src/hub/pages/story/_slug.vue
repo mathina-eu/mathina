@@ -35,7 +35,8 @@
               small
             >
               mdi-arrow-left-circle-outline
-            </v-icon> Back
+            </v-icon>
+            {{ $t('story.back') }}
           </v-btn>
           <v-btn
             v-if="hasMoreActions"
@@ -43,7 +44,8 @@
             title="You can use the right arrow on your keyboard as well!"
             @click="next"
           >
-            Next <v-icon
+            {{ $t('story.next') }}
+            <v-icon
               class="ml-1"
               small
             >
@@ -91,9 +93,10 @@ export default {
     GameView,
     StoryDialog,
   },
-  async asyncData({ $axios, params }) {
+  async asyncData({ $axios, params, app: { i18n } }) {
+    const locale = i18n.locale === i18n.defaultLocale ? '' : `-${i18n.locale}`;
     const story = constants.STORIES.find(({ slug }) => slug === params.slug);
-    const { data } = await $axios.get(`/stories/${story.id}/actions.yaml`);
+    const { data } = await $axios.get(`/stories/${story.id}/actions${locale}.yaml`);
     const { actions } = yaml.load(data);
 
     return {
@@ -206,6 +209,7 @@ export default {
       }
 
       if (this.currentActionId <= 0) {
+        this.currentActionId--;
         this.next();
         return;
       }
