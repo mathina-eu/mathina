@@ -29,7 +29,6 @@ const generateRoutes = () => {
   return [...stories, ...cities];
 };
 
-console.log(resolve(__dirname), '../hub');
 export default {
   ...sharedConfig,
   // TODO: Need to tweak to allow educators platform assets

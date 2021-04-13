@@ -1,4 +1,8 @@
 actions:
+  - type: background
+    src: c1-bg1.jpg
+    id: bg1
+    style: "width: 100%"
   - type: sceneText
     text: >
       <p>Lorem ipsum</p>
@@ -16,6 +20,11 @@ actions:
       - text: "Some have defects!"
         char: wizard
         mood: sad
+  - type: clearBackground
+    id: bg1
+  - type: background
+    src: $COMMON/img/bg/example-shared.jpg
+    style: "width: 100%"
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"

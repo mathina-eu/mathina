@@ -176,12 +176,21 @@ z-index, positioning and other attributes for each layer if needed.
   style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
 ```
 
+**Example using common shared resources**
+
+```yaml
+- type: background
+  src: $COMMON/img/bg/c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+```
+This image should be located in `src/hub/stories/common/img/bg/c1-bg1.jpg`
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `background` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/`. You can also use **common** shared backgrounds. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/bg/bg1.jpg` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
 | id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
 
@@ -218,12 +227,22 @@ Display an image.
   style: "width: 20%;"
 ```
 
+**Example using common shared resources**
+
+```yaml
+- type: image
+  src: $COMMON/img/c1-5.png
+  id: c1-5
+```
+This image should be located in `src/hub/stories/common/img/c1-5.png`
+
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `image` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/`. You can also use **common** shared images. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/img1.jpg` |
 | id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
