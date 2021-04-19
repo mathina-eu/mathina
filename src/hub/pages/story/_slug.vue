@@ -1,5 +1,5 @@
 <template>
-  <StoryView>
+  <StoryView :is-loading="isLoading">
     <div class="root text-left">
       <StoryBackgrounds :backgrounds="backgrounds" />
       <StoryImages :images="images" />
@@ -79,7 +79,10 @@ import {
   SceneTextAction,
   DialogAction,
   GameAction,
+  BackgroundAction,
+  ImageAction,
 } from '~/components/story/action-types';
+import { preloadImage } from '~/utils';
 
 const BACK = 'back';
 const NEXT = 'next';
@@ -99,13 +102,16 @@ export default {
     const { data } = await $axios.get(`/stories/${story.id}/actions${locale}.yaml`);
     const { actions } = yaml.load(data);
 
+    const parsedActions = actions.map(action => ActionFactory.create(action));
+
     return {
-      actions: actions.map(action => ActionFactory.create(action)),
+      actions: parsedActions,
       story: Object.freeze(story),
     };
   },
   data() {
     return {
+      isLoading: true,
       constants,
       currentActionId: 0,
       actionExecutor: null,
@@ -163,7 +169,10 @@ export default {
       return this.currentActionId === firstActionWithoutAuto;
     },
   },
-  mounted() {
+  async mounted() {
+    await this.preloadImagesForActions(this.actions);
+    this.isLoading = false;
+
     this.$store.dispatch('setBreadcrumbs', [
       { path: `/world/`, text: 'World Map' },
       { path: `/story/${this.story?.slug}/`, text: this.story?.title },
@@ -184,6 +193,15 @@ export default {
     document.removeEventListener('keydown', this.keydownListener);
   },
   methods: {
+    async preloadImagesForActions(actionsToPreload) {
+      const images = [];
+      for (let action of actionsToPreload) {
+        if (action instanceof ImageAction || action instanceof BackgroundAction) {
+          images.push(action.getAssetPath(this.imgRoot));
+        }
+      }
+      await Promise.all(images.map(i => preloadImage(i)));
+    },
     keydownListener({ key, keyCode }) {
       // TODO: debounce?
       if (key === 'ArrowRight' || keyCode === 39) {
