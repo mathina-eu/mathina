@@ -4,7 +4,18 @@
       class="text-center"
       cols="12"
     >
-      <div class="ratio">
+      <v-progress-circular
+        v-if="isLoading"
+        :size="150"
+        :width="10"
+        value="Loading"
+        color="primary"
+        indeterminate
+      />
+      <div
+        v-else
+        class="ratio"
+      >
         <slot />
       </div>
     </v-col>
@@ -13,7 +24,14 @@
 
 <script>
 export default {
-  name: 'StoryView'
+  name: 'StoryView',
+  props: {
+    isLoading: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
+  },
 };
 </script>
 
