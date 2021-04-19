@@ -1,17 +1,90 @@
 actions:
+  - type: background
+    src: logi-bg1-layered2fulls.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: sceneText
-    text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+    text: Mathina and her friend Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
+  - type: background
+    src: logi-bg1-layered2_kang point_leorunss.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: dialog
     entries:
-      - text: "I love these toys!"
-        char: mathina
+      - text: There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
+        char: kangaroo
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
+  - type: background
+    src: logi-bg1-layered2_leosteps1920.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: sceneText
+    text: Leo was about to cross the street, but the kangaroo reached out after him. 
+  - type: background
+    src: logi-bg1-layered2_kang point_leorunss.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: dialog
+    entries:
+      - text: Slow down, young man. You can't just cross this zebra. Do you see those traffic lights on the opposite side? 
+        char: kangaroo
         mood: sad
+  - type: sceneText
+    text: They saw one column rising, another retreating to the ground.
+  - type: sceneText
+    text: There was always a different number of columns rising up, and there were three lights on each of them.
+  - type: sceneText
+    text: ...violet, orange, and pink, but in a different order on each column.
+  - type: dialog
+    entries:
+      - text: We can only cross if the three colors appear in all possible orders.” - The kangaroo smiled, noticing Leo’s amazement.
+        char: kangaroo
+        mood: happy
+      - text: Another column rose, and the kangaroo asked, - “Do you think we can go now?”
+        char: kangaroo
+        mood: happy
+      - text: I think we've got it all! - Leo shouted, and was again ready to cross the street. Now it was Mathina who grabbed his backpack and kept him from running across the cars.
+        char: kangaroo
+        mood: happy
+      - text: No way! - Mathina said.
+        char: kangaroo
+        mood: happy
+      - text: But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last - Leo argued convincingly.
+        char: kangaroo
+        mood: happy
+      - text: And what if, for example, violet came first and then pink, instead of orange? - Mathina grinned like a little monkey.
+        char: kangaroo
+        mood: happy
+      - text: Leave him, Leo is probably not as good in distinguishing pink and violet as you are - said the kangaroo.
+        char: kangaroo
+        mood: happy
+      - text: Oh, kangaroo, don't be like that! - Mathina got angry. - I don't understand colors better just because I'm a girl! But I can think pretty well - and she stuck out her tongue at the kangaroo.
+        char: kangaroo
+        mood: happy
+      - text: Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
+        char: kangaroo
+        mood: happy
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+    text: How many lights do you think would be enough to show all the sequences? 
+    toolbarText: How many lights do you think would be enough to show all the sequences? 
+    cta: Try to find them all!
+    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+  - type: dialog
+    entries:
+      - text: I know, I know, I know! Eight is the solution, eight is the solution, kangaroo, eeeeeiiiiiight! - Leo cried and jumped up in the air. Mathina raised her eyebrows, suspicious of Leo having messed up something.
+        char: kangaroo
+        mood: happy  
+      - text: Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
+        char: kangaroo
+        mood: happy
+      - text: Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
+        char: kangaroo
+        mood: happy
+  - type: image 
+    src: logi-bg1-layered_empty_s.jpg
+    id: kangapoint
+    style: "width: 20%; top: 40%; right: 30%;"
+    align: right
+
+
+
+
+  
+
+  
