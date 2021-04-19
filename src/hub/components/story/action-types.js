@@ -38,7 +38,12 @@ export class BackgroundAction extends Action {
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/bg/${this.src}`;
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${context.imgRoot}/bg/${this.src}`;
+    }
 
     if (context.activeDirection === 'back') {
       context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
@@ -94,7 +99,12 @@ export class ImageAction extends Action {
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/${this.src}`;
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${context.imgRoot}/${this.src}`;
+    }
 
     if (context.activeDirection === 'back') {
       context.images = context.images.filter(img => img.src !== path);
