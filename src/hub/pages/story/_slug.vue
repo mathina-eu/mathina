@@ -194,13 +194,21 @@ export default {
   },
   methods: {
     async preloadImagesForActions(actionsToPreload) {
-      const images = [];
+      const images = new Set();
       for (let action of actionsToPreload) {
+        if (action instanceof DialogAction) {
+          for (let dialog of action.entries) {
+            const mood = dialog.mood ? dialog.mood : 'normal';
+            const portrait = `/portraits/${dialog.char.toLocaleLowerCase()}/${mood}00.data.png`;
+            images.add(portrait);
+          }
+        }
+
         if (action instanceof ImageAction || action instanceof BackgroundAction) {
-          images.push(action.getAssetPath(this.imgRoot));
+          images.add(action.getAssetPath(this.imgRoot));
         }
       }
-      await Promise.all(images.map(i => preloadImage(i)));
+      await Promise.all(Array.from(images).map(i => preloadImage(i)));
     },
     keydownListener({ key, keyCode }) {
       // TODO: debounce?
