@@ -1,0 +1,37 @@
+button{
+    -webkit-appearance: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden; /*  Disable scrollbars */
+    display: block;  /* No floating content on sides */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 26;
+    background: #f3f1cd;
+}
+
+.largerCheckbox {
+    width: 30px;
+    height: 30px;
+}
+
+/* "You did it!" message */
+#successMessage, #crashMessage, #finalMessage {
+    width: 0;
+    height: 0;
+    /*padding: 20px;*/
+    background: #333;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    
+    user-select: none;
+}
+
+#successMessage, #crashMessage, #finalMessage h2{
+    color: #fff
+    /*font-family: "Comic Sans MS", cursive, sans-serif;*/
+}
