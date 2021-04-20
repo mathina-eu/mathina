@@ -1,32 +1,36 @@
 actions:
   - type: background
-    src: logi-bg1-layered2fulls.jpg
+    src: logi1_backgrounds.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: sceneText
     text: Mathina and her friend Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
-  - type: background
-    src: logi-bg1-layered2_kang point_leorunss.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: dialog
     entries:
       - text: There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
         char: kangaroo
         mood: happy
-  - type: background
-    src: logi-bg1-layered2_leosteps1920.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: sceneText
     text: Leo was about to cross the street, but the kangaroo reached out after him. 
-  - type: background
-    src: logi-bg1-layered2_kang point_leorunss.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: dialog
     entries:
       - text: Slow down, young man. You can't just cross this zebra. Do you see those traffic lights on the opposite side? 
         char: kangaroo
         mood: sad
+  - type: image 
+    src: lamps33.png
+    id: lamps33
+    style: "width: 40%; top: 42%; right: 30%;"
+    align: right
+    valign: bottom
   - type: sceneText
     text: They saw one column rising, another retreating to the ground.
+  - type: clearImage
+    id: lamps33
+  - type: image 
+    src: lamps3gif.gif
+    id: lamps3sgif
+    style: "width: 40%; top: 42%; right: 30%;"
+    align: right
   - type: sceneText
     text: There was always a different number of columns rising up, and there were three lights on each of them.
   - type: sceneText
@@ -73,18 +77,31 @@ actions:
       - text: Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
         char: kangaroo
         mood: happy
-      - text: Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
+  - type: game
+    text: Leo found these color combinations below. What do you think he included twice? Put here all the sequences Leo has picked (all of them only once)!
+    toolbarText: We see the 8 traffic lights, you can rearrange them. Once you’ve put identical ones next to each other, the superfluous ones disappear.
+    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+  - type: dialog
+    entries:
+      - text: You see, it's only five now. And guess what, there's a sixth one, too! - Mathina said contemptuously.
         char: kangaroo
         mood: happy
-  - type: image 
-    src: logi-bg1-layered_empty_s.jpg
-    id: kangapoint
-    style: "width: 20%; top: 40%; right: 30%;"
-    align: right
-
-
-
-
-  
-
-  
+  - type: game
+    text: We see the 5 correct lamps lined up and a traffic light without colors that can be colored and additional lamps can be added.
+    toolbarText: Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
+    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+  - type: dialog
+    entries:
+      - text: Well, it starts with two violets and pinks, and only one in orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
+        char: kangaroo
+        mood: happy
+      - text: Got it! Now, after orange comes... not violet but pink, that is - orange-pink-violet.
+        char: kangaroo
+        mood: happy  
+      - text: Bingo! - Mathina patted Leo on his shoulder.
+        char: kangaroo
+        mood: happy  
+  - type: sceneText
+    text: At this point, six traffic lights appear on the opposite side and show the sequence they created together. 
+  - type: sceneText
+    text: The kangaroo was pleased. Mathina and Leo rushed across the street right into the huge, round ice cream store squeezed between two highrises.
