@@ -4,18 +4,18 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
 
   - type: image
+    id: Wave1
     src: onda.png
-    id: Wave_1
     style: "width: 8%; top: 35%; left: 15%;  z-index: 0;"
  
   - type: image
+    id: Wave2
     src: onda2.png
-    id: Wave_2
     style: "width: 10%; top: 45%; left: 25%; z-index: 0;"
  
   - type: image
+    id: Wave3
     src: onda3.png
-    id: Wave_3
     style: "width: 12%; top: 60%; left: 10%;  z-index: 0;"
  
  
@@ -27,24 +27,43 @@ actions:
     text: >
       <h1>The talking parrot</h1>        
 
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power2.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 3
+      xPercent: 35
+      yPercent: -10
+      ease: power2.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 5
+      xPercent: 65
+      yPercent: 0
+      ease: power2.inOut
+      repeat: -1
+      yoyo: true
+
+
+      
   - type: dialog
     entries:
       - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
         char: mathina
         mood: happy
-
-
-  - type: animation
-    target: Wave_1
-    vars:
-      duration: 3
-      xPercent: 85
-      yPercent: -10
-      #ease: power2.in
-      repeat: -1
-      yoyo: true
-      yoyoEase: power2.inout
-
 
   - type: sceneText
     text: >
