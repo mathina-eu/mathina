@@ -1,9 +1,65 @@
 <template>
   <StoryView :is-loading="isLoading">
-    <div class="root text-left">
-      <StoryBackgrounds :backgrounds="backgrounds" />
-      <StoryImages :images="images" />
-      <div class="text-wrapper mt-16">
+    <Parallax class="root">
+      <template slot="back1">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back1')" />
+        <StoryImages :images="parallaxedImages('back1')" />
+      </template>
+      <template slot="back2">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back2')" />
+        <StoryImages :images="parallaxedImages('back2')" />
+      </template>
+      <template slot="back3">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back3')" />
+        <StoryImages :images="parallaxedImages('back3')" />
+      </template>
+      <template slot="mid1">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid1')" />
+        <StoryImages :images="parallaxedImages('mid1')" />
+      </template>
+      <template slot="mid2">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid2')" />
+        <StoryImages :images="parallaxedImages('mid2')" />
+      </template>
+      <template slot="mid3">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid3')" />
+        <StoryImages :images="parallaxedImages('mid3')" />
+      </template>
+      <template slot="front1">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front1')" />
+        <StoryImages :images="parallaxedImages('front1')" />
+      </template>
+      <template slot="front2">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front2')" />
+        <StoryImages :images="parallaxedImages('front2')" />
+      </template>
+      <template slot="front3">
+        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front3')" />
+        <StoryImages :images="parallaxedImages('front3')" />
+      </template>
+      <div class="navigation">
+        <v-btn
+          v-if="!isFirstAction"
+          class="navigation__button"
+          title="You can use the left arrow on your keyboard as well!"
+          @click="back"
+        >
+          <v-icon>
+            mdi-arrow-left
+          </v-icon>
+        </v-btn>
+        <v-btn
+          v-if="hasMoreActions"
+          class="navigation__button right"
+          title="You can use the right arrow on your keyboard as well!"
+          @click="next"
+        >
+          <v-icon>
+            mdi-arrow-right
+          </v-icon>
+        </v-btn>
+      </div>
+      <div class="text-wrapper mt-5">
         <StoryDialog
           v-if="isDialogMode"
           v-bind="activeDialog"
@@ -23,36 +79,6 @@
           :img-root="imgRoot"
           @lastGameFinished="isLastGameFinished=true"
         />
-        <div>
-          <v-btn
-            v-if="!isFirstAction"
-            class="mt-12"
-            title="You can use the left arrow on your keyboard as well!"
-            @click="back"
-          >
-            <v-icon
-              class="mr-1"
-              small
-            >
-              mdi-arrow-left-circle-outline
-            </v-icon>
-            {{ $t('story.back') }}
-          </v-btn>
-          <v-btn
-            v-if="hasMoreActions"
-            class="mt-12"
-            title="You can use the right arrow on your keyboard as well!"
-            @click="next"
-          >
-            {{ $t('story.next') }}
-            <v-icon
-              class="ml-1"
-              small
-            >
-              mdi-arrow-right-circle-outline
-            </v-icon>
-          </v-btn>
-        </div>
         <v-btn
           v-if="!hasMoreActions && isLastGameFinished"
           class="mt-12"
@@ -61,7 +87,7 @@
           All done!
         </v-btn>
       </div>
-    </div>
+    </Parallax>
   </StoryView>
 </template>
 
@@ -74,6 +100,7 @@ import SceneText from '~/components/story/SceneText';
 import GameView from '~/components/story/GameView';
 import StoryBackgrounds from '~/components/story/StoryBackgrounds';
 import StoryImages from '~/components/story/StoryImages';
+import Parallax from '~/components/Parallax';
 import {
   ActionFactory,
   SceneTextAction,
@@ -89,6 +116,7 @@ const NEXT = 'next';
 
 export default {
   components: {
+    Parallax,
     StoryImages,
     StoryBackgrounds,
     StoryView,
@@ -193,6 +221,20 @@ export default {
     document.removeEventListener('keydown', this.keydownListener);
   },
   methods: {
+    parallaxedBackgrounds(layer) {
+      console.log('layer', layer);
+      console.log(this.backgrounds);
+      let bgs =  this.backgrounds.filter(bg => bg.parallax === layer);
+      console.log('bgs', bgs);
+      return bgs;
+    },
+    parallaxedImages(layer) {
+      console.log('layer', layer);
+      console.log(this.images);
+      let bgs =  this.images.filter(img => img.parallax === layer);
+      console.log('img', bgs);
+      return bgs;
+    },
     async preloadImagesForActions(actionsToPreload) {
       const images = new Set();
       for (let action of actionsToPreload) {
@@ -288,7 +330,16 @@ export default {
 .root {
   height: 100%;
   width: 100%;
-  position: relative;
+
+  &::before {
+    content: '';
+    width: 200vw;
+    height: 200vh;
+    position: fixed;
+    z-index: -1;
+    left: -100vw;
+    top: -100vh;
+  }
 }
 
 .text-wrapper {
@@ -299,5 +350,45 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
+}
+
+.navigation {
+  --button-size: 50px;
+
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 5;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+
+  @media (min-width: 1300px) {
+    width: calc(100% + 3 * (var(--button-size)));
+    left: calc(-1.5 * var(--button-size));
+  }
+
+  @media (min-width: 1400px) {
+    width: calc(100% + 4 * (var(--button-size)));
+    left: calc(-2 * var(--button-size));
+  }
+
+  &__button {
+    width: var(--button-size);
+    min-width: var(--button-size) !important;
+    height: var(--button-size) !important;
+    border-radius: 50%;
+    position: sticky;
+    margin: 0 1rem;
+    left: 0;
+
+    &.right {
+      margin-left: auto;
+    }
+  }
 }
 </style>

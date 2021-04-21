@@ -174,6 +174,7 @@ z-index, positioning and other attributes for each layer if needed.
 - type: background
   src: c1-bg1.jpg
   style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+  parallax: back2
 ```
 
 **Example using common shared resources**
@@ -211,6 +212,7 @@ Remove a background
 | --- | --- | --- |
 | **type** | `clearBackground` | action type |
 | **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
+| parallax | back1, back2, back3, mid1, mid2, mid3, front1, front2, front3 | Set parallax layer. Higher layer represents faster movement. |
 
 ### Set image
 
@@ -225,6 +227,7 @@ Display an image.
   align: center
   valign: bottom
   style: "width: 20%;"
+  parallax: mid2
 ```
 
 **Example using common shared resources**
@@ -247,6 +250,7 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
+| parallax | back1, back2, back3, mid1, mid2, mid3, front1, front2, front3 | Set parallax layer. Higher layer represents faster movement. |
 
 ### Animate Image
 
