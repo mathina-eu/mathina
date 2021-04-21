@@ -1,20 +1,51 @@
 actions:
   - type: background
-    src: bg_img_temp.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: image
+    src: onda.png
+    id: Wave_1
+    style: "width: 8%; top: 35%; left: 15%;  z-index: 0;"
+ 
+  - type: image
+    src: onda2.png
+    id: Wave_2
+    style: "width: 10%; top: 45%; left: 25%; z-index: 0;"
+ 
+  - type: image
+    src: onda3.png
+    id: Wave_3
+    style: "width: 12%; top: 60%; left: 10%;  z-index: 0;"
+ 
+ 
+
+
 
 
   - type: sceneText
     text: >
-      <h1>The talking parrot</h1>
-      
-          
+      <h1>The talking parrot</h1>        
 
   - type: dialog
     entries:
       - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
         char: mathina
         mood: happy
+
+
+  - type: animation
+    target: Wave_1
+    vars:
+      duration: 3
+      xPercent: 85
+      yPercent: -10
+      #ease: power2.in
+      repeat: -1
+      yoyo: true
+      yoyoEase: power2.inout
+
+
   - type: sceneText
     text: >
       <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!
@@ -235,33 +266,30 @@ actions:
       - text: "It is beautiful - said Mathina - how does it work? I see that the letters appear twice: one in the inner circle and one in the outer circle, but they are shifted. Why?"
         char: Mathina
         mood: excited
-  - type: dialog
-    entries:
-      - text: "The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle. In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
+      - text: "The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle."
         char: Angela
         mood: normal
-  - type: dialog
-    entries:
-      - text: "... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one. Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
+      - text: "In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
+        char: Angela
+        mood: normal        
+      - text: "... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one."
         char: Mathina
         mood: happy
-  - type: dialog
-    entries:
+      - text: "Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
+        char: Mathina
+        mood: happy
       - text: "Clever girl - said Angela. So… wanna try to translate something else?"
         char: Angela
         mood: happy
-  - type: dialog
-    entries:
       - text: "Yes, please! Let’s try!"
         char: Mathina
         mood: happy
-  - type: dialog
-    entries:
       - text: "Remember, move from the outside to the inside to decode."
         char: Angela
         mood: normal
   - type: clearImage
     id: CaesarJewel
+
   - type: game
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Select the correct word"
@@ -282,8 +310,7 @@ actions:
     entries:
       - text: "Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
         char: Angela
-        mood: happy
-        
+        mood: happy   
   - type: background
     src: bg2_img_temp.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
