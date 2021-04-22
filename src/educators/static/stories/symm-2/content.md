@@ -8,7 +8,7 @@ We start by exploring the concept of reflection symmetry: first, by using images
 
 When speaking about symmetries, it is natural to introduce the concept of isometry. An **isometry** is a function which preserves distances: if two points *A* and *B* are transformed into *A’* and *B’*, then *dist(A,B)=dist(A’,B’)*.
 
-![Isometry](/stories/symm-2/img/_align-center_/iso.png =360x300)
+![Isometry](/stories/symm-2/img/_align-center_/iso.png =300x250)
 
 A **symmetry of a figure** is an isometry that maps the figure exactly onto itself, so that it looks the same before and after the mapping: it should not be possible to distinguish the initial figure from the final one (either by shape, position, or colour).
 
@@ -27,7 +27,7 @@ By using this tool, the user gets acquainted with: 1) the fact that the segment 
 
 A rotation symmetry of an image is a rotation which takes the image exactly onto itself.
 
-![Watch the movie here](/stories/symm-2/video/ros_C_4.mp4 =640x360)
+![Watch the movie here](/stories/symm-2/video/_align-center_/ros_C_4.mp4 =640x360 )
 
 In the story, a
 [“half-turn maze”](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
@@ -51,17 +51,17 @@ And how can we distinguish dihedral rosettes from each other? A natural way is c
 [“Bag Game I”:](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 by playing it, we are classifying dihedral rosettes according to their symmetry.
 
-![Bag Game I](/stories/symm-2/img/rosaceas-diedrais.png =1000x194)
+![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-diedrais.png =1000x194)
 
 **Remark**: In the story, we only considered rosettes with 6 or less symmetry axes, however we can create rosettes with as many symmetry axes as we wish. So, there are infinitely many
 dihedral rosettes^[Similarly, there are infinitely many cyclic rosettes]
 , all of different symmetry types…
 
-![Bag Game I](/stories/symm-2/img/rosaceas-d.png =1000x179)
+![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-d.png =1000x179)
 
 And how can we distinguish (classify) cyclic rosettes?
 
-![Watch the movie here](/stories/symm-2/video/rot_3.mp4 =640x360)
+![Watch the movie here](/stories/symm-2/video/_align-center_/rot_3.mp4 =640x360)
 
 In the previous example, the rosette has **3** rotation symmetries. However, even if we hadn’t checked the rotation symmetries, we would know that the rosette had, at least, **one** rotation symmetry: the **identity**, which corresponds to a rotation of *0º* (or, equivalently, of *360º*), the so called 
 trivial symmetry^[In general, when we ask if there is a symmetry, we are thinking about a non-trivial symmetry.]
@@ -71,11 +71,11 @@ We classify the cyclic rosettes according to the number of the rotation symmetri
 [“Bag Game II”](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 .
 
-![Bag Game I](/stories/symm-2/img/rosaceas-ciclicas.png =1000x195)
+![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-ciclicas.png =1000x195)
 
 Note that dihedral rosettes also have rotation symmetries and in a dihedral rosette there are as many reflection symmetries as rotation symmetries.
 
-![Watch the movie here](/stories/symm-2/video/ros_D_4.mp4 =640x360)
+![Watch the movie here](/stories/symm-2/video/_align-center_/ros_D_4.mp4 =640x360)
 
 &nbsp;
 
@@ -113,7 +113,8 @@ Below, we present a small description of each app. Links both for the apps and f
 
 An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she can move the existing mirror, by dragging it back and forth.
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -123,7 +124,8 @@ A set of 8 rosettes is presented. The user is invited to choose the 4 rosettes w
 ![Confirm](/stories/symm-2/img/confirm.png =40x40),
 the program shows a new set of 8 rosettes. A total of 3 sets are shown. The game is solved when all "good" rosettes (i.e. with symmetry axes) are selected.
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -133,7 +135,8 @@ A set of 12 rosettes is presented. The user is invited to drag each rosette to t
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
 it is possible to get help for counting the number of symmetry axes.
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -141,7 +144,8 @@ it is possible to get help for counting the number of symmetry axes.
 
 This app is similar to Game 3. However, instead of counting symmetry axes, the user should count the number of rotation symmetries of each rosette.
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -155,7 +159,8 @@ However, the original maze will get more and more transparent, and, after a cert
 ![Lantern](/stories/symm-2/img/lanterna.png =40x40)
 button and see both mazes all the time. 
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -164,4 +169,5 @@ button and see both mazes all the time.
 
 This app is similar to Game 5. However, instead of the (right) maze being reflected, it is rotated by 180º.
 
-@[youtube](OYrrdu4y_7E)
+@[youtube](OYrrdu4y_7E?_align-center_)
+[Script](/stories/symm-2/transcripts/Script2.pdf)

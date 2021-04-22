@@ -1,0 +1,76 @@
+
+/* "You did it!" message */
+
+h2 {
+  font-size: 250%;   
+  font-weight: normal;
+  text-align: center;
+}
+
+#successMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center
+}
+
+#errorMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center
+}
+
+#optionsdiv {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: left;
+  font-size: 20px;
+
+}
+
+
+
+button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+}
