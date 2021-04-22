@@ -378,9 +378,9 @@ export default {
   }
 
   &__button {
-    width: var(--button-size);
-    min-width: var(--button-size) !important;
-    height: var(--button-size) !important;
+    width: var(--button-size, 50px);
+    min-width: var(--button-size, 50px) !important;
+    height: var(--button-size, 50px) !important;
     border-radius: 50%;
     position: sticky;
     margin: 0 1rem;
