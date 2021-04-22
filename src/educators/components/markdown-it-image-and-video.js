@@ -404,7 +404,6 @@ function renderMedia(tokens, idx, options, env, md) {
   if (type !== 'video' && type !== 'audio')
   {return '';}
   let attrs = options.html5Media[`${type}Attrs`].trim();
-  console.log('YOO', token.attrs);
   if (attrs)
   {attrs = ` ${  attrs}`;}
 

@@ -1,0 +1,21 @@
+actions:
+  - type: sceneText
+    text: >
+      <p>Deustch lorem ipsum</p>
+      <p>Ich mag Welpen</p>
+  - type: dialog
+    entries:
+      - text: "Mags du Welpen?"
+        char: mathina
+        exposition: "Ein wilder Welpe erscheint"
+        mood: happy
+      - text: "Einige haben Mängel"
+        char: generic-char
+        charName: Anna
+      - text: "Ach! Hans, Run! It's the Lhurgoyf!"
+        char: wizard
+        mood: sad
+  - type: game
+    text: "Willst du mit dem Welpen spielen?"
+    cta: "Versuchen Sie es selbst!"
+    url: /apps/example-app/?lang=de

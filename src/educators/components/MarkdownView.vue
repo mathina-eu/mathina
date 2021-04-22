@@ -69,8 +69,14 @@ export default {
 </script>
 
 <style>
-.markdown-body img[src*="_align-center_"] {
+.markdown-body img[src*="_align-center_"],
+.markdown-body video[src*="_align-center_"],
+.markdown-body iframe[src*="_align-center_"] {
   display: block;
   margin: 0 auto;
+}
+
+.markdown-body img {
+  max-width: unset;
 }
 </style>
