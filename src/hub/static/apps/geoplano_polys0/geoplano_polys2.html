@@ -1,0 +1,2925 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../atractor-apps-all/scripts/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Simetrias</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+
+	  p {
+  padding: 4px;
+}
+
+#container1 {
+  display: inline-block;
+  width: 500px;
+  height: 200px;
+  background-color: silver;
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+
+   top: 50%;
+}
+    </style>
+	<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
+
+  </head>
+  <body>
+  
+
+
+<div id='container1' ondragover="onDragOver(event)" ondrop="onDrop(event)"></div>
+	<img src="../atractor-apps-all/icons/happy.png" id="certo1" width="70px" style="display:none"></img>
+		<img src="../atractor-apps-all/icons/sad.png" id="errado" width="70px" style="display:none"></img>
+		
+		<audio src="../atractor-apps-all/sons/aplausos.mp3" id="aplausosAudio" type="audio/mpeg"></audio>
+   
+   
+	<div id="successMessage" style="display:none">
+    <img src="../atractor-apps-all/icons/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="../atractor-apps-all/gifs/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="../atractor-apps-all/icons/next.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
+	
+
+	  
+  <script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+	<script>
+			function Link(){
+ window.location.href="geoplano_polys3.html";
+}
+ var redLine;
+	var w=window.innerWidth*0.9;
+	var w1=1.02*w;
+	var h=window.innerHeight;
+	var h2=1*h;
+	var h1=0.15*h; 
+	var trianglesb=[[],[],[],[]];	
+var circlesb=[[],[],[],[]];
+var squaresb=[[],[],[],[]];
+var polys=[];
+	document.getElementById('container1').style.width=w1+"px";
+	document.getElementById('container1').style.height=h2+"px";
+	
+	
+	
+	
+var num=8;
+	  var nn= Math.min(w/(2*num),h2/num);
+	  var hn=Math.round(w/nn);
+	  var vn=Math.round(h2/nn);
+	 var posx=[]; var posy=[];var med=0;
+	 
+	 var nnm=1.1*nn;
+	  var nnm2=1.15*nn;
+	
+	
+		  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+  
+	/*
+	  
+*/	
+	
+// Set up the canvas to catch the dragged shapes
+var s1 = new Konva.Stage({
+  container: 'container1',
+  width: 1920,
+  height: 1080
+});
+// add a layer to host the 'dropped' shapes.
+var layer1 = new Konva.Layer({
+  draggable: false
+});
+s1.add(layer1);
+
+
+var layer2 = new Konva.Layer({
+  draggable: false
+});
+s1.add(layer2);
+
+
+function isItemInArray(array, item) {
+    for (var i = 0; i < array.length; i++) {
+        // This if statement depends on the format of your array
+        if (array[i][0] == item[0] && array[i][1] == item[1]) {
+            return true;   // Found it
+        }
+    }
+    return false;   // Not found
+}
+
+var c1= new Konva.Line({
+ x: nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true,
+		translation:(nn/2,nn/2)
+      });
+	  
+c1.on('dragstart',function() {
+       this.moveToTop();
+          var c1 = this.clone({
+});
+
+if(c1.x()==nnm/2&c1.y()==nnm/2){layer2.add(c1);layer2.draw();}
+
+
+var aa= c1.x(); 
+
+
+var bb=c1.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < trianglesb[0].length; i++){ if ( trianglesb[0][i][0] == 
+med-Math.abs(xi-med)-1 && trianglesb[0][i][1]==yi && !duplo) { 
+duplo=true;
+trianglesb[0].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+
+});
+
+c1.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(triangles[0].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi],
+                });
+				trianglesb[0].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen = new Konva.Line({
+ x: nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true,
+		translation:(nn/2,nn/2)
+      });
+   
+   
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+		
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+ if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//trianglesb[0].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =  new Konva.Line({
+ x: nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true,
+		//translation:(nn/2,nn/2)
+      });
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	 shapen.x((1-Math.min(frame.time/1000,1))*aa+nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+		
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+	
+		
+		if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}}; 
+		
+	        if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+		  
+        })	  
+		
+		
+
+   var c2= new Konva.Line({
+ x: 3*nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+
+	c2.on('dragstart',function() {
+       this.moveToTop();
+          var c2 = this.clone({
+});if(c2.x()==3*nnm/2&c2.y()==nnm/2){layer2.add(c2);layer2.draw();} 
+
+
+
+var aa= c2.x(); 
+
+
+var bb=c2.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < trianglesb[1].length; i++){ if ( trianglesb[1][i][0] == 
+med-Math.abs(xi-med)-1 && trianglesb[1][i][1]==yi && !duplo) { 
+duplo=true;
+trianglesb[1].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+});
+
+c2.on('dragend', function() {
+             
+
+			 
+
+
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(triangles[1].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {  this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+                });
+				trianglesb[1].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.Line({
+ x: 3*nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+3*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	  
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+   if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//trianglesb[1].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =  new Konva.Line({
+ x: 3*nnm/2,
+        y: nnm/2,
+        
+        points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	 
+	  shapen.x((1-Math.min(frame.time/1000,1))*aa+3*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	 
+		
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	        if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                    aplausosAudio.play();
+					$('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  
+	  
+	  
+
+var c3=new Konva.Line({
+ x: 5*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+
+
+
+c3.on('dragstart',function() {
+       this.moveToTop();
+          var c3 = this.clone({
+});if(c3.x()==5*nnm/2&c3.y()==nnm/2){layer2.add(c3);layer2.draw();} 
+
+
+
+
+var aa= c3.x(); 
+
+
+var bb=c3.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < trianglesb[2].length; i++){ if ( trianglesb[2][i][0] == 
+med-Math.abs(xi-med)-1 && trianglesb[2][i][1]==yi && !duplo) { 
+duplo=true;
+trianglesb[2].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+
+});
+
+c3.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(triangles[2].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+                });
+				trianglesb[2].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.Line({
+ x: 5*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+5*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//trianglesb[2].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =   new Konva.Line({
+ x: 5*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+5*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+
+
+
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	        if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                    aplausosAudio.play();
+					$('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+	  
+var c4=new Konva.Line({
+ x: 7*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+c4.on('dragstart',function() {
+       this.moveToTop();
+          var c4 = this.clone({
+});if(c4.x()==7*nnm/2&c4.y()==nnm/2){layer2.add(c4);layer2.draw();}
+
+
+
+
+var aa= c4.x(); 
+
+
+var bb=c4.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < trianglesb[3].length; i++){ if ( trianglesb[3][i][0] == 
+med-Math.abs(xi-med)-1 && trianglesb[3][i][1]==yi && !duplo) { 
+duplo=true;
+trianglesb[3].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+
+
+ });
+
+c4.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+
+
+
+if(triangles[3].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+                });
+				trianglesb[3].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =  new Konva.Line({
+ x: 7*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+7*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//trianglesb[3].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =    new Konva.Line({
+ x: 7*nnm/2,
+        y: nnm/2,
+        
+       points: [-nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+7*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+
+ 
+		
+	
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	
+	  
+	  
+	  
+	  
+	  
+	  var c5=new Konva.RegularPolygon({
+        x: 9*nnm/2,
+        y: nnm/2,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	  
+c5.on('dragstart',function() {
+       this.moveToTop();
+          var c5 = this.clone({
+});if(c5.x()==9*nnm/2&c5.y()==nnm/2){layer2.add(c5);layer2.draw();} 
+
+
+var aa= c5.x(); 
+
+
+var bb=c5.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < squaresb[0].length; i++){ if ( squaresb[0][i][0] == 
+med-Math.abs(xi-med)-1 && squaresb[0][i][1]==yi && !duplo) { 
+duplo=true;
+squaresb[0].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+
+
+});
+
+c5.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(squares[0].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				squaresb[0].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+     x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+9*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//squaresb[0].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+         x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+9*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	        if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+var c6 =new Konva.RegularPolygon({
+        x: 11*nnm/2,
+        y: nnm/2,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+
+	  
+c6.on('dragstart',function() {
+       this.moveToTop();
+          var c6 = this.clone({
+});if(c6.x()==11*nnm/2&c6.y()==nnm/2){layer2.add(c6);layer2.draw();} 
+
+       
+var aa= c6.x(); 
+
+
+var bb=c6.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < squaresb[1].length; i++){ if ( squaresb[1][i][0] == 
+med-Math.abs(xi-med)-1 && squaresb[1][i][1]==yi && !duplo) { 
+duplo=true;
+squaresb[1].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+});
+
+c6.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(squares[1].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				squaresb[1].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+     x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+11*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//squaresb[1].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+         x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+11*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+		if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                    aplausosAudio.play();
+					$('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	
+
+
+
+
+
+
+
+var c7 =new Konva.RegularPolygon({
+        x: 13*nnm/2,
+        y: nnm/2,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+		  
+c7.on('dragstart',function() {
+       this.moveToTop();
+          var c7 = this.clone({
+});if(c7.x()==13*nnm/2&c7.y()==nnm/2){layer2.add(c7);layer2.draw();}
+
+
+       
+
+var aa= c7.x(); 
+
+
+var bb=c7.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < squaresb[2].length; i++){ if ( squaresb[2][i][0] == 
+med-Math.abs(xi-med)-1 && squaresb[2][i][1]==yi && !duplo) { 
+duplo=true;
+squaresb[2].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+ });
+
+c7.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+if(squares[2].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				squaresb[2].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+     x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+13*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//squaresb[2].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+         x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+13*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	        if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  var c8= new Konva.RegularPolygon({
+        x: 15*nnm/2,
+        y: nnm/2,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	  
+	  	  
+c8.on('dragstart',function() {
+       this.moveToTop();
+          var c8 = this.clone({
+});if(c8.x()==15*nnm/2&c8.y()==nnm/2){layer2.add(c8);layer2.draw();} 
+
+
+       
+var aa= c8.x(); 
+
+
+var bb=c8.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < squaresb[3].length; i++){ if ( squaresb[3][i][0] == 
+med-Math.abs(xi-med)-1 && squaresb[3][i][1]==yi && !duplo) { 
+duplo=true;
+squaresb[3].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+});
+
+c8.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+
+if(squares[3].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				squaresb[3].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+     x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+15*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//squaresb[3].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+   var shapen =   new Konva.RegularPolygon({
+         x: 9*nnm/2,
+        y: nnm/1.6,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+		draggable:true
+      }); 
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+15*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+				    aplausosAudio.play();
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	  	
+	  
+	  
+	  
+	  
+	  
+var c9	  = new Konva.Line({
+ x: 17*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+
+c9.on('dragstart',function() {
+       this.moveToTop();
+          var c9 = this.clone({
+});if(c9.x()==17*nnm/2&c9.y()==nnm/2){layer2.add(c9);layer2.draw();} 
+
+
+
+var aa= c9.x(); 
+
+
+var bb=c9.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < circlesb[0].length; i++){ if ( circlesb[0][i][0] == 
+med-Math.abs(xi-med)-1 && circlesb[0][i][1]==yi && !duplo) { 
+duplo=true;
+circlesb[0].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+
+
+});
+
+c9.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+
+
+
+
+if(circles[0].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				circlesb[0].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen = new Konva.Line({
+ x: 17*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+17*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//circlesb[0].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+    var shapen = new Konva.Line({
+ x: 17*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+17*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                    aplausosAudio.play();
+					$('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	 
+
+
+
+
+
+
+
+
+ 
+var c10 =  new Konva.Line({
+ x: 19*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+c10.on('dragstart',function() {
+       this.moveToTop();
+          var c10 = this.clone({
+});if(c10.x()==19*nnm/2&c10.y()==nnm/2){layer2.add(c10);layer2.draw();} 
+
+
+      
+var aa= c10.x(); 
+
+
+var bb=c10.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < circlesb[1].length; i++){ if ( circlesb[1][i][0] == 
+med-Math.abs(xi-med)-1 && circlesb[1][i][1]==yi && !duplo) { 
+duplo=true;
+circlesb[1].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+});
+
+c10.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+if(circles[1].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				circlesb[1].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen = new Konva.Line({
+ x: 19*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+19*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//circlesb[1].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+    var shapen = new Konva.Line({
+ x: 19*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+19*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	 
+
+
+
+
+var c11 = new Konva.Line({
+ x: 21*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+
+
+
+c11.on('dragstart',function() {
+       this.moveToTop();
+          var c11 = this.clone({
+});if(c11.x()==21*nnm/2&c11.y()==nnm/2){layer2.add(c11);layer2.draw();} 
+
+       
+var aa= c11.x(); 
+
+
+var bb=c11.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < circlesb[2].length; i++){ if ( circlesb[2][i][0] == 
+med-Math.abs(xi-med)-1 && circlesb[2][i][1]==yi && !duplo) { 
+duplo=true;
+circlesb[2].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+});
+
+c11.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+if(circles[2].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				circlesb[2].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen = new Konva.Line({
+ x: 21*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+21*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+				//circlesb[2].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+    var shapen = new Konva.Line({
+ x: 21*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+21*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	 
+
+
+
+
+
+var c12 = new Konva.Line({
+ x: 23*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+c12.on('dragstart',function() {
+       this.moveToTop();
+          var c12 = this.clone({
+});if(c12.x()==23*nnm/2&c12.y()==nnm/2){layer2.add(c12);layer2.draw();} 
+
+
+
+var aa= c12.x(); 
+
+
+var bb=c12.y();
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+var duplo=false; 
+for( var i = 0; i < circlesb[3].length; i++){ if ( circlesb[3][i][0] == 
+med-Math.abs(xi-med)-1 && circlesb[3][i][1]==yi && !duplo) { 
+duplo=true;
+circlesb[3].splice(i, 1);  }}
+
+
+var duplo2=false;
+for( var i = 0; i < polys.length; i++){ if ( polys[i][0] == 
+med-Math.abs(xi-med)-1 && polys[i][1]==yi &&!duplo2 ) { duplo2=true;
+polys.splice(i, 1);  }}
+});
+
+c12.on('dragend', function() {
+             
+var aa= this.position().x; 
+
+
+var bb=this.position().y;
+var posx2 = posx.map(myFunction);
+
+function myFunction(value, index, array) {
+  return Math.abs(value - aa);
+}
+
+var minx=Math.min(...posx2);
+var xi=posx2.indexOf(minx);   
+
+var posy2 = posy.map(myFunction2);
+
+function myFunction2(value, index, array) {
+  return Math.abs(value - bb);
+}
+
+var miny=Math.min(...posy2);
+var yi=posy2.indexOf(miny);   
+
+var posconf=[med-Math.abs(xi-med)-1,yi];
+
+if(circles[3].some(elem => (elem[0]==med-Math.abs(xi-med)-1&elem[1]==yi))&&xi>=med)
+  { 
+  if(!isItemInArray(polys, posconf))
+  
+  {this.position({
+                  x: posx[xi],
+                  y: posy[yi]
+				  
+                });
+				circlesb[3].push(posconf)
+				polys.push(posconf)
+				} 
+				
+				else { this.hide();
+   
+   var shapen = new Konva.Line({
+ x: 23*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+		
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+		 shapen.x((1-Math.min(frame.time/1000,1))*posx[xi]+23*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*posy[yi]+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);};
+
+}
+
+  else
+
+  {  
+  if(xi>=med&& !isItemInArray(polys, posconf)&&bb>h1){
+   this.position({
+                 x: posx[xi],
+                  y: posy[yi]
+                });
+
+
+				this.draggable(true)
+				
+				var posconf=[med-Math.abs(xi-med)-1,yi];
+				
+			//	circlesb[3].push(posconf)
+				polys.push(posconf)
+				} else {
+  
+  this.hide();
+   
+    var shapen = new Konva.Line({
+ x: 23*nnm/2,
+        y: nnm/2,
+        
+       points: [nn/2,-nn/2,-nn/2,nn/2,nn/2,nn/2],
+        
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true,
+		draggable:true
+      });
+	  
+	
+	   var atime = 0; 
+   var anim = new Konva.Animation(function(frame) {
+        atime=frame.time; 
+	
+	 	 shapen.x((1-Math.min(frame.time/1000,1))*aa+23*nnm/2*Math.min(frame.time/1000,1));
+	  shapen.y((1-Math.min(frame.time/1000,1))*bb+nnm/2*Math.min(frame.time/1000,1));
+	
+	 if(atime/1000>1) {anim.stop();shapen.hide();};	
+      }, layer2);
+anim.start();
+layer2.add(shapen);
+}
+	
+}
+
+
+   
+	   var lenb=squaresb[0].length+squaresb[1].length+squaresb[2].length+squaresb[3].length+
+	   circlesb[0].length+ circlesb[1].length+ circlesb[2].length+ circlesb[3].length+
+	    trianglesb[0].length+ trianglesb[1].length+ trianglesb[2].length+ trianglesb[3].length;
+		
+			if(polys.length>0){if(lenb==polys.length){document.getElementById("errado").style.display="none";
+		document.getElementById("certo1").style.display="inline-block"} else {
+		document.getElementById("certo1").style.display="none";
+		document.getElementById("errado").style.display="inline-block"}};
+		
+	         if(polys.length==0) {document.getElementById("certo1").style.display="none";document.getElementById("errado").style.display="none";};  if (lenb==len && polys.length==len) {
+				
+	  
+                  var text = 'You win! Enjoy your booty!';
+                     aplausosAudio.play();
+					 $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+	 redLine.moveToTop();
+		  layer2.draw();
+        })	 
+
+
+
+
+
+
+
+
+
+
+  layer2.add(c1);
+ layer2.add(c2);
+  layer2.add(c3);
+ layer2.add(c4); layer2.add(c5);
+ layer2.add(c6); layer2.add(c7);
+ layer2.add(c8); layer2.add(c9);
+ layer2.add(c10); layer2.add(c11);
+ layer2.add(c12);
+	 
+for(var i=0;i<hn+1;i++)
+{	  
+	  var blackLine = new Konva.Line({
+        points: [nn*i, h1,nn*i,h],
+        stroke: 'black',
+        strokeWidth: 2,
+        lineCap: 'round',
+        lineJoin: 'round'
+      });
+	  
+	   
+	  
+	  posx.push(nn*(i+.5));
+	  
+	 if((i==hn/2)||(i==(hn-1)/2)) {med=i;redLine = new Konva.Line({
+        points: [nn*i, h1,nn*i,h],
+        stroke: 'red',
+        strokeWidth: 4,
+        lineCap: 'round',
+        lineJoin: 'round'
+      });layer2.add(redLine)} else{ layer1.add(blackLine)};
+	  
+	  };
+	  
+	  for(var j=0;j<vn+1;j++)
+{	  
+	  var blackLine = new Konva.Line({
+        points: [0,h1+nn*j, hn*(nn),h1+nn*j],
+        stroke: 'black',
+        strokeWidth: 2,
+        lineCap: 'round',
+        lineJoin: 'round'
+      });
+	 
+	 posy.push(h1+nn*(j+.5));
+	 
+	 layer1.add(blackLine);
+	 
+	  };
+	  
+triangles=[[],[],[[med-1,1],[med-2,2],[med-2,3],[med-3,4]],[]];	
+circles=[[],[],[],[]];
+squares=[[],[],[[med-1,2],[med-1,3],[med-1,4],[med-2,4]],
+[[med-1,5]]];
+
+
+
+ var len=squares[0].length+squares[1].length+squares[2].length+squares[3].length+
+	   circles[0].length+ circles[1].length+ circles[2].length+ circles[3].length+
+	    triangles[0].length+ triangles[1].length+ triangles[2].length+ triangles[3].length;
+		
+		
+
+   for(var k=0;k<triangles[0].length;k++){
+  dropShape(posx[triangles[0][k][0]], posy[triangles[0][k][1]], "trianglered");};
+
+  for(var k=0;k<triangles[1].length;k++){
+  dropShape(posx[triangles[1][k][0]], posy[triangles[1][k][1]], "triangleblue");};
+    
+  for(var k=0;k<triangles[2].length;k++){
+  dropShape(posx[triangles[2][k][0]], posy[triangles[2][k][1]], "trianglegreen");};
+  
+  for(var k=0;k<triangles[3].length;k++){
+  dropShape(posx[triangles[3][k][0]], posy[triangles[3][k][1]], "trianglebrown");};
+
+  for(var k=0;k<circles[0].length;k++){
+  dropShape(posx[circles[0][k][0]], posy[circles[0][k][1]], "circlered");};
+
+  for(var k=0;k<circles[1].length;k++){
+  dropShape(posx[circles[1][k][0]], posy[circles[1][k][1]], "circleblue");};
+    
+  for(var k=0;k<circles[2].length;k++){
+  dropShape(posx[circles[2][k][0]], posy[circles[2][k][1]], "circlegreen");};
+  
+  for(var k=0;k<circles[3].length;k++){
+  dropShape(posx[circles[3][k][0]], posy[circles[3][k][1]], "circlebrown");};
+  
+  for(var k=0;k<squares[0].length;k++){
+  dropShape(posx[squares[0][k][0]], posy[squares[0][k][1]], "squarered");};
+
+  for(var k=0;k<squares[1].length;k++){
+  dropShape(posx[squares[1][k][0]], posy[squares[1][k][1]], "squareblue");};
+    
+  for(var k=0;k<squares[2].length;k++){
+  dropShape(posx[squares[2][k][0]], posy[squares[2][k][1]], "squaregreen");};
+  
+  for(var k=0;k<squares[3].length;k++){
+  dropShape(posx[squares[3][k][0]], posy[squares[3][k][1]], "squarebrown");};
+  
+//  Function to create a new shape when we drop something dragged from the palette
+function dropShape(x, y, type) {
+  var shape;
+
+  if (type == 'trianglered') { shape=new Konva.Line({
+x: x-nn/2,
+        y: y-nn/2,
+  points: [nn,nn,0,nn,nn,0],
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true
+      })}
+  
+  
+	  
+	  
+	   if (type == 'triangleblue') { shape=new Konva.Line({
+x: x-nn/2,
+        y: y-nn/2,
+  points: [nn,nn,0,nn,nn,0],
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true
+      })}
+	  
+	  
+	    if (type == 'trianglegreen') { shape=new Konva.Line({
+x: x-nn/2,
+        y: y-nn/2,
+  points: [nn,nn,0,nn,nn,0],
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true
+      })}
+	  
+	    if (type == 'trianglebrown') { shape=new Konva.Line({
+x: x-nn/2,
+        y: y-nn/2,
+  points: [nn,nn,0,nn,nn,0],
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1,
+        closed: true
+      })}
+	  
+	  if (type == 'squarered') { shape=new Konva.RegularPolygon({
+        x: x,
+        y: y,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'red',
+        stroke: 'black',
+        strokeWidth: 1
+      });  };
+	  
+	    if (type == 'squareblue') { shape=new Konva.RegularPolygon({
+        x: x,
+        y: y,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'blue',
+        stroke: 'black',
+        strokeWidth: 1
+      });  };
+	  
+	    if (type == 'squaregreen') { shape=new Konva.RegularPolygon({
+        x: x,
+        y: y,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'green',
+        stroke: 'black',
+        strokeWidth: 1
+      });  };
+	  
+	    if (type == 'squarebrown') { shape=new Konva.RegularPolygon({
+        x: x,
+        y: y,
+        sides: 4,
+        radius: nn/1.414,
+		rotation: 45,
+        fill: 'brown',
+        stroke: 'black',
+        strokeWidth: 1
+      });  };
+	  
+	      if (type == 'circlered') { shape=new Konva.Circle({x: x, y: y, radius: nn/2, fill: 'red', stroke: 'black', strokeWidth: 1})  };
+	   if (type == 'circleblue') { shape=new Konva.Circle({x: x, y: y, radius: nn/2, fill: 'blue', stroke: 'black', strokeWidth: 1})  };
+	   if (type == 'circlegreen') { shape=new Konva.Circle({x: x, y: y, radius: nn/2, fill: 'green', stroke: 'black', strokeWidth: 1})  };
+	   if (type == 'circlebrown') { shape=new Konva.Circle({x: x, y: y, radius: nn/2, fill: 'brown', stroke: 'black', strokeWidth: 1})  };
+	  
+  layer1.add(shape);
+  s1.draw();
+}
+
+	</script>
+  </body>
+</html>
