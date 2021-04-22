@@ -38,12 +38,7 @@ export class BackgroundAction extends Action {
 
   execute(context) {
     super.execute();
-    let path;
-    if (this.src.startsWith('$COMMON')) {
-      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
-    } else {
-      path = `${context.imgRoot}/bg/${this.src}`;
-    }
+    const path = this.getAssetPath(context.imgRoot);
 
     if (context.activeDirection === 'back') {
       context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
@@ -52,6 +47,16 @@ export class BackgroundAction extends Action {
 
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
     context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style }];
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/bg/${this.src}`;
+    }
+    return path;
   }
 }
 
@@ -99,12 +104,7 @@ export class ImageAction extends Action {
 
   execute(context) {
     super.execute();
-    let path;
-    if (this.src.startsWith('$COMMON')) {
-      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
-    } else {
-      path = `${context.imgRoot}/${this.src}`;
-    }
+    const path = this.getAssetPath(context.imgRoot);
 
     if (context.activeDirection === 'back') {
       context.images = context.images.filter(img => img.src !== path);
@@ -119,6 +119,16 @@ export class ImageAction extends Action {
       position: { vertical: this.valign, horizontal: this.align }
     });
     context.images = images;
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/${this.src}`;
+    }
+    return path;
   }
 }
 
