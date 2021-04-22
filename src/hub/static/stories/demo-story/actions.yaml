@@ -3,6 +3,11 @@ actions:
     src: c1-bg1.jpg
     id: bg1
     style: "width: 100%"
+    parallax: back2
+  - type: image
+    src: $COMMON/img/bg/example-shared.jpg
+    style: "width: 40%; bottom: 20%; left: 20%;"
+    parallax: mid2
   - type: sceneText
     text: >
       <p>Lorem ipsum</p>
@@ -25,6 +30,7 @@ actions:
   - type: background
     src: $COMMON/img/bg/example-shared.jpg
     style: "width: 100%"
+    parallax: front2
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"
