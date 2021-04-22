@@ -4,12 +4,26 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: sceneText
     text: Mathina and her friend Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
+  - type: image
+    src: c1-5.png
+    id: c1-5
+    align: center
+    valign: bottom
+    style: "width: 20%;"
   - type: dialog
     entries:
       - text: There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
         char: kangaroo
         mood: happy
+  - type: animation
+    target: c1-5
+    vars:
+      duration: 3
+      xPercent: 85
+      yPercent: -10
+      ease: power3.out
   - type: sceneText
+    tag: someTagName
     text: Leo was about to cross the street, but the kangaroo reached out after him. 
   - type: dialog
     entries:
@@ -17,22 +31,30 @@ actions:
         char: kangaroo
         mood: sad
   - type: image 
-    src: lamps33.png
-    id: lamps33
-    style: "width: 40%; top: 42%; right: 30%;"
+    src: lamps38.png
+    id: lamps38
+    style: "width: 20%; top: 42%; right: 30%;"
+    align: right
+    valign: bottom
+  - type: image 
+    src: c1-5.png
+    id: c1-5
+    style: "width: 40%; top: 30%; right: 25%;"
     align: right
     valign: bottom
   - type: sceneText
     text: They saw one column rising, another retreating to the ground.
   - type: clearImage
-    id: lamps33
+    id: lamps38
   - type: image 
-    src: lamps3gif.gif
-    id: lamps3sgif
-    style: "width: 40%; top: 42%; right: 30%;"
+    src: lamps3gif2204.gif
+    id: lamps3gif
+    style: "width: 15%; top: 24%; right: 20%;"
     align: right
   - type: sceneText
     text: There was always a different number of columns rising up, and there were three lights on each of them.
+  - type: clearImage
+    id: lamps3gif
   - type: sceneText
     text: ...violet, orange, and pink, but in a different order on each column.
   - type: dialog
