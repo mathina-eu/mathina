@@ -13,24 +13,34 @@ actions:
 
   - type: sceneText
     text: >
-      <p> I found it
-      It was a sunny morning, Mathina and Leo were going on a stroll
-      in the fields near their village when they suddenly saw an old woman
-      waving her hands towards the sky and uttering incomprehensible words.  </p>
+      <p>Es war ein sonniger Morgen, Mathina und Leo gingen durch die Felder in der Nähe ihres Dorfes spazieren. 
+      Da sahen sie plötzlich eine ältere Frau, die zum Himmel schaute und mit ihren Armen merkwürde Bewegungen machte.
+      Sie murmelte unverständliche Worte dazu. 
+      #It was a sunny morning, Mathina and Leo were going on a stroll
+      #in the fields near their village when they suddenly saw an old woman
+      #waving her hands towards the sky and uttering incomprehensible words. 
+      </p>
 
   - type: sceneText
     text: >
-      <p>The woman was old but fiery and strong, like a retired ranger,
-      for whom time had stopped passing by. Her hair was white and long.
-      She was wearing strong leather clothes, an old worn dusty cape, boots
-      like those used for riding horses, and she carried a bag, a thick rope,
-      a book on her hand, and a short stick decorated with color stripes,
-      too short to be used as a walking support but long enough to extend
-      her arm to the floor. </p>
+      <p>Die Frau war alt, aber stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
+      Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten, 
+      außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock, der mit farbigen Streifen dekoriert war.
+      Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden. 
+      #The woman was old but fiery and strong, like a retired ranger,
+      #for whom time had stopped passing by. Her hair was white and long.
+      #She was wearing strong leather clothes, an old worn dusty cape, boots
+      #like those used for riding horses, and she carried a bag, a thick rope,
+      #a book on her hand, and a short stick decorated with color stripes,
+      #too short to be used as a walking support but long enough to extend
+      #her arm to the floor. 
+      </p>
 
   - type: sceneText
     text: >
-      <p>Mathina, who wasn’t shy at all, approached the woman.</p>
+      <p>Mathia zögerte nicht und ging auf die Frau zu.
+      #Mathina, who wasn’t shy at all, approached the woman.
+      </p>
 
   - type: animation
     target: mat1
@@ -46,51 +56,76 @@ actions:
       - mathina: left
     entries:
 
-      - text: Ms, are you a warrior?
+      - text: Hallo, bist Du eine Kriegerin?
+        #Ms, are you a warrior?
         char: mathina
         mood: happy
-      - text: Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
+      - text: Oh, meine Liebe, das würde ich nicht sagen. Ich habe nie gekämpft, also jedenfalls nicht mit menschlichen Wesen.
+        #Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
         char: flamma
         mood: sad
-      - text: Are you a wizard then?
+      - text: Bist Du dann eine Zauberin? 
+        #Are you a wizard then?
         char: mathina
         mood: happy
-      - text: I wouldn’t say that either, although I know some of them and they have helped me more than once.
+      - text: Das würde ich auch nicht sagen, obwohl ich einige von ihnen kenne, und sie haben mir mehr als einmal geholfen.
+        #I wouldn’t say that either, although I know some of them and they have helped me more than once.
         char: flamma
         mood: sad
-      - text: Then who are you? You speak a strange language.
+      - text: Wer bist Du dann? Du hast vorhin eine unbekannte Sprache gesprochen.
+        #Then who are you? You speak a strange language.
         char: mathina
         mood: happy
-      - text: I am a firebird trainer.
+      - text: Ich bin eine Feuervogeltrainerin
+        #I am a firebird trainer.
         char: flamma
         mood: sad
-      - text: What is that? - Replied Leo, with increasing interest.
-        char: mathina
+      - text: Was ist das? - Fragte Leo, der auch neugierig geworden war.
+        #What is that? - Replied Leo, with increasing interest.
+        char: leo
+        #maybe leo needs to be properly integrated into the dialog?
         mood: happy
-      - text: My name is Flamma, I come from Arisa, a land full of strange
-          creatures and wizards. In Arisa there are many types of firebirds,
-          or birds of fire. These creatures are extremely intelligent, but their
-          minds and language are different from ours. They use a very precise
-          language to communicate where they are, how they fly, and where they go.
-          We humans don’t have such precise words for describing their flight,
-          but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+      - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
+          Es gibt zum Beispiel viele verschiedene Arten von Feuervögeln, oder Vögel des Feuers.
+          Diese Kreaturen sind überaus intelligent, doch ist ihr Geist und ihre Sprache anders als unsere.
+          Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
+          Wir Menschen können mit unserer Sprache nicht so exakt den Flug der Feuervögel beschreiben.
+          Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
+          Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
+          Das ist es, was ich mache, ich trainiere Feuervögel.
+          #My name is Flamma, I come from Arisa, a land full of strange
+          #creatures and wizards. In Arisa there are many types of firebirds,
+          #or birds of fire. These creatures are extremely intelligent, but their
+          #minds and language are different from ours. They use a very precise
+          #language to communicate where they are, how they fly, and where they go.
+          #We humans don’t have such precise words for describing their flight,
+          #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. 
+          #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
         char: flamma
         mood: sad
-      - text: Oh, that is fascinating. Can we see some of these firebirds?
-          You say there are different types…
+      - text: Oh, das ist ja spannend. Können wir mal solche Feuervögel sehen?
+          Du sagst, es gibt verschiedene Arten...
+          #Oh, that is fascinating. Can we see some of these firebirds?
+          #You say there are different types…
         char: mathina
         mood: happy
-      - text: I came here looking for a small unidragon which I lost two
-          days ago. I think he wanted to explore the world but flew too far away.
-          You will see it, once I manage to tell him where I am.
+      - text: Ich bin hierher gekommen, um einen kleinen Einhorndrachen zu suchen, der mir vor zwei Tagen entwischt ist.
+          Ich glaube, er wollte die Welt erkunden, ist aber zu weit weg geflogen.
+          Ihr werdet ihn sehen, wenn ich es geschafft habe, ihm zu sagen, wo ich bin.
+          #I came here looking for a small unidragon which I lost two
+          #days ago. I think he wanted to explore the world but flew too far away.
+          #You will see it, once I manage to tell him where I am.
         char: flamma
         mood: sad
 
 
   - type: sceneText
-    text: Flamma let out a deep and loud scream to the sky. It didn’t remind
-        of any language, but it seemed to have a meaning. Suddenly, a kind of
-        dragon appeared in the sky, leaving a colorful smokey trail in the air.
+    text: Flamma stieß einen tiefen, lauten Schrei in Richtung Himmel aus.
+        Er erinnerte an keine Sprache, schien aber eine Bedeutung zu haben.
+        Plötzlich erschien eine Art Drache am Himmel, der eine farbige Rauchspur in der Luft hinterließ.
+        #Flamma let out a deep and loud scream to the sky. It didn’t remind
+        #of any language, but it seemed to have a meaning. Suddenly, a kind of
+        #dragon appeared in the sky, leaving a colorful smokey trail in the air.
         The dragon moved gracefully and responded to Flamma as she moved her
         arm and the stick.
   - type: dialog
