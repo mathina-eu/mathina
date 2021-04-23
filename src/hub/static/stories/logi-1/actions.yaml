@@ -5,15 +5,15 @@ actions:
   - type: image
     src: kangaroo-standing.png
     id: kang-st
-    style: "width: 25%; top: 27%; right: 68%;"
+    style: "width: 25%; top: 27%; right: 68%; z-index: 1;"
   - type: image
     src: leo-runs.png
     id: leo-runs
-    style: "width: 14%; top: 50%; right: 72%;"
+    style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
   - type: image
     src: mathina-runs.png
     id: mathina-runs
-    style: "width: 17%; top: 44%; right: 79%;"
+    style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
   - type: sceneText
     text: Mathina 
   - type: clearImage
@@ -55,22 +55,19 @@ actions:
   - type: clearImage
     id: lamps
   - type: image
-    src: lamps3gif2204.gif
-    id: lamps3gof
-    style: "width: 16%; top: 28%; right: 29%;"
+    src: lampsgif2304.gif
+    id: lampsgif
+    style: "width: 11.5%; top: 31%; right: 31.7%;"
+  - type: clearImage
+    id: kang-po
+  - type: image
+    src: kangaroo-standing.png
+    id: kang-st
+    style: "width: 25%; top: 27%; right: 68%;"
   - type: sceneText
     text: They saw one column rising, another retreating to the ground.
-  - type: clearImage
-    id: lamps38
-  - type: image 
-    src: lamps3gif2204.gif
-    id: lamps3gif
-    style: "width: 15%; top: 24%; right: 20%;"
-    align: right
   - type: sceneText
     text: There was always a different number of columns rising up, and there were three lights on each of them.
-  - type: clearImage
-    id: lamps3gif
   - type: sceneText
     text: ...violet, orange, and pink, but in a different order on each column.
   - type: dialog
@@ -78,12 +75,44 @@ actions:
       - text: We can only cross if the three colors appear in all possible orders.” - The kangaroo smiled, noticing Leo’s amazement.
         char: kangaroo
         mood: happy
+  - type: clearImage
+    id: lampsgif
+  - type: image
+    src: lamps-3.png
+    id: lamps
+    style: "width: 16%; top: 28%; right: 29%;"
+  - type: dialog
+    entries:
       - text: Another column rose, and the kangaroo asked, - “Do you think we can go now?”
         char: kangaroo
         mood: happy
-      - text: I think we've got it all! - Leo shouted, and was again ready to cross the street. Now it was Mathina who grabbed his backpack and kept him from running across the cars.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 45
+      yPercent: 0
+      ease: power3.out
+  - type: image
+    src: lamps-3.png
+    id: lamps
+    style: "width: 16%; top: 28%; right: 29%;"
+  - type: dialog
+    entries:
+      - text: I think we've got it all! Leo shouted, and was again ready to cross the street.  
         char: kangaroo
         mood: happy
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: Now it was Mathina who grabbed his backpack and kept him from running across the cars.
+  - type: dialog
+    entries:
       - text: No way! - Mathina said.
         char: kangaroo
         mood: happy
@@ -112,25 +141,39 @@ actions:
       - text: I know, I know, I know! Eight is the solution, eight is the solution, kangaroo, eeeeeiiiiiight! - Leo cried and jumped up in the air. Mathina raised her eyebrows, suspicious of Leo having messed up something.
         char: kangaroo
         mood: happy  
+  - type: image
+    src: solution 8 lamps.png
+    id: solution8
+    style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
+  - type: dialog
+    entries:
       - text: Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
         char: kangaroo
         mood: happy
+  - type: clearImage
+    id: solution8
   - type: game
-    text: Leo found these color combinations below. What do you think he included twice? Put here all the sequences Leo has picked (all of them only once)!
+    text: What do you think Leo has included twice? Put here all the sequences Leo has picked (all of them only once)!
     toolbarText: We see the 8 traffic lights, you can rearrange them. Once you’ve put identical ones next to each other, the superfluous ones disappear.
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+  - type: image
+    src: solution5lamps.png
+    id: solution5
+    style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
   - type: dialog
     entries:
       - text: You see, it's only five now. And guess what, there's a sixth one, too! - Mathina said contemptuously.
         char: kangaroo
         mood: happy
+  - type: clearImage
+    id: solution5
   - type: game
     text: We see the 5 correct lamps lined up and a traffic light without colors that can be colored and additional lamps can be added.
     toolbarText: Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
   - type: dialog
     entries:
-      - text: Well, it starts with two violets and pinks, and only one in orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
+      - text: Well, two begin with violet and two with pink, and only one with orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
         char: kangaroo
         mood: happy
       - text: Got it! Now, after orange comes... not violet but pink, that is - orange-pink-violet.
