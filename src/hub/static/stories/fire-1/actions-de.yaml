@@ -13,34 +13,32 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Es war ein sonniger Morgen, Mathina und Leo gingen durch die Felder in der Nähe ihres Dorfes spazieren. 
+      Es war ein sonniger Morgen, Mathina und Leo gingen durch die Felder in der Nähe ihres Dorfes spazieren.
       Da sahen sie plötzlich eine ältere Frau, die zum Himmel schaute und mit ihren Armen merkwürde Bewegungen machte.
-      Sie murmelte unverständliche Worte dazu. 
-      #It was a sunny morning, Mathina and Leo were going on a stroll
-      #in the fields near their village when they suddenly saw an old woman
-      #waving her hands towards the sky and uttering incomprehensible words. 
-      </p>
+      Sie murmelte unverständliche Worte dazu.
+    #It was a sunny morning, Mathina and Leo were going on a stroll
+    #in the fields near their village when they suddenly saw an old woman
+    #waving her hands towards the sky and uttering incomprehensible words.
 
   - type: sceneText
     text: >
-      <p>Die Frau war alt, aber stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
-      Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten, 
+      Die Frau war alt, aber stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
+      Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten,
       außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock, der mit farbigen Streifen dekoriert war.
-      Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden. 
-      #The woman was old but fiery and strong, like a retired ranger,
-      #for whom time had stopped passing by. Her hair was white and long.
-      #She was wearing strong leather clothes, an old worn dusty cape, boots
-      #like those used for riding horses, and she carried a bag, a thick rope,
-      #a book on her hand, and a short stick decorated with color stripes,
-      #too short to be used as a walking support but long enough to extend
-      #her arm to the floor. 
-      </p>
+      Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden.
+    #The woman was old but fiery and strong, like a retired ranger,
+    #for whom time had stopped passing by. Her hair was white and long.
+    #She was wearing strong leather clothes, an old worn dusty cape, boots
+    #like those used for riding horses, and she carried a bag, a thick rope,
+    #a book on her hand, and a short stick decorated with color stripes,
+    #too short to be used as a walking support but long enough to extend
+    #her arm to the floor.
+
 
   - type: sceneText
     text: >
-      <p>Mathia zögerte nicht und ging auf die Frau zu.
-      #Mathina, who wasn’t shy at all, approached the woman.
-      </p>
+      <p>Mathia zögerte nicht und ging auf die Frau zu. </p>
+    #Mathina, who wasn’t shy at all, approached the woman.
 
   - type: animation
     target: mat1
@@ -64,7 +62,7 @@ actions:
         #Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
         char: flamma
         mood: sad
-      - text: Bist Du dann eine Zauberin? 
+      - text: Bist Du dann eine Zauberin?
         #Are you a wizard then?
         char: mathina
         mood: happy
@@ -93,28 +91,28 @@ actions:
           Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
           Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
           Das ist es, was ich mache, ich trainiere Feuervögel.
-          #My name is Flamma, I come from Arisa, a land full of strange
-          #creatures and wizards. In Arisa there are many types of firebirds,
-          #or birds of fire. These creatures are extremely intelligent, but their
-          #minds and language are different from ours. They use a very precise
-          #language to communicate where they are, how they fly, and where they go.
-          #We humans don’t have such precise words for describing their flight,
-          #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. 
-          #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+        #My name is Flamma, I come from Arisa, a land full of strange
+        #creatures and wizards. In Arisa there are many types of firebirds,
+        #or birds of fire. These creatures are extremely intelligent, but their
+        #minds and language are different from ours. They use a very precise
+        #language to communicate where they are, how they fly, and where they go.
+        #We humans don’t have such precise words for describing their flight,
+        #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language.
+        #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
         char: flamma
         mood: sad
       - text: Oh, das ist ja spannend. Können wir mal solche Feuervögel sehen?
           Du sagst, es gibt verschiedene Arten...
-          #Oh, that is fascinating. Can we see some of these firebirds?
-          #You say there are different types…
+        #Oh, that is fascinating. Can we see some of these firebirds?
+        #You say there are different types…
         char: mathina
         mood: happy
       - text: Ich bin hierher gekommen, um einen kleinen Einhorndrachen zu suchen, der mir vor zwei Tagen entwischt ist.
           Ich glaube, er wollte die Welt erkunden, ist aber zu weit weg geflogen.
           Ihr werdet ihn sehen, wenn ich es geschafft habe, ihm zu sagen, wo ich bin.
-          #I came here looking for a small unidragon which I lost two
-          #days ago. I think he wanted to explore the world but flew too far away.
-          #You will see it, once I manage to tell him where I am.
+        #I came here looking for a small unidragon which I lost two
+        #days ago. I think he wanted to explore the world but flew too far away.
+        #You will see it, once I manage to tell him where I am.
         char: flamma
         mood: sad
 
@@ -126,8 +124,9 @@ actions:
         #Flamma let out a deep and loud scream to the sky. It didn’t remind
         #of any language, but it seemed to have a meaning. Suddenly, a kind of
         #dragon appeared in the sky, leaving a colorful smokey trail in the air.
-        The dragon moved gracefully and responded to Flamma as she moved her
-        arm and the stick.
+        #PENDING TRANSLATION FROM HERE
+        #The dragon moved gracefully and responded to Flamma as she moved her
+        #arm and the stick.
   - type: dialog
     avatarAlign:
       - flamma: right
