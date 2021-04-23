@@ -38,7 +38,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Mathia, überhaupt nicht zögerlich, ging auf die Frau zu.
+      <p>Mathia zögerte nicht und ging auf die Frau zu.
       #Mathina, who wasn’t shy at all, approached the woman.
       </p>
 
@@ -83,23 +83,38 @@ actions:
       - text: Was ist das? - Fragte Leo, der auch neugierig geworden war.
         #What is that? - Replied Leo, with increasing interest.
         char: leo
+        #maybe leo needs to be properly integrated into the dialog?
         mood: happy
-      - text: My name is Flamma, I come from Arisa, a land full of strange
-          creatures and wizards. In Arisa there are many types of firebirds,
-          or birds of fire. These creatures are extremely intelligent, but their
-          minds and language are different from ours. They use a very precise
-          language to communicate where they are, how they fly, and where they go.
-          We humans don’t have such precise words for describing their flight,
-          but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+      - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
+          In Arisa gibt es viele verschiedene Arten von Feuervögeln, oder Vögeln des Feuers.
+          Diese Kreaturen sind überaus intelligent, doch ist ihr Geist und ihre Sprache anders als unsere.
+          Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
+          Wir Menschen können mit unserer Sprache nicht so exakt den Flug der Feuervögel beschreiben.
+          Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
+          Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
+          Das ist es, was ich mache, ch trainiere Feuervögel.
+          #My name is Flamma, I come from Arisa, a land full of strange
+          #creatures and wizards. In Arisa there are many types of firebirds,
+          #or birds of fire. These creatures are extremely intelligent, but their
+          #minds and language are different from ours. They use a very precise
+          #language to communicate where they are, how they fly, and where they go.
+          #We humans don’t have such precise words for describing their flight,
+          #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. 
+          #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
         char: flamma
         mood: sad
-      - text: Oh, that is fascinating. Can we see some of these firebirds?
-          You say there are different types…
+      - text: Oh, das ist ja spannend. Können wir ma solche Feuervögel sehen?
+          Du sagst, es gibt verschiedene Arten...
+          #Oh, that is fascinating. Can we see some of these firebirds?
+          #You say there are different types…
         char: mathina
         mood: happy
-      - text: I came here looking for a small unidragon which I lost two
-          days ago. I think he wanted to explore the world but flew too far away.
-          You will see it, once I manage to tell him where I am.
+      - text: Ich bin hierher gekommen, um einen kleinen Einhorndrachen zu suchen, der mir vor zwei Tagen entwischt ist.
+          Ich glaube, er wollte die Welt erkunden, ist aber zu weit weg geflogen.
+          Ihr werdet ihn sehen, wenn ich es geschafft habe, ihm zu sagen, wo ich bin.
+          #I came here looking for a small unidragon which I lost two
+          #days ago. I think he wanted to explore the world but flew too far away.
+          #You will see it, once I manage to tell him where I am.
         char: flamma
         mood: sad
 
