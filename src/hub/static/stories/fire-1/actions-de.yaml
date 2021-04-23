@@ -86,13 +86,13 @@ actions:
         #maybe leo needs to be properly integrated into the dialog?
         mood: happy
       - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
-          In Arisa gibt es viele verschiedene Arten von Feuervögeln, oder Vögeln des Feuers.
+          Es gibt zum Beispiel viele verschiedene Arten von Feuervögeln, oder Vögel des Feuers.
           Diese Kreaturen sind überaus intelligent, doch ist ihr Geist und ihre Sprache anders als unsere.
           Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
           Wir Menschen können mit unserer Sprache nicht so exakt den Flug der Feuervögel beschreiben.
           Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
           Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
-          Das ist es, was ich mache, ch trainiere Feuervögel.
+          Das ist es, was ich mache, ich trainiere Feuervögel.
           #My name is Flamma, I come from Arisa, a land full of strange
           #creatures and wizards. In Arisa there are many types of firebirds,
           #or birds of fire. These creatures are extremely intelligent, but their
@@ -103,7 +103,7 @@ actions:
           #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
         char: flamma
         mood: sad
-      - text: Oh, das ist ja spannend. Können wir ma solche Feuervögel sehen?
+      - text: Oh, das ist ja spannend. Können wir mal solche Feuervögel sehen?
           Du sagst, es gibt verschiedene Arten...
           #Oh, that is fascinating. Can we see some of these firebirds?
           #You say there are different types…
@@ -120,9 +120,12 @@ actions:
 
 
   - type: sceneText
-    text: Flamma let out a deep and loud scream to the sky. It didn’t remind
-        of any language, but it seemed to have a meaning. Suddenly, a kind of
-        dragon appeared in the sky, leaving a colorful smokey trail in the air.
+    text: Flamma stieß einen tiefen, lauten Schrei in Richtung Himmel aus.
+        Er erinnerte an keine Sprache, schien aber eine Bedeutung zu haben.
+        Plötzlich erschien eine Art Drache am Himmel, der eine farbige Rauchspur in der Luft hinterließ.
+        #Flamma let out a deep and loud scream to the sky. It didn’t remind
+        #of any language, but it seemed to have a meaning. Suddenly, a kind of
+        #dragon appeared in the sky, leaving a colorful smokey trail in the air.
         The dragon moved gracefully and responded to Flamma as she moved her
         arm and the stick.
   - type: dialog
