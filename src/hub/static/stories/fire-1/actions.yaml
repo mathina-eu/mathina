@@ -158,7 +158,8 @@ actions:
 
   - type: dialog
     entries:
-      - text: Mathina, I noticed you practised well and have now a good understanding of how to communicate with unidragons. In a few weeks, there is a big
+      - text: Mathina, I noticed you practised well and have now a good understanding of how to communicate with unidragons. 
+          In a few weeks, there is a big
           festival of firebirds trainers in the castle of Arisa. I think you
           should come with me to see it and to try to fly in some more
           challenging competitions, with the best trainers in the country.
