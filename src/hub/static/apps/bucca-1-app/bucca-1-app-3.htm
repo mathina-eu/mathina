@@ -155,16 +155,48 @@ text-align: center;
 <div id="messaggio">Trova il messaggio corretto</div>
 <div id="chiave">Chiave: il cielo ne &egrave; pieno</div>
 
-<div id="Div1" class="divimg">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.<br><img src="img/f09.png" width="30%"></div>
-<div id="Div2" class="divimg">Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.<br><img src="img/f07.png" width="30%" ></div>
-<div id="Div3" class="divimg">Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.<br><img src="img/f08.png" width="30%" ></div>
-<div id="Div4" class="divimg">Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.<br><img src="img/f10.png" width="30%" ></div>
+<div id="Div1" class="divimg"><span id="Testo1">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.</span><br><img src="img/f09.png" width="30%"></div>
+<div id="Div2" class="divimg"><span id="Testo2">Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.</span><br><img src="img/f07.png" width="30%" ></div>
+<div id="Div3" class="divimg"><span id="Testo3">Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.</span><br><img src="img/f08.png" width="30%" ></div>
+<div id="Div4" class="divimg"><span id="Testo4">Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.</span><br><img src="img/f10.png" width="30%" ></div>
 
 <div id="QuadratoCentrale">
 
 </div>
 
 <script>
+
+Traduzioni=[
+[["messaggio"],"Select the right message","Trova il messaggio corretto"],
+[["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno."],
+[["Testo1"],"We made a great discovery! See you in two Mondays at the ice cream shop.","Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria."],
+[["Testo2"],"We found the treasure map! See you in two Mondays the park.","Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco."],
+[["Testo3"],"Let's meet in two Tuesdays at the park to share the pirate treasure.","Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati."],
+[["Testo4"],"We found a talking parrot: let's meet at our house in two Tuesdays.","Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;."]
+];
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function Traduci(Lang) {
+  for (var k = 0; k < Traduzioni.length; k++) {
+    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+    }
+  }
+}
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 
 
 function Link() {
@@ -238,6 +270,12 @@ function IsRectInRect(Contenitore,Contenuto) {
 
 function Init() {
 	Vittoria=["H1","D3"];
+	
+	Lingua=Number(gup('l', document.location.search));
+	
+	if (!isNumeric(Lingua)) Lingua=1;
+	if (Lingua==0) Lingua=1;
+	Traduci(Lingua);
 
 
 }
