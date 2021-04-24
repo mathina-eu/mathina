@@ -8,7 +8,7 @@
       <img
         v-for="image in images"
         :id="image.id"
-        :key="image.src"
+        :key="`${image.src}${image.id}`"
         :src="image.src"
         :class="`images-wrapper__image--${image.position.horizontal} images-wrapper__image--vertical-${image.position.vertical}`"
         class="images-wrapper__image"

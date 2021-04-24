@@ -113,7 +113,12 @@ export class ImageAction extends Action {
       return;
     }
 
-    const images = context.images.filter(img => img.src !== path && (!img.id || img.id !== this.id));
+    const images = context.images.filter(img => {
+      if (this.id) {
+        return img.id !== this.id;
+      }
+      return img.src !== path;
+    });
     images.push({
       id: this.id,
       src: path,

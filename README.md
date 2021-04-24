@@ -253,8 +253,8 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `image` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/`. You can also use **common** shared images. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/img1.jpg` |
-| id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
+| **src** | `<string>` path | File should be located in `$STORY_DIR/img/`. You can also use **common** shared images. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/img1.jpg`. Note that multiple images with the same path can only be displayed at the same time if they have unique IDs set. |
+| id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later or displaying multiple instance of an image with the same file path. |
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
