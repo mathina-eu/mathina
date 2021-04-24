@@ -221,6 +221,40 @@ text-align: center;
 </div>
 
 <script>
+
+Traduzioni=[
+[["messaggio"],"Message: Look at the third tree, east from the entrance","Messaggio: guardate il settimo albero a est dell'entrata."],
+[["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno."],
+[["Head1"],"Look at the third tree, east from the entrance.","Guardate il settimo albero a est dell'entrata."],
+[["Head2"],"Look at the third tree going right from the entrance.","Guardate il terzo albero a destra dall'entrata."],
+[["Head3"],"Look at the seventh tree north of the fountains.","Guardate il settimo albero a nord delle fontane."],
+[["Head4"],"Look at the tree near the bench.","Guardate l'albero vicino alla panchina."]
+];
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function Traduci(Lang) {
+  for (var k = 0; k < Traduzioni.length; k++) {
+    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+    }
+  }
+}
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+
+
 //Make the DIV element draggagle:
 dragElement(document.getElementById("Div1"));
 dragElement(document.getElementById("Div2"));
@@ -325,7 +359,11 @@ function IsRectInRect(Contenitore,Contenuto) {
 function Init() {
 	Vittoria=["H1","D3"];
 
-
+	Lingua=Number(gup('l', document.location.search));
+	
+	if (!isNumeric(Lingua)) Lingua=1;
+	if (Lingua==0) Lingua=1;
+	Traduci(Lingua);
 }
 
 
