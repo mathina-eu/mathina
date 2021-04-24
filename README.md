@@ -202,7 +202,7 @@ This image should be located in `src/hub/stories/common/img/bg/c1-bg1.jpg`
 | **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/`. You can also use **common** shared backgrounds. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/bg/bg1.jpg` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
 | id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
-| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax the layer. Higher layer represents faster movement. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
 
 ### Clear background
 
@@ -258,7 +258,7 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
-| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax the layer. Higher layer represents faster movement. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
 
 ### Animate Image
 
