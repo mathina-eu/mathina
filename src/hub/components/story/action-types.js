@@ -27,13 +27,14 @@ export class AnimationAction extends Action {
 }
 
 export class BackgroundAction extends Action {
-  constructor({ id, src, style, ...rest }) {
+  constructor({ id, src, style, parallax = 'back1', ...rest }) {
     super(rest);
     this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;
     this.id = id;
+    this.parallax = parallax;
   }
 
   execute(context) {
@@ -46,7 +47,7 @@ export class BackgroundAction extends Action {
     }
 
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
-    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style }];
+    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style, parallax: this.parallax }];
   }
 
   getAssetPath(imgRoot) {
@@ -91,7 +92,7 @@ export class ClearBackgroundAction extends Action {
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, ...rest }) {
+  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
@@ -100,6 +101,7 @@ export class ImageAction extends Action {
     this.valign = valign ? valign : 'none';
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
+    this.parallax = parallax;
   }
 
   execute(context) {
@@ -111,12 +113,18 @@ export class ImageAction extends Action {
       return;
     }
 
-    const images = context.images.filter(img => img.src !== path && (!img.id || img.id !== this.id));
+    const images = context.images.filter(img => {
+      if (this.id) {
+        return img.id !== this.id;
+      }
+      return img.src !== path;
+    });
     images.push({
       id: this.id,
       src: path,
       style: this.style,
-      position: { vertical: this.valign, horizontal: this.align }
+      position: { vertical: this.valign, horizontal: this.align },
+      parallax: this.parallax
     });
     context.images = images;
   }
