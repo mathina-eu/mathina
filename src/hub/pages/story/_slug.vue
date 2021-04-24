@@ -15,9 +15,11 @@
         <GameView
           v-else-if="isGameMode"
           :text="action.text"
+          :toolbar-text="action.toolbarText"
           :url="action.url"
           :cta="action.cta"
           :img="action.img"
+          :toolbar-img="action.toolbarImg"
           :img-root="imgRoot"
           @lastGameFinished="isLastGameFinished=true"
         />
@@ -119,8 +121,7 @@ export default {
   computed: {
     firstInteractiveActionId() {
       for (let [id, action] of this.actions.entries()) {
-        if (action.autoProgress) {
-          console.log('first interactive action', id);
+        if (!action.autoProgress) {
           return id;
         }
       }
@@ -168,10 +169,10 @@ export default {
     document.addEventListener('keydown', this.keydownListener);
     this.executeCurrentAction();
 
-    // If there's an action link (eg url query has ?actionLink=5), execute up to actionLink
-    const actionLink = this.$route.query['actionLink'];
-    if (actionLink && actionLink < this.actions.length) {
-      while (this.currentActionId < actionLink) {
+    // If there's an action link (eg url query has ?actionLink=tagName), execute up to action with tag: tagName
+    const tag = this.$route.query['actionLink'];
+    if (tag) {
+      while (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
         this.next();
       }
     }
@@ -191,6 +192,12 @@ export default {
     back() {
       this.activeDirection = BACK;
 
+      if (this.currentActionId - 1 === this.firstInteractiveActionId && this.currentActionId > 0) {
+        this.currentActionId--;
+        this.back();
+        return;
+      }
+
       if (this.action instanceof DialogAction) {
         this.dialog.current--;
         if (this.dialog.current >= 0) {
@@ -198,7 +205,7 @@ export default {
         }
       }
 
-      if (this.currentActionId < this.firstInteractiveActionId || this.currentActionId <= 0) {
+      if (this.currentActionId <= 0) {
         this.next();
         return;
       }

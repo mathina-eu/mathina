@@ -76,6 +76,7 @@ actions:
       - text: "If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
+    tag: firstGame
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
     url: https://www.atractor.pt/temp/apps-tests/dobrar_1.html

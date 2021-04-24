@@ -1,17 +1,349 @@
 actions:
+  - type: background
+    src: bg_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+
+
   - type: sceneText
     text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+      <h1>The talking parrot</h1>
+      
+          
+
   - type: dialog
     entries:
-      - text: "I love these toys!"
+      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
         char: mathina
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
+  - type: sceneText
+    text: >
+      <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!
+      </br >
+      </br >
+      The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
+  - type: dialog
+    entries:
+      - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+  - type: dialog
+    entries:
+      - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
+        char: mathina
+        mood: happy
+
+  - type: sceneText
+    text: >
+      <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
+
+  - type: sceneText
+    text: >
+      <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.
+      </br>
+      </br>
+      Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again”.
+      </p>
+        
+  - type: dialog
+    entries:
+      - text: "Finally I’m back to Buccaneer’s Island!"
+        char: mathina
+        mood: happy
+
+  - type: sceneText
+    text: >
+      <p>The memory of the lady quickly vanished, replaced by the fresh breeze of the ocean and the bright sounds of the bells of the fishers boats. What a wonderful welcome!
+      </p>
+  - type: sceneText
+    text: >
+      <p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
+        “Treasure map! Here is the map for the hidden treasure of Buccaneer’s Island” </br>
+        “The best apples of Buccaneer’s Island! Give it a taste!”  </br>
+        “Who is the best singer of pirate’s songs? Challenge me!” </br>
+      </p>
+
+  - type: sceneText
+    text: >
+      <p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
+      </br> </br> What is it? Another screech, this time louder!
+      </p>
+
+  - type: background
+    src: bg_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: background
+    src: bg2_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+       
+  - type: sceneText
+    text: >
+      <p>Mathina moved around until she found herself in front of a very clever-looking parrot. It had very nice red, yellow and blue feathers, and when he realised that Mathina was watching him, he just went silent, moving the head, intrigued.
+      </p>
+ 
+  - type: dialog
+    entries:
+      - text: "Hi!! My name is Mathina, may I pet you?"
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Z-F-T!!"
+        char: Parrot
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Wait.. what?"
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    text: >
+      <p>Mathina was baffled, she didn’t understand a word of what the parrot said, but he was clearly speaking some sort of language.
+      </p>
+  - type: sceneText
+    text: >
+      <p>A lady arrived near the stand and greeted Mathina.
+      </p>
+  - type: dialog
+    entries:
+      - text: "Don’t worry: he is like that all the time. I’m Angela, nice to meet you."
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Hi! Is this your parrot?"
+        char: Mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. 
+               Some years ago the crew retired, and so everybody went his own way. Some of them are probably still there on the island."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Wow! Looks like you became friends!"
+        char: Angela
+        mood: happy
+  - type: sceneText
+    text: >
+      <p>The parrot was playing with Mathina, ruffling her hairs with his beak.
+      </p>
+
+
+
+  - type: dialog
+    entries:
+      - text: "Do you want a cookie?"
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> The parrot seemed very happy and replied “Z-F-T! Z-F-T!”. Mathina seemed very curious... </p>
+  - type: dialog
+    entries:
+      - text: "It seems the same word he said before. What if it is telling me just “yes”?"
+        char: Mathina
+        mood: distracted
+  - type: dialog
+    entries:
+      - text: "It sounds right: before you asked to pet him, now he wants a cookie. Shall we try with something different? Ask him something with “no” as an answer."
+        char: Angela
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>Mathina thought about this for a while. What question could she ask to be almost sure the parrot would reply no? </p>
+  - type: dialog
+    entries:
+      - text: "Maybe I will keep this cookie. Is it ok?"
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> The parrot seemed a bit annoyed, and replied “O-P! O-P!”. </br></br> Mathina smiled and gave the cookie to the parrot.</p>
+  - type: dialog
+    entries:
+      - text: "Now we know, Z-F-T means “yes”, and O-P means “no”."
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> What a strange language... Mathina seemed baffled.</p>
+  - type: dialog
+    entries:
+      - text: "I am confused. O-P has two letters, the same as “no”, but I don’t have any idea about that. Maybe is just some crazy code."
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Maybe he is just changing the letters! Think about the alphabet K, M, N, O, P,..."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Hey! I got it. He is substituting the letter with the one immediately after it in the alphabet. So no becomes “no”, since O is immediately after N, and P is immediately after O."
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> Angela seemed happy and the parrot also gave a screech of joy.</p>
+  - type: dialog
+    entries:
+      - text: "Very good Mathina! This is one of the standard ways pirates use to communicate in secret."
+        char: Angela
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> Mathina was amazed, and also quite happy since she was able to understand at least a part of this code.</p>
+  - type: dialog
+    entries:
+      - text: "How do you know this? And… how do you manage to translate so quickly?"
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "You never know who on this island was a pirate or not but, keep this as a secret, I was part of the same crew as John - the parrot. He is very intelligent. Actually, he can speak quite fluently. But sometimes he finds it funny to repeat some words in code, like “yes” and “no”."
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "We have a trick to communicate: a necklace that can be used to encrypt and decrypt words and sentences."
+        char: Angela
+        mood: normal
+  - type: image
+    id: CaesarJewel
+    src: Img_CaesarJewel.png
+    style: "height: 50%; top: 45%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p> Angela gave to Mathina a small necklace. </p>
+  - type: animation
+    target: CaesarJewel
+    vars:
+      duration: 3
+      xPercent: -150
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: >
+      <p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
+  - type: dialog
+    entries:
+      - text: "It is beautiful - said Mathina - how does it work? I see that the letters appear twice: one in the inner circle and one in the outer circle, but they are shifted. Why?"
+        char: Mathina
+        mood: excited
+  - type: dialog
+    entries:
+      - text: "The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle. In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one. Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
+        char: Mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Clever girl - said Angela. So… wanna try to translate something else?"
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Yes, please! Let’s try!"
+        char: Mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Remember, move from the outside to the inside to decode."
+        char: Angela
+        mood: normal
+  - type: clearImage
+    id: CaesarJewel
   - type: game
-    text: "Want to hop around?"
+    text: "Remember: to decode you have to start from the outer circle"
+    toolbarText: "Select the correct word"
     cta: "Try it yourself!"
-    url: /apps/example-app/
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina spent quite a lot of time playing with the parrot. "It is almost time to catch the ferry back home...", thought Mathina while giving back the necklace to Angela.</p>
+  - type: dialog
+    entries:
+      - text: "Angela, it was a wonderful day, I hope to come again visiting you and John."
+        char: Mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
+        char: Angela
+        mood: happy
+        
+  - type: background
+    src: bg2_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: background
+    src: bg_img_temp.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+        
+        
+  - type: sceneText
+    text: >
+      <p> Mathina was very happy! She put the jewel on her neck and, after giving John another cookie she headed back to the dock, to take the ferry. 
+      </br>
+      </br>
+      She was very excited and she almost did not notice that the same lady of the ongoing trip was seated just in front of her.</p>
+  - type: sceneText
+    text: >
+      <p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
+  - type: dialog
+    entries:
+      - text: "Hi!! Wow, I almost did not notice you. It was a great day!"
+        char: Mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> Mathina begins to explain the adventure with the parrot and with Angela, while the other lady was listening, herself lost into memories. </p>
+  - type: dialog
+    entries:
+      - text: "... and finally I tried to translate some sentences, but almost missed the last ferry! But here I am… and… how was your day…. uh… don’t remember your name, sorry."
+        char: Mathina
+        mood: normal
+  - type: sceneText
+    text: >
+      <p> The lady smiled. "I also had my own adventures today! I was on the island hiding a treasure of my own! Who knows who’ll find it!" </p>
+  - type: dialog
+    entries:
+      - text: "Now I am curious, where did you hide it?"
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> "Somewhere in a tree, but I don’t want to spoil you too much! But well - she said while looking at the new pendant of Mathina - are you ready for one last riddle, before the ferry arrives at the dock?" </p>
+  - type: dialog
+    entries:
+      - text: "Of course, I am, tell me!"
+        char: Mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> "Oh, it is not something to tell… Here it is - she said as she handed Mathina an old piece of paper - There is a riddle encoded in this piece of paper, and to me, it looks like that you have all the tools you need for decoding that... Good luck!" </p>
+  - type: sceneText
+    text: >
+      <p> Mathina looked at the piece of paper: a few words - of course incomprehensible - which looked very similar to the one she learned from Angela and John today. Will you help her translate the secret message? </p>
+
+  - type: game
+    text: "Try to decipher the secret message with the help of the jewel"
+    toolbarText: "Try to decipher the secret message with the help of the jewel"
+    cta: "Try it yourself!"
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+      
+      
+      
+      
+      

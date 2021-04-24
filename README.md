@@ -309,9 +309,14 @@ Dialog entries support various moods which use images defined in `src/hub/static
 ```yaml
 - type: game
   text: "Is the following image good (i.e. symmetric)?"
+  toolbarText: "Is the following image good (i.e. symmetric)?"
   cta: "Try it yourself!"
   url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
   img:
+    src: c1-2.png
+    height: 200
+    width: 200
+  toolbarImg:
     src: c1-2.png
     height: 200
     width: 200
@@ -323,10 +328,30 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `game` | action type |
 | **text** | Any `<string>` | Game description |
+| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
 | img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
+| toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
 
+## Using tags to link directly to an action
+
+You can add a `tag` property to any interactive action to support directly linking and fast forwarding to that action.
+
+Example:
+
+```yaml
+- type: dialog
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+- type: sceneText
+  tag: someTagName
+  text: At the stall, Mathina is greeted by a smiling wizard.
+```
+
+Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
+the story will be fast-forwarded to the sceneText instead of the dialog action.
 
 # Educator's Repository
 
@@ -369,6 +394,18 @@ Adding content to the Repository is done by adding
 ### Supported Syntax
 
 For supported syntax see this [example](https://raw.githubusercontent.com/mathina-eu/mathina/master/src/educators/static/stories/demo-story/content.md).
+
+### Using HTML instead of Markdown
+
+You can also use HTML directly instead of markdown for more flexibility. 
+In that case your content.md file should start with `!HTML!`.
+
+Example:
+```
+!HTML!
+
+<img src='/stories/demo-story/img/test.png' style="display: block; margin: 0 auto;">
+```
 
 ### Example: Adding Story Educator guides
 

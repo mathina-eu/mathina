@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 class Action {
   constructor(props) {
     this.autoProgress = false;
+    this.tag = props.tag || '';
   }
 
   execute() {}
@@ -46,8 +47,8 @@ export class ImageAction extends Action {
     this.type = 'image';
     this.id = id;
     this.src = src;
-    this.align = align ? align : 'center';
-    this.valign = valign ? valign : 'center';
+    this.align = align ? align : 'none';
+    this.valign = valign ? valign : 'none';
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
   }
@@ -107,13 +108,23 @@ export class DialogAction extends Action {
 }
 
 export class GameAction extends Action {
-  constructor({ text, cta = 'Try it yourself!', url, img, ...rest }) {
+  constructor({
+    text,
+    cta = 'Try it yourself!',
+    toolbarText = '',
+    url,
+    img,
+    toolbarImg,
+    ...rest
+  }) {
     super(rest);
     this.type = 'game';
     this.text = text;
+    this.toolbarText = toolbarText;
     this.cta = cta;
     this.url = url;
     this.img = img;
+    this.toolbarImg = toolbarImg;
   }
 
   execute(context) {

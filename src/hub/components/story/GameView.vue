@@ -46,7 +46,14 @@
             >
               <v-icon>mdi-close</v-icon>
             </v-btn>
-            <v-toolbar-title>{{ text }}</v-toolbar-title>
+            <img
+              v-if="toolbarImgPath"
+              class="mr-4"
+              :height="toolbarImg.height"
+              :width="toolbarImg.width"
+              :src="toolbarImgPath"
+            >
+            <v-toolbar-title>{{ textInToolbar }}</v-toolbar-title>
             <v-spacer />
             <v-toolbar-items>
               <v-btn
@@ -78,6 +85,10 @@ export default {
       type: String,
       default: '',
     },
+    toolbarText: {
+      type: String,
+      default: '',
+    },
     url: {
       type: String,
       required: true,
@@ -87,6 +98,11 @@ export default {
       required: true,
     },
     img: {
+      type: Object,
+      required: false,
+      default: () => {},
+    },
+    toolbarImg: {
       type: Object,
       required: false,
       default: () => {},
@@ -108,7 +124,16 @@ export default {
         return '';
       }
       return `${this.imgRoot}/${this.img.src}`;
-    }
+    },
+    toolbarImgPath() {
+      if (!this.toolbarImg?.src) {
+        return '';
+      }
+      return `${this.imgRoot}/${this.toolbarImg.src}`;
+    },
+    textInToolbar() {
+      return this.toolbarText || this.text;
+    },
   }
 };
 </script>
