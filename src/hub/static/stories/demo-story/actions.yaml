@@ -3,7 +3,6 @@ actions:
     src: c1-bg1.jpg
     id: bg1
     style: "width: 100%"
-    parallax: back2
   - type: image
     src: $COMMON/img/bg/example-shared.jpg
     style: "width: 40%; bottom: 20%; left: 20%;"

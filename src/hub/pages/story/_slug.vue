@@ -1,41 +1,18 @@
 <template>
   <StoryView :is-loading="isLoading">
     <Parallax class="root">
-      <template slot="back1">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back1')" />
-        <StoryImages :images="parallaxedImages('back1')" />
-      </template>
-      <template slot="back2">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back2')" />
-        <StoryImages :images="parallaxedImages('back2')" />
-      </template>
-      <template slot="back3">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('back3')" />
-        <StoryImages :images="parallaxedImages('back3')" />
-      </template>
-      <template slot="mid1">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid1')" />
-        <StoryImages :images="parallaxedImages('mid1')" />
-      </template>
-      <template slot="mid2">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid2')" />
-        <StoryImages :images="parallaxedImages('mid2')" />
-      </template>
-      <template slot="mid3">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('mid3')" />
-        <StoryImages :images="parallaxedImages('mid3')" />
-      </template>
-      <template slot="front1">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front1')" />
-        <StoryImages :images="parallaxedImages('front1')" />
-      </template>
-      <template slot="front2">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front2')" />
-        <StoryImages :images="parallaxedImages('front2')" />
-      </template>
-      <template slot="front3">
-        <StoryBackgrounds :backgrounds="parallaxedBackgrounds('front3')" />
-        <StoryImages :images="parallaxedImages('front3')" />
+      <template
+        v-for="layer in ['back1', 'back2', 'back3', 'mid1', 'mid2', 'mid3', 'front1', 'front2', 'front3']"
+        :slot="layer"
+      >
+        <StoryBackgrounds
+          :key="layer"
+          :backgrounds="parallaxedBackgrounds(layer)"
+        />
+        <StoryImages
+          :key="`${layer}img`"
+          :images="parallaxedImages(layer)"
+        />
       </template>
       <div class="navigation">
         <v-btn
@@ -222,18 +199,10 @@ export default {
   },
   methods: {
     parallaxedBackgrounds(layer) {
-      console.log('layer', layer);
-      console.log(this.backgrounds);
-      let bgs =  this.backgrounds.filter(bg => bg.parallax === layer);
-      console.log('bgs', bgs);
-      return bgs;
+      return this.backgrounds.filter(bg => bg.parallax === layer);
     },
     parallaxedImages(layer) {
-      console.log('layer', layer);
-      console.log(this.images);
-      let bgs =  this.images.filter(img => img.parallax === layer);
-      console.log('img', bgs);
-      return bgs;
+      return this.images.filter(img => img.parallax === layer);
     },
     async preloadImagesForActions(actionsToPreload) {
       const images = new Set();

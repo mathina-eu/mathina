@@ -174,6 +174,14 @@ z-index, positioning and other attributes for each layer if needed.
 - type: background
   src: c1-bg1.jpg
   style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+```
+
+**Example for using parallax**
+
+```yaml
+- type: background
+  src: c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
   parallax: back2
 ```
 
@@ -194,6 +202,7 @@ This image should be located in `src/hub/stories/common/img/bg/c1-bg1.jpg`
 | **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/`. You can also use **common** shared backgrounds. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/bg/bg1.jpg` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
 | id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax the layer. Higher layer represents faster movement. |
 
 ### Clear background
 
@@ -212,7 +221,6 @@ Remove a background
 | --- | --- | --- |
 | **type** | `clearBackground` | action type |
 | **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
-| parallax | back1, back2, back3, mid1, mid2, mid3, front1, front2, front3 | Set parallax layer. Higher layer represents faster movement. |
 
 ### Set image
 
@@ -227,7 +235,7 @@ Display an image.
   align: center
   valign: bottom
   style: "width: 20%;"
-  parallax: mid2
+  parallax: mid1
 ```
 
 **Example using common shared resources**
@@ -250,7 +258,7 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
-| parallax | back1, back2, back3, mid1, mid2, mid3, front1, front2, front3 | Set parallax layer. Higher layer represents faster movement. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax the layer. Higher layer represents faster movement. |
 
 ### Animate Image
 

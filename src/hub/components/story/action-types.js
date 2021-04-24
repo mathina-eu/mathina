@@ -92,7 +92,7 @@ export class ClearBackgroundAction extends Action {
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, parallax = 'mid1', ...rest }) {
+  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
