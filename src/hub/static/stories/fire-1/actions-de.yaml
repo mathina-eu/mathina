@@ -215,34 +215,53 @@ actions:
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
-    text: "Flamma voice suddenly got all serious and she said:"
+    text: Flammas sprach plötzlich mit ernster Stimme:
+    #"Flamma voice suddenly got all serious and she said:"
 
   - type: dialog
     entries:
-      - text: Mathina, you seem to have a great talent for understanding
-          and communicating with unidragons. In a few weeks, there is a big
-          festival of firebirds trainers in the castle of Arisa. I think you
-          should come with me to see it and to try to fly in some more
-          challenging competitions, with the best trainers in the country.
+      - text: Mathina, ich habe gesehen, dass Du Spaß beim Üben hattest.
+          Du verstehst nun schon gut, wie man einen Einhorndrache führt.
+          In ein paar Wochen findet ein großes Feuervogel-Festival im Schloss von Arisa statt.
+          Möchtest Du mit mir kommen und bei Trainingswettkämpfen antreten? 
+          Es werden die besten Drachen-Trainerinnen und Trainer des Landes dabei sein.
+        #Mathina, you seem to have a great talent for understanding
+        #and communicating with unidragons. In a few weeks, there is a big
+        #festival of firebirds trainers in the castle of Arisa. I think you
+        #should come with me to see it and to try to fly in some more
+        #challenging competitions, with the best trainers in the country.
         char: flamma
         mood: sad
-      - text: Oh, that would be fantastic. Could we get our own
-          unidragon? - asked Leo, who was immediately counting himself in.
-        char: leo
+      - text: Oh, das wäre wirklich toll!
+          Können wir unseren eigenen Einhorndrachen haben?
+        #Oh, that would be fantastic. Could we get our own
+        #unidragon? - asked Leo, who was immediately counting himself in.
+        char: mathina
+        #this should be leo.
+        exposition: Fragte Leo, der natürlich auch mit zum Festival wollte.
         mood: happy
-      - text: Well, a unidragon is a big pet to have, it is a great
-          responsibility, and it has to accept you. If you do well in the
-          festival, yes, you could become a firebird trainer and get
-          your own unidragon.
+      - text: Also, so ein Einhorndrache ist ein treuer Begleiter, er muss Euch natürlich erst akzeptieren. 
+          Es ist ein große Verantwortung. 
+          Wenn Ihr bei den Wettkämpfen auf dem Festival gut abschneidet, 
+          ja, dann könntet Ihr tatsächlich einen eigenen Einhorndrachen bekommen und ihn trainieren.
+        #Well, a unidragon is a big pet to have, it is a great
+        #responsibility, and it has to accept you. If you do well in the
+        #festival, yes, you could become a firebird trainer and get
+        #your own unidragon.
         char: flamma
         mood: sad
-      - text: I would love to try. I am always up for adventures!
-          We will have a unidragon, Leo!
+      - text: Ich würde es gern versuchen. Ich liebe Abenteuer!
+          Wir werden einen Einhorndrachen haben, Leo!      
+        #I would love to try. I am always up for adventures!
+        #We will have a unidragon, Leo!
         char: mathina
         mood: happy
-      - text: Then it is set. But you will have to practise a lot.
-          I will let you train with this unidragon more and once you are
-          ready we will go to the festival.
+      - text: So soll es sein. Ihr werden aber viel üben müssen.
+          Ich werde euch diesen Einhorndrachen noch etwas mehr trainieren lassen.
+          Wenn ihr soweit seid, gehen wir zum Festival.
+        #Then it is set. But you will have to practise a lot.
+        #I will let you train with this unidragon more and once you are
+        #ready we will go to the festival.
     char: flamma
     mood: happy
 
