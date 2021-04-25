@@ -22,7 +22,7 @@ actions:
 
   - type: sceneText
     text: >
-      Die Frau war alt, aber stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
+      Die Frau war alt, stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
       Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten,
       außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock, der mit farbigen Streifen dekoriert war.
       Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden.
@@ -137,13 +137,14 @@ actions:
         #What is that? Is it a dragon? - asked Leo - I am not afraid
         #of them! - he added, although he was a bit nervous of the animal
         #getting closer.
-        char: leo
+        char: mathina
+        #This should be leo.
         exposition: sagte Leo, aber er wirkte doch etwas unsicher.    
         mood: sad
       - text: Das ist ein Einhorndrache. Einhorndrachen sind wie normale Drachen,
           aber sie werden mit einem Horn auf dem Kopf geboren. So wie die Milchzähne bei Kindern,
-          ist dieses Horn noch nicht so fest, und irgendwann fällt es vom Kopf ab
-          und ein stärkeres und größeres Horn wächst. Aber das abgefallene Horn lebt noch, und der Drache kan es immernoch spüren.
+          ist dieses Horn noch nicht so fest. Irgendwann fällt es vom Kopf ab,
+          und ein stärkeres, größeres Horn wächst. Aber das abgefallene Horn lebt noch, und der Drache kan es immernoch spüren.
           Wer einen Einhorndrachen trainieren möchte, so wie ich es tue, muss einen Drachen finden und sein Horn hüten.
           Es ist eine verantwortungsvolle Aufgabe, denn das Horn ist empfindlich, und immernoch Teil des Drachen.
           Er spürt, wenn wir es bewegen oder damit in eine bestimmte Richtung zeigen.
@@ -184,11 +185,14 @@ actions:
 
   - type: dialog
     entries:
-      - text: Very well! -yelled Flamma- Now try to catch these fireballs
-          with the unidragon! - as she threw some balls of fire into the air
-          that floated like balloons. Fireballs is the main food for unidragons,
-          and they love to eat these.
+      - text: Sehr gut! Und jetzt versucht mal, den Einhorndrachen so zu lenken, dass er diese Feuerbälle fängt.
+          Feuerbälle sind die Hauptnahrung der Einhorndrachen, und sie schmecken besonders lecker.
+        #Very well! -yelled Flamma- Now try to catch these fireballs
+        #with the unidragon! - as she threw some balls of fire into the air
+        #that floated like balloons. Fireballs is the main food for unidragons,
+        #and they love to eat these.
         char: flamma
+        exposition: Flamma warf einige feurig brennende Bälle in die Luft, die wie Luftballons schwebten.
         mood: sad
 
   - type: game
@@ -197,9 +201,12 @@ actions:
 
   - type: dialog
     entries:
-      - text: Not bad! - continued Flamma - but if you want to become a
-          unidragon trainer, you have to practice. Can you make the
-          unidragon draw shapes in the sky with his smoke trail? Try it!
+      - text: Nicht schlecht. Wenn Ihr aber wirklich Einhorndrachen trainieren wollt, müsst ihr üben.
+          Könnt Ihr den Einhorndrachen dazu bringen, mit seiem rauchenden Schwanz Figuren in die Luft zu malen?
+          Probiert es mal aus!      
+        #Not bad! - continued Flamma - but if you want to become a
+        #unidragon trainer, you have to practice. Can you make the
+        #unidragon draw shapes in the sky with his smoke trail? Try it!
         char: flamma
         mood: sad
 
