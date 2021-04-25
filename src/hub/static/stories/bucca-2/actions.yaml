@@ -1,112 +1,275 @@
 actions:
-  - type: background
-    src: bg2.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  # - type: background
+    # src: bg2.jpg
+    # style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
 
-  - type: image
-    id: Wave1
-    src: onda.png
-    style: "width: 8%; top: 35%; left: 15%;  z-index: 0;"
+  # - type: image
+    # id: Wave1
+    # src: onda.png
+    # style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
  
-  - type: image
-    id: Wave2
-    src: onda2.png
-    style: "width: 10%; top: 45%; left: 25%; z-index: 0;"
+  # - type: image
+    # id: Wave2
+    # src: onda2.png
+    # style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
  
-  - type: image
-    id: Wave3
-    src: onda3.png
-    style: "width: 12%; top: 60%; left: 10%;  z-index: 0;"
+  # - type: image
+    # id: Wave3
+    # src: onda3.png
+    # style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
  
+  # - type: image
+    # id: Cloud1
+    # src: nuvola1.png
+    # style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  # - type: image
+    # id: Cloud2
+    # src: nuvola2.png
+    # style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  # - type: image
+    # id: Cloud3
+    # src: nuvola3.png
+    # style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  # - type: image
+    # id: Cloud4
+    # src: nuvola4.png
+    # style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
  
 
+  # - type: sceneText
+    # text: >
+      # <h1>The talking parrot</h1>        
+
+  # - type: animation
+    # target: Wave1
+    # vars:
+      # duration: 4
+      # xPercent: 50
+      # yPercent: 10
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
+  # - type: animation
+    # target: Wave2
+    # vars:
+      # duration: 5
+      # xPercent: 35
+      # yPercent: -10
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
+  # - type: animation
+    # target: Wave3
+    # vars:
+      # duration: 6
+      # xPercent: 65
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
 
 
+  # - type: animation
+    # target: Cloud1
+    # vars:
+      # duration: 6
+      # xPercent: 50
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+  # - type: animation
+    # target: Cloud2
+    # vars:
+      # duration: 7
+      # xPercent: 50
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+  # - type: animation
+    # target: Cloud3
+    # vars:
+      # duration: 8
+      # xPercent: 50
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+  # - type: animation
+    # target: Cloud4
+    # vars:
+      # duration: 6.5
+      # xPercent: 50
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
 
-  - type: sceneText
-    text: >
-      <h1>The talking parrot</h1>        
-
-  - type: animation
-    target: Wave1
-    vars:
-      duration: 4
-      xPercent: 50
-      yPercent: 10
-      ease: power2.inOut
-      repeat: -1
-      yoyo: true
-
-  - type: animation
-    target: Wave2
-    vars:
-      duration: 3
-      xPercent: 35
-      yPercent: -10
-      ease: power2.inOut
-      repeat: -1
-      yoyo: true
-
-  - type: animation
-    target: Wave3
-    vars:
-      duration: 5
-      xPercent: 65
-      yPercent: 0
-      ease: power2.inOut
-      repeat: -1
-      yoyo: true
 
 
       
-  - type: dialog
-    entries:
-      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
-        char: mathina
-        mood: happy
+  # - type: dialog
+    # entries:
+      # - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
+        # char: mathina
+        # mood: happy
 
-  - type: sceneText
-    text: >
-      <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!
-      </br >
-      </br >
-      The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
-  - type: dialog
-    entries:
-      - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
-        char: mathina
-        mood: excited
-  - type: sceneText
-    text: >
-      <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
-  - type: dialog
-    entries:
-      - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
-        char: mathina
-        mood: happy
+  # - type: image
+    # id: Boat
+    # src: barca.png
+    # style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
 
-  - type: sceneText
-    text: >
-      <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
 
-  - type: sceneText
-    text: >
-      <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.
-      </br>
-      </br>
-      Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again”.
-      </p>
-        
+  # - type: sceneText
+    # text: >
+      # <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!</p>
+      
+ 
+  # - type: animation
+    # target: Boat
+    # vars:
+      # duration: 6
+      # xPercent: 0
+      # yPercent: -8
+      # ease: power1.inOut
+      # rotation: -2
+      # repeat: -1
+      # yoyo: true
+
+      
+  # - type: sceneText
+    # text: >
+      # <p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
+      
+
+      
+  # - type: dialog
+    # entries:
+      # - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
+        # char: mathina
+        # mood: excited
+  # - type: sceneText
+    # text: >
+      # <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+  # - type: dialog
+    # entries:
+      # - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
+        # char: mathina
+        # mood: happy
+
+  # - type: sceneText
+    # text: >
+      # <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
+
+
+  # - type: animation
+    # target: Boat
+    # vars:
+      # duration: 3
+      # x: 400%
+      # y: -100%
+      # ease: power1.inOut
+      # width: 12%
+      
+
+  # - type: sceneText
+    # text: >
+      # <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+ 
+ 
+  # - type: sceneText
+    # text: >
+      # <p>“Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again.”
+      # </p>
+
+  # - type: background
+    # src: bg2.jpg
+    # style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+  # - type: clearImage
+    # id: Wave1
+  # - type: clearImage
+    # id: Wave2
+  # - type: clearImage
+    # id: Wave3
+  # - type: clearImage
+    # id: Boat
+  # - type: clearImage
+    # id: Cloud1
+  # - type: clearImage
+    # id: Cloud2
+  # - type: clearImage
+    # id: Cloud3
+  # - type: clearImage
+    # id: Cloud4
+
+  - type: image
+    id: Fisherman1
+    src: barca3.png
+    style: "width: 13%; top: 12%; left: 0%;  z-index: 0;"
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 0;"
+  - type: image
+    id: Fisherman3
+    src: barca4.png
+    style: "width: 13%; top: 52%; left: 80%;  z-index: 0;"
+
+
   - type: dialog
     entries:
       - text: "Finally I’m back to Buccaneer’s Island!"
         char: mathina
         mood: happy
 
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 6
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: -3
+      yoyo: true
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 5
+      xPercent: 10
+      yPercent: 3
+      ease: power1.inOut
+      repeat: -1
+      rotate: -2
+      yoyo: true
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 7
+      xPercent: -10
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 2
+      yoyo: true
+
+
   - type: sceneText
     text: >
       <p>The memory of the lady quickly vanished, replaced by the fresh breeze of the ocean and the bright sounds of the bells of the fishers boats. What a wonderful welcome!
       </p>
+
+  - type: image
+    id: Mathina1
+    src: mathina_1.png
+    style: "width: 30%; top: 40%; left: 70%;  z-index: 1; transform: ScaleX(-1);"
+
   - type: sceneText
     text: >
       <p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
@@ -120,19 +283,56 @@ actions:
       <p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
       </br> </br> What is it? Another screech, this time louder!
       </p>
+  
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 60%; left: 55%;  z-index: 2;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 67%; left: 59%;  z-index: 1;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 53%; left: 58%;  z-index: 2;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 2;"
+   
+ 
 
-  - type: background
-    src: bg_img_temp.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-  - type: background
-    src: bg2_img_temp.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-       
+  
   - type: sceneText
     text: >
       <p>Mathina moved around until she found herself in front of a very clever-looking parrot. It had very nice red, yellow and blue feathers, and when he realised that Mathina was watching him, he just went silent, moving the head, intrigued.
       </p>
  
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+
   - type: dialog
     entries:
       - text: "Hi!! My name is Mathina, may I pet you?"
@@ -152,10 +352,19 @@ actions:
     text: >
       <p>Mathina was baffled, she didn’t understand a word of what the parrot said, but he was clearly speaking some sort of language.
       </p>
+      
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+      
   - type: sceneText
     text: >
       <p>A lady arrived near the stand and greeted Mathina.
       </p>
+      
+      
   - type: dialog
     entries:
       - text: "Don’t worry: he is like that all the time. I’m Angela, nice to meet you."
@@ -213,11 +422,51 @@ actions:
   - type: sceneText
     text: >
       <p> The parrot seemed a bit annoyed, and replied “O-P! O-P!”. </br></br> Mathina smiled and gave the cookie to the parrot.</p>
+       
+  - type: clearImage
+    id: Mathina1
+  
+  - type: image
+    id: Mathina2
+    src: mathina_4.png
+    style: "height: 80%; top: 30%; right: 5%;  z-index: 2;"      
+      
+        
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+  - type: animation
+    target: John1
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+       
+        
   - type: dialog
     entries:
       - text: "Now we know, Z-F-T means “yes”, and O-P means “no”."
         char: Mathina
         mood: happy
+               
+        
   - type: sceneText
     text: >
       <p> What a strange language... Mathina seemed baffled.</p>
@@ -244,6 +493,10 @@ actions:
       - text: "Very good Mathina! This is one of the standard ways pirates use to communicate in secret."
         char: Angela
         mood: happy
+        
+        
+
+        
   - type: sceneText
     text: >
       <p> Mathina was amazed, and also quite happy since she was able to understand at least a part of this code.</p>
@@ -265,18 +518,12 @@ actions:
   - type: image
     id: CaesarJewel
     src: Img_CaesarJewel.png
-    style: "height: 50%; top: 45%;"
+    style: "height: 50%; bottom: 0%;"
     align: center
   - type: sceneText
     text: >
       <p> Angela gave to Mathina a small necklace. </p>
-  - type: animation
-    target: CaesarJewel
-    vars:
-      duration: 3
-      xPercent: -150
-      yPercent: 0
-      ease: power3.out
+       
   - type: sceneText
     text: >
       <p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
@@ -306,8 +553,6 @@ actions:
       - text: "Remember, move from the outside to the inside to decode."
         char: Angela
         mood: normal
-  - type: clearImage
-    id: CaesarJewel
 
   - type: game
     text: "Remember: to decode you have to start from the outer circle"
@@ -330,20 +575,152 @@ actions:
       - text: "Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
         char: Angela
         mood: happy   
-  - type: background
-    src: bg2_img_temp.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-  - type: background
-    src: bg_img_temp.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
         
+  - type: clearImage
+    id: CaesarJewel
         
   - type: sceneText
     text: >
-      <p> Mathina was very happy! She put the jewel on her neck and, after giving John another cookie she headed back to the dock, to take the ferry. 
-      </br>
-      </br>
-      She was very excited and she almost did not notice that the same lady of the ongoing trip was seated just in front of her.</p>
+      <p> Mathina was very happy! She put the jewel on her neck and, after giving John another cookie she headed back to the dock, to take the ferry. </p> 
+
+
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: Angela1
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+
+
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+               
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0; transform: ScaleX(-1);"
+  
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+  - type: sceneText
+    text: >
+      <p> She was very excited and she almost did not notice that the same lady of the ongoing trip was seated just in front of her.</p> 
+ 
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
   - type: sceneText
     text: >
       <p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
