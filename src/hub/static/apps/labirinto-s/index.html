@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/labirinto.css">
+    <title>Labirinto</title>
+    </head>  
+    
+    
+	<body>
+        <div>
+            <!--Barra de controlo-->
+            <table id="topBar" width="300">
+                <tr align="left" valign="center">
+                    <th id="initBut" height="50"><button width='50' height='50' onclick="init()"><img src='../atractor-apps-all/icons/refresh.png' width='50' height='50'></button></th>
+                    <th height="50">
+                        <table><tr>
+                        <td><button id="butLanterna" onclick="showLabirinto()" style="visibility: hidden;"><img src='../atractor-apps-all/icons/lanterna.png' width='50' height='50'></button></td>
+                        <td><label id="tLanterna" style="visibility: hidden;">(0)</label></td>
+                        </tr></table>
+                    </th>                   
+
+                    <th id="colisoesInfo" height="50">
+                        <table><tr>
+                        <td><img src='../atractor-apps-all/icons/collision.png' width='50' height='50'></td>
+                        <td><label id="tColisoes2">0</label></td>
+                        </tr></table>
+                    </th>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="position: relative;">
+            <!--img src="imgs/labirinto1.png" id="lab1"-->
+            <canvas id="layerFundo" width=800 height="500" style="position: absolute; z-index: 1"></canvas>
+            <canvas id="labirintoL" width=800 height="500" style="position: absolute; opacity:2; z-index: 1"></canvas>
+            <canvas id="labirintoR" width=800 height="500" style="position: absolute; z-index: 3"></canvas>
+            <canvas id="layerRasto" width="800" height="500" style="position: absolute; z-index: 4;"></canvas>
+            <canvas id="layerPontos" width="800" height="500" style="position: absolute; z-index: 5;"></canvas>
+        </div>
+
+        <div id="successMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden;'>
+            <h2 id='textoSucess'>Muito bem!</h2>
+            <div><img id="medalha" src="../atractor-apps-all/icons/medalhaOuro.png" width="100px" height="100px"></div>
+            <button onclick="nextLevel()"><img id="fecharMessIcon" src="../atractor-apps-all/icons/next.png" width="100px" height="100px"></button>
+        </div>
+        <div id="crashMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden;'>
+            <h2 id='textoCrash'>Oh não!</h2>
+            <div><img src="../atractor-apps-all/icons/collision.png"></div>
+            <div><button onclick="hideFeedBack('#crashMessage')"><img src="../atractor-apps-all/icons/back.png" width="100px" height="100px"></button></div>
+        </div>
+        <div id="finalMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+            <h2 id="finalText">Fim de jogo!</h2>
+            <div>
+                <img id="finalFeedback1" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">
+                <img id="finalFeedback2" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">
+                <img id="finalFeedback3" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">
+            </div>
+            <button onclick="reloadApp()"><img src="../atractor-apps-all/icons/refresh.png" width="100px"></button>
+        </div>
+        
+        <img src="../atractor-apps-all/imgs/labirinto1.png" id="lab1" style="display:none;">
+        <img src="../atractor-apps-all/imgs/labirinto2.png" id="lab2" style="display:none;">
+        <img src="../atractor-apps-all/imgs/labirinto3.png" id="lab3" style="display:none;">
+        <img src="../atractor-apps-all/icons/collision.png" id="colisao" style="display:none">
+        <img src="../atractor-apps-all/icons/drag2.png" id="drag" style="display:none">
+        <img src="../atractor-apps-all/imgs/exit.png" id="exit" style="display:none">
+        <img src="../atractor-apps-all/imgs/pegadas.png" id="pegadas" style="display:none">
+        <audio src="../atractor-apps-all/sons/vidro_a_partir.mp3" id="crashAudio" type="audio/mpeg"></audio>
+        <audio src="../atractor-apps-all/sons/aplausos1.mp3" id="aplausos1" type="audio/mpeg"></audio>
+        <audio src="../atractor-apps-all/sons/aplausos2.mp3" id="aplausos2" type="audio/mpeg"></audio>
+        <audio src="../atractor-apps-all/sons/aplausos3.mp3" id="aplausos3" type="audio/mpeg"></audio>
+        <audio src="../atractor-apps-all/sons/yay.mp3" id="yay" type="audio/mpeg"></audio>
+        
+        <script src="../atractor-apps-all/scripts/UtilVector.js"></script>
+        <script src="../atractor-apps-all/scripts/UtilDraw.js"></script>
+        <script src="../atractor-apps-all/scripts/Util.js"></script>
+        <script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+		<script type="application/javascript">
+            //  Variaveis
+            var larg = layerPontos.width;
+            var alt = layerPontos.height;
+			var x0 = layerPontos.offsetParent.offsetLeft;
+			var y0 = layerPontos.offsetParent.offsetTop;
+            var scal = 0.75;
+            var sim = getUrlVars().sim;
+            if(sim==undefined){
+                sim = "ref";
+            }          
+            var lang = getUrlVars().lang;
+            if(lang==undefined){
+                lang="pt";
+            }
+            var letraA = "E";
+            var letraB = "S";
+            var letrasPts = [new Point(larg/4-35, alt-15), new Point(larg/4, 28), new Point(larg/4, 28)];
+
+            var P;
+            var selectedLab = 0;
+            var listaLab = [lab1, lab2, lab3];
+            var feedbacks = [];
+            var onMoveFlag = false;
+
+            var timerMouseMove;    
+
+            var raioBola = 10;
+            var corBola = "#FF0000";
+            var corRasto = "#0000FF";
+            var grossRasto = 2;
+            var corFundo = "#f3f1cd";
+            var corEixo = "darkred";
+            var grossEixo = 5;
+            var numColisoes;
+            //var flagImgOrig = true;
+            var timerOpacidade;
+            var flagTracejado = true;
+            var nLanternas=0;
+            var counter = 0;
+			
+            lab1.crossOrigin = "";
+            //
+            // Funções
+            function scaleP(ponto){
+                return new Point(scal*ponto.x, scal*ponto.y);
+            }
+            function unScaleP(ponto){
+                return new Point(ponto.x/scal, ponto.y/scal);
+            }
+            
+			function init(){
+                // Hide the success message
+                hideFeedBack('#successMessage');
+                hideFeedBack('#crashMessage');
+                hideFeedBack('#finalMessage');
+                document.getElementById('successMessage').style.visibility='visible';
+                document.getElementById('crashMessage').style.visibility='visible';
+                document.getElementById('finalMessage').style.visibility='visible';
+                
+                if(lang=="pt"){
+                    letraA = "E";
+                    letraB = "S";
+                    document.getElementById('textoSucess').textContent="Parabéns!";
+                    document.getElementById('textoCrash').textContent="Oh não!";
+                    document.getElementById('finalText').textContent="Final do jogo!";
+                }else{
+                    letraA = "E";
+                    letraB = "G";
+                    document.getElementById('textoSucess').textContent="Congratulations!";
+                    document.getElementById('textoCrash').textContent="Oh no!";
+                    document.getElementById('finalText').textContent="End of the game!";
+                }
+                document.getElementById('drag').style.visibility = "visible";
+                
+                nLanternas = 0;
+                document.getElementById('tLanterna').textContent = String(nLanternas);
+                showButLanterna(false);
+                //console.log(document.getElementById('tLanterna').style);
+                //
+                numColisoes = 0;
+                document.getElementById('tColisoes2').textContent = String(numColisoes);
+                
+                P = new Point(larg*0.25, alt-raioBola-20);
+                
+                flagTracejado = selectedLab<2;
+                
+                updateCanvas();
+            }
+            
+            function updateCanvas(){
+                //console.log(window.innerHeight);
+                var scalX = (window.innerWidth-x0)/larg;
+                var scalY = (window.innerHeight-y0-20)/alt;
+                scal=Math.min(scalX, scalY);
+                
+                var canvasWidth = larg*scal;
+                var canvasHeight = alt*scal;
+                
+                clearCanvas(layerFundo);
+                clearCanvas(labirintoL);
+                clearCanvas(labirintoR);
+                clearCanvas(layerRasto);
+                clearCanvas(layerPontos);
+                
+                layerFundo.width = labirintoL.width=labirintoR.width=layerRasto.width=layerPontos.width = canvasWidth;
+                layerFundo.height = labirintoL.height=labirintoR.height=layerRasto.height=layerPontos.height = canvasHeight;
+                
+                var ctx = layerFundo.getContext("2d");
+                // Fundo
+                ctx.fillStyle = corFundo;
+				ctx.fillRect(0,0,canvasWidth,canvasHeight);
+                
+                // imgm original
+                var lab = listaLab[selectedLab];
+                ctx = labirintoL.getContext("2d");
+                ctx.save();
+                ctx.scale(scal, scal);
+                ctx.drawImage(lab,0,0, 400, 500);
+                ctx.restore();
+                labirintoL.style.opacity = 1;
+                
+                // Imagem refletida
+                ctx = labirintoR.getContext("2d");
+                ctx.save();
+                //ctx.translate(larg*0.5, alt*0.5);
+                if(sim=="ref"){
+                    ctx.scale(-scal,scal);
+                    ctx.drawImage(lab, -larg, 0, 400, 500);
+                }else{
+                    ctx.scale(-scal,-scal);
+                    ctx.drawImage(lab, -larg, -alt, 400, 500);
+                }                
+                ctx.restore();
+                //
+                if(sim=="ref"){
+                    // Eixo de simetria
+                    ctx.strokeStyle = corEixo;
+                    ctx.lineWidth = grossEixo;
+                    ctx.beginPath();
+                    ctx.moveTo(canvasWidth/2,0);
+                    ctx.lineTo(canvasWidth/2,canvasHeight);
+                    ctx.stroke();
+                }else{
+                    // Centro de rotação
+                    ctx.fillStyle = corEixo;
+                    drawCirculo(canvasWidth/2,canvasHeight/2,scal*raioBola*0.5,corBola*0.5,ctx);
+                }
+                /*ctx.font = "30px Comic Sans MS";
+                ctx.fillStyle = "black";
+                ctx.textAlign = "center";
+                ctx.fillText(letraA, scal*letrasPts[0].x, scal*letrasPts[0].y);
+                if(sim=="ref"){
+                    ctx.fillText(letraB, scal*letrasPts[1].x, scal*letrasPts[1].y);
+                }else{
+                    ctx.fillText(letraB, scal*letrasPts[2].x, scal*letrasPts[2].y);
+                }*/
+                ctx.drawImage(exit,scal*(letrasPts[1].x-30), scal*(letrasPts[1].y-25    ),scal*60, scal*30);
+                ctx.drawImage(pegadas,scal*(letrasPts[0].x-30), scal*(letrasPts[0].y-35    ),scal*40, scal*50);
+                //
+                // Pontos + tracejado
+                var PP = transformaPonto(P);
+                drawPoints(new Point(scal*P.x,scal*P.y),new Point(scal*PP.x,scal*PP.y),scal*raioBola);
+                var ctx = layerPontos.getContext("2d");
+                ctx.drawImage(drag,scal*(P.x-25),scal*(P.y-25),scal*50, scal*50);
+            }
+            
+            function testeFinal(P){
+                return P.y<scal*(50-raioBola);
+            }
+            
+            function reduzirOpacidade(){
+                var eps = 0.03;
+                var opac = labirintoL.style.opacity;
+                labirintoL.style.opacity = Math.max(0,opac-eps);
+                if(labirintoL.style.opacity==0){
+                    clearInterval(timerOpacidade);
+                    showButLanterna(true);
+                }
+            }
+			
+			function showLabirinto(){
+                labirintoL.style.opacity=1;
+                nLanternas++;
+                document.getElementById('tLanterna').textContent = String(nLanternas);
+                showButLanterna(false);
+                //timerOpacidade = setInterval(reduzirOpacidade,100);
+            }
+            
+            function transformaPonto(Ponto, scalFactor=1){
+                if(sim=="ref"){
+                    return getRefVertical(Ponto, scalFactor*larg*0.5);
+                }else{
+                    return getRot(Ponto, new Point(scalFactor*larg*0.5, scalFactor*alt*0.5), Math.PI);
+                }
+            }
+            
+			function mouseDown(e) {
+                console.log("mouseDown");
+                var P2 = scaleP(P);
+				
+				if(e.offsetX==undefined){
+                	M = new Point(e.touches[0].clientX-x0,e.touches[0].clientY-y0);
+				}else{
+					M = new Point(e.offsetX,e.offsetY);
+				}
+				if (dist(P2, M)<=scal*(raioBola+15) && !testeFinal(M) && !testeFinal(P2)) {
+                    onMoveFlag = true;
+                    var PP = transformaPonto(P2, scal);
+                    var ctx = layerRasto.getContext("2d");
+                    ctx.strokeStyle = corRasto;
+                    ctx.lineWidth = grossRasto;
+                    ctx.beginPath();
+                    ctx.moveTo(PP.x, PP.y);
+                    if(labirintoL.style.opacity == 1){
+                        timerOpacidade = setInterval(reduzirOpacidade,100);
+                    }
+                    counter = 0;
+                }
+			}
+			
+			function mouseUp(e) {
+				console.log("mouseUp");
+                onMoveFlag = false;
+			}
+            function mouseOut(e) {
+                console.log("mouseOut");
+                onMoveFlag = false;
+            }
+			
+			function mouseMove(e) {
+                //console.log(counter++);
+                if (onMoveFlag) {
+                    var P2 = scaleP(P);
+                    var PP = transformaPonto(P2,scal);
+                    
+                    var testeCor = labirintoR.getContext('2d').getImageData(PP.x, PP.y, 1, 1).data;
+                    flagCerto = getHexColor(testeCor[0],testeCor[1],testeCor[2])==corFundo;
+                    //console.log("MouseMove - flagCerto: "+flagCerto);
+                    var ctx;
+                    //console.log(flagCerto+" "+counter++);
+                    if(flagCerto){
+						if(e.offsetX==undefined){
+							var mouseX = Math.min(scal*(larg*0.5-raioBola), Math.max(scal*raioBola,e.touches[0].clientX-x0));
+	                        var mouseY = Math.min(scal*(alt-raioBola),Math.max(scal*raioBola,e.touches[0].clientY-y0));
+						}else{
+					 		var mouseX = Math.min(scal*(larg*0.5-raioBola),Math.max(scal*raioBola,e.offsetX));
+	                        var mouseY = Math.min(scal*(alt-raioBola), Math.max(scal*raioBola,e.offsetY));
+						}                    
+                        var PMouse = new Point(mouseX,mouseY);
+                        if(dist(P2,PMouse)>scal*raioBola){
+                            var v = vetorkAB(scal*raioBola,P2,PMouse);
+                            P2 = new Point(P2.x+v[0],P2.y+v[1]);
+                        }else{
+                            P2 = new Point(mouseX,mouseY);
+                        }
+                        PP = transformaPonto(P2, scal);
+                        
+                        ctx = layerRasto.getContext("2d");
+                        ctx.lineTo(PP.x,PP.y);
+                        ctx.stroke();
+
+                        PP = transformaPonto(P2, scal);
+                        drawPoints(P2,PP,scal*raioBola);
+                        
+                        if(testeFinal(P2)){
+                            // PARABÉNS!
+                            onMoveFlag = false;
+                            //aplausosAudio.play();
+                            var falhas = nLanternas+numColisoes;
+                            if(falhas<1){
+                                medalha.src="../atractor-apps-all/icons/medalhaOuro.png";
+                                aplausos1.play();
+                            }else if(falhas<2){
+                                medalha.src="../atractor-apps-all/icons/medalhaPrata.png";
+                                aplausos2.play();
+                            }else if(falhas<3){
+                                medalha.src="../atractor-apps-all/icons/medalhaBronze.png";
+                                aplausos3.play();
+                            }else{
+                                medalha.src="../atractor-apps-all/icons/feedbackCerto.png";
+                                yay.play();
+                            }
+                            feedbacks[selectedLab] = medalha.src;
+                            if(selectedLab<listaLab.length-1){
+                                showFeedback('#successMessage');
+                            }else{
+                                document.getElementById("finalFeedback1").src = feedbacks[0];
+                                document.getElementById("finalFeedback2").src = feedbacks[1];
+                                document.getElementById("finalFeedback3").src = feedbacks[2];
+                                showFeedback('#finalMessage');
+                            }
+                        }
+                    }else{
+                        onMoveFlag = false;
+                        // Tocar o audio do acidente
+                        crashAudio.play();
+                        
+                        // desenha imagem da colisão
+                        ctx = layerRasto.getContext("2d");
+                        ctx.drawImage(colisao,PP.x-scal*15,PP.y-scal*15,scal*30,scal*30);
+                        
+                        numColisoes++;
+                        document.getElementById('tColisoes2').textContent=String(numColisoes);
+                        
+                        // coloca os pontos no trilho certo
+                        PP = putPointNoCaminho(PP);
+                        P2 = transformaPonto(PP,scal);
+                        drawPoints(PP,P2,scal*raioBola);
+                       
+                        // alerta utilizador
+                        showFeedback('#crashMessage');
+                    }
+                    P = unScaleP(P2);
+				}
+			}
+            
+            function putPointNoCaminho(P0){
+                var afasta = scal*25;
+                var r = scal*10;
+                var n = 20;
+                var i;
+                var ang0,ang1,ang2, ang3;
+                var tempAng;
+                var tempCor;
+                var tempP;
+                var tempFlag;
+                for(i=0; i<n; i++){
+                    tempAng = i*2*Math.PI/n;
+                    tempP = new Point(P0.x+r*Math.cos(tempAng), P0.y+r*Math.sin(tempAng));
+                    tempCor = labirintoR.getContext('2d').getImageData(tempP.x, tempP.y, 1, 1).data;
+                    tempFlag = getHexColor(tempCor[0],tempCor[1],tempCor[2])==corFundo;
+                    if(!tempFlag){
+                        ang0=tempAng;
+                        break;
+                    }
+                }
+                for(i=0; i<=n;i++){
+                    tempAng = ang0+i*2*Math.PI/n;
+                    tempP = new Point(P0.x+r*Math.cos(tempAng), P0.y+r*Math.sin(tempAng));
+                    tempCor = labirintoR.getContext('2d').getImageData(tempP.x, tempP.y, 1, 1).data;
+                    tempFlag = getHexColor(tempCor[0],tempCor[1],tempCor[2])==corFundo;
+                    if(tempFlag){
+                        ang1=tempAng;
+                        break;
+                    }
+                }
+                for(i=0; i<=n;i++){
+                    tempAng = ang1+i*2*Math.PI/n;
+                    tempP = new Point(P0.x+r*Math.cos(tempAng), P0.y+r*Math.sin(tempAng));
+                    tempCor = labirintoR.getContext('2d').getImageData(tempP.x, tempP.y, 1, 1).data;
+                    tempFlag = getHexColor(tempCor[0],tempCor[1],tempCor[2])==corFundo;
+                    if(!tempFlag){
+                        break;
+                    }
+                }
+                ang2 = tempAng;
+                ang3 = (ang1+ang2)/2;
+                
+                return new Point(P0.x+afasta*Math.cos(ang3), P0.y+afasta*Math.sin(ang3));
+            }
+			
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                    vars[key] = value;
+                });
+                return vars;
+            }
+
+            function showFeedback(tipo='#successMessage'){
+                if(tipo=="#successMessage"){
+                    if(selectedLab<listaLab.length-1){
+                        document.getElementById("fecharMessIcon").src="../atractor-apps-all/icons/next.png";
+                    }else{
+                        document.getElementById("fecharMessIcon").src="../atractor-apps-all/icons/back.png";
+                    }
+                }
+                
+                $(tipo).show();
+                $(tipo).animate( {
+                    left: '5%',
+                    top: '5%',
+                    width: '90%',
+                    height: '90%',
+                    opacity: 0.9
+                } );
+            }
+    
+            function hideFeedBack(tipo='#successMessage'){
+                $(tipo).css( {
+                    left: 0,
+                    top: 0,
+                    width: 0,
+                    height: 0
+                } );
+                $(tipo).hide();
+            }
+
+            function nextLevel(){
+                if(selectedLab<listaLab.length-1){
+                    selectedLab = selectedLab+1;
+                    init();
+                    labirintoL.style.opacity=1;
+                }else{
+                    hideFeedBack();
+                }
+            }
+
+            function drawPoints(P1,P2,grossP){
+                ctx = layerPontos.getContext("2d");
+                clearCanvas(layerPontos);
+                if(flagTracejado){
+                    drawTracejado(P1,P2,corBola,ctx);
+                }
+                drawCirculo(P1.x,P1.y,grossP,corBola,ctx);
+                drawCirculo(P2.x,P2.y,grossP,corBola,ctx);
+            }
+
+            function showTracejado(){
+                var cb = document.getElementById("tracejadoCheck");
+                flagTracejado = cb.checked;
+                var PP = transformaPonto(P);
+                var P1 = new Point(scal*P.x,scal*P.y);
+                var P2 = new Point(scal*PP.x,scal*PP.y);
+                drawPoints(P1,P2,scal*raioBola);
+            }
+
+            function showButLanterna(flag){
+                if(flag){
+                    document.getElementById('butLanterna').style.visibility = "visible";
+                    document.getElementById('tLanterna').style.visibility = "visible";
+                }else{
+                    document.getElementById('butLanterna').style.visibility = "hidden";
+                    document.getElementById('tLanterna').style.visibility = "hidden";
+                }
+            }
+            
+            // Evento executado após carregar a página
+			window.onload = function() {
+                layerPontos.onmousedown = layerPontos.ontouchstart = mouseDown;
+				layerPontos.onmouseup = layerPontos.ontouchend = layerPontos.ontouchcancel = mouseUp;
+				layerPontos.onmousemove = layerPontos.ontouchmove = mouseMove;
+                layerPontos.onmouseout = mouseOut;
+				init();
+			}
+
+            function reloadApp(){
+                location.reload();
+            }
+		</script>
+    </body>
+</html>

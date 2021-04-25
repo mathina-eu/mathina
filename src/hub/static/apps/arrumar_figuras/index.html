@@ -126,7 +126,7 @@ img:hover {
 	<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
 
   </head>
-  <body>
+  <body onload="fitStageIntoParentContainer();">
 
 
 		<div id="container0" style="display:none">
@@ -143,7 +143,7 @@ style=" position: absolute;
 
 
   <img src="../atractor-apps-all/icons/happy.png" id="certo1" width="7%" style="  position: absolute;
-  top: 45%;
+  top: 5%;
   right: 10%;display:none"></img>
  
 <img src="../atractor-apps-all/icons/back.png" width=6% onclick="home();" style=" position: absolute;
@@ -182,7 +182,7 @@ style=" position: absolute;
 
 	
 	<script>
-	var ini=true;
+	var ini=true; var stage;
 	
 	window.addEventListener('resize', function(){
 	
@@ -371,6 +371,12 @@ function init() {
 				container.appendChild( renderer.domElement );
 				// scene
 				
+				var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg1-05.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
 						
 				scene = new THREE.Scene();
 				// camera
@@ -557,8 +563,10 @@ var delta=60;
         }
       }
  
-var stage;
+
       function initStage(images) {
+	  
+
 	  
 	  $('#successMessage').hide();
   $('#successMessage').css( {
@@ -574,6 +582,11 @@ var stage;
           width: width,
           height: height
         });
+		
+		
+	
+			  
+			  
         var background = new Konva.Layer();
         var animalLayer = new Konva.Layer();
        
@@ -807,9 +820,33 @@ var textscore = new Konva.Text({
 		
 		
 
+        	
+	var imageObj2 = new Image(); 
+      imageObj2.onload = function() { 
+	  back=new Konva.Image({
+           x:  0*width,
+           y:0*height,
+          image: imageObj2,
+          width: window.innerWidth,
+          height: window.innerHeight,
+		  opacity:.35
+        });
+		
+
+        // add the shape to the layer
+        background.add(back);
+		  
+     background.batchDraw();
+	  
+	  
+	}
+	
+	
+	imageObj2.src = '../atractor-apps-all/imgs/symm-bg1-01.jpg';
         stage.add(background);
         stage.add(animalLayer);
 	  stage.add(textLayer);
+    
     	
 
    var layer = new Konva.Layer();
@@ -1107,7 +1144,7 @@ imagenames=['s14.png','s1.png',
 		im17: imagenames[numbers[16]],
 		im18: imagenames[numbers[17]],
 		
-        black: 'sim.png',
+        black: 'arca.png',
 		icon8: 'puzzled.png'
       };
 	  var posxx=[];
@@ -1162,13 +1199,14 @@ im18_black: {x: posxx[17], y: 0.35*window.innerHeight}
         // to do this we need to scale the stage
         var scale = Math.min(window.innerWidth / stageWidth,window.innerHeight / stageHeight);
 
+	
         stage.width(stageWidth * scale);
         stage.height(stageHeight * scale);
         stage.scale({ x: scale, y: scale });
         stage.draw();
       }
 
-      fitStageIntoParentContainer();
+      
 
    
 

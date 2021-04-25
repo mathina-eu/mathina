@@ -13,11 +13,20 @@ var width0=parseInt(WW);
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var width=width0;
 if(S3PPre=="vplan")
-{var height=Math.min(width0/2,height0);}
+{var height=.96*Math.min(width0/2,height0);}
 else
-{var height=Math.min(width0,height0);};
+{var height=.96*Math.min(width0,height0);};
 var width2=width;
 var height2=height;
+
+var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg2-03.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+			
+			
 scene=new THREE.Scene();
 //scene.fog=new THREE.Fog(0x000000,1500,2100);
 sceneOrtho=new THREE.Scene();
