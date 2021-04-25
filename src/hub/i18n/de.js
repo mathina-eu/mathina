@@ -7,7 +7,7 @@ export default {
     'help': 'Besuche eine Stadt!',
   },
   story: {
-    'next': 'Nächster',
+    'next': 'Weiter',
     'back': 'Zurück',
   },
   index: {
