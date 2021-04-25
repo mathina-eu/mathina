@@ -133,6 +133,12 @@ Number.prototype.mod = function(n) {
 };
 
 function Init() {	
+
+Lingua=Number(gup('l', document.location.search));
+	
+	if (!isNumeric(Lingua)) Lingua=1;
+	if (Lingua==0) Lingua=1;
+	Traduci(Lingua);
 	window.CanvasMathina=document.getElementById('CanvasMathina');
 	window.ctxMathina = CanvasMathina.getContext('2d');
 
@@ -216,7 +222,6 @@ function LoadGraphics() {
 
 }
 
-	Alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 function Draw(X0,Y0,A1,A2,Scale) {
 ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 
@@ -232,8 +237,8 @@ ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 	ctxMathina.arc(X0,Y0,230/Scale,0,Math.PI*2,true);
 	ctxMathina.stroke();
 	
-	for (let i=0;i<Alphabet.length;i++) {
-		Angle=i*Math.PI*2/Alphabet.length+A1;
+	for (let i=0;i<Alphabet[Lingua].length;i++) {
+		Angle=i*Math.PI*2/Alphabet[Lingua].length+A1;
 		ctxMathina.save();
 		ctxMathina.translate(X0,Y0);
 		ctxMathina.rotate(Angle);
@@ -244,12 +249,12 @@ ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 		ctxMathina.textAlign = 'center';
 		ctxMathina.textBaseline = 'middle';
 		ctxMathina.font = "50px Arial";
-		ctxMathina.fillText(Alphabet[i], 0,0);	
+		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);	
 		*/
-		DrawLetter(ctxMathina,Alphabet[i],0,0, i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);	
+		DrawLetter(ctxMathina,Alphabet[Lingua][i],0,0, i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);	
 		
 		ctxMathina.translate(0, 225/Scale);
-		ctxMathina.rotate(Math.PI/Alphabet.length);
+		ctxMathina.rotate(Math.PI/Alphabet[Lingua].length);
 		ctxMathina.translate(0, -225/Scale);
 		ctxMathina.beginPath();
 		ctxMathina.strokeStyle = "rgb(104,66,19)";
@@ -271,8 +276,8 @@ ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 	ctxMathina.arc(X0,Y0,330/Scale,0,Math.PI*2,true);
 	ctxMathina.stroke();  
 	
-	for (let i=0;i<Alphabet.length;i++) {
-		Angle=i*Math.PI*2/Alphabet.length+A2;
+	for (let i=0;i<Alphabet[Lingua].length;i++) {
+		Angle=i*Math.PI*2/Alphabet[Lingua].length+A2;
 		ctxMathina.save();
 		ctxMathina.translate(X0,Y0);
 		ctxMathina.rotate(Angle);
@@ -283,12 +288,12 @@ ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
 		ctxMathina.textAlign = 'center';
 		ctxMathina.textBaseline = 'middle';
 		ctxMathina.font = "50px Arial";
-		ctxMathina.fillText(Alphabet[i], 0,0);
+		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);
 */
-		DrawLetter(ctxMathina,Alphabet[i],0,0,i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);
+		DrawLetter(ctxMathina,Alphabet[Lingua][i],0,0,i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);
 		
 		ctxMathina.translate(0, 325/Scale);
-		ctxMathina.rotate(Math.PI/Alphabet.length);
+		ctxMathina.rotate(Math.PI/Alphabet[Lingua].length);
 		ctxMathina.translate(0, -325/Scale);
 		ctxMathina.beginPath();
 		ctxMathina.strokeStyle = "rgb(104,66,19)";
@@ -365,7 +370,7 @@ function RandomString(N,Alfabeto) {
 function StringToArray(Text) {
 	var Ris=[];
 	for (let i=0;i<Text.length;i++) {
-		Ris.push(Alphabet.indexOf(Text[i]));
+		Ris.push(Alphabet[Lingua].indexOf(Text[i]));
 	}
 	return Ris;
 }
@@ -373,7 +378,7 @@ function StringToArray(Text) {
 function ArrayToString(Arr) {
 	var Ris="";
 	for (let i=0;i<Arr.length;i++) {
-		Ris = Ris + Alphabet[Arr[i]];
+		Ris = Ris + Alphabet[Lingua][Arr[i]];
 	}
 	return Ris;
 }
@@ -381,7 +386,7 @@ function ArrayToString(Arr) {
 function Translate(Text,Number) {
 	var TextArray=StringToArray(Text.toUpperCase());
 	for (let i=0;i<TextArray.length;i++) {
-		TextArray[i] = (((TextArray[i]+Number) % Alphabet.length)+Alphabet.length)%Alphabet.length;
+		TextArray[i] = (((TextArray[i]+Number) % Alphabet[Lingua].length)+Alphabet[Lingua].length)%Alphabet[Lingua].length;
 	}
 	return ArrayToString(TextArray);
 }
@@ -389,16 +394,16 @@ function Translate(Text,Number) {
 function Up(ev) {
 	if (CosaStoMuovendo==1) {
 		AngPosizione1=AngPosizione1+AngMouseFinale-AngMouseIniziale;
-		AngPosizione1=Math.round(Alphabet.length*AngPosizione1/(2*Math.PI))*(2*Math.PI/Alphabet.length);
+		AngPosizione1=Math.round(Alphabet[Lingua].length*AngPosizione1/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
 		CosaStoMuovendo=-1;
 	}
 	if (CosaStoMuovendo==2) {
 		AngPosizione2=AngPosizione2+AngMouseFinale-AngMouseIniziale;
-		AngPosizione2=Math.round(Alphabet.length*AngPosizione2/(2*Math.PI))*(2*Math.PI/Alphabet.length);
+		AngPosizione2=Math.round(Alphabet[Lingua].length*AngPosizione2/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
 		CosaStoMuovendo=-1;
 	}
 	
-	CaesarShift=Math.round(Alphabet.length*(AngPosizione2-AngPosizione1)/(2*Math.PI));
+	CaesarShift=Math.round(Alphabet[Lingua].length*(AngPosizione2-AngPosizione1)/(2*Math.PI));
 	Draw(CentroCesare[0],CentroCesare[1],AngPosizione1,AngPosizione2,Scale);
 	ev.preventDefault();
 	if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
@@ -569,7 +574,24 @@ function shuffle(array) {
   return array;
 }
 
-ElencoParoleIta=[
+Lingua=1;
+
+Alphabet=[
+"", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+];
+
+ElencoParole=[
+[],
+[
+"I am looking for the treasure of the pirates",
+"I do have a strange sense of humor",
+"I am very happy when someone smiles at me",
+"A good pirate has good dialogue skills",
+"A very nice tree is planted in the garden"
+],
+[
 "Sto cercando il tesoro dei pirati e non ho nascosto niente",
 "Non troverai mai i diamanti e i rubini che ho nascosto al parco",
 "Una mappa del tesoro dei pirati si trova nel bosco",
@@ -578,31 +600,49 @@ ElencoParoleIta=[
 "Sta nascosto dentro a un albero particolare", 
 "Chi ha preso tre dobloni ha dimenticato il tesoro vero", 
 "Sul nascondiglio scelto non ho niente da rivelare"
+]
 ];
 
-ElencoParole=[
-"I am looking for the treasure of the pirates",
-"I do have a strange sense of humor",
-"I am very happy when someone smiles at me",
-"A good pirate has good dialogue skills",
-"A very nice tree is planted in the garden"
+Traduzioni=[
+[["Trad1"],"Try to decipher this sentence without knowing the key:","Prova a decifrare questa frase senza conoscere la chiave:"]
 ];
 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function Traduci(Lang) {
+  for (var k = 0; k < Traduzioni.length; k++) {
+    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+    }
+  }
+}
 
 
 function GenerateEx() {
 	CorrectAnswer=Math.floor(Math.random()*4+1);
-	NumeroParola=Math.floor(Math.random()*ElencoParole.length);
-	ParolaOriginale=ElencoParole[NumeroParola];
-	var NumeriTot=Array.from(Array(ElencoParole.length).keys());
+	NumeroParola=Math.floor(Math.random()*ElencoParole[Lingua].length);
+	ParolaOriginale=ElencoParole[Lingua][NumeroParola];
+	var NumeriTot=Array.from(Array(ElencoParole[Lingua].length).keys());
 	NumeriTot.splice(NumeriTot.indexOf(NumeroParola),1);
 	NumeriTot=shuffle(NumeriTot);
-	ParolaTradotta=Cesare(ParolaOriginale,Alphabet,1+Math.floor(Math.random()*(Alphabet.length-1)));
+	ParolaTradotta=Cesare(ParolaOriginale,Alphabet[Lingua],1+Math.floor(Math.random()*(Alphabet[Lingua].length-1)));
 	document.getElementById("paroladatradurre").innerHTML=ParolaTradotta;
-	document.getElementById("Btn1").innerHTML=ElencoParole[NumeriTot[0]];
-	document.getElementById("Btn2").innerHTML=ElencoParole[NumeriTot[1]];
-	document.getElementById("Btn3").innerHTML=ElencoParole[NumeriTot[2]];
-	document.getElementById("Btn4").innerHTML=ElencoParole[NumeriTot[3]];
+	document.getElementById("Btn1").innerHTML=ElencoParole[Lingua][NumeriTot[0]];
+	document.getElementById("Btn2").innerHTML=ElencoParole[Lingua][NumeriTot[1]];
+	document.getElementById("Btn3").innerHTML=ElencoParole[Lingua][NumeriTot[2]];
+	document.getElementById("Btn4").innerHTML=ElencoParole[Lingua][NumeriTot[3]];
 	document.getElementById("Btn"+CorrectAnswer).innerHTML=ParolaOriginale;
 
 }
@@ -623,7 +663,7 @@ function Link() {
 <body onload="Init()">
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="Partenza"><div class="PartContainer"><p>Try to <b id="TextAction">decode</b> this sentence without knowing the key:</p>
+<div id="Partenza"><div class="PartContainer"><p id="Trad1">Try to decipher this sentence without knowing the key:</p>
 <p id="paroladatradurre" style="word-break:break-all;"></p></div></div>
 <div id="Arrivo"><div class="PartContainer"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
 <button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
