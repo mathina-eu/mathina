@@ -63,8 +63,9 @@ actions:
       - text: I am a firebird trainer.
         char: flamma
         mood: sad
-      - text: What is that? - Replied Leo, with increasing interest.
+      - text: What is that? 
         char: mathina
+        exposition: Replied Leo, with increasing interest.
         mood: happy
       - text: My name is Flamma, I come from Arisa, a land full of strange
           creatures and wizards. In Arisa there are many types of firebirds,
@@ -97,10 +98,12 @@ actions:
       - flamma: right
       - mathina: left
     entries:
-      - text: What is that? Is it a dragon? - asked Leo - I am not afraid
-          of them! - he added, although he was a bit nervous of the animal
-          getting closer.
+      - text: What is that? Is it a dragon? I am not afraid
+          of them! 
         char: flamma
+        # this should be leo.
+        exposition: he added, although he was a bit nervous of the animal
+          getting closer.
         mood: sad
       - text: This is a unidragon. Unidragons are very similar to dragons,
           but they are born with a horn on their heads. Like milk teeth in
@@ -115,12 +118,15 @@ actions:
           unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
         mood: sad
-      - text: Yes! Yes! - said Mathina. And Leo added,
-          “Let’s become unidragon trainers!”
+      - text: Yes! Yes!
         char: mathina
         mood: sad
+      -text:  Let’s become unidragon trainers!
+        char: mathina
+        #this should be leo.
+        mood: sad
       - text: You just have to point the horn in the direction that you
-          want the unidragon to fly. - said Flamma.
+          want the unidragon to fly.
         char: flamma
         mood: sad
 
@@ -130,11 +136,12 @@ actions:
 
   - type: dialog
     entries:
-      - text: Very well! -yelled Flamma- Now try to catch these fireballs
-          with the unidragon! - as she threw some balls of fire into the air
-          that floated like balloons. Fireballs is the main food for unidragons,
+      - text: Very well! Now try to catch these fireballs
+          with the unidragon! Fireballs is the main food for unidragons,
           and they love to eat these.
         char: flamma
+        exposition: She threw some balls of fire into the air
+          that floated like balloons.
         mood: sad
 
   - type: game
@@ -143,7 +150,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: Not bad! - continued Flamma - but if you want to become a
+      - text: Not bad! but if you want to become a
           unidragon trainer, you have to practice. Can you make the
           unidragon draw shapes in the sky with his smoke trail? Try it!
         char: flamma
@@ -154,7 +161,7 @@ actions:
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
-    text: "Flamma voice suddenly got all serious and she said:"
+    text: Flamma voice suddenly got all serious and she said:
 
   - type: dialog
     entries:
@@ -166,8 +173,9 @@ actions:
         char: flamma
         mood: sad
       - text: Oh, that would be fantastic. Could we get our own
-          unidragon? - asked Leo, who was immediately counting himself in.
+          unidragon? 
         char: leo
+        exposition: Leo was immediately counting himself in.
         mood: happy
       - text: Well, a unidragon is a big pet to have, it is a great
           responsibility, and it has to accept you. If you do well in the
