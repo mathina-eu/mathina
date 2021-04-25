@@ -9,6 +9,7 @@ export default {
   index: {
     title: 'Dobrodosli v svetu Mathine',
     subtitle: 'Izberi starostno skupino!',
+    'start-exploring': 'Start exploring!',
   },
   menu: {
     language: 'Jezik',

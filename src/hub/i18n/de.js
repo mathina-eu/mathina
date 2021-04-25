@@ -6,9 +6,14 @@ export default {
     'title': 'Mathina',
     'help': 'Besuche eine Stadt!',
   },
+  story: {
+    'next': 'Nächster',
+    'back': 'Zurück',
+  },
   index: {
     title: 'Willkommen in Mathina',
     subtitle: 'Wählen Sie eine Altersgruppe aus, um zu beginnen!',
+    'start-exploring': 'Beginnen Sie',
   },
   menu: {
     language: 'Sprache',

@@ -1,0 +1,64 @@
+/* Add some margin to the page and set a default font and colour */
+button{
+    -webkit-appearance: none;
+}
+
+body {
+    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: "Arial", cursive, sans-serif;
+    background: #f3f1cd;
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+    clear: both;
+    text-align: center;
+    /*max-width: 800px;*/
+    /*border: 1px solid #333;*/
+}
+
+/* Give headings their own font */
+.wideBox h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #408A7B;
+}
+
+.buttons{
+    /*max-width: 800px;*/
+    /*border: 1px solid #333;*/
+}
+
+.line{
+    /*max-width: 800px;*/
+    margin: 10px;
+    border-top: 1px solid black;
+}
+
+/* Main content area */
+#content div{
+    padding: 0px;
+    /*max-width: 800px;*/
+    text-align: center;
+    margin-right: 0px;
+    /*border: 1px solid #333;*/
+}
+
+/* "You did it!" message */
+#successMessage, #errorMessage {
+    width: 0;
+    height: 0;
+    /*padding: 20px;*/
+    z-index: 100;
+    background: #333;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#successMessage, #errorMessage h2{
+    color: #fff
+}

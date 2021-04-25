@@ -1,5 +1,7 @@
 import { gsap } from 'gsap';
 
+export const GENERIC_CHAR = 'generic-char';
+
 class Action {
   constructor(props) {
     this.autoProgress = false;
@@ -25,19 +27,66 @@ export class AnimationAction extends Action {
 }
 
 export class BackgroundAction extends Action {
-  constructor({ src, style, ...rest }) {
+  constructor({ id, src, style, ...rest }) {
     super(rest);
     this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;
+    this.id = id;
   }
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/bg/${this.src}`;
+    const path = this.getAssetPath(context.imgRoot);
+
+    if (context.activeDirection === 'back') {
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+      return;
+    }
+
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
-    context.backgrounds = [...bgs, { src: path, style: this.style }];
+    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style }];
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/bg/${this.src}`;
+    }
+    return path;
+  }
+}
+
+export class ClearBackgroundAction extends Action {
+  constructor({ id, ...rest }) {
+    super(rest);
+    this.type = 'clearBackground';
+    this.id = id;
+    this.autoProgress = true;
+    this.historyStack = [];
+  }
+
+  execute(context) {
+    super.execute();
+
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.backgrounds = [...context.backgrounds, this.historyStack.pop()];
+      }
+      return;
+    }
+
+    if (this.src) {
+      const path = `${context.imgRoot}/bg/${this.src}`;
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+    } else {
+      const bg = context.backgrounds.find(bg => bg.id === this.id);
+      this.historyStack.push(bg);
+      context.backgrounds = context.backgrounds.filter(bg => bg.id !== this.id);
+    }
   }
 }
 
@@ -55,7 +104,7 @@ export class ImageAction extends Action {
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/${this.src}`;
+    const path = this.getAssetPath(context.imgRoot);
 
     if (context.activeDirection === 'back') {
       context.images = context.images.filter(img => img.src !== path);
@@ -70,6 +119,16 @@ export class ImageAction extends Action {
       position: { vertical: this.valign, horizontal: this.align }
     });
     context.images = images;
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/${this.src}`;
+    }
+    return path;
   }
 }
 
@@ -91,11 +150,15 @@ export class DialogAction extends Action {
   constructor({ entries, ...rest }) {
     super(rest);
     this.type = 'dialog';
-    this.entries = entries.map(({ text, char, mood }) => {
+    this.entries = entries.map((
+      { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
+    ) => {
       return {
         text,
         char,
-        mood: mood ? mood : 'normal',
+        charName,
+        mood,
+        exposition,
       };
     });
   }
@@ -139,15 +202,25 @@ export class ClearImageAction extends Action {
     this.type = 'clearImage';
     this.id = id;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
   execute(context) {
     super.execute();
 
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.images = [...context.images, this.historyStack.pop()];
+      }
+      return;
+    }
+
     if (this.src) {
       const path = `${context.imgRoot}/${this.src}`;
       context.images = context.images.filter(img => img.src !== path);
     } else {
+      const img = context.images.find(img => img.id === this.id);
+      this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }
   }
@@ -162,6 +235,7 @@ export class ActionFactory {
     GameAction,
     ClearImageAction,
     AnimationAction,
+    ClearBackgroundAction,
   }
 
   static create({ type, ...props }) {

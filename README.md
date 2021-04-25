@@ -6,9 +6,11 @@
   * [Quick Start](#quick-start)
   * [Working with stories](#working-with-stories)
   * [Supported Actions](#supported-story-actions)
+  * [Story localization](#story-localization)
 * [Educator's Repository](#educators-repository)
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
+  * [Educator content localization](#educator-content-localization)
 * [Standalone Apps](#standalone-apps)
 * [Extra: Example App](#extra-example-app)
 
@@ -161,7 +163,7 @@ CITIES: {
 
 *NOTE*: **BOLD** properties are required.
 
-## Set background
+### Set background
 
 Sets a background image. Multiple background images can be set. Use the **style** property to set 
 z-index, positioning and other attributes for each layer if needed.
@@ -174,13 +176,41 @@ z-index, positioning and other attributes for each layer if needed.
   style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
 ```
 
+**Example using common shared resources**
+
+```yaml
+- type: background
+  src: $COMMON/img/bg/c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+```
+This image should be located in `src/hub/stories/common/img/bg/c1-bg1.jpg`
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `background` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/`. You can also use **common** shared backgrounds. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/bg/bg1.jpg` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
+| id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
+
+### Clear background
+
+Remove a background
+
+**Example**
+
+```yaml
+- type: clearBackground
+  id: bg1
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `clearBackground` | action type |
+| **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
 
 ### Set image
 
@@ -197,12 +227,22 @@ Display an image.
   style: "width: 20%;"
 ```
 
+**Example using common shared resources**
+
+```yaml
+- type: image
+  src: $COMMON/img/c1-5.png
+  id: c1-5
+```
+This image should be located in `src/hub/stories/common/img/c1-5.png`
+
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `image` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/`. You can also use **common** shared images. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/img1.jpg` |
 | id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
@@ -282,6 +322,12 @@ Dialog entries support various moods which use images defined in `src/hub/static
   entries:
     - text: "I love these toys!"
       char: mathina
+      exposition: "A wild Anna appears!"
+      mood: happy
+    - text: "Some have defects!"
+      char: generic-char
+      charName: Anna
+    - text: "Hey, you there!"
     - text: "Some have defects!"
       char: wizard
       mood: sad
@@ -299,8 +345,10 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **text** | Any `<string>` | action type |
-| **char** | mathina, wizard, ... | id of a supported character |
+| char| mathina, wizard, ... | id of a supported character, defaults to **generic**  |
+| charName | `<string>` | An optional replacement character name. Especially useful when used with generic characters. |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
+| exposition | `<string>` | An optional narrative description of the events of a scene, written in the present tense. Will be displayed in cursive |
 
 ### Game
 
@@ -352,6 +400,21 @@ Example:
 
 Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
 the story will be fast-forwarded to the sceneText instead of the dialog action.
+
+## Story localization
+
+To prepare a localized version of a story add a `actions-<locale>.yaml` file.
+
+For example to add a german file, add `actions-de.yaml` to `/src/hub/static/stories/demo-story/`
+
+For localized images it's recommended to group them in a `<locale>` subdirectory. For instance put images specific to a
+german story to `/src/hub/static/stories/demo-story/img/de/some-german-specific-image.png` 
+
+### Supported locales
+
+* `de` - German
+* `en` - English (Do not create an actions-en.yaml file as the default actions.yaml file will be used for english)
+* ...
 
 # Educator's Repository
 
@@ -416,7 +479,7 @@ Story ID's should be based on the ID in [Story Index Document](https://docs.goog
 3. Create a `content.md` file and write some Markdown.
 
 You can see some example content for the `demo-story` at
-https://edu.zabkar.net/story/demo-story-url-path/
+https://mathina-edu.netlify.app/story/demo-story-url-path
 
 ### Images
 
@@ -425,6 +488,14 @@ As a convention you should add images to the story's `img` subdirectory.
 ### Videos
 
 As a convention you should add videos to the story's `video` subdirectory.
+
+## Educator content localization
+
+To prepare a localized version of a story add a `content-<locale>.md` file.
+
+For example to add a german file, add `content-de.md` to `/src/educators/static/stories/demo-story/`
+
+For supported locales see [here](#supported-locales)
 
 # Standalone Apps
 
