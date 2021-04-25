@@ -4,11 +4,13 @@ button{
 }
 
 body {
-    margin: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: auto;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    background: #f3f1cd;
+    background-image: url("../imgs/symm-bg1-02.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #fbd131;
 }
 
 /* Header/footer boxes */
@@ -16,35 +18,39 @@ body {
 .wideBox {
     clear: both;
     text-align: center;
-    /*max-width: 800px;*/
+    width: 1000px;
+    margin: auto;
     /*border: 1px solid #333;*/
 }
 
 /* Give headings their own font */
 .wideBox h1 {
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #408A7B;
 }
 
 .buttons{
+    width: 1000px;
+    margin: auto;
     /*max-width: 800px;*/
     /*border: 1px solid #333;*/
 }
 
 .line{
-    /*max-width: 800px;*/
-    margin: 10px;
+    width: 1000px;
+    margin: auto;
     border-top: 1px solid black;
 }
 
 /* Main content area */
-#content div{
-    padding: 0px;
-    /*max-width: 800px;*/
-    text-align: center;
-    margin-right: 0px;
-    /*border: 1px solid #333;*/
+#conteudo div{
+    width: 1000px;
+    margin: auto;
+}
+.content{
+    width: 1000px;
+    margin: auto;
 }
 
 /* "You did it!" message */
