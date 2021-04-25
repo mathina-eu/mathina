@@ -1,212 +1,240 @@
 actions:
-  # - type: background
-    # src: bg2.jpg
-    # style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
 
-  # - type: image
-    # id: Wave1
-    # src: onda.png
-    # style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
  
-  # - type: image
-    # id: Wave2
-    # src: onda2.png
-    # style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
  
-  # - type: image
-    # id: Wave3
-    # src: onda3.png
-    # style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
  
-  # - type: image
-    # id: Cloud1
-    # src: nuvola1.png
-    # style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
-  # - type: image
-    # id: Cloud2
-    # src: nuvola2.png
-    # style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
-  # - type: image
-    # id: Cloud3
-    # src: nuvola3.png
-    # style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
-  # - type: image
-    # id: Cloud4
-    # src: nuvola4.png
-    # style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
  
 
-  # - type: sceneText
-    # text: >
-      # <h1>The talking parrot</h1>        
+  - type: sceneText
+    text: >
+      <h1>The talking parrot</h1>        
 
-  # - type: animation
-    # target: Wave1
-    # vars:
-      # duration: 4
-      # xPercent: 50
-      # yPercent: 10
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
-  # - type: animation
-    # target: Wave2
-    # vars:
-      # duration: 5
-      # xPercent: 35
-      # yPercent: -10
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
-  # - type: animation
-    # target: Wave3
-    # vars:
-      # duration: 6
-      # xPercent: 65
-      # yPercent: 0
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
 
-  # - type: animation
-    # target: Cloud1
-    # vars:
-      # duration: 6
-      # xPercent: 50
-      # yPercent: 0
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
-  # - type: animation
-    # target: Cloud2
-    # vars:
-      # duration: 7
-      # xPercent: 50
-      # yPercent: 0
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
-  # - type: animation
-    # target: Cloud3
-    # vars:
-      # duration: 8
-      # xPercent: 50
-      # yPercent: 0
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
-  # - type: animation
-    # target: Cloud4
-    # vars:
-      # duration: 6.5
-      # xPercent: 50
-      # yPercent: 0
-      # ease: power1.inOut
-      # repeat: -1
-      # yoyo: true
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
 
 
       
-  # - type: dialog
-    # entries:
-      # - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
-        # char: mathina
-        # mood: happy
+  - type: dialog
+    entries:
+      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
+        char: mathina
+        mood: happy
 
-  # - type: image
-    # id: Boat
-    # src: barca.png
-    # style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 1;"
+  - type: image
+    id: Wave4
+    src: onda4.png
+    style: "width: 35%; bottom: 2.5%; left: 3%;  z-index: 2;"
 
 
-  # - type: sceneText
-    # text: >
-      # <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!</p>
+  - type: sceneText
+    text: >
+      <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!</p>
       
+
  
-  # - type: animation
-    # target: Boat
-    # vars:
-      # duration: 6
-      # xPercent: 0
-      # yPercent: -8
-      # ease: power1.inOut
-      # rotation: -2
-      # repeat: -1
-      # yoyo: true
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -11
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+ 
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
 
       
-  # - type: sceneText
-    # text: >
-      # <p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
+  - type: sceneText
+    text: >
+      <p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
       
 
       
-  # - type: dialog
-    # entries:
-      # - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
-        # char: mathina
-        # mood: excited
-  # - type: sceneText
-    # text: >
-      # <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
-  # - type: dialog
-    # entries:
-      # - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
-        # char: mathina
-        # mood: happy
+  - type: dialog
+    entries:
+      - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+  - type: dialog
+    entries:
+      - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
+        char: mathina
+        mood: happy
 
-  # - type: sceneText
-    # text: >
-      # <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
+  - type: sceneText
+    text: >
+      <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
 
 
-  # - type: animation
-    # target: Boat
-    # vars:
-      # duration: 3
-      # x: 400%
-      # y: -100%
-      # ease: power1.inOut
-      # width: 12%
+  - type: animation
+    target: Boat
+    vars:
+      duration: 3
+      x: 600
+      y: -100
+      ease: power1.inOut
+      width: 12%
+
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 3
+      x: 620
+      y: -110
+      ease: power1.inOut
+      width: 12%
       
 
-  # - type: sceneText
-    # text: >
-      # <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+  - type: sceneText
+    text: >
+      <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
  
  
-  # - type: sceneText
-    # text: >
-      # <p>“Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again.”
-      # </p>
+  - type: sceneText
+    text: >
+      <p>“Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again.”
+      </p>
 
-  # - type: background
-    # src: bg2.jpg
-    # style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
   - type: background
     src: bg2_b.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
-  # - type: clearImage
-    # id: Wave1
-  # - type: clearImage
-    # id: Wave2
-  # - type: clearImage
-    # id: Wave3
-  # - type: clearImage
-    # id: Boat
-  # - type: clearImage
-    # id: Cloud1
-  # - type: clearImage
-    # id: Cloud2
-  # - type: clearImage
-    # id: Cloud3
-  # - type: clearImage
-    # id: Cloud4
+
+
+
+  - type: clearImage
+    id: Wave1
+  - type: clearImage
+    id: Wave2
+  - type: clearImage
+    id: Wave3
+  - type: clearImage
+    id: Wave4
+  - type: clearImage
+    id: Boat
+  - type: clearImage
+    id: Cloud1
+  - type: clearImage
+    id: Cloud2
+  - type: clearImage
+    id: Cloud3
+  - type: clearImage
+    id: Cloud4
 
   - type: image
     id: Fisherman1
@@ -215,11 +243,11 @@ actions:
   - type: image
     id: Fisherman2
     src: barca2.png
-    style: "width: 13%; top: 25%; left: 76%;  z-index: 0;"
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 1;"
   - type: image
     id: Fisherman3
     src: barca4.png
-    style: "width: 13%; top: 52%; left: 80%;  z-index: 0;"
+    style: "width: 13%; top: 14%; right: 0%;  z-index: 0;"
 
 
   - type: dialog
@@ -242,8 +270,8 @@ actions:
     target: Fisherman2
     vars:
       duration: 5
-      xPercent: 10
-      yPercent: 3
+      xPercent: 5
+      yPercent: -10
       ease: power1.inOut
       repeat: -1
       rotate: -2
@@ -253,7 +281,7 @@ actions:
     vars:
       duration: 7
       xPercent: -10
-      yPercent: 10
+      yPercent: -10
       ease: power1.inOut
       repeat: -1
       rotate: 2
@@ -266,9 +294,9 @@ actions:
       </p>
 
   - type: image
-    id: Mathina1
-    src: mathina_1.png
-    style: "width: 30%; top: 40%; left: 70%;  z-index: 1; transform: ScaleX(-1);"
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 70%; top: 40%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
 
   - type: sceneText
     text: >
@@ -283,23 +311,30 @@ actions:
       <p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
       </br> </br> What is it? Another screech, this time louder!
       </p>
-  
+  - type: clearImage
+    id: Mathina0
+ 
+  - type: image
+    id: Mathina00
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 5%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+ 
   - type: image
     id: John1
     src: parrot_corpo.png
-    style: "height: 30%; top: 60%; left: 55%;  z-index: 2;"
+    style: "height: 30%; top: 60%; left: 55%;  z-index: 3;"
   - type: image
     id: John1_Coda
     src: parrot_coda.png
-    style: "height: 20%; top: 67%; left: 59%;  z-index: 1;"
+    style: "height: 20%; top: 67%; left: 59%;  z-index: 2;"
   - type: image
     id: John1_Ala
     src: parrot_ala.png
-    style: "height: 30%; top: 53%; left: 58%;  z-index: 2;"
+    style: "height: 30%; top: 53%; left: 58%;  z-index: 3;"
   - type: image
     id: John1_Becco
     src: parrot_becco.png
-    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 2;"
+    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 3;"
    
  
 
@@ -375,6 +410,14 @@ actions:
       - text: "Hi! Is this your parrot?"
         char: Mathina
         mood: happy
+  - type: clearImage
+    id: Mathina00
+ 
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 45%; bottom: 5%; right: 5%;  z-index: 1;"
+        
   - type: dialog
     entries:
       - text: "Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. 
@@ -392,7 +435,6 @@ actions:
       </p>
 
 
-
   - type: dialog
     entries:
       - text: "Do you want a cookie?"
@@ -406,6 +448,16 @@ actions:
       - text: "It seems the same word he said before. What if it is telling me just “yes”?"
         char: Mathina
         mood: distracted
+        
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+        
+        
   - type: dialog
     entries:
       - text: "It sounds right: before you asked to pet him, now he wants a cookie. Shall we try with something different? Ask him something with “no” as an answer."
@@ -424,13 +476,22 @@ actions:
       <p> The parrot seemed a bit annoyed, and replied “O-P! O-P!”. </br></br> Mathina smiled and gave the cookie to the parrot.</p>
        
   - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"             
+       
+       
+  - type: clearImage
     id: Mathina1
   
   - type: image
     id: Mathina2
-    src: mathina_4.png
-    style: "height: 80%; top: 30%; right: 5%;  z-index: 2;"      
-      
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+       
         
   - type: animation
     target: John1_Ala
@@ -517,8 +578,8 @@ actions:
         mood: normal
   - type: image
     id: CaesarJewel
-    src: Img_CaesarJewel.png
-    style: "height: 50%; bottom: 0%;"
+    src: disco_ba.png
+    style: "height: 50%; bottom: 5%;"
     align: center
   - type: sceneText
     text: >
@@ -606,11 +667,8 @@ actions:
     id: Fisherman3
 
   - type: background
-    src: bg2_b.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-  - type: background
     src: bg2.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
                
   - type: image
     id: Wave1
@@ -629,8 +687,8 @@ actions:
  
   - type: image
     id: Boat
-    src: barca.png
-    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0; transform: ScaleX(-1);"
+    src: barca_flip.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
   
   - type: image
     id: Cloud1
@@ -721,6 +779,17 @@ actions:
       repeat: -1
       yoyo: true
 
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: 2
+      repeat: -1
+      yoyo: true
+
   - type: sceneText
     text: >
       <p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
@@ -765,6 +834,12 @@ actions:
     toolbarText: "Try to decipher the secret message with the help of the jewel"
     cta: "Try it yourself!"
     url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    
+  - type: sceneText
+    text: >
+      <h1>The secret messages - The End</h1>        
+
+    
       
       
       
