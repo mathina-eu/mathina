@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head><script src="../atractor-apps-all/scripts/konva.min.js"></script>
+		<title>Simetria</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	
+	<style>
+	   html {
+  touch-action: pan-down;
+}
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+	  
+	  .image-upload>input {
+  display: none;
+}
+
+	</style>
+	
+	</head>
+	<body>
+	
+	
+
+		<div id="container">
+
+
+<div id="espelhoop" style="display: none"  style=" width:0%; height:0%;">
+
+ <img src="../atractor-apps-all/icons/move-icon.png" style="width:3%; position: absolute;
+  top: 1%;
+  right: 90%; "/>  
+  <input type="range" name="RangeVal" value="RangeVal" id="range" min="-75" max="75" 
+  step=".01" style=" width:12%; position: absolute;
+  top: 7%;
+  right: 85%;" />
+
+
+</div>
+</div>
+			<div id="imagesdiv" style="display:none"></div>
+		
+		<script src="../atractor-apps-all/scripts/three.js"></script>
+		<script src="../atractor-apps-all/scripts/Reflector.js"></script>
+		<script src="../atractor-apps-all/scripts/DragControls.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+
+		<script>
+		 var icon=[]; 
+  
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+	
+	
+		
+		
+		function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return "0x" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+
+var dragging = false;
+		var espelho=false;
+		var verticalMirror;var planeBack, geometry, planeGeo3;
+	
+			// scene size
+			var WIDTH = window.innerWidth;
+			var HEIGHT = window.innerHeight;
+			// camera
+			var VIEW_ANGLE = 30;
+			var ASPECT = WIDTH / HEIGHT;
+			var NEAR = 1;
+			var FAR = 5000;
+			var camera, scene, renderer;
+			var cameraControls;
+			var sphereGroup, smallSphere;
+			
+			var objects = [];
+			var RangeVal=50;
+			var Rangetransp=1.0;
+			var Rangecolor=0; 
+			
+range.oninput = function() {
+    var tt = this.value;
+	RangeVal=parseFloat(this.value);
+		if(espelho) {
+		scene.remove(verticalMirror);scene.remove(planeBack);		
+verticalMirror.position.z = -RangeVal;
+	planeBack.position.z=verticalMirror.position.z-.5;
+	scene.add(verticalMirror);scene.add(planeBack);
+	}
+}
+
+
+range.onchange = function() {
+    var tt = this.value;
+	RangeVal=parseFloat(this.value);
+		if(espelho) {	
+scene.remove(verticalMirror);scene.remove(planeBack);		
+	verticalMirror.position.z = -RangeVal;
+	planeBack.position.z=verticalMirror.position.z-.5;
+	scene.add(verticalMirror);scene.add(planeBack);
+	}			
+	
+	
+}
+
+
+
+var planeGeo2,materialpb;
+
+
+
+
+	var imgname = '../atractor-apps-all/imgs/borboleta.png';
+	
+
+    var img = new Image();
+    img.src = imgname+"?_="+(new Date().getTime());
+    img.onload = function() {   
+           a=this.height/this.width;
+		planeGeo2 = new THREE.PlaneBufferGeometry( 100, 100*a );
+				
+
+	var loader = new THREE.TextureLoader();
+
+// load a resource
+loader.load(
+    // resource URL
+    imgname,
+    // Function when resource is loaded
+    function ( texture ) {
+	
+	var texture1=texture.clone();
+	texture1.needsUpdate = true;
+	
+  materialpb = new THREE.MeshPhongMaterial( { map: texture1, side:THREE.DoubleSide,  transparent: true, opacity: 0.99 } ) 
+	   
+	   init(); animate();myFunction()
+    }
+);
+
+	
+	
+		  return
+		
+        
+}
+
+
+var container = document.getElementById( 'container' );
+			
+
+			function init() {
+				
+			document.getElementById("range").value=50;
+						
+				// renderer
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				//renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( WIDTH, HEIGHT );
+				renderer.setClearColor(0xd2d1b8,1);
+				container.appendChild( renderer.domElement );
+				// scene
+				
+						
+				scene = new THREE.Scene();
+				// camera
+				camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
+				camera.position.set( 100, 150,225 );
+				camera.lookAt(new THREE.Vector3(0,30,0));
+				scene.add( camera );
+			
+					window.ImageBitmap = window.ImageBitmap || function () { return null }
+				
+			
+			
+			
+			planeGeo3 = new THREE.PlaneBufferGeometry( 182, 51.1 );
+				
+				var planeGeobg = new THREE.PlaneBufferGeometry( 1500,1500 );
+				
+				
+				
+				// reflectors/mirrors
+			
+				geometry = new THREE.PlaneBufferGeometry(180, 49.4 );
+				verticalMirror = new THREE.Reflector( geometry, {
+					clipBias: 0,
+					textureWidth: WIDTH * window.devicePixelRatio,
+					textureHeight: HEIGHT * window.devicePixelRatio,
+					color: eval(rgbToHex(127, 127, 127)),
+					recursion: 1,
+					opacity:1.0
+				} );
+				verticalMirror.position.y = 55.1;
+				verticalMirror.position.z = -50;
+objects.push(verticalMirror);
+				if(espelho) {scene.add( verticalMirror );}
+				
+				
+					planeBack = new THREE.Mesh( planeGeo3, new THREE.MeshBasicMaterial( { transparent:true, color: 0x222222 , opacity:1, side: THREE.DoubleSide} ) );
+				planeBack.position.y = verticalMirror.position.y+.35;
+				planeBack.position.z=verticalMirror.position.z-.5;
+				//verticalMirror.add(planeBack);
+				
+				
+				if(espelho) {scene.add( planeBack )};
+					
+				
+					
+				
+			
+				// walls
+			
+	
+				var planeBottom = new THREE.Mesh( planeGeo2, materialpb );
+				planeBottom.rotateX( - Math.PI / 2 );
+					planeBottom.rotateZ(  Math.PI / 2 );
+				planeBottom.position.y=30;
+				scene.add( planeBottom );
+				
+				
+				var floorTexture2 = new THREE.TextureLoader().load( '../atractor-apps-all/imgs/lines2.png' );
+	floorTexture2.wrapS = floorTexture2.wrapT = THREE.RepeatWrapping; 
+	floorTexture2.repeat.set( 30,30 );
+	
+				var planeBottombg= new THREE.Mesh( planeGeobg, new THREE.MeshPhongMaterial( {  map: floorTexture2 } ) );
+				planeBottombg.rotateX( - Math.PI / 2 );
+					planeBottombg.rotateZ(  Math.PI / 2 );
+				planeBottombg.position.y=29.9;
+					planeBottombg.position.x=-100;
+					planeBottombg.position.z=0;
+				scene.add( planeBottombg );
+
+				
+				
+				// lights
+				var mainLight = new THREE.PointLight( 0xcccccc, 1.5, 1050 );
+				mainLight.position.y = 220;
+				scene.add( mainLight );
+				
+				var mainLight2 = new THREE.PointLight( 0xcccccc, 1.5, 250 );
+				mainLight2.position.z = -150;
+				scene.add( mainLight2 );
+				
+				var greenLight = new THREE.PointLight( 0x00ff00, 0.25, 1000 );
+				greenLight.position.set( 550, 50, 0 );
+				scene.add( greenLight );
+				var redLight = new THREE.PointLight( 0xff0000, 0.25, 1000 );
+				redLight.position.set( - 550, 50, 0 );
+				scene.add( redLight );
+				var blueLight = new THREE.PointLight( 0x7f7fff, 0.25, 1000 );
+				blueLight.position.set( 0, 50, 550 );
+				scene.add( blueLight );
+				renderer.render( scene, camera );
+				
+			}
+			function animate() {	//var dragControls = new THREE.DragControls( verticalMirror, camera, renderer.domElement );
+				requestAnimationFrame( animate );
+				renderer.render( scene, camera );
+			}
+				function myFunction() {espelho=true;
+				if(espelho) {	document.getElementById("espelhoop").style="display: block"; scene.add( verticalMirror );scene.add(planeBack)} else 
+				{	document.getElementById("espelhoop").style="display: none"; scene.remove(verticalMirror);scene.remove(planeBack)}
+				animate()}
+			
+// Prevent scrolling when touching the canvas
+document.body.addEventListener("touchstart", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchend", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchmove", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);		
+
+	
+		</script>
+	</body>
+</html>
