@@ -16,7 +16,7 @@
         link
         @click="setAgeGroupAndEnterWorld(0)"
       >
-        Start Exploring!
+        {{ $t('index.start-exploring') }}
       </v-btn>
     </v-col>
   </v-row>
