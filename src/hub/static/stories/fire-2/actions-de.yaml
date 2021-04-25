@@ -1,0 +1,312 @@
+# FIRE-2. Talking to the unidragon
+actions:
+  - type: background
+    src: mathina-fire-bg-full.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat1
+    position: left
+    valign: bottom
+    style: "height: 25vh"
+
+
+  - type: sceneText
+    text: >
+      Mathina and Leo returned to the field where Flamma, the firebird
+      trainer, used to be. They had been training unidragons several days
+      per week, every time they saw a big flying animal in the sky they came
+      to see if Flamma was there, training it. They wanted to get better at
+      leading unidragons, to participate in the trainers’ festival that was
+      going to be held soon. That morning they had seen a dragon flying in
+      the distance and they thought that Flamma must be training it.
+
+  - type: sceneText
+    text: >
+      Indeed, Flamma was there, moving intensely and screaming incomprehensible
+      words into the air, almost like singing. Mathina and Leo ran over the
+      field to meet her. They were expecting to see Flamma leading the
+      unidragon as an orchestra director conducts the music, with the horn
+      of the unidragon as a stick. However, Flamma had nothing in her hands.
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: Flamma, we saw the unidragon, are you training him?
+        char: mathina
+        mood: happy
+
+      - text: This is another dragon! And you don’t have his horn!! Why is he
+          not flying away?
+        char: leo
+        mood: happy
+
+  - type: sceneText
+    text: Flamma stopped screaming to the sky and the unidragon descended
+      gently to the land to rest.
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: You are right Leo, this is another unidragon. And this poor boy
+          had a sad incident. His early horn came off, as with any unidragon,
+          when he reached adulthood. But in the precise moment that the horn
+          fell he was flying over a lake, so the horn fell into the water
+          and nobody has ever found it.
+        char: flamma
+        mood: happy
+
+      - text:  Normally when that happens, the unidragons are not tamed and
+          they remain wild, but they still feel their lost horn when it moves,
+          even if it is kilometers away or hidden far away. If someone finds
+          it and plays with it without knowing, the unidragon can become mad
+          if he doesn’t learn to ignore the feeling. So, I decided to train
+          this unidragon as I do with the others. Of course, since we don’t
+          have his horn, we need to use something else.
+        char: flamma
+        mood: happy
+
+      - text: Unidragons have a kind of language, different from humans.
+          Their language expresses what they can feel, and in this case,
+          also the feeling of the direction of the horn. We humans don’t
+          have words for that, because we don’t have such feelings, but
+          we can use magical numbers to understand and communicate with
+          the unidragons, translating from what we mean to what they can
+          understand.
+        char: flamma
+        mood: happy
+
+      - text: Magical numbers! How can you talk with numbers?
+        char: leo
+        mood: happy
+
+      - text: I have the feeling that an invisible structure is somehow connecting everything…
+        char: mathina
+        mood: happy
+
+      - text: So, how can we tell him how to fly?
+        char: leo
+        mood: happy
+
+      - text: Well, as I said, we don’t have words that correspond to his
+          language, but we can use some magic to describe the path we want to
+          make him follow. You can tell me in numbers what you want to do,
+          and I will translate them into unidragon language.
+        char: flamma
+        mood: happy
+
+      - text: What can we say?
+        char: mathina
+        mood: happy
+
+      - text: Let us start with something easy. Let us tell him to fly just
+          over the land, horizontally in a straight line.
+        char: flamma
+        mood: happy
+
+      - text: Ok, let’s tell him to do that.
+        char: leo
+        mood: happy
+
+      - text: No, you can’t use the human words, they are too confusing
+          and imprecise for him. You just tell him the magical number one.
+        char: flamma
+        mood: happy
+
+      - text: The magical number one?
+        char: leo
+        mood: happy
+
+      - text: It means to advance at his normal speed.
+        char: flamma
+        mood: happy
+
+  - type: sceneText
+    text: Flamma said the number one in unidragon language, and the animal
+      started moving forward, quite as if it was running instead of flying.
+      At a shout of Flamma, the unidragon returned to the base of the tree,
+      where he was before moving.
+
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: And what if we tell him 2?
+        char: leo
+        mood: happy
+
+      - text: He will move twice as fast.
+        char: flamma
+        mood: happy
+
+      - text: Oh, I start to understand, so the number is the speed. But how do we make him fly?
+        char: mathina
+        mood: happy
+
+      - text: Well, for that you need to tell him two numbers. The first is
+          how much he advances, the second is how much he rises in the air.
+        char: flamma
+        mood: happy
+
+      - text: Aha!, so we are telling him to advance and rise up!
+        char: mathina
+        mood: happy
+
+      - text: In magical language, we would write that as (1,1), and in unidragon it is pronounced…
+        char: flamma
+        mood: happy
+
+  - type: sceneText
+    text: ...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
+
+  - type: dialog
+    avatarAlign:
+       - flamma: right
+       - mathina: left
+    entries:
+
+      - text: It flies, it flies!!
+        char: leo
+        mood: happy
+        exposition: Both Mathina and Leo exclaimed.
+
+      - text: Yes, it does! But let me make him come back before he is too far away.
+        char: leo
+        mood: happy
+        exposition: And Flamma made the animal come back.
+
+      - text: You see that it was rising at the same speed as it was advancing.
+          Can you figure out how to tell him to fly in a steeper path?
+        char: flamma
+        mood: happy
+
+      - text: Hmm… maybe we can tell him a 2 instead of a 1, as before?
+        char: leo
+        mood: happy
+
+      - text: Yes, but in the second number, because we want him to rise faster.
+        char: mathina
+        mood: happy
+
+      - text: Very well, I will tell him (1,2)
+        exposition: said Flamma, and pronounced the magical words.
+        char: flamma
+        mood: happy
+
+  - type: sceneText
+    text: Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try Mathina!
+        char: flamma
+        mood: happy
+
+  - type: game
+    text: "Try to fly the unidragon with pairs of numbers"
+    url:
+
+  - type: sceneText
+    text: Flamma was pleased to see how Mathina handled that language.
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+     - text: Very well! You see, you can tell the unidragon a few pairs of
+        numbers, to be flown in sequence, one after another. Unidragons have
+        a good memory and they will remember the sequence. This is very useful
+        for the unidragon trainers because you can plan the path they will fly
+        in advance, for instance avoiding obstacles.
+       char: flamma
+       mood: happy
+
+     - text: But Flamma, if you tell him so many pairs of numbers,
+          how can you know where the unidragon will end?
+       char: leo
+       mood: happy
+
+     - text: I will let you figure that out.
+       char: flamma
+       mood: happy
+
+  - type: game
+    text: "Fly the unidragon to the castle avoiding the obstacles. You can
+      only fly over the blue sky, if you hit a cloud or a mountain, you
+      will have to start again."
+    url:
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: Did you notice something? How can you guess where the unidragon
+          will be?
+        char: flamma
+        mood: happy
+
+      - text: It’s not a guess, it’s easy! You only need to add all the first
+          numbers and all the second numbers of the pairs! What you get
+          is where you will be after following the list of pairs.
+        char: mathina
+        mood: happy
+
+      - text: Mathina, that is exactly right!
+        exposition: said Flamma with great pride.
+        char: leo
+        mood: happy
+
+  - type: sceneText
+    text: Leo was astonished and checking what Mathina just said,
+      since he had been taking notes of what was happening on the flight.
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: I will pose a challenge to you then. I have these fireballs
+          that unidragons love to eat. You have to tell the dragon the path
+          to reach all the fireballs but without touching any of the clouds
+          in the sky.
+        char: flamma
+        mood: happy
+
+      - text: No problem, with this trick we can do that!
+        char: leo
+        mood: happy
+
+  - type: game
+    text: "Eat all the fireballs without touching the clouds and then reach the castle"
+    url:
+
+  - type: dialog
+    avatarAlign:
+      - flamma: right
+      - mathina: left
+    entries:
+
+      - text: Fantastic, Mathina. Now you are really becoming a firebird trainer.
+          Next time we will go to the Arisa castle, where all the firebird
+          trainers meet and challenge each other.
+        char: flamma
+        mood: happy
