@@ -74,13 +74,14 @@ actions:
         #Then who are you? You speak a strange language.
         char: mathina
         mood: happy
-      - text: Ich bin eine Feuervogeltrainerin
+      - text: Ich bin eine Feuervogeltrainerin.
         #I am a firebird trainer.
         char: flamma
         mood: sad
-      - text: Was ist das? - Fragte Leo, der auch neugierig geworden war.
+      - text: Was ist das? 
         #What is that? - Replied Leo, with increasing interest.
-        char: leo
+        char: leo 
+        exposition: Fragte Leo, der auch neugierig geworden war.
         #maybe leo needs to be properly integrated into the dialog?
         mood: happy
       - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
@@ -132,12 +133,12 @@ actions:
       - flamma: right
       - mathina: left
     entries:
-      - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!
-          - sagte Leo, aber er wirkte doch etwas unsicher.      
+      - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!  
         #What is that? Is it a dragon? - asked Leo - I am not afraid
         #of them! - he added, although he was a bit nervous of the animal
         #getting closer.
         char: leo
+        exposition: sagte Leo, aber er wirkte doch etwas unsicher.    
         mood: sad
       - text: Das ist ein Einhorndrache. Einhorndrachen sind wie normale Drachen,
           aber sie werden mit einem Horn auf dem Kopf geboren. So wie die Milchzähne bei Kindern,
