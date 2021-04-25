@@ -1,0 +1,1384 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../atractor-apps-all/scripts/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Arrumar rosáceas</title>
+    <style>
+    html {
+  touch-action: pan-down;
+}
+
+html, body {
+  overflow:hidden;
+}
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+	  
+	  .image-upload>input {
+  display: none;
+}
+button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+    </style>
+	<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
+
+  </head>
+  <body>
+    <div id="container0" style="display:none">
+			<audio src="../atractor-apps-all/sons/aplausos.mp3" id="aplausosAudio" type="audio/mpeg"></audio>
+   
+ 
+<img src="../atractor-apps-all/icons/back.png" width=5% onclick="home();" style=" position: absolute;
+  top: 5%;
+  right: 92%;"></img>
+
+  
+   <img src="../atractor-apps-all/icons/happy.png" id="certo1" width=6% style=" position: absolute;
+  top: 4%;
+  left: 83%;display:none"></img>
+  
+  
+
+<img src="../atractor-apps-all/icons/confirm.png" id="correct"  width=80px onclick="mycorrect()" style="position:absolute; left: 90%;
+  top: 3%; display:none"></img>
+
+
+  
+		</div>
+    <div id="container"></div>
+	  <div id="successMessage" style="display:none">
+     <img src="../atractor-apps-all/icons/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="../atractor-apps-all/gifs/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="../atractor-apps-all/icons/refresh.png" onclick="location.reload();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+	
+  </div>
+  
+  <script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+    <script src="../atractor-apps-all/scripts/three.js"></script>
+		<script src="../atractor-apps-all/scripts/DragControls.js"></script>
+		<script src="../atractor-apps-all/scripts/THREE.MeshLine.js"></script>
+	<script>
+		$(window).bind(
+  'touchmove',
+   function(e) {
+    e.preventDefault();
+  }
+);
+
+	var planeicon; 
+	
+var imgsangs=[
+[0],
+[0,Math.PI],
+[0,2*Math.PI/3, 4*Math.PI/3],
+[0,Math.PI/2,Math.PI,3*Math.PI/2],
+[0, 2*Math.PI/5,4*Math.PI/5,6*Math.PI/5,8*Math.PI/5],
+[0, 2*Math.PI/6,4*Math.PI/6,6*Math.PI/6,8*Math.PI/6, 10*Math.PI/6],
+
+[0],
+[0,Math.PI],
+[0,2*Math.PI/3, 4*Math.PI/3],
+[0,Math.PI/2,Math.PI,3*Math.PI/2],
+[0, 2*Math.PI/5,4*Math.PI/5,6*Math.PI/5,8*Math.PI/5],
+[0, 2*Math.PI/6,4*Math.PI/6,6*Math.PI/6,8*Math.PI/6, 10*Math.PI/6],
+
+[0],
+[0,Math.PI],
+[0,2*Math.PI/3, 4*Math.PI/3],
+[0,Math.PI/2,Math.PI,3*Math.PI/2],
+[0, 2*Math.PI/5,4*Math.PI/5,6*Math.PI/5,8*Math.PI/5],
+[0, 2*Math.PI/6,4*Math.PI/6,6*Math.PI/6,8*Math.PI/6, 10*Math.PI/6]
+]
+	
+		
+
+	
+
+
+	
+		var imageuser, planeBack, checker, checker2, checker3, checker4, checker5, checker6, len, 
+		checker7, checker8, checker9, checker10,segment3,geometry, material, material2, material3,
+		 geometryc, geometryc2, meshc, meshc2,path,path2, 
+		segment1, segment2, pontos=false, segmentos=false, curva=false, colort=true, frente=true;
+	
+	
+	var objects = [];
+	var nim;
+	
+ 
+ var angscertos; 
+  
+  	function Link(ii) 
+	{ang=0; objects = [];
+		
+		angscertos=imgsangs[ii];
+			
+			var x = 0;
+var len = angscertos.length;
+while(x < len){ 
+    angscertos[x] = Math.round(100*angscertos[x])/100; 
+    x++
+}
+
+
+	var indexn=imgsangs[ii].indexOf(0)
+		var indexn2=imgsangs[ii].indexOf(3.14)
+		var indexn3=imgsangs[ii].indexOf(-3.14)
+		var indexn4=imgsangs[ii].indexOf(2*3.14)
+		var indexn5=imgsangs[ii].indexOf(-2*3.14)
+	
+if(indexn==-1&&indexn2==-1&&indexn3==-1&&indexn4==-1&&indexn5==-1) 
+{document.getElementById("correct").style.display="none";}
+else {document.getElementById("correct").style.display="inline";}
+	
+		
+		
+angsmarc=[];	
+	var imgname = '../atractor-apps-all/imgs/'+imagenames[ii];
+	nim=ii;
+
+    var img = new Image();
+    img.src = imgname+"?_="+(new Date().getTime());
+    img.onload = function() {   
+           a=this.height/this.width;
+		planeGeo2 = new THREE.PlaneBufferGeometry( 80, 80*a );
+planeGeo3n = new THREE.PlaneBufferGeometry( 160, 160*a );
+
+		
+			//container.removeChild( renderer.domElement );
+			
+
+	var loader = new THREE.TextureLoader();
+
+// load a resource
+loader.load(
+    // resource URL
+    imgname,
+    // Function when resource is loaded
+    function ( texture ) {
+	
+	var texture1=texture.clone();
+	texture1.needsUpdate = true;
+
+	
+	materialc=new THREE.MeshPhongMaterial( {  map: texture1, side: THREE.DoubleSide, transparent: true, opacity:.5 } )
+	materialco=new THREE.MeshPhongMaterial( {  map: texture1, side: THREE.DoubleSide, transparent: true, opacity:.99 } )
+	materialcn=new THREE.MeshPhongMaterial( {  map: texture1, side: THREE.DoubleSide, transparent: true, opacity:0 } )
+	   
+	   init(); animate(); myFunction();
+    }
+);
+
+	
+	
+		  return
+		
+        
+}
+
+
+	document.getElementById("container").style.display="none"
+	document.getElementById("container0").style.display="inline"
+	
+	
+	
+
+
+
+
+	
+			
+			
+			
+		
+		//init();//animate();
+		
+		}
+
+  
+  
+  var ang;
+	var dif=0;
+	var dif2=0;
+	var posc=0;
+			// scene size
+			var WIDTH = window.innerWidth*.99;
+			var HEIGHT = window.innerHeight*.99;
+			// camera
+			var VIEW_ANGLE = 11
+			var ASPECT = WIDTH / HEIGHT;
+			var NEAR = 1;
+			var FAR = 5000;
+			var camera, scene, renderer;
+			var cameraControls;
+			var sphereGroup, smallSphere;
+			var planeBottom
+			var largura=80;
+			var altura=79;
+			var repete=1;
+			//var imgname="frisomot.png"
+			var floorTexture, planeGeo2, planeGeo3n;
+
+			
+	
+	  var mapCanvas
+	
+	 var loader = new THREE.TextureLoader;
+ var onLoad = function(_texture) {
+  var imgWidth = largura; var imgHeight= altura;
+  
+
+
+mapCanvas = document.createElement( 'canvas' );
+  mapCanvas.width = imgWidth*20;
+  mapCanvas.height = imgHeight*10;
+
+  // document.body.appendChild( mapCanvas );
+  var ctx = mapCanvas.getContext( '2d' );
+  
+  
+  
+  var img = new Image;
+  img.onload = function() {
+
+   
+ 
+   //ctx.translate( -imgWidth , 0 );
+   ctx.drawImage( img, 0, 0, imgWidth*10, imgHeight*10 );
+
+ ctx.scale(-1,-1);
+
+   		ctx.drawImage( img, -2*imgWidth*10, -imgHeight*10, imgWidth*10, imgHeight*10 );  
+
+  // ctx.rotate(  Math.PI );
+ //ctx.translate( imgWidth / 2, imgHeight / 2 );
+   //ctx.drawImage( img, imgWidth, 0, imgWidth, imgHeight );
+   //ctx.translate( -imgWidth / 2, -imgHeight / 2 ); 
+
+texturer = new THREE.Texture( mapCanvas );
+  texturer.needsUpdate = true 
+texturer.wrapS = THREE.RepeatWrapping; 
+texturer.wrapT = THREE.RepeatWrapping;
+
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+texturer.repeat.set( 2,1); 
+  materialrnm = new THREE.MeshBasicMaterial({map : texturer, side:THREE.DoubleSide});
+materialrnm.needsUpdate = true;	
+
+
+}
+  img.src = imgname;
+
+       
+
+
+ 
+ };
+
+
+var localPlane3 = new THREE.Plane( new THREE.Vector3( -1,0,0 ), largura*2 ),
+					localPlane4 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), largura*2);
+		
+	
+	
+	
+	
+	var localPlane3 = new THREE.Plane( new THREE.Vector3( 1,0,0 ), largura*2 ),
+					localPlane4 = new THREE.Plane( new THREE.Vector3( -1, 0,0 ), largura*2);
+	
+	
+	
+	
+	
+		 var loader2 = new THREE.TextureLoader;
+ var onLoad2 = function(_texture) {
+  var imgWidth = largura; var imgHeight= altura;
+  
+
+
+mapCanvas = document.createElement( 'canvas' );
+  mapCanvas.width = imgWidth*20;
+  mapCanvas.height = imgHeight*10;
+
+  // document.body.appendChild( mapCanvas );
+  var ctx = mapCanvas.getContext( '2d' );
+  
+  
+  
+  var img = new Image;
+  img.onload = function() {
+
+   
+ 
+   //ctx.translate( -imgWidth , 0 );
+   ctx.drawImage( img, 0, 0, imgWidth*10, imgHeight*10 );
+
+ ctx.scale(-1,-1);
+
+   		ctx.drawImage( img, -2*imgWidth*10, -imgHeight*10, imgWidth*10, imgHeight*10 );  
+
+  // ctx.rotate(  Math.PI );
+ //ctx.translate( imgWidth / 2, imgHeight / 2 );
+   //ctx.drawImage( img, imgWidth, 0, imgWidth, imgHeight );
+   //ctx.translate( -imgWidth / 2, -imgHeight / 2 ); 
+
+
+
+}
+  img.src = imgname;
+
+       
+
+
+ 
+ };
+
+
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+function home(){
+	document.getElementById("container0").style.display="none"
+		document.getElementById("container").style.display="inline"
+		container.removeChild( renderer.domElement );
+document.getElementById('certo1').style.display="none"
+}
+
+var container = document.getElementById( 'container0' );
+	var renderer;			
+		
+		function init() {
+		
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( WIDTH, HEIGHT );
+				renderer.setClearColor(0xd2d1b8,1);
+				container.appendChild( renderer.domElement );
+				
+				renderer.localClippingEnabled = true;
+				
+				
+				// scene
+				scene = new THREE.Scene();
+				// camera
+				camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
+				camera.position.set( 0, 480,0 );
+						camera.lookAt(new THREE.Vector3(0,0,0));
+						camera.up.set(0,55,0)
+				scene.add( camera );
+				
+				
+						
+				
+				
+				
+				// walls
+			
+
+			
+	planeBottom = new THREE.Mesh( planeGeo2, materialco );
+				planeBottom.rotateX( - Math.PI / 2 );
+				scene.add( planeBottom );
+				
+				
+				
+					
+				var radius = 1, segments = 16;
+				geometry = new THREE.SphereGeometry( radius, segments );
+				 material = new THREE.MeshPhongMaterial( { color: 0xFF0000, side: THREE.DoubleSide } );
+				material2 = new THREE.MeshPhongMaterial( { color: 0x00FF00 } );
+			 material3 = new THREE.MeshPhongMaterial( { color: 0xFFFF00 } );
+			  material4 = new THREE.MeshPhongMaterial( { color: 0x000000, side: THREE.DoubleSide } );
+
+			checker = new THREE.Mesh( geometry, material );
+
+				checker.position.set(-2, 0, 0 );
+				
+				
+				var radius = 1, segments = 16;
+				var geometry = new THREE.SphereGeometry( radius, segments );
+			
+
+		checker2 = new THREE.Mesh( geometry, material );
+
+				checker2.position.set(2, 0, 0 );
+				
+				
+							
+				
+			
+
+				// lights
+				var mainLight = new THREE.PointLight( 0xcccccc, 1.5, 1250 );
+				mainLight.position.y = 600;
+				scene.add( mainLight );
+				
+				var mainLight2 = new THREE.PointLight( 0xcccccc, 1.5, 1250 );
+				mainLight2.position.z = -150;
+				scene.add( mainLight2 );
+				
+				var greenLight = new THREE.PointLight( 0x00ff00, 0.25, 1000 );
+				greenLight.position.set( 550, 50, 0 );
+				//scene.add( greenLight );
+				var redLight = new THREE.PointLight( 0xff0000, 0.25, 1000 );
+				redLight.position.set( - 550, 50, 0 );
+				//scene.add( redLight );
+				var blueLight = new THREE.PointLight( 0x7f7fff, 0.25, 1000 );
+				blueLight.position.set( 0, 50, 550 );
+				scene.add( blueLight );
+			
+			var radius = 0.75, segments = 16;
+				var geometry = new THREE.SphereGeometry( radius, segments );
+			
+var geometry0 = new THREE.SphereGeometry( radius*1.33, segments );
+			
+			
+				checkertransang = new THREE.Mesh( geometry0, material );
+
+				checkertransang.position.set(44, 0, 0 );
+			objects.push( checkertransang );
+			
+			var radius = 4, segments = 16;
+				var geometry = new THREE.SphereGeometry( radius, segments );
+			var materialt = new THREE.MeshPhongMaterial( { color: 0xFFFF00, side: THREE.DoubleSide, transparent:true, opacity:0.01 } );
+			
+			
+
+			
+				checkertransang2 = new THREE.Mesh( geometry, materialt );
+
+				checkertransang2.position.set(44, 0, 0 );
+			objects.push( checkertransang2 );
+			
+			
+			}
+			
+			
+			function animate() {
+				requestAnimationFrame( animate );
+				renderer.render( scene, camera );
+			}
+				
+			
+
+	
+					
+					
+var mesh, mesh0, meshesp, meshesp2, meshFunction;
+
+
+	var materialc, materialco, materialcn; 
+	
+
+
+var tempo=[];
+var planeBottom2;
+var clock0=0;
+var clock=0;
+var myloop0
+var myloop1
+
+var arrowHelper2;
+
+
+
+function getCursorPosition(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+    console.log("x: " + x + " y: " + y);
+}
+
+var arrowHelper, planeBottom3;
+
+var checkertransang,checkertransang2, checkertranscent;
+
+var  dir, origin
+
+var ang=0
+var refv=false;
+
+var angsmarc;
+function mycorrect() {
+
+var indexc=angscertos.indexOf(Math.round(ang*100)/100);
+if(indexc==-1){ 
+	} else 
+{if(angsmarc.indexOf(ang.toFixed(2))==-1)
+{ angsmarc.push(-ang)}};
+
+
+for (i=0;i<angsmarc.length;i++)
+{
+
+var geometry = new THREE.Geometry();
+geometry.vertices.push(
+	new THREE.Vector3(48*Math.cos(angsmarc[i]), 0.05, 48*Math.sin(angsmarc[i]) ),
+	new THREE.Vector3(40*Math.cos(angsmarc[i]), 0.05, 40*Math.sin(angsmarc[i]) )
+);
+			
+var resolution = new THREE.Vector2( window.innerWidth, window.innerHeight );
+var line = new MeshLine();
+line.setGeometry( geometry );
+//line.setGeometry( geometry, function( p ) { return 2; } ); // makes width 2 * lineWidth				
+var material = new MeshLineMaterial({color: 0x0000ff,resolution: resolution,
+		sizeAttenuation: !false,
+		lineWidth: 5});	
+var mesh = new THREE.Mesh( line.geometry, material ); // this syntax could definitely be improved!
+scene.add( mesh )	
+}
+
+if(angsmarc.length==angscertos.length) {document.getElementById('certo1').style.display='inline';}; 
+					
+}
+
+function myFunction () 
+{
+rotv=true; 
+ if(rotv)
+{
+			
+		
+		
+var geometry = new THREE.Geometry();
+geometry.vertices.push(
+	new THREE.Vector3(48*Math.cos(0), 0.05, 48*Math.sin(0) ),
+	new THREE.Vector3(40*Math.cos(0), 0.05, 40*Math.sin(0) )
+);
+			
+var resolution = new THREE.Vector2( window.innerWidth, window.innerHeight );
+var line = new MeshLine();
+line.setGeometry( geometry );
+//line.setGeometry( geometry, function( p ) { return 2; } ); // makes width 2 * lineWidth				
+var materiall = new MeshLineMaterial({color: 0x000000,resolution: resolution,
+		sizeAttenuation: !false,
+		lineWidth: 2});	
+var mesh = new THREE.Mesh( line.geometry, materiall ); // this syntax could definitely be improved!
+scene.add( mesh )	
+		
+		
+		
+		var localPlane3 = new THREE.Plane( new THREE.Vector3( -1,0,0 ), largura*2 ),
+					localPlane4 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), largura*2);
+					
+					
+	planeBottom3 = new THREE.Mesh( planeGeo2,materialc );
+				planeBottom3.rotateX( - Math.PI / 2 );
+				
+				
+				
+				scene.add( planeBottom3 );
+
+planeBottom3n = new THREE.Mesh( planeGeo3n,materialcn );
+planeBottom3n.rotateX( - Math.PI / 2 );
+				
+		planeBottom3n.position.z=10;		
+				
+				scene.add( planeBottom3n );
+			
+			var radius = .75, segments = 16;
+				var geometry = new THREE.SphereGeometry( radius, segments );
+			
+var geometry0 = new THREE.SphereGeometry( radius*1.33, segments );
+			
+		
+			scene.add(checkertransang)
+			
+			
+			//planeicon=
+			
+				var imgname = '../atractor-apps-all/icons/drag.png';
+
+
+    var img = new Image();
+    img.src = imgname+"?_="+(new Date().getTime());
+    img.onload = function() {   
+           
+		planeGeoicon = new THREE.PlaneBufferGeometry( 8, 8 );
+
+		
+			//container.removeChild( renderer.domElement );
+			
+
+	var loader = new THREE.TextureLoader();
+
+// load a resource
+loader.load(
+    // resource URL
+    imgname,
+    // Function when resource is loaded
+    function ( texture ) {
+	
+	var texture1=texture.clone();
+	texture1.needsUpdate = true;
+
+	
+	materialicon=new THREE.MeshPhongMaterial( {  map: texture1, side: THREE.DoubleSide, transparent: true, opacity:.5 } )
+	  
+	   planeicon=new THREE.Mesh( planeGeoicon,materialicon );
+planeicon.rotateX( - Math.PI / 2 );
+planeicon.rotateZ( Math.PI / 4 );
+
+		planeicon.position.x=48;		
+		planeicon.position.y=9;
+planeicon.position.z=5;			
+				
+				scene.add( planeicon );
+    }
+);
+
+	
+	
+		  return
+		
+        
+}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			scene.add(checkertransang2)	
+					
+	checkertranscent = new THREE.Mesh( geometry, material );
+
+				checkertranscent.position.set(0, 0, 0 );
+			
+			scene.add(checkertranscent)
+			
+			
+			var segmentCount = 100,
+    radius = 44,
+    geometry2 = new THREE.Geometry(),
+    material2 = new THREE.LineBasicMaterial({ color: 0xFF0000, linewidth: 2 });
+
+for (var i = 0; i <= segmentCount; i++) {
+    var theta = (i / segmentCount) * Math.PI * 2;
+    geometry2.vertices.push(
+        new THREE.Vector3(
+            Math.cos(theta) * radius,0,
+            Math.sin(theta) * radius));            
+}
+
+circ=new THREE.Line(geometry2, material2)
+
+circ.position.y=.11;
+scene.add(circ);
+
+dir = new THREE.Vector3(checkertransang.position.x, checkertransang.position.y, checkertransang.position.z );
+
+
+
+origin = new THREE.Vector3(checkertranscent.position.x, checkertranscent.position.y, checkertranscent.position.z  );
+var dir1 = new THREE.Vector3(1,0,0 );
+
+var len =Math.sqrt(checkertransang.position.x*checkertransang.position.x+checkertransang.position.y*checkertransang.position.y+checkertransang.position.z*checkertransang.position.z);
+var hex = 0xff0000;
+					
+var circazul;
+	
+	
+			var controls = new THREE.DragControls( objects, camera, renderer.domElement );
+
+				
+			
+controls.addEventListener ( 'drag', function( event ){
+ 
+
+scene.remove(planeicon);
+
+
+ang=Math.atan2(event.object.position.z,event.object.position.x);
+
+scene.remove(circazul);
+
+var     geometry2azul = new THREE.Geometry(),
+materialazul = new THREE.LineBasicMaterial({ color: 0x0000FF, linewidth: 2 });
+
+var angn; if(ang<0) {angn= ang} else {angn = ang- 2*Math.PI};
+
+
+for (var i = 0; i <= segmentCount; i++) {
+    var theta = (i / segmentCount) * angn;
+    geometry2azul.vertices.push(
+        new THREE.Vector3(
+            Math.cos(theta) * radius,0.02,
+            Math.sin(theta) * radius));            
+}
+
+circazul=new THREE.Line(geometry2azul, materialazul)
+
+circazul.position.y=.11;
+scene.add(circazul);
+
+
+if(ang<0) {ang=-ang} else {ang=-ang+Math.PI*2}; 
+
+
+if(Math.abs(ang-Math.PI)<.02) {ang=Math.PI};
+if(Math.abs(ang-Math.PI/2)<.02) {ang=Math.PI/2};
+if(Math.abs(ang-3*Math.PI/2)<.02) {ang=3*Math.PI/2};
+if(Math.abs(ang-Math.PI/3)<.02) {ang=Math.PI/3};
+if(Math.abs(ang-2*Math.PI/3)<.02) {ang=2*Math.PI/3};
+if(Math.abs(ang-4*Math.PI/3)<.02) {ang=4*Math.PI/3};
+if(Math.abs(ang-5*Math.PI/3)<.02) {ang=5*Math.PI/3};
+
+if(Math.abs(ang-2*Math.PI/5)<.02) {ang=2*Math.PI/5};
+if(Math.abs(ang-4*Math.PI/5)<.02) {ang=4*Math.PI/5};
+if(Math.abs(ang-6*Math.PI/5)<.02) {ang=6*Math.PI/5};
+if(Math.abs(ang-8*Math.PI/5)<.02) {ang=8*Math.PI/5};
+
+
+if(Math.abs(ang)<.02) {ang=0};	
+
+			var indexc=angscertos.indexOf(Math.round(ang*100)/100);
+var indexc2=angscertos.indexOf(Math.round(100*(2*Math.PI+ang))/100);
+var indexc3=angscertos.indexOf(Math.round(100*(-2*Math.PI+ang))/100);
+		console.log(indexc2);
+		console.log(Math.round(100*(Math.PI+ang))/100);
+		if(indexc==-1&&indexc2==-1&&indexc3==-1) 
+		{document.getElementById("correct").style.display="none"}
+		else {document.getElementById("correct").style.display="inline"}
+		
+		
+				event.object.position.x=44*Math.cos(-ang);
+				event.object.position.z=Math.sin(-ang)*44;
+				event.object.position.y=0;
+				
+				checkertransang.position.set(checkertransang2.position.x,checkertransang2.position.y,checkertransang2.position.z)
+	
+	
+				scene.remove(planeBottom3)		
+	
+	
+				
+  
+				
+				planeBottom3 = new THREE.Mesh( planeGeo2, materialc );
+
+	
+					planeBottom3.position.y=0.1;
+					planeBottom3.applyMatrix( new THREE.Matrix4().makeTranslation( checkertranscent.position.x, 0.1, checkertranscent.position.z ) )
+			
+					planeBottom3.rotateX( - Math.PI / 2 );
+					
+						planeBottom3.rotateZ(ang)
+		
+					scene.add( planeBottom3 )
+					
+					
+
+})
+			
+			
+	
+		
+	
+			
+				}
+				else {
+				scene.remove(checkertransang)
+			scene.remove(checkertransang2)	
+			scene.remove(planeBottom3n)
+			scene.remove(circ)	
+			scene.remove( planeBottom3 );
+			scene.remove( checkertranscent );
+			}}
+
+	
+  var icon=[]; 
+  
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      function loadImages(sources, callback) {
+        var assetDir = '../atractor-apps-all/imgs/';
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        for (var src in sources) {
+          numImages++;
+        }
+        for (var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if (++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = assetDir + sources[src];
+        }
+      }
+      function isNearOutline(animal, outline) {
+        var a = animal;
+        var o = outline;
+        var ax = a.x();
+        var ay = a.y();
+var delta=60;
+        if (ax > o.x - delta && ax < o.x + delta && ay > o.y - 2*delta && ay < o.y + 3*delta) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+ 
+
+      function initStage(images) {
+	  			
+	  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+  
+  
+        var stage = new Konva.Stage({
+          container: 'container',
+          width: width,
+          height: height
+        });
+        var background = new Konva.Layer();
+        var animalLayer = new Konva.Layer();
+       
+var textLayer=	new Konva.Layer();   var animalShapes = [];
+        var score = 0;
+
+
+var textscore = new Konva.Text({
+        text: String(score)+' de '+String(ct),
+        x: 0.25*window.innerWidth+ window.innerWidth/5,
+        y: 0.35*window.innerHeight + window.innerWidth/5,
+		
+	
+		  
+		  
+        fontSize: 30
+      });
+
+		
+        // image positions
+        var animals = {
+          im1: {
+            x: 0.02*width,
+            y: 0.05*height
+          },
+          im2: {
+            x: 0.19*width,
+            y:  0.05*height
+          },
+         im3: {
+            x: 0.36*width,
+            y:  0.05*height
+          },
+         im4: {
+            x: 0.53*width,
+            y:  0.05*height
+          },
+		  
+		   im5: {
+            x: 0.7*width,
+            y:  0.05*height
+          },
+		  
+		   im6: {
+            x: 0.87*width,
+            y: 0.05*height
+          },
+          im7: {
+            x: 0.02*width,
+            y:  0.3*height
+          },
+         im8: {
+            x: 0.19*width,
+            y:  0.3*height
+          },
+		   im9: {
+            x: 0.36*width,
+            y:  0.3*height
+          },
+		  
+		   im10: {
+            x: 0.53*width,
+            y: 0.3*height
+          },
+          im11: {
+            x: 0.7*width,
+            y:  0.3*height
+          },
+         im12: {
+            x: 0.87*width,
+            y:  0.3*height
+          }
+		
+		  
+        };
+
+      
+
+        // create draggable animals
+        for (var key in animals) {
+          // anonymous function to induce scope
+          (function() {
+            var privKey = key;
+            var anim = animals[key];
+
+            var animal = new Konva.Image({
+              image: images[key],
+              x: anim.x,
+              y: anim.y,
+			   width: window.innerWidth/9,
+			  height: (window.innerWidth/9)/images[key].width*images[key].height,
+             draggable: true
+            });
+
+            animal.on('dragstart', function() {
+              this.moveToTop();
+              animalLayer.draw();
+            });
+            /*
+             * check if animal is in the right spot and
+             * snap into place if it is
+             */
+            animal.on('dragend', function() {
+              var outline = outlines[privKey + '_black'];
+              if (!animal.inRightPlace && isNearOutline(animal, outline)) {
+                animal.position({
+                  x: outline.x,
+                  y: outline.y
+                });
+                animalLayer.draw();
+                animal.inRightPlace = true;
+				
+			textscore.text(String(score+1)+' de '+String(ct))
+   
+icon[privKey.substring(2)-1].opacity(0)
+				layer.draw();
+				
+	 
+                if (++score >= ct) {
+				
+	  aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  }
+                
+
+                // disable drag and drop
+                setTimeout(function() {
+                  animal.draggable(false);
+                }, 50);
+              } else
+			  
+			  { if (!animal.inRightPlace ) {
+                animal.position({
+                  x: anim.x,
+                  y: anim.y
+                });
+                animalLayer.draw();
+                animal.inRightPlace = false;
+				
+				layer.draw();
+				}
+				
+			
+			  
+			  
+            }}
+			);
+            // make animal glow on mouseover
+            animal.on('mouseover', function() {
+              document.body.style.cursor = 'pointer';
+            });
+            // return animal on mouseout
+            animal.on('mouseout', function() {
+              animal.image(images[privKey]);
+              animalLayer.draw();
+              document.body.style.cursor = 'default';
+            });
+
+            animal.on('dragmove', function() {
+              document.body.style.cursor = 'pointer';
+            });
+
+            animalLayer.add(animal);
+            animalShapes.push(animal);
+          })();
+        }
+
+        // create animal outlines
+        for (var key in outlines) {
+          // anonymous function to induce scope
+          (function() {
+            var imageObj = images[key];
+            var out = outlines[key];
+
+            var outline = new Konva.Image({
+              image: imageObj,
+              x: out.x,
+              y: out.y,
+          width: window.innerWidth/8,
+          height: window.innerWidth/9,
+			  
+            });
+
+            animalLayer.add(outline);
+          })();
+        }
+		
+		
+
+        stage.add(background);
+        stage.add(animalLayer);
+	  stage.add(textLayer);
+    	
+
+
+   var layer = new Konva.Layer();
+      stage.add(layer);
+
+     
+	       var imageObj = new Image(); 
+      imageObj.onload = function() { 
+	  
+	  
+	  for(i=0;i<6;i++)
+	  {
+        icon[i] = new Konva.Image({
+           
+		  x: (0.12+0.17*i)*width,
+          y:0.05*height,
+          image: imageObj,
+          width: window.innerWidth/40,
+          height: window.innerWidth/40,
+		  opacity:0.5
+        });
+		
+	
+			
+
+        // add the shape to the layer
+        layer.add(icon[i]);
+		  
+     layer.batchDraw();
+		
+	
+		
+		}
+		
+	 for(i=6;i<12;i++)
+	  {
+      icon[i] = new Konva.Image({
+          x:  (0.12+0.17*(i-6))*width,
+           y:0.3*height,
+          image: imageObj,
+          width: window.innerWidth/40,
+          height: window.innerWidth/40,
+		  opacity:0.5
+        });
+		
+	
+			
+
+        // add the shape to the layer
+        layer.add(icon[i]);
+		  
+     layer.batchDraw();
+		
+	}
+		
+		
+		
+	
+	for(i=0;i<12;i++)
+	
+		 {icon[i].on('mouseover', function() {
+              document.body.style.cursor = 'pointer';
+            })};	
+		
+	
+		
+		
+		 icon[0].on('mousedown touchstart', function() {
+          Link(numbers[0])
+        });
+		
+		 icon[1].on('mousedown touchstart', function() {
+          Link(numbers[1])
+        });
+		
+		 icon[2].on('mousedown touchstart', function() {
+          Link(numbers[2])
+        });
+		
+		 icon[3].on('mousedown touchstart', function() {
+          Link(numbers[3])
+        });
+		
+			 icon[4].on('mousedown touchstart', function() {
+          Link(numbers[4])
+        });
+		
+		 icon[5].on('mousedown touchstart', function() {
+          Link(numbers[5])
+        });
+		
+		 icon[6].on('mousedown touchstart', function() {
+          Link(numbers[6])
+        });
+		
+		 icon[7].on('mousedown touchstart', function() {
+          Link(numbers[7])
+        });
+		
+		 icon[8].on('mousedown touchstart', function() {
+          Link(numbers[8])
+        });
+		
+			 icon[9].on('mousedown touchstart', function() {
+          Link(numbers[9])
+        });
+		
+		
+		 icon[10].on('mousedown touchstart', function() {
+          Link(numbers[10])
+        });
+		
+		 icon[11].on('mousedown touchstart', function() {
+          Link(numbers[11])
+        });
+		
+	
+			
+	
+		
+		
+		
+      };
+      imageObj.src = '../atractor-apps-all/icons/rodar.png';
+	  
+
+
+
+		
+		
+      }
+
+imagenames=["c1_1.png",
+  "c2_1.png",
+   "c3_1.png",
+  	"c4_1.png",
+	"c5_1.png",
+	"c6_1.png",
+"c1_2.png",
+"c2_2.png",
+  "c3_3.png",
+"c4_3.png",	"c5_3.png","c6_2.png",
+"c1_3.png",
+      
+		
+		"c2_3.png",
+       
+         "c3_2.png",
+		
+	
+		"c4_2.png",
+		
+		
+		"c5_2.png",
+	
+		
+		
+		"c6_3.png"]
+		
+		imgsim=['1','2','3','4','5','6','1','2','3','4','5','6','1','2','3','4','5','6']
+		
+ var numbers = [ 0,1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15,16,17];
+  numbers.sort( function() { return Math.random() - .5 } );
+  numbers=numbers.slice(0, 12);
+
+  var cicl, lencicl=0;
+
+  
+  if (localStorage.getItem("ciclicas")!== null) {
+         cicl=localStorage.getItem("ciclicas");
+		 cicl=cicl.substring(1, cicl.length - 1);
+          cicl=cicl.split(",");
+		  lencicl=cicl.length;
+}else{
+          console.log(" Sorry! No Web Storage support..")
+}
+  
+
+  
+  if(lencicl==12) {numbers=[]; 
+  for(var i=0;i<12;i++) 
+  {numbers.push(imagenames.indexOf(cicl[i].substring(1, cicl[i].length - 1)))}}; 
+  
+ 
+      var sources = {
+
+        im1: imagenames[numbers[0]],
+        im2: imagenames[numbers[1]],
+        im3: imagenames[numbers[2]],
+        im4: imagenames[numbers[3]],
+		im5: imagenames[numbers[4]],
+		im6: imagenames[numbers[5]],
+		im7: imagenames[numbers[6]],
+		im8: imagenames[numbers[7]],
+		im9: imagenames[numbers[8]],
+		im10: imagenames[numbers[9]],
+		im11: imagenames[numbers[10]],
+		im12: imagenames[numbers[11]],
+		
+		
+		
+        black1: 'bag1.png',
+		 black2: 'bag2.png',
+		  black3: 'bag3.png',
+		   black4: 'bag4.png',
+		    black5: 'bag5.png',
+			 black6: 'bag6.png',
+		icon8: 'puzzled.png'
+      };
+	 
+	 var posxx=[], posyy=[];
+	  var ct=0;
+	  var n1=0, n2=0, n3=0, n4=0, n5=0, n6=0;
+	   for(var i=0;i<12;i++) 
+	   {
+	  if(imgsim[numbers[i]]=='1')  {ct++; n1++; posxx[i]=(0.01+n1/100)* window.innerWidth; 
+ posyy[i]=(0.58+2*n1/100)*window.innerHeight;	  } else {
+	  
+	  if(imgsim[numbers[i]]=='2')  {ct++; n2++; posxx[i]=(0.18+n2/100)* window.innerWidth;
+ posyy[i]=(0.58+2*n2/100)*window.innerHeight;	  } else
+	  
+	  {   if(imgsim[numbers[i]]=='3')  {ct++; n3++; posxx[i]=(0.35+n3/100) * window.innerWidth;
+ posyy[i]=(0.58+2*n3/100)*window.innerHeight;	  } else 
+	  
+	  {  if(imgsim[numbers[i]]=='4')  {ct++; n4++; posxx[i]=(0.52+n4/100) * window.innerWidth;
+ posyy[i]=(0.58+2*n4/100)*window.innerHeight;	  } else 
+	  
+	  {  if(imgsim[numbers[i]]=='5')  {ct++; n5++; posxx[i]=(0.69+n5/100) * window.innerWidth;
+ posyy[i]=(0.58+2*n5/100)*window.innerHeight;	  } else 
+ 
+ {ct++;n6++; posxx[i]=(0.86+n6/100) *width;
+  posyy[i]=(0.58+2*n6/100)*window.innerHeight;}
+	  }}}}};
+	  
+	    var outlines = {
+		
+		black1: {
+            x: 0.02 *window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+        
+			black2: {
+            x: 0.19* window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+		  
+		  black3: {
+            x: 0.36* window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+		  		  black4: {
+            x: 0.53* window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+		  
+		   black5: {
+            x: 0.7* window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+		  
+		    black6: {
+            x: 0.87* window.innerWidth,
+          y: 0.75*window.innerHeight
+			
+          },
+			
+		im1_black: {x: posxx[0], y: posyy[0]} ,
+         im2_black: {x: posxx[1], y: posyy[1]} ,
+im3_black: {x: posxx[2], y: posyy[2]} ,
+im4_black: {x: posxx[3], y: posyy[3]} ,
+im5_black: {x: posxx[4], y: posyy[4]} ,
+im6_black: {x: posxx[5], y: posyy[5]},
+im7_black: {x: posxx[6], y: posyy[6]},
+im8_black: {x: posxx[7], y: posyy[7]}, 		 
+im9_black: {x: posxx[8], y: posyy[8]},
+im10_black: {x: posxx[9], y: posyy[9]} 	,
+im11_black: {x: posxx[10], y: posyy[10]} 	,
+im12_black: {x: posxx[11], y: posyy[11]} 	,
+
+        };
+	 
+	 
+	
+	 
+      loadImages(sources, initStage);
+	  
+	
+
+   
+
+    </script>
+  </body>
+</html>

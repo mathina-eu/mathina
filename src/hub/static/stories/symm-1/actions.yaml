@@ -1,14 +1,15 @@
 actions:
   - type: background
-    src: c1-bg1.jpg
+    src: $COMMON/img/bg/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
   - type: image
     id: c1-1  
     src: c1-1.png
     style: "width: 37%; top: 42%; right: 0%;"
     align: right
   - type: image
-    src: Mathina1.png
+    src: $COMMON/img/Mathina1.png
     id: Mathina1
     style: "width: 13%; top: 57%; left: 0%;"   
   - type: sceneText
@@ -17,7 +18,7 @@ actions:
       <p>Right next to her there was a stall selling cuddly toys. And it was full of all kinds of toys: puppies, teddy bears, ladybugs, ....</p>     
   - type: image
     id: feiticeiro
-    src: Feiticeiro1.png
+    src: $COMMON/img/Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"
     align: right
   - type: animation
@@ -32,7 +33,7 @@ actions:
   - type: clearImage
     id: Mathina1
   - type: image
-    src: Mathina2.png
+    src: $COMMON/img/Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"    
   - type: dialog
@@ -88,12 +89,12 @@ actions:
   - type: clearImage
     id: c1-3
   - type: image
-    src: Mathina2.png
+    src: $COMMON/img/Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: Feiticeiro1.png
+    src: $COMMON/img/Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"
     align: right    
   - type: dialog
@@ -141,12 +142,12 @@ actions:
   - type: clearImage
     id: c1-5
   - type: image
-    src: Mathina2.png
+    src: $COMMON/img/Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: Feiticeiro1.png
+    src: $COMMON/img/Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"
     align: right    
   - type: dialog
@@ -172,12 +173,12 @@ actions:
   - type: clearImage
     id: toys
   - type: image
-    src: Mathina2.png
+    src: $COMMON/img/Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: Feiticeiro1.png
+    src: $COMMON/img/Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"    
   - type: dialog
     entries:    
@@ -209,7 +210,7 @@ actions:
     text: >
       <p>After the game, Mathina put her toys in another box. She had got so many new cuddly toys, that she was having a hard time carrying them. When she was trying to drag the box out of the stall, Mathina heard her name.</p>
   - type: image
-    src: Leo1.png
+    src: $COMMON/img/Leo1.png
     id: Leo1
     style: "width: 13%; top: 67%; right: 15%;"       
   - type: dialog
@@ -233,7 +234,7 @@ actions:
   - type: clearImage
     id: Leo1
   - type: image
-    src: Leo2.png
+    src: $COMMON/img/Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 62%; right: 30%;"   
   - type: dialog
@@ -245,7 +246,7 @@ actions:
         char: mathina
   - type: image
     id: Feiticeiro3
-    src: Feiticeiro3.png
+    src: $COMMON/img/Feiticeiro3.png
     style: "width: 17%; top: 42%; left: 17%;"
     align: right         
   - type: dialog
@@ -279,7 +280,7 @@ actions:
   - type: clearImage
     id: Leo2
   - type: image
-    src: Leo3.png
+    src: $COMMON/img/Leo3.png
     id: Leo3
     style: "width: 13%; top: 65%; right: 30%;"       
   - type: dialog
@@ -312,11 +313,11 @@ actions:
     id: casa
   - type: image
     id: Feiticeiro2
-    src: Feiticeiro2.png
+    src: $COMMON/img/Feiticeiro2.png
     style: "width: 17%; top: 42%; left: 32%;"
     align: right
   - type: image
-    src: Mathina4.png
+    src: $COMMON/img/Mathina4.png
     id: Mathina4
     style: "width: 7.5%; top: 56%; left: 50%;"
   - type: clearImage
@@ -352,7 +353,7 @@ actions:
   - type: clearImage
     id: Feiticeiro2
   - type: image
-    src: Mathina1.png
+    src: $COMMON/img/Mathina1.png
     id: Mathina1
     style: "width: 13%; top: 59%; left: 25%;"     
   - type: dialog
@@ -367,7 +368,7 @@ actions:
     style: "width: 37%; top: 42%; right: 0%;"
     align: right
   - type: image
-    src: Leo4.png
+    src: $COMMON/img/Leo4.png
     id: Leo4
     style: "width: 9%; top: 69%; right: 30%;"
   - type: animation
@@ -377,9 +378,12 @@ actions:
       xPercent: 170
       yPercent: 0
       ease: power3.out
+  - type: clearBackground
+    id: c1-bg1      
   - type: background
-    src: c1-bg2.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"      
+    src: $COMMON/img/bg/c1-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg2    
   - type: sceneText
     text: >
       <p>Mathina went to the stall where Leo was trying in vain to finish his toys. Leo was talking loudly, and he seemed angry.</p>
@@ -420,11 +424,11 @@ actions:
   - type: clearImage
     id: barco
   - type: image
-    src: Mathina6.png
+    src: $COMMON/img/Mathina6.png
     id: Mathina6
     style: "width: 8.5%; top: 57%; left: 51%;"
   - type: image
-    src: Leo4.png
+    src: $COMMON/img/Leo4.png
     id: Leo4
     style: "width: 9%; top: 69%; right: 30%;"    
   - type: dialog
@@ -440,7 +444,7 @@ actions:
   - type: clearImage
     id: Leo4
   - type: image
-    src: Leo2.png
+    src: $COMMON/img/Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 62%; left: 57%;"      
   - type: dialog
@@ -477,9 +481,12 @@ actions:
     id: Mathina6
   - type: clearImage
     id: c1-2
+  - type: clearBackground
+    id: c1-bg2    
   - type: background
-    src: c1-bg1.jpg
+    src: $COMMON/img/bg/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
   - type: image
     src: Mathina3.png
     id: Mathina3
@@ -487,11 +494,11 @@ actions:
     align: center
   - type: image
     id: Feiticeiro2
-    src: Feiticeiro2.png
+    src: $COMMON/img/Feiticeiro2.png
     style: "width: 17%; top: 43%; left: 29%;"
     align: right
   - type: image
-    src: Leo2.png
+    src: $COMMON/img/Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 61%; right: 30%;"     
   - type: sceneText
@@ -519,4 +526,3 @@ actions:
   - type: sceneText
     text: >
       <p> ... dragging all their new toys behind.</p>         
-      
