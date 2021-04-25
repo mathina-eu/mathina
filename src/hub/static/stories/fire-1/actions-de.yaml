@@ -14,7 +14,7 @@ actions:
   - type: sceneText
     text: >
       Es war ein sonniger Morgen, Mathina und Leo gingen durch die Felder in der Nähe ihres Dorfes spazieren.
-      Da sahen sie plötzlich eine ältere Frau, die zum Himmel schaute und mit ihren Armen merkwürde Bewegungen machte.
+      Da sahen sie plötzlich eine Frau, die zum Himmel schaute und mit ihren Armen merkwürde Bewegungen machte.
       Sie murmelte unverständliche Worte dazu.
     #It was a sunny morning, Mathina and Leo were going on a stroll
     #in the fields near their village when they suddenly saw an old woman
@@ -37,7 +37,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Mathia zögerte nicht und ging auf die Frau zu. </p>
+      <p>Mathina zögerte nicht und ging auf die Frau zu. </p>
     #Mathina, who wasn’t shy at all, approached the woman.
 
   - type: animation
@@ -66,7 +66,7 @@ actions:
         #Are you a wizard then?
         char: mathina
         mood: happy
-      - text: Das würde ich auch nicht sagen, obwohl ich einige von ihnen kenne, und sie haben mir mehr als einmal geholfen.
+      - text: Das würde ich auch nicht sagen, obwohl ich einige von ihnen kenne, und sie haben mir schon das ein oder andere Mal geholfen.
         #I wouldn’t say that either, although I know some of them and they have helped me more than once.
         char: flamma
         mood: sad
@@ -132,30 +132,48 @@ actions:
       - flamma: right
       - mathina: left
     entries:
-      - text: What is that? Is it a dragon? - asked Leo - I am not afraid
-          of them! - he added, although he was a bit nervous of the animal
-          getting closer.
+      - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!
+          - sagte Leo, aber er wirkte doch etwas unsicher.      
+        #What is that? Is it a dragon? - asked Leo - I am not afraid
+        #of them! - he added, although he was a bit nervous of the animal
+        #getting closer.
+        char: leo
+        mood: sad
+      - text: Das ist ein Einhorndrache. Einhorndrachen sind wie normale Drachen,
+          aber sie werden mit einem Horn auf dem Kopf geboren. So wie die Milchzähne bei Kindern,
+          ist dieses Horn noch nicht so fest, und irgendwann fällt es vom Kopf ab
+          und ein stärkeres und größeres Horn wächst. Aber das abgefallene Horn lebt noch, und der Drache kan es immernoch spüren.
+          Wer einen Einhorndrachen trainieren möchte, so wie ich es tue, muss einen Drachen finden und sein Horn hüten.
+          Es ist eine verantwortungsvolle Aufgabe, denn das Horn ist empfindlich, und immernoch Teil des Drachen.
+          Er spürt, wenn wir es bewegen oder damit in eine bestimmte Richtung zeigen.
+          So können wir den Drachen in der Luft führen.
+          Dieser Stock, den ich trage, ist kein Gehstock, es ist das Horn dieses Einhorndrachen.
+          Wollt Ihr mal versuchen, den Drachen am Himmel zu lenken?      
+        #This is a unidragon. Unidragons are very similar to dragons,
+        #but they are born with a horn on their heads. Like milk teeth in
+        #children, that horn is fragile and eventually, it falls off their head
+        #when a stronger and bigger horn grows. But the fallen horn is not a dead
+        #material, the dragon can still feel it. Trainers of unidragons, as I am,
+        #must find a unidragon and take care of its horn. It is a big
+        #responsibility, since the horn is a sensitive part of the dragon, and
+        #the animal can feel it when we move it or point with it in a certain
+        #direction. We use that to guide the dragons in the air. The stick that
+        #I am carrying is not a walking support, it is the horn of this
+        #unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
         mood: sad
-      - text: This is a unidragon. Unidragons are very similar to dragons,
-          but they are born with a horn on their heads. Like milk teeth in
-          children, that horn is fragile and eventually, it falls off their head
-          when a stronger and bigger horn grows. But the fallen horn is not a dead
-          material, the dragon can still feel it. Trainers of unidragons, as I am,
-          must find a unidragon and take care of its horn. It is a big
-          responsibility, since the horn is a sensitive part of the dragon, and
-          the animal can feel it when we move it or point with it in a certain
-          direction. We use that to guide the dragons in the air. The stick that
-          I am carrying is not a walking support, it is the horn of this
-          unidragon. Would you like to try to move the unidragon in the sky?
-        char: flamma
-        mood: sad
-      - text: Yes! Yes! - said Mathina. And Leo added,
-          “Let’s become unidragon trainers!”
+      - text: Ja, unbedingt!
+        #Yes! Yes! - said Mathina. And Leo added,
         char: mathina
         mood: sad
-      - text: You just have to point the horn in the direction that you
-          want the unidragon to fly. - said Flamma.
+      - text: Lass uns Einhorndrachen trainieren!      
+        #“Let’s become unidragon trainers!”
+        char: leo
+        mood: sad
+      
+      - text: Ihr müsst einfach mit dem Horn in die Richtung zeigen, in die der Drache fliegen soll-
+        #You just have to point the horn in the direction that you
+        #want the unidragon to fly. - said Flamma.
         char: flamma
         mood: sad
 
