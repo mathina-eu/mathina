@@ -1,16 +1,19 @@
 actions:
-  - type: sceneText
-    text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+  - type: background
+    src: logi-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: dialog
     entries:
-      - text: "I love these toys!"
-        char: mathina
+      - text: That's it! - Leo pointed at the sign on the skyscraper's facade, where it read “Ytic-igol” in giant letters. Leo would have headed inside, but Mathina quickly grabbed his hand.
+        char: leo
         mood: happy
       - text: "Some have defects!"
         char: wizard
         mood: sad
+  - type: sceneText
+    text: >
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum dolores est</p>
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"
