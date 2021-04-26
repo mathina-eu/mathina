@@ -123,117 +123,151 @@ actions:
         char: leo
         mood: happy
 
-      - text: 
+      - text: Wie ich schon sagte, wir haben keine Worte, die zu ihrer Sprache passen,
+          aber wir können Magie nutzen, um die Flugbahn zu beschreiben, die er entlang fliegen soll.
+          Ihr könnt imr in Zahlen sagen, was ihr machen wollt, und ich übersetze sie für euch in die Sprache der Einhorndrachen.
         #Well, as I said, we don’t have words that correspond to his
-          language, but we can use some magic to describe the path we want to
-          make him follow. You can tell me in numbers what you want to do,
-          and I will translate them into unidragon language.
+        #language, but we can use some magic to describe the path we want to
+        #make him follow. You can tell me in numbers what you want to do,
+        #and I will translate them into unidragon language.
         char: flamma
         mood: happy
 
-      - text: What can we say?
+      - text: Was können wir denn sagen?
+        #What can we say?
         char: mathina
         mood: happy
 
-      - text: Let us start with something easy. Let us tell him to fly just
-          over the land, horizontally in a straight line.
+      - text: Lasst uns mit etwas Einfachem anfangen. Wir sagen ihm, er 
+          soll geradeaus kurz über dem Boden fliegen, wagerecht in einer geraden Linie.
+        #Let us start with something easy. Let us tell him to fly just
+        #over the land, horizontally in a straight line.
         char: flamma
         mood: happy
 
-      - text: Ok, let’s tell him to do that.
+      - text: Okay, das sagen wir ihm.
+        #Ok, let’s tell him to do that.
         char: leo
         mood: happy
 
-      - text: No, you can’t use the human words, they are too confusing
-          and imprecise for him. You just tell him the magical number one.
+      - text: Nein, Du kannst nicht einfach die menschlichen Worte benutzen, die sind zu verwirrend und ungenau für ihn.
+          Du sagst ihm einfach die Zauberzahl Eins.
+        #No, you can’t use the human words, they are too confusing
+        #and imprecise for him. You just tell him the magical number one.
         char: flamma
         mood: happy
 
-      - text: The magical number one?
+      - text: Die Zauberzahl Eins?
+        #The magical number one?
         char: leo
         mood: happy
 
-      - text: It means to advance at his normal speed.
+      - text: Das bedeutet, er soll mit seiner normalen Geschwindigkeit vorwärts fliegen.
+        #It means to advance at his normal speed.
         char: flamma
         mood: happy
 
   - type: sceneText
-    text: Flamma said the number one in unidragon language, and the animal
-      started moving forward, quite as if it was running instead of flying.
-      At a shout of Flamma, the unidragon returned to the base of the tree,
-      where he was before moving.
+    text: Flamma sagte die Zahl Eins in der Einhorndrachensprache,
+      und der Drache bewegte sich vorwärts, ein bisschen so als ob er rennen würde statt zu fliegen.
+      Flamma rief etwas, und der Eihorndrache kam zum Baum zurück, wo er gestartet war.
+    #Flamma said the number one in unidragon language, and the animal
+    #started moving forward, quite as if it was running instead of flying.
+    #At a shout of Flamma, the unidragon returned to the base of the tree,
+    #where he was before moving.
 
 
   - type: dialog
     avatarAlign:
       - flamma: right
       - mathina: left
+      - leo: left
     entries:
 
-      - text: And what if we tell him 2?
+      - text: Und was passiert, wenn wir ihm die Zahl Zwei sagen?
+        #And what if we tell him 2?
         char: leo
         mood: happy
 
-      - text: He will move twice as fast.
+      - text: Dann wird er doppelt so schnell fliegen.
+        #He will move twice as fast.
         char: flamma
         mood: happy
 
-      - text: Oh, I start to understand, so the number is the speed. But how do we make him fly?
+      - text: Ah, ich glaube, ich verstehe. Die Zahl ist die Geschwindigkeit. Aber wie sagen wir ihm, dass er hoch fliegen soll?
+        #Oh, I start to understand, so the number is the speed. But how do we make him fly?
         char: mathina
         mood: happy
 
-      - text: Well, for that you need to tell him two numbers. The first is
-          how much he advances, the second is how much he rises in the air.
+      - text: Nun, dafür musst Du ihm zwei Zahlen sagen. Die erste steht dafür, wie weit er fliegen soll, und die zweite dafür wie hoch.
+        #Well, for that you need to tell him two numbers. The first is
+        #how much he advances, the second is how much he rises in the air.
         char: flamma
         mood: happy
 
-      - text: Aha!, so we are telling him to advance and rise up!
+      - text: Aha! Also sagen wir ihm vorwärts und aufwärts zu fliegen!
+        #Aha!, so we are telling him to advance and rise up!
         char: mathina
         mood: happy
 
-      - text: In magical language, we would write that as (1,1), and in unidragon it is pronounced…
+      - text: In der Zaubersprache würden wir dafür (1,1) schreiben, und in der Eihorndrachensprache hört es sich so an...
+        #In magical language, we would write that as (1,1), and in unidragon it is pronounced…
         char: flamma
         mood: happy
 
   - type: sceneText
-    text: ...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
+    text: ...und sie machte ein Geräusch.
+      Der Einhorndrache flog in gerader Line gleichzeitig vorwärts und aufwärts.
+    #...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
 
   - type: dialog
     avatarAlign:
        - flamma: right
        - mathina: left
+       - leo: left
     entries:
 
-      - text: It flies, it flies!!
+      - text: Er fliegt, er fliegt!
+        #It flies, it flies!!
         char: leo
         mood: happy
-        exposition: Both Mathina and Leo exclaimed.
+        exposition: riefen Mathina und Leo gleichzeitig.
+        #Both Mathina and Leo exclaimed.
 
-      - text: Yes, it does! But let me make him come back before he is too far away.
-        char: leo
+      - text: Ja, er fliegt. Aber ich werde ihn mal wieder zurückrufen, bevor er zu weit weg ist.
+        #Yes, it does! But let me make him come back before he is too far away.
+        char: flamma
         mood: happy
-        exposition: And Flamma made the animal come back.
+        exposition: Flamma rief den Drachen, und er kam zurück.
+        #And Flamma made the animal come back.
 
-      - text: You see that it was rising at the same speed as it was advancing.
-          Can you figure out how to tell him to fly in a steeper path?
+      - text: Ihr habt gesehen, dass er genauso schnell vorwärts kam, wie er nach oben kam.
+          Könnt Ihr herausfinden, wie er eine steilere Bahn fliegen kann?
+        #You see that it was rising at the same speed as it was advancing.
+        #Can you figure out how to tell him to fly in a steeper path?
         char: flamma
         mood: happy
 
-      - text: Hmm… maybe we can tell him a 2 instead of a 1, as before?
+      - text: Hm, vielleicht können wir ihm eine 2 sagen statt der 1 vorher?
+        #Hmm… maybe we can tell him a 2 instead of a 1, as before?
         char: leo
         mood: happy
 
-      - text: Yes, but in the second number, because we want him to rise faster.
+      - text: Ja, aber es muss die zweite Zahl sein, denn er soll ja schneller hoch fliegen.
+        #Yes, but in the second number, because we want him to rise faster.
         char: mathina
         mood: happy
 
-      - text: Very well, I will tell him (1,2)
-        exposition: said Flamma, and pronounced the magical words.
+      - text: Nun gut, dann sage ich ihm also (1,2),
+        #Very well, I will tell him (1,2)
+        exposition: sagte Flamma und sprach die Zauberworte dafür.
+        #said Flamma, and pronounced the magical words.
         char: flamma
         mood: happy
 
   - type: sceneText
-    text: Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
+    text: Als Flamma dem Einhorndrachen die beiden Zahlen nannte, flog er in einer steileren Bahn in die Luft.
+    #Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
 
   - type: dialog
     avatarAlign:
@@ -241,91 +275,116 @@ actions:
       - mathina: left
     entries:
 
-      - text: I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try Mathina!
+      - text: Ich kann Euch beibringen, wie man das übersetzt. Ich habe alle Zahlen in Einhorndrachensprache in meinem Notizbuch.
+          Versuch' es mal, Mathina!
+        #I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try Mathina!
         char: flamma
         mood: happy
 
   - type: game
-    text: "Try to fly the unidragon with pairs of numbers"
+    text: "Versuche den Einhorndrachen mit Zahlenpaaren fliegen zu lassen"
+    #"Try to fly the unidragon with pairs of numbers"
     url:
 
   - type: sceneText
-    text: Flamma was pleased to see how Mathina handled that language.
+    text: Flamma gefiel, wie Mathina diese neue Sprache benutzte.
+    #Flamma was pleased to see how Mathina handled that language.
 
   - type: dialog
     avatarAlign:
       - flamma: right
       - mathina: left
+      - leo: left
     entries:
 
-     - text: Very well! You see, you can tell the unidragon a few pairs of
-        numbers, to be flown in sequence, one after another. Unidragons have
-        a good memory and they will remember the sequence. This is very useful
-        for the unidragon trainers because you can plan the path they will fly
-        in advance, for instance avoiding obstacles.
+     - text: Super! Weißt Du, Du kannst dem Einhorndrachen auch mehrere Zahlenpaare nennen, die er dann nacheinander fliegt.
+        Einhorndrachen haben ein gutes Gedächtnis, sie können sich eine gaze Reihen von Paaren merken.
+        Das ist ganz praktisch, wenn man Einhorndrachen trainiert, denn so kann man schon vorher planen, wie der Drache fliegen soll,
+        zum Beispiel um Hindernissen auszuweichen.
+      #Very well! You see, you can tell the unidragon a few pairs of
+      #numbers, to be flown in sequence, one after another. Unidragons have
+      #a good memory and they will remember the sequence. This is very useful
+      #for the unidragon trainers because you can plan the path they will fly
+      #in advance, for instance avoiding obstacles.
        char: flamma
        mood: happy
 
-     - text: But Flamma, if you tell him so many pairs of numbers,
-          how can you know where the unidragon will end?
+     - text: Aber, wenn Du ihm so viele Zahlenpaare sagts, woher weißt Du dann, wohin der Drache am Ende fliegt, Flamma?
+      #But Flamma, if you tell him so many pairs of numbers,
+      #how can you know where the unidragon will end?
        char: leo
        mood: happy
 
-     - text: I will let you figure that out.
+     - text: Das lasse ich euch selbst herausfinden.
+      #I will let you figure that out.
        char: flamma
        mood: happy
 
   - type: game
-    text: "Fly the unidragon to the castle avoiding the obstacles. You can
-      only fly over the blue sky, if you hit a cloud or a mountain, you
-      will have to start again."
+    text: "Fliege den Einhorndrachen zum Schloss und weiche den Hindernissen aus.
+      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke under einen Berg triffst, usst Du noch einmal von vorn anfangen."
+    #"Fly the unidragon to the castle avoiding the obstacles. You can
+    #only fly over the blue sky, if you hit a cloud or a mountain, you
+    #will have to start again."
     url:
 
   - type: dialog
     avatarAlign:
       - flamma: right
       - mathina: left
+      -leo: left
     entries:
 
-      - text: Did you notice something? How can you guess where the unidragon
-          will be?
+      - text: Ist Euch etwas aufgefallen? Woher wisst Ihr, wo der Einhorndrache sein wird? Könnt Ihr es erraten?
+        #Did you notice something? How can you guess where the unidragon
+        #will be?
         char: flamma
         mood: happy
 
-      - text: It’s not a guess, it’s easy! You only need to add all the first
-          numbers and all the second numbers of the pairs! What you get
-          is where you will be after following the list of pairs.
+      - text: Das muss ich nicht raten, das ist einfach! Du musst nur alle Zahlen zusammenrechnen, erst alle ersten, dann alle zweiten von den Zahlenpaaren.
+        So kriegtst Du heraus, wo der Drache am Ende ist, wenn er alle Zahlenpaare befolgt hat.
+        #It’s not a guess, it’s easy! You only need to add all the first
+        #numbers and all the second numbers of the pairs! What you get
+        #is where you will be after following the list of pairs.
         char: mathina
         mood: happy
 
-      - text: Mathina, that is exactly right!
-        exposition: said Flamma with great pride.
-        char: leo
+      - text: Ganz genau, Mathina!
+        #Mathina, that is exactly right!
+        exposition: sagte Flamma stolz.
+        #said Flamma with great pride.
+        char: Flamma
         mood: happy
 
   - type: sceneText
-    text: Leo was astonished and checking what Mathina just said,
-      since he had been taking notes of what was happening on the flight.
+    text: Leo war ganz erstaunt darüber, was Mathina gesagt hatte, und verglich es mit seinen Notizen, die er während des Flugs gemacht hatte.
+    #Leo was astonished and checking what Mathina just said,
+    #since he had been taking notes of what was happening on the flight.
 
   - type: dialog
     avatarAlign:
       - flamma: right
       - mathina: left
+      - leo: left
     entries:
 
-      - text: I will pose a challenge to you then. I have these fireballs
-          that unidragons love to eat. You have to tell the dragon the path
-          to reach all the fireballs but without touching any of the clouds
-          in the sky.
+      - text: Ich gebe Euch nun eine Aufgabe. Diese Feuerbälle finden Einhorndrachen total lecker.
+          Sagt dem Drachen, wie er fliegen muss, um alle zu bekommen. Er darf aber keine wolken berühren.
+        #I will pose a challenge to you then. I have these fireballs
+        #that unidragons love to eat. You have to tell the dragon the path
+        #to reach all the fireballs but without touching any of the clouds
+        #in the sky.
         char: flamma
         mood: happy
 
-      - text: No problem, with this trick we can do that!
+      - text: Kein Problem. Mit dem Trick schaffen wir das!
+        #No problem, with this trick we can do that!
         char: leo
         mood: happy
 
   - type: game
-    text: "Eat all the fireballs without touching the clouds and then reach the castle"
+    text: "Schnappt Euch alle Feuerbälle, ohne die Wolken zu berühren, und fliegt dann zum Schloss."
+    #"Eat all the fireballs without touching the clouds and then reach the castle"
     url:
 
   - type: dialog
@@ -334,8 +393,10 @@ actions:
       - mathina: left
     entries:
 
-      - text: Fantastic, Mathina. Now you are really becoming a firebird trainer.
-          Next time we will go to the Arisa castle, where all the firebird
-          trainers meet and challenge each other.
+      - text: Super gemacht! Jetzt könnt ihr wirklich Feuervögel trainieren.
+          Das nächste Mal gehen wir zum Schloss von Arisa, wo sich alle treffen, die Feuervögel trainieren, und ihr Können miteinander messen.
+        #Fantastic, Mathina. Now you are really becoming a firebird trainer.
+        #Next time we will go to the Arisa castle, where all the firebird
+        #trainers meet and challenge each other.
         char: flamma
         mood: happy
