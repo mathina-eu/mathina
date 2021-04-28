@@ -13,8 +13,8 @@ actions:
 
 
   - type: sceneText
-    text: > Mathina und Leo kamen wieder einmal zum Feld, wo sie Flamma, die Feuervogeltrainerin, getroffen hatten.
-      Seit einiger Zeit trainierten sie nun schon Einhorndrachen, meist mehrere Tage in der Woche. 
+    text: Mathina und Leo kamen wieder einmal zum Feld, wo sie Flamma, die Feuervogeltrainerin, getroffen hatten.
+      Seit einiger Zeit trainierten sie nun schon Einhorndrachen, meist mehrere Tage in der Woche.
       Immer wenn sie ein großes geflügeltes Wesen am Himmel sahen, kamen sie um zu sehen, ob Flamma da war und trainierte.
       Sie wollten noch besser werden im Führen von Einhorndrachen und bald beim großen Feuervogel-Festival an den Trainingswettkämpfen teilnehmen.
       An diesem Morgen hatten sie einen Drachen in der Ferne fliegen sehen und dachten, Flamma trainiert ihn.
@@ -27,8 +27,8 @@ actions:
     #the distance and they thought that Flamma must be training it.
 
   - type: sceneText
-    text: > Und tatsächlich, Flamma war da. Sie machte große Bewegungen und schrie unverständliche Worte in Richtung Himmel, fast wie Gesang.
-      Mathina und Leo rannten über das Feld, um Flamma zu begrüßen. 
+    text: Und tatsächlich, Flamma war da. Sie machte große Bewegungen und schrie unverständliche Worte in Richtung Himmel, fast wie Gesang.
+      Mathina und Leo rannten über das Feld, um Flamma zu begrüßen.
       Sie hatten erwartet, dass Flamma den Einhorndrachen führen würde, so wie eine Dirigentin die Musik des Orchesters, mit dem Horn als Taktstock.
       Aber Flamma hielt nichts in ihren Händen.
     #Indeed, Flamma was there, moving intensely and screaming incomprehensible
@@ -50,8 +50,7 @@ actions:
         mood: happy
 
       - text: Das ist aber ein anderer Drache! Und Du hast sein Horn gar nicht!! Warum fliegt er denn nicht weg?
-      #This is another dragon! And you don’t have his horn!! Why is he
-          not flying away?
+      #This is another dragon! And you don’t have his horn!! Why is he not flying away?
         char: leo
         mood: happy
 
@@ -67,8 +66,8 @@ actions:
       - leo: left
     entries:
 
-      - text: Stimmt, Leo, das ist ein anderer Einhorndrache. 
-          Und diesem armen Kerlchen ist etwas Trauriges passiert. Sein frühes Horn ist abgefallen, wie bei jedem Einhorndrachen, der erwachsen wird. 
+      - text: Stimmt, Leo, das ist ein anderer Einhorndrache.
+          Und diesem armen Kerlchen ist etwas Trauriges passiert. Sein frühes Horn ist abgefallen, wie bei jedem Einhorndrachen, der erwachsen wird.
           Aber genau in dem Moment, als das Horn abfiel, flog er gerade über einem großen See, so dass das Horn ins Wasser fiel, und niemand hat es jemals gefunden.
         #You are right Leo, this is another unidragon. And this poor boy
         #had a sad incident. His early horn came off, as with any unidragon,
@@ -80,7 +79,7 @@ actions:
 
       - text:  Normalerweise, wenn so etwas passiert, wird so ein Einhorndrache nicht zahm sondern bleibt wild.
           Aber er fühlt sein verlorenes Horn, wenn es bewegt wird, auch wenn es viele Kilometer entfernt ist oder gar an einem versteckten Ort.
-          Wenn jemand das Horn findet und damit spielt, ohne zu wissen, was es ist, 
+          Wenn jemand das Horn findet und damit spielt, ohne zu wissen, was es ist,
           kann der Einhorndrache sogar verrückt werden, wenn er nicht lernt, das Gefühl zu verdrängen.
           Deshalb habe ich beschlossen, diesen Drachen zu trainieren. Da ich aber sein Horn nicht habe, muss ich mir anders behelfen.
         #Normally when that happens, the unidragons are not tamed and
@@ -95,8 +94,8 @@ actions:
 
       - text: Die Sprache der Einhorndrachen ist anders als die der Menschen.
           Sie können sagen, was sie fühlen, und in diesem Fall, können sie die Richtung des Horns fühlen und auch genau beschreiben.
-          Wir Menschen haben dafür keine Worte, denn wir können soetwas auch nicht fühlen. 
-          Aber wir können magische Zahlen benutzen, um die Eihorndrachen zu verstehen und mit ihnen zu kommunizieren. 
+          Wir Menschen haben dafür keine Worte, denn wir können soetwas auch nicht fühlen.
+          Aber wir können magische Zahlen benutzen, um die Eihorndrachen zu verstehen und mit ihnen zu kommunizieren.
           So können wir ihnen sagen, was wir meinen, und sie verstehen uns.
         #Unidragons have a kind of language, different from humans.
         #Their language expresses what they can feel, and in this case,
@@ -138,7 +137,7 @@ actions:
         char: mathina
         mood: happy
 
-      - text: Lasst uns mit etwas Einfachem anfangen. Wir sagen ihm, er 
+      - text: Lasst uns mit etwas Einfachem anfangen. Wir sagen ihm, er
           soll geradeaus kurz über dem Boden fliegen, wagerecht in einer geraden Linie.
         #Let us start with something easy. Let us tell him to fly just
         #over the land, horizontally in a straight line.
@@ -232,7 +231,7 @@ actions:
         char: leo
         mood: happy
         exposition: riefen Mathina und Leo gleichzeitig.
-        #Both Mathina and Leo exclaimed.
+          #Both Mathina and Leo exclaimed.
 
       - text: Ja, er fliegt. Aber ich werde ihn mal wieder zurückrufen, bevor er zu weit weg ist.
         #Yes, it does! But let me make him come back before he is too far away.
@@ -332,7 +331,7 @@ actions:
     avatarAlign:
       - flamma: right
       - mathina: left
-      -leo: left
+      - leo: left
     entries:
 
       - text: Ist Euch etwas aufgefallen? Woher wisst Ihr, wo der Einhorndrache sein wird? Könnt Ihr es erraten?
@@ -342,10 +341,10 @@ actions:
         mood: happy
 
       - text: Das muss ich nicht raten, das ist einfach! Du musst nur alle Zahlen zusammenrechnen, erst alle ersten, dann alle zweiten von den Zahlenpaaren.
-        So kriegtst Du heraus, wo der Drache am Ende ist, wenn er alle Zahlenpaare befolgt hat.
-        #It’s not a guess, it’s easy! You only need to add all the first
-        #numbers and all the second numbers of the pairs! What you get
-        #is where you will be after following the list of pairs.
+          So kriegtst Du heraus, wo der Drache am Ende ist, wenn er alle Zahlenpaare befolgt hat.
+          #It’s not a guess, it’s easy! You only need to add all the first
+          #numbers and all the second numbers of the pairs! What you get
+          #is where you will be after following the list of pairs.
         char: mathina
         mood: happy
 

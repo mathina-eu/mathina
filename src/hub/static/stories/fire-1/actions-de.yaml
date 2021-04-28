@@ -78,9 +78,9 @@ actions:
         #I am a firebird trainer.
         char: flamma
         mood: sad
-      - text: Was ist das? 
+      - text: Was ist das?
         #What is that? - Replied Leo, with increasing interest.
-        char: leo 
+        char: leo
         exposition: Fragte Leo, der auch neugierig geworden war.
         #maybe leo needs to be properly integrated into the dialog?
         mood: happy
@@ -133,13 +133,13 @@ actions:
       - flamma: right
       - mathina: left
     entries:
-      - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!  
+      - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!
         #What is that? Is it a dragon? - asked Leo - I am not afraid
         #of them! - he added, although he was a bit nervous of the animal
         #getting closer.
         char: mathina
         #This should be leo.
-        exposition: sagte Leo, aber er wirkte doch etwas unsicher.    
+        exposition: sagte Leo, aber er wirkte doch etwas unsicher.
         mood: sad
       - text: Das ist ein Einhorndrache. Einhorndrachen sind wie normale Drachen,
           aber sie werden mit einem Horn auf dem Kopf geboren. So wie die Milchzähne bei Kindern,
@@ -150,7 +150,7 @@ actions:
           Er spürt, wenn wir es bewegen oder damit in eine bestimmte Richtung zeigen.
           So können wir den Drachen in der Luft führen.
           Dieser Stock, den ich trage, ist kein Gehstock, es ist das Horn dieses Einhorndrachen.
-          Wollt Ihr mal versuchen, den Drachen am Himmel zu lenken?      
+          Wollt Ihr mal versuchen, den Drachen am Himmel zu lenken?
         #This is a unidragon. Unidragons are very similar to dragons,
         #but they are born with a horn on their heads. Like milk teeth in
         #children, that horn is fragile and eventually, it falls off their head
@@ -168,11 +168,11 @@ actions:
         #Yes! Yes! - said Mathina. And Leo added,
         char: mathina
         mood: sad
-      - text: Lass uns Einhorndrachen trainieren!      
+      - text: Lass uns Einhorndrachen trainieren!
         #“Let’s become unidragon trainers!”
         char: leo
         mood: sad
-      
+
       - text: Ihr müsst einfach mit dem Horn in die Richtung zeigen, in die der Drache fliegen soll-
         #You just have to point the horn in the direction that you
         #want the unidragon to fly. - said Flamma.
@@ -203,7 +203,7 @@ actions:
     entries:
       - text: Nicht schlecht. Wenn Ihr aber wirklich Einhorndrachen trainieren wollt, müsst ihr üben.
           Könnt Ihr den Einhorndrachen dazu bringen, mit seiem rauchenden Schwanz Figuren in die Luft zu malen?
-          Probiert es mal aus!      
+          Probiert es mal aus!
         #Not bad! - continued Flamma - but if you want to become a
         #unidragon trainer, you have to practice. Can you make the
         #unidragon draw shapes in the sky with his smoke trail? Try it!
@@ -215,7 +215,8 @@ actions:
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
-    text: Flammas sprach plötzlich mit ernster Stimme:
+    text: >
+      Flammas sprach plötzlich mit ernster Stimme:
     #"Flamma voice suddenly got all serious and she said:"
 
   - type: dialog
@@ -223,7 +224,7 @@ actions:
       - text: Mathina, ich habe gesehen, dass Du Spaß beim Üben hattest.
           Du verstehst nun schon gut, wie man einen Einhorndrache führt.
           In ein paar Wochen findet ein großes Feuervogel-Festival im Schloss von Arisa statt.
-          Möchtest Du mit mir kommen und bei Trainingswettkämpfen antreten? 
+          Möchtest Du mit mir kommen und bei Trainingswettkämpfen antreten?
           Es werden die besten Drachen-Trainerinnen und Trainer des Landes dabei sein.
         #Mathina, you seem to have a great talent for understanding
         #and communicating with unidragons. In a few weeks, there is a big
@@ -240,9 +241,9 @@ actions:
         #this should be leo.
         exposition: Fragte Leo, der natürlich auch mit zum Festival wollte.
         mood: happy
-      - text: Also, so ein Einhorndrache ist ein treuer Begleiter, er muss Euch natürlich erst akzeptieren. 
-          Es ist ein große Verantwortung. 
-          Wenn Ihr bei den Wettkämpfen auf dem Festival gut abschneidet, 
+      - text: Also, so ein Einhorndrache ist ein treuer Begleiter, er muss Euch natürlich erst akzeptieren.
+          Es ist ein große Verantwortung.
+          Wenn Ihr bei den Wettkämpfen auf dem Festival gut abschneidet,
           ja, dann könntet Ihr tatsächlich einen eigenen Einhorndrachen bekommen und ihn trainieren.
         #Well, a unidragon is a big pet to have, it is a great
         #responsibility, and it has to accept you. If you do well in the
@@ -251,7 +252,7 @@ actions:
         char: flamma
         mood: sad
       - text: Ich würde es gern versuchen. Ich liebe Abenteuer!
-          Wir werden einen Einhorndrachen haben, Leo!      
+          Wir werden einen Einhorndrachen haben, Leo!
         #I would love to try. I am always up for adventures!
         #We will have a unidragon, Leo!
         char: mathina
