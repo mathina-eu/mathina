@@ -34,22 +34,17 @@ actions:
   - type: animation
     target: leo-thinking
     vars:
-      duration: 2
+      duration: 0.5
       xPercent: 0
-      yPercent: -20
-      ease: power3.out      
+      yPercent: -40
+      repeat: 3
+      yoyo: true
+      ease: power1.inOut
   - type: dialog
     entries:
-      - text: No, it's not strange at all, let's go! - Leo jumped up but was immediately stopped by an invisible wall.
+      - text: No, it's not strange at all, let's go! - Leo jumped up but was stopped by an invisible wall.
         char: leo
         mood: sad
-  - type: animation
-    target: leo-thinking
-    vars:
-      duration: 2
-      xPercent: 0
-      yPercent: 0
-      ease: power3.out      
   - type: clearImage
     id: mathina-thinking
   - type: image
@@ -127,7 +122,7 @@ actions:
   - type: image
     src: leo-thinking.png
     id: leo-thinking
-    style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
+    style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
   - type: dialog
     entries:
       - text: Stop, stop immediately! - the voice cried. They turned around and saw a giant owl. Stop! - he repeated.
@@ -144,7 +139,7 @@ actions:
   - type: image
     src: owl-wing-front.png
     id: owl-w-f
-    style: "width: 19%; top: 35%; right: 30%;"  
+    style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
   - type: dialog
     entries:
       - text: Observe the marble floor here in the doorway - the owl pointed at the colored tiles. - As a matter of fact, there is a purpose behind the pattern.
@@ -153,10 +148,30 @@ actions:
       - text: You are not allowed to stomp simply across it, unless you reveal the logic behind. This is how we ensure that only worthy people pass through to the boss.
         char: owl
         mood: sad
+  - type: animation
+    target: mathina-thinking
+    vars:
+      duration: 1
+      xPercent: -30
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: owl-w-f
+    vars:
+      duration: 1
+      xPercent: 50
+      yPercent: -15
+      ease: power3.out
+  - type: image
+    src: tiled floor.jpg
+    id: tiled floor
+    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
   - type: sceneText
     text: The owl listed the rules - they can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. Mathina observed the figure, scratched her kin.
   - type: clearImage
     id: leo-thinking
+  - type: clearImage
+    id: tiled floor
   - type: image
     src: leo-runs.png
     id: leo-runs
@@ -229,6 +244,12 @@ actions:
       - text: But this time – he added -, I’ll make a very special exception. Now you can return to the starting point, and try again, but that's absolutely, my last favor.
         char: owl
         mood: sad
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-down.png
+    id: owl-w-d
+    style: "width: 20%; top: 41%; right: 29%;"  
   - type: sceneText
     text: Leo stared at Mathina with a disgusted frown, really frightened by the owl's promise.
   - type: clearImage
@@ -242,9 +263,131 @@ actions:
       - text: You stay here now and don't do anything! - Mathina said to Leo. She wondered what to do.
         char: mathina
         mood: sad
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-sitting.png
+    id: leo-sitting
+    style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
   - type: game
     text: What advice would you give them? Where would you go? Try all the possible ways!
     toolbarText: The rule is that you can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
-    cta: "Try it yourself!"
+    cta: Try it yourself!
     url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
-    
+  - type: clearImage
+    id: mathina-standing
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+  - type: sceneText
+    text: Mathina carried through solution possibilities in her head but always encountered an obstacle. She scratched her head, looked around, and again noticed the script on the facade - YTIC-IGOL.
+  - type: dialog
+    entries:
+      - text: Oh, got it! - she shouted. She remembered that the script had to be read backwards. 
+        char: mathina
+        mood: sad
+  - type: sceneText
+    text: So what if she tried to think backwards here as well? What if she tried to get through from the doorway to where she stood?
+  - type: game
+    text: Can you get from the doorway to Mathina, does this work?
+    toolbarText: The rule is that you can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
+    cta: Try it yourself!
+    url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
+  - type: sceneText
+    text: Mathina traced the now absolutely self-evident route backwards. She strove to memorize the fields.
+  - type: dialog
+    entries:
+      - text: Red circle, red triangle, blue triangle... - Mathina murmured.
+        char: mathina
+        mood: sad
+  - type: clearImage
+    id: leo-sitting
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
+  - type: dialog
+    entries:
+      - text: Come on, Leo, follow me, I found the way!
+        char: mathina
+        mood: sad
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 2
+      xPercent: -110
+      yPercent: 10
+      ease: power3.out  
+  - type: sceneText
+    text: Leo stepped next to Mathina and grabbed the bag.
+  - type: clearImage
+    id: leo-runs-t
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
+  - type: sceneText
+    text: The owl watched them with satisfaction as they loaded off the bag and set out to leave.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 4
+      xPercent: 350
+      yPercent: -2
+      ease: power3.out  
+  - type: animation
+    target: mathina-runs
+    vars:
+      duration: 5
+      xPercent: 350
+      yPercent: -5
+      ease: power3.out  
+  - type: animation
+    target: bag
+    vars:
+      duration: 4
+      xPercent: 410
+      yPercent: 0
+      ease: power3.out  
+  - type: dialog
+    entries:
+      - text: Congratulations, young lady, congratulations! - He shouted after them. 
+        char: owl
+        mood: sad
+  - type: clearImage
+    id: leo-runs
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 19%; top: 44%; right: 15%; z-index:2"
+  - type: sceneText
+    text: Mathina nodded politely because she hated being called a young lady, she was the smart and strong Mathina…
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 3
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+  - type: sceneText
+    text: They skillfully walked back on the colored tiles.
