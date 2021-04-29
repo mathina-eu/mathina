@@ -3,7 +3,9 @@
     width="600"
     elevation="5"
   >
-    <v-card-title>{{ text }}</v-card-title>
+    <v-card-title style="word-break: normal;">
+      {{ text }}
+    </v-card-title>
     <div
       v-if="imgPath"
       class="d-flex flex-column justify-space-between align-center"

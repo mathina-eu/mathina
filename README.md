@@ -363,19 +363,34 @@ Dialog entries support various moods which use images defined in `src/hub/static
       mood: sad
 ```
 
+**Example with avatar alignment**
+
+```yaml
+- type: dialog
+  avatarAlign:
+    mathina: left
+    wizard: right
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+    - text: "Some have defects!"
+      char: wizard
+```
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `dialog` | action type |
 | **entries** | `<array>` of Entries | Dialog entries |
+| avatarAlign | `<object>` { char: left or right } | Optionally set position of characters images in this dialog to `left` or `right`. Defaults to `left`. |
 
 **Entries**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **text** | Any `<string>` | action type |
-| char| mathina, wizard, ... | id of a supported character, defaults to **generic**  |
+| char | mathina, wizard, ... | id of a supported character, defaults to **generic**  |
 | charName | `<string>` | An optional replacement character name. Especially useful when used with generic characters. |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
 | exposition | `<string>` | An optional narrative description of the events of a scene, written in the present tense. Will be displayed in cursive |
