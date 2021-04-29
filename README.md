@@ -277,6 +277,23 @@ Specify gsap animation properties as the vars property.
     ease: power3.out
 ```
 
+**Example with a defined back animation**
+
+```yaml
+- type: animation
+  target: img1
+  vars:
+    duration: 0.5
+    xPercent: 0
+    yPercent: -40
+    ease: power1.inOut
+  varsBack:
+    duration: 0.5
+    xPercent: 0
+    yPercent: 40
+    ease: power1.inOut
+```
+
 **Params**
 
 | Name | Valid values | Description |
@@ -284,6 +301,7 @@ Specify gsap animation properties as the vars property.
 | **type** | `animation` | action type |
 | **target** | Valid id `<string>` | id of the image to animate. Should be set as `id` param when adding image via image action type. |
 | **vars** | gsap to() params `<object>` | See GSAP documentation for possible values https://greensock.com/docs/v3/GSAP/gsap.to() |
+| varsBack | gsap to() params `<object>` | You can set animation parameters that should be executed when "Back" navigation is used by the player. If this is not set, the image will display its previous state without animating the transition. |
 
 ### Clear image
 
