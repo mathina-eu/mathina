@@ -299,16 +299,6 @@ export default {
 .root {
   height: 100%;
   width: 100%;
-
-  &::before {
-    content: '';
-    width: 200vw;
-    height: 200vh;
-    position: fixed;
-    z-index: -1;
-    left: -100vw;
-    top: -100vh;
-  }
 }
 
 .text-wrapper {
