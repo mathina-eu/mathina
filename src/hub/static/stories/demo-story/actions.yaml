@@ -48,6 +48,8 @@ actions:
   - type: clearImage
     id: img2
   - type: dialog
+    avatarAlign:
+      mathina: right
     entries:
       - text: "I love these toys!"
         char: mathina

@@ -152,7 +152,7 @@ export default {
     },
     activeDialog() {
       if (this.dialog.current !== null) {
-        return this.dialog.entries[this.dialog.current];
+        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign };
       }
       return {};
     },

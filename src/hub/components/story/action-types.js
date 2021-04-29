@@ -174,9 +174,10 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, ...rest }) {
+  constructor({ entries, avatarAlign, ...rest }) {
     super(rest);
     this.type = 'dialog';
+    this.avatarAlign = avatarAlign || {};
     this.entries = entries.map((
       { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
     ) => {
@@ -198,6 +199,7 @@ export class DialogAction extends Action {
       context.dialog.current = 0;
     }
     context.dialog.entries = this.entries;
+    context.dialog.avatarAlign = this.avatarAlign;
   }
 }
 
