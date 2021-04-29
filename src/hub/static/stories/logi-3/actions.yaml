@@ -1,17 +1,102 @@
 actions:
+  - type: background2
+    src: logi-bg32.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
-    text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+    text: This is the street map of Logi-city. 
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
+  - type: sceneText
+    text: All streets bear the name of famous mathematicians from all around the world. 
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 13%; top: 55%; right: 87%;"
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 12%; top: 54%; right: 36%;"
+  - type: sceneText
+    text: Leo is wearing his green cap and Mathina keeps her pencil at hand.
+  - type: image
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 45%; right: 83%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 29%; right: 87%;"
+  - type: sceneText
+    text: Mathina and Leo walk on Hilbert Road towards the corner of Péter Street. 
+  - type: image
+    src: policeman-nr1-turn.png
+    id: policeman1-t
+    style: "width: 20%; top: 40%; right: 3%;"
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 57%; right: 83%;"
   - type: dialog
     entries:
-      - text: "I love these toys!"
-        char: mathina
+      - text: Catch him, please catch him! - cried the policeman rushing on Hilbert Road towards the corner of Péter Street. He was almost out of breath.
+        char: policeman1
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
+  - type: sceneText
+    text: Leo immediately followed him, running as fast as he could, barely touching the ground with his feet.
+  - type: image
+    src: policeman-nr2.png
+    id: policeman2
+    style: "width: 18%; top: 20%; right: 30%;"
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 30%; right: 83%;"
+  - type: dialog
+    entries:
+      - text: Who are we supposed to catch? - said Mathina to a second police officer slowing down right beside her to catch a breath.
+        char: mathina
         mood: sad
-  - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+  - type: sceneText
+    text: The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 75%; right: 45%;"
+  - type: image
+    src: thief.png
+    id: thief
+    style: "width: 14%; top: 45%; right: 57%;"
+  - type: dialog
+    entries:
+      - text: There he is, that thief stole all the even numbers of this town! - he said gasping heavily.
+        char: policeman2
+        mood: sad
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      xPercent: 300
+      yPercent: 330
+      ease: power3.out
+  - type: sceneText
+    text: Leo had already reached the corner, and quickly disappeared onto Péter Street. 
+  - type: animation
+    target: pm2
+    vars:
+      duration: 3
+      xPercent: 150
+      yPercent: 385
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 150
+      yPercent: 397
+      ease: power3.out
+  - type: sceneText
+    text: Mathina took a couple of bags off the policeman's shoulder to speed up the chase. When they reached the Hilbert-Péter corner, they saw that Leo was only a few meters away from the thief. 
+  - type: sceneText
+    text: The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4, which was sticking out of the bag - when the thief suddenly turned left onto Gödel Street. 
+
