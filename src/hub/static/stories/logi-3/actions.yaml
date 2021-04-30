@@ -1,5 +1,5 @@
 actions:
-  - type: background2
+  - type: background
     src: logi-bg32.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
@@ -8,7 +8,7 @@ actions:
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
   - type: sceneText
-    text: All streets bear the name of famous mathematicians from all around the world. 
+    text: All streets bear names of famous mathematicians from all around the world. 
   - type: image
     src: mathina-runs.png
     id: mathina-runs
@@ -18,7 +18,7 @@ actions:
     id: leo-runs-t
     style: "width: 12%; top: 54%; right: 36%;"
   - type: sceneText
-    text: Leo is wearing his green cap and Mathina keeps her pencil at hand.
+    text: Leo was wearing his green cap and Mathina kept her pencil at hand.
   - type: image
     src: leo-icon2.png
     id: leo-i2
@@ -28,7 +28,7 @@ actions:
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
   - type: sceneText
-    text: Mathina and Leo walk on Hilbert Road towards the corner of Péter Street. 
+    text: They walked on Hilbert Road towards the corner of Péter Street. 
   - type: image
     src: policeman-nr1-turn.png
     id: policeman1-t
@@ -37,13 +37,20 @@ actions:
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
+  - type: sceneText
+    text: They saw a policeman rushing ahead of them. He was almost out of breath. 
   - type: dialog
     entries:
-      - text: Catch him, please catch him! - cried the policeman rushing on Hilbert Road towards the corner of Péter Street. He was almost out of breath.
-        char: policeman1
+      - text: Catch him, please catch him! - he cried.
+        char: first policeman
         mood: happy
   - type: sceneText
     text: Leo immediately followed him, running as fast as he could, barely touching the ground with his feet.
+  - type: dialog
+    entries:
+      - text: Who are we supposed to catch? - asked Mathina.
+        char: mathina
+        mood: sad
   - type: image
     src: policeman-nr2.png
     id: policeman2
@@ -52,25 +59,22 @@ actions:
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
-  - type: dialog
-    entries:
-      - text: Who are we supposed to catch? - said Mathina to a second police officer slowing down right beside her to catch a breath.
-        char: mathina
-        mood: sad
+  - type: sceneText
+    text: A second police officer was slowing down right beside her to catch a breath.
   - type: sceneText
     text: The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
     src: thief-icon.png
     id: thief-i
-    style: "width: 7%; top: 75%; right: 45%;"
+    style: "width: 7%; top: 75%; right: 55%;"
   - type: image
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
   - type: dialog
     entries:
-      - text: There he is, that thief stole all the even numbers of this town! - he said gasping heavily.
-        char: policeman2
+      - text: A thief, a thief stole all the even numbers of this town! - he said gasping heavily.
+        char: second policeman
         mood: sad
   - type: animation
     target: leo-i2
@@ -81,6 +85,8 @@ actions:
       ease: power3.out
   - type: sceneText
     text: Leo had already reached the corner, and quickly disappeared onto Péter Street. 
+  - type: sceneText
+    text: Mathina took a couple of bags off the policeman's shoulder to speed up the chase. 
   - type: animation
     target: pm2
     vars:
@@ -92,11 +98,103 @@ actions:
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 150
-      yPercent: 397
+      xPercent: 170
+      yPercent: 400
+      ease: power3.out
+  - type: clearImage
+    id: pm1
+  - type: sceneText
+    text: When they reached the Hilbert-Péter corner, they saw that Leo was only a few meters away from the thief. 
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      xPercent: 330
+      yPercent: 330
       ease: power3.out
   - type: sceneText
-    text: Mathina took a couple of bags off the policeman's shoulder to speed up the chase. When they reached the Hilbert-Péter corner, they saw that Leo was only a few meters away from the thief. 
+    text: The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4, which was sticking out of the bag. 
+  - type: animation
+    target: thief-i
+    vars:
+      duration: 1
+      xPercent: 80
+      yPercent: -100
+      ease: power3.out
   - type: sceneText
-    text: The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4, which was sticking out of the bag - when the thief suddenly turned left onto Gödel Street. 
-
+    text: But the thief suddenly turned left onto Gödel Street.
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 77%; right: 58%;"
+  - type: sceneText
+    text: Leo could not slow down anymore, and found himself crashing into the policeman running from the other end of Péter Street.
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 500
+      yPercent: 400
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Let me help you - Mathina offered her hand to the policeman lying on the ground. 
+        char: Mathina
+        mood: sad
+  - type: sceneText
+    text: Mathina saw Leo already setting off on Gödel Street to catch the thief.
+  - type: clearImage
+    id: thief-i
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      xPercent: 410
+      yPercent: 170
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Come back, you have no chance! - cried the policeman pulling himself together.
+        char: First policeman
+        mood: sad
+      - text: I’ll help other cops, we'll hunt him down together - Leo shouted, turning back.
+        char: Leo
+        mood: sad
+      - text: There are no more policemen! It's only the two of us, one at both ends of the town! - the policemen looked at each other in despair. 
+        char: First policeman
+        mood: sad
+      - text: Leo stopped immediately. He was devastated. - What? Only the two of you?
+        char: Leo
+        mood: sad
+  - type: sceneText
+    text: The policemen nodded so emphatically that even Leo could see it from the distance.
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      xPercent: 70
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 300
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: pm2
+    vars:
+      duration: 3
+      xPercent: 130
+      yPercent: 10
+      ease: power3.out
+  - type: animation
+    target: pm1
+    vars:
+      duration: 3
+      xPercent: -50
+      yPercent: -400
+      ease: power3.out
+  - type: sceneText
+    text: They caught up with Leo, then at the meeting of five corners, turned left onto Hemachandra Street, and finally sat down in a cafe on Russell Square, the city’s main square.
