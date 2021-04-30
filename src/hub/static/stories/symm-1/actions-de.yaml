@@ -14,8 +14,11 @@ actions:
     style: "width: 13%; top: 57%; left: 0%;"   
   - type: sceneText
     text: >
-      <p>Mathina arrived at Symmetry Fair, where she found a huge fun fair: there were roller coasters, carousels and many stalls, all with countless games and challenges. Mathina was fascinated with so many amusements and activities and was eager to try them all!</p>
-      <p>Right next to her there was a stall selling cuddly toys. And it was full of all kinds of toys: puppies, teddy bears, ladybugs, ....</p>     
+      <p>Mathina besuchte heute den Symmel-Rummel. Dort gab es Achterbahnen, Karussels und viele kleine Marktbuden mit unzähligen Spielen und Dingen zum Ausprobieren.
+      Mathina war fasziniert von den vielen, tollen Angeboten und Aktivitäten und wollte alle ausprobieren!</p>
+      <p>Gleich neben ihr war ein Marktstand mit Kuscheltieren. Da gab es alle möglichen Figuren: Hündchen, Teddybären, Marienkäfer, ... </p>
+    #Mathina arrived at Symmetry Fair, where she found a huge fun fair: there were roller coasters, carousels and many stalls, all with countless games and challenges. Mathina was fascinated with so many amusements and activities and was eager to try them all!</p>
+    #<p>Right next to her there was a stall selling cuddly toys. And it was full of all kinds of toys: puppies, teddy bears, ladybugs, ....</p>     
   - type: image
     id: feiticeiro
     src: $COMMON/img/Feiticeiro1.png
@@ -29,7 +32,8 @@ actions:
       yPercent: 0
       ease: power3.out    
   - type: sceneText
-    text: At the stall, Mathina was greeted by a smiling wizard.
+    text: Ein freundlicher Zauberer begrüßte Mathina am Marktstand.
+    #At the stall, Mathina was greeted by a smiling wizard.
   - type: clearImage
     id: Mathina1
   - type: image
@@ -37,35 +41,53 @@ actions:
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"    
   - type: dialog
+    avatarAlign:
+      - wizard: right
+      - mathina: left
     entries:
-      - text: "I love these toys!"
+      - text: Das sind wirklich tolle Kuscheltiere!
+      #"I love these toys!"
         char: mathina       
         mood: happy
-      - text: "Some have defects!"
+      - text: Einige müssen wir aber leider verstecken.
+      #"Some have defects!"
         char: wizard
-        exposition: "Answered the wizard sadly."        
+        exposition: antwortete der Zauberer traurig.
+      #"Answered the wizard sadly."        
         mood: sad
-      - text: "Really! Why?"
+      - text: Wirklich? Warum denn?
+      #"Really! Why?"
         char: mathina
         mood: surprised
-      - text: "Here at Symmetry Fair we just want toys ... with symmetry! Only these toys are good for us!"
+      - text: Hier auf dem Symmel-Rummel zeigen wir nur Spielzeuge ... die symmetrisch sind. 
+            Die anderen Kuscheltiere locken die Symmel-Wichtel an, und die bringen hier sonst alles durcheinander. Das wollen wir nicht.
+      #"Here at Symmetry Fair we just want toys ... with symmetry! Only these toys are good for us!"
         char: wizard
-        exposition: "The wizard was getting angry."         
-      - text: "But today I’ve received these toys from the Symmetry Industries and some don’t have symmetry!
-                  This is not acceptable in Symmetry Fair!"
+        exposition: Der Zauberer wurde nun etwas mürrisch.
+      #"The wizard was getting angry."         
+      - text: Heute haben wir allerdings einige Kuscheltiere von der Symmel-Fabrik geliefert bekommen, die nicht symmetrisch sind.
+                Die muss ich nun alle aussortieren!
+      #"But today I’ve received these toys from the Symmetry Industries and some don’t have symmetry!
+      #            This is not acceptable in Symmetry Fair!"
         char: wizard
         mood: angry
-      - text: "Well, they all look lovely to me!"
+      - text: Also, für mich sehen sie alle sehr schön aus.
+      #"Well, they all look lovely to me!"
         char: mathina
-      - text: "I have an idea! Why don't you help me, by choosing the good toys? I can stow them on the stall and you can keep the remaining toys!"
+      - text: Ich habe eine Idee. Kannst Du  mir helfen, die symmetrischen Kuscheltiere auszuwählen? Ich lege sie dann in den Marktstand.
+            Die anderen, die hier die Symmel-Wichtel anlocken, kannst Du behalten. Zu Dir kommen die Wichtel nicht, nur wir auf dem Symmel-Rummel müssen darauf achtgeben.
+      #"I have an idea! Why don't you help me, by choosing the good toys? I can stow them on the stall and you can keep the remaining toys!"
         char: wizard
         mood: excited
-      - text: "I’d love to get new toys! But I don't know how to choose them!"
+      - text: Ich würde Dir sehr gern helfen! Aber ich weiß nicht, wie ich auswählen soll.
+      #"I’d love to get new toys! But I don't know how to choose them!"
         char: mathina
         mood: sad
-      - text: "Here, let me help you! I'll show you pictures of cuddly toys. And you have to choose the symmetric images."
+      - text: Ok, ich helfe dir. Ich zeige dir Bilder von Kuscheltieren, und du sagst mir, welche davon symmetrisch sind.
+      #"Here, let me help you! I'll show you pictures of cuddly toys. And you have to choose the symmetric images."
         char: wizard
-        exposition: "Mathina was still confused..."         
+        exposition: Mathina wusste immer noch nicht, was er meinte.
+      #"Mathina was still confused..."         
   - type: clearImage
     id: Mathina2
   - type: clearImage
@@ -77,14 +99,19 @@ actions:
     style: "width: 25%; top: 50%"       
   - type: dialog
     entries:
-      - text: "I’ll show you an example! Look at this image."
+      - text: Hier ist ein Beispiel. Schau Dir diesen Teddy an.
+      #"I’ll show you an example! Look at this image."
         char: wizard      
-      - text: "If we fold the image in a certain way, the two parts overlap!"
+      - text: Wenn wir das Bild an einer bestimmten Stelle falten, liegen zwei Hälften übereinander. 
+      #"If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
     tag: firstGame
-    text: "Is the following image good (i.e. symmetric)?"
-    cta: "Try it yourself!"
+    text: Ist der Teddy für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
+            ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
+    #"Is the following image good (i.e. symmetric)?"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/dobrar_1/index.html
   - type: clearImage
     id: c1-3
@@ -99,7 +126,9 @@ actions:
     align: right    
   - type: dialog
     entries:
-      - text: "The teddy bear image has a symmetry axis. It’s a good toy!"
+      - text: Den Teddybären können wir so falten, dass zwei Hälften übereinander liegen. Die Stelle, wo der Knick sein muss, nennt man eine Symmetrieachse.
+            Der Teddy kann also hier bleiben, er lockt die Symmel-Wichtel nicht an.
+      #"The teddy bear image has a symmetry axis. It’s a good toy!"
         char: wizard
   - type: clearImage
     id: Mathina2
@@ -113,15 +142,19 @@ actions:
     position: center
   - type: dialog
     entries:    
-      - text: "I'll show you another example! Now look at this bee image!"
+      - text: Lass es uns noch einmal zusammen versuchen.
+      #"I'll show you another example! Now look at this bee image!"
         char: wizard        
   - type: game
-    text: "Is the following image good (i.e. symmetric)?"
-    cta: "Try it yourself!"
+    text: Könnte ich diese Biene in den Marktstand stellen, ohne dass sie die Symmel-Wichtel anlockt? Hat sie eine Symmetrieachse und ist also symmetrisch?
+    #"Is the following image good (i.e. symmetric)?"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/dobrar_2/index.html
   - type: dialog
     entries:        
-      - text: "The image of this bee also has a symmetry axis."
+      - text: Ja, die Biene hat eine Symmetrieachse und kann also hier bleiben.
+      #"The image of this bee also has a symmetry axis."
         char: wizard
   - type: clearImage
     id: c1-4
@@ -132,12 +165,16 @@ actions:
     style: "width: 25%; top: 50%"     
   - type: dialog
     entries:     
-      - text: "Now look at the image of a cat."
+      - text: Nun schau Dir die Katze an.
+      #"Now look at the image of a cat."
         char: wizard
     position: center
   - type: game
-    text: "Is the following image good (i.e. symmetric)?"
-    cta: "Try it yourself!"
+    text:  Ist dieses Kuscheltier für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
+            ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
+    #"Is the following image good (i.e. symmetric)?"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/dobrar_3/index.html
   - type: clearImage
     id: c1-5
@@ -152,10 +189,13 @@ actions:
     align: right    
   - type: dialog
     entries:
-      - text: "It's not a good toy!"
+      - text: Nein, dieses Kuscheltier würde die Symmel-Wichtel anlocken. Du kannst es gern haben, Mathina.
+      #"It's not a good toy!"
         char: wizard
-        exposition: "Explained the wizard."        
-      - text: "I think I know how to choose the good toys! Can I help you?"
+        exposition: erklärte der Zauberer und gab Mathina die Katze.
+        #"Explained the wizard."        
+      - text: Ich glaube, ich weiß jetzt was Du brauchst, damit die Symmel-Wichtel nicht angelockt werden. Ich helfe Dir!
+      #"I think I know how to choose the good toys! Can I help you?"
         char: mathina
   - type: clearImage
     id: Mathina2
@@ -168,7 +208,8 @@ actions:
     style: "width: 40%; top: 63%; left: 45%"     
   - type: dialog
     entries:         
-      - text: "Of course, Mathina! The good images should go into this box!"
+      - text: Danke, Mathina. Bitte sortiere die symmetrischen Kuscheltiere in diese Kiste.
+      #"Of course, Mathina! The good images should go into this box!"
         char: wizard
   - type: clearImage
     id: toys
@@ -182,14 +223,19 @@ actions:
     style: "width: 17%; top: 45%; left: 40%;"    
   - type: dialog
     entries:    
-      - text: "And at the end, can I have the remaining toys?"
+      - text: Und ich darf danach wirklich die nicht-symmetrischen Kuscheltiere mitnehmen? Ich möchte sie den anderen Kindern in meinem Dorf schenken.
+      #"And at the end, can I have the remaining toys?"
         char: mathina
         mood: excited
-      - text: "Yes, Mathina! It's a promise!"
+      - text: Natürlich, das habe ich Dir ja versprochen!
+      #"Yes, Mathina! It's a promise!"
         char: wizard
         mood: happy
   - type: game
-    text: "Put the \"good\" toys in the box"
+    text: Schiebe die symmetrischen Kuscheltiere in die Kiste.
+    #"Put the \"good\" toys in the box"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/arrumar_figuras-_en/index.html
   - type: clearImage
     id: c1-1
@@ -207,8 +253,8 @@ actions:
   - type: clearImage
     id: feiticeiro    
   - type: sceneText
-    text: >
-      <p>After the game, Mathina put her toys in another box. She had got so many new cuddly toys, that she was having a hard time carrying them. When she was trying to drag the box out of the stall, Mathina heard her name.</p>
+    text: Mathina hatte sich alle Kuscheltiere angeschaut, und die symmetrischen in die Kiste des Zauberers sortiert. Nun nahm sie sich eine leere Kiste, um alle aussortierten Kuscheltiere einzupacken und mitzunehmen. Es waren ganz schön viele. Als sie versuchte, ihre Kiste zu tragen, hörte sie jemanden ihren Namen rufen.
+    #<p>After the game, Mathina put her toys in another box. She had got so many new cuddly toys, that she was having a hard time carrying them. When she was trying to drag the box out of the stall, Mathina heard her name.</p>
   - type: image
     src: $COMMON/img/Leo1.png
     id: Leo1
@@ -217,7 +263,8 @@ actions:
     entries:
       - text: "Mathina, Mathina!"
         char: Leo
-        exposition: "Leo had just arrived at Symmetry Fair."        
+        exposition: Leo war gerade auf dem Symmel-Rummel angekommen.
+        #"Leo had just arrived at Symmetry Fair."        
         mood: excited
   - type: animation
     target: Leo1
@@ -228,7 +275,8 @@ actions:
       ease: power3.out         
   - type: dialog
     entries:    
-      - text: "Leo, you won't believe it! I just got a lot of new toys."
+      - text: Leo, Du wirst Augen machen! Ich habe diese ganzen Kuscheltiere geschenkt bekommen!
+      #"Leo, you won't believe it! I just got a lot of new toys."
         char: mathina
         mood: excited
   - type: clearImage
@@ -239,10 +287,12 @@ actions:
     style: "width: 15.5%; top: 62%; right: 30%;"   
   - type: dialog
     entries:    
-      - text: "Really??"
+      - text: Echt?
+      #"Really??"
         char: Leo
         mood: excited  
-      - text: "Yes, I just had to help the wizard choose some toys!"
+      - text: Ja, ich habe dem Zauberer beim Sortieren geholfen. Diese Kuscheltiere dürfen nicht auf dem Rummel bleiben, weil sie die Symmel-Wichtel anlocken. Deshalb darf ich sie mitnehmen.
+      #"Yes, I just had to help the wizard choose some toys!"
         char: mathina
   - type: image
     id: Feiticeiro3
@@ -251,9 +301,11 @@ actions:
     align: right         
   - type: dialog
     entries:    
-      - text: "And you can get even a lot more new toys if you wish."
+      - text: Oh, ich habe noch andere aussortierte Spielzeuge. Die könnt ihr auch noch mitnehmen.
+      #"And you can get even a lot more new toys if you wish."
         char: wizard
-        exposition: "The wizard was listening to Mathina's and Leo's conversation."             
+        exposition: Der Zauberer hatte Mathina und Leo zugehört.
+        #"The wizard was listening to Mathina's and Leo's conversation."             
         mood: excited
   - type: animation
     target: Feiticeiro3
@@ -264,17 +316,22 @@ actions:
       ease: power3.out
   - type: dialog
     entries:       
-      - text: "Really??"
+      - text: Wirklich? Können wir Dir auch noch bei anderen Dingen helfen?
+      #"Really??"
         char: Leo
         mood: excited
-      - text: "Yes. Just help me finish the toys which I'm building. And you can get half of the toys in the end."
+      - text: Ja, gern. Ihr könnt mir helfen, ein paar Spielzeuge fertig zu bauen.
+      #"Yes. Just help me finish the toys which I'm building. And you can get half of the toys in the end."
         char: wizard
-      - text: "There are two types of toys: some of them are more difficult to build than the others. Which ones do you prefer?"
+      - text: Es gibt zwei verschiedene Spielzeugsorten. Bei der einen Sorte werden bunte Bausteine benutzt, bei der anderen Linien.
+      #"There are two types of toys: some of them are more difficult to build than the others. Which ones do you prefer?"
         char: wizard
-      - text: "The difficult ones."
+      - text: Ich würde gern bei den Linien helfen.
+      #"The difficult ones."
         char: Leo
         mood: excited
-      - text: "The easier ones."
+      - text: Dann helfe ich bei den Bausteinen.
+      #"The easier ones."
         char: Mathina
         mood: excited
   - type: clearImage
@@ -285,7 +342,8 @@ actions:
     style: "width: 13%; top: 65%; right: 30%;"       
   - type: dialog
     entries:    
-      - text: "Ok, Leo, please go to the next stall, where you can build the toys. Mathina, please stay with me."
+      - text: Prima. Die Spielzeuge mit den Linien werden am nächsten Marktstand gebaut. Leo, Du kannst schon vorgehen und Dir alles anschauen.
+      #"Ok, Leo, please go to the next stall, where you can build the toys. Mathina, please stay with me."
         char: wizard
   - type: animation
     target: Leo3
@@ -305,7 +363,8 @@ actions:
     align: center    
   - type: dialog
     entries:      
-      - text: "Look, Mathina, I’m building a dollhouse. Can you continue?"
+      - text: Schau Dir mal diese Burg an, Mathina. Sie ist noch nicht fertig. Kannst Du sie zu Ende bauen?
+      #"Look, Mathina, I’m building a dollhouse. Can you continue?"
         char: wizard
   - type: clearImage
     id: Leo3        
@@ -323,30 +382,38 @@ actions:
   - type: clearImage
     id: box       
   - type: sceneText
-    text: >
-      <p>Mathina tried to finish the dollhouse, but whenever she dragged a piece and placed it in a square, the piece just ran away.</p> 
+    text: Mathina versuchte es, aber immer, wenn sie einen Baustein setzen wollte, rutschte er wieder weg.
+    #<p>Mathina tried to finish the dollhouse, but whenever she dragged a piece and placed it in a square, the piece just ran away.</p> 
   - type: dialog
     entries:
-      - text: "What am I doing wrong?"
+      - text: Hm, hast Du einen Tipp für mich?
+      #"What am I doing wrong?"
         char: mathina
         mood: sad
-      - text: "Mathina, never forget that at Symmetry Fair … everything must be symmetric!"
+      - text: Vergiss nicht, dass auf dem Symmel-Rummel alles symmetrisch sein muss, Mathina.
+      #"Mathina, never forget that at Symmetry Fair … everything must be symmetric!"
         char: wizard
-      - text: "Let me help you!"
+      - text: Ich zeige es Dir, wenn Du möchtest.
+      #"Let me help you!"
         char: wizard
   - type: game
-    text: "Watch the movie!"
-    cta: "Play!"
+    text: Schau Dir die Erklärung des Zauberers an.
+    #"Watch the movie!"
+    cta: Abspielen
+    #"Play!"
     url: /stories/symm-1/video/geoplano-anim2.mp4
   - type: dialog
     entries:    
-      - text: "Ok, I got it! I’m going to finish the toys."
+      - text: Ah, ja, jetzt weiß ich, wie es geht! Ich baue die Burg gleich fertig!
+      #"Ok, I got it! I’m going to finish the toys."
         char: Mathina
         mood: excited            
   - type: game
     tag: polygons
-    text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
-    cta: "Try it yourself!"
+    text: Wie sieht das fertige Spielzeug aus? Ziehe die bunten Bausteine in das Bild und setze sie auf die grauen Felder.
+    #"How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/geoplano_polys0/index.html     
   - type: clearImage
     id: Mathina4
@@ -358,9 +425,10 @@ actions:
     style: "width: 13%; top: 59%; left: 25%;"     
   - type: dialog
     entries:    
-      - text: "I’ve done it!  I wonder how Leo is getting along."
+      - text: Ich bin fertig! Mal sehen, wie Leo voran kommt...
+      #"I’ve done it!  I wonder how Leo is getting along."
         char: Mathina
-        exposition: "Mathina gathered all the new toys she collected."        
+        #exposition: "Mathina gathered all the new toys she collected."        
         mood: excited
   - type: image
     id: c1-2  
@@ -385,8 +453,8 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg2    
   - type: sceneText
-    text: >
-      <p>Mathina went to the stall where Leo was trying in vain to finish his toys. Leo was talking loudly, and he seemed angry.</p>
+    text: Mathina ging hinüber zum Marktstand, wo Leo an einem anderen Spielzeug tüftelte. Er murmelte zu sich selbst und schien sich zu ärgern.
+    #<p>Mathina went to the stall where Leo was trying in vain to finish his toys. Leo was talking loudly, and he seemed angry.</p>
   - type: clearImage
     id: Mathina1       
   - type: image
@@ -395,16 +463,19 @@ actions:
     style: "width: 12%; top: 57%; left: 48%;"        
   - type: dialog
     entries:    
-      - text: "Why isn’t this working? Why isn’t this working?"
+      - text: Warum klappt das denn bloß nicht? Irgendwie muss das doch gehen...
+      #"Why isn’t this working? Why isn’t this working?"
         char: Leo
-        exposition: "Leo asked while trying to finish a toy, but without success."        
+        exposition: Leo sprach vor sich hin, während er versuchte, das Spielzeug fertigzubauen.
+        #"Leo asked while trying to finish a toy, but without success."        
         mood: angry
-  - type: sceneText
-    text: >
-      <p> Leo was trying to finish a toy, but without success.</p>
+ # - type: sceneText
+    #text: >
+      #<p> Leo was trying to finish a toy, but without success.</p>
   - type: dialog
     entries:    
-      - text: "What’s the matter, Leo?"
+      - text: Was ist denn los, Leo?
+      #"What’s the matter, Leo?"
         char: Mathina
         mood: surprised
   - type: clearImage
@@ -418,9 +489,11 @@ actions:
     align: center
   - type: dialog
     entries:    
-      - text: "Mathina, I’m trying to finish this boat, but it’s not possible!"
+      - text: Ich versuche die ganze Zeit, dieses Boot fertig zu bauen, aber es geht einfach nicht!
+      #"Mathina, I’m trying to finish this boat, but it’s not possible!"
         char: Leo
-        exposition: "Leo showed Mathina what he was doing."
+        exposition: Leo zeigte Mathina, was er probierte.
+        #"Leo showed Mathina what he was doing."
   - type: clearImage
     id: barco
   - type: image
@@ -433,13 +506,17 @@ actions:
     style: "width: 9%; top: 69%; right: 30%;"    
   - type: dialog
     entries:    
-      - text: "Leo, notice that, here, in Symmetry Fair, everything has to be symmetric!"
+      - text: Vergiss nicht, dass auf dem Symmel-Rummel alles symmetrisch sein muss, Leo.
+      #"Leo, notice that, here, in Symmetry Fair, everything has to be symmetric!"
         char: Mathina
-        exposition: "Mathina said, repeating the wizard’s words."        
+        exposition: wiederholte Mathina die Worte des Zauberers.
+        #"Mathina said, repeating the wizard’s words."        
   - type: game
     tag: lines
-    text: "How can Mathina finish the toys? You just need to draw the missing lines."
-    cta: "Try it yourself!"
+    text: Wie muss das Spielzeug fertig gebaut werden? Zeichne die fehlenden Linien ein.
+    #"How can Mathina finish the toys? You just need to draw the missing lines."
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/geoplano_lin1/index.html 
   - type: clearImage
     id: Leo4
@@ -449,7 +526,8 @@ actions:
     style: "width: 15.5%; top: 62%; left: 57%;"      
   - type: dialog
     entries:    
-      - text: "Wow, we gained so many new toys!"
+      - text: Super, wir haben es geschafft!
+      #"Wow, we gained so many new toys!"
         char: Leo
         mood: excited    
   - type: animation
@@ -460,8 +538,8 @@ actions:
       yPercent: -50
       ease: power3.out  
   - type: sceneText
-    text: >
-      <p> Leo was jumping up and down from happiness.</p>
+    text: Leo sprang vor Freude in die Luft.
+    #<p> Leo was jumping up and down from happiness.</p>
   - type: animation
     target: Leo2
     vars:
@@ -470,10 +548,12 @@ actions:
       yPercent: 2      
   - type: dialog
     entries:    
-      - text: "And it was so easy to get them! I wonder why I had so much trouble before Mathina came along …"
+      - text: Und was machen wir jetzt mit den ganzen Spielzeugen, die wir mitnehmen dürfen?
+      #"And it was so easy to get them! I wonder why I had so much trouble before Mathina came along …"
         char: Leo
         mood: surprised
-      - text: "Well Leo, next time you should listen to the wizard and try the easiest tasks first."
+      - text: Wir teilen sie mit den Kindern im Dorf.
+      #"Well Leo, next time you should listen to the wizard and try the easiest tasks first."
         char: Mathina
   - type: clearImage
     id: Leo2
@@ -502,8 +582,8 @@ actions:
     id: Leo2
     style: "width: 15.5%; top: 61%; right: 30%;"     
   - type: sceneText
-    text: >
-      <p> In the end, as agreed, the wizard gave Mathina and Leo many of the toys they had built.</p><p> Before they left, the wizard said he was amazed by their performance! Not only they were able to identify symmetric images, but they had also helped the wizard to create new symmetric toys, some of which could now be used by other children who would come to visit the fair.</p>
+    text: <p> Gemeinsam mit dem Zauberer packten sie alle Spielzeuge ein, die nicht auf dem Symmel-Rummel bleiben durften. Der Zauberer bedankte sich bei den beiden für ihre Hilfe. Nun gab es nur symmetrische Spielzeuge auf dem Symmel-Rummel. Die Symmel-Wichtel würden also nicht vorbeikommen und alles durcheinander bringen.
+    #<p> In the end, as agreed, the wizard gave Mathina and Leo many of the toys they had built.</p><p> Before they left, the wizard said he was amazed by their performance! Not only they were able to identify symmetric images, but they had also helped the wizard to create new symmetric toys, some of which could now be used by other children who would come to visit the fair.</p>
   - type: clearImage
     id: Leo2
   - type: clearImage
@@ -515,8 +595,8 @@ actions:
     id: mathina-leo-caixa
     style: "width: 38%; top: 48%; left: 7%;"       
   - type: sceneText
-    text: >
-      <p> Excited about the wizard's words, Mathina and Leo left Symmetry Fair ...</p>
+    text: Mathina und Leo gingen fröhlich nach Hause...
+    #<p> Excited about the wizard's words, Mathina and Leo left Symmetry Fair ...</p>
   - type: animation
     target: mathina-leo-caixa
     vars:
@@ -524,5 +604,5 @@ actions:
       xPercent: 140
       yPercent: 0      
   - type: sceneText
-    text: >
-      <p> ... dragging all their new toys behind.</p>         
+    text: ... und die vielen Spielzeuge zogen sie stolz in der Kiste hinter sich her.
+    #<p> ... dragging all their new toys behind.</p>         
