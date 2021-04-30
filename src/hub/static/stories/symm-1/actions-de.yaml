@@ -110,6 +110,7 @@ actions:
     text: Ist der Teddy für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
             ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
     #"Is the following image good (i.e. symmetric)?"
+    toolbarText: Falte den Teddy mit den Schiebereglern.
     cta: Probiere es aus!
     #"Try it yourself!"
     url: /apps/dobrar_1/index.html
@@ -146,8 +147,9 @@ actions:
       #"I'll show you another example! Now look at this bee image!"
         char: wizard        
   - type: game
-    text: Könnte ich diese Biene in den Marktstand stellen, ohne dass sie die Symmel-Wichtel anlockt? Hat sie eine Symmetrieachse und ist also symmetrisch?
+    text: Könnte ich diese Biene in den Marktstand stellen, ohne dass sie die Symmel-Wichtel anlockt? Kannst Du sie so falten, dass zwei gleiche Hälften übereinander liegen, ist sie also symmetrisch?
     #"Is the following image good (i.e. symmetric)?"
+    toolbarText: Falte die Biene.
     cta: Probiere es aus!
     #"Try it yourself!"
     url: /apps/dobrar_2/index.html
@@ -173,6 +175,7 @@ actions:
     text:  Ist dieses Kuscheltier für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
             ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
     #"Is the following image good (i.e. symmetric)?"
+    toolbarText: Falte die Katze.
     cta: Probiere es aus!
     #"Try it yourself!"
     url: /apps/dobrar_3/index.html
@@ -208,7 +211,7 @@ actions:
     style: "width: 40%; top: 63%; left: 45%"     
   - type: dialog
     entries:         
-      - text: Danke, Mathina. Bitte sortiere die symmetrischen Kuscheltiere in diese Kiste.
+      - text: Danke, Mathina. Bitte sortiere die symmetrischen Kuscheltiere in diese Kiste. Die können dann hier bleiben.
       #"Of course, Mathina! The good images should go into this box!"
         char: wizard
   - type: clearImage
