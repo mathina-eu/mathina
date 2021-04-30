@@ -1,7 +1,11 @@
 <template>
   <v-card width="600">
-    <div class="d-flex flex-no-wrap">
+    <div
+      class="d-flex flex-no-wrap"
+      :class="{'justify-space-between': alignment === 'right'}"
+    >
       <v-avatar
+        v-if="alignment === 'left'"
         class="ma-3"
         size="125"
         tile
@@ -24,6 +28,14 @@
           v-text="exposition"
         />
       </div>
+      <v-avatar
+        v-if="alignment === 'right'"
+        class="ma-3"
+        size="125"
+        tile
+      >
+        <v-img :src="avatar" />
+      </v-avatar>
     </div>
   </v-card>
 </template>
@@ -58,6 +70,11 @@ export default {
       required: false,
       default: '',
     },
+    avatarAlign: {
+      type: Object,
+      required: false,
+      default: () => {},
+    }
   },
   computed: {
     avatar() {
@@ -72,6 +89,13 @@ export default {
         return 'Sasha';
       }
       return this.char;
+    },
+    alignment() {
+      console.log('align', this.avatarAlign);
+      if (this.avatarAlign && this.avatarAlign[this.char]) {
+        return this.avatarAlign[this.char];
+      }
+      return 'left';
     }
   },
 };

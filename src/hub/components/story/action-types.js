@@ -12,17 +12,36 @@ class Action {
 }
 
 export class AnimationAction extends Action {
-  constructor({ vars, target, ...rest }) {
+  constructor({ vars, varsBack, target, ...rest }) {
     super(rest);
     this.target = target;
     this.type = 'animation';
     this.vars = vars;
+    this.varsBack = varsBack;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
-  execute() {
+  execute(context) {
     super.execute();
-    gsap.to(`#${this.target}`, this.vars);
+    if (context.activeDirection === 'back') {
+      const el = document.getElementById(this.target);
+      if (this.varsBack) {
+        gsap.to(`#${this.target}`, {
+          ...this.varsBack, onComplete: () => {
+            el._gsap = undefined;
+          }
+        });
+      } else {
+        el.style.cssText = this.historyStack.pop();
+      }
+    } else {
+      const el = document.getElementById(this.target);
+      if (!this.varsBack) {
+        this.historyStack.push(document.getElementById(this.target).style.cssText);
+      }
+      gsap.to(`#${this.target}`, { ...this.vars, onComplete: () => { el._gsap = undefined; } });
+    }
   }
 }
 
@@ -155,9 +174,10 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, ...rest }) {
+  constructor({ entries, avatarAlign, ...rest }) {
     super(rest);
     this.type = 'dialog';
+    this.avatarAlign = avatarAlign || {};
     this.entries = entries.map((
       { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
     ) => {
@@ -173,8 +193,13 @@ export class DialogAction extends Action {
 
   execute(context) {
     super.execute();
+    if (context.activeDirection === 'back') {
+      context.dialog.current = this.entries.length - 1;
+    } else {
+      context.dialog.current = 0;
+    }
     context.dialog.entries = this.entries;
-    context.dialog.current = 0;
+    context.dialog.avatarAlign = this.avatarAlign;
   }
 }
 
@@ -224,10 +249,13 @@ export class ClearImageAction extends Action {
     }
 
     if (this.src) {
+      // TODO: undocumented and doesn't work with back...
       const path = `${context.imgRoot}/${this.src}`;
       context.images = context.images.filter(img => img.src !== path);
     } else {
       const img = context.images.find(img => img.id === this.id);
+      let el = document.getElementById(this.id);
+      img.style = el.style.cssText;
       this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }

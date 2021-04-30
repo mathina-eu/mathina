@@ -277,6 +277,23 @@ Specify gsap animation properties as the vars property.
     ease: power3.out
 ```
 
+**Example with a defined back animation**
+
+```yaml
+- type: animation
+  target: img1
+  vars:
+    duration: 0.5
+    xPercent: 0
+    yPercent: -40
+    ease: power1.inOut
+  varsBack:
+    duration: 0.5
+    xPercent: 0
+    yPercent: 40
+    ease: power1.inOut
+```
+
 **Params**
 
 | Name | Valid values | Description |
@@ -284,6 +301,7 @@ Specify gsap animation properties as the vars property.
 | **type** | `animation` | action type |
 | **target** | Valid id `<string>` | id of the image to animate. Should be set as `id` param when adding image via image action type. |
 | **vars** | gsap to() params `<object>` | See GSAP documentation for possible values https://greensock.com/docs/v3/GSAP/gsap.to() |
+| varsBack | gsap to() params `<object>` | You can set animation parameters that should be executed when "Back" navigation is used by the player. If this is not set, the image will display its previous state without animating the transition. |
 
 ### Clear image
 
@@ -345,19 +363,34 @@ Dialog entries support various moods which use images defined in `src/hub/static
       mood: sad
 ```
 
+**Example with avatar alignment**
+
+```yaml
+- type: dialog
+  avatarAlign:
+    mathina: left
+    wizard: right
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+    - text: "Some have defects!"
+      char: wizard
+```
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `dialog` | action type |
 | **entries** | `<array>` of Entries | Dialog entries |
+| avatarAlign | `<object>` { char: left or right } | Optionally set position of characters images in this dialog to `left` or `right`. Defaults to `left`. |
 
 **Entries**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **text** | Any `<string>` | action type |
-| char| mathina, wizard, ... | id of a supported character, defaults to **generic**  |
+| char | mathina, wizard, ... | id of a supported character, defaults to **generic**  |
 | charName | `<string>` | An optional replacement character name. Especially useful when used with generic characters. |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
 | exposition | `<string>` | An optional narrative description of the events of a scene, written in the present tense. Will be displayed in cursive |
