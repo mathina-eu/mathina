@@ -171,12 +171,62 @@ Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
 };
 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+Lingua=1;
+
+Alphabet=[
+"", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+];
+
+ElencoParole=[
+[], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+["LEMON", "CASE", "SPIDER", "GRASS", "MILK", "STARS"],
+["LIMONE", "CASE", "RAGNO", "ERBA", "LATTE", "STELLA"]
+];
+
+Traduzioni=[
+[["Trad1"],"Try to cipher this word, first with the key.",
+"Prova a cifrare questa parola, usando prima la chiave "],
+[["Trad2"]," and then with the key",
+" e poi la chiave "]
+];
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function Traduci(Lang) {
+  for (var k = 0; k < Traduzioni.length; k++) {
+    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+    }
+  }
+}
+
 function Link() {
 	location.reload();
 
 }
 
 function Init() {	
+
+Lingua=Number(gup('l', document.location.search));
+	
+	if (!isNumeric(Lingua)) Lingua=1;
+	if (Lingua==0) Lingua=1;
+	Traduci(Lingua);
+	
 	window.CanvasMathina=document.getElementById('CanvasMathina');
 	window.ctxMathina = CanvasMathina.getContext('2d');
 
@@ -279,7 +329,7 @@ function LoadGraphics() {
 
 }
 
-	Alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
 function Draw(can,X0,Y0,A1,A2,Scale) {
 	ctx=can.getContext('2d');
 
@@ -297,8 +347,8 @@ function Draw(can,X0,Y0,A1,A2,Scale) {
 	ctx.arc(X0,Y0,230/Scale,0,Math.PI*2,true);
 	ctx.stroke();
 	
-	for (let i=0;i<Alphabet.length;i++) {
-		Angle=i*Math.PI*2/Alphabet.length+A1;
+	for (let i=0;i<Alphabet[Lingua].length;i++) {
+		Angle=i*Math.PI*2/Alphabet[Lingua].length+A1;
 		ctx.save();
 		ctx.translate(X0,Y0);
 		ctx.rotate(Angle);
@@ -309,12 +359,12 @@ function Draw(can,X0,Y0,A1,A2,Scale) {
 		ctxMathina.textAlign = 'center';
 		ctxMathina.textBaseline = 'middle';
 		ctxMathina.font = "50px Arial";
-		ctxMathina.fillText(Alphabet[i], 0,0);	
+		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);	
 		*/
-		DrawLetter(ctx,Alphabet[i],0,0, i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);	
+		DrawLetter(ctx,Alphabet[Lingua][i],0,0, i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);	
 		
 		ctx.translate(0, 225/Scale);
-		ctx.rotate(Math.PI/Alphabet.length);
+		ctx.rotate(Math.PI/Alphabet[Lingua].length);
 		ctx.translate(0, -225/Scale);
 		ctx.beginPath();
 		ctx.strokeStyle = "rgb(104,66,19)";
@@ -336,8 +386,8 @@ function Draw(can,X0,Y0,A1,A2,Scale) {
 	ctx.arc(X0,Y0,330/Scale,0,Math.PI*2,true);
 	ctx.stroke();  
 	
-	for (let i=0;i<Alphabet.length;i++) {
-		Angle=i*Math.PI*2/Alphabet.length+A2;
+	for (let i=0;i<Alphabet[Lingua].length;i++) {
+		Angle=i*Math.PI*2/Alphabet[Lingua].length+A2;
 		ctx.save();
 		ctx.translate(X0,Y0);
 		ctx.rotate(Angle);
@@ -348,12 +398,12 @@ function Draw(can,X0,Y0,A1,A2,Scale) {
 		ctxMathina.textAlign = 'center';
 		ctxMathina.textBaseline = 'middle';
 		ctxMathina.font = "50px Arial";
-		ctxMathina.fillText(Alphabet[i], 0,0);
+		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);
 */
-		DrawLetter(ctx,Alphabet[i],0,0,i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);
+		DrawLetter(ctx,Alphabet[Lingua][i],0,0,i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);
 		
 		ctx.translate(0, 325/Scale);
-		ctx.rotate(Math.PI/Alphabet.length);
+		ctx.rotate(Math.PI/Alphabet[Lingua].length);
 		ctx.translate(0, -325/Scale);
 		ctx.beginPath();
 		ctx.strokeStyle = "rgb(104,66,19)";
@@ -432,7 +482,7 @@ function RandomString(N,Alfabeto) {
 function StringToArray(Text) {
 	var Ris=[];
 	for (let i=0;i<Text.length;i++) {
-		Ris.push(Alphabet.indexOf(Text[i]));
+		Ris.push(Alphabet[Lingua].indexOf(Text[i]));
 	}
 	return Ris;
 }
@@ -440,7 +490,7 @@ function StringToArray(Text) {
 function ArrayToString(Arr) {
 	var Ris="";
 	for (let i=0;i<Arr.length;i++) {
-		Ris = Ris + Alphabet[Arr[i]];
+		Ris = Ris + Alphabet[Lingua][Arr[i]];
 	}
 	return Ris;
 }
@@ -448,7 +498,7 @@ function ArrayToString(Arr) {
 function Translate(Text,Number) {
 	var TextArray=StringToArray(Text.toUpperCase());
 	for (let i=0;i<TextArray.length;i++) {
-		TextArray[i] = (((TextArray[i]+Number) % Alphabet.length)+Alphabet.length)%Alphabet.length;
+		TextArray[i] = (((TextArray[i]+Number) % Alphabet[Lingua].length)+Alphabet[Lingua].length)%Alphabet[Lingua].length;
 	}
 	return ArrayToString(TextArray);
 }
@@ -456,16 +506,16 @@ function Translate(Text,Number) {
 function Up(ev) {
 	if (CosaStoMuovendo==1) {
 		document.getElementById(ChiStoMuovendo).AngPosizione1=document.getElementById(ChiStoMuovendo).AngPosizione1+=+AngMouseFinale-AngMouseIniziale;
-		document.getElementById(ChiStoMuovendo).AngPosizione1=Math.round(Alphabet.length*document.getElementById(ChiStoMuovendo).AngPosizione1/(2*Math.PI))*(2*Math.PI/Alphabet.length);
+		document.getElementById(ChiStoMuovendo).AngPosizione1=Math.round(Alphabet[Lingua].length*document.getElementById(ChiStoMuovendo).AngPosizione1/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
 		CosaStoMuovendo=-1;
 	}
 	if (CosaStoMuovendo==2) {
 		document.getElementById(ChiStoMuovendo).AngPosizione2=document.getElementById(ChiStoMuovendo).AngPosizione2+AngMouseFinale-AngMouseIniziale;
-		document.getElementById(ChiStoMuovendo).AngPosizione2=Math.round(Alphabet.length*document.getElementById(ChiStoMuovendo).AngPosizione2/(2*Math.PI))*(2*Math.PI/Alphabet.length);
+		document.getElementById(ChiStoMuovendo).AngPosizione2=Math.round(Alphabet[Lingua].length*document.getElementById(ChiStoMuovendo).AngPosizione2/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
 		CosaStoMuovendo=-1;
 	}
 	
-	document.getElementById(ChiStoMuovendo).CaesarShift=Math.round(Alphabet.length*(document.getElementById(ChiStoMuovendo).AngPosizione2-document.getElementById(ChiStoMuovendo).AngPosizione1)/(2*Math.PI));
+	document.getElementById(ChiStoMuovendo).CaesarShift=Math.round(Alphabet[Lingua].length*(document.getElementById(ChiStoMuovendo).AngPosizione2-document.getElementById(ChiStoMuovendo).AngPosizione1)/(2*Math.PI));
 	Draw(document.getElementById(ChiStoMuovendo),CentroCesare[0],CentroCesare[1],document.getElementById(ChiStoMuovendo).AngPosizione1,document.getElementById(ChiStoMuovendo).AngPosizione2,Scale);
 	ev.preventDefault();
 	if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
@@ -662,30 +712,28 @@ String.prototype.shuffle2 = function () {
     return a.join("");
 }
 
-ElencoParole=["LIMONE", "ARMADIO", "RAGNO", "ERBA", "GATTO", "CANE"];
-
 
 function GenerateEx() {
 	CorrectAnswer1=Math.floor(Math.random()*4+1);
 	CorrectAnswer2=Math.floor(Math.random()*4+1);
-	Chiave1=Math.floor(Math.random()*Alphabet.length);
-	Chiave2=Math.floor(Math.random()*Alphabet.length);
+	Chiave1=Math.floor(Math.random()*Alphabet[Lingua].length);
+	Chiave2=Math.floor(Math.random()*Alphabet[Lingua].length);
 	
-	NumeroParola=Math.floor(Math.random()*ElencoParole.length);
-	ParolaOriginale=ElencoParole[NumeroParola];
-	ParolaTradotta1=Cesare(ParolaOriginale,Alphabet,Chiave1);
-	ParolaTradotta2=Cesare(ParolaTradotta1,Alphabet,Chiave2);
+	NumeroParola=Math.floor(Math.random()*ElencoParole[Lingua].length);
+	ParolaOriginale=ElencoParole[Lingua][NumeroParola];
+	ParolaTradotta1=Cesare(ParolaOriginale,Alphabet[Lingua],Chiave1);
+	ParolaTradotta2=Cesare(ParolaTradotta1,Alphabet[Lingua],Chiave2);
 	document.getElementById("paroladatradurre").innerHTML=ParolaOriginale;
-	document.getElementById("chiave1").innerHTML="A &rarr; "+Alphabet[Chiave1]+ " (" + Chiave1 + ")";
-	document.getElementById("chiave2").innerHTML="A &rarr; "+Alphabet[Chiave2]+ " (" + Chiave2 + ")";
-	document.getElementById("BtnM1").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("BtnM2").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("BtnM3").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("BtnM4").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("Btn1").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("Btn2").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("Btn3").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
-	document.getElementById("Btn4").innerHTML=RandomString(ParolaOriginale.length,Alphabet);
+	document.getElementById("chiave1").innerHTML="A &rarr; "+Alphabet[Lingua][Chiave1]+ " (" + Chiave1 + ")";
+	document.getElementById("chiave2").innerHTML="A &rarr; "+Alphabet[Lingua][Chiave2]+ " (" + Chiave2 + ")";
+	document.getElementById("BtnM1").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("BtnM2").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("BtnM3").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("BtnM4").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("Btn1").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("Btn2").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("Btn3").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
+	document.getElementById("Btn4").innerHTML=RandomString(ParolaOriginale.length,Alphabet[Lingua]);
 	
 	
 	document.getElementById("BtnM"+CorrectAnswer1).innerHTML=ParolaTradotta1;
@@ -715,7 +763,7 @@ function SelectMiddle(N) {
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
 <div id="DivCanvas2"><canvas id="CanvasMathina2"></canvas></div>
-<div id="Partenza"><div class="PartContainer"><p>Prova a <b id="TextAction">cifrare</b> questa parola, usando prima la chiave <br><b id="chiave1"></b><br> e poi la chiave <br><b id="chiave2"></b>:</p>
+<div id="Partenza"><div class="PartContainer"><p><span id="Trad1">Prova a <b id="TextAction">cifrare</b> questa parola, usando prima la chiave </span><br><b id="chiave1"></b><br><span id="Trad2"> e poi la chiave </span><br><b id="chiave2"></b>:</p>
 <p id="paroladatradurre"></p></div></div>
 <div id="Medio"><div class="PartContainer"><button type="button" onclick="SelectMiddle(1)" id="BtnM1" class="button"></button><br>
 <button type="button" onclick="SelectMiddle(2)" id="BtnM2" class="button"></button><br>
