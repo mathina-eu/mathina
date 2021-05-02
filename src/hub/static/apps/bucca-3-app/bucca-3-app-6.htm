@@ -1,6 +1,15 @@
 <html>
 <head>
 <style>
+html { 
+  background: url(img/bg3_plain.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
 #Partenza {
 	position:absolute;
 	margin:auto;
@@ -9,8 +18,13 @@
 	width:25%;
 	height:72%;
 	z-index:2;
-	border:solid;
 	  font-size: 32px;
+	  	border:solid;
+	border-color:#684213;
+	font-size: 32px;
+	background: #FFFBEB;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	border-radius:15px;
 }
 #Arrivo {
 	position:absolute;
@@ -20,8 +34,23 @@
 	width:25%;
 	height:72%;
 	z-index:2;
-	border:solid;
 	font-size: 32px;
+		border:solid;
+	border-color:#684213;
+	font-size: 32px;
+	background: #FFFBEB;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	border-radius:15px;
+}
+
+.PartContainer {
+	position: absolute;
+  top: 50%;
+	width:95%;
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+	padding:10px;
+	text-align:center;
 }
 #DivCanvas {
 	position:absolute;
@@ -585,9 +614,9 @@ function Check(N) {
 <body onload="Init()">
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="Partenza">
-<p id="paroladatradurre"></p></div>
-<div id="Arrivo"><p id="parolatradotta"></p></div>
+<div id="Partenza"><div class="PartContainer">
+<p id="paroladatradurre"></p></div></div>
+<div id="Arrivo"><div class="PartContainer"><p id="parolatradotta"></p></div></div>
 <div id="successMessage" style="display:none">
     <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
