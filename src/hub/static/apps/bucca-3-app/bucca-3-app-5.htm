@@ -1,16 +1,30 @@
 <html>
 <head>
 <style>
+html { 
+  background: url(img/bg3_plain.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
 #Partenza {
 	position:absolute;
 	margin:auto;
 	top:55%;
-	left:7%;
-	width:20%;
+	left:5%;
+	width:25%;
 	height:35%;
 	z-index:2;
+	font-size: 32px;
 	border:solid;
-	 font-size: 32px;
+	border-color:#684213;
+	font-size: 32px;
+	background: #FFFBEB;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	border-radius:15px;
 }
 
 #Medio {
@@ -29,11 +43,27 @@
 #Arrivo {
 	position:absolute;
 	top:55%;
-	right:10%;
-	width:13%;
+	right:5%;
+	width:25%;
 	height:35%;
 	z-index:2;
 	overflow:hidden;
+	border:solid;
+	border-color:#684213;
+	font-size: 32px;
+	background: #FFFBEB;
+	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	border-radius:15px;
+}
+
+.PartContainer {
+	position: absolute;
+  top: 50%;
+	width:95%;
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+	padding:10px;
+	text-align:center;
 }
 #DivCanvas {
 	position:absolute;
@@ -153,7 +183,60 @@ Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
 };
 
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+Lingua=1;
+
+Alphabet=[
+"", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+];
+
+ElencoParole=[
+[], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+["LEMON", "CASE", "SPIDER", "GRASS", "MILK", "STARS"],
+["LIMONE", "CASE", "RAGNO", "ERBA", "LATTE", "STELLA"]
+];
+
+Traduzioni=[
+[["Trad1"],"Position the big jewel to make it cipher as the sequence of the two small jewels",
+"Posiziona il disco grande in modo che cifri un testo come la successione dei due dischi piccoli in alto."],
+[["Trad2"],"When you have done click here:",
+"Quando hai posizionato il disco in modo corretto premi qui:"],
+[["Btn4"],"POSITIONED",
+"POSIZIONATO"]
+];
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function Traduci(Lang) {
+  for (var k = 0; k < Traduzioni.length; k++) {
+    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+    }
+  }
+}
+
+
 function Init() {	
+
+Lingua=Number(gup('l', document.location.search));
+	
+	if (!isNumeric(Lingua)) Lingua=1;
+	if (Lingua==0) Lingua=1;
+	Traduci(Lingua);
+
 	GenerateEx();
 	window.CanvasMathina=document.getElementById('CanvasMathina');
 	window.ctxMathina = CanvasMathina.getContext('2d');
@@ -688,10 +771,10 @@ function Link() {
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
 <div id="DivCanvas2"><canvas id="CanvasMathina2"></canvas></div>
 <div id="DivCanvas3"><canvas id="CanvasMathina3"></canvas></div>
-<div id="Partenza"><p>Posiziona il disco grande in modo che cifri un testo come la successione dei due dischi piccoli in alto.</p></div>
+<div id="Partenza"><div class="PartContainer"><p><span id="Trad1">Posiziona il disco grande in modo che cifri un testo come la successione dei due dischi piccoli in alto.</span></p></div></div>
 <div id="Medio">&rarr;</div>
-<div id="Arrivo"><p>Quando hai posizionato il disco in modo corretto premi qui:</p><br>
-<button type="button" onclick="Check()" id="Btn4" class="button">POSIZIONATO</button><br></div>
+<div id="Arrivo"><div class="PartContainer"><p><span id="Trad2">Quando hai posizionato il disco in modo corretto premi qui:</span></p><br>
+<button type="button" onclick="Check()" id="Btn4" class="button">POSIZIONATO</button><br></div></div>
 <div id="successMessage" style="display:none">
     <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
