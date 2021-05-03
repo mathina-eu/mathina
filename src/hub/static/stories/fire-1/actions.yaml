@@ -4,20 +4,20 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
 
   - type: image
-    src: $COMMON/img/characters/mathina/mathina3.png
+    src: mathinaleo.png
     id: mat1
-    style: "width: 15%; top: 45%; left: 9%;"  
+    style: "width: 15%; top: 30%; left: 1%;"  
     #valign: bottom
     #style: "height: 25vh"
-  - type: image
-    src: $COMMON/img/leo3.png
-    id: leo1
-    style: "width: 15%; top: 57%; left: 0%; "  
+  #- type: image
+    #src: $COMMON/img/leo3.png
+    #id: leo1
+    #style: "width: 15%; top: 57%; left: 0%; "  
     #valign: bottom
   - type: image
     src: flamma2.png
     id: fla1
-    style: "width: 20%; top: 30%; left: 50%;"  
+    style: "width: 20%; top: 45%; left: 50%;"  
 
   - type: sceneText
     text: >
@@ -28,12 +28,12 @@ actions:
   - type: animation
     target: mat1
     vars:
-        duration: 3
-        xPercent: 180
-        yPercent: -10
+        duration: 5
+        xPercent: 160
+        yPercent: 75
+        width: 20% 
         ease: power3.out
-    #  style: "width: 13%; top: 45%; left: 30%;" 
-    #  ease: power3.out
+
 
   - type: sceneText
     text: >
@@ -45,18 +45,19 @@ actions:
       too short to be used as a walking support but long enough to extend
       her arm to the floor. </p>
       
-  - type: animation
-    target: leo1
-    vars:
-        duration: 3
-        xPercent: 150
-        yPercent: -10
-        ease: power3.out
 
   - type: sceneText
     text: >
       <p>Mathina, who wasn’t shy at all, approached the woman.</p>
-
+  - type: animation
+    target: fla1
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
 
 
   - type: dialog
@@ -84,13 +85,16 @@ actions:
         char: flamma
         mood: sad
       - text: What is that?
-        char: mathina
+        char: leo
         exposition: Replied Leo, with increasing interest.
         mood: happy
       - text: My name is Flamma, I come from Arisa, a land full of strange
           creatures and wizards. In Arisa there are many types of firebirds,
           or birds of fire. These creatures are extremely intelligent, but their
-          minds and language are different from ours. They use a very precise
+          minds and language are different from ours. 
+        char: flamma
+        mood: sad
+      - text:   They use a very precise
           language to communicate where they are, how they fly, and where they go.
           We humans don’t have such precise words for describing their flight,
           but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
@@ -106,6 +110,18 @@ actions:
         char: flamma
         mood: sad
 
+  - type: clearImage
+    id: fla1
+    
+  - type: image
+    src: flamma1.png
+    id: fla2
+    style: "width: 20%; top: 33%; left: 53%;" 
+    
+  - type: image
+    src: unidragon.png
+    id: uni
+    style: "width: 10%; top: 5%; left: 90%;" 
 
   - type: sceneText
     text: Flamma let out a deep and loud scream to the sky. It didn’t remind
@@ -120,8 +136,7 @@ actions:
     entries:
       - text: What is that? Is it a dragon? I am not afraid
           of them!
-        char: flamma
-        # this should be leo.
+        char: leo
         exposition: he added, although he was a bit nervous of the animal
           getting closer.
         mood: sad
