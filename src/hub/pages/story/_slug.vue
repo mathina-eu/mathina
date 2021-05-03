@@ -180,7 +180,7 @@ export default {
 
     this.$store.dispatch('setBreadcrumbs', [
       { path: `/world/`, text: 'World Map' },
-      { path: `/story/${this.story?.slug}/`, text: this.story?.title },
+      { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
     ]);
 
     document.addEventListener('keydown', this.keydownListener);
