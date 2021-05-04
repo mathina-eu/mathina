@@ -184,7 +184,7 @@ actions:
   - type: clearImage
     id: solution5
   - type: game
-    text: We see the 5 correct lamps lined up and a traffic light without colors that can be colored and additional lamps can be added.
+    text: We see the 5 correct lamps lined up and a traffic light without colors which can be colored. Additional lamps can be added, too.
     toolbarText: Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=3
   - type: dialog
