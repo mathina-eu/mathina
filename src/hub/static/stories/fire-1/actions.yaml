@@ -1,12 +1,29 @@
 actions:
   - type: background
-    src: fire-bg1-layered.png 
+    src: bg_full.png 
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+    
+  - type: image
+    src: bg_clouds.png 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front1
+    
+  - type: image
+    src: bg_castle.png 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+    
+  - type: image
+    src: bg_fields.png 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
 
   - type: image
     src: mathinaleo.png
     id: mat1
     style: "width: 15%; top: 30%; left: 1%;"  
+    parallax: front2
     #valign: bottom
     #style: "height: 25vh"
   #- type: image
@@ -17,7 +34,8 @@ actions:
   - type: image
     src: flamma2.png
     id: fla1
-    style: "width: 20%; top: 45%; left: 50%;"  
+    style: "width: 20%; top: 45%; left: 50%;" 
+    parallax: front3 
 
   - type: sceneText
     text: >
@@ -119,11 +137,13 @@ actions:
     src: flamma1.png
     id: fla2
     style: "width: 20%; top: 33%; left: 53%;" 
+    parallax: front3 
     
   - type: image
     src: unidragon.png
     id: uni
     style: "width: 10%; top: 5%; left: 90%;" 
+    parallax: front3 
 
   - type: sceneText
     text: Flamma let out a deep and loud scream to the sky. It didn’t remind
