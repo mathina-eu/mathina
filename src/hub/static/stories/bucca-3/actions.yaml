@@ -1,13 +1,17 @@
 actions:
   - type: background
     src: bg3_plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
 
 
   - type: sceneText
     text: >
       <h1>The lost treasure</h1>
       
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
           
   - type: sceneText
     text: >
@@ -15,12 +19,13 @@ actions:
       </br >
       </br >
       Mathina ran out and opened the envelope carefully. There was a letter inside.</p>
-      
+                   
   - type: image
-    id: Mathina2
-    src: $COMMON/img/characters/mathina/mathina4.png
-    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+    id: Paper0
+    src: Pergamena.png
+    style: "height: 40%; bottom: 2%; left: 2%;  z-index: 2;"
              
+
       
   - type: sceneText
     text: >
@@ -44,6 +49,10 @@ actions:
   - type: sceneText
     text: >
       <p>Mathina's mind immediately returned to that day at the market. She went to her room and found the jewel that Angela had given her. It was a brass pendant engraved with the letters of the alphabet shown in two concentric circles that could be rotated.</p>
+
+  - type: clearImage
+    id: Paper0
+
   - type: animation
     target: CaesarJewel
     vars:
@@ -64,14 +73,27 @@ actions:
         char: Mathina
         mood: normal
 
-  - type: clearImage
-    id: CaesarJewel
 
   - type: game
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Try to decode some words using the suggested key"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-1.htm
+
+  - type: clearImage
+    id: CaesarJewel
+  - type: clearImage
+    id: Mathina0
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+  - type: image
+    id: Paper1
+    src: Pergamena.png
+    style: "height: 50%; bottom: 4%; left: 3%;  z-index: 2;"
 
   - type: dialog
     entries:
@@ -102,13 +124,63 @@ actions:
     text: "Select the plaintext. Remember the hint “BACKWARD”..."
     toolbarText: "Try to select the correct plaintext"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-2.htm
 
   - type: dialog
     entries:
       - text: "Well… that was harder than expected, but now I am very curious to see what the lady has to tell me!"
         char: Mathina
         mood: normal
+ 
+  - type: clearImage
+    id: Paper1
+  - type: clearImage
+    id: Mathina1
+
+
+
+
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Fisherman1
+    src: barca.png
+    style: "width: 8%; bottom: 5%; left: 20%;  z-index: 1;"
+
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 8%; bottom: 5%; left: 30%;  z-index: 1;"
+
+  - type: image
+    id: Fisherman3
+    src: barca3.png
+    style: "width: 8%; bottom: 5%; left: 40%;  z-index: 1;"
+
+ 
+  - type: image
+    id: Gabbiano1
+    src: gabbiano1.png
+    style: "width: 8%; top: 10%; left: 10%;  z-index: 1;"
+
+  - type: image
+    id: Gabbiano2
+    src: gabbiano2.png
+    style: "width: 8%; top: 10%; left: 15%;  z-index: 1;"
+
+  - type: image
+    id: Gabbiano3
+    src: gabbiano3.png
+    style: "width: 8%; top: 10%; left: 20%;  z-index: 1;"
+ 
+ 
+ 
+ 
+ 
  
   - type: sceneText
     text: >
