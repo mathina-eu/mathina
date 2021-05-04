@@ -219,7 +219,7 @@ actions:
       yPercent: -300
       ease: power3.out
   - type: sceneText
-    text: They caught up with Leo, then at the meeting of five corners, turned left onto Hemachandra Street, and finally sat down in a cafe on Russell Square, the city’s main square.
+    text: They caught up with Leo, and finally sat down in a cafe on Russell Square, the city’s main square.
   - type: dialog
     entries:
       - text: Why are there only the two of you? - Mathina was puzzled.
@@ -427,7 +427,7 @@ actions:
       ease: power3.out
   - type: dialog
     entries:
-      - text: I got it! - cried Leo. And he showed the map to the policemen
+      - text: I got it! - cried Leo. And he showed the map to the policemen.
         char: Leo
         mood: sad
   - type: sceneText
@@ -490,3 +490,8 @@ actions:
         mood: sad
   - type: sceneText
     text: The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
+  - type: game
+    text: Have you enjoyed using the app? Continue playing with different maps.
+    toolbarText: 
+    cta: 
+    url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=3
