@@ -1,0 +1,528 @@
+actions:
+  - type: background
+    src: $COMMON/img/bg/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
+  - type: image
+    id: c1-1  
+    src: c1-1.png
+    style: "width: 37%; top: 42%; right: 0%;"
+    align: right
+  - type: image
+    src: $COMMON/img/Mathina1.png
+    id: Mathina1
+    style: "width: 13%; top: 57%; left: 0%;"   
+  - type: sceneText
+    text: >
+      <p>Mathina arrivò alla Fiera della Simmetria, dove trovò un enorme luna park: c'erano montagne russe, giostre e tante bancarelle, tutte con innumerevoli giochi e sfide. Mathina era affascinata da così tanti divertimenti ed era ansiosa di provarli tutti!</p>
+      <p>Proprio accanto a lei c'era una bancarella che vendeva peluche di tutti i tipi: coniglietti, orsacchiotti, coccinelle, ...</p>     
+  - type: image
+    id: feiticeiro
+    src: $COMMON/img/Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 40%;"
+    align: right
+  - type: animation
+    target: Mathina1
+    vars:
+      duration: 4
+      xPercent: 220
+      yPercent: 0
+      ease: power3.out    
+  - type: sceneText
+    text: Alla bancarella, Mathina fu accolta da un mago sorridente.
+  - type: clearImage
+    id: Mathina1
+  - type: image
+    src: $COMMON/img/Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 32%;"    
+  - type: dialog
+    entries:
+      - text: "Mi piacciono tanto questi peluche!"
+        char: mathina       
+        mood: happy
+      - text: "Alcuni hanno dei difetti!"
+        char: wizard
+        exposition: "Le rispose tristemente il mago."        
+        mood: sad
+      - text: "Davvero? Perché?"
+        char: mathina
+        mood: surprised
+      - text: "Qui alla Fiera della Simmetria vogliamo dei giocattoli... simmetrici! Solo questi giocattoli ci vanno bene!"
+        char: wizard
+        exposition: "Il mago si stava arrabbiando."         
+      - text: "Ma oggi ho ricevuto questi giocattoli dalle Industrie Simmetriche e alcuni di loro non sono simmetrici!
+                  Questo non è accettabile alla Fiera della Simmetria!"
+        char: wizard
+        mood: angry
+      - text: "Beh, a me sembrano tutti così carini!"
+        char: mathina
+      - text: "Ho appena avuto un'idea! Perché non mi aiuti, scegliendo i giocattoli perfetti? Così potrò tenere sulla bancarella solo quelli, tu invece potrai portarti a casa gli altri!"
+        char: wizard
+        mood: excited
+      - text: "Mi piacerebbe avere dei nuovi peluche! Ma non so come scegliere quelli perfetti!"
+        char: mathina
+        mood: sad
+      - text: "Aspetta, lascia che ti aiuti! Ti mostrerò delle immagini di alcuni peluche adorabili e tu dovrai scegliere le immagini simmetriche."
+        char: wizard
+        exposition: "Mathina era ancora confusa..."         
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro     
+  - type: image
+    src: c1-3.png
+    id: c1-3
+    align: center
+    style: "width: 25%; top: 50%"       
+  - type: dialog
+    entries:
+      - text: "Ti mostrerò un esempio! Guarda questa immagine."
+        char: wizard      
+      - text: "Se ripieghiamo l'immagine in un modo preciso, le due parti si sovrappongono!"
+        char: wizard
+  - type: game
+    tag: firstGame
+    text: "Quest'immagine è simmetrica?"
+    cta: "Prova da solo!"
+    url: /apps/dobrar_1/index.html
+  - type: clearImage
+    id: c1-3
+  - type: image
+    src: $COMMON/img/Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 32%;"
+  - type: image
+    id: feiticeiro
+    src: $COMMON/img/Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 40%;"
+    align: right    
+  - type: dialog
+    entries:
+      - text: "L'immagine dell'orsacchiotto ha un asse di simmetria. E' un giocattolo perfetto!"
+        char: wizard
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro     
+  - type: image
+    src: c1-4.png
+    id: c1-4
+    align: center
+    style: "width: 25%; top: 50%" 
+    position: center
+  - type: dialog
+    entries:    
+      - text: "Ora ti propongo un altro esempio! Guarda questa immagine di un'ape!"
+        char: wizard        
+  - type: game
+    text: "Quest'immagine è simmetrica?"
+    cta: "Prova da solo!"
+    url: /apps/dobrar_2/index.html
+  - type: dialog
+    entries:        
+      - text: "Anche l'immagine di questa ape ha un asse di simmetria."
+        char: wizard
+  - type: clearImage
+    id: c1-4
+  - type: image
+    src: c1-5.png
+    id: c1-5
+    align: center
+    style: "width: 25%; top: 50%"     
+  - type: dialog
+    entries:     
+      - text: "Ora prova a guardare l'immagine del gattino."
+        char: wizard
+    position: center
+  - type: game
+    text: "Quest'immagine è simmetrica?"
+    cta: "Prova da solo!"
+    url: /apps/dobrar_3/index.html
+  - type: clearImage
+    id: c1-5
+  - type: image
+    src: $COMMON/img/Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 32%;"
+  - type: image
+    id: feiticeiro
+    src: $COMMON/img/Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 40%;"
+    align: right    
+  - type: dialog
+    entries:
+      - text: "Questo peluche non è simmetrico!"
+        char: wizard
+        exposition: "Le disse il mago."        
+      - text: "Credo di aver capito come scegliere i giocattoli perfetti! Posso aiutarti?"
+        char: mathina
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro    
+  - type: image
+    src: toys.png
+    id: toys
+    align: center
+    style: "width: 40%; top: 63%; left: 45%"     
+  - type: dialog
+    entries:         
+      - text: "Certamente, Mathina! Le immagini simmetriche dovranno essere riposte in questa scatola!"
+        char: wizard
+  - type: clearImage
+    id: toys
+  - type: image
+    src: $COMMON/img/Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 32%;"
+  - type: image
+    id: feiticeiro
+    src: $COMMON/img/Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 40%;"    
+  - type: dialog
+    entries:    
+      - text: "E alla fine, posso tenermi gli altri peluche?"
+        char: mathina
+        mood: excited
+      - text: "Certo, Mathina! E' una promessa!"
+        char: wizard
+        mood: happy
+  - type: game
+    text: "Metti i giocattoli \"perfetti\" nella scatola"
+    url: /apps/arrumar_figuras-_en/index.html
+  - type: clearImage
+    id: c1-1
+  - type: image
+    src: Mathina3.png
+    id: Mathina3
+    style: "width: 9%; top: 53%;"
+    align: center
+  - type: image
+    src: symm-box.png
+    id: box
+    style: "width: 13%; top: 55%; left: 53%;" 
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro    
+  - type: sceneText
+    text: >
+      <p>Alla fine del gioco, Mathina mise i suoi giocattoli in una scatola differente. Aveva ricevuto così tanti peluche nuovi e adorabili, che faceva fatica a trasportarli. Mentre stava tentando di trascinare la scatola lontano dalla bancarella, Mathina sentì qualcuno che la chiamava.</p>
+  - type: image
+    src: $COMMON/img/Leo1.png
+    id: Leo1
+    style: "width: 13%; top: 67%; right: 15%;"       
+  - type: dialog
+    entries:
+      - text: "Mathina, Mathina!"
+        char: Leo
+        exposition: "Leo era appena arrivato alla Fiera della Simmetria."        
+        mood: excited
+  - type: animation
+    target: Leo1
+    vars:
+      duration: 3
+      xPercent: -130
+      yPercent: 0
+      ease: power3.out         
+  - type: dialog
+    entries:    
+      - text: "Leo, non ci crederai mai! Ho appena ottenuto tantissimi giocattoli nuovi."
+        char: mathina
+        mood: excited
+  - type: clearImage
+    id: Leo1
+  - type: image
+    src: $COMMON/img/Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; right: 30%;"   
+  - type: dialog
+    entries:    
+      - text: "Davvero???"
+        char: Leo
+        mood: excited  
+      - text: "Sì, ho solo dovuto aiutare il mago a scegliere i peluche!"
+        char: mathina
+  - type: image
+    id: Feiticeiro3
+    src: $COMMON/img/Feiticeiro3.png
+    style: "width: 17%; top: 42%; left: 17%;"
+    align: right         
+  - type: dialog
+    entries:    
+      - text: "E potrai averne ancora di più, se vuoi."
+        char: wizard
+        exposition: "Il mago aveva ascoltato la conversazione tra Mathina e Leo."             
+        mood: excited
+  - type: animation
+    target: Feiticeiro3
+    vars:
+      duration: 3
+      xPercent: 70
+      yPercent: 0
+      ease: power3.out
+  - type: dialog
+    entries:       
+      - text: "Davvero???"
+        char: Leo
+        mood: excited
+      - text: "Sì. Dovrai solo aiutarmi a finire i giocattoli che sto costruendo. E alla fine avrai la metà di quelli che avremo costruito."
+        char: wizard
+      - text: "Ci sono due tipi di giocattoli: alcuni sono più difficili da costruire rispetto agli altri. Quali preferisci?"
+        char: wizard
+      - text: "I più difficili."
+        char: Leo
+        mood: excited
+      - text: "I più facili."
+        char: Mathina
+        mood: excited
+  - type: clearImage
+    id: Leo2
+  - type: image
+    src: $COMMON/img/Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 65%; right: 30%;"       
+  - type: dialog
+    entries:    
+      - text: "Ok, Leo, per favore spostati alla prossima bancarella, dove potrai costruire i giocattoli. Mathina, resta con me."
+        char: wizard
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 4
+      xPercent: 230
+      yPercent: 0
+      ease: power3.out          
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: Feiticeiro3    
+  - type: image
+    id: casa
+    src: casa.jpg
+    style: "width: 35%; top: 60%"
+    align: center    
+  - type: dialog
+    entries:      
+      - text: "Guarda, Mathina, sto costruendo una casa per le bambole. Puoi continuare tu?"
+        char: wizard
+  - type: clearImage
+    id: Leo3        
+  - type: clearImage
+    id: casa
+  - type: image
+    id: Feiticeiro2
+    src: $COMMON/img/Feiticeiro2.png
+    style: "width: 17%; top: 42%; left: 32%;"
+    align: right
+  - type: image
+    src: $COMMON/img/Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 50%;"
+  - type: clearImage
+    id: box       
+  - type: sceneText
+    text: >
+      <p>Mathina provò a finire la casa delle bambole, ma ogni volta che trascinava un pezzo e lo posizionava in un quadrato, il pezzo scappava via.</p> 
+  - type: dialog
+    entries:
+      - text: "Dove sto sbagliando?"
+        char: mathina
+        mood: sad
+      - text: "Mathina, non ti dimenticare che a una Fiera della Simmetria… ogni cosa deve essere simmetrica!"
+        char: wizard
+      - text: "Lascia che ti aiuti!"
+        char: wizard
+  - type: game
+    text: "Guarda il video!"
+    cta: "Play!"
+    url: /stories/symm-1/video/geoplano-anim2.mp4
+  - type: dialog
+    entries:    
+      - text: "Ok, ho capito! Finirò i giocattoli."
+        char: Mathina
+        mood: excited            
+  - type: game
+    tag: polygons
+    text: "Come può Mathina finire di costruire i giocattoli? Devi solo trascinare la figure colorate sul quadrato grigio corrispondente."
+    cta: "Prova da solo!"
+    url: /apps/geoplano_polys0/index.html     
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Feiticeiro2
+  - type: image
+    src: $COMMON/img/Mathina1.png
+    id: Mathina1
+    style: "width: 13%; top: 59%; left: 25%;"     
+  - type: dialog
+    entries:    
+      - text: "Ho finito! Chissà a che punto sarà Leo."
+        char: Mathina
+        exposition: "Mathina raccolse tutti i suoi nuovi giocattoli."        
+        mood: excited
+  - type: image
+    id: c1-2  
+    src: c1-2.png
+    style: "width: 37%; top: 42%; right: 0%;"
+    align: right
+  - type: image
+    src: $COMMON/img/Leo4.png
+    id: Leo4
+    style: "width: 9%; top: 69%; right: 30%;"
+  - type: animation
+    target: Mathina1
+    vars:
+      duration: 3
+      xPercent: 170
+      yPercent: 0
+      ease: power3.out
+  - type: clearBackground
+    id: c1-bg1      
+  - type: background
+    src: $COMMON/img/bg/c1-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg2    
+  - type: sceneText
+    text: >
+      <p>Mathina raggiunse la bancarella dove Leo stava tentando invano di concludere i suoi giocattoli. Leo urlava e sembrava arrabbiato.</p>
+  - type: clearImage
+    id: Mathina1       
+  - type: image
+    src: Mathina5.png
+    id: Mathina5
+    style: "width: 12%; top: 57%; left: 48%;"        
+  - type: dialog
+    entries:    
+      - text: "Perché non funziona? Perché non funziona?"
+        char: Leo
+        exposition: "Si domandava Leo mentre tentava di finire un giocattolo, ma senza successo."        
+        mood: angry
+  - type: sceneText
+    text: >
+      <p> Leo stava tentando di finire un giocattolo, ma senza successo.</p>
+  - type: dialog
+    entries:    
+      - text: "Leo, cosa succede?"
+        char: Mathina
+        mood: surprised
+  - type: clearImage
+    id: Mathina5
+  - type: clearImage
+    id: Leo4    
+  - type: image
+    id: barco
+    src: barco.jpg
+    style: "width: 25%; top: 55%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Mathina, sto tentando di finire questa barchetta, ma non è possibile!"
+        char: Leo
+        exposition: "Leo mostrò a Mathina cosa stava facendo."
+  - type: clearImage
+    id: barco
+  - type: image
+    src: $COMMON/img/Mathina6.png
+    id: Mathina6
+    style: "width: 8.5%; top: 57%; left: 51%;"
+  - type: image
+    src: $COMMON/img/Leo4.png
+    id: Leo4
+    style: "width: 9%; top: 69%; right: 30%;"    
+  - type: dialog
+    entries:    
+      - text: "Leo, ricordati che qui, alla Fiera della Simmetria, ogni cosa deve essere simmetrica!"
+        char: Mathina
+        exposition: "Gli disse Mathina, ripetendo le parole del mago."        
+  - type: game
+    tag: lines
+    text: "Come ha fatto Mathina a finire i giocattoli? Devi solo disegnare le linee mancanti."
+    cta: "Prova da solo!"
+    url: /apps/geoplano_lin1/index.html 
+  - type: clearImage
+    id: Leo4
+  - type: image
+    src: $COMMON/img/Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; left: 57%;"      
+  - type: dialog
+    entries:    
+      - text: "Wow, abbiamo guadagnato così tanti giocattoli nuovi!"
+        char: Leo
+        mood: excited    
+  - type: animation
+    target: Leo2
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: -50
+      ease: power3.out  
+  - type: sceneText
+    text: >
+      <p> Leo saltellava dalla felicità.</p>
+  - type: animation
+    target: Leo2
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 2      
+  - type: dialog
+    entries:    
+      - text: "Ed è stato così facile ottenerli! Mi chiedo come mai ho avuto così tanti problemi prima che arrivasse Mathina…"
+        char: Leo
+        mood: surprised
+      - text: "Beh Leo, la prossima volta dovresti ascoltare meglio il mago e provare prima a risolvere i compiti più facili."
+        char: Mathina
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: Mathina6
+  - type: clearImage
+    id: c1-2
+  - type: clearBackground
+    id: c1-bg2    
+  - type: background
+    src: $COMMON/img/bg/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
+  - type: image
+    src: Mathina3.png
+    id: Mathina3
+    style: "width: 9%; top: 52%;"
+    align: center
+  - type: image
+    id: Feiticeiro2
+    src: $COMMON/img/Feiticeiro2.png
+    style: "width: 17%; top: 43%; left: 29%;"
+    align: right
+  - type: image
+    src: $COMMON/img/Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 61%; right: 30%;"     
+  - type: sceneText
+    text: >
+      <p> Alla fine, come promesso, il mago diede a Mathina e Leo tanti dei giocattoli che avevano costruito.</p><p> Prima che se ne andassero, il mago disse loro che era stupito dalle loro capacità! Non solo erano stati capaci di identificare le immagini simmetriche, ma lo avevano anche aiutato a creare nuovi giocattoli simmetrici, alcuni dei quali sarebbero stati per gli altri bambini che avrebbero visitato la Fiera della Simmetria.</p>
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: Feiticeiro2
+  - type: image
+    src: mathina-leo-caixa.png
+    id: mathina-leo-caixa
+    style: "width: 38%; top: 48%; left: 7%;"       
+  - type: sceneText
+    text: >
+      <p> Entusiasmati dalle parole del mago, Mathina e Leo lasciarono la Fiera della Simmetria...</p>
+  - type: animation
+    target: mathina-leo-caixa
+    vars:
+      duration: 7
+      xPercent: 140
+      yPercent: 0      
+  - type: sceneText
+    text: >
+      <p> ... trascinando tutti i loro giocattoli nuovi.</p>         
