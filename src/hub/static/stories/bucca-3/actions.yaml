@@ -38,7 +38,7 @@ actions:
       YIVGNDZCOIJFXJYZCOMVZIMVWZCOOVBIDIMJHRJMMJHJOZHOZZH</p>
   - type: image
     id: CaesarJewel
-    src: CaesarJewel.png
+    src: disco_ba.png
     style: "height: 50%; top: 45%;"
     align: center
   - type: sceneText
