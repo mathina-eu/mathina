@@ -62,8 +62,10 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
+      leo: left
+      
     entries:
 
       - text: Ms, are you a warrior?
@@ -129,10 +131,13 @@ actions:
         dragon appeared in the sky, leaving a colorful smokey trail in the air.
         The dragon moved gracefully and responded to Flamma as she moved her
         arm and the stick.
+        
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
+      leo: left
+      
     entries:
       - text: What is that? Is it a dragon? I am not afraid
           of them!
@@ -157,8 +162,7 @@ actions:
         char: mathina
         mood: sad
       - text: Let’s become unidragon trainers!
-        char: mathina
-        #this should be leo.
+        char: leo
         mood: sad
       - text: You just have to point the horn in the direction that you
           want the unidragon to fly.
@@ -170,6 +174,11 @@ actions:
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
     entries:
       - text: Very well! Now try to catch these fireballs
           with the unidragon! Fireballs is the main food for unidragons,
@@ -184,6 +193,11 @@ actions:
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
     entries:
       - text: Not bad! but if you want to become a
           unidragon trainer, you have to practice. Can you make the
@@ -200,6 +214,11 @@ actions:
       Flamma voice suddenly got all serious and she said:
 
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
     entries:
       - text: Mathina, I noticed you practised well and have now a good understanding of how to communicate with unidragons.
           In a few weeks, there is a big
