@@ -42,7 +42,7 @@ actions:
       ease: power1.inOut
   - type: dialog
     entries:
-      - text: No, it's not strange at all, let's go! - Leo jumped up but was stopped by an invisible wall.
+      - text: No, it's not strange at all, let's go! - Leo jumped up but was immediately stopped by an invisible wall.
         char: leo
         mood: sad
   - type: clearImage
@@ -207,7 +207,7 @@ actions:
       yPercent: -8
       ease: power3.out  
   - type: sceneText
-    text: then to the orange square
+    text: Then to the orange square.
   - type: animation
     target: leo-runs
     vars:
@@ -288,7 +288,7 @@ actions:
         char: mathina
         mood: sad
   - type: sceneText
-    text: So what if she tried to think backwards here as well? What if she tried to get through from the doorway to where she stood?
+    text: So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
   - type: game
     text: Can you get from the doorway to Mathina, does this work?
     toolbarText: The rule is that you can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
@@ -390,4 +390,4 @@ actions:
       yPercent: 0
       ease: power3.out  
   - type: sceneText
-    text: They skillfully walked back on the colored tiles.
+    text: They skillfully walked back on the colored tiles and said goodbye to the owl.
