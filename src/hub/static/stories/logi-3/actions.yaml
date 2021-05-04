@@ -314,9 +314,17 @@ actions:
         char: Mathina
         mood: sad
   - type: image
-    src: sugarcubes.png
-    id: sugar
-    style: "width: 8%; top: 6%; right: 89%;"
+    src: sugarcube1.png
+    id: sugar1
+    style: "width: 8%; top: 14%; right: 90%;"
+  - type: image
+    src: sugarcube2.png
+    id: sugar2
+    style: "width: 8%; top: 4%; right: 89%;"
+  - type: image
+    src: sugarcube3.png
+    id: sugar3
+    style: "width: 9.5%; top: 9%; right: 82%;"
   - type: sceneText
     text: Mathina and Leo snucked the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
@@ -324,40 +332,148 @@ actions:
     toolbarText: You can move sugar cubes on the map. 
     cta: dst
     url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 185
+      yPercent: 130
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 270
+      yPercent: 480
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 450
+      yPercent: 250
+      ease: power3.out
+  - type: sceneText
+    text: Leo simply pulled the cubes from one place to the other.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
   - type: dialog
     entries:
-      - text: Leo simply pulled the cubes from one place to the other. - With brains, please! - Mathina ordered. - Do you remember? We should start out from the three parallel roads.
+      - text: With brains, please! - Mathina ordered. - Do you remember? We should start out from the three parallel roads.
         char: Mathina
         mood: sad
-  - type: dialog
-    entries:
-      - text: Mathina put a cube on each of the three horizontal lines and they started pushing and pulling them along the lines.
-        char: Mathina
-        mood: sad
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 57
+      yPercent: 45
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 52
+      yPercent: 200
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 20
+      yPercent: 470
+      ease: power3.out
+  - type: sceneText
+    text: Mathina put a cube on each of the three horizontal lines and they started pushing and pulling them along the lines.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 240
+      yPercent: 40
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 500
+      yPercent: 200
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 20
+      yPercent: 470
+      ease: power3.out
   - type: dialog
     entries:
       - text: I got it! - cried Leo. And he showed the map to the policemen
-        char: Mathina
+        char: Leo
         mood: sad
   - type: sceneText
     text: They looked at the arrangement for a second or two and nodded with appreciation.
   - type: dialog
     entries:
       - text: That's really convincing, thank you, thank you! - they were so grateful.
-        char: Mathina
+        char: First policeman
         mood: sad
-  - type: clearBackground
-    id: logi-bg3-old
+  - type: clearImage
+    id: sugar1
+  - type: clearImage
+    id: sugar2
+  - type: clearImage
+    id: sugar3
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
-    src: thief-icon.png
-    id: thief-i
-    style: "width: 7%; top: 75%; right: 55%;"
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 40%; right: 77%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 35%; right: 75%;"
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 37%; right: 75%;"
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 42%; right: 74%;"
+  - type: sceneText
+    text: Mathina, Leo and the two policemen were just about to finish their coffees and cakes, when suddenly...
   - type: image
     src: thief.png
     id: thief
-    style: "width: 14%; top: 30%; right: 75%;"
+    style: "width: 14%; top: 45%; right: 57%;"
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 19%; right: 75%;"
   - type: sceneText
-    text: Then suddenly, the thief who stole all even numbers of the city, appeared in the cafe window, noticed them, and fled again.
+    text: ...the thief who stole all even numbers of the city, appeared in the cafe window, noticed them, and fled again.
   - type: clearImage
     id: thief-i
   - type: clearImage
@@ -365,10 +481,12 @@ actions:
   - type: dialog
     entries:
       - text: Oh, we really shouldn't be sitting here, when thieves are running across Logi-city! - the other policeman claimed.
-        char: Mathina
+        char: Second policeman
         mood: sad
   - type: dialog
     entries:
       - text: Sometimes it's better to sit down and think, believe me - Mathina winked at them.
         char: Mathina
         mood: sad
+  - type: sceneText
+    text: The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
