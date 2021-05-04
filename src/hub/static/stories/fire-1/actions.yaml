@@ -1,30 +1,30 @@
 actions:
   - type: background
-    src: fire-bg1-layered.png 
+    src: fire-bg1-layered.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina3.png
     id: mat1
-    style: "width: 15%; top: 45%; left: 9%;"  
+    style: "width: 15%; top: 45%; left: 9%;"
     #valign: bottom
     #style: "height: 25vh"
   - type: image
     src: $COMMON/img/leo3.png
     id: leo1
-    style: "width: 15%; top: 57%; left: 0%; "  
+    style: "width: 15%; top: 57%; left: 0%; "
     #valign: bottom
   - type: image
     src: flamma2.png
     id: fla1
-    style: "width: 20%; top: 30%; left: 50%;"  
+    style: "width: 20%; top: 30%; left: 50%;"
 
   - type: sceneText
     text: >
       <p>It was a sunny morning, Mathina and Leo were going on a stroll
       in the fields near their village when they suddenly saw an old woman
       waving her hands towards the sky and uttering incomprehensible words.  </p>
-      
+
   - type: animation
     target: mat1
     vars:
@@ -32,7 +32,7 @@ actions:
         xPercent: 180
         yPercent: -10
         ease: power3.out
-    #  style: "width: 13%; top: 45%; left: 30%;" 
+    #  style: "width: 13%; top: 45%; left: 30%;"
     #  ease: power3.out
 
   - type: sceneText
@@ -44,7 +44,7 @@ actions:
       a book on her hand, and a short stick decorated with color stripes,
       too short to be used as a walking support but long enough to extend
       her arm to the floor. </p>
-      
+
   - type: animation
     target: leo1
     vars:
@@ -152,7 +152,7 @@ actions:
 
   - type: game
     text: "Fly the unidragon 1"
-    url: https://mathina-tests.firebaseapp.com/vector2.html
+    url: /apps/imaginary-tests/fire-4-1/index.html
 
   - type: dialog
     entries:
