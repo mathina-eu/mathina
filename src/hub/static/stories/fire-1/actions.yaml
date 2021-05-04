@@ -145,6 +145,14 @@ actions:
     style: "width: 10%; top: 5%; left: 90%;" 
     parallax: front3 
 
+  #- type: animation
+  #  target: uni
+  #  vars:
+  #      duration: 1
+  #      width: 20% 
+  #      ease: power3.out
+
+
   - type: sceneText
     text: Flamma let out a deep and loud scream to the sky. It didn’t remind
         of any language, but it seemed to have a meaning. Suddenly, a kind of
