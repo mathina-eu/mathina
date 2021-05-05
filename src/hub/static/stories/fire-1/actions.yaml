@@ -1,6 +1,6 @@
 actions:
   - type: background
-    src: bg_full.png 
+    src: fire-bg1-layered.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
     
@@ -42,7 +42,7 @@ actions:
       <p>It was a sunny morning, Mathina and Leo were going on a stroll
       in the fields near their village when they suddenly saw an old woman
       waving her hands towards the sky and uttering incomprehensible words.  </p>
-      
+
   - type: animation
     target: mat1
     vars:
@@ -51,7 +51,6 @@ actions:
         yPercent: 75
         width: 20% 
         ease: power3.out
-
 
   - type: sceneText
     text: >
@@ -62,7 +61,6 @@ actions:
       a book on her hand, and a short stick decorated with color stripes,
       too short to be used as a walking support but long enough to extend
       her arm to the floor. </p>
-      
 
   - type: sceneText
     text: >
@@ -200,7 +198,7 @@ actions:
 
   - type: game
     text: "Fly the unidragon 1"
-    url: https://mathina-tests.firebaseapp.com/vector2.html
+    url: /apps/imaginary-tests/fire-4-1/index.html
 
   - type: dialog
     avatarAlign:
