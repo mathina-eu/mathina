@@ -63,7 +63,7 @@ actions:
       - text: "Mi piacerebbe avere dei nuovi peluche! Ma non so come scegliere quelli perfetti!"
         char: mathina
         mood: sad
-      - text: "Aspetta, lascia che ti aiuti! Ti mostrerò delle immagini di alcuni peluche adorabili e tu dovrai scegliere le immagini simmetriche."
+      - text: "Aspetta, lascia che ti aiuti! Ti mostrerò delle immagini di alcuni adorabili peluche e tu dovrai scegliere le immagini simmetriche."
         char: wizard
         exposition: "Mathina era ancora confusa..."         
   - type: clearImage
@@ -83,7 +83,7 @@ actions:
         char: wizard
   - type: game
     tag: firstGame
-    text: "Quest'immagine è simmetrica?"
+    text: "Quest'immagine è giusta (cioè simmetrica)?"
     cta: "Prova da solo!"
     url: /apps/dobrar_1/index.html
   - type: clearImage
@@ -116,7 +116,7 @@ actions:
       - text: "Ora ti propongo un altro esempio! Guarda questa immagine di un'ape!"
         char: wizard        
   - type: game
-    text: "Quest'immagine è simmetrica?"
+    text: "Quest'immagine è giusta (cioè simmetrica)?"
     cta: "Prova da solo!"
     url: /apps/dobrar_2/index.html
   - type: dialog
@@ -190,6 +190,7 @@ actions:
         mood: happy
   - type: game
     text: "Metti i giocattoli \"perfetti\" nella scatola"
+    cta: "Prova da solo!"
     url: /apps/arrumar_figuras-_en/index.html
   - type: clearImage
     id: c1-1
@@ -345,7 +346,7 @@ actions:
         mood: excited            
   - type: game
     tag: polygons
-    text: "Come può Mathina finire di costruire i giocattoli? Devi solo trascinare la figure colorate sul quadrato grigio corrispondente."
+    text: "Come può Mathina finire di costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
     cta: "Prova da solo!"
     url: /apps/geoplano_polys0/index.html     
   - type: clearImage
@@ -399,9 +400,6 @@ actions:
         char: Leo
         exposition: "Si domandava Leo mentre tentava di finire un giocattolo, ma senza successo."        
         mood: angry
-  - type: sceneText
-    text: >
-      <p> Leo stava tentando di finire un giocattolo, ma senza successo.</p>
   - type: dialog
     entries:    
       - text: "Leo, cosa succede?"
@@ -438,7 +436,7 @@ actions:
         exposition: "Gli disse Mathina, ripetendo le parole del mago."        
   - type: game
     tag: lines
-    text: "Come ha fatto Mathina a finire i giocattoli? Devi solo disegnare le linee mancanti."
+    text: "Aiuta Leo a concludere i giocattoli, disegna le linee mancanti."
     cta: "Prova da solo!"
     url: /apps/geoplano_lin1/index.html 
   - type: clearImage
@@ -470,7 +468,7 @@ actions:
       yPercent: 2      
   - type: dialog
     entries:    
-      - text: "Ed è stato così facile ottenerli! Mi chiedo come mai ho avuto così tanti problemi prima che arrivasse Mathina…"
+      - text: "Ed è stato così facile ottenerli! Mi chiedo come mai ho avuto così tanti problemi prima del tuo arrivo…"
         char: Leo
         mood: surprised
       - text: "Beh Leo, la prossima volta dovresti ascoltare meglio il mago e provare prima a risolvere i compiti più facili."
