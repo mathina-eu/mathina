@@ -1,9 +1,9 @@
 # Mathematical concepts
-he purpose of this story is to underline, through the attack known as "Man in the middle", the importance of digital signature in cryptographic communication.
+The purpose of this story is to underline, through the attack known as "Man in the middle", the importance of digital signature in cryptographic communication.
 In the first chapter of the story, Angela explains to Mathina and Leo the Diffie-Hellman key exchange system, a cryptographic system that allows you to share secret information through unencrypted, and indeed publicly available, communications.
 The method is based on the so-called "One-way function", i.e. invertible functions which are very easily computable in one direction, but extremely difficult to compute in the other.
 In the story, reference is made, as an example, to the difference in difficulty perceived by Leo in primary school between multiplications and divisions, which although mathematically are one the inverse of the other, have different perceived difficulties by the students.
-The Diffie-Hellman method actually uses the discrete logarithm, i.e. the calculation of the logarithm in modular arithmetic (for a hint of what modular arithmetic is, see link repository IO3), an operation that is extremely more complex from the point of view of computational difficulty than exponentiation.
+The Diffie-Hellman method actually uses the discrete logarithm, i.e. the calculation of the logarithm in modular arithmetic (for a hint of what modular arithmetic is, see [here](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)), an operation that is extremely more complex from the point of view of computational difficulty than exponentiation.
 
 Public key cryptography, on the other hand, involves an asymmetry in the use of keys. The first, the private one, will be kept secret by the user after generation; it will only serve to decrypt received messages. The other, the public one, can be made publicly available to anyone who wants to communicate with the user and is used only to encrypt the message (this implies that whoever encrypts a message giving as recipients only other people will not be able to decrypt their own message)
 This eliminates the need for the user to communicate a different secret key to each person who wants to communicate with him: this is particularly useful in the case of "one-to-many" communications, such as in the case of banking institutions or government agencies.
@@ -24,7 +24,6 @@ The second chapter of the story shifts the focus more properly to the "Man in th
 There are three interactive experiences throughout the story, available at four different times. They are linked to key moments in the encryption and decryption process of the message and the choice of the key.
 
 All apps are programmed in Javascript and can be used on computers, tablets and smartphones. Below is a brief description of the interactive experiences with links to the explanatory videos on Mathina's YouTube channel. 
-
 
 &nbsp;
 

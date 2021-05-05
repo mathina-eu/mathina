@@ -1,21 +1,41 @@
 # Mathematical concepts
-he purpose of this story is to underline, through the attack known as "Man in the middle", the importance of digital signature in cryptographic communication.
-In the first chapter of the story, Angela explains to Mathina and Leo the Diffie-Hellman key exchange system, a cryptographic system that allows you to share secret information through unencrypted, and indeed publicly available, communications.
-The method is based on the so-called "One-way function", i.e. invertible functions which are very easily computable in one direction, but extremely difficult to compute in the other.
-In the story, reference is made, as an example, to the difference in difficulty perceived by Leo in primary school between multiplications and divisions, which although mathematically are one the inverse of the other, have different perceived difficulties by the students.
-The Diffie-Hellman method actually uses the discrete logarithm, i.e. the calculation of the logarithm in modular arithmetic (for a hint of what modular arithmetic is, see link repository IO3), an operation that is extremely more complex from the point of view of computational difficulty than exponentiation.
+From a mathematical content point of view, the purpose of this story is to introduce modular arithmetic to the reader, to examine the security of Caesar's cipher and to propose a cryptographic method similar to Caesar's cipher but much more secure: the Vigenère cipher.
 
-Public key cryptography, on the other hand, involves an asymmetry in the use of keys. The first, the private one, will be kept secret by the user after generation; it will only serve to decrypt received messages. The other, the public one, can be made publicly available to anyone who wants to communicate with the user and is used only to encrypt the message (this implies that whoever encrypts a message giving as recipients only other people will not be able to decrypt their own message)
-This eliminates the need for the user to communicate a different secret key to each person who wants to communicate with him: this is particularly useful in the case of "one-to-many" communications, such as in the case of banking institutions or government agencies.
+In the story, Mathina is already familiar with Caesar's cipher so it is advisable to first read the story ["The Talking Parrot"](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) in which it is presented. In this story, Angela guides Mathina towards the discovery of a particular way of making sums with numbers: modular arithmetic.
 
-Public key cryptography can also be used "backward" to verify a user's identity. In this case, in the message encrypted with the recipient's public key, the sender adds a signature, which will then be sent in an encrypted copy with his own private key. The recipient can then use the sender's public key to verify that the signature coincides with that contained in the message intended for him, thus confirming the sender's identity.
+Modular arithmetic "modulo n" works like the usual arithmetic but, in a sense, it only uses numbers between 0 and n-1. If we have two numbers a and b chosen between 0 and n-1, we can add, subtract or multiply them. To do this, we do the operation normally and then calculate the remainder of the integer division of the number obtained by n: this will be the result of the operation with modular arithmetic (we say, in mathematical language, that I calculate the sum, difference or the product "modulo n").
+For example, if the modulus n is equal to 12, 10 + 5 equals 3 because 10 + 5 = 15 (the result of the usual sum) and the remainder of dividing 15 by 12 is 3. Coming to terms with modular arithmetic it's the same as dealing with a clock with n hours (this analogy is also repeated in one of the Apps of this story). The sum of the example just done, made on a clock does not surprise us: if we start at 10 and add 5 hours, the hand will stop at 3!
 
-The second chapter of the story shifts the focus more properly to the "Man in the middle" attack. Mathina is kidnapped by a mysterious pirate, who succeeds in replacing her in communications with Leo and Angela. 
+
+The connection with the Caesar cipher is that if we associate the numbers from 0 to 25, in order, to the letters "A", "B", ..., "Z", applying the Caesar cipher with k jumps is equivalent to adding k modulo 25 to the numbers that correspond to the various letters. Furthermore, with this interpretation, the decryption operation is simply a subtraction modulo 25.
+
+This point of view also serves Angela to make Mathina understand that applying Caesar's cipher twice does not make the message more secure: double effort is made to obtain nothing new. In fact, using the cipher twice in a row, with key k and h respectively, is like using it only once with key k + h.
+
+A variant of Caesar's cipher, the Vigenère cipher, is also presented in the story. It is atill a substitution cipher, like the Caesar cipher but works by partitioning the letters into multiple sets, each of which is encrypted using the Caesar cipher with a different key. The key is therefore a list of s numbers: the first will tell us how to encrypt the first letter and the letters at position s + 1, 2s + 1, ... the second number the second letter and the letters at position s + 2, 2s + 2, ... and so on. In the story, the key used is composed of two numbers: in practice, the ciphertext is obtained by using the Caesar cipher on the odd letters with the key equal to the first of the two numbers and on the letters at even position with the key given by the second of the two numbers. For example, if the key were the pair of numbers (1,3), the word "MATHINA" is encrypted by "adding" 1 to the letters of odd position and "adding" 3 to the letters of even position. We then get the word "NDUKJOB".
+
+Image with the Vigenere cipher with a key with 2 numbers.
+
 
 
 # Didactical remarks
 
-"One-way functions" are the basis of several applications in modern cryptography, in particular for some key-exchange systems, such as Diffie-Hellman, and public key cryptography. Compared to the algorithm used in the real world, we opted for the use of a simplified version, in order not to introduce topics not covered in secondary school and to focus attention on the method. The mathematical skills needed to use this story include the properties of powers and the knowledge of division with remainder, which can be introduced or reviewed in the first years of upper secondary school. For a detailed study of the Diffie-Hellman algorithm, at least an introduction to the concepts of exponential and logarithm are required. 
+Some concepts used in this story are presented more widely in the story ["The Talking Parrot"](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), intended for readers in the age group 7 to 11 years. Both "The Talking Parrot" and "The Lost Treasure" are accessible to readers in the 7-14 age group. Reading "The Talking Parrot" before "The Lost Treasure" is recommended.
+
+Modular arithmetic presents many interesting didactic ideas. By varying n, different algebraic structures can be obtained and it is interesting to study some aspects related to abstract algebra. Here are some ideas that can be tackled by simply knowing the concept of quotient and remainder of the division by an integer.
+
+`*` *Look for some invertible elements with respect to the product.*
+The number 1 is a neutral element for the product: each non-zero element multiplied by 1 gives the number itself as a result. The inverse of a number a, if it exists, is that number b such that a times b (modulo n) is equal to 1. For example, if n = 7, the number 3 multiplied by 5 is 15, which modulo 7, that is, on a clock with 7 hours, it is equal to 1. This means that 5 is the inverse of 3 modulo 7!
+
+`*` *Characterization of the invertible elements with respect to the product.*
+A more in-depth analysis shows that only numbers that are coprime with n have inverse and therefore if n is prime all numbers, except 0, have inverse modulo n.
+
+`*` *The discrete logarithm modulo n*.
+This concept, defined as usual as the inverse operation of exponentiation (modulo n), is one of the typical examples of "one-way function" on which modern cryptographic methods are also based. For more information see [here](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+
+The Vigenère cipher looks like a simple variant of the Caesar cipher but it is not: the fact of not knowing in general how long the key is, constitutes a significant obstacle to the cipher attack, so much so that these ciphers were considered unassailable until last century. In reality, with statistical techniques that analyze the frequency of letters in the text, which can be used effectively by a computer, even the Vigenère cipher is nowadays not very secure.
+
+Despite this fact, a variant of the Vigenère cipher in which the key is as long as the text itself and is randomly chosen, called the Vernam cipher, is the safest cipher from a mathematical point of view: a person who wants to decode the message without knowing the key, the only possible approach is to try all the keys! In practice, this cipher is never used because it requires an exchange of a lot of information between the parties.
+
 
 &nbsp;
 
@@ -30,6 +50,7 @@ All apps are programmed in Javascript and can be used on computers, tablets and 
 ## [Game 1 - The jewel I](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 In this app, the user must try to correctly encrypt some words using the Caesar cipher with a key chosen by the computer. This experience is used to familiarize the user with Caesar's cipher and, if the user has read the story "The Talking Parrot", to provide a reference to the concepts seen previously.
+
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/bucca-3/transcripts/Script1.pdf)
 
@@ -52,7 +73,6 @@ In this experience, the Caesar cipher presented earlier is analyzed mathematical
 [Script](/stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
-
 ## [Game 4 - Caesar cipher repeated I](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 In this experience, messages are encoded and decoded using Caesar's cipher twice in succession. The coding method is exactly the same as the experiences of the story "The Talking Parrot". The only difference is that this time the operation is repeated twice.
@@ -61,6 +81,7 @@ In this experience, messages are encoded and decoded using Caesar's cipher twice
 [Script](/stories/bucca-3/transcripts/Script4.pdf)
 
 &nbsp;
+
 ## [Game 5 - Caesar cipher repeated II](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This experience concludes the analysis of history to observe that the Caesar cipher repeated 2 times in a row has nothing different from the usual Caesar cipher. Just change the key. To do this, the user is presented with two Caesar disks combined as in the previous experience and is asked to place a third Caesar disk so that the result of the encoding operation is the same.
@@ -78,6 +99,7 @@ The experience is identical to the first, with the only difference that this tim
 [Script](/stories/bucca-3/transcripts/Script6.pdf)
 
 &nbsp;
+
 ## [Game 7 - The jewel IV](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This experience is identical to the previous one, it is presented to the user only to focus on a particular letter of the text, making sure to translate it as an "E", thus experiencing exactly what Mathina and Angela are doing in the story.
@@ -86,12 +108,16 @@ This experience is identical to the previous one, it is presented to the user on
 [Script](/stories/bucca-3/transcripts/Script7.pdf)
 
 &nbsp;
+
 ## [Game 8 - Word by word](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This experience is a first step towards the Vigenère cipher. The text is encoded using two Caesar discs, one for even words and one for odd words. As it will be discovered in the story, this is not yet the right approach to actually decode the message and this experience aims to check, in person, that it is not the correct method.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/bucca-3/transcripts/Script8.pdf)
+
+&nbsp;
+
 ## [Game 9 - A new cipher](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 The concluding experience of the story is the Vigenère cipher on two letters. Using two Caesar discs, the even and odd letters are changed respectively. In this way, following the suggestions of the story, you can easily decode the message. Then there is the possibility of repeating this experience with different messages and keys.
@@ -99,5 +125,4 @@ The concluding experience of the story is the Vigenère cipher on two letters. U
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/bucca-3/transcripts/Script9.pdf)
 
-&nbsp;
 &nbsp;
