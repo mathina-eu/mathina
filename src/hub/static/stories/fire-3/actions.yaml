@@ -1,17 +1,192 @@
 actions:
+  - type: background
+    src: fire-bg1-layered.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat1
+    style: "width: 15%; top: 45%; left: 9%;"
+    #valign: bottom
+    #style: "height: 25vh"
+  - type: image
+    src: $COMMON/img/leo3.png
+    id: leo1
+    style: "width: 15%; top: 57%; left: 0%; "
+    #valign: bottom
+  - type: image
+    src: flamma2.png
+    id: fla1
+    style: "width: 20%; top: 30%; left: 50%;"
+
   - type: sceneText
     text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+      It was early in the morning when Mathina was suddenly woken up by the shoutings of Leo, who was downstairs the house calling her.
+
   - type: dialog
+    avatarAlign:
+      - leo: left
     entries:
-      - text: "I love these toys!"
-        char: mathina
+
+      - text: Mathina, Mathina! Wake up and come! Flamma is here!
+        char: leo
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
+
+  - type: sceneText
+    text: >
+      Mathina got dressed as fast as she could and went downstairs. Flamma was indeed there, and Leo was serving himself and everybody some cups of milk and cake from the breakfast that their grandmother had left prepared.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+    entries:
+
+      - char: mathina
+        text: What happens? Why are you up so early?
+
+      - char: leo
+        text: Champ, champ! A race! Champ! You will win!
+        exposition: Leo's mouth was full of cookies, so Mathina was only able to understand the words "Race" and "win”.
+
+      - char: flamma
+        text: >
+          Exciting news Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time is very different and more difficult. This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
+
+      - char: mathina
+        text: yes! of course! let's go!
+        exposition: said Mathina, now with her mouth full, eating cakes.
+
+  - type: sceneText
+    text: And the three left for Arisa.
+    # change background to castle
+
+  - type: sceneText
+    text: When they arrived, Flamma described how the race worked and the animals they were going to find.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: flamma
+        text: The phoenixes are not like unidragons, that can fly backward, forwards, or stop in the air.  Phoenixes are like eagles, they can only fly forwards.
+        mood: happy
+
+      - char: flamma
+        text: They orient themselves by looking at the ground, so they always fly forwards with the same speed relative to the ground. In other words, if you see their shadow right below the phoenix, that shadow moves forward at a constant speed, regardless of whether the phoenix flies rising, descending, or steady at the same height.
+        mood: happy
+
+      - char: flamma
+        text: Like the unidragons, the phoenixes are very intelligent and can be trained so that we can communicate with them and tell them where to fly.
+        mood: happy
+
+      - char: mathina
+        text: If they always move with the same speed forwards, how is that a race? They will always arrive at the same time to the finish line.
+
+      - char: flamma
+        text: You are right, they always move at the same speed forward, but this race is not about speed, it is about avoiding the obstacles that the wizards will put in the sky.
+
+      - char: mathina
+        text: Obstacles?
+
+      - char: flamma
+        text: Yes, you will see, once we get to the castle.
+
+  - type: sceneText
+    text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. High mountains raised behind the castle, covered by snow, and at the front, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were on the ground, with some trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
+
+  - type: sceneText
+    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man next to a fantastic phoenix. The animal was like an enormous eagle, with bright red and yellow feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in violet and green feathers that were sparking quietly, releasing a multi-colored smoke.
+
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: flamma
+        text: Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
+
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+    text: "App 3-1"
+    url:
+
+  - type: game
+    text: "App 3-2"
+    url:
+
+  - type: sceneText
+    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix lying in the ground. It had bright blue and green feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: leo
+        text: What happened to this phoenix?
+
+      - char: flamma
+        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
+
+      - char: leo
+        text: But she can fly, right?
+
+      - char: flamma
+        text: Yes, but how would you tell her what altitude you want her to be at? - challenged Flamma.
+
+      - char: leo
+        text: Well, I can tell her if she should go upwards or downwards, she can do that.
+
+      - char: flamma
+        text: Humm, nobody has tried, but you might be right. Phoenixes are extremely intelligent, if you train her to understand your “upwards and downwards” instructions, she will learn quickly. But you will need to tell her how much to ascend or descend, at any moment she is flying.
+
+      - char: leo
+        text: It will be easy, it is like the unidragons, you tell them a direction and they follow it.
+
+      - char: flamma
+        text: Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
+
+  - type: game
+    text: "App 3-3"
+    url:
+
+  - type: sceneText
+    text: >
+      Leo had a big success flying Liz, Flamma was impressed. Mathina was also happy that Leo had found a new way to lead the phoenix, and she had an idea:
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: mathina
+        text: Leo, you learned a way to tell the phoenix when to rise and descend. I learned a way to tell the phoenix a height at any flown distance. Why don’t we mix the two things together?
+
+      - char: leo
+        text: What do you mean, Mathina?
+
+      - char: mathina
+        text: I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
+        exposition: Leo was a bit confused now, but Flamma intervened.
+
+      - char: flamma
+        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+
+  - type: game
+    text: "App 3-4"
+    url:
+
+  - type: sceneText
+    text: >
+      Mathina and Leo spent the whole day training and playing with the phoenixes. They succeeded to train Liz, and all the wizards in the jury and the expert firebird trainers admired them for doing so and awarded them the Originality prize for the best trainers. They finished the day having a great dinner in a feast organized in the biggest room in the castle.
