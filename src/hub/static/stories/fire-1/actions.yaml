@@ -36,6 +36,12 @@ actions:
     id: fla1
     style: "width: 20%; top: 45%; left: 50%;" 
     parallax: front1
+    
+  - type: image
+    src: unidragon1.png
+    id: uni1
+    style: "width: 0%; top: 5%; left: 90%;" 
+    parallax: mid2 
 
   - type: sceneText
     text: >
@@ -137,19 +143,21 @@ actions:
     style: "width: 20%; top: 33%; left: 53%;" 
     parallax: front3 
     
-  - type: image
-    src: unidragon1.png
-    id: uni1
-    style: "width: 10%; top: 5%; left: 90%;" 
-    parallax: front3 
+  # - type: image
+    # src: unidragon1.png
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;" 
+    # parallax: mid2 
 
 
-  # - type: animation
-    # target: uni1
-    # vars:
-       # duration: 1
-       # width: 50% 
-       # ease: power3.out
+  - type: animation
+    target: uni1
+    vars:
+        duration: 3
+        xPercent: -130
+        yPercent: 40
+        width: 25%
+        ease: power1.out
 
 
   - type: sceneText
