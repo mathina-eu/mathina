@@ -3,7 +3,7 @@ From a mathematical content point of view, the purpose of this story is to intro
 
 It is a simple mono-alphabetic substitution cipher. This means that each letter of the alphabet is associated with a letter of the same alphabet in a unique way and so that this correspondence associates different letters to different letters.
 
-![Example of a substitution cipher](/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
+![Example of a substitution cipher] (/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
 
 The way in which the letters are associated one with another one in a substitution cipher is the key of the cipher, so that one encrypts a message simply by replacing each letter with the corresponding one according to the key. The decoding method is the same, but the correspondence is followed in reverse. For example, with the key from the previous image, the word "XXXXXXXX" is encrypted in the word "YYYYYYYYY".
 
@@ -12,17 +12,17 @@ Image: example of an encryption and decryption with the example key above
 
 In its original form, the Caesar cipher is, among the substitution ciphers, very simple: the key in fact consists in associating to each letter the third letter from it in the alphabet: the letter "A" is associated with the letter "D",  "B" to "E" and so on ... It can be generalized by using, instead of 3 as in the original, a different number. To know the key we just need to know the number of "jumps" we have to do. If we are looking for the letter we had to associate to the letter "Z", we will have to start over from the beginning of the alphabet. For example, the letter "Z", with the standard Caesar cipher, is associated with the letter "C".
 
-![The original Caesar cipher](/stories/bucca-2/img/_align-center_/caesarkey.png=225x110)
+![The original Caesar cipher](/stories/bucca-2/img/caesarkey.png =225x110)
 
 For this reason, to use a Caesar cipher quickly, it is often convenient to represent the letters of the alphabet not on a line, but in a circle so that in order to jump from one letter to another, it is never necessary to start from the beginning: the letters follow each other without interruptions. 
 
-![The alphabet placed in a circle for use with Caesar cipher](/stories/bucca-2/img/_align-center_/caesarcircle.png)
+![The alphabet placed in a circle for use with Caesar cipher](/stories/bucca-2/img/_align-center_/caesarcircle.png =225x110)
 
 Often, in the literature, one speaks of Caesar cipher even when the jumps are not 3 but an arbitrarily chosen number (the cipher key). In the story "The Talking Parrot", for example, Mathina meets a parrot that expresses itself in a particular language: the parrot answers in code using the Caesar cipher with one jump. When asked "Do you want cookies?", the animal replies "Z-F-T!". The letter following "Y" is "Z" while the ones following the "E" and "S" are "F" and "T" respectively: the gluttonous bird promptly answers "YES!" to Mathina's question!
  
 In the story, Mathina receives as a gift a jewel with two concentric circles, engraved with the letters of the alphabet on each circle. This allows her to easily encrypt and decrypt messages with the Caesar cipher. To encrypt just search for a letter on the internal drive and choose the letter in the same position on the external drive. To decipher the same thing, but by reading the letters from the outside to the inside.
 
-![The Caesar jewel used in the story](/stories/bucca-2/img/_align-center_/caesarjewel.jpg)
+![The Caesar jewel used in the story](/stories/bucca-2/img/_align-center_/caesarjewel.png =225x110)
 
 In the two interactive experiences of the story, readers are involved respectively in the encryption process, known the key (LINK to repository IO3) and decryption process, without knowing the key (LINK to repository IO3).
 
