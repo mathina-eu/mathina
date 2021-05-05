@@ -85,6 +85,7 @@ import {
   GameAction,
   BackgroundAction,
   ImageAction,
+  AnimationAction,
 } from '~/components/story/action-types';
 import { preloadImage } from '~/utils';
 
@@ -180,7 +181,7 @@ export default {
 
     this.$store.dispatch('setBreadcrumbs', [
       { path: `/world/`, text: 'World Map' },
-      { path: `/story/${this.story?.slug}/`, text: this.story?.title },
+      { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
     ]);
 
     document.addEventListener('keydown', this.keydownListener);
@@ -189,9 +190,15 @@ export default {
     // If there's an action link (eg url query has ?actionLink=tagName), execute up to action with tag: tagName
     const tag = this.$route.query['actionLink'];
     if (tag) {
-      while (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
-        this.next();
-      }
+      const executor = () => {
+        this.$nextTick(() => {
+          if (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
+            this.next();
+            executor();
+          }
+        });
+      };
+      executor();
     }
   },
   destroyed() {
@@ -252,7 +259,14 @@ export default {
       }
 
       this.currentActionId--;
-      this.executeCurrentAction();
+
+      if (this.action instanceof AnimationAction) {
+        this.$nextTick(() => {
+          this.executeCurrentAction();
+        });
+      } else {
+        this.executeCurrentAction();
+      }
     },
     next() {
       this.activeDirection = NEXT;
@@ -267,7 +281,14 @@ export default {
         return false;
       }
       this.currentActionId++;
-      this.executeCurrentAction();
+
+      if (this.action instanceof AnimationAction) {
+        this.$nextTick(() => {
+          this.executeCurrentAction();
+        });
+      } else {
+        this.executeCurrentAction();
+      }
     },
     autoProgress() {
       if (this.activeDirection === NEXT) {

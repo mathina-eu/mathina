@@ -28,6 +28,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
+            class="game-cta"
             color="primary"
             dark
             v-bind="attrs"
@@ -41,13 +42,6 @@
             dark
             color="primary"
           >
-            <v-btn
-              icon
-              dark
-              @click="showGameDialog=false; $emit('lastGameFinished');"
-            >
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
             <img
               v-if="toolbarImgPath"
               class="mr-4"
@@ -59,11 +53,11 @@
             <v-spacer />
             <v-toolbar-items>
               <v-btn
+                icon
                 dark
-                text
                 @click="showGameDialog=false; $emit('lastGameFinished');"
               >
-                Finish
+                <v-icon>mdi-close</v-icon>
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
@@ -146,5 +140,16 @@ export default {
   width: 100%;
   height: calc(100% - 64px);
   overflow: hidden;
+}
+
+.game-cta {
+  display: block !important;
+  max-width: 100%;
+  height: auto !important;
+
+  >>> .v-btn__content {
+    white-space: normal;
+    padding: 1rem;
+  }
 }
 </style>
