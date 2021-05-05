@@ -16,7 +16,7 @@
         <v-card-title
           class="headline"
           style="text-transform: capitalize;"
-          v-text="displayName"
+          v-text="charName ? charName : $t(`chars.${displayName}`)"
         />
         <v-card-text
           class="text-body-1"
@@ -86,12 +86,11 @@ export default {
         return this.charName;
       }
       if (this.char === GENERIC_CHAR) {
-        return 'Sasha';
+        return 'jane';
       }
       return this.char;
     },
     alignment() {
-      console.log('align', this.avatarAlign);
       if (this.avatarAlign && this.avatarAlign[this.char]) {
         return this.avatarAlign[this.char];
       }

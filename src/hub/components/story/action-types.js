@@ -255,7 +255,7 @@ export class ClearImageAction extends Action {
     } else {
       const img = context.images.find(img => img.id === this.id);
       let el = document.getElementById(this.id);
-      img.style = el.style.cssText;
+      img.style = el?.style?.cssText;
       this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }

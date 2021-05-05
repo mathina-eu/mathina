@@ -15,5 +15,11 @@ export default {
     language: 'Jezik',
     'select-age': 'Izberi starost',
     'assist-mode': 'Asistent'
-  }
+  },
+  chars: {
+    mathina: 'Mathina',
+    wizard: 'Wizard',
+    leo: 'Leo',
+    jane: 'Jane',
+  },
 };
