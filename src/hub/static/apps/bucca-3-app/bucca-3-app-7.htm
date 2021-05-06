@@ -10,6 +10,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+
 #Partenza {
 	position:absolute;
 	margin:auto;
@@ -18,8 +19,8 @@ html {
 	width:25%;
 	height:72%;
 	z-index:2;
-	  font-size: 32px;
-	  	border:solid;
+	font-size: 32px;
+	border:solid;
 	border-color:#684213;
 	font-size: 32px;
 	background: #FFFBEB;
@@ -35,7 +36,7 @@ html {
 	height:72%;
 	z-index:2;
 	font-size: 32px;
-		border:solid;
+	border:solid;
 	border-color:#684213;
 	font-size: 32px;
 	background: #FFFBEB;
@@ -52,6 +53,7 @@ html {
 	padding:10px;
 	text-align:center;
 }
+
 #DivCanvas {
 	position:absolute;
 	top:0px;
@@ -90,6 +92,7 @@ text-align: center;
     top: 1%;
     width: 98%;
     height: 58%;
+    opacity: 0.8;
 }
 
 #failMessage {
@@ -113,7 +116,7 @@ text-align: center;
     top: 1%;
     width: 98%;
     height: 58%;
-
+    opacity: 0.8;
 }
 
 .button {
@@ -130,11 +133,6 @@ text-align: center;
 }
 </style>
 <script>
-function Link() {
-	location.reload();
-
-}
-
 Number.prototype.mod = function(n) {
     return ((this%n)+n)%n;
 };
@@ -155,10 +153,7 @@ ParolaOriginale=[
 "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
 "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
 ];
-Traduzioni=[
-[["Trad1"],"Try to decipher this sentence, without knowing the key.",
-"Prova a decifrare questa frase, senza conoscere la chiave "]
-];
+Traduzioni=[];
 
 function gup( name, url ) {
     if (!url) url = location.href;
@@ -179,13 +174,12 @@ function Traduci(Lang) {
 }
 
 function Init() {	
-
-Lingua=Number(gup('l', document.location.search));
+	Lingua=Number(gup('l', document.location.search));
 	
 	if (!isNumeric(Lingua)) Lingua=1;
 	if (Lingua==0) Lingua=1;
 	Traduci(Lingua);
-	
+
 	window.CanvasMathina=document.getElementById('CanvasMathina');
 	window.ctxMathina = CanvasMathina.getContext('2d');
 
@@ -252,8 +246,10 @@ function Reset() {
 	CosaStoMuovendo=0;
 	CaesarShift=0;
 	
-	
+}
 
+function Highlight(Text,N) {
+	return Text.substring(0,N) + "<span style='background-color:yellow;'>" + Text.substring(N,N+1) + "</span>" + Text.substring(N+1);
 }
 
 function LoadGraphics() {
@@ -570,7 +566,8 @@ function Anima() {
 		var Angolo2=AngPosizione2;
 		if (CosaStoMuovendo==1) Angolo1+=AngMouseFinale-AngMouseIniziale;
 		if (CosaStoMuovendo==2) Angolo2+=AngMouseFinale-AngMouseIniziale;
-		document.getElementById("parolatradotta").innerHTML=Cesare(ParolaOriginale[Lingua],Alphabet[Lingua],Math.round(Alphabet[Lingua].length*(Angolo2-Angolo1)/(2*Math.PI)));
+		var Nuova=Cesare(ParolaOriginale[Lingua],Alphabet[Lingua],Math.round(Alphabet[Lingua].length*(Angolo2-Angolo1)/(2*Math.PI)));
+		document.getElementById("parolatradotta").innerHTML=Highlight(Nuova,7);
 		Draw(CentroCesare[0],CentroCesare[1],Angolo1,Angolo2,Scale);
     }
 }
@@ -641,8 +638,8 @@ function GenerateEx() {
 	Arr=shuffle([1,2,3,4]);
 	CorrectAnswer=Math.floor(Math.random()*4+1);
 	ParolaTradotta=Cesare(ParolaOriginale[Lingua],Alphabet[Lingua],Math.floor(Math.random()*Alphabet[Lingua].length));
-	document.getElementById("paroladatradurre").innerHTML=ParolaOriginale[Lingua];
-	document.getElementById("parolatradotta").innerHTML=ParolaOriginale[Lingua];
+	document.getElementById("paroladatradurre").innerHTML=Highlight(ParolaOriginale[Lingua],7);
+	document.getElementById("parolatradotta").innerHTML=Highlight(ParolaOriginale[Lingua],7);
 
 
 }
@@ -651,6 +648,11 @@ function Check(N) {
 	if (CorrectAnswer==N) Finisci();
 	else Sconfitta();
 
+
+}
+
+function Link() {
+	location.reload();
 
 }
 </script>
