@@ -1,0 +1,443 @@
+<html>
+<head>
+<style>
+#DivCanvas {
+	position:absolute;
+	top:0%;
+	left:0%;
+	width:100%;
+	height:100%;
+	
+	z-index:1;
+}
+
+#CanvasMathina {
+	position:relative;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	z-index:2;
+	visibility:visible;
+}
+
+#successMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center;
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 58%;
+}
+
+#failMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center;
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 58%;
+}
+
+html { 
+  background: url(bg_ew2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+</style>
+<script>
+
+function LoadGraphics() {
+	NumeroCaricati=0;
+	Img1 = new Image();
+	Img1.src = "./im1.png";
+	Img1.onload = function() {NumeroCaricati++;}
+	
+	
+	Img2 = new Image();
+	Img2.src = "./im2.png";
+	Img2.onload = function() {NumeroCaricati++;}
+
+}
+
+function CheckCaricamento() {
+	if (NumeroCaricati==2) {
+		Resize();
+	} else {
+		setTimeout(function(){ 	CheckCaricamento();}, 10);
+	}
+}
+
+
+function Init() {	
+	window.CanvasMathina=document.getElementById('CanvasMathina');
+	window.ctxMathina = CanvasMathina.getContext('2d');
+
+	LoadGraphics();
+	setTimeout(function(){ 	CheckCaricamento();}, 10);
+
+	DivCanvas.addEventListener('mousedown', Down, false);
+	DivCanvas.addEventListener('mouseup', Up, false);
+	DivCanvas.addEventListener('mouseout', Up, false);
+	DivCanvas.addEventListener('mousemove', Move, false);
+	
+	DivCanvas.addEventListener('touchstart', Down, false);
+	DivCanvas.addEventListener('touchend', Up, false);
+	DivCanvas.addEventListener('touchmove', Move, false);
+	
+	window.addEventListener('resize',Resize,false);
+
+
+}
+
+function GetMouseCoordinates(ev,T) {
+	if (ev.changedTouches  != null) {
+		touchobject=ev.changedTouches[0];
+		var mousexMov = touchobject.clientX-T.offsetLeft;
+		var mouseyMov = touchobject.clientY-T.offsetTop;
+	} else {
+		var mousexMov = ev.clientX-T.offsetLeft;
+		var mouseyMov = ev.clientY-T.offsetTop;
+	}
+
+	return [mousexMov,mouseyMov];
+}
+
+function GetNearFigure(Coord) {
+	CV=Math.floor((Coord[1]-Inizio[1]+StepVer/2)/StepVer);
+	CH=(Math.floor((Coord[0]-Inizio[0]+StepHor/2-CV*StepHor/2)/StepHor));
+	return [CV,CH];
+
+}
+
+function GetNearLattice(Coord) {
+	var Near=[];
+	var ML=Setup[0].length-1;
+	var MD=Setup.length-1;
+	if (Coord[1]>0) Near.push([Coord[0],Coord[1]-1]);
+	if (Coord[1]<ML) Near.push([Coord[0],Coord[1]+1]);
+	
+	if (Coord[0]>0) Near.push([Coord[0]-1,Coord[1]]);
+	if (Coord[0]>0 && Coord[1]<ML) Near.push([Coord[0]-1,Coord[1]+1]);
+
+	if (Coord[0]<MD && Coord[1]>0) Near.push([Coord[0]+1,Coord[1]-1]);
+	if (Coord[0]<MD && Coord[1]<=ML) Near.push([Coord[0]+1,Coord[1]]);
+	return Near;
+}
+
+function DisegnaVicini(Ctx,Pos) {
+	Vicini=GetNearLattice(Pos);
+	for (let i=0;i<Vicini.length;i++) {
+		DisegnaCerchio(Ctx,Vicini[i]);
+	}
+
+}
+
+function CercaPos(Chi,Dove) {
+	for (let i=0;i<Dove.length;i++) {
+		if (Dove[i][0]==Chi[0] && Dove[i][1]==Chi[1]) return i;
+	}
+	return -1;
+}
+
+
+
+function CheckMossaValida(Prima,Dopo) {
+	PrimaText=Setup[Prima[0]][Prima[1]];
+	DopoText=Setup[Dopo[0]][Dopo[1]];
+	for (let i=0;i<PrimaText.length;i++) {
+		if (DopoText.indexOf(PrimaText[i])>-1) return true;
+	}
+	return false;
+}
+
+function Down(ev) {
+	ev.preventDefault();
+	MousePos=GetMouseCoordinates(ev,this);
+	
+	NuovaPos=GetNearFigure(MousePos);
+	MossaValida=CercaPos(NuovaPos,Vicini);
+	
+	if (MossaValida>-1) {
+		if (CheckMossaValida(PosAttuale,NuovaPos)) {
+			DisegnaSfondo();
+			DisegnaPG(ctxMathina,NuovaPos);
+			DisegnaVicini(ctxMathina,NuovaPos);
+			PosAttuale=NuovaPos;
+			
+			if (PosAttuale[0]==PosVittoria[0] && PosAttuale[1]==PosVittoria[1]) {
+				Finisci();
+			}
+			
+		} else {
+			Sconfitta();
+		
+		}
+	
+	}
+	
+}
+
+function Link() {
+	location.reload();
+
+}
+
+function Up(ev) {
+	ev.preventDefault();
+}
+
+function Move(ev) {
+	ev.preventDefault();
+}
+
+
+function Resize() {
+	var doc = document, w = window;
+    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?doc.documentElement: doc.body;
+    
+    var width = docEl.clientWidth;
+    var height = docEl.clientHeight;
+    
+    // mobile zoomed in?
+    if ( w.innerWidth && width > w.innerWidth ) {
+        width = w.innerWidth;
+        height = w.innerHeight;
+    }
+
+	window.dimension = [width,height];
+	
+	CanvasMathina.width = dimension[0]*100/100;
+	CanvasMathina.height = dimension[1]*100/100;
+	
+	StepHor=Math.floor(CanvasMathina.width/11);
+	StepVer=Math.floor(CanvasMathina.height/5);
+	SizeShape=Math.floor(StepHor/2);
+	Reset();
+	DisegnaSfondo();
+	
+	DisegnaPG(ctxMathina,PosAttuale);
+	DisegnaVicini(ctxMathina,PosAttuale);
+}
+
+function Reset() {
+	Setup=[
+	['sy','tg','cr','sr','tr','cg','sb','cr'],
+    ['ty','sr','sb','cb','sg','sb','tr','tb'],
+    ['cr','cb','tr','sy','cr','sy','tg','tb'],
+    ['tr','tb','cr','tr','cb','cg','cy','cr']
+	];
+	
+	
+	colorMap = {
+      'g': 'rgb(0,200,0)',
+      'y': 'rgb(255,255,51)',
+      'r': 'rgb(200,0,0)',
+      'b': 'rgb(0,0,200)'
+    };
+
+	PosAttuale=[2,0];
+	PosVittoria=[1,7];
+	Inizio=[StepHor,StepVer];
+	
+
+}
+
+
+
+function DisegnaPoligono(Ctx,Centro,Dimensione,Colore,Tipo) {
+		if (Tipo=="s") {
+			Ctx.beginPath();
+			Ctx.lineWidth  = 2;
+			Ctx.strokeStyle = "rgb(255,255,255)";
+			Ctx.fillStyle = Colore;
+			Ctx.moveTo(Centro[0]-Dimensione/2,Centro[1]-Dimensione/2);
+			Ctx.lineTo(Centro[0]+Dimensione/2,Centro[1]-Dimensione/2);
+			Ctx.lineTo(Centro[0]+Dimensione/2,Centro[1]+Dimensione/2);
+			Ctx.lineTo(Centro[0]-Dimensione/2,Centro[1]+Dimensione/2);
+			Ctx.lineTo(Centro[0]-Dimensione/2,Centro[1]-Dimensione/2);
+			Ctx.fill();
+			Ctx.stroke();
+		}
+		
+		if (Tipo=="c") {
+			Ctx.beginPath();
+			Ctx.lineWidth  = 2;
+			Ctx.strokeStyle = "rgb(255,255,255)";
+			Ctx.fillStyle = Colore;
+			Ctx.arc(Centro[0],Centro[1],Dimensione/2,0,Math.PI*2,true);
+			Ctx.fill();
+			Ctx.stroke();
+		}
+
+		if (Tipo=="t") {
+			let B=1.73205080757*Dimensione/6;
+			Ctx.beginPath();
+			Ctx.fillStyle = Colore;
+			Ctx.lineWidth  = 2;
+			Ctx.strokeStyle = "rgb(255,255,255)";
+			Ctx.moveTo(Centro[0]-Dimensione/2,Centro[1]+B);
+			Ctx.lineTo(Centro[0],Centro[1]-2*B);
+			Ctx.lineTo(Centro[0]+Dimensione/2,Centro[1]+B);
+			Ctx.lineTo(Centro[0]-Dimensione/2,Centro[1]+B);
+			Ctx.fill();
+			Ctx.stroke();
+		}
+
+
+}
+
+function TiraLinea(Ctx,A,B) {
+	Ctx.beginPath();
+	Ctx.lineWidth  = 4;
+	Ctx.strokeStyle = "rgb(50,50,50)";
+	Ctx.moveTo(A[0],A[1]);
+	Ctx.lineTo(B[0],B[1]);
+	Ctx.stroke();
+}
+
+function DisegnaPG(Ctx,P) {
+return;
+	PP=SetupPos[P[0]][P[1]];
+	Img1_dim=[Img1.width,Img1.height];
+	Scale=2.5;
+	Ctx.drawImage(Img1, PP[0]-Math.floor(Img1_dim[0]/(2*Scale)), PP[1]-Math.floor(Img1_dim[1]/(2*Scale)), Img1_dim[0]/Scale, Img1_dim[1]/Scale);
+	
+	/*
+	Ctx.beginPath();
+	Ctx.strokeStyle = "rgb(160,255,50)";
+	Ctx.arc(PP[0],PP[1],50,0,Math.PI*2,true);
+	Ctx.stroke();
+	*/
+}
+
+
+function DisegnaFine(Ctx,PosFine) {
+return;
+	PP2=SetupPos[PosFine[0]][PosFine[1]];
+	Img2_dim=[Img2.width,Img2.height];
+	Scale=8;
+	Ctx.drawImage(Img2, PP2[0]-Math.floor(Img2_dim[0]/(2*Scale)), PP2[1]-Math.floor(Img2_dim[1]/(2*Scale)), Img2_dim[0]/Scale, Img2_dim[1]/Scale);
+	
+	/*
+	Ctx.beginPath();
+	Ctx.strokeStyle = "rgb(160,255,50)";
+	Ctx.arc(PP[0],PP[1],50,0,Math.PI*2,true);
+	Ctx.stroke();
+	*/
+}
+
+
+function DisegnaCerchio(Ctx,P) {
+return;
+	PP=SetupPos[P[0]][P[1]];
+	Ctx.beginPath();
+	Ctx.strokeStyle = "rgb(255,150,0)";
+	Ctx.lineWidth  = 4;
+	Ctx.arc(PP[0],PP[1],50,0,Math.PI*2,true);
+	Ctx.stroke();
+}
+
+
+function DisegnaSfondo() {
+
+	ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
+	
+	SetupPos=[];
+	for (let i=0;i<Setup.length;i++) {
+		var PosTemp=[];
+		for (let j=0;j<Setup[i].length;j++) {
+			Pos=[i*StepHor/2+Inizio[0]+j*StepHor,Inizio[1]+i*StepVer];
+			PosTemp.push(Pos);
+			PosRx=[i*StepHor/2+Inizio[0]+(j+1)*StepHor,Inizio[1]+i*StepVer];
+			PosDw=[(i+1)*StepHor/2+Inizio[0]+j*StepHor,Inizio[1]+(i+1)*StepVer];
+			PosDl=[(i+1)*StepHor/2+Inizio[0]+(j-1)*StepHor,Inizio[1]+(i+1)*StepVer];
+			if (j<Setup[i].length-1) TiraLinea(ctxMathina,Pos,PosRx);
+			if (i<Setup.length-1) TiraLinea(ctxMathina,Pos,PosDw);
+			if (j>0 && i<Setup.length-1) TiraLinea(ctxMathina,Pos,PosDl);
+
+			
+			
+			DisegnaPoligono(ctxMathina,Pos,SizeShape,colorMap[Setup[i][j].charAt(1)],Setup[i][j].charAt(0));
+		}
+		SetupPos.push(PosTemp);
+	}
+
+	DisegnaFine(ctxMathina,PosVittoria);
+
+}
+
+function Finisci() {
+document.getElementById("successMessage").style.display="block";
+
+}
+
+function Sconfitta() {
+document.getElementById("failMessage").style.display="block";
+
+}
+
+
+
+</script>
+</head>
+<body onload="Init()">
+<div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+<div id="successMessage" style="display:none">
+    <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="img/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
+  
+<div id="failMessage" style="display:none">
+    <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+ 
+	   
+	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
+</body>
+</html>
