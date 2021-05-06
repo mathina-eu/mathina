@@ -32,7 +32,7 @@ actions:
 
   - type: image
     src: mathinaleo.png
-    id: mat1
+    id: matleo
     style: "width: 15%; top: 30%; left: 1%;"  
     parallax: mid2
     #valign: bottom
@@ -44,7 +44,7 @@ actions:
     #valign: bottom
   - type: image
     src: flamma2.png
-    id: fla1
+    id: fla
     style: "width: 20%; top: 45%; left: 50%;" 
     parallax: front1
     
@@ -61,7 +61,7 @@ actions:
       waving her hands towards the sky and uttering incomprehensible words.  </p>
 
   - type: animation
-    target: mat1
+    target: matleo
     vars:
         duration: 5
         xPercent: 160
@@ -80,17 +80,17 @@ actions:
       her arm to the floor. </p>
       
   - type: clearImage
-    id: mat1
+    id: matleo
     
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
-    id: mat2
+    id: mat
     style: "width: 8%; top: 50%; left: 45%;"  
     parallax: mid2
     
   - type: image
     src: $COMMON/img/characters/leo/leo1.png
-    id: leo2
+    id: leo
     style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"  
     parallax: mid2
 
@@ -98,7 +98,7 @@ actions:
     text: >
       <p>Mathina, who wasn’t shy at all, approached the woman.</p>
   - type: animation
-    target: fla1
+    target: fla
     vars:
         duration: 2
         #transform: scaleX(-1)
@@ -136,11 +136,11 @@ actions:
         mood: sad
         
   - type: clearImage
-    id: leo2
+    id: leo
     
   - type: image
     src: $COMMON/img/characters/leo/leo4.png
-    id: leo2
+    id: leo
     style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"  
     parallax: mid2
     
@@ -158,11 +158,11 @@ actions:
         mood: happy
         
   - type: clearImage
-    id: mat2  
+    id: mat
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina4.png
-    id: mat3
+    id: mat
     style: "width: 7.5%; top: 52%; left: 46%"  
     parallax: mid2    
      
@@ -197,31 +197,40 @@ actions:
         mood: sad
 
   - type: clearImage
-    id: fla1
+    id: fla
     
   - type: clearImage
-    id: leo2
+    id: leo
     
   - type: image
     src: $COMMON/img/characters/leo/leo3.png
-    id: leo2
+    id: leo
     style: "width: 8%; top: 50%; left: 38%"  
+    parallax: mid2
+    
+  - type: clearImage
+    id: mat      
+        
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"  
     parallax: mid2
     
   - type: image
     src: flamma1.png
-    id: fla2
+    id: fla
     style: "width: 20%; top: 33%; left: 53%;" 
     parallax: front3 
     
   - type: image
     src: unidragon.gif
-    id: uni1
+    id: uni
     style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)" 
     parallax: mid2 
 
   - type: animation
-    target: uni1
+    target: uni
     vars: 
         duration: 3
         width: 25%
@@ -230,7 +239,7 @@ actions:
 
         
   - type: animation
-    target: fla2
+    target: fla
     vars: 
         duration: 1
         transform: rotateY(180deg)
@@ -238,7 +247,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: mat3
+    target: mat
     vars: 
         duration: 1
         transform: rotateY(180deg)
@@ -246,7 +255,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: leo2
+    target: leo
     vars: 
         duration: 1
         transform: rotateY(180deg)
@@ -254,7 +263,7 @@ actions:
         ease: power1.out
 
   - type: animation
-    target: uni1
+    target: uni
     vars: 
         duration: 3
         delay: 3
@@ -264,7 +273,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: fla2
+    target: fla
     vars: 
         duration: 3
         transform: rotateY(0deg)
@@ -272,7 +281,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: mat3
+    target: mat
     vars: 
         duration: 1
         transform: rotateY(0deg)
@@ -280,7 +289,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: leo2
+    target: leo
     vars: 
         duration: 1
         transform: rotateY(0deg)
@@ -288,7 +297,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: uni1
+    target: uni
     vars: 
         duration: 4
         delay: 6
@@ -301,7 +310,7 @@ actions:
         ease: power1.out
         
   - type: animation
-    target: uni1
+    target: uni
     vars: 
         duration: 4
         delay: 10
@@ -321,6 +330,15 @@ actions:
         The dragon moved gracefully and responded to Flamma as she moved her
         arm and the stick.
         
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"   
+    parallax: mid2
+        
   - type: dialog
     avatarAlign:
       flamma: right
@@ -334,6 +352,35 @@ actions:
         exposition: he added, although he was a bit nervous of the animal
           getting closer.
         mood: sad
+ 
+  - type: clearImage
+    id: fla
+        
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)" 
+    parallax: front1    
+  
+  - type: animation
+    target: uni
+    vars: 
+        duration: 20
+        delay: 3
+        transform: rotateY(180deg)
+        xPercent: -65
+        yPercent: -10
+        #xPercent: -530
+        #yPercent: -20
+        width: 30%
+        ease: power1.out  
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
       - text: This is a unidragon. Unidragons are very similar to dragons,
           but they are born with a horn on their heads. Like milk teeth in
           children, that horn is fragile and eventually, it falls off their head
@@ -350,6 +397,22 @@ actions:
           unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
         mood: sad
+        
+  # - type: clearImage
+    # id: mat      
+        
+  # - type: image
+    # src: $COMMON/img/characters/mathina/mathina5.png
+    # id: mat
+    # style: "width: 8%; top: 50%; left: 45%;"  
+    # parallax: mid2
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
       - text: Yes! Yes!
         char: mathina
         mood: sad
@@ -362,7 +425,7 @@ actions:
         mood: sad
 
   - type: game
-    text: "Fly the unidragon 1"
+    text: "Game: Fly the unidragon 1"
     url: /apps/imaginary-tests/fire-4-1/index.html
 
   - type: dialog
@@ -381,7 +444,7 @@ actions:
         mood: sad
 
   - type: game
-    text: "Fly the unidragon 2"
+    text: "Game: Fly the unidragon 2"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: dialog
@@ -398,7 +461,7 @@ actions:
         mood: sad
 
   - type: game
-    text: "Fly the unidragon 3"
+    text: "Game: Fly the unidragon 3"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
@@ -437,10 +500,10 @@ actions:
       - text: Then it is set. But you will have to practise a lot.
           I will let you train with this unidragon more and once you are
           ready we will go to the festival.
-    char: flamma
-    mood: happy
+        char: flamma
+        mood: happy
 
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
+    text: "Game: unidragon training playground"
+    cta: "Practise!"
     url: /apps/example-app/
