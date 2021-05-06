@@ -20,21 +20,7 @@
 	visibility:visible;
 }
 
-#DivFinish {
 
-	opacity:0.9;
-	font-size:70px;
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:6;
-	background-color:#aaaaff;
-	color:black;
-	visibility:hidden;
-	text-align:center;
-}
 
 html { 
   background: url(bg_ew3.jpg) no-repeat center center fixed; 
@@ -46,9 +32,37 @@ html {
   overflow: hidden;
 }
 
+#successMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center;
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 58%;
+}
+
 </style>
 <script src="generazione.js"></script>
 <script>
+  function Link() {
+	location.reload();
+
+}
+
 function LoadGraphics(FileName) {
 	NumeroCaricati=0;
 	police_hat = new Image();
@@ -255,7 +269,7 @@ function DisegnaSegmenti() {
 function Finale() {
 	if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
 	console.log("Finale");
-	document.getElementById('DivFinish').style.visibility="visible";
+	document.getElementById("successMessage").style.display="block";
 
 }
 
@@ -361,7 +375,17 @@ function Anima() {
 </head>
 <body onload="Init()">
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="DivFinish"><p>Good Job!</p>
-<p onclick="location.reload();">Try again</p></div>
+<div id="successMessage" style="display:none">
+    <img src="happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
 </body>
 </html>
