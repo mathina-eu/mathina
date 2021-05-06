@@ -1,0 +1,363 @@
+<html>
+<head>
+	<link href="css/jquery-ui.min.css" rel="stylesheet">
+	<script src="js/jquery-latest-slim.min.js"></script>
+	<script src="js/jquery-ui-custom.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/keyboard.css" rel="stylesheet">
+	<script src="js/jquery.keyboard.js"></script>
+
+	<style type="text/css">
+.tg {
+	border-collapse:collapse;
+	border-color:#9ABAD9;
+	border-spacing:0;
+	}
+.tg td
+{background-color:#EBF5FF;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#444;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal; border-color:#000000;font-size:30px;font-weight:bold;text-align:center;vertical-align:top}
+.tg th{background-color:#409cff;border-color:#9ABAD9;border-style:solid;border-width:1px;color:#fff;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-vqdg{}
+.tg .tg-e4ml{border-color:#000000;font-family:"Arial Black", Gadget, sans-serif !important;;font-size:20px;font-weight:bold;
+  text-align:center;vertical-align:top}
+  
+.tg .tg-ndxe{background-color:#D2E4FC;border-color:#000000;font-size:32px;font-weight:bold;text-align:center;vertical-align:top}  
+
+  #wrapper {
+  margin-top:5%;
+    width: 100%;
+    //border: 1px solid black;
+	visibility:hidden;
+}
+#first {
+    width: 50%;
+	float:left; /* add this */
+    //border: 1px solid red;
+	text-align:right;
+}
+#second {
+    //border: 1px solid green;
+}
+#Scelta {
+	 position:absolute;
+width:50%;
+height:50%;
+top:25%;
+left:25%;	 
+z-index:10;
+border: 3px solid #00274e;
+background-color: rgba(220,252,249,0.9);
+border-radius:15px;
+}
+
+html { 
+  background: url(bg_ew4.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.normbutton {
+	padding:2%;
+	border:solid #00274e;
+	border-radius: 15px;
+	height:30%;
+	font-size:1.5vw;
+	margin:1%;
+}
+</style>
+
+<script>
+CurrentLine=0;
+
+
+function gup( name, url ) {
+    if (!url) url = location.href;
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( url );
+    return results == null ? null : results[1];
+}
+
+
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function init() {	
+	Numero=gup('n', document.location.search);
+	Amici=gup('f', document.location.search);
+	Step=gup('s', document.location.search);
+	
+	Custom=gup('c',document.location.search);
+	
+	if (Custom==1) {
+		AddKeyboard("InAm");
+		//AddKeyboard("InFr");
+		Step=1;
+	
+	} else {
+	document.getElementById("Scelta").style.display="none";
+		if (!isNumeric(Numero)) Numero=128;
+		if (!isNumeric(Amici)) Numero=7;
+		if (!isNumeric(Step)) Step=5;
+		
+		GiveOld=Numero;
+	
+		SoldiAmici=[];
+		for (let i=0;i<Amici;i++) SoldiAmici.push(0);
+		GenerateBeginning(Numero,Step);
+		document.getElementById("wrapper").style.visibility="visible";
+	}
+	
+}
+
+
+PlayerNames=["Martin","Emma","Ava","George","Robert","Charlotte","Emily"];
+
+function Generate() {
+
+		Numero=document.getElementById("InAm").value;
+		//Amici=document.getElementById("InFr").value;
+		Amici=7;
+		if (!isNumeric(Numero)) Numero=128;
+		if (!isNumeric(Amici)) Numero=7;
+		if (!isNumeric(Step)) Step=5;
+		
+		GiveOld=Numero;
+	
+		SoldiAmici=[];
+		for (let i=0;i<Amici;i++) SoldiAmici.push(0);
+		GenerateBeginning(Numero,Step);
+	Custom=0;
+	document.getElementById("Scelta").style.display="none";
+	document.getElementById("wrapper").style.visibility="visible";
+
+}
+
+function SumDigits(N) {
+	var Stringa=N.toString();
+	var Somma=0;
+	for (let i=0;i<Stringa.length;i++) {
+		Somma+=Number(Stringa[i]);
+	}
+	return Somma;
+}
+
+function GenerateBeginning(TI,N) {
+	B=TI;
+	C=SumDigits(B);
+	for (let i=0;i<N;i++) {
+		A=CurrentLine+1;
+		if (i==N-1) {
+			if (i<Amici) {
+			AddLineAll(PlayerNames[A-1],B,"<textarea id='K"+A+"'></textarea>");
+			AddKeyboard("K"+A);
+			GiveOld=B;
+			} else if (i<2*Amici) {
+			AddLineAll(PlayerNames[A-1],B,"<textarea id='K"+A+"'></textarea>");
+			AddKeyboard("K"+A);
+			GiveOld=B;
+			}
+			
+		} else {
+			AddLineAll(PlayerNames[A-1],B,C);
+		}
+		
+		B=B-C;
+		C=SumDigits(B);
+	
+	
+	}
+	
+	
+
+}
+
+function AddLineAll(A,B,C) {
+	if (CurrentLine<Amici) {
+	CurrentLine++;
+	var Tabella=document.getElementById("Tabella");
+	var row = Tabella.insertRow(CurrentLine);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	
+	if (CurrentLine % 2 == 0) {
+	cell1.classList.add("tg-ndxe");
+	cell2.classList.add("tg-ndxe");
+	cell3.classList.add("tg-ndxe");
+	}
+	
+	cell1.innerHTML = A;
+	cell2.innerHTML = B;
+	cell3.innerHTML = C;
+	if (isNumeric(C)) {
+	SoldiAmici[CurrentLine-1]+=Number(C);
+	}
+	} else if (CurrentLine<2*Amici) {
+	CurrentLine++;
+	var Tabella=document.getElementById("Tabella2");
+	var row = Tabella.insertRow(CurrentLine-Amici);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	
+	if (CurrentLine % 2 == 1) {
+	cell1.classList.add("tg-ndxe");
+	cell2.classList.add("tg-ndxe");
+	cell3.classList.add("tg-ndxe");
+	}
+	
+	if (isNumeric(C)) {
+		SoldiAmici[CurrentLine-1-Amici]+=Number(C);
+		cell3.innerHTML = SoldiAmici[CurrentLine-1-Amici];
+	} else {
+	console.log("hei");
+		cell3.innerHTML="<span id='N"+CurrentLine+"'></span>";
+	}
+	cell1.innerHTML = B;
+	cell2.innerHTML = C;
+	
+	
+	}
+
+}
+
+function AddLine(Receive) {
+	if (CurrentLine<Amici) {
+		CurrentLine++;
+		SoldiAmici[CurrentLine-1]+=Number(Receive);
+		var Tabella=document.getElementById("Tabella");
+		var row = Tabella.insertRow(CurrentLine);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		console.log(GiveOld,Receive);
+		GiveOld=GiveOld-Receive;
+		console.log(GiveOld);
+		cell1.innerHTML = PlayerNames[CurrentLine-1];
+		cell2.innerHTML = GiveOld;
+		cell3.innerHTML = "<textarea id=\"K"+CurrentLine+"\"></textarea>";
+		
+		if (CurrentLine % 2 == 0) cell1.classList.add("tg-ndxe");
+		
+		var DaRimuovere=document.getElementById('K'+(CurrentLine-1));
+		var Genitore=DaRimuovere.parentNode;
+		Genitore.removeChild(DaRimuovere);
+		Genitore.innerHTML ="<span style='color:#0000cc;'>" + Receive + "</span>";
+	} else if (CurrentLine<2*Amici) {
+
+		SoldiAmici[CurrentLine-1-Amici]+=Number(Receive)
+		if (CurrentLine>Amici) document.getElementById("N"+CurrentLine).innerHTML=SoldiAmici[CurrentLine-1-Amici];
+	
+		CurrentLine++;
+		
+		var Tabella=document.getElementById("Tabella2");
+		var row = Tabella.insertRow(CurrentLine-Amici);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		
+		GiveOld=GiveOld-Receive;
+		
+		cell3.innerHTML = "<span id='N"+CurrentLine+"'></span>";
+		cell1.innerHTML = GiveOld;
+		cell2.innerHTML = "<textarea id=\"K"+CurrentLine+"\"></textarea>";
+		
+		var DaRimuovere=document.getElementById('K'+(CurrentLine-1));
+		var Genitore=DaRimuovere.parentNode;
+		Genitore.removeChild(DaRimuovere);
+		Genitore.innerHTML ="<span style='color:#0000cc;'>" + Receive + "</span>";
+	}
+	
+}
+
+
+function AddKeyboard(IdName) {
+	$(function(){
+	$("#"+IdName).keyboard({
+			layout: 'custom',
+			customLayout: {
+				'normal' : [
+					'1 2 3',
+					'4 5 6',
+					'7 8 9',
+					'0 {accept} {b}'
+				]
+			},
+			// example callback function
+			accepted : function(e, keyboard, el){ 
+			if (Custom==1) return;
+			if (GiveOld<=0) return;
+			
+				$(this).keyboard().getkeyboard().destroy();
+				AddLine(el.value); 
+				AddKeyboard("K"+CurrentLine);
+				
+				
+			}
+		})
+		//.addTyping();
+		});
+	
+}
+
+
+
+</script>
+
+
+</head>
+
+<body onload="init()">
+<div id="Scelta">
+<div style=" position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);">
+<table class="tg" width="500">
+<tbody>
+<tr ><td>Initial amount of gold:</td><td><textarea id="InAm" style="width:250px; height:80px;" class="ui-widget-content ui-corner-all ui-keyboard-preview"></textarea></td></tr>
+<!--<tr><td>Number of friends:</td><td><textarea id="InFr"></textarea></td></tr>-->
+<tr><td><button onclick="Generate()" class="normbutton">Generate table</button></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="wrapper">
+    <div id="first"><table class="tg" id="Tabella" align="right">
+<thead>
+  <tr>
+    <th class="tg-e4ml">Name of the <br>player</th>
+    <th class="tg-e4ml">Remaining amount<br>to give away</th>
+    <th class="tg-e4ml">Amount received<br>in first round</th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+    <div id="second"><table class="tg" id="Tabella2">
+<thead>
+  <tr>
+    <th class="tg-e4ml">Remaining amount<br>to give away</th>
+    <th class="tg-e4ml">Amount received<br>in second round</th>
+	<th class="tg-e4ml">Total amout <br> received</th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table></div>
+</div>
+
+
+
+
+</body>
+</html>
