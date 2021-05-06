@@ -14,8 +14,8 @@ html {
 	position:absolute;
 	margin:auto;
 	top:50%;
-	left:5%;
-	width:40%;
+	left:4%;
+	width:44%;
 	height:45%;
 	z-index:2;
 	border:solid;
@@ -33,7 +33,7 @@ html {
 	position:absolute;
 	margin:auto;
 	top:15%;
-	left:5%;
+	left:4%;
 	width:10%;
 	height:20%;
 	z-index:2;
@@ -51,7 +51,7 @@ html {
 	position:absolute;
 	margin:auto;
 	top:15%;
-	right:5%;
+	right:4%;
 	width:10%;
 	height:20%;
 	z-index:2;
@@ -70,8 +70,8 @@ html {
 #Arrivo {
 	position:absolute;
 	top:50%;
-	right:5%;
-	width:40%;
+	right:4%;
+	width:44%;
 	height:45%;
 	z-index:2;
 	border:solid;
@@ -83,6 +83,17 @@ html {
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 	border-radius:15px;
 }
+
+.PartContainer {
+	position: absolute;
+  top: 50%;
+	width:95%;
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+	padding:10px;
+	text-align:center;
+}
+
 #DivCanvas {
 	position:absolute;
 	top:0%;
@@ -624,8 +635,8 @@ function Anima() {
 		document.getElementById("TestFin").innerHTML=Traduci(TestoIniziale,document.getElementById("CanvasMathina").CaesarShift,document.getElementById("CanvasMathina2").CaesarShift);
 		
 		
-		document.getElementById("Ch1").innerHTML="A &rarr; "+Alphabet[document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet.length)]+ " (" + document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet.length) + ")";
-		document.getElementById("Ch2").innerHTML="A &rarr; "+Alphabet[document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet.length)]+ " (" + document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet.length) + ")";
+		document.getElementById("Ch1-t").innerHTML="A &rarr; "+Alphabet[document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet.length)]+ " (" + document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet.length) + ")";
+		document.getElementById("Ch2-t").innerHTML="A &rarr; "+Alphabet[document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet.length)]+ " (" + document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet.length) + ")";
 		
 		
 		Draw(document.getElementById(ChiStoMuovendo),document.getElementById(ChiStoMuovendo).CentroCesare[0],document.getElementById(ChiStoMuovendo).CentroCesare[1],Angolo1,Angolo2,document.getElementById(ChiStoMuovendo).Scale);
@@ -697,8 +708,8 @@ ElencoParole=["LIMONE", "ARMADIO", "RAGNO", "ERBA", "GATTO", "CANE"];
 
 
 function GenerateEx() {
-document.getElementById("Ch1").innerHTML="A &rarr; "+Alphabet[0]+ " (" + 0 + ")";
-		document.getElementById("Ch2").innerHTML="A &rarr; "+Alphabet[0]+ " (" + 0 + ")";
+document.getElementById("Ch1-t").innerHTML="A &rarr; "+Alphabet[0]+ " (" + 0 + ")";
+		document.getElementById("Ch2-t").innerHTML="A &rarr; "+Alphabet[0]+ " (" + 0 + ")";
 	TestoIniziale="Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax drù pjgbc.".toUpperCase();
 	document.getElementById("TestIni").innerHTML=TestoIniziale;
 	document.getElementById("TestFin").innerHTML=TestoIniziale;
@@ -729,10 +740,10 @@ function Traduci(Testo,N1,N2) {
 
 <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
 <div id="DivCanvas2"><canvas id="CanvasMathina2"></canvas></div>
-<div id="Partenza"><p>Modifica la posizione dei dischi e osserva cosa succede:</p><p id="TestIni"></p></div>
-<div id="Ch1"></div>
-<div id="Ch2"></div>
-<div id="Arrivo"><p>Ecco il testo tradotto:</p><p id="TestFin"></p></div>
+<div id="Partenza"><div class="PartContainer"><p>Modifica la posizione dei dischi e osserva cosa succede:</p><p id="TestIni"></p></div></div>
+<div id="Ch1"><div class="PartContainer">Parole dispari:<br><span id="Ch1-t"></span></div></div>
+<div id="Ch2"><div class="PartContainer">Parole pari:<br><span id="Ch2-t"></span></div></div>
+<div id="Arrivo"><div class="PartContainer"><p>Ecco il testo tradotto:</p><p id="TestFin"></p></div></div>
 <div id="successMessage" style="display:none">
     <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
