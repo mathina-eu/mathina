@@ -3,21 +3,49 @@ actions:
     src: logi-bg4.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
+    src: plasma2.gif
+    id: plasma2
+    style: "width: 38%; top: 6%; right: 62%;"
+  - type: image
     src: leo-pointingl.png 
     id: leo-pointl
-    style: "width: 22%; top: 60%; right: 39%;"
+    style: "width: 24%; top: 40%; right: 20%;"
   - type: image
     src: mathina-thinking-turned.png
     id: mathina-think-t
-    style: "width: 22%; top: 40%; right: 33%;"
+    style: "width: 22%; top: 35%; right: 12%;"
   - type: dialog
     entries:
-      - text: What’s that...? - Mathina asked, but Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. He rushed to the entrance of the building.
+      - text: What’s that...? - Mathina asked, but Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
         char: Mathina
         mood: happy
+  - type: animation
+    target: leo-pointl
+    vars:
+      duration: 3
+      xPercent: -180
+      yPercent: 15
+      ease: power3.out    
+  - type: sceneText
+    text: Leo rushed to the entrance of the building.
+  - type: dialog
+    entries:
       - text: Lo-gi-ci-ty Sta-di-um - Leo syllabified the label.
         char: Leo
         mood: happy
+  - type: clearImage
+    id: leo-pointl
+  - type: image
+    src: leo-thinking.png 
+    id: leo-think
+    style: "width: 17%; top: 43%; right: 74%;"
+  - type: animation
+    target: mathina-think-t
+    vars:
+      duration: 3
+      xPercent: -140
+      yPercent: -40
+      ease: power3.out    
   - type: sceneText
     text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside.
   - type: dialog
@@ -25,10 +53,22 @@ actions:
       - text: Sir, you can't do that to us, - the sound came from the hallway. - Simply give us our prize so that we can go home!
         char: Trainer
         mood: happy
+  - type: image
+    src: trainer.png
+    id: trainer
+    style: "width: 22%; top: 20%; right: 55%;"
   - type: sceneText
-    text: A man in a training suit stepped through the wall and appeared close to Mathina. 
+    text: A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
+  - type: image
+    src: boys5.png 
+    id: boys5
+    style: "width: 60%; top: 45%; right: 15%; z-index: 3"
+  - type: image
+    src: georget.png
+    id: georget
+    style: "width: 10%; top: 30%; right: 30%; z-index: 2;"
   - type: sceneText
-    text: Soon, six young men arrived from the wall, too, carrying strange sports devices, Möbius strip-shaped rackets in their hands. 
+    text: Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
   - type: dialog
     entries:
       - text: You can't simply leave like this! - they begged.
@@ -48,9 +88,18 @@ actions:
         mood: happy
   - type: dialog
     entries:
-      - text: What is it that you can't work out? - Mathina asked enthusiastically, but Leo put his hand on her mouth because he could see the others staring at her.
+      - text: What is it that you can't work out? - Mathina asked enthusiastically. 
         char: Mathina
         mood: happy
+  - type: animation
+    target: leo-think
+    vars:
+      duration: 3
+      xPercent: 200
+      yPercent: -50
+      ease: power3.out  
+  - type: sceneText
+    text: Leo put his hand on her mouth because he could see the others staring at her.
   - type: dialog
     entries:
       - text: All right, if this little girl finds the solution for you, you'll get the gold medal! - the trainer said, and Leo kept his hand on Mathina's mouth, as he knew she would make a scene for being called “this little girl”.
@@ -58,7 +107,16 @@ actions:
         mood: happy
   - type: dialog
     entries:
-      - text: The trainer explained the situation to Mathina. We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list. The first person on the list receives the sum of the digits of the number of gold medals received. For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
+      - text: The trainer explained the situation to Mathina. We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
+        char: Trainer
+        mood: happy
+      - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list. The first person on the list receives the sum of the digits of the number of gold medals received. 
+        char: Trainer
+        mood: happy
+      - text: For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
+        char: Trainer
+        mood: happy
+      - text: Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
         char: Trainer
         mood: happy
       - text: Where is George on the list? - Mathina asked.
@@ -67,6 +125,12 @@ actions:
       - text: Little lady, we won't tell you that. Try to figure it out! - the trainer replied.
         char: Trainer
         mood: happy
+  - type: clearImage
+    id: mathina-think-t
+  - type: image
+    src: mathina-standing.png
+    id: mathina-stand
+    style: "width: 19%; top: 16%; right: 43%;"
   - type: sceneText
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
@@ -92,6 +156,15 @@ actions:
       - text: But I know, I know how to solve this! - Leo jumped up. - Let me tell you! Please!
         char: Mathina
         mood: happy
+  - type: animation
+    target: leo-thinking
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 40
+      repeat: 1
+      yoyo: true
+      ease: power1.inOut
   - type: sceneText
     text: Seeing how excited he was, Mathina and the trainer gave him the go ahead.
   - type: dialog
