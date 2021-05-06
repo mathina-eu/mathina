@@ -1,13 +1,17 @@
 actions:
   - type: background
     src: bg3_plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
 
 
   - type: sceneText
     text: >
       <h1>The lost treasure</h1>
       
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
           
   - type: sceneText
     text: >
@@ -15,12 +19,13 @@ actions:
       </br >
       </br >
       Mathina ran out and opened the envelope carefully. There was a letter inside.</p>
-      
+                   
   - type: image
-    id: Mathina2
-    src: $COMMON/img/characters/mathina/mathina4.png
-    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+    id: Paper0
+    src: Pergamena.png
+    style: "height: 40%; bottom: 2%; left: 2%;  z-index: 2;"
              
+
       
   - type: sceneText
     text: >
@@ -44,6 +49,10 @@ actions:
   - type: sceneText
     text: >
       <p>Mathina's mind immediately returned to that day at the market. She went to her room and found the jewel that Angela had given her. It was a brass pendant engraved with the letters of the alphabet shown in two concentric circles that could be rotated.</p>
+
+  - type: clearImage
+    id: Paper0
+
   - type: animation
     target: CaesarJewel
     vars:
@@ -64,14 +73,27 @@ actions:
         char: Mathina
         mood: normal
 
-  - type: clearImage
-    id: CaesarJewel
 
   - type: game
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Try to decode some words using the suggested key"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-1.htm
+
+  - type: clearImage
+    id: CaesarJewel
+  - type: clearImage
+    id: Mathina0
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+  - type: image
+    id: Paper1
+    src: Pergamena.png
+    style: "height: 50%; bottom: 4%; left: 3%;  z-index: 2;"
 
   - type: dialog
     entries:
@@ -102,7 +124,7 @@ actions:
     text: "Select the plaintext. Remember the hint “BACKWARD”..."
     toolbarText: "Try to select the correct plaintext"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-2.htm
 
   - type: dialog
     entries:
@@ -110,16 +132,148 @@ actions:
         char: Mathina
         mood: normal
  
+  - type: clearImage
+    id: Paper1
+  - type: clearImage
+    id: Mathina1
+
+
+
+
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Fisherman1
+    src: barca1.png
+    style: "width: 8%; bottom: 12%; left: 30%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 8%; bottom: 15%; left: 40%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman3
+    src: barca3.png
+    style: "width: 8%; bottom: 20%; left: 60%;  z-index: 0;"
+
+ 
+  - type: image
+    id: Gabbiano1
+    src: gabbiano1.png
+    style: "width: 8%; top: 10%; left: 10%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano2
+    src: gabbiano2.png
+    style: "width: 8%; top: 18%; left: 5%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano3
+    src: gabbiano3.png
+    style: "width: 8%; top: 35%; left: 20%;  z-index: 0;"
+ 
+ 
+ 
+ 
   - type: sceneText
     text: >
       <p>The next day, after a nice trip on the ferry, Mathina once again wandered around the island. What a nice way to spend the holiday! She entered the bar near the dock and located the lady, who was sitting at a table studying some documents. 
       </p>
 
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 8
+      xPercent: 30
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 6
+      xPercent: 25
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 10
+      xPercent: 40
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano1
+    vars:
+      duration: 7
+      xPercent: 20
+      yPercent: 20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano2
+    vars:
+      duration: 5
+      xPercent: 20
+      yPercent: 30
+      ease: power1.inOut
+      repeat: -1
+      rotate: -10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano3
+    vars:
+      duration: 9
+      xPercent: 20
+      yPercent: -40
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
+
+
+ 
   - type: dialog
     entries:
       - text: "Hi again, and welcome back to Buccaneer’s Island!" 
         char: Angela
         mood: happy
+
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+
   - type: dialog
     entries:
       - text: "Hi! I was very surprised to get your message yesterday! Why all these secrecy? I’m wondering why we are in this place, it is quite crowded, don’t you fear somebody can overhear us?" 
@@ -205,7 +359,7 @@ actions:
   - type: image
     id: CaesarJewel2
     src: CaesarJewelAD.png
-    style: "position:absolute; width: 25%; top: 45%; left: 15%"
+    style: "position:absolute; width: 25%; top: 45%; left: 22%"
 
   - type: sceneText
     text: >
@@ -226,12 +380,19 @@ actions:
   - type: image 
     id: CaesarJewel3
     src: CaesarJewelNumbers.png
-    style: "position:absolute; width: 25%; top: 45%; left: 60%"
+    style: "position:absolute; width: 25%; top: 45%; left: 55%"
 
   - type: sceneText
     text: >
       <p>Angela used a pen and one of the paper napkins of the ice cream and quickly drew a sketch of the jewel. This time instead of the letters she wrote numbers.</p>
 
+  - type: clearImage
+    id: Mathina1
+
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
 
 
   - type: dialog
@@ -261,17 +422,24 @@ actions:
         char: Angela
         mood: normal
 
-  - type: clearImage
-    id: CaesarJewel2
-  - type: clearImage
-    id: CaesarJewel3
-
-
   - type: dialog
     entries:
       - text: "Let’s assume for a moment that I trust you - you are a pirate lady, after all. How does this help me in coding and decoding messages?"
         char: Mathina
         mood: normal
+
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela2
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+
+  - type: dialog
+    entries:
       - text: "Well, encoding is just fine: you simply have to perform a sum, but the interesting thing about sums is that they can be inverted: for instance, if A+3 is equal to D, then there is an inverse operation which can be made to pass from D to A. Would you guess what this is?"
         char: Angela
         mood: normal
@@ -284,6 +452,15 @@ actions:
       - text: "I'm puzzled... I am still having trouble understanding this concept..."
         char: Mathina
         mood: normal
+        
+        
+  - type: clearImage
+    id: CaesarJewel2
+  - type: clearImage
+    id: CaesarJewel3
+        
+  - type: dialog
+    entries:        
       - text: "Mmh, maybe this will make it easier: think about a clock."
         char: Angela
         mood: normal
@@ -291,10 +468,14 @@ actions:
         char: Mathina
         mood: normal
 
+
   - type: image 
     id: Clock1
     src: Clock1.png
-    style: "position:absolute; width: 25%; top: 45%; left: 15%"
+    style: "position:absolute; width: 25%; bottom: 5%; left: 15%"
+
+  - type: clearImage
+    id: Angela2
 
   - type: dialog
     entries:
@@ -310,7 +491,7 @@ actions:
       - text: "..."
         char: Mathina
         mood: normal
-      - text: "well... not so usual!"
+      - text: "well... not really the usual sum!"
         char: Angela
         mood: normal
 
@@ -320,10 +501,13 @@ actions:
         char: Mathina
         mood: normal
 
+  - type: clearImage
+    id: Mathina2
+
   - type: image 
     id: Clock2
     src: Clock2.png
-    style: "position:absolute; width: 25%; top: 45%; left: 60%"
+    style: "position:absolute; width: 25%; bottom: 5%; left: 60%"
 
 
   - type: dialog
@@ -342,11 +526,19 @@ actions:
  
 
   - type: game
-    text: "Try to calculate the sum of some additions on the given clocks"
-    toolbarText: "Try to calculate the sum of some additions on the given clocks"
+    text: "Try to calculate the sum of some additions on the clocks"
+    toolbarText: "Try to calculate the sum of some additions on the clocks"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-3.htm
 
+  - type: image
+    id: Angela3
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+  - type: image
+    id: Mathina3
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
 
 
   - type: dialog
@@ -357,6 +549,30 @@ actions:
       - text: "It would be great!! What about this Friday?"
         char: Mathina
         mood: happy
+
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: Angela3
+    
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+  - type: clearImage
+    id: Gabbiano1
+  - type: clearImage
+    id: Gabbiano2
+  - type: clearImage
+    id: Gabbiano3
+
+
+  - type: background
+    src: bg3_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
         
   - type: sceneText
     text: >
@@ -366,14 +582,71 @@ actions:
   - type: sceneText
     text: >
       <p>Days passed, and Mathina had a huge deal thinking about sums on the clock, and how this was related to secret messages. The trick about using numbers instead of letters helped a lot, and Mathina was quite skilled now in decoding messages, when having the key, of course.</p>
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 27%; left: 2%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 34%; left: 6%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 20%; left: 5%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 23.5%; left: 11%;  z-index: 3;"
+          
+
   - type: sceneText
     text: >
       <p> When she arrived on the Buccaneer’s Island she found Angela waiting for her at the dock. She was not alone, and already from the ferry, Mathina was able to notice the garish feathers of a beautiful parrot.</p>
 
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 60%; bottom: -10%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
 
-       
-        
-        
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+      
+      
         
   - type: dialog
     entries:        
@@ -391,9 +664,73 @@ actions:
         char: Angela
         mood: happy
 
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+  - type: clearImage
+    id: Mathina4 
+  - type: clearImage
+    id: Angela4  
+
+
+  - type: background
+    src: bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Barca
+    src: barca.png
+    style: "height: 16%; top: 16%; right: 14%;  z-index: -3;"
+
+  - type: image
+    id: Gabbiano
+    src: gabbiano3.png
+    style: "height: 6%; top: 16%; right: 19%;  z-index: -3;"
+
+  - type: image
+    id: Finestra
+    src: finestra.png
+    style: "width: 21.09%; top: 10.35%; right: 12.4%;  z-index: -2;"
+
+
+  - type: image
+    id: Dipinto
+    src: dipinto.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
+
+
   - type: sceneText
     text: >
       <p> Mathina followed them to a cozy house not so far from the marketplace. It was located in a good position near the wood but with a great view of the seashore. </p>
+
+  - type: animation
+    target: Barca
+    vars:
+      duration: 8
+      xPercent: -30
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano
+    vars:
+      duration: 5
+      xPercent: -20
+      yPercent: -100
+      ease: power1.inOut
+      repeat: -1
+      rotate: -5
+      yoyo: true
+
 
   - type: dialog
     entries:        
@@ -412,6 +749,12 @@ actions:
     text: >
       <p> The lunch was great! Not only the food was delicious, but Angela told many stories about her adventures, and John had a lot of fun correcting her when the details of the stories were too exaggerated. </p>
 
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"            
+
   - type: dialog
     entries:     
       - text: "...and so there were 20 bandits..."
@@ -423,6 +766,14 @@ actions:
       - text: "...ok anyway, they managed to decode our messages and they were waiting for us!"
         char: Angela
         mood: normal
+        
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 40%; bottom: 0%; right: 0%;  z-index: 1;"
+        
+  - type: dialog
+    entries:     
       - text: "Oh, wait! That is something I have been thinking of during these days. You said that they have broken your code, right?"
         char: Mathina
         mood: normal
@@ -452,6 +803,16 @@ actions:
     text: >
       <p> Mathina started discussing very complicated tricks to make the code more complicated. </p>
 
+
+  - type: clearImage
+    id: Angela4
+
+  - type: image
+    id: Angela5
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+    
+
   - type: dialog
     entries:     
       - text: "Wait a moment, remember that it is not just a matter of rendering the code more complex. Pirates still need to learn how to use it, so they will know that “𝛼” means just “a”, so even if you require more knowledge to learn the method, your effort to decipher a code is still the same."
@@ -463,6 +824,19 @@ actions:
       - text: "Oh, sure I did. For some time we tried to tweak the code a bit. Just take the jewel and use it twice to encode a message... twice the effort, twice the result."
         char: Angela
         mood: normal
+        
+  - type: clearImage   
+    id: Mathina4
+    
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 1%;  z-index: 2; transform: ScaleX(-1);"
+
+
+        
+  - type: dialog
+    entries:             
       - text: "Wow! This seems effective!"
         char: Mathina
         mood: excited
@@ -474,7 +848,7 @@ actions:
     text: "Select the correct result of the method applied two times with the given keys."
     toolbarText: "Select the correct result of the method applied two times with the given keys."
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-4.htm
 
   - type: sceneText
     text: >
@@ -532,8 +906,15 @@ actions:
     text: "The big disc has to cypher words as the two smaller ones used consecutively. Select the correct position."
     toolbarText: "Select the correct position for the big disc."
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-5.htm
     
+  - type: clearImage
+    id: Dipinto
+
+  - type: image
+    id: Dipinto1
+    src: dipinto_nohook.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
     
   - type: sceneText
     text: >
@@ -549,9 +930,29 @@ actions:
         char: Mathina
         mood: normal
 
+  - type: clearImage
+    id: Angela5
+
+  - type: image
+    id: Angela6
+    src: Angela_1.png
+    style: "height: 50%; bottom: 10%; left: 5%;  z-index: 1;"      
+
+
+  - type: animation
+    target: Dipinto1
+    vars:
+      duration: 4
+      x: 110
+      y: 120
+      rotate: -95
+    
+
+
   - type: sceneText
     text: >
       <p> Angela looked at Mathina, then at the portrait on the wall. She smiled, with an expression quite similar to the one of the women on the painting. Then, she took the paint off the wall, turning toward Mathina and showing her the back of the portrait. A message had been written there, with a curly and precise writing. </p>
+      
   - type: sceneText
     text: >
       <p> The first part was the only one which was easy to understand: 
@@ -582,7 +983,10 @@ actions:
       - text: "We are not sure, you know, between our adventures we all spend our time in different ways, somebody goes to the city, and other lands: I’ve heard that there are strange and funny places to visit."
         char: Angela
         mood: normal
-      - text: "Once she came back from a trip, she told me she visited a strange fair, where somebody sold her some other necklaces, similar to the one we used, but strangely symmetric. She kept telling me that in this necklace lied a new way of communicating in secrecy, sort of a revolution on the field. And she wanted to keep that a secret."
+      - text: "Once she came back from a trip, she told me she visited a strange fair, where somebody sold her some other necklaces, similar to the one we used, but strangely symmetric." 
+        char: Angela
+        mood: normal
+      - text: "She kept telling me that in this necklace lied a new way of communicating in secrecy, sort of a revolution on the field. And she wanted to keep that a secret."
         char: Angela
         mood: normal
       - text: "Wow! I’m wondering how these new necklaces looked like. Did you have the chance to look at them?"
@@ -608,7 +1012,17 @@ actions:
     text: "Verify that the text has not been cyphered in the usual way."
     toolbarText: "Verify that the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-6.htm
+
+  - type: clearImage
+    id: Angela6
+  - type: clearImage
+    id: Dipinto1
+
+  - type: image
+    id: Angela7
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
 
 
   - type: sceneText
@@ -620,7 +1034,7 @@ actions:
       - text: "I’m not sure what to do: I have tried all the possible combinations of the jewel, but the deciphered texts do not make sense."
         char: Mathina
         mood: sad
-      - text: "Exactly, and I’m sure that the original message was written in a language we can understand. But wait, I know another hint. I was told that one needs to use the necklace <b>twice</b> to find the solution."
+      - text: "Exactly, and I’m sure that the original message was written in a language we can understand. But wait, I know another hint. I was told that one needs to use the necklace twice to find the solution."
         char: Angela
         mood: normal
       - text: "Twice? But I thought it was useless, am I wrong?"
@@ -668,8 +1082,15 @@ actions:
     text: "Verify that, as before, the text has not been cyphered in the usual way."
     toolbarText: "Verify that, as before, the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-7.htm
  
+  - type: clearImage
+    id: Angela7
+  - type: image
+    id: Angela8
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
  
   - type: dialog
     entries:            
@@ -693,7 +1114,7 @@ actions:
     text: "Mathina suggest to use two jewels: one to cypher words at even position and one to cypher words at odd position. Convince yourself that also this method does not work."
     toolbarText: "Convince yourself that also this method does not work."
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-8.htm
 
 
 
@@ -714,7 +1135,7 @@ actions:
     text: "Finally the cypher has been understood: the two jewels have to be used to cypher letters at odd and even position respectively. "
     toolbarText: "Try to decode the message!"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+    url: /apps/bucca-3-app/bucca-3-app-9.htm
 
 
   - type: dialog
@@ -729,10 +1150,124 @@ actions:
         char: Angela
         mood: normal
 
+  - type: clearImage
+    id: Barca
+  - type: clearImage
+    id: Finestra
+  - type: clearImage
+    id: Angela8
+  - type: clearImage
+    id: Mathina5
+
+
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Tree
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 1;"      
+  
 
   - type: sceneText
     text: >
-      <p> Angela, Mathina and John went for the treasure hunt. Well… Once you know where it is hidden is way easier. The house was not so far from Angela’s place, and the oak was very evident. The box did produce a weird metal sound while being extracted from the tree.</p>
+      <p> Angela, Mathina and John went for the treasure hunt. Well… Once you know where it is hidden is way easier. The house was not so far from Angela’s place, and the oak was very evident. </p>
+
+  - type: image
+    id: Angela9
+    src: Angela_2.png
+    style: "height: 70%; bottom: 10%; left: -1%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: image
+    id: Cassa
+    src: cassa.png
+    style: "width: 30%; bottom: 5%; left: 25%;  z-index: 1;"      
+
+
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 3%; left: 8%;  z-index: 2;"
+
+  - type: image
+    id: Stella1
+    src: stella1.png
+    style: "width: 10%; bottom: 40%; left: 20%;  z-index: 1;"      
+  - type: image
+    id: Stella2
+    src: stella2.png
+    style: "width: 10%; bottom: 48%; left: 30%;  z-index: 1;"      
+  - type: image
+    id: Stella3
+    src: stella3.png
+    style: "width: 10%; bottom: 50%; left: 40%;  z-index: 1;"      
+  - type: image
+    id: Stella4
+    src: stella4.png
+    style: "width: 10%; bottom: 48%; left: 50%;  z-index: 1;"      
+  - type: image
+    id: Stella5
+    src: stella5.png
+    style: "width: 10%; bottom: 40%; left: 60%;  z-index: 1;"      
+
+
+  - type: sceneText
+    text: >
+      <p> The box did produce a weird metal sound while being extracted from the tree.</p>
+
+  - type: animation
+    target: Stella1
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella5
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella2
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella4
+    vars:
+      duration: 5
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella3
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
 
 
   - type: dialog
@@ -762,6 +1297,12 @@ actions:
   - type: sceneText
     text: >
       <p> Mathina went back to her home, with many, many things in her mind. She just discovered not only how to use the necklace in a way more secure than before, but also had a great adventure with her friend. Who knows which secrets are still hidden in Buccaneer’s island. </p>
+      
+      
+  - type: sceneText
+    text: >
+      <h1>The lost treasure - The End</h1>        
+
 
 
 
