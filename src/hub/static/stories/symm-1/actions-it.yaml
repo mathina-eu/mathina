@@ -191,7 +191,7 @@ actions:
   - type: game
     text: "Metti i giocattoli \"perfetti\" nella scatola"
     cta: "Prova da solo!"
-    url: /apps/arrumar_figuras-_en/index.html
+    url: /apps/arrumar_figuras/index.html
   - type: clearImage
     id: c1-1
   - type: image
