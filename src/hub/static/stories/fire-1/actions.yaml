@@ -37,11 +37,11 @@ actions:
     style: "width: 20%; top: 45%; left: 50%;" 
     parallax: front1
     
-  - type: image
-    src: unidragon1.png
-    id: uni1
-    style: "width: 0%; top: 5%; left: 90%;" 
-    parallax: mid2 
+  # - type: image
+    # src: unidragon.gif
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;" 
+    # parallax: mid2 
 
   - type: sceneText
     text: >
@@ -143,30 +143,73 @@ actions:
     style: "width: 20%; top: 33%; left: 53%;" 
     parallax: front3 
     
-  # - type: image
-    # src: unidragon1.png
-    # id: uni1
-    # style: "width: 10%; top: 5%; left: 90%;" 
-    # parallax: mid2 
+  - type: image
+    src: unidragon.gif
+    id: uni1
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)" 
+    parallax: mid2 
 
   - type: animation
     target: uni1
     vars: 
         duration: 3
         width: 25%
-        #xPercent: -130
-        #yPercent: 40
+        xPercent: -130
+        yPercent: 40
         #width: 25%}]
         #ease: power1.out
+        
+  - type: animation
+    target: fla2
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3
+        ease: power1.out
 
-  # - type: animation
-    # target: uni1
-    # vars: 
-        # keyframes:[{duration(3), width(25%)}]
-        # #xPercent: -130
-        # #yPercent: 40
-        # #width: 25%}]
-        # #ease: power1.out
+  - type: animation
+    target: uni1
+    vars: 
+        duration: 3
+        delay: 3
+        xPercent: -230
+        yPercent: -30
+        width: 20%
+        ease: power1.out
+        
+  - type: animation
+    target: fla2
+    vars: 
+        duration: 2
+        transform: rotateY(0deg)
+        delay: 6
+        ease: power1.out
+        
+  - type: animation
+    target: uni1
+    vars: 
+        duration: 4
+        delay: 6
+        transform: rotateY(0deg)
+        #xPercent: -330
+        #yPercent: -40
+        #xPercent: -530
+        #yPercent: -40
+        width: 5%
+        ease: power1.out
+        
+  - type: animation
+    target: uni1
+    vars: 
+        duration: 4
+        delay: 10
+        transform: rotateY(180deg)
+        #xPercent: -330
+        #yPercent: -40
+        #xPercent: -530
+        #yPercent: -40
+        width: 10%
+        ease: power1.out
 
 
   - type: sceneText
@@ -193,7 +236,10 @@ actions:
           but they are born with a horn on their heads. Like milk teeth in
           children, that horn is fragile and eventually, it falls off their head
           when a stronger and bigger horn grows. But the fallen horn is not a dead
-          material, the dragon can still feel it. Trainers of unidragons, as I am,
+          material, the dragon can still feel it. 
+        char: flamma
+        mood: sad
+      - text: Trainers of unidragons, as I am,
           must find a unidragon and take care of its horn. It is a big
           responsibility, since the horn is a sensitive part of the dragon, and
           the animal can feel it when we move it or point with it in a certain
