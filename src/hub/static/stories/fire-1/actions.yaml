@@ -1,11 +1,12 @@
 actions:
   - type: background
-    src: fire-bg1-layered.png
+    src: bg_full.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
     
   - type: image
     src: bg_clouds.png 
+    id: clouds
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back3
     
@@ -18,6 +19,16 @@ actions:
     src: bg_fields.png 
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
   - type: image
     src: mathinaleo.png
@@ -67,6 +78,21 @@ actions:
       a book on her hand, and a short stick decorated with color stripes,
       too short to be used as a walking support but long enough to extend
       her arm to the floor. </p>
+      
+  - type: clearImage
+    id: mat1
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat2
+    style: "width: 8%; top: 50%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo2
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"  
+    parallax: mid2
 
   - type: sceneText
     text: >
@@ -108,10 +134,46 @@ actions:
       - text: I am a firebird trainer.
         char: flamma
         mood: sad
+        
+  - type: clearImage
+    id: leo2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo2
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"  
+    parallax: mid2
+    
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
+    entries:
+    
       - text: What is that?
         char: leo
         exposition: Replied Leo, with increasing interest.
         mood: happy
+        
+  - type: clearImage
+    id: mat2  
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat3
+    style: "width: 7.5%; top: 52%; left: 46%"  
+    parallax: mid2    
+     
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
+    entries:     
+        
       - text: My name is Flamma, I come from Arisa, a land full of strange
           creatures and wizards. In Arisa there are many types of firebirds,
           or birds of fire. These creatures are extremely intelligent, but their
@@ -137,6 +199,15 @@ actions:
   - type: clearImage
     id: fla1
     
+  - type: clearImage
+    id: leo2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo3.png
+    id: leo2
+    style: "width: 8%; top: 50%; left: 38%"  
+    parallax: mid2
+    
   - type: image
     src: flamma1.png
     id: fla2
@@ -156,8 +227,7 @@ actions:
         width: 25%
         xPercent: -130
         yPercent: 40
-        #width: 25%}]
-        #ease: power1.out
+
         
   - type: animation
     target: fla2
@@ -165,6 +235,22 @@ actions:
         duration: 1
         transform: rotateY(180deg)
         delay: 3
+        ease: power1.out
+        
+  - type: animation
+    target: mat3
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.5
+        ease: power1.out
+        
+  - type: animation
+    target: leo2
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.7
         ease: power1.out
 
   - type: animation
@@ -180,9 +266,25 @@ actions:
   - type: animation
     target: fla2
     vars: 
-        duration: 2
+        duration: 3
         transform: rotateY(0deg)
         delay: 6
+        ease: power1.out
+        
+  - type: animation
+    target: mat3
+    vars: 
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.5
+        ease: power1.out
+        
+  - type: animation
+    target: leo2
+    vars: 
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.7
         ease: power1.out
         
   - type: animation
