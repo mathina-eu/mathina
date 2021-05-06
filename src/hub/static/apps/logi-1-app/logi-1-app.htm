@@ -197,7 +197,7 @@ function LoadVersion(N) {
 			}
 			ArraySem.push(SemCorr);
 		}
-
+		SemaforiTotali=8;
 	for (let i=0;i<ArraySem.length;i++) {
 		AddColor(ArraySem[i][0]);
 		AddColor(ArraySem[i][1]);
@@ -260,6 +260,11 @@ function LoadVersion(N) {
 	return;
 }
 
+  function Link() {
+	location.reload();
+
+}
+
 PosCestino=1000;
 
 function CheckSemaforiUguali(N) {
@@ -280,6 +285,7 @@ function CheckSemaforiUguali(N) {
 		if (ColoriAltro[0]==MieiColori[0] && ColoriAltro[1]==MieiColori[1] && ColoriAltro[2]==MieiColori[2]) {
 			var liDaRim=document.getElementById("S"+ConfrontoIndice);
 			liDaRim.parentNode.removeChild(liDaRim);
+			SemaforiTotali=SemaforiTotali-1;
 		}
 	}
 	
@@ -289,7 +295,22 @@ function CheckSemaforiUguali(N) {
 		if (ColoriAltro[0]==MieiColori[0] && ColoriAltro[1]==MieiColori[1] && ColoriAltro[2]==MieiColori[2]) {
 			var liDaRim=document.getElementById("S"+ConfrontoIndice);
 			liDaRim.parentNode.removeChild(liDaRim);
+			SemaforiTotali=SemaforiTotali-1;
+			//ArraySem.splice(ConfrontoIndice,1);
 		}
+	}
+	
+	if (Versione==2) {
+			ElencoFinale=[];
+			
+			for (let i=0;i<ArraySem.length;i++) {
+				ElencoFinale.push(ArraySem[i].join(""));
+			}
+			ElencoUnici= ElencoFinale.filter(function(item, pos) {
+				return ElencoFinale.indexOf(item) == pos;
+			});
+			
+			if (ElencoUnici.length==SemaforiTotali) Finisci();
 	}
 	
 }
@@ -483,7 +504,8 @@ function Add() {
 
 		//call its drawImage() function passing it the source canvas directly
 		destCtx.drawImage(CanvasMathina, 0, 0);
-		ArraySem.push(ColoriCorrenti);
+		
+		if (Versione !=2) ArraySem.push(ColoriCorrenti);
 		NuovoSemaforo();
 		
 		
