@@ -149,15 +149,24 @@ actions:
     # style: "width: 10%; top: 5%; left: 90%;" 
     # parallax: mid2 
 
-
   - type: animation
     target: uni1
-    vars:
+    vars: 
         duration: 3
-        xPercent: -130
-        yPercent: 40
         width: 25%
-        ease: power1.out
+        #xPercent: -130
+        #yPercent: 40
+        #width: 25%}]
+        #ease: power1.out
+
+  # - type: animation
+    # target: uni1
+    # vars: 
+        # keyframes:[{duration(3), width(25%)}]
+        # #xPercent: -130
+        # #yPercent: 40
+        # #width: 25%}]
+        # #ease: power1.out
 
 
   - type: sceneText
