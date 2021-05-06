@@ -442,7 +442,7 @@ actions:
         mood: happy
   - type: sceneText
     text: >
-      <p> Il pappagallo sembrava molto felice e ripeteva “T-J!! T-J!!". Mathina era molto incuriosita... </p>
+      <p> Il pappagallo sembrava molto felice e ripeteva “T-J!! T-J!!”. Mathina era molto incuriosita... </p>
   - type: dialog
     entries:
       - text: "sembra che dica sempre la stessa parola! E se mi dicesse solo “sì”?"
