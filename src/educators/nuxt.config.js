@@ -12,7 +12,7 @@ const distFolder = 'educators';
 // const IS_DEV = process.env.NODE_ENV !== 'production';
 const generateRoutes = () => {
   // TODO: add other locales / dedup
-  const locales = ['de/', ''];
+  const locales = ['de/', 'pt/', ''];
 
   let cities = [];
   let stories = [];

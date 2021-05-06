@@ -39,4 +39,10 @@ export default {
     'select-age': 'Altersgruppe',
     'assist-mode': 'Assist-Modus'
   },
+  chars: {
+    mathina: 'Mathina',
+    wizard: 'Wizard',
+    leo: 'Leo',
+    jane: 'Jane',
+  },
 };
