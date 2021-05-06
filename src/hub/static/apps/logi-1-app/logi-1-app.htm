@@ -489,15 +489,15 @@ function Add() {
 		
 		
 		if (Versione==1) {
-		var ElencoFinale=[];
-		
-		for (let i=0;i<ArraySem.length;i++) {
-			ElencoFinale.push(ArraySem[i].join(""));
-		}
-		ElencoUnici= ElencoFinale.filter(function(item, pos) {
-			return ElencoFinale.indexOf(item) == pos;
-		});
-		if (ElencoUnici.length==6) Finisci();
+			var ElencoFinale=[];
+			
+			for (let i=0;i<ArraySem.length;i++) {
+				ElencoFinale.push(ArraySem[i].join(""));
+			}
+			ElencoUnici= ElencoFinale.filter(function(item, pos) {
+				return ElencoFinale.indexOf(item) == pos;
+			});
+			//if (ElencoUnici.length==6) Finisci();
 	}
 		}
 		
