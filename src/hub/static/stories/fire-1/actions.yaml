@@ -302,10 +302,6 @@ actions:
         duration: 4
         delay: 6
         transform: rotateY(0deg)
-        #xPercent: -330
-        #yPercent: -40
-        #xPercent: -530
-        #yPercent: -40
         width: 5%
         ease: power1.out
         
@@ -315,10 +311,6 @@ actions:
         duration: 4
         delay: 10
         transform: rotateY(180deg)
-        #xPercent: -330
-        #yPercent: -40
-        #xPercent: -530
-        #yPercent: -40
         width: 10%
         ease: power1.out
 
@@ -398,14 +390,6 @@ actions:
         char: flamma
         mood: sad
         
-  # - type: clearImage
-    # id: mat      
-        
-  # - type: image
-    # src: $COMMON/img/characters/mathina/mathina5.png
-    # id: mat
-    # style: "width: 8%; top: 50%; left: 45%;"  
-    # parallax: mid2
         
   - type: dialog
     avatarAlign:
@@ -428,6 +412,22 @@ actions:
     text: "Game: Fly the unidragon 1"
     url: /apps/imaginary-tests/fire-4-1/index.html
 
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 5%; top: 48%; left: 52%;"  
+    parallax: front1
+    
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power0.out  
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -442,6 +442,13 @@ actions:
         exposition: She threw some balls of fire into the air
           that floated like balloons.
         mood: sad
+     
+    
+  # - type: image
+    # src: fireball2.png
+    # id: fire2
+    # style: "width: 8%; top: 50%; left: 52%;"  
+    # parallax: front1
 
   - type: game
     text: "Game: Fly the unidragon 2"
