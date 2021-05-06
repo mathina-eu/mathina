@@ -3,7 +3,7 @@
  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>App 1 base</title>
+    <title>App 1-1</title>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
@@ -43,7 +43,9 @@ drawWand() := (
 );
 
 drawRecallButton() := (
-  drawtext(recallButton.pos, recallButton.label, size->30, align->"mid");
+  fillcircle(recallButton.pos, recallButton.rad, color->(0.7,0,1), alpha->0.5);
+  drawcircle(recallButton.pos, recallButton.rad, color->(1,1,1), size-> 5);
+  drawtext(recallButton.pos + (0,-0.4), recallButton.label, color->(1,1,1), size->30, align->"mid");
 );
 
 
@@ -122,6 +124,9 @@ moveDragon(dt) := (
     if(length(dragon.trailA) > dragon.trailAMaxLength,
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
+      );
+    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+      dragon.trailB = bite(dragon.trailB);
     );
   );
 );
@@ -265,6 +270,7 @@ dragon = {
   "trailAMaxSize": 1,
   "trailAMaxLength": 100,
   "trailB": [],
+  "trailBMaxLength": 100,
   "flipbook": ["dragon1", "dragon2", "dragon3", "dragon2"],
   "scale": 0.3,
   "rotation": 0,
@@ -277,7 +283,7 @@ dragonAnimationTrack = setupAnimationTrack(0,0.6);
 dragonAnimationTrack.looping = true;
 
 wand = {
-  "pos": canvasCenter + (0,-7),
+  "pos": canvasCenter + (0,-12),
   "length": 3,
   "dir": [0,1],
   "value": 0,
@@ -338,7 +344,7 @@ wandActive := false;
 
 
 recallButton := {
-  "pos": wand.pos + (0,-9),
+  "pos": wand.pos + (-12,-5),
   "rad": 3,
   "label": "Zurück!"
 };
@@ -371,32 +377,32 @@ followCurve.drawPercent = 1;
 playanimation();
 setupTime();
 </script>
-<script src="../Egdod/egdodUI.js"></script>
-<script src="../Egdod/egdodMath.js"></script>
-<script src="../Egdod/egdodArray.js"></script>
-<script src="../Egdod/egdodColor.js"></script>
-<script src="../Egdod/egdodMisc.js"></script>
-<script src="../Egdod/egdodAnim.js"></script>
+<script src="../../Egdod/egdodUI.js"></script>
+<script src="../../Egdod/egdodMath.js"></script>
+<script src="../../Egdod/egdodArray.js"></script>
+<script src="../../Egdod/egdodColor.js"></script>
+<script src="../../Egdod/egdodMisc.js"></script>
+<script src="../../Egdod/egdodAnim.js"></script>
 
 
 
 
 <script id='csdraw' type='text/x-cindyscript'>
   
-  drawimage(canvasCorners_4, canvasCorners_3, "back");
   
+  drawimage(canvasCorners_4, canvasCorners_3, "back");
   drawDragonTrail();
-  drawPickUp();
+  //drawPickUp();
   drawDragon();
   //drawObstacles();
+  drawimage(canvasCorners_4, canvasCorners_3, "front");
   drawWand();
   
   //drawStrokeObject(followCurve);
   
-  drawimage(canvasCorners_4, canvasCorners_3, "front");
 
   drawRecallButton();
-  drawScoreLabel();
+  //drawScoreLabel();
 </script>
 
 
@@ -417,7 +423,7 @@ setupTime();
     );
   , // else //
     moveDragon(delta);
-    collideWithPickUp();
+    //collideWithPickUp();
     //collideWithObstacles();
   );
 </script>
@@ -464,21 +470,21 @@ setupTime();
     cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
-                  smoke1: "smoke_1.png",
-                   smoke2: "smoke_2.png",
-                   smoke3: "smoke_3.png",
-                   dragon1: "dragon_1.png",
-                   dragon2: "dragon_2.png",
-                   dragon3: "dragon_3.png",
-                   magic1: "magic_1.png",
-                   magic2: "magic_2.png",
-                   magic3: "magic_3.png",                   
-                   fireball1: "fireball_1.png",
-                   fireball2: "fireball_2.png",
-                   fireball3: "fireball_3.png", 
-                   back:   "back_2.png",
-                   front:  "front_2.png",
-                   wand:   "wand.png",
+                  smoke1:  "../assets/smoke_1.png",
+                   smoke2: "../assets/smoke_2.png",
+                   smoke3: "../assets/smoke_3.png",
+                   dragon1: "../assets/dragon_1.png",
+                   dragon2: "../assets/dragon_2.png",
+                   dragon3: "../assets/dragon_3.png",
+                   magic1: "../assets/magic_1.png",
+                   magic2: "../assets/magic_2.png",
+                   magic3: "../assets/magic_3.png",                   
+                   fireball1: "../assets/fireball_1.png",
+                   fireball2: "../assets/fireball_2.png",
+                   fireball3: "../assets/fireball_3.png", 
+                   back:   "../assets/back_2.png",
+                   front:  "../assets/front_2.png",
+                   wand:   "../assets/wand.png",
                  }
                 });
 
