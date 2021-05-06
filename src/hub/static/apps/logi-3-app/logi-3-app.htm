@@ -49,10 +49,10 @@ html {
 </style>
 <script src="generazione.js"></script>
 <script>
-function LoadGraphics() {
+function LoadGraphics(FileName) {
 	NumeroCaricati=0;
 	police_hat = new Image();
-	police_hat.src = "./hat.png";
+	police_hat.src = FileName;
 	police_hat.onload = function() {NumeroCaricati++;}
 }
 
@@ -117,7 +117,8 @@ function Init() {
 	window.addEventListener('resize',Resize,false);
 
 		
-	LoadGraphics();
+	if (Versione==2) LoadGraphics("./sc.png");
+	else  LoadGraphics("./hat.png");
 	setTimeout(function(){ 	CheckCaricamento();}, 10);
 }
 
