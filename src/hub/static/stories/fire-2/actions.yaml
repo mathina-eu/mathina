@@ -1,16 +1,59 @@
 # FIRE-2. Talking to the unidragon
 actions:
   - type: background
-    src: mathina-fire-bg-full.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+    
+  - type: image
+    src: bg_clouds.png 
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: back3
+    
+  - type: image
+    src: bg_castle.png 
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: back2
+    
+  - type: image
+    src: bg_fields.png 
+    id: fields
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 35%; top: 30%; left: 1%;"  
+    parallax: mid2
 
   - type: image
-    src: $COMMON/img/characters/mathina/mathina3.png
-    id: mat1
-    position: left
-    valign: bottom
-    style: "height: 25vh"
-
+    src: flamma2.png
+    id: fla
+    style: "width: 35%; top: 20%; left: 100%;" 
+    parallax: front1
+    
+  - type: animation
+    target: fla
+    vars:
+        duration: 0.01
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        #ease: power3.out
 
   - type: sceneText
     text: >
@@ -21,6 +64,56 @@ actions:
       leading unidragons, to participate in the trainers’ festival that was
       going to be held soon. That morning they had seen a dragon flying in
       the distance and they thought that Flamma must be training it.
+      
+  - type: animation
+    target: clouds
+    vars:
+      duration: 1.5
+      width: 100%
+      height: 100%
+      ease: power3.Out
+      
+  # - type: animation
+    # target: bg
+    # vars:
+       # duration: 2
+       # width: 100%
+       # height: 100%
+      # # ease: power1.inOut
+      
+  - type: animation
+    target: fields
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+      
+  - type: animation
+    target: castle
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+      
+  - type: animation
+    target: matleo
+    vars:
+        duration: 3
+        xPercent: 160
+        yPercent: 75
+        width: 20% 
+        ease: power3.out
+        
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        xPercent: -160
+        yPercent: 70
+        width: 20% 
+        ease: power2.out
 
   - type: sceneText
     text: >
