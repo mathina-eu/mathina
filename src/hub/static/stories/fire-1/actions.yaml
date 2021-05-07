@@ -426,7 +426,7 @@ actions:
         repeat: 1000
         rotate: 360
         #yoyo: true
-        ease: power0.out  
+        ease: power.out  
 
   - type: dialog
     avatarAlign:
@@ -444,15 +444,49 @@ actions:
         mood: sad
      
     
-  # - type: image
-    # src: fireball2.png
-    # id: fire2
-    # style: "width: 8%; top: 50%; left: 52%;"  
-    # parallax: front1
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.5
+        xPercent: 150
+        yPercent: -150
+        ease: power0.out  
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 0.5
+        repeat: 3
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 1.5
+        delay: 0.5
+        xPercent: 550
+        yPercent: 60
+        ease: power0.out  
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 2
+        repeat: 300
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
 
   - type: game
     text: "Game: Fly the unidragon 2"
     url: https://mathina-tests.firebaseapp.com/vector2.html
+
+  - type: clearImage
+    id: fire1
 
   - type: dialog
     avatarAlign:
