@@ -6,11 +6,19 @@ button{
 body {
     margin: auto;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    background-image: url("../imgs/symm-bg1-02.jpg");
-    background-position: center top;
+    background-image: url("../imgs/symm-bg1-06.jpg");
+    background-position: left top;
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #fbd131;
+}
+
+/* For any viewports less than 1000px wide */
+@media (max-width: 1200px) {
+    body {
+        background-size: 1200px 675px; /* Force the image to its minimum width */
+    }
+
 }
 
 /* Header/footer boxes */
@@ -18,7 +26,7 @@ body {
 .wideBox {
     clear: both;
     text-align: center;
-    width: 1000px;
+    /*width: 1000px;*/
     margin: auto;
     /*border: 1px solid #333;*/
 }
@@ -38,20 +46,22 @@ body {
 }
 
 .line{
-    width: 1000px;
-    margin: auto;
+    /*width: 1000px;*/
+    margin: 10px;
+    margin-left: 150px;
     border-top: 1px solid black;
 }
 
-/* Main content area */
+/* Main content area 
 #conteudo div{
-    width: 1000px;
+    width: 1200px;
     margin: auto;
 }
 .content{
-    width: 1000px;
+    width: 1200px;
     margin: auto;
 }
+*/
 
 /* "You did it!" message */
 #successMessage, #errorMessage, #finalMessage {

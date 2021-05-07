@@ -4,11 +4,21 @@ button{
 }
 
 body {
-    margin: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    font-family: "Arial", cursive, sans-serif;
-    background: #f3f1cd;
+    margin: auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-image: url("../imgs/symm-bg1-01.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #fae47b;
+}
+
+/* For any viewports less than 1000px wide */
+@media (max-width: 1200px) {
+    body {
+        background-size: 1200px 675px; /* Force the image to its minimum width */
+    }
+
 }
 
 /* Header/footer boxes */

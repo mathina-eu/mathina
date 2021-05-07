@@ -555,7 +555,7 @@ texture4.repeat.set( 0.5,1 );
         var o = outline;
         var ax = a.x();
         var ay = a.y();
-var delta=60;
+var delta=120;
         if (ax > o.x - delta && ax < o.x + delta && ay > o.y - delta && ay < o.y + delta) {
           return true;
         } else {
@@ -595,7 +595,7 @@ var textLayer=	new Konva.Layer();   var animalShapes = [];
 
 
 var textscore = new Konva.Text({
-        text: String(score)+' de '+String(ct),
+        text: String(score)+' / '+String(ct),
         x: 0.25*window.innerWidth+ window.innerWidth/5,
         y: 0.35*window.innerHeight + window.innerWidth/5,
 		
@@ -730,7 +730,7 @@ var textscore = new Konva.Text({
 				icon[privKey.substring(2)-1].opacity(0)
 				layer.draw();
                 				
-			textscore.text(String(score+1)+' de '+String(ct))
+			textscore.text(String(score+1)+' / '+String(ct))
    
 
 	  textLayer.add(textscore);
