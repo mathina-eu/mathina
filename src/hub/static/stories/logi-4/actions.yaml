@@ -13,7 +13,7 @@ actions:
   - type: image
     src: mathina-thinking-turned.png
     id: mathina-think-t
-    style: "width: 22%; top: 35%; right: 12%;"
+    style: "width: 22%; top: 35%; right: 12%; z-index: 1"
   - type: dialog
     entries:
       - text: What’s that...? - Mathina asked, but Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
@@ -56,7 +56,7 @@ actions:
   - type: image
     src: trainer.png
     id: trainer
-    style: "width: 22%; top: 20%; right: 55%;"
+    style: "width: 22%; top: 20%; right: 55%; z-index: 2"
   - type: sceneText
     text: A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
   - type: image
@@ -83,33 +83,32 @@ actions:
     text: The guys looked at each other, tried to count on their fingers, uttered some numbers.
   - type: dialog
     entries:
-      - text: You can't figure this out! - two guys complained.
-        char: two boys
+      - text: We can't figure this out! - two guys complained.
+        char: boys
         mood: happy
   - type: dialog
     entries:
       - text: What is it that you can't work out? - Mathina asked enthusiastically. 
         char: Mathina
         mood: happy
-  - type: animation
-    target: leo-think
-    vars:
-      duration: 3
-      xPercent: 200
-      yPercent: -50
-      ease: power3.out  
+  - type: dialog
+    entries:
+      - text: All right, if this little girl finds the solution for you, you'll get the gold medal! - the trainer said. 
+        char: Trainer
+        mood: happy
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 25%; right: 55.5%; z-index: 3;"
   - type: sceneText
-    text: Leo put his hand on her mouth because he could see the others staring at her.
+    text: Leo saw how annoyed Mathina was for being called “this little girl”.
   - type: dialog
     entries:
-      - text: All right, if this little girl finds the solution for you, you'll get the gold medal! - the trainer said, and Leo kept his hand on Mathina's mouth, as he knew she would make a scene for being called “this little girl”.
+      - text: The trainer explained the situation to Mathina - We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
         char: Trainer
         mood: happy
   - type: dialog
     entries:
-      - text: The trainer explained the situation to Mathina. We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
-        char: Trainer
-        mood: happy
       - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list. The first person on the list receives the sum of the digits of the number of gold medals received. 
         char: Trainer
         mood: happy
@@ -135,16 +134,16 @@ actions:
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
     entries:
-      - text: So it has to be split between 7 people, right? - The boys nodded. - Between the 6 team members and the trainer. Mathina started scribbling and cried out after a few minutes - Yeah!
+      - text: So it has to be split between 7 people, right? - the boys nodded. - Between the 6 team members and the trainer. Mathina started scribbling and cried out after a few minutes - Yeah!
         char: Mathina
         mood: happy
       - text: So how many do we get? How many? - The athletes inquired.
         char: Boys
         mood: happy
   - type: game
-    text: Can you find out how many? Generate a table by filling in the initial amount of gold medals received.
+    text: Can you find out how many? 
     toolbarText: 
-    cta: 
+    cta: Generate a table by filling in the initial amount of gold medals received.
     url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
   - type: dialog
     entries:
@@ -154,14 +153,14 @@ actions:
   - type: dialog
     entries:
       - text: But I know, I know how to solve this! - Leo jumped up. - Let me tell you! Please!
-        char: Mathina
+        char: Leo
         mood: happy
   - type: animation
-    target: leo-thinking
+    target: leo-think
     vars:
-      duration: 3
+      duration: 0.7
       xPercent: 0
-      yPercent: 40
+      yPercent: -40
       repeat: 1
       yoyo: true
       ease: power1.inOut
@@ -170,15 +169,21 @@ actions:
   - type: dialog
     entries:
       - text: Well, I think we could go through all the cases, like what if all get 1 or 2 or 3 medals, except for George, and so on! And we’ll come across the right number. It won’t be a high number, I am sure…
-        char: Mathina
+        char: leo
         mood: happy
   - type: sceneText
     text: Leo began to count, thinking out loud.
   - type: dialog
     entries:
-      - text: If all take always the same amount, except for George, then two consecutive ones will get the same amount. They cannot take 1, because there are no two neighbouring numbers with 1 as a sum of the digits. If each of them takes 2, then it doesn’t work either, since in case the sum of the digits is 2, then the number less or more by two won’t have 2 as the sum of the digits - Leo slowed down and wiped the sweat off from his forehead. - What if we take 3? The sum of the digits is 3 with both 12, 21 and 30, but not with the following player. There is a problem with number 4, too. Is there a solution...?
-        char: Mathina
-        mood: happy
+      - text: If all take always the same amount, except for George, then two consecutive ones will get the same amount. They cannot take 1, because there are no two neighbouring numbers with 1 as a sum of the digits. 
+        char: leo
+        mood: thinking
+      - text: If each of them takes 2, then it doesn’t work either, since in case the sum of the digits is 2, then the number less or more by two won’t have 2 as the sum of the digits - Leo slowed down and wiped the sweat off from his forehead.
+        char: leo
+        mood: thinking
+      - text: What if we take 3? The sum of the digits is 3 with both 12, 21 and 30, but not with the following player. There is a problem with number 4, too. Is there a solution...?
+        char: leo
+        mood: thinking
   - type: sceneText
     text: Leo felt dizzy, although he only considered 4 cases. Mathina looked at him with a questioning look.
   - type: dialog
@@ -195,10 +200,10 @@ actions:
         char: Mathina
         mood: happy
   - type: game
-    text: Do you notice any regularity with 116? *ez nem jó*
+    text: Do you notice any regularity with 116?
     toolbarText: 
-    cta: "Try it yourself!"
-    url: 
+    cta: Try it yourself!
+    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?n=116&s=2&f=7
   - type: dialog
     entries:
       - text: 116 isn’t good because we’ll run out of it soon, - George said, turning to Mathina.
@@ -220,16 +225,16 @@ actions:
         char: Mathina
         mood: happy
   - type: game
-    text: Why do you think it’s like that, that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
-    toolbarText: Try it on a few numbers by following the example!
-    cta: 
-    url: 
+    text: Why is it like that, that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
+    toolbarText: 
+    cta: Experiment with a few numbers!
+    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
   - type: dialog
     entries:
-      - text: Yes, that's true. But that’s just an experiment for now. Maybe we can learn something from it.
-        char: Mathina
+      - text: I know! - George shouted. - Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
+        char: George
         mood: happy
-      - text: I know! - George shouted. - Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. What happens if we subtract one from the other? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). This way it’s divisible by 9. And this is true for any number of digits, because the last digit is always dropped, and the rest always gets 9, 99, 999,…. 99999999 as a multiplier, because we subtract one from a power of ten.
+      - text: What happens if we subtract one from the other? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). This way it’s divisible by 9. And this is true for any number of digits, because the last digit is always dropped, and the rest always gets 9, 99, 999,…. 99999999 as a multiplier, because we subtract one from a power of ten.  
         char: George
         mood: happy
   - type: sceneText
@@ -249,13 +254,16 @@ actions:
     text: Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
   - type: dialog
     entries:
-      - text: Good, - George went on. - Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. However, the first in line will get more than 9 in the first round, so you need a number greater than 117, a number which has a larger sum of digits than 9. Let's say 127.
+      - text: Good, - George went on. - Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
+        char: George
+        mood: happy
+      - text: However, the first in line will get more than 9 in the first round, so you need a number greater than 117, a number which has a larger sum of digits than 9. Let's say 127.
         char: George
         mood: happy
   - type: game
     text: Do you think George is right, does it work with 127?
     toolbarText: 
-    cta: 
+    cta: Experiment with the number 127!
     url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?n=127&s=2&f=7
   - type: dialog
     entries:
@@ -274,8 +282,8 @@ actions:
   - type: game
     text: Can you figure out how many medals are actually needed?
     toolbarText: 
-    cta: 
-    url: 
+    cta: Experiment with numbers!
+    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
   - type: dialog
     entries:
       - text: So I thought 6 people would get 9 in both rounds, and one person would get 18 in the first, then 9 in the second round. This means, 7x18 + 9 = 135. And so the fifth person gets more than the others!
@@ -287,12 +295,34 @@ actions:
       - text: Oh really! - George shook his head. - But you didn't say so either! - They all laughed. - But it's okay, this way it feels even better to know the solution!
         char: George
         mood: happy
+  - type: clearImage
+    id: gold
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 43%; right: 33.5%; z-index: 3;"
+  - type: image
+    src: gold-medal.png
+    id: gold2
+    style: "width: 2%; top: 57%; right: 62%; z-index: 3;"
+  - type: image
+    src: gold-medal.png
+    id: gold3
+    style: "width: 2%; top: 86%; right: 32.5%; z-index: 3;"
+  - type: image
+    src: gold-medal.png
+    id: gold4
+    style: "width: 2%; top: 59%; right: 42%; z-index: 3;"
   - type: sceneText
     text: The trainer passed out the medals one after the other. He gave Mathina a round of applause.
   - type: dialog
     entries:
-      - text: You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!"
+      - text: You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!
         char: Trainer
         mood: happy
   - type: sceneText
     text: Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
+  - type: clearImage
+    id: leo-think
+  - type: clearImage
+    id: mathina-stand
