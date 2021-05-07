@@ -264,8 +264,8 @@ actions:
         mood: sad
   - type: game
     text: Help Mathina and Leo find a good plan by moving 2 policemen on the map.
-    toolbarText: You can move 2 policemen on the map. 
-    cta: dst
+    toolbarText: Try it yourself!
+    cta: 
     url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1
   - type: dialog
     entries:
@@ -329,7 +329,7 @@ actions:
     text: Mathina and Leo snucked the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
     text: Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
-    toolbarText: You can move sugar cubes on the map. 
+    toolbarText: Try it yourself!
     cta: dst
     url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1
   - type: animation
@@ -492,6 +492,6 @@ actions:
     text: The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
   - type: game
     text: Have you enjoyed using the app? Continue playing with different maps.
-    toolbarText: 
+    toolbarText: Click here!
     cta: 
     url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=3
