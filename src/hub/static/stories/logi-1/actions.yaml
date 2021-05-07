@@ -15,7 +15,7 @@ actions:
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
   - type: sceneText
-    text: Mathina and her friend Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
+    text: Mathina and her brother Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
   - type: clearImage
     id: kang-st
   - type: image
@@ -26,7 +26,7 @@ actions:
     entries:
       - text: There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
         char: kangaroo
-        mood: happy
+        mood: nice
   - type: animation
     target: leo-runs
     vars:
@@ -51,7 +51,7 @@ actions:
     entries:
       - text: Slow down, young man. You can't just cross this zebra. Do you see those traffic lights on the opposite side? 
         char: kangaroo
-        mood: sad
+        mood: serious
   - type: clearImage
     id: lamps
   - type: image
@@ -74,7 +74,7 @@ actions:
     entries:
       - text: We can only cross if the three colors appear in all possible orders.” - The kangaroo smiled, noticing Leo’s amazement.
         char: kangaroo
-        mood: happy
+        mood: nice
   - type: clearImage
     id: lampsgif
   - type: image
@@ -85,7 +85,7 @@ actions:
     entries:
       - text: Now they saw three lights only, and the kangaroo asked, - “Do you think we can go now?”
         char: kangaroo
-        mood: happy
+        mood: nice
   - type: animation
     target: leo-runs
     vars:
@@ -99,9 +99,9 @@ actions:
     style: "width: 16%; top: 28%; right: 29%;"
   - type: dialog
     entries:
-      - text: I think we've got it all! Leo shouted, and was again ready to cross the street.  
-        char: kangaroo
-        mood: happy
+      - text: I think we've got it all! - Leo shouted, and was again ready to cross the street.  
+        char: leo
+        mood: excited
   - type: animation
     target: leo-runs
     vars:
@@ -114,13 +114,13 @@ actions:
   - type: dialog
     entries:
       - text: No way! - Mathina said.
-        char: kangaroo
-        mood: happy
+        char: mathina
+        mood: angry
       - text: But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last - Leo argued convincingly.
-        char: kangaroo
-        mood: happy
+        char: leo
+        mood: excited
       - text: And what if, for example, violet came first and then pink, instead of orange? - Mathina grinned like a little monkey.
-        char: kangaroo
+        char: mathina
         mood: happy
       - text: Leave him, Leo is probably not as good in distinguishing pink and violet as you are - said the kangaroo.
         char: kangaroo
