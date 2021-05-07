@@ -44,5 +44,6 @@ export default {
     wizard: 'Wizard',
     leo: 'Leo',
     jane: 'Jane',
+	flamma: 'Flamma'
   },
 };
