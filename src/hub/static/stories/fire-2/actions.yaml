@@ -23,6 +23,12 @@ actions:
     id: fields
     style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
     parallax: mid1
+    
+  - type: image
+    src: white.png 
+    id: white
+    style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
+    parallax: front1
 
   - type: animation
     target: clouds
@@ -100,8 +106,8 @@ actions:
   - type: animation
     target: matleo
     vars:
-        duration: 3
-        xPercent: 160
+        duration: 4
+        xPercent: 200
         yPercent: 75
         width: 20% 
         ease: power3.out
@@ -125,8 +131,9 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
+      leo: left
     entries:
 
       - text: Flamma, we saw the unidragon, are you training him?
@@ -144,8 +151,8 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
       - text: You are right Leo, this is another unidragon. And this poor boy
@@ -264,8 +271,9 @@ actions:
 
   - type: dialog
     avatarAlign:
-       - flamma: right
-       - mathina: left
+       flamma: right
+       mathina: left
+       leo: left
     entries:
 
       - text: It flies, it flies!!
