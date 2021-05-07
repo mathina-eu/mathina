@@ -5,7 +5,7 @@ actions:
   - type: image
     src: kangaroo-standing.png
     id: kang-st
-    style: "width: 25%; top: 27%; right: 68%; z-index: 1;"
+    style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
   - type: image
     src: leo-runs.png
     id: leo-runs
@@ -63,7 +63,7 @@ actions:
   - type: image
     src: kangaroo-standing.png
     id: kang-st
-    style: "width: 25%; top: 27%; right: 68%;"
+    style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
   - type: sceneText
     text: They saw one column appearing, another one disappearing.
   - type: sceneText
@@ -126,35 +126,30 @@ actions:
         char: kangaroo
         mood: happy
       - text: Oh, kangaroo, don't be like that! - Mathina got angry. - I don't understand colors better just because I'm a girl! But I can think pretty well - and she stuck out her tongue at the kangaroo.
-        char: kangaroo
+        char: mathina
         mood: happy
       - text: Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
         char: kangaroo
         mood: happy
   - type: game
-    text: How many lights do you think would be enough to show all the sequences? 
-    toolbarText: How many lights do you think would be enough to show all the sequences? 
+    text: How many lights do you think would be enough to show all the variations? 
+    toolbarText: 
     cta: Try to find them all!
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
   - type: animation
     target: leo-runs
     vars:
-      duration: 2
+      duration: 1
       xPercent: 0
-      yPercent: -10
-      ease: power3.out
+      yPercent: -30
+      repeat: 1
+      yoyo: true
+      ease: power1.inOut
   - type: dialog
     entries:
       - text: I know, I know, I know! Eight is the solution, eight is the solution, kangaroo, eeeeeiiiiiight! - Leo cried and jumped up in the air. 
-        char: kangaroo
+        char: leo
         mood: happy  
-  - type: animation
-    target: leo-runs
-    vars:
-      duration: 2
-      xPercent: 0
-      yPercent: 0
-      ease: power3.out
   - type: sceneText
     text: Mathina raised her eyebrows, suspicious of Leo having messed up something.
   - type: image
@@ -164,13 +159,13 @@ actions:
   - type: dialog
     entries:
       - text: Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
-        char: kangaroo
+        char: mathina
         mood: happy
   - type: clearImage
     id: solution8
   - type: game
-    text: What do you think Leo has included twice? Put here all the sequences Leo has picked (all of them only once)!
-    toolbarText: We see the 8 traffic lights, you can rearrange them. Once you’ve put identical ones next to each other, the superfluous ones disappear.
+    text: What do you think Leo has included twice? Pull identical lamps on top of each other, and the superfluous ones will disappear.
+    toolbarText: 
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=2
   - type: image
     src: solution5lamps.png
@@ -179,7 +174,7 @@ actions:
   - type: dialog
     entries:
       - text: You see, it's only five now. And guess what, there's a sixth one, too! - Mathina said contemptuously.
-        char: kangaroo
+        char: mathina
         mood: happy
   - type: clearImage
     id: solution5
@@ -190,7 +185,7 @@ actions:
   - type: dialog
     entries:
       - text: Well, two begin with violet and two with pink, and only one with orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
-        char: kangaroo
+        char: leo
         mood: happy
   - type: image
     src: solution6lampss.png
@@ -199,10 +194,10 @@ actions:
   - type: dialog
     entries:        
       - text: Got it! Now, after orange comes... not violet but pink, that is - orange-pink-violet.
-        char: kangaroo
+        char: leo
         mood: happy  
       - text: Bingo! - Mathina patted Leo on his shoulder.
-        char: kangaroo
+        char: mathina
         mood: happy  
   - type: clearImage
     id: solution6
