@@ -1,3 +1,4 @@
+#FIRE-1
 actions:
   - type: background
     src: bg_full.png
@@ -43,9 +44,9 @@ actions:
     #style: "width: 15%; top: 57%; left: 0%; "  
     #valign: bottom
   - type: image
-    src: flamma2.png
+    src: flamma3.png
     id: fla
-    style: "width: 20%; top: 45%; left: 50%;" 
+    style: "width: 20%; top: 40%; left: 50%;" 
     parallax: front1
     
   # - type: image
@@ -64,7 +65,7 @@ actions:
     target: matleo
     vars:
         duration: 5
-        xPercent: 160
+        xPercent: 155
         yPercent: 75
         width: 20% 
         ease: power3.out
