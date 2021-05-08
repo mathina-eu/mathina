@@ -1,391 +1,424 @@
 <html>
+
 <head>
-<style>
-#DivCanvas {
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:1;
-}
+    <style>
+        #DivCanvas {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
 
-#CanvasMathina {
-	position:relative;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:2;
-	visibility:visible;
-}
+        #CanvasMathina {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
 
 
 
-html { 
-  background: url(bg_ew3.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
-}
+        html {
+            background: url(bg_ew3.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Roboto", sans-serif;
+            overflow: hidden;
+        }
 
-#successMessage {
-  position: absolute;
-  /*left: 50%;
+        #successMessage {
+            position: absolute;
+            /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-  z-index: 100;
-  background: #f3f1cd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 10% 0%;
-text-align: center;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 58%;
-}
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+        }
+    </style>
+    <script src="generazione.js"></script>
+    <script>
+        function Link() {
+            location.reload();
 
-</style>
-<script src="generazione.js"></script>
-<script>
-  function Link() {
-	location.reload();
+        }
 
-}
+        function LoadGraphics(FileName) {
+            NumeroCaricati = 0;
+            police_hat = new Image();
+            police_hat.src = FileName;
+            police_hat.onload = function() {
+                NumeroCaricati++;
+            }
+        }
 
-function LoadGraphics(FileName) {
-	NumeroCaricati=0;
-	police_hat = new Image();
-	police_hat.src = FileName;
-	police_hat.onload = function() {NumeroCaricati++;}
-}
+        function LoadVersion(N) {
+            if (N == 1) {
+                Polizia = [
+                    [100, 100],
+                    [100, 250]
+                ];
+                PoliziaIntersezioni = [
+                    [-1],
+                    [-1]
+                ];
+                Load();
+            }
 
-function LoadVersion(N) {
-	if (N==1) {
-		Polizia=[[100,100],[100,250]];
-		PoliziaIntersezioni=[[-1],[-1]];
-		Load();
-	}
-	
-	if (N==2) {
-		Polizia=[[100,100],[100,250],[100,400]];
-		PoliziaIntersezioni=[[-1],[-1],[-1]];
-		Load();
-	}
-	
-	if (N==3) {
-		Polizia=[[100,100],[100,250],[100,400]];
-		PoliziaIntersezioni=[[-1],[-1],[-1]];
-		GeneraGioco();
-		Trim();
-		//
-		
-	}
+            if (N == 2) {
+                Polizia = [
+                    [100, 100],
+                    [100, 250],
+                    [100, 400]
+                ];
+                PoliziaIntersezioni = [
+                    [-1],
+                    [-1],
+                    [-1]
+                ];
+                Load();
+            }
 
-	return;
-}
+            if (N == 3) {
+                Polizia = [
+                    [100, 100],
+                    [100, 250],
+                    [100, 400]
+                ];
+                PoliziaIntersezioni = [
+                    [-1],
+                    [-1],
+                    [-1]
+                ];
+                GeneraGioco();
+                Trim();
+                //
 
+            }
 
-function gup( name, url ) {
-    if (!url) url = location.href;
-    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-    var regexS = "[\\?&]"+name+"=([^&#]*)";
-    var regex = new RegExp( regexS );
-    var results = regex.exec( url );
-    return results == null ? null : results[1];
-}
-
-
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
-
-function Init() {	
-	Versione=gup('v', document.location.search);
-	
-	if (!isNumeric(Versione)) Versione=1;
-	window.CanvasMathina=document.getElementById('CanvasMathina');
-	window.ctxMathina = CanvasMathina.getContext('2d');
-	
-	
-	DivCanvas.addEventListener('mousedown', Down, false);
-	DivCanvas.addEventListener('mouseup', Up, false);
-	DivCanvas.addEventListener('mouseout', Up, false);
-	DivCanvas.addEventListener('mousemove', Move, false);
-	
-	DivCanvas.addEventListener('touchstart', Down, false);
-	DivCanvas.addEventListener('touchend', Up, false);
-	DivCanvas.addEventListener('touchmove', Move, false);
-	
-	window.addEventListener('resize',Resize,false);
-
-		
-	if (Versione==2) LoadGraphics("./sc.png");
-	else  LoadGraphics("./hat.png");
-	setTimeout(function(){ 	CheckCaricamento();}, 10);
-}
-
-function CheckCaricamento() {
-	if (NumeroCaricati==1) {
-		Resize(); 
-		Reset();	
-		
-	} else {
-		setTimeout(function(){ 	CheckCaricamento();}, 100);
-	}
-}
+            return;
+        }
 
 
-function canvas_arrow(context, fromx, fromy, tox, toy) {
-  var headlen = 10; // length of head in pixels
-  var dx = tox - fromx;
-  var dy = toy - fromy;
-  var angle = Math.atan2(dy, dx);
-  context.moveTo(fromx, fromy);
-  context.lineTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
-  context.moveTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
-}
-
-function Resize() {
-	var doc = document, w = window;
-    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?doc.documentElement: doc.body;
-    
-    var width = docEl.clientWidth;
-    var height = docEl.clientHeight;
-    
-    // mobile zoomed in?
-    if ( w.innerWidth && width > w.innerWidth ) {
-        width = w.innerWidth;
-        height = w.innerHeight;
-    }
-
-	window.dimension = [width,height];
-	
-	CanvasMathina.width = dimension[0];
-	CanvasMathina.height = dimension[1];
-	
-}
-
-function Reset() {
-	police_dimension=[police_hat.width,police_hat.height];
-	Segmenti=[];
-	Intersezioni=[];
-	NumeriGenera=[3,2,2];
-	SogliaPuntiCoincidenti=15; //Distanza a cui due punti vengono considerati coincidenti
-	SogliaDistTrim=200;	//Soglia a cui eliminare gli angoli morti
-	SogliaCoeffAng=0.4;	//Quanto possono differire gli angoli in radianti di due rette considerate parallele
-	SogliaSovrapposizione=20;	//Quanto si devono sovrapporre due segmenti
-	SogliaEstremiVicini=CanvasMathina.height*2/3; //Minima distanza tra gli estremi dei segmenti
-	SogliaPuntiVicini=50;
-	SogliaPuntoMouse=50;
-	SogliaRicercaIntersezioni=0;
-	RaggioPolizia=20;
-	RaggioIncroci=20;
-	SogliaBlocco=100;
-	
-	
-	LoadVersion(Versione);
-	
-	TrovaRiempi();
-	DisegnaSegmenti();
-	DisegnaPolizia();
-	console.log("Segm:" + Segmenti.length);
-}
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
 
 
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
 
 
-function DisegnaSegmenti() {
-	ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
-	SegmentiPresi=0;
-	for (var i=0;i<Segmenti.length;i++) {
-		ProssimoSegmento=1;
-		ctxMathina.beginPath();
-		ctxMathina.strokeStyle = "rgba(90,102,108,1)";
-		for (var j=0;j<PoliziaIntersezioni.length;j++) {
-			if (PoliziaIntersezioni[j]!= -1 && Intersezioni[PoliziaIntersezioni[j]][1].indexOf(i)>-1) {
-				console.log("preso!");
-				ctxMathina.strokeStyle = "rgb(0,200,50)";
-				if (ProssimoSegmento==1) {
-					SegmentiPresi++;
-					ProssimoSegmento=0;
-				}
-			}
-		}
-		
-		ctxMathina.lineWidth  = 25;
-		ctxMathina.setLineDash([0]);
-		ctxMathina.moveTo(Segmenti[i][0][0],Segmenti[i][0][1]);
-		ctxMathina.lineTo(Segmenti[i][1][0],Segmenti[i][1][1]);
-		ctxMathina.stroke();
-		
-		
-		ctxMathina.beginPath();
-		ctxMathina.strokeStyle = "rgb(245,245,245)";
-		ctxMathina.lineWidth  = 3;
-		ctxMathina.setLineDash([15, 15]);
-		ctxMathina.moveTo(Segmenti[i][0][0],Segmenti[i][0][1]);
-		ctxMathina.lineTo(Segmenti[i][1][0],Segmenti[i][1][1]);
-		ctxMathina.stroke();
-		
-		
-		
-	}
-	ctxMathina.setLineDash([0]);
-	
-	for (var i=0;i<Intersezioni.length;i++) {
-		ctxMathina.beginPath();
-		ctxMathina.fillStyle = "rgb(5,200,30)";
-		ctxMathina.lineWidth  = 2;
-		ctxMathina.strokeStyle = "rgb(0,0,0)";
-		ctxMathina.arc(Intersezioni[i][0][0],Intersezioni[i][0][1],RaggioIncroci,0,Math.PI*2,true);
-		ctxMathina.fill();
-		ctxMathina.stroke();
-	
-		//ctxMathina.beginPath();
-		//ctxMathina.fillStyle = "rgb(0,0,0)";
-		//ctxMathina.textAlign = "center";
-		//ctxMathina.font = "14px Arial";
-		//ctxMathina.fillText(i, Intersezioni[i][0][0],Intersezioni[i][0][1]+5);	
-	}
-	if (SegmentiPresi==Segmenti.length) {
-		setTimeout(function(){ 	Finale();}, 500);
-	}
-}
+        function Init() {
+            Versione = gup('v', document.location.search);
 
-function Finale() {
-	if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
-	console.log("Finale");
-	document.getElementById("successMessage").style.display="block";
-
-}
-
-function PoliziaCheck() {
-PoliziaIntersezioni[PuntoPreso]=-1;
-	for (var i=0;i<Intersezioni.length;i++) {
-			
-			if (Distanza(Polizia[PuntoPreso],Intersezioni[i][0])<SogliaPuntoMouse) {
-				Polizia[PuntoPreso]=Intersezioni[i][0];
-				PoliziaIntersezioni[PuntoPreso]=i;
-			}
-		}
-}
-
-function DisegnaPolizia() {
-	for (var i=0;i<Polizia.length;i++) {
-			Scale=5;
-			PM=[Polizia[i][0]-0.5*police_dimension[0]/Scale,Polizia[i][1]-0.5*police_dimension[1]/Scale];
-			ctxMathina.drawImage(police_hat, PM[0],PM[1], police_dimension[0]/Scale, police_dimension[1]/Scale);
-			//ctxMathina.beginPath();
-			//ctxMathina.lineWidth  = 5;
-			//ctxMathina.strokeStyle = "rgb(255,255,0)";
-			//ctxMathina.arc(Polizia[i][0],Polizia[i][1],RaggioPolizia,0,Math.PI*2,true);
-			//ctxMathina.stroke();
-		}
-}
+            if (!isNumeric(Versione)) Versione = 1;
+            window.CanvasMathina = document.getElementById('CanvasMathina');
+            window.ctxMathina = CanvasMathina.getContext('2d');
 
 
-PuntoPreso=-1;
+            DivCanvas.addEventListener('mousedown', Down, false);
+            DivCanvas.addEventListener('mouseup', Up, false);
+            DivCanvas.addEventListener('mouseout', Up, false);
+            DivCanvas.addEventListener('mousemove', Move, false);
 
-function Down(ev) {
-	ev.preventDefault();
-	if (ev.changedTouches  != null) {
-		touchobject=ev.changedTouches[0];
-		var mousexMov = touchobject.clientX-this.offsetLeft;
-		var mouseyMov = touchobject.clientY-this.offsetTop;
-	} else {
-		
-		var mousexMov = ev.clientX-this.offsetLeft;
-		var mouseyMov = ev.clientY-this.offsetTop;
-	}
+            DivCanvas.addEventListener('touchstart', Down, false);
+            DivCanvas.addEventListener('touchend', Up, false);
+            DivCanvas.addEventListener('touchmove', Move, false);
 
-	MousePos=[mousexMov,mouseyMov];
-	
-	for (var i=0;i<Polizia.length;i++) {
-		if (Distanza(Polizia[i],MousePos) <SogliaPuntoMouse) {
-			PuntoPreso=i;
-			break;
-		}
-	}
-	startAnima();
-	
-}
+            window.addEventListener('resize', Resize, false);
 
-function Up(ev) {
-	ev.preventDefault();
-	if (PuntoPreso>-1) {
-		PoliziaCheck();
-	}
-	PuntoPreso=-1;
-	//if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
-}
 
-function Move(ev) {
-	ev.preventDefault();
-	if (ev.changedTouches  != null) {
-		touchobject=ev.changedTouches[0];
-		var mousexMov = touchobject.clientX-this.offsetLeft;
-		var mouseyMov = touchobject.clientY-this.offsetTop;
-	} else {
-		var mousexMov = ev.clientX-this.offsetLeft;
-		var mouseyMov = ev.clientY-this.offsetTop;
-	}
-	MousePos=[mousexMov,mouseyMov];
-	
-	if (PuntoPreso>-1) {
-		Polizia[PuntoPreso]=MousePos;
-		PoliziaCheck();
-	}
-	
-}
+            if (Versione == 2) LoadGraphics("./sc.png");
+            else LoadGraphics("./hat.png");
+            setTimeout(function() {
+                CheckCaricamento();
+            }, 10);
+        }
 
-function startAnima() {
-    fpsInterval = 1000 / 60;
-    then = Date.now();
-    startTime = then;
-    Anima();
-}
+        function CheckCaricamento() {
+            if (NumeroCaricati == 1) {
+                Resize();
+                Reset();
 
-function Anima() {
-    window.CurrentAnim=requestAnimationFrame(Anima);
-    now = Date.now();
-    elapsed = now - then;
-    if (elapsed > fpsInterval) {
-        then = now - (elapsed % fpsInterval);
-		
-		DisegnaSegmenti();
-		DisegnaPolizia();
-		
-    }
-}
-</script>
+            } else {
+                setTimeout(function() {
+                    CheckCaricamento();
+                }, 100);
+            }
+        }
+
+
+        function canvas_arrow(context, fromx, fromy, tox, toy) {
+            var headlen = 10; // length of head in pixels
+            var dx = tox - fromx;
+            var dy = toy - fromy;
+            var angle = Math.atan2(dy, dx);
+            context.moveTo(fromx, fromy);
+            context.lineTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+            context.moveTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+        }
+
+        function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ? doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+
+            CanvasMathina.width = dimension[0];
+            CanvasMathina.height = dimension[1];
+
+        }
+
+        function Reset() {
+            police_dimension = [police_hat.width, police_hat.height];
+            Segmenti = [];
+            Intersezioni = [];
+            NumeriGenera = [3, 2, 2];
+            SogliaPuntiCoincidenti = 15; //Distanza a cui due punti vengono considerati coincidenti
+            SogliaDistTrim = 200; //Soglia a cui eliminare gli angoli morti
+            SogliaCoeffAng = 0.4; //Quanto possono differire gli angoli in radianti di due rette considerate parallele
+            SogliaSovrapposizione = 20; //Quanto si devono sovrapporre due segmenti
+            SogliaEstremiVicini = CanvasMathina.height * 2 / 3; //Minima distanza tra gli estremi dei segmenti
+            SogliaPuntiVicini = 50;
+            SogliaPuntoMouse = 50;
+            SogliaRicercaIntersezioni = 0;
+            RaggioPolizia = 20;
+            RaggioIncroci = 20;
+            SogliaBlocco = 100;
+
+
+            LoadVersion(Versione);
+
+            TrovaRiempi();
+            DisegnaSegmenti();
+            DisegnaPolizia();
+            console.log("Segm:" + Segmenti.length);
+        }
+
+
+
+
+        function DisegnaSegmenti() {
+            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            SegmentiPresi = 0;
+            for (var i = 0; i < Segmenti.length; i++) {
+                ProssimoSegmento = 1;
+                ctxMathina.beginPath();
+                ctxMathina.strokeStyle = "rgba(90,102,108,1)";
+                for (var j = 0; j < PoliziaIntersezioni.length; j++) {
+                    if (PoliziaIntersezioni[j] != -1 && Intersezioni[PoliziaIntersezioni[j]][1].indexOf(i) > -1) {
+                        console.log("preso!");
+                        ctxMathina.strokeStyle = "rgb(0,200,50)";
+                        if (ProssimoSegmento == 1) {
+                            SegmentiPresi++;
+                            ProssimoSegmento = 0;
+                        }
+                    }
+                }
+
+                ctxMathina.lineWidth = 25;
+                ctxMathina.setLineDash([0]);
+                ctxMathina.moveTo(Segmenti[i][0][0], Segmenti[i][0][1]);
+                ctxMathina.lineTo(Segmenti[i][1][0], Segmenti[i][1][1]);
+                ctxMathina.stroke();
+
+
+                ctxMathina.beginPath();
+                ctxMathina.strokeStyle = "rgb(245,245,245)";
+                ctxMathina.lineWidth = 3;
+                ctxMathina.setLineDash([15, 15]);
+                ctxMathina.moveTo(Segmenti[i][0][0], Segmenti[i][0][1]);
+                ctxMathina.lineTo(Segmenti[i][1][0], Segmenti[i][1][1]);
+                ctxMathina.stroke();
+
+
+
+            }
+            ctxMathina.setLineDash([0]);
+
+            for (var i = 0; i < Intersezioni.length; i++) {
+                ctxMathina.beginPath();
+                ctxMathina.fillStyle = "rgb(5,200,30)";
+                ctxMathina.lineWidth = 2;
+                ctxMathina.strokeStyle = "rgb(0,0,0)";
+                ctxMathina.arc(Intersezioni[i][0][0], Intersezioni[i][0][1], RaggioIncroci, 0, Math.PI * 2, true);
+                ctxMathina.fill();
+                ctxMathina.stroke();
+
+                //ctxMathina.beginPath();
+                //ctxMathina.fillStyle = "rgb(0,0,0)";
+                //ctxMathina.textAlign = "center";
+                //ctxMathina.font = "14px Arial";
+                //ctxMathina.fillText(i, Intersezioni[i][0][0],Intersezioni[i][0][1]+5);	
+            }
+            if (SegmentiPresi == Segmenti.length) {
+                setTimeout(function() {
+                    Finale();
+                }, 500);
+            }
+        }
+
+        function Finale() {
+            if (typeof CurrentAnim != 'undefined') cancelAnimationFrame(CurrentAnim);
+            console.log("Finale");
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+        function PoliziaCheck() {
+            PoliziaIntersezioni[PuntoPreso] = -1;
+            for (var i = 0; i < Intersezioni.length; i++) {
+
+                if (Distanza(Polizia[PuntoPreso], Intersezioni[i][0]) < SogliaPuntoMouse) {
+                    Polizia[PuntoPreso] = Intersezioni[i][0];
+                    PoliziaIntersezioni[PuntoPreso] = i;
+                }
+            }
+        }
+
+        function DisegnaPolizia() {
+            for (var i = 0; i < Polizia.length; i++) {
+                Scale = 5;
+                PM = [Polizia[i][0] - 0.5 * police_dimension[0] / Scale, Polizia[i][1] - 0.5 * police_dimension[1] / Scale];
+                ctxMathina.drawImage(police_hat, PM[0], PM[1], police_dimension[0] / Scale, police_dimension[1] / Scale);
+                //ctxMathina.beginPath();
+                //ctxMathina.lineWidth  = 5;
+                //ctxMathina.strokeStyle = "rgb(255,255,0)";
+                //ctxMathina.arc(Polizia[i][0],Polizia[i][1],RaggioPolizia,0,Math.PI*2,true);
+                //ctxMathina.stroke();
+            }
+        }
+
+
+        PuntoPreso = -1;
+
+        function Down(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
+
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
+
+            MousePos = [mousexMov, mouseyMov];
+
+            for (var i = 0; i < Polizia.length; i++) {
+                if (Distanza(Polizia[i], MousePos) < SogliaPuntoMouse) {
+                    PuntoPreso = i;
+                    break;
+                }
+            }
+            startAnima();
+
+        }
+
+        function Up(ev) {
+            ev.preventDefault();
+            if (PuntoPreso > -1) {
+                PoliziaCheck();
+            }
+            PuntoPreso = -1;
+            //if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
+        }
+
+        function Move(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
+            MousePos = [mousexMov, mouseyMov];
+
+            if (PuntoPreso > -1) {
+                Polizia[PuntoPreso] = MousePos;
+                PoliziaCheck();
+            }
+
+        }
+
+        function startAnima() {
+            fpsInterval = 1000 / 60;
+            then = Date.now();
+            startTime = then;
+            Anima();
+        }
+
+        function Anima() {
+            window.CurrentAnim = requestAnimationFrame(Anima);
+            now = Date.now();
+            elapsed = now - then;
+            if (elapsed > fpsInterval) {
+                then = now - (elapsed % fpsInterval);
+
+                DisegnaSegmenti();
+                DisegnaPolizia();
+
+            }
+        }
+    </script>
 </head>
+
 <body onload="Init()">
-<div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="successMessage" style="display:none">
-    <img src="happy.png" id="certo" width=8% style=" position: absolute;
+    <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+    <div id="successMessage" style="display:none">
+        <img src="happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
   right: 46%;"></img>
-  <img src="Festejos.gif" width=40% style=" position: absolute;
+        <img src="Festejos.gif" width=40% style=" position: absolute;
   top: 10%;
   right: 30%; z-index: -1;"> </img>
-	   
-	<img src="refresh.png" onclick="Link();" width=10% style=" position: absolute;
+
+        <img src="refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
-  </div>
+    </div>
 </body>
+
 </html>
