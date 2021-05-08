@@ -286,8 +286,42 @@
 	});
 	</script>
 	<script type="text/javascript">
+	Lingua=1;
+
+	Traduzioni=[
+	[["Trad1"],"","","",""]
+	];
+
+	function isNumeric(n) {
+	  return !isNaN(parseFloat(n)) && isFinite(n);
+	}
+
+	function gup( name, url ) {
+		if (!url) url = location.href;
+		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		var regexS = "[\\?&]"+name+"=([^&#]*)";
+		var regex = new RegExp( regexS );
+		var results = regex.exec( url );
+		return results == null ? null : results[1];
+	}
+
+
+	function Traduci(Lang) {
+	  for (var k = 0; k < Traduzioni.length; k++) {
+		for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+		  if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+		}
+	  }
+	}
+	
 	function Init() {
-		ListaPrimi = [23, 29, 31, 37];
+	
+		Lingua=Number(gup('l', document.location.search));
+		if (!isNumeric(Lingua)) Lingua=1;
+		if (Lingua==0) Lingua=1;
+		Traduci(Lingua);
+		
+		ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
 		PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
 		document.getElementById("Primo1").innerHTML = PrimoScelto;
 		BaseScelta = 2 + Math.floor(Math.random() * (PrimoScelto - 3));
