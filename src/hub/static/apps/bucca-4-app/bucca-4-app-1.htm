@@ -271,7 +271,29 @@
 	Lingua=1;
 
 	Traduzioni=[
-	[["Trad1"],"","","",""]
+	[["Trad1"],"Phase 1 (Angela): I will choose two numbers for you:","Fase 1 (Angela): Sceglierò per voi due numeri:","Fase 1 (&Acirc;ngela): Vou escolher dois n&uacute;meros para voc&ecirc;:","Phase 1 (Angela): Ich werde zwei Zahlen f&uuml;r Sie ausw&auml;hlen:"],
+	[["Trad2"],"a prime number <em>p</em>","un numero primo <em>p</em>: ","um n&uacute;mero primo <em>p</em>","eine Primzahl <em>p</em>"],
+	[["Trad3"],"and a number <em>g</em> which will be our base:","e un numero <em>g</em> che sarà la nostra base:","e um n&uacute;mero <em>g</em> que ser&aacute; nossa base:","und eine Zahl <em> g </ em>, die unsere Basis sein wird:"],
+	[["Trad4"],"Let's get started!","Ok, iniziamo!","Vamos começar!","Lass uns anfangen!"],
+	[["Trad5"],"Phase 2 (Leo): Leo's secret","Fase 2 (Leo): il segreto di Leo","Fase 2 (Leo): o segredo de Leo","Phase 2 (Leo): Leos Geheimnis"],
+	[["Trad6"],"Choose Leo's secret number between <em>2</em> and","Scegli il numero segreto di Leo tra <em>2</em> e ","Escolha o n&uacute;mero secreto de Leo entre <em>2</em> e","W&auml;hl Leos Geheimnummer zwischen <em>2</em> und"],
+	[["Trad7","Trad7a","Trad7b","Trad7c"],"Caution!","Attenzione!","Aten&ccedil;&atilde;o!","Achtung!"],
+	[["Trad8","Trad8a","Trad8b","Trad8c"],"is not between <em>2</em> and","non sta tra <em>2</em> e","n&atilde;o est&aacute; entre <em>2</em> e","liegt nicht zwischen <em>2</em> und"],
+	[["Trad9"],"Leo computed the number to send to Mathina: ","Leo ha calcolato il numero da mandare a Mathina: ","Leo calculou o n&uacute;mero para enviar para Mathina:","Leo berechnet die Anzahl an Mathina zu senden: "],
+	[["Trad10","Trad10a","Trad10b","Trad10c","Trad10d","Trad10e","Trad10f","Trad10g"],"modulo","modulo","m&oacute;dulo","Modulo"],
+	[["Trad11"],"Let's see what Mathina is doing at the same time!","Vediamo cosa sta facendo Mathina in contemporanea!","Vamos ver o que a Mathina est&aacute; fazendo ao mesmo tempo!","Mal sehen, was Mathina gleichzeitig macht!"],
+	[["Trad12"],"Phase 2 (Mathina): Mathina's secret","Fase 2 (Mathina): il segreto di Mathina","Fase 2 (Mathina): o segredo de Mathina","Phase 2 (Mathina): Leos Mathina"],
+	[["Trad13"],"Choose Mathina's secret number between <em>2</em> and","Scegli il numero segreto di Mathina tra <em>2</em> e","Escolha o n&uacute;mero secreto de Mathina entre <em>2</em> e","W&auml;hl Mathinas Geheimnummer zwischen <em>2</em> und"],
+	[["Trad14"],"Mathina computed the number to send to Leo: ","Mathina ha calcolato il numero da mandare a Leo:","Mathina calculou o n&uacute;mero para enviar para Leo:","Mathina berechnet die Anzahl an Leo zu senden: "],
+	[["Trad15"],"Done! And now?","Fatto! E adesso?","Feito! E agora?","Getan! Und nun?"],
+	[["Trad16"],"Leo and Mathina exchange numbers A and B","Leo e Mathina si scambiano i numeri A e B","Leo e Mathina trocam os n&uacute;meros A e B","Leo und Mathina tauschen die Nummern A und B aus"],
+	[["Trad17"],"Phase 3 (Leo): the shared secret","Fase 3 (Leo): il segreto condiviso","Fase 3 (Leo): o segredo compartilhado","Phase 3 (Leo): das gemeinsame Geheimnis"],
+	[["Trad18"],"Here is the value that Leo calculates","Ecco il valore che calcola Leo","Aqui est&aacute; o valor que Leo calcula","Hier ist der Wert, den Leo berechnet"],
+	[["Trad19"],"Is that the same number that Mathina found?","&Egrave; lo stesso numero che ha trovato Mathina?","&Eacute; o mesmo n&uacute;mero que Mathina encontrou?","Ist das die gleiche Nummer, die Mathina gefunden hat?"],
+	[["Trad20"],"Let's check","Controlliamo","Vamos checar","Lass uns nachsehen"],
+	[["Trad21"],"Phase 3 (Mathina): the shared secret","Fase 3 (Mathina): il segreto condiviso","Fase 3 (Mathina): o segredo compartilhado","Phase 3 (Mathina): das gemeinsame Geheimnis"],
+	[["Trad22"],"Here is the value that Mathina calculates","Ecco il valore che calcola Mathina","Aqui est&aacute; o valor que Mathina calcula","Hier ist der Wert, den Mathina berechnet"],
+	[["Trad23"],"It it the same number that Leo found!","&Egrave; lo stesso numero che ha trovato Leo!","&Eacute; o mesmo n&uacute;mero que o Leo encontrou!","Es ist die gleiche Nummer, die Leo gefunden hat!"],
 	];
 
 	function isNumeric(n) {
@@ -433,49 +455,49 @@
 <body onload="Init()">
 	<div id="DivCanvas">
 		<div id="Text1">
-			<p class="titolo">Fase 1 (Angela): Sceglierò per voi due numeri: <br>un numero primo <em>p</em>: <b id="Primo1"></b>, <br>e un numero <em>g</em> che sarà la nostra base: <b id="Base1"></b></p>
-			<p><button onclick="$('#Text2').show();">Ok, iniziamo!</button></p>
+			<p class="titolo"><span id="Trad1">Fase 1 (Angela): Sceglierò per voi due numeri: </span><br><span id="Trad2">un numero primo <em>p</em>: </span> <b id="Primo1"></b>, <br><span id="Trad3">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
+			<p><button onclick="$('#Text2').show();"><span id="Trad4">Ok, iniziamo!</span></button></p>
 		</div>
 		<div id="Text2">
-			<p class="titolo">Fase 2 (Leo): il segreto di Leo</p>
+			<p class="titolo" id="Trad5">Fase 2 (Leo): il segreto di Leo</p>
 			<p>
-				<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br /> a = <input type="text" id="segretoalice" onchange="diffie(1)" />
-				<span class="att" id="azero">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <span class="att" id="auno">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <br />
+				<span id="Trad6">Scegli il numero segreto di Leo tra <em>2</em> e </span><em class="pmuno">p-1</em>: <br /> a = <input type="text" id="segretoalice" onchange="diffie(1)" />
+				<span class="att" id="azero"><span id="Trad7">Attenzione! </span><em class="SegMatA">a</em><span id="Trad8"> non sta tra tra <em>2</em> e </span><em class="pmuno">p-1</em></span> <span class="att" id="auno"><span id="Trad7a">Attenzione!</span> <em class="SegMatA">a</em><span id="Trad8a"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span> <br />
 			</p>
 			<div id="DPostMat" style="display:none;">
-				<p>Leo ha calcolato il numero da mandare a Mathina: <br>
-					<em>A</em> = <em>g<sup>a</sup></em> modulo <em>p</em> = <em class="SegG">g</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em>= <span id="chia"></span></p>
-				<p><button onclick="$('#Text3').show();">Vediamo cosa sta facendo Mathina in contemporanea!</button></p>
+				<p><span id="Trad9">Leo ha calcolato il numero da mandare a Mathina: </span><br>
+					<em>A</em> = <em>g<sup>a</sup></em> <span id="Trad10">modulo</span> <em>p</em> = <em class="SegG">g</em><sup class="SegMatA">a</sup> <span id="Trad10a">modulo</span> <em class="SegP">p</em>= <span id="chia"></span></p>
+				<p><button onclick="$('#Text3').show();" id="Trad11">Vediamo cosa sta facendo Mathina in contemporanea!</button></p>
 			</div>
 		</div>
 		<div id="Text3">
-			<p class="titolo">Fase 2 (Mathina): il segreto di Mathina</p>
+			<p class="titolo" id="Trad12">Fase 2 (Mathina): il segreto di Mathina</p>
 			<p>
-				<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br />
+				<span class="Trad13">Scegli il numero segreto di Leo tra <em>2</em> e</span> <em class="pmuno">p-1</em>: <br />
 				<input type="text" id="segretobob" onchange="diffie(2)" />
-				<span class="att" id="bzero">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span>
-				<span class="att" id="buno">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span>
+				<span class="att" id="bzero"><span id="Trad7c">Attenzione! </span> <em class="SegMatB">b</em> <span id="Trad8b"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span>
+				<span class="att" id="buno"><span id="Trad7d">Attenzione! </span> <em class="SegMatB">b</em> <span id="Trad8c"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span>
 				<br />
 			</p>
 			<div id="DPostLeo" style="display:none;">
-				<p>Mathina ha calcolato il numero da mandare a Leo: <br>
-					<em>B</em> = <em>g<sup>b</sup></em> modulo <em>p</em>= <em class="SegG">g</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em>= <span id="chib"></span></p>
-				<p><button onclick="$('#Text6').show();">Fatto! E adesso?</button></p>
+				<p><span id="Trad14">Mathina ha calcolato il numero da mandare a Leo:</span> <br>
+					<em>B</em> = <em>g<sup>b</sup></em> <span id="Trad10b">modulo</span> <em>p</em>= <em class="SegG">g</em><sup class="SegMatB">b</sup> <span id="Trad10c">modulo</span> <em class="SegP">p</em>= <span id="chib"></span></p>
+				<p><button onclick="$('#Text6').show();" id="Trad15">Fatto! E adesso?</button></p>
 			</div>
 		</div>
 		<div id="Text6">
-			<p><button onclick="$('#Text4').show();">Leo e Mathina si scambiano i numeri A e B</button></p>
+			<p><button onclick="$('#Text4').show();" id="Trad16">Leo e Mathina si scambiano i numeri A e B</button></p>
 		</div>
 		<div id="Text4">
-			<p class="titolo">Fase 3 (Leo): il segreto condiviso</p>
-			<p>Ecco il valore che calcola Leo <em>S</em> = <em>B<sup>a</sup></em> modulo <em>p</em> = <em class="SegCondB">B</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em> = <span id="segra"></span>
-				<br> &Egrave; lo stesso numero che ha trovato Mathina? </p>
-			<p><button onclick="$('#Text5').show();">Controlliamo</button></p>
+			<p class="titolo" id="Trad17">Fase 3 (Leo): il segreto condiviso</p>
+			<p><span id="Trad18">Ecco il valore che calcola Leo</span> <em>S</em> = <em>B<sup>a</sup></em> <span id="Trad10d">modulo</span> <em>p</em> = <em class="SegCondB">B</em><sup class="SegMatA">a</sup> <span id="Trad10e">modulo</span> <em class="SegP">p</em> = <span id="segra"></span>
+				<br> <span id="Trad19">&Egrave; lo stesso numero che ha trovato Mathina?</span> </p>
+			<p><button onclick="$('#Text5').show();" id="Trad20">Controlliamo</button></p>
 		</div>
 		<div id="Text5">
-			<p class="titolo">Fase 3 (Mathina): il segreto condiviso</p>
-			<p>Ecco il valore che calcola Mathina <em>S</em> = <em>A<sup>b</sup></em> modulo <em>p</em> = <em class="SegCondA">A</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em> = <span id="segrb"></span>
-				<br> &Egrave; lo stesso numero che ha trovato Leo! </p>
+			<p class="titolo" id="Trad21">Fase 3 (Mathina): il segreto condiviso</p>
+			<p><span id="Trad22">Ecco il valore che calcola Mathina</span> <em>S</em> = <em>A<sup>b</sup></em> <span id="Trad10f">modulo</span> <em>p</em> = <em class="SegCondA">A</em><sup class="SegMatB">b</sup> <span id="Trad10g">modulo</span> <em class="SegP">p</em> = <span id="segrb"></span>
+				<br> <span id="Trad23">&Egrave; lo stesso numero che ha trovato Leo!</span> </p>
 		</div>
 	</div>
 	<div class="block" style="display:none"> <input id="text" type="text" /> </div>
