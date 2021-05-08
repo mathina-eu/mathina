@@ -161,14 +161,13 @@ actions:
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 50%; left: 55%;"  
+    style: "width: 8%; top: 53%; left: 55%;"  
     parallax: mid2
     
   - type: image
     src: $COMMON/img/characters/leo/leo5.png
     id: leo
     style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
-    
     parallax: mid2
 
   - type: animation
@@ -189,7 +188,7 @@ actions:
 
       - text: Flamma, we saw the unidragon, are you training him?
         char: mathina
-        mood: excited
+        mood: happy
  
   - type: animation
     target: uni
@@ -220,7 +219,7 @@ actions:
       - text: This is another dragon! And you don’t have his horn!! Why is he
           not flying away?
         char: leo
-        mood: normal
+        mood: talking
         
   - type: animation
     target: uni
@@ -287,6 +286,7 @@ actions:
     avatarAlign:
       flamma: right
       mathina: left
+      leo: left
     entries:
 
       - text: You are right Leo, this is another unidragon. And this poor boy
@@ -296,6 +296,22 @@ actions:
           and nobody has ever found it.
         char: flamma
         mood: normal
+  
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%;"  
+    parallax: mid2    
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:      
 
       - text:  Normally when that happens, the unidragons are not tamed and
           they remain wild, but they still feel their lost horn when it moves,
@@ -307,6 +323,23 @@ actions:
         char: flamma
         mood: normal
 
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(0deg)
+        ease: power3.out
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
       - text: Unidragons have a kind of language, different from humans.
           Their language expresses what they can feel, and in this case,
           also the feeling of the direction of the horn. We humans don’t
@@ -317,13 +350,32 @@ actions:
         char: flamma
         mood: normal
 
+
+
       - text: Magical numbers! How can you talk with numbers?
         char: leo
-        mood: worried
+        mood: surprised
+        
+        
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2    
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:  
 
       - text: I have the feeling that an invisible structure is somehow connecting everything…
         char: mathina
-        mood: determined
+        mood: arguing
 
       - text: So, how can we tell him how to fly?
         char: leo
@@ -338,7 +390,7 @@ actions:
 
       - text: What can we say?
         char: mathina
-        mood: happy
+        mood: talking
 
       - text: Let us start with something easy. Let us tell him to fly just
           over the land, horizontally in a straight line.
@@ -347,7 +399,7 @@ actions:
 
       - text: Ok, let’s tell him to do that.
         char: leo
-        mood: happy
+        mood: talking
 
       - text: No, you can’t use the human words, they are too confusing
           and imprecise for him. You just tell him the magical number one.
@@ -356,50 +408,203 @@ actions:
 
       - text: The magical number one?
         char: leo
-        mood: happy
+        mood: thinking
 
       - text: It means to advance at his normal speed.
         char: flamma
         mood: normal
 
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 8%; top: 70%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 8%; top: 70%; left: 45%;"  
+    parallax: mid2  
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;" 
+    parallax: front2 
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+       # yPercent: 5
+        #width: 50% 
+        #ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 0.1
+        xPercent: 100
+        delay: 5
+        transform: rotateY(180deg)
+
+        
+  - type: animation
+    target: uni
+    vars:
+        duration: 1
+        delay: 5
+        xPercent: -10
+        #yPercent: 5
+        #width: 50% 
+        ease: power3.out
+
   - type: sceneText
     text: Flamma said the number one in unidragon language, and the animal
       started moving forward, quite as if it was running instead of flying.
-      At a shout of Flamma, the unidragon returned to the base of the tree,
+      At a shout of Flamma, the unidragon returned to the place,
       where he was before moving.
 
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2   
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
+      leo: left
     entries:
 
       - text: And what if we tell him 2?
         char: leo
-        mood: happy
+        mood: talking
 
       - text: He will move twice as fast.
         char: flamma
-        mood: happy
+        mood: normal
 
-      - text: Oh, I start to understand, so the number is the speed. But how do we make him fly?
+      - text: Oh, I start to understand, so the number is the speed. But how do we make him fly up?
         char: mathina
-        mood: happy
+        mood: arguing
 
       - text: Well, for that you need to tell him two numbers. The first is
           how much he advances, the second is how much he rises in the air.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: Aha!, so we are telling him to advance and rise up!
         char: mathina
-        mood: happy
+        mood: talking
 
       - text: In magical language, we would write that as (1,1), and in unidragon it is pronounced…
         char: flamma
-        mood: happy
+        mood: normal
 
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;" 
+    parallax: front2 
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
+    parallax: mid2  
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -50
+        #width: 50% 
+        #ease: power3.out
+        
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        #xPercent: 100
+        delay: 3
+        transform: rotateY(180deg)
+        
   - type: sceneText
     text: ...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
 
@@ -413,30 +618,72 @@ actions:
       - text: It flies, it flies!!
         char: leo
         mood: happy
-        exposition: Both Mathina and Leo exclaimed.
+        exposition: Leo exclaimed.
 
       - text: Yes, it does! But let me make him come back before he is too far away.
-        char: leo
+        char: flamma
         mood: happy
         exposition: And Flamma made the animal come back.
+        
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2   
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
 
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
       - text: You see that it was rising at the same speed as it was advancing.
           Can you figure out how to tell him to fly in a steeper path?
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: Hmm… maybe we can tell him a 2 instead of a 1, as before?
         char: leo
-        mood: happy
+        mood: arguing
 
       - text: Yes, but in the second number, because we want him to rise faster.
         char: mathina
-        mood: happy
+        mood: arguing
 
       - text: Very well, I will tell him (1,2)
         exposition: said Flamma, and pronounced the magical words.
         char: flamma
-        mood: happy
+        mood: normal
 
   - type: sceneText
     text: Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
