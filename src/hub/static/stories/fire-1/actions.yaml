@@ -119,13 +119,13 @@ actions:
 
       - text: Ms, are you a warrior?
         char: mathina
-        mood: normal
+        mood: talking
       - text: Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
         char: flamma
         mood: normal
       - text: Are you a wizard then?
         char: mathina
-        mood: determined
+        mood: arguing
       - text: I wouldn’t say that either, although I know some of them and they have helped me more than once.
         char: flamma
         mood: normal
@@ -156,7 +156,7 @@ actions:
       - text: What is that?
         char: leo
         exposition: Replied Leo, with increasing interest.
-        mood: normal
+        mood: talking
         
   - type: clearImage
     id: mat
@@ -190,7 +190,7 @@ actions:
       - text: Oh, that is fascinating. Can we see some of these firebirds?
           You say there are different types…
         char: mathina
-        mood: normal
+        mood: talking
       - text: I came here looking for a small unidragon which I lost two
           days ago. I think he wanted to explore the world but flew too far away.
           You will see it, once I manage to tell him where I am.
@@ -344,7 +344,7 @@ actions:
         char: leo
         exposition: he added, although he was a bit nervous of the animal
           getting closer.
-        mood: worried
+        mood: surprised
  
   - type: clearImage
     id: fla
@@ -400,10 +400,10 @@ actions:
     entries:
       - text: Yes! Yes!
         char: mathina
-        mood: excited
+        mood: happy
       - text: Let’s become unidragon trainers!
         char: leo
-        mood: excited
+        mood: happy
       - text: You just have to point the horn in the direction that you
           want the unidragon to fly.
         char: flamma
@@ -528,7 +528,7 @@ actions:
           unidragon?
         char: leo
         exposition: Leo was immediately counting himself in.
-        mood: excited
+        mood: happy
       - text: Well, a unidragon is a big pet to have, it is a great
           responsibility, and it has to accept you. If you do well in the
           festival, yes, you could become a firebird trainer and get
@@ -538,7 +538,7 @@ actions:
       - text: I would love to try. I am always up for adventures!
           We will have a unidragon, Leo!
         char: mathina
-        mood: excited
+        mood: happy
       - text: Then it is set. But you will have to practise a lot.
           I will let you train with this unidragon more and once you are
           ready we will go to the festival.
