@@ -1,0 +1,554 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Scambio di chiavi</title>
+	<style>
+	@font-face {
+	font-family: Orbitron;
+	src: url(./css/font/orbitron-medium.otf);
+}
+@font-face {
+    font-family: DejaVu Sans Mono;
+    src: url(./css/font/DejaVuSansMono.ttf);
+    }
+body, #Text1, #Text2, #Text3, #Text4, #Text5{
+overflow:hidden !important;}
+body {
+	//background-image: url(./images/sfondo.png);
+	background-repeat: no-repeat;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a{
+font: 17px Orbitron;
+color:rgb(37,41,74);
+	}
+#ScassoTitolo {
+	position: absolute;
+	width: 1920px;
+	height: 95px;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background-image: url(./images/scasso.png);
+	background-origin: border-box;
+	background-repeat:no-repeat;
+	color:#FFF;
+	font-family:Orbitron;
+	font-size:60px;
+	padding-left:60px;
+	padding-top:20px;
+}
+#DivCanvas {
+	position:absolute;
+	width:1920px;
+	height:1080px;
+	z-index:0;
+	left: 0px;
+	top: 0px;
+}
+#Text1 {
+	position:absolute;
+	width:920px;
+	height:140px;
+	z-index:2;
+	left: 480px;
+	top: 90px;
+	background:rgba(255,255,255,0.5);
+	font: 20px DejaVu Sans Mono;
+	overflow-y: scroll;
+	resize: none;
+	outline: 2px dashed #FF9900; 
+	box-shadow: 0 0 0 2px #0000FF;
+	padding:10px;
+}
+#Text2 {
+	position:absolute;
+	width:890px;
+	height:285px;
+	z-index:2;
+	left: 20px;
+	top: 300px;	
+	background:rgba(255,255,255,0.5);
+	font: 20px DejaVu Sans Mono;
+	overflow-y: scroll;
+	resize: none;
+	border: 1px solid #FF9900; 
+	padding:10px;
+	display:none;
+}
+#Text3 {
+	position:absolute;
+	width:890px;
+	height: 285px;
+	z-index:2;
+	left: 970px;
+	top: 300px;	
+	background:rgba(255,255,255,0.5); 
+	font: 20px DejaVu Sans Mono;
+	overflow-y: scroll;
+	resize: none;
+	border: 1px solid #0000FF; 
+	padding:20px;
+	display:none;
+}
+
+#Text4 {
+	position:absolute;
+	width:890px;
+	height:235px;
+	z-index:2;
+	left: 20px;
+	top: 635px;	
+	background:rgba(255,255,255,0.5);
+	font: 20px DejaVu Sans Mono;
+	overflow-y: scroll;
+	resize: none;
+	border: 1px solid #FF9900; 
+	padding:20px;
+	display:none;
+}
+#Text5 {
+	position:absolute;
+	width:890px;
+	height: 235px;
+	z-index:2;
+	left: 970px;
+	top: 635px;	
+	background:rgba(255,255,255,0.5); 
+	font: 20px DejaVu Sans Mono;
+	overflow-y: scroll;
+	resize: none;
+	border: 1px solid #0000FF; 
+	padding:20px;
+	display:none;
+}
+a {
+	font: 17px Orbitron;
+	color:rgb(37,41,74);
+}
+.titolo{
+	font: 25px Orbitron;
+	color:rgb(37,41,74);
+}
+.target{
+	color:rgb(37,41,74);
+	font-weight:bold;
+}
+.att{
+	font: 20px Orbitron;
+	line-height:2em;
+	color:red;
+	display:none;
+}
+.att2{
+	font: 20px Orbitron;
+	line-height:2em;
+	color:green;
+	display:none;
+}
+input{
+	font: 20px DejaVu Sans Mono;
+	border: 1px solid #999999;
+}
+#congruo{
+	width: 40px;
+}
+button{
+	font: 20px DejaVu Sans Mono;
+}
+#button0{
+	position:absolute; 
+	top:980px; 
+	left:20px;
+}
+input[readonly]{
+	resize: none;
+	background:rgb(220,220,220);
+}
+	#primop, #generatore, #segretoalice, #segretobob{
+	color: black !important;
+	background: white !important;
+	}
+	
+	#successMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center;
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 58%;
+}
+
+#failMessage {
+  position: absolute;
+  /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+  z-index: 100;
+  background: #f3f1cd;
+  border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 10% 0%;
+text-align: center;
+    left: 1%;
+    top: 1%;
+    width: 98%;
+    height: 58%;
+}
+
+	</style>
+	<link href='./css/jquery-ui.min.css' rel="stylesheet" />
+	<link href='./css/keyboard.css' rel="stylesheet" />
+	<script src='./js/jquery-3.1.1.min.js' type="text/javascript"></script>
+	<script src='./js/jquery-latest.min.js' type="text/javascript"></script>
+	<script src='./js/jquery-ui.min.js' type="text/javascript"></script>
+	<script src='./js/jquery.keyboard.js' type="text/javascript"></script>
+	<script type="text/javascript">
+	jQuery(function($) {
+		$('#text').keyboard({
+			layout: 'num'
+		});
+		$('.version').html('(v' + $('#text').getkeyboard().version + ')');
+		$('#segretoalice').keyboard({
+			layout: 'num',
+			restrictInput : true,
+			preventPaste : true,
+			autoAccept : true
+		});
+		$('#chiavetrovata').keyboard({
+			layout: 'num',
+			restrictInput : true,
+			preventPaste : true,
+			autoAccept : true
+		});
+	});
+	</script>
+	<script type="text/javascript">
+	function Init() {
+		ListaPrimi=[23,29,31,37];
+		PrimoScelto=ListaPrimi[Math.floor(Math.random()*ListaPrimi.length)];
+		document.getElementById("Primo1").innerHTML = PrimoScelto;
+
+		BaseScelta=2+Math.floor(Math.random()*(PrimoScelto-3));
+		document.getElementById("Base1").innerHTML = BaseScelta;
+		
+		Giusta1=Math.floor(Math.random()*4)+1;
+		Giusta2=Math.floor(Math.random()*4)+1;
+		
+		
+		
+		
+		
+		UpdateLabels();
+	}
+	
+	function RiempiForm(l) {
+		document.getElementById("BA1").innerHTML=GeneraCaso(l);
+		document.getElementById("BA2").innerHTML=GeneraCaso(l);
+		document.getElementById("BA3").innerHTML=GeneraCaso(l);
+		document.getElementById("BA4").innerHTML=GeneraCaso(l);
+		document.getElementById("BB1").innerHTML=GeneraCaso(l);
+		document.getElementById("BB2").innerHTML=GeneraCaso(l);
+		document.getElementById("BB3").innerHTML=GeneraCaso(l);
+		document.getElementById("BB4").innerHTML=GeneraCaso(l);
+		
+		document.getElementById("BA"+Giusta1).innerHTML="<em class='SegG'>g</em><sup class='SegMatA'>a</sup> modulo <em class='SegP'>p</em>= <span id='chia'></span>";
+		document.getElementById("BB"+Giusta2).innerHTML="<em class='SegCondB'>B</em><sup class='SegMatA'>a</sup> modulo <em class='SegP'>p</em> = <span id='segra'></span>";
+	
+	}
+	
+	
+	function GeneraCaso(l) {
+
+		switch (Math.floor(Math.random()*4)) {
+		  case 0:
+			return "<em>"+l+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
+			break;
+		  case 1:
+			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+l+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
+			break;
+			
+			case 2:
+			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+l+"<span></span>";
+			
+			break;
+			
+		  default:
+			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+l+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
+		}
+		
+		
+		
+		
+	}
+
+	// JavaScript Document
+function isPrime(n) {
+	if (n == 2) {
+		return true
+	}
+	if (n < 2) {
+		return false
+	}
+	if (n != Math.round(n)) {
+		return false
+	}
+	if (n % 2 == 0) {
+		return false
+	}
+	var isPrime = true;
+	var sq = Math.sqrt(n);
+	for (var i = 3; i <= sq; i = i + 2) {
+		if (n % i == 0) {
+			isPrime = false
+		}
+	}
+	return isPrime;
+}
+
+function potmod(bb, ee, nn) {
+	var xx = 1;
+	for (ii = 0; ii < ee; ii++) {
+		xx = xx * bb;
+		xx = xx % nn;
+	}
+	return xx;
+}
+
+function diffie() {
+	p=PrimoScelto;
+	g=BaseScelta;
+	aa = document.getElementById("segretoalice").value;
+	a = parseInt(aa);
+	A = potmod(g, a, p);
+	
+	b = 2+Math.floor(Math.random()*(p-3));
+	B = potmod(g, b, p);
+	segretoA = potmod(B, a, p);
+	segretoB = potmod(A, b, p);
+	
+	RiempiForm(a);
+	
+	UpdateLabels();
+	document.getElementById("chia").innerHTML = A;
+	document.getElementById("chib").innerHTML = B;
+	document.getElementById("segra").innerHTML = segretoA;
+	//document.getElementById("segrb").innerHTML = segretoB;
+	console.log(a % (p - 1) == 0);
+	if (a % (p - 1) == 0) {
+		$('#azero').show();
+	} else {
+		$('#azero').hide();
+	}
+	if (a % (p - 1) == 1) {
+		$('#auno').show();
+	} else {
+		$('#auno').hide();
+	}
+	
+	
+	
+}
+
+function UpdateLabels() {
+
+if (typeof a !== 'undefined' && isNaN(a)==false) {
+	var Lista=document.getElementsByClassName("SegMatA");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=a;
+} else {
+	var Lista=document.getElementsByClassName("SegMatA");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="a";
+}
+
+if (typeof B !== 'undefined' && isNaN(B)==false) {
+	var Lista=document.getElementsByClassName("SegCondB");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=B;
+} else {
+	var Lista=document.getElementsByClassName("SegCondB");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="B";
+}
+
+if (typeof A !== 'undefined' && isNaN(A)==false) {
+	var Lista=document.getElementsByClassName("SegCondA");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=A;
+} else {
+	var Lista=document.getElementsByClassName("SegCondA");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="A";
+}
+
+if (typeof b !== 'undefined' && isNaN(b)==false) {
+	var Lista=document.getElementsByClassName("SegMatB");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=b;
+} else {
+	var Lista=document.getElementsByClassName("SegMatB");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="b";
+}
+
+if (typeof BaseScelta !== 'undefined') {
+	var Lista=document.getElementsByClassName("SegG");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=BaseScelta;
+}
+
+
+if (typeof BaseScelta !== 'undefined') {
+	var Lista=document.getElementsByClassName("SegP");
+	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto;
+}
+
+var Lista=document.getElementsByClassName("pmuno");
+for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto-2;
+
+
+}
+
+function SendMessage1(N) {
+	document.getElementById("BA1").style.backgroundColor="#4CAF50";
+	document.getElementById("BA2").style.backgroundColor="#4CAF50";
+	document.getElementById("BA3").style.backgroundColor="#4CAF50";
+	document.getElementById("BA4").style.backgroundColor="#4CAF50";
+	document.getElementById("BA"+N).style.backgroundColor="#ECAF50";
+	
+	$('#Text3').show();
+	Premuto1=N;
+
+}
+
+function ShareSecret1(N) {
+	document.getElementById("BB1").style.backgroundColor="#4CAF50";
+	document.getElementById("BB2").style.backgroundColor="#4CAF50";
+	document.getElementById("BB3").style.backgroundColor="#4CAF50";
+	document.getElementById("BB4").style.backgroundColor="#4CAF50";
+	document.getElementById("BB"+N).style.backgroundColor="#ECAF50";
+	$('#Text5').show();
+Premuto2=N;
+
+}
+
+function CheckFinale() {
+	ChiaveUtente=parseInt(document.getElementById("chiavetrovata").value);
+	if (Premuto1 == Giusta1 && Premuto2 == Giusta2 && ChiaveUtente==segretoB) {
+		//document.getElementById("messdec").innerHTML="Giusto";
+		Finisci();
+	
+	} else {
+		Sconfitta();
+	
+	}
+
+
+}
+
+function Finisci() {
+document.getElementById("successMessage").style.display="block";
+
+}
+
+function Sconfitta() {
+document.getElementById("failMessage").style.display="block";
+
+}
+
+function Link() {
+	location.reload();
+
+}
+
+	</script>
+</head>
+
+<body onload="Init()">
+	<div id="DivCanvas">
+		<div id="Text1">
+			<p>Fase 1 (Angela): Sceglierò per voi due numeri: <br>un numero primo <em>p</em>: <b id="Primo1"></b>, <br>e un numero <em>g</em> che sarà la nostra base: <b id="Base1"></b></p>
+			<p><button onclick="$('#Text2').show();">Ok, iniziamo!</button></p>
+		</div>
+		<div id="Text2">
+			<p class="titolo">Fase 2 (Leo): il segreto di Leo</p>
+			<p>
+			<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br /> 
+			a = <input type="text" id="segretoalice" onchange="diffie()" /> 
+			<span class="att" id="azero">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <span class="att" id="auno">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <br />
+			</p>
+			<p>Che numero comunichi a Mathina?<br>
+			<p>Leo ha calcolato il numero da mandare a Mathina: <br>
+			<p>
+			<button id="BA1" onclick="SendMessage1(1)"></button>
+			<button id="BA2" onclick="SendMessage1(2)"></button>
+			<button id="BA3" onclick="SendMessage1(3)"></button>
+			<button id="BA4" onclick="SendMessage1(4)"></button>
+			</p>
+		</div>
+		<div id="Text3">
+			<p class="titolo">La risposta di Mathina</p>
+			<p>Ciao Leo! Grazie del messaggio. Il numero che ho calcolato io &egrave; B=<span id="chib"  ></span></p>
+			<p><button onclick="$('#Text4').show();">Grazie Mathina!</button></p>
+		</div>
+		<div id="Text4">
+			<p class="titolo">Il segreto condiviso</p>
+			<p>Ora Leo conosce la risposta di Mathina pu&ograve; calcolare il segreto condiviso. Come fa?<br>
+			<button id="BB1" onclick="ShareSecret1(1)"></button>
+			<button id="BB2" onclick="ShareSecret1(2)"></button>
+			<button id="BB3" onclick="ShareSecret1(3)"></button>
+			<button id="BB4" onclick="ShareSecret1(4)"></button>
+		</div>
+		<div id="Text5">
+			<p class="titolo">Ora proviamo a decifrare il messaggio di Mathina</p>
+			<p>Inserisci la chiave: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br>
+			<br>
+			<span id="messdec"></span>
+			</p>
+		</div>
+	</div>
+	<div class="block" style="display:none"> <input id="text" type="text" /> </div>
+	<div id="successMessage" style="display:none">
+    <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="img/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   <p>Il messaggio decifrato &egrave;<br>
+	   VIENI QUI L'HO TROVATO</p>
+	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
+  
+<div id="failMessage" style="display:none">
+    <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+ 
+	   
+	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  </div>
+</body>
+
+</html>
