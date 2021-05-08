@@ -22,6 +22,19 @@
 		oplus(x, y) := x + y - x * y;
 
 
+		pNorm(p, v) := (
+			v = apply(v, abs(#));
+
+			if(p == 0,
+				max(v);
+			, // else //
+				sum(apply(v, #^p))^(1 / p);
+			);
+		);
+
+		distPointSet(point, set) := (
+			min(apply(set, dist(point,#)));
+		);
 
 		// *************************************************************************************************
 		// Computes the binomial n over k.
@@ -33,6 +46,7 @@
 		        faculty(n) / faculty(k) / faculty(n - k)
 		    );
 		);
+		
 
 
 		// *************************************************************************************************
@@ -156,18 +170,21 @@
 			result;
 		);
 
+		// CONVEX POLYGONS ONLY!!!
 		pointInPolygon(point, poly) := (
-			regional(result);
+			regional(resultForwards, resultBackwards);
 
-			result = true;
+			resultForwards = true;
+			resultBackwards = true;
 			forall(cycle(poly),
-				result = result & (triangleheight(#_1, #_2, point) >= 0);
+				resultForwards  = and(resultForwards , triangleheight(#_1, #_2, point) >= 0);
+				resultBackwards = and(resultBackwards, triangleheight(#_1, #_2, point) <= 0);
 			);
-			result;
-		);
-		
 
-					
+
+			or(resultForwards, resultBackwards);
+		);
+				
 
 
 		// *************************************************************************************************
@@ -313,6 +330,7 @@
 
 
 
+		lissajoue(a, b, d, t) := [sin(a * t + d), cos(b * t)];
 
 
 

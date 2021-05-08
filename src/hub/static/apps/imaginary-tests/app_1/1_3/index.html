@@ -3,7 +3,7 @@
  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>App 1 base</title>
+    <title>App 1-3</title>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
@@ -121,6 +121,7 @@ moveDragon(dt) := (
 
   if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
     dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
+    scoreCurve();
     if(length(dragon.trailA) > dragon.trailAMaxLength,
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
@@ -245,7 +246,51 @@ newObstaclePoint(list, minDist, count) := (
 
 
 
-lissajoue(a, b, d, t) := [sin(a * t + d), cos(b * t)];
+
+
+
+
+
+
+
+
+
+lissajoue(t) := lissajoue(1, 2, pi/3, 2 * pi * t);
+lemiscate(t) := [cos(2 * pi * t), sin(2 * pi * t) * cos(2 * pi * t)]; // Lemiscate of Gerono
+
+createCurveStroke(name) := (
+  result = sampleCircle(1, 2*pi);
+
+  if(name == "lissajoue", result = sampleCurve("lissajoue", 0, 1));
+  if(name == "circle",    result = sampleCircle(1, 2*pi));
+  if(name == "square",    result = samplePolygon([(-1,1), (1,1), (1,-1), (-1,-1)]));
+  if(name == "lemiscate", result = sampleCurve("lemiscate", 0, 1));
+  if(name == "triangle", result = samplePolygon([(0,1), 0.5 * (-sqrt(3), -1), 0.5 * (sqrt(3), -1)]));
+
+  result;
+);
+
+
+
+
+
+
+generateCurve() := (
+  currCurve = randchoose(curveNames);
+  followCurve.pos = randchoose(curvePositions);
+  followCurve.stroke = curveScales_currCurve * createCurveStroke(currCurve);
+  
+  followScore = [];
+);
+
+
+scoreCurve() := (
+  followScore = if(length(followScore) >= scoreLength, bite(followScore), followScore) :> distPointSet((dragon.pos - followCurve.pos), followCurve.stroke);
+  if(and(length(followScore) >= scoreLength, sum(followScore) <= scoreGoal * scoreLength),
+    generateCurve();
+  );
+);
+
 
 
 // **********************************************************************************************************
@@ -299,7 +344,7 @@ magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
 
 
 
-
+/*
 obstacles = [];
 
 repeat(5, 
@@ -329,7 +374,7 @@ pickUp = {
 
 fireballAnimationTrack = setupAnimationTrack(0,0.5);
 fireballAnimationTrack.looping = true;
-
+*/
 
 scoreLabel = {
   "pos": canvasCorners_1 + (2, -2),
@@ -359,13 +404,27 @@ recallStart = [];
 
 
 
-followCurve = createRootStrokeObject(canvasCenter, (0,0,0), (1,1,1), 0);
-curve(t) := 10 * lissajoue(1, 2, pi/3, t);
-followCurve.stroke = samplecurve("curve", 0, 2*pi);
+
+curveNames = ["lissajoue", "circle", "square", "lemiscate", "triangle"];
+curvePositions = apply(-2..2, dragonHome + [lerp(-20, 20, #, -2, 2), 2]);
+curveScales = {
+  "circle": 10,
+  "square": 10,
+  "lemiscate": 15,
+  "triangle": 13,
+  "lissajoue": 10
+};
+
+followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
+followCurve.lineSize = 5;
 followCurve.drawPercent = 1;
 
+scoreLength = 200;
+scoreGoal = 1.5;
 
 
+generateCurve();
+followCurve.pos = curvePositions_(-1);
 
 
 
@@ -389,20 +448,20 @@ setupTime();
 
 <script id='csdraw' type='text/x-cindyscript'>
   
-  
   drawimage(canvasCorners_4, canvasCorners_3, "back");
+  drawStrokeObject(followCurve);
   drawDragonTrail();
-  drawPickUp();
+  //drawPickUp();
   drawDragon();
   //drawObstacles();
   drawimage(canvasCorners_4, canvasCorners_3, "front");
   drawWand();
   
-  //drawStrokeObject(followCurve);
   
 
   drawRecallButton();
   drawScoreLabel();
+
 </script>
 
 
@@ -410,9 +469,9 @@ setupTime();
   delta = deltaTime();
 
   updateAnimationTrack(dragonAnimationTrack, delta * lerp(1, 2, wand.value, 0, wand.maxValue));
-  updateAnimationTrack(fireballAnimationTrack, delta);
+  //updateAnimationTrack(fireballAnimationTrack, delta);
   animateFlipbook(dragon, dragonAnimationTrack);
-  animateFlipbook(pickUp, fireballAnimationTrack);
+  //animateFlipbook(pickUp, fireballAnimationTrack);
 
   if(recallActive,
     updateAnimationTrack(recallTrack, delta);
@@ -423,7 +482,7 @@ setupTime();
     );
   , // else //
     moveDragon(delta);
-    collideWithPickUp();
+    //collideWithPickUp();
     //collideWithObstacles();
   );
 </script>

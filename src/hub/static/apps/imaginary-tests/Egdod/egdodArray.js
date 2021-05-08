@@ -129,6 +129,8 @@
 			list;
 		);
 
+		
+
 		// *************************************************************************************************
 		// Chooses randomly k elements of a list.
 		// *************************************************************************************************
@@ -140,7 +142,7 @@
 				, // else //
 					res = [];
 					forall(1..k,
-						i = randomint(length(list) - 1) + 1;
+						i = randomint(length(list)) + 1;
 						res = res :> list_i;
 						list = remove(list, i);
 					);
@@ -149,7 +151,7 @@
 				);
 		);
 
-		randchoose(list)    := randsort(list, 1);
+		randchoose(list) := randchoose(list, 1)_1;
 
 
 
