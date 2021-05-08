@@ -3,178 +3,215 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Scambio di chiavi</title>
 	<style>
+	html {
+		background: url(img/bg4.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		font-family: "Roboto", sans-serif;
+	}
+
 	@font-face {
-	font-family: Orbitron;
-	src: url(./css/font/orbitron-medium.otf);
-}
-@font-face {
-    font-family: DejaVu Sans Mono;
-    src: url(./css/font/DejaVuSansMono.ttf);
-    }
-body, #Text1, #Text2, #Text3, #Text4, #Text5{
-overflow:hidden !important;}
-body {
-	//background-image: url(./images/sfondo.png);
-	background-repeat: no-repeat;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-a{
-font: 17px Orbitron;
-color:rgb(37,41,74);
-	}
-#ScassoTitolo {
-	position: absolute;
-	width: 1920px;
-	height: 95px;
-	top: 0px;
-	left: 0px;
-	z-index: 1;
-	background-image: url(./images/scasso.png);
-	background-origin: border-box;
-	background-repeat:no-repeat;
-	color:#FFF;
-	font-family:Orbitron;
-	font-size:60px;
-	padding-left:60px;
-	padding-top:20px;
-}
-#DivCanvas {
-	position:absolute;
-	width:1920px;
-	height:1080px;
-	z-index:0;
-	left: 0px;
-	top: 0px;
-}
-#Text1 {
-	position:absolute;
-	width:920px;
-	height:140px;
-	z-index:2;
-	left: 480px;
-	top: 90px;
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	outline: 2px dashed #FF9900; 
-	box-shadow: 0 0 0 2px #0000FF;
-	padding:10px;
-}
-#Text2 {
-	position:absolute;
-	width:890px;
-	height:205px;
-	z-index:2;
-	left: 20px;
-	top: 300px;	
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #FF9900; 
-	padding:10px;
-	display:none;
-}
-#Text3 {
-	position:absolute;
-	width:890px;
-	height: 205px;
-	z-index:2;
-	left: 970px;
-	top: 300px;	
-	background:rgba(255,255,255,0.5); 
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #0000FF; 
-	padding:10px;
-	display:none;
-}
-
-#Text4 {
-	position:absolute;
-	width:890px;
-	height:335px;
-	z-index:2;
-	left: 20px;
-	top: 545px;	
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #FF9900; 
-	padding:20px;
-	display:none;
-}
-#Text5 {
-	position:absolute;
-	width:890px;
-	height: 235px;
-	z-index:2;
-	left: 970px;
-	top: 545px;	
-	background:rgba(255,255,255,0.5); 
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #0000FF; 
-	padding:20px;
-	display:none;
-}
-a {
-	font: 17px Orbitron;
-	color:rgb(37,41,74);
-}
-.titolo{
-	font: 25px Orbitron;
-	color:rgb(37,41,74);
-}
-.target{
-	color:rgb(37,41,74);
-	font-weight:bold;
-}
-.att{
-	font: 20px Orbitron;
-	line-height:2em;
-	color:red;
-	display:none;
-}
-.att2{
-	font: 20px Orbitron;
-	line-height:2em;
-	color:green;
-	display:none;
-}
-input{
-	font: 20px DejaVu Sans Mono;
-	border: 1px solid #999999;
-}
-#congruo{
-	width: 40px;
-}
-button{
-	font: 20px DejaVu Sans Mono;
-}
-#button0{
-	position:absolute; 
-	top:980px; 
-	left:20px;
-}
-input[readonly]{
-	resize: none;
-	background:rgb(220,220,220);
-}
-	#primop, #generatore, #segretoalice, #segretobob{
-	color: black !important;
-	background: white !important;
+		font-family: Orbitron;
+		src: url(./css/font/orbitron-medium.otf);
 	}
 
+	@font-face {
+		font-family: DejaVu Sans Mono;
+		src: url(./css/font/DejaVuSansMono.ttf);
+	}
+
+	body,
+	#Text1,
+	#Text2,
+	#Text3,
+	#Text4,
+	#Text5 {
+		overflow: hidden !important;
+	}
+
+	body {
+		//background-image: url(./images/sfondo.png);
+		background-repeat: no-repeat;
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+
+	a {
+		font: 17px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	#ScassoTitolo {
+		position: absolute;
+		width: 1920px;
+		height: 95px;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+		background-image: url(./images/scasso.png);
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		color: #FFF;
+		font-family: Orbitron;
+		font-size: 60px;
+		padding-left: 60px;
+		padding-top: 20px;
+	}
+
+	#DivCanvas {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		z-index: 0;
+		left: 0px;
+		top: 0px;
+	}
+
+	#Text1 {
+		position: absolute;
+		width: 920px;
+		height: 140px;
+		z-index: 2;
+		left: 480px;
+		top: 90px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		outline: 2px dashed #FF9900;
+		box-shadow: 0 0 0 2px #0000FF;
+		padding: 10px;
+	}
+
+	#Text2 {
+		position: absolute;
+		width: 890px;
+		height: 205px;
+		z-index: 2;
+		left: 20px;
+		top: 300px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #FF9900;
+		padding: 10px;
+		display: none;
+	}
+
+	#Text3 {
+		position: absolute;
+		width: 890px;
+		height: 205px;
+		z-index: 2;
+		left: 970px;
+		top: 300px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #0000FF;
+		padding: 10px;
+		display: none;
+	}
+
+	#Text4 {
+		position: absolute;
+		width: 890px;
+		height: 335px;
+		z-index: 2;
+		left: 20px;
+		top: 545px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #FF9900;
+		padding: 20px;
+		display: none;
+	}
+
+	#Text5 {
+		position: absolute;
+		width: 890px;
+		height: 235px;
+		z-index: 2;
+		left: 970px;
+		top: 545px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #0000FF;
+		padding: 20px;
+		display: none;
+	}
+
+	a {
+		font: 17px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	.titolo {
+		font: 25px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	.target {
+		color: rgb(37, 41, 74);
+		font-weight: bold;
+	}
+
+	.att {
+		font: 20px Orbitron;
+		line-height: 2em;
+		color: red;
+		display: none;
+	}
+
+	.att2 {
+		font: 20px Orbitron;
+		line-height: 2em;
+		color: green;
+		display: none;
+	}
+
+	input {
+		font: 20px DejaVu Sans Mono;
+		border: 1px solid #999999;
+	}
+
+	#congruo {
+		width: 40px;
+	}
+
+	button {
+		font: 20px DejaVu Sans Mono;
+	}
+
+	#button0 {
+		position: absolute;
+		top: 980px;
+		left: 20px;
+	}
+
+	input[readonly] {
+		resize: none;
+		background: rgb(220, 220, 220);
+	}
+
+	#primop,
+	#generatore,
+	#segretoalice,
+	#segretobob {
+		color: black !important;
+		background: white !important;
+	}
 	</style>
 	<link href='./css/jquery-ui.min.css' rel="stylesheet" />
 	<link href='./css/keyboard.css' rel="stylesheet" />
@@ -190,235 +227,186 @@ input[readonly]{
 		$('.version').html('(v' + $('#text').getkeyboard().version + ')');
 		$('#sceglia').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 		$('#sceglib').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 		$('#chiavetrovata').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 	});
 	</script>
 	<script type="text/javascript">
 	function Init() {
-		ListaPrimi=[23,29,31,37];
-		PrimoScelto=ListaPrimi[Math.floor(Math.random()*ListaPrimi.length)];
+		ListaPrimi = [23, 29, 31, 37];
+		PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
 		document.getElementById("Primo1").innerHTML = PrimoScelto;
-
-		BaseScelta=2+Math.floor(Math.random()*(PrimoScelto-3));
+		BaseScelta = 2 + Math.floor(Math.random() * (PrimoScelto - 3));
 		document.getElementById("Base1").innerHTML = BaseScelta;
-		
-		Giusta1=Math.floor(Math.random()*4)+1;
-		Giusta2=Math.floor(Math.random()*4)+1;
-		
-		
-		
+		Giusta1 = Math.floor(Math.random() * 4) + 1;
+		Giusta2 = Math.floor(Math.random() * 4) + 1;
 		diffie();
-		
 		UpdateLabels();
-		
 		//document.getElementById("codem").innerHTML=RandomString(25,Alphabet);
-		
 	}
-	
-	function RiempiForm(l) {
-		
-	
-	}
-	
-	
+
+	function RiempiForm(l) {}
+
 	function GeneraCaso(l) {
-
-		switch (Math.floor(Math.random()*4)) {
-		  case 0:
-			return "<em>"+l+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
-			break;
-		  case 1:
-			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+l+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
-			break;
-			
+		switch (Math.floor(Math.random() * 4)) {
+			case 0:
+				return "<em>" + l + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+				break;
+			case 1:
+				return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + l + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+				break;
 			case 2:
-			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em>= "+l+"<span></span>";
-			
-			break;
-			
-		  default:
-			return "<em>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</em><sup>"+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"</sup> modulo <em>"+l+"</em>= "+(2+Math.floor(Math.random()*(PrimoScelto-3)))+"<span></span>";
+				return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + l + "<span></span>";
+				break;
+			default:
+				return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + l + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
 		}
-		
-		
-		
-		
 	}
-
 	// JavaScript Document
-function isPrime(n) {
-	if (n == 2) {
-		return true
+	function isPrime(n) {
+		if(n == 2) {
+			return true
+		}
+		if(n < 2) {
+			return false
+		}
+		if(n != Math.round(n)) {
+			return false
+		}
+		if(n % 2 == 0) {
+			return false
+		}
+		var isPrime = true;
+		var sq = Math.sqrt(n);
+		for(var i = 3; i <= sq; i = i + 2) {
+			if(n % i == 0) {
+				isPrime = false
+			}
+		}
+		return isPrime;
 	}
-	if (n < 2) {
-		return false
+
+	function potmod(bb, ee, nn) {
+		var xx = 1;
+		for(ii = 0; ii < ee; ii++) {
+			xx = xx * bb;
+			xx = xx % nn;
+		}
+		return xx;
 	}
-	if (n != Math.round(n)) {
-		return false
+	Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+	function RandomString(N, Alfabeto) {
+		var Risp = "";
+		for(let i = 0; i < N; i++) {
+			Risp = Risp + Alfabeto[Math.floor(Math.random() * Alfabeto.length)];
+		}
+		return Risp;
 	}
-	if (n % 2 == 0) {
-		return false
+
+	function diffie() {
+		p = PrimoScelto;
+		g = BaseScelta;
+		a = 2 + Math.floor(Math.random() * (p - 3));
+		A = potmod(g, a, p);
+		b = 2 + Math.floor(Math.random() * (p - 3));
+		B = potmod(g, b, p);
+		segretoA = potmod(B, a, p);
+		segretoB = potmod(A, b, p);
+		RiempiForm(a);
+		UpdateLabels();
+		document.getElementById("chia").innerHTML = A;
+		document.getElementById("chib").innerHTML = B;
+		//document.getElementById("segra").innerHTML = segretoA;
+		//document.getElementById("segrb").innerHTML = segretoB;
 	}
-	var isPrime = true;
-	var sq = Math.sqrt(n);
-	for (var i = 3; i <= sq; i = i + 2) {
-		if (n % i == 0) {
-			isPrime = false
+
+	function UpdateLabels() {
+		if(typeof a !== 'undefined' && isNaN(a) == false) {
+			var Lista = document.getElementsByClassName("SegMatA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = a;
+		} else {
+			var Lista = document.getElementsByClassName("SegMatA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "a";
+		}
+		if(typeof B !== 'undefined' && isNaN(B) == false) {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = B;
+		} else {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "B";
+		}
+		if(typeof A !== 'undefined' && isNaN(A) == false) {
+			var Lista = document.getElementsByClassName("SegCondA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = A;
+		} else {
+			var Lista = document.getElementsByClassName("SegCondA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "A";
+		}
+		if(typeof b !== 'undefined' && isNaN(b) == false) {
+			var Lista = document.getElementsByClassName("SegMatB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = b;
+		} else {
+			var Lista = document.getElementsByClassName("SegMatB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "b";
+		}
+		if(typeof BaseScelta !== 'undefined') {
+			var Lista = document.getElementsByClassName("SegG");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = BaseScelta;
+		}
+		if(typeof BaseScelta !== 'undefined') {
+			var Lista = document.getElementsByClassName("SegP");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = PrimoScelto;
+		}
+		var Lista = document.getElementsByClassName("pmuno");
+		for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = PrimoScelto - 2;
+		if(typeof B !== 'undefined' && isNaN(B) == false) {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = B;
+		} else {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "B";
 		}
 	}
-	return isPrime;
-}
 
-function potmod(bb, ee, nn) {
-	var xx = 1;
-	for (ii = 0; ii < ee; ii++) {
-		xx = xx * bb;
-		xx = xx % nn;
-	}
-	return xx;
-}
-
-Alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-function RandomString(N,Alfabeto) {
-	var Risp="";
-	for (let i=0;i<N;i++) {
-		Risp = Risp + Alfabeto[Math.floor(Math.random()*Alfabeto.length)];
-	}
-	return Risp;
-}
-
-function diffie() {
-	p=PrimoScelto;
-	g=BaseScelta;
-	a = 2+Math.floor(Math.random()*(p-3));
-	A = potmod(g, a, p);
-	
-	b = 2+Math.floor(Math.random()*(p-3));
-	B = potmod(g, b, p);
-	segretoA = potmod(B, a, p);
-	segretoB = potmod(A, b, p);
-	
-	RiempiForm(a);
-	
-	UpdateLabels();
-	document.getElementById("chia").innerHTML = A;
-	document.getElementById("chib").innerHTML = B;
-	//document.getElementById("segra").innerHTML = segretoA;
-	//document.getElementById("segrb").innerHTML = segretoB;
-	
-	
-}
-
-function UpdateLabels() {
-
-if (typeof a !== 'undefined' && isNaN(a)==false) {
-	var Lista=document.getElementsByClassName("SegMatA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=a;
-} else {
-	var Lista=document.getElementsByClassName("SegMatA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="a";
-}
-
-if (typeof B !== 'undefined' && isNaN(B)==false) {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=B;
-} else {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="B";
-}
-
-if (typeof A !== 'undefined' && isNaN(A)==false) {
-	var Lista=document.getElementsByClassName("SegCondA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=A;
-} else {
-	var Lista=document.getElementsByClassName("SegCondA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="A";
-}
-
-if (typeof b !== 'undefined' && isNaN(b)==false) {
-	var Lista=document.getElementsByClassName("SegMatB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=b;
-} else {
-	var Lista=document.getElementsByClassName("SegMatB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="b";
-}
-
-if (typeof BaseScelta !== 'undefined') {
-	var Lista=document.getElementsByClassName("SegG");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=BaseScelta;
-}
-
-
-if (typeof BaseScelta !== 'undefined') {
-	var Lista=document.getElementsByClassName("SegP");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto;
-}
-
-var Lista=document.getElementsByClassName("pmuno");
-for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto-2;
-
-
-
-if (typeof B !== 'undefined' && isNaN(B)==false) {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=B;
-} else {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="B";
-}
-
-}
-
-
-function CheckFinale() {
-	ChiaveUtente=parseInt(document.getElementById("chiavetrovata").value);
-	if (ChiaveUtente==segretoB) {
-		document.getElementById("messdec").innerHTML="Giusto";
-	
-	
-	} else {
-		document.getElementById("messdec").innerHTML="Sbagliato";
-	
-	
+	function CheckFinale() {
+		ChiaveUtente = parseInt(document.getElementById("chiavetrovata").value);
+		if(ChiaveUtente == segretoB) {
+			document.getElementById("messdec").innerHTML = "Giusto";
+		} else {
+			document.getElementById("messdec").innerHTML = "Sbagliato";
+		}
 	}
 
+	function ScegliA() {
+		nna = document.getElementById("sceglia").value;
+		na = parseInt(nna);
+		Cond1 = potmod(B, na, p);
+		document.getElementById("NCA").innerHTML = Cond1;
+		$('#nascA').show();
+	}
 
-}
-
-function ScegliA() {
-	nna = document.getElementById("sceglia").value;
-	na = parseInt(nna);
-
-	Cond1 = potmod(B, na, p);
-	document.getElementById("NCA").innerHTML=Cond1;
-	$('#nascA').show();
-}
-
-function ScegliB() {
-	nnb = document.getElementById("sceglia").value;
-	nb = parseInt(nnb);
-
-	Cond2 = potmod(A, nb, p);
-	document.getElementById("NCB").innerHTML=Cond2;
-	$('#nascB').show();
-}
-
+	function ScegliB() {
+		nnb = document.getElementById("sceglia").value;
+		nb = parseInt(nnb);
+		Cond2 = potmod(A, nb, p);
+		document.getElementById("NCB").innerHTML = Cond2;
+		$('#nascB').show();
+	}
 	</script>
 </head>
 
@@ -441,23 +429,15 @@ function ScegliB() {
 		</div>
 		<div id="Text4">
 			<p class="titolo">Come procediamo?</p>
-			<p>Dobbiamo trovare la chiave. Sappiamo che vale <span class="SegCondB"></span><sup>a</sup>, ma anche <span class="SegCondA"></span><sup>b</sup>, solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.<br><br>
-			Scegli a: <input type="text" id="sceglia" onchange="ScegliA()" />. 
-			<span id="nascA" style="display:none;">Con questa scelta, 
-			<span class="SegCondB"></span><sup id="NewA">a</sup> modulo <em class="SegP">p</em> = <em id="NCA"></em>
-			</span><br><br>
-			Scegli b: <input type="text" id="sceglib" onchange="ScegliB()" />. 
-			<span id="nascB" style="display:none;">Con questa scelta, 
-			<span class="SegCondA"></span><sup id="NewB">b</sup> modulo <em class="SegP">p</em> = <em id="NCB"></em></span><br>
-			
+			<p>Dobbiamo trovare la chiave. Sappiamo che vale <span class="SegCondB"></span><sup>a</sup>, ma anche <span class="SegCondA"></span><sup>b</sup>, solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.<br><br> Scegli a: <input type="text" id="sceglia" onchange="ScegliA()" />. <span id="nascA" style="display:none;">Con questa scelta, <span class="SegCondB"></span><sup id="NewA">a</sup> modulo <em class="SegP">p</em> = <em id="NCA"></em>
+				</span><br><br> Scegli b: <input type="text" id="sceglib" onchange="ScegliB()" />. <span id="nascB" style="display:none;">Con questa scelta, <span class="SegCondA"></span><sup id="NewB">b</sup> modulo <em class="SegP">p</em> = <em id="NCB"></em></span><br>
 			</p>
 			<p><button onclick="$('#Text5').show();">Ok, sono pronto a decodificare il messaggio</button></p>
 		</div>
 		<div id="Text5">
 			<p class="titolo">Riusciamo a decodificare il messaggio?</p>
-			<p>Inserisci la chiave: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br>
-			Ecco il messaggio decodificato: <br>
-			<span id="messdec"></span>
+			<p>Inserisci la chiave: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> Ecco il messaggio decodificato: <br>
+				<span id="messdec"></span>
 			</p>
 		</div>
 	</div>

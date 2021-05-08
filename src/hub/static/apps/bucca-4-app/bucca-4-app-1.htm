@@ -3,193 +3,231 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Scambio di chiavi</title>
 	<style>
+	html {
+		background: url(img/bg4.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		font-family: "Roboto", sans-serif;
+	}
+
 	@font-face {
-	font-family: Orbitron;
-	src: url(./css/font/orbitron-medium.otf);
-}
-@font-face {
-    font-family: DejaVu Sans Mono;
-    src: url(./css/font/DejaVuSansMono.ttf);
-    }
-body, #Text1, #Text2, #Text3, #Text4, #Text5{
-overflow:hidden !important;}
-body {
-	//background-image: url(./images/sfondo.png);
-	background-repeat: no-repeat;
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-a{
-font: 17px Orbitron;
-color:rgb(37,41,74);
-	}
-#ScassoTitolo {
-	position: absolute;
-	width: 1920px;
-	height: 95px;
-	top: 0px;
-	left: 0px;
-	z-index: 1;
-	background-image: url(./images/scasso.png);
-	background-origin: border-box;
-	background-repeat:no-repeat;
-	color:#FFF;
-	font-family:Orbitron;
-	font-size:60px;
-	padding-left:60px;
-	padding-top:20px;
-}
-#DivCanvas {
-	position:absolute;
-	width:1920px;
-	height:1080px;
-	z-index:0;
-	left: 0px;
-	top: 0px;
-}
-#Text1 {
-	position:absolute;
-	width:920px;
-	height:180px;
-	z-index:2;
-	left: 480px;
-	top: 105px;
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	outline: 2px dashed #FF9900; 
-	box-shadow: 0 0 0 2px #0000FF;
-	padding:20px;
-}
-#Text2 {
-	position:absolute;
-	width:890px;
-	height:235px;
-	z-index:2;
-	left: 20px;
-	top: 345px;	
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #FF9900; 
-	padding:20px;
-	display:none;
-}
-#Text3 {
-	position:absolute;
-	width:890px;
-	height: 235px;
-	z-index:2;
-	left: 970px;
-	top: 345px;	
-	background:rgba(255,255,255,0.5); 
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #0000FF; 
-	padding:20px;
-	display:none;
-}
-
-#Text6 {
-	position:absolute;
-	width:920px;
-	height:50px;
-	z-index:2;
-	left: 480px;
-	top: 635px;	
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #FF9900; 
-	padding:10px;
-	display:none;
-}
-#Text4 {
-	position:absolute;
-	width:890px;
-	height:235px;
-	z-index:2;
-	left: 20px;
-	top: 735px;	
-	background:rgba(255,255,255,0.5);
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #FF9900; 
-	padding:20px;
-	display:none;
-}
-#Text5 {
-	position:absolute;
-	width:890px;
-	height: 235px;
-	z-index:2;
-	left: 970px;
-	top: 735px;	
-	background:rgba(255,255,255,0.5); 
-	font: 20px DejaVu Sans Mono;
-	overflow-y: scroll;
-	resize: none;
-	border: 1px solid #0000FF; 
-	padding:20px;
-	display:none;
-}
-a {
-	font: 17px Orbitron;
-	color:rgb(37,41,74);
-}
-.titolo{
-	font: 25px Orbitron;
-	color:rgb(37,41,74);
-}
-.target{
-	color:rgb(37,41,74);
-	font-weight:bold;
-}
-.att{
-	font: 20px Orbitron;
-	line-height:2em;
-	color:red;
-	display:none;
-}
-.att2{
-	font: 20px Orbitron;
-	line-height:2em;
-	color:green;
-	display:none;
-}
-input{
-	font: 20px DejaVu Sans Mono;
-	border: 1px solid #999999;
-}
-#congruo{
-	width: 40px;
-}
-button{
-	font: 20px DejaVu Sans Mono;
-}
-#button0{
-	position:absolute; 
-	top:980px; 
-	left:20px;
-}
-input[readonly]{
-	resize: none;
-	background:rgb(220,220,220);
-}
-	#primop, #generatore, #segretoalice, #segretobob{
-	color: black !important;
-	background: white !important;
+		font-family: Orbitron;
+		src: url(./css/font/orbitron-medium.otf);
 	}
 
+	@font-face {
+		font-family: DejaVu Sans Mono;
+		src: url(./css/font/DejaVuSansMono.ttf);
+	}
+
+	body,
+	#Text1,
+	#Text2,
+	#Text3,
+	#Text4,
+	#Text5 {
+		overflow: hidden !important;
+	}
+
+	body {
+		//background-image: url(./images/sfondo.png);
+		background-repeat: no-repeat;
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+	}
+
+	a {
+		font: 17px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	#ScassoTitolo {
+		position: absolute;
+		width: 1920px;
+		height: 95px;
+		top: 0px;
+		left: 0px;
+		z-index: 1;
+		background-image: url(./images/scasso.png);
+		background-origin: border-box;
+		background-repeat: no-repeat;
+		color: #FFF;
+		font-family: Orbitron;
+		font-size: 60px;
+		padding-left: 60px;
+		padding-top: 20px;
+	}
+
+	#DivCanvas {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		z-index: 0;
+		left: 0px;
+		top: 0px;
+	}
+
+	#Text1 {
+		position: absolute;
+		width: 920px;
+		height: 180px;
+		z-index: 2;
+		left: 480px;
+		top: 105px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		outline: 2px dashed #FF9900;
+		box-shadow: 0 0 0 2px #0000FF;
+		padding: 20px;
+	}
+
+	#Text2 {
+		position: absolute;
+		width: 890px;
+		height: 235px;
+		z-index: 2;
+		left: 20px;
+		top: 345px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #FF9900;
+		padding: 20px;
+		display: none;
+	}
+
+	#Text3 {
+		position: absolute;
+		width: 890px;
+		height: 235px;
+		z-index: 2;
+		left: 970px;
+		top: 345px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #0000FF;
+		padding: 20px;
+		display: none;
+	}
+
+	#Text6 {
+		position: absolute;
+		width: 920px;
+		height: 50px;
+		z-index: 2;
+		left: 480px;
+		top: 635px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #FF9900;
+		padding: 10px;
+		display: none;
+	}
+
+	#Text4 {
+		position: absolute;
+		width: 890px;
+		height: 235px;
+		z-index: 2;
+		left: 20px;
+		top: 735px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #FF9900;
+		padding: 20px;
+		display: none;
+	}
+
+	#Text5 {
+		position: absolute;
+		width: 890px;
+		height: 235px;
+		z-index: 2;
+		left: 970px;
+		top: 735px;
+		background: rgba(255, 255, 255, 0.5);
+		font: 20px DejaVu Sans Mono;
+		overflow-y: scroll;
+		resize: none;
+		border: 1px solid #0000FF;
+		padding: 20px;
+		display: none;
+	}
+
+	a {
+		font: 17px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	.titolo {
+		font: 25px Orbitron;
+		color: rgb(37, 41, 74);
+	}
+
+	.target {
+		color: rgb(37, 41, 74);
+		font-weight: bold;
+	}
+
+	.att {
+		font: 20px Orbitron;
+		line-height: 2em;
+		color: red;
+		display: none;
+	}
+
+	.att2 {
+		font: 20px Orbitron;
+		line-height: 2em;
+		color: green;
+		display: none;
+	}
+
+	input {
+		font: 20px DejaVu Sans Mono;
+		border: 1px solid #999999;
+	}
+
+	#congruo {
+		width: 40px;
+	}
+
+	button {
+		font: 20px DejaVu Sans Mono;
+	}
+
+	#button0 {
+		position: absolute;
+		top: 980px;
+		left: 20px;
+	}
+
+	input[readonly] {
+		resize: none;
+		background: rgb(220, 220, 220);
+	}
+
+	#primop,
+	#generatore,
+	#segretoalice,
+	#segretobob {
+		color: black !important;
+		background: white !important;
+	}
 	</style>
 	<link href='./css/jquery-ui.min.css' rel="stylesheet" />
 	<link href='./css/keyboard.css' rel="stylesheet" />
@@ -205,170 +243,156 @@ input[readonly]{
 		$('.version').html('(v' + $('#text').getkeyboard().version + ')');
 		$('#primop').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 		$('#generatore').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 		$('#segretoalice').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 		$('#segretobob').keyboard({
 			layout: 'num',
-			restrictInput : true,
-			preventPaste : true,
-			autoAccept : true
+			restrictInput: true,
+			preventPaste: true,
+			autoAccept: true
 		});
 	});
 	</script>
 	<script type="text/javascript">
 	function Init() {
-		ListaPrimi=[23,29,31,37];
-		PrimoScelto=ListaPrimi[Math.floor(Math.random()*ListaPrimi.length)];
+		ListaPrimi = [23, 29, 31, 37];
+		PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
 		document.getElementById("Primo1").innerHTML = PrimoScelto;
-
-		BaseScelta=2+Math.floor(Math.random()*(PrimoScelto-3));
+		BaseScelta = 2 + Math.floor(Math.random() * (PrimoScelto - 3));
 		document.getElementById("Base1").innerHTML = BaseScelta;
-		
 		UpdateLabels();
 	}
-
 	// JavaScript Document
-function isPrime(n) {
-	if (n == 2) {
-		return true
+	function isPrime(n) {
+		if(n == 2) {
+			return true
+		}
+		if(n < 2) {
+			return false
+		}
+		if(n != Math.round(n)) {
+			return false
+		}
+		if(n % 2 == 0) {
+			return false
+		}
+		var isPrime = true;
+		var sq = Math.sqrt(n);
+		for(var i = 3; i <= sq; i = i + 2) {
+			if(n % i == 0) {
+				isPrime = false
+			}
+		}
+		return isPrime;
 	}
-	if (n < 2) {
-		return false
+
+	function potmod(bb, ee, nn) {
+		var xx = 1;
+		for(ii = 0; ii < ee; ii++) {
+			xx = xx * bb;
+			xx = xx % nn;
+		}
+		return xx;
 	}
-	if (n != Math.round(n)) {
-		return false
-	}
-	if (n % 2 == 0) {
-		return false
-	}
-	var isPrime = true;
-	var sq = Math.sqrt(n);
-	for (var i = 3; i <= sq; i = i + 2) {
-		if (n % i == 0) {
-			isPrime = false
+
+	function diffie(TT) {
+		p = PrimoScelto;
+		g = BaseScelta;
+		aa = document.getElementById("segretoalice").value;
+		bb = document.getElementById("segretobob").value;
+		a = parseInt(aa);
+		b = parseInt(bb);
+		A = potmod(g, a, p);
+		B = potmod(g, b, p);
+		segretoA = potmod(B, a, p);
+		segretoB = potmod(A, b, p);
+		UpdateLabels();
+		document.getElementById("chia").innerHTML = A;
+		document.getElementById("chib").innerHTML = B;
+		document.getElementById("segra").innerHTML = segretoA;
+		document.getElementById("segrb").innerHTML = segretoB;
+		console.log(a % (p - 1) == 0);
+		if(a % (p - 1) == 0) {
+			$('#azero').show();
+		} else {
+			$('#azero').hide();
+		}
+		if(b % (p - 1) == 0) {
+			$('#bzero').show();
+		} else {
+			$('#bzero').hide();
+		}
+		if(a % (p - 1) == 1) {
+			$('#auno').show();
+		} else {
+			$('#auno').hide();
+		}
+		if(b % (p - 1) == 1) {
+			$('#buno').show();
+		} else {
+			$('#buno').hide();
+		}
+		if(TT == 1) {
+			$('#DPostMat').show();
+		} else {
+			$('#DPostLeo').show();
 		}
 	}
-	return isPrime;
-}
 
-function potmod(bb, ee, nn) {
-	var xx = 1;
-	for (ii = 0; ii < ee; ii++) {
-		xx = xx * bb;
-		xx = xx % nn;
+	function UpdateLabels() {
+		if(typeof a !== 'undefined' && isNaN(a) == false) {
+			var Lista = document.getElementsByClassName("SegMatA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = a;
+		} else {
+			var Lista = document.getElementsByClassName("SegMatA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "a";
+		}
+		if(typeof B !== 'undefined' && isNaN(B) == false) {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = B;
+		} else {
+			var Lista = document.getElementsByClassName("SegCondB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "B";
+		}
+		if(typeof A !== 'undefined' && isNaN(A) == false) {
+			var Lista = document.getElementsByClassName("SegCondA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = A;
+		} else {
+			var Lista = document.getElementsByClassName("SegCondA");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "A";
+		}
+		if(typeof b !== 'undefined' && isNaN(b) == false) {
+			var Lista = document.getElementsByClassName("SegMatB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = b;
+		} else {
+			var Lista = document.getElementsByClassName("SegMatB");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = "b";
+		}
+		if(typeof BaseScelta !== 'undefined') {
+			var Lista = document.getElementsByClassName("SegG");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = BaseScelta;
+		}
+		if(typeof BaseScelta !== 'undefined') {
+			var Lista = document.getElementsByClassName("SegP");
+			for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = PrimoScelto;
+		}
+		var Lista = document.getElementsByClassName("pmuno");
+		for(let i = 0; i < Lista.length; i++) Lista[i].innerHTML = PrimoScelto - 2;
 	}
-	return xx;
-}
-
-function diffie(TT) {
-	p=PrimoScelto;
-	g=BaseScelta;
-	aa = document.getElementById("segretoalice").value;
-	bb = document.getElementById("segretobob").value;
-	a = parseInt(aa);
-	b = parseInt(bb);
-	A = potmod(g, a, p);
-	B = potmod(g, b, p);
-	segretoA = potmod(B, a, p);
-	segretoB = potmod(A, b, p);
-	UpdateLabels();
-	document.getElementById("chia").innerHTML = A;
-	document.getElementById("chib").innerHTML = B;
-	document.getElementById("segra").innerHTML = segretoA;
-	document.getElementById("segrb").innerHTML = segretoB;
-	console.log(a % (p - 1) == 0);
-	if (a % (p - 1) == 0) {
-		$('#azero').show();
-	} else {
-		$('#azero').hide();
-	}
-	if (b % (p - 1) == 0) {
-		$('#bzero').show();
-	} else {
-		$('#bzero').hide();
-	}
-	if (a % (p - 1) == 1) {
-		$('#auno').show();
-	} else {
-		$('#auno').hide();
-	}
-	if (b % (p - 1) == 1) {
-		$('#buno').show();
-	} else {
-		$('#buno').hide();
-	}
-	if (TT==1) {
-		$('#DPostMat').show();
-	} else {
-		$('#DPostLeo').show();
-	}
-}
-
-function UpdateLabels() {
-
-if (typeof a !== 'undefined' && isNaN(a)==false) {
-	var Lista=document.getElementsByClassName("SegMatA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=a;
-} else {
-	var Lista=document.getElementsByClassName("SegMatA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="a";
-}
-
-if (typeof B !== 'undefined' && isNaN(B)==false) {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=B;
-} else {
-	var Lista=document.getElementsByClassName("SegCondB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="B";
-}
-
-if (typeof A !== 'undefined' && isNaN(A)==false) {
-	var Lista=document.getElementsByClassName("SegCondA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=A;
-} else {
-	var Lista=document.getElementsByClassName("SegCondA");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="A";
-}
-
-if (typeof b !== 'undefined' && isNaN(b)==false) {
-	var Lista=document.getElementsByClassName("SegMatB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=b;
-} else {
-	var Lista=document.getElementsByClassName("SegMatB");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML="b";
-}
-
-if (typeof BaseScelta !== 'undefined') {
-	var Lista=document.getElementsByClassName("SegG");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=BaseScelta;
-}
-
-
-if (typeof BaseScelta !== 'undefined') {
-	var Lista=document.getElementsByClassName("SegP");
-	for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto;
-}
-
-var Lista=document.getElementsByClassName("pmuno");
-for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto-2;
-
-
-}
-
 	</script>
 </head>
 
@@ -381,27 +405,28 @@ for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto-2;
 		<div id="Text2">
 			<p class="titolo">Fase 2 (Leo): il segreto di Leo</p>
 			<p>
-			<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br /> 
-			a = <input type="text" id="segretoalice" onchange="diffie(1)" /> 
-			<span class="att" id="azero">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <span class="att" id="auno">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <br />
+				<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br /> a = <input type="text" id="segretoalice" onchange="diffie(1)" />
+				<span class="att" id="azero">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <span class="att" id="auno">Attenzione! <em class="SegMatA">a</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> <br />
 			</p>
-			<div id="DPostMat" style="display:none;"><p>Leo ha calcolato il numero da mandare a Mathina: <br>
-			<em>A</em> = <em>g<sup>a</sup></em> modulo <em>p</em> = <em class="SegG">g</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em>= <span id="chia"  ></span></p>
-			<p><button onclick="$('#Text3').show();">Vediamo cosa sta facendo Mathina in contemporanea!</button></p></div>
+			<div id="DPostMat" style="display:none;">
+				<p>Leo ha calcolato il numero da mandare a Mathina: <br>
+					<em>A</em> = <em>g<sup>a</sup></em> modulo <em>p</em> = <em class="SegG">g</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em>= <span id="chia"></span></p>
+				<p><button onclick="$('#Text3').show();">Vediamo cosa sta facendo Mathina in contemporanea!</button></p>
+			</div>
 		</div>
 		<div id="Text3">
 			<p class="titolo">Fase 2 (Mathina): il segreto di Mathina</p>
 			<p>
-			<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br /> 
-			<input type="text" id="segretobob" onchange="diffie(2)" /> 
-			<span class="att" id="bzero">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span> 
-			<span class="att" id="buno">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span>
-			<br />
+				<span class="target">Scegli</span> il numero segreto di Leo tra <em>2</em> e <em class="pmuno">p-1</em>: <br />
+				<input type="text" id="segretobob" onchange="diffie(2)" />
+				<span class="att" id="bzero">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span>
+				<span class="att" id="buno">Attenzione! <em class="SegMatB">b</em> non sta tra tra <em>2</em> e <em class="pmuno">p-1</em></span>
+				<br />
 			</p>
-			
-			<div id="DPostLeo" style="display:none;"><p>Mathina ha calcolato il numero da mandare a Leo: <br>
-			<em>B</em> = <em>g<sup>b</sup></em> modulo <em>p</em>= <em class="SegG">g</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em>= <span id="chib"></span></p>
-			<p><button onclick="$('#Text6').show();">Fatto! E adesso?</button></p>
+			<div id="DPostLeo" style="display:none;">
+				<p>Mathina ha calcolato il numero da mandare a Leo: <br>
+					<em>B</em> = <em>g<sup>b</sup></em> modulo <em>p</em>= <em class="SegG">g</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em>= <span id="chib"></span></p>
+				<p><button onclick="$('#Text6').show();">Fatto! E adesso?</button></p>
 			</div>
 		</div>
 		<div id="Text6">
@@ -409,26 +434,14 @@ for (let i=0;i<Lista.length;i++) Lista[i].innerHTML=PrimoScelto-2;
 		</div>
 		<div id="Text4">
 			<p class="titolo">Fase 3 (Leo): il segreto condiviso</p>
-			<p>Ecco il valore che calcola Leo 
-			<em>S</em> = 
-			<em>B<sup>a</sup></em> modulo <em>p</em>  = 
-			<em class="SegCondB">B</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em> = 
-			<span id="segra"></span>
-			<br>
-			&Egrave; lo stesso numero che ha trovato Mathina?
-			</p>
+			<p>Ecco il valore che calcola Leo <em>S</em> = <em>B<sup>a</sup></em> modulo <em>p</em> = <em class="SegCondB">B</em><sup class="SegMatA">a</sup> modulo <em class="SegP">p</em> = <span id="segra"></span>
+				<br> &Egrave; lo stesso numero che ha trovato Mathina? </p>
 			<p><button onclick="$('#Text5').show();">Controlliamo</button></p>
 		</div>
 		<div id="Text5">
 			<p class="titolo">Fase 3 (Mathina): il segreto condiviso</p>
-			<p>Ecco il valore che calcola Mathina 
-			<em>S</em> = 
-			<em>A<sup>b</sup></em> modulo <em>p</em>  = 
-			<em class="SegCondA">A</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em> = 
-			<span id="segrb"></span>
-			<br>
-			&Egrave; lo stesso numero che ha trovato Leo!
-			</p>
+			<p>Ecco il valore che calcola Mathina <em>S</em> = <em>A<sup>b</sup></em> modulo <em>p</em> = <em class="SegCondA">A</em><sup class="SegMatB">b</sup> modulo <em class="SegP">p</em> = <span id="segrb"></span>
+				<br> &Egrave; lo stesso numero che ha trovato Leo! </p>
 		</div>
 	</div>
 	<div class="block" style="display:none"> <input id="text" type="text" /> </div>
