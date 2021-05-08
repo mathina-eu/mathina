@@ -4,7 +4,7 @@ export default {
   },
   world: {
     'title': 'Mathina',
-    'help': 'Besuche eine Stadt!',
+    'help': 'Besuche einen Ort!',
   },
   story: {
     'next': 'Weiter',
@@ -26,7 +26,7 @@ export default {
       'symm-2': 'Mathina, the rosette game and the magic mazes',
       'symm-3': 'Stamping friezes',
       'symm-4': 'The polyhedron carousel',
-      'demo-story': 'German Demo Story',
+      'demo-story': 'Deutsch Demo Geschichte',
     },
   },
   index: {
@@ -41,8 +41,9 @@ export default {
   },
   chars: {
     mathina: 'Mathina',
-    wizard: 'Wizard',
+    wizard: 'Zauberer',
     leo: 'Leo',
     jane: 'Jane',
+	flamma: 'Flamma',
   },
 };
