@@ -4,12 +4,21 @@ button{
 }
 
 body {
-    margin: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: auto;
     font-family: "Comic Sans MS", cursive, sans-serif;
-    /*background-image:url(../imgs/wood2.jpg);*/
-    background-color: #f3f1cd;
+    background-image: url("../imgs/symm-bg3-03.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #ecd2a7;
+}
+
+/* For any viewports less than 1000px wide */
+@media (max-width: 1200px) {
+    body {
+        background-size: 1200px 675px; /* Force the image to its minimum width */
+    }
+
 }
 
 /* Header/footer boxes */
@@ -25,7 +34,7 @@ body {
 .wideBox h1 {
     font-weight: bold;
     font-size: 1.5em;
-    color: #408A7B;
+    color: #6e503c;
 }
 
 .buttons{

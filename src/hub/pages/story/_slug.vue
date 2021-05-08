@@ -1,9 +1,42 @@
 <template>
   <StoryView :is-loading="isLoading">
-    <div class="root text-left">
-      <StoryBackgrounds :backgrounds="backgrounds" />
-      <StoryImages :images="images" />
-      <div class="text-wrapper mt-16">
+    <Parallax class="root">
+      <template
+        v-for="layer in ['back1', 'back2', 'back3', 'mid1', 'mid2', 'mid3', 'front1', 'front2', 'front3']"
+        :slot="layer"
+      >
+        <StoryBackgrounds
+          :key="layer"
+          :backgrounds="parallaxedBackgrounds(layer)"
+        />
+        <StoryImages
+          :key="`${layer}img`"
+          :images="parallaxedImages(layer)"
+        />
+      </template>
+      <div class="navigation">
+        <v-btn
+          v-if="!isFirstAction"
+          class="navigation__button"
+          title="You can use the left arrow on your keyboard as well!"
+          @click="back"
+        >
+          <v-icon>
+            mdi-arrow-left
+          </v-icon>
+        </v-btn>
+        <v-btn
+          v-if="hasMoreActions"
+          class="navigation__button right"
+          title="You can use the right arrow on your keyboard as well!"
+          @click="next"
+        >
+          <v-icon>
+            mdi-arrow-right
+          </v-icon>
+        </v-btn>
+      </div>
+      <div class="text-wrapper mt-5">
         <StoryDialog
           v-if="isDialogMode"
           v-bind="activeDialog"
@@ -23,36 +56,6 @@
           :img-root="imgRoot"
           @lastGameFinished="isLastGameFinished=true"
         />
-        <div>
-          <v-btn
-            v-if="!isFirstAction"
-            class="mt-12"
-            title="You can use the left arrow on your keyboard as well!"
-            @click="back"
-          >
-            <v-icon
-              class="mr-1"
-              small
-            >
-              mdi-arrow-left-circle-outline
-            </v-icon>
-            {{ $t('story.back') }}
-          </v-btn>
-          <v-btn
-            v-if="hasMoreActions"
-            class="mt-12"
-            title="You can use the right arrow on your keyboard as well!"
-            @click="next"
-          >
-            {{ $t('story.next') }}
-            <v-icon
-              class="ml-1"
-              small
-            >
-              mdi-arrow-right-circle-outline
-            </v-icon>
-          </v-btn>
-        </div>
         <v-btn
           v-if="!hasMoreActions && isLastGameFinished"
           class="mt-12"
@@ -61,7 +64,7 @@
           All done!
         </v-btn>
       </div>
-    </div>
+    </Parallax>
   </StoryView>
 </template>
 
@@ -74,6 +77,7 @@ import SceneText from '~/components/story/SceneText';
 import GameView from '~/components/story/GameView';
 import StoryBackgrounds from '~/components/story/StoryBackgrounds';
 import StoryImages from '~/components/story/StoryImages';
+import Parallax from '~/components/Parallax';
 import {
   ActionFactory,
   SceneTextAction,
@@ -81,6 +85,7 @@ import {
   GameAction,
   BackgroundAction,
   ImageAction,
+  AnimationAction,
 } from '~/components/story/action-types';
 import { preloadImage } from '~/utils';
 
@@ -89,6 +94,7 @@ const NEXT = 'next';
 
 export default {
   components: {
+    Parallax,
     StoryImages,
     StoryBackgrounds,
     StoryView,
@@ -147,7 +153,7 @@ export default {
     },
     activeDialog() {
       if (this.dialog.current !== null) {
-        return this.dialog.entries[this.dialog.current];
+        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign };
       }
       return {};
     },
@@ -175,7 +181,7 @@ export default {
 
     this.$store.dispatch('setBreadcrumbs', [
       { path: `/world/`, text: 'World Map' },
-      { path: `/story/${this.story?.slug}/`, text: this.story?.title },
+      { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
     ]);
 
     document.addEventListener('keydown', this.keydownListener);
@@ -184,15 +190,27 @@ export default {
     // If there's an action link (eg url query has ?actionLink=tagName), execute up to action with tag: tagName
     const tag = this.$route.query['actionLink'];
     if (tag) {
-      while (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
-        this.next();
-      }
+      const executor = () => {
+        this.$nextTick(() => {
+          if (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
+            this.next();
+            executor();
+          }
+        });
+      };
+      executor();
     }
   },
   destroyed() {
     document.removeEventListener('keydown', this.keydownListener);
   },
   methods: {
+    parallaxedBackgrounds(layer) {
+      return this.backgrounds.filter(bg => bg.parallax === layer);
+    },
+    parallaxedImages(layer) {
+      return this.images.filter(img => img.parallax === layer);
+    },
     async preloadImagesForActions(actionsToPreload) {
       const images = new Set();
       for (let action of actionsToPreload) {
@@ -221,17 +239,17 @@ export default {
     back() {
       this.activeDirection = BACK;
 
-      if (this.currentActionId - 1 === this.firstInteractiveActionId && this.currentActionId > 0) {
-        this.currentActionId--;
-        this.back();
-        return;
-      }
-
       if (this.action instanceof DialogAction) {
         this.dialog.current--;
         if (this.dialog.current >= 0) {
           return;
         }
+      }
+
+      if (this.currentActionId - 1 === this.firstInteractiveActionId && this.currentActionId > 0) {
+        this.currentActionId--;
+        this.back();
+        return;
       }
 
       if (this.currentActionId <= 0) {
@@ -241,7 +259,14 @@ export default {
       }
 
       this.currentActionId--;
-      this.executeCurrentAction();
+
+      if (this.action instanceof AnimationAction) {
+        this.$nextTick(() => {
+          this.executeCurrentAction();
+        });
+      } else {
+        this.executeCurrentAction();
+      }
     },
     next() {
       this.activeDirection = NEXT;
@@ -256,7 +281,14 @@ export default {
         return false;
       }
       this.currentActionId++;
-      this.executeCurrentAction();
+
+      if (this.action instanceof AnimationAction) {
+        this.$nextTick(() => {
+          this.executeCurrentAction();
+        });
+      } else {
+        this.executeCurrentAction();
+      }
     },
     autoProgress() {
       if (this.activeDirection === NEXT) {
@@ -288,7 +320,6 @@ export default {
 .root {
   height: 100%;
   width: 100%;
-  position: relative;
 }
 
 .text-wrapper {
@@ -299,5 +330,45 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: left;
+}
+
+.navigation {
+  --button-size: 50px;
+
+  margin: auto;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 5;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+
+  @media (min-width: 1300px) {
+    width: calc(100% + 3 * (var(--button-size)));
+    left: calc(-1.5 * var(--button-size));
+  }
+
+  @media (min-width: 1400px) {
+    width: calc(100% + 4 * (var(--button-size)));
+    left: calc(-2 * var(--button-size));
+  }
+
+  &__button {
+    width: var(--button-size, 50px);
+    min-width: var(--button-size, 50px) !important;
+    height: var(--button-size, 50px) !important;
+    border-radius: 50%;
+    position: sticky;
+    margin: 0 1rem;
+    left: 0;
+
+    &.right {
+      margin-left: auto;
+    }
+  }
 }
 </style>
