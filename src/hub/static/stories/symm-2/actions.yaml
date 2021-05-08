@@ -1,7 +1,8 @@
 actions:
   - type: background
-    src: c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
   - type: image
     src: Mathina1.png
     id: Mathina1
@@ -23,7 +24,7 @@ actions:
     align: right      
   - type: sceneText
     text: >
-      <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, others of comic book heroes, other animals, …. Inside the stall, there were many kids playing a strange game with the discs.</p>
+      <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, others of comic book heroes, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
   - type: image
     id: feiticeiro
     src: Feiticeiro1.png
@@ -36,7 +37,7 @@ actions:
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"    
   - type: sceneText
-    text: <p>Inside the stall, there was a smiling wizard.</p>
+    text: <p>Near the stall, there was a smiling wizard.</p>
   - type: dialog
     entries:
       - text: "Hello! What are the kids playing?"
@@ -59,7 +60,7 @@ actions:
     entries:        
       - text: "OK. Let's start with a simple case. Look at this butterfly image:"
         char: wizard
-      - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “forms” a picture equal to the initial one."
+      - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “makes” a picture equal to the initial one."
         char: wizard
   - type: game
     text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
@@ -121,6 +122,7 @@ actions:
       - text: "To keep them, you still need to store them in the right bags."
         char: wizard
       - text: "But what should I do?"
+        exposition: "Mathina was intrigued."       
         char: mathina
         mood: surprised
       - text: "It works like this: there are six bags numbered from 1 to 6. If a rosette has one symmetry axis, it should go to bag 1, if it has two, it should go to bag 2, and so on…"
@@ -145,12 +147,12 @@ actions:
   - type: clearImage
     id: Mathina2
   - type: clearImage
-    id: feiticeiro   
+    id: feiticeiro
   - type: image
     src: BagGame.png
     id: BagGame
     align: center
-    style: "width: 100%; top: 50%"
+    style: "width: 100%; top: 50%"    
   - type: dialog
     entries:    
       - text: "Here they are."
@@ -159,9 +161,10 @@ actions:
         char: wizard
       - text: "But what should I do? These rosettes have no symmetry axes!"
         char: mathina
+        exposition: "Mathina was suspicious."        
         mood: surprised
   - type: clearImage
-    id: BagGame
+    id: BagGame        
   - type: image
     src: filme1.png
     id: filme1
@@ -203,9 +206,12 @@ actions:
       src: rodar.png
       height: 40
       width: 40
+  - type: clearBackground
+    id: c1-bg1      
   - type: background
-    src: c1-bg2.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"      
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg2    
   - type: clearImage
     id: c1-1
   - type: clearImage
@@ -213,69 +219,108 @@ actions:
   - type: clearImage
     id: feiticeiro    
   - type: image
-    src: Mathina3.png
-    id: Mathina3
-    style: "width: 9%; top: 53%;"
-    align: center
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 20%;"
   - type: image
-    src: symm-box.png
-    id: box
-    style: "width: 13%; top: 65%; left: 53%;"
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 67%; left: 1%;"
   - type: image
-    src: Leo1.png
-    id: Leo1
-    style: "width: 13%; top: 67%; right: 15%;"       
+    id: maze
+    src: maze.png
+    style: "width: 37%; top: 42%; right: 0%; z-index:3"
+    align: right   
   - type: sceneText
     text: >
       <p>Loaded with rosettes, Mathina looked around to pick the next amusement, when she heard her name.</p>
       <p>Leo had just arrived at Symmetry Fair and called Mathina.</p>
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 70
+      yPercent: 0
+      ease: power3.out      
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
         char: Leo
-        mood: excited
-  - type: animation
-    target: Leo1
-    vars:
-      duration: 3
-      xPercent: -130
-      yPercent: 0
-      ease: power3.out   
-  - type: clearImage
-    id: box    
+        exposition: "Leo had just arrived at Symmetry Fair and called Mathina."         
+        mood: excited     
   - type: dialog
     entries:    
       - text: "Come on! Let's try all these amusements. I don't even know where to go. To the carousels?"
         char: mathina
+        exposition: "Mathina shouted enthusiastically to Leo."          
         mood: excited
+  - type: clearImage
+    id: Leo3
+  - type: clearImage
+    id: Mathina4
+  - type: image
+    src: mathina-leo.png
+    id: mathina-leo
+    style: "width: 25%; top: 57%; left: 17%;"    
   - type: dialog
     entries:    
       - text: "Look, there are mazes here. Let's choose one!"
         char: Leo
-        mood: excited        
+        mood: excited
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 4
+      xPercent: 85
+      yPercent: 0
+      ease: power3.out        
   - type: sceneText
     text: >
-      <p> Leo pushed Mathina to the entrance of a closed wooden pavilion with a large luminous sign with the word maze.</p>
-  - type: image
-    id: maze
-    src: maze.jpg
-    style: "width: 20%; top: 75%; left: 15%;"
-    align: right
+      <p> Leo pushed Mathina to the entrance of a wooden pavilion with a large sign with the word maze.</p>
   - type: dialog
     entries:         
       - text: "Notice that this is not a normal maze: it is a mirror maze."
         char: mathina
+        exposition: "Mathina said reading the text on the sign, near the word maze."           
+  - type: clearImage
+    id: mathina-leo
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"  
+  - type: image
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 58%; left: 48%;  z-index:2"    
+  - type: dialog
+    entries:    
       - text: "I'll try it!"
         char: Leo
         mood: excited
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 130
+      yPercent: -25
+      ease: power3.out    
   - type: sceneText
     text: >
-      <p>Without further ado, Leo entered one of the mazes, leaving Mathina alone.</p>
+      <p>Without further ado, Leo entered a maze, leaving Mathina alone.</p>
   - type: dialog
     entries:         
       - text: "I also want to try, but first I want to understand what I am expected to do!"
         char: mathina
+        exposition: "Mathina shouted to Leo, who had meanwhile disappeared."         
         mood: angry
+  - type: clearImage
+    id: Mathina2       
+  - type: image
+    src: mathina-instrucoes-labirinto.png
+    id: mathina-instrucoes
+    style: "width: 18%; top: 58%; left: 39%;"
+  - type: dialog
+    entries:    
       - text: "First I’m going to read the instructions. Here they are."
         char: mathina
   - type: clearImage
@@ -283,60 +328,196 @@ actions:
   - type: image
     id: maze2
     src: maze2.jpg
-    style: "width: 30%; top: 62%;"
+    style: "width: 30%; top: 62%"
     align: center
+  - type: clearImage
+    id: mathina-instrucoes
+  - type: clearImage
+    id: Leo3     
   - type: sceneText
     text: >
       <p><strong>This is the mirror maze</strong></p>     
       <p>The goal is to start at entrance and end up at the goal, but beware: the path will get more and more transparent, and, after a certain point, you won't be able to see it. To help you out, there’s a magic mirror on your right: in this mirror you will be able to see the reflected image of the path you must follow.</p>
       <p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
+  - type: clearImage
+    id: maze2
+  - type: image
+    src: mathina-instrucoes-labirinto.png
+    id: mathina-instrucoes
+    style: "width: 18%; top: 58%; left: 39%; z-index:2"
+  - type: image
+    id: maze
+    src: maze.png
+    style: "width: 40%; top: 42%; right: 0%;  z-index:3"
+    align: right    
   - type: dialog
     entries:         
-      - text: "Great, I think I've got it! Here I go."
+      - text: "Great, I think I've got it!"
+        char: mathina
+        mood: excited
+  - type: animation
+    target: mathina-instrucoes
+    vars:
+      duration: 3
+      xPercent: 145
+      yPercent: -20
+      ease: power3.out      
+  - type: dialog
+    entries:         
+      - text: "Here I go."
         char: mathina
         mood: excited
   - type: clearImage
-    id: maze2
+    id: mathina-instrucoes          
   - type: game
     text: "How can Mathina solve the mirror maze?"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/labirinto-s.html?lang=en&sim=ref
+    url: /apps/labirinto-s/index.html?lang=en&sim=ref
+  - type: clearBackground
+    id: c1-bg2     
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg3    
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: clearImage
+    id: maze   
+  - type: image
+    id: HalfTurnrMaze
+    src: HalfTurnrMaze.png
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
+    align: right    
   - type: dialog
     entries:
       - text: "I already solved the maze. I hardly even hit the wall!"
         char: mathina
-        mood: excited    
+        mood: excited
+  - type: clearImage
+    id: Mathina2        
+  - type: image
+    src: mathina-instrucoes-labirinto2.png
+    id: mathina-instrucoes2
+    style: "width: 19%; top: 56%; left: 39%;"
+  - type: dialog
+    entries:    
       - text: "And there’s a new maze here, let me read the instructions."
         char: mathina
   - type: image
     id: maze3
     src: maze3.png
     style: "width: 30%; top: 62%;"
+    align: center    
+  - type: clearImage
+    id: mathina-instrucoes2
+  - type: clearImage
+    id: HalfTurnrMaze     
     align: center        
   - type: sceneText
     text: >
       <p><strong>This is the half-turn maze</strong></p>    
       <p>The goal is to start at entrance  and end up at the goal , but beware: the path will get more and more transparent and, at a certain point, you won't be able to see it. To help you out, a magical image is shown on your right: in it, you will be able to watch a rotated (by a half turn) image of the path you must follow.</p>
       <p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
+  - type: clearImage
+    id: maze3       
+  - type: image
+    src: mathina-instrucoes-labirinto2.png
+    id: mathina-instrucoes2
+    style: "width: 19%; top: 56%; left: 39%; z-index: 2"
+  - type: image
+    id: HalfTurnrMaze
+    src: HalfTurnrMaze.png
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
+    align: right    
   - type: dialog
     entries:         
-      - text: "Great, I think I've got it! Here I go."
+      - text: "Great, I think I've got it!"
+        char: mathina
+        mood: excited
+  - type: animation
+    target: mathina-instrucoes2
+    vars:
+      duration: 3
+      xPercent: 145
+      yPercent: -24
+      ease: power3.out
+  - type: dialog
+    entries:        
+      - text: "Here I go."
         char: mathina
         mood: excited
   - type: clearImage
-    id: maze3
+    id: mathina-instrucoes2          
   - type: game
     text: "How can Mathina solve the half-turn maze?"
     cta: "Try it yourself!"
-    url: https://www.atractor.pt/temp/apps-tests/labirinto-s.html?lang=en&sim=rot      
+    url: /apps/labirinto-s/index.html?lang=en&sim=rot
+  - type: clearImage
+    id: HalfTurnrMaze
+  - type: clearBackground
+    id: c1-bg3    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"     
   - type: dialog
-    entries:                 
+    entries:
+      - text: "I already solved the maze. I hardly even hit the wall!"
+        char: mathina
+        exposition: "Mathina was feeling very proud."          
+        mood: excited    
       - text: "I wonder if Leo has finished. I think he is stuck inside the mazes. This is what happens if you don't read the instructions..."
         char: mathina
-        mood: surprised      
+        exposition: "Mathina looked around without finding Leo."         
+        mood: surprised
+  - type: clearImage
+    id: Mathina2        
+  - type: image
+    src: Mathina6.png
+    id: Mathina6
+    style: "width: 8.5%; top: 57%; left: 47%;"        
   - type: sceneText
     text: >
       <p>Mathina sighed and, while waiting for Leo, sat down, admiring all the hustle and bustle of Symmetry Fair.</p>
+  - type: clearImage
+    id: Mathina6
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: image
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 67%; left: 1%;"    
+  - type: sceneText
+    text: >
       <p>Eventually, and much later, Leo got out of the maze, feeling embarrassed for taking so long.</p>
-      <p>After Leo promised not to enter any of the amusements by himself, Mathina and Leo continued exploring Symmetry Fair.</p>
-      <p>Before leaving, and after having acquired many new skills related to symmetry, Mathina and Leo said goodbye to the wizard, who invited them to tea. In the end, Mathina and Leo, left the Fair, commenting on how even the cakes that the wizard had offered them ... were symmetric!… They had spent an exciting day at Symmetry Fair!</p>      
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 220
+      yPercent: 0
+      ease: power3.out    
+  - type: sceneText
+    text: >      
+      <p>After Leo promised not to enter any of the amusements by himself, Mathina and Leo continued exploring Symmetry Fair.</p>      
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo3
+  - type: clearBackground
+    id: c1-bg1     
+  - type: background
+    src: $COMMON/img/bg/SYMM/bucca-bg3b-with-leo-wizard.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;" 
+    id: bucca-bg3b-with-leo-wizard    
+  - type: sceneText
+    text: >
+      <p>Before leaving, and after having acquired many new skills related to symmetry, Mathina and Leo said goodbye to the wizard, who invited them to tea. In the end, Mathina and Leo, left the Fair, commenting on how even the cakes that the wizard had offered them ... were symmetric!… They had spent an exciting day at Symmetry Fair!</p>          

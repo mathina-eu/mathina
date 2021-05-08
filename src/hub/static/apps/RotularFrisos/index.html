@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pt">
+<head>
+
+<title>Frisos</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/rotularFris_style.css">
+
+<body>
+    <div class="wideBox">
+      <h1 id="titulo">Coloca os rótulos nos sacos</h1>
+    </div>
+    <div class="line"></div>
+    <div style="position: relative;">
+        <!--img src="../atractor-apps-all/imgs/labirinto1.png" id="lab1"-->
+        <canvas id="sacosFrisos" width=800 height="500" style="position: absolute; z-index: 0"></canvas>
+        <canvas id="frisos" width=800 height="500" style="position: absolute; z-index: 1"></canvas>
+        <canvas id="rotulosBrancos" width=800 height="500" style="position: absolute; z-index: 2"></canvas>
+        <canvas id="rotulos" width=800 height="500" style="position: absolute; z-index: 3"></canvas>
+    </div>
+    <div id="successMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+        <h2 id="sucessText">Parabéns!</h2>
+        <button onclick="hideDialog('#successMessage')"><img src="../atractor-apps-all/icons/back.png" width="100px"> </button>
+    </div>
+    <div id="errorMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+        <h2 id="errorText">Ainda não colocaste todos os rótulos de forma correta.</h2>
+        <h2 id="errorText2">Tenta outra vez!</h2>
+        <button onclick="hideDialog('#errorMessage')"><image src="../atractor-apps-all/icons/back.png" width="100px"> </image> </button>
+    </div>
+
+</body>
+
+<img src="../atractor-apps-all/imgs/pasta.png" id="pasta" style="display:none">
+
+<audio src="../atractor-apps-all/sons/ooooh.mp3" id="somErrado" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/somEscolha.mp3" id="somEscolha" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos1.mp3" id="aplausos1" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos2.mp3" id="aplausos2" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos3.mp3" id="aplausos3" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/yay.mp3" id="yay" type="audio/mpeg"></audio>
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    var lang = getUrlVars().lang;
+    if(lang==undefined){
+        lang="pt";
+    }
+    var titLabelFinal;
+    var simsLabels;
+
+    var canvasX0;
+    var canvasY0;
+    var canvasWidth;
+    var canvasHeight;
+    var MP; // Posição do 'rato'
+    
+    var bagW0 = 300; // largura original da imagem do saco
+    var rotuW0 = 60; // largura original das imagens dos rótulos
+    var rotulosH = 80; // altura da faixa dos rótulos
+    var frisosData;// = getFrisosData(); // endereços das imagens dos frisos e o seu tipo de simetria
+    
+    var sacosPositions;// posições dos sacos
+    var bagW;// largura de cada saco
+    var rotuW; // largura de cada rotulo
+    //
+    var rotuBasePos; // posição dos rotulos na base
+    var rotuPositions0; // posicao dos rotulos vazios
+    var rotuPositions; // posicao dos rotulos
+    var rotuSim; // lista dos tipos de simetria dos rótulos
+    var rotuImgs; // lista das imagens dos rotulos
+    var rotuErrados; // lista de rótulos mal colocados
+    var rotuBloqueados; // lista de rótulos certos que não se podem alterar
+
+    var rotuInMove = null;
+    var tentativas = 0;
+
+    window.onload = function() {
+        init();
+    }
+    
+    function init() {
+        // Hide the success message
+        setLanguage();        
+        
+        $('#successMessage').hide();
+        $('#errorMessage').hide();
+        //$('#finalMessage').hide();
+        document.getElementById('successMessage').style.visibility="visible";
+        document.getElementById('errorMessage').style.visibility="visible";
+        //document.getElementById('finalMessage').style.visibility="visible";
+        
+        setEventos();
+
+        frisosData = getFrisosData();
+        frisosData.sort( function() { return Math.random() - .5 } );
+
+        setPosicoesTamanhos();
+
+        loadSacos();
+
+        loadFrisos();
+        
+        loadRotulosBrancos();
+        
+        loadRotulos(); 
+    }
+    // Evento executado após carregar a página
+    function setEventos() {
+        var layerRotulos = document.getElementById('rotulos');
+        layerRotulos.onmousedown = layerRotulos.ontouchstart = mouseDown;
+        layerRotulos.onmouseup = layerRotulos.ontouchend = layerRotulos.ontouchcancel = mouseUp;
+        layerRotulos.onmousemove = layerRotulos.ontouchmove = mouseMove;
+        //layerRotulos.onmouseout = mouseUp;
+    }
+
+    function getFrisosData(){
+        var frisosP111 = new Array("Cereja-p111.png","LetraP-p111.png", "Music-p111.png");
+        var simP111 = new Array("trans");
+        var userP111 = new Array();
+        
+        var frisosP1a1 = new Array("Cereja-p1a1.png","LetraP-p1a1.png", "Music-p1a1.png");
+        var simP1a1 = new Array("trans","refDesl");
+        var userP1a1 = new Array();
+        
+        var frisosP1m1 = new Array("Cereja-p1m1.png","LetraP-p1m1.png", "Music-p1m1.png");
+        var simP1m1 = new Array("trans","refH","refDesl");
+        var userP1m1 = new Array();
+
+        var frisosP112 = new Array("Cereja-p112.png","LetraP-p112.png", "Music-p112.png");
+        var simP112 = new Array("trans","rot");
+        var userP112 = new Array();
+
+        var frisosPm11 = new Array("Cereja-pm11.png","LetraP-pm11.png", "Music-pm11.png");
+        var simPm11 = new Array("trans","refV");
+        var userPm11 = new Array();
+
+        var frisosPma2 = new Array("Cereja-pma2.png","LetraP-pma2.png", "Music-pma2.png");
+        var simPma2 = new Array("trans", "refV", "rot", "refDesl");
+        var userPma2 = new Array();
+
+        var frisosPmm2 = new Array("Cereja-pmm2.png","LetraP-pmm2.png", "Music-pmm2.png");
+        var simPmm2 = new Array("trans", "refV", "refH", "rot", "refDesl");
+        var userPmm2 = new Array();
+
+        return new Array([frisosP111,simP111, userP111, 7],[frisosP1a1,simP1a1, userP1a1, 6],[frisosP1m1,simP1m1, userP1m1, 2],[frisosP112,simP112, userP112, 4],[frisosPm11,simPm11, userPm11, 1],[frisosPma2,simPma2, userPma2, 5],[frisosPmm2,simPmm2, userPmm2, 3]);
+    }
+
+    function setPosicoesTamanhos(){
+        var layerSacos = document.getElementById('sacosFrisos');
+        canvasX0 = layerSacos.offsetParent.offsetLeft;
+        canvasY0 = layerSacos.offsetParent.offsetTop;
+        canvasWidth = window.innerWidth-30;
+        canvasHeight = window.innerHeight-30-canvasY0;
+        bagW = Math.min(0.9*canvasWidth/4,0.9*(canvasHeight-rotulosH)/2);
+        
+        var bagX0 = canvasWidth/8;
+        var espW = canvasWidth/4;
+        var espH = (canvasHeight-rotulosH)/2;
+        var bagY0 = rotulosH+espH/2;
+        
+        sacosPositions = new Array();
+        for(var i=0; i<7; i++){
+            sacosPositions[i] = {x:bagX0+(i%4)*espW,y:bagY0+Math.floor(i/4)*espH};
+        }
+        
+        var kScale =Math.min(0.20*bagW,60)/rotuW0;
+        rotuW = kScale*rotuW0;
+        rotuPositions0 = new Array();
+        rotuSim = new Array();
+        for(var i=0; i<frisosData.length;i++){
+            rotuPositions0[i] = new Array();
+            var nRotu = frisosData[i][1].length;
+            var ww = nRotu*rotuW;
+            var hh = nRotu*rotuW;
+            for(var j=0; j<nRotu; j++){
+                var rotuX = sacosPositions[i].x-(ww-rotuW)*0.5+j*rotuW;
+                var rotuY = sacosPositions[i].y-bagW/3.5;
+                rotuPositions0[i][j] = {x:rotuX, y:rotuY};
+                rotuSim.push(frisosData[i][1][j]);
+            }
+        }
+
+        var rotuX = canvasWidth/10;
+        var rotuDist = canvasWidth/5;
+        rotuBasePos = new Array();
+        for(var i=0; i<5;i++){
+            rotuBasePos[i] = {x:rotuX+i*rotuDist, y:rotulosH*0.6};
+        }
+
+        rotuPositions = new Array();
+        rotuBloqueados = new Array();
+        for(var i=0; i<rotuSim.length;i++){
+            rotuPositions[i] = getBasePosition(i);
+            rotuBloqueados[i] = false;
+        }
+    }
+
+    function loadSacos(){
+        var layerSacos = document.getElementById('sacosFrisos');
+        layerSacos.width = canvasWidth;
+        layerSacos.height = canvasHeight;
+        var ctx = layerSacos.getContext("2d");
+        var imgSaco = document.getElementById('pasta');
+        for(var i=0; i<sacosPositions.length; i++){
+            ctx.drawImage(imgSaco,sacosPositions[i].x-bagW/2, sacosPositions[i].y-bagW/2, bagW, bagW);
+        }
+
+        ctx.fillStyle = "#6e503c";
+        ctx.font = "bold 18px Comic Sans MS";
+        for(var i=0; i<rotuBasePos.length; i++){
+            ctx.fillText(simsLabels[i], rotuBasePos[i].x-simsLabels[i].length*5, rotulosH*0.20);
+        }
+
+        ctx.fillStyle = "#6e503c";
+        ctx.font = "bold 20px Comic Sans MS";
+        for(var i=0; i<sacosPositions.length; i++){
+            ctx.fillText(frisosData[i][3], sacosPositions[i].x-bagW*0.03, sacosPositions[i].y-bagW*0.40);
+        }
+
+        var tempImg;
+        var sims = ["trans", "refH", "refV", "rot", "refDesl"];
+        for(var i=0; i<rotuBasePos.length; i++){
+            ctx.globalAlpha = 0.4;
+            tempImg = new Image();
+            tempImg.src = "../atractor-apps-all/imgs/Icon-"+sims[i]+".png";
+            tempImg.value = i;
+            tempImg.onload = function(){
+                var k = this.value;
+                ctx.drawImage(this,rotuBasePos[k].x-rotuW/2, rotuBasePos[k].y-rotuW/2, rotuW, rotuW);
+            }
+        }
+    }
+    function loadFrisos(){
+        var layerFrisos = document.getElementById('frisos');
+        layerFrisos.width = canvasWidth;
+        layerFrisos.height = canvasHeight;
+        var ctx = layerFrisos.getContext("2d");
+        var imgFriso;
+        for(var i=0; i<frisosData.length; i++){
+            for(var j=0; j<frisosData[i][0].length;j++){
+                imgFriso = new Image();
+                imgFriso.src = "../atractor-apps-all/imgs/"+frisosData[i][0][j];
+                imgFriso.value = new Array(i,j);
+                imgFriso.onload = function(){
+                    var k1 = this.value[0];
+                    var k2 = this.value[1];
+                    ctx.save();
+                    ctx.translate(sacosPositions[k1].x, sacosPositions[k1].y-bagW/4+k2*bagW*0.22);
+                    //ctx.rotate((k2+2) * Math.PI / 6);
+                    ctx.drawImage(this,0-bagW*0.35, 0, bagW*0.7, bagW*0.7/2);
+                    ctx.restore();
+                }
+            }
+        }
+    }
+    function loadRotulosBrancos(){
+        var layerRotulos0 = document.getElementById('rotulosBrancos');
+        layerRotulos0.width = canvasWidth;
+        layerRotulos0.height = canvasHeight;
+        var ctx = layerRotulos0.getContext("2d");
+        var imgRotulo;
+        for(var i=0; i<rotuPositions0.length;i++){
+            for(var j=0; j<rotuPositions0[i].length; j++){
+                imgRotulo = new Image();
+                imgRotulo.src = "../atractor-apps-all/imgs/rotulo0.png";
+                imgRotulo.value = new Array(i,j);
+                imgRotulo.onload = function(){
+                    var k1 = this.value[0];
+                    var k2 = this.value[1];
+                    ctx.drawImage(this, rotuPositions0[k1][k2].x-rotuW*0.5, rotuPositions0[k1][k2].y-rotuW*0.5, rotuW, rotuW);
+                }
+            }
+        }
+    }
+    function loadRotulos(){
+        var layerRotulos = document.getElementById('rotulos');
+        layerRotulos.width = canvasWidth;
+        layerRotulos.height = canvasHeight;
+        var ctx = layerRotulos.getContext("2d");
+        rotuImgs = new Array();
+        var imgRotulo;
+        for(var i=0; i<rotuSim.length;i++){
+            imgRotulo = new Image();
+            imgRotulo.src = "../atractor-apps-all/imgs/Icon-"+rotuSim[i]+".png";                
+            imgRotulo.value = i;
+            imgRotulo.onload = function(){
+                var k = this.value;
+                ctx.drawImage(this, rotuPositions[k].x-rotuW*0.5, rotuPositions[k].y-rotuW*0.5, rotuW, rotuW);
+            }
+            rotuImgs[i]=imgRotulo;
+        }
+    }
+    function drawRotulos(){
+        var layerRotulos = document.getElementById('rotulos');
+        var ctx = layerRotulos.getContext("2d");
+        ctx.clearRect(0, 0, layerRotulos.width, layerRotulos.height);
+        for(var i=0; i<rotuImgs.length;i++){
+            ctx.drawImage(rotuImgs[i], rotuPositions[i].x-rotuW*0.5, rotuPositions[i].y-rotuW*0.5, rotuW, rotuW);
+        }
+    }
+    function getBasePosition(k){
+        var pos;
+        if(rotuSim[k]=="trans"){
+            pos=rotuBasePos[0];
+        }else if(rotuSim[k]=="refH"){
+            pos=rotuBasePos[1];
+        }else if(rotuSim[k]=="refV"){
+            pos=rotuBasePos[2];
+        }else if(rotuSim[k]=="rot"){
+            pos=rotuBasePos[3];
+        }else{
+            //tipoSim=="refDesl"
+            pos=rotuBasePos[4];
+        }
+        return pos;
+    }
+    function arrumaRotulos(){
+        for(var i=0; i<sacosPositions.length; i++){
+            for(var j=0; j<frisosData[i][2].length;j++){
+                rotuPositions[frisosData[i][2][j]]=rotuPositions0[i][j];
+            }
+        }
+    }
+    function getListaSims(list){
+        var newList=new Array();
+        for(var i=0; i<list.length;i++){
+            newList.push(rotuSim[list[i]]);
+        }
+        return newList;
+    }
+    function finishAction(){
+        var flag = true;
+        for(var i = 0; i<sacosPositions.length; i++){
+            if(frisosData[i][1].length>frisosData[i][2].length){
+                flag = false;
+                break;
+            }
+        }
+        if(flag){
+            rotuErrados = getErrados();
+            if(rotuErrados.length>0){
+                showDialog('#errorMessage');
+                somErrado.play();
+                tentativas++;
+            }else{
+                showDialog('#successMessage');
+                if(tentativas==0){
+                    aplausos1.play();
+                }else if(tentativas==1){
+                    aplausos2.play();
+                }else if(tentativas==2){
+                    aplausos3.play();
+                }else{
+                    yay.play();
+                }
+            }
+        }
+    }
+    function getErrados(){
+        var errados = new Array();
+        var k;
+        for(var i = 0; i<sacosPositions.length; i++){
+            for(var j=0; j<frisosData[i][2].length; j++){
+                k = frisosData[i][2][j];
+                if(estaNaLista(rotuSim[k],frisosData[i][1])){
+                    rotuBloqueados[k]=true;
+                }else{
+                    errados.push([i,k]);
+                }
+            }
+        }
+        return errados;
+    }
+
+    function mouseDown(e) {
+        //console.log("mouseDown");
+        //
+        var layerRotulos = document.getElementById('rotulos');
+        if(e.offsetX==undefined){
+            MP = {x:e.touches[0].clientX-canvasX0, y:e.touches[0].clientY-canvasY0};
+        }else{
+            MP = {x:e.offsetX, y:e.offsetY};
+        }
+        for(var i=0; i<rotuPositions.length;i++){
+            if(estaPertoDe(MP,rotuPositions[i],rotuW*0.5) && !rotuBloqueados[i]){
+                rotuInMove = i;
+                break;
+            }
+        }
+        if(rotuInMove!=null){
+            somEscolha.play();
+            for(var i=0; i<sacosPositions.length; i++){
+                if(estaPertoDe(MP,sacosPositions[i],bagW*0.5)){
+                    retiraDaLista(rotuInMove,frisosData[i][2]);
+                    break;
+                }
+            }
+        }
+    }
+    function mouseMove(e) {
+        //console.log("mouseMove: ");
+        if(rotuInMove!=null){
+            var layerRotulos = document.getElementById('rotulos');
+            if(e.offsetX==undefined){
+                MP = {x:e.touches[0].clientX-canvasX0, y:e.touches[0].clientY-canvasY0};
+            }else{
+                MP = {x:e.offsetX, y:e.offsetY};
+            }
+            rotuPositions[rotuInMove]=MP;
+            drawRotulos();
+        }
+    }
+    function mouseUp(e){
+        //console.log("mouseUp");
+        if(rotuInMove!=null){
+            var layerRotulos = document.getElementById('rotulos');
+            if(e.offsetX!=undefined){
+                MP = {x:e.offsetX, y:e.offsetY};
+            }
+            arrumaRotulos();
+            var flag1,flag2,flag3;
+            var atracou = false;
+            for(var i=0; i<sacosPositions.length; i++){
+                flag1 = estaPertoDe(MP,sacosPositions[i],bagW*0.5);
+                flag2 = frisosData[i][2].length<frisosData[i][1].length;
+                flag3 = !estaNaLista(rotuSim[rotuInMove],getListaSims(frisosData[i][2]));
+                if(flag1 && flag2 && flag3){
+                    rotuPositions[rotuInMove] = rotuPositions0[i][frisosData[i][2].length];
+                    frisosData[i][2].push(rotuInMove);
+                    atracou = true;
+                    break;
+                }
+            }
+            if(!atracou){
+                rotuPositions[rotuInMove]=getBasePosition(rotuInMove);
+            }else{
+                somEscolha.play();
+            }
+
+            drawRotulos();
+            rotuInMove=null;
+
+            finishAction();
+        }        
+    }
+    
+    function reloadApp(){
+        location.reload();
+    }
+    
+    function showDialog(tipo='#successMessage'){
+        $(tipo).show();
+        $(tipo).animate( {
+            left: '5%',
+            top: '5%',
+            width: '90%',
+            height: '90%',
+            opacity: 0.9
+        } );
+        if(tipo=='#successMessage'){
+            document.getElementById('titulo').textContent=titLabelFinal;
+        }
+    }
+
+    function hideDialog(tipo='#successMessage'){
+        $(tipo).hide();
+        $(tipo).css( {
+            width: 0,
+            height: 0
+        } );
+        if(tipo=='#errorMessage'){
+            var kSaco;
+            var kNum;
+            for(var i=0; i<rotuErrados.length; i++){
+                kSaco = rotuErrados[i][0];
+                kNum = rotuErrados[i][1];
+                //rotuPositions[k] = getBasePosition(k);    
+                retiraDaLista(kNum,frisosData[kSaco][2]);   
+                rotuPositions[kNum] = getBasePosition(kNum);             
+            }
+            arrumaRotulos();
+            drawRotulos();
+        }
+    }
+
+    function setLanguage(){
+        //console.log(lang);
+        if(lang=="en"){
+            //console.log(lang);
+            document.getElementById('titulo').textContent="Put the labels on the bags";
+            document.getElementById('sucessText').textContent="Congratulations!";
+            document.getElementById('errorText').textContent="You have not yet placed all labels correctly.";
+            document.getElementById('errorText2').textContent="Try again...";
+            titLabelFinal = "Very well!";
+            simsLabels = new Array();
+            simsLabels.push("Translations");
+            simsLabels.push("Horizontal reflection");
+            simsLabels.push("Vertical reflections");
+            simsLabels.push("Rotations");
+            simsLabels.push("Glide reflections");
+        }else{
+            document.getElementById('titulo').textContent="Coloca os rótulos nos sacos";
+            document.getElementById('sucessText').textContent="Parabéns!";
+            document.getElementById('errorText').textContent="Ainda não colocaste todos os rótulos de forma correta.";
+            document.getElementById('errorText2').textContent="Tenta outra vez...";
+            titLabelFinal = "Muito bem!";
+            simsLabels = new Array();
+            simsLabels.push("Translações");
+            simsLabels.push("Reflexão horizontal");
+            simsLabels.push("Reflexões verticais");
+            simsLabels.push("Rotações");
+            simsLabels.push("Reflexões deslizantes");
+        }
+    }
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    function estaNaLista(elem, lista){
+        var flag = false;
+        for(var i=0; i<lista.length;i++){
+            if(elem==lista[i]){
+                flag=true;
+                break;
+            }
+        }
+        return flag;
+    }
+    function retiraDaLista(elem, lista){
+        for(var i=0; lista.length; i++){
+            if(elem==lista[i]){
+                lista.splice(i,1);
+                break;
+            }
+        }
+    }
+
+    function estaPertoDe(P1, P2, raio){
+        return Math.abs(P1.x-P2.x)<raio && Math.abs(P1.y-P2.y)<raio;
+    }
+
+</script>
+
+</head>
+</html>
