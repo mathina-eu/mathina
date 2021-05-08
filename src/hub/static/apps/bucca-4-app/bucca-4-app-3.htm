@@ -249,7 +249,27 @@
 	Lingua=1;
 
 	Traduzioni=[
-	[["Trad1"],"","","",""]
+	[["Trad1"],"Angela chose the two numbers: <br> a prime number <em> p </em>:","Angela ha scelto i due numeri: <br>un numero primo <em>p</em>:","&Acirc;ngela escolheu os dois n&uacute;meros: <br> um n&uacute;mero primo <em> p </em>:","Angela w&auml;hlt die beiden Zahlen: <br> eine Primzahl <em> p </em>:"],
+	[["Trad2"],"and a number <em> g </em> which will be our base:","e un numero <em>g</em> che sarà la nostra base:","e um n&uacute;mero <em> g </em> que ser&aacute; nossa base:","und eine Zahl <em> g </ em>, die unsere Basis sein wird:"],
+	[["Trad3"],"Let's get started!","Ok, iniziamo!","Vamos começar!","Lass uns anfangen!"],
+	[["Trad4"],"Phase 2 (Leo): Leo's secret","Fase 2 (Leo): il segreto di Leo","Fase 2 (Leo): o segredo de Leo","Phase 2 (Leo): Leos Geheimnis"],
+	[["Trad5"],"Hi Mathina! I secretly chose a number a, between 2 and","Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e","Oi Mathina! Eu secretamente escolhi um n&uacute;mero a, entre 2 e","Hallo Mathina! Ich habe heimlich eine Zahl a zwischen 2 und 2 gew&auml;hlt"],
+	[["Trad6","Trad6a"],"Then I computed","Poi ho calcolato","Ent&atilde;o eu calculei","Dann habe ich berechnet"],
+	[["Trad7","Trad7a"],"which is equal to","che vale","que &eacute; igual a","das ist gleich"],
+	[["Trad8","Trad8a"],"And now?","E adesso?","E agora?","Und nun?"],
+	[["Trad9"],"Phase 2 (Mathina): Mathina's secret","Fase 2 (Mathina): il segreto di Mathina","Fase 2 (Mathina): o segredo de Mathina","Phase 2 (Mathina): Leos Mathina"],
+	[["Trad10"],"Hi Leo! I secretly chose a number b, between 2 and","Ciao Leo! Ho scelto segretamente un numero b, tra 2 e","Oi Leo! Eu secretamente escolhi um n&uacute;mero b, entre 2 e","Hallo Leo! Ich habe heimlich eine Zahl b zwischen 2 und 2 gew&auml;hlt"],
+	[["Trad11"],"How do we proceed?","Come procediamo?","Como procedemos?","Wie Fahren wir fort?"],
+	[["Trad12"],"We need to find the key. We know that","Dobbiamo trovare la chiave. Sappiamo che vale","Precisamos encontrar a chave. N&oacute;s sabemos isso","Wir m&uuml;ssen den Schl&uuml;ssel finden. Wir wissen das"],
+	[["Trad13"],"but also","ma anche","mas tamb&eacute;m","aber auch"],
+	[["Trad14"],"only not knowing a and b we are forced to try various combinations.","solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.","apenas n&atilde;o conhecendo aeb, somos for&ccedil;ados a tentar v&aacute;rias combina&ccedil;&otilde;es.","Nur wenn wir a und b nicht kennen, m&uuml;ssen wir verschiedene Kombinationen ausprobieren."],
+	[["Trad15","Trad15a"],"Choose","Scegli","Escolher","W&auml;hlen"],
+	[["Trad16","Trad16a"],"with this choice","Con questa scelta","com esta escolha","mit dieser Wahl"],
+	[["Trad17","Trad17a"],"modulo","modulo","m&oacute;dulo","Modulo"],
+	[["Trad18"],"Ok, I'm ready to decode the message","Ok, sono pronto a decodificare il messaggio","Ok, estou pronto para decodificar a mensagem","Ok, ich bin bereit, die Nachricht zu entschl&uuml;sseln"],
+	[["Trad19"],"Can we decode the message?","Riusciamo a decodificare il messaggio?","Podemos decodificar a mensagem?","K&ouml;nnen wir die Nachricht entschl&uuml;sseln?"],
+	[["Trad20"],"Enter the key:","Inserisci la chiave:","Insira a chave:","Geben Sie den Schlüssel:"],
+	[["Trad21"],"Here is the decoded message","Ecco il messaggio decodificato","Aqui est&aacute; a mensagem decodificada","Hier ist die dekodierte Nachricht"]
 	];
 
 	function isNumeric(n) {
@@ -447,30 +467,30 @@
 <body onload="Init()">
 	<div id="DivCanvas">
 		<div id="Text1">
-			<p>Angela ha scelto per i due numeri: <br>un numero primo <em>p</em>: <b id="Primo1"></b>, <br>e un numero <em>g</em> che sarà la nostra base: <b id="Base1"></b></p>
-			<p><button onclick="$('#Text2').show();">Ok, iniziamo!</button></p>
+			<p><span id="Trad1">Angela ha scelto per i due numeri: <br>un numero primo <em>p</em>:</span> <b id="Primo1"></b>, <br><span id="Trad2">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
+			<p><button onclick="$('#Text2').show();" id="Trad3">Ok, iniziamo!</button></p>
 		</div>
 		<div id="Text2">
-			<p class="titolo">Fase 2 (Leo): il segreto di Leo</p>
-			<p>Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e <em class="pmuno">p-2</em>. Poi ho calcolato <em class="SegG">g</em><sup>a</sup>, che vale <span id="chia"></span></p>
-			<p><button onclick="$('#Text3').show();">E adesso?</button></p>
+			<p class="titolo" id="Trad4">Fase 2 (Leo): il segreto di Leo</p>
+			<p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
+			<p><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
 			</p>
 		</div>
 		<div id="Text3">
-			<p class="titolo">Fase 2 (Mathina): il segreto di Mathina</p>
-			<p>Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e <em class="pmuno">p-2</em>. Poi ho calcolato <em class="SegG">g</em><sup>b</sup>, che vale <span id="chib"></span></p>
-			<p><button onclick="$('#Text4').show();">E adesso?</button></p>
+			<p class="titolo" id="Trad9">Fase 2 (Mathina): il segreto di Mathina</p>
+			<p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
+			<p><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
 		</div>
 		<div id="Text4">
-			<p class="titolo">Come procediamo?</p>
-			<p>Dobbiamo trovare la chiave. Sappiamo che vale <span class="SegCondB"></span><sup>a</sup>, ma anche <span class="SegCondA"></span><sup>b</sup>, solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.<br><br> Scegli a: <input type="text" id="sceglia" onchange="ScegliA()" />. <span id="nascA" style="display:none;">Con questa scelta, <span class="SegCondB"></span><sup id="NewA">a</sup> modulo <em class="SegP">p</em> = <em id="NCA"></em>
-				</span><br><br> Scegli b: <input type="text" id="sceglib" onchange="ScegliB()" />. <span id="nascB" style="display:none;">Con questa scelta, <span class="SegCondA"></span><sup id="NewB">b</sup> modulo <em class="SegP">p</em> = <em id="NCB"></em></span><br>
+			<p class="titolo" id="Trad11">Come procediamo?</p>
+			<p><span id="Trad12">Dobbiamo trovare la chiave. Sappiamo che vale</span> <span class="SegCondB"></span><sup>a</sup>, <span id="Trad13">ma anche</span> <span class="SegCondA"></span><sup>b</sup>, <span id="Trad14">solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.</span><br><br> <span id="Trad15">Scegli</span> a: <input type="text" id="sceglia" onchange="ScegliA()" />. <span id="nascA" style="display:none;"><span id="Trad16">Con questa scelta</span>, <span class="SegCondB"></span><sup id="NewA">a</sup> <span id="Trad17">modulo</span> <em class="SegP">p</em> = <em id="NCA"></em>
+				</span><br><br> <span id="Trad15a">Scegli</span> b: <input type="text" id="sceglib" onchange="ScegliB()" />. <span id="nascB" style="display:none;"><span id="Trad16a">Con questa scelta</Span>, <span class="SegCondA"></span><sup id="NewB">b</sup> <span id="Trad17a">modulo</span><em class="SegP">p</em> = <em id="NCB"></em></span><br>
 			</p>
-			<p><button onclick="$('#Text5').show();">Ok, sono pronto a decodificare il messaggio</button></p>
+			<p><button onclick="$('#Text5').show();" id="Trad18">Ok, sono pronto a decodificare il messaggio</button></p>
 		</div>
 		<div id="Text5">
-			<p class="titolo">Riusciamo a decodificare il messaggio?</p>
-			<p>Inserisci la chiave: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> Ecco il messaggio decodificato: <br>
+			<p class="titolo" id="Trad19">Riusciamo a decodificare il messaggio?</p>
+			<p><span id="Trad20">Inserisci la chiave</span>: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <br>
 				<span id="messdec"></span>
 			</p>
 		</div>
