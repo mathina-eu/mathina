@@ -34,8 +34,7 @@ drawWand() := (
   drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
   
   forall(1..ceil(lerp(2, magicLength, wand.value, 0, wand.maxValue)),
-    drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->0.2, alpha->1);
-
+    drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
 
   //draw([wand.pos, wand.pos + wand.length * wand.dir], color->(0,0,1), size-> 5, arrow->true, arrowsize->0.5);
