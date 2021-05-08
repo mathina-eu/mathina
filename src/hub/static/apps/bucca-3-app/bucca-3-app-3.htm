@@ -1,496 +1,510 @@
 <html>
+
 <head>
-<style>
-html { 
-  background: url(img/bg3_plain.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto", sans-serif;
-}
+    <style>
+        html {
+            background: url(img/bg3_plain.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Roboto", sans-serif;
+        }
 
-#Partenza {
-	position:absolute;
-	margin:auto;
-	top:15%;
-	left:2%;
-	width:25%;
-	height:70%;
-	z-index:2;
-	border:solid;
-	border-color:#684213;
-	font-size: 32px;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
-.PartContainer {
-	position: absolute;
-  top: 50%;
-	width:95%;
-  -ms-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
-	padding:15px;
-	text-align:center;
-}
+        #Partenza {
+            position: absolute;
+            margin: auto;
+            top: 15%;
+            left: 2%;
+            width: 25%;
+            height: 70%;
+            z-index: 2;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
 
-#Arrivo {
-	position:absolute;
-	top:15%;
-	right:2%;
-	width:25%;
-	height:70%;
-	z-index:2;
-	border:solid;
-	border-color:#684213;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
+        .PartContainer {
+            position: absolute;
+            top: 50%;
+            width: 95%;
+            -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+            padding: 15px;
+            text-align: center;
+        }
 
-#DivCanvas {
-	position:absolute;
-	top:0%;
-	left:0%;
-	width:100%;
-	height:100%;
-	z-index:1;
-}
+        #Arrivo {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+            width: 25%;
+            height: 70%;
+            z-index: 2;
+            border: solid;
+            border-color: #684213;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
 
-#CanvasMathina {
-	position:relative;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:2;
-	visibility:visible;
-}
+        #DivCanvas {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #CanvasMathina {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
 
 
-#successMessage {
-  position: absolute;
-  /*left: 50%;
+        #successMessage {
+            position: absolute;
+            /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-  z-index: 100;
-  background: #f3f1cd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 10% 0%;
-text-align: center;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 58%;
-}
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+        }
 
-#failMessage {
-  position: absolute;
-  /*left: 50%;
+        #failMessage {
+            position: absolute;
+            /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-  z-index: 100;
-  background: #f3f1cd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 10% 0%;
-text-align: center;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 58%;
-}
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+        }
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: 2px;
-  margin:5px;
-  width:80%;
-  font-family:Monospace;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 32px;
-}
-</style>
-<script>
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: 2px;
+            margin: 5px;
+            width: 80%;
+            font-family: Monospace;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+        }
+    </style>
+    <script>
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
 
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
-Lingua=1;
-
-
-Traduzioni=[
-[["Trad1"],"Sum these numbers with the aid of this strange clock!",
-"Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!","Some esses n&uacute;meros com a ajuda deste estranho rel&oacute;gio!","Summiere diese Zahlen mit Hilfe dieser seltsamen Uhr!"]
-];
-
-function gup( name, url ) {
-    if (!url) url = location.href;
-    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-    var regexS = "[\\?&]"+name+"=([^&#]*)";
-    var regex = new RegExp( regexS );
-    var results = regex.exec( url );
-    return results == null ? null : results[1];
-}
+        Lingua = 1;
 
 
-function Traduci(Lang) {
-  for (var k = 0; k < Traduzioni.length; k++) {
-    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
-      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
-    }
-  }
-}
+        Traduzioni = [
+            [
+                ["Trad1"], "Sum these numbers with the aid of this strange clock!",
+                "Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!", "Some esses n&uacute;meros com a ajuda deste estranho rel&oacute;gio!", "Summiere diese Zahlen mit Hilfe dieser seltsamen Uhr!"
+            ]
+        ];
 
-function Init() {	
-	Lingua=Number(gup('l', document.location.search));
-	
-	if (!isNumeric(Lingua)) Lingua=1;
-	if (Lingua==0) Lingua=1;
-	Traduci(Lingua);
-
-	window.CanvasMathina=document.getElementById('CanvasMathina');
-	window.ctxMathina = CanvasMathina.getContext('2d');
-	
-	GenerateEx();
-	
-	DivCanvas.addEventListener('mousedown', Down, false);
-	DivCanvas.addEventListener('mouseup', Up, false);
-	DivCanvas.addEventListener('mouseout', Up, false);
-	DivCanvas.addEventListener('mousemove', Move, false);
-	
-	DivCanvas.addEventListener('touchstart', Down, false);
-	DivCanvas.addEventListener('touchend', Up, false);
-	DivCanvas.addEventListener('touchmove', Move, false);
-	
-	window.addEventListener('resize',Resize,false);
-	
-	Resize();
-	
-	Reset();
-}
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
 
 
-function Resize() {
-	var doc = document, w = window;
-    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?doc.documentElement: doc.body;
-    
-    var width = docEl.clientWidth;
-    var height = docEl.clientHeight;
-    
-    // mobile zoomed in?
-    if ( w.innerWidth && width > w.innerWidth ) {
-        width = w.innerWidth;
-        height = w.innerHeight;
-    }
+        function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
 
-	window.dimension = [width,height];
-	
-	CanvasMathina.width = dimension[0];
-	CanvasMathina.height = dimension[1];
-	
-}
+        function Init() {
+            Lingua = Number(gup('l', document.location.search));
 
-function Reset() {
-	
-	RaggioClock=dimension[1]*(4/5)/2;
-	LungLancetta=RaggioClock*3/4;
-	
-	
-	AngPosizione1=0;
-	ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
-	DisegnaQuadrante();
-	DisegnaLancetta(0);
-	
-}
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
 
-function DisegnaQuadrante() {
-	
-	ctxMathina.beginPath();
-	ctxMathina.fillStyle = "rgb(230,230,230)";
-	ctxMathina.lineWidth  = 1;
-	ctxMathina.strokeStyle = "rgb(0,0,0)";
-	ctxMathina.arc(dimension[0]/2,dimension[1]/2,RaggioClock,0,Math.PI*2,true);
-	ctxMathina.fill();
-	ctxMathina.stroke();
+            window.CanvasMathina = document.getElementById('CanvasMathina');
+            window.ctxMathina = CanvasMathina.getContext('2d');
 
-	for (let i=0;i<NumeroOre;i++) {
-		var Angle=i*Math.PI*2/NumeroOre-Math.PI/2;
-		var LX=dimension[0]/2+RaggioClock*Math.cos(Angle)*6/7;
-		var LY=dimension[1]/2+RaggioClock*Math.sin(Angle)*6/7;
-		ctxMathina.beginPath();
-		ctxMathina.fillStyle = "rgb(0,0,0)";
-		ctxMathina.textAlign = "center";
-		ctxMathina.font = "28px Arial";
-		ctxMathina.fillText(i, LX,LY);	
-		
-	}
-}
+            GenerateEx();
 
-function DisegnaLancetta(Deg) {
-	var Angle=Deg-Math.PI/2;
-	var LX=dimension[0]/2+LungLancetta*Math.cos(Angle);
-	var LY=dimension[1]/2+LungLancetta*Math.sin(Angle);
-	ctxMathina.beginPath();
-	ctxMathina.lineWidth=5;
-	ctxMathina.strokeStyle = "rgb(0,0,0)";
-	canvas_arrow(ctxMathina,dimension[0]/2,dimension[1]/2,LX,LY);
-	ctxMathina.stroke();
-}
+            DivCanvas.addEventListener('mousedown', Down, false);
+            DivCanvas.addEventListener('mouseup', Up, false);
+            DivCanvas.addEventListener('mouseout', Up, false);
+            DivCanvas.addEventListener('mousemove', Move, false);
+
+            DivCanvas.addEventListener('touchstart', Down, false);
+            DivCanvas.addEventListener('touchend', Up, false);
+            DivCanvas.addEventListener('touchmove', Move, false);
+
+            window.addEventListener('resize', Resize, false);
+
+            Resize();
+
+            Reset();
+        }
 
 
-function canvas_arrow(context, fromx, fromy, tox, toy) {
-  var headlen = 10; // length of head in pixels
-  var dx = tox - fromx;
-  var dy = toy - fromy;
-  var angle = Math.atan2(dy, dx);
-  context.moveTo(fromx, fromy);
-  context.lineTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
-  context.moveTo(tox, toy);
-  context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
-}
+        function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ? doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+
+            CanvasMathina.width = dimension[0];
+            CanvasMathina.height = dimension[1];
+
+        }
+
+        function Reset() {
+
+            RaggioClock = dimension[1] * (4 / 5) / 2;
+            LungLancetta = RaggioClock * 3 / 4;
+
+
+            AngPosizione1 = 0;
+            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            DisegnaQuadrante();
+            DisegnaLancetta(0);
+
+        }
+
+        function DisegnaQuadrante() {
+
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(230,230,230)";
+            ctxMathina.lineWidth = 1;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            ctxMathina.arc(dimension[0] / 2, dimension[1] / 2, RaggioClock, 0, Math.PI * 2, true);
+            ctxMathina.fill();
+            ctxMathina.stroke();
+
+            for (let i = 0; i < NumeroOre; i++) {
+                var Angle = i * Math.PI * 2 / NumeroOre - Math.PI / 2;
+                var LX = dimension[0] / 2 + RaggioClock * Math.cos(Angle) * 6 / 7;
+                var LY = dimension[1] / 2 + RaggioClock * Math.sin(Angle) * 6 / 7;
+                ctxMathina.beginPath();
+                ctxMathina.fillStyle = "rgb(0,0,0)";
+                ctxMathina.textAlign = "center";
+                ctxMathina.font = "28px Arial";
+                ctxMathina.fillText(i, LX, LY);
+
+            }
+        }
+
+        function DisegnaLancetta(Deg) {
+            var Angle = Deg - Math.PI / 2;
+            var LX = dimension[0] / 2 + LungLancetta * Math.cos(Angle);
+            var LY = dimension[1] / 2 + LungLancetta * Math.sin(Angle);
+            ctxMathina.beginPath();
+            ctxMathina.lineWidth = 5;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            canvas_arrow(ctxMathina, dimension[0] / 2, dimension[1] / 2, LX, LY);
+            ctxMathina.stroke();
+        }
+
+
+        function canvas_arrow(context, fromx, fromy, tox, toy) {
+            var headlen = 10; // length of head in pixels
+            var dx = tox - fromx;
+            var dy = toy - fromy;
+            var angle = Math.atan2(dy, dx);
+            context.moveTo(fromx, fromy);
+            context.lineTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+            context.moveTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+        }
 
 
 
 
+        function Down(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
 
-function Down(ev) {
-	ev.preventDefault();
-	if (ev.changedTouches  != null) {
-		touchobject=ev.changedTouches[0];
-		var mousexMov = touchobject.clientX-this.offsetLeft;
-		var mouseyMov = touchobject.clientY-this.offsetTop;
-	} else {
-		
-		var mousexMov = ev.clientX-this.offsetLeft;
-		var mouseyMov = ev.clientY-this.offsetTop;
-	}
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
 
-	MousePos=[mousexMov,mouseyMov];
-	InMovimento=1;
-	
-	MouseStart=[mousexMov,mouseyMov];	
-	if (MousePos[0]<=dimension[0]/2) AngMouseIniziale=-find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-	else AngMouseIniziale=find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-	
-		startAnima();
-}
+            MousePos = [mousexMov, mouseyMov];
+            InMovimento = 1;
 
-function find_angle(A,B,C) {
-    var AB = Math.sqrt(Math.pow(B[0]-A[0],2)+ Math.pow(B[1]-A[1],2));    
-    var BC = Math.sqrt(Math.pow(B[0]-C[0],2)+ Math.pow(B[1]-C[1],2)); 
-    var AC = Math.sqrt(Math.pow(C[0]-A[0],2)+ Math.pow(C[1]-A[1],2));
-    return Math.acos((BC*BC+AB*AB-AC*AC)/(2*BC*AB));
-}
+            MouseStart = [mousexMov, mouseyMov];
+            if (MousePos[0] <= dimension[0] / 2) AngMouseIniziale = -find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+            else AngMouseIniziale = find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
 
-function Up(ev) {
-	ev.preventDefault();
-	if (InMovimento==1) {
-	AngPosizione1=AngPosizione1+AngMouseFinale-AngMouseIniziale;
-	AngPosizione1=Math.round(NumeroOre*AngPosizione1/(2*Math.PI))*(2*Math.PI/NumeroOre);
-	InMovimento=0;
-	}
-	if (typeof CurrentAnim != 'undefined') {
-		cancelAnimationFrame( CurrentAnim );
+            startAnima();
+        }
 
-		}
-		ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
-		DisegnaQuadrante();
-		DisegnaLancetta(AngPosizione1);
-}
+        function find_angle(A, B, C) {
+            var AB = Math.sqrt(Math.pow(B[0] - A[0], 2) + Math.pow(B[1] - A[1], 2));
+            var BC = Math.sqrt(Math.pow(B[0] - C[0], 2) + Math.pow(B[1] - C[1], 2));
+            var AC = Math.sqrt(Math.pow(C[0] - A[0], 2) + Math.pow(C[1] - A[1], 2));
+            return Math.acos((BC * BC + AB * AB - AC * AC) / (2 * BC * AB));
+        }
 
-function Move(ev) {
-	ev.preventDefault();
-	if (ev.changedTouches  != null) {
-		touchobject=ev.changedTouches[0];
-		var mousexMov = touchobject.clientX-this.offsetLeft;
-		var mouseyMov = touchobject.clientY-this.offsetTop;
-	} else {
-		var mousexMov = ev.clientX-this.offsetLeft;
-		var mouseyMov = ev.clientY-this.offsetTop;
-	}
-	MousePos=[mousexMov,mouseyMov];
-	
-	
-}
+        function Up(ev) {
+            ev.preventDefault();
+            if (InMovimento == 1) {
+                AngPosizione1 = AngPosizione1 + AngMouseFinale - AngMouseIniziale;
+                AngPosizione1 = Math.round(NumeroOre * AngPosizione1 / (2 * Math.PI)) * (2 * Math.PI / NumeroOre);
+                InMovimento = 0;
+            }
+            if (typeof CurrentAnim != 'undefined') {
+                cancelAnimationFrame(CurrentAnim);
 
-function startAnima() {
-    fpsInterval = 1000 / 60;
-    then = Date.now();
-    startTime = then;
-    Anima();
-	AngoloPrec=AngPosizione1;
-	AngoloDelta=0;
-	AngoloVero=0;
-}
+            }
+            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            DisegnaQuadrante();
+            DisegnaLancetta(AngPosizione1);
+        }
 
-function Link() {
-	location.reload();
-
-}
-
-function DisegnaSomma(Ang0,Ang1) {
-//if (Ang0<0) Ang0+=2*Math.Pi;
-Ang0=Ang0-Math.PI/2;
-	AngFinale=Ang0+Ang1;
-	
-ctxMathina.beginPath();
-	ctxMathina.lineWidth=5;
-	ctxMathina.strokeStyle = "rgb(0,0,0)";
-	ctxMathina.arc(dimension[0]/2,dimension[1]/2,RaggioClock/2,AngFinale,Ang0,true);
-	ctxMathina.stroke();
-	
-	
-	AGira=Ang0+Ang1/2;
-	var TX=dimension[0]/2+RaggioClock*Math.cos(AGira)/3;
-	var TY=dimension[1]/2+RaggioClock*Math.sin(AGira)/3
-ctxMathina.beginPath();
-		ctxMathina.fillStyle = "rgb(0,0,0)";
-		ctxMathina.textAlign = "center";
-		ctxMathina.font = "30px Arial";
-		ctxMathina.fillText(Math.floor((NumeroOre*AngoloVero+0.8)/(2*Math.PI)), TX ,TY);	
-
-}
-
-function Anima() {
-    window.CurrentAnim=requestAnimationFrame(Anima);
-    now = Date.now();
-    elapsed = now - then;
-    if (elapsed > fpsInterval) {
-        then = now - (elapsed % fpsInterval);
-		var Angolo1=AngPosizione1;
-		if (InMovimento==1) {
-		if (MousePos[0]<=dimension[0]/2) AngMouseFinale=-find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-		else AngMouseFinale=find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-		Angolo1+=AngMouseFinale-AngMouseIniziale;
-		}	
-		AngoloDelta=Angolo1-AngoloPrec;
-		AngoloPrec=Angolo1;
-		
-		if (AngoloDelta<-1) AngoloDelta=AngoloDelta+2*Math.PI;
-		if (AngoloDelta>1) AngoloDelta=AngoloDelta-2*Math.PI;
-		AngoloVero+=AngoloDelta;
-		
-		ctxMathina.clearRect(0,0,dimension[0],dimension[1]);
-		DisegnaQuadrante();
-		DisegnaLancetta(Angolo1);
-		console.log(AngoloVero);
-		if (AngoloVero>0) DisegnaSomma(AngPosizione1,AngoloVero);
-    }
-}
-
-function Finisci() {
-document.getElementById("successMessage").style.display="block";
-
-}
-
-function Sconfitta() {
-document.getElementById("failMessage").style.display="block";
-
-}
-
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
-
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array;
-}
-
-function GenerateEx() {
-NumeroOre=5+Math.floor(Math.random()*15);
- LetA=Math.floor(Math.random()*NumeroOre);
- LetB=Math.floor(Math.random()*NumeroOre);
- LetC=Math.floor(Math.random()*NumeroOre);
- if (LetA+LetB+LetC<NumeroOre) LetC=NumeroOre+Math.floor(Math.random()*NumeroOre)-LetA-LetB;
-CorrectAnswer=Math.floor(Math.random()*4+1);
-RispostaCorretta=(((LetA+LetB+LetC)% NumeroOre)+NumeroOre)% NumeroOre;
-
-var NumeriTot=Array.from(Array(NumeroOre).keys());
-	NumeriTot.splice(NumeriTot.indexOf(RispostaCorretta),1);
-	NumeriTot=shuffle(NumeriTot);
-
-	
-	ParolaOriginale=LetA +" + " + LetB;
-	//ParolaTradotta=Cesare(ParolaOriginale,Alphabet,Math.floor(Math.random()*Alphabet.length));
-	document.getElementById("paroladatradurre").innerHTML=LetA +" + " + LetB+" + " + LetC;
-	document.getElementById("Btn1").innerHTML=NumeriTot[0];
-	document.getElementById("Btn2").innerHTML=NumeriTot[1];
-	document.getElementById("Btn3").innerHTML=NumeriTot[2];
-	document.getElementById("Btn4").innerHTML=NumeriTot[3];
-	document.getElementById("Btn"+CorrectAnswer).innerHTML=RispostaCorretta;
-
-}
-
-function Check(N) {
-	if (CorrectAnswer==N) Finisci();
-	else Sconfitta();
+        function Move(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
+            MousePos = [mousexMov, mouseyMov];
 
 
-}
-</script>
+        }
+
+        function startAnima() {
+            fpsInterval = 1000 / 60;
+            then = Date.now();
+            startTime = then;
+            Anima();
+            AngoloPrec = AngPosizione1;
+            AngoloDelta = 0;
+            AngoloVero = 0;
+        }
+
+        function Link() {
+            location.reload();
+
+        }
+
+        function DisegnaSomma(Ang0, Ang1) {
+            //if (Ang0<0) Ang0+=2*Math.Pi;
+            Ang0 = Ang0 - Math.PI / 2;
+            AngFinale = Ang0 + Ang1;
+
+            ctxMathina.beginPath();
+            ctxMathina.lineWidth = 5;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            ctxMathina.arc(dimension[0] / 2, dimension[1] / 2, RaggioClock / 2, AngFinale, Ang0, true);
+            ctxMathina.stroke();
+
+
+            AGira = Ang0 + Ang1 / 2;
+            var TX = dimension[0] / 2 + RaggioClock * Math.cos(AGira) / 3;
+            var TY = dimension[1] / 2 + RaggioClock * Math.sin(AGira) / 3
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,0)";
+            ctxMathina.textAlign = "center";
+            ctxMathina.font = "30px Arial";
+            ctxMathina.fillText(Math.floor((NumeroOre * AngoloVero + 0.8) / (2 * Math.PI)), TX, TY);
+
+        }
+
+        function Anima() {
+            window.CurrentAnim = requestAnimationFrame(Anima);
+            now = Date.now();
+            elapsed = now - then;
+            if (elapsed > fpsInterval) {
+                then = now - (elapsed % fpsInterval);
+                var Angolo1 = AngPosizione1;
+                if (InMovimento == 1) {
+                    if (MousePos[0] <= dimension[0] / 2) AngMouseFinale = -find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+                    else AngMouseFinale = find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+                    Angolo1 += AngMouseFinale - AngMouseIniziale;
+                }
+                AngoloDelta = Angolo1 - AngoloPrec;
+                AngoloPrec = Angolo1;
+
+                if (AngoloDelta < -1) AngoloDelta = AngoloDelta + 2 * Math.PI;
+                if (AngoloDelta > 1) AngoloDelta = AngoloDelta - 2 * Math.PI;
+                AngoloVero += AngoloDelta;
+
+                ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+                DisegnaQuadrante();
+                DisegnaLancetta(Angolo1);
+                console.log(AngoloVero);
+                if (AngoloVero > 0) DisegnaSomma(AngPosizione1, AngoloVero);
+            }
+        }
+
+        function Finisci() {
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.display = "block";
+
+        }
+
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        function GenerateEx() {
+            NumeroOre = 5 + Math.floor(Math.random() * 15);
+            LetA = Math.floor(Math.random() * NumeroOre);
+            LetB = Math.floor(Math.random() * NumeroOre);
+            LetC = Math.floor(Math.random() * NumeroOre);
+            if (LetA + LetB + LetC < NumeroOre) LetC = NumeroOre + Math.floor(Math.random() * NumeroOre) - LetA - LetB;
+            CorrectAnswer = Math.floor(Math.random() * 4 + 1);
+            RispostaCorretta = (((LetA + LetB + LetC) % NumeroOre) + NumeroOre) % NumeroOre;
+
+            var NumeriTot = Array.from(Array(NumeroOre).keys());
+            NumeriTot.splice(NumeriTot.indexOf(RispostaCorretta), 1);
+            NumeriTot = shuffle(NumeriTot);
+
+
+            ParolaOriginale = LetA + " + " + LetB;
+            //ParolaTradotta=Cesare(ParolaOriginale,Alphabet,Math.floor(Math.random()*Alphabet.length));
+            document.getElementById("paroladatradurre").innerHTML = LetA + " + " + LetB + " + " + LetC;
+            document.getElementById("Btn1").innerHTML = NumeriTot[0];
+            document.getElementById("Btn2").innerHTML = NumeriTot[1];
+            document.getElementById("Btn3").innerHTML = NumeriTot[2];
+            document.getElementById("Btn4").innerHTML = NumeriTot[3];
+            document.getElementById("Btn" + CorrectAnswer).innerHTML = RispostaCorretta;
+
+        }
+
+        function Check(N) {
+            if (CorrectAnswer == N) Finisci();
+            else Sconfitta();
+
+
+        }
+    </script>
 </head>
+
 <body onload="Init()">
-<div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="Partenza"><div class="PartContainer"><p><span id="Trad1">Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!</span></p>
-<b id="paroladatradurre"></b></div></div>
-<div id="Arrivo"><div class="PartContainer"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
-<button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
-<button type="button" onclick="Check(3)" id="Btn3" class="button"></button><br>
-<button type="button" onclick="Check(4)" id="Btn4" class="button"></button><br></div></div>
-<div id="successMessage" style="display:none">
-    <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
+    <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+    <div id="Partenza">
+        <div class="PartContainer">
+            <p><span id="Trad1">Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!</span></p>
+            <b id="paroladatradurre"></b>
+        </div>
+    </div>
+    <div id="Arrivo">
+        <div class="PartContainer"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
+            <button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
+            <button type="button" onclick="Check(3)" id="Btn3" class="button"></button><br>
+            <button type="button" onclick="Check(4)" id="Btn4" class="button"></button><br>
+        </div>
+    </div>
+    <div id="successMessage" style="display:none">
+        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
   right: 46%;"></img>
-  <img src="img/Festejos.gif" width=40% style=" position: absolute;
+        <img src="img/Festejos.gif" width=40% style=" position: absolute;
   top: 10%;
   right: 30%; z-index: -1;"> </img>
-	   
-	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
-  </div>
-  
-<div id="failMessage" style="display:none">
-    <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
+    </div>
+
+    <div id="failMessage" style="display:none">
+        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
   right: 46%;"></img>
- 
-	   
-	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
-  </div>
+    </div>
 </body>
+
 </html>
