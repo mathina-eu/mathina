@@ -78,6 +78,7 @@ export default {
       { code: 'en', file: 'en.js', name: 'English' },
       { code: 'de', file: 'de.js', name: 'Deutsch' },
       { code: 'pt', file: 'pt.js', name: 'Português' },
+      { code: 'it', file: 'it.js', name: 'Italiano' },
       { code: 'sl', file: 'sl.js', name: 'Slovensko' }
     ],
     defaultLocale: 'en',
