@@ -287,6 +287,13 @@ function init() {
 				container.appendChild( renderer.domElement );
 				// scene
 				
+				var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg1-05.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+				
 						
 				scene = new THREE.Scene();
 				// camera

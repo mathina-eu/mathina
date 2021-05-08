@@ -12,28 +12,48 @@ class Action {
 }
 
 export class AnimationAction extends Action {
-  constructor({ vars, target, ...rest }) {
+  constructor({ vars, varsBack, target, ...rest }) {
     super(rest);
     this.target = target;
     this.type = 'animation';
     this.vars = vars;
+    this.varsBack = varsBack;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
-  execute() {
+  execute(context) {
     super.execute();
-    gsap.to(`#${this.target}`, this.vars);
+    if (context.activeDirection === 'back') {
+      const el = document.getElementById(this.target);
+      if (this.varsBack) {
+        gsap.to(`#${this.target}`, {
+          ...this.varsBack, onComplete: () => {
+            el._gsap = undefined;
+          }
+        });
+      } else {
+        el.style.cssText = this.historyStack.pop();
+      }
+    } else {
+      const el = document.getElementById(this.target);
+      if (!this.varsBack) {
+        this.historyStack.push(document.getElementById(this.target).style.cssText);
+      }
+      gsap.to(`#${this.target}`, { ...this.vars, onComplete: () => { el._gsap = undefined; } });
+    }
   }
 }
 
 export class BackgroundAction extends Action {
-  constructor({ id, src, style, ...rest }) {
+  constructor({ id, src, style, parallax = 'back1', ...rest }) {
     super(rest);
     this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;
     this.id = id;
+    this.parallax = parallax;
   }
 
   execute(context) {
@@ -46,7 +66,7 @@ export class BackgroundAction extends Action {
     }
 
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
-    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style }];
+    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style, parallax: this.parallax }];
   }
 
   getAssetPath(imgRoot) {
@@ -91,7 +111,7 @@ export class ClearBackgroundAction extends Action {
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, ...rest }) {
+  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
@@ -100,6 +120,7 @@ export class ImageAction extends Action {
     this.valign = valign ? valign : 'none';
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
+    this.parallax = parallax;
   }
 
   execute(context) {
@@ -111,12 +132,18 @@ export class ImageAction extends Action {
       return;
     }
 
-    const images = context.images.filter(img => img.src !== path && (!img.id || img.id !== this.id));
+    const images = context.images.filter(img => {
+      if (this.id) {
+        return img.id !== this.id;
+      }
+      return img.src !== path;
+    });
     images.push({
       id: this.id,
       src: path,
       style: this.style,
-      position: { vertical: this.valign, horizontal: this.align }
+      position: { vertical: this.valign, horizontal: this.align },
+      parallax: this.parallax
     });
     context.images = images;
   }
@@ -147,9 +174,10 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, ...rest }) {
+  constructor({ entries, avatarAlign, ...rest }) {
     super(rest);
     this.type = 'dialog';
+    this.avatarAlign = avatarAlign || {};
     this.entries = entries.map((
       { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
     ) => {
@@ -165,8 +193,13 @@ export class DialogAction extends Action {
 
   execute(context) {
     super.execute();
+    if (context.activeDirection === 'back') {
+      context.dialog.current = this.entries.length - 1;
+    } else {
+      context.dialog.current = 0;
+    }
     context.dialog.entries = this.entries;
-    context.dialog.current = 0;
+    context.dialog.avatarAlign = this.avatarAlign;
   }
 }
 
@@ -216,10 +249,13 @@ export class ClearImageAction extends Action {
     }
 
     if (this.src) {
+      // TODO: undocumented and doesn't work with back...
       const path = `${context.imgRoot}/${this.src}`;
       context.images = context.images.filter(img => img.src !== path);
     } else {
       const img = context.images.find(img => img.id === this.id);
+      let el = document.getElementById(this.id);
+      img.style = el?.style?.cssText;
       this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }

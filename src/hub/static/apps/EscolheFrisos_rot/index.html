@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt">
+<head>
+
+<title id="titBarra">Escolhe frisos com simetria de rotação</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolheFris_style.css">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolheFris_style2.css">
+
+<body>
+    <div class="wideBox">
+      <h1 id="titulo">Escolhe os 3 frisos com simetria de rotação</h1>
+    </div>
+    <div align="center" class="buttons">
+        <table>
+            <th>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
+            </th>
+        </table>
+    </div>
+    <div class="line"></div>
+
+    <div class="content" id="conteudo" align="left">
+        <div id="loaders" style = 'position:absolute; z-index: 1'></div>
+        <div id="frisos" style = 'position:absolute; z-index: 2'> </div>
+        <div id="targets"  style = 'position:absolute; z-index: 3'> </div>
+        <div id="errados"  style = 'position:absolute; z-index: 4'> </div>
+        <!--<div id="certos"  style = 'position:absolute; z-index: 4'> </div>-->
+        <div id="buts"  style = 'position:absolute; z-index: 5'> </div>
+    </div>
+    
+    <div id="successMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+        <h2 id="sucessText">Muito bem!</h2>
+        <button onclick="hideDialog('#successMessage')"><image src="../atractor-apps-all/icons/next.png" width="100px"> </image> </button>
+    </div>
+    <div id="errorMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+        <h2 id="errorText">Ainda não descobriste todos os frisos com eixo de simetria.</h2>
+        <h2 id="errorText2">Tenta outra vez!</h2>
+        <button onclick="hideDialog('#errorMessage')"><image src="../atractor-apps-all/icons/back.png" width="100px"> </image> </button>
+    </div>
+    <div id="finalMessage" style = 'position:absolute; z-index: 6; text-align: center; visibility: hidden'>
+        <h2 id="finalText">Fim de jogo!</h2>
+        <div>
+            <img id="finalFeedback1" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px" align="top">
+            <img id="pastaFinal" src="../atractor-apps-all/imgs/pasta4.png" width="200px">
+        </div>
+        <div>
+            <button onclick="reloadApp()" align="top"><img src="../atractor-apps-all/icons/refresh.png" width="100px"></button>
+        </div>
+    </div>
+</body>
+
+<img id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' style = 'visibility: hidden'>
+<img id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' style = 'visibility: hidden'>
+<img id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' style = 'visibility: hidden'>
+
+<audio src="../atractor-apps-all/sons/ooooh.mp3" id="somErrado" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/somEscolha.mp3" id="somEscolha" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos1.mp3" id="aplausos1" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos2.mp3" id="aplausos2" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/aplausos3.mp3" id="aplausos3" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/yay.mp3" id="yay" type="audio/mpeg"></audio>
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/EscolheFris_func.js"></script>
+
+<script type="text/javascript">
+    var jogada = 0;
+    var max_jogadas = 1;
+    var jogada_certos = 3;
+    var jogada_imgs = 9;
+    var lista_certos = ["Cereja-p112.png", "LetraP-p112.png", "Music-p112.png"];
+    var lista_errados = ["Cereja-p1a1.png", "Cereja-p111.png", "LetraP-p1a1.png", "LetraP-p111.png", "Music-p1a1.png", "Music-p111.png"];
+
+    var lang = getUrlVars().lang;
+    if(lang==undefined){
+        lang="pt";
+    }
+
+    var escolha_certos = new Array();
+    var escolha_errados = new Array();    
+	
+    var imgWidth = 300;
+    var imgHeight = imgWidth/2;
+    var assetDir = '../atractor-apps-all/imgs/';
+    var iconsDir = '../atractor-apps-all/icons/';
+    var imgs;
+    var targets;
+    var errados;
+    var certos;
+    var buts;
+    var feedbacks = new Array(feedback1);
+    var tentativas=0;
+    var myInterval;
+
+    var width = window.innerWidth;
+    var height = window.innerHeight; 
+
+    function setLanguage(){
+        //console.log(lang);
+        if(lang=="en"){
+            //console.log(lang);
+            document.getElementById('titBarra').textContent="Choose friezes with rotation symmetry";
+            document.getElementById('titulo').textContent="Choose "+jogada_certos+" friezes with rotation symmetry";
+            document.getElementById('sucessText').textContent="Very well!";
+            document.getElementById('errorText').textContent="You haven't yet discovered all the friezes with rotation symmetry";
+            document.getElementById('errorText2').textContent="Try again!";
+            document.getElementById('finalText').textContent="End of the game!";
+        }else{
+            document.getElementById('titBarra').textContent="Escolhe frisos com simetria de rotação";
+            document.getElementById('titulo').textContent="Escolhe os "+jogada_certos+" frisos com simetria de rotação";
+            document.getElementById('sucessText').textContent="Muito bem!";
+            document.getElementById('errorText').textContent="Ainda não descobriste todos os frisos com simetria de rotação.";
+            document.getElementById('errorText2').textContent="Volta a tentar.";
+            document.getElementById('finalText').textContent="Final do jogo!";
+        }
+    }
+
+    window.onload = function() {
+        init();
+    }
+
+</script>
+
+</head>
+</html>
