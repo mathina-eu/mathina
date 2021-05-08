@@ -20,9 +20,17 @@ if (typeof DataPols == 'undefined') DataPols=anim;
 var width0=parseInt(WW);
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var width=width0;
-var height=Math.min(width0/2,height0);
+var height=.96*Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
+
+var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg1-02.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+			
 scene=new THREE.Scene();
 //scene.fog=new THREE.Fog(0x000000,1500,2100);
 sceneOrtho=new THREE.Scene();
@@ -45,7 +53,7 @@ renderer.autoClear=false;
 renderer.setSize(width,height);
 renderer.setClearColor(0xf3f1cd,1);
 container=document.getElementById('ThreeJS');
-container.appendChild(renderer.domElement);
+document.getElementById("THREE").appendChild(renderer.domElement);
 window.addEventListener('resize',OnResize,true);
 //LIGHT 
 var light = new THREE.PointLight(0xffffff);

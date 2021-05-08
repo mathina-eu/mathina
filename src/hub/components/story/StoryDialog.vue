@@ -1,7 +1,11 @@
 <template>
   <v-card width="600">
-    <div class="d-flex flex-no-wrap">
+    <div
+      class="d-flex flex-no-wrap"
+      :class="{'justify-space-between': alignment === 'right'}"
+    >
       <v-avatar
+        v-if="alignment === 'left'"
         class="ma-3"
         size="125"
         tile
@@ -12,7 +16,7 @@
         <v-card-title
           class="headline"
           style="text-transform: capitalize;"
-          v-text="displayName"
+          v-text="charName ? charName : $t(`chars.${displayName}`)"
         />
         <v-card-text
           class="text-body-1"
@@ -24,6 +28,14 @@
           v-text="exposition"
         />
       </div>
+      <v-avatar
+        v-if="alignment === 'right'"
+        class="ma-3"
+        size="125"
+        tile
+      >
+        <v-img :src="avatar" />
+      </v-avatar>
     </div>
   </v-card>
 </template>
@@ -58,6 +70,11 @@ export default {
       required: false,
       default: '',
     },
+    avatarAlign: {
+      type: Object,
+      required: false,
+      default: () => {},
+    }
   },
   computed: {
     avatar() {
@@ -69,9 +86,15 @@ export default {
         return this.charName;
       }
       if (this.char === GENERIC_CHAR) {
-        return 'Sasha';
+        return 'jane';
       }
       return this.char;
+    },
+    alignment() {
+      if (this.avatarAlign && this.avatarAlign[this.char]) {
+        return this.avatarAlign[this.char];
+      }
+      return 'left';
     }
   },
 };

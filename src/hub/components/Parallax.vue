@@ -1,40 +1,59 @@
 <template>
   <ParallaxContainer class="parallax-container">
+    <slot />
     <ParallaxElement
-      class="back"
+      class="layer"
       :offset="offsetBack"
     >
-      <slot name="back" />
+      <slot name="back1" />
     </ParallaxElement>
     <ParallaxElement
-      class="front"
-      :offset="offsetFront"
+      class="layer"
+      :offset="offsetBack + 5"
     >
-      <slot name="front" />
+      <slot name="back2" />
     </ParallaxElement>
     <ParallaxElement
-      class="mid"
+      class="layer"
+      :offset="offsetBack + 10"
+    >
+      <slot name="back3" />
+    </ParallaxElement>
+    <ParallaxElement
+      class="layer"
       :offset="offsetMid"
     >
-      <slot name="mid" />
+      <slot name="mid1" />
     </ParallaxElement>
     <ParallaxElement
-      class="front"
+      class="layer"
+      :offset="offsetMid + 5"
+    >
+      <slot name="mid2" />
+    </ParallaxElement>
+    <ParallaxElement
+      class="layer"
+      :offset="offsetMid + 10"
+    >
+      <slot name="mid3" />
+    </ParallaxElement>
+    <ParallaxElement
+      class="layer"
       :offset="offsetFront"
     >
-      <slot name="front" />
+      <slot name="front1" />
     </ParallaxElement>
     <ParallaxElement
-      class="clouds"
-      :offset="offsetClouds"
+      class="layer"
+      :offset="offsetFront + 10"
     >
-      <slot name="clouds" />
+      <slot name="front2" />
     </ParallaxElement>
     <ParallaxElement
-      class="clouds clouds--right"
-      :offset="offsetClouds * 2"
+      class="layer"
+      :offset="offsetFront + 15"
     >
-      <slot name="clouds-right" />
+      <slot name="front3" />
     </ParallaxElement>
   </ParallaxContainer>
 </template>
@@ -52,19 +71,15 @@ export default {
   props: {
     offsetBack: {
       type: Number,
-      default: 10,
+      default: 0,
     },
     offsetMid: {
       type: Number,
-      default: 25,
+      default: 10,
     },
     offsetFront: {
       type: Number,
-      default: 50,
-    },
-    offsetClouds: {
-      type: Number,
-      default: 100,
+      default: 25,
     },
   },
 };
@@ -76,39 +91,12 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-
-  >>> img {
-    max-width: 104%;
-    margin: -2%;
-  }
 }
 
-.front {
+.layer {
   position: absolute;
-  bottom: -5%;
-  left: -2%;
-  right: -2%;
-}
-
-.mid {
-  position: absolute;
-  bottom: 5%;
-  right: -5%;
-}
-
-.back {
   width: 100%;
   height: 100%;
-  z-index: -2;
-  position: absolute;
 }
 
-.clouds {
-  top: 10%;
-  position: absolute;
-
-  &--right {
-    right: 0;
-  }
-}
 </style>
