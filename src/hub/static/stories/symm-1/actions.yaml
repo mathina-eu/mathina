@@ -1,30 +1,30 @@
 actions:
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
     id: c1-1  
     src: c1-1.png
-    style: "width: 37%; top: 42%; right: 0%;"
+    style: "width: 37%; top: 42%; right: 0%; z-index: 2;"
     align: right
   - type: image
-    src: $COMMON/img/Mathina1.png
+    src: Mathina1.png
     id: Mathina1
-    style: "width: 13%; top: 57%; left: 0%;"   
+    style: "width: 13%; top: 57%; left: 0%; z-index: 3;"  
   - type: sceneText
     text: >
       <p>Mathina arrived at Symmetry Fair, where she found a huge fun fair: there were roller coasters, carousels and many stalls, all with countless games and challenges. Mathina was fascinated with so many amusements and activities and was eager to try them all!</p>
       <p>Right next to her there was a stall selling cuddly toys. And it was full of all kinds of toys: puppies, teddy bears, ladybugs, ....</p>     
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
-    style: "width: 17%; top: 45%; left: 40%;"
+    src: Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 40%; z-index: 4;"
     align: right
   - type: animation
     target: Mathina1
     vars:
-      duration: 4
+      duration: 2
       xPercent: 220
       yPercent: 0
       ease: power3.out    
@@ -33,7 +33,7 @@ actions:
   - type: clearImage
     id: Mathina1
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"    
   - type: dialog
@@ -89,12 +89,12 @@ actions:
   - type: clearImage
     id: c1-3
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"
     align: right    
   - type: dialog
@@ -139,15 +139,19 @@ actions:
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
     url: /apps/dobrar_3/index.html
+  - type: dialog
+    entries:        
+      - text: "If we fold it, we will never find two parts that overlap!"
+        char: wizard    
   - type: clearImage
     id: c1-5
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"
     align: right    
   - type: dialog
@@ -173,12 +177,12 @@ actions:
   - type: clearImage
     id: toys
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 40%;"    
   - type: dialog
     entries:    
@@ -190,7 +194,8 @@ actions:
         mood: happy
   - type: game
     text: "Put the \"good\" toys in the box"
-    url: /apps/arrumar_figuras-_en/index.html
+    url: /apps/arrumar_figuras/index.html
+    cta: "Try it!"      
   - type: clearImage
     id: c1-1
   - type: image
@@ -201,7 +206,7 @@ actions:
   - type: image
     src: symm-box.png
     id: box
-    style: "width: 13%; top: 55%; left: 53%;" 
+    style: "width: 15%; top: 52%; left: 53%;" 
   - type: clearImage
     id: Mathina2
   - type: clearImage
@@ -210,7 +215,7 @@ actions:
     text: >
       <p>After the game, Mathina put her toys in another box. She had got so many new cuddly toys, that she was having a hard time carrying them. When she was trying to drag the box out of the stall, Mathina heard her name.</p>
   - type: image
-    src: $COMMON/img/Leo1.png
+    src: Leo1.png
     id: Leo1
     style: "width: 13%; top: 67%; right: 15%;"       
   - type: dialog
@@ -222,7 +227,7 @@ actions:
   - type: animation
     target: Leo1
     vars:
-      duration: 3
+      duration: 2
       xPercent: -130
       yPercent: 0
       ease: power3.out         
@@ -234,7 +239,7 @@ actions:
   - type: clearImage
     id: Leo1
   - type: image
-    src: $COMMON/img/Leo2.png
+    src: Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 62%; right: 30%;"   
   - type: dialog
@@ -246,7 +251,7 @@ actions:
         char: mathina
   - type: image
     id: Feiticeiro3
-    src: $COMMON/img/Feiticeiro3.png
+    src: Feiticeiro3.png
     style: "width: 17%; top: 42%; left: 17%;"
     align: right         
   - type: dialog
@@ -258,7 +263,7 @@ actions:
   - type: animation
     target: Feiticeiro3
     vars:
-      duration: 3
+      duration: 2
       xPercent: 70
       yPercent: 0
       ease: power3.out
@@ -280,7 +285,7 @@ actions:
   - type: clearImage
     id: Leo2
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
     style: "width: 13%; top: 65%; right: 30%;"       
   - type: dialog
@@ -290,7 +295,7 @@ actions:
   - type: animation
     target: Leo3
     vars:
-      duration: 4
+      duration: 1
       xPercent: 230
       yPercent: 0
       ease: power3.out          
@@ -302,7 +307,9 @@ actions:
     id: casa
     src: casa.jpg
     style: "width: 35%; top: 60%"
-    align: center    
+    align: center
+  - type: clearImage
+    id: box     
   - type: dialog
     entries:      
       - text: "Look, Mathina, I’m building a dollhouse. Can you continue?"
@@ -313,15 +320,13 @@ actions:
     id: casa
   - type: image
     id: Feiticeiro2
-    src: $COMMON/img/Feiticeiro2.png
+    src: Feiticeiro2.png
     style: "width: 17%; top: 42%; left: 32%;"
     align: right
   - type: image
-    src: $COMMON/img/Mathina4.png
+    src: Mathina4.png
     id: Mathina4
-    style: "width: 7.5%; top: 56%; left: 50%;"
-  - type: clearImage
-    id: box       
+    style: "width: 7.5%; top: 56%; left: 50%;"      
   - type: sceneText
     text: >
       <p>Mathina tried to finish the dollhouse, but whenever she dragged a piece and placed it in a square, the piece just ran away.</p> 
@@ -337,12 +342,7 @@ actions:
   - type: game
     text: "Watch the movie!"
     cta: "Play!"
-    url: /stories/symm-1/video/geoplano-anim2.mp4
-  - type: dialog
-    entries:    
-      - text: "Ok, I got it! I’m going to finish the toys."
-        char: Mathina
-        mood: excited            
+    url: /stories/symm-1/video/geoplano-anim2.mp4          
   - type: game
     tag: polygons
     text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
@@ -353,7 +353,7 @@ actions:
   - type: clearImage
     id: Feiticeiro2
   - type: image
-    src: $COMMON/img/Mathina1.png
+    src: Mathina1.png
     id: Mathina1
     style: "width: 13%; top: 59%; left: 25%;"     
   - type: dialog
@@ -368,25 +368,25 @@ actions:
     style: "width: 37%; top: 42%; right: 0%;"
     align: right
   - type: image
-    src: $COMMON/img/Leo4.png
+    src: Leo4.png
     id: Leo4
     style: "width: 9%; top: 69%; right: 30%;"
   - type: animation
     target: Mathina1
     vars:
-      duration: 3
+      duration: 2
       xPercent: 170
       yPercent: 0
       ease: power3.out
   - type: clearBackground
     id: c1-bg1      
   - type: background
-    src: $COMMON/img/bg/c1-bg2.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg2    
   - type: sceneText
     text: >
-      <p>Mathina went to the stall where Leo was trying in vain to finish his toys. Leo was talking loudly, and he seemed angry.</p>
+      <p>Mathina went to the stall where Leo was talking loudly, and he seemed angry.</p>
   - type: clearImage
     id: Mathina1       
   - type: image
@@ -424,11 +424,11 @@ actions:
   - type: clearImage
     id: barco
   - type: image
-    src: $COMMON/img/Mathina6.png
+    src: Mathina6.png
     id: Mathina6
     style: "width: 8.5%; top: 57%; left: 51%;"
   - type: image
-    src: $COMMON/img/Leo4.png
+    src: Leo4.png
     id: Leo4
     style: "width: 9%; top: 69%; right: 30%;"    
   - type: dialog
@@ -444,7 +444,7 @@ actions:
   - type: clearImage
     id: Leo4
   - type: image
-    src: $COMMON/img/Leo2.png
+    src: Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 62%; left: 57%;"      
   - type: dialog
@@ -455,19 +455,15 @@ actions:
   - type: animation
     target: Leo2
     vars:
-      duration: 2
+      duration: 1
       xPercent: 0
-      yPercent: -50
-      ease: power3.out  
+      yPercent: -40
+      repeat: 1
+      yoyo: true
+      ease: power1.inOu   
   - type: sceneText
     text: >
-      <p> Leo was jumping up and down from happiness.</p>
-  - type: animation
-    target: Leo2
-    vars:
-      duration: 2
-      xPercent: 0
-      yPercent: 2      
+      <p> Leo was jumping up and down from happiness.</p>       
   - type: dialog
     entries:    
       - text: "And it was so easy to get them! I wonder why I had so much trouble before Mathina came along …"
@@ -484,7 +480,7 @@ actions:
   - type: clearBackground
     id: c1-bg2    
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
@@ -494,11 +490,11 @@ actions:
     align: center
   - type: image
     id: Feiticeiro2
-    src: $COMMON/img/Feiticeiro2.png
+    src: Feiticeiro2.png
     style: "width: 17%; top: 43%; left: 29%;"
     align: right
   - type: image
-    src: $COMMON/img/Leo2.png
+    src: Leo2.png
     id: Leo2
     style: "width: 15.5%; top: 61%; right: 30%;"     
   - type: sceneText
@@ -513,7 +509,7 @@ actions:
   - type: image
     src: mathina-leo-caixa.png
     id: mathina-leo-caixa
-    style: "width: 38%; top: 48%; left: 7%;"       
+    style: "width: 47%; top: 43%; left: 7%;"       
   - type: sceneText
     text: >
       <p> Excited about the wizard's words, Mathina and Leo left Symmetry Fair ...</p>
@@ -521,8 +517,8 @@ actions:
     target: mathina-leo-caixa
     vars:
       duration: 7
-      xPercent: 140
-      yPercent: 0      
+      xPercent: 100
+      yPercent: 0
   - type: sceneText
     text: >
       <p> ... dragging all their new toys behind.</p>         

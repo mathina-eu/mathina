@@ -1,10 +1,10 @@
 actions:
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
-    src: $COMMON/img/Mathina1.png
+    src: Mathina1.png
     id: Mathina1
     style: "width: 13%; top: 57%; left: 0%;"
   - type: sceneText
@@ -27,13 +27,13 @@ actions:
       <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, others of comic book heroes, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right
   - type: clearImage
     id: Mathina1    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"    
   - type: sceneText
@@ -60,7 +60,7 @@ actions:
     entries:        
       - text: "OK. Let's start with a simple case. Look at this butterfly image:"
         char: wizard
-      - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “forms” a picture equal to the initial one."
+      - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “makes” a picture equal to the initial one."
         char: wizard
   - type: game
     text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
@@ -97,12 +97,12 @@ actions:
   - type: clearImage
     id: n16
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right    
   - type: dialog
@@ -185,12 +185,12 @@ actions:
   - type: clearImage
     id: filme1
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right    
   - type: dialog
@@ -209,7 +209,7 @@ actions:
   - type: clearBackground
     id: c1-bg1      
   - type: background
-    src: $COMMON/img/bg/c1-bg2.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg2    
   - type: clearImage
@@ -219,17 +219,17 @@ actions:
   - type: clearImage
     id: feiticeiro    
   - type: image
-    src: $COMMON/img/Mathina4.png
+    src: Mathina4.png
     id: Mathina4
     style: "width: 7.5%; top: 56%; left: 20%;"
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
     style: "width: 13%; top: 67%; left: 1%;"
   - type: image
     id: maze
     src: maze.png
-    style: "width: 37%; top: 42%; right: 0%;"
+    style: "width: 37%; top: 42%; right: 0%; z-index:3"
     align: right   
   - type: sceneText
     text: >
@@ -281,17 +281,17 @@ actions:
     entries:         
       - text: "Notice that this is not a normal maze: it is a mirror maze."
         char: mathina
-        exposition: "Mathina said while reading some small letters on the sign, near the word maze."           
+        exposition: "Mathina said reading the text on the sign, near the word maze."           
   - type: clearImage
     id: mathina-leo
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"  
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
-    style: "width: 13%; top: 58%; left: 48%;"    
+    style: "width: 13%; top: 58%; left: 48%;  z-index:2"    
   - type: dialog
     entries:    
       - text: "I'll try it!"
@@ -303,12 +303,7 @@ actions:
       duration: 3
       xPercent: 130
       yPercent: -25
-      ease: power3.out
-  - type: image
-    id: maze
-    src: maze.png
-    style: "width: 37%; top: 42%; right: 0%;"
-    align: right      
+      ease: power3.out    
   - type: sceneText
     text: >
       <p>Without further ado, Leo entered a maze, leaving Mathina alone.</p>
@@ -333,7 +328,7 @@ actions:
   - type: image
     id: maze2
     src: maze2.jpg
-    style: "width: 30%; top: 62%;"
+    style: "width: 30%; top: 62%"
     align: center
   - type: clearImage
     id: mathina-instrucoes
@@ -349,11 +344,11 @@ actions:
   - type: image
     src: mathina-instrucoes-labirinto.png
     id: mathina-instrucoes
-    style: "width: 18%; top: 58%; left: 39%;"
+    style: "width: 18%; top: 58%; left: 39%; z-index:2"
   - type: image
     id: maze
     src: maze.png
-    style: "width: 40%; top: 42%; right: 0%;"
+    style: "width: 40%; top: 42%; right: 0%;  z-index:3"
     align: right    
   - type: dialog
     entries:         
@@ -366,12 +361,7 @@ actions:
       duration: 3
       xPercent: 145
       yPercent: -20
-      ease: power3.out
-  - type: image
-    id: maze
-    src: maze.png
-    style: "width: 40%; top: 42%; right: 0%;"
-    align: right       
+      ease: power3.out      
   - type: dialog
     entries:         
       - text: "Here I go."
@@ -386,11 +376,11 @@ actions:
   - type: clearBackground
     id: c1-bg2     
   - type: background
-    src: $COMMON/img/bg/c1-bg3.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg3    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: clearImage
@@ -398,7 +388,7 @@ actions:
   - type: image
     id: HalfTurnrMaze
     src: HalfTurnrMaze.png
-    style: "width: 40%; top: 39%; right: 0%;"
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
     align: right    
   - type: dialog
     entries:
@@ -435,11 +425,11 @@ actions:
   - type: image
     src: mathina-instrucoes-labirinto2.png
     id: mathina-instrucoes2
-    style: "width: 19%; top: 56%; left: 39%;"
+    style: "width: 19%; top: 56%; left: 39%; z-index: 2"
   - type: image
     id: HalfTurnrMaze
     src: HalfTurnrMaze.png
-    style: "width: 40%; top: 39%; right: 0%;"
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
     align: right    
   - type: dialog
     entries:         
@@ -469,11 +459,11 @@ actions:
   - type: clearBackground
     id: c1-bg3    
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"     
   - type: dialog
@@ -489,7 +479,7 @@ actions:
   - type: clearImage
     id: Mathina2        
   - type: image
-    src: $COMMON/img/Mathina6.png
+    src: Mathina6.png
     id: Mathina6
     style: "width: 8.5%; top: 57%; left: 47%;"        
   - type: sceneText
@@ -498,11 +488,11 @@ actions:
   - type: clearImage
     id: Mathina6
   - type: image
-    src: $COMMON/img/Mathina4.png
+    src: Mathina4.png
     id: Mathina4
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
     style: "width: 13%; top: 67%; left: 1%;"    
   - type: sceneText
@@ -525,7 +515,7 @@ actions:
   - type: clearBackground
     id: c1-bg1     
   - type: background
-    src: $COMMON/img/bg/bucca-bg3b-with-leo-wizard.jpg
+    src: $COMMON/img/bg/SYMM/bucca-bg3b-with-leo-wizard.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;" 
     id: bucca-bg3b-with-leo-wizard    
   - type: sceneText
