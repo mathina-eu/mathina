@@ -30,6 +30,22 @@ actions:
     style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
     parallax: front1
 
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: -25%; left: 5%;" 
+    parallax: mid2 
+    
+  # - type: animation
+    # target: uni
+    # vars:
+      # duration: 6
+      # xPercent: -800
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
   - type: animation
     target: clouds
     vars:
@@ -107,8 +123,17 @@ actions:
     target: matleo
     vars:
         duration: 4
-        xPercent: 200
+        xPercent: 220
         yPercent: 75
+        width: 20% 
+        ease: power3.out
+        
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        #xPercent: 
+        yPercent: 85
         width: 20% 
         ease: power3.out
         
@@ -117,8 +142,8 @@ actions:
     vars:
         duration: 3
         xPercent: -160
-        yPercent: 70
-        width: 20% 
+        yPercent: 60
+        width: 22% 
         ease: power2.out
 
   - type: sceneText
@@ -129,6 +154,24 @@ actions:
       unidragon as an orchestra director conducts the music, with the horn
       of the unidragon as a stick. However, Flamma had nothing in her hands.
 
+  - type: clearImage
+    id: matleo
+    
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 55%;"  
+    parallax: mid2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
+    parallax: mid2
+
+
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -138,12 +181,36 @@ actions:
 
       - text: Flamma, we saw the unidragon, are you training him?
         char: mathina
-        mood: happy
+        mood: excited
+        
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%; transform: scalex(-1)"  
+    parallax: mid2
 
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
       - text: This is another dragon! And you don’t have his horn!! Why is he
           not flying away?
         char: leo
-        mood: happy
+        mood: normal
+        
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
 
   - type: sceneText
     text: Flamma stopped screaming to the sky and the unidragon descended
@@ -161,7 +228,7 @@ actions:
           fell he was flying over a lake, so the horn fell into the water
           and nobody has ever found it.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text:  Normally when that happens, the unidragons are not tamed and
           they remain wild, but they still feel their lost horn when it moves,
@@ -185,15 +252,15 @@ actions:
 
       - text: Magical numbers! How can you talk with numbers?
         char: leo
-        mood: happy
+        mood: worried
 
       - text: I have the feeling that an invisible structure is somehow connecting everything…
         char: mathina
-        mood: happy
+        mood: determined
 
       - text: So, how can we tell him how to fly?
         char: leo
-        mood: happy
+        mood: thinking
 
       - text: Well, as I said, we don’t have words that correspond to his
           language, but we can use some magic to describe the path we want to
