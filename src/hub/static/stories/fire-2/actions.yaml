@@ -168,6 +168,7 @@ actions:
     src: $COMMON/img/characters/leo/leo5.png
     id: leo
     style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
+    
     parallax: mid2
 
   - type: animation
@@ -204,11 +205,12 @@ actions:
     id: leo
     
   - type: image
-    src: $COMMON/img/characters/leo/leo4.png
+    src: leo4_mirrored.png
     id: leo
-    style: "width: 13%; top: 60%; left: 45%; transform: scalex(-1)"  
+    style: "width: 13%; top: 60%; left: 45%;"    
     parallax: mid2
 
+  
   - type: dialog
     avatarAlign:
       flamma: right
@@ -259,16 +261,26 @@ actions:
         #transform: scaleY(-1)
         #filter: FlipH
         #transform: scale(1,-1)
-        transform: rotateX(180deg)
+        transform: rotateY(180deg)
         ease: power3.out
+  
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 2
+        # #transform: scaleY(-1)
+        # #filter: FlipH
+        # #transform: scale(1,-1)
+        # transform: rotateY(180deg)
+        # ease: power3.out
   
   - type: clearImage
     id: uni
     
   - type: image
-    src: unidragon_sitting.png
+    src: unidragon-sitting.png
     id: uni
-    style: "width: 20%; top: 5%; left: 5%;" 
+    style: "width: 25%; top: 30%; left: 17%;" 
     parallax: front1
 
   - type: dialog
