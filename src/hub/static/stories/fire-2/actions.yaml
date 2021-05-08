@@ -131,7 +131,7 @@ actions:
   - type: animation
     target: uni
     vars:
-        duration: 4
+        duration: 3
         #xPercent: 
         yPercent: 85
         width: 20% 
@@ -170,7 +170,14 @@ actions:
     style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
     parallax: mid2
 
-
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent: 
+        yPercent: 10
+        width: 30% 
+        ease: power3.out
 
   - type: dialog
     avatarAlign:
@@ -182,7 +189,17 @@ actions:
       - text: Flamma, we saw the unidragon, are you training him?
         char: mathina
         mood: excited
-        
+ 
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent: 
+        yPercent: 20
+        width: 40% 
+        ease: power3.out
+
+ 
   - type: clearImage
     id: leo
     
@@ -203,6 +220,15 @@ actions:
         char: leo
         mood: normal
         
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        xPercent: -10
+        yPercent: 5
+        width: 50% 
+        ease: power3.out
+        
   - type: clearImage
     id: fla
     
@@ -211,10 +237,39 @@ actions:
     id: fla
     style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
     parallax: front1
+    
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
 
   - type: sceneText
     text: Flamma stopped screaming to the sky and the unidragon descended
       gently to the land to rest.
+  
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleY(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateX(180deg)
+        ease: power3.out
+  
+  - type: clearImage
+    id: uni
+    
+  - type: image
+    src: unidragon_sitting.png
+    id: uni
+    style: "width: 20%; top: 5%; left: 5%;" 
+    parallax: front1
 
   - type: dialog
     avatarAlign:
@@ -238,7 +293,7 @@ actions:
           this unidragon as I do with the others. Of course, since we don’t
           have his horn, we need to use something else.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: Unidragons have a kind of language, different from humans.
           Their language expresses what they can feel, and in this case,
@@ -248,7 +303,7 @@ actions:
           the unidragons, translating from what we mean to what they can
           understand.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: Magical numbers! How can you talk with numbers?
         char: leo
@@ -267,7 +322,7 @@ actions:
           make him follow. You can tell me in numbers what you want to do,
           and I will translate them into unidragon language.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: What can we say?
         char: mathina
@@ -276,7 +331,7 @@ actions:
       - text: Let us start with something easy. Let us tell him to fly just
           over the land, horizontally in a straight line.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: Ok, let’s tell him to do that.
         char: leo
@@ -285,7 +340,7 @@ actions:
       - text: No, you can’t use the human words, they are too confusing
           and imprecise for him. You just tell him the magical number one.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: The magical number one?
         char: leo
@@ -293,7 +348,7 @@ actions:
 
       - text: It means to advance at his normal speed.
         char: flamma
-        mood: happy
+        mood: normal
 
   - type: sceneText
     text: Flamma said the number one in unidragon language, and the animal
