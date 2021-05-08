@@ -6,9 +6,14 @@ export default {
     'title': 'Mathina',
     'help': 'Visit a city!',
   },
+  story: {
+    'next': 'Next',
+    'back': 'Back',
+  },
   index: {
-    title: 'Adventures of Mathina',
+    title: 'Welcome to Mathina',
     subtitle: 'Select an age group to start!',
+    'start-exploring': 'Start exploring!',
   },
   menu: {
     language: 'Language',
