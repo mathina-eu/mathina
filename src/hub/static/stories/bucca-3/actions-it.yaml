@@ -29,7 +29,7 @@ actions:
       
   - type: sceneText
     text: >
-      <p>“<i>Cara Mathina,</br>
+      <p>“<i>Cara Mathina,</br></br>
         ti ricordi di me? Ci siamo incontrate qualche tempo fa al mercato dell'Isola dei Bucanieri, con il pappagallo John. Se ricordo bene, le avventure sull'isola ti erano piaciute molto. Vorrei chiederti un piccolo aiuto. Temo che qualcuno mi stia spiando, quindi ho cercato mandarti una comunicazione in un modo... più segreto del solito! Il messaggio sul retro di questa lettera ti dirà dove e quando incontrarci. Non ho specificato la chiave, ma sono sicura che nel giro di pochi tentativi riuscirai a trovarla. Oh, ho anche aggiunto un’altra piccola modifica al nostro metodo segreto per cifrare i messaggi, per essere più sicura. Se vuoi un indizio puoi dare un’occhiata alla piccola scultura in legno che trovi dentro questa busta.
         </br>
         </br>
@@ -70,7 +70,7 @@ actions:
   - type: dialog
     entries:
       - text: "“Vediamo se mi ricordo ancora come si fa... ”, disse fra sè e sè Mathina."
-        char: Mathina
+        char: mathina
         mood: normal
 
 
@@ -98,7 +98,7 @@ actions:
   - type: dialog
     entries:
       - text: "Direi che mi ricordo molto bene come funziona questo metodo! Ora torniamo al messaggio di Angela..."
-        char: Mathina
+        char: mathina
         mood: normal
 
   - type: sceneText
@@ -112,7 +112,7 @@ actions:
   - type: dialog
     entries:
       - text: "“Questo è strano”, pensò Mathina."
-        char: Mathina
+        char: mathina
         mood: normal
 
   - type: sceneText
@@ -129,7 +129,7 @@ actions:
   - type: dialog
     entries:
       - text: "Beh ... è stato più difficile del previsto, ma ora sono molto curiosa di vedere cosa ha da dirmi Angela!"
-        char: Mathina
+        char: mathina
         mood: normal
  
   - type: clearImage
@@ -263,7 +263,7 @@ actions:
   - type: dialog
     entries:
       - text: "Ciao di nuovo e bentornata sull'Isola dei Bucanieri!" 
-        char: Angela
+        char: angela
         mood: happy
 
 
@@ -277,12 +277,12 @@ actions:
   - type: dialog
     entries:
       - text: "Ciao! Sono stato molto sorpresa di ricevere il tuo messaggio ieri! Perché tutta questa segretezza? Mi chiedo perché siamo in questo posto, è piuttosto affollato, non temi che qualcuno possa ascoltarci?" 
-        char: Mathina
+        char: mathina
         mood: happy
   - type: dialog
     entries:
       - text: "Il posto migliore per parlare in segreto è dove tutti possono sentirti."
-        char: Angela
+        char: angela
         mood: normal
   - type: sceneText
     text: >
@@ -290,45 +290,45 @@ actions:
   - type: dialog
     entries:
       - text: "Hahaha!! No, no! Sarebbero troppi indovinelli tutti in una volta! Ma dimmi, come hai trovato la mia versione del nostro vecchio cifrario, nel messaggio che ti ho mandato?"
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "Molto interessante! Anche se ... il gioco diventa complicato se bisogna immaginarsi il codice ogni volta. Inoltre, se ci sono riuscita io, anche altri potrebbero essere riusciti a decodificare il messaggio." 
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
   - type: dialog
     entries:
       - text: "Verissimo, hai perfettamente ragione! Sai, abbiamo un detto: “Condividi il metodo che usi, ma conserva il codice per la ciurma”!
 "
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "Che cosa significa?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
   - type: dialog
     entries:
       - text: "Significa che se vuoi comunicare in segreto, dovrai sempre comunicare le regole che stai usando per cifrare il messaggio. Poi, dovrai solo mantenere in segreto la chiave che hai utilizzato."
-        char: Angela
-        mood: normale
+        char: angela
+        mood: normal
 
   - type: dialog
     entries:
       - text: "È divertente! Tempo fa ho parlato con mio fratello minore di un argomento molto simile."
-        char: Mathina
-        mood: happy
+        char: mathina
+        mood: talking
   - type: dialog
     entries:
       - text: "È risaputo tra i pirati! Sai, mantenere solo la chiave segreta è una cosa, farlo per molte informazioni è più complicato, specialmente quando si passa tanto tempo a chiacchierare in un bar. Oh, a proposito, hai già ordinato qualcosa? Sono molto curioso di provare il nuovo gusto di gelato: perle e cocco salato."
-        char: Angela
+        char: angela
         mood: happy
 
   - type: dialog
     entries:
       - text: "Sembra buono! Ne prendo uno anche io!"
-        char: Mathina
+        char: mathina
         mood: happy
 
 
@@ -343,19 +343,18 @@ actions:
   - type: dialog
     entries:
       - text: "Questa collana è bellissima: l’artista è riuscito ad avvolgere l'alfabeto in un cerchio per ottenere questo bellissimo effetto. Mi chiedo... come fai a scrivere e leggere messaggi in codice senza? Ne hai un’altra?"
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "In realtà la collana è unica, ma dopo averla usata per parecchio tempo mi sono accorta che c'è una semplice regola molto utile se vuoi codificare o decodificare qualcosa. Vorresti conoscerla?"
-        char: Angela
+        char: angela
         mood: normal
-
   - type: dialog
     entries:
       - text: "Sì, per favore!"
-        char: Mathina
-        mood: happy
+        char: mathina
+        mood: talking
 
   - type: image
     id: CaesarJewel2
@@ -369,13 +368,13 @@ actions:
   - type: dialog
     entries:
       - text: "Dai un'occhiata: A si sovrappone alla D, la B alla E e così via. Giusto? Come vedi, lo spazio tra le lettere è sempre lo stesso: tre."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Quindi è come una rotazione: ogni tacchetta è una frazione di un intero giro, e ogni lettera viene spostata avanti di tre tacchette. Giusto?"
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Esatto, ma ora ti stai concentrando sulla descrizione della collana ma puoi descrivere questa... operazione in modo ancora più semplice: prova a usare i numeri al posto delle lettere."
-        char: Angela
+        char: angela
         mood: normal
 
   - type: image 
@@ -399,34 +398,34 @@ actions:
   - type: dialog
     entries:
       - text: "... ecco qui! Ora dai un'altra occhiata e ricorda che il numero di passi è tre."
-        char: Angela
+        char: angela
         mood: normal
       - text: "woow, beh, è ​​molto più facile ora: stai semplicemente facendo delle somme. La A - o meglio - lo 0 viene sovrapposto a D, che è 3. Quindi stai solo sommando il numero di passi. È geniale. Ma... che senso ha quello che stiamo facendo?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: " Puoi davvero... sommare le lettere? A scuola imparavo espressioni, in cui si sommano le lettere, ma è qualcosa di più simile a “x+x=2x”."
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Puoi sommare le lettere, ma qui è ancora più semplice: pensa solo a usare le lettere come segnaposto per i numeri."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Ma qui c'è qualcosa di ancora più strano: guarda la lettera Y, intendo, il numero 24. Se fosse una somma, otterrei 24+3=27. Ma invece, ottengo la lettera B, cioè, il numero 1. Mi stai dicendo che 24+3=1?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Sì, è esattamente quello che ti sto dicendo!"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Ma... ha senso? Se 24+3 = 1, significa... aspetta... significa che 24+2 = 0. Ma 24+2 fa 26, come può 26 essere uguale a 0?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Sì, e non è così strano: abbiamo deciso che A dovrebbe corrispondere a 0, ma quando avvolgi l'alfabeto in un cerchio, A è anche la lettera accanto alla Z, quindi A corrisponde sia a 0 che a a 26."
-        char: Angela
+        char: angela
         mood: normal
 
   - type: dialog
     entries:
       - text: "Supponiamo pure per un momento che io mi fidi di te (dopotutto sei un pirata). In che modo questo mi può aiutare a codificare e decodificare i messaggi?"
-        char: Mathina
+        char: mathina
         mood: normal
 
   - type: clearImage
@@ -442,17 +441,17 @@ actions:
   - type: dialog
     entries:
       - text: "Beh, la codifica è molto facile: devi semplicemente eseguire una somma, ma la cosa interessante delle somme è che possono essere invertite: ad esempio, se A + 3 è uguale a D, allora c'è un'operazione inversa che può far ottenere D partendo da A. Indovina di cosa si tratta?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Facile: la sottrazione! Se A + 3 = D, allora D-3 deve essere uguale ad A..."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "...e a 26..."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Sono confusa... Ho ancora qualche difficoltà a capire questo concetto..."
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: sad
         
         
   - type: clearImage
@@ -463,10 +462,10 @@ actions:
   - type: dialog
     entries:        
       - text: "Mmh, forse questo ti farà capire meglio: pensa a un orologio."
-        char: Angela
+        char: angela
         mood: normal
       - text: "...un orologio?"
-        char: Mathina
+        char: mathina
         mood: normal
 
 
@@ -481,25 +480,25 @@ actions:
   - type: dialog
     entries:
       - text: "Sì: supponiamo che siano le 16 e tra tre ore saranno le 19. Abbiamo detto che 4 + 3 = 7."
-        char: Angela
+        char: angela
         mood: normal
       - text: "... esatto, non vedo alcun problema in questo caso. Ho appena fatto la solita somma."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Beh ... non proprio la solita somma: cosa succede se fossero le 11:00?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "..."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Non è proprio la solita somma! Ma ci assomiglia!"
-        char: Angela
+        char: angela
         mood: normal
 
   - type: dialog
     entries:
       - text: "Beh, tre ore dopo le 11 sono le 14, quindi le 11 + 3 ... oh ..."
-        char: Mathina
+        char: mathina
         mood: normal
 
   - type: clearImage
@@ -514,10 +513,10 @@ actions:
   - type: dialog
     entries:
       - text: "Vedi? Hai 12 ore sul tuo orologio, quindi 12 = 0, e dopo le 11 ricomincerai dall'inizio. Per la collana è lo stesso, ma il tuo orologio questa volta ha 26 ore."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Ti va di esercitarti di più su questa nuova somma? Proviamo a fare qualche addizione su alcuni orologi."
-        char: Angela
+        char: angela
         mood: normal
 
   - type: clearImage
@@ -545,10 +544,10 @@ actions:
   - type: dialog
     entries:
       - text: "Ben fatto!! Mmh, a proposito di orologi, sembra che sia quasi ora di andare, se vuoi prendere il traghetto! Mi piacerebbe invitarti per pranzo uno dei prossimi giorni."
-        char: Angela
+        char: angela
         mood: excited
       - text: "Sarebbe fantastico !! Che ne diresti di questo venerdì?"
-        char: Mathina
+        char: mathina
         mood: happy
 
   - type: clearImage
@@ -651,7 +650,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Ciao John! È molto tempo che non ci si vede!"
-        char: Mathina
+        char: mathina
         mood: normal
 
   - type: sceneText
@@ -661,7 +660,7 @@ actions:
   - type: dialog
     entries:        
       - text: "John non vedeva l'ora di fare un giro, quindi abbiamo deciso di venire entrambi ad aspettarti sul molo."
-        char: Angela
+        char: angela
         mood: happy
 
   - type: clearImage
@@ -735,13 +734,13 @@ actions:
   - type: dialog
     entries:        
       - text: "Sai, ogni pirata ha le sue ricette culinarie. È una specie di modo per legare con l'equipaggio, quasi un segreto per tutti gli altri."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Woow! E qual è la tua ricetta preferita?"
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Dovrei farti indovinare con un indovinello cifrato, ma sono abbastanza sicura che ormai sei diventata molto brava a decifrare i messaggi, quindi… adoro cucinare le melanzane! E penso che ti piacerà la mia cucina! Anche John non può resistere a prenderne un boccone!"
-        char: Angela
+        char: angela
         mood: happy
 
 
@@ -758,13 +757,13 @@ actions:
   - type: dialog
     entries:     
       - text: "… e quindi c'erano 20 banditi..."
-        char: Angela
+        char: angela
         mood: normal
       - text: "...3 banditi..."
         char: John
         mood: normal
       - text: "...ok comunque, erano riusciti a decodificare i nostri messaggi e ci stavano aspettando!"
-        char: Angela
+        char: angela
         mood: normal
         
   - type: image
@@ -775,13 +774,13 @@ actions:
   - type: dialog
     entries:     
       - text: "oh, aspetta! Questa è una cosa a cui ho pensato in questi giorni. Hai detto che avevano scoperto il tuo codice, giusto?"
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Sì."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Dopotutto... se sanno come funziona il codice, e tu mi hai detto che sostanzialmente ogni pirata lo sa, è solo questione di controllare tutte le combinazioni, che in realtà non sono così tante."
-        char: Mathina
+        char: mathina
         mood: normal
         
   - type: sceneText
@@ -792,10 +791,10 @@ actions:
   - type: dialog
     entries:     
       - text: "Questo è davvero interessante. Tuttavia non è così facile rendere il codice più difficile da decifrare. Hai provato a pensare a come farlo?"
-        char: Angela
+        char: angela
         mood: happy
       - text: " In realtà mi sono venute un sacco di idee... Ad esempio... Perché non possiamo usare un altro alfabeto, come il greco? Potremmo sostituire “a” con “𝛼” e così via..."
-        char: Mathina
+        char: mathina
         mood: normal
 
 
@@ -813,16 +812,17 @@ actions:
     style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
     
 
+
   - type: dialog
     entries:     
       - text: "Aspetta un attimo, ricorda che non si tratta solo di rendere il codice più complesso. I pirati dovrebbero ancora imparare a usarlo, quindi sapranno che “𝛼” significa solo “a”, quindi anche se avrai bisogno di più informazioni per imparare il metodo, il tuo sforzo per decifrare un codice sarà sempre lo stesso."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Hai ragione. Avrei comunque provato tutte le 26 lettere e alla fine avrei trovato la soluzione. Ma tu hai avuto qualche idea per complicare il meccanismo di cifratura? In particolare dopo quell'ultima storia con i banditi."
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: sad
       - text: "Oh, certo che l’ho avuta. Per un po’ di tempo abbiamo provato a modificare un po' il codice. Ad esempio, prendi il gioiello e usalo due volte di fila per codificare un messaggio. Il doppio dello sforzo... il doppio del risultato."
-        char: Angela
+        char: angela
         mood: normal
         
   - type: clearImage   
@@ -838,10 +838,10 @@ actions:
   - type: dialog
     entries:             
       - text: "Woow! Questo sì che sembra efficace!"
-        char: Mathina
+        char: mathina
         mood: excited
       - text: "Purtroppo c'era un grosso difetto nel nostro ragionamento. Vuoi fare una prova?"
-        char: Angela
+        char: angela
         mood: normal
 
   - type: game
@@ -865,32 +865,32 @@ actions:
   - type: dialog
     entries:     
       - text: "Dai un'occhiata a questi due messaggi. Uno è stato codificato utilizzando il gioiello una sola volta e l'altro è stato codificato utilizzando il gioiello due volte. Cerca di capire quale è quale."
-        char: Angela
+        char: angela
         mood: normal
 
 
   - type: dialog
     entries:     
       - text: "Beh... in realtà non sembrano così diversi."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Esattamente. E non è solo apparenza: puoi provare a capirlo usando la nostra strana somma. Supponiamo che il gioiello sia impostato per l'aggiunta di 4. Cosa succede se utilizzo il gioiello due volte di fila?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Inizi con un numero, ad esempio 3. Poi aggiungi 4 - quindi ottieni 7, e infine aggiungi di nuovo 4, ottenendo 11."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Ok, ma hai aggiunto 4 due volte, e quando sommi puoi scegliere di sommare prima i due 4, quindi cosa ottieni?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Oh ... giusto! Se aggiungi 4 due volte, stai aggiungendo 8."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "...e così alla fine anche se usi il gioiello due volte, puoi ottenere il risultato finale usando il gioiello solo una volta. E funziona anche se cambi i numeri. Se aggiungi prima 5 e poi 6, puoi ottenere lo stesso risultato aggiungendo..."
-        char: Angela
+        char: angela
         mood: normal
       - text: "...11 solo una volta. È incredibile ... Ora che me lo hai fatto notare, a me sembra la cosa più facile del mondo, ma prima non me ne ero accorta perché questo fatto era nascosto dietro la meccanica del gioiello."
-        char: Mathina
+        char: mathina
         mood: normal
         
   - type: clearImage
@@ -899,7 +899,7 @@ actions:
   - type: dialog
     entries:            
       - text: "Abbiamo avuto la stessa sensazione. Sai, è stato John a notarlo per la prima volta. Ha posizionato il gioiello in modo tale che usandolo due volte si ottenga il messaggio originale. Indovina quale posizione ha scelto?"
-        char: Angela
+        char: angela
         mood: normal
 
   - type: game
@@ -924,11 +924,11 @@ actions:
   - type: dialog
     entries:            
       - text: "Quindi, altre idee per rendere il codice più sicuro?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Mmh, perché me lo chiedi? Hai in mente qualche richiesta specifica per questo?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
 
   - type: clearImage
     id: Angela5
@@ -972,40 +972,40 @@ actions:
   - type: dialog
     entries:            
       - text: "Sicuramente somiglia molto al nostro codice, vero? Immagino che tu non conosca la chiave, giusto?"
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "In questo caso, è solo somiglianza apparente. Questa è la calligrafia di una mia vecchia amica, anche lei pirata, ovviamente. È stata lei a darmi la collana che ti ho regalato, tanti anni fa, ed è stata lei a iniziare a utilizzarla in questo modo per codificare i messaggi come ti ho insegnato."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Cosa è successo?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Sai, tra un’avventura e l’altra tutti noi passiamo il tempo in modi diversi, qualcuno in città e qualcun altro in cerca di avventure: ho sentito dire che ci sono un sacco di posti strani e divertenti da visitare."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Una volta che lei era tornata da un viaggio, mi aveva raccontato di aver visitato una strana fiera, dove qualcuno le ha venduto altre collane, simili a quella che usavamo noi, ma stranamente simmetriche." 
-        char: Angela
+        char: angela
         mood: normal
       - text: " Continuava a dirmi che in queste collane c'era un nuovo modo di comunicare in segreto, un’idea rivoluzionaria. E voleva mantenerlo segreto."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Wow! Mi chiedo che aspetto avessero queste nuove collane. Avevi avuto modo di vederle?"
-        char: Mathina
+        char: mathina
         mood: excited
       - text: "Purtroppo no. Lei poi scomparve per una settimana e quando tornò mi regalò il ritratto, dicendomi di aver nascosto le collane sull'isola per tenerle al sicuro e che il ritratto conteneva le informazioni per ritrovarle."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Mi chiedo dove si trovi ora..."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Uh, era abbastanza stanca di fare il pirata, quindi è andata a nord, sulle montagne. Ho sentito che ha accettato un lavoro per addestrare uccelli particolari, ma meglio non dirlo a John, sarebbe geloso!"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Hihihi, giusto! Bene... torniamo al messaggio segreto! Beh, sono sicura che hai già tentato, ma... dato che sembra il nostro codice, mi chiedo se possiamo semplicemente provare a decodificarlo, come al solito, anche senza la chiave."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Prova pure!"
-        char: Angela
+        char: angela
         mood: normal
  
   - type: game
@@ -1032,22 +1032,22 @@ actions:
   - type: dialog
     entries:            
       - text: "Non sono sicura su cosa fare: ho provato tutte le combinazioni della collana, ma il messaggio decifrato non ha comunque senso."
-        char: Mathina
+        char: mathina
         mood: sad
       - text: "Esatto, e sono sicura che il messaggio originale sia scritto in una lingua che noi conosciamo. Ma aspetta, ora che ci penso ho un altro suggerimento. Mi è stato detto che bisogna usare la collana due volte per trovare la soluzione."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Due volte? Ma pensavo fosse inutile, sbaglio?"
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Sì, ma forse c'è qualcosa che ci sfugge. Ci siamo convinte del fatto che usare la collana due volte di file è la stessa cosa che usarla una volta sola."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Mmh, e se provassimo a partire dal messaggio stesso? Gli spazi ci sono e non sono codificati con la collana."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "È vero, ma sei sicura che non sia una falsa pista?"
-        char: Angela
+        char: angela
         mood: normal
 
 
@@ -1062,19 +1062,19 @@ actions:
   - type: dialog
     entries:            
       - text: "Mmh, hai ragione, ma forse possiamo provare a presumere che lo spazio sia nella posizione corretta e poi vedere se riusciamo a trovare qualcosa di interessante."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Sì, sembra promettente. E se ci concentrassimo su parole brevi?"
-        char: Angela
+        char: angela
         mood: normal
       - text: "Sì: iniziamo con le parole con una lettera. C'è una “N”, e poi una “S”... uhm... poi un’altra “S”."
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Se stiamo assumendo che gli spazi siano corretti, forse lo è anche la punteggiatura. Beh, comunque, forse possiamo provare a far diventare queste lettere isolate delle “E”."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Sembra possibile, proviamo a controllare quale messaggio troviamo."
-        char: Mathina
+        char: mathina
         mood: normal
 
 
@@ -1095,19 +1095,19 @@ actions:
   - type: dialog
     entries:            
       - text: "Sembra strano, sembra davvero che non ci siano speranze di trovare un testo leggibile. Ma... aspetta, mi hai detto che dobbiamo usare la collana due volte, giusto?"
-        char: Mathina
+        char: mathina
         mood: sad
       - text: "Esattamente, ma non so come."
-        char: Angela
+        char: angela
         mood: normal
       - text: "E se, ad esempio, dovessimo usare un'impostazione per una parte del testo e impostazioni diverse per un'altra parte?"
-        char: Mathina
+        char: mathina
         mood: normal
       - text: "Sì... potresti avere ragione! Ma è complicato: come decidiamo quale parte del testo è quale?"
-        char: Angela
-        mood: excited
+        char: angela
+        mood: normal
       - text: "Possiamo usare... le parole! Forse le parole in una posizione dispari hanno una chiave e le parole in una posizione pari hanno un'altra chiave. Proviamoci!"
-        char: Mathina
+        char: mathina
         mood: excited
 
   - type: game
@@ -1121,13 +1121,13 @@ actions:
   - type: dialog
     entries:            
       - text: "Niente ... Tranne che almeno in questo modo siamo in grado di tradurre sia “N” che “S” in “E”."
-        char: Mathina
+        char: mathina
         mood: sad
       - text: "beh… almeno questo è un modo per usare la collana due volte. Tuttavia, le parole lunghe rimangono illeggibili. Forse dobbiamo cambiare il modo in cui lo traduciamo. Che ne dici di usare solo lettere invece di parole? Possiamo provare a usare una chiave per le lettere in posizione dispari e un'altra chiave per le lettere in posizione pari."
-        char: Angela
+        char: angela
         mood: normal
       - text: "Ma certo! E ho notato che “N” e “S” sono in posizioni diverse, quindi potremmo riuscire a tradurre entrambe come “E”."
-        char: Mathina
+        char: mathina
         mood: normal
 
 
@@ -1141,13 +1141,13 @@ actions:
   - type: dialog
     entries:            
       - text: "Questo è ... incredibile! Ci avevo provato per così tanto tempo, e ora ... ecco la soluzione!"
-        char: Angela
+        char: angela
         mood: normal
       - text: "E questo espediente è stato molto molto intelligente: in questo modo è più difficile provare tutte le combinazioni possibili. Mi chiedo quante ce ne siano..."
-        char: Mathina
-        mood: normal
+        char: mathina
+        mood: surprised
       - text: "Sì, ma mi chiedo di più su cosa si nasconde nell'albero! Andiamo a controllare!"
-        char: Angela
+        char: angela
         mood: normal
 
   - type: clearImage
@@ -1273,7 +1273,7 @@ actions:
   - type: dialog
     entries:            
       - text: "Woow ... cosa sono?"
-        char: Mathina
+        char: mathina
         mood: excited
 
   - type: sceneText
@@ -1284,13 +1284,13 @@ actions:
   - type: dialog
     entries:            
       - text: "Sono molto belle, probabilmente sono un suggerimento per un altro modo di codificare i messaggi."
-        char: Angela
-        mood: excited
-      - text: "Penso che questo sarà l'inizio di una grande avventura, proprio come quella che abbiamo fatto oggi!"
-        char: Mathina
+        char: angela
         mood: happy
+      - text: "Penso che questo sarà l'inizio di una grande avventura, proprio come quella che abbiamo fatto oggi!"
+        char: mathina
+        mood: talking
       - text: "Vorrei un biscotto, per favore!"
-        char: John
+        char: parrot
         mood: normal
 
 
