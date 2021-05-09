@@ -146,7 +146,7 @@ updateDragon() := (
   speed = abs(dragon.velocity);
   if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
   dragon.rotation = 0.5*pi-arctan2(wand.dir);
-  if(wand.dir.x < 0.1,
+  if(wand.dir.x < -0.1,
     dragon.rotation = -dragon.rotation;
     dragon.flipx = true;
   );
@@ -374,7 +374,7 @@ dragon = {
   "pos": dragonHome,
   "rad": 0.6,
   "velocity": [0,0],
-  "maxSpeed": 15,
+  "maxSpeed": 10,
   "trailA": [[dragonHome, ceil(3 * random()), 2 * pi * random()]],
   "trailAMaxSize": 1,
   "trailAMaxLength": 100,
@@ -396,8 +396,8 @@ wand = {
   "length": 3,
   "dir": [0,1],
   "value": 0,
-  "catchRadius": 6,
-  "maxValue": 6,
+  "catchRadius": 15,
+  "maxValue": 10,
   "acceleration": 0.5,
   "deadzone": 0.5
 };
@@ -523,13 +523,13 @@ recallStart = [];
 
 
 curveNames = ["lissajoue", "circle", "square", "lemiscate", "triangle"];
-curvePositions = apply(-2..2, dragonHome + [lerp(-20, 20, #, -2, 2), 2]);
+curvePositions = apply(-1..1, dragonHome + [lerp(-20, 20, #, -2, 2), -2]);
 curveScales = {
-  "circle": 10,
-  "square": 10,
-  "lemiscate": 15,
-  "triangle": 13,
-  "lissajoue": 10
+  "circle": 15,
+  "square": 13,
+  "lemiscate": 20,
+  "triangle": 17,
+  "lissajoue": 15
 };
 
 followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
@@ -652,23 +652,23 @@ setupTime();
     cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
-                  smoke1:  "../assets/smoke_1.png",
-                   smoke2: "../assets/smoke_2.png",
-                   smoke3: "../assets/smoke_3.png",
-                   dragon1: "../assets/dragon_1.png",
-                   dragon2: "../assets/dragon_2.png",
-                   dragon3: "../assets/dragon_3.png",
-                   magic1: "../assets/magic_1.png",
-                   magic2: "../assets/magic_2.png",
-                   magic3: "../assets/magic_3.png",                   
-                   fireball1: "../assets/fireball_1.png",
-                   fireball2: "../assets/fireball_2.png",
-                   fireball3: "../assets/fireball_3.png", 
-                   back:   "../assets/back_2.png",
-                   front:  "../assets/front_2.png",
-                   wand:   "../assets/wand.png",
-                   flamma:   "../assets/flamma_wave.png",
-                   bubble:   "../assets/speech_bubble.png",                   
+                  smoke1:  "../../assets/smoke_1.png",
+                   smoke2: "../../assets/smoke_2.png",
+                   smoke3: "../../assets/smoke_3.png",
+                   dragon1: "../../assets/dragon_1.png",
+                   dragon2: "../../assets/dragon_2.png",
+                   dragon3: "../../assets/dragon_3.png",
+                   magic1: "../../assets/magic_1.png",
+                   magic2: "../../assets/magic_2.png",
+                   magic3: "../../assets/magic_3.png",                   
+                   fireball1: "../../assets/fireball_1.png",
+                   fireball2: "../../assets/fireball_2.png",
+                   fireball3: "../../assets/fireball_3.png", 
+                   back:   "../../assets/back_2.png",
+                   front:  "../../assets/front_2.png",
+                   wand:   "../../assets/wand.png",
+                   flamma:   "../../assets/flamma_wave.png",
+                   bubble:   "../../assets/speech_bubble.png",                   
                  }
                 });
 

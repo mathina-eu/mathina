@@ -69,7 +69,7 @@ drawDragonTrail() := (
   forall(1..length(dragon.trailA) - 1,
     //fillcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,1,0), alpha->lerp(0, 0.5, #, 0, length(dragon.trailA) - 1));
     //drawcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,0.5,0));
-    drawimage(dragon.trailA_#_1, "smoke" + dragon.trailA_#_2, angle->dragon.trailA_#_3, scale->0.15 * lerp(0.5, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), alpha->lerp(0, 1, #, 0, length(dragon.trailA) - 1));
+    //drawimage(dragon.trailA_#_1, "smoke" + dragon.trailA_#_2, angle->dragon.trailA_#_3, scale->0.15 * lerp(0.5, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), alpha->lerp(0, 1, #, 0, length(dragon.trailA) - 1));
   );
 );
 
@@ -160,8 +160,9 @@ moveDragon(dt) := (
 
 
 updateDragon() := (
-  regional(speed);
+  regional(speed, currArrow);
 
+  /*
   dragon.velocity = wand.dir * lerp(0, dragon.maxSpeed, wand.value, 0, wand.maxValue);
   speed = abs(dragon.velocity);
   if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
@@ -173,7 +174,30 @@ updateDragon() := (
   if(wand.dir.x > 0.1,
     dragon.flipx = false;
   );
+  */
+
+  if(path.dragonIndex < length(path.points),
+    currArrow = path.points_(path.dragonIndex + 1) - path.points_(path.dragonIndex);
+    currArrow = currArrow / abs(currArrow);
+    
+    dragon.rotation = 0.5*pi-arctan2(currArrow);
+    if(currArrow.x < -0.1,
+      dragon.rotation = -dragon.rotation;
+      dragon.flipx = true;
+    );
+    if(currArrow.x > 0.1,
+      dragon.flipx = false;
+    );
+  );
+
 );
+
+
+
+
+
+
+
 
 
 
@@ -186,6 +210,8 @@ recallDragon() := (
   dragon.velocity = [0,0];
   dragon.trailA = [];
   dragon.trailB = [];
+  path.points = [(0,0)];
+  inputBuffer.record = [];
 );
 
 
@@ -414,7 +440,7 @@ drawPath() := (
         "lineAlpha": 1,
         "lineSize": 12,
         "fillColor": (1,1,1),
-        "fillAlpha": 1,
+        "fillAlpha": 0,
         "arrow": true,
         "arrowSize": 1
       }); 
@@ -423,12 +449,12 @@ drawPath() := (
       drawStrokeObject({
         "pos": (0,0), 
         "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
-        "drawPercent": 1,
+        "drawPercent": easeInOutCubic(path.progress),
         "lineColor": lerp((1, 0.8, 0), (1, 0.6, 0), path.progress),
-        "lineAlpha": lerp(0.6, 1, path.progress),
+        "lineAlpha": lerp(0, 1, path.progress),
         "lineSize": lerp(8, 12, path.progress),
         "fillColor": (1,1,1),
-        "fillAlpha": 1,
+        "fillAlpha": 0,
         "arrow": true,
         "arrowSize": lerp(0.7, 1, path.progress)
       });  
@@ -437,9 +463,9 @@ drawPath() := (
       drawStrokeObject({
           "pos": (0,0), 
           "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
-          "drawPercent": 1,
+          "drawPercent": 0,
           "lineColor": (1, 0.8, 0),
-          "lineAlpha": 0.6,
+          "lineAlpha": 0,
           "lineSize": 8,
           "fillColor": (1,1,1),
           "fillAlpha": 0,
@@ -730,7 +756,10 @@ recallTarget = dragonHome;
 
 
 
-
+mountainPolygons = [
+  [],
+  []
+];
 
 
 
@@ -757,13 +786,18 @@ setupTime();
   
   drawimage(canvasCorners_4, canvasCorners_3, "back");
   drawGrid();
-  drawPath();
   drawDragonTrail();
+  drawPath();
   //drawPickUp();
   drawDragon();
   //drawClouds();
   //drawObstacles();
   //drawimage(canvasCorners_4, canvasCorners_3, "front");
+
+  drawimage(canvasCenter + (-12,-15), "mountain2");
+  drawimage(canvasCenter + (8,-8), "mountain1");
+
+
   //drawFlamma();
   //drawWand();
   
@@ -805,6 +839,7 @@ setupTime();
       , // else //
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
         path.dragonIndex = path.dragonIndex + 1;
+        updateDragon();
       );
       path.progress = 0;
     );
@@ -819,6 +854,7 @@ setupTime();
     if(recallTrack.timeLeft <= 0,
       recallActive = false;
       dragon.trailA = [[dragon.pos, ceil(3 * random()), 2 * pi * random()]];
+
     );
   , // else //
     moveDragon(delta);
@@ -834,6 +870,8 @@ setupTime();
 
 
 <script id='csmousedown' type='text/x-cindyscript'>
+  println(mouse().xy);
+
   /*
   if(!recallActive & dist(mouse().xy, wand.pos) <= wand.catchRadius,
     wandActive = true;
@@ -842,6 +880,7 @@ setupTime();
     repaint();
   );
   */
+
   if(!recallActive & dist(mouse().xy, recallButton.pos) <= recallButton.rad,
     recallTarget = dragonHome;
     recallDragon();
@@ -863,6 +902,7 @@ setupTime();
       if(length(inputBuffer.record) >= 1,
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
         dragonMoving = true;
+        updateDragon();
 
         );
     );
@@ -901,27 +941,29 @@ setupTime();
     cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
-                  smoke1:  "../assets/smoke_1.png",
-                   smoke2: "../assets/smoke_2.png",
-                   smoke3: "../assets/smoke_3.png",
-                   dragon1: "../assets/dragon_1.png",
-                   dragon2: "../assets/dragon_2.png",
-                   dragon3: "../assets/dragon_3.png",
-                   magic1: "../assets/magic_1.png",
-                   magic2: "../assets/magic_2.png",
-                   magic3: "../assets/magic_3.png",                   
-                   fireball1: "../assets/fireball_1.png",
-                   fireball2: "../assets/fireball_2.png",
-                   fireball3: "../assets/fireball_3.png", 
-                   cloud1: "../assets/cloud_1.png",
-                   cloud2: "../assets/cloud_2.png",
-                   cloud3: "../assets/cloud_3.png",                    
-                   cloud4: "../assets/cloud_4.png",                    
-                   back:   "../assets/back_2.png",
-                   front:  "../assets/front_2.png",
-                   wand:   "../assets/wand.png",
-                   flamma:   "../assets/flamma_wave.png",
-                   bubble:   "../assets/speech_bubble.png",
+                   mountain1:  "../../assets/mountain_1.png",
+                   mountain2: "../../assets/mountain_2.png",
+                   smoke1:  "../../assets/smoke_1.png",
+                   smoke2: "../../assets/smoke_2.png",                  
+                   smoke3: "../../assets/smoke_3.png",
+                   dragon1: "../../assets/dragon_1.png",
+                   dragon2: "../../assets/dragon_2.png",
+                   dragon3: "../../assets/dragon_3.png",
+                   magic1: "../../assets/magic_1.png",
+                   magic2: "../../assets/magic_2.png",
+                   magic3: "../../assets/magic_3.png",                   
+                   fireball1: "../../assets/fireball_1.png",
+                   fireball2: "../../assets/fireball_2.png",
+                   fireball3: "../../assets/fireball_3.png", 
+                   cloud1: "../../assets/cloud_1.png",
+                   cloud2: "../../assets/cloud_2.png",
+                   cloud3: "../../assets/cloud_3.png",                    
+                   cloud4: "../../assets/cloud_4.png",                    
+                   back:   "../../assets/back_3.png",
+                   front:  "../../assets/front_2.png",
+                   wand:   "../../assets/wand.png",
+                   flamma:   "../../assets/flamma_wave.png",
+                   bubble:   "../../assets/speech_bubble.png",
                  }
                 });
 
