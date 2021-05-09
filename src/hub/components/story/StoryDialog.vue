@@ -1,5 +1,8 @@
 <template>
-  <v-card width="600">
+  <v-card
+    width="600"
+    :style="styleText"
+  >
     <div
       class="d-flex flex-no-wrap"
       :class="{'justify-space-between': alignment === 'right'}"
@@ -74,7 +77,12 @@ export default {
       type: Object,
       required: false,
       default: () => {},
-    }
+    },
+    styleText: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
   computed: {
     avatar() {

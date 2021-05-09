@@ -4,6 +4,7 @@ actions:
     id: bg1
     style: "width: 100%"
   - type: sceneText
+    style: "position: absolute; left: 10px; top: 10px;"
     text: >
       <p>Lorem ipsum</p>
       <p>Lorem ipsum dolores est</p>

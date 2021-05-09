@@ -16,7 +16,7 @@
             v-bind="attrs"
             v-on="on"
           >
-            {{ city.name }}
+            {{ $t(`cities.${city.id}`) }}
           </v-btn>
         </template>
         <v-list

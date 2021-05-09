@@ -1,5 +1,8 @@
 <template>
-  <StoryView :is-loading="isLoading">
+  <StoryView
+    :is-loading="isLoading"
+    :full-width="fullWidth"
+  >
     <Parallax class="root">
       <template
         v-for="layer in ['back1', 'back2', 'back3', 'mid1', 'mid2', 'mid3', 'front1', 'front2', 'front3']"
@@ -44,6 +47,7 @@
         <SceneText
           v-else-if="isSceneTextAction"
           :text="action.text"
+          :style-text="action.style"
         />
         <GameView
           v-else-if="isGameMode"
@@ -57,11 +61,11 @@
           @lastGameFinished="isLastGameFinished=true"
         />
         <v-btn
-          v-if="!hasMoreActions && isLastGameFinished"
+          v-if="!hasMoreActions"
           class="mt-12"
           @click="$router.back()"
         >
-          All done!
+          {{ $t('story.back-to-world') }}
         </v-btn>
       </div>
     </Parallax>
@@ -134,6 +138,9 @@ export default {
     };
   },
   computed: {
+    fullWidth() {
+      return this.story?.fullWidth || false;
+    },
     firstInteractiveActionId() {
       for (let [id, action] of this.actions.entries()) {
         if (!action.autoProgress) {
@@ -153,7 +160,7 @@ export default {
     },
     activeDialog() {
       if (this.dialog.current !== null) {
-        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign };
+        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign, styleText: this.dialog.style };
       }
       return {};
     },
@@ -347,16 +354,6 @@ export default {
   justify-content: space-between;
   transform: translateY(-50%);
 
-  @media (min-width: 1300px) {
-    width: calc(100% + 3 * (var(--button-size)));
-    left: calc(-1.5 * var(--button-size));
-  }
-
-  @media (min-width: 1400px) {
-    width: calc(100% + 4 * (var(--button-size)));
-    left: calc(-2 * var(--button-size));
-  }
-
   &__button {
     width: var(--button-size, 50px);
     min-width: var(--button-size, 50px) !important;
@@ -367,6 +364,8 @@ export default {
     left: 0;
 
     &.right {
+      right: 0;
+      left: unset;
       margin-left: auto;
     }
   }
