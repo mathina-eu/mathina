@@ -607,7 +607,8 @@ actions:
         
   - type: sceneText
     text: ...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
-
+     
+    
   - type: dialog
     avatarAlign:
        flamma: right
@@ -619,6 +620,23 @@ actions:
         char: leo
         mood: happy
         exposition: Leo exclaimed.
+        
+  - type: clearImage
+    id: mat
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:       
+        
 
       - text: Yes, it does! But let me make him come back before he is too far away.
         char: flamma
@@ -629,19 +647,10 @@ actions:
     id: uni
     
   - type: clearImage
-    id: mat
-    
-  - type: clearImage
     id: leo
     
   - type: clearImage
-    id: fla
-    
-  - type: image
-    src: $COMMON/img/characters/mathina/mathina5.png
-    id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
-    parallax: mid2   
+    id: fla 
     
   - type: image
     src: leo4_mirrored.png
@@ -685,18 +694,109 @@ actions:
         char: flamma
         mood: normal
 
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 45%; left: 0%;" 
+    parallax: front2 
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
+    parallax: mid2  
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -100
+        width: 30% 
+        #ease: power3.out
+        
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 1
+        # #xPercent: 100
+        # delay: 3
+        # transform: rotateY(180deg)
+        
+
+
   - type: sceneText
     text: Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
 
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla 
+    
+  - type: clearImage
+    id: mat
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
+
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
-      - text: I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try Mathina!
+      - text: I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try it!
         char: flamma
-        mood: happy
+        mood: normal
 
   - type: game
     text: "Try to fly the unidragon with pairs of numbers"
@@ -707,8 +807,8 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
      - text: Very well! You see, you can tell the unidragon a few pairs of
@@ -717,16 +817,16 @@ actions:
         for the unidragon trainers because you can plan the path they will fly
         in advance, for instance avoiding obstacles.
        char: flamma
-       mood: happy
+       mood: normal
 
      - text: But Flamma, if you tell him so many pairs of numbers,
           how can you know where the unidragon will end?
        char: leo
-       mood: happy
+       mood: thinking
 
      - text: I will let you figure that out.
        char: flamma
-       mood: happy
+       mood: normal
 
   - type: game
     text: "Fly the unidragon to the castle avoiding the obstacles. You can
@@ -736,14 +836,14 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
       - text: Did you notice something? How can you guess where the unidragon
           will be?
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: It’s not a guess, it’s easy! You only need to add all the first
           numbers and all the second numbers of the pairs! What you get
@@ -753,8 +853,8 @@ actions:
 
       - text: Mathina, that is exactly right!
         exposition: said Flamma with great pride.
-        char: leo
-        mood: happy
+        char: flamma
+        mood: normal
 
   - type: sceneText
     text: Leo was astonished and checking what Mathina just said,
@@ -762,8 +862,8 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
       - text: I will pose a challenge to you then. I have these fireballs
@@ -771,7 +871,7 @@ actions:
           to reach all the fireballs but without touching any of the clouds
           in the sky.
         char: flamma
-        mood: happy
+        mood: normal
 
       - text: No problem, with this trick we can do that!
         char: leo
@@ -783,12 +883,12 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
     entries:
 
       - text: Fantastic, Mathina. Now you are really becoming a firebird trainer.
           Next time we will go to the Arisa castle, where all the firebird
           trainers meet and challenge each other.
         char: flamma
-        mood: happy
+        mood: normal
