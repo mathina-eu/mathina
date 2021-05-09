@@ -513,8 +513,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: 
-      "Vedi? Hai 12 ore sul tuo orologio, quindi 12 = 0, e dopo le 11 ricomincerai dall'inizio. Per la collana è lo stesso, ma il tuo orologio questa volta ha 26 ore."
+      - text: "Vedi? Hai 12 ore sul tuo orologio, quindi 12 = 0, e dopo le 11 ricomincerai dall'inizio. Per la collana è lo stesso, ma il tuo orologio questa volta ha 26 ore."
         char: Angela
         mood: normal
       - text: "Ti va di esercitarti di più su questa nuova somma? Proviamo a fare qualche addizione su alcuni orologi."

@@ -377,7 +377,7 @@ factions:
   - type: dialog
     entries:
       - text: "T-J !!"
-        char: Parrot
+        char: parrot
         mood: happy
   - type: dialog
     entries:
@@ -404,12 +404,12 @@ factions:
   - type: dialog
     entries:
       - text: "Non preoccuparti: è sempre così. Sono Angela, piacere di conoscerti."
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "Ciao! È il tuo pappagallo?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: clearImage
     id: Mathina00
@@ -422,12 +422,12 @@ factions:
   - type: dialog
     entries:
       - text: "Non esattamente… Vive con me, ma la sua storia è molto interessante: una volta faceva parte della ciurma di una nave pirata, e ha preso parte a tante tante avventure. Da alcuni anni la ciurma ha smesso di navigare, e così ognuno ha preso la sua strada. Alcuni di loro sono probabilmente ancora presenti sull'isola."
-        char: Angela
+        char: angela
         mood: normal
   - type: dialog
     entries:
       - text: "Wow! Sembra che siate diventati amici!"
-        char: Angela
+        char: angela
         mood: happy
   - type: sceneText
     text: >
@@ -438,7 +438,7 @@ factions:
   - type: dialog
     entries:
       - text: "Vuoi un biscotto?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -446,8 +446,8 @@ factions:
   - type: dialog
     entries:
       - text: "sembra che dica sempre la stessa parola! E se mi dicesse solo “sì”?"
-        char: Mathina
-        mood: distracted
+        char: mathina
+        mood: thinking
         
   - type: clearImage
     id: Angela1
@@ -461,7 +461,7 @@ factions:
   - type: dialog
     entries:
       - text: "sembra proprio di sì: prima gli chiedevi di accarezzarlo, ora voleva un biscotto. Proviamo con qualcosa di diverso? Chiedigli qualcosa che abbia un “no” come risposta."
-        char: Angela
+        char: angela
         mood: normal
   - type: sceneText
     text: >
@@ -469,7 +469,7 @@ factions:
   - type: dialog
     entries:
       - text: "Forse terrò questo biscotto per me, e lo mangerò più tardi. Va bene?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -524,7 +524,7 @@ factions:
   - type: dialog
     entries:
       - text: "Ora lo sappiamo, “T-J” significa “sì” e “O-P” significa “no”."
-        char: Mathina
+        char: mathina
         mood: happy
                
         
@@ -534,17 +534,17 @@ factions:
   - type: dialog
     entries:
       - text: "Sono confusa... “O-P” ha due lettere, proprio come “no”, ma capisco perché il pappagallo parli così! Non ne ho idea. Forse è solo un codice strampalato."
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "Forse sta solo cambiando le lettere! Pensa all'alfabeto K, M, N, O, P, ... "
-        char: Angela
+        char: angela
         mood: normal
   - type: dialog
     entries:
       - text: "Penso di avere capito! Sta sostituendo ogni lettera con quella immediatamente successiva nell'alfabeto. Quindi NO diventa OP, poiché O è immediatamente dopo N e P è immediatamente dopo O."
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -552,7 +552,7 @@ factions:
   - type: dialog
     entries:
       - text: "Molto brava Mathina! Questo è uno dei modi standard con cui i pirati comunicano in segreto ."
-        char: Angela
+        char: angela
         mood: happy
         
         
@@ -564,17 +564,17 @@ factions:
   - type: dialog
     entries:
       - text: "Come fai a saperlo? E... come riesci a tradurre così velocemente?"
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "Non si sa mai chi su quest'isola è un pirata o no. Ti rivelerò un segreto: facevo parte della stessa ciurma di John, il pappagallo. John è molto intelligente ed è in grado di parlare abbastanza fluentemente. Ma a volte trova divertente ripetere alcune parole in codice, come  “sì” e “no”."
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "Abbiamo un trucco per comunicare: una collana che può essere utilizzata per crittografare e decrittare parole e frasi."
-        char: Angela
+        char: angela
         mood: normal
   - type: image
     id: CaesarJewel
@@ -591,28 +591,28 @@ factions:
   - type: dialog
     entries:
       - text: "È molto bella... come funziona? - disse Mathina - Vedo che le lettere appaiono due volte: una nel cerchio interno e una nel cerchio esterno, ma sono spostate. Perché?"
-        char: Mathina
+        char: mathina
         mood: excited
       - text: "“Il cerchio interno è il tuo punto di partenza. Se vuoi crittografare la lettera A, ti basta cercare la A nel cerchio interno, e poi guardare la lettera che corrisponde alla A nel cerchio esterno. "
-        char: Angela
+        char: angela
         mood: normal
       - text: "In questo caso trovi B, quindi la lettera A viene tradotta nella lettera B. Se vuoi decifrare..."
-        char: Angela
+        char: angela
         mood: normal        
       - text: "... lo faccio solo all'indietro, giusto? Cerco la lettera che voglio tradurre nel cerchio esterno, quindi trovo la lettera corrispondente in quello interno."
-        char: Mathina
+        char: mathina
         mood: happy
       - text: " Come se vedessi che la lettera J va alla lettera I, e se continuo a cercare T va in S. Quindi... TJ è SI!"
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Bravissima - esclamò Angela. Vuoi provare a tradurre qualche altra frase?"
-        char: Angela
+        char: angela
         mood: happy
       - text: "Sì grazie! Proviamo!"
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Ricorda, spostati dal cerchio esterno a quello interno per decifrare."
-        char: Angela
+        char: angela
         mood: normal
 
   - type: game
@@ -628,12 +628,12 @@ factions:
   - type: dialog
     entries:
       - text: "Angela, è stata una giornata meravigliosa, spero di tornare presto a trovare te e John."
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "Certo che lo farai! Oh, e non restituirmi la collana. Tienilo come ricordo della giornata passata insieme a noi!"
-        char: Angela
+        char: angela
         mood: happy   
         
   - type: clearImage
@@ -794,7 +794,7 @@ factions:
   - type: dialog
     entries:
       - text: "Ciao!! Quasi non ti ho notato. È stato un giorno divertentissimo!"
-        char: Mathina
+        char: mathina
         mood: excited
   - type: sceneText
     text: >
@@ -802,7 +802,7 @@ factions:
   - type: dialog
     entries:
       - text: "... E finalmente ho provato a tradurre alcune frasi, ma ho quasi perso l'ultimo traghetto! Ma eccomi qui ... e ... com'è andata la tua giornata ... uh ... non ricordo il tuo nome, scusa!"
-        char: Mathina
+        char: mathina
         mood: normal
   - type: sceneText
     text: >
@@ -810,7 +810,7 @@ factions:
   - type: dialog
     entries:
       - text: "Ora sono curiosa, dove l’hai nascosto?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -818,7 +818,7 @@ factions:
   - type: dialog
     entries:
       - text: "Certo che lo sono! Dimmi!"
-        char: Mathina
+        char: mathina
         mood: excited
   - type: sceneText
     text: >

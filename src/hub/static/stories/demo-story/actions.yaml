@@ -3,6 +3,83 @@ actions:
     src: c1-bg1.jpg
     id: bg1
     style: "width: 100%"
+    
+# BEGIN PROVA
+
+  - type: dialog
+    entries:
+      - text: "mathina happy"
+        char: mathina
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "mathina talking"
+        char: mathina
+        mood: talking
+
+  - type: dialog
+    entries:
+      - text: "mathina surprised"
+        char: mathina
+        mood: surprised
+
+  - type: dialog
+    entries:
+      - text: "mathina thinking"
+        char: mathina
+        mood: thinking
+
+  - type: dialog
+    entries:
+      - text: "mathina arguing"
+        char: mathina
+        mood: arguing
+
+  - type: dialog
+    entries:
+      - text: "mathina sad"
+        char: mathina
+        mood: sad
+
+  - type: dialog
+    entries:
+      - text: "angela normal"
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "angela happy"
+        char: angela
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "angela sad"
+        char: angela
+        mood: sad
+
+  - type: dialog
+    entries:
+      - text: "john normal"
+        char: parrot
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "john happy"
+        char: parrot
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "john sad"
+        char: parrot
+        mood: sad
+
+# END PROVA    
+    
   - type: sceneText
     text: >
       <p>Lorem ipsum</p>
