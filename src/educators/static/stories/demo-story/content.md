@@ -6,7 +6,7 @@
 
 ## Link to a specific point of a story using tags
 
-Note that using *$**HUB_URL* will replace the start of the link with http://localhost:3002 during development and the 
+Note that using $​HUB_URL will replace the start of the link with http://localhost:3002 during development and the 
 Hub's url in production.
 
 [First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
