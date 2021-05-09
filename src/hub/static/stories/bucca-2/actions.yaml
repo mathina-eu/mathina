@@ -619,7 +619,7 @@ actions:
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Select the correct word"
     cta: "Try it yourself!"
-    url: /apps/bucca-2-app/bucca-2-app-1.htm
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1
 
 
   - type: sceneText
@@ -832,7 +832,7 @@ actions:
     text: "Try to decipher the secret message with the help of the jewel"
     toolbarText: "Try to decipher the secret message with the help of the jewel"
     cta: "Try it yourself!"
-    url: /apps/bucca-2-app/bucca-2-app-2.htm
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=1
     
   - type: sceneText
     text: >

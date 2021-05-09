@@ -43,7 +43,7 @@ scene=new THREE.Scene();
 
 
 
-camera = new THREE.PerspectiveCamera( 15, window.innerWidth / window.innerHeight, 1, 1000 );
+camera = new THREE.PerspectiveCamera( 15, width / height, 1, 1000 );
 camera.position.set(20,-10,0);
 camera.up.set(0,-1,0)
 scene.add(camera);
