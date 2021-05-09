@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<style>
+    html {
+        background: url(img/bg1_plain.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .head {
+        padding: 10px;
+        cursor: move;
+        z-index: 10;
+        background-color: #C8F4F9;
+        border: 5px solid #565A6E;
+        color: #000;
+        width: 15%;
+        heigth: 10%;
+        position: absolute;
+        left: 100px;
+        font-size: 25px;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    .divimg {
+        cursor: move;
+        position: absolute;
+        background-color: #FFF3EC;
+        text-align: center;
+        border: 5px solid #F87595;
+        width: 11%;
+        heigth: 5%;
+        right: 100px;
+        z-index: 10;
+    }
+
+
+    #QuadratoCentrale1 {
+        position: absolute;
+        left: 25vw;
+        top: 15vh;
+        width: 20vw;
+        height: 15vw;
+        border: solid 5px #2F7604;
+        background-color: #F8FFCA;
+    }
+
+    #QuadratoCentrale2 {
+        position: absolute;
+        left: 55vw;
+        top: 15vh;
+        width: 20vw;
+        height: 15vw;
+        border: solid 3px;
+        border: solid 5px #2F7604;
+        background-color: #F8FFCA;
+    }
+
+    #QuadratoCentrale3 {
+        position: absolute;
+        left: 25vw;
+        top: 50vh;
+        width: 20vw;
+        height: 15vw;
+        border: solid 3px;
+        border: solid 5px #2F7604;
+        background-color: #F8FFCA;
+    }
+
+    #QuadratoCentrale4 {
+        position: absolute;
+        left: 55vw;
+        top: 50vh;
+        width: 20vw;
+        height: 15vw;
+        border: solid 3px;
+        border: solid 5px #2F7604;
+        background-color: #F8FFCA;
+    }
+
+    #messaggio {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #C8F4F9;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #chiave {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #FFF3EC;
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #Head1 {
+        top: 200px;
+    }
+
+    #Head2 {
+        top: 350px;
+    }
+
+    #Head3 {
+        top: 550px;
+    }
+
+    #Head4 {
+        top: 700px;
+    }
+
+    #Div1 {
+        top: 50px;
+    }
+
+    #Div2 {
+        top: 200px;
+    }
+
+    #Div3 {
+        top: 350px;
+    }
+
+    #Div4 {
+        top: 500px;
+    }
+
+    #Div5 {
+        top: 650px;
+    }
+
+    #Div6 {
+        top: 800px;
+    }
+
+    #successMessage {
+        position: absolute;
+        /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+        z-index: 100;
+        background: #f3f1cd;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 58%;
+    }
+
+    #failMessage {
+        position: absolute;
+        /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+        z-index: 100;
+        background: #f3f1cd;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 58%;
+    }
+</style>
+
+<body onload="Init()">
+    <div id="messaggio">Messaggio: guardate il settimo albero a est dell'entrata.</div>
+    <div id="chiave">Chiave: il cielo ne &egrave; pieno</div>
+
+    <div id="Head1" class="head">Guardate il settimo albero a est dell'entrata</div>
+    <div id="Head2" class="head">Guardate il terzo albero a destra dall'entrata</div>
+    <div id="Head3" class="head">Guardate il settimo albero a nord delle fontane</div>
+    <div id="Head4" class="head">Guardate l'albero vicino alla panchina</div>
+
+    <div id="Div1" class="divimg"><img src="img/f06.png" width="60%"></div>
+    <div id="Div2" class="divimg"><img src="img/f08.png" width="60%"></div>
+    <div id="Div3" class="divimg"><img src="img/f07.png" width="60%"></div>
+    <div id="Div4" class="divimg"><img src="img/f09.png" width="60%"></div>
+    <div id="Div5" class="divimg"><img src="img/f10.png" width="60%"></div>
+    <div id="Div6" class="divimg"><img src="img/f11.png" width="60%"></div>
+
+    <div id="QuadratoCentrale1">
+
+    </div>
+
+    <div id="QuadratoCentrale2">
+
+    </div>
+
+    <div id="QuadratoCentrale3">
+
+    </div>
+
+    <div id="QuadratoCentrale4">
+
+    </div>
+
+    <script>
+        Traduzioni = [
+            [
+                ["messaggio"], "Message: Look at the third tree, east from the entrance.", "Messaggio: guardate il settimo albero a est dell'entrata.", "Mensagem: Olhe para a terceira &aacute;rvore, a leste da entrada.", "Nachricht: Sehen Sie sich den dritten Baum &ouml;stlich vom Eingang an."
+            ],
+            [
+                ["chiave"], "Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.", "Chave: o c&eacute;u est&aacute; cheio deles.", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
+            ],
+            [
+                ["Head1"], "Look at the third tree, east from the entrance.", "Guardate il settimo albero a est dell'entrata.", "Olhe para a terceira &aacute;rvore, a leste da entrada", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
+            ],
+            [
+                ["Head2"], "Look at the third tree going right from the entrance.", "Guardate il terzo albero a destra dall'entrata.", "Olhe para a terceira &aacute;rvore indo bem na entrada.", "Schauen Sie sich den dritten Baum an, der direkt vom Eingang aus verl&auml;uft."
+            ],
+            [
+                ["Head3"], "Look at the seventh tree north of the fountains.", "Guardate il settimo albero a nord delle fontane.", "Olhe para a s&eacute;tima &aacute;rvore ao norte das fontes.", "Schauen Sie sich den siebten Baum n&ouml;rdlich der Brunnen an."
+            ],
+            [
+                ["Head4"], "Look at the tree near the bench.", "Guardate l'albero vicino alla panchina.", "Olhe para a &aacute;rvore perto do banco.", "Schau dir den Baum in der N&auml;he der Bank an."
+            ]
+        ];
+
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
+
+
+        function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+
+
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("Div1"));
+        dragElement(document.getElementById("Div2"));
+        dragElement(document.getElementById("Div3"));
+        dragElement(document.getElementById("Div4"));
+        dragElement(document.getElementById("Div5"));
+        dragElement(document.getElementById("Div6"));
+        dragElement(document.getElementById("Head1"));
+        dragElement(document.getElementById("Head2"));
+        dragElement(document.getElementById("Head3"));
+        dragElement(document.getElementById("Head4"));
+
+        function dragElement(elmnt) {
+            var pos1 = 0,
+                pos2 = 0,
+                pos3 = 0,
+                pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function Link() {
+                location.reload();
+
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // get the mouse cursor position at startup:
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+                CheckRects();
+            }
+        }
+
+        function CheckSameRect(A, B) {
+            for (let i = 1; i <= 4; i++) {
+                if (IsRectInRect("QuadratoCentrale" + i, "Head" + A) && IsRectInRect("QuadratoCentrale" + i, "Div" + B)) return true;
+            }
+            return false;
+        }
+
+        function CheckInRect(A) {
+            for (let i = 1; i <= 4; i++) {
+                if (IsRectInRect("QuadratoCentrale" + i, A)) return true;
+            }
+            return false;
+        }
+
+        function CheckRects() {
+            if (!CheckInRect("Head1")) return;
+            if (!CheckInRect("Head2")) return;
+            if (!CheckInRect("Head3")) return;
+            if (!CheckInRect("Head4")) return;
+            NFuori = 0;
+            if (!CheckInRect("Div1")) NFuori++;
+            if (!CheckInRect("Div2")) NFuori++;
+            if (!CheckInRect("Div3")) NFuori++;
+            if (!CheckInRect("Div4")) NFuori++;
+            if (!CheckInRect("Div5")) NFuori++;
+            if (!CheckInRect("Div6")) NFuori++;
+
+            if (NFuori != 2) return;
+
+            if (CheckSameRect(1, 1) || CheckSameRect(1, 3)) Finisci();
+            else Sconfitta();
+
+        }
+
+        function IsRectInRect(Contenitore, Contenuto) {
+            var DimContenitore = document.getElementById(Contenitore).getBoundingClientRect();
+            var DimContenuto = document.getElementById(Contenuto).getBoundingClientRect();
+            if (DimContenitore.left < DimContenuto.left && DimContenitore.right > DimContenuto.right && DimContenitore.top < DimContenuto.top && DimContenitore.bottom > DimContenuto.bottom) return true;
+            return false;
+        }
+
+
+        function Init() {
+            Vittoria = ["H1", "D3"];
+
+            Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
+        }
+
+
+        function Finisci() {
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.display = "block";
+
+        }
+
+        function Link() {
+            location.reload();
+
+        }
+    </script>
+    <div id="successMessage" style="display:none">
+        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+        <img src="img/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+
+    <div id="failMessage" style="display:none">
+        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+</body>
+
+</html>

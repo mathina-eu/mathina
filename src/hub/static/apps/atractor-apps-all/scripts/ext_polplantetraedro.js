@@ -105,11 +105,11 @@ if (typeof DataPols == 'undefined') DataPols=anim;
 var width0=parseInt(WW);
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var width=width0;
-var height=Math.min(width0/2,height0);
+var height=.96*Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
 var loader = new THREE.TextureLoader();
-loader.load('../atractor-apps-all/imgs/symm-bg2-02.jpg' , 
+loader.load('../atractor-apps-all/imgs/symm-bg2-04.jpg' , 
 function(texture)
             {
              scene.background = texture;  

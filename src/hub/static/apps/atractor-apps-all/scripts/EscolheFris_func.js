@@ -18,7 +18,7 @@ function init() {
 
     lista_escolhidas = new Array();
     for (var i=0; i<jogada_imgs; i++) {
-        lista_loaders[i]=loadImg('loaders',"icons/loading_fris.gif",imgWidth*0.9);
+        lista_loaders[i]=loadImg('loaders',"../atractor-apps-all/icons/loading_fris.gif",imgWidth*0.9);
     }
     loadImages();
 }
@@ -128,7 +128,7 @@ function loadImg(xdiv,source,largura=imgWidth){
     img.src = source;
     document.getElementById(xdiv).appendChild(img);
     if(borderGross>0){            
-        img.style.border = borderGross+"px solid #f3f1cd";
+        img.style.border = borderGross+"px solid transparent";
     }
     return img
 }

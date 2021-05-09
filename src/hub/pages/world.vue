@@ -39,7 +39,7 @@
               </v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title v-text="story.title" />
+              <v-list-item-title v-text="$t(`story.titles.${story.id}`)" />
             </v-list-item-content>
           </v-list-item>
         </v-list>
