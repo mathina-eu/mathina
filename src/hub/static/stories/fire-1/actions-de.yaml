@@ -1,16 +1,59 @@
+#FIRE-1 GERMAN Version"
 actions:
   - type: background
-    src: mathina-fire-bg-full.jpg
+    src: bg_full.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+    
+  - type: image
+    src: bg_clouds.png 
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+    
+  - type: image
+    src: bg_castle.png 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+    
+  - type: image
+    src: bg_fields.png 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
 
   - type: image
-    src: $COMMON/img/characters/mathina/mathina3.png
-    id: mat1
-    position: left
-    valign: bottom
-    style: "height: 25vh"
-
-
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 15%; top: 30%; left: 1%;"  
+    parallax: mid2
+    #valign: bottom
+    #style: "height: 25vh"
+  #- type: image
+    #src: $COMMON/img/leo3.png
+    #id: leo1
+    #style: "width: 15%; top: 57%; left: 0%; "  
+    #valign: bottom
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%;" 
+    parallax: front1
+    
+  # - type: image
+    # src: unidragon.gif
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;" 
+    # parallax: mid2 
   - type: sceneText
     text: >
       Es war ein sonniger Morgen, Mathina und Leo gingen durch die Felder in der Nähe ihres Dorfes spazieren.
@@ -20,9 +63,18 @@ actions:
     #in the fields near their village when they suddenly saw an old woman
     #waving her hands towards the sky and uttering incomprehensible words.
 
+  - type: animation
+    target: matleo
+    vars:
+        duration: 5
+        xPercent: 155
+        yPercent: 75
+        width: 20% 
+        ease: power3.out
+
   - type: sceneText
     text: >
-      Die alte Frau war stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
+      Die Frau war stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
       Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten,
       außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock, der mit farbigen Streifen dekoriert war.
       Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden.
@@ -34,6 +86,20 @@ actions:
     #too short to be used as a walking support but long enough to extend
     #her arm to the floor.
 
+  - type: clearImage
+    id: matleo
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"  
+    parallax: mid2
 
   - type: sceneText
     text: >
@@ -41,12 +107,14 @@ actions:
     #Mathina, who wasn’t shy at all, approached the woman.
 
   - type: animation
-    target: mat1
+    target: fla
     vars:
-      x: 100
-      y: -10
-      style: "height: 200px"
-      ease: power3.out
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
 
   - type: dialog
     avatarAlign:
@@ -57,39 +125,99 @@ actions:
       - text: Hallo, bist Du eine Kriegerin?
         #Ms, are you a warrior?
         char: mathina
-        mood: happy
+        mood: talking
       - text: Oh, meine Liebe, das würde ich nicht sagen. Ich habe nie gekämpft, also jedenfalls nicht mit menschlichen Wesen.
         #Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
         char: flamma
-        mood: sad
+        mood: normal
       - text: Bist Du dann eine Zauberin?
         #Are you a wizard then?
         char: mathina
-        mood: happy
+        mood: arguing
       - text: Das würde ich auch nicht sagen, obwohl ich einige von ihnen kenne, und sie haben mir schon das ein oder andere Mal geholfen.
         #I wouldn’t say that either, although I know some of them and they have helped me more than once.
         char: flamma
-        mood: sad
+        mood: normal
       - text: Wer bist Du dann? Du hast vorhin eine fremde Sprache gesprochen.
         #Then who are you? You speak a strange language.
         char: mathina
-        mood: happy
+        mood: surprised
       - text: Ich bin eine Feuervogeltrainerin.
         #I am a firebird trainer.
         char: flamma
-        mood: sad
+        mood: normal
+        
+        
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"  
+    parallax: mid2
+    
+    
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
+    entries:
       - text: Was ist das?
         #What is that? - Replied Leo, with increasing interest.
         char: leo
         exposition: Fragte Leo, der auch neugierig geworden war.
         #maybe leo needs to be properly integrated into the dialog?
-        mood: happy
+        mood: talking
+        
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7.5%; top: 52%; left: 46%"  
+    parallax: mid2    
+     
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+      
+    entries:  
       - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
           Es gibt zum Beispiel viele verschiedene Arten von Feuervögeln, oder Vögel des Feuers.
           Diese Kreaturen sind überaus intelligent, doch ist ihr Geist und ihre Sprache anders als unsere.
-          Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
+          #Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
+        #My name is Flamma, I come from Arisa, a land full of strange
+        #creatures and wizards. In Arisa there are many types of firebirds,
+        #or birds of fire. These creatures are extremely intelligent, but their
+        #minds and language are different from ours. They use a very precise
+        #language to communicate where they are, how they fly, and where they go.
+        #We humans don’t have such precise words for describing their flight,
+        #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language.
+        #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+        char: flamma
+        mood: normal
+      - text: Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
           Wir Menschen können mit unserer Sprache nicht so exakt den Flug der Feuervögel beschreiben.
-          Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
+          #Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
+          #Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
+          #Das ist es, was ich mache, ich trainiere Feuervögel.
+        #My name is Flamma, I come from Arisa, a land full of strange
+        #creatures and wizards. In Arisa there are many types of firebirds,
+        #or birds of fire. These creatures are extremely intelligent, but their
+        #minds and language are different from ours. They use a very precise
+        #language to communicate where they are, how they fly, and where they go.
+        #We humans don’t have such precise words for describing their flight,
+        #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language.
+        #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+        char: flamma
+        mood: normal
+      - text: Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
           Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
           Das ist es, was ich mache, ich trainiere Feuervögel.
         #My name is Flamma, I come from Arisa, a land full of strange
@@ -101,13 +229,13 @@ actions:
         #but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language.
         #The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
         char: flamma
-        mood: sad
+        mood: normal
       - text: Oh, das ist ja spannend. Können wir mal solche Feuervögel sehen?
           Du sagst, es gibt verschiedene Arten...
         #Oh, that is fascinating. Can we see some of these firebirds?
         #You say there are different types…
         char: mathina
-        mood: happy
+        mood: talking
       - text: Ich bin hierher gekommen, um einen kleinen Einhorndrachen zu suchen, der mir vor zwei Tagen entwischt ist.
           Ich glaube, er wollte die Welt erkunden, ist aber zu weit weg geflogen.
           Ihr werdet ihn sehen, wenn ich es geschafft habe, ihm zu sagen, wo ich bin.
@@ -115,7 +243,125 @@ actions:
         #days ago. I think he wanted to explore the world but flew too far away.
         #You will see it, once I manage to tell him where I am.
         char: flamma
-        mood: sad
+        mood: normal
+
+  - type: clearImage
+    id: fla
+    
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo3.png
+    id: leo
+    style: "width: 8%; top: 50%; left: 38%"  
+    parallax: mid2
+    
+  - type: clearImage
+    id: mat      
+        
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: flamma1.png
+    id: fla
+    style: "width: 20%; top: 33%; left: 53%;" 
+    parallax: front3 
+    
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)" 
+    parallax: mid2 
+
+  - type: animation
+    target: uni
+    vars: 
+        duration: 3
+        width: 25%
+        xPercent: -130
+        yPercent: 40
+
+        
+  - type: animation
+    target: fla
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3
+        ease: power1.out
+        
+  - type: animation
+    target: mat
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.5
+        ease: power1.out
+        
+  - type: animation
+    target: leo
+    vars: 
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars: 
+        duration: 3
+        delay: 3
+        xPercent: -230
+        yPercent: -30
+        width: 20%
+        ease: power1.out
+        
+  - type: animation
+    target: fla
+    vars: 
+        duration: 3
+        transform: rotateY(0deg)
+        delay: 6
+        ease: power1.out
+        
+  - type: animation
+    target: mat
+    vars: 
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.5
+        ease: power1.out
+        
+  - type: animation
+    target: leo
+    vars: 
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.7
+        ease: power1.out
+        
+  - type: animation
+    target: uni
+    vars: 
+        duration: 4
+        delay: 6
+        transform: rotateY(0deg)
+        width: 5%
+        ease: power1.out
+        
+  - type: animation
+    target: uni
+    vars: 
+        duration: 4
+        delay: 10
+        transform: rotateY(180deg)
+        width: 10%
+        ease: power1.out
 
 
   - type: sceneText
@@ -128,10 +374,21 @@ actions:
         #PENDING TRANSLATION FROM HERE
         #The dragon moved gracefully and responded to Flamma as she moved her
         #arm and the stick.
+        
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"   
+    parallax: mid2
+        
   - type: dialog
     avatarAlign:
-      - flamma: right
-      - mathina: left
+      flamma: right
+      mathina: left
+      leo: left
     entries:
       - text: Was ist das, ist es ein Drache? Ich habe keine Angst vor Drachen!
         #What is that? Is it a dragon? - asked Leo - I am not afraid
@@ -139,16 +396,70 @@ actions:
         #getting closer.
         char: leo
         exposition: sagte Leo, aber er wirkte doch etwas unsicher.
-        mood: sad
+        mood: surprised
+        
+  - type: clearImage
+    id: fla
+        
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)" 
+    parallax: front1    
+  
+  - type: animation
+    target: uni
+    vars: 
+        duration: 20
+        delay: 3
+        transform: rotateY(180deg)
+        xPercent: -65
+        yPercent: -10
+        #xPercent: -530
+        #yPercent: -20
+        width: 30%
+        ease: power1.out          
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:  
       - text: Das ist ein Einhorndrache. Einhorndrachen sind wie normale Drachen,
           aber sie werden mit einem Horn auf dem Kopf geboren. So wie die Milchzähne bei Kindern,
           ist dieses Horn noch nicht so fest. Irgendwann fällt es vom Kopf ab,
           und ein stärkeres, größeres Horn wächst. Aber das abgefallene Horn lebt noch, und der Drache kann es immer noch spüren.
-          Wer einen Einhorndrachen trainieren möchte, so wie ich es tue, muss einen Drachen finden und sein Horn hüten.
+        #This is a unidragon. Unidragons are very similar to dragons,
+        #but they are born with a horn on their heads. Like milk teeth in
+        #children, that horn is fragile and eventually, it falls off their head
+        #when a stronger and bigger horn grows. But the fallen horn is not a dead
+        #material, the dragon can still feel it. Trainers of unidragons, as I am,
+        #must find a unidragon and take care of its horn. It is a big
+        #responsibility, since the horn is a sensitive part of the dragon, and
+        #the animal can feel it when we move it or point with it in a certain
+        #direction. We use that to guide the dragons in the air. The stick that
+        #I am carrying is not a walking support, it is the horn of this
+        #unidragon. Would you like to try to move the unidragon in the sky?
+        char: flamma
+        mood: normal
+      - text: Wer einen Einhorndrachen trainieren möchte, so wie ich es tue, muss einen Drachen finden und sein Horn hüten.
           Es ist eine verantwortungsvolle Aufgabe, denn das Horn ist empfindlich, und immer noch Teil des Drachen.
           Er spürt, wenn wir es bewegen oder damit in eine bestimmte Richtung zeigen.
           So können wir den Drachen in der Luft führen.
-          Dieser Stock, den ich trage, ist kein Gehstock, es ist das Horn dieses Einhorndrachen.
+        #This is a unidragon. Unidragons are very similar to dragons,
+        #but they are born with a horn on their heads. Like milk teeth in
+        #children, that horn is fragile and eventually, it falls off their head
+        #when a stronger and bigger horn grows. But the fallen horn is not a dead
+        #material, the dragon can still feel it. Trainers of unidragons, as I am,
+        #must find a unidragon and take care of its horn. It is a big
+        #responsibility, since the horn is a sensitive part of the dragon, and
+        #the animal can feel it when we move it or point with it in a certain
+        #direction. We use that to guide the dragons in the air. The stick that
+        #I am carrying is not a walking support, it is the horn of this
+        #unidragon. Would you like to try to move the unidragon in the sky?
+        char: flamma
+        mood: normal
+      - text: Dieser Stock, den ich trage, ist kein Gehstock, es ist das Horn dieses Einhorndrachen.
           Wollt Ihr mal versuchen, den Drachen am Himmel zu lenken?
         #This is a unidragon. Unidragons are very similar to dragons,
         #but they are born with a horn on their heads. Like milk teeth in
@@ -162,27 +473,46 @@ actions:
         #I am carrying is not a walking support, it is the horn of this
         #unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
-        mood: sad
+        mood: normal
       - text: Ja, unbedingt!
         #Yes! Yes! - said Mathina. And Leo added,
         char: mathina
-        mood: sad
+        mood: happy
       - text: Lass uns Einhorndrachen trainieren!
         #“Let’s become unidragon trainers!”
         char: leo
-        mood: sad
+        mood: happy
 
       - text: Ihr müsst einfach mit dem Horn in die Richtung zeigen, in die der Drache fliegen soll.
         #You just have to point the horn in the direction that you
         #want the unidragon to fly. - said Flamma.
         char: flamma
-        mood: sad
+        mood: normal
 
   - type: game
-    text: "Fly the unidragon 1"
+    text: "Spiel 1: Fliege den Einhorndrachen"
     url: https://mathina-tests.firebaseapp.com/vector2.html
+    
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 5%; top: 48%; left: 52%;"  
+    parallax: front1
+    
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out  
 
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
     entries:
       - text: Sehr gut! Und jetzt versucht mal, den Einhorndrachen so zu lenken, dass er diese Feuerbälle fängt.
           Feuerbälle sind die Hauptnahrung der Einhorndrachen, und sie schmecken besonders lecker.
@@ -192,13 +522,58 @@ actions:
         #and they love to eat these.
         char: flamma
         exposition: Flamma warf einige feurig brennende Bälle in die Luft, die wie Luftballons schwebten.
-        mood: sad
+        mood: normal
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.5
+        xPercent: 150
+        yPercent: -150
+        ease: power0.out  
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 0.5
+        repeat: 3
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 1.5
+        delay: 0.5
+        xPercent: 550
+        yPercent: 60
+        ease: power0.out  
+        
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 2
+        repeat: 300
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
 
   - type: game
-    text: "Fly the unidragon 2"
+    text: "Spiel 2: Fange die Feuerbälle ein"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
+  - type: clearImage
+    id: fire1
+    
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
     entries:
       - text: Nicht schlecht. Wenn Ihr aber wirklich Einhorndrachen trainieren wollt, müsst ihr üben.
           Könnt Ihr den Einhorndrachen dazu bringen, mit seinem rauchenden Schwanz Figuren in die Luft zu malen?
@@ -207,10 +582,10 @@ actions:
         #unidragon trainer, you have to practice. Can you make the
         #unidragon draw shapes in the sky with his smoke trail? Try it!
         char: flamma
-        mood: sad
+        mood: normal
 
   - type: game
-    text: "Fly the unidragon 3"
+    text: "Spiel 3: Einhorndrachen-Flugschule"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
@@ -219,6 +594,10 @@ actions:
     #"Flamma voice suddenly got all serious and she said:"
 
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
     entries:
       - text: Mathina, ich habe gesehen, dass Du Spaß beim Üben hattest.
           Du verstehst nun schon gut, wie man einen Einhorndrache führt.
@@ -231,7 +610,7 @@ actions:
         #should come with me to see it and to try to fly in some more
         #challenging competitions, with the best trainers in the country.
         char: flamma
-        mood: sad
+        mood: normal
       - text: Oh, das wäre wirklich toll!
           Können wir unseren eigenen Einhorndrachen haben?
         #Oh, that would be fantastic. Could we get our own
@@ -249,23 +628,23 @@ actions:
         #festival, yes, you could become a firebird trainer and get
         #your own unidragon.
         char: flamma
-        mood: sad
+        mood: normal
       - text: Ich würde es gern versuchen. Ich liebe Abenteuer!
           Wir werden einen Einhorndrachen haben, Leo!
         #I would love to try. I am always up for adventures!
         #We will have a unidragon, Leo!
         char: mathina
         mood: happy
-      - text: So soll es sein. Ihr werden aber viel üben müssen.
+      - text: So soll es sein. Ihr werdet aber viel üben müssen.
           Ich werde euch diesen Einhorndrachen noch etwas mehr trainieren lassen.
           Wenn ihr soweit seid, gehen wir zum Festival.
         #Then it is set. But you will have to practise a lot.
         #I will let you train with this unidragon more and once you are
         #ready we will go to the festival.
-    char: flamma
-    mood: happy
+        char: flamma
+        mood: normal
 
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
+    text: "Freier Einhorndrachen-Flugplatz"
+    cta: "Probiere alles aus, was Du möchtest!"
     url: /apps/example-app/
