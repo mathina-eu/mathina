@@ -76,7 +76,7 @@ actions:
     text: >
       Die Frau war stark und souverän, wie eine erfahrene Waldhüterin, für die die Zeit stehen geblieben ist.
       Ihr Haar war weiß und lang. Sie trug solide Lederkleidung, einen alten, staubigen Umhang, Stiefel, die an Reitstiefel erinnerten,
-      außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock, der mit farbigen Streifen dekoriert war.
+      außerdem eine Tasche, ein dickes Seil und in der einen Hand ein Buch, in der anderen einen kurzen Stock.
       Der Stock war zu kurz, um ein Gehstock zu sein, reichte aber dennoch von ihrer Hand bis zum Boden.
     #The woman was old but fiery and strong, like a retired ranger,
     #for whom time had stopped passing by. Her hair was white and long.
@@ -142,7 +142,7 @@ actions:
         #Then who are you? You speak a strange language.
         char: mathina
         mood: surprised
-      - text: Ich bin eine Feuervogeltrainerin.
+      - text: Ich bin eine Trainerin der Feuervögel.
         #I am a firebird trainer.
         char: flamma
         mood: normal
@@ -189,7 +189,7 @@ actions:
       
     entries:  
       - text: Ich heiße Flamma, und ich komme aus Arisa, einem Land, in dem es jede Menge sonderbare Kreaturen gibt und auch zauberkundige Menschen.
-          Es gibt zum Beispiel viele verschiedene Arten von Feuervögeln, oder Vögel des Feuers.
+          Es gibt zum Beispiel viele verschiedene Arten von Feuervögeln.
           Diese Kreaturen sind überaus intelligent, doch ist ihr Geist und ihre Sprache anders als unsere.
           #Sie verwenden eine Sprache, mit der sie sehr genau sagen können, wo sie sich gerade befinden, wie sie fliegen und wohin.
         #My name is Flamma, I come from Arisa, a land full of strange
@@ -219,7 +219,7 @@ actions:
         mood: normal
       - text: Aber es gibt magische Sprachen, mit Zahlen, Symbolen und geheimen Worten, mit denen wir das, was wir meinen, in ihre Sprache übersetzen können.
           Wenn man die Feuervögel gut trainiert, können sie uns verstehen und so fliegen, wie wir es ihnen sagen.
-          Das ist es, was ich mache, ich trainiere Feuervögel.
+          Das ist es also, was ich mache, ich trainiere Feuervögel.
         #My name is Flamma, I come from Arisa, a land full of strange
         #creatures and wizards. In Arisa there are many types of firebirds,
         #or birds of fire. These creatures are extremely intelligent, but their
@@ -367,7 +367,8 @@ actions:
   - type: sceneText
     text: Flamma stieß einen tiefen, lauten Schrei in Richtung Himmel aus.
         Er erinnerte an keine Sprache, schien aber eine Bedeutung zu haben.
-        Plötzlich erschien eine Art Drache am Himmel, der eine farbige Rauchspur in der Luft hinterließ.
+        Plötzlich erschien eine Art Drache am Himmel.
+        #, der eine farbige Rauchspur in der Luft hinterließ.
         #Flamma let out a deep and loud scream to the sky. It didn’t remind
         #of any language, but it seemed to have a meaning. Suddenly, a kind of
         #dragon appeared in the sky, leaving a colorful smokey trail in the air.
@@ -491,6 +492,7 @@ actions:
 
   - type: game
     text: "Spiel 1: Fliege den Einhorndrachen"
+    cta: "Fliege den Einhorndrachen!"
     url: https://mathina-tests.firebaseapp.com/vector2.html
     
   - type: image
@@ -564,6 +566,7 @@ actions:
 
   - type: game
     text: "Spiel 2: Fange die Feuerbälle ein"
+    cta: "Fange Feuerbälle!"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: clearImage
@@ -586,6 +589,7 @@ actions:
 
   - type: game
     text: "Spiel 3: Einhorndrachen-Flugschule"
+    cta: "Fliege den Einhorndrachen!"
     url: https://mathina-tests.firebaseapp.com/vector2.html
 
   - type: sceneText
