@@ -1,17 +1,380 @@
 actions:
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: sceneText
     text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+      <h1>Man in the middle</h1>
+  - type: sceneText
+    text: >
+     <p>Some time has passed since Mathina went for the first time to Buccaneer’s Island and with her brother, she is now on the verge of a new adventure.
+     <br/>She has received a letter from a mysterious person claiming to have followed her and her brother during their last trips to Buccaneer’s Island...</p>
   - type: dialog
     entries:
-      - text: "I love these toys!"
+      - text: "WHAT?! No, this is not possible, who could have followed us? Why? What do they want from us?"
+        char: leo
+        mood: excited
+      - text: "I don’t know Leo, but we must go and find out ourselves!"
+        char: mathina
+        mood: normal
+      - text: "Ok, but how can we be sure that they are not following us again? What if it is a trap? I am very scared, Mathina!"
+        char: leo
+        mood: excited
+      - text: "Don’t worry, Leo, everything will be fine, let’s go to the island, we will figure out something once we arrive there!"
+        char: mathina
+        mood: normal 
+  - type: sceneText
+    text: >
+     <p>The next day, Mathina and her brother left for the island, in what would become one of their last trips to the magical and mysterious place where they lived so many adventures and got so entangled in pirates history and treasures from a time long gone by.<br/>The sky was a blue pearl that morning and the travel was enjoyable and safe. The mysterious letter was sort of an unspoken presence in Mathina and Leo’s minds, but looking at them you could perceive that something was bugging them. </p>   
+  - type: sceneText
+    text: >
+     <p>When the ferry finally got to the dock on Buccaneer’s Island, Mathina and Leo already knew that a new adventure was about to begin, a dangerous one, this time! </p>      
+  - type: dialog
+    entries:
+      - text: "Hii!! How are you Mathina?"
+        char: angela
+        mood: excited
+      - text: "Hi Angela! This is my brother Leo! Well... we are quite puzzled at the moment!"
         char: mathina
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
+  - type: sceneText
+    text: >
+     <p>Mathina, Angela and Leo spent some time together near the sea, discussing the strange message. They realize that they had to explore the surrounding area a little bit in order to gain some clues about this mysterious person. </p>               
+  - type: dialog
+    entries:     
+      - text: "But how do we manage to communicate safely while we are looking around?"
+        char: leo
+        mood: normal
+      - text: "Yes, Leo, so, do you remember the trick I explained to you last time when we were playing? You start with a message and with a key, and then you can encrypt it. The same key works to decrypt the coded message and get back the original."
+        char: mathina
+        mood: normal
+      - text: "I remember, the key was a number, which we can use by summing it to the letters of the alphabet, right?"
+        char: leo
+        mood: normal
+      - text: "Yes, exactly!"
+        char: mathina
+        mood: happy
+      - text: "But wait, This person could intercept our messages... Even if we decide about a key now... he could be listening! I also remember that this method was not so safe... Like... after a bit, let’s say some minutes, one can try various combinations and get the key!"
+        char: leo
+        mood: normal
+      - text: "I have an idea about this. Every time we communicate, we will change the key! So no matter if this mysterious presence manages to get the key: we will have another one!"
+        char: angela
+        mood: normal
+      - text: "That is clever indeed! But... How? If we have to always come here we will lose a lot of time, but we cannot just agree on another key in a message: if this person manages to decode the communication will also decode the new key!"
+        char: mathina
+        mood: normal
+      - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
+        char: angela
+        mood: normal
+      - text: "Wow, this seems so cool, how is it possible?"
+        char: leo
+        mood: excited
+      - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
+        char: angela
+        mood: normal
+  - type: sceneText
+    text: >
+     <p>Angela took a deck of cards from her jacket and showed it to Leo. </p>    
+  - type: dialog
+    entries:     
+      - text: "Well, there is a trick. Look: these cards are all in order, from the ace of spades to the king of hearts. Now, look how much time I need to shuffle them."
+        char: angela
+        mood: normal
+  - type: sceneText
+    text: >
+     <p>With a quick move, Angela shuffled the card, and showed them, now all randomly placed, in her hands. </p> 
+  - type: dialog
+    entries:     
+      - text: "Now, how much time do you think it would take for you to get back this deck in order, as it was before?"
+        char: angela
+        mood: normal
+      - text: "Mmh... well, not too much, but surely longer than the time it took to you to shuffle it."
+        char: leo
+        mood: normal
+      - text: "Exactly! There are operations very easy to do, but quite complicated to be undone. This is the trick!"
+        char: angela
+        mood: happy
+      - text: "Ok, but how do we produce a method? We can’t just go around shuffling cards!"
+        char: mathina
+        mood: normal
+      - text: "The trick is to use numbers: our shuffling operation will be to raise a certain number to another number, like... 3^7=2187. Of course you can go back, but it takes time and effort!"
+        char: angela
+        mood: normal
+      - text: "Ok, but you told us that we can agree on the key in public. If you tell me something like 'the key is the exponent to which you have to rise 3 to get 2187', either I also have to do all the effort, or you tell me directly 7, and anyone who listens will know the key as well!"
+        char: mathina
+        mood: normal
+      - text: "Here is where the trick happened. This particular trick is called “Diffie-Hellman key exchange”. Let’s try it. First, we must choose a base <i>p</i> and then a number between 2 and <i>p</i>-2, then we must choose a random number in that range and do some simple operations. Have a look!"
+        char: angela
+        mood: normal
   - type: game
-    text: "Want to hop around?"
+    text: "Let's help Mathina and Leo understand the method"
+    toolbarText: "Follow the steps and try to create the shared secret"
     cta: "Try it yourself!"
-    url: /apps/example-app/
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+  - type: dialog
+    entries:     
+      - text: "See, now we have the common secret which we can use as the key for all the ciphers you already encountered before."
+        char: angela
+        mood: happy
+      - text: "Thank you, so it’s decided this will be the key we will use to communicate. We can now simply exchange SMS and agree on a new key if the old one got compromised even if we are in distant places on the island."
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <h1>The <i>man in the middle</i> attack</h1>
+  - type: dialog
+    entries:     
+      - text: "Ok, it’s set. This is the way we will use to communicate here on Buccaneer’s Island. I will go exploring the mountain, while you will examine the coast and the park with Angela. To keep messages secret we will change the key of our cypher every time, using the Diffie-Hellman method to exchange the new key!"
+        char: mathina
+        mood: normal
+      - text: "Ok let’s go, sis!"
+        char: leo
+        mood: happy
+      - text: "But let’s be careful! That mysterious figure of which you caught a glimpse during your last trip here doesn’t sound reassuring to me."
+        char: mathina
+        mood: normal
+  - type: sceneText
+    text: >
+      <p> So Mathina and Leo parted ways, the youngster heading toward the coastline, and Mathina starting to climb up the hill. Their only hint about the secret of the buccaneers laid onto the engravings in the cave at the park that Leo and his friends saw during their trip to the island. It would be basically a worthless hint, if not for the mysterious figure that Leo said he had seen before leaving the island that was, he was convinced, following them from the park to the pier. If there was someone interested in their discovery, maybe there was something to discover and their findings had a deeper meaning. Surely Buccaneer’s Island is a place full of surprises, it’s worth a try, they thought.</p>
+  - type: sceneText
+    text: >
+      <p> An hour later Leo and Angela were still exploring the coast, when they received an SMS from Mathina.</p>
+  - type: game
+    text: "Let's see what interesting news Mathina has for us!"
+    toolbarText: "Follow the steps to decode Mathina's message"
+    cta: "Try it yourself!"
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: dialog
+    entries:     
+      - text: "WOW! Do you know anything about that, Angela?"
+        char: leo
+        mood: excited
+      - text: "No, I don’t. But surely Mathina must be on the right path. So, look, let’s try following her path, but from here on the coast. Can you see it? The forest in which the parrots live is right there, between us and Mathina’s path. Maybe if we try to position ourselves in such a way we can see both the forest and the trail, we may be able to direct Mathina along her path."
+        char: angela
+        mood: normal
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+  - type: dialog
+    entries:      
+    - text: "Uhm, very strange. We agreed that we should confirm our messages and set a new shared key, but Mathina is not answering. Should we be worried about that?"
+      char: leo
+      mood: normal
+    - text: "I don't think so, maybe Mathina just missed our last message, I’m sure we will know from her very soon." 
+      char: angela
+      mood: normal
+  - type: sceneText
+    text: >
+      <p>So the duo continued to explore the path up to the parrot forest, in the hope that the birds were the key to the success of their quest!</p>
+  - type: dialog
+    entries:      
+     - text: "But what if somebody did manage to understand the code?"
+       char: leo
+       mood: normal
+     - text: "That's unlikely, look! let’s try to do it!"
+       char: angela
+       mood: normal
+  - type: game
+    text: "Try help Leo to hack the system"
+    toolbarText: "Follow the steps to help Leo understand how secure the system is"
+    cta: "Try it yourself!"
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
+  - type: dialog
+    entries:      
+     - text: "See? It takes quite a lot of time to do that, we can be safe!"
+       char: angela
+       mood: normal
+  - type: background
+    src: red.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
+  - type: sceneText
+    text: >
+      <p>Meanwhile, on the mountain...</p>  
+  - type: dialog
+    entries:      
+     - text: "Hey! Who are you? Let me go! Stop! Who are you? What do you want from me?"
+       char: mathina
+       mood: angry
+     - text: "Shut up! I'm not going to hurt you or anything!"
+       char: pirate
+       mood: angry
+     - text: "Yeah, very reassuring, that's what any thief or pirate would say! I don't have anything valuable! Go away! Let me go!"
+       char: angela
+       mood: normal       
+  - type: sceneText
+    text: >
+      <p>Mathina was in trouble! The mysterious figure was real and was holding her captive in a cave on the mountain. Who was he? What did he want from Mathina?</p>      
+  - type: background
+    src: red.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"        
+  - type: dialog
+    entries:      
+     - text: "Now that you can not run away, let me introduce myself. Ahoy, I'm Captain Terry Charmingparrot, from Buccaneer's Island!"
+       char: pirate
+       mood: normal
+     - text: "What are you talking about? Everybody knows that there are no pirates or buccaneers left here. They are just a thing of the past!"
+       char: mathina
+       mood: angry
+     - text: "Well, not me, young lady, not me! I'm here and I am a real pirate! My ancestors left a huge treasure here on the island and when your stinky little brother and his fellow fleas found the engraving in the park last year, I realized I had the first great opportunity to finally discover the truth about the treasure! Now, let me bring your little brother as well!"
+       char: pirate
+       mood: normal
+     - text: "How do you plan to do it? We decided that he will not come here on the mountain, but search for hints near the coast."
+       char: mathina
+       mood: normal
+     - text: "I know about your little cryptographic system. I can fake to be you, as he does not know who is sending him messages!"
+       char: pirate
+       mood: normal
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"        
+  - type: sceneText
+    text: >
+      <p>Then at Parrot Forest...</p>      
+  - type: dialog
+    entries:      
+     - text: "Hey! Look! A new message from Mathina!"
+       char: leo
+       mood: normal
+  - type: game
+    text: "Let's see what interesting news Mathina has for us!"
+    toolbarText: "Follow the steps to decode Mathina's message"
+    cta: "Try it yourself!"
+    url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"      
+  - type: dialog
+    entries:      
+     - text: "Ok, Angela, let's go catch up with Mathina! It looks like we are near the end of our quest!"
+       char: leo
+       mood: normal
+  - type: background
+    src: bg4_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+  - type: sceneText
+    text: >
+      <p>So the duo started to climb up the mountains following the parrot trail discovered by Mathina.</p> 
+  - type: background
+    src: red.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+  - type: dialog
+    entries:      
+     - text: "So here we are! Welcome to my cave!"
+       char: pirate
+       mood: normal    
+     - text: "Who are you? Where’s Mathina?"
+       char: leo
+       mood: angry 
+  - type: sceneText
+    text: >
+      <p>Leo shouted at the mysterious pirate while a net covered the exit of the cave, trapping Angela and himself inside.</p>        
+  - type: dialog
+    entries: 
+     - text: "Your sister is safe little fella, don’t worry. She just forgot to teach you some safety tricks: you need to be certain that you're really talking to the real receiver of your message while using key exchange cryptography! Now, be quiet and make yourself comfortable, you will be my guest for quite a time!"
+       char: pirate
+       mood: normal  
+  - type: sceneText
+    text: >
+      <p>Leo and Angela were brought to the room where Mathina was being held.</p>        
+  - type: dialog
+    entries:        
+     - text: "I'm sorry Leo, I'm sorry Angela, I fell into the trap of this pirate and he must have sent you some misleading message to lure you here in his cove. He says he is the last true pirate on the island and he wants to discover the treasure of his ancient fellow buccaneers."
+       char: mathina
+       mood: sad        
+     - text: "But there may be no treasure at all! All we know is that there were some buccaneers on the island, but we have no evidence that the treasure is still here – or it ever was, for that matters. Even the trail of the parrot may just be a trick engineered by the tourist office to entertain some visitors."
+       char: angela
+       mood: normal          
+  - type: sceneText
+    text: >
+      <p>Suddenly Captain Terry Charmingparrot slammed the door open.</p>  
+  - type: dialog
+    entries:        
+     - text: "Shut up, you vermins! I know for sure that the treasure is real! I'm the last living pirate on the island! And you gotta help me find the treasure! Let's go!"
+       char: pirate
+       mood: normal 
+  - type: background
+    src: red.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+  - type: sceneText
+    text: >
+      <p>The following days were dreadful for the party. They were bound with plastic chains to one another and forced to search the forest and the coasts looking for hidden treasure.</p>  
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+  - type: dialog
+    entries:        
+     - text: "He is so much of a pirate that he couldn't even have proper chains to bound us! We've been kidnapped by the parody of a pirate. He's probably out of his mind, we must bring him back to reason and convince him that there's no treasure at all!"
+       char: mathina
+       mood: angry 
+     - text: "But how can we do it? Maybe we can fake a letter from some old pirate saying that the treasure has been all spent in debauchery and revelry once the buccaneers came to this island."
+       char: leo
+       mood: normal
+     - text: "No, it won't work, Leo, Captain Charmingparrot knows about public-key cryptography, this was how he got us here in the first place! He used a so-called 'man in the middle attack' in which the receiver is not able to confirm the identity of the sender and trusts them to be the real one."
+       char: mathina
+       mood: normal
+     - text: "Yes, and the consequences may be dreadful, as in our case. We could have implemented some signature system for our messages, Mathina."
+       char: angela
+       mood: normal
+     - text: "Yes, we definitely could've, do you know how this works, Leo?"
+       char: mathina
+       mood: normal
+  - type: sceneText
+    text: >
+      <p>Leo nodded in deny.</p>  
+  - type: dialog
+    entries:        
+     - text: "They are based on mathematical operations that are very easy to perform one way, but much more difficult to perform backway. For example, Leo, do you remember when in school you studied two-figure division and complained about how much more difficult it was than multiplication? The principle is the same, just way harder on one of the two sides."
+       char: angela
+       mood: normal       
+  - type: sceneText
+    text: >
+      <p>"But, Angela!" Mathina interrupted with an unhoped smile</p>        
+  - type: dialog
+    entries:        
+     - text: "Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot should trust the message as he sees it!"
+       char: mathina
+       mood: happy      
+     - text: "Very good point Mathina, let’s do it, oh wait he's there, just pretend we're busy!"
+       char: leo
+       mood: normal   
+     - text: "Arrr, even today nothing but a bunch of old broken bottles, I'm starting to question if you're not just making me lose big time in my quest, you sea fleas! It's getting dark, let's go back to the cove! Tomorrow we will resume the search."
+       char: pirate
+       mood: normal  
+  - type: sceneText
+    text: >
+      <p>So, during the night, Mathina, Angela and Leo had time to produce a fake letter from an old pirate. When they would have been alone the following day, they would hide it under a rock, then they would have called their jailer to rescue it, telling him that they were not strong enough to lift the rock hiding it.<br/><br/>As the day came, their mischief developed as planned!</p>   
+  - type: dialog
+    entries:        
+     - text: "Yes, finally, I knew you would be useful after all, finally a real hint about the treasure!"
+       char: pirate
+       mood: normal 
+  - type: sceneText
+    text: >
+      <p>Ahoy Captain,<br/>terrible times lay ahead of us, all the treasure is lost. The crew dilapidated it all in every sort of debauchery when arriving on this island. Our name as Buccaneers is compromised, we must go back to sea and start rebuilding our treasure. I found a small group of trusted men, who were not involved in the squandering of the treasure and will leave them on the island to build from our misfortune. They shall be honourable men and teach to the posterity a life of honesty and righteousness.<br/>All the other members of the crew will follow us at sea. Only Fate shall know our destiny!</p> 
+  - type: dialog
+    entries:        
+     - text: "My whole quest has been void and null. The real treasure was not here this whole time!"
+       char: pirate
+       mood: normal 
+  - type: sceneText
+    text: >
+      <p>Mathina tried to comfort him.</p> 
+  - type: dialog
+    entries:        
+     - text: "No, it was here. Look at us, just as your fellow ancestors, my friend Angela, my brother Leo and me, we are here united in adversity, and fighting to carry on, just as they did centuries ago!"
+       char: mathina
+       mood: normal 
+     - text: "..."
+       char: pirate
+       mood: normal 
+  - type: sceneText
+    text: >
+      <p>The man, sighing silently, freed the three from their chains, waved them goodbye and walked away into the sunny coast, heading back to his cove, just to be heard of no more.</p> 
+ 
+
