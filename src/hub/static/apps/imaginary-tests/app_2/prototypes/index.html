@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>App 1-2</title>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
+
+    <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
+</head>
+
+<body style="font-family:Palatino; margin:0; font-size:16pt">
+
+
+
+
+<script id='csinit' type='text/x-cindyscript'>
+
+
+// **********************************************************************************************************
+// Functions ************************************************************************************************
+// **********************************************************************************************************
+
+
+
+drawDragon() := (
+  drawFlipBookObject(dragon);
+  //fillcircle(dragon.pos, dragon.rad, color->(1,0.5,0));
+);
+
+drawWand() := (
+  //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
+  drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
+  
+  forall(1..ceil(lerp(2, magicLength, wand.value, 0, wand.maxValue)),
+    drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
+  );
+
+  //draw([wand.pos, wand.pos + wand.length * wand.dir], color->(0,0,1), size-> 5, arrow->true, arrowsize->0.5);
+  //fillcircle(wand.pos, 0.3, color->(0,0,1));
+);
+
+drawRecallButton() := (
+  fillcircle(recallButton.pos, recallButton.rad, color->(0.7,0,1), alpha->0.5);
+  drawcircle(recallButton.pos, recallButton.rad, color->(1,1,1), size-> 5);
+  drawtext(recallButton.pos + (0,-0.4), recallButton.label, color->(1,1,1), size->30, align->"mid");
+);
+
+
+drawPickUp() := (
+  //fillcircle(pickUp.pos, pickUp.rad, color->(0,1,0));
+  drawFlipBookObject(pickUp);
+);
+
+drawScoreLabel() := (
+  drawtext(scoreLabel.pos, scoreLabel.text, size->30);
+);
+
+drawObstacles() := (
+  forall(obstacles,
+    fillcircle(#.pos, #.rad, color->(1,0,0));
+  );
+);
+
+
+drawDragonTrail() := (
+  //connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 3, alpha->0.5);
+  forall(1..length(dragon.trailA) - 1,
+    //fillcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,1,0), alpha->lerp(0, 0.5, #, 0, length(dragon.trailA) - 1));
+    //drawcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,0.5,0));
+    drawimage(dragon.trailA_#_1, "smoke" + dragon.trailA_#_2, angle->dragon.trailA_#_3, scale->0.15 * lerp(0.5, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), alpha->lerp(0, 1, #, 0, length(dragon.trailA) - 1));
+  );
+);
+
+drawFlamma() := (
+  drawFlipBookObject(flamma);
+);
+
+drawSpeechBubble() := (
+  if(showSpeechBubble, 
+    drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha);
+    drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
+  );
+);
+
+
+
+drawClouds() := (
+  forall(clouds,
+    drawimage(#.pos, #.sprite, scale->#.scale);
+  );
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+collideWithPickUp() := (
+  if(dist(dragon.pos, pickUp.pos) < dragon.rad + pickUp.rad,
+    scoreLabel.score = scoreLabel.score + 1;
+    scoreLabel.text = scoreLabel.score;
+    lastPickUpPos = pickUp.pos;
+    pickUp.pos = newPickUpSpawnPoint(obstacles ++ [wand, dragon], 10);
+
+    if(!flammaIn,
+      flammaOut = false;
+      flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+      flammaIn = true;
+      flammaInStart = flamma.pos;
+    );
+  );
+);
+
+
+
+
+collideWithObstacles() := (
+  forall(obstacles,
+    if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    recallTarget = lastPickUpPos;
+      recallDragon();
+    );
+  );
+);
+
+
+
+
+
+
+
+
+moveDragon(dt) := (
+  //dragon.pos = dragon.pos + dragon.velocity * dt;
+
+  if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
+    dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
+    if(length(dragon.trailA) > dragon.trailAMaxLength,
+      dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
+      dragon.trailA = bite(dragon.trailA);
+      );
+    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+      dragon.trailB = bite(dragon.trailB);
+    );
+  );
+);
+
+
+updateDragon() := (
+  regional(speed);
+
+  dragon.velocity = wand.dir * lerp(0, dragon.maxSpeed, wand.value, 0, wand.maxValue);
+  speed = abs(dragon.velocity);
+  if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
+  dragon.rotation = 0.5*pi-arctan2(wand.dir);
+  if(wand.dir.x < 0.1,
+    dragon.rotation = -dragon.rotation;
+    dragon.flipx = true;
+  );
+  if(wand.dir.x > 0.1,
+    dragon.flipx = false;
+  );
+);
+
+
+
+recallDragon() := (
+  wandActive = false;
+  recallStart = dragon.pos;
+  recallTrack = setupAnimationTrack(now(), now() + 1);
+  recallActive = true;
+  wand.value = 0;
+  dragon.velocity = [0,0];
+  dragon.trailA = [];
+  dragon.trailB = [];
+);
+
+
+
+updateWand() := (
+  regional(relMouse, dist);
+
+  relMouse = mouse().xy - wand.pos;
+  dist = abs(relMouse);
+  wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
+  if(wand.value < wand.deadzone, 
+    wand.value = 0;
+  );
+  wand.dir = slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+newPickUpSpawnPoint(list, minDist) := (
+  regional(candidateValid, candidate, counter);
+
+      candidateValid = true;
+
+      candidate = canvasCorners_4 + [random() * canvasWidth, random() * canvasHeight];
+      if(list == [],
+        candidate;
+      , // else //
+        if(pointInPolygon(candidate, pickUpSpawnArea),
+          forall(list,
+            if(dist(#.pos, candidate) < minDist,
+              candidateValid = false;
+            );
+          );
+        , // else //
+          candidateValid = false;
+        );
+        if(candidateValid,
+          candidate;
+        , // else //
+          newPickUpSpawnPoint(list, minDist);
+        );
+      );
+);
+
+
+newObstaclePoint(list, minDist, count) := (
+  regional(candidateValid, candidate, counter);
+
+  if(count == 0,
+    [];
+  , // else //
+    candidateValid = true;
+
+    candidate = canvasCorners_4 + [random() * canvasWidth, random() * canvasHeight];
+    if(list == [],
+      candidate;
+    , // else //
+      forall(list,
+        if(dist(#.pos, candidate) < minDist,
+          candidateValid = false;
+        );
+      );
+      if(candidateValid,
+        candidate;
+      , // else //
+        newObstaclePoint(list, minDist, count - 1);
+      );
+    );
+  );
+);
+
+
+
+
+
+
+
+
+
+
+
+
+processFlamma() := (
+  if(flammaIn,
+    updateAnimationTrack(flammaInTrack, delta);
+    tween(flamma, "pos", flammaInStart, flamma.endPos, flammaInTrack, "easeInOutCubic");
+    showSpeechBubble = (flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))) != "");
+    if(showSpeechBubble,
+      if(flammaInTrack.timeLeft <= 0.3,
+        speechBubble.alpha = lerp(0, 1, flammaInTrack.timeLeft, 0.3, 0);
+      );
+    );
+    if(flammaInTrack.timeLeft <= 0,
+      flammaOutTrack = setupAnimationTrack(now() + 1, now() + 2);
+      flammaIn = false;
+      flammaOut = true;
+    );
+  );
+  if(flammaOut,
+    updateAnimationTrack(flammaOutTrack, delta);
+    tween(flamma, "pos", flamma.endPos, flamma.startPos, flammaOutTrack, "easeInCirc");
+    if(flammaOutTrack.timeLeft > 0.7,
+      speechBubble.alpha = lerp(1, 0, flammaOutTrack.timeLeft, 1, 0.7);
+    );
+    if(flammaOutTrack.timeLeft <= 0,
+      flammaOut = false;
+      showSpeechBubble = false;
+    );
+  );
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cindyToGrid(p) := (p - gridOrigin) / gridStep;
+gridToCindy(p) := gridStep * p + gridOrigin;
+
+
+drawGrid() := (
+  forall(grid,
+    fillcircle(gridToCindy(#), 0.3, color->(1,1,1));
+  );
+);
+
+drawInputDisplay() := (
+  drawtext(inputDisplay.pos - [5 * inputDisplay.size, 0], "(", size->70 * inputDisplay.size, align->"mid");
+  drawtext(inputDisplay.pos - [1.5 * inputDisplay.size, 0], inputDisplay.texts.x, size->50 * inputDisplay.size, align->"right");
+  drawtext(inputDisplay.pos, "|", size->70 * inputDisplay.size, align->"mid");
+  drawtext(inputDisplay.pos + [3.5 * inputDisplay.size, 0], inputDisplay.texts.y, size->50 * inputDisplay.size, align->"right");
+  drawtext(inputDisplay.pos + [5 * inputDisplay.size, 0], ")", size->70 * inputDisplay.size, align->"mid");
+);
+
+
+drawInputButtons() := (
+  forall(inputButtons.positions,
+    fillcircle(#.low, inputButtons.rad, color->(0.7,0,1), alpha->0.5);
+    drawcircle(#.low, inputButtons.rad, color->(1,1,1), size-> 5);
+    drawtext(#.low + (0,-0.7), "-", color->(1,1,1), size->70 * inputDisplay.size, align->"mid");
+    fillcircle(#.high, inputButtons.rad, color->(0.7,0,1), alpha->0.5);
+    drawcircle(#.high, inputButtons.rad, color->(1,1,1), size-> 5);
+    drawtext(#.high + (0,-1), "+", color->(1,1,1), size->70 * inputDisplay.size, align->"mid");
+  );
+);
+
+
+drawInputBuffer() := (
+  forall(1..length(inputBuffer.record),
+    drawtext(inputBuffer.pos + ((# - 1) * (canvasRight - inputBuffer.pos.x) / inputBuffer.max , 0), "(" + inputBuffer.record_#.x + " | " + inputBuffer.record_#.y + ")", size-> 50 * inputBuffer.size);
+  );
+);
+
+
+
+
+
+
+
+
+catchInputButtons() := (
+  if(dist(mouse().xy, inputButtons.positions.x.low)  < inputButtons.rad, inputDisplay.texts_1 = clamp(inputDisplay.texts.x - 1, inputDisplay.extremeValues.x_1, inputDisplay.extremeValues.x_2));
+  if(dist(mouse().xy, inputButtons.positions.x.high) < inputButtons.rad, inputDisplay.texts_1 = clamp(inputDisplay.texts.x + 1, inputDisplay.extremeValues.x_1, inputDisplay.extremeValues.x_2));
+  if(dist(mouse().xy, inputButtons.positions.y.low)  < inputButtons.rad, inputDisplay.texts_2 = clamp(inputDisplay.texts.y - 1, inputDisplay.extremeValues.y_1, inputDisplay.extremeValues.y_2));
+  if(dist(mouse().xy, inputButtons.positions.y.high) < inputButtons.rad, inputDisplay.texts_2 = clamp(inputDisplay.texts.y + 1, inputDisplay.extremeValues.y_1, inputDisplay.extremeValues.y_2));
+);
+
+drawinputComfirmButton() := (
+  fillcircle(inputConfirmButton.pos, inputConfirmButton.rad, color->(0.7,0,1), alpha->0.5);
+  drawcircle(inputConfirmButton.pos, inputConfirmButton.rad, color->(1,1,1), size-> 5);
+  drawtext(inputConfirmButton.pos + (0,-0.4), inputConfirmButton.label, color->(1,1,1), size->30, align->"mid");
+);
+
+drawStartButton() := (
+  fillcircle(startButton.pos, startButton.rad, color->(0.7,0,1), alpha->0.5);
+  drawcircle(startButton.pos, startButton.rad, color->(1,1,1), size-> 5);
+  drawtext(startButton.pos + (0,-0.4), startButton.label, color->(1,1,1), size->30, align->"mid");
+);
+
+
+
+
+
+
+
+
+
+drawPath() := (
+  regional(arrows);
+
+  arrows = consecutive(path.points);
+  forall(reverse(1..length(arrows)),
+    if(# < path.dragonIndex,
+      drawStrokeObject({
+        "pos": (0,0), 
+        "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+        "drawPercent": 1,
+        "lineColor": (1, 0.6, 0),
+        "lineAlpha": 1,
+        "lineSize": 12,
+        "fillColor": (1,1,1),
+        "fillAlpha": 1,
+        "arrow": true,
+        "arrowSize": 1
+      }); 
+    );   
+    if(# == path.dragonIndex,
+      drawStrokeObject({
+        "pos": (0,0), 
+        "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+        "drawPercent": 1,
+        "lineColor": lerp((1, 0.8, 0), (1, 0.6, 0), path.progress),
+        "lineAlpha": lerp(0.6, 1, path.progress),
+        "lineSize": lerp(8, 12, path.progress),
+        "fillColor": (1,1,1),
+        "fillAlpha": 1,
+        "arrow": true,
+        "arrowSize": lerp(0.7, 1, path.progress)
+      });  
+    );  
+    if(# > path.dragonIndex,
+      drawStrokeObject({
+          "pos": (0,0), 
+          "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+          "drawPercent": 1,
+          "lineColor": (1, 0.8, 0),
+          "lineAlpha": 0.6,
+          "lineSize": 8,
+          "fillColor": (1,1,1),
+          "fillAlpha": 0,
+          "arrow": true,
+          "arrowSize": 0.7
+      });
+    );
+  );
+);
+
+
+
+// **********************************************************************************************************
+// Start ****************************************************************************************************
+// **********************************************************************************************************
+canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
+canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
+canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+[canvasLeft, canvasTop] = canvasCorners_1;
+[canvasRight, canvasBottom] = canvasCorners_3;
+
+
+
+
+
+
+
+
+
+
+
+gridOrigin = canvasCorners_4 + (5, 14);
+gridStep = 5;
+gridRange = [-1..15, -2..7];
+grid = flatten(apply(gridRange.y, j, apply(gridRange.x, i, [i, j])));
+
+
+
+
+
+
+
+inputDisplay = {
+  "pos": canvasCenter + (-6, -17),
+  "size": 1,
+  "texts": [0,0],
+  "extremeValues": [(-5, 5), (-5, 5)]
+};
+inputButtons = {
+  "rad": 1.5,
+  "positions": [
+      {"low": (inputDisplay.pos + (- 2.5 * inputDisplay.size, - 2.5 * inputDisplay.size)), "high": (inputDisplay.pos + (- 2.5 * inputDisplay.size, 4 * inputDisplay.size))}, 
+      {"low": (inputDisplay.pos + (  2.5 * inputDisplay.size, - 2.5 * inputDisplay.size)), "high": (inputDisplay.pos + (  2.5 * inputDisplay.size, 4 * inputDisplay.size))}
+  ]
+};
+inputConfirmButton := {
+  "pos": inputDisplay.pos + (10, 1) * inputDisplay.size,
+  "rad": 3,
+  "label": "Passt!"
+};
+
+
+inputBuffer = {
+  "record": [],
+  "pos": canvasCorners_1 + (1, -4),
+  "size": 1,
+  "max": 10
+};
+
+
+
+
+
+startButton := {
+  "pos": canvasCorners_3 + (-4, 4),
+  "rad": 3,
+  "label": "Los!"
+};
+
+
+
+
+
+
+
+path = {
+  "points": [(0,0)],
+  "dragonIndex": 1,
+  "progress": 0
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+dragonHome = gridOrigin;
+dragon = {
+  "pos": dragonHome,
+  "rad": 0.6,
+  "velocity": [0,0],
+  "maxSpeed": 15,
+  "trailA": [[dragonHome, ceil(3 * random()), 2 * pi * random()]],
+  "trailAMaxSize": 1,
+  "trailAMaxLength": 100,
+  "trailB": [],
+  "trailBMaxLength": 100,
+  "flipbook": ["dragon1", "dragon2", "dragon3", "dragon2"],
+  "scale": 0.3,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1
+};
+
+dragonAnimationTrack = setupAnimationTrack(0,0.6);
+dragonAnimationTrack.looping = true;
+
+
+dragonMoving = false;
+
+
+
+
+wand = {
+  "pos": canvasCenter + (0,-12),
+  "length": 3,
+  "dir": [0,1],
+  "value": 0,
+  "catchRadius": 6,
+  "maxValue": 6,
+  "acceleration": 0.5,
+  "deadzone": 0.5
+};
+
+magicLength = 30;
+magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
+
+
+
+
+
+
+
+clouds = [
+  {
+    "pos": canvasCenter + [-11.39, 13.19],
+    "scale": 1,
+    "sprite": "cloud3"
+  },
+  {
+    "pos": canvasCenter + [27.81, 12.71],
+    "scale": 1,
+    "sprite": "cloud2"
+  },
+  {
+    "pos": canvasCenter + [-25.91, 1.71],
+    "scale": 1,
+    "sprite": "cloud4"
+  },
+  {
+    "pos": canvasCenter + [17.17, -2.53],
+    "scale": 1,
+    "sprite": "cloud1"
+  }
+];
+
+
+obstacles = [
+  {"pos": clouds_1.pos + [0,0], "rad": 1},
+  {"pos": clouds_1.pos + [-2.5,0], "rad": 0.6},
+  {"pos": clouds_1.pos + [2.2,-0.5], "rad": 0.8},
+
+  {"pos": clouds_2.pos + [0,0], "rad": 1},
+  {"pos": clouds_2.pos + [-2,-0.3], "rad": 0.6},
+  {"pos": clouds_2.pos + [2,0], "rad": 0.8},
+
+  {"pos": clouds_3.pos + [0,-0.5], "rad": 1},
+  {"pos": clouds_3.pos + [3,0], "rad": 1},
+  {"pos": clouds_3.pos + [-2.5,-0.3], "rad": 0.5},
+
+  {"pos": clouds_4.pos + [0,0], "rad": 1},
+  {"pos": clouds_4.pos + [-2,0], "rad": 0.7},
+  {"pos": clouds_4.pos + [2,0], "rad": 0.7}
+];
+
+
+pickUpSpawnArea = [
+    canvasCenter + [-35.47, 18.87],
+    canvasCenter + [35.41, 19.11],
+    canvasCenter + [36.01, -14.01], 
+    canvasCenter + [-3.47, -14.09], 
+    canvasCenter + [-36.27, -4.49]
+];
+
+
+pickUp = {
+  "pos": canvasCenter + [30, -5],  //newPickUpSpawnPoint(obstacles ++ [wand, dragon], 10),
+  "rad": 2,
+  "flipbook": ["fireball1", "fireball2", "fireball3"],
+  "scale": 0.6,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1
+};
+lastPickUpPos = dragonHome;
+
+fireballAnimationTrack = setupAnimationTrack(0,0.5);
+fireballAnimationTrack.looping = true;
+
+
+scoreLabel = {
+  "pos": canvasCorners_1 + (2, -2),
+  "score": 0,
+  "text": "0"
+};
+
+wandActive := false;
+
+
+
+flamma = {
+  "startPos": canvasCenter + (-50, -2),
+  "pos": canvasCenter + (-50, -2),
+  "endPos": canvasCenter + (-35, -2),
+  "flipbook": ["flamma"],
+  "scale": 0.5,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1,
+  "feedback": [
+      "", "", "Sehr gut!", "", "",
+      "Toll!", "", "", "Wow!", "",
+      "", "Weiter so!", "", "", "Großartig!",
+      ""
+  ]
+};
+flammaIn = false;
+flammaOut = false;
+
+
+speechBubble = {
+  "sprite": "bubble",
+  "text": "",
+  "pos": canvasCenter + (-32, 7),
+  "alpha": 0
+};
+showSpeechBubble = false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+recallButton := {
+  "pos": canvasCorners_4 + (4,4),
+  "rad": 3,
+  "label": "Zurück!"
+};
+
+recallActive = false;
+recallStart = dragonHome;
+recallTarget = dragonHome;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+playanimation();
+setupTime();
+</script>
+<script src="../../Egdod/egdodUI.js"></script>
+<script src="../../Egdod/egdodMath.js"></script>
+<script src="../../Egdod/egdodArray.js"></script>
+<script src="../../Egdod/egdodColor.js"></script>
+<script src="../../Egdod/egdodMisc.js"></script>
+<script src="../../Egdod/egdodAnim.js"></script>
+
+
+
+
+<script id='csdraw' type='text/x-cindyscript'>
+  
+  
+  drawimage(canvasCorners_4, canvasCorners_3, "back");
+  drawGrid();
+  drawPath();
+  drawDragonTrail();
+  //drawPickUp();
+  drawDragon();
+  //drawClouds();
+  //drawObstacles();
+  //drawimage(canvasCorners_4, canvasCorners_3, "front");
+  //drawFlamma();
+  //drawWand();
+  
+  //drawStrokeObject(followCurve);
+  
+  //drawSpeechBubble();
+  
+
+
+  drawInputDisplay();
+  drawInputButtons();  
+  drawInputBuffer();
+  drawinputComfirmButton();
+  drawStartButton();
+
+
+  drawRecallButton();
+  //drawScoreLabel();
+</script>
+
+
+<script id='cstick' type='text/x-cindyscript'>
+  delta = deltaTime();
+
+  updateAnimationTrack(dragonAnimationTrack, delta);
+  animateFlipbook(dragon, dragonAnimationTrack);
+
+  if(dragonMoving,
+    updateAnimationTrack(dragonMoveTrack, delta);
+    path.progress = dragonMoveTrack.progress;
+    if(path.dragonIndex < length(path.points),
+      tween(dragon, "pos", gridToCindy(path.points_(path.dragonIndex)), gridToCindy(path.points_(path.dragonIndex + 1)), dragonMoveTrack, "easeInOutQuad");
+    );
+
+    if(dragonMoveTrack.timeLeft <= 0,
+      if(path.dragonIndex >= length(path.points),
+        dragonMoving = false;
+        inputBuffer.record = [];
+      , // else //
+        dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
+        path.dragonIndex = path.dragonIndex + 1;
+      );
+      path.progress = 0;
+    );
+  );
+  
+  //updateAnimationTrack(fireballAnimationTrack, delta);
+  //animateFlipbook(pickUp, fireballAnimationTrack);
+
+  if(recallActive,
+    updateAnimationTrack(recallTrack, delta);
+    tween(dragon, "pos", recallStart, recallTarget, recallTrack, "easeInOutCubic");
+    if(recallTrack.timeLeft <= 0,
+      recallActive = false;
+      dragon.trailA = [[dragon.pos, ceil(3 * random()), 2 * pi * random()]];
+    );
+  , // else //
+    moveDragon(delta);
+    //collideWithPickUp();
+    //collideWithObstacles();
+  );
+
+
+
+  //processFlamma();
+</script>
+
+
+
+<script id='csmousedown' type='text/x-cindyscript'>
+  /*
+  if(!recallActive & dist(mouse().xy, wand.pos) <= wand.catchRadius,
+    wandActive = true;
+    updateWand();
+    updateDragon();
+    repaint();
+  );
+  */
+  if(!recallActive & dist(mouse().xy, recallButton.pos) <= recallButton.rad,
+    recallTarget = dragonHome;
+    recallDragon();
+  );
+
+  if(!dragonMoving,
+    catchInputButtons();
+
+    if(dist(mouse().xy, inputConfirmButton.pos) < inputConfirmButton.rad,
+      if((length(inputBuffer.record) < inputBuffer.max) & (inputDisplay.texts != [0,0]),
+        inputBuffer.record = inputBuffer.record :> inputDisplay.texts;
+        inputDisplay.texts = [0,0];
+        
+        path.points = path.points :> (path.points_(-1) + inputBuffer.record_(-1));
+      );
+    );
+  
+    if(dist(mouse().xy, startButton.pos) < startButton.rad,
+      if(length(inputBuffer.record) >= 1,
+        dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
+        dragonMoving = true;
+
+        );
+    );
+  );
+
+</script>
+
+<script id='csmousedrag' type='text/x-cindyscript'>
+  /*
+  if(wandActive,
+    updateWand();
+    updateDragon();
+  );
+  */
+</script>
+
+<script id='csmousemove' type='text/x-cindyscript'>
+</script>
+
+<script id='csmouseup' type='text/x-cindyscript'>
+  /*
+  if(wandActive,
+    updateWand();
+    updateDragon();
+  );
+
+  wandActive = false;
+  */
+</script>
+
+<canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
+</canvas>
+
+<script>
+
+    cindy = createCindy({canvasname:"CSCanvas",
+                 scripts:"cs*",
+                 images:{
+                  smoke1:  "../assets/smoke_1.png",
+                   smoke2: "../assets/smoke_2.png",
+                   smoke3: "../assets/smoke_3.png",
+                   dragon1: "../assets/dragon_1.png",
+                   dragon2: "../assets/dragon_2.png",
+                   dragon3: "../assets/dragon_3.png",
+                   magic1: "../assets/magic_1.png",
+                   magic2: "../assets/magic_2.png",
+                   magic3: "../assets/magic_3.png",                   
+                   fireball1: "../assets/fireball_1.png",
+                   fireball2: "../assets/fireball_2.png",
+                   fireball3: "../assets/fireball_3.png", 
+                   cloud1: "../assets/cloud_1.png",
+                   cloud2: "../assets/cloud_2.png",
+                   cloud3: "../assets/cloud_3.png",                    
+                   cloud4: "../assets/cloud_4.png",                    
+                   back:   "../assets/back_2.png",
+                   front:  "../assets/front_2.png",
+                   wand:   "../assets/wand.png",
+                   flamma:   "../assets/flamma_wave.png",
+                   bubble:   "../assets/speech_bubble.png",
+                 }
+                });
+
+</script>
+
+
+
+</body>
+
+</html>
