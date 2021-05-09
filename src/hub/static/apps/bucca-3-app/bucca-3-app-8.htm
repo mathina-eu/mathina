@@ -1,818 +1,856 @@
 <html>
+
 <head>
-<style>
-html { 
-  background: url(img/bg3_plain.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: "Roboto", sans-serif;
-}
+    <style>
+        html {
+            background: url(img/bg3_plain.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Roboto", sans-serif;
+        }
 
-#Partenza {
-	position:absolute;
-	margin:auto;
-	top:50%;
-	left:4%;
-	width:44%;
-	height:45%;
-	z-index:2;
-	border:solid;
-	font-size: 30px;
-	border:solid;
-	border-color:#684213;
-	font-size: 32px;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
-
-
-#Ch1 {
-	position:absolute;
-	margin:auto;
-	top:15%;
-	left:4%;
-	width:10%;
-	height:20%;
-	z-index:2;
-	border:solid;
-	font-size: 30px;
-	border:solid;
-	border-color:#684213;
-	font-size: 32px;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
-
-#Ch2 {
-	position:absolute;
-	margin:auto;
-	top:15%;
-	right:4%;
-	width:10%;
-	height:20%;
-	z-index:2;
-	border:solid;
-	font-size: 30px;
-	border:solid;
-	border-color:#684213;
-	font-size: 32px;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
+        #Partenza {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 4%;
+            width: 44%;
+            height: 45%;
+            z-index: 2;
+            border: solid;
+            font-size: 30px;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
 
 
+        #Ch1 {
+            position: absolute;
+            margin: auto;
+            top: 15%;
+            left: 4%;
+            width: 10%;
+            height: 20%;
+            z-index: 2;
+            border: solid;
+            font-size: 30px;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
 
-#Arrivo {
-	position:absolute;
-	top:50%;
-	right:4%;
-	width:44%;
-	height:45%;
-	z-index:2;
-	border:solid;
-	font-size: 30px;
-	border:solid;
-	border-color:#684213;
-	font-size: 32px;
-	background: #FFFBEB;
-	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	border-radius:15px;
-}
+        #Ch2 {
+            position: absolute;
+            margin: auto;
+            top: 15%;
+            right: 4%;
+            width: 10%;
+            height: 20%;
+            z-index: 2;
+            border: solid;
+            font-size: 30px;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
 
-.PartContainer {
-	position: absolute;
-  top: 50%;
-	width:95%;
-  -ms-transform: translate(0%, -50%);
-  transform: translate(0%, -50%);
-	padding:10px;
-	text-align:center;
-}
 
-#DivCanvas {
-	position:absolute;
-	top:0%;
-	left:13%;
-	width:30%;
-	height:50%;
-	z-index:1;
-}
-#CanvasMathina {
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:2;
-	visibility:visible;
-}
-#DivCanvas2 {
-	position:absolute;
-	top:0%;
-	left:56%;
-	width:30%;
-	height:50%;
-	z-index:1;
-	visibility:visible;
-}
-#CanvasMathina2 {
-	position:absolute;
-	top:0px;
-	left:0px;
-	width:100%;
-	height:100%;
-	z-index:2;
-	visibility:visible;
-}
 
-#successMessage {
-  position: absolute;
-  /*left: 50%;
+        #Arrivo {
+            position: absolute;
+            top: 50%;
+            right: 4%;
+            width: 44%;
+            height: 45%;
+            z-index: 2;
+            border: solid;
+            font-size: 30px;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
+
+        .PartContainer {
+            position: absolute;
+            top: 50%;
+            width: 95%;
+            -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+            padding: 10px;
+            text-align: center;
+        }
+
+        #DivCanvas {
+            position: absolute;
+            top: 0%;
+            left: 13%;
+            width: 30%;
+            height: 50%;
+            z-index: 1;
+        }
+
+        #CanvasMathina {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
+
+        #DivCanvas2 {
+            position: absolute;
+            top: 0%;
+            left: 56%;
+            width: 30%;
+            height: 50%;
+            z-index: 1;
+            visibility: visible;
+        }
+
+        #CanvasMathina2 {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
+
+        #successMessage {
+            position: absolute;
+            /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-  z-index: 100;
-  background: #f3f1cd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 10% 0%;
-text-align: center;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 58%;
-    opacity: 0.8;
-}
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+            opacity: 0.8;
+        }
 
-#failMessage {
-  position: absolute;
-  /*left: 50%;
+        #failMessage {
+            position: absolute;
+            /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-  z-index: 100;
-  background: #f3f1cd;
-  border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 10% 0%;
-text-align: center;
-    left: 1%;
-    top: 1%;
-    width: 98%;
-    height: 58%;
-    opacity: 0.8;
-}
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+            opacity: 0.8;
+        }
 
-.button {
-  background-color: #4CAF50; /* Green */
-  border: 2px;
-  margin:5px;
-  font-family:Monospace;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 32px;
-  width:100%;
-}
-</style>
-<script>
-Number.prototype.mod = function(n) {
-    return ((this%n)+n)%n;
-};
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: 2px;
+            margin: 5px;
+            font-family: Monospace;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+            width: 100%;
+        }
+    </style>
+    <script>
+        Number.prototype.mod = function(n) {
+            return ((this % n) + n) % n;
+        };
 
-function isNumeric(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
 
-Lingua=1;
+        Lingua = 1;
 
-Alphabet=[
-"", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-];
-ParolaOriginale=[
-[], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
-"Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt".toUpperCase(),
-"Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
-];
-Traduzioni=[
-[["Trad1"],"Odd words:","Parole dispari:"],
-[["Trad2"],"Even words:","Parole pari:"],
-[["Trad3"],"Change the position of the disks and look what happen:","Modifica la posizione dei dischi e osserva cosa succede:"],
-[["Trad4"],"Here is the deciphered text:","Ecco il testo decifrato:"],
-];
+        Alphabet = [
+            "", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        ];
+        ParolaOriginale = [
+            [], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+            "Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt".toUpperCase(),
+            "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
+        ];
+        Traduzioni = [
+            [
+                ["Trad1"], "Odd words:", "Parole dispari:", "&Iacute;mpar palavras:", "Ungerade W&ouml;rter:"
+            ],
+            [
+                ["Trad2"], "Even words:", "Parole pari:", "Par palavras:", "Sogar Worte:"
+            ],
+            [
+                ["Trad3"], "Change the position of the disks and look what happen:", "Modifica la posizione dei dischi e osserva cosa succede:", "Mude a posi&ccedil;&atilde;o dos discos e veja o que acontece:", "&Auml;ndern Sie die Position der Festplatten und schauen Sie, was passiert:"
+            ],
+            [
+                ["Trad4"], "Here is the deciphered text:", "Ecco il testo decifrato:", "Aqui est&aacute; o texto decifrado:", "Hier ist der entschl&uuml;sselte Text:"
+            ]
+        ];
 
-function gup( name, url ) {
-    if (!url) url = location.href;
-    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
-    var regexS = "[\\?&]"+name+"=([^&#]*)";
-    var regex = new RegExp( regexS );
-    var results = regex.exec( url );
-    return results == null ? null : results[1];
-}
-
-
-function TraduciText(Lang) {
-  for (var k = 0; k < Traduzioni.length; k++) {
-    for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
-      if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
-    }
-  }
-}
-
-function Init() {	
-
-Lingua=Number(gup('l', document.location.search));
-	
-	if (!isNumeric(Lingua)) Lingua=1;
-	if (Lingua==0) Lingua=1;
-	TraduciText(Lingua);
-	GenerateEx();
-	window.CanvasMathina=document.getElementById('CanvasMathina');
-	window.ctxMathina = CanvasMathina.getContext('2d');
-
-	CanvasMathina.addEventListener('mousedown', Down, false);
-	CanvasMathina.addEventListener('mouseup', Up, false);
-	window.addEventListener('mousemove', Move, false);
-	
-	CanvasMathina.addEventListener('touchstart', Down, false);
-	CanvasMathina.addEventListener('touchend', Up, false);
-	CanvasMathina.addEventListener('touchmove', Move, false);
-	
-	window.CanvasMathina2=document.getElementById('CanvasMathina2');
-	window.ctxMathina2 = CanvasMathina2.getContext('2d');
-
-	CanvasMathina2.addEventListener('mousedown', Down, false);
-	CanvasMathina2.addEventListener('mouseup', Up, false);
-
-	
-	CanvasMathina2.addEventListener('touchstart', Down, false);
-	CanvasMathina2.addEventListener('touchend', Up, false);
-	CanvasMathina2.addEventListener('touchmove', Move, false);
-	
-	window.CanvasMathina2=document.getElementById('CanvasMathina2');
-	window.ctxMathina2 = CanvasMathina2.getContext('2d');
-
-	
-	window.addEventListener('resize',Resize,false);
-	LoadGraphics();
-	setTimeout(function(){ 	CheckCaricamento();}, 10);
-	
-	
-}
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
 
 
-function CheckCaricamento() {
-	if (NumeroCaricati==2) {
-		Reset();	
-		Resize(); 
-	} else {
-		setTimeout(function(){ 	CheckCaricamento();}, 10);
-	}
-}
+        function TraduciText(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
 
-function Resize() {
-	var doc = document, w = window;
-    var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat')?
-            doc.documentElement: doc.body;
-    
-    var width = docEl.clientWidth;
-    var height = docEl.clientHeight;
-    
-    // mobile zoomed in?
-    if ( w.innerWidth && width > w.innerWidth ) {
-        width = w.innerWidth;
-        height = w.innerHeight;
-    }
+        function Init() {
 
-	window.dimension = [width,height];
-	Border=dimension[0]/100;
-	window.MenuDim=[dimension[0]*8/10+Border,Border,dimension[0]*2/10-2*Border,dimension[1]-2*Border];
-	
-	CanvasMathina.MathinaDim=[document.getElementById('DivCanvas').clientWidth,document.getElementById('DivCanvas').clientHeight];
-	CanvasMathina2.MathinaDim=[document.getElementById('DivCanvas2').clientWidth,document.getElementById('DivCanvas2').clientHeight];
-	
-	CanvasMathina.width = CanvasMathina.MathinaDim[0];
-	CanvasMathina.height = CanvasMathina.MathinaDim[1];
-	CanvasMathina2.width = CanvasMathina2.MathinaDim[0];
-	CanvasMathina2.height = CanvasMathina2.MathinaDim[1];
-	
-	CanvasMathina.Scale=necklace_dimension[1]/CanvasMathina.MathinaDim[1];
-	CanvasMathina2.Scale=necklace_dimension[1]/CanvasMathina2.MathinaDim[1];
-	CanvasMathina.CentroCesare=[CanvasMathina.MathinaDim[0]/2,CanvasMathina.MathinaDim[1]/2];
-	CanvasMathina2.CentroCesare=[CanvasMathina2.MathinaDim[0]/2,CanvasMathina2.MathinaDim[1]/2];
-	Draw(CanvasMathina,CanvasMathina.CentroCesare[0],CanvasMathina.CentroCesare[1],CanvasMathina.AngPosizione1,CanvasMathina.AngPosizione2,CanvasMathina.Scale);	
-	Draw(CanvasMathina2,CanvasMathina2.CentroCesare[0],CanvasMathina2.CentroCesare[1],CanvasMathina2.AngPosizione1,CanvasMathina2.AngPosizione2,CanvasMathina2.Scale);	
-	
-}
+            Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            TraduciText(Lingua);
+            GenerateEx();
+            window.CanvasMathina = document.getElementById('CanvasMathina');
+            window.ctxMathina = CanvasMathina.getContext('2d');
+
+            CanvasMathina.addEventListener('mousedown', Down, false);
+            CanvasMathina.addEventListener('mouseup', Up, false);
+            window.addEventListener('mousemove', Move, false);
+
+            CanvasMathina.addEventListener('touchstart', Down, false);
+            CanvasMathina.addEventListener('touchend', Up, false);
+            CanvasMathina.addEventListener('touchmove', Move, false);
+
+            window.CanvasMathina2 = document.getElementById('CanvasMathina2');
+            window.ctxMathina2 = CanvasMathina2.getContext('2d');
+
+            CanvasMathina2.addEventListener('mousedown', Down, false);
+            CanvasMathina2.addEventListener('mouseup', Up, false);
 
 
-function Reset() {
-	necklace_dimension=[bottom_necklace.width,bottom_necklace.height];
-	MousePos=[-1,-1];
-	AngMouseFinale=0;
-	AngMouseIniziale=0;
-	CosaStoMuovendo=0;
-	CanvasMathina.AngPosizione1=0;
-	CanvasMathina.AngPosizione2=0;
-	CanvasMathina.CaesarShift=0;
-	CanvasMathina2.AngPosizione1=0;
-	CanvasMathina2.AngPosizione2=0;
-	CanvasMathina2.CaesarShift=0;
-	
-}
+            CanvasMathina2.addEventListener('touchstart', Down, false);
+            CanvasMathina2.addEventListener('touchend', Up, false);
+            CanvasMathina2.addEventListener('touchmove', Move, false);
 
-function LoadGraphics() {
-	NumeroCaricati=0;
-	bottom_necklace = new Image();
-	bottom_necklace.src = "./bottom.png";
-	bottom_necklace.onload = function() {NumeroCaricati++;}
-	
-	
-	top_necklace = new Image();
-	top_necklace.src = "./top.png";
-	top_necklace.onload = function() {NumeroCaricati++;}
+            window.CanvasMathina2 = document.getElementById('CanvasMathina2');
+            window.ctxMathina2 = CanvasMathina2.getContext('2d');
 
-}
 
-	Alphabet[Lingua]="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-function Draw(can,X0,Y0,A1,A2,Scale) {
-	ctx=can.getContext('2d');
+            window.addEventListener('resize', Resize, false);
+            LoadGraphics();
+            setTimeout(function() {
+                CheckCaricamento();
+            }, 10);
 
-	ctx.clearRect(0,0,can.MathinaDim[0],can.MathinaDim[1]);
 
-	
-	let CX=X0-necklace_dimension[0]/(2*Scale);
-	let CY=Y0-necklace_dimension[1]/(2*Scale);
-	
-    ctx.drawImage(bottom_necklace, CX, CY, necklace_dimension[0]/Scale, necklace_dimension[1]/Scale);
+        }
 
-	ctx.beginPath();
-	ctx.strokeStyle = "rgb(177,133,91)";
-	ctx.lineWidth=90/Scale;
-	ctx.arc(X0,Y0,230/Scale,0,Math.PI*2,true);
-	ctx.stroke();
-	
-	for (let i=0;i<Alphabet[Lingua].length;i++) {
-		Angle=i*Math.PI*2/Alphabet[Lingua].length+A1;
-		ctx.save();
-		ctx.translate(X0,Y0);
-		ctx.rotate(Angle);
-		ctx.translate(0, -225/Scale);
-		//ctxMathina.rotate(-Angle);
-		/*
-		ctxMathina.beginPath();
-		ctxMathina.textAlign = 'center';
-		ctxMathina.textBaseline = 'middle';
-		ctxMathina.font = "50px Arial";
-		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);	
-		*/
-		DrawLetter(ctx,Alphabet[Lingua][i],0,0, i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);	
-		
-		ctx.translate(0, 225/Scale);
-		ctx.rotate(Math.PI/Alphabet[Lingua].length);
-		ctx.translate(0, -225/Scale);
-		ctx.beginPath();
-		ctx.strokeStyle = "rgb(104,66,19)";
-		ctx.lineWidth=2;
-		ctx.moveTo(0,-50/Scale);
-		ctx.lineTo(0,40/Scale);
-		ctx.stroke();	
-		
-		ctx.restore();
-		
-	}
-	
-	
-	
-	
-	ctx.beginPath();
-	ctx.strokeStyle = "rgb(177,133,91)";
-	ctx.lineWidth=90/Scale;
-	ctx.arc(X0,Y0,330/Scale,0,Math.PI*2,true);
-	ctx.stroke();  
-	
-	for (let i=0;i<Alphabet[Lingua].length;i++) {
-		Angle=i*Math.PI*2/Alphabet[Lingua].length+A2;
-		ctx.save();
-		ctx.translate(X0,Y0);
-		ctx.rotate(Angle);
-		ctx.translate(0, -325/Scale);
-		//ctxMathina.rotate(-Angle);
-		/*
+
+        function CheckCaricamento() {
+            if (NumeroCaricati == 2) {
+                Reset();
+                Resize();
+            } else {
+                setTimeout(function() {
+                    CheckCaricamento();
+                }, 10);
+            }
+        }
+
+        function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+            Border = dimension[0] / 100;
+            window.MenuDim = [dimension[0] * 8 / 10 + Border, Border, dimension[0] * 2 / 10 - 2 * Border, dimension[1] - 2 * Border];
+
+            CanvasMathina.MathinaDim = [document.getElementById('DivCanvas').clientWidth, document.getElementById('DivCanvas').clientHeight];
+            CanvasMathina2.MathinaDim = [document.getElementById('DivCanvas2').clientWidth, document.getElementById('DivCanvas2').clientHeight];
+
+            CanvasMathina.width = CanvasMathina.MathinaDim[0];
+            CanvasMathina.height = CanvasMathina.MathinaDim[1];
+            CanvasMathina2.width = CanvasMathina2.MathinaDim[0];
+            CanvasMathina2.height = CanvasMathina2.MathinaDim[1];
+
+            CanvasMathina.Scale = necklace_dimension[1] / CanvasMathina.MathinaDim[1];
+            CanvasMathina2.Scale = necklace_dimension[1] / CanvasMathina2.MathinaDim[1];
+            CanvasMathina.CentroCesare = [CanvasMathina.MathinaDim[0] / 2, CanvasMathina.MathinaDim[1] / 2];
+            CanvasMathina2.CentroCesare = [CanvasMathina2.MathinaDim[0] / 2, CanvasMathina2.MathinaDim[1] / 2];
+            Draw(CanvasMathina, CanvasMathina.CentroCesare[0], CanvasMathina.CentroCesare[1], CanvasMathina.AngPosizione1, CanvasMathina.AngPosizione2, CanvasMathina.Scale);
+            Draw(CanvasMathina2, CanvasMathina2.CentroCesare[0], CanvasMathina2.CentroCesare[1], CanvasMathina2.AngPosizione1, CanvasMathina2.AngPosizione2, CanvasMathina2.Scale);
+
+        }
+
+
+        function Reset() {
+            necklace_dimension = [bottom_necklace.width, bottom_necklace.height];
+            MousePos = [-1, -1];
+            AngMouseFinale = 0;
+            AngMouseIniziale = 0;
+            CosaStoMuovendo = 0;
+            CanvasMathina.AngPosizione1 = 0;
+            CanvasMathina.AngPosizione2 = 0;
+            CanvasMathina.CaesarShift = 0;
+            CanvasMathina2.AngPosizione1 = 0;
+            CanvasMathina2.AngPosizione2 = 0;
+            CanvasMathina2.CaesarShift = 0;
+
+        }
+
+        function LoadGraphics() {
+            NumeroCaricati = 0;
+            bottom_necklace = new Image();
+            bottom_necklace.src = "./bottom.png";
+            bottom_necklace.onload = function() {
+                NumeroCaricati++;
+            }
+
+
+            top_necklace = new Image();
+            top_necklace.src = "./top.png";
+            top_necklace.onload = function() {
+                NumeroCaricati++;
+            }
+
+        }
+
+        Alphabet[Lingua] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        function Draw(can, X0, Y0, A1, A2, Scale) {
+            ctx = can.getContext('2d');
+
+            ctx.clearRect(0, 0, can.MathinaDim[0], can.MathinaDim[1]);
+
+
+            let CX = X0 - necklace_dimension[0] / (2 * Scale);
+            let CY = Y0 - necklace_dimension[1] / (2 * Scale);
+
+            ctx.drawImage(bottom_necklace, CX, CY, necklace_dimension[0] / Scale, necklace_dimension[1] / Scale);
+
+            ctx.beginPath();
+            ctx.strokeStyle = "rgb(177,133,91)";
+            ctx.lineWidth = 90 / Scale;
+            ctx.arc(X0, Y0, 230 / Scale, 0, Math.PI * 2, true);
+            ctx.stroke();
+
+            for (let i = 0; i < Alphabet[Lingua].length; i++) {
+                Angle = i * Math.PI * 2 / Alphabet[Lingua].length + A1;
+                ctx.save();
+                ctx.translate(X0, Y0);
+                ctx.rotate(Angle);
+                ctx.translate(0, -225 / Scale);
+                //ctxMathina.rotate(-Angle);
+                /*
+                ctxMathina.beginPath();
+                ctxMathina.textAlign = 'center';
+                ctxMathina.textBaseline = 'middle';
+                ctxMathina.font = "50px Arial";
+                ctxMathina.fillText(Alphabet[Lingua][i], 0,0);	
+                */
+                DrawLetter(ctx, Alphabet[Lingua][i], 0, 0, i % 2 ? "rgba(224,235,237,1.0)" : "rgba(234,233,215,1.0)", Scale);
+
+                ctx.translate(0, 225 / Scale);
+                ctx.rotate(Math.PI / Alphabet[Lingua].length);
+                ctx.translate(0, -225 / Scale);
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(104,66,19)";
+                ctx.lineWidth = 2;
+                ctx.moveTo(0, -50 / Scale);
+                ctx.lineTo(0, 40 / Scale);
+                ctx.stroke();
+
+                ctx.restore();
+
+            }
+
+
+
+
+            ctx.beginPath();
+            ctx.strokeStyle = "rgb(177,133,91)";
+            ctx.lineWidth = 90 / Scale;
+            ctx.arc(X0, Y0, 330 / Scale, 0, Math.PI * 2, true);
+            ctx.stroke();
+
+            for (let i = 0; i < Alphabet[Lingua].length; i++) {
+                Angle = i * Math.PI * 2 / Alphabet[Lingua].length + A2;
+                ctx.save();
+                ctx.translate(X0, Y0);
+                ctx.rotate(Angle);
+                ctx.translate(0, -325 / Scale);
+                //ctxMathina.rotate(-Angle);
+                /*
 		ctxMathina.beginPath();
 		ctxMathina.textAlign = 'center';
 		ctxMathina.textBaseline = 'middle';
 		ctxMathina.font = "50px Arial";
 		ctxMathina.fillText(Alphabet[Lingua][i], 0,0);
 */
-		DrawLetter(ctx,Alphabet[Lingua][i],0,0,i%2?"rgba(224,235,237,1.0)":"rgba(234,233,215,1.0)",Scale);
-		
-		ctx.translate(0, 325/Scale);
-		ctx.rotate(Math.PI/Alphabet[Lingua].length);
-		ctx.translate(0, -325/Scale);
-		ctx.beginPath();
-		ctx.strokeStyle = "rgb(104,66,19)";
-		ctx.lineWidth=2;
-		ctx.moveTo(0,-50/Scale);
-		ctx.lineTo(0,40/Scale);
-		ctx.stroke();
-		
-		ctx.restore();
-	}
-	
-	ctx.drawImage(top_necklace, CX,CY, necklace_dimension[0]/Scale, necklace_dimension[1]/Scale);
-	WriteLetterTest();
-}
+                DrawLetter(ctx, Alphabet[Lingua][i], 0, 0, i % 2 ? "rgba(224,235,237,1.0)" : "rgba(234,233,215,1.0)", Scale);
 
-function DrawLetter(ctx,text,w,h,Color,Scale) {
-	// constants
-	const blur = 2/Scale;
-	const highLight = "rgba(104,66,19,1)";
-	const shadow = "rgba(0,0,0,0.65)";
-	const font = (50/Scale)+"px Arial";
-	const background = "linear-gradient(to right,  #1e5799 0%,#3096e5 100%)";
-	const border = "2px solid #6CF"
+                ctx.translate(0, 325 / Scale);
+                ctx.rotate(Math.PI / Alphabet[Lingua].length);
+                ctx.translate(0, -325 / Scale);
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(104,66,19)";
+                ctx.lineWidth = 2;
+                ctx.moveTo(0, -50 / Scale);
+                ctx.lineTo(0, 40 / Scale);
+                ctx.stroke();
 
+                ctx.restore();
+            }
 
-	// set up font and font rendering alignment
-	ctx.font = font;            
-	ctx.textAlign = "center";
-	ctx.textBaseline = "middle";
-
-	// draw dark shadow
-	ctx.shadowBlur = blur; // shadow
-	ctx.fillStyle = ctx.shadowColor = shadow;
-	ctx.shadowOffsetY = ctx.shadowOffsetX = blur;
-	ctx.fillText(text, w, h);
-
-	// draw highLight
-	ctx.fillStyle = ctx.shadowColor = highLight;
-	ctx.shadowOffsetY = ctx.shadowOffsetX = -blur;
-	ctx.fillText(text,  w, h);
-
-	// draw center text that removes pixels
-	ctx.shadowColor = "rgba(0,0,0,0.0)";               // turn off shadow
-	ctx.fillStyle = "black";
-	ctx.fillStyle = Color;
-	//ctx.globalCompositeOperation = "destination-out"; // New pixels will remove old pixels making them transparent
-	ctx.fillText(text,  w, h);
-	//ctx.globalCompositeOperation = "source-over";     // restore default composite operation.
-}
-
-function Move(ev) {
-	ev.preventDefault();
-	if (typeof ChiStoMuovendo !== 'undefined') {
-		if (ev.changedTouches  != null) {
-			touchobject=ev.changedTouches[0];
-			var mousexMov = touchobject.clientX-document.getElementById(ChiStoMuovendo).getBoundingClientRect().x;
-			var mouseyMov = touchobject.clientY-document.getElementById(ChiStoMuovendo).getBoundingClientRect().y;
-		} else {
-			var mousexMov = ev.clientX-document.getElementById(ChiStoMuovendo).getBoundingClientRect().x;
-			var mouseyMov = ev.clientY-document.getElementById(ChiStoMuovendo).getBoundingClientRect().y;
-		}
-		MouseStart=[MousePos[0],MousePos[1]];
-		MousePos=[mousexMov,mouseyMov];
-		//console.log(MousePos);
-	}
-}
-
-function RandomString(N,Alfabeto) {
-	var Risp="";
-	for (let i=0;i<N;i++) {
-		Risp = Risp + Alfabeto[Math.floor(Math.random()*Alfabeto.length)];
-	}
-	return Risp;
-}
-
-function StringToArray(Text) {
-	var Ris=[];
-	for (let i=0;i<Text.length;i++) {
-		Ris.push(Alphabet[Lingua].indexOf(Text[i]));
-	}
-	return Ris;
-}
-
-function ArrayToString(Arr) {
-	var Ris="";
-	for (let i=0;i<Arr.length;i++) {
-		Ris = Ris + Alphabet[Lingua][Arr[i]];
-	}
-	return Ris;
-}
-
-function Translate(Text,Number) {
-	var TextArray=StringToArray(Text.toUpperCase());
-	for (let i=0;i<TextArray.length;i++) {
-		TextArray[i] = (((TextArray[i]+Number) % Alphabet[Lingua].length)+Alphabet[Lingua].length)%Alphabet[Lingua].length;
-	}
-	return ArrayToString(TextArray);
-}
-
-function Up(ev) {
-	if (CosaStoMuovendo==1) {
-		document.getElementById(ChiStoMuovendo).AngPosizione1=document.getElementById(ChiStoMuovendo).AngPosizione1+AngMouseFinale-AngMouseIniziale;
-		document.getElementById(ChiStoMuovendo).AngPosizione1=Math.round(Alphabet[Lingua].length*document.getElementById(ChiStoMuovendo).AngPosizione1/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
-		CosaStoMuovendo=-1;
-	}
-	if (CosaStoMuovendo==2) {
-		document.getElementById(ChiStoMuovendo).AngPosizione2=document.getElementById(ChiStoMuovendo).AngPosizione2+AngMouseFinale-AngMouseIniziale;
-		document.getElementById(ChiStoMuovendo).AngPosizione2=Math.round(Alphabet[Lingua].length*document.getElementById(ChiStoMuovendo).AngPosizione2/(2*Math.PI))*(2*Math.PI/Alphabet[Lingua].length);
-		CosaStoMuovendo=-1;
-	}
-	
-	document.getElementById(ChiStoMuovendo).CaesarShift=Math.round(Alphabet[Lingua].length*(document.getElementById(ChiStoMuovendo).AngPosizione2-document.getElementById(ChiStoMuovendo).AngPosizione1)/(2*Math.PI));
-	Draw(document.getElementById(ChiStoMuovendo),document.getElementById(ChiStoMuovendo).CentroCesare[0],document.getElementById(ChiStoMuovendo).CentroCesare[1],document.getElementById(ChiStoMuovendo).AngPosizione1,document.getElementById(ChiStoMuovendo).AngPosizione2,document.getElementById(ChiStoMuovendo).Scale);
-	ev.preventDefault();
-	if (typeof CurrentAnim != 'undefined') cancelAnimationFrame( CurrentAnim );
-}
-
-function WriteLetterTest2() {
-	ctxMathina.beginPath();
-	ctxMathina.fillStyle = "rgb(0,0,255)";
-	ctxMathina.textAlign = 'center';
-	ctxMathina.textBaseline = 'middle';
-	ctxMathina.font = "100px Arial";
-	ctxMathina.fillText("HOME", dimension[0]*1/8,150);	
-	
-	ctxMathina.beginPath();
-	ctxMathina.fillStyle = "rgb(0,0,255)";
-	ctxMathina.textAlign = 'center';
-	ctxMathina.textBaseline = 'middle';
-	ctxMathina.font = "100px Arial";
-	ctxMathina.fillText(Translate("HOME",CaesarShift), dimension[0]*7/8,150);
-}
-
- function wrapText(context, text, x, y, maxWidth, lineHeight) {
-        var words = text.split(' ');
-        var line = '';
-
-        for(var n = 0; n < words.length; n++) {
-          var testLine = line + words[n] + ' ';
-          var metrics = context.measureText(testLine);
-          var testWidth = metrics.width;
-          if (testWidth > maxWidth && n > 0) {
-            context.fillText(line, x, y);
-            line = words[n] + ' ';
-            y += lineHeight;
-          }
-          else {
-            line = testLine;
-          }
+            ctx.drawImage(top_necklace, CX, CY, necklace_dimension[0] / Scale, necklace_dimension[1] / Scale);
+            WriteLetterTest();
         }
-        context.fillText(line, x, y);
-      }
 
-function WriteLetterTest() {
-return 0;
-	ctxMathina.beginPath();
-	ctxMathina.fillStyle = "rgb(0,0,255)";
-	ctxMathina.textAlign = 'center';
-	ctxMathina.textBaseline = 'middle';
-	ctxMathina.font = "100px Arial";
-	ctxMathina.fillText("KRPH", dimension[0]*1/8,150);	
-	
-	ctxMathina.beginPath();
-	ctxMathina.fillStyle = "rgb(0,0,255)";
-	ctxMathina.textAlign = 'center';
-	ctxMathina.textBaseline = 'middle';
-	ctxMathina.font = "70px Arial";
-	wrapText(ctxMathina,"Do you think you found the correct key?", dimension[0]*7/8,150,400,60);
-}
-
-function Distanza(A,B) {
-	return Math.sqrt(Math.pow(B[0]-A[0],2)+Math.pow(B[1]-A[1],2));
-}
-
-function Down(ev) {
-	ev.preventDefault();
-	
-	window.ChiStoMuovendo=this.id;
-	if (ev.changedTouches  != null) {
-		touchobject=ev.changedTouches[0];
-		var mousexMov = touchobject.clientX-this.getBoundingClientRect().x;
-		var mouseyMov = touchobject.clientY-this.getBoundingClientRect().y;
-	} else {
-		var mousexMov = ev.clientX-this.getBoundingClientRect().x;
-		var mouseyMov = ev.clientY-this.getBoundingClientRect().y;
-	}
-
-	
-	
-	
-
-	MousePos=[mousexMov,mouseyMov];
-	
-
-	DistClickCentro=Distanza(MousePos,this.CentroCesare);
-	if (DistClickCentro>185/this.Scale && DistClickCentro<275/this.Scale) CosaStoMuovendo=1;
-	else if (DistClickCentro>(330-45)/this.Scale && DistClickCentro<(330+45)/this.Scale) CosaStoMuovendo=2;
-	else CosaStoMuovendo=0;
-	
-	MouseStart=[mousexMov,mouseyMov];	
-	//if (MousePos[0]<=dimension[0]/2) AngMouseIniziale=-find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-	//else AngMouseIniziale=find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
-	
-	if (MousePos[0]<=this.MathinaDim[0]/2) AngMouseIniziale=-find_angle([this.MathinaDim[0]/2,this.MathinaDim[1]/2-100],[this.MathinaDim[0]/2,this.MathinaDim[1]/2],MousePos);
-	else AngMouseIniziale=find_angle([this.MathinaDim[0]/2,this.MathinaDim[1]/2-100],[this.MathinaDim[0]/2,this.MathinaDim[1]/2],MousePos);
-	
-	startAnima();
-}
+        function DrawLetter(ctx, text, w, h, Color, Scale) {
+            // constants
+            const blur = 2 / Scale;
+            const highLight = "rgba(104,66,19,1)";
+            const shadow = "rgba(0,0,0,0.65)";
+            const font = (50 / Scale) + "px Arial";
+            const background = "linear-gradient(to right,  #1e5799 0%,#3096e5 100%)";
+            const border = "2px solid #6CF"
 
 
-function find_angle(A,B,C) {
-    var AB = Math.sqrt(Math.pow(B[0]-A[0],2)+ Math.pow(B[1]-A[1],2));    
-    var BC = Math.sqrt(Math.pow(B[0]-C[0],2)+ Math.pow(B[1]-C[1],2)); 
-    var AC = Math.sqrt(Math.pow(C[0]-A[0],2)+ Math.pow(C[1]-A[1],2));
-    return Math.acos((BC*BC+AB*AB-AC*AC)/(2*BC*AB));
-}
+            // set up font and font rendering alignment
+            ctx.font = font;
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
 
-function startAnima() {
-    fpsInterval = 1000 / 60;
-    then = Date.now();
-    startTime = then;
-    Anima();
-}
+            // draw dark shadow
+            ctx.shadowBlur = blur; // shadow
+            ctx.fillStyle = ctx.shadowColor = shadow;
+            ctx.shadowOffsetY = ctx.shadowOffsetX = blur;
+            ctx.fillText(text, w, h);
 
-function Anima() {
-    window.CurrentAnim=requestAnimationFrame(Anima);
-    now = Date.now();
-    elapsed = now - then;
-    if (elapsed > fpsInterval) {
-        then = now - (elapsed % fpsInterval);
+            // draw highLight
+            ctx.fillStyle = ctx.shadowColor = highLight;
+            ctx.shadowOffsetY = ctx.shadowOffsetX = -blur;
+            ctx.fillText(text, w, h);
 
-		if (MousePos[0]<=document.getElementById(ChiStoMuovendo).MathinaDim[0]/2) AngMouseFinale=-find_angle([document.getElementById(ChiStoMuovendo).MathinaDim[0]/2,document.getElementById(ChiStoMuovendo).MathinaDim[1]/2-1],[document.getElementById(ChiStoMuovendo).MathinaDim[0]/2,document.getElementById(ChiStoMuovendo).MathinaDim[1]/2],MousePos);
-		else AngMouseFinale=find_angle([document.getElementById(ChiStoMuovendo).MathinaDim[0]/2,document.getElementById(ChiStoMuovendo).MathinaDim[1]/2-1],[document.getElementById(ChiStoMuovendo).MathinaDim[0]/2,document.getElementById(ChiStoMuovendo).MathinaDim[1]/2],MousePos);
-		document.getElementById(ChiStoMuovendo).getContext('2d').clearRect(0,0,document.getElementById(ChiStoMuovendo).MathinaDim[0],document.getElementById(ChiStoMuovendo).MathinaDim[1]);
-		
-		var Angolo1=document.getElementById(ChiStoMuovendo).AngPosizione1;
-		var Angolo2=document.getElementById(ChiStoMuovendo).AngPosizione2;
-		
-		
-		
-		if (CosaStoMuovendo==1) Angolo1+=AngMouseFinale-AngMouseIniziale;
-		if (CosaStoMuovendo==2) Angolo2+=AngMouseFinale-AngMouseIniziale;
-		
-		
-		
-		
-		
-		
-		document.getElementById(ChiStoMuovendo).CaesarShift=Math.round(Alphabet[Lingua].length*(Angolo2-Angolo1)/(2*Math.PI));
-		
-		
-		document.getElementById("TestFin").innerHTML=Traduci(TestoIniziale,document.getElementById("CanvasMathina").CaesarShift,document.getElementById("CanvasMathina2").CaesarShift);
-		
-		
-		document.getElementById("Ch1-t").innerHTML="A &rarr; "+Alphabet[Lingua][document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length)]+ " (" + document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length) + ")";
-		document.getElementById("Ch2-t").innerHTML="A &rarr; "+Alphabet[Lingua][document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet[Lingua].length)]+ " (" + document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet[Lingua].length) + ")";
-		
-		
-		Draw(document.getElementById(ChiStoMuovendo),document.getElementById(ChiStoMuovendo).CentroCesare[0],document.getElementById(ChiStoMuovendo).CentroCesare[1],Angolo1,Angolo2,document.getElementById(ChiStoMuovendo).Scale);
-    }
-}
+            // draw center text that removes pixels
+            ctx.shadowColor = "rgba(0,0,0,0.0)"; // turn off shadow
+            ctx.fillStyle = "black";
+            ctx.fillStyle = Color;
+            //ctx.globalCompositeOperation = "destination-out"; // New pixels will remove old pixels making them transparent
+            ctx.fillText(text, w, h);
+            //ctx.globalCompositeOperation = "source-over";     // restore default composite operation.
+        }
 
-function Finisci() {
-document.getElementById("successMessage").style.display="block";
+        function Move(ev) {
+            ev.preventDefault();
+            if (typeof ChiStoMuovendo !== 'undefined') {
+                if (ev.changedTouches != null) {
+                    touchobject = ev.changedTouches[0];
+                    var mousexMov = touchobject.clientX - document.getElementById(ChiStoMuovendo).getBoundingClientRect().x;
+                    var mouseyMov = touchobject.clientY - document.getElementById(ChiStoMuovendo).getBoundingClientRect().y;
+                } else {
+                    var mousexMov = ev.clientX - document.getElementById(ChiStoMuovendo).getBoundingClientRect().x;
+                    var mouseyMov = ev.clientY - document.getElementById(ChiStoMuovendo).getBoundingClientRect().y;
+                }
+                MouseStart = [MousePos[0], MousePos[1]];
+                MousePos = [mousexMov, mouseyMov];
+                //console.log(MousePos);
+            }
+        }
 
-}
+        function RandomString(N, Alfabeto) {
+            var Risp = "";
+            for (let i = 0; i < N; i++) {
+                Risp = Risp + Alfabeto[Math.floor(Math.random() * Alfabeto.length)];
+            }
+            return Risp;
+        }
 
-function Sconfitta() {
-document.getElementById("failMessage").style.display="block";
+        function StringToArray(Text) {
+            var Ris = [];
+            for (let i = 0; i < Text.length; i++) {
+                Ris.push(Alphabet[Lingua].indexOf(Text[i]));
+            }
+            return Ris;
+        }
 
-}
+        function ArrayToString(Arr) {
+            var Ris = "";
+            for (let i = 0; i < Arr.length; i++) {
+                Ris = Ris + Alphabet[Lingua][Arr[i]];
+            }
+            return Ris;
+        }
 
-function Cesare(Str,Alfabeto,T) {
-	Str=Str.toUpperCase();
-	Modulo=Alfabeto.length;
-	var StrTr="";
-	for (let i=0;i<Str.length;i++) {
-		PosOr=Alfabeto.indexOf(Str[i]);
-		if (PosOr==-1) {
-		StrTr = StrTr+Str[i];
-		
-		} else {
-			PosNew=(((PosOr+T) % Modulo)+Modulo)%Modulo;
-			StrTr = StrTr + Alfabeto[PosNew];
-			}
-	}
+        function Translate(Text, Number) {
+            var TextArray = StringToArray(Text.toUpperCase());
+            for (let i = 0; i < TextArray.length; i++) {
+                TextArray[i] = (((TextArray[i] + Number) % Alphabet[Lingua].length) + Alphabet[Lingua].length) % Alphabet[Lingua].length;
+            }
+            return ArrayToString(TextArray);
+        }
 
-	return StrTr;
-}
+        function Up(ev) {
+            if (CosaStoMuovendo == 1) {
+                document.getElementById(ChiStoMuovendo).AngPosizione1 = document.getElementById(ChiStoMuovendo).AngPosizione1 + AngMouseFinale - AngMouseIniziale;
+                document.getElementById(ChiStoMuovendo).AngPosizione1 = Math.round(Alphabet[Lingua].length * document.getElementById(ChiStoMuovendo).AngPosizione1 / (2 * Math.PI)) * (2 * Math.PI / Alphabet[Lingua].length);
+                CosaStoMuovendo = -1;
+            }
+            if (CosaStoMuovendo == 2) {
+                document.getElementById(ChiStoMuovendo).AngPosizione2 = document.getElementById(ChiStoMuovendo).AngPosizione2 + AngMouseFinale - AngMouseIniziale;
+                document.getElementById(ChiStoMuovendo).AngPosizione2 = Math.round(Alphabet[Lingua].length * document.getElementById(ChiStoMuovendo).AngPosizione2 / (2 * Math.PI)) * (2 * Math.PI / Alphabet[Lingua].length);
+                CosaStoMuovendo = -1;
+            }
 
+            document.getElementById(ChiStoMuovendo).CaesarShift = Math.round(Alphabet[Lingua].length * (document.getElementById(ChiStoMuovendo).AngPosizione2 - document.getElementById(ChiStoMuovendo).AngPosizione1) / (2 * Math.PI));
+            Draw(document.getElementById(ChiStoMuovendo), document.getElementById(ChiStoMuovendo).CentroCesare[0], document.getElementById(ChiStoMuovendo).CentroCesare[1], document.getElementById(ChiStoMuovendo).AngPosizione1, document.getElementById(ChiStoMuovendo).AngPosizione2, document.getElementById(ChiStoMuovendo).Scale);
+            ev.preventDefault();
+            if (typeof CurrentAnim != 'undefined') cancelAnimationFrame(CurrentAnim);
+        }
 
-function shuffle(array) {
-  var currentIndex = array.length, temporaryValue, randomIndex;
+        function WriteLetterTest2() {
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,255)";
+            ctxMathina.textAlign = 'center';
+            ctxMathina.textBaseline = 'middle';
+            ctxMathina.font = "100px Arial";
+            ctxMathina.fillText("HOME", dimension[0] * 1 / 8, 150);
 
-  // While there remain elements to shuffle...
-  while (0 !== currentIndex) {
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,255)";
+            ctxMathina.textAlign = 'center';
+            ctxMathina.textBaseline = 'middle';
+            ctxMathina.font = "100px Arial";
+            ctxMathina.fillText(Translate("HOME", CaesarShift), dimension[0] * 7 / 8, 150);
+        }
 
-    // Pick a remaining element...
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
+        function wrapText(context, text, x, y, maxWidth, lineHeight) {
+            var words = text.split(' ');
+            var line = '';
 
-    // And swap it with the current element.
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
+            for (var n = 0; n < words.length; n++) {
+                var testLine = line + words[n] + ' ';
+                var metrics = context.measureText(testLine);
+                var testWidth = metrics.width;
+                if (testWidth > maxWidth && n > 0) {
+                    context.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            context.fillText(line, x, y);
+        }
 
-  return array;
-}
+        function WriteLetterTest() {
+            return 0;
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,255)";
+            ctxMathina.textAlign = 'center';
+            ctxMathina.textBaseline = 'middle';
+            ctxMathina.font = "100px Arial";
+            ctxMathina.fillText("KRPH", dimension[0] * 1 / 8, 150);
 
-String.prototype.shuffle2 = function () {
-    var a = this.split(""),
-        n = a.length;
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,255)";
+            ctxMathina.textAlign = 'center';
+            ctxMathina.textBaseline = 'middle';
+            ctxMathina.font = "70px Arial";
+            wrapText(ctxMathina, "Do you think you found the correct key?", dimension[0] * 7 / 8, 150, 400, 60);
+        }
 
-    for(var i = n - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
-    }
-    return a.join("");
-}
+        function Distanza(A, B) {
+            return Math.sqrt(Math.pow(B[0] - A[0], 2) + Math.pow(B[1] - A[1], 2));
+        }
 
-ElencoParole=["LIMONE", "ARMADIO", "RAGNO", "ERBA", "GATTO", "CANE"];
+        function Down(ev) {
+            ev.preventDefault();
 
-
-function GenerateEx() {
-document.getElementById("Ch1-t").innerHTML="A &rarr; "+Alphabet[Lingua][0]+ " (" + 0 + ")";
-		document.getElementById("Ch2-t").innerHTML="A &rarr; "+Alphabet[Lingua][0]+ " (" + 0 + ")";
-	TestoIniziale="Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax drù pjgbc.".toUpperCase();
-	document.getElementById("TestIni").innerHTML=TestoIniziale;
-	document.getElementById("TestFin").innerHTML=TestoIniziale;
-}
-
-function Check() {
-	if (document.getElementById("CanvasMathina3").CaesarShift % Alphabet[Lingua].length==(Chiave1+Chiave2) % Alphabet[Lingua].length) Finisci();
-	else Sconfitta();
-
-
-}
+            window.ChiStoMuovendo = this.id;
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.getBoundingClientRect().x;
+                var mouseyMov = touchobject.clientY - this.getBoundingClientRect().y;
+            } else {
+                var mousexMov = ev.clientX - this.getBoundingClientRect().x;
+                var mouseyMov = ev.clientY - this.getBoundingClientRect().y;
+            }
 
 
 
-function Traduci(Testo,N1,N2) {
-	var Parole=Testo.split(" ");
-	var Finale="";
-	for (let i=0;i<Parole.length;i++) {
-		if (i%2==0) Finale=Finale + Cesare(Parole[i],Alphabet[Lingua],N1);
-		else Finale=Finale + Cesare(Parole[i],Alphabet[Lingua],N2);
-		Finale=Finale + " ";
-	}
-	return Finale;
-}
-</script>
+
+            MousePos = [mousexMov, mouseyMov];
+
+
+            DistClickCentro = Distanza(MousePos, this.CentroCesare);
+            if (DistClickCentro > 185 / this.Scale && DistClickCentro < 275 / this.Scale) CosaStoMuovendo = 1;
+            else if (DistClickCentro > (330 - 45) / this.Scale && DistClickCentro < (330 + 45) / this.Scale) CosaStoMuovendo = 2;
+            else CosaStoMuovendo = 0;
+
+            MouseStart = [mousexMov, mouseyMov];
+            //if (MousePos[0]<=dimension[0]/2) AngMouseIniziale=-find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
+            //else AngMouseIniziale=find_angle([dimension[0]/2,dimension[1]/2-100],[dimension[0]/2,dimension[1]/2],MousePos);
+
+            if (MousePos[0] <= this.MathinaDim[0] / 2) AngMouseIniziale = -find_angle([this.MathinaDim[0] / 2, this.MathinaDim[1] / 2 - 100], [this.MathinaDim[0] / 2, this.MathinaDim[1] / 2], MousePos);
+            else AngMouseIniziale = find_angle([this.MathinaDim[0] / 2, this.MathinaDim[1] / 2 - 100], [this.MathinaDim[0] / 2, this.MathinaDim[1] / 2], MousePos);
+
+            startAnima();
+        }
+
+
+        function find_angle(A, B, C) {
+            var AB = Math.sqrt(Math.pow(B[0] - A[0], 2) + Math.pow(B[1] - A[1], 2));
+            var BC = Math.sqrt(Math.pow(B[0] - C[0], 2) + Math.pow(B[1] - C[1], 2));
+            var AC = Math.sqrt(Math.pow(C[0] - A[0], 2) + Math.pow(C[1] - A[1], 2));
+            return Math.acos((BC * BC + AB * AB - AC * AC) / (2 * BC * AB));
+        }
+
+        function startAnima() {
+            fpsInterval = 1000 / 60;
+            then = Date.now();
+            startTime = then;
+            Anima();
+        }
+
+        function Anima() {
+            window.CurrentAnim = requestAnimationFrame(Anima);
+            now = Date.now();
+            elapsed = now - then;
+            if (elapsed > fpsInterval) {
+                then = now - (elapsed % fpsInterval);
+
+                if (MousePos[0] <= document.getElementById(ChiStoMuovendo).MathinaDim[0] / 2) AngMouseFinale = -find_angle([document.getElementById(ChiStoMuovendo).MathinaDim[0] / 2, document.getElementById(ChiStoMuovendo).MathinaDim[1] / 2 - 1], [document.getElementById(ChiStoMuovendo).MathinaDim[0] / 2, document.getElementById(ChiStoMuovendo).MathinaDim[1] / 2], MousePos);
+                else AngMouseFinale = find_angle([document.getElementById(ChiStoMuovendo).MathinaDim[0] / 2, document.getElementById(ChiStoMuovendo).MathinaDim[1] / 2 - 1], [document.getElementById(ChiStoMuovendo).MathinaDim[0] / 2, document.getElementById(ChiStoMuovendo).MathinaDim[1] / 2], MousePos);
+                document.getElementById(ChiStoMuovendo).getContext('2d').clearRect(0, 0, document.getElementById(ChiStoMuovendo).MathinaDim[0], document.getElementById(ChiStoMuovendo).MathinaDim[1]);
+
+                var Angolo1 = document.getElementById(ChiStoMuovendo).AngPosizione1;
+                var Angolo2 = document.getElementById(ChiStoMuovendo).AngPosizione2;
+
+
+
+                if (CosaStoMuovendo == 1) Angolo1 += AngMouseFinale - AngMouseIniziale;
+                if (CosaStoMuovendo == 2) Angolo2 += AngMouseFinale - AngMouseIniziale;
+
+
+
+
+                document.getElementById(ChiStoMuovendo).CaesarShift = Math.round(Alphabet[Lingua].length * (Angolo2 - Angolo1) / (2 * Math.PI));
+
+
+                document.getElementById("TestFin").innerHTML = Traduci(TestoIniziale, document.getElementById("CanvasMathina").CaesarShift, document.getElementById("CanvasMathina2").CaesarShift);
+
+
+                document.getElementById("Ch1-t").innerHTML = "A &rarr; " + Alphabet[Lingua][document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length)] + " (" + document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length) + ")";
+                document.getElementById("Ch2-t").innerHTML = "A &rarr; " + Alphabet[Lingua][document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet[Lingua].length)] + " (" + document.getElementById("CanvasMathina2").CaesarShift.mod(Alphabet[Lingua].length) + ")";
+
+
+                Draw(document.getElementById(ChiStoMuovendo), document.getElementById(ChiStoMuovendo).CentroCesare[0], document.getElementById(ChiStoMuovendo).CentroCesare[1], Angolo1, Angolo2, document.getElementById(ChiStoMuovendo).Scale);
+            }
+        }
+
+        function Finisci() {
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.display = "block";
+
+        }
+
+        function Cesare(Str, Alfabeto, T) {
+            Str = Str.toUpperCase();
+            Modulo = Alfabeto.length;
+            var StrTr = "";
+            for (let i = 0; i < Str.length; i++) {
+                PosOr = Alfabeto.indexOf(Str[i]);
+                if (PosOr == -1) {
+                    StrTr = StrTr + Str[i];
+
+                } else {
+                    PosNew = (((PosOr + T) % Modulo) + Modulo) % Modulo;
+                    StrTr = StrTr + Alfabeto[PosNew];
+                }
+            }
+
+            return StrTr;
+        }
+
+
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        String.prototype.shuffle2 = function() {
+            var a = this.split(""),
+                n = a.length;
+
+            for (var i = n - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+            return a.join("");
+        }
+
+        ElencoParole = ["LIMONE", "ARMADIO", "RAGNO", "ERBA", "GATTO", "CANE"];
+
+
+        function GenerateEx() {
+            document.getElementById("Ch1-t").innerHTML = "A &rarr; " + Alphabet[Lingua][0] + " (" + 0 + ")";
+            document.getElementById("Ch2-t").innerHTML = "A &rarr; " + Alphabet[Lingua][0] + " (" + 0 + ")";
+            TestoIniziale = "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax drù pjgbc.".toUpperCase();
+            document.getElementById("TestIni").innerHTML = TestoIniziale;
+            document.getElementById("TestFin").innerHTML = TestoIniziale;
+        }
+
+        function Check() {
+            if (document.getElementById("CanvasMathina3").CaesarShift % Alphabet[Lingua].length == (Chiave1 + Chiave2) % Alphabet[Lingua].length) Finisci();
+            else Sconfitta();
+
+
+        }
+
+
+
+        function Traduci(Testo, N1, N2) {
+            var Parole = Testo.split(" ");
+            var Finale = "";
+            for (let i = 0; i < Parole.length; i++) {
+                if (i % 2 == 0) Finale = Finale + Cesare(Parole[i], Alphabet[Lingua], N1);
+                else Finale = Finale + Cesare(Parole[i], Alphabet[Lingua], N2);
+                Finale = Finale + " ";
+            }
+            return Finale;
+        }
+    </script>
 </head>
+
 <body onload="Init()">
 
-<div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
-<div id="DivCanvas2"><canvas id="CanvasMathina2"></canvas></div>
-<div id="Partenza"><div class="PartContainer"><p id="Trad3">Modifica la posizione dei dischi e osserva cosa succede:</p><p id="TestIni"></p></div></div>
-<div id="Ch1"><div class="PartContainer"><span id="Trad1">Parole dispari:</span><br><span id="Ch1-t"></span></div></div>
-<div id="Ch2"><div class="PartContainer"><span id="Trad2">Parole pari:</span><br><span id="Ch2-t"></span></div></div>
-<div id="Arrivo"><div class="PartContainer"><p id="Trad4">Ecco il testo tradotto:</p><p id="TestFin"></p></div></div>
-<div id="successMessage" style="display:none">
-    <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
+    <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+    <div id="DivCanvas2"><canvas id="CanvasMathina2"></canvas></div>
+    <div id="Partenza">
+        <div class="PartContainer">
+            <p id="Trad3">Modifica la posizione dei dischi e osserva cosa succede:</p>
+            <p id="TestIni"></p>
+        </div>
+    </div>
+    <div id="Ch1">
+        <div class="PartContainer"><span id="Trad1">Parole dispari:</span><br><span id="Ch1-t"></span></div>
+    </div>
+    <div id="Ch2">
+        <div class="PartContainer"><span id="Trad2">Parole pari:</span><br><span id="Ch2-t"></span></div>
+    </div>
+    <div id="Arrivo">
+        <div class="PartContainer">
+            <p id="Trad4">Ecco il testo tradotto:</p>
+            <p id="TestFin"></p>
+        </div>
+    </div>
+    <div id="successMessage" style="display:none">
+        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
   right: 46%;"></img>
-  <img src="img/Festejos.gif" width=40% style=" position: absolute;
+        <img src="img/Festejos.gif" width=40% style=" position: absolute;
   top: 10%;
   right: 30%; z-index: -1;"> </img>
-	   
-	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
-  </div>
-  
-<div id="failMessage" style="display:none">
-    <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
+    </div>
+
+    <div id="failMessage" style="display:none">
+        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
   top: 30%;
   right: 46%;"></img>
- 
-	   
-	<img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
-  </div>
+    </div>
 </body>
+
 </html>
