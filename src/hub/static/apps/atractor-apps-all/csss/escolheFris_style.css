@@ -1,0 +1,80 @@
+/* Add some margin to the page and set a default font and colour */
+button{
+    -webkit-appearance: none;
+}
+
+body {
+    margin: auto;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-image: url("../imgs/symm-bg1-06.jpg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #fbd131;
+}
+
+/* For any viewports less than 1000px wide */
+@media (max-width: 1200px) {
+    body {
+        background-size: 1200px 675px; /* Force the image to its minimum width */
+    }
+
+}
+
+/* Header/footer boxes */
+
+.wideBox {
+    clear: both;
+    text-align: center;
+    /*width: 1000px;*/
+    margin: auto;
+    /*border: 1px solid #333;*/
+}
+
+/* Give headings their own font */
+.wideBox h1 {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #408A7B;
+}
+
+.buttons{
+    width: 1000px;
+    margin: auto;
+    /*max-width: 800px;*/
+    /*border: 1px solid #333;*/
+}
+
+.line{
+    /*width: 1000px;*/
+    margin: 10px;
+    margin-left: 150px;
+    border-top: 1px solid black;
+}
+
+/* Main content area 
+#conteudo div{
+    width: 1200px;
+    margin: auto;
+}
+.content{
+    width: 1200px;
+    margin: auto;
+}
+*/
+
+/* "You did it!" message */
+#successMessage, #errorMessage, #finalMessage {
+    width: 0;
+    height: 0;
+    /*padding: 20px;*/
+    z-index: 100;
+    background: #333;
+    border: 2px solid #333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+#successMessage, #errorMessage, #finalMessage h2{
+    color: #fff
+}

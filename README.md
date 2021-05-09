@@ -6,9 +6,11 @@
   * [Quick Start](#quick-start)
   * [Working with stories](#working-with-stories)
   * [Supported Actions](#supported-story-actions)
+  * [Story localization](#story-localization)
 * [Educator's Repository](#educators-repository)
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
+  * [Educator content localization](#educator-content-localization)
 * [Standalone Apps](#standalone-apps)
 * [Extra: Example App](#extra-example-app)
 
@@ -161,7 +163,7 @@ CITIES: {
 
 *NOTE*: **BOLD** properties are required.
 
-## Set background
+### Set background
 
 Sets a background image. Multiple background images can be set. Use the **style** property to set 
 z-index, positioning and other attributes for each layer if needed.
@@ -174,13 +176,51 @@ z-index, positioning and other attributes for each layer if needed.
   style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
 ```
 
+**Example for using parallax**
+
+```yaml
+- type: background
+  src: c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+  parallax: back2
+```
+
+**Example using common shared resources**
+
+```yaml
+- type: background
+  src: $COMMON/img/bg/c1-bg1.jpg
+  style: "position: absolute; right: 0; bottom: 0; width: 40%; z-index: 3;"
+```
+This image should be located in `src/hub/stories/common/img/bg/c1-bg1.jpg`
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `background` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/` |
+| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/bg/`. You can also use **common** shared backgrounds. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/bg/bg1.jpg` |
 | style | `<string>` css style | Use css styles to setup background layer. Multiple background layers can be set using z-index for instance.|
+| id | <string> with no spaces | Set an optional unique per story id for background, useful for `clear`-ing the background later. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
+
+### Clear background
+
+Remove a background
+
+**Example**
+
+```yaml
+- type: clearBackground
+  id: bg1
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `clearBackground` | action type |
+| **id** | Valid id `<string>` | id of the background to remove. Should be set as `id` param when adding the background. |
 
 ### Set image
 
@@ -195,18 +235,30 @@ Display an image.
   align: center
   valign: bottom
   style: "width: 20%;"
+  parallax: mid1
 ```
+
+**Example using common shared resources**
+
+```yaml
+- type: image
+  src: $COMMON/img/c1-5.png
+  id: c1-5
+```
+This image should be located in `src/hub/stories/common/img/c1-5.png`
+
 
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `image` | action type |
-| **src** | `<string>` path | Filename. File should be located in `$STORY_DIR/img/` |
-| id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later. |
+| **src** | `<string>` path | File should be located in `$STORY_DIR/img/`. You can also use **common** shared images. In that case put the images in `src/hub/static/stories/common/` and start the path in the yaml src definition with `$COMMON`. Example src: `$COMMON/img/img1.jpg`. Note that multiple images with the same path can only be displayed at the same time if they have unique IDs set. |
+| id | <string> with no spaces | Set an optional unique per story id for image, useful for `clear`-ing the image later or displaying multiple instance of an image with the same file path. |
 | align | center, left, right | Horizontal alignment of image |
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
+| parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
 
 ### Animate Image
 
@@ -225,6 +277,23 @@ Specify gsap animation properties as the vars property.
     ease: power3.out
 ```
 
+**Example with a defined back animation**
+
+```yaml
+- type: animation
+  target: img1
+  vars:
+    duration: 0.5
+    xPercent: 0
+    yPercent: -40
+    ease: power1.inOut
+  varsBack:
+    duration: 0.5
+    xPercent: 0
+    yPercent: 40
+    ease: power1.inOut
+```
+
 **Params**
 
 | Name | Valid values | Description |
@@ -232,6 +301,7 @@ Specify gsap animation properties as the vars property.
 | **type** | `animation` | action type |
 | **target** | Valid id `<string>` | id of the image to animate. Should be set as `id` param when adding image via image action type. |
 | **vars** | gsap to() params `<object>` | See GSAP documentation for possible values https://greensock.com/docs/v3/GSAP/gsap.to() |
+| varsBack | gsap to() params `<object>` | You can set animation parameters that should be executed when "Back" navigation is used by the player. If this is not set, the image will display its previous state without animating the transition. |
 
 ### Clear image
 
@@ -282,9 +352,29 @@ Dialog entries support various moods which use images defined in `src/hub/static
   entries:
     - text: "I love these toys!"
       char: mathina
+      exposition: "A wild Anna appears!"
+      mood: happy
+    - text: "Some have defects!"
+      char: generic-char
+      charName: Anna
+    - text: "Hey, you there!"
     - text: "Some have defects!"
       char: wizard
       mood: sad
+```
+
+**Example with avatar alignment**
+
+```yaml
+- type: dialog
+  avatarAlign:
+    mathina: left
+    wizard: right
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+    - text: "Some have defects!"
+      char: wizard
 ```
 
 **Params**
@@ -293,14 +383,17 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `dialog` | action type |
 | **entries** | `<array>` of Entries | Dialog entries |
+| avatarAlign | `<object>` { char: left or right } | Optionally set position of characters images in this dialog to `left` or `right`. Defaults to `left`. |
 
 **Entries**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **text** | Any `<string>` | action type |
-| **char** | mathina, wizard, ... | id of a supported character |
+| char | mathina, wizard, ... | id of a supported character, defaults to **generic**  |
+| charName | `<string>` | An optional replacement character name. Especially useful when used with generic characters. |
 | mood | **normal**, happy, sad, surprised, angry, excited | Direction the character's avatar is facing. Defaults to `normal` if not set. |
+| exposition | `<string>` | An optional narrative description of the events of a scene, written in the present tense. Will be displayed in cursive |
 
 ### Game
 
@@ -309,9 +402,14 @@ Dialog entries support various moods which use images defined in `src/hub/static
 ```yaml
 - type: game
   text: "Is the following image good (i.e. symmetric)?"
+  toolbarText: "Is the following image good (i.e. symmetric)?"
   cta: "Try it yourself!"
   url: https://www.atractor.pt/temp/apps-tests/dobrar_3.html
   img:
+    src: c1-2.png
+    height: 200
+    width: 200
+  toolbarImg:
     src: c1-2.png
     height: 200
     width: 200
@@ -323,10 +421,45 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `game` | action type |
 | **text** | Any `<string>` | Game description |
+| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
 | img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
+| toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
 
+## Using tags to link directly to an action
+
+You can add a `tag` property to any interactive action to support directly linking and fast forwarding to that action.
+
+Example:
+
+```yaml
+- type: dialog
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+- type: sceneText
+  tag: someTagName
+  text: At the stall, Mathina is greeted by a smiling wizard.
+```
+
+Then if the user visits the page by using a link which contains the query parameter actionLink=someTagName
+the story will be fast-forwarded to the sceneText instead of the dialog action.
+
+## Story localization
+
+To prepare a localized version of a story add a `actions-<locale>.yaml` file.
+
+For example to add a german file, add `actions-de.yaml` to `/src/hub/static/stories/demo-story/`
+
+For localized images it's recommended to group them in a `<locale>` subdirectory. For instance put images specific to a
+german story to `/src/hub/static/stories/demo-story/img/de/some-german-specific-image.png` 
+
+### Supported locales
+
+* `de` - German
+* `en` - English (Do not create an actions-en.yaml file as the default actions.yaml file will be used for english)
+* ...
 
 # Educator's Repository
 
@@ -370,6 +503,18 @@ Adding content to the Repository is done by adding
 
 For supported syntax see this [example](https://raw.githubusercontent.com/mathina-eu/mathina/master/src/educators/static/stories/demo-story/content.md).
 
+### Using HTML instead of Markdown
+
+You can also use HTML directly instead of markdown for more flexibility. 
+In that case your content.md file should start with `!HTML!`.
+
+Example:
+```
+!HTML!
+
+<img src='/stories/demo-story/img/test.png' style="display: block; margin: 0 auto;">
+```
+
 ### Example: Adding Story Educator guides
 
 Story ID's should be based on the ID in [Story Index Document](https://docs.google.com/spreadsheets/d/1UEhZXMXJSGjwBbRu_AKIY0BM1-qVh2dfz4ZcU8Cr5zs/edit#gid=0)
@@ -379,7 +524,7 @@ Story ID's should be based on the ID in [Story Index Document](https://docs.goog
 3. Create a `content.md` file and write some Markdown.
 
 You can see some example content for the `demo-story` at
-https://edu.zabkar.net/story/demo-story-url-path/
+https://mathina-edu.netlify.app/story/demo-story-url-path
 
 ### Images
 
@@ -388,6 +533,14 @@ As a convention you should add images to the story's `img` subdirectory.
 ### Videos
 
 As a convention you should add videos to the story's `video` subdirectory.
+
+## Educator content localization
+
+To prepare a localized version of a story add a `content-<locale>.md` file.
+
+For example to add a german file, add `content-de.md` to `/src/educators/static/stories/demo-story/`
+
+For supported locales see [here](#supported-locales)
 
 # Standalone Apps
 

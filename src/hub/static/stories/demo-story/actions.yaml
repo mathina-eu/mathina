@@ -1,16 +1,73 @@
 actions:
+  - type: background
+    src: c1-bg1.jpg
+    id: bg1
+    style: "width: 100%"
   - type: sceneText
     text: >
       <p>Lorem ipsum</p>
       <p>Lorem ipsum dolores est</p>
+  - type: image
+    id: img1
+    src: $COMMON/img/Mathina1.png
+    style: "height: 300px; bottom: 20%; left: 20%;"
+  - type: sceneText
+    text: Hello
+  - type: animation
+    target: img1
+    vars:
+      duration: 0.5
+      xPercent: 0
+      yPercent: -40
+      ease: power1.inOut
+    varsBack:
+      duration: 0.5
+      xPercent: 0
+      yPercent: 40
+      ease: power1.inOut
+  - type: sceneText
+    text: >
+      <p>Lorem ipsum</p>
+      <p>Lorem ipsum dolores est</p>
+  - type: clearImage
+    id: img1
+  - type: image
+    id: img2
+    src: $COMMON/img/Mathina1.png
+    style: "height: 200px; bottom: 20%; left: 20%;"
+  - type: sceneText
+    text: Hello again
+  - type: animation
+    target: img2
+    vars:
+      duration: 0.5
+      xPercent: 20
+      ease: power1.inOut
+  - type: sceneText
+    text: pause
+  - type: clearImage
+    id: img2
   - type: dialog
+    avatarAlign:
+      mathina: right
     entries:
       - text: "I love these toys!"
         char: mathina
+        exposition: "A wild Anna appears!"
         mood: happy
+      - text: "Some have defects!"
+        char: generic-char
+        charName: Anna
+      - text: "Hey, you there!"
       - text: "Some have defects!"
         char: wizard
         mood: sad
+  - type: clearBackground
+    id: bg1
+  - type: background
+    src: $COMMON/img/bg/example-shared.jpg
+    style: "width: 100%"
+    parallax: front2
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"

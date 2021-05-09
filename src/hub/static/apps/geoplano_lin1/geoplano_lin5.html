@@ -1,0 +1,720 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
+	</head>
+	<body>
+
+
+<button type="button" onclick="recuar()" style="padding:0; width:auto; height:auto"><img src="../atractor-apps-all/icons/recuar.png" width=40px style="margin:0; padding:0"></img></button><br/>
+	
+		<canvas id="canvas"></canvas>
+		<audio src="../atractor-apps-all/sons/aplausos.mp3" id="aplausosAudio" type="audio/mpeg"></audio>
+   
+		<img src="../atractor-apps-all/icons/happy.png" id="certo" width="70px" style="display:none"></img>
+		<img src="../atractor-apps-all/icons/sad.png" id="errado" width="70px" style="display:none"></img>
+		
+		<div id="successMessage" style="display:none">
+		 <img src="../atractor-apps-all/icons/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="../atractor-apps-all/gifs/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="../atractor-apps-all/icons/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+
+  </div>
+		<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+		<script type="application/javascript">
+		function Link(){
+ window.location.href="index.html";
+}
+			var canvasWidth = 500;
+			var canvasHeight = 400;
+			var canvas = document.getElementById("canvas");
+			
+			var bounds = null;
+			var ctx = null;
+			var hasLoaded = false;
+			var delta=50;
+			var startX = 0;
+			var startY = 0;
+			var mouseX = 0;
+			var mouseY = 0;
+			var isDrawing = false;
+			var existingLines = [];
+			var path=[[[250,100],[200,100]],[[200,100],[200,50]],[[200,50],[150,50]],[[150,50],[150,150]],
+			[[150,150],[100,150]],[[100,150],[100,100]],[[100,100],[50,100]],[[50,100],[50,350]],
+			[[50,350],[250,350]],[[200,350],[200,250]],[[200,250],[250,200]],
+			[[100,250],[150,250]],[[150,250],[150,200]],[[150,200],[100,200]],[[100,200],[100,250]]];
+			var cores_ori=["black","black","black","black","black","black","black","black","black","black","black","black",
+			"black","black","black"]
+		var color="black";
+			var pathl=path.length;
+			var nnx=[];
+			for (var i=0;i<pathl;i++)
+			{nnx.push((path[i][0][0]-path[i][1][0])/delta)}
+		
+			
+			
+			var nny=[];
+			for (var i=0;i<pathl;i++)
+			{nny.push((path[i][0][1]-path[i][1][1])/delta)}
+			
+			var dists=[];
+			for (var i=0; i<pathl; i++)
+			{
+			dists[i]=[];
+			for (var k=0; k<=Math.abs(nnx[i]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nny[i]);k2++)
+			{
+			if(pDistance(path[i][0][0]-Math.sign(nnx[i])*k*delta,
+			path[i][0][1]-Math.sign(nny[i])*k2*delta,
+			path[i][0][0],path[i][0][1],path[i][1][0],
+			path[i][1][1])==0)
+			dists[i].push([path[i][0][0]-Math.sign(nnx[i])*delta*k,
+			path[i][0][1]-Math.sign(nny[i])*k2*delta,cores_ori[i]])
+			}
+			}
+			 }
+			
+			
+			
+			dists[pathl]=[];
+			for (var k=0; k<=Math.abs(nnx[pathl]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nny[pathl]);k2++)
+			{
+		if(pDistance(path[pathl][0][0]+Math.sign(nnx[pathl])*k*delta,path[pathl][0][1]+Math.sign(nny[pathl])*k2*delta,
+		path[pathl][0][0],path[pathl][0][1],path[pathl][1][0],path[pathl][1][1])==0)
+			dists[pathl].push([path[pathl] [0][0]+Math.sign(nnx[pathl])*delta*k,path[pathl][0][1]+
+			Math.sign(nny[pathl])*k2*delta,
+			cores_ori[pathl]])
+			}
+			}
+		
+	
+		var dists2=[];
+		
+		for (j=0;j<dists.length;j++)
+		{for(var k=0;k<dists[j].length-1;k++)
+		{dists2.push([[500-dists[j][k][0],dists[j][k][1]],[500-dists[j][k+1][0],dists[j][k+1][1]],dists[j][k][2]].sort())}};
+		
+		
+		
+		
+		
+			var path2=[];
+			
+			for (var k=0;k<path.length;++k)
+			{path2.push([[500-path[k][0][0],path[k][0][1]],[500-path[k][1][0],path[k][1][1]]].sort())}
+			
+			
+			
+			var pathlin=[];
+			
+			var colorline=["black","black","black","black"];
+			function draw() {
+				ctx.fillStyle = "#f3f1cd";
+				ctx.fillRect(0,0,canvasWidth,canvasHeight);
+				
+			
+				ctx.lineWidth = 2;
+				
+				
+				for (var i = 0; i < existingLines.length; ++i) {
+					var line = existingLines[i];
+					ctx.beginPath();
+					ctx.strokeStyle = line.cor;
+					ctx.moveTo(line.startX,line.startY);
+					ctx.lineTo(line.endX,line.endY);
+	ctx.stroke();					
+				}
+				
+			
+				
+				if (isDrawing) {
+					ctx.strokeStyle = "darkred";
+					ctx.lineWidth = 3;
+					ctx.beginPath();
+					ctx.moveTo(startX,startY);
+					ctx.lineTo(mouseX,mouseY);
+					ctx.stroke();
+				}
+			
+			for(var l=0; l<22; ++l) {
+			for (var j = 0; j < 20; ++j) {drawCoordinates(delta*l,delta*j)}
+			
+			}
+			ctx.strokeStyle = "darkred";
+					ctx.lineWidth = 4;
+					ctx.beginPath();
+					ctx.moveTo(250,0);
+					ctx.lineTo(250,400);
+					ctx.stroke();
+					
+					//objecto inicial
+					
+					
+					
+				ctx.lineWidth = 2;
+				
+				
+					for (var m=1; m<path.length+1; ++m)
+					{ctx.beginPath();
+					ctx.strokeStyle = cores_ori[m-1];
+					ctx.moveTo(path[m-1][0][0],path[m-1][0][1]);
+					ctx.lineTo(path[m-1][1][0],path[m-1][1][1])
+						//ctx.lineTo(path[0][0],path[0][1]);
+					ctx.stroke();
+					}
+			
+	
+			
+			}
+			
+		
+			
+			
+			
+				
+			function recuar()
+			{existingLines.pop();
+			pathlin=[];
+					for(var n=0; n<existingLines.length; ++n) 
+					{pathlin.push([[existingLines[n].startX,existingLines[n].startY],
+					[existingLines[n].endX,existingLines[n].endY],existingLines[n].cor].sort())}
+
+					var pathlinl=pathlin.length;
+					var nnxlin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnxlin.push((pathlin[i][0][0]-pathlin[i][1][0])/delta)}
+			
+			
+			var nnylin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnylin.push((pathlin[i][0][1]-pathlin[i][1][1])/delta)}
+			
+			var distslin=[];
+			for (var i=0; i<pathlinl; i++)
+			{
+			distslin[i]=[];
+			for (var k=0; k<=Math.abs(nnxlin[i]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nnylin[i]);k2++)
+			{
+			if(pDistance(pathlin[i][0][0]-Math.sign(nnxlin[i])*k*delta,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][0][0],pathlin[i][0][1],pathlin[i][1][0],pathlin[i][1][1])==0)
+			distslin[i].push([pathlin[i][0][0]-Math.sign(nnxlin[i])*delta*k,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][2]])
+			}
+			}
+			 }
+			
+			
+		var dists2lin=[];
+		
+		for (j=0;j<distslin.length;j++)
+		{for(var k=0;k<distslin[j].length-1;k++){
+			
+		if (dists2lin.indexOf([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]]].sort()) < 0) 	
+		{dists2lin.push([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]],distslin[j][k][2]].sort())}}};
+		
+					
+var dists2linf = dists2lin.filter((t={},a=>!(t[a]=a in t)));
+					
+			if(existingLines.length==0) 
+						{document.getElementById("certo").style="display:none";
+						document.getElementById("errado").style="display:none"}
+						else {
+					
+				if(	JSON.stringify(dists2linf.sort()).slice(1,-1).split(",[[").every(function(element){
+    return JSON.stringify(dists2.sort()).indexOf(element) != -1;
+}))
+					{document.getElementById("certo").style="display: inline";
+					document.getElementById("errado").style="display:none"}
+					else
+						{document.getElementById("certo").style="display:none"
+						document.getElementById("errado").style="display:inline"
+					}
+						
+						}
+
+			draw();
+			}
+			
+			var color;
+			
+			function onmousedown(e) {
+			bounds = canvas.getBoundingClientRect();
+
+				if(hasLoaded && e.button === 0) {
+					if (!isDrawing) {
+						startX = Math.round((e.clientX - bounds.left)/delta)*delta;
+						startY = Math.round((e.clientY - bounds.top)/delta)*delta;
+						
+						if(startX>=250) {isDrawing = true;draw();};
+					}
+					
+					
+				}
+				
+				
+				
+			}
+			
+			function onmouseup(e) {
+			bounds = canvas.getBoundingClientRect();
+
+				if(hasLoaded && e.button === 0) {
+					if (isDrawing && startX>=250 && Math.round(mouseX/delta)*delta>=250 && (startX!=Math.round(mouseX/delta)*delta||
+					startY!=Math.round(mouseY/delta)*delta)) {
+						existingLines.push({
+							startX: startX,
+							startY: startY,
+							endX: Math.round(mouseX/delta)*delta,
+							endY:  Math.round(mouseY/delta)*delta,
+							cor: color
+						});
+						
+						isDrawing = false;draw();
+					}
+					
+					
+					
+					pathlin=[];
+					for(var n=0; n<existingLines.length; ++n) 
+					{pathlin.push([[existingLines[n].startX,existingLines[n].startY],
+					[existingLines[n].endX,existingLines[n].endY],existingLines[n].cor].sort())}
+
+					var pathlinl=pathlin.length;
+					var nnxlin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnxlin.push((pathlin[i][0][0]-pathlin[i][1][0])/delta)}
+			
+			
+			var nnylin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnylin.push((pathlin[i][0][1]-pathlin[i][1][1])/delta)}
+			
+			var distslin=[];
+			for (var i=0; i<pathlinl; i++)
+			{
+			distslin[i]=[];
+			for (var k=0; k<=Math.abs(nnxlin[i]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nnylin[i]);k2++)
+			{
+			if(pDistance(pathlin[i][0][0]-Math.sign(nnxlin[i])*k*delta,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][0][0],pathlin[i][0][1],pathlin[i][1][0],pathlin[i][1][1])==0)
+			distslin[i].push([pathlin[i][0][0]-Math.sign(nnxlin[i])*delta*k,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][2]])
+			
+			
+			}
+			}
+			 }
+			
+			
+	
+
+			
+		var dists2lin=[];
+		
+	for (j=0;j<distslin.length;j++)
+		{for(var k=0;k<distslin[j].length-1;k++){
+		
+	
+		
+		if (dists2lin.indexOf([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]]].sort()) < 0) 	
+		{dists2lin.push([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]],distslin[j][k][2]].sort())}}};
+		
+
+var dists2linf = dists2lin.filter((t={},a=>!(t[a]=a in t)));
+
+		
+	
+					
+				if(	JSON.stringify(dists2linf.sort()).slice(1,-1).split(",[[").every(function(element){
+    return JSON.stringify(dists2.sort()).indexOf(element) != -1;
+}))
+					{document.getElementById("certo").style="display: inline";
+					document.getElementById("errado").style="display:none"}
+					else
+						{document.getElementById("certo").style="display:none"
+						document.getElementById("errado").style="display:inline"
+					
+						
+						}
+
+					
+				}
+				
+				
+				
+			
+			
+			
+				if(	JSON.stringify(dists2linf.sort())== JSON.stringify(dists2.sort())) {
+			aplausosAudio.play();
+			                  $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+			}
+			
+			}
+			
+			function onmousemove(e) {
+			bounds = canvas.getBoundingClientRect();
+
+				if (hasLoaded) {
+					mouseX = e.clientX - bounds.left;
+					mouseY = e.clientY - bounds.top;
+					
+										if (isDrawing&&mouseX>=250) {
+						draw();
+					}
+				}
+			}
+			
+			window.onload = function() {
+				canvas = document.getElementById("canvas");
+				canvas.width = canvasWidth;
+				canvas.height = canvasHeight;
+				
+				bounds = canvas.getBoundingClientRect();
+				ctx = canvas.getContext("2d");
+				hasLoaded = true;
+				
+		
+				
+				
+				draw();
+						
+			}
+			
+			function drawCoordinates(x,y){	
+  	var ctx = document.getElementById("canvas").getContext("2d");
+
+
+  	ctx.fillStyle = "#ff2626"; // Red color
+
+    ctx.beginPath();
+    ctx.arc(x, y, 4, 0, Math.PI * 2, true);
+    ctx.fill();
+}
+
+function pDistance(x, y, x1, y1, x2, y2) {
+
+  var A = x - x1;
+  var B = y - y1;
+  var C = x2 - x1;
+  var D = y2 - y1;
+
+  var dot = A * C + B * D;
+  var len_sq = C * C + D * D;
+  var param = -1;
+  if (len_sq != 0) //in case of 0 length line
+      param = dot / len_sq;
+
+  var xx, yy;
+
+  if (param < 0) {
+    xx = x1;
+    yy = y1;
+  }
+  else if (param > 1) {
+    xx = x2;
+    yy = y2;
+  }
+  else {
+    xx = x1 + param * C;
+    yy = y1 + param * D;
+  }
+
+  var dx = x - xx;
+  var dy = y - yy;
+  return Math.sqrt(dx * dx + dy * dy);
+}
+
+
+canvas.addEventListener("mousedown", function (e) {
+        onmousedown(e)
+}, false);
+canvas.addEventListener("mouseup", function (e) {
+  onmouseup(e)
+}, false);
+canvas.addEventListener("mousemove", function (e) {
+  onmousemove(e)
+}, false);
+
+
+
+// Set up touch events for mobile, etc
+function ontouchstart(e) {
+
+ bounds = canvas.getBoundingClientRect();
+
+        mousePos = getTouchPos(canvas, e);
+  var touch = e.touches[0];  
+
+
+
+				if(hasLoaded) {
+					if (!isDrawing) {
+						startX = Math.round((touch.clientX - bounds.left)/delta)*delta;
+						startY = Math.round((touch.clientY - bounds.top)/delta)*delta;
+						
+						
+						
+						if(startX>=250) {isDrawing = true;};
+					}
+					
+					
+				}
+				
+				
+				
+
+};
+
+function ontouchend(e) {	
+
+
+if(hasLoaded) {
+if (isDrawing && startX>=250 && Math.round(mouseX/delta)*delta>=250 && (startX!=Math.round(mouseX/delta)*delta||
+startY!=Math.round(mouseY/delta)*delta)) {
+						existingLines.push({
+							startX: startX,
+							startY: startY,
+							endX: Math.round(mouseX/delta)*delta,
+							endY:  Math.round(mouseY/delta)*delta,
+							cor: color
+						});
+						
+						isDrawing = false;draw();
+					}
+					
+					
+					
+					pathlin=[];
+					for(var n=0; n<existingLines.length; ++n) 
+					{pathlin.push([[existingLines[n].startX,existingLines[n].startY],
+					[existingLines[n].endX,existingLines[n].endY],existingLines[n].cor].sort())}
+
+					var pathlinl=pathlin.length;
+					var nnxlin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnxlin.push((pathlin[i][0][0]-pathlin[i][1][0])/delta)}
+			
+			
+			var nnylin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnylin.push((pathlin[i][0][1]-pathlin[i][1][1])/delta)}
+			
+			var distslin=[];
+			for (var i=0; i<pathlinl; i++)
+			{
+			distslin[i]=[];
+			for (var k=0; k<=Math.abs(nnxlin[i]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nnylin[i]);k2++)
+			{
+			if(pDistance(pathlin[i][0][0]-Math.sign(nnxlin[i])*k*delta,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][0][0],pathlin[i][0][1],pathlin[i][1][0],pathlin[i][1][1])==0)
+			distslin[i].push([pathlin[i][0][0]-Math.sign(nnxlin[i])*delta*k,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][2]])
+			
+			
+			}
+			}
+			 }
+			
+			
+	
+
+			
+		var dists2lin=[];
+		
+	for (j=0;j<distslin.length;j++)
+		{for(var k=0;k<distslin[j].length-1;k++){
+		
+	
+		
+		if (dists2lin.indexOf([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]]].sort()) < 0) 	
+		{dists2lin.push([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]],distslin[j][k][2]].sort())}}};
+		
+
+var dists2linf = dists2lin.filter((t={},a=>!(t[a]=a in t)));
+
+		
+	
+			
+				if(	JSON.stringify(dists2linf.sort()).slice(1,-1).split(",[[").every(function(element){
+    return JSON.stringify(dists2.sort()).indexOf(element) != -1;
+}))
+					{document.getElementById("certo").style="display: inline";
+					document.getElementById("errado").style="display:none"}
+					else
+						{document.getElementById("certo").style="display:none"
+						document.getElementById("errado").style="display:inline"
+					
+						
+						}
+
+					
+				}
+				
+				
+				
+				if(hasLoaded) {dists=[];
+				for(var n=0; n<existingLines.length; ++n) 
+				{dists.push(pDistance(mouseX, mouseY, existingLines[n].startX, existingLines[n].startY, 
+				existingLines[n].endX,existingLines[n].endY));}
+				var mindist=Math.min(...dists);
+				var indexmin=dists.indexOf(mindist);
+				if(mindist<10) {existingLines.splice(indexmin, 1)};
+		
+		
+		pathlin=[];
+					for(var n=0; n<existingLines.length; ++n) 
+					{pathlin.push([[existingLines[n].startX,existingLines[n].startY],[existingLines[n].endX,existingLines[n].endY],
+					existingLines[n].cor].sort())}
+
+			var pathlinl=pathlin.length;
+					var nnxlin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnxlin.push((pathlin[i][0][0]-pathlin[i][1][0])/delta)}
+			
+			
+			var nnylin=[];
+			for (var i=0;i<pathlinl;i++)
+			{nnylin.push((pathlin[i][0][1]-pathlin[i][1][1])/delta)}
+			
+			var distslin=[];
+			for (var i=0; i<pathlinl; i++)
+			{
+			distslin[i]=[];
+			for (var k=0; k<=Math.abs(nnxlin[i]);k++)
+			{
+			for (var k2=0; k2<=Math.abs(nnylin[i]);k2++)
+			{
+			if(pDistance(pathlin[i][0][0]-Math.sign(nnxlin[i])*k*delta,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][0][0],pathlin[i][0][1],pathlin[i][1][0],pathlin[i][1][1])==0)
+			distslin[i].push([pathlin[i][0][0]-Math.sign(nnxlin[i])*delta*k,pathlin[i][0][1]-Math.sign(nnylin[i])*k2*delta,pathlin[i][2]])
+			}
+			}
+			 }
+			
+			
+		var dists2lin=[];
+		
+		for (j=0;j<distslin.length;j++)
+		{for(var k=0;k<distslin[j].length-1;k++){
+			
+			
+		if (dists2lin.indexOf([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]]].sort()) < 0) 	
+		{dists2lin.push([[distslin[j][k][0],distslin[j][k][1]],
+		[distslin[j][k+1][0],distslin[j][k+1][1]],distslin[j][k][2]].sort())}}};
+			
+				var dists2linf = dists2lin.filter((t={},a=>!(t[a]=a in t)));
+
+		
+			
+				if(	JSON.stringify(dists2linf.sort()).slice(1,-1).split(",[[").every(function(element){
+    return JSON.stringify(dists2.sort()).indexOf(element) != -1;
+}))
+					{document.getElementById("certo").style="display: inline";
+					document.getElementById("errado").style="display:none"}
+					else
+						{document.getElementById("certo").style="display:none"
+						document.getElementById("errado").style="display:inline"
+					
+						
+						}
+
+					
+				}
+			
+			
+				if(	JSON.stringify(dists2linf.sort())== JSON.stringify(dists2.sort())) {
+			aplausosAudio.play();
+			                  $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+			}
+			
+			}
+
+function ontouchmove(e) {
+
+  var touch = e.touches[0];
+				if (hasLoaded) {
+					mouseX = touch.clientX - bounds.left;
+					mouseY = touch.clientY - bounds.top;
+					
+										if (isDrawing&&mouseX>=250) {
+						draw();
+					}
+				}
+			}
+
+
+canvas.addEventListener("touchstart", function (e) {
+        ontouchstart(e);
+}, false);
+canvas.addEventListener("touchend", function (e) {
+  ontouchend(e)
+}, false);
+canvas.addEventListener("touchmove", function (e) {
+  ontouchmove(e)
+}, false);
+
+
+// Get the position of a touch relative to the canvas
+function getTouchPos(canvasDom, touchEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: touchEvent.touches[0].clientX - rect.left,
+    y: touchEvent.touches[0].clientY - rect.top
+  };
+}
+
+// Prevent scrolling when touching the canvas
+document.body.addEventListener("touchstart", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchend", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener("touchmove", function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+						
+		</script>
+	</body>
+</html>

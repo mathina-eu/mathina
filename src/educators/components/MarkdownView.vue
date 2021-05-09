@@ -1,18 +1,28 @@
 <template>
-  <markdown-it-vue
-    ref="markdown"
-    class="md-body"
-    :content="content"
-    :options="options"
-  />
+  <div>
+    <markdown-it-vue
+      v-if="type === TYPE_MARKDOWN"
+      ref="markdown"
+      class="md-body"
+      :content="content"
+      :options="options"
+    />
+    <div
+      v-else
+      v-html="content"
+    />
+  </div>
 </template>
 
 <script>
 import MarkdownItVue from 'markdown-it-vue';
 import MarkdownVideo from './md-it-video-embed-plugin';
-import { html5Media } from 'markdown-it-html5-media';
+import { html5Media } from './markdown-it-image-and-video';
 import MarkdownToc from 'markdown-it-table-of-contents';
 import 'markdown-it-vue/dist/markdown-it-vue.css';
+
+const TYPE_MARKDOWN = 'md';
+const TYPE_HTML = 'html';
 
 export default {
   components: {
@@ -26,7 +36,10 @@ export default {
   },
   data() {
     return {
+      TYPE_MARKDOWN,
+      TYPE_HTML,
       content: '',
+      type: TYPE_MARKDOWN,
       options: {
         markdownIt: {
           linkify: true
@@ -44,9 +57,26 @@ export default {
     this.$refs.markdown.use(html5Media);
     this.$refs.markdown.use(MarkdownToc, { includeLevel: [1,2,3] });
     this.$refs.markdown.use(MarkdownVideo);
-    const { data } = await this.$axios.get(this.mdPath);
+    let { data } = await this.$axios.get(this.mdPath);
+    if (data.startsWith('!HTML!')) {
+      data = data.replace('!HTML!', '');
+      this.type = TYPE_HTML;
+    }
     this.content = data;
   }
 };
 
 </script>
+
+<style>
+.markdown-body img[src*="_align-center_"],
+.markdown-body video[src*="_align-center_"],
+.markdown-body iframe[src*="_align-center_"] {
+  display: block;
+  margin: 0 auto;
+}
+
+.markdown-body img {
+  max-width: unset;
+}
+</style>

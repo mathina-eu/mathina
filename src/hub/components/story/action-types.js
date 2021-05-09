@@ -1,74 +1,161 @@
 import { gsap } from 'gsap';
 
+export const GENERIC_CHAR = 'generic-char';
+
 class Action {
   constructor(props) {
     this.autoProgress = false;
+    this.tag = props.tag || '';
   }
 
   execute() {}
 }
 
 export class AnimationAction extends Action {
-  constructor({ vars, target, ...rest }) {
+  constructor({ vars, varsBack, target, ...rest }) {
     super(rest);
     this.target = target;
     this.type = 'animation';
     this.vars = vars;
+    this.varsBack = varsBack;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
-  execute() {
+  execute(context) {
     super.execute();
-    gsap.to(`#${this.target}`, this.vars);
+    if (context.activeDirection === 'back') {
+      const el = document.getElementById(this.target);
+      if (this.varsBack) {
+        gsap.to(`#${this.target}`, {
+          ...this.varsBack, onComplete: () => {
+            el._gsap = undefined;
+          }
+        });
+      } else {
+        el.style.cssText = this.historyStack.pop();
+      }
+    } else {
+      const el = document.getElementById(this.target);
+      if (!this.varsBack) {
+        this.historyStack.push(document.getElementById(this.target).style.cssText);
+      }
+      gsap.to(`#${this.target}`, { ...this.vars, onComplete: () => { el._gsap = undefined; } });
+    }
   }
 }
 
 export class BackgroundAction extends Action {
-  constructor({ src, style, ...rest }) {
+  constructor({ id, src, style, parallax = 'back1', ...rest }) {
     super(rest);
     this.style = style;
     this.type = 'background';
     this.src = src;
     this.autoProgress = true;
+    this.id = id;
+    this.parallax = parallax;
   }
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/bg/${this.src}`;
+    const path = this.getAssetPath(context.imgRoot);
+
+    if (context.activeDirection === 'back') {
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+      return;
+    }
+
     const bgs = context.backgrounds.filter(bg => bg.src !== path);
-    context.backgrounds = [...bgs, { src: path, style: this.style }];
+    context.backgrounds = [...bgs, { id: this.id, src: path, style: this.style, parallax: this.parallax }];
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/bg/${this.src}`;
+    }
+    return path;
+  }
+}
+
+export class ClearBackgroundAction extends Action {
+  constructor({ id, ...rest }) {
+    super(rest);
+    this.type = 'clearBackground';
+    this.id = id;
+    this.autoProgress = true;
+    this.historyStack = [];
+  }
+
+  execute(context) {
+    super.execute();
+
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.backgrounds = [...context.backgrounds, this.historyStack.pop()];
+      }
+      return;
+    }
+
+    if (this.src) {
+      const path = `${context.imgRoot}/bg/${this.src}`;
+      context.backgrounds = context.backgrounds.filter(bg => bg.src !== path);
+    } else {
+      const bg = context.backgrounds.find(bg => bg.id === this.id);
+      this.historyStack.push(bg);
+      context.backgrounds = context.backgrounds.filter(bg => bg.id !== this.id);
+    }
   }
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, ...rest }) {
+  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
     this.src = src;
-    this.align = align ? align : 'center';
-    this.valign = valign ? valign : 'center';
+    this.align = align ? align : 'none';
+    this.valign = valign ? valign : 'none';
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
+    this.parallax = parallax;
   }
 
   execute(context) {
     super.execute();
-    const path = `${context.imgRoot}/${this.src}`;
+    const path = this.getAssetPath(context.imgRoot);
 
     if (context.activeDirection === 'back') {
       context.images = context.images.filter(img => img.src !== path);
       return;
     }
 
-    const images = context.images.filter(img => img.src !== path && (!img.id || img.id !== this.id));
+    const images = context.images.filter(img => {
+      if (this.id) {
+        return img.id !== this.id;
+      }
+      return img.src !== path;
+    });
     images.push({
       id: this.id,
       src: path,
       style: this.style,
-      position: { vertical: this.valign, horizontal: this.align }
+      position: { vertical: this.valign, horizontal: this.align },
+      parallax: this.parallax
     });
     context.images = images;
+  }
+
+  getAssetPath(imgRoot) {
+    let path;
+    if (this.src.startsWith('$COMMON')) {
+      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+    } else {
+      path = `${imgRoot}/${this.src}`;
+    }
+    return path;
   }
 }
 
@@ -87,33 +174,53 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, ...rest }) {
+  constructor({ entries, avatarAlign, ...rest }) {
     super(rest);
     this.type = 'dialog';
-    this.entries = entries.map(({ text, char, mood }) => {
+    this.avatarAlign = avatarAlign || {};
+    this.entries = entries.map((
+      { text, char = GENERIC_CHAR, mood= 'normal', charName = null, exposition = null }
+    ) => {
       return {
         text,
         char,
-        mood: mood ? mood : 'normal',
+        charName,
+        mood,
+        exposition,
       };
     });
   }
 
   execute(context) {
     super.execute();
+    if (context.activeDirection === 'back') {
+      context.dialog.current = this.entries.length - 1;
+    } else {
+      context.dialog.current = 0;
+    }
     context.dialog.entries = this.entries;
-    context.dialog.current = 0;
+    context.dialog.avatarAlign = this.avatarAlign;
   }
 }
 
 export class GameAction extends Action {
-  constructor({ text, cta = 'Try it yourself!', url, img, ...rest }) {
+  constructor({
+    text,
+    cta = 'Try it yourself!',
+    toolbarText = '',
+    url,
+    img,
+    toolbarImg,
+    ...rest
+  }) {
     super(rest);
     this.type = 'game';
     this.text = text;
+    this.toolbarText = toolbarText;
     this.cta = cta;
     this.url = url;
     this.img = img;
+    this.toolbarImg = toolbarImg;
   }
 
   execute(context) {
@@ -128,15 +235,28 @@ export class ClearImageAction extends Action {
     this.type = 'clearImage';
     this.id = id;
     this.autoProgress = true;
+    this.historyStack = [];
   }
 
   execute(context) {
     super.execute();
 
+    if (context.activeDirection === 'back') {
+      if (this.historyStack.length > 0) {
+        context.images = [...context.images, this.historyStack.pop()];
+      }
+      return;
+    }
+
     if (this.src) {
+      // TODO: undocumented and doesn't work with back...
       const path = `${context.imgRoot}/${this.src}`;
       context.images = context.images.filter(img => img.src !== path);
     } else {
+      const img = context.images.find(img => img.id === this.id);
+      let el = document.getElementById(this.id);
+      img.style = el?.style?.cssText;
+      this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }
   }
@@ -151,6 +271,7 @@ export class ActionFactory {
     GameAction,
     ClearImageAction,
     AnimationAction,
+    ClearBackgroundAction,
   }
 
   static create({ type, ...props }) {

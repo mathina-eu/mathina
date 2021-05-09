@@ -3,7 +3,9 @@
     width="600"
     elevation="5"
   >
-    <v-card-title>{{ text }}</v-card-title>
+    <v-card-title style="word-break: normal;">
+      {{ text }}
+    </v-card-title>
     <div
       v-if="imgPath"
       class="d-flex flex-column justify-space-between align-center"
@@ -26,6 +28,7 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
+            class="game-cta"
             color="primary"
             dark
             v-bind="attrs"
@@ -39,22 +42,22 @@
             dark
             color="primary"
           >
-            <v-btn
-              icon
-              dark
-              @click="showGameDialog=false; $emit('lastGameFinished');"
+            <img
+              v-if="toolbarImgPath"
+              class="mr-4"
+              :height="toolbarImg.height"
+              :width="toolbarImg.width"
+              :src="toolbarImgPath"
             >
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-            <v-toolbar-title>{{ text }}</v-toolbar-title>
+            <v-toolbar-title>{{ textInToolbar }}</v-toolbar-title>
             <v-spacer />
             <v-toolbar-items>
               <v-btn
+                icon
                 dark
-                text
                 @click="showGameDialog=false; $emit('lastGameFinished');"
               >
-                Finish
+                <v-icon>mdi-close</v-icon>
               </v-btn>
             </v-toolbar-items>
           </v-toolbar>
@@ -78,6 +81,10 @@ export default {
       type: String,
       default: '',
     },
+    toolbarText: {
+      type: String,
+      default: '',
+    },
     url: {
       type: String,
       required: true,
@@ -87,6 +94,11 @@ export default {
       required: true,
     },
     img: {
+      type: Object,
+      required: false,
+      default: () => {},
+    },
+    toolbarImg: {
       type: Object,
       required: false,
       default: () => {},
@@ -108,7 +120,16 @@ export default {
         return '';
       }
       return `${this.imgRoot}/${this.img.src}`;
-    }
+    },
+    toolbarImgPath() {
+      if (!this.toolbarImg?.src) {
+        return '';
+      }
+      return `${this.imgRoot}/${this.toolbarImg.src}`;
+    },
+    textInToolbar() {
+      return this.toolbarText || this.text;
+    },
   }
 };
 </script>
@@ -119,5 +140,16 @@ export default {
   width: 100%;
   height: calc(100% - 64px);
   overflow: hidden;
+}
+
+.game-cta {
+  display: block !important;
+  max-width: 100%;
+  height: auto !important;
+
+  >>> .v-btn__content {
+    white-space: normal;
+    padding: 1rem;
+  }
 }
 </style>
