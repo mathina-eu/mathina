@@ -3,7 +3,7 @@
  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>App 1-2</title>
+    <title>App 2-p</title>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
@@ -212,6 +212,8 @@ recallDragon() := (
   dragon.trailB = [];
   path.points = [(0,0)];
   inputBuffer.record = [];
+  inputDisplay.texts = [0,0];
+  path.progress = 0;
 );
 
 
@@ -475,6 +477,33 @@ drawPath() := (
     );
   );
 );
+
+
+
+
+
+
+
+
+
+
+
+collideWithMountains() := (
+  forall(mountainPolygons,
+    if(pointInPolygon(dragon.pos, #),
+      dragonMoving = false;
+      recallDragon();
+    );
+  );
+);
+
+
+
+
+
+
+
+
 
 
 
@@ -757,8 +786,8 @@ recallTarget = dragonHome;
 
 
 mountainPolygons = [
-  [],
-  []
+  [[17.39, 13.09], [23.95, -10], [10.07, -10]],
+  [[37.51, 21.85], [42.55, -10], [29.87, -10]]
 ];
 
 
@@ -860,6 +889,7 @@ setupTime();
     moveDragon(delta);
     //collideWithPickUp();
     //collideWithObstacles();
+    collideWithMountains();
   );
 
 
@@ -870,7 +900,6 @@ setupTime();
 
 
 <script id='csmousedown' type='text/x-cindyscript'>
-  println(mouse().xy);
 
   /*
   if(!recallActive & dist(mouse().xy, wand.pos) <= wand.catchRadius,
