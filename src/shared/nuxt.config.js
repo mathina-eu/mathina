@@ -11,7 +11,8 @@ export default {
   target: 'static',
   env: {
     IS_DEV,
-    HUB_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app'
+    HUB_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
+    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
   },
 
   /*
@@ -65,6 +66,9 @@ export default {
       }
     ]
   ],
+  axios: {
+    baseURL: process.env.BASE_URL,
+  },
   i18n: {
     locales: [
       // ISO 639-1
