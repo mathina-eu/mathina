@@ -8,7 +8,7 @@ In the story, before introducing these polyhedra, we dwell on an important geome
 
 ## Convex polyhedron
 
-In the story, an example of a non convex polyhedron is found by chance, when Leo tries to close a vehicle of a Polyhedron Carousel and [some of the vehicle components turn inward](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+In the story, an example of a non convex polyhedron is found by chance, when Leo tries to close a vehicle of a Polyhedron Carousel and [some of the vehicle components turn inward]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 | ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
@@ -28,30 +28,30 @@ The main idea we intend to convey on the subject is that a **Platonic Solid** is
 
 `*` at each vertex the same number of faces meet;
 
-`*` the [**dihedral angles**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), i.e. the angles between contiguous faces, are equal;
+`*` the [**dihedral angles**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), i.e. the angles between contiguous faces, are equal;
 
-`*` the [**solid angles**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) at each vertex are equal.
+`*` the [**solid angles**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) at each vertex are equal.
 
 ### Building all Platonic Solids
 
 In the story, Mathina and Leo remember a polyhedron which satisfies all these properties: the **cube**.
 
 When trying to build a cube, Leo discovers, experimentally, a 
-[**cube net**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[**cube net**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 , and, later on, he realizes that the net is not unique (there are several other options). Throughout the story, the relations between a polyhedron and its nets are also explored in the remaining Platonic Solids.
 
 The two characters then decide to embrace the challenge of **finding, in a constructive way, all the remaining Platonic solids**. They observe that, in a cube, the number of squares arriving at each vertex -- **3** -- is always the same (as mentioned in one of the properties referred above). What if the number of squares was different from 3?
-[They easily conclude that this is not possible.](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[They easily conclude that this is not possible.]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 So, they decide to move on to triangles, which must be equilateral (according to the properties mentioned above).
 
-Following the same approach as before, the characters consider the case of 3 triangles joining in each vertex. By doing so, they discover a second Platonic Solid: the [**tetrahedron**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Following the same approach as before, the characters consider the case of 3 triangles joining in each vertex. By doing so, they discover a second Platonic Solid: the [**tetrahedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Passing to 4 triangles in each vertex, the characters build another Platonic Solid: the [**octahedron**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Finally, by choosing 5 triangles in each vertex, they find the [**icosahedron**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Passing to 4 triangles in each vertex, the characters build another Platonic Solid: the [**octahedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Finally, by choosing 5 triangles in each vertex, they find the [**icosahedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-After concluding that it is not possible to build Platonic solids with more than 5 triangles in each vertex, the characters move on to [**regular pentagons**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Again, by joining 3 polygons in each vertex, Leo and Mathina find a new Platonic Solid: the [**dodecahedron**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+After concluding that it is not possible to build Platonic solids with more than 5 triangles in each vertex, the characters move on to [**regular pentagons**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Again, by joining 3 polygons in each vertex, Leo and Mathina find a new Platonic Solid: the [**dodecahedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Leo and Mathina soon conclude that not only it is impossible to build Platonic solids with more than 3 pentagons at each vertex, but it is also impossible to build Platonic solids by [**using polygons with more than 5 sides**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Thus, they have discovered all the [**Platonic Solids**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Leo and Mathina soon conclude that not only it is impossible to build Platonic solids with more than 3 pentagons at each vertex, but it is also impossible to build Platonic solids by [**using polygons with more than 5 sides**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Thus, they have discovered all the [**Platonic Solids**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 | Cube | Tetrahedron | Octahedron | Icosahedron | Dodecahedron |
 | ------ | ------ | ------ | ------ | ------ |
@@ -69,23 +69,23 @@ In fact, it is possible to prove that a polyhedron satisfying these conditions h
 
 **Remark 1**: Notice that, following this new definition, in order to check if a polyhedron is Platonic, there is no need to compare its dihedral angles or its solid angles at each vertex (in the story, the characters studied these angles because they were not aware of the previous result).
 
-**Remark 2**: If we remove the condition “at each vertex arrive the same number of faces”, we can also get non Platonic Solids, as shown in [Game 4](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+**Remark 2**: If we remove the condition “at each vertex arrive the same number of faces”, we can also get non Platonic Solids, as shown in [Game 4]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 ## Uniform Polyhedra
 
-What is a uniform polyhedron? Examining a uniform polyhedron, the cuboctahedron, Mathina guesses it is a polyhedron whose faces are all regular polygons, but not all with the same number of sides, and for which [the solid angles at each vertex are equal](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+What is a uniform polyhedron? Examining a uniform polyhedron, the cuboctahedron, Mathina guesses it is a polyhedron whose faces are all regular polygons, but not all with the same number of sides, and for which [the solid angles at each vertex are equal]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 | Cuboctahedron (uniform polyhedron) | Great rhombicuboctahedron (uniform polyhedron) | Miller polyhedron (non uniform polyhedron) | Small rhombicuboctahedron(uniform polyhedron) |
 | ------ | ------ | ------ | ------ |
 |![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
-However, following “Mathina’s definition” a problem may arise: if we build a mould around a solid angle of the great rhombicuboctahedron,  [the mould won’t fit all the solid angles](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12): in this case, [two moulds are needed](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+However, following “Mathina’s definition” a problem may arise: if we build a mould around a solid angle of the great rhombicuboctahedron,  [the mould won’t fit all the solid angles]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12): in this case, [two moulds are needed]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Nevertheless, if we look at both moulds, we may notice that [they are the reflected image of each other](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Nevertheless, if we look at both moulds, we may notice that [they are the reflected image of each other]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 In this case, we will consider all the vertices of the polyhedron as being of "the same type".
 
-With this extended definition, we can now state that all the vertices of the Great rhombicuboctahedron are of the same type: in fact, the two moulds considered -- the original and the reflected one -- [fit perfectly in all the vertices](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). And the same thing happens for all the four polyhedra presented above. So, taking into account Mathina’s definition, the four polyhedra seem uniform. However, in the story, the technician claims that one of them is not uniform: [**the Miller polyhedron**](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+With this extended definition, we can now state that all the vertices of the Great rhombicuboctahedron are of the same type: in fact, the two moulds considered -- the original and the reflected one -- [fit perfectly in all the vertices]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). And the same thing happens for all the four polyhedra presented above. So, taking into account Mathina’s definition, the four polyhedra seem uniform. However, in the story, the technician claims that one of them is not uniform: [**the Miller polyhedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 This discrepancy is related to the definition of uniform polyhedron. For the technician, the condition "all the vertices are of the same type" should be replaced by a stronger one, which highlights the symmetrical aspect of the polyhedron: "for each pair of vertices, there is at least one symmetry of the polyhedron that takes one vertex onto the other". Thus, a **uniform polyhedron** is a polyhedron:
 
@@ -93,20 +93,20 @@ This discrepancy is related to the definition of uniform polyhedron. For the tec
 
 `*` for each pair of vertices, there is at least one symmetry of the polyhedron that takes one vertex onto the other.
 
-In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 ![Icosahedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Manipulate the polyhedron here](https://www.atractor.pt/temp/apps-tests/Miller_manip.html).
 
-However if we [rotate the octagonal dome on the top of the Miller polyhedron by 45º](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), we get a new uniform polyhedron: the small rhombicuboctahedron.
+However if we [rotate the octagonal dome on the top of the Miller polyhedron by 45º]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), we get a new uniform polyhedron: the small rhombicuboctahedron.
 
-Throughout the story, the characters get acquainted with **all uniform polyhedra**: 1) an infinite family of prisms, [whose bases are regular polygons and whose side faces are squares](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12); 2) an infinite family of anti-prisms, [whose bases are regular polygons and whose side faces are equilateral triangles](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12); 3) other 13 polyhedron:
+Throughout the story, the characters get acquainted with **all uniform polyhedra**: 1) an infinite family of prisms, [whose bases are regular polygons and whose side faces are squares]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12); 2) an infinite family of anti-prisms, [whose bases are regular polygons and whose side faces are equilateral triangles]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12); 3) other 13 polyhedron:
 
 ![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
-In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
+In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
 
 &nbsp;
 
@@ -143,7 +143,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Separating convex polyhedra](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 1 - Separating convex polyhedra]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 A set of 8 polyhedra is presented. The user is invited to choose the 4 convex ones. After choosing the correct polyhedra and clicking 
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
@@ -154,7 +154,7 @@ A set of 8 polyhedra is presented. The user is invited to choose the 4 convex on
 
 &nbsp;
 
-## [Game 2 - Choosing the right nets for the cube](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 2 - Choosing the right nets for the cube]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 A set of 6 proposals for cube nets is presented. The user is invited to choose the 3 “right” ones. After choosing the correct nets and clicking 
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
@@ -165,7 +165,7 @@ A set of 6 proposals for cube nets is presented. The user is invited to choose t
 
 &nbsp;
 
-## [Game 3 - Choosing the right nets for the octahedron](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 3 - Choosing the right nets for the octahedron]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This app is similar to **Game 2**. However, the chosen polyhedron is an octahedron.
 
@@ -174,7 +174,7 @@ This app is similar to **Game 2**. However, the chosen polyhedron is an octahedr
 
 &nbsp;
 
-## [Game 4 - Choosing non Platonic polyhedra whose faces are all regular and equal polygons](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 4 - Choosing non Platonic polyhedra whose faces are all regular and equal polygons]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the non Platonic polyhedra whose faces are all regular and equal polygons.
 
@@ -183,7 +183,7 @@ This app is similar to **Game 1**. However, instead of choosing convex polyhedra
 
 &nbsp;
 
-## [Game 5 - Separating uniform polyhedra](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 5 - Separating uniform polyhedra]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the uniform polyhedra. 
 

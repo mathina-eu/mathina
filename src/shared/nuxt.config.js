@@ -11,7 +11,7 @@ export default {
   target: 'static',
   env: {
     IS_DEV,
-    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://dev.zabkar.net'
+    HUB_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app'
   },
 
   /*
@@ -65,13 +65,6 @@ export default {
       }
     ]
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-    baseURL: process.env.BASE_URL,
-  },
   i18n: {
     locales: [
       // ISO 639-1
@@ -79,7 +72,6 @@ export default {
       { code: 'de', file: 'de.js', name: 'Deutsch' },
       { code: 'pt', file: 'pt.js', name: 'Português' },
       { code: 'it', file: 'it.js', name: 'Italiano' },
-      { code: 'sl', file: 'sl.js', name: 'Slovensko' }
     ],
     defaultLocale: 'en',
     vueI18n: {

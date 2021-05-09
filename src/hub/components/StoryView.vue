@@ -2,7 +2,9 @@
   <v-row align="center">
     <v-col
       class="text-center"
+      :class="{'ratio-wrapper--scaled': fullWidth}"
       cols="12"
+      :style="style"
     >
       <v-progress-circular
         v-if="isLoading"
@@ -14,6 +16,7 @@
       />
       <div
         v-else
+        ref="ratio"
         class="ratio"
       >
         <slot />
@@ -31,7 +34,54 @@ export default {
       default: false,
       required: false,
     },
+    fullWidth: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
+  data() {
+    return {
+      style: '',
+    };
+  },
+  watch: {
+    isLoading: {
+      handler(isLoading, wasLoading) {
+        if (!isLoading && wasLoading) {
+          this.$nextTick(() => {
+            this.setScaling();
+          });
+        }
+      }
+    }
+  },
+  mounted() {
+    if (!this.isLoading) {
+      this.$nextTick(() => {
+        this.setScaling();
+      });
+    }
+    window.addEventListener('resize', this.setScaling);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setScaling);
+  },
+  methods: {
+    setScaling() {
+      if (!this.fullWidth || this.isLoading) {
+        return false;
+      }
+      let el = this.$refs.ratio;
+      let elementWidth = el.clientWidth;
+      let bodyWidth = document.body.clientWidth;
+      if (!elementWidth || !bodyWidth) {
+        return false;
+      }
+      let ratio = bodyWidth / elementWidth;
+      this.style = `transform: scale(${ratio}); transform-origin: top;`;
+    },
+  }
 };
 </script>
 
@@ -41,6 +91,13 @@ export default {
   grid-template-columns: 1fr;
   max-width: 1200px;
   margin: auto;
+}
+
+.ratio-wrapper {
+  &--scaled {
+    align-self: start;
+    margin-top: -20px;
+  }
 }
 
 .ratio::before {
