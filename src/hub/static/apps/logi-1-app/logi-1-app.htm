@@ -1,0 +1,679 @@
+<html>
+
+<head>
+    <style>
+        #DivCanvas {
+            position: absolute;
+            top: 5%;
+            left: 75%;
+            width: 25%;
+            height: 90%;
+            z-index: 1;
+        }
+
+        #CanvasMathina {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
+
+        #DivComandi {
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            width: 50%;
+            height: 35%;
+            border: 3px solid #00274e;
+            padding: 1%;
+            z-index: 10;
+            background-color: rgba(220, 252, 249, 0.9);
+            border-radius: 15px;
+        }
+
+        #DivSfondo {
+            position: absolute;
+            top: 3%;
+            left: 0px;
+            right: 0px;
+            height: 35%;
+            padding: 1%;
+            z-index: 1;
+            border-top: 3px solid #00274e;
+            border-bottom: 3px solid #00274e;
+            //background-color: #dcfcf9;
+            background-color: rgba(220, 252, 249, 0.9);
+            //background: rgb(213,175,178);
+            //background: -moz-linear-gradient(180deg, rgba(213,175,178,0) 12%, rgba(213,175,178,1) 30%, rgba(213,175,178,1) 70%, rgba(213,175,178,0) 88%);
+            //background: -webkit-linear-gradient(180deg, rgba(213,175,178,0) 12%, rgba(213,175,178,1) 30%, rgba(213,175,178,1) 70%, rgba(213,175,178,0) 88%);
+            //background: linear-gradient(180deg, rgba(213,175,178,0) 12%, rgba(213,175,178,1) 30%, rgba(213,175,178,1) 70%, rgba(213,175,178,0) 88%);
+            //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5afb2",endColorstr="#d5afb2",GradientType=1);
+
+
+        }
+
+        #Cestino {
+            position: absolute;
+            top: 15%;
+            left: 75%;
+            width: 100px;
+            height: 100px;
+            border: 3px solid #00274e;
+            padding: 1%;
+            z-index: 2;
+            background-image: url("./icon_trash.svg");
+            background-color: #e7dace;
+            border-radius: 15px;
+        }
+
+
+        #ElencoSemafori {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            padding-top: 3%;
+            padding-left: 16%;
+            padding-right: 5%;
+            z-index: 3;
+            //border: 1px solid #00274e;
+            overflow: hidden;
+        }
+
+        #ElencoSemafori>div {
+            float: left;
+        }
+
+        .slide {
+            padding: 10px;
+        }
+
+        .colbutton {
+            height: 0px;
+            width: 16%;
+            padding: 8%;
+
+            border: solid;
+            border-radius: 100%;
+            margin: 1%;
+            font-size: 40px;
+            color: #fff;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+        }
+
+        .colbutton>span {
+            position: relative;
+            top: -20px;
+            left: -10px;
+        }
+
+        .normbutton {
+            padding: 2%;
+            border: solid #00274e;
+            border-radius: 15px;
+            height: 30%;
+            font-size: 1.5vw;
+            margin: 1%;
+        }
+
+        #successMessage {
+            position: absolute;
+            /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+            z-index: 100;
+            background: #f3f1cd;
+            border: 2px solid #333;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+            padding: 10% 0%;
+            text-align: center;
+            left: 1%;
+            top: 1%;
+            width: 98%;
+            height: 58%;
+        }
+
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding: auto;
+            float: left;
+            font-size: 4em;
+            text-align: center;
+        }
+
+
+        #Scelta {
+            position: absolute;
+            width: 98%;
+            height: 98%;
+            top: 1%;
+            left: 1%;
+            z-index: 100;
+            background: #dddddd;
+            display: none;
+        }
+
+        html {
+            background: url(bg_ew1.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Roboto", sans-serif;
+            overflow: hidden;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        MousePos = [0, 0];
+        StoSpostando = false;
+        IdCosaSpostata = "";
+
+
+        function LoadVersion(N) {
+
+            if (N == 2) {
+                document.getElementById("Cestino").style.display = "none";
+                document.getElementById("testo").innerHTML = "Descr2";
+                document.getElementById("DivComandi").style.display = "none";
+                //Scelgo 8 semafori
+                ArraySem = [];
+                for (let i = 0; i < 8; i++) {
+                    var ColCorr = [1, 2, 3];
+                    var SemCorr = [];
+                    for (let j = 0; j < 3; j++) {
+                        let Indice = Math.floor(Math.random() * ColCorr.length);
+                        SemCorr.push(ColCorr[Indice]);
+                        ColCorr.splice(Indice, 1);
+                    }
+                    ArraySem.push(SemCorr);
+                }
+                SemaforiTotali = 8;
+                for (let i = 0; i < ArraySem.length; i++) {
+                    AddColor(ArraySem[i][0]);
+                    AddColor(ArraySem[i][1]);
+                    AddColor(ArraySem[i][2]);
+                    Add();
+                }
+
+                for (let i = 0; i < ArraySem.length; i++) {
+                    document.getElementById("S" + (i + 1)).addEventListener('mouseup', e => {
+                        setTimeout(function() {
+                            CheckSemaforiUguali(i + 1);
+                        }, 10);
+                    });
+                }
+
+
+
+            }
+
+            if (N == 3) {
+                document.getElementById("testo").innerHTML = "Descr3";
+                AddColor(1);
+                AddColor(2);
+                AddColor(3);
+                Add();
+
+                AddColor(1);
+                AddColor(3);
+                AddColor(2);
+                Add();
+
+                AddColor(2);
+                AddColor(1);
+                AddColor(3);
+                Add();
+
+                AddColor(2);
+                AddColor(3);
+                AddColor(1);
+                Add();
+
+                AddColor(3);
+                AddColor(1);
+                AddColor(2);
+                Add();
+
+
+                for (let i = 0; i < ArraySem.length; i++) {
+                    document.getElementById("S" + (i + 1)).addEventListener('mouseup', e => {
+                        var PosNow = Number(document.getElementById("S" + (i + 1)).style.left.replace(/px$/, ''));
+                        console.log(PosNow);
+                        if (Math.abs(PosNow - PosCestino) < 80) {
+                            var liDaRim = document.getElementById("S" + (i + 1));
+                            liDaRim.parentNode.removeChild(liDaRim);
+                            NumeroSemafori--;
+                        }
+                    });
+                }
+
+            }
+
+            return;
+        }
+
+        function Link() {
+            location.reload();
+
+        }
+
+        PosCestino = 1000;
+
+        function CheckSemaforiUguali(N) {
+            var ListaSem = document.getElementById("sortable").getElementsByTagName('li');
+            var ListaNum = [];
+            for (let i = 0; i < ListaSem.length; i++) {
+                if (ListaSem[i].id.search("S") != -1) {
+                    ListaNum.push(ListaSem[i].id);
+                }
+            }
+
+            var DoveMiTrovo = ListaNum.indexOf("S" + N);
+            var MieiColori = ArraySem[N - 1];
+
+            if (DoveMiTrovo > 0) {
+                var ConfrontoIndice = Number(ListaNum[DoveMiTrovo - 1].substring(1)); //L'indice numerico del semaforo che viene prima
+                var ColoriAltro = ArraySem[ConfrontoIndice - 1];
+                if (ColoriAltro[0] == MieiColori[0] && ColoriAltro[1] == MieiColori[1] && ColoriAltro[2] == MieiColori[2]) {
+                    var liDaRim = document.getElementById("S" + ConfrontoIndice);
+                    liDaRim.parentNode.removeChild(liDaRim);
+                    SemaforiTotali = SemaforiTotali - 1;
+                }
+            }
+
+            if (DoveMiTrovo < ListaNum.length - 1) {
+                var ConfrontoIndice = Number(ListaNum[DoveMiTrovo + 1].substring(1)); //L'indice numerico del semaforo che viene dopo
+                var ColoriAltro = ArraySem[ConfrontoIndice - 1];
+                if (ColoriAltro[0] == MieiColori[0] && ColoriAltro[1] == MieiColori[1] && ColoriAltro[2] == MieiColori[2]) {
+                    var liDaRim = document.getElementById("S" + ConfrontoIndice);
+                    liDaRim.parentNode.removeChild(liDaRim);
+                    SemaforiTotali = SemaforiTotali - 1;
+                    //ArraySem.splice(ConfrontoIndice,1);
+                }
+            }
+
+            if (Versione == 2) {
+                ElencoFinale = [];
+
+                for (let i = 0; i < ArraySem.length; i++) {
+                    ElencoFinale.push(ArraySem[i].join(""));
+                }
+                ElencoUnici = ElencoFinale.filter(function(item, pos) {
+                    return ElencoFinale.indexOf(item) == pos;
+                });
+
+                if (ElencoUnici.length == SemaforiTotali) Finisci();
+            }
+
+        }
+
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
+
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+
+        function Init() {
+
+
+            Versione = gup('v', document.location.search);
+
+            if (!isNumeric(Versione)) Versione = 1;
+            window.CanvasMathina = document.getElementById('CanvasMathina');
+            window.ctxMathina = CanvasMathina.getContext('2d');
+
+            window.addEventListener('resize', Resize, false);
+
+
+
+
+            Colori = ["#111111", "#9900CC", "#ff9933", "#fd9beb"];
+
+            document.getElementById("Color1").style.background = Colori[1];
+            document.getElementById("Color2").style.background = Colori[2];
+            document.getElementById("Color3").style.background = Colori[3];
+
+            LoadGraphics();
+            setTimeout(function() {
+                CheckCaricamento();
+            }, 10);
+
+        }
+
+        function Trasla() {
+            /*
+            $("#ElencoSemafori").sortable({
+                        revert: true
+                    }); 
+            */
+
+            $("#sortable").sortable();
+            $("#sortable").disableSelection();
+
+        }
+
+        function LoadGraphics() {
+            NumeroCaricati = 0;
+            trafficlight = new Image();
+            trafficlight.src = "./trafficlight.png";
+            trafficlight.onload = function() {
+                NumeroCaricati++;
+            }
+        }
+
+        function CheckCaricamento() {
+            if (NumeroCaricati == 1) {
+                Reset();
+                Resize();
+                LoadVersion(Versione);
+            } else {
+                setTimeout(function() {
+                    CheckCaricamento();
+                }, 10);
+            }
+        }
+
+
+        function NuovoSemaforo() {
+            LuceCorrente = 0;
+            ColoriCorrenti = [0, 0, 0];
+            DrawSemaforo(ColoriCorrenti, LuceCorrente);
+        }
+
+        function AddColor(N) {
+            if (LuceCorrente > -1 && ColoriCorrenti.indexOf(N) == -1) {
+                ColoriCorrenti[LuceCorrente] = N;
+                LuceCorrente++;
+                if (LuceCorrente == 3) {
+                    LuceCorrente = -1;
+                }
+                DrawSemaforo(ColoriCorrenti, LuceCorrente);
+            }
+        }
+
+
+
+        function DrawSemaforo(ListColor, Highlight) {
+            RaggioLuci = 160;
+            RaggioHigh = 180;
+            ColorHigh = "rgba(255,255,0,0.8)";
+            CentriLuci = [
+                [271, 304],
+                [271, 666],
+                [271, 1037]
+            ];
+
+            //Disegna colori se ci sono
+            for (let i = 0; i < 3; i++) {
+                ctxMathina.beginPath();
+                ctxMathina.fillStyle = Colori[ListColor[i]];
+                ctxMathina.arc(CentriLuci[i][0] / Scale, CentriLuci[i][1] / Scale, RaggioLuci / Scale, 0, Math.PI * 2, true);
+                ctxMathina.fill();
+            }
+
+
+
+            //Disegna il semaforo
+            ctxMathina.drawImage(trafficlight, 0, 0, trafficlight_dimension[0] / Scale, trafficlight_dimension[1] / Scale);
+
+
+
+            //Disegna il disco evidenziatore
+            if (Highlight > -1) {
+                ctxMathina.beginPath();
+                ctxMathina.lineWidth = 30 / Scale;
+                ctxMathina.strokeStyle = ColorHigh;
+                ctxMathina.arc(CentriLuci[Highlight][0] / Scale, CentriLuci[Highlight][1] / Scale, RaggioHigh / Scale, 0, Math.PI * 2, true);
+                ctxMathina.stroke();
+            }
+        }
+
+
+        function Resize() {
+
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ? doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+            Border = dimension[0] / 100;
+
+            CanvasMathina.width = dimension[0] * 1 / 8;
+            CanvasMathina.height = dimension[1] * 63 / 200;
+
+            PosCestino = Math.floor(dimension[0] * 75 / 100);
+            console.log(PosCestino);
+            Scale = trafficlight_dimension[1] / CanvasMathina.height;
+
+            NuovoSemaforo();
+
+        }
+
+
+        function Reset() {
+            trafficlight_dimension = [trafficlight.width, trafficlight.height];
+            Scale = 4;
+            NuovoSemaforo();
+            Trasla();
+        }
+        ArraySem = [];
+        NumeroSemafori = 0;
+
+        function Add() {
+            if (LuceCorrente == -1 && NumeroSemafori < 8) {
+                NewScale = 1;
+                NumeroSemafori++;
+                var canvas = document.createElement("canvas");
+                var NuovoDiv = document.createElement("li");
+                NuovoDiv.id = "S" + NumeroSemafori;
+                //NuovoDiv.onclick=function() { IniziaSposta(NuovoDiv.id); };//function() {};
+
+                canvas.height = NewScale * trafficlight_dimension[1] / Scale;
+                canvas.width = NewScale * trafficlight_dimension[0] / Scale;
+                var destCtx = canvas.getContext('2d');
+                destCtx.scale(NewScale, NewScale);
+                NuovoDiv.appendChild(canvas);
+                NuovoDiv.classList.add("slide");
+
+                NuovoDiv.addEventListener('mouseup', e => {
+                    var PosNow = Number(document.getElementById(NuovoDiv.id).style.left.replace(/px$/, ''));
+                    console.log(PosNow);
+                    if (Math.abs(PosNow - PosCestino) < 80) {
+                        var liDaRim = document.getElementById(NuovoDiv.id);
+                        liDaRim.parentNode.removeChild(liDaRim);
+                        NumeroSemafori--;
+                    }
+                });
+
+
+                document.getElementById("sortable").appendChild(NuovoDiv);
+
+                //call its drawImage() function passing it the source canvas directly
+                destCtx.drawImage(CanvasMathina, 0, 0);
+
+                if (Versione != 2) ArraySem.push(ColoriCorrenti);
+                NuovoSemaforo();
+
+
+                if (Versione == 1) {
+                    var ElencoFinale = [];
+
+                    for (let i = 0; i < ArraySem.length; i++) {
+                        ElencoFinale.push(ArraySem[i].join(""));
+                    }
+                    ElencoUnici = ElencoFinale.filter(function(item, pos) {
+                        return ElencoFinale.indexOf(item) == pos;
+                    });
+                    //if (ElencoUnici.length==6) Finisci();
+                }
+
+                if (Versione == 3) {
+                    var ElencoFinale = [];
+
+                    for (let i = 0; i < ArraySem.length; i++) {
+                        ElencoFinale.push(ArraySem[i].join(""));
+                    }
+                    ElencoUnici = ElencoFinale.filter(function(item, pos) {
+                        return ElencoFinale.indexOf(item) == pos;
+                    });
+                    if (ElencoUnici.length == 6) Finisci();
+                }
+            }
+
+
+        }
+
+
+        function Move(ev) {
+
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX;
+                var mouseyMov = touchobject.clientY;
+            } else {
+                var mousexMov = ev.clientX;
+                var mouseyMov = ev.clientY;
+            }
+
+            MousePos = [mousexMov, mouseyMov];
+            if (StoSpostando) {
+                document.getElementById(IdCosaSpostata).style.left += MousePos[0] - MouseStart[0];
+            }
+
+            ev.preventDefault();
+        }
+
+        function IniziaSposta(ID) {
+            console.log(ID);
+            IdCosaSpostata = ID;
+            StoSpostando = true;
+            MouseStart = [MousePos[0], MousePos[1]];
+            document.getElementById(IdCosaSpostata).style.position = "absolute";
+            //CosaStart=[document.getElementById(ID).style.left,document.getElementById(ID).style.top];
+        }
+
+
+        function Down(ev) {
+            ev.preventDefault();
+        }
+
+        function Up(ev) {
+            StoSpostando = false;
+            ev.preventDefault();
+        }
+
+
+        function startAnima() {
+            fpsInterval = 1000 / 60;
+            then = Date.now();
+            startTime = then;
+            Anima();
+        }
+
+        function Finisci() {
+            document.getElementById("successMessage").style.display = "block";
+
+        }
+
+        function Anima() {
+            window.CurrentAnim = requestAnimationFrame(Anima);
+            now = Date.now();
+            elapsed = now - then;
+            if (elapsed > fpsInterval) {
+
+            }
+        }
+
+        function Generate() {
+
+            document.getElementById("Scelta").style.display = "none";
+
+
+        }
+    </script>
+</head>
+
+<body onload="Init()">
+    <div id="Cestino"></div>
+    <div id="DivSfondo"></div>
+    <div id="Scelta">
+        <div style=" position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  ">
+            <b id="testo">Description</b><br><br>
+            <button onclick="Generate()">Let's play!</button>
+        </div>
+    </div>
+    <div id="successMessage" style="display:none">
+        <img src="happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+        <img src="Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+
+        <img src="refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+    <div id="DivComandi">
+        <p><button type="button" onclick="AddColor(1)" class="colbutton" id="Color1"><span>1</span></button>
+            <button type="button" onclick="AddColor(2)" class="colbutton" id="Color2"><span>2</span></button>
+            <button type="button" onclick="AddColor(3)" class="colbutton" id="Color3"><span>3</span></button>
+        </p>
+        <p><button type="button" onclick="Add()" class="normbutton">Add traffic light</button><button type="button" onclick="NuovoSemaforo()" class="normbutton">Reset color choice</button></p>
+        <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+    </div>
+    <div id="ElencoSemafori" class="all-slides">
+        <ul id="sortable">
+            <li id="listazero" style="visibility:hidden;"></li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
