@@ -45,5 +45,11 @@ export default {
     leo: 'Leo',
     jane: 'Jane',
 	flamma: 'Flamma',
+	angela: 'Angela',
+	charmingparrot: 'Captain Charmingparrot',
+	carla: 'Carla',
+	parrot: 'John the parrot',
+	mysteriousfigure: 'Mysterious figure',
+	sean: 'Sean',
   },
 };
