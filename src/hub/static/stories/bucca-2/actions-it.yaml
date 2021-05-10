@@ -619,6 +619,7 @@ actions:
     text: "Ricorda: per decifrare devi partire dal cerchio esterno."
     toolbarText: "Seleziona la parola corretta."
     cta: "Provaci tu!"
+    tag: app1
     url: /apps/bucca-2-app/bucca-2-app-1.htm
 
 
@@ -831,6 +832,7 @@ actions:
     text: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
     toolbarText: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
     cta: "Provaci tu!"
+    tag: app2
     url: /apps/bucca-2-app/bucca-2-app-2.htm
     
   - type: sceneText
