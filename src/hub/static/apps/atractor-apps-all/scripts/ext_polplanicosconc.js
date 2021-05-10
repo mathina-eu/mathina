@@ -53,7 +53,7 @@ renderer.autoClear=false;
 renderer.setSize(width,height);
 renderer.setClearColor(0xf3f1cd,1);
 container=document.getElementById('ThreeJS');
-container.appendChild(renderer.domElement);
+document.getElementById("THREE").appendChild(renderer.domElement);
 window.addEventListener('resize',OnResize,true);
 //LIGHT 
 var light = new THREE.PointLight(0xffffff);

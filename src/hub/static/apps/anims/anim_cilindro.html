@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Carimbar</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+<style type="text/css">
+html {
+  width: 100%;
+  height: 100%;
+  margins:0 px;
+  background: #fae47b; 
+}
+</style>	
+	<style type="text/css">
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 162px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 6px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -210%;
+    left: 0%;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    margin-left: 6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent  #555  transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+</style>
+	<script>
+	
+nAzu=2
+
+	
+	
+	
+	function myFunction(image){
+    var img = new Image();
+    img.src = image;
+    img.onload = function() {   
+         a=this.width/this.height;
+		 return a
+        
+}}
+var imgname = "../atractor-apps-all/imgs/mot"+parseInt(nAzu)+".png";
+var a = myFunction(imgname)
+
+</script>
+</head>
+	<body onload="init();animate();return false">
+<div id="THREE" style="position:absolute; top: 0px;"></div>
+
+
+<img  src="../atractor-apps-all/icons/pause.png"  width=3.5% id=pauseRotateButton onClick=pauseRotation() style="position:absolute;  top: 10px;"></img>
+<img  src="../atractor-apps-all/icons/play.png"  width=3.5% id=playRotateButton onClick=playRotation() style="position:absolute; top: 10px; display: none;"></img>
+
+
+<input type="range" name="RangeVal" value="RangeVal" id="range" min="-2.5" max="3.5" step=".1" style="display: none;" />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../atractor-apps-all/icons/back.png" width=2.5% onclick="home();" style="display: none;"></img>
+
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/three87.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/Detector.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/TrackballControls.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+function chgMode(md){
+ var u=window.location.href,
+  r=new RegExp("_md([a-z]+)(-_[a-z][a-z])?[.]html");
+
+
+   window.location.href=u.replace(r,"_md"+md+".html");
+  }
+ //]]>
+</script>
+
+<script>
+
+function home(){
+	window.location.href="Scilindro_ini.html"
+}
+
+
+
+var speed=0.01	
+
+var nn=1; 
+var initv = 0;		
+var material = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,side: THREE.DoubleSide} );
+		
+var materialF = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,
+        side: THREE.FrontSide,
+        flatShading: true,
+        transparent: true,
+        opacity: 0.9
+    } );	
+
+var materialB = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,
+        side: THREE.BackSide,
+        flatShading: true,
+        transparent: true,
+        opacity: 0.9
+    } );	
+
+		
+		
+		texturep = new THREE.TextureLoader().load(imgname);
+
+
+// assuming you want the texture to repeat in both directions:
+texturep.wrapS = THREE.RepeatWrapping; 
+texturep.wrapT = THREE.RepeatWrapping;
+
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+texturep.repeat.set( 6*nn, 1 ); 
+
+var localPlane = new THREE.Plane( new THREE.Vector3( 1,0,0 ), 0 ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( - 1, 0, 0 ), 0 );
+			
+var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+var materialtap = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+var materialtap2 = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+		
+		RangeVal=-2.5;
+			var camera, scene, renderer, controls, planef, tempo;
+			var mesh;
+			var meshFunction;
+			var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;
+			var segments = 40;
+			var tapete;
+			var tapete2;
+
+var h_plane = -0.001;
+var h_pad = h_plane+0.0001;
+var h_tap = h_plane+0.0002;
+			
+			range.oninput = function() {
+    var tt = this.value;RangeVal=parseFloat(this.value);
+	displaySup(tt*nn);
+}
+range.onchange = function() {var tt = this.value;RangeVal=parseFloat(this.value);
+    displaySup(tt*nn);
+}
+
+
+
+			
+			function init() {
+				// CENA + PROCESSAMENTO DE IMAGEM WEBGL
+ 				var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg4-02.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+ 				scene = new THREE.Scene();
+				renderer = new THREE.WebGLRenderer();
+				 var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+renderer.setSize(width,height);
+
+
+				document.getElementById('THREE').appendChild( renderer.domElement );
+				renderer.setClearColor(0xfae47b,1);
+				
+				// CAMERA
+				var aspect=width/height, near=0.1, far=2000;
+				camera = new THREE.PerspectiveCamera(20,aspect,near,far);
+				var kc = 4*a*nn
+				camera.position.set(-2.4*kc,2*kc,1.3*kc);
+				//camera.position.set(0,2*kc,0);
+				camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+					
+				// LUZES
+				var light = new THREE.PointLight(0xf0f0f0);
+light.position.set(-25,20,-50);
+//scene.add(light);
+				var light2 = new THREE.PointLight(0xffffff);
+				light2.position.set(-20,20,0);
+				//scene.add(light2);
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );
+
+controls = new THREE.TrackballControls( camera, renderer.domElement );
+	controls.noPan = true;
+
+
+				this.mesh = new THREE.Object3D(); 
+mesh = Sup(RangeVal);
+
+	var translation0 = new THREE.Matrix4().makeTranslation(-a,0,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+				scene.add( mesh );
+				
+				
+
+
+planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn, 2), materialp);
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+var translation = new THREE.Matrix4().makeTranslation(a,0,0);
+
+//planef.applyMatrix(translation)
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+
+	
+var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn+1, 2+1), materialtap2);
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+scene.add(planeff);
+
+	
+		window.addEventListener('resize', function() {
+       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+renderer.setSize(width,height);
+      });
+
+			}
+
+			
+
+
+function animate() {requestAnimationFrame(animate);
+render();}
+
+function phi(tt) {return 1/6*Math.pow(tt+2.5,2)-2.5}
+
+function render() {
+		
+				renderer.localClippingEnabled = true;
+
+				if(initv==1&&isRotating) {RangeVal = -2.5;
+	tt=-2.5;
+	document.getElementById('range').value = -2.5;
+	scene.remove.apply(scene,scene.children)
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );
+var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn+1, 2+1), materialtap2);
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+scene.add(planeff);		
+displaySup(-2.5); tempo=[];
+ initv=0;
+ 
+ isRotating=true;pauseRotateButton.innerHTML="Parar Animação";
+ }
+	
+else {	
+	
+	if(isRotating)
+    { 
+	  if(RangeVal<=3.5) {
+	  
+	  RangeVal += speed;
+var tt=Math.min(RangeVal,4.5);
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+		
+		
+var kc = 4*a*nn
+
+				camera.position.set(3.4*kc,3.4*kc,5.6*kc);
+	
+				camera.lookAt(new THREE.Vector3(0,1.5,0));
+				camera.up.set(0,55,0)
+		
+		displaySup(phi(tt)*nn)} else {
+	  scene.remove(mesh)
+	  
+	   RangeVal += speed/2;
+var tt=Math.min(RangeVal,4.5);
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+
+var kc = 4*a*nn
+
+				camera.position.set(-2.4*kc*(1-phi(tt)+3.5),
+				2*kc,0.01*(phi(tt)-3.5)+1.3*kc*(1-phi(tt)+3.5));
+						
+				camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+				renderer.render( scene, camera )} 
+
+
+	  
+	  }; 
+	  
+	 	  if(RangeVal>3.5) {
+		  initv=1;
+		  isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+		  pauseRotateButton.innerHTML="Animar";RangeVal=-2.5;	    document.getElementById('range').value = -2.5;}
+    };
+	
+	if(animvp) {	var pos= new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z )
+	 
+var posf=pos.clone().applyAxisAngle(new THREE.Vector3(0,1,0),speed/8) 
+	 camera.position.set(posf.x,posf.y,posf.z);
+	  	camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0, 55, 0)
+        camera.updateProjectionMatrix()
+		}
+			
+				renderer.render( scene, camera );}
+			
+	
+	
+			function Sup(clock)
+{
+
+					
+			var k = (a/Math.PI)
+	
+			var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;	
+		
+				// DEF DA FUNCAO (X,Y)
+				meshFunction = function(x, y) {
+				var x00 = (xMax-xMin) * x + xMin;
+					var y00 = (yMax-yMin) * y + yMin;
+					
+					
+					var x0 = k*Math.sin(x00/k);
+					var y0 = k-k*Math.cos(x00/k);
+					var z0 = y00;
+				
+				
+		
+					
+									
+						return new THREE.Vector3(x0, y0, -z0);
+					
+				};
+				
+				
+	
+
+				// SUPERFICIE
+				
+				var geometry = new THREE.ParametricGeometry( meshFunction, segments, segments/10 );
+				
+mesh=new THREE.Group();	
+				
+				var mesh0 = new THREE.Mesh( geometry, materialF);
+				
+				mesh.add(mesh0);
+				
+				var mesh1 = new THREE.Mesh( geometry, materialB );
+				
+				mesh.add(mesh1);
+				
+				var espelhoi = new THREE.Curve();
+espelhoi.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,1)
+    return curvep;
+    };
+
+var geometryespi = new THREE.TubeGeometry( espelhoi, 60, .008, 20, false );
+var materialespi =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshespi = new THREE.Mesh( geometryespi, materialespi );
+mesh.add( meshespi );
+
+
+var espelho2i = new THREE.Curve();
+espelho2i.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,0)
+    return curvep;
+    };
+
+var geometryesp2i = new THREE.TubeGeometry( espelho2i, 60, .008, 20, false );
+var materialesp2i =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshesp2i = new THREE.Mesh( geometryesp2i, materialesp2i );
+mesh.add( meshesp2i );
+			
+			
+				return mesh
+				
+
+}
+tempo=[];
+function displaySup(clock)
+{
+	scene.remove(mesh);
+	scene.remove(planef);
+	
+	
+	if(tempo.indexOf(clock) === -1) tempo.push(clock);
+min=Math.min(...tempo);
+max=Math.max(...tempo);
+
+var localPlane = new THREE.Plane( new THREE.Vector3( -1,0,0 ), max*2*a-a*nn ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), -min*2*a+a*nn );
+					var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+	mesh = Sup(clock);
+	var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+		  
+	scene.add(mesh);
+	
+	
+	planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn, 2), materialp);
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+var translation = new THREE.Matrix4().makeTranslation(a,0,0);
+
+//planef.applyMatrix(translation)
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+ 	scene.add(planef);
+}	
+
+
+
+var isRotating=true
+function pauseRotation()
+{isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+
+ }
+
+
+function playRotation()
+{isRotating=true;
+document.getElementById("pauseRotateButton").style.display='inline';
+document.getElementById("playRotateButton").style.display='none';
+}
+var animvp=false;
+
+
+		</script>
+
+	</body>
+</html>

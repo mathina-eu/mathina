@@ -1,0 +1,522 @@
+actions:
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
+  - type: image
+    src: Mathina1.png
+    id: Mathina1
+    style: "width: 13%; top: 57%; left: 0%;"
+  - type: sceneText
+    text: >
+      <p> Mathina acabou de chegar à Feira da Simetria, onde encontrou uma enorme feira de diversões, com montanhas-russas, carrosséis e muitas barraquinhas, todas elas com inúmeros jogos e desafios. Ela ficou fascinada com tantas diversões e atividades e ansiosa por experimentar tudo!</p>
+  - type: animation
+    target: Mathina1
+    vars:
+      duration: 4
+      xPercent: 280
+      yPercent: 0
+      ease: power3.out
+  - type: image
+    id: c1-1  
+    src: c1-1.png
+    style: "width: 37%; top: 42%; right: 0%;"
+    align: right      
+  - type: sceneText
+    text: >
+      <p>Mesmo ao lado dela, encontrava-se uma barraquinha completamente cheia de discos gravados com belas imagens coloridas! Alguns tinham imagens de flores, outros imagens de heróis de banda-desenhada, outros de animais,…. Na barraquinha estavam várias crianças entusiasmadas a jogar um estranho jogo com esses discos.</p>
+  - type: image
+    id: feiticeiro
+    src: Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 50%;"
+    align: right
+  - type: clearImage
+    id: Mathina1    
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"    
+  - type: sceneText
+    text: <p>Ao lado da barraquinha estava um feiticeiro sorridente.</p>
+  - type: dialog
+    entries:
+      - text: "Olá! O que é que estão as crianças a jogar?"
+        char: mathina
+        mood: happy
+      - text: "É o Jogo das Rosáceas. Vou mostrar-te 8 rosáceas de cada vez e tens de escolher as que têm eixos de simetria."
+        char: wizard
+      - text: "Hmm... Não tenho a certeza de saber o que são eixos de simetria."
+        char: mathina
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro     
+  - type: image
+    src: borboleta2.png
+    id: borboleta
+    align: center
+    style: "top: 47%; width: 28%"
+  - type: dialog
+    entries:        
+      - text: "Está bem! Vamos começar com um caso simples. Olha para esta imagem de uma borboleta."
+        char: wizard
+      - text: "Podemos imaginar uma reta que divide a imagem em duas metades de tal forma que, quando colocas um espelho sobre essa reta, a metade que fica frente ao espelho, juntamente com o seu reflexo, “formam” uma imagem igual à inicial."
+        char: wizard
+  - type: game
+    text: "Move o espelho, arrastando-o para a frente e para trás através do botão"
+    toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
+    cta: "Vamos jogar!"
+    url: /apps/espelho_im1/index.html
+    img:
+      src: move-icon.png
+      height: 40
+      width: 40
+  - type: clearImage
+    id: borboleta    
+  - type: image
+    src: n16.png
+    id: n16
+    align: center
+    style: "width: 30%; bottom: 0%"
+  - type: dialog
+    entries:
+      - text: "Mas se escolheres agora esta imagem:"
+        char: wizard         
+      - text: "E se colocares um espelho sobre qualquer reta, nunca obterás uma imagem como a inicial. Ora vê:"
+        char: wizard      
+  - type: game
+    text: "Move o espelho, arrastando-o para a frente e para trás através do botão."
+    toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
+    cta: "Vamos jogar!"
+    url: /apps/espelho_im2/index.html
+    img:
+      src: move-icon.png
+      height: 40
+      width: 40
+    id: n16
+  - type: clearImage
+    id: n16
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: image
+    id: feiticeiro
+    src: Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 50%;"
+    align: right    
+  - type: dialog
+    entries:      
+      - text: "Já entendi! estou pronta para resolver o Jogo das Rosáceas."
+        char: mathina
+        mood: excited
+  - type: game
+    text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
+    cta: "Experimenta!"
+    url: /apps/EscolheRosaceas/index.html?lang=pt    
+  - type: dialog
+    entries:    
+      - text: "Já consegui. Posso ficar com as rosáceas?"
+        char: mathina
+        mood: happy
+      - text: "Para as ganhares, precisas ainda de as guardar nos sacos certos."
+        char: wizard
+      - text: "Então o que devo fazer?"
+        exposition: "Mathina estava intrigada."       
+        char: mathina
+        mood: surprised
+      - text: "Funciona assim: existem seis sacos numerados de 1 a 6. Se uma rosácea tem um eixo de simetria, deve ir para o saco 1, se tiver dois, deve ir para o saco 2, e assim por diante…"
+        char: wizard
+  - type: game
+    text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
+    toolbarText: "Guarda as rosáceas nos sacos certos!"
+    cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
+    url: /apps/rosaceas_diedrais/index.html
+    img:
+      src: vertical.png
+      height: 40
+      width: 40
+  - type: dialog
+    entries:
+      - text: "Portaste-te muito bem, Mathina! E também queres ganhar as rosáceas sem eixos de simetria?"
+        char: wizard
+        mood: happy
+      - text: "Siiim!"
+        char: mathina
+        mood: excited
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro
+  - type: image
+    src: BagGame.png
+    id: BagGame
+    align: center
+    style: "width: 100%; top: 50%"    
+  - type: dialog
+    entries:    
+      - text: "Aqui estão elas."
+        char: wizard       
+      - text: "A única coisa que temos de fazer é guardá-las nos sacos certos. Temos novamente 6 sacos numerados de 1 a 6…"
+        char: wizard
+      - text: "Mas o que devo fazer? Essas rosáceas não têm eixos de simetria!"
+        char: mathina
+        exposition: "Mathina estava desconfiada."        
+        mood: surprised
+  - type: clearImage
+    id: BagGame        
+  - type: image
+    src: filme1.png
+    id: filme1
+    align: center
+    style: "width: 22%; top: 58%"    
+  - type: dialog
+    entries:    
+      - text: "Tens toda a razão. Mas aqui vamos usar outra regra. Vou ajudar-te. – ofereceu-se o feiticeiro – olha: aqui estão duas rosáceas iguais uma por cima da outra. Vamos fazer rodar a rosácea de cima (que tem alguma transparência) uma volta completa. Quantas vezes conseguimos que as duas se sobreponham?"
+        char: wizard      
+  - type: game
+    text: "Ver o filme!"
+    cta: "Ver"
+    url: /stories/symm-2/video/rot_3.mp4
+  - type: dialog
+    entries:
+      - text: "Viste? As duas rosáceas ficaram sobrepostas
+3 vezes. Portanto esta rosácea vai para o saco 3."
+        char: wizard
+  - type: clearImage
+    id: filme1
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: image
+    id: feiticeiro
+    src: Feiticeiro1.png
+    style: "width: 17%; top: 45%; left: 50%;"
+    align: right    
+  - type: dialog
+    entries:            
+      - text: "Agora vamos distribuir todas estas rosáceas pelos sacos certos. Quando acabares, todas as rosáceas serão tuas."
+        char: wizard
+  - type: game
+    text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
+    toolbarText: "Guarda as rosáceas nos sacos certos!"
+    cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
+    url: /apps/rosaceas_ciclicas/index.html
+    img:
+      src: rodar.png
+      height: 40
+      width: 40
+  - type: clearBackground
+    id: c1-bg1      
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg2    
+  - type: clearImage
+    id: c1-1
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: feiticeiro    
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 20%;"
+  - type: image
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 67%; left: 1%;"
+  - type: image
+    id: maze
+    src: maze-pt.png
+    style: "width: 37%; top: 42%; right: 0%; z-index: 3"
+    align: right   
+  - type: sceneText
+    text: >
+      <p>Carregada de rosáceas, a Mathina olhou à sua volta, tentando escolher a próxima diversão, quando ouviu o seu nome.</p>
+      <p>O Leo tinha acabado de chegar à Feira da Simetria.</p>
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 70
+      yPercent: 0
+      ease: power3.out      
+  - type: dialog
+    entries:
+      - text: "Mathina, Mathina!"
+        char: leo        
+        mood: excited     
+  - type: dialog
+    entries:    
+      - text: "Anda! Vamos experimentar todas estas diversões. Nem sei para onde ir. Para os carrosséis?"
+        char: mathina
+        exposition: "Mathina gritou entusiasmada para o Leo."          
+        mood: excited
+  - type: clearImage
+    id: Leo3
+  - type: clearImage
+    id: Mathina4
+  - type: image
+    src: mathina-leo.png
+    id: mathina-leo
+    style: "width: 25%; top: 57%; left: 17%;"    
+  - type: dialog
+    entries:    
+      - text: "Olha, existem aqui labirintos. Vamos escolher um!"
+        char: leo
+        mood: excited
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 4
+      xPercent: 85
+      yPercent: 0
+      ease: power3.out        
+  - type: sceneText
+    text: >
+      <p>O Leo empurrou a Mathina para a entrada de um pavilhão fechado, de madeira, com uma grande placa onde se lia a palavra "labirinto".</p>
+  - type: dialog
+    entries:         
+      - text: "Olha que este não é um labirinto normal: é um labirinto de espelhos."
+        char: mathina
+        exposition: "Disse a Mathina, lendo o texto na placa ao lado da palavra \"labirinto\""          
+  - type: clearImage
+    id: mathina-leo
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"  
+  - type: image
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 58%; left: 48%;  z-index: 2"    
+  - type: dialog
+    entries:    
+      - text: "Vou experimentar!"
+        char: leo
+        mood: excited
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 130
+      yPercent: -25
+      ease: power3.out    
+  - type: sceneText
+    text: >
+      <p>Leo entrou de imediato e deixou a Mathina sozinha.</p>
+  - type: dialog
+    entries:         
+      - text: "Também quero experimentar, mas primeiro quero entender o que é para fazer!"
+        char: mathina
+        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: angry
+  - type: clearImage
+    id: Mathina2       
+  - type: image
+    src: mathina-instrucoes-labirinto.png
+    id: mathina-instrucoes
+    style: "width: 18%; top: 58%; left: 39%;"
+  - type: dialog
+    entries:    
+      - text: "Primeiro vou ler as instruções. Aqui estão elas."
+        char: mathina
+  - type: clearImage
+    id: maze
+  - type: image
+    id: maze2
+    src: maze2.jpg
+    style: "width: 30%; top: 62%"
+    align: center
+  - type: clearImage
+    id: mathina-instrucoes
+  - type: clearImage
+    id: Leo3     
+  - type: sceneText
+    text: >
+      <p><strong>Este é um labirinto de espelhos</strong></p>     
+      <p>O objetivo é começares na entrada  e terminares na saída , mas cuidado: o caminho ficará cada vez mais transparente e, a partir de certo ponto, não o conseguirás ver. Para te ajudar, há um espelho mágico à tua direita: nesse espelho, podes observar a imagem refletida do caminho que deves seguir.</p>
+      <p>P.s. Não queremos que te percas! Se estiveres em dificuldade, carrega no botão com forma de lanterna.</p>
+  - type: clearImage
+    id: maze2
+  - type: image
+    src: mathina-instrucoes-labirinto.png
+    id: mathina-instrucoes
+    style: "width: 18%; top: 58%; left: 39%; z-index:2"
+  - type: image
+    id: maze
+    src: maze-pt.png
+    style: "width: 40%; top: 42%; right: 0%; z-index:3"
+    align: right    
+  - type: dialog
+    entries:         
+      - text: "Ótimo, acho que já entendi!"
+        char: mathina
+        mood: excited
+  - type: animation
+    target: mathina-instrucoes
+    vars:
+      duration: 3
+      xPercent: 145
+      yPercent: -20
+      ease: power3.out      
+  - type: dialog
+    entries:         
+      - text: "Cá vou eu."
+        char: mathina
+        mood: excited
+  - type: clearImage
+    id: mathina-instrucoes          
+  - type: game
+    text: "Como pode a Mathina resolver o labirinto de espelhos?"
+    cta: "Experimenta!"
+    url: /apps/labirinto-s/index.html?lang=pt&sim=ref
+  - type: clearBackground
+    id: c1-bg2     
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg3    
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: clearImage
+    id: maze   
+  - type: image
+    id: HalfTurnrMaze
+    src: HalfTurnrMaze-pt.png
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
+    align: right    
+  - type: dialog
+    entries:
+      - text: "Já resolvi o labirinto. E quase nem bati na parede!"
+        char: mathina
+        mood: excited
+  - type: clearImage
+    id: Mathina2        
+  - type: image
+    src: mathina-instrucoes-labirinto2.png
+    id: mathina-instrucoes2
+    style: "width: 19%; top: 56%; left: 39%;"
+  - type: dialog
+    entries:    
+      - text: "E há um novo labirinto aqui. Vou ler as instruções."
+        char: mathina
+  - type: image
+    id: maze3
+    src: maze3.png
+    style: "width: 30%; top: 62%;"
+    align: center    
+  - type: clearImage
+    id: mathina-instrucoes2
+  - type: clearImage
+    id: HalfTurnrMaze     
+    align: center        
+  - type: sceneText
+    text: >
+      <p><strong>Este é o labirinto da meia-volta</strong></p>    
+      <p>O objetivo é começares na entrada  e terminares na saída , mas cuidado: o caminho ficará cada vez mais transparente e, a partir de certo ponto, não o conseguirás ver. Para te ajudar, é apresentada uma imagem mágica à tua direita: nela, podes observar uma imagem rodada (de meia-volta) do caminho que deves seguir.</p>
+      <p>P.s. Não queremos que te percas! Se estiveres em dificuldade, carrega no botão com forma de lanterna.</p>
+  - type: clearImage
+    id: maze3       
+  - type: image
+    src: mathina-instrucoes-labirinto2.png
+    id: mathina-instrucoes2
+    style: "width: 19%; top: 56%; left: 39%; z-index: 2"
+  - type: image
+    id: HalfTurnrMaze
+    src: HalfTurnrMaze-pt.png
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
+    align: right    
+  - type: dialog
+    entries:         
+      - text: "Ótimo, acho que já entendi!"
+        char: mathina
+        mood: excited
+  - type: animation
+    target: mathina-instrucoes2
+    vars:
+      duration: 3
+      xPercent: 145
+      yPercent: -24
+      ease: power3.out
+  - type: dialog
+    entries:        
+      - text: "Cá vou eu."
+        char: mathina
+        mood: excited
+  - type: clearImage
+    id: mathina-instrucoes2          
+  - type: game
+    text: "Como pode a Mathina resolver o labirinto de meia-volta?"
+    cta: "Experimenta!"
+    url: /apps/labirinto-s/index.html?lang=pt&sim=rot
+  - type: clearImage
+    id: HalfTurnrMaze
+  - type: clearBackground
+    id: c1-bg3    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1    
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 42%;"     
+  - type: dialog
+    entries:
+      - text: "Já terminei o segundo labirinto"
+        char: mathina
+        exposition: "A Mathina estava muito orgulhosa."          
+        mood: excited    
+      - text: "Será que o Leo já acabou? Deve estar preso dentro dos labirintos. É o que acontece quando não se lê as instruções..."
+        char: mathina
+        exposition: "Mathina olhou à sua volta sem conseguir encontrar o Leo."
+        mood: surprised
+  - type: clearImage
+    id: Mathina2        
+  - type: image
+    src: Mathina6.png
+    id: Mathina6
+    style: "width: 8.5%; top: 57%; left: 47%;"        
+  - type: sceneText
+    text: >
+      <p>Mathina suspirou e, enquanto esperava pelo Leo sentou-se a admirar toda a animação da Feira de Simetria.</p>
+  - type: clearImage
+    id: Mathina6
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 42%;"
+  - type: image
+    src: Leo3.png
+    id: Leo3
+    style: "width: 13%; top: 67%; left: 1%;"    
+  - type: sceneText
+    text: >
+      <p>Por fim, e muito mais tarde, o Leo saiu do labirinto, sentindo-se envergonhado por ter demorado tanto.</p>
+  - type: animation
+    target: Leo3
+    vars:
+      duration: 3
+      xPercent: 220
+      yPercent: 0
+      ease: power3.out    
+  - type: sceneText
+    text: >      
+      <p>Depois de o Leo ter prometido não entrar sozinho em mais nenhuma das diversões, a Mathina e o Leo continuaram a explorar a Feira da Simetria.</p>      
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo3
+  - type: clearBackground
+    id: c1-bg1     
+  - type: background
+    src: $COMMON/img/bg/SYMM/bucca-bg3b-with-leo-wizard.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;" 
+    id: bucca-bg3b-with-leo-wizard    
+  - type: sceneText
+    text: >
+      <p>Antes de partirem, e depois de terem adquirido muitas novas competências relacionadas com a simetria, a Mathina e o Leo despediram-se do feiticeiro, que os convidou para o lanche. No final, a Mathina e o Leo, saíram da feira, comentando que até os bolos que o feiticeiro lhes havia oferecido ... eram simétricos!... Ambos tinham passado um dia emocionante na Feira da Simetria!</p>

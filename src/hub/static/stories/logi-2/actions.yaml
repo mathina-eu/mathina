@@ -128,7 +128,7 @@ actions:
       - text: Stop, stop immediately! - the voice cried. They turned around and saw a giant owl. Stop! - he repeated.
         char: owl
         mood: sad
-      - text: We have an important mission to complete here, Mr Owl - Mathina said confidently. - We need to deliver this birthday gift to the Head of Logical Matters of Logi-city. 
+      - text: We have an important mission to complete here, Mr Owl - Mathina said confidently. - We need to deliver this birthday gift to the Head of Logical Matters of Logi-city. Leo pointed at the bag at his feet.
         char: mathina
         mood: sad
       - text: Yes, I was notified. But you are no exception to the rule. 
@@ -228,7 +228,7 @@ actions:
   - type: dialog
     entries:
       - text: Stop! You stop immediately! - Leo was so terrified that he stood still on the orange triangle. 
-        char: owl
+        char: leo
         mood: sad
   - type: clearImage
     id: owl-w-f
@@ -270,8 +270,8 @@ actions:
     id: leo-sitting
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
   - type: game
-    text: What advice would you give them? Where would you go? Try all the possible ways!
-    toolbarText: The rule is that you can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
+    text: What advice would you give them? 
+    toolbarText: You can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
     cta: Try it yourself!
     url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
   - type: clearImage
@@ -291,7 +291,7 @@ actions:
     text: So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
   - type: game
     text: Can you get from the doorway to Mathina, does this work?
-    toolbarText: The rule is that you can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
+    toolbarText: 
     cta: Try it yourself!
     url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
   - type: sceneText

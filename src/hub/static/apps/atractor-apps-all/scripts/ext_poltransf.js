@@ -12,10 +12,7 @@ if (typeof DataPols == 'undefined') DataPols=pol;
 var width0=parseInt(WW);
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var width=width0;
-if(S3PPre=="vplan")
-{var height=.96*Math.min(width0/2,height0);}
-else
-{var height=.96*Math.min(width0,height0);};
+var height=.96*Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
 
@@ -349,10 +346,7 @@ function OnResize()
 {var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var width=width0;
-if(S3PPre=="vplan")
-{var height=Math.min(width0/2,height0);}
-else
-{var height=Math.min(width0,height0);};
+var height=Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
 camera.aspect=width/height;

@@ -1,0 +1,1118 @@
+actions:
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1
+  - type: image
+    src: mathina-leo.png
+    id: mathina-leo
+    style: "width: 25%; top: 57%; left: 1%;"       
+  - type: sceneText
+    text: >
+      <p> Mathina e o Leo chegaram à Feira da Simetria, onde encontraram um enorme parque de diversões, com montanhas-russas, carrosséis e muitas barraquinhas</p>
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 3
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out  
+  - type: sceneText
+    text: >
+      <p>De início, ficaram ambos fascinados com aquele novo mundo e com todas as diversões que ele oferecia!</p> 
+  - type: clearBackground
+    id: c1-bg1
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg3
+  - type: sceneText
+    text: >
+      <p>À medida que se aproximaram da feira, aperceberam-se, contudo, de que o parque parecia fechado e havia uma enorme azáfama. E o motivo de tamanha azáfama eram os preparativos para um grande evento: o Dia dos Poliedros e da Simetria.</p>
+  - type: clearBackground
+    id: c1-bg3
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg4
+  - type: sceneText
+    text: >
+      <p>Depois de observar o parque, o Leo, sempre impaciente, incitou a Mathina a experimentarem juntos uma das diversões: um carrossel que aparentemente ainda estava a funcionar.</p>
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 3
+      xPercent: 100
+      yPercent: 0
+      ease: power3.out      
+  - type: sceneText
+    text: >
+      <p>Ao aproximarem-se do carrossel, a Mathina e o Leo observaram os veículos do carrossel: em vez dos habituais carrinhos ou avionetas, encontraram algumas formas estranhas…</p>
+  - type: dialog
+    entries:
+      - text: "Poliedros, os veículos têm uma espécie de forma poliedral. Mas não são poliedros porque não são fechados…"
+        char: mathina
+        exposition: "Disse a Mathina, pensando para si mesma em voz alta"
+  - type: clearImage
+    id: mathina-leo        
+  - type: clearBackground
+    id: c1-bg4
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg5.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg5        
+  - type: sceneText
+    text: >
+      <p>Embora sentindo-se desconfortável, a Mathina decidiu acompanhar o Leo e entrar no carrossel. E mal os dois se sentaram em veículos diferentes, começou a chover. Contudo, isso não impediu o Leo de continuar a explorar o carrossel: dentro do veículo, encontrou uma alavanca com a palavra “fechar”, que imediatamente acionou.</p>
+  - type: clearBackground
+    id: c1-bg5
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg6.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg6    
+  - type: dialog
+    entries:
+      - text: "NÃO!"
+        char: leo
+        exposition: "Gritaram a Mathina e o Leo em simultâneo: ao fechar, alguns componentes do veículo viraram-se para dentro, magoando o Leo na testa."
+        mood: surprised
+  - type: image
+    src: tecnico.png
+    id: tecnico
+    style: "width: 16%; top: 45%; left: 1%;"         
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/icosaedro_concavo.html
+  - type: animation
+    target: tecnico
+    vars:
+      duration: 3
+      xPercent: 90
+      yPercent: 0
+      ease: power3.out
+  - type: clearBackground
+    id: c1-bg6
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg4    
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 35%;"
+  - type: image
+    src: Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; right: 60%;"     
+  - type: sceneText
+    text: >
+      <p>Alertado pelos gritos, um técnico de construção civil, que estava por perto, dirigiu-se para eles a correr.</p>
+  - type: dialog
+    entries:
+      - text: "O que aconteceu? Estão bem? Quem são vocês?"
+        char: technician
+        mood: worried
+  - type: sceneText
+    text: >
+      <p>Depois de explicar a situação, a Mathina estava assustada com a reação do técnico ao aperceber-se de que os dois tinham entrado no carrossel sem permissão. No entanto, depois de verificar que o Leo estava bem, o técnico apenas parecia interessado no veículo usado pelo Leo.</p>
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: tecnico
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 10%;"
+  - type: image
+    src: Leo5.png
+    id: Leo5
+    style: "width: 15.5%; top: 62%; right: 70%;"
+  - type: image
+    src: tecnico.png
+    id: tecnico
+    style: "width: 16%; top: 45%; left: 21%;"      
+  - type: dialog
+    entries:
+      - text: "Isto não devia ter fechado para dentro! Devia ter a forma de um poliedro convexo!"
+        char: technician
+        exposition: "Dizia o técnico, enquanto consertava o veículo manualmente."
+        mood: surprised        
+  - type: clearBackground
+    id: c1-bg4
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg7.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg7    
+  - type: dialog
+    entries:
+      - text: "Esta é a forma certa"
+        char: technician
+        exposition: "Disse o técnico após consertar o veículo."
+  - type: clearImage
+    id: tecnico
+  - type: image
+    src: tecnico2.png
+    id: tecnico2
+    style: "width: 16%; top: 45%; left: 25%;"     
+  - type: dialog
+    entries:
+      - text: "O que quer dizer com “poliedro convexo”?"
+        char: leo
+  - type: image
+    src: imagem1.png
+    id: imagem1
+    align: center
+    style: "width: 25%; top: 52%"             
+  - type: dialog
+    entries:        
+      - text: "Olha, por exemplo, para este poliedro: é possível encontrar dois pontos nas faces do poliedro de tal forma que pelo menos um ponto do segmento que une esses pontos esteja fora do poliedro. Neste caso, por exemplo, o ponto médio do segmento:"
+        char: technician
+      - text: "Para um poliedro ser convexo, é necessário que, para cada par de pontos nas faces, todo o segmento que une esses pontos esteja contido no poliedro."
+        char: technician        
+  - type: clearImage
+    id: imagem1
+  - type: dialog
+    entries:        
+      - text: "Não sei se entendi."
+        char: leo        
+  - type: clearImage
+    id: Leo5
+  - type: clearImage
+    id: Mathina2
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 20%;"
+  - type: image
+    src: Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; right: 75%;"     
+  - type: dialog
+    entries:        
+      - text: "Primeiro vamos sair daqui e vamos para o meu gabinete. Vocês não deviam estar sozinhos num local de construção! – sugeriu o técnico."
+        char: technician
+        mood: worried        
+  - type: animation
+    target: Leo2
+    vars:
+      duration: 3
+      xPercent: -85
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: Mathina4
+    vars:
+      duration: 3
+      xPercent: -165
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: tecnico2
+    vars:
+      duration: 3
+      xPercent: -100
+      yPercent: 0
+      ease: power3.out       
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo acompanharam o técnico até ao gabinete.</p>
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: tecnico2
+  - type: clearBackground
+    id: c1-bg7
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg8.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg8    
+  - type: sceneText
+    text: >
+      <p>O técnico explicou que, além do carrossel que eles tinham explorado, havia outros em construção.</p>
+  - type: dialog
+    entries:        
+      - text: "Querem descobrir quais destes poliedros são convexos?"
+        char: technician
+        exposition: "Desafiou o técnico."
+  - type: game
+    text: "Escolhe os poliedros convexos. De cada vez, escolhe os 4 poliedros e clica em"
+    toolbarText: "Escolhe os poliedros convexos."
+    cta: "Tenta separar os poliedros que são convexos!"
+    url: /apps/EscolhePoliConvexos/index.html?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: sceneText
+    text: >
+      <p>Depois de selecionarem os poliedros convexos, a Mathina e o Leo quiseram saber em que estava o técnico a trabalhar. O técnico explicou que estava a começar a construção de uma maquete para um novo carrossel: o carrossel dos poliedros platónicos e uniformes. Mas, ele ia ter de se ausentar. Se quisessem, podiam ficar ali, mas não sair do escritório: era perigoso andarem sozinhos numa zona de construção.</p>      
+  - type: dialog
+    entries:        
+      - text: "Podemos ficar a ajudá-lo a montar a maquete!"
+        char: leo
+        exposition: "Voluntariou-se o Leo entusiasticamente"
+  - type: clearBackground
+    id: c1-bg8
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: sceneText
+    text: >
+      <p>E, assim que o técnico saiu, o Leo perguntou à Mathina:</p>
+  - type: dialog
+    entries:        
+      - text: "Tens alguma ideia a que ele se referia quando falou em “poliedros platónicos e uniformes”?"
+        char: leo
+      - text: "Bem, se não sabias o que era, não devias ter oferecido ajuda!"
+        char: mathina
+        exposition: "Respondeu a Mathina irritada"
+        mood: angry
+  - type: image
+    src: rombus.png
+    id: rombus
+    align: center
+    style: "top: 44%; width: 18%"
+  - type: dialog
+    entries:     
+      - text: "Não sei o que são poliedros uniformes, mas tenho uma ideia sobre sólidos platónicos: acho que são poliedros “tão regulares quanto possível”. Por exemplo, se considerarmos o plano, o que são polígonos regulares? Não podemos dizer que são os que têm lados iguais, pois um losango satisfaz essa propriedade, mas não é regular."
+        char: mathina
+  - type: clearImage
+    id: rombus
+  - type: image
+    src: rectangle.png
+    id: rectangle
+    align: center
+    style: "top: 61%; width: 25%"    
+  - type: dialog
+    entries:      
+      - text: "Também não podemos dizer que são os que têm ângulos iguais, pois um retângulo satisfaz essa propriedade, mas não é regular."
+        char: mathina
+  - type: clearImage
+    id: rectangle
+  - type: dialog
+    entries:
+      - text: "No plano, os polígonos “tão regulares quanto possível” são aqueles com lados e ângulos iguais (como o triângulo equilátero, o quadrado e assim por diante ...)."
+        char: mathina
+  - type: dialog
+    entries:        
+      - text: "Da mesma forma, chamamos sólidos platónicos aos poliedros que são “tão regulares quanto possível”. Esses poliedros devem satisfazer, em particular, as seguintes condições: “as faces são todas polígonos regulares e iguais entre si”; “em cada vértice encontra-se o mesmo número de faces”; “os ângulos entre faces contíguas são iguais”; “os ângulos sólidos em cada vértice são iguais”."
+        char: mathina
+      - text: "O que queres dizer com “os ângulos entre faces contíguas são iguais”? E com “os ângulos sólidos em cada vértice são iguais”?"
+        char: leo
+        mood: surprised
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-cubo.png
+    id: Mathina1-cubo
+    style: "width: 23%; bottom: 0%; left: 0%;"        
+  - type: dialog
+    entries:        
+      - text: "Vamos começar por este cubo."
+        char: mathina
+        exposition: "Respondeu a Mathina, agarrando num modelo existente no gabinete do técnico."
+  - type: sceneText
+    text: >
+      <p>Usando um pedaço de plasticina, a Mathina fez um molde em torno de um vértice do cubo e explicou que isso correspondia a “um ângulo sólido em torno do vértice”. De seguida, mostrou que esse molde se encaixava perfeitamente em cada vértice do cubo: num cubo, os ângulos sólidos em cada vértice são iguais.</p>
+  - type: image
+    src: cuboMolde.png
+    id: cuboMolde
+    align: center
+    style: "top: 57%; width: 13%"       
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/CuboMolde.mp4
+  - type: clearImage
+    id: cuboMolde    
+  - type: sceneText
+    text: >
+      <p>Usando outro pedaço de plasticina, a Mathina fez um molde em torno de uma aresta do cubo e explicou que isso correspondia a “um ângulo entre faces contíguas”. De seguida, mostrou que esse molde se encaixava perfeitamente à volta de cada aresta do cubo: num cubo, os ângulos entre faces contíguas são iguais.</p>
+  - type: image
+    src: cuboMolde2.png
+    id: cuboMolde2
+    align: center
+    style: "top: 57%; width: 13%"       
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/CuboMolde2.mp4
+  - type: clearImage
+    id: cuboMolde2    
+  - type: dialog
+    entries:        
+      - text: "Então, o cubo é um sólido platónico?"
+        char: leo
+      - text: "Sim, mas não me lembro de outros sólidos platónicos."
+        char: mathina
+  - type: clearBackground
+    id: c1-bg10
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: clearImage
+    id: Mathina1-cubo
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo decidiram então construir, de raiz, modelos para todos os sólidos platónicos, utilizando os materiais à sua disposição no gabinete: cartolinas, cola, uma tesoura, plasticina e algumas peças magnéticas com a forma de triângulos equiláteros que se podiam unir sem recurso a cola.</p>
+  - type: sceneText
+    text: >
+      <p>Começaram pelo poliedro com que estavam mais familiarizados: o cubo, e o Leo começou por cortar quadrados: cortou um quadrado e depois outro e colou-os. Após assim proceder, apercebeu-se de que seria mais fácil cortar uma tira de 2 quadrados seguidos, pois poderia dobrar a tira ao meio, evitando ter de cortar para voltar a colar novamente as duas peças.</p>
+  - type: image
+    src: cubo-tentativa.png
+    id: cubo-tentativa
+    align: center
+    style: "top: 56%; width: 32%"      
+  - type: dialog
+    entries:        
+      - text: "Um cubo tem 6 faces. Vou cortar 6 quadrados alinhados e depois montar o cubo."
+        char: leo
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/6quadrados.html
+  - type: dialog
+    entries:        
+      - text: "Isso não é possível! A tira só pode ter um máximo de 4 quadrados alinhados."
+        char: mathina
+  - type: clearImage
+    id: cubo-tentativa
+  - type: image
+    src: plan-cubo-01.png
+    id: plan-cubo-01
+    align: center
+    style: "top: 56%; width: 32%"     
+  - type: sceneText
+    text: >
+      <p>O Leo desenhou então 4 quadrados seguidos. Para construir um cubo, eram necessários 2 outros quadrados, pelo que ele decidiu acrescentar um quadrado em cada lado da tira:</p>
+  - type: dialog
+    entries:        
+      - text: "Ótimo, Leo! Acabaste de construir uma planificação do cubo."
+        char: mathina
+  - type: sceneText
+    text: >
+      <p>A Mathina construiu então um cubo, usando a planificação do Leo. Ao colar 3 faces num vértice comum, a Mathina usou uma caixa de sapatos (que estava no gabinete) como molde para manter as três faces em boa posição enquanto a cola secava.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=p2pol_24
+  - type: sceneText
+    text: >
+      <p>Entretanto, divertido com a sua descoberta, o Leo criou outras propostas de planificações do cubo.</p>
+  - type: clearImage
+    id: plan-cubo-01
+  - type: game
+    text: "Escolhe as planificações do cubo. De cada vez, escolhe as 3 propostas “certas” e clica em"
+    toolbarText: "Escolhe as planificações corretas do cubo."
+    cta: "Tenta separar as planificações do cubo que são corretas!"
+    url: /apps/EscolhePlanCubo/index.html?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: sceneText
+    text: >
+      <p>Mathina sugeriu então sistematizarem um processo para procurarem todos os sólidos platónicos. Como, num sólido platónico, o número de faces que se encontram em cada vértice é o mesmo, eles decidiram tomar em consideração esse número. Num cubo, tal número é 3.</p>
+  - type: image
+    src: mesmovertice1.png
+    id: mesmovertice1
+    align: center
+    style: "top: 56%; width: 18%"        
+  - type: sceneText
+    text: >
+      <p>E se fosse 2? Como, num poliedro, cada aresta é o bordo de duas (e apenas duas) faces, eles concluíram que cada uma das faces quadradas precisava de ter as arestas coincidentes com as da outra face, ou seja, o "poliedro" seria plano.</p>
+  - type: clearImage
+    id: mesmovertice1
+  - type: image
+    src: mesmovertice2.png
+    id: mesmovertice2
+    align: center
+    style: "top: 56%; width: 18%"
+  - type: sceneText
+    text: >
+      <p>E se fosse 4? Tal não era possível: como, num sólido platónico, os ângulos entre faces consecutivas são todos iguais, os quadrados teriam de estar no plano. E mais de 4 quadrados seria também obviamente impossível.</p>
+  - type: clearImage
+    id: mesmovertice2      
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-tetra.png
+    id: Mathina1-tetra
+    style: "width: 23%; bottom: 0%; left: 1%;"        
+  - type: sceneText
+    text: >
+      <p>Não havendo mais possibilidades com quadrados, a Mathina e o Leo decidiram passar para os triângulos equiláteros. Usando os triângulos equiláteros magnéticos à sua disposição no gabinete, uniram 3 triângulos em torno de um vértice, criando uma espécie de pirâmide triangular aberta. Depois, pegaram num pouco de plasticina, criaram um molde do vértice e tentaram acrescentar outro triângulo a uma das arestas livres usando o molde e, de repente,… fecharam a pirâmide com o novo triângulo! ...</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/tetraedro_form.html
+  - type: dialog
+    entries:        
+      - text: "Eu conheço este poliedro. É um sólido Platónico e chama-se tetraedro."
+        char: mathina
+  - type: clearImage
+    id: Mathina1-tetra
+  - type: clearBackground
+    id: c1-bg10
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-tetra.png
+    id: Leo2-2-tetra
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>O Leo estava curioso por obter uma planificação do tetraedro. Então, separou alguns dos triângulos do tetraedro pelas arestas, planificando o poliedro.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol2p_169
+  - type: sceneText
+    text: >
+      <p>Os dois continuaram a sua busca por sólidos platónicos, passando para 4 triângulos em cada vértice.</p>
+  - type: clearImage
+    id: Leo2-2-tetra
+  - type: image
+    src: Leo2-2-tetra2.png
+    id: Leo2-2-tetra2
+    style: "width: 22%; bottom: 0%; right: 58%;"    
+  - type: sceneText
+    text: >
+      <p>Enquanto o Leo criava uma estrutura composta por 4 triângulos num dos vértices, a Mathina apercebeu-se de que tal estrutura não era rígida. E, para criar um sólido platónico, eles deviam garantir que os ângulos entre as faces contíguas eram todos iguais.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/octaedro_form_1.html      
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Leo2-2-tetra2
+  - type: clearImage
+    id: Mathina2-2
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg12.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg12    
+  - type: sceneText
+    text: >
+      <p>A Mathina colocou então a estrutura sobre uma mesa, com o vértice inicial para cima, e, pressionando-o contra a mesa, apercebeu-se de que a posição final (todos os novos vértices estavam agora no plano da mesa) correspondia exatamente ao que ela queria: agora, os quatro ângulos entre as faces (ângulos diedrais) eram iguais.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/octaedro_form_2.html
+  - type: clearBackground
+    id: c1-bg12
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg30.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg30        
+  - type: sceneText
+    text: >
+      <p>Como continuar por forma a criar um sólido platónico? Após levantarem a estrutura, uniram dois triângulos a arestas livres e contíguas, por forma a que duas das novas arestas, uma em cada triângulo, ficassem juntas. De seguida, juntaram, sucessivamente e de forma similar, os dois triângulos em falta e verificaram que tinham obtido um novo poliedro que aparentava ser sólido platónico.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/octaedro_form_3.html
+  - type: clearBackground
+    id: c1-bg30    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 4%;"
+  - type: image
+    src: Leo2-2-octa.png
+    id: Leo2-2-octa
+    style: "width: 27%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>Sempre curioso, o Leo abriu o poliedro para obter uma planificação.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
+  - type: sceneText
+    text: >
+      <p>O Leo decidiu então proceder como anteriormente (para o cubo), criando exemplos alternativos de planificações do poliedro.</p>
+  - type: game
+    text: "Escolhe as planificações do octaedro. De cada vez, escolhe as 3 propostas “certas” e clica em"
+    toolbarText: "Escolhe as planificações corretas do octaedro."
+    cta: "Tenta separar as planificações do octaedro que são corretas!"
+    url: /apps/EscolhePlanOcta/index.html?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Mathina2-2
+  - type: clearImage
+    id: Leo2-2-octa       
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-icosaedro.png
+    id: Mathina1-icosaedro
+    style: "width: 23%; bottom: 0%; left: 0%;"
+  - type: sceneText
+    text: >
+      <p>Depois de terem encontrado este novo sólido platónico com 4 triângulos em cada vértice, a Mathina e o Leo passaram para 5 triângulos, criando assim uma "pirâmide" reta aberta. Decidiram proceder como anteriormente: colocaram os novos vértices sobre uma mesa para obter ângulos diedrais idênticos. De seguida, acrescentaram, a um dos vértices livres, 3 triângulos, por forma a que o novo ângulo sólido fosse igual ao da pirâmide inicial “aberta”. Depois, juntaram, sucessivamente, 2 triângulos em cada vértice livre da pirâmide “aberta”, até obterem uma faixa de 10 triângulos. A Mathina e o Leo notaram então que as arestas livres da faixa formavam um pentágono num plano paralelo ao anterior, mas rodado de um décimo de volta. De seguida, continuaram o processo anterior: primeiro acrescentaram 2 triângulos e depois, sucessivamente, um triângulo (unido ao anterior). E o seu esforço compensou: obtiveram um novo poliedro que aparentava ser um sólido platónico!</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/icosaedro_form.html
+  - type: clearBackground
+    id: c1-bg10
+  - type: clearImage
+    id: Mathina1-icosaedro
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-icosa.png
+    id: Leo2-2-icosa
+    style: "width: 32%; bottom: 0%; right: 50%;"
+  - type: sceneText
+    text: >
+      <p>Tal como antes, o Leo abriu o poliedro, tentando perceber como poderia ser uma sua planificação.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol2p_98
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Leo2-2-icosa
+  - type: clearImage
+    id: Mathina2-2
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: image
+    src: mesmovertice3.png
+    id: mesmovertice3
+    align: center
+    style: "top: 56%; width: 18%"    
+  - type: sceneText
+    text: >
+      <p>Depois de encontrarem um poliedro com 5 triângulos equiláteros em cada vértice, o passo natural seria passarem para 6 triângulos; no entanto, o Leo e a Mathina rapidamente concluíram que tal não era possível:</p>    
+  - type: dialog
+    entries:        
+      - text: "Ah! É como no caso dos 4 quadrados no mesmo vértice…"
+        char: leo
+  - type: clearImage
+    id: mesmovertice3
+  - type: clearBackground
+    id: c1-bg9    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg13.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg13    
+  - type: sceneText
+    text: >
+      <p>Quando descobriram que não havia mais possibilidades de utilizar triângulos e quadrados, a Mathina e o Leo passaram para pentágonos regulares, criando uma armação com 3 pentágonos regulares com um vértice comum.</p>
+  - type: clearBackground
+    id: c1-bg13    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg14.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg14    
+  - type: sceneText
+    text: >
+      <p>O Leo descobriu que um novo pentágono se encaixava com segurança em arestas contíguas de pentágonos diferentes. Então, acrescentou três pentágonos dessa forma, o que levou à criação de três novas e grandes aberturas. A Mathina tentou preenchê-las com três novos pentágonos, que se encaixaram perfeitamente. No final, a Mathina e o Leo encontraram novamente três grandes aberturas, mais uma vez com o mesmo formato. Eles tentaram proceder da mesma forma, colocando três novos pentágonos: e esses pentágonos não só se encaixaram muito bem como até se uniram, criando um novo vértice. Por precaução, os dois testaram o poliedro com um molde de plasticina: o molde encaixava-se perfeitamente em todos os vértices - tinham, pois, acabado de descobrir um novo poliedro regular!</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/dodecaedro_form.html
+  - type: clearBackground
+    id: c1-bg14
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-dodeca.png
+    id: Leo2-2-dodeca
+    style: "width: 33%; bottom: 0%; right: 49%;"
+  - type: sceneText
+    text: >
+      <p>No final e, como havia sucedido com os poliedro anteriores, o Leo abriu-o para ver uma planificação:</p>
+  - type: game
+    text: "Ver filme aqui!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
+  - type: clearImage
+    id: Leo2-2-dodeca
+  - type: image
+    src: Leo2-2-pentagonos.png
+    id: Leo2-2-pentagonos
+    style: "width: 27%; bottom: 0%; right: 50%;"
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo continuaram a sua busca por novos sólidos platónicos. E, rapidamente, se aperceberam de que não era possível usar mais do que três pentágonos num vértice comum e obter um ângulo sólido igual ao de uma pirâmide reta regular.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/4poligonos_5.html
+  - type: clearImage
+    id: Leo2-2-pentagonos
+  - type: clearBackground
+    id: c1-bg11
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    id: c1-bg9    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: clearImage
+    id: Mathina2-2
+  - type: sceneText
+    text: >
+      <p>E era também impossível construir sólidos platónicos usando polígonos regulares com mais de 5 lados. Eles haviam esgotado todas as possibilidades!</p>
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg8.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg8    
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo estavam tão absortos a discutir todas as suas descobertas que nem deram conta da chegada do técnico.</p>
+  - type: dialog
+    entries:        
+      - text: "Olá novamente! Então, o que estão a fazer?"
+        char: technician
+  - type: sceneText
+    text: >
+      <p>O Leo e a Mathina compartilharam com o técnico todas as suas descobertas.</p>
+  - type: dialog
+    entries:        
+      - text: "Ótimo, vocês descobriram todos os poliedros regulares, ou sólidos platónicos, como costumam ser designados."
+        char: technician
+        mood: impressed        
+      - text: "É verdade que, num sólido platónico, todos os ângulos entre faces contíguas são iguais e o mesmo se passa com os ângulos sólidos em cada vértice."
+        char: technician
+      - text: "Contudo, para poliedros convexos, se as faces forem todas polígonos regulares iguais entre si, e a cada vértice chegar o mesmo número de faces, então podemos garantir que todos os ângulos mencionados são iguais!"
+        char: technician        
+      - text: "Então, agora é muito mais fácil confirmar se um poliedro é realmente um sólido platónico!"
+        char: mathina
+      - text: "Sim, nem precisamos de plasticina!"
+        char: leo
+  - type: game
+    text: "Ver sólidos platónicos!"
+    cta: "Ver"
+    url: /apps/anims/5platonicosi.html
+  - type: dialog
+    entries:        
+      - text: "Vocês encontraram todos os sólidos Platónicos: cubo, tetraedro, octaedro, icosaedro e dodecaedro."
+        char: technician
+        mood: impressed        
+      - text: "Mas não podemos simplesmente dizer que os sólidos platónicos são poliedros cujas faces são todas polígonos regulares e iguais?"
+        char: leo
+        exposition: "O Leo ainda tinha uma dúvida."
+      - text: "Não, não podemos, mesmo se assumirmos que são convexos. Por que não tentas encontrar, entre os meus modelos, exemplos de poliedros que, não sendo sólidos platónicos, têm como faces polígonos regulares todos iguais entre si?"    
+        char: technician
+        exposition: "Desafiou o técnico."        
+  - type: game
+    text: "Escolhe os poliedros não-platónicos cujas faces são todas polígonos regulares e iguais. De cada vez, escolhe os 2 poliedros e clica em"
+    toolbarText: "Escolhe os poliedros não-platónicos cujas faces são todas polígonos regulares e iguais"
+    cta: "Tenta separar os poliedros que não são platónicos e cujas faces são polígonos regulares iguais!"
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: clearBackground
+    id: c1-bg8
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg15.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg15      
+  - type: dialog
+    entries:        
+      - text: "Bem, gostei muito de conversar convosco, mas tenho de voltar para o meu trabalho: a construção de uma maquete para o carrossel de poliedros platónicos e uniformes."
+        char: technician
+        exposition: "O técnico explicou, enquanto colocava o seu modelo em cima da mesa."
+  - type: clearBackground
+    id: c1-bg15
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg18.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg18
+  - type: image
+    src: technician-cubocta.png
+    id: technician-cubocta
+    style: "width: 22%; bottom: 0%; left: 28%;"
+  - type: sceneText
+    text: >
+      <p>Da sua coleção de poliedros, o técnico selecionou um poliedro uniforme, ao qual chamou cuboctaedro.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol_35
+  - type: clearImage
+    id: technician-cubocta 
+  - type: clearBackground
+    id: c1-bg18
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg16.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg16    
+  - type: sceneText
+    text: >
+      <p>Colou-o então à maquete e, mal o técnico terminou a colagem, o telefone tocou.</p>
+  - type: clearBackground
+    id: c1-bg16
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg20.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg20    
+  - type: dialog
+    entries:        
+      - text: "O que é um poliedro uniforme?"
+        char: leo
+        exposition: "Perguntou Leo à Mathina."
+      - text: "Bem, olhando para o cuboctaedro, parece ser um poliedro cujas faces são todas polígonos regulares, mas nem todas com o mesmo número de lados. Além disso, os ângulos sólidos em cada vértice parecem iguais."
+        char: mathina
+        exposition: "Disse a Mathina, depois de verificar, com um molde de plasticina, se o cuboctaedro tinha os mesmos ângulos sólidos e concluindo experimentalmente que sim."
+  - type: clearBackground
+    id: c1-bg20
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg19.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg19    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-4-6-8.png
+    id: Leo2-2-4-6-8
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: dialog
+    entries:        
+      - text: "E achas que este poliedro é uniforme?"
+        char: leo
+        exposition: "Perguntou o Leo, agarrando num modelo próximo."
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol_80        
+  - type: dialog
+    entries:        
+      - text: "Bem, tal como antes, todas as faces são polígonos regulares, mas nem todas têm o mesmo número de lados. Deixa-me verificar se os ângulos sólidos em cada vértice são iguais."
+        char: mathina
+        exposition: "Foi a Mathina verificar os ângulos."
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/CuboRombiOcta.mp4
+  - type: clearBackground
+    id: c1-bg19
+  - type: clearImage
+    id: Leo2-2-4-6-8
+  - type: clearImage
+    id: Mathina2-2        
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg17.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg17    
+  - type: sceneText
+    text: >
+      <p>Quando o técnico regressou do telefonema, o Leo e a Mathina imediatamente lhe perguntaram se este último poliedro era uniforme: para o Leo era – parecia um cuboctaedro –,  mas a Mathina não concordava; ela tinha testado os ângulos sólidos com um molde, e ele apenas encaixava em metade deles.</p>
+  - type: dialog
+    entries:        
+      - text: "Tens razão quanto ao molde, Mathina. Aqui, são necessários dois moldes diferentes: um molde e a sua imagem refletida."
+        char: technician
+      - text: "Podemos obter esse segundo molde, virando o molde original “ao contrário”."
+        char: technician
+        exposition: "Continuou o técnico."
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/Viramolde.mp4
+  - type: dialog
+    entries:        
+      - text: "Cada vértice pode ser moldado por um desses dois moldes – o original e o “virado ao contrário”. E, como cada um dos 2 moldes pode ser obtido por reflexão um do outro, consideramos os vértices do poliedro como sendo “do mesmo tipo”."
+        char: technician
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/CuboRombiOctaVM.mp4
+  - type: clearBackground
+    id: c1-bg17    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg21.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg21
+  - type: image
+    src: Leo2-Miller.png
+    id: Leo2-Miller
+    style: "width: 22%; bottom: 0%; right: 58%;"    
+  - type: sceneText
+    text: >
+      <p>O técnico pegou então no poliedro escolhido pelo Leo, pois tratava-se também de um poliedro uniforme. Enquanto o técnico estava concentrado a colá-lo na maquete, o Leo pegou noutro poliedro.</p>
+  - type: dialog
+    entries:        
+      - text: "E que tal este? É uniforme?"
+        char: leo
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/poliedros.html?pre=pol_68
+  - type: sceneText
+    text: >
+      <p>Ao analisar o poliedro, a Mathina reparou que todas as faces eram polígonos regulares. De seguida, usando 2 moldes, concluiu que os vértices eram do mesmo tipo. Para ela, o poliedro parecia um bom candidato...</p>
+  - type: clearImage
+    id: Leo2-Miller             
+  - type: image
+    src: Leo2-Miller2.png
+    id: Leo2-Miller2
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>O Leo dirigiu-se então diretamente ao técnico, pedindo-lhe para confirmar a opinião da Mathina:</p>
+  - type: clearBackground
+    id: c1-bg21    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg22.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg22
+  - type: dialog
+    entries:        
+      - text: "Quer acrescentar este poliedro à maquete? É uniforme?"
+        char: leo
+  - type: sceneText
+    text: >
+      <p>Para surpresa do Leo, o técnico pareceu ficar completamente alarmado com a sua pergunta.</p>
+  - type: dialog
+    entries:        
+      - text: "Oh não! Construí um poliedro não uniforme por engano: o poliedro de Miller."
+        char: technician
+        mood: surprised        
+  - type: clearBackground
+    id: c1-bg22    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg23.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg23        
+  - type: clearImage
+    id: Leo2-Miller2
+  - type: sceneText
+    text: >
+      <p>Para corrigir o erro, o técnico cortou a cúpula octogonal no topo do poliedro de Miller e rodou-a de 45º, por forma a que os triângulos da cúpula ficassem alinhados com os triângulos de baixo.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/transfMiller.html
+  - type: dialog
+    entries:        
+      - text: "Isto é o que eu devia ter feito! Desta forma, temos agora um poliedro uniforme."
+        char: technician
+        exposition: "Explicou o técnico."
+      - text: "Não percebo! Por que é que o poliedro de Miller não é uniforme? Ele tem exatamente as mesmas faces que este último poliedro e, além disso, os seus vértices são todos do mesmo tipo. Eu verifiquei isso."
+        char: mathina
+      - text: "Tens razão uma vez mais, Mathina. No entanto, um poliedro uniforme é mais do que um poliedro cujos vértices são todos do “mesmo tipo” e em que todas as faces são polígonos regulares, embora nem todas com o mesmo número de arestas."
+        char: technician
+      - text: "Um poliedro uniforme também deve verificar a seguinte condição: “para cada par de vértices, há pelo menos uma simetria do poliedro que leva um vértice no outro”."
+        char: technician
+        exposition: "Explicou o técnico."
+  - type: clearBackground
+    id: c1-bg23    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg24.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg24
+  - type: dialog
+    entries:        
+      - text: "Não percebi. O que é uma simetria de um poliedro?"
+        char: leo
+      - text: "Vamos começar pelo início! Uma simetria de um poliedro é uma isometria (ou seja, uma função que preserva distâncias) que leva o poliedro em si mesmo: o poliedro deve ficar exatamente com o mesmo aspeto antes e depois de se aplicar a isometria."
+        char: technician
+      - text: "Considera, por exemplo, um cubo e pensa numa rotação de 90º em torno de um eixo que passa pelos centros de duas faces opostas. Se rodarmos, o cubo é levado em si mesmo. Esta rotação é, pois, uma simetria de cubo."
+        char: technician
+        exposition: "Continuou o técnico."
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-4/video/AnimCubo.mp4
+  - type: image
+    src: cubo-plano.png
+    id: cubo-plano
+    style: "width: 37%; bottom: 0%; left: 42%;"   
+  - type: dialog
+    entries:        
+      - text: "Consideremos agora o plano que passa por duas arestas diametralmente opostas. A reflexão neste plano é também uma simetria do cubo."
+        char: technician
+      - text: "E se considerares quaisquer dois vértices do cubo, há sempre pelo menos uma simetria que leva um dos vértices no outro. Esta propriedade é válida não apenas para o cubo, mas também para todos os sólidos platónicos e para todos os poliedros uniformes."
+        char: technician        
+  - type: clearImage
+    id: cubo-plano
+  - type: dialog
+    entries:        
+      - text: "Já entendi! Mas por que não é o poliedro de Miller uniforme?"
+        char: mathina
+      - text: "Por que não tentam descobrir?"
+        char: technician
+        exposition: "Desafiou o técnico."
+  - type: clearBackground
+    id: c1-bg24    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg25.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg25
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo examinaram cuidadosamente o poliedro, rodando-o várias vezes.</p>
+  - type: dialog
+    entries:        
+      - text: "É uniforme: se considerarmos, por exemplo, estes 2 vértices (a vermelho e azul), há uma rotação que leva um no outro! Ora vê!"
+        char: leo
+        exposition: "Leo exclaimed."        
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/MillerRot.html
+  - type: dialog
+    entries:        
+      - text: "Não é essa a questão, Leo: para mostrar que é uniforme, temos de considerar todos os pares de vértices diferentes do poliedro! Um par não é suficiente!"
+        char: mathina
+      - text: "No entanto, para mostrar que o poliedro não é uniforme, basta provar que existe um par de vértices (A, B) para o qual falha a condição indicada pelo técnico, ou seja, não há uma simetria do poliedro que leva A em B."
+        char: mathina
+        exposition: "A Mathina continuou."
+  - type: sceneText
+    text: >
+      <p>Depois de examinar cuidadosamente o poliedro uma vez mais, a Mathina fez uma descoberta.</p>
+  - type: clearBackground
+    id: c1-bg25    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg26.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg26
+  - type: dialog
+    entries:        
+      - text: "Repara, Leo! Se olhares cuidadosamente para o “equador” deste poliedro, vês um anel de quadrados. E este é o único anel de quadrados que existe no poliedro!"
+        char: mathina
+  - type: clearBackground
+    id: c1-bg26    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg27.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg27
+  - type: dialog
+    entries:        
+      - text: "Então, se considerarmos um vértice no anel (A) e um fora do anel (B) não há nenhuma simetria do poliedro que leve A em B."
+        char: mathina
+      - text: "Não entendo!"
+        char: leo
+      - text: "Leo, qualquer isometria que leve A em B irá remover o anel de quadrados do equador, mudando assim o aspecto final do poliedro."
+        char: mathina
+      - text: "Ah! Já entendi."
+        char: leo
+  - type: clearBackground
+    id: c1-bg27    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg24.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg24
+  - type: dialog
+    entries:    
+      - text: "Bem, já vi que perceberam por que motivo o poliedro de Miller não é uniforme. Por que não me ajudam agora a selecionar os poliedros uniformes de entre os modelos que tenho na minha gaveta?"
+        char: technician
+        mood: impressed        
+        exposition: "Desafiou o técnico."
+      - text: "Desta forma, podem-me ajudar com a montagem da maquete do carrossel…"
+        char: technician        
+  - type: game
+    text: "Escolhe os poliedros uniformes. De cada vez, escolhe os 4 poliedros e clica em"
+    toolbarText: "Escolhe os poliedros uniformes"
+    cta: "Tenta separar os poliedros que são uniformes!"
+    url: /apps/EscolhePoliUnif/index.html?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: dialog
+    entries:    
+      - text: "Já encontrámos todos os poliedros uniformes e colocámo-los neste saco. Existem 13 poliedros."
+        char: leo
+        exposition: "Concluiu o Leo."
+      - text: "Estou curioso. Existem outros poliedros uniformes diferentes dos que encontrámos?"
+        char: leo        
+      - text: "Na realidade, há um número infinito de poliedros uniformes."
+        char: technician
+      - text: "O quê?"
+        char: leo
+        exposition: "Perguntaram o Leo e a Mathina ao mesmo tempo."
+      - text: "É muito fácil! Pensem em prismas retos cujas bases são polígonos regulares e cujas faces laterais são quadrados. Esse tipo de prismas também são poliedros uniformes."
+        char: technician
+      - text: "E podemos até criar outros poliedros uniformes, transformando os prismas em anti-prismas com triângulos equiláteros como faces laterais. No entanto, com exceção dos prismas e antiprismas, os poliedros do saco são os únicos uniformes."
+        char: technician
+        exposition: "Acrescentou o técnico."
+  - type: clearBackground
+    id: c1-bg24    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg28.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg28
+  - type: dialog
+    entries:    
+      - text: "Venham ver modelos desses poliedros na minha gaveta! Não os mostrei, porque decidi não usá-los: achei-os muito básicos ..."
+        char: technician
+        exposition: "Explicou o técnico."
+  - type: game
+    text: "Vê os poliedros!"
+    cta: "Ver"
+    url: /apps/anims/prismas_antiprismas.html
+  - type: dialog
+    entries:    
+      - text: "Querem ajudar-me a terminar a maquete? Só precisamos de colar todos os modelos de poliedros uniformes que vocês selecionaram para além dos sólidos platónicos que construíram."
+        char: technician
+  - type: clearBackground
+    id: c1-bg28    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg29.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg29        
+  - type: sceneText
+    text: >
+      <p>Os três finalizaram a montagem da maquete do “carrossel dos poliedros platónicos e uniformes” e contemplaram o resultado: era um bela obra, não só pela diversidade de cores, mas também e, principalmente, pela simetria existente nos poliedros escolhidos, que os tornava visualmente muito apelativos.</p>
+  - type: game
+    text: "Vê os poliedros!"
+    cta: "Ver"
+    url: /apps/anims/carrossel.html
