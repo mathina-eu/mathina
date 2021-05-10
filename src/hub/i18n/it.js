@@ -36,7 +36,7 @@ export default {
   },
   menu: {
     language: 'Lingua',
-    'select-age': 'Seleziona fascia d\'età',
+    'select-age': 'Seleziona fascia di età',
     'assist-mode': 'Assist mode ?!?'
   },
   chars: {
@@ -47,6 +47,7 @@ export default {
 	parrot: 'John',
 	carla: 'Carla',
 	sean: 'Sean',
+	rasha: 'Rasha',
     jane: 'Jane',
 	flamma: 'Flamma',
 	charmingparrot: 'Capitano Charmingparrot',
