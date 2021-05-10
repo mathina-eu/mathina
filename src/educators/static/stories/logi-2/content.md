@@ -18,7 +18,7 @@ Working on problems that require thinking out-of-the-box can help children devel
 In **The tiled floor trap**, the following basic mathematical concepts play an important role:
 
 + Pattern: A repeating or growing sequence or design. An ordered set of objects, numbers, or shapes arranged according to a rule
-+ Polygon: A closed figure formed from line segments that meet only at their endpoints
++ Polygon: Polygon is a bounded region of the plane, the boundary of which consists of a finite sequence of line segments, joined by their endpoints. One endpoint of each line segment is the endpoint of just the following line segment and one endpoint of the first line segment is also an endpoint of the last line segment; only endpoints belong to more than one line segment.
 + Sequence: A set of objects/numbers arranged in a certain order or pattern
 
 # Didactical remarks
@@ -35,8 +35,6 @@ The approach to the subject is, however, different from what is usually used in 
 
 ## Suggestions for additional exercises
 The widely used mathematics educational toolkit called **Dienes logic blocks** can be employed for similar games. The tiles in the 48-piece set are characterized by four properties: color (red, green, blue, or yellow), shape (circle, square, triangle), size (small or large), and with or without perforation.
-
-![Dienes logic blocks](/stories/logi-2/img/dienes.png)
 
 We can play a two-player game with the tiles. Both players receive 10-10 tiles. The rule is that neighbouring tiles should only differ from each other in one single attribute. Players lay down a piece one after the other on the table. The player who cannot continue the game, loses. 
 
