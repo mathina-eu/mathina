@@ -38,7 +38,7 @@ actions:
 
   - type: sceneText
     text: >
-      <h1>The talking parrot</h1>        
+      <h1>Il pappagallo parlante</h1>        
 
   - type: animation
     target: Wave1
@@ -108,10 +108,12 @@ actions:
       repeat: -1
       yoyo: true
 
+
+
       
   - type: dialog
     entries:
-      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
+      - text: "Corri, Mathina, corri! O perderai il traghetto per l'Isola dei Bucanieri!"
         char: mathina
         mood: happy
 
@@ -127,7 +129,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!</p>
+      <p>Duecento metri ... Biglietto controllato ... Attenzione al molo scivoloso ... Fatto!</p>
       
 
  
@@ -157,27 +159,27 @@ actions:
       
   - type: sceneText
     text: >
-      <p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
+      <p>Il traghetto partì con calma mentre Mathina riprendeva fiato su una delle sedie vicino alle finestre. </p>
       
 
       
   - type: dialog
     entries:
-      - text: "This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
+      - text: "Mio fratello e i suoi amici stanno visitando una fiera particolare vicino a casa nostra, quindi ho tutto il tempo per esplorare l'isola. Sono così curiosa..."
         char: mathina
         mood: excited
   - type: sceneText
     text: >
-      <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+      <p>"La prima volta sull’Isola dei Bucanieri?" chiese una signora seduta accanto a Mathina.</p>
   - type: dialog
     entries:
-      - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
+      - text: "Quasi! Ci sono già stata con mio fratello, ma non sono riuscita a scoprire tutti i suoi segreti. E te?"
         char: mathina
         mood: happy
 
   - type: sceneText
     text: >
-      <p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
+      <p>"Passo spesso da quelle parti, ed è sempre divertente andare lì e cercare qualche mistero. Sei fortunata: oggi è il giorno di mercato sull'isola. Merita sicuramente una visita.”</p>
 
 
   - type: animation
@@ -201,12 +203,12 @@ actions:
 
   - type: sceneText
     text: >
-      <p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+      <p>"Molte grazie! Il mio nome è Mathina, e tu? " Chiese Mathina. In quel momento però il traghetto stava attraccando e molte persone iniziarono ad uscire.  </p>
  
  
   - type: sceneText
     text: >
-      <p>“Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again.”
+      <p>Mathina riuscì a sentire alcune parole prima che la ragazza venisse allontanata dal mucchio di persone “Mi chiamo… oh, non è importante! Sono sicura che ci rivedremo."
       </p>
 
   - type: background
@@ -250,7 +252,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: "Finally I’m back to Buccaneer’s Island!"
+      - text: "Bene, eccomi di nuovo sull’Isola dei Bucanieri"
         char: mathina
         mood: happy
 
@@ -288,7 +290,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>The memory of the lady quickly vanished, replaced by the fresh breeze of the ocean and the bright sounds of the bells of the fishers boats. What a wonderful welcome!
+      <p>Il ricordo della signora sul traghetto svanì rapidamente, sostituito dalla fresca brezza dell'oceano e dai suoni vivaci delle campane delle barche dei pescatori. Che magnifica accoglienza!
       </p>
 
   - type: image
@@ -298,16 +300,17 @@ actions:
 
   - type: sceneText
     text: >
-      <p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
-        “Treasure map! Here is the map for the hidden treasure of Buccaneer’s Island” </br>
-        “The best apples of Buccaneer’s Island! Give it a taste!”  </br>
-        “Who is the best singer of pirate’s songs? Challenge me!” </br>
+      <p>Una strada sterrata collegava il porticciolo dell'isola con la città principale, ed oggi era piena di bancarelle.
+      </br> </br> 
+      “Mappa del tesoro! Ecco la mappa del tesoro nascosto dell'Isola dei Bucanieri "</br> 
+      “Le migliori mele dell’Isola dei Bucanieri! Assaggiatele! "</br> 
+      “Chi è il miglior cantante delle canzoni dei pirati? Sfidami! " </br> 
       </p>
 
   - type: sceneText
     text: >
-      <p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
-      </br> </br> What is it? Another screech, this time louder!
+      <p>Tante voci e tanti oggetti strani e misteriosi! Mathina si aggirava molto felice provando, assaggiando e cantando, mentre la sua attenzione veniva catturata da un forte stridio. 
+      </br> </br>  Che cos'è? Un altro stridio, questa volta più forte!
       </p>
   - type: clearImage
     id: Mathina0
@@ -339,7 +342,7 @@ actions:
   
   - type: sceneText
     text: >
-      <p>Mathina moved around until she found herself in front of a very clever-looking parrot. It had very nice red, yellow and blue feathers, and when he realised that Mathina was watching him, he just went silent, moving the head, intrigued.
+      <p>Mathina si spostò finché non si trovò di fronte a un pappagallo dall'aspetto molto intelligente. Aveva delle bellissime piume rosse, gialle e blu, e quando si rese conto che Mathina lo stava guardando, rimase in silenzio, muovendo la testa, incuriosito.
       </p>
  
   - type: animation
@@ -368,22 +371,22 @@ actions:
 
   - type: dialog
     entries:
-      - text: "Hi!! My name is Mathina, may I pet you?"
+      - text: "Ciao!! Mi chiamo Mathina, posso accarezzarti?"
         char: mathina
         mood: happy
   - type: dialog
     entries:
-      - text: "Z-F-T!!"
+      - text: "T-J !!"
         char: parrot
         mood: happy
   - type: dialog
     entries:
-      - text: "Wait.. what?"
+      - text: "...cosa hai detto?"
         char: mathina
         mood: surprised
   - type: sceneText
     text: >
-      <p>Mathina was baffled, she didn’t understand a word of what the parrot said, but he was clearly speaking some sort of language.
+      <p>Mathina era sconcertata, non capiva una parola di quello che diceva il pappagallo, ma stava chiaramente tentando di parlare con lei.
       </p>
       
   - type: image
@@ -394,18 +397,18 @@ actions:
       
   - type: sceneText
     text: >
-      <p>A lady arrived near the stand and greeted Mathina.
+      <p>Una signora si avvicinò alla bancarella e salutò Mathina.
       </p>
       
       
   - type: dialog
     entries:
-      - text: "Don’t worry: he is like that all the time. I’m Angela, nice to meet you."
+      - text: "Non preoccuparti: è sempre così. Sono Angela, piacere di conoscerti."
         char: angela
         mood: happy
   - type: dialog
     entries:
-      - text: "Hi! Is this your parrot?"
+      - text: "Ciao! È il tuo pappagallo?"
         char: mathina
         mood: happy
   - type: clearImage
@@ -418,34 +421,33 @@ actions:
         
   - type: dialog
     entries:
-      - text: "Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. 
-               Some years ago the crew retired, and so everybody went his own way. Some of them are probably still there on the island."
+      - text: "Non esattamente… Vive con me, ma la sua storia è molto interessante: una volta faceva parte della ciurma di una nave pirata, e ha preso parte a tante tante avventure. Da alcuni anni la ciurma ha smesso di navigare, e così ognuno ha preso la sua strada. Alcuni di loro sono probabilmente ancora presenti sull'isola."
         char: angela
         mood: normal
   - type: dialog
     entries:
-      - text: "Wow! Looks like you became friends!"
+      - text: "Wow! Sembra che siate diventati amici!"
         char: angela
         mood: happy
   - type: sceneText
     text: >
-      <p>The parrot was playing with Mathina, ruffling her hairs with his beak.
+      <p>Il pappagallo stava giocando con Mathina, cercando di arruffarle i capelli con il becco.
       </p>
 
 
   - type: dialog
     entries:
-      - text: "Do you want a cookie?"
+      - text: "Vuoi un biscotto?"
         char: mathina
         mood: happy
   - type: sceneText
     text: >
-      <p> The parrot seemed very happy and replied “Z-F-T! Z-F-T!”. Mathina seemed very curious... </p>
+      <p> Il pappagallo sembrava molto felice e ripeteva “T-J!! T-J!!”. Mathina era molto incuriosita... </p>
   - type: dialog
     entries:
-      - text: "It seems the same word he said before. What if it is telling me just “yes”?"
+      - text: "sembra che dica sempre la stessa parola! E se mi dicesse solo “sì”?"
         char: mathina
-        mood: surprised
+        mood: thinking
         
   - type: clearImage
     id: Angela1
@@ -458,20 +460,20 @@ actions:
         
   - type: dialog
     entries:
-      - text: "It sounds right: before you asked to pet him, now he wants a cookie. Shall we try with something different? Ask him something with “no” as an answer."
+      - text: "sembra proprio di sì: prima gli chiedevi di accarezzarlo, ora voleva un biscotto. Proviamo con qualcosa di diverso? Chiedigli qualcosa che abbia un “no” come risposta."
         char: angela
         mood: normal
   - type: sceneText
     text: >
-      <p>Mathina thought about this for a while. What question could she ask to be almost sure the parrot would reply no? </p>
+      <p>Mathina ci pensò su per un po'. Quale domanda poteva fare per essere quasi sicura che il pappagallo avrebbe risposto di no?</p>
   - type: dialog
     entries:
-      - text: "Maybe I will keep this cookie. Is it ok?"
+      - text: "Forse terrò questo biscotto per me, e lo mangerò più tardi. Va bene?"
         char: mathina
         mood: happy
   - type: sceneText
     text: >
-      <p> The parrot seemed a bit annoyed, and replied “O-P! O-P!”. </br></br> Mathina smiled and gave the cookie to the parrot.</p>
+      <p> "Il pappagallo questa volta sembrava infastidito e rispose “O-P! O-P!”. </br></br> Mathina sorrise e diede il biscotto al pappagallo.</p>
        
   - type: clearImage
     id: Angela1
@@ -521,35 +523,35 @@ actions:
         
   - type: dialog
     entries:
-      - text: "Now we know, Z-F-T means “yes”, and O-P means “no”."
+      - text: "Ora lo sappiamo, “T-J” significa “sì” e “O-P” significa “no”."
         char: mathina
         mood: happy
                
         
   - type: sceneText
     text: >
-      <p> What a strange language... Mathina seemed baffled.</p>
+      <p> Che strana lingua... Mathina sembrava confusa.</p>
   - type: dialog
     entries:
-      - text: "I am confused. O-P has two letters, the same as “no”, but I don’t have any idea about that. Maybe is just some crazy code."
+      - text: "Sono confusa... “O-P” ha due lettere, proprio come “no”, ma capisco perché il pappagallo parli così! Non ne ho idea. Forse è solo un codice strampalato."
         char: mathina
         mood: normal
   - type: dialog
     entries:
-      - text: "Maybe he is just changing the letters! Think about the alphabet K, M, N, O, P,..."
+      - text: "Forse sta solo cambiando le lettere! Pensa all'alfabeto K, M, N, O, P, ... "
         char: angela
         mood: normal
   - type: dialog
     entries:
-      - text: "Hey! I got it. He is substituting the letter with the one immediately after it in the alphabet. So no becomes “no”, since O is immediately after N, and P is immediately after O."
+      - text: "Penso di avere capito! Sta sostituendo ogni lettera con quella immediatamente successiva nell'alfabeto. Quindi NO diventa OP, poiché O è immediatamente dopo N e P è immediatamente dopo O."
         char: mathina
         mood: happy
   - type: sceneText
     text: >
-      <p> Angela seemed happy and the parrot also gave a screech of joy.</p>
+      <p> Angela sembrava felice, e anche il pappagallo lanciò uno strillo di gioia.</p>
   - type: dialog
     entries:
-      - text: "Very good Mathina! This is one of the standard ways pirates use to communicate in secret."
+      - text: "Molto brava Mathina! Questo è uno dei modi standard con cui i pirati comunicano in segreto ."
         char: angela
         mood: happy
         
@@ -558,20 +560,20 @@ actions:
         
   - type: sceneText
     text: >
-      <p> Mathina was amazed, and also quite happy since she was able to understand at least a part of this code.</p>
+      <p> Mathina era sbalordita e anche abbastanza felice dal momento che era in grado di capire almeno una parte di questo codice. </p>
   - type: dialog
     entries:
-      - text: "How do you know this? And… how do you manage to translate so quickly?"
+      - text: "Come fai a saperlo? E... come riesci a tradurre così velocemente?"
         char: mathina
         mood: normal
   - type: dialog
     entries:
-      - text: "You never know who on this island was a pirate or not but, keep this as a secret, I was part of the same crew as John - the parrot. He is very intelligent. Actually, he can speak quite fluently. But sometimes he finds it funny to repeat some words in code, like “yes” and “no”."
+      - text: "Non si sa mai chi su quest'isola è un pirata o no. Ti rivelerò un segreto: facevo parte della stessa ciurma di John, il pappagallo. John è molto intelligente ed è in grado di parlare abbastanza fluentemente. Ma a volte trova divertente ripetere alcune parole in codice, come  “sì” e “no”."
         char: angela
         mood: happy
   - type: dialog
     entries:
-      - text: "We have a trick to communicate: a necklace that can be used to encrypt and decrypt words and sentences."
+      - text: "Abbiamo un trucco per comunicare: una collana che può essere utilizzata per crittografare e decrittare parole e frasi."
         char: angela
         mood: normal
   - type: image
@@ -581,56 +583,56 @@ actions:
     align: center
   - type: sceneText
     text: >
-      <p> Angela gave to Mathina a small necklace. </p>
+      <p> Angela diede a Mathina una piccola collana. </p>
        
   - type: sceneText
     text: >
-      <p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
+      <p> Era fatta di ottone. Una catena sottile con un ciondolo molto strano: una sorta di due cerchi uno dentro l'altro, con incise le lettere dell'alfabeto.</p>
   - type: dialog
     entries:
-      - text: "It is beautiful - said Mathina - how does it work? I see that the letters appear twice: one in the inner circle and one in the outer circle, but they are shifted. Why?"
+      - text: "È molto bella... come funziona? - disse Mathina - Vedo che le lettere appaiono due volte: una nel cerchio interno e una nel cerchio esterno, ma sono spostate. Perché?"
         char: mathina
         mood: excited
-      - text: "The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle."
+      - text: "“Il cerchio interno è il tuo punto di partenza. Se vuoi crittografare la lettera A, ti basta cercare la A nel cerchio interno, e poi guardare la lettera che corrisponde alla A nel cerchio esterno. "
         char: angela
         mood: normal
-      - text: "In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
+      - text: "In questo caso trovi B, quindi la lettera A viene tradotta nella lettera B. Se vuoi decifrare..."
         char: angela
         mood: normal        
-      - text: "... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one."
+      - text: "... lo faccio solo all'indietro, giusto? Cerco la lettera che voglio tradurre nel cerchio esterno, quindi trovo la lettera corrispondente in quello interno."
         char: mathina
         mood: happy
-      - text: "Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
+      - text: " Come se vedessi che la lettera J va alla lettera I, e se continuo a cercare T va in S. Quindi... TJ è SI!"
         char: mathina
         mood: happy
-      - text: "Clever girl - said Angela. So… wanna try to translate something else?"
+      - text: "Bravissima - esclamò Angela. Vuoi provare a tradurre qualche altra frase?"
         char: angela
         mood: happy
-      - text: "Yes, please! Let’s try!"
+      - text: "Sì grazie! Proviamo!"
         char: mathina
         mood: happy
-      - text: "Remember, move from the outside to the inside to decode."
+      - text: "Ricorda, spostati dal cerchio esterno a quello interno per decifrare."
         char: angela
         mood: normal
 
   - type: game
-    text: "Remember: to decode you have to start from the outer circle"
-    toolbarText: "Select the correct word"
-    cta: "Try it yourself!"
-    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1
+    text: "Ricorda: per decifrare devi partire dal cerchio esterno."
+    toolbarText: "Seleziona la parola corretta."
+    cta: "Provaci tu!"
+    url: /apps/bucca-2-app/bucca-2-app-1.htm
 
 
   - type: sceneText
     text: >
-      <p> Mathina spent quite a lot of time playing with the parrot. "It is almost time to catch the ferry back home...", thought Mathina while giving back the necklace to Angela.</p>
+      <p> Mathina passò gran parte della giornata giocando insieme ad Angela e John. "E' quasi ora di riprendere il traghetto per tornare a casa...", pensò Mathina mentre restituiva la collana ad Angela.</p>
   - type: dialog
     entries:
-      - text: "Angela, it was a wonderful day, I hope to come again visiting you and John."
+      - text: "Angela, è stata una giornata meravigliosa, spero di tornare presto a trovare te e John."
         char: mathina
         mood: normal
   - type: dialog
     entries:
-      - text: "Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
+      - text: "Certo che lo farai! Oh, e non restituirmi la collana. Tienilo come ricordo della giornata passata insieme a noi!"
         char: angela
         mood: happy   
         
@@ -639,8 +641,7 @@ actions:
         
   - type: sceneText
     text: >
-      <p> Mathina was very happy! She put the jewel on her neck and, after giving John another cookie she headed back to the dock, to take the ferry. </p> 
-
+      <p> Mathina era molto felice! Si mise il gioiello al collo e, dopo aver dato a John un altro biscotto, tornò al molo, per prendere il traghetto. </p> 
 
   - type: clearImage
     id: Mathina2
@@ -706,7 +707,7 @@ actions:
  
   - type: sceneText
     text: >
-      <p> She was very excited and she almost did not notice that the same lady of the ongoing trip was seated just in front of her.</p> 
+      <p> Era molto eccitata, e quasi non si accorse che la stessa ragazza del viaggio di andata era seduta proprio di fronte a lei.</p> 
  
   - type: animation
     target: Wave1
@@ -789,52 +790,52 @@ actions:
 
   - type: sceneText
     text: >
-      <p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
+      <p> Com’è andata oggi? Ti sei divertita sull'Isola dei Bucanieri? Mathina quasi saltò sulla sedia. </p>
   - type: dialog
     entries:
-      - text: "Hi!! Wow, I almost did not notice you. It was a great day!"
+      - text: "Ciao!! Quasi non ti ho notato. È stato un giorno divertentissimo!"
         char: mathina
         mood: excited
   - type: sceneText
     text: >
-      <p> Mathina begins to explain the adventure with the parrot and with Angela, while the other lady was listening, herself lost into memories. </p>
+      <p> Mathina iniziò a spiegare l'avventura con il pappagallo e con Angela, mentre l'altra persona ascoltava, lei stessa persa nei ricordi. </p>
   - type: dialog
     entries:
-      - text: "... and finally I tried to translate some sentences, but almost missed the last ferry! But here I am… and… how was your day…. uh… don’t remember your name, sorry."
+      - text: "... E finalmente ho provato a tradurre alcune frasi, ma ho quasi perso l'ultimo traghetto! Ma eccomi qui ... e ... com'è andata la tua giornata ... uh ... non ricordo il tuo nome, scusa!"
         char: mathina
         mood: normal
   - type: sceneText
     text: >
-      <p> The lady smiled. "I also had my own adventures today! I was on the island hiding a treasure of my own! Who knows who’ll find it!" </p>
+      <p> La signora sorrise. "Anche io ho passato una giornata avventurosa! Anzi, ti confido un segreto: sono stata sull’isola a nascondere un piccolo tesoro! Chissà chi lo troverà!" </p>
   - type: dialog
     entries:
-      - text: "Now I am curious, where did you hide it?"
+      - text: "Ora sono curiosa, dove l’hai nascosto?"
         char: mathina
         mood: happy
   - type: sceneText
     text: >
-      <p> "Somewhere in a tree, but I don’t want to spoil you too much! But well - she said while looking at the new pendant of Mathina - are you ready for one last riddle, before the ferry arrives at the dock?" </p>
+      <p> "Forse da qualche parte su un albero, ma non voglio rivelarti troppo. Piuttosto - disse guardando il nuovo ciondolo di Mathina - sei pronta per un ultimo enigma, prima che il traghetto arrivi al molo?" </p>
   - type: dialog
     entries:
-      - text: "Of course, I am, tell me!"
+      - text: "Certo che lo sono! Dimmi!"
         char: mathina
         mood: excited
   - type: sceneText
     text: >
-      <p> "Oh, it is not something to tell… Here it is - she said as she handed Mathina an old piece of paper - There is a riddle encoded in this piece of paper, and to me, it looks like that you have all the tools you need for decoding that... Good luck!" </p>
+      <p> "Oh, non è qualcosa da dire... Eccolo qui - e porse a Mathina un vecchio pezzo di carta - C'è un indovinello cifrato in questo pezzo di carta, e mi sembra che tu abbia tutti gli strumenti di cui hai bisogno per decifrarlo... Buona fortuna!" </p>
   - type: sceneText
     text: >
-      <p> Mathina looked at the piece of paper: a few words - of course incomprehensible - which looked very similar to the one she learned from Angela and John today. Will you help her translate the secret message? </p>
+      <p> Mathina guardò il pezzo di carta: poche parole - ovviamente incomprensibili - che somigliavano molto a quelle che aveva imparato oggi da Angela e John. La aiuterai a tradurre il messaggio segreto? </p>
 
   - type: game
-    text: "Try to decipher the secret message with the help of the jewel"
-    toolbarText: "Try to decipher the secret message with the help of the jewel"
-    cta: "Try it yourself!"
-    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=1
+    text: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
+    toolbarText: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
+    cta: "Provaci tu!"
+    url: /apps/bucca-2-app/bucca-2-app-2.htm
     
   - type: sceneText
     text: >
-      <h1>The talking parrot - The End</h1>        
+      <h1>Il pappagallo parlante - FINE</h1>        
 
     
       

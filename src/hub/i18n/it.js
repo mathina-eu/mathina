@@ -1,10 +1,10 @@
 export default {
   city: {
-    'choose-story': 'Choose a story!',
+    'choose-story': 'Scegli una storia!',
   },
   world: {
     'title': 'Mathina',
-    'help': 'Visit a city!',
+    'help': 'Visita un luogo!',
   },
   cities: {
     'island': 'Buccaneer Island',
@@ -13,18 +13,17 @@ export default {
     'symmetry-fair': 'Symmetry Fair',
   },
   story: {
-    'next': 'Next',
-    'back': 'Back',
-    'back-to-world': 'Back to World Map',
+    'next': 'Avanti',
+    'back': 'Indietro',
     titles: {
       'logi-1': 'The traffic light challenge',
       'logi-2': 'Ytic-igol',
       'logi-3': 'Cats and dogs',
       'logi-4': 'My gold, please',
-      'bucca-1': 'Mathina and the secret messages',
-      'bucca-2': 'Mathina and the talking parrot',
-      'bucca-3': 'Mathina and the lost treasure',
-      'bucca-4': 'The man in the middle',
+      'bucca-1': 'I messaggi segreti',
+      'bucca-2': 'Il pappagallo parlante',
+      'bucca-3': 'Il tesoro perduto',
+      'bucca-4': 'Man in the middle',
       'fire-1': 'The firebird trainer',
       'fire-2': 'Talking to the unidragon',
       'fire-3': 'The phoenix race',
@@ -37,19 +36,30 @@ export default {
     },
   },
   index: {
-    title: 'Welcome to Mathina',
-    subtitle: 'Select an age group to start!',
-    'start-exploring': 'Start exploring!',
+    title: 'Benvenuto nel mondo di Mathina',
+    subtitle: 'Seleziona una fascia di età!',
+    'start-exploring': 'Inizia ad esplorare!',
   },
   menu: {
-    language: 'Language',
-    'select-age': 'Select age',
-    'assist-mode': 'Assist mode'
+    language: 'Lingua',
+    'select-age': 'Seleziona fascia d\'età',
+    'assist-mode': 'Assist mode ?!?'
   },
   chars: {
     mathina: 'Mathina',
-    wizard: 'Wizard',
     leo: 'Leo',
+    wizard: 'Wizard',
+	angela: 'Angela',
+	parrot: 'John',
+	carla: 'Carla',
+	sean: 'Sean',
     jane: 'Jane',
+	flamma: 'Flamma',
+	charmingparrot: 'Capitano Charmingparrot',
+	mysteriousfigure: 'Figura misteriosa',
+    Leo: 'Leo',
+    Mathina: 'Mathina',
+	Parrot: 'John',
+	Angela: 'Angela'
   },
 };
