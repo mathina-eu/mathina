@@ -189,11 +189,6 @@ actions:
         char: mathina
         mood: happy
 
-  - type: background
-    src: bg2_b.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
-
-
   - type: clearImage
     id: Wave1
   - type: clearImage
@@ -212,7 +207,9 @@ actions:
     id: Cloud3
   - type: clearImage
     id: Cloud4
-
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
   - type: image
     id: Fisherman1
     src: barca3.png
@@ -372,13 +369,6 @@ random number in that range and do some simple operations. Have a look!"
         char: mathina
         mood: arguing
         
-   
-  - type: background
-    src: bg4.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
-    src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
   - type: clearImage
     id: Fisherman1
   - type: clearImage
@@ -390,7 +380,14 @@ random number in that range and do some simple operations. Have a look!"
   - type: clearImage
     id: Leo0
   - type: clearImage
-    id: Angela1  
+    id: Angela1     
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+
   - type: image
     id: Mathina1
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -439,6 +436,10 @@ random number in that range and do some simple operations. Have a look!"
     - text: "I don't think so, maybe Mathina just missed our last message, I’m sure we will know from her very soon." 
       char: angela
       mood: normal
+  - type: clearImage
+    id: Leo1  
+  - type: clearImage
+    id: Angela2  
   - type: background
     src: alberi1.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
@@ -448,10 +449,7 @@ random number in that range and do some simple operations. Have a look!"
   - type: background
     src: terreno.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"       
-  - type: clearImage
-    id: Leo1  
-  - type: clearImage
-    id: Angela2 
+
   - type: image
     id: Leo2
     src: $COMMON/img/characters/leo/leo5.png 
@@ -481,19 +479,19 @@ random number in that range and do some simple operations. Have a look!"
     toolbarText: "Follow the steps to help Leo understand how secure the system is"
     cta: "Try it yourself!"
     url: /apps/bucca-4-app/bucca-4-app-3.htm?l=1
-        
+  - type: clearImage
+    id: Leo2  
+  - type: clearImage
+    id: Angela3 
+  - type: clearImage
+    id: terreno         
   - type: background
     src: alberi4.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
   - type: background
     src: terreno.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
-  - type: clearImage
-    id: Leo2  
-  - type: clearImage
-    id: Angela3 
-  - type: clearImage
-    id: terreno  
+
 
   - type: dialog
     entries:      
@@ -517,11 +515,81 @@ random number in that range and do some simple operations. Have a look!"
      - text: "Yeah, very reassuring, that's what any thief or pirate would say! I don't have anything valuable! Go away! Let me go!"
        char: mathina
        mood: arguing       
+  - type: image
+    id: sedia
+    src: sedia.png
+    style: "height: 45%; top: 30%; right: 20%;  z-index: 1; transform: ScaleX(1);"  
   - type: sceneText
     text: >
       <p>Mathina was in trouble! The mysterious figure was real and was holding her captive in a cave on the mountain. Who was he? What did he want from Mathina?</p>      
 
-      
+  - type: dialog
+    entries:      
+     - text: "Now that you can not run away, let me introduce myself. Ahoy, I'm Captain Terry Charmingparrot, from Buccaneer's Island!"
+       char: charmingparrot
+       mood: normal
+     - text: "What are you talking about? Everybody knows that there are no pirates or buccaneers left here. They are just a thing of the past!"
+       char: mathina
+       mood: arguing
+     - text: "Well, not me, young lady, not me! I'm here and I am a real pirate! My ancestors left a huge treasure here on the island and when your stinky little brother and his fellow fleas found the engraving in the park last year, I realized I had the first great opportunity to finally discover the truth about the treasure! Now, let me bring your little brother as well!"
+       char: charmingparrot
+       mood: normal
+     - text: "How do you plan to do it? We decided that he will not come here on the mountain, but search for hints near the coast."
+       char: mathina
+       mood: arguing
+     - text: "I know about your little cryptographic system. I can fake to be you, as he does not know who is sending him messages!"
+       char: charmingparrot
+       mood: happy
+       
+  - type: clearImage
+    id: sedia   
+       
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi1.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi2.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: background
+    src: alberi4.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi3.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"           
+  - type: sceneText
+    text: >
+      <p>Then at Parrot Forrest...</p>         
+  - type: dialog
+    entries:      
+     - text: "Hey! Look! A new message from Mathina!"
+       char: leo
+       mood: talking
+  - type: game
+    text: "Let's see what interesting news Mathina has for us!"
+    toolbarText: "Follow the steps to decode Mathina's message"
+    cta: "Try it yourself!"
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=1
+     
+  - type: dialog
+    entries:      
+     - text: "Ok, Angela, let's go catch up with Mathina! It looks like we are near the end of our quest!"
+       char: leo
+       mood: talking
+   
+  - type: sceneText
+    text: >
+      <p>So the duo started to climb up the mountains following the parrot trail discovered by Mathina.</p>   
+  
+  
+  
+  
+  
   - type: sceneText
     text: >
       <h1>The man in the middle - The End</h1>        
