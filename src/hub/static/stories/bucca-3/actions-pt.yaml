@@ -1152,6 +1152,8 @@ actions:
         mood: normal
 
   - type: clearImage
+    id: Gabbiano
+  - type: clearImage
     id: Barca
   - type: clearImage
     id: Finestra

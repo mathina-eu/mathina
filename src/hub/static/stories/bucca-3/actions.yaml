@@ -1164,6 +1164,8 @@ actions:
   - type: clearImage
     id: Finestra
   - type: clearImage
+    id: Gabbiano
+  - type: clearImage
     id: Angela8
   - type: clearImage
     id: Mathina5
