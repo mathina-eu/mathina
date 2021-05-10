@@ -45,6 +45,7 @@ export default [
     slug: 'the-firebird-trainer',
     id: 'fire-1',
     ageMeta: AGE_GROUPS['0'],
+    fullWidth: true,
   },
   {
     slug: 'talking-to-the-unidragon',
