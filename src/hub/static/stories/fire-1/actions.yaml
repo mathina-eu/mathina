@@ -57,9 +57,9 @@ actions:
 
   - type: sceneText
     text: >
-      <p>It was a sunny morning, Mathina and Leo were going on a stroll
+      It was a sunny morning, Mathina and Leo were going on a stroll
       in the fields near their village when they suddenly saw an old woman
-      waving her hands towards the sky and uttering incomprehensible words.  </p>
+      waving her hands towards the sky and uttering incomprehensible words.
 
   - type: animation
     target: matleo
@@ -72,13 +72,13 @@ actions:
 
   - type: sceneText
     text: >
-      <p>The woman was old but fiery and strong, like a retired ranger,
+      The woman was old but fiery and strong, like a retired ranger,
       for whom time had stopped passing by. Her hair was white and long.
       She was wearing strong leather clothes, an old worn dusty cape, boots
       like those used for riding horses, and she carried a bag, a thick rope,
       a book on her hand, and a short stick decorated with color stripes,
       too short to be used as a walking support but long enough to extend
-      her arm to the floor. </p>
+      her arm to the floor.
 
   - type: clearImage
     id: matleo
@@ -97,7 +97,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Mathina, who wasn’t shy at all, approached the woman.</p>
+      Mathina, who wasn’t shy at all, approached the woman.
   - type: animation
     target: fla
     vars:
@@ -107,7 +107,6 @@ actions:
         #transform: scale(1,-1)
         transform: rotateY(180deg)
         ease: power3.out
-
 
   - type: dialog
     avatarAlign:
@@ -390,14 +389,6 @@ actions:
           unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
         mood: normal
-
-
-  - type: dialog
-    avatarAlign:
-      flamma: right
-      mathina: left
-      leo: left
-    entries:
       - text: Yes! Yes!
         char: mathina
         mood: happy
