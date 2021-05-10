@@ -585,7 +585,54 @@ random number in that range and do some simple operations. Have a look!"
   - type: sceneText
     text: >
       <p>So the duo started to climb up the mountains following the parrot trail discovered by Mathina.</p>   
+
+  - type: background
+    src: bg-grey-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+  - type: dialog
+    entries:      
+     - text: "So here we are! Welcome to my cove!"
+       char: charmingparrot
+       mood: happy   
+     - text: "Who are you? Where’s Mathina?"
+       char: leo
+       mood: surprise
+  - type: sceneText
+    text: >
+      <p>Leo shouted at the mysterious pirate while a net covered the exit of the cove, trapping Angela and himself inside.</p>        
+  - type: dialog
+    entries: 
+     - text: "Your sister is safe little fella, don’t worry. She just forgot to teach you some safety tricks: you need to be certain that you're really talking to the real receiver of your message while using key exchange cryptography! Now, be quiet and make yourself comfortable, you will be my guest for quite a time!"
+       char: charmingparrot
+       mood: normal    
+  - type: sceneText
+    text: >
+      <p>Leo and Angela were brought to the room where Mathina was being held.</p>        
   
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 40%; top: 55%; right: 2%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Leo0
+    src: $COMMON/img/characters/leo/leo1.png
+    style: "height: 40%; top: 50%; right: 12%;  z-index: 1; transform: ScaleX(1);"
+  
+  - type: image
+    id: Angela0
+    src: Angela_2.png
+    style: "height: 80%; top: 35%; right: 20%;  z-index: 2; transform: ScaleX(-1);" 
+ 
+
+
+  - type: dialog
+    entries:        
+     - text: "I'm sorry Leo, I'm sorry Angela, I fell into the trap of this pirate and he must have sent you some misleading message to lure you here in his cove. He says he is the last true pirate on the island and he wants to discover the treasure of his ancient fellow buccaneers."
+       char: mathina
+       mood: sad        
+     - text: "But there may be no treasure at all! All we know is that there were some buccaneers on the island, but we have no evidence that the treasure is still here – or it ever was, for that matters. Even the trail of the parrot may just be a trick engineered by the tourist office to entertain some visitors."
+       char: angela
+       mood: normal          
   
   
   
