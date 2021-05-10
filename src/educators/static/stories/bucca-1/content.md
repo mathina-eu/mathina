@@ -8,7 +8,7 @@ A simple cryptographic method is thus presented. Nevertheless, this has all the 
 ![pentagon](/stories/bucca-1/img/pentagon.png)
 ![square](/stories/bucca-1/img/square.png)
 
-The method to encrypt the message is simply to write other false messages similar to the real message you want to hide and to draw a different picture on each message. At this point all the messages, contradictory as a whole, can be placed in plain sight so that anyone can read them. Only those who have the key ("has six sides") will immediately understand what the correct message is by seeing the hexagon drawn on it. In the three interactive experiences the readers know the key and are involved, for the first two interactive experiences in the encoding process [(here)](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) and [(here)](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) and in the [third app](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), in the decoding process of the message.
+The method to encrypt the message is simply to write other false messages similar to the real message you want to hide and to draw a different picture on each message. At this point all the messages, contradictory as a whole, can be placed in plain sight so that anyone can read them. Only those who have the key ("has six sides") will immediately understand what the correct message is by seeing the hexagon drawn on it. In the three interactive experiences the readers know the key and are involved, for the first two interactive experiences in the encoding process [(here)]($HUB_URL/story/the-secret-messages/?actionLink=app1) and [(here)]($HUB_URL/story/the-secret-messages/?actionLink=app2) and in the [third app]($HUB_URL/story/the-secret-messages/?actionLink=app3), in the decoding process of the message.
 
 # Didactical remarks
 
@@ -25,7 +25,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Keys and messages I](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 1 - Keys and messages I]($HUB_URL/story/the-secret-messages/?actionLink=app1)
 
 In the first experience, the key is “it has five sides” and the message you want to convey is “Look at the third tree, north from the fountains”. The user must drag the message to be transmitted and the figure that is described by the key (a pentagon) to the center of the screen. In this experience the images available are abstract figures.
 
@@ -34,7 +34,7 @@ In the first experience, the key is “it has five sides” and the message you 
 
 &nbsp;
 
-## [Game 2 - Keys and messages II](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 2 - Keys and messages II]($HUB_URL/story/the-secret-messages/?actionLink=app2)
 
 The second app proposes the same situation as the first, the one linked to the encoding of the message, but with a different key ("the sky is full of them"). Moreover, unlike with the first app, there are more images than messages and there are two possible images that meet the demands: a star and a cloud. The user must associate one of these two images with the correct message and combine the false messages with images different from these two.
 
@@ -44,7 +44,7 @@ The second app proposes the same situation as the first, the one linked to the e
 
 &nbsp;
 
-## [Game 3 - Keys and messages III](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 3 - Keys and messages III]($HUB_URL/story/the-secret-messages/?actionLink=app3)
 
 In the third and last experience, the readers are instead involved in the process of decoding the message: they know the key (which is again “the sky is full of it”) and they must select the secret message among those proposed.
 

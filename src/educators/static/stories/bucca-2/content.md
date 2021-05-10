@@ -29,7 +29,7 @@ In the story, Mathina receives as a gift a jewel with two concentric circles, en
 ![The Caesar jewel used in the story](/stories/bucca-2/img/caesarjewel.png)
 
 
-In the two interactive experiences of the story, readers are involved respectively in the encryption process, [known the key](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) and decryption process, [without knowing the key](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+In the two interactive experiences of the story, readers are involved respectively in the encryption process, [known the key]($HUB_URL/story/the-talking-parrot/?actionLink=app1) and decryption process, [without knowing the key]($HUB_URL/story/the-talking-parrot/?actionLink=app2).
 
 
 # Didactical remarks
@@ -44,7 +44,7 @@ In the story of Mathina, Caesar's cipher is only presented on a general level, b
 
 `*` The educator could take a cue from Mathina's story for a first introduction to modular arithmetic. 
 
-These insights are taken up in the story ["The lost treasure"](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), intended for readers in the 11 to 14 age group. Both "The Talking Parrot" and "The Lost Treasure" are accessible to readers in the 7-14 age range and can be read one after the other. By using storytelling and games, our main goal is to lead children to discover Symmetry in a playful way.
+These insights are taken up in the story ["The lost treasure"]($HUB_URL/story/the-lost-treasure/), intended for readers in the 11 to 14 age group. Both "The Talking Parrot" and "The Lost Treasure" are accessible to readers in the 7-14 age range and can be read one after the other. By using storytelling and games, our main goal is to lead children to discover Symmetry in a playful way.
 
 
 &nbsp;
@@ -58,7 +58,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - The jewel I](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 1 - The jewel I]($HUB_URL/story/the-talking-parrot/?actionLink=app1)
 
 In the first experience, the key to the method is the one used by the parrot John, that is, the jump of one letter. In this app, the user must try to correctly encrypt some words using the Caesar cipher with one jump.
 
@@ -67,7 +67,7 @@ In the first experience, the key to the method is the one used by the parrot Joh
 
 &nbsp;
 
-## [Game 2 - The jewel II](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 2 - The jewel II]($HUB_URL/story/the-talking-parrot/?actionLink=app2)
 
 In the second app, the user must instead try to decrypt a message. He/she only knows that the ciphertext was obtained with a Caesar cipher. In the app, there is a version of the jewel of the story in which it is possible to rotate the discs with the alphabet and this movement has the effect of changing the key.
 
