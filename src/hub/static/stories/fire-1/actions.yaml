@@ -4,20 +4,20 @@ actions:
     src: bg_full.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
-    
+
   - type: image
-    src: bg_clouds.png 
+    src: bg_clouds.png
     id: clouds
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back3
-    
+
   - type: image
-    src: bg_castle.png 
+    src: bg_castle.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back2
-    
+
   - type: image
-    src: bg_fields.png 
+    src: bg_fields.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: mid1
 
@@ -34,26 +34,26 @@ actions:
   - type: image
     src: mathinaleo.png
     id: matleo
-    style: "width: 15%; top: 30%; left: 1%;"  
+    style: "width: 15%; top: 30%; left: 1%;"
     parallax: mid2
     #valign: bottom
     #style: "height: 25vh"
   #- type: image
     #src: $COMMON/img/leo3.png
     #id: leo1
-    #style: "width: 15%; top: 57%; left: 0%; "  
+    #style: "width: 15%; top: 57%; left: 0%; "
     #valign: bottom
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 40%; left: 50%;" 
+    style: "width: 20%; top: 40%; left: 50%;"
     parallax: front1
-    
+
   # - type: image
     # src: unidragon.gif
     # id: uni1
-    # style: "width: 10%; top: 5%; left: 90%;" 
-    # parallax: mid2 
+    # style: "width: 10%; top: 5%; left: 90%;"
+    # parallax: mid2
 
   - type: sceneText
     text: >
@@ -67,7 +67,7 @@ actions:
         duration: 5
         xPercent: 155
         yPercent: 75
-        width: 20% 
+        width: 20%
         ease: power3.out
 
   - type: sceneText
@@ -79,20 +79,20 @@ actions:
       a book on her hand, and a short stick decorated with color stripes,
       too short to be used as a walking support but long enough to extend
       her arm to the floor. </p>
-      
+
   - type: clearImage
     id: matleo
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 50%; left: 45%;"  
+    style: "width: 8%; top: 50%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo1.png
     id: leo
-    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"  
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
     parallax: mid2
 
   - type: sceneText
@@ -114,7 +114,7 @@ actions:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
 
       - text: Ms, are you a warrior?
@@ -135,50 +135,50 @@ actions:
       - text: I am a firebird trainer.
         char: flamma
         mood: normal
-        
+
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo4.png
     id: leo
-    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"  
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
     parallax: mid2
-    
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
-    
+
       - text: What is that?
         char: leo
         exposition: Replied Leo, with increasing interest.
         mood: talking
-        
+
   - type: clearImage
     id: mat
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina4.png
     id: mat
-    style: "width: 7.5%; top: 52%; left: 46%"  
-    parallax: mid2    
-     
+    style: "width: 7.5%; top: 52%; left: 46%"
+    parallax: mid2
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-      
-    entries:     
-        
+
+    entries:
+
       - text: My name is Flamma, I come from Arisa, a land full of strange
           creatures and wizards. In Arisa there are many types of firebirds,
           or birds of fire. These creatures are extremely intelligent, but their
-          minds and language are different from ours. 
+          minds and language are different from ours.
         char: flamma
         mood: normal
       - text:   They use a very precise
@@ -199,65 +199,65 @@ actions:
 
   - type: clearImage
     id: fla
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo3.png
     id: leo
-    style: "width: 8%; top: 50%; left: 38%"  
+    style: "width: 8%; top: 50%; left: 38%"
     parallax: mid2
-    
+
   - type: clearImage
-    id: mat      
-        
+    id: mat
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 50%; left: 45%;"  
+    style: "width: 8%; top: 50%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: flamma1.png
     id: fla
-    style: "width: 20%; top: 33%; left: 53%;" 
-    parallax: front3 
-    
+    style: "width: 20%; top: 33%; left: 53%;"
+    parallax: front3
+
   - type: image
     src: unidragon.gif
     id: uni
-    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)" 
-    parallax: mid2 
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)"
+    parallax: mid2
 
   - type: animation
     target: uni
-    vars: 
+    vars:
         duration: 3
         width: 25%
         xPercent: -130
         yPercent: 40
 
-        
+
   - type: animation
     target: fla
-    vars: 
+    vars:
         duration: 1
         transform: rotateY(180deg)
         delay: 3
         ease: power1.out
-        
+
   - type: animation
     target: mat
-    vars: 
+    vars:
         duration: 1
         transform: rotateY(180deg)
         delay: 3.5
         ease: power1.out
-        
+
   - type: animation
     target: leo
-    vars: 
+    vars:
         duration: 1
         transform: rotateY(180deg)
         delay: 3.7
@@ -265,50 +265,50 @@ actions:
 
   - type: animation
     target: uni
-    vars: 
+    vars:
         duration: 3
         delay: 3
         xPercent: -230
         yPercent: -30
         width: 20%
         ease: power1.out
-        
+
   - type: animation
     target: fla
-    vars: 
+    vars:
         duration: 3
         transform: rotateY(0deg)
         delay: 6
         ease: power1.out
-        
+
   - type: animation
     target: mat
-    vars: 
+    vars:
         duration: 1
         transform: rotateY(0deg)
         delay: 6.5
         ease: power1.out
-        
+
   - type: animation
     target: leo
-    vars: 
+    vars:
         duration: 1
         transform: rotateY(0deg)
         delay: 6.7
         ease: power1.out
-        
+
   - type: animation
     target: uni
-    vars: 
+    vars:
         duration: 4
         delay: 6
         transform: rotateY(0deg)
         width: 5%
         ease: power1.out
-        
+
   - type: animation
     target: uni
-    vars: 
+    vars:
         duration: 4
         delay: 10
         transform: rotateY(180deg)
@@ -322,22 +322,22 @@ actions:
         dragon appeared in the sky, leaving a colorful smokey trail in the air.
         The dragon moved gracefully and responded to Flamma as she moved her
         arm and the stick.
-        
+
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo4.png
     id: leo
-    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"   
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
     parallax: mid2
-        
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
       - text: What is that? Is it a dragon? I am not afraid
           of them!
@@ -345,19 +345,19 @@ actions:
         exposition: he added, although he was a bit nervous of the animal
           getting closer.
         mood: surprised
- 
+
   - type: clearImage
     id: fla
-        
+
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)" 
-    parallax: front1    
-  
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)"
+    parallax: front1
+
   - type: animation
     target: uni
-    vars: 
+    vars:
         duration: 20
         delay: 3
         transform: rotateY(180deg)
@@ -366,8 +366,8 @@ actions:
         #xPercent: -530
         #yPercent: -20
         width: 30%
-        ease: power1.out  
-        
+        ease: power1.out
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -378,7 +378,7 @@ actions:
           but they are born with a horn on their heads. Like milk teeth in
           children, that horn is fragile and eventually, it falls off their head
           when a stronger and bigger horn grows. But the fallen horn is not a dead
-          material, the dragon can still feel it. 
+          material, the dragon can still feel it.
         char: flamma
         mood: normal
       - text: Trainers of unidragons, as I am,
@@ -390,8 +390,8 @@ actions:
           unidragon. Would you like to try to move the unidragon in the sky?
         char: flamma
         mood: normal
-        
-        
+
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -409,17 +409,22 @@ actions:
         char: flamma
         mood: normal
 
+#Game 1.1
   - type: game
-    text: "Game: Fly the unidragon 1"
-    url: /apps/imaginary-tests/fire-4-1/index.html
+    text: |
+      Use the horn to guide the unidragon.
+      Try to draw some nice shapes in the air.
+    toolbarText: Fly the unidragon
+    url: /apps/imaginary-tests/app_1/1_1/index.html
+    cta: Fly the unidragon!
 
 
   - type: image
     src: fireball1.png
     id: fire1
-    style: "width: 5%; top: 48%; left: 52%;"  
+    style: "width: 5%; top: 48%; left: 52%;"
     parallax: front1
-    
+
   - type: animation
     target: fire1
     vars:
@@ -427,14 +432,14 @@ actions:
         repeat: 1000
         rotate: 360
         #yoyo: true
-        ease: power.out  
+        ease: power.out
 
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
       - text: Very well! Now try to catch these fireballs
           with the unidragon! Fireballs is the main food for unidragons,
@@ -443,16 +448,16 @@ actions:
         exposition: She threw some balls of fire into the air
           that floated like balloons.
         mood: normal
-     
-    
+
+
   - type: animation
     target: fire1
     vars:
         duration: 0.5
         xPercent: 150
         yPercent: -150
-        ease: power0.out  
-        
+        ease: power0.out
+
   - type: animation
     target: fire1
     vars:
@@ -462,7 +467,7 @@ actions:
         rotate: 360
         #yoyo: true
         #ease: power.out
-        
+
   - type: animation
     target: fire1
     vars:
@@ -470,8 +475,8 @@ actions:
         delay: 0.5
         xPercent: 550
         yPercent: 60
-        ease: power0.out  
-        
+        ease: power0.out
+
   - type: animation
     target: fire1
     vars:
@@ -482,9 +487,12 @@ actions:
         #yoyo: true
         #ease: power.out
 
+#Game 1.2
   - type: game
-    text: "Game: Fly the unidragon 2"
-    url: https://mathina-tests.firebaseapp.com/vector2.html
+    text: Fly the unidragon to eat all the fireballs. Do not touch the clouds, firedragons hate them!
+    toolbarText: Catch the fireballs!
+    url: /apps/imaginary-tests/app_1/1_2/index.html
+    cta: Catch the fireballs!
 
   - type: clearImage
     id: fire1
@@ -494,7 +502,7 @@ actions:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
       - text: Not bad! but if you want to become a
           unidragon trainer, you have to practice. Can you make the
@@ -502,9 +510,12 @@ actions:
         char: flamma
         mood: normal
 
+#Game 1.3
   - type: game
-    text: "Game: Fly the unidragon 3"
-    url: https://mathina-tests.firebaseapp.com/vector2.html
+    text: Try to fly as close as possible to the lines in the sky.
+    toolbarText: Follow the lines!
+    url: /apps/imaginary-tests/app_1/1_3/index.html
+    cta: Follow the lines!
 
   - type: sceneText
     text: >
@@ -515,7 +526,7 @@ actions:
       flamma: right
       mathina: left
       leo: left
-      
+
     entries:
       - text: Mathina, I noticed you practised well and have now a good understanding of how to communicate with unidragons.
           In a few weeks, there is a big
@@ -545,7 +556,8 @@ actions:
         char: flamma
         mood: normal
 
+# Game 1.1 again (?)
   - type: game
-    text: "Game: unidragon training playground"
+    text: You can practise again flying the unidragon. What shapes can you make?
     cta: "Practise!"
-    url: /apps/example-app/
+    url: /apps/imaginary-tests/app_1/1_1/index.html
