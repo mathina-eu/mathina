@@ -1,7 +1,7 @@
 actions:
   - type: dialog
     entries:
-      - text: "Ok, so! I’ll count to 10 and then come to find you all! Start hiding!"
+      - text: "Ok, so! I'll count to 10 and then come to find you all! Start hiding!"
         char: leo
         mood: happy
       - text: "One!"
@@ -12,10 +12,10 @@ actions:
         mood: happy
   - type: sceneText
     text: >
-          <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
+          <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     text: >
-      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
+      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     text: >
       <p>While Mathina, the oldest in the group, was having a walk nearby, Leo and his friend were playing an exciting match of "hide and seek".</p>
@@ -24,7 +24,7 @@ actions:
       - text: "Seven!"
         char: leo
         mood: happy      
-      - text: "Hey all, wait, come here, come here! Look what I’ve found!"
+      - text: "Hey all, wait, come here, come here! Look what I've found!"
         char: sean
         mood: happy
   - type: sceneText
@@ -32,16 +32,16 @@ actions:
       <p>All the kids ran towards Sean and saw a big tree that was caved in enough for them to step in.</p>
   - type: dialog
     entries:
-      - text: "Leo, what if this was one of the Buccaneers’ hiding spots from the tale your sister Mathina told us the other day?"
+      - text: "Leo, what if this was one of the Buccaneers' hiding spots from the tale your sister Mathina told us the other day?"
         char: sean
         mood: happy      
-      - text: "I don’t know, but it sure looks like one of them"
+      - text: "I don't know, but it sure looks like one of them"
         char: leo
         mood: happy
-      - text: "I wonder how the buccaneers could enter this area: it’s so small here!"
+      - text: "I wonder how the buccaneers could enter this area: it's so small here!"
         char: carla
         mood: happy
-      - text: "But we must be careful! If this cave is really a secret cove for pirates, we shouldn’t let anyone know that we discovered it!"
+      - text: "But we must be careful! If this cave is really a secret cove for pirates, we shouldn't let anyone know that we discovered it!"
         char: sean
         mood: happy
       - text: "You are right! But what about Rasha and Lucy? They are not here today. We should find out how to tell them about this discovery!"
@@ -52,7 +52,7 @@ actions:
       <p>The kids discussed methods for keeping their new secret place hidden, and how to tell Rasha and Lucy about that.</p>
   - type: dialog
     entries:
-      - text: "Let’s cover the cave entrance with bushes and leaves, so that no one finds it. Then we leave a message that explains the location of the tree."
+      - text: "Let's cover the cave entrance with bushes and leaves, so that no one finds it. Then we leave a message that explains the location of the tree."
         char: carla
         mood: happy      
       - text: "But how will it work? If we leave a message, anybody can read it! We should find a way to keep it secret. What if we hide the message very thoroughly?"
@@ -63,7 +63,7 @@ actions:
       <p>Leo made a good point:</p>
   - type: dialog
     entries:
-      - text: "Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can’t be sure that no one finds it!"
+      - text: "Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
         char: leo
         mood: happy      
       - text: "Then we have to hide it very well!"
@@ -83,10 +83,10 @@ actions:
       <p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
   - type: dialog
     entries:
-      - text: "Do you think it is one of those secret pirates’ coves you told me about?"
+      - text: "Do you think it is one of those secret pirates' coves you told me about?"
         char: leo
         mood: happy      
-      - text: "Hmm, it looks strange enough to be one of those. I will check this with my friends on the island and I’ll tell you! Wait, earlier you said that you needed my help with some messages: what did you mean?"
+      - text: "Hmm, it looks strange enough to be one of those. I will check this with my friends on the island and I'll tell you! Wait, earlier you said that you needed my help with some messages: what did you mean?"
         char: mathina
         mood: happy
       - text: "We decided to keep this place hidden and cover it again with branches and leaves, but we wanted to leave a message for our friends Rasha and Lucy, who were not here today, so that they can find it if they come here on their own. Can you explain how to communicate in secrecy?"
@@ -98,7 +98,7 @@ actions:
       - text: "Uhm… for example, I like the number of edges in a triangle? It is because my birthday is on the third of September!"
         char: sean
         mood: happy
-      - text: "Wonderful! Let’s decide that the piece of information we share and that only we know is that the shape Sean likes has 3 edges. Now we prepare our messages. Let’s say that four should be ok."
+      - text: "Wonderful! Let's decide that the piece of information we share and that only we know is that the shape Sean likes has 3 edges. Now we prepare our messages. Let's say that four should be ok."
         char: mathina
         mood: happy
       - text: "Four messages?! But we need to write one message only!"
@@ -125,16 +125,16 @@ actions:
       - text: "But what if somebody discovers the messages and chooses to check all the four places anyway?"
         char: sean
         mood: normal
-      - text: "Good point: this is why the messages are quite similar. No one can’t be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages"
+      - text: "Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages"
         char: leo
         mood: normal      
-      - text: "Oh, I see, that’s right"
+      - text: "Oh, I see, that's right"
         char: sean
         mood: normal      
-      - text: "It is decided then! Now let’s choose the key for our messages."
+      - text: "It is decided then! Now let's choose the key for our messages."
         char: leo
         mood: normal      
-      - text: "Let’s use this one: ‘The sky is full of them’."
+      - text: "Let's use this one: 'The sky is full of them'."
         char: sean
         mood: normal            
       - text: "Nice idea! So we can leave here the information to retrieve our secret findings!"
@@ -155,27 +155,27 @@ actions:
       <p>He finds the four messages and is puzzled as he does not understand which one is correct. He tries to locate the tree, but after a while, he leaves, feeling frustrated.</p>  
   - type: sceneText
     text: >
-      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer’s Island, he called Lucy</p>
+      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy</p>
   - type: dialog
     entries:
-      - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: ‘The sky is full of them’."
+      - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: 'The sky is full of them'."
         char: leo
         mood: normal
   - type: sceneText
     text: >
-      <p>On the following weekend, Rasha and Lucy visited Buccaneer’s Island with their parents, and found the messages. They recalled the key: “The sky is full of them” so they chose, without effort, the correct message.</p>
+      <p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: "The sky is full of them" so they chose, without effort, the correct message.</p>
   - type: sceneText
     text: >
-      <p>Once they arrived at the tree, their mom, a history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer’s Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+      <p>Once they arrived at the tree, their mom, a history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
   - type: sceneText
     text: >
       <p>Near a strange-looking rock, she found a strange series of symbols.</p>
   - type: dialog
     entries:
-      - text: "Great mom! You found the pirates’ secret! We should let Mathina know!"
+      - text: "Great mom! You found the pirates' secret! We should let Mathina know!"
         char: rasha
         mood: normal      
-      - text: "Yes, let’s leave another set of messages here, where we found Leo’s and Mathina’s instructions!"
+      - text: "Yes, let's leave another set of messages here, where we found Leo's and Mathina's instructions!"
         char: rashamom
         mood: normal
   - type: sceneText
@@ -187,4 +187,4 @@ actions:
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
   - type: sceneText
     text: >
-      <p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha’s mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
+      <p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
