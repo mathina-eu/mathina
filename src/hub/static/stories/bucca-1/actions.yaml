@@ -10,15 +10,15 @@ actions:
       - text: "Two!"
         char: leo
         mood: happy
-      - type: sceneText
-        text: >
+  - type: sceneText
+    text: >
           <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     text: >
       <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer’s Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     text: >
-      <p>While Mathina, the oldest in the group, was having a walk nearby, Leo and his friend were playing an exciting match of “hide and seek”.</p>
+      <p>While Mathina, the oldest in the group, was having a walk nearby, Leo and his friend were playing an exciting match of "hide and seek".</p>
   - type: dialog
     entries:
       - text: "Seven!"
@@ -107,16 +107,84 @@ actions:
       - text: "Be patient, Carla! We will prepare four messages but only one will be the right one: we will have one true message and three fake messages! We will put them all together here in the bush but first, we will draw a figure on each of them. The trick is that on the correct message we will draw a triangle so we will be able to understand which is the correct one!"
         char: mathina
         mood: happy
-      - text: "Now I get it! If our key would be “it smells nice” then we can choose, for example, a triangle, a car, a circle and a flower."
+      - text: "Now I get it! If our key would be 'it smells nice' then we can choose, for example, a triangle, a car, a circle and a flower."
         char: sean
         mood: happy
       - text: "Exactly!"
         char: leo
         mood: happy
-      - text: "I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were “it has 6 edges”, then we could write the following messages"
+      - text: "I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 6 edges', then we could write the following messages"
         char: carla
         mood: happy
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"
-    url: /apps/example-app/
+    url: /apps/bucca-1-app/bucca-1-app-1.htm?l=1
+  - type: dialog
+    entries:
+      - text: "But what if somebody discovers the messages and chooses to check all the four places anyway?"
+        char: sean
+        mood: normal
+      - text: "Good point: this is why the messages are quite similar. No one can’t be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages"
+        char: leo
+        mood: normal      
+      - text: "Oh, I see, that’s right"
+        char: sean
+        mood: normal      
+      - text: "It is decided then! Now let’s choose the key for our messages."
+        char: leo
+        mood: normal      
+      - text: "Let’s use this one: ‘The sky is full of them’."
+        char: sean
+        mood: normal            
+      - text: "Nice idea! So we can leave here the information to retrieve our secret findings!"
+        char: leo
+        mood: normal      
+  - type: game
+    text: "Want to hop around?"
+    cta: "Try it yourself!"
+    url: /apps/bucca-1-app/bucca-1-app-2.htm?l=1
+  - type: sceneText
+    text: >
+      <p>Mathina and the kids leave the messages in an envelope near a tree in the middle of their meeting place and then pack up for returning home.</p>
+  - type: sceneText
+    text: >
+      <p>As soon as they leave, a mysterious figure, dressed in dark and shady clothes, goes to the bushes and starts to search for the secret messages. </p>  
+  - type: sceneText
+    text: >
+      <p>He finds the four messages and is puzzled as he does not understand which one is correct. He tries to locate the tree, but after a while, he leaves, feeling frustrated.</p>  
+  - type: sceneText
+    text: >
+      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer’s Island, he called Lucy</p>
+  - type: dialog
+    entries:
+      - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: ‘The sky is full of them’."
+        char: leo
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>On the following weekend, Rasha and Lucy visited Buccaneer’s Island with their parents, and found the messages. They recalled the key: “The sky is full of them” so they chose, without effort, the correct message.</p>
+  - type: sceneText
+    text: >
+      <p>Once they arrived at the tree, their mom, a history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer’s Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+  - type: sceneText
+    text: >
+      <p>Near a strange-looking rock, she found a strange series of symbols.</p>
+  - type: dialog
+    entries:
+      - text: "Great mom! You found the pirates’ secret! We should let Mathina know!"
+        char: rasha
+        mood: normal      
+      - text: "Yes, let’s leave another set of messages here, where we found Leo’s and Mathina’s instructions!"
+        char: rashamom
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>They leave the answer as well as their four new messages.</p>
+  - type: game
+    text: "Want to hop around?"
+    cta: "Try it yourself!"
+    url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
+  - type: sceneText
+    text: >
+      <p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha’s mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
