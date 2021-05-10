@@ -33,7 +33,7 @@ drawWand() := (
   //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
   drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
   
-  forall(1..ceil(lerp(2, magicLength, wand.value, 0, wand.maxValue)),
+  forall(1..ceil(lerp(0, magicLength, wand.value, 0, wand.maxValue)),
     drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
 
@@ -399,7 +399,7 @@ wand = {
   "catchRadius": 15,
   "maxValue": 10,
   "acceleration": 0.5,
-  "deadzone": 0.5
+  "deadzone": 1
 };
 
 magicLength = 30;
@@ -645,6 +645,7 @@ setupTime();
   );
 
   wandActive = false;
+  wand.value = 0;
 </script>
 
 <canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
@@ -669,7 +670,7 @@ setupTime();
                    fireball3: "../../assets/fireball_3.png", 
                    back:   "../../assets/back_2.png",
                    front:  "../../assets/front_2.png",
-                   wand:   "../../assets/wand.png",
+                   wand:   "../../assets/wand_2.png",
                    flamma:   "../../assets/flamma_wave.png",
                    bubble:   "../../assets/speech_bubble.png",                   
                  }
