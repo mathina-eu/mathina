@@ -363,8 +363,33 @@
                 }
             }
         }
+		
+		function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+            console.log(dimension);
+			
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			document.body.style.zoom=ScalaCalcolata;
+        }
+
 
         function Init() {
+		
+			window.addEventListener('resize', Resize, false);
 
             Lingua = Number(gup('l', document.location.search));
             if (!isNumeric(Lingua)) Lingua = 1;
