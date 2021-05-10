@@ -12,7 +12,6 @@ In this story, the following basic mathematical concepts are playing an importan
 
 + Add: To combine, put together two or more quantities.
 + Addend: Any number being added. 
-+ Number: A number indicates how many or how much. The number of objects can be named by a word or a numeral.
 + Pattern: A repeating or growing sequence or design. An ordered set of objects, numbers, or shapes arranged according to a rule. 
 + Sequence: A set of objects/numbers arranged in special order or pattern.
 + Sum: The answer to an addition problem.
@@ -37,7 +36,7 @@ For the age group 4-6, sorting games combined with body movement can be suggeste
 **Solitaire game**
 Create 3 red, 3 blue, and 3 green cards, and then put the numbers 1, 2, and 3 in each color. The task is to place the cards in a 3 × 3 table so that all three colors and all three numbers are represented in each row and each column. A more advanced version of the game is created with a 4x4 table.
 
-![Solitaire game](/stories/logi-1/img/solitaire.png)
+![Solitaire game](/stories/logi-1/img/solitaire2.png)
 
 **Sudoku** refines thinking skills. Here is an example: 1. Enter the numbers 1, 2, 3, 4 in the blank fields so that all four numbers are present in each row, each column, and each framed square.
 
