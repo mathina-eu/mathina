@@ -601,7 +601,9 @@ setupTime();
       dragon.trailA = [[dragonHome, ceil(3 * random()), 2 * pi * random()]];
     );
   , // else //
-    moveDragon(delta);
+    if(wandActive, 
+      moveDragon(delta);
+    );
     //collideWithPickUp();
     //collideWithObstacles();
   );
@@ -630,6 +632,7 @@ setupTime();
     updateWand();
     updateDragon();
   );
+
 </script>
 
 <script id='csmousemove' type='text/x-cindyscript'>
