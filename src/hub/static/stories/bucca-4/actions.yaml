@@ -289,7 +289,7 @@ actions:
         mood: normal
       - text: "Wow, this seems so cool, how is it possible?"
         char: leo
-        mood: excited
+        mood: happy
       - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
         char: angela
         mood: normal
@@ -571,15 +571,19 @@ random number in that range and do some simple operations. Have a look!"
   - type: background
     src: alberi1.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+
   - type: background
     src: alberi2.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
   - type: background
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  
   - type: background
     src: alberi3.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
   - type: background
     src: terreno.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"           
