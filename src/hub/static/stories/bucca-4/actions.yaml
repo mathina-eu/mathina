@@ -345,6 +345,7 @@ random number in that range and do some simple operations. Have a look!"
     text: "Let's help Mathina and Leo understand the method"
     toolbarText: "Follow the steps and try to create the shared secret"
     cta: "Try it yourself!"
+    tag: app1
     url: /apps/bucca-4-app/bucca-4-app-1.htm?l=1
   - type: dialog
     entries:     
@@ -413,6 +414,7 @@ random number in that range and do some simple operations. Have a look!"
     text: "Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
+    tag: app2
     url: /apps/bucca-4-app/bucca-4-app-2.htm?l=1
   - type: dialog
     entries:     
@@ -475,6 +477,7 @@ random number in that range and do some simple operations. Have a look!"
     text: "Try help Leo to hack the system"
     toolbarText: "Follow the steps to help Leo understand how secure the system is"
     cta: "Try it yourself!"
+    tag: app3
     url: /apps/bucca-4-app/bucca-4-app-3.htm?l=1
   - type: clearImage
     id: Leo2  
@@ -597,6 +600,7 @@ random number in that range and do some simple operations. Have a look!"
     text: "Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
+    tag: app4
     url: /apps/bucca-4-app/bucca-4-app-4.htm?l=1
      
   - type: dialog
