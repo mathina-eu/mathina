@@ -259,15 +259,15 @@ actions:
      <p>Mathina, Angela and Leo spent some time together near the sea, discussing the strange message. They realize that they had to explore the surrounding area a little bit in order to gain some clues about this mysterious person. </p>               
   
   - type: image
-    id: Mathina2
+    id: Mathina0
     src: $COMMON/img/characters/mathina/mathina2.png
     style: "height: 40%; top: 55%; right: 2%;  z-index: 1; transform: ScaleX(1);"
   - type: image
-    id: Leo1
+    id: Leo0
     src: $COMMON/img/characters/leo/leo1.png
     style: "height: 40%; top: 50%; right: 12%;  z-index: 1; transform: ScaleX(1);"
   - type: image
-    id: Angela2
+    id: Angela0
     src: Angela_2.png
     style: "height: 80%; top: 35%; right: 20%;  z-index: 2; transform: ScaleX(-1);" 
     
@@ -355,13 +355,27 @@ random number in that range and do some simple operations. Have a look!"
     entries:     
       - text: "Ok, it’s set. This is the way we will use to communicate here on Buccaneer’s Island. I will go exploring the mountain, while you will examine the coast and the park with Angela. To keep messages secret we will change the key of our cypher every time, using the Diffie-Hellman method to exchange the new key!"
         char: mathina
-        mood: normal
+        mood: happy
       - text: "Ok let’s go, sis!"
         char: leo
         mood: happy
       - text: "But let’s be careful! That mysterious figure of which you caught a glimpse during your last trip here doesn’t sound reassuring to me."
         char: mathina
-        mood: normal
+        mood: arguing
+        
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+  - type: clearImage
+    id: Mathina0
+  - type: clearImage
+    id: Leo0
+  - type: clearImage
+    id: Angela0
+
   - type: sceneText
     text: >
       <p> So Mathina and Leo parted ways, the youngster heading toward the coastline, and Mathina starting to climb up the hill. Their only hint about the secret of the buccaneers laid onto the engravings in the cave at the park that Leo and his friends saw during their trip to the island. It would be basically a worthless hint, if not for the mysterious figure that Leo said he had seen before leaving the island that was, he was convinced, following them from the park to the pier. If there was someone interested in their discovery, maybe there was something to discover and their findings had a deeper meaning. Surely Buccaneer’s Island is a place full of surprises, it’s worth a try, they thought.</p>
