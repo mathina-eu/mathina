@@ -31,20 +31,33 @@ Here you encounter:
 ## Suggestions for additional exercises: 
 Select as many of the 36 dots as possible, without choosing two dots on the same straight line. 
 
-
+![36 dots](/stories/logi-3/img/logi3.png)
 
 Place as many queens on the chessboard as possible without hitting one another.
 
+![chess](/stories/logi-3/img/sakk.png)
 
- One possible solution to the so-called Eight Queens problem (see: https://en.wikibooks.org/wiki/Puzzles/Chess_puzzles/Eight_Queens). Image credits: Encik Tekateki. Source: https://commons.wikimedia.org/wiki/File:Solution_K_for_8_Queen_Puzzles.png   
+One possible solution to the [so-called Eight Queens problem](https://en.wikibooks.org/wiki/Puzzles/Chess_puzzles/Eight_Queens). 
+[Image credits: Encik Tekateki](https://commons.wikimedia.org/wiki/File:Solution_K_for_8_Queen_Puzzles.png)
 
 # About the apps 
 
-The story is accompanied by one app in three versions. At the first occasion users have the chance to play with the app freely. At the second and third time a solution is needed among different conditions.
-.
+The story is accompanied by one app in three slightly different versions. At the first occasion users have the chance to play with the app freely. At the second and third time a solution is needed among different conditions.
 
-The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video. 
-Game 1 - Cats and dogs (link to the IO3 Repository)
-Test page: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1 
+The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video.
+
+Game - Cats and dogs (link to the IO3 Repository)
+App page: /apps/bucca-3-app/logi-3-app.htm?l=1
 
 The user sees a map and two police hats. The goal is to find out whether two policemen are able to oversee all roads of the city or more are needed. The user is able to move the icons on the map and the roads overseen will appear highlighted. Free play; no solutions are required this time. 
+
+Explanatory film about the app (link to the YouTube Channel)
+
+
+
+[First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+
+![Some text](/stories/demo-story/video/video.mp4)
+
+
+![Some alt text](/stories/demo-story/img/test.png)
