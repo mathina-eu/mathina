@@ -36,7 +36,7 @@ actions:
     style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
   - type: sceneText
     text: >
-      <h1>Man in the middle</h1>
+      <h1>The man in the middle</h1>
   - type: animation
     target: Wave1
     vars:
@@ -612,7 +612,7 @@ random number in that range and do some simple operations. Have a look!"
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: background
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
   - type: background
     src: alberi3.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
@@ -889,7 +889,8 @@ random number in that range and do some simple operations. Have a look!"
   - type: sceneText
     text: >
       <p>The man, sighing silently, freed the three from their chains, waved them goodbye and walked away into the sunny coast, heading back to his cove, just to be heard of no more.</p> 
- 
+  - type: clearImage
+    id: captE 
   - type: sceneText
     text: >
       <h1>The man in the middle - The End</h1>        
