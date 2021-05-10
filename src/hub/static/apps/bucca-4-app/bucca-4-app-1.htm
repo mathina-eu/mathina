@@ -359,6 +359,7 @@
             for (var k = 0; k < Traduzioni.length; k++) {
                 for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
                     if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+					else console.log("Not finding ID " + Traduzioni[k][0][kk]);
                 }
             }
         }
@@ -519,10 +520,10 @@
         <div id="Text3">
             <p class="titolo" id="Trad12">Fase 2 (Mathina): il segreto di Mathina</p>
             <p>
-                <span class="Trad13">Scegli il numero segreto di Leo tra <em>2</em> e</span> <em class="pmuno">p-1</em>: <br />
+                <span id="Trad13">Scegli il numero segreto di Mathina tra <em>2</em> e</span> <em class="pmuno">p-1</em>: <br />
                 <input type="text" id="segretobob" onchange="diffie(2)" />
                 <span class="att" id="bzero"><span id="Trad7c">Attenzione! </span> <em class="SegMatB">b</em> <span id="Trad8b"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span>
-                <span class="att" id="buno"><span id="Trad7d">Attenzione! </span> <em class="SegMatB">b</em> <span id="Trad8c"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span>
+                <span class="att" id="buno"><span id="Trad7b">Attenzione! </span> <em class="SegMatB">b</em> <span id="Trad8c"> non sta tra tra <em>2</em> e </span> <em class="pmuno">p-1</em></span>
                 <br />
             </p>
             <div id="DPostLeo" style="display:none;">
