@@ -293,43 +293,7 @@ actions:
       - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
         char: angela
         mood: normal
-  - type: sceneText
-    text: >
-     <p>Angela took a deck of cards from her jacket and showed it to Leo. </p>    
-  - type: dialog
-    entries:     
-      - text: "Well, there is a trick. Look: these cards are all in order, from the ace of spades to the king of hearts. Now, look how much time I need to shuffle them."
-        char: angela
-        mood: normal
-  - type: sceneText
-    text: >
-     <p>With a quick move, Angela shuffled the card, and showed them, now all randomly placed, in her hands. </p> 
-  - type: dialog
-    entries:     
-      - text: "Now, how much time do you think it would take for you to get back this deck in order, as it was before?"
-        char: angela
-        mood: normal
-      - text: "Mmh... well, not too much, but surely longer than the time it took to you to shuffle it."
-        char: leo
-        mood: normal
-      - text: "Exactly! There are operations very easy to do, but quite complicated to be undone. This is the trick!"
-        char: angela
-        mood: happy
-      - text: "But wait, This person could intercept our messages... Even if we decide about a key now... he could be listening! I also remember that this method was not so safe... Like... after a bit, let’s say some minutes, one can try various combinations and get the key!"
-        char: leo
-        mood: thinking
-      - text: "I have an idea about this. Every time we communicate, we will change the key! So no matter if this mysterious presence manages to get the key: we will have another one!"
-        char: angela
-        mood: normal
-      - text: "That is clever indeed! But... How? If we have to always come here we will lose a lot of time, but we cannot just agree on another key in a message: if this person manages to decode the communication will also decode the new key!"
-        char: mathina
-        mood: arguing
-      - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
-        char: angela
-        mood: happy
-      - text: "Wow, this seems so cool, how is it possible?"
-        char: leo
-        mood: talking
+    
   - type: clearImage
     id: Angela0
   - type: image
