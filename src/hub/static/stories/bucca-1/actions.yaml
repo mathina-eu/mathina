@@ -1,4 +1,15 @@
 actions:
+  - type: background
+    src: bg1.jpg
+    style: "position: absolute; left: 0; width: 220%; height: 220%; z-index:-1; overflow:hidden;"
+  - type: image
+    id: albero
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: cespuglio
+    src: cespuglio.png
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 0;"    
   - type: dialog
     entries:
       - text: "Ok, so! I'll count to 10 and then come to find you all! Start hiding!"
