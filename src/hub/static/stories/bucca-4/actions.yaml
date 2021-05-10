@@ -290,9 +290,7 @@ actions:
       - text: "Wow, this seems so cool, how is it possible?"
         char: leo
         mood: happy
-      - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
-        char: angela
-        mood: normal
+
     
   - type: clearImage
     id: Angela0
