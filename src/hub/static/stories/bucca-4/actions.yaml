@@ -330,7 +330,7 @@ actions:
       - text: "Ok, but you told us that we can agree on the key in public. If you tell me something like 'the key is the exponent to which you have to rise 3 to get 2187', either I also have to do all the effort, or you tell me directly 7, and anyone who listens will know the key as well!"
         char: mathina
         mood: arguing
-      - text: "Here is where the trick happens. This particular trick is called "Diffie-Hellman key exchange". Let's try it. First, we must choose a prime number p -let's call it base-, then a number between 2 and p-2, then we must choose a random number in that range and do some simple operations. Have a look!"
+      - text: "Here is where the trick happens. This particular trick is called "Diffie-Hellman key exchange". Let's try it. First, we must choose a prime number p, then a number g between 2 and p-2, that we will call base, and finally we must choose a random number in that same range and do some simple operations. Have a look!"
         char: angela
         mood: normal
   - type: game
