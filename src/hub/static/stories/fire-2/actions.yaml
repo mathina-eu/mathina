@@ -86,7 +86,9 @@ actions:
       leading unidragons, to participate in the trainers’ festival that was
       going to be held soon. That morning they had seen a dragon flying in
       the distance and they thought that Flamma must be training it.
-      
+ 
+
+    
   - type: animation
     target: clouds
     vars:
@@ -199,7 +201,7 @@ actions:
         width: 40% 
         ease: power3.out
 
- 
+
   - type: clearImage
     id: leo
     
@@ -208,6 +210,7 @@ actions:
     id: leo
     style: "width: 13%; top: 60%; left: 45%;"    
     parallax: mid2
+
 
   
   - type: dialog
@@ -252,6 +255,7 @@ actions:
   - type: sceneText
     text: Flamma stopped screaming to the sky and the unidragon descended
       gently to the land to rest.
+
   
   - type: animation
     target: leo
@@ -621,6 +625,7 @@ actions:
         mood: happy
         exposition: Leo exclaimed.
         
+
   - type: clearImage
     id: mat
     
@@ -643,6 +648,7 @@ actions:
         mood: happy
         exposition: And Flamma made the animal come back.
         
+
   - type: clearImage
     id: uni
     
@@ -676,6 +682,8 @@ actions:
        mathina: left
        leo: left
     entries:
+
+
       - text: You see that it was rising at the same speed as it was advancing.
           Can you figure out how to tell him to fly in a steeper path?
         char: flamma
@@ -752,6 +760,7 @@ actions:
   - type: sceneText
     text: Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
 
+
   - type: clearImage
     id: uni
     
@@ -809,6 +818,7 @@ actions:
     avatarAlign:
       flamma: right
       mathina: left
+      leo: left
     entries:
 
      - text: Very well! You see, you can tell the unidragon a few pairs of
@@ -864,6 +874,7 @@ actions:
     avatarAlign:
       flamma: right
       mathina: left
+      leo: left
     entries:
 
       - text: I will pose a challenge to you then. I have these fireballs
