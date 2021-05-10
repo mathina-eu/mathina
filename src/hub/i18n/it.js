@@ -6,6 +6,12 @@ export default {
     'title': 'Mathina',
     'help': 'Visita un luogo!',
   },
+  cities: {
+    'island': 'Buccaneer Island',
+    'logicity': 'Logicity',
+    'birds-of-fire': 'Birds of Fire',
+    'symmetry-fair': 'Symmetry Fair',
+  },
   story: {
     'next': 'Avanti',
     'back': 'Indietro',

@@ -78,6 +78,7 @@ actions:
     text: "Ricorda: per decodificare devi partire dal disco esterno"
     toolbarText: "Prova a decodificare qualche parola utilizzando la chiave"
     cta: "Provaci tu!"
+    tag: app1
     url: /apps/bucca-3-app/bucca-3-app-1.htm
 
   - type: clearImage
@@ -124,6 +125,7 @@ actions:
     text: "Seleziona il testo decifrato. Ricordati del suggerimento “INDIETRO”..."
     toolbarText: "Seleziona il testo decifrato corretto"
     cta: "Provaci tu!"
+    tag: app2
     url: /apps/bucca-3-app/bucca-3-app-2.htm
 
   - type: dialog
@@ -529,6 +531,7 @@ actions:
     text: "Esegui alcune somme utilizzando l'orologio che ti viene dato"
     toolbarText: "Esegui alcune somme utilizzando l'orologio che ti viene dato"
     cta: "Provaci tu!"
+    tag: app3
     url: /apps/bucca-3-app/bucca-3-app-3.htm
 
   - type: image
@@ -848,6 +851,7 @@ actions:
     text: "Seleziona il risultato della cifratura della parola suggerita utilizzando le due chiavi"
     toolbarText: "Seleziona il risultato della cifratura della parola suggerita utilizzando le due chiavi"
     cta: "Provaci tu!"
+    tag: app4
     url: /apps/bucca-3-app/bucca-3-app-4.htm
 
   - type: sceneText
@@ -906,6 +910,7 @@ actions:
     text: "Il disco grande deve cifrare le parole come i due dischi piccoli utilizzati uno dopo l’altro. Mettilo nella posizione corretta!"
     toolbarText: "Il disco grande cifra le parole come i due dischi piccoli utilizzati uno dopo l’altro. Mettilo nella posizione corretta!"
     cta: "Provaci tu!"
+    tag: app5
     url: /apps/bucca-3-app/bucca-3-app-5.htm
     
   - type: clearImage
@@ -1012,6 +1017,7 @@ actions:
     text: "Verifica che il testo non è stato cifrato nel solito modo."
     toolbarText: "Verifica che il testo non è stato cifrato nel solito modo."
     cta: "Provaci tu!"
+    tag: app6
     url: /apps/bucca-3-app/bucca-3-app-6.htm
 
   - type: clearImage
@@ -1082,6 +1088,7 @@ actions:
     text: "Convinciamoci che non dobbiamo usare il gioiello nel solito modo"
     toolbarText: "Convinciamoci che non dobbiamo usare il gioiello nel solito modo. Concentriamoci a provare a tradurre le lettere evidenziate."
     cta: "Provaci tu!"
+    tag: app7
     url: /apps/bucca-3-app/bucca-3-app-7.htm
  
   - type: clearImage
@@ -1114,6 +1121,7 @@ actions:
     text: "Mathina suggerisce di usare due gioielli: uno per decifrare le parole alla posizione dispari e uno per decifrare le parole alla posizione pari. Convinciamoci che nemmeno questo espediente funziona..."
     toolbarText: "Mathina suggerisce di usare due gioielli: uno per decifrare le parole alla posizione dispari e uno per decifrare le parole alla posizione pari. Convinciamoci che nemmeno questo espediente funziona..."
     cta: "Try it yourself!"
+    tag: app8
     url: /apps/bucca-3-app/bucca-3-app-8.htm
 
 
@@ -1135,6 +1143,7 @@ actions:
     text: "Ci siamo finalmente: due gioielli servono per decifrare le lettere alle posizioni dispari e pari rispettivamente! Decifriamo il messaggio!"
     toolbarText: "I due gioielli servono per decifrare le lettere alle posizioni dispari e pari rispettivamente! Prova a decifrare il messaggio"
     cta: "Provaci tu!"
+    tag: app9
     url: /apps/bucca-3-app/bucca-3-app-9.htm
 
 
