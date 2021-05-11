@@ -9,7 +9,7 @@ Iniziamo esplorando il concetto di simmetria di assiale: in primo luogo, utilizz
 Quando si parla di simmetrie, è naturale introdurre il concetto di isometria. Una **isometria** è una funzione che preserva le distanze: se due punti *A* e * B * vengono trasformati in *A'* e *B'*, allora *dist (A, B) = dist (A ', B ')*.
 ![Isometry](/stories/symm-2/img/_align-center_/iso.png =300x250)
 
-Una ** simmetria di una figura ** è un'isometria che mappa la figura esattamente su se stessa, in modo che sia uguale prima e dopo la trasformazione: non è possibile distinguere la figura iniziale da quella finale (né per forma , posizione o colore).
+Una **simmetria di una figura** è un'isometria che mappa la figura esattamente su se stessa, in modo che sia uguale prima e dopo la trasformazione: non è possibile distinguere la figura iniziale da quella finale (né per forma , posizione o colore).
 
 ## Simmetria assiale
 
@@ -51,7 +51,7 @@ giocandoci classifichiamo i rosoni diedrali in base alla loro simmetria.
 
 ! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-diedrais.png = 1000x194)
 
-** Nota **: Nella storia, abbiamo considerato solo rosoni con sei o meno assi di simmetria, tuttavia possiamo creare rosoni con un numero qualsiasi diassi di simmetria. Quindi ci ne sono infiniti rosoni diedrali ^ [Allo stesso modo, ci sono infiniti rosoni ciclici]
+**Nota**: Nella storia, abbiamo considerato solo rosoni con sei o meno assi di simmetria, tuttavia possiamo creare rosoni con un numero qualsiasi diassi di simmetria. Quindi ci ne sono infiniti rosoni diedrali ^ [Allo stesso modo, ci sono infiniti rosoni ciclici]
 , tutti con diverso tipo di simmetria ...
 
 ! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-d.png = 1000x179)
@@ -60,7 +60,7 @@ Come distinguere (classificare) i rosoni ciclici?
 
 ! [Guarda il video] (/ stories / symm-2 / video / _align-center_ / rot_3.mp4 = 640x360)
 
-Nell'esempio precedente, la rosetta ha ** 3 ** simmetrie di rotazione. Tuttavia, anche se non avessimo verificato le simmetrie di rotazione, sapremmo che il rosone ha almeno ** una ** simmetria di rotazione: l'** identità **, che corrisponde a una rotazione di * 0 * gradi (o, equivalentemente, di * 360 * gradi), detta anche simmetria banale ^ [In generale, quando ci chiediamo se esiste una simmetria, stiamo pensando a una simmetria non banale.].
+Nell'esempio precedente, la rosetta ha **3** simmetrie di rotazione. Tuttavia, anche se non avessimo verificato le simmetrie di rotazione, sapremmo che il rosone ha almeno **una** simmetria di rotazione: l'**identità**, che corrisponde a una rotazione di *0* gradi (o, equivalentemente, di *360* gradi), detta anche simmetria banale ^ [In generale, quando ci chiediamo se esiste una simmetria, stiamo pensando a una simmetria non banale.].
 
 Classifichiamo i rosoni ciclici in base al numero delle simmetrie di rotazione che hanno. Questo è precisamente l'obiettivo dell'app
 ["Il gioco dei sacchetti II"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
