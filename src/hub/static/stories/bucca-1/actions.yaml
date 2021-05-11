@@ -270,6 +270,10 @@ actions:
     src: albero_solo.png
     style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
+    id: cespuglioD
+    src: cespuglio.png
+    style: "height: 10%; top: 12.4%; right: -1%;  z-index: 0; transform: scaleX(-1)"    
+  - type: image
     id: cespuglioB
     src: cespuglio.png
     style: "height: 9%; top: 7%; right: 0%;  z-index: 1;"
@@ -316,7 +320,7 @@ actions:
   - type: animation
     target: cespuglioC4
     vars:
-      duration: 3
+      duration: 5
       xPercent: 5
       ease: power1.inOut
       repeat: -1
@@ -324,7 +328,7 @@ actions:
   - type: animation
     target: cespuglioC5
     vars:
-      duration: 3
+      duration: 5
       xPercent: 5
       ease: power1.inOut
       repeat: -1
@@ -405,6 +409,20 @@ actions:
       - text: "Let's use this one: 'The sky is full of them'."
         char: sean
         mood: normal            
+  - type: image
+    id: myst0
+    src: myst.png
+    style: "height: 12%; top: 8%; right: 83%;  z-index: 0;"
+  - type: animation
+    target: myst0
+    vars:
+      duration: 2
+      rotate: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: dialog
+    entries:
       - text: "Nice idea! So we can leave here the information to retrieve our secret findings!"
         char: leo
         mood: happy      
@@ -413,15 +431,33 @@ actions:
     cta: "Let's try!"
     tag: app2
     url: /apps/bucca-1-app/bucca-1-app-2.htm?l=1
-  - type: sceneText
-    text: >
-      <p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
+  - type: clearImage
+    id: leo1
   - type: clearImage
     id: bambino3
   - type: clearImage
     id: bambino4
+  - type: image
+    id: leo11
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 15%; top: 20%; right: 15%;  z-index: 0;" 
+  - type: image
+    id: bambino33
+    src: bambino3.png
+    style: "height: 20%; top: 23%; right: 26%;  z-index: 0; transform: ScaleX(1)"
+  - type: image
+    id: bambino44
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"    
+  - type: sceneText
+    text: >
+      <p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
   - type: clearImage
-    id: leo1
+    id: bambino33
+  - type: clearImage
+    id: bambino44
+  - type: clearImage
+    id: leo11
   - type: clearImage
     id: mathina1
   - type: clearImage
@@ -430,14 +466,18 @@ actions:
     id: albero_n
     src: albero_solo.png
     style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
+  - type: clearImage
+    id: myst0
   - type: image
     id: myst
     src: myst.png
     style: "height: 30%; top: 17%; right: 15%;  z-index: 6;"
   - type: sceneText
+    style: "position: absolute; left: 25%; top:50%;"
     text: >
       <p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>  
   - type: sceneText
+    style: "position: absolute; left: 25%; top:50%;"  
     text: >
       <p>He found the four messages and was puzzled as he did not understand which one was correct. He tried to locate the tree, but after a while, he left, feeling frustrated.</p>  
   - type: clearImage
@@ -462,6 +502,8 @@ actions:
     id: cespuglioC4
   - type: clearImage
     id: cespuglioC5
+  - type: clearImage
+    id: cespuglioD
   - type: clearImage
     id: myst
   - type: clearImage
@@ -510,9 +552,11 @@ actions:
       yoyo: true
 
   - type: sceneText
+    style: "position: absolute; right: 10%;"
     text: >
       <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy.</p>
   - type: dialog
+    style: "position: absolute; right: 10%;"
     entries:
       - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: 'The sky is full of them'."
         char: leo
