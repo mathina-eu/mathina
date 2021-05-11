@@ -5,10 +5,10 @@
         #Partenza {
             position: absolute;
             margin: auto;
-            top: 25%;
+            top: 20%;
             left: 2%;
             width: 25%;
-            height: 50%;
+            height: 60%;
             z-index: 2;
             border: solid;
             border-color: #684213;
@@ -30,10 +30,10 @@
 
         #Arrivo {
             position: absolute;
-            top: 25%;
+            top: 20%;
             right: 2%;
             width: 25%;
-            height: 50%;
+            height: 60%;
             z-index: 2;
             border: solid;
             border-color: #684213;
@@ -202,8 +202,9 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
-            Scale = necklace_dimension[1] / dimension[1];
-            CentroCesare = [dimension[0] / 2, dimension[1] / 2];
+            //Scale = Math.max(necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
+            Scale = Math.max(2* necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
+            CentroCesare = [dimension[0] / 2, Math.floor(dimension[1] / 2 + dimension[1]*2/100)];
             Draw(CentroCesare[0], CentroCesare[1], AngPosizione1, AngPosizione2, Scale);
         }
 
