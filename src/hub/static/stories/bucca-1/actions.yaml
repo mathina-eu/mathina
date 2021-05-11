@@ -3,6 +3,42 @@ actions:
     src: bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
+    id: branch
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch2
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch3
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch2
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch3
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: image
     id: albero
     src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
@@ -60,6 +96,12 @@ actions:
         mood: happy
   - type: clearImage
     id: albero1
+  - type: clearImage
+    id: branch    
+  - type: clearImage
+    id: branch2   
+  - type: clearImage
+    id: branch3
   - type: background
     src: bg1b-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
@@ -89,13 +131,70 @@ actions:
     src: bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
+    id: branch3
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch4
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch5
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch3
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch4
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch5
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
+  - type: image
     id: albero2
     src: albero_bambini.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
     id: cespuglio
     src: cespuglio.png
-    style: "height: 55%; top: 35%; right: -5%;  z-index: 1;"
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 5;"
+    parallax: mid2
+  - type: image
+    id: cespuglio2
+    src: cespuglio.png
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    parallax: mid1
+  - type: image
+    id: cespuglio3
+    src: cespuglio.png
+    style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
+    parallax: back3
+  - type: image
+    id: cespuglio4
+    src: cespuglio.png
+    style: "height: 55%; top: 50%; right: -5%;  z-index: 2;"
+    parallax: back2
+  - type: image
+    id: cespuglio5
+    src: cespuglio.png
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    parallax: mid3
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
@@ -121,10 +220,24 @@ actions:
   - type: clearImage
     id: cespuglio
   - type: clearImage
-    id: albero2
+    id: cespuglio2
+  - type: clearImage
+    id: cespuglio3   
+  - type: clearImage
+    id: cespuglio4 
+  - type: clearImage
+    id: cespuglio5
+  - type: clearImage
+    id: albero2  
+  - type: clearImage
+    id: branch3  
+  - type: clearImage
+    id: branch4
+  - type: clearImage
+    id: branch5  
   - type: background
     src: bg1_plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"        
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"        
 
   - type: sceneText
     text: >
@@ -161,7 +274,7 @@ actions:
       - text: "Exactly!"
         char: leo
         mood: happy
-      - text: "I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 6 edges', then we could write the following messages"
+      - text: "I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 5 edges', then we could write the following messages"
         char: carla
         mood: happy
   - type: game
