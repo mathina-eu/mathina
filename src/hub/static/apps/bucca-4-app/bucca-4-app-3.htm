@@ -230,12 +230,14 @@
                 restrictInput: true,
                 preventPaste: true,
                 autoAccept: true
+				maxLength:3
             });
             $('#sceglib').keyboard({
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
                 autoAccept: true
+				maxLength:3
             });
             $('#chiavetrovata').keyboard({
                 layout: 'num',
@@ -521,9 +523,10 @@
         }
 
         function ScegliB() {
-            nnb = document.getElementById("sceglia").value;
+            nnb = document.getElementById("sceglib").value;
             nb = parseInt(nnb);
             Cond2 = potmod(A, nb, p);
+			//console.log(A,nb,p,Cond2);
             document.getElementById("NCB").innerHTML = Cond2;
             $('#nascB').show();
         }
