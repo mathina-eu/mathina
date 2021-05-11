@@ -343,8 +343,9 @@ actions:
     text: >
       <p>They leave the answer as well as their four new messages.</p>
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
+    text: "Want to help Rasha leave the messages?"
+    cta: "Let's try!"
+    tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
   - type: sceneText
     text: >
