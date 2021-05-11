@@ -77,7 +77,7 @@
             width: 920px;
             height: 140px;
             z-index: 2;
-            left: 480px;
+            left: 25%;
             top: 25px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -93,7 +93,7 @@
             width: 890px;
             height: 205px;
             z-index: 2;
-            left: 20px;
+            left: 1%;
             top: 230px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -109,7 +109,7 @@
             width: 890px;
             height: 205px;
             z-index: 2;
-            left: 970px;
+            right: 1%;
             top: 230px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -125,7 +125,7 @@
             width: 890px;
             height: 335px;
             z-index: 2;
-            left: 20px;
+            left: 1%;
             top: 500px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -141,7 +141,7 @@
             width: 890px;
             height: 235px;
             z-index: 2;
-            left: 970px;
+            right: 1%;
             top: 500px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -336,12 +336,36 @@
             }
         }
 
+		function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+            console.log(dimension);
+			
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			document.body.style.zoom=ScalaCalcolata;
+        }
+
         function Init() {
 
             Lingua = Number(gup('l', document.location.search));
             if (!isNumeric(Lingua)) Lingua = 1;
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
+			
+			window.addEventListener('resize', Resize, false);
 
             ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
             PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
