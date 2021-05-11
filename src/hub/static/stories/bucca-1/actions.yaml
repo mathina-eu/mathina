@@ -57,11 +57,7 @@ actions:
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
-          <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
-  - type: sceneText
-    style: "position: absolute; left: 5%;"
-    text: >
-      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
+      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island could freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
@@ -195,16 +191,13 @@ actions:
     src: cespuglio.png
     style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
     parallax: mid3
-  - type: sceneText
-    style: "position: absolute; left: 5%;"
-    text: >
-      <p>Leo made a good point:</p>
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
       - text: "Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
         char: leo
-        mood: happy      
+        mood: happy 
+        exposition: Leo made a good point.
       - text: "Then we have to hide it very well!"
         char: sean
         mood: happy
@@ -238,7 +231,102 @@ actions:
   - type: background
     src: bg1_plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"        
-
+  - type: image
+    id: bambino3
+    src: bambino3.png
+    style: "height: 55%; top: 42%; right: 35%;  z-index: 2; transform: ScaleX(-1)"
+  - type: image
+    id: bambino4
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+  - type: image
+    id: leo1
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 55%; top: 42%; right: 47%;  z-index: 1;"    
+  - type: image
+    id: mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"    
+  - type: image
+    id: alberoB
+    src: albero_bambini.png
+    style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: cespuglioB
+    src: cespuglio.png
+    style: "height: 9%; top: 7%; right: 0%;  z-index: 1;"
+  - type: image
+    id: cespuglioA1
+    src: cespuglio.png
+    style: "height: 18%; top: 24%; right: 7%;  z-index: 2;"
+  - type: image
+    id: cespuglioA2
+    src: cespuglio.png
+    style: "height: 18%; top: 24%; right: 17%;  z-index: 2;"
+  - type: image
+    id: cespuglioA3
+    src: cespuglio.png
+    style: "height: 18%; top: 23%; right: 12%;  z-index: 1;"
+  - type: image
+    id: cespuglioA4
+    src: cespuglio.png
+    style: "height: 18%; top: 22%; right: 9%;  z-index: 0;"
+  - type: image
+    id: cespuglioA5
+    src: cespuglio.png
+    style: "height: 18%; top: 22%; right: 15%;  z-index: 0;"
+  - type: image
+    id: cespuglioC1
+    src: cespuglio.png
+    style: "height: 10%; top: 12%; right: 79%;  z-index: 2;"
+  - type: image
+    id: cespuglioC2
+    src: cespuglio.png
+    style: "height: 10%; top: 12%; right: 85%;  z-index: 2;"
+  - type: image
+    id: cespuglioC3
+    src: cespuglio.png
+    style: "height: 10%; top: 11%; right: 82%;  z-index: 1;"
+  - type: image
+    id: cespuglioC4
+    src: cespuglio.png
+    style: "height: 10%; top: 10%; right: 80%;  z-index: 0;"
+  - type: image
+    id: cespuglioC5
+    src: cespuglio.png
+    style: "height: 10%; top: 10%; right: 83%;  z-index: 0;"
+  - type: animation
+    target: cespuglioC4
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: animation
+    target: cespuglioC5
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
+  - type: animation
+    target: cespuglioA4
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: animation
+    target: cespuglioA5
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
   - type: sceneText
     text: >
       <p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
@@ -278,42 +366,88 @@ actions:
         char: carla
         mood: happy
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
+    text: "Want to help the kids?"
+    cta: "Let's try!"
+    tag: app1
     url: /apps/bucca-1-app/bucca-1-app-1.htm?l=1
   - type: dialog
     entries:
       - text: "But what if somebody discovers the messages and chooses to check all the four places anyway?"
         char: sean
         mood: normal
-      - text: "Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages"
+      - text: "Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages!"
         char: leo
-        mood: normal      
-      - text: "Oh, I see, that's right"
+        mood: thinking      
+      - text: "Oh, I see, that's right!"
         char: sean
         mood: normal      
       - text: "It is decided then! Now let's choose the key for our messages."
         char: leo
-        mood: normal      
+        mood: talking      
       - text: "Let's use this one: 'The sky is full of them'."
         char: sean
         mood: normal            
       - text: "Nice idea! So we can leave here the information to retrieve our secret findings!"
         char: leo
-        mood: normal      
+        mood: happy      
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
+    text: "Want to help the kids?"
+    cta: "Let's try!"
+    tag: app2
     url: /apps/bucca-1-app/bucca-1-app-2.htm?l=1
   - type: sceneText
     text: >
-      <p>Mathina and the kids leave the messages in an envelope near a tree in the middle of their meeting place and then pack up for returning home.</p>
+      <p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
+  - type: clearImage
+    id: bambino3
+  - type: clearImage
+    id: bambino4
+  - type: clearImage
+    id: leo1
+  - type: clearImage
+    id: mathina1
+  - type: clearImage
+    id: alberoB
+  - type: image
+    id: albero_n
+    src: albero_solo.png
+    style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: myst
+    src: myst.png
+    style: "height: 30%; top: 17%; right: 15%;  z-index: 6;"
   - type: sceneText
     text: >
-      <p>As soon as they leave, a mysterious figure, dressed in dark and shady clothes, goes to the bushes and starts to search for the secret messages. </p>  
+      <p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>  
   - type: sceneText
     text: >
-      <p>He finds the four messages and is puzzled as he does not understand which one is correct. He tries to locate the tree, but after a while, he leaves, feeling frustrated.</p>  
+      <p>He found the four messages and was puzzled as he did not understand which one was correct. He tried to locate the tree, but after a while, he left, feeling frustrated.</p>  
+  - type: clearImage
+    id: cespuglioB 
+  - type: clearImage
+    id: cespuglioA1
+  - type: clearImage
+    id: cespuglioA2 
+  - type: clearImage
+    id: cespuglioA3
+  - type: clearImage
+    id: cespuglioA4
+  - type: clearImage
+    id: cespuglioA5
+  - type: clearImage
+    id: cespuglioC1
+  - type: clearImage
+    id: cespuglioC2 
+  - type: clearImage
+    id: cespuglioC3
+  - type: clearImage
+    id: cespuglioC4
+  - type: clearImage
+    id: cespuglioC5
+  - type: clearImage
+    id: myst
+  - type: clearImage
+    id: albero_n
   - type: sceneText
     text: >
       <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy</p>
@@ -321,16 +455,106 @@ actions:
     entries:
       - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: 'The sky is full of them'."
         char: leo
-        mood: normal
+        mood: talking
+  - type: background
+    src: bg1_nokids.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: cespuglio11
+    src: cespuglio.png
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 5;"
+    parallax: mid2
+  - type: image
+    id: cespuglio12
+    src: cespuglio.png
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    parallax: mid1
+  - type: image
+    id: cespuglio13
+    src: cespuglio.png
+    style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
+    parallax: back3
+  - type: image
+    id: cespuglio14
+    src: cespuglio.png
+    style: "height: 55%; top: 50%; right: -5%;  z-index: 2;"
+    parallax: back2
+  - type: image
+    id: cespuglio15
+    src: cespuglio.png
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    parallax: mid3
+  - type: image
+    id: branch10
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch11
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch12
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch10
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch11
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch12
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: image
+    id: albero10
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;" 
   - type: sceneText
     text: >
-      <p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: "The sky is full of them" so they chose, without effort, the correct message.</p>
+      <p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
   - type: sceneText
     text: >
-      <p>Once they arrived at the tree, their mom, a history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+      <p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+  - type: clearImage
+    id: albero10  
+  - type: clearImage
+    id: branch10  
+  - type: clearImage
+    id: branch11
+  - type: clearImage
+    id: branch12  
+  - type: clearImage
+    id: cespuglio11
+  - type: clearImage
+    id: cespuglio12
+  - type: clearImage
+    id: cespuglio13
+  - type: clearImage
+    id: cespuglio14
+  - type: clearImage
+    id: cespuglio15
+  - type: background
+    src: bg1b-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+
   - type: sceneText
     text: >
-      <p>Near a strange-looking rock, she found a strange series of symbols.</p>
+      <p>Near a strange-looking rock, she found a stranger series of symbols.</p>
   - type: dialog
     entries:
       - text: "Great mom! You found the pirates' secret! We should let Mathina know!"
@@ -345,7 +569,6 @@ actions:
   - type: game
     text: "Want to help Rasha leave the messages?"
     cta: "Let's try!"
-    tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
   - type: sceneText
     text: >
