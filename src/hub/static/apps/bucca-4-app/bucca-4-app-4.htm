@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <style>
+    <style>
         html {
             background: url(img/bg4.jpg) no-repeat center center fixed;
             -webkit-background-size: cover;
@@ -77,7 +77,7 @@
             width: 920px;
             height: 140px;
             z-index: 2;
-            left: 480px;
+            left: 25%;
             top: 25px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -93,7 +93,7 @@
             width: 890px;
             height: 320px;
             z-index: 2;
-            left: 20px;
+            left: 1%;
             top: 225px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -109,7 +109,7 @@
             width: 890px;
             height: 320px;
             z-index: 2;
-            left: 970px;
+            right: 1%;
             top: 225px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -125,7 +125,7 @@
             width: 890px;
             height: 235px;
             z-index: 2;
-            left: 20px;
+            left: 1%;
             top: 605px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -139,13 +139,17 @@
 		#Trad18 {
 		 font: 40px DejaVu Sans Mono;
 		}
+		
+		#Bottoni1 {
+			display:none;
+		}
 
         #Text5 {
             position: absolute;
             width: 890px;
             height: 235px;
             z-index: 2;
-            left: 970px;
+            right: 1%;
             top: 605px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
@@ -368,8 +372,31 @@
             for (var k = 0; k < Traduzioni.length; k++) {
                 for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
                     if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+					else console.log("Not finding ID " + Traduzioni[k][0][kk]);
                 }
             }
+        }
+
+		function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+            console.log(dimension);
+			
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			document.body.style.zoom=ScalaCalcolata;
         }
 
         function Init() {
@@ -378,6 +405,8 @@
             if (!isNumeric(Lingua)) Lingua = 1;
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
+
+			window.addEventListener('resize', Resize, false);
 
             ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
             PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
@@ -405,16 +434,16 @@
         function GeneraCaso(l) {
             switch (Math.floor(Math.random() * 4)) {
                 case 0:
-                    return "<em>" + l + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + l + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
                     break;
                 case 1:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + l + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + l + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
                     break;
                 case 2:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + l + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + l + "<span></span>";
                     break;
                 default:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + l + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + l + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
             }
         }
         // JavaScript Document
@@ -465,6 +494,7 @@
             document.getElementById("chia").innerHTML = A;
             document.getElementById("chib").innerHTML = B;
             document.getElementById("segra").innerHTML = segretoA;
+			document.getElementById("Bottoni1").style.display="block";
             //document.getElementById("segrb").innerHTML = segretoB;
             console.log(a % (p - 1) == 0);
             if (a % (p - 1) == 0) {
@@ -567,8 +597,8 @@
 <body onload="Init()">
     <div id="DivCanvas">
         <div id="Text1">
-            <p><span id="Trad1">Fase 1 (Angela): Sceglierò per voi due numeri: </span><br><span id="Trad2">un numero primo <em>p</em>: </span> <b id="Primo1"></b>, <br><span id="Trad3">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
-            <p><button onclick="$('#Text2').show();"><span id="Trad4">Ok, iniziamo!</span></button></p>
+            <p><span id="Trad1">Fase 1 (Angela): Sceglierò per voi due numeri: </span><br><span id="Trad2">un numero primo <em>p</em>: </span> = <b id="Primo1"></b>, <br><span id="Trad3">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
+            <p style="text-align:center;"><button onclick="$('#Text2').show();"><span id="Trad4">Ok, iniziamo!</span></button></p>
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad5">Fase 2 (Leo): il segreto di Leo</p>
@@ -578,7 +608,7 @@
             </p>
             <p><span id="Trad9">Che numero comunichi a Mathina?</span><br>
             <p><span id="Trad10">Leo ha calcolato il numero da mandare a Mathina:</span> <br>
-            <p>
+            <p id="Bottoni1">
                 <button id="BA1" onclick="SendMessage1(1)"></button>
                 <button id="BA2" onclick="SendMessage1(2)"></button>
                 <button id="BA3" onclick="SendMessage1(3)"></button>
@@ -588,7 +618,7 @@
         <div id="Text3">
             <p class="titolo"><span id="Trad11">La risposta di Mathina</span></p>
             <p><span id="Trad12">Ciao Leo! Grazie del messaggio. Il numero che ho calcolato io &egrave; B=</span><span id="chib"></span></p>
-            <p><button onclick="$('#Text4').show();" id="Trad13">Grazie Mathina!</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad13">Grazie Mathina!</button></p>
         </div>
         <div id="Text4">
             <p class="titolo" id="Trad14">Il segreto condiviso</p>
