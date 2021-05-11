@@ -20,10 +20,9 @@
             width: 25%;
             height: 72%;
             z-index: 2;
-            font-size: 32px;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,3vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -37,10 +36,9 @@
             width: 25%;
             height: 72%;
             z-index: 2;
-            font-size: 32px;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,3vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -240,7 +238,7 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
-            Scale = necklace_dimension[1] / dimension[1];
+            Scale = Math.max(2* necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
             CentroCesare = [dimension[0] / 2, dimension[1] / 2];
             Draw(CentroCesare[0], CentroCesare[1], AngPosizione1, AngPosizione2, Scale);
         }
