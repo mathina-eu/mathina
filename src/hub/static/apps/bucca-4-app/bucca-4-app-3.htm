@@ -534,25 +534,25 @@
     <div id="DivCanvas">
         <div id="Text1">
             <p><span id="Trad1">Angela ha scelto per i due numeri: <br>un numero primo <em>p</em>:</span> <b id="Primo1"></b>, <br><span id="Trad2">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
-            <p><button onclick="$('#Text2').show();" id="Trad3">Ok, iniziamo!</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text2').show();" id="Trad3">Ok, iniziamo!</button></p>
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad4">Fase 2 (Leo): il segreto di Leo</p>
             <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
-            <p><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
             </p>
         </div>
         <div id="Text3">
             <p class="titolo" id="Trad9">Fase 2 (Mathina): il segreto di Mathina</p>
             <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
-            <p><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
         </div>
         <div id="Text4">
             <p class="titolo" id="Trad11">Come procediamo?</p>
             <p><span id="Trad12">Dobbiamo trovare la chiave. Sappiamo che vale</span> <span class="SegCondB"></span><sup>a</sup>, <span id="Trad13">ma anche</span> <span class="SegCondA"></span><sup>b</sup>, <span id="Trad14">solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.</span><br><br> <span id="Trad15">Scegli</span> a: <input type="text" id="sceglia" onchange="ScegliA()" />. <span id="nascA" style="display:none;"><span id="Trad16">Con questa scelta</span>, <span class="SegCondB"></span><sup id="NewA">a</sup> <span id="Trad17">modulo</span> <em class="SegP">p</em> = <em id="NCA"></em>
                 </span><br><br> <span id="Trad15a">Scegli</span> b: <input type="text" id="sceglib" onchange="ScegliB()" />. <span id="nascB" style="display:none;"><span id="Trad16a">Con questa scelta</Span>, <span class="SegCondA"></span><sup id="NewB">b</sup> <span id="Trad17a">modulo</span><em class="SegP">p</em> = <em id="NCB"></em></span><br>
             </p>
-            <p><button onclick="$('#Text5').show();" id="Trad18">Ok, sono pronto a decodificare il messaggio</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text5').show();" id="Trad18">Ok, sono pronto a decodificare il messaggio</button></p>
         </div>
         <div id="Text5">
             <p class="titolo" id="Trad19">Riusciamo a decodificare il messaggio?</p>
