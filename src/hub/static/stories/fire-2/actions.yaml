@@ -5,27 +5,27 @@ actions:
     id: bg
     style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
-    
+
   - type: image
-    src: bg_clouds.png 
+    src: bg_clouds.png
     id: clouds
     style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
     parallax: back3
-    
+
   - type: image
-    src: bg_castle.png 
+    src: bg_castle.png
     id: castle
     style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
     parallax: back2
-    
+
   - type: image
-    src: bg_fields.png 
+    src: bg_fields.png
     id: fields
     style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
     parallax: mid1
-    
+
   - type: image
-    src: white.png 
+    src: white.png
     id: white
     style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
     parallax: front1
@@ -33,9 +33,9 @@ actions:
   - type: image
     src: unidragon.gif
     id: uni
-    style: "width: 10%; top: -25%; left: 5%;" 
-    parallax: mid2 
-    
+    style: "width: 10%; top: -25%; left: 5%;"
+    parallax: mid2
+
   # - type: animation
     # target: uni
     # vars:
@@ -58,15 +58,15 @@ actions:
   - type: image
     src: mathinaleo.png
     id: matleo
-    style: "width: 35%; top: 30%; left: 1%;"  
+    style: "width: 35%; top: 30%; left: 1%;"
     parallax: mid2
 
   - type: image
     src: flamma2.png
     id: fla
-    style: "width: 35%; top: 20%; left: 100%;" 
+    style: "width: 35%; top: 20%; left: 100%;"
     parallax: front1
-    
+
   - type: animation
     target: fla
     vars:
@@ -86,9 +86,9 @@ actions:
       leading unidragons, to participate in the trainers’ festival that was
       going to be held soon. That morning they had seen a dragon flying in
       the distance and they thought that Flamma must be training it.
- 
 
-    
+
+
   - type: animation
     target: clouds
     vars:
@@ -96,7 +96,7 @@ actions:
       width: 100%
       height: 100%
       ease: power3.Out
-      
+
   # - type: animation
     # target: bg
     # vars:
@@ -104,7 +104,7 @@ actions:
        # width: 100%
        # height: 100%
       # # ease: power1.inOut
-      
+
   - type: animation
     target: fields
     vars:
@@ -112,7 +112,7 @@ actions:
        width: 100%
        height: 100%
        ease: power3.Out
-      
+
   - type: animation
     target: castle
     vars:
@@ -120,32 +120,32 @@ actions:
        width: 100%
        height: 100%
        ease: power3.Out
-      
+
   - type: animation
     target: matleo
     vars:
         duration: 4
         xPercent: 220
         yPercent: 75
-        width: 20% 
+        width: 20%
         ease: power3.out
-        
+
   - type: animation
     target: uni
     vars:
         duration: 3
-        #xPercent: 
+        #xPercent:
         yPercent: 85
-        width: 20% 
+        width: 20%
         ease: power3.out
-        
+
   - type: animation
     target: fla
     vars:
         duration: 3
         xPercent: -160
         yPercent: 60
-        width: 22% 
+        width: 22%
         ease: power2.out
 
   - type: sceneText
@@ -158,27 +158,27 @@ actions:
 
   - type: clearImage
     id: matleo
-    
-    
+
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
+    style: "width: 8%; top: 53%; left: 55%;"
     parallax: mid2
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo5.png
     id: leo
-    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
+    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"
     parallax: mid2
 
   - type: animation
     target: uni
     vars:
         duration: 2
-        #xPercent: 
+        #xPercent:
         yPercent: 10
-        width: 30% 
+        width: 30%
         ease: power3.out
 
   - type: dialog
@@ -191,28 +191,28 @@ actions:
       - text: Flamma, we saw the unidragon, are you training him?
         char: mathina
         mood: happy
- 
+
   - type: animation
     target: uni
     vars:
         duration: 2
-        #xPercent: 
+        #xPercent:
         yPercent: 20
-        width: 40% 
+        width: 40%
         ease: power3.out
 
 
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: leo4_mirrored.png
     id: leo
-    style: "width: 13%; top: 60%; left: 45%;"    
+    style: "width: 13%; top: 60%; left: 45%;"
     parallax: mid2
 
 
-  
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -223,25 +223,25 @@ actions:
           not flying away?
         char: leo
         mood: talking
-        
+
   - type: animation
     target: uni
     vars:
         duration: 2
         xPercent: -10
         yPercent: 5
-        width: 50% 
+        width: 50%
         ease: power3.out
-        
+
   - type: clearImage
     id: fla
-    
+
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
     parallax: front1
-    
+
   - type: animation
     target: mat
     vars:
@@ -256,7 +256,7 @@ actions:
     text: Flamma stopped screaming to the sky and the unidragon descended
       gently to the land to rest.
 
-  
+
   - type: animation
     target: leo
     vars:
@@ -266,7 +266,7 @@ actions:
         #transform: scale(1,-1)
         transform: rotateY(180deg)
         ease: power3.out
-  
+
   # - type: animation
     # target: leo
     # vars:
@@ -276,14 +276,14 @@ actions:
         # #transform: scale(1,-1)
         # transform: rotateY(180deg)
         # ease: power3.out
-  
+
   - type: clearImage
     id: uni
-    
+
   - type: image
     src: unidragon-sitting.png
     id: uni
-    style: "width: 25%; top: 30%; left: 17%;" 
+    style: "width: 25%; top: 30%; left: 17%;"
     parallax: front1
 
   - type: dialog
@@ -300,22 +300,22 @@ actions:
           and nobody has ever found it.
         char: flamma
         mood: normal
-  
+
   - type: clearImage
     id: mat
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina4.png
     id: mat
-    style: "width: 7%; top: 55%; left: 55%;"  
-    parallax: mid2    
-        
+    style: "width: 7%; top: 55%; left: 55%;"
+    parallax: mid2
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-    entries:      
+    entries:
 
       - text:  Normally when that happens, the unidragons are not tamed and
           they remain wild, but they still feel their lost horn when it moves,
@@ -336,7 +336,7 @@ actions:
         #transform: scale(1,-1)
         transform: rotateY(0deg)
         ease: power3.out
-        
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -359,23 +359,23 @@ actions:
       - text: Magical numbers! How can you talk with numbers?
         char: leo
         mood: surprised
-        
-        
+
+
   - type: clearImage
     id: mat
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
-    parallax: mid2    
-        
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-    entries:  
+    entries:
 
       - text: I have the feeling that an invisible structure is somehow connecting everything…
         char: mathina
@@ -420,47 +420,47 @@ actions:
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: mat
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
     id: fla
-    
+
   - type: image
     src: flamma2.png
     id: fla
-    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
     parallax: front1
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina2.png
     id: mat
-    style: "width: 8%; top: 70%; left: 55%;"  
-    parallax: mid2  
-    
+    style: "width: 8%; top: 70%; left: 55%;"
+    parallax: mid2
+
   - type: image
     src: $COMMON/img/characters/leo/leo2.png
     id: leo
-    style: "width: 8%; top: 70%; left: 45%;"  
-    parallax: mid2  
+    style: "width: 8%; top: 70%; left: 45%;"
+    parallax: mid2
 
   - type: image
     src: unidragon.gif
     id: uni
-    style: "width: 40%; top: 25%; left: 5%;" 
-    parallax: front2 
-    
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
+
   - type: animation
     target: uni
     vars:
         duration: 5
         xPercent: 100
        # yPercent: 5
-        #width: 50% 
+        #width: 50%
         #ease: power3.out
 
   - type: animation
@@ -471,7 +471,7 @@ actions:
         delay: 5
         transform: rotateY(180deg)
 
-        
+
   - type: animation
     target: uni
     vars:
@@ -479,7 +479,7 @@ actions:
         delay: 5
         xPercent: -10
         #yPercent: 5
-        #width: 50% 
+        #width: 50%
         ease: power3.out
 
   - type: sceneText
@@ -490,38 +490,38 @@ actions:
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: mat
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
     id: fla
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
-    parallax: mid2   
-    
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
   - type: image
     src: leo4_mirrored.png
     id: leo
-    style: "width: 13%; top: 60%; left: 45%;"    
+    style: "width: 13%; top: 60%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: unidragon-sitting.png
     id: uni
-    style: "width: 25%; top: 30%; left: 17%;" 
+    style: "width: 25%; top: 30%; left: 17%;"
     parallax: front1
-    
+
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
     parallax: front1
 
   - type: dialog
@@ -558,49 +558,49 @@ actions:
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: mat
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
     id: fla
 
   - type: image
     src: leo5_mirrored.png
     id: leo
-    style: "width: 10%; top: 60%; left: 45%;"  
+    style: "width: 10%; top: 60%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: flamma2.png
     id: fla
-    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
     parallax: front1
-    
+
   - type: image
     src: unidragon.gif
     id: uni
-    style: "width: 40%; top: 25%; left: 5%;" 
-    parallax: front2 
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina4.png
     id: mat
-    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
-    parallax: mid2  
-    
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
   - type: animation
     target: uni
     vars:
         duration: 5
         xPercent: 100
         yPercent: -50
-        #width: 50% 
+        #width: 50%
         #ease: power3.out
-        
+
   - type: animation
     target: leo
     vars:
@@ -608,11 +608,11 @@ actions:
         #xPercent: 100
         delay: 3
         transform: rotateY(180deg)
-        
+
   - type: sceneText
     text: ...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
-     
-    
+
+
   - type: dialog
     avatarAlign:
        flamma: right
@@ -624,56 +624,56 @@ actions:
         char: leo
         mood: happy
         exposition: Leo exclaimed.
-        
+
 
   - type: clearImage
     id: mat
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
-    parallax: mid2  
-    
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
   - type: dialog
     avatarAlign:
        flamma: right
        mathina: left
        leo: left
-    entries:       
-        
+    entries:
+
 
       - text: Yes, it does! But let me make him come back before he is too far away.
         char: flamma
         mood: happy
         exposition: And Flamma made the animal come back.
-        
+
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
-    id: fla 
-    
+    id: fla
+
   - type: image
     src: leo4_mirrored.png
     id: leo
-    style: "width: 13%; top: 60%; left: 45%;"    
+    style: "width: 13%; top: 60%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: unidragon-sitting.png
     id: uni
-    style: "width: 25%; top: 30%; left: 17%;" 
+    style: "width: 25%; top: 30%; left: 17%;"
     parallax: front1
-    
+
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
     parallax: front1
 
   - type: dialog
@@ -704,49 +704,49 @@ actions:
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: mat
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
     id: fla
 
   - type: image
     src: leo5_mirrored.png
     id: leo
-    style: "width: 10%; top: 60%; left: 45%;"  
+    style: "width: 10%; top: 60%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: flamma2.png
     id: fla
-    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
     parallax: front1
-    
+
   - type: image
     src: unidragon.gif
     id: uni
-    style: "width: 40%; top: 45%; left: 0%;" 
-    parallax: front2 
+    style: "width: 40%; top: 45%; left: 0%;"
+    parallax: front2
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina4.png
     id: mat
-    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
-    parallax: mid2  
-    
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
   - type: animation
     target: uni
     vars:
         duration: 5
         xPercent: 100
         yPercent: -100
-        width: 30% 
+        width: 30%
         #ease: power3.out
-        
+
   # - type: animation
     # target: leo
     # vars:
@@ -754,7 +754,7 @@ actions:
         # #xPercent: 100
         # delay: 3
         # transform: rotateY(180deg)
-        
+
 
 
   - type: sceneText
@@ -763,38 +763,38 @@ actions:
 
   - type: clearImage
     id: uni
-    
+
   - type: clearImage
     id: leo
-    
+
   - type: clearImage
-    id: fla 
-    
+    id: fla
+
   - type: clearImage
     id: mat
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
-    style: "width: 8%; top: 53%; left: 55%;"  
-    parallax: mid2  
-    
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
   - type: image
     src: leo4_mirrored.png
     id: leo
-    style: "width: 13%; top: 60%; left: 45%;"    
+    style: "width: 13%; top: 60%; left: 45%;"
     parallax: mid2
-    
+
   - type: image
     src: unidragon-sitting.png
     id: uni
-    style: "width: 25%; top: 30%; left: 17%;" 
+    style: "width: 25%; top: 30%; left: 17%;"
     parallax: front1
-    
+
   - type: image
     src: flamma3.png
     id: fla
-    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
     parallax: front1
 
   - type: dialog
@@ -807,8 +807,11 @@ actions:
         char: flamma
         mood: normal
 
+# Game 2.1
   - type: game
-    text: "Try to fly the unidragon with pairs of numbers"
+    text: Try to fly the unidragon with pairs of numbers.
+    toolbarText: Fly the unidragon with pairs of numbers!
+    cta: Fly the unidragon!
     url:
 
   - type: sceneText
@@ -838,11 +841,13 @@ actions:
        char: flamma
        mood: normal
 
+#Game 2.2
   - type: game
-    text: "Fly the unidragon to the castle avoiding the obstacles. You can
+    text: Fly the unidragon to the castle avoiding the obstacles. You can
       only fly over the blue sky, if you hit a cloud or a mountain, you
-      will have to start again."
-    toolbarText: Fly to the castle!
+      will have to start again.
+    cta: Fly to the castle!
+    toolbarText: Fly to the castle avoiding obstacles!
     url:
 
   - type: dialog
@@ -889,8 +894,10 @@ actions:
         char: leo
         mood: happy
 
+# Game 2.3
   - type: game
-    text: "Eat all the fireballs without touching the clouds and then reach the castle"
+    text: Eat all the fireballs without touching the clouds and then reach the castle.
+    cta: Fly to eat the fireballs!
     url:
     toolbarText: Eat the fireballs and fly to the castle!
 
