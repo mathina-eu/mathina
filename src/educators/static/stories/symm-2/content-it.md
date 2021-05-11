@@ -1,12 +1,12 @@
 # Concetti matematici
 
-L'obiettivo principale di questa storia è presentare, in modo divertente, diversi concetti relativi alla ** simmetria di assiale e di rotazione **.
+L'obiettivo principale di questa storia è presentare, in modo divertente, diversi concetti relativi alla **simmetria di assiale e di rotazione**.
 
 Iniziamo esplorando il concetto di simmetria di assiale: in primo luogo, utilizzando immagini che hanno un solo asse di simmetria e poi studiando rosette con più assi. Infine si passa alle rosette senza assi di simmetria, e le distinguiamo (cioè classifichiamo) in base al numero di simmetrie di rotazione.
 
 ## Cos'è una simmetria?
 
-Quando si parla di simmetrie, è naturale introdurre il concetto di isometria. Una ** isometria ** è una funzione che preserva le distanze: se due punti * A * e * B * vengono trasformati in * A' * e * B' *, allora * dist (A, B) = dist (A ', B ') *.
+Quando si parla di simmetrie, è naturale introdurre il concetto di isometria. Una **isometria** è una funzione che preserva le distanze: se due punti *A* e * B * vengono trasformati in *A'* e *B'*, allora *dist (A, B) = dist (A ', B ')*.
 ![Isometry](/stories/symm-2/img/_align-center_/iso.png =300x250)
 
 Una ** simmetria di una figura ** è un'isometria che mappa la figura esattamente su se stessa, in modo che sia uguale prima e dopo la trasformazione: non è possibile distinguere la figura iniziale da quella finale (né per forma , posizione o colore).
@@ -15,10 +15,10 @@ Una ** simmetria di una figura ** è un'isometria che mappa la figura esattament
 
 Si noti che identificare una simmetria assiale equivale a trovare un asse di simmetria della figura.
 
-Nella storia, a
+Nella storia, l'app
 ["Labirinto specchiato"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
 è disponibile (collegamento al repository IO3).
-Utilizzando questo strumento, l'utente viene a conoscenza di: 1) il fatto che il segmento che unisce un punto * A * e la sua immagine riflessa * A '* è perpendicolare alla linea di riflessione * r * e 2) entrambi i punti (* A * e * A '*) sono alla stessa distanza da * r *.
+Utilizzando questo strumento, l'utente viene a conoscenza di: 1) il fatto che il segmento che unisce un punto *A* e la sua immagine riflessa *A'* è perpendicolare alla retta di riflessione *r* e 2) entrambi i punti (*A* e *A'*) sono alla stessa distanza da * r *.
 
 ! [Riflessione] (/ stories / symm-2 / img / _align-center_ / AA1.jpg = 360x169)
 
@@ -28,88 +28,81 @@ Una simmetria di rotazione di un'immagine è una rotazione che porta l'immagine 
 
 ! [Guarda il film qui] (/ stories / symm-2 / video / _align-center_ / ros_C_4.mp4 = 640x360)
 
-Nella storia, a
-["Half-turn maze"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
-è anche disponibile (collegamento al repository IO3). Esplorando questo strumento, l'utente acquisisce maggiore familiarità con un tipo specifico di rotazione, quello di * 180 * gradi. In particolare, può osservare che il centro di rotazione * O * è il punto medio di * [AA ’] *.
+Nella storia, l'app
+["Il labirinto del mezzo giro"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
+è disponibile (collegamento al repository IO3). Esplorando questa app, l'utente acquisisce maggiore familiarità con un tipo specifico di rotazione, quello di * 180 * gradi. In particolare, può osservare che il centro di rotazione * O * è il punto medio di * [AA ’] *.
 ![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
 
 &nbsp;
 
-## Rosettes
+## Rosoni
 
-We will now consider flat images which have some kind of symmetry of rotation or reflection, the so-called rosettes.
+Considereremo ora immagini piatte che hanno simmetrie rotazionali e/o assiale: i cosiddetti rosoni.
 
-With respect to their symmetry, rosettes can be divided into two classes: **dihedral**, if they have at least one reflection symmetry (so there exits at least one symmetry axis), and **cyclic**, if they don’t possess any reflection symmetry.
+Rispetto alla loro simmetria, le rosette possono essere divise in due classi: **diedrali**, se hanno almeno una simmetria assiale (quindi esiste almeno un asse di simmetria), e **ciclico**, se non hanno alcuna simmetria assiale.
 
-The
-[“Rosette Game”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-presented in the story is a game in which the player must choose the rosettes with reflection symmetry, i.e. the dihedral rosettes.
+L'app
+["Il gioco dei rosoni"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
+presente nella storia è un gioco in cui l'utente deve scegliere i rosoni con una simmetria assiale, cioè i rosoni diedrali.
 
-And how can we distinguish dihedral rosettes from each other? A natural way is counting their symmetry axes… That is precisely the goal of
-[“Bag Game I”:]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-by playing it, we are classifying dihedral rosettes according to their symmetry.
+Come distinguere i rosoni diedrali l'uno dall'altro? Un modo naturale è contare i loro assi di simmetria... Questo è precisamente l'obiettivo dell'app
+["Il gioco dei sacchetti I":] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12):
+giocandoci classifichiamo i rosoni diedrali in base alla loro simmetria.
 
-![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-diedrais.png =1000x194)
+! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-diedrais.png = 1000x194)
 
-**Remark**: In the story, we only considered rosettes with 6 or less symmetry axes, however we can create rosettes with as many symmetry axes as we wish. So, there are infinitely many
-dihedral rosettes^[Similarly, there are infinitely many cyclic rosettes]
-, all of different symmetry types…
+** Nota **: Nella storia, abbiamo considerato solo rosoni con sei o meno assi di simmetria, tuttavia possiamo creare rosoni con un numero qualsiasi diassi di simmetria. Quindi ci ne sono infiniti rosoni diedrali ^ [Allo stesso modo, ci sono infiniti rosoni ciclici]
+, tutti con diverso tipo di simmetria ...
 
-![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-d.png =1000x179)
+! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-d.png = 1000x179)
 
-And how can we distinguish (classify) cyclic rosettes?
+Come distinguere (classificare) i rosoni ciclici?
 
-![Watch the movie here](/stories/symm-2/video/_align-center_/rot_3.mp4 =640x360)
+! [Guarda il video] (/ stories / symm-2 / video / _align-center_ / rot_3.mp4 = 640x360)
 
-In the previous example, the rosette has **3** rotation symmetries. However, even if we hadn’t checked the rotation symmetries, we would know that the rosette had, at least, **one** rotation symmetry: the **identity**, which corresponds to a rotation of *0º* (or, equivalently, of *360º*), the so called 
-trivial symmetry^[In general, when we ask if there is a symmetry, we are thinking about a non-trivial symmetry.]
+Nell'esempio precedente, la rosetta ha ** 3 ** simmetrie di rotazione. Tuttavia, anche se non avessimo verificato le simmetrie di rotazione, sapremmo che il rosone ha almeno ** una ** simmetria di rotazione: l'** identità **, che corrisponde a una rotazione di * 0 * gradi (o, equivalentemente, di * 360 * gradi), detta anche simmetria banale ^ [In generale, quando ci chiediamo se esiste una simmetria, stiamo pensando a una simmetria non banale.].
+
+Classifichiamo i rosoni ciclici in base al numero delle simmetrie di rotazione che hanno. Questo è precisamente l'obiettivo dell'app
+["Il gioco dei sacchetti II"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
 .
 
-We classify the cyclic rosettes according to the number of the rotation symmetries they have. That is precisely the goal of 
-[“Bag Game II”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-.
+! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-ciclicas.png = 1000x195)
 
-![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-ciclicas.png =1000x195)
-
-Note that dihedral rosettes also have rotation symmetries and in a dihedral rosette there are as many reflection symmetries as rotation symmetries.
-
-![Watch the movie here](/stories/symm-2/video/_align-center_/ros_D_4.mp4 =640x360)
+Si noti che i rosoni diedrali hanno anche simmetrie di rotazione e in un rosone diedrale ci sono tante simmetrie assiali quante simmetrie di rotazione.
+![Guarda il video](/stories/symm-2/video/_align-center_/ros_D_4.mp4 =640x360)
 
 &nbsp;
 
 # Commenti didattici
 
-By using storytelling and games, our main goal is to lead young learners to discover Symmetry in a playful way.
+Utilizzando lo storytelling e i giochi, l'obiettivo di questa storia è portare i giovani studenti a scoprire la simmetria in modo giocoso.
 
-The presentation starts with some concrete experiments carried out by the characters. The experiments are thoroughly illustrated by the animations and images provided, and help to present in an intuitive way various mathematical concepts: reflection symmetry, rotation symmetry, classification of rosettes according to their symmetry. The understanding of these concepts is deepened throughout the story, and the young learners have the opportunity to consolidate their knowledge, in a playful way, by solving the various challenges proposed in the available apps.
+La presentazione inizia con alcuni test concreti condotti dai personaggi. Gli esperimenti sono ampiamente illustrati dalle animazioni e dalle immagini fornite, e aiutano a presentare in modo intuitivo vari concetti matematici: simmetria assiale, simmetria di rotazione e classificazione dei rosoni in base alla loro simmetria. La comprensione di questi concetti si approfondisce nel corso della storia, ed i giovani studenti hanno la possibilità di consolidare le proprie conoscenze, in modo giocoso, risolvendo le varie sfide proposte nelle app disponibili.
 
-The story is self-contained and should not require consulting additional materials. For this purpose, two factors were taken into account: 1) almost no need of previous knowledge of the subject: the only concepts not explained in the story are those of “symmetry axis” (and “reflection symmetry”), and “rotation”, with which 7-10 year old students should be familiar; 2) adequacy of the contents to the 7/10 age group: in what concerns reflection symmetry, it is a subject addressed in the Portuguese Mathematics curriculum for the “Primary School” (6/9 years); on the other hand, although nowadays rotation symmetry is only included in the 6th degree curriculum (11 year old students), some years ago, it was included in the Portuguese “Primary School” curriculum. Our approach to this subject differs, however, from what is usually used in formal education: by using storytelling, by providing visually attractive interactive examples, and by offering a large number of games and challenges in the form of apps.
+La storia è autonoma e non richiede la consultazione di materiali aggiuntivi. A tal fine, sono stati presi in considerazione due fattori: 1) quasi nessuna necessità di una conoscenza precedente della materia: gli unici concetti non spiegati nel racconto sono quelli di "asse di simmetria" (e "simmetria assiale"), e di "rotazione" , con cui gli studenti di 7-10 anni dovrebbero avere familiarità; 2) adeguatezza dei contenuti alla fascia di età 7/10. L'approccio con cui vengono presentati gli argomenti differisce, tuttavia, da quello che viene solitamente utilizzato nell'istruzione formale. Prima di tutto viene usata la storia come espediente per introurre i concetti matematici. Inoltre vengono forniti molti esempi interattivi visivamente attraenti sono presenti un gran numero di giochi e sfide sotto forma di app.
 
-In addition to the mathematical topics already mentioned, there is one which is not included in the academic curricula: “classification of rosettes”. The purpose of introducing this subject is to convey a broader geometric idea about rosettes and their symmetry.
+Giochi simili a quelli presentati nella storia possono essere sviluppati dagli educatori. Di seguito, facciamo una proposta di alcune esperienze possibili:
 
-Additional experiments similar to the ones presented in the story can be developed by educators. Below, we make a proposal for experiments:
+`*` Il controllo se un'immagine ha assi di simmetria può essere simulato fisicamente con gli studenti, utilizzando uno specchio.
 
-`*` Checking if an image has symmetry axes can be physically simulated with students, by using a mirror.
-
-`*` The games “Rosette Games”, “Bag Game I” and “Bag Game II”, can be played physically: it is only necessary to print cards containing different types of rosettes. Such rosettes can even be built by the students themselves: for creating them, we suggest using the Atractor's (free) program 
-[“GeCla”](http://www.atractor.pt/mat/GeCla/index-_en.html)
-.
+`*` I giochi “Il gioco dei rosoni”, “Il gioco dei sacchetti I” e “Il gioco dei sacchetti II”, possono essere ricreati fisicamente: è sufficiente stampare carte contenenti diversi tipi di rosoni. Tali rosoni possono essere costruiti anche dagli stessi studenti: per crearle suggeriamo di utilizzare il programma (gratuito) di Atractor
+["GeCla"] (http://www.atractor.pt/mat/GeCla/index-_en.html)
 
 &nbsp;
 
 # Esperienze interattive
 
-There are six apps accompanying the story: 1 is dedicated to testing if a given image has a symmetry axis, by using a mirror; 3 are dedicated to the classification of rosettes; and the remaining 2 correspond to mazes through which it is possible to explore properties related to, respectively, reflection and rotation symmetry.
+Ci sono sei app che accompagnano la storia. Una è dedicata a testare se una data immagine ha un asse di simmetria, utilizzando uno specchio, tre sono dedicati alla classificazione dei rosoni e le restanti due corrispondono a labirinti attraverso i quali è possibile esplorare proprietà legate, rispettivamente, alla simmetria assiale e di rotazione.
 
-All the apps were programmed in JavaScript and should be usable both on PCs and tablets/smartphones.
+Tutte le app sono state programmate in JavaScript e sono utilizzabili sia su PC che su tablet / smartphone.
 
-Below, we present a small description of each app. Links both for the apps and for explanatory films about them (in Mathina’s YouTube channel) are also provided.
+Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre forniti collegamenti sia per le app che per filmati esplicativi su di esse (nel canale YouTube di Mathina).
 
 &nbsp;
 
 ## [App 1 - Usando gli specchi (I e II)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she can move the existing mirror, by dragging it back and forth.
+Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data ha un asse di simmetria. Per questo, l'utente può spostare uno specchio, trascinandolo avanti e indietro.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
@@ -118,44 +111,38 @@ An image is provided. The user is invited to check if the given image has a symm
 
 ## [App 2 - Il gioco dei rosoni]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-A set of 8 rosettes is presented. The user is invited to choose the 4 rosettes with symmetry axes. After choosing the correct rosettes and clicking
-![Confirm](/stories/symm-2/img/confirm.png =40x40),
-the program shows a new set of 8 rosettes. A total of 3 sets are shown. The game is solved when all "good" rosettes (i.e. with symmetry axes) are selected.
-
+Viene presentato un set di otto rosoni. L'utente è invitato a scegliere le quattro rosette con assi di simmetria. Dopo aver scelto le rosette e aver fatto clic su ![Conferma](/stories/symm-2/img/confirm.png =40x40),
+il programma mostra un nuovo set di otto rosoni. Vengono mostrati un totale di 3 set di rosonoi. Il gioco è risolto quando tutti i rosoni "corretti", (cioè con assi di simmetria) sono selezionati.
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
-## [Game 3 - Il gioco dei sacchetti I]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 3 - Il gioco dei sacchetti I]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-A set of 12 rosettes is presented. The user is invited to drag each rosette to the corresponding bag, according to its number of symmetry axes: bag 1 contains the rosettes which only have 1 symmetry axis; bag 2, those only with 2 symmetry axes; .... By clicking
+Viene presentato un set di dodici rosoni. L'utente è invitato a trascinare ciascun rosone nella sacca corrispondente, in base al suo numero di assi di simmetria: la sacca 1 contiene i rosoni che hanno un solo asse di simmetria; borsa 2, quelle solo con esattamente 2 assi di simmetria e così via. Cliccando su
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
-it is possible to get help for counting the number of symmetry axes.
+è possibile ottenere aiuto per il conteggio del numero di assi di simmetria.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
-## [Game 4 - Il gioco dei sacchetti II]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 4 - Il gioco dei sacchetti II]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-This app is similar to Game 3. However, instead of counting symmetry axes, the user should count the number of rotation symmetries of each rosette.
-
+Questa app è simile al Gioco 3. Tuttavia, invece di contare gli assi di simmetria, l'utente dovrebbe contare il numero di simmetrie di rotazione di ciascuna rosetta.
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
-## [Game 5 - Il labirinto specchiato]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 5 - Il labirinto specchiato]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-Two mazes are shown side by side: the original one (on the left) and the reflected one on the right. The user should go from the entrance of the original maze
+Vengono mostrati due labirinti affiancati: quello originale (a sinistra) e quello riflesso, a destra. L'utente dovrebbe andare dall'ingresso del labirinto originale
 ![Entrance](/stories/symm-2/img/pegadas.png =40x40)
-up to the goal
-![Goal](/stories/symm-2/img/exit.png =60x30).
-However, the original maze will get more and more transparent, and, after a certain point, it's impossible to see it. So, to solve the maze, one should look at the reflected maze. Only for training purposes, the user can click the
-![Lantern](/stories/symm-2/img/lanterna.png =40x40)
-button and see both mazes all the time. 
+fino all'uscita ![Goal](/stories/symm-2/img/exit.png =60x30).
+Tuttavia, il labirinto originale diventerà sempre più trasparente e, dopo un certo punto, sarà impossibile da vedere. Quindi, per risolvere il labirinto, si dovrà guardare il labirinto riflesso. Solo per scopi di formazione, l'utente può fare clic sulla ![lanterna](/stories/symm-2/im-g/lanterna.png =40x40) per visualizzare entrambi i percorsi.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
@@ -163,9 +150,9 @@ button and see both mazes all the time.
 &nbsp;
 
 
-## [Game 6 - Il labirinto del mezzo giro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 6 - Il labirinto del mezzo giro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-This app is similar to Game 5. However, instead of the (right) maze being reflected, it is rotated by 180º.
+Quest app è simile all'App. 5. In questo caso, però, invece di essere riflesso, il labirinto è ruotato di 180 gradi.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
