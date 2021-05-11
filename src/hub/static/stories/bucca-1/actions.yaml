@@ -5,8 +5,7 @@ actions:
   - type: image
     id: albero
     src: albero_solo.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
-    
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
