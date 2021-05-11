@@ -360,8 +360,7 @@ actions:
         mood: happy
       - text: "But let’s be careful! That mysterious figure of which you caught a glimpse during your last trip here doesn’t sound reassuring to me."
         char: mathina
-        mood: arguing
-        
+        mood: arguing      
   - type: clearImage
     id: Fisherman1
   - type: clearImage
@@ -377,10 +376,10 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: terr1
     src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:3;"  
   - type: image
     id: Mathina1
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -393,12 +392,11 @@ actions:
   - type: image
     id: Leo1
     src: $COMMON/img/characters/leo/leo4.png 
-    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 5; transform: ScaleX(1);"
   - type: image
     id: Angela2
     src: angela_3.png 
-    style: "height: 70%; top: 30%; right: 70%;  z-index: 1; transform: ScaleX(-1);"
-
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"
   - type: sceneText
     text: >
       <p> An hour later Leo and Angela were still exploring the coast, when they received an SMS from Mathina.</p>
@@ -416,12 +414,6 @@ actions:
       - text: "No, I don’t. But surely Mathina must be on the right path. So, look, let’s try following her path, but from here on the coast. Can you see it? The forest in which the parrots live is right there, between us and Mathina’s path. Maybe if we try to position ourselves in such a way we can see both the forest and the trail, we may be able to direct Mathina along her path."
         char: angela
         mood: sad
-  - type: background
-    src: bg4.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
-    src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
   - type: dialog
     entries:      
     - text: "Uhm, very strange. We agreed that we should confirm our messages and set a new shared key, but Mathina is not answering. Should we be worried about that?"
@@ -434,26 +426,22 @@ actions:
     id: Leo1  
   - type: clearImage
     id: Angela2  
-  - type: background
+  - type: image
+    id: alb1111
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
+  - type: image
+    id: alb2222
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
-    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"    
   - type: image
     id: Leo2
     src: $COMMON/img/characters/leo/leo5.png 
-    style: "height: 10%; top: 50%; right: 45%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 10%; top: 50%; right: 45%;  z-index: 2; transform: ScaleX(1);"
   - type: image
     id: Angela3
     src: angela_1.png 
-    style: "height: 20%; top: 70%; right: 50%;  z-index: 0; transform: ScaleX(1);"  
-  - type: image
-    id: terreno
-    src: terreno.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);" 
-  
+    style: "height: 20%; top: 70%; right: 50%;  z-index: 2; transform: ScaleX(1);"  
   - type: sceneText
     text: >
       <p>So the duo continued to explore the path up to the parrot forest, in the hope that the birds were the key to the success of their quest!</p>
@@ -474,22 +462,24 @@ actions:
   - type: clearImage
     id: Leo2  
   - type: clearImage
-    id: Angela3 
-  - type: clearImage
-    id: terreno         
-  - type: background
+    id: Angela3        
+  - type: image
+    id: alb4444
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
-    src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
-
-
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:2;"      
   - type: dialog
     entries:      
      - text: "See? It takes quite a lot of time to do that, we can be safe!"
        char: angela
        mood: normal
+  - type: clearImage
+    id: alb1111
+  - type: clearImage
+    id: alb2222
+  - type: clearImage
+    id: alb4444
+  - type: clearImage
+    id: terr1
   - type: background
     src: bg-grey-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
@@ -500,7 +490,6 @@ actions:
     id: myst1
     src: myst.png
     style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);"         
-
   - type: image
     id: Mathina3
     src: $COMMON/img/characters/mathina/mathina1.png
@@ -565,25 +554,26 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: alb111
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
+  - type: image
+    id: alb222
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
-
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"
+  - type: image
+    id: alb444
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
-  
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"
+  - type: image
+    id: alb333
     src: alberi3.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
-
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:2;"
+  - type: image
+    id: terr2
     src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"           
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:3;"           
   - type: sceneText
     text: >
       <p>Then at Parrot Forrest...</p>         
@@ -609,6 +599,16 @@ actions:
     text: >
       <p>So the duo started to climb up the mountains following the parrot trail discovered by Mathina.</p>   
 
+  - type: clearImage
+    id: terr2
+  - type: clearImage
+    id: alb111
+  - type: clearImage
+    id: alb222
+  - type: clearImage
+    id: alb333    
+  - type: clearImage
+    id: alb444    
   - type: background
     src: bg-grey-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
@@ -666,8 +666,7 @@ actions:
        mood: thinking        
      - text: "But there may be no treasure at all! All we know is that there were some buccaneers on the island, but we have no evidence that the treasure is still here – or it ever was, for that matters. Even the trail of the parrot may just be a trick engineered by the tourist office to entertain some visitors."
        char: angela
-       mood: normal          
-  
+       mood: normal            
   - type: sceneText
     text: >
       <p>Suddenly Captain Terry Charmingparrot slammed the door open.</p>  
@@ -691,33 +690,33 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: alb11
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
+  - type: image
+    id: alb22
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
-    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"    
   - type: image
     id: Leo5
     src: $COMMON/img/characters/leo/leo4.png 
-    style: "height: 55%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 55%; top: 40%; right: 40%;  z-index: 2; transform: ScaleX(1);"
   - type: image
     id: Mathina5
     src: $COMMON/img/characters/mathina/mathina5.png 
-    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(-1);"
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 3; transform: ScaleX(-1);"
   - type: image
     id: terreno2
     src: terreno.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);"   
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 4; transform: ScaleX(1);"   
   - type: image
     id: Angela5
     src: angela_3.png 
-    style: "height: 70%; top: 30%; right: 70%;  z-index: 2; transform: ScaleX(-1);"  
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"  
   - type: sceneText
     text: >
       <p>The following days were dreadful for the party. They were bound with plastic chains to one another and forced to search the forest and the coasts looking for hidden treasure.</p>  
-
   - type: dialog
     entries:        
      - text: "He is so much of a pirate that he couldn't even have proper chains to bound us! We've been kidnapped by the parody of a pirate. He's probably out of his mind, we must bring him back to reason and convince him that there's no treasure at all!"
@@ -758,6 +757,10 @@ actions:
        char: charmingparrot
        mood: sad
   - type: clearImage
+    id: alb11
+  - type: clearImage
+    id: alb22
+  - type: clearImage
     id: Leo5
   - type: clearImage
     id: Mathina5
@@ -789,7 +792,6 @@ actions:
     id: Mathina6
   - type: clearImage
     id: Angela6
-
   - type: background
     src: bg1_plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"   
@@ -844,7 +846,8 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
-  - type: background
+  - type: image
+    id: terrE
     src: terreno.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image

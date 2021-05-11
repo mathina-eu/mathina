@@ -1,16 +1,14 @@
 actions:
   - type: background
     src: bg1.jpg
-    style: "position: absolute; left: 0; width: 220%; height: 220%; z-index:-1; overflow:hidden;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
     id: albero
     src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
-  - type: image
-    id: cespuglio
-    src: cespuglio.png
-    style: "height: 55%; top: 35%; right: -5%;  z-index: 0;"    
+    
   - type: dialog
+    style: "position: absolute; left: 5%;"
     entries:
       - text: "Ok, so! I'll count to 10 and then come to find you all! Start hiding!"
         char: leo
@@ -22,15 +20,19 @@ actions:
         char: leo
         mood: happy
   - type: sceneText
+    style: "position: absolute; left: 5%;"
     text: >
           <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
+    style: "position: absolute; left: 5%;"
     text: >
       <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island can freely play away from the dangers of the wilderness. </p>
   - type: sceneText
+    style: "position: absolute; left: 5%;"
     text: >
       <p>While Mathina, the oldest in the group, was having a walk nearby, Leo and his friend were playing an exciting match of "hide and seek".</p>
   - type: dialog
+    style: "position: absolute; left: 5%;"
     entries:
       - text: "Seven!"
         char: leo
@@ -38,10 +40,18 @@ actions:
       - text: "Hey all, wait, come here, come here! Look what I've found!"
         char: sean
         mood: happy
+  - type: clearImage
+    id: albero
+  - type: image
+    id: albero1
+    src: albero_bambini.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: sceneText
+    style: "position: absolute; left: 5%;"
     text: >
       <p>All the kids ran towards Sean and saw a big tree that was caved in enough for them to step in.</p>
   - type: dialog
+    style: "position: absolute; left: 5%;"
     entries:
       - text: "Leo, what if this was one of the Buccaneers' hiding spots from the tale your sister Mathina told us the other day?"
         char: sean
@@ -49,6 +59,13 @@ actions:
       - text: "I don't know, but it sure looks like one of them"
         char: leo
         mood: happy
+  - type: clearImage
+    id: albero1
+  - type: background
+    src: bg1b-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+  - type: dialog
+    entries:       
       - text: "I wonder how the buccaneers could enter this area: it's so small here!"
         char: carla
         mood: happy
@@ -69,10 +86,23 @@ actions:
       - text: "But how will it work? If we leave a message, anybody can read it! We should find a way to keep it secret. What if we hide the message very thoroughly?"
         char: sean
         mood: happy
+  - type: background
+    src: bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: albero2
+    src: albero_bambini.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: cespuglio
+    src: cespuglio.png
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 1;"
   - type: sceneText
+    style: "position: absolute; left: 5%;"
     text: >
       <p>Leo made a good point:</p>
   - type: dialog
+    style: "position: absolute; left: 5%;"
     entries:
       - text: "Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
         char: leo
@@ -89,6 +119,14 @@ actions:
       - text: "Listen: we agree on some piece of information that only we will know. Mathina calls it KEY, and it makes sense to call it so, as it is the key to make everything work!"
         char: leo
         mood: happy
+  - type: clearImage
+    id: cespuglio
+  - type: clearImage
+    id: albero2
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"        
+
   - type: sceneText
     text: >
       <p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
