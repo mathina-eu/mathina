@@ -139,6 +139,10 @@
 		#Trad18 {
 		 font: 40px DejaVu Sans Mono;
 		}
+		
+		#Bottoni1 {
+			display:none;
+		}
 
         #Text5 {
             position: absolute;
@@ -489,6 +493,7 @@
             document.getElementById("chia").innerHTML = A;
             document.getElementById("chib").innerHTML = B;
             document.getElementById("segra").innerHTML = segretoA;
+			document.getElementById("Bottoni1").style.display="block";
             //document.getElementById("segrb").innerHTML = segretoB;
             console.log(a % (p - 1) == 0);
             if (a % (p - 1) == 0) {
@@ -602,7 +607,7 @@
             </p>
             <p><span id="Trad9">Che numero comunichi a Mathina?</span><br>
             <p><span id="Trad10">Leo ha calcolato il numero da mandare a Mathina:</span> <br>
-            <p>
+            <p id="Bottoni1">
                 <button id="BA1" onclick="SendMessage1(1)"></button>
                 <button id="BA2" onclick="SendMessage1(2)"></button>
                 <button id="BA3" onclick="SendMessage1(3)"></button>
