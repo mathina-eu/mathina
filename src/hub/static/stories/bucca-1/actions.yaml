@@ -76,7 +76,6 @@ actions:
         char: sean
         mood: happy
 
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
