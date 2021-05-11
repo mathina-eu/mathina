@@ -229,21 +229,21 @@
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
 				maxLength:3
             });
             $('#sceglib').keyboard({
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
 				maxLength:3
             });
             $('#chiavetrovata').keyboard({
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
             });
         });
     </script>
@@ -313,6 +313,17 @@
             ],
             [
                 ["Trad21"], "Here is the decoded message", "Ecco il messaggio decodificato", "Aqui est&aacute; a mensagem decodificada", "Hier ist die dekodierte Nachricht"
+            ],
+            [
+                [], "The sun is shining today", "Oggi il sole splende", "O sol esta brilhando hoje", "Die Sonne scheint heute"
+            ]
+			,
+            [
+                [], "Congratulations!!", "Complimenti!!", "Parab&eacute;ns!!", "Gl&uuml;ckwunsch!!"
+            ]
+			,
+            [
+                [], "Try again!!", "Riprova!!", "Tente novamente!!", "Versuch es noch einmal!!"
             ]
         ];
 
@@ -441,12 +452,14 @@
         }
 
         function diffie() {
-            p = PrimoScelto;
-            g = BaseScelta;
-            a = 2 + Math.floor(Math.random() * (p - 3));
-            A = potmod(g, a, p);
-            b = 2 + Math.floor(Math.random() * (p - 3));
-            B = potmod(g, b, p);
+			do {
+				p = PrimoScelto;
+				g = BaseScelta;
+				a = 2 + Math.floor(Math.random() * (p - 3));
+				A = potmod(g, a, p);
+				b = 2 + Math.floor(Math.random() * (p - 3));
+				B = potmod(g, b, p);
+			} while (A==1 || B==1);
             segretoA = potmod(B, a, p);
             segretoB = potmod(A, b, p);
             RiempiForm(a);
@@ -508,9 +521,9 @@
         function CheckFinale() {
             ChiaveUtente = parseInt(document.getElementById("chiavetrovata").value);
             if (ChiaveUtente == segretoB) {
-                document.getElementById("messdec").innerHTML = "Giusto";
+                document.getElementById("messdec").innerHTML = Traduzioni[21][Lingua] + "<br><br>" + Traduzioni[22][Lingua];
             } else {
-                document.getElementById("messdec").innerHTML = "Sbagliato";
+                document.getElementById("messdec").innerHTML = RandomString(25,Alphabet)+ "<br><br>" + Traduzioni[23][Lingua];
             }
         }
 
@@ -559,8 +572,7 @@
         </div>
         <div id="Text5">
             <p class="titolo" id="Trad19">Riusciamo a decodificare il messaggio?</p>
-            <p><span id="Trad20">Inserisci la chiave</span> <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <br>
-                <span id="messdec"></span>
+            <p><span id="Trad20">Inserisci la chiave</span> <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <span id="messdec"></span>
             </p>
         </div>
     </div>
