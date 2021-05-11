@@ -42,6 +42,10 @@ actions:
     id: albero
     src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
+  - type: sceneText
+    text: >
+      <h1>The secret messages</h1>
+        
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
