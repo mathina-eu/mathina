@@ -842,6 +842,7 @@ actions:
     text: "Fly the unidragon to the castle avoiding the obstacles. You can
       only fly over the blue sky, if you hit a cloud or a mountain, you
       will have to start again."
+    toolbarText: Fly to the castle!
     url:
 
   - type: dialog
@@ -891,6 +892,7 @@ actions:
   - type: game
     text: "Eat all the fireballs without touching the clouds and then reach the castle"
     url:
+    toolbarText: Eat the fireballs and fly to the castle!
 
   - type: dialog
     avatarAlign:

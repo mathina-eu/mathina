@@ -363,7 +363,7 @@ actions:
       - text: Die Sprache der Einhorndrachen ist anders als die der Menschen.
           Sie können sagen, was sie fühlen, und in diesem Fall, können sie die Richtung des Horns fühlen und auch genau beschreiben.
           Wir Menschen haben dafür keine Worte, denn wir können soetwas auch nicht fühlen.
-          Aber wir können magische Zahlen benutzen, um die Eihorndrachen zu verstehen und mit ihnen zu kommunizieren.
+          Aber wir können magische Zahlen benutzen, um die Einhorndrachen zu verstehen und mit ihnen zu kommunizieren.
           So können wir ihnen sagen, was wir meinen, und sie verstehen uns.
         #Unidragons have a kind of language, different from humans.
         #Their language expresses what they can feel, and in this case,
@@ -409,7 +409,7 @@ actions:
 
       - text: Wie ich schon sagte, wir haben keine Worte, die zu ihrer Sprache passen,
           aber wir können Magie nutzen, um die Flugbahn zu beschreiben, die er entlang fliegen soll.
-          Ihr könnt imr in Zahlen sagen, was ihr machen wollt, und ich übersetze sie für euch in die Sprache der Einhorndrachen.
+          Ihr könnt mir in Zahlen sagen, was ihr machen wollt, und ich übersetze sie für euch in die Sprache der Einhorndrachen.
         #Well, as I said, we don’t have words that correspond to his
         #language, but we can use some magic to describe the path we want to
         #make him follow. You can tell me in numbers what you want to do,
@@ -518,7 +518,7 @@ actions:
   - type: sceneText
     text: Flamma sagte die Zahl Eins in der Einhorndrachensprache,
       und der Drache bewegte sich vorwärts, ein bisschen so als ob er rennen würde statt zu fliegen.
-      Flamma rief etwas, und der Eihorndrache kam zum Baum zurück, wo er gestartet war.
+      Flamma rief etwas, und der Eihorndrache kam zurück zu der Stelle, wo er gestartet war.
     #Flamma said the number one in unidragon language, and the animal
     #started moving forward, quite as if it was running instead of flying.
     #At a shout of Flamma, the unidragon returned to the base of the tree,
@@ -877,7 +877,7 @@ actions:
     entries:
 
      - text: Super! Weißt Du, Du kannst dem Einhorndrachen auch mehrere Zahlenpaare nennen, die er dann nacheinander fliegt.
-        Einhorndrachen haben ein gutes Gedächtnis, sie können sich eine gaze Reihen von Paaren merken.
+        Einhorndrachen haben ein gutes Gedächtnis, sie können sich eine ganze Reihen von Paaren merken.
         Das ist ganz praktisch, wenn man Einhorndrachen trainiert, denn so kann man schon vorher planen, wie der Drache fliegen soll,
         zum Beispiel um Hindernissen auszuweichen.
       #Very well! You see, you can tell the unidragon a few pairs of
@@ -901,10 +901,11 @@ actions:
 
   - type: game
     text: "Fliege den Einhorndrachen zum Schloss und weiche den Hindernissen aus.
-      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke under einen Berg triffst, usst Du noch einmal von vorn anfangen."
+      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke oder einen Berg triffst, musst Du noch einmal von vorn anfangen."
     #"Fly the unidragon to the castle avoiding the obstacles. You can
     #only fly over the blue sky, if you hit a cloud or a mountain, you
     #will have to start again."
+    toolbarText: Fliege zum Schloss!
     url:
 
   - type: dialog
@@ -964,6 +965,7 @@ actions:
     text: "Schnappt Euch alle Feuerbälle, ohne die Wolken zu berühren, und fliegt dann zum Schloss."
     #"Eat all the fireballs without touching the clouds and then reach the castle"
     url:
+    toolbarText: Nimm alle Feuerbälle mit und fliege zum Schloss!
 
   - type: dialog
     avatarAlign:
