@@ -190,7 +190,7 @@
 
             Resize();
 
-            Reset();
+            
         }
 
 
@@ -213,11 +213,12 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
+			Reset();
         }
 
         function Reset() {
 
-            RaggioClock = dimension[1] * (4 / 5) / 2;
+            RaggioClock = Math.min(dimension[0] * (2 / 5) / 2,dimension[1] * (4 / 5) / 2);
             LungLancetta = RaggioClock * 3 / 4;
 
 
@@ -309,7 +310,7 @@
 
         function Up(ev) {
             ev.preventDefault();
-            if (InMovimento == 1) {
+            if (typeof(InMovimento) !== 'undefined' && InMovimento == 1) {
                 AngPosizione1 = AngPosizione1 + AngMouseFinale - AngMouseIniziale;
                 AngPosizione1 = Math.round(NumeroOre * AngPosizione1 / (2 * Math.PI)) * (2 * Math.PI / NumeroOre);
                 InMovimento = 0;
