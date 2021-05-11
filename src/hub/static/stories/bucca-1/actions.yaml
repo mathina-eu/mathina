@@ -39,8 +39,8 @@ actions:
       repeat: -1
       yoyo: true    
   - type: image
-    id: albero
-    src: albero_solo.png
+    id: albero1
+    src: albero_bambini.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
   - type: sceneText
     text: >
@@ -75,11 +75,7 @@ actions:
       - text: "Hey all, wait, come here, come here! Look what I've found!"
         char: sean
         mood: happy
-  - type: clearImage
-    id: albero
-  - type: image
-    id: albero1
-    src: albero_bambini.png
+
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: sceneText
     style: "position: absolute; left: 5%;"
@@ -91,7 +87,7 @@ actions:
       - text: "Leo, what if this was one of the Buccaneers' hiding spots from the tale your sister Mathina told us the other day?"
         char: sean
         mood: happy      
-      - text: "I don't know, but it sure looks like one of them"
+      - text: "I don't know, but it sure looks like one of them!"
         char: leo
         mood: happy
   - type: clearImage
@@ -187,12 +183,12 @@ actions:
       yoyo: true 
   - type: image
     id: albero2
-    src: albero_bambini.png
+    src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
     id: cespuglio
     src: cespuglio.png
-    style: "height: 55%; top: 35%; right: -5%;  z-index: 5;"
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 5; transform: scaleX(-1)"
     parallax: mid2
   - type: image
     id: cespuglio2
@@ -207,7 +203,7 @@ actions:
   - type: image
     id: cespuglio4
     src: cespuglio.png
-    style: "height: 55%; top: 50%; right: -5%;  z-index: 2;"
+    style: "height: 55%; top: 50%; right: -5%;  z-index: 2; transform: scaleX(-1)"
     parallax: back2
   - type: image
     id: cespuglio5
