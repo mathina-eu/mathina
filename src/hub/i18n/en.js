@@ -51,5 +51,7 @@ export default {
 	parrot: 'John the parrot',
 	mysteriousfigure: 'Mysterious figure',
 	sean: 'Sean',
+	rasha: 'Rasha',
+	rashamom: 'Mom of Rasha'
   },
 };
