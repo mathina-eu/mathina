@@ -14,7 +14,7 @@ This point of view also serves Angela to make Mathina understand that applying C
 A variant of Caesar's cipher, the Vigenère cipher, is also presented in the story. It is still a substitution cipher, like the Caesar cipher but works by partitioning the letters into multiple sets, each of which is encrypted using the Caesar cipher with a different key. The key is therefore a list of s numbers: the first will tell us how to encrypt the first letter and the letters at position s + 1, 2s + 1, ... the second number the second letter and the letters at position s + 2, 2s + 2, ... and so on. In the story, the key used is composed of two numbers: in practice, the ciphertext is obtained by using the Caesar cipher on the odd letters with the key equal to the first of the two numbers and on the letters at even position with the key given by the second of the two numbers. For example, if the key were the pair of numbers (1,3), the word "MATHINA" is encrypted by "adding" 1 to the letters of odd position and "adding" 3 to the letters of even position. We then get the word "NDUKJOB".
 
 
-![Vigenere cipher](/stories/bucca-3/img/ndukjob.png)
+![Vigenere cipher](/stories/bucca-3/img/_align-center_/ndukjob.png)
 
 
 

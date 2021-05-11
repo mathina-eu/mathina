@@ -3,10 +3,10 @@ From the point of view of the mathematical content, the purpose of this story is
 
 A simple cryptographic method is thus presented. Nevertheless, this has all the characteristics of a modern and effective cryptographic method. There is a procedure, the actual method, which allows you to hide the message to be transmitted and there is the key (that is, a code, a number or a concept) that allows anyone who knows it to understand the hidden message. The cryptographic method used by Leo and his friends involves choosing a key and for this purpose they choose a phrase that allows us to identify a precise figure: for example, "it has five sides" will allow us to identify a pentagon among the following figures:
 
-![circle](/stories/bucca-1/img/circle.png)
-![triangle](/stories/bucca-1/img/triangle.png)
-![pentagon](/stories/bucca-1/img/pentagon.png)
-![square](/stories/bucca-1/img/square.png)
+![circle](/stories/bucca-1/img/circle.png =250x150)
+![triangle](/stories/bucca-1/img/triangle.png =250x150)
+![pentagon](/stories/bucca-1/img/pentagon.png =250x150)
+![square](/stories/bucca-1/img/square.png =250x150)
 
 The method to encrypt the message is simply to write other false messages similar to the real message you want to hide and to draw a different picture on each message. At this point all the messages, contradictory as a whole, can be placed in plain sight so that anyone can read them. Only those who have the key ("has six sides") will immediately understand what the correct message is by seeing the hexagon drawn on it. In the three interactive experiences the readers know the key and are involved, for the first two interactive experiences in the encoding process [(here)]($HUB_URL/story/the-secret-messages/?actionLink=app1) and [(here)]($HUB_URL/story/the-secret-messages/?actionLink=app2) and in the [third app]($HUB_URL/story/the-secret-messages/?actionLink=app3), in the decoding process of the message.
 
