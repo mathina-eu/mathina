@@ -11,7 +11,7 @@ export default {
     'back': 'Back',
     titles: {
       'logi-1': 'The traffic light challenge',
-      'logi-2': 'Ytic-igol',
+      'logi-2': 'The tiled floor trap',
       'logi-3': 'Cats and dogs',
       'logi-4': 'My gold, please',
       'bucca-1': 'Mathina and the secret messages',
@@ -45,5 +45,12 @@ export default {
     leo: 'Leo',
     jane: 'Jane',
 	flamma: 'Flamma',
+    kangaroo: 'Kangaroo'
+    first policeman: 'First policeman'
+    second policeman: 'Second policeman'
+    owl: 'Owl'
+    trainer: 'Trainer'
+    george: 'George'
+    boys: 'Boys'
   },
 };
