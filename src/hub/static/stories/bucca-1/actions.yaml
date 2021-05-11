@@ -267,7 +267,7 @@ actions:
     style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"    
   - type: image
     id: alberoB
-    src: albero_bambini.png
+    src: albero_solo.png
     style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
     id: cespuglioB
