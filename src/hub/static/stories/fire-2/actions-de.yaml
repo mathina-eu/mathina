@@ -861,9 +861,11 @@ actions:
         mood: normal
 
   - type: game
-    text: "Versuche den Einhorndrachen mit Zahlenpaaren fliegen zu lassen"
+    text: "Versuche, den Einhorndrachen mit Zahlenpaaren fliegen zu lassen."
+    toolbarText: Fliege den Einhorndrachen mit Zahlenpaaren!
     #"Try to fly the unidragon with pairs of numbers"
     url:
+    cta: Fliege den Einhorndrachen!
 
   - type: sceneText
     text: Flamma gefiel, wie Mathina diese neue Sprache benutzte.
@@ -907,6 +909,7 @@ actions:
     #will have to start again."
     toolbarText: Fliege zum Schloss!
     url:
+    cta: Fliege den Einhorndrachen!
 
   - type: dialog
     avatarAlign:
@@ -966,6 +969,7 @@ actions:
     #"Eat all the fireballs without touching the clouds and then reach the castle"
     url:
     toolbarText: Nimm alle Feuerbälle mit und fliege zum Schloss!
+    cta: Fliege den Einhorndrachen!
 
   - type: dialog
     avatarAlign:
