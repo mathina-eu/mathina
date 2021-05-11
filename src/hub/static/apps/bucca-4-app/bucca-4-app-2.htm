@@ -372,6 +372,7 @@
             for (var k = 0; k < Traduzioni.length; k++) {
                 for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
                     if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+					else console.log("Not finding ID " + Traduzioni[k][0][kk]);
                 }
             }
         }
@@ -433,16 +434,16 @@
         function GeneraCaso(l) {
             switch (Math.floor(Math.random() * 4)) {
                 case 0:
-                    return "<em>" + l + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + l + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
                     break;
                 case 1:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + l + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + l + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
                     break;
                 case 2:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em>= " + l + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em> = " + l + "<span></span>";
                     break;
                 default:
-                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + l + "</em>= " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
+                    return "<em>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</em><sup>" + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "</sup> modulo <em>" + l + "</em> = " + (2 + Math.floor(Math.random() * (PrimoScelto - 3))) + "<span></span>";
             }
         }
         // JavaScript Document
@@ -596,8 +597,8 @@
 <body onload="Init()">
     <div id="DivCanvas">
         <div id="Text1">
-            <p><span id="Trad1">Fase 1 (Angela): Sceglierò per voi due numeri: </span><br><span id="Trad2">un numero primo <em>p</em>: </span> <b id="Primo1"></b>, <br><span id="Trad3">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
-            <p><button onclick="$('#Text2').show();"><span id="Trad4">Ok, iniziamo!</span></button></p>
+            <p><span id="Trad1">Fase 1 (Angela): Sceglierò per voi due numeri: </span><br><span id="Trad2">un numero primo <em>p</em>: </span> = <b id="Primo1"></b>, <br><span id="Trad3">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
+            <p style="text-align:center;"><button onclick="$('#Text2').show();"><span id="Trad4">Ok, iniziamo!</span></button></p>
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad5">Fase 2 (Leo): il segreto di Leo</p>
@@ -617,7 +618,7 @@
         <div id="Text3">
             <p class="titolo"><span id="Trad11">La risposta di Mathina</span></p>
             <p><span id="Trad12">Ciao Leo! Grazie del messaggio. Il numero che ho calcolato io &egrave; B=</span><span id="chib"></span></p>
-            <p><button onclick="$('#Text4').show();" id="Trad13">Grazie Mathina!</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad13">Grazie Mathina!</button></p>
         </div>
         <div id="Text4">
             <p class="titolo" id="Trad14">Il segreto condiviso</p>
