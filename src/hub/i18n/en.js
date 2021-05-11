@@ -59,9 +59,8 @@ export default {
 	charmingparrot: 'Captain Charmingparrot',
 	parrot: 'John the parrot',
 	mysteriousfigure: 'Mysterious figure',
-	Leo: 'Leo',
-    Mathina: 'Mathina',
-	Parrot: 'John',
-	Angela: 'Angela'
+	sean: 'Sean',
+	rasha: 'Rasha',
+	rashamom: 'Mom of Rasha'
   },
 };
