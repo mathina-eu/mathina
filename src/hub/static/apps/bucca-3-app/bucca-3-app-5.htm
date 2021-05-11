@@ -19,10 +19,9 @@
             width: 25%;
             height: 35%;
             z-index: 2;
-            font-size: 32px;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,4vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -37,7 +36,7 @@
 
             z-index: 0;
 
-            font-size: 300px;
+            font-size:min(20vw,30vh);
 
         }
 
@@ -51,7 +50,7 @@
             overflow: hidden;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,4vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -183,7 +182,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 32px;
+            font-size:min(1.6vw,3vh);
         }
     </style>
     <script>
@@ -323,9 +322,9 @@
             CanvasMathina3.width = CanvasMathina3.MathinaDim[0];
             CanvasMathina3.height = CanvasMathina3.MathinaDim[1];
 
-            CanvasMathina.Scale = necklace_dimension[1] / CanvasMathina.MathinaDim[1];
-            CanvasMathina2.Scale = necklace_dimension[1] / CanvasMathina2.MathinaDim[1];
-            CanvasMathina3.Scale = necklace_dimension[1] / CanvasMathina3.MathinaDim[1];
+            CanvasMathina.Scale = Math.max(necklace_dimension[0] / CanvasMathina.MathinaDim[0],necklace_dimension[1] / CanvasMathina.MathinaDim[1]);
+            CanvasMathina2.Scale = Math.max(necklace_dimension[0] / CanvasMathina2.MathinaDim[0],necklace_dimension[1] / CanvasMathina2.MathinaDim[1]);
+            CanvasMathina3.Scale = Math.max(necklace_dimension[0] / CanvasMathina3.MathinaDim[0],necklace_dimension[1] / CanvasMathina3.MathinaDim[1]);
             CanvasMathina.CentroCesare = [CanvasMathina.MathinaDim[0] / 2, CanvasMathina.MathinaDim[1] / 2];
             CanvasMathina2.CentroCesare = [CanvasMathina2.MathinaDim[0] / 2, CanvasMathina2.MathinaDim[1] / 2];
             CanvasMathina3.CentroCesare = [CanvasMathina3.MathinaDim[0] / 2, CanvasMathina3.MathinaDim[1] / 2];
@@ -809,7 +808,7 @@
     <div id="Medio">&rarr;</div>
     <div id="Arrivo">
         <div class="PartContainer">
-            <p><span id="Trad2">Quando hai posizionato il disco in modo corretto premi qui:</span></p><br>
+            <p><span id="Trad2">Quando hai posizionato il disco in modo corretto premi qui:</span></p>
             <button type="button" onclick="Check()" id="Btn4" class="button">POSIZIONATO</button><br>
         </div>
     </div>
