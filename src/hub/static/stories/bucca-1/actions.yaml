@@ -101,6 +101,19 @@ actions:
   - type: background
     src: bg1b-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+  - type: image
+    id: bambino0
+    src: bambino3.png
+    style: "height: 55%; top: 42%; right: 50%;  z-index: 2; transform: ScaleX(1)"
+  - type: image
+    id: bambino00
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+  - type: image
+    id: leo0
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 55%; top: 42%; right: 77%;  z-index: 1;transform: ScaleX(-1)"
+
   - type: dialog
     entries:       
       - text: "I wonder how the buccaneers could enter this area: it's so small here!"
@@ -123,8 +136,14 @@ actions:
       - text: "But how will it work? If we leave a message, anybody can read it! We should find a way to keep it secret. What if we hide the message very thoroughly?"
         char: sean
         mood: happy
+  - type: clearImage
+    id: bambino0
+  - type: clearImage
+    id: bambino00
+  - type: clearImage
+    id: leo0
   - type: background
-    src: bg1.jpg
+    src: bg1_nokids.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
     id: branch3
@@ -448,14 +467,65 @@ actions:
     id: myst
   - type: clearImage
     id: albero_n
+  - type: background
+    src: bg3_nopg.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: scaleX(-1)"
+  - type: image
+    id: leoC
+    src: $COMMON/img/characters/leo/leo1.png
+    style: "height: 35%; top: 57%; right: 11%;  z-index: 1;"  
+  - type: image
+    id: Barca
+    src: barca.png
+    style: "height: 16%; top: 13%; right: 72%;  z-index: -3;"
+
+  - type: image
+    id: Gabbiano
+    src: gabbiano3.png
+    style: "height: 6%; top: 15%; right: 75%;  z-index: -2;"
+
+  - type: image
+    id: Finestra
+    src: finestra.png
+    style: "width: 21.09%; top: 10.35%; right: 66.5%;  z-index: 0; transform: ScaleX(-1)"
+
+  - type: animation
+    target: Barca
+    vars:
+      duration: 8
+      xPercent: -30
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Gabbiano
+    vars:
+      duration: 5
+      xPercent: -20
+      yPercent: -100
+      ease: power1.inOut
+      repeat: -1
+      rotate: -5
+      yoyo: true
+
   - type: sceneText
     text: >
-      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy</p>
+      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy.</p>
   - type: dialog
     entries:
       - text: "When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: 'The sky is full of them'."
         char: leo
         mood: talking
+  - type: clearImage
+    id: Barca
+  - type: clearImage
+    id: Gabbiano
+  - type: clearImage
+    id: Finestra
+  - type: clearImage
+    id: leoC
   - type: background
     src: bg1_nokids.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
@@ -551,7 +621,34 @@ actions:
   - type: background
     src: bg1b-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
-
+  - type: image
+    id: sym1
+    src: sim1.png
+    style: "height: 10%; top: 50%; right: 16%;  z-index: 0;" 
+  - type: image
+    id: sym2
+    src: sim2.png
+    style: "height: 10%; top: 50%; right: 26%;  z-index: 0;" 
+  - type: image
+    id: sym3
+    src: sim3.png
+    style: "height: 10%; top: 50%; right: 36%;  z-index: 0;" 
+  - type: image
+    id: sym4
+    src: sim4.png
+    style: "height: 10%; top: 50%; right: 46%;  z-index: 0;" 
+  - type: image
+    id: sym5
+    src: sim5.png
+    style: "height: 10%; top: 50%; right: 56%;  z-index: 0;" 
+  - type: image
+    id: sym6
+    src: sim6.png
+    style: "height: 10%; top: 50%; right: 66%;  z-index: 0;" 
+  - type: image
+    id: sym7
+    src: sim7.png
+    style: "height: 10%; top: 50%; right: 76%;  z-index: 0;" 
   - type: sceneText
     text: >
       <p>Near a strange-looking rock, she found a stranger series of symbols.</p>
@@ -569,7 +666,11 @@ actions:
   - type: game
     text: "Want to help Rasha leave the messages?"
     cta: "Let's try!"
+    tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
   - type: sceneText
     text: >
       <p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
+  - type: sceneText
+    text: >
+      <h1>The secret messages - The End</h1>  
