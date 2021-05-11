@@ -548,7 +548,7 @@ actions:
     entries:
       - text: "Ben fatto!! Mmh, a proposito di orologi, sembra che sia quasi ora di andare, se vuoi prendere il traghetto! Mi piacerebbe invitarti per pranzo uno dei prossimi giorni."
         char: angela
-        mood: excited
+        mood: happy
       - text: "Sarebbe fantastico !! Che ne diresti di questo venerdì?"
         char: mathina
         mood: happy

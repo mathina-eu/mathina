@@ -312,7 +312,7 @@ actions:
     entries:
       - text: "Significa que se quiseremos comunicar em segredo, devemos sempre revelar as regras que estão a ser usadas ao cifrar a mensagem. Assim, só é necessário manter em segredo a chave."
         char: Angela
-        mood: normale
+        mood: normal
 
   - type: dialog
     entries:
@@ -546,7 +546,7 @@ actions:
     entries:
       - text: "Muito bem! Mmm, falando em relógios, parece que está quase na hora de ir, se quiseres apanhar a barca! Mas terei todo o prazer em almoçar contigo num dos próximos dias."
         char: Angela
-        mood: excited
+        mood: happy
       - text: "Isso seria excelente!! Que tal na sexta?"
         char: mathina
         mood: happy
@@ -1106,7 +1106,7 @@ actions:
         mood: normal
       - text: "Boa... podes ter razão! Mas é complicado: como decidimos qual parte do texto é qual?"
         char: Angela
-        mood: excited
+        mood: happy
       - text: "Podemos usar palavras! Talvez as palavras em posições ímpares tenham uma chave e as palavras em posições pares tenham outra chave. Vamos tentar!"
         char: mathina
         mood: excited
@@ -1288,7 +1288,7 @@ actions:
     entries:            
       - text: "São lindos! Provavelmente uma sugestão para uma outra forma de cifrar mensagens."
         char: Angela
-        mood: excited
+        mood: happy
       - text: "Acho que isto ser uma grande aventura, assim como a que fizemos hoje."
         char: mathina
         mood: happy

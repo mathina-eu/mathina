@@ -313,7 +313,7 @@ actions:
     entries:
       - text: "It means that if you want to communicate in secret, you shall always say the rules you are using when ciphering the message. Then you just have to keep the key secret."
         char: angela
-        mood: normale
+        mood: normal
 
   - type: dialog
     entries:
@@ -548,7 +548,7 @@ actions:
     entries:
       - text: "Well done! Mmh, speaking of clocks, it appears that it is almost time to go if you want to catch the ferry! But I’ll gladly have you for lunch one of the next days."
         char: angela
-        mood: excited
+        mood: happy
       - text: "It would be great!! What about this Friday?"
         char: mathina
         mood: happy
