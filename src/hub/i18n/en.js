@@ -61,6 +61,10 @@ export default {
 	mysteriousfigure: 'Mysterious figure',
 	sean: 'Sean',
 	rasha: 'Rasha',
-	rashamom: 'Mom of Rasha'
+	rashamom: 'Mom of Rasha',
+	Leo: 'Leo',
+    Mathina: 'Mathina',
+	Parrot: 'John',
+	Angela: 'Angela'
   },
 };
