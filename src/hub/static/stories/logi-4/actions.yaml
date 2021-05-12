@@ -10,10 +10,12 @@ actions:
     src: leo-pointingl.png 
     id: leo-pointl
     style: "width: 24%; top: 40%; right: 20%;"
+    parallax: back2
   - type: image
     src: mathina-thinking-turned.png
     id: mathina-think-t
     style: "width: 22%; top: 35%; right: 12%; z-index: 1"
+    parallax: back2
   - type: dialog
     entries:
       - text: What’s that...? - Mathina asked, but Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
@@ -39,6 +41,7 @@ actions:
     src: leo-thinking.png 
     id: leo-think
     style: "width: 17%; top: 43%; right: 74%;"
+    parallax: back2
   - type: animation
     target: mathina-think-t
     vars:
@@ -57,16 +60,19 @@ actions:
     src: trainer.png
     id: trainer
     style: "width: 22%; top: 20%; right: 55%; z-index: 2"
+    parallax: back2
   - type: sceneText
     text: A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
   - type: image
     src: boys5.png 
     id: boys5
     style: "width: 60%; top: 45%; right: 15%; z-index: 3"
+    parallax: back2
   - type: image
     src: georget.png
     id: georget
     style: "width: 10%; top: 30%; right: 30%; z-index: 2;"
+    parallax: back2
   - type: sceneText
     text: Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
   - type: dialog
@@ -130,6 +136,7 @@ actions:
     src: mathina-standing.png
     id: mathina-stand
     style: "width: 19%; top: 16%; right: 43%;"
+    parallax: back2
   - type: sceneText
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
@@ -144,7 +151,7 @@ actions:
     text: Can you find out how many? 
     toolbarText: 
     cta: Generate a table by filling in the initial amount of gold medals received.
-    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
+    url: /app/logi-4-app/logi-4-app.htm?v=1
   - type: dialog
     entries:
       - text: I'm not going to simply tell you that, - Mathina grinned. She whispered something in the trainer’s ear. The trainer nodded contentedly. - I'd rather help you figure it out for yourselves, - Mathina said. 
