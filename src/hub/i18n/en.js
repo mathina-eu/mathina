@@ -45,5 +45,12 @@ export default {
     leo: 'Leo',
     jane: 'Jane',
 	flamma: 'Flamma',
+  owl: 'Owl',
+  kangaroo: 'Kangaroo',
+  first_policeman: 'First policeman',
+  second_policeman: 'Second policeman',
+  george: 'George',
+  trainer: 'Trainer',
+  boys: 'Boys'
   },
 };
