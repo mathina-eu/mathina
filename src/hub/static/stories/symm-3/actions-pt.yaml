@@ -97,26 +97,26 @@ actions:
   - type: image
     id: FrisoPlaca
     src: FrisoPlaca2.png
-    style: "width: 70%; top: 50%; left: 0%"
+    style: "width: 70%; top: 50%; left: 0%; z-index: 2;"
   - type: image
     id: feiticeiro
     src: feiticeiro-magia.png
-    style: "width: 17%; top: 35%; left: 30%;"
+    style: "width: 17%; top: 35%; left: 30%; z-index: 3;"
     align: right
   - type: image
     id: mathina
     src: mathina3.png
-    style: "width: 9%; top: 10%; left: 15%;"
+    style: "width: 9%; top: 10%; left: 15%; z-index: 4;"
   - type: image
     id: leo
     src: leo2.png
-    style: "width: 20%; top: 40%; left: 70%;"
+    style: "width: 20%; top: 40%; left: 70%; z-index: 5;"
   - type: sceneText
     text: >
       <p>A placa deixava um rasto no chão, com um desenho repetitivo.</p>
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /stories/symm-3/video/Anim%20Placa%20p111.mp4
   - type: sceneText
     text: >
@@ -129,11 +129,11 @@ actions:
       - text: "Estou a embelezar esta rua, carimbando frisos. Mas a tinta da placa está a desaparecer e tenho de ir ao meu castelo repô-la; o pior é que a placa é muito grande e difícil de transportar com a minha varinha mágica."
         char: wizard
       - text: "Porque é que não enrola a placa e a enfia na varinha?"
-        char: Leo
+        char: leo
       - text: "Desculpa, como te chamas?"
         char: wizard
       - text: "Leo."
-        char: Leo
+        char: leo
       - text: "E eu chamo-me Mathina."
         char: mathina  
       - text: "Bem Leo, essa é uma ideia muito boa!"
@@ -169,7 +169,7 @@ actions:
       <p>Os três, juntos, enrolaram a placa e prenderam-na, usando alguns travessões da Mathina.</p>        
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_formcilindro.html
   - type: clearBackground
     id: 'fundo'
@@ -182,12 +182,12 @@ actions:
       <p>De seguida, enquanto o feiticeiro executava uma magia para chamar a varinha mágica, as crianças observaram-no, sem se aperceberem que o rolo, que estava pousado no chão, começara a rolar, dado que a rua tinha um certo declive.</p>
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_cilindro.html 
   - type: dialog
     entries:    
       - text: "Oh, não! Temos de apanhar o rolo!"
-        char: Leo
+        char: leo
         mood: surprised
   - type: sceneText
     text: >
@@ -241,12 +241,12 @@ actions:
   - type: dialog
     entries:    
       - text: "É muito fixe carimbar frisos assim!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Eu quero carimbar muitos frisos nas ruas da Feira da Simetria. Venham ver os meus desenhos."
         char: wizard
       - text: "Sim!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: 'fundo'
@@ -271,7 +271,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Vamos ajudá-lo a carimbar frisos nas ruas!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearImage
     id: todos_frisos
@@ -286,7 +286,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Vou começar por este!"
-        char: Leo
+        char: leo
   - type: clearImage
     id: friso2
   - type: image
@@ -335,7 +335,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Que dizes, Mathina, vamos ajudar o feiticeiro a carimbar frisos?"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -369,7 +369,7 @@ actions:
       - text: "Reparaste, Leo, que o friso que escolheste tem eixo de simetria, e que há outros aqui que não têm?"
         char: mathina
       - text: "Não. É verdade!"
-        char: Leo
+        char: leo
       - text: "Vamos separá-los!"
         char: mathina
   - type: game
@@ -391,7 +391,7 @@ actions:
   - type: dialog
     entries:         
       - text: "E há mais! Há frisos que só têm eixos de simetria vertical, outros só têm horizontal e há os que têm ambos...."
-        char: Leo
+        char: leo
       - text: "Não tinha reparado! Vamos separá-los em sacos!"
         char: mathina
   - type: image
@@ -470,7 +470,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Siiiim! Então, basta fazer o seguinte: usar este desenho na placa"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: fundo
@@ -483,7 +483,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Enrolá-la assim:"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: fundo
   - type: background
@@ -493,11 +493,11 @@ actions:
   - type: dialog
     entries:    
       - text: "E carimbar o friso como antes!"
-        char: Leo
+        char: leo
         mood: excited
   - type: game
-    text: "Observa o filme!"
-    cta: "Ver!"
+    text: "Ver filme aqui!"
+    cta: "Ver"
     url: /apps/anims/anim_cilindro2.html
   - type: clearBackground
     id: fundo
@@ -514,8 +514,8 @@ actions:
       - text: "Tens razão, Leo! Mas nem me parece que seja necessário usar um rolo! Acho que conseguimos carimbar o friso usando apenas uma placa com um “P”. Ora vê!"
         char: mathina
   - type: game
-    text: "Observa o filme!"
-    cta: Ver!"
+    text: "Ver filme aqui!"
+    cta: "Ver"
     url: /apps/anims/anim_friso_refV.html
   - type: dialog
     entries:    
@@ -525,7 +525,7 @@ actions:
         char: wizard
   - type: game
     text: "Experimenta carimbar frisos com simetria de reflexão horizontal e vertical usando uma “placa”. Escolhe uma imagem e observa a animação exibida na app."
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/Sfriso_refVH/
   - type: clearBackground
     id: fundo
@@ -655,7 +655,7 @@ actions:
   - type: dialog
     entries:   
       - text: "Quero ir lá para fora carimbar frisos!"
-        char: Leo
+        char: leo
   #
   # Voltando para o exterior
   - type: clearBackground
@@ -702,7 +702,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Sim! Eu vou escolher este desenho para a placa:"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Leo enrola o friso3
@@ -716,7 +716,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Vou enrolá-lo"
-        char: Leo
+        char: leo
   #
   # Leo carimba o friso3
   - type: clearImage
@@ -729,13 +729,13 @@ actions:
   - type: dialog
     entries:    
       - text: "e ... carimbar o friso!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_cilindro3.html
   #
   # Mathina pensa em carimbar o friso3 usando metade do carimbo
@@ -744,7 +744,7 @@ actions:
       - text: "Tens razão, Leo! Mas até acho que conseguimos carimbar o friso usando meio rolo…"
         char: mathina
       - text: "O que estás a dizer?"
-        char: Leo
+        char: leo
         mood: surprised
   #
   # Mathina mostra metade do carimbo do friso3
@@ -784,19 +784,19 @@ actions:
   - type: dialog
     entries:    
       - text: "carimbamos metade do friso:"
-        char: Mathina
+        char: mathina
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_cilindros_parte1.html
   #
   # Leo questiona Mathina sobre como carimbar a parte 2 do friso
   - type: dialog
     entries:    
       - text: "Claro. Mas como é que carimbamos a outra metade?"
-        char: Leo
+        char: leo
         mood: angry
   #
   # Mathina explica a Leo (parte 1)
@@ -853,7 +853,7 @@ actions:
   # Animação a carimbar a parte 2 do friso
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_cilindros_parte2.html
   #
   # Leo também quer carimbar
@@ -862,7 +862,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Ah, já sei, já sei! Também quero carimbar!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Muito apressado, Leo começa a carimbar
@@ -877,7 +877,7 @@ actions:
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /apps/anims/anim_refdeslizante_leo.html
   #
   # Leo terminou!
@@ -891,7 +891,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Pronto!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Mathina diz a Leo que este não era o friso esperado
@@ -938,7 +938,7 @@ actions:
       - text: "O friso que carimbaste tem o que se chama uma reflexão deslizante"
         char: wizard
       - text: "Tem o quê?"
-        char: Leo
+        char: leo
         mood: surprised
       - text: "Reflexão deslizante. Considera este friso e imagina uma cópia dele, que colocas exatamente por cima. É possível refletir a meio na horizontal e arrastar a cópia um pouco para a frente ou para trás, por forma a que o aspecto da imagem obtida seja idêntico ao da imagem inicial. Diz-se que o friso tem simetria de reflexão deslizante"
         char: wizard
@@ -946,7 +946,7 @@ actions:
   # Filme sobre a reflexão deslizante        
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
   #
   # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
@@ -1062,7 +1062,7 @@ actions:
   # Animação sobre o que é a translação
   - type: game
     text: "Observa o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
   #
   # Volta a mostrar os 7 sacos com todos os frisos
@@ -1087,7 +1087,7 @@ actions:
     tag: 8Game
     text: "Observa os frisos patentes em cada um dos 7 sacos obtidos. Para cada saco, arrasta os símbolos que correspondem às simetrias existentes nos frisos aí patentes."
     cta: "Jogar!"
-    url: /apps/RotularFrisos/?lang=en
+    url: /apps/RotularFrisos/?lang=pt
   #
   # Parte final da história
   - type: clearBackground
@@ -1119,7 +1119,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Bem, adorei estar aqui, mas queria explorar outras diversões da Feira da Simetria!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Claro, Leo!"
         char: wizard

@@ -77,7 +77,7 @@ actions:
     src: n16.png
     id: n16
     align: center
-    style: "width: 23%; top: 62%"
+    style: "width: 30%; bottom: 0%"
   - type: dialog
     entries:
       - text: "But if you now choose this image:"
@@ -245,8 +245,7 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
-        exposition: "Leo had just arrived at Symmetry Fair and called Mathina."         
+        char: leo    
         mood: excited     
   - type: dialog
     entries:    
@@ -265,7 +264,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Look, there are mazes here. Let's choose one!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: mathina-leo
@@ -295,7 +294,7 @@ actions:
   - type: dialog
     entries:    
       - text: "I'll try it!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: Leo3
