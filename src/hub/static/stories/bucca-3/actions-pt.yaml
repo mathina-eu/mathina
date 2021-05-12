@@ -297,7 +297,7 @@ actions:
     entries:
       - text: "Foi muito inteligente! Mesmo que... se torne complicado se todos tiverem que descobrir o código de todas as vezes. Mas, se eu consegui, outras pessoas também poderiam ter descoberto o significado da mensagem."
         char: mathina
-        mood: normal
+        mood: surprised
   - type: dialog
     entries:
       - text: "Tens razão! Sabes, há um ditado que afirma: “Compartilha o método que usas, mantém a chave para a tripulação”!"
@@ -307,7 +307,7 @@ actions:
     entries:
       - text: "O que significa isso?"
         char: mathina
-        mood: normal
+        mood: surprised
   - type: dialog
     entries:
       - text: "Significa que se quiseremos comunicar em segredo, devemos sempre revelar as regras que estão a ser usadas ao cifrar a mensagem. Assim, só é necessário manter em segredo a chave."
@@ -318,7 +318,7 @@ actions:
     entries:
       - text: "Interessante! Conversei recentemente com o meu irmão mais novo sobre um assunto muito semelhante."
         char: mathina
-        mood: happy
+        mood: talking
   - type: dialog
     entries:
       - text: "É um conhecimento comum entre piratas! Sabes, manter em segredo apenas a chave é uma coisa, manter um monte de informações em segredo é bem mais complicado, em particular depois de uma longa noite no bar. Ah, a propósito, já pediste alguma coisa? Estou muito curiosa para experimentar o novo sabor de gelado: pérolas e coco salgado."
@@ -355,7 +355,7 @@ actions:
     entries:
       - text: "Sim, por favor!"
         char: mathina
-        mood: happy
+        mood: talking
 
   - type: image
     id: CaesarJewel2
@@ -403,22 +403,22 @@ actions:
         mood: normal
       - text: "Uau, bem, é muito mais fácil agora: é só somar. O A, isto é, o 0 é enviado em D, que é 3. Ou seja, basta somae apenas o número de etapas. Isto é engenhoso. Mas ... Como faz isto sentido?"
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "Pode-se mesmo... somar letras? Na escola, aprendi a lidar com expressões nas quais se somam letras, mas é algo mais parecido com x+x=2x."
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "Podes somar letras, mas aqui é ainda mais simples: pensa apenas em usar letras como espaços reservados para números."
         char: Angela
         mood: normal
       - text: "Mas há algo ainda mais estranho aqui: olhe para a letra Y, quero dizer, o número 24. Se fosse uma soma normal, obter-se-ia 24 + 3 = 27. Mas, em vez disso, damos a volta e obtemos a letra B, quer dizer, o número 1. Está-me a dizer que 24 + 3 = 1?"
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "É exatamente isso que te estou a dizer!"
         char: Angela
         mood: normal
       - text: "Isso faz sentido? Se 24 + 3 = 1, significa... espere... significa que 24 + 2 = 0. Mas 24 + 2 é 26, como é que 26 pode ser igual a 0?"
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "Não é, de facto, assim tão estranho: decidimos que A deve corresponder a 0, mas quando se enrola o alfabeto num círculo, A é também a letra ao lado de Z, então A corresponde a 0 e a 26."
         char: Angela
         mood: normal
@@ -452,7 +452,7 @@ actions:
         mood: normal
       - text: "Estou confusa... Ainda estou com alguma dificuldade em entender este conceito..."
         char: mathina
-        mood: normal
+        mood: sad
         
         
   - type: clearImage
@@ -821,7 +821,7 @@ actions:
         mood: normal
       - text: "Tem razão. Eu teria ainda tentado todas as 26 letras e acabaria por encontrar a resposta. Mas você já teve alguma ideia nesse sentido? Principalmente depois daquela última história com os bandidos."
         char: mathina
-        mood: normal
+        mood: sad
       - text: "Oh, claro que sim. Durante algum tempo, tentamos ajustar um pouco a cifra usando a jóia duas vezes para codificar uma mensagem... o dobro do esforço, o dobro do resultado."
         char: Angela
         mood: normal
@@ -929,7 +929,7 @@ actions:
         mood: normal
       - text: "Mmm, porque pergunta? Tem alguma missão específica em mente para isso?"
         char: mathina
-        mood: normal
+        mood: surprised
 
   - type: clearImage
     id: Angela5
@@ -980,7 +980,7 @@ actions:
         mood: normal
       - text: "Que aconteceu?"
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "Não temos a certeza, sabes, entre as nossas aventuras, todos passamos o nosso tempo de maneiras diferentes, alguns vão para a cidade ou para outras terras: ouvi dizer que existem lugares estranhos e engraçados para visitar."
         char: Angela
         mood: normal
@@ -1040,7 +1040,7 @@ actions:
         mood: normal
       - text: "Duas vezes? Mas pensei que tal era inútil, estou enganada?"
         char: mathina
-        mood: normal
+        mood: surprised
       - text: "Sim, mas talvez haja algo que nos esteja a falhar. Provamos que usar o colar duas vezes nada mais é do que usá-lo uma vez."
         char: Angela
         mood: normal
@@ -1106,7 +1106,7 @@ actions:
         mood: normal
       - text: "Boa... podes ter razão! Mas é complicado: como decidimos qual parte do texto é qual?"
         char: Angela
-        mood: excited
+        mood: normal
       - text: "Podemos usar palavras! Talvez as palavras em posições ímpares tenham uma chave e as palavras em posições pares tenham outra chave. Vamos tentar!"
         char: mathina
         mood: excited
@@ -1146,7 +1146,7 @@ actions:
         mood: normal
       - text: "E isso foi muito, muito inteligente: desta forma, é mais difícil tentar todas as combinações possíveis. Quantas serão."
         char: mathina
-        mood: normal
+        mood: talking
       - text: "Sim, mas eu quero mais saber o que está escondido na árvore! Vamos ver?"
         char: Angela
         mood: normal
@@ -1286,10 +1286,10 @@ actions:
     entries:            
       - text: "São lindos! Provavelmente uma sugestão para uma outra forma de cifrar mensagens."
         char: Angela
-        mood: excited
+        mood: happy
       - text: "Acho que isto ser uma grande aventura, assim como a que fizemos hoje."
         char: mathina
-        mood: happy
+        mood: talking
       - text: "Eu gostaria de um biscoito, por favor!"
         char: John
         mood: normal
