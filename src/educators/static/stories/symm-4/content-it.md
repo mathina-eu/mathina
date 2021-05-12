@@ -10,7 +10,7 @@ Nella storia, prima di introdurre questi poliedri, ci soffermiamo su un importan
 
 Nella storia, un esempio di poliedro non convesso si trova per caso, quando Leo cerca di "chiudere" un veicolo di una giostra dei poliedri e [certe delle componenti del veicolo si piegano all'interno]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Possiamo costruire un esempio di poliedro non convesso, ad esempio, partendo da un icosaedro e spostando all'interno di un icosaedro uno dei suoi vertici e le facce ad esso adiacenti ([Clicca qui per manipolare il poliedro](https://www.atractor.pt/temp/apps-tests/poliedros.html?pre=pol_1)).
+Possiamo costruire un esempio di poliedro non convesso, ad esempio, partendo da un icosaedro e spostando al suo interno uno dei suoi vertici e le facce ad esso adiacenti ([Clicca qui per manipolare il poliedro](https://www.atractor.pt/temp/apps-tests/poliedros.html?pre=pol_1)).
 
 | ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
@@ -45,13 +45,13 @@ I due personaggi decidono quindi di abbracciare la sfida di **trovare, in modo c
 
 Quindi, decidono di passare ai triangoli, che devono essere equilateri (secondo le proprietà sopra menzionate).
 
-Seguendo lo stesso approccio di prima, i personaggi considerano il caso di tre triangoli che si uniscono in ogni vertice. Così facendo, scoprono un secondo il [**tetraedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Seguendo lo stesso approccio di prima, i personaggi considerano il caso di tre triangoli che si uniscono in ogni vertice. Così facendo, ne scoprono un secondo: il [**tetraedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Passando a quattro triangoli attorno a un vertice Mathina e Leo costruiscono l'[**ottaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Infine, scegliendo cinque triangoli attorno a ogni vertice, trovano l'[**icosahedron**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Passando a quattro triangoli attorno a un vertice Mathina e Leo costruiscono l'[**ottaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Infine, scegliendo cinque triangoli attorno a ogni vertice, trovano l'[**icosaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Dopo aver concluso che non è possibile costruire solidi platonici con più di cinque triangoli attorno a ogni vertice, i personaggi passano ai[**pentagoni regolari**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Unendone tre attornoad ogni vertice, Leo e Mathina trovano un altro solido platonico, il [**dodecaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Dopo aver concluso che non è possibile costruire solidi platonici con più di cinque triangoli attorno a ogni vertice, i personaggi passano ai [**pentagoni regolari**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Unendone tre attorno ad ogni vertice, Leo e Mathina trovano un altro solido platonico, il [**dodecaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-Leo e Mathina concludono facilmente che non solo è impossibile costruire solidi platonici con più di tre pentagoni attorno ad ogni vertice, ma è anche impossibile costruire solidi platonici [**utilizzando poligoni con più di cinque lati**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Quindi, per esclusione, hanno costruito tutti (e cinque) i solidi platonici [**Platonic Solids**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Leo e Mathina concludono facilmente che non solo è impossibile costruire solidi platonici con più di tre pentagoni attorno ad ogni vertice, ma è anche impossibile costruire solidi platonici [**utilizzando poligoni con più di cinque lati**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Quindi, per esclusione, hanno costruito tutti (e cinque) i [**solidi platonici**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
 | Cubo | Tetraedro | Ottaedro | Icosaedro | Dodecaedro |
 | ------ | ------ | ------ | ------ | ------ |
@@ -67,7 +67,7 @@ Una più semplice **definizione di solido platonico** è data dal tecnico: un so
 
 `*` gli angoli solidi su ciascun vertice sono uguali.
 
-**Nota 1**: Si noti che, seguendo questa nuova definizione, per verificare se un poliedro è platonico, non è necessario confrontare i suoi angoli diedri o solidi su ciascun vertice (nella storia, i personaggi li hanno studiati angoli perché non erano a conoscenza del risultato precedente).
+**Nota 1**: Si noti che, seguendo questa nuova definizione, per verificare se un poliedro è platonico, non è necessario confrontare i suoi angoli diedri o solidi su ciascun vertice (nella storia, i personaggi li hanno studiati perché non erano a conoscenza del risultato precedente).
 
 **Nota 2**: Se rimuoviamo la condizione "ad ogni vertice arriva lo stesso numero di facce", possiamo anche ottenere solidi non platonici, come mostrato nella [**App 4**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
@@ -126,7 +126,7 @@ Esperenze aggiuntive simili a quelle presentate nella storia possono essere svil
   * verificare che i solidi platonici abbiano “angoli diedri uguali” così come “angoli solidi uguali in ogni vertice” può essere fatto fare agli studenti, utilizzando modelli fisici dei solidi platonici e stampi costruiti, ad esempio, con la plastilina.
 
 `*` Poliedri uniformi:
-  * verificando che, in un poliedro uniforme, tutti i vertici siano “dello stesso tipo” può essere proposto agli studenti, utilizzando modelli fisici dei poliedri e stampi.
+  * verificare che, in un poliedro uniforme, tutti i vertici siano “dello stesso tipo” può essere proposto agli studenti, utilizzando modelli fisici dei poliedri e stampi.
 
 &nbsp;
 
@@ -155,7 +155,7 @@ Viene presentato un insieme di otto poliedri. L'utente è invitato a scegliere i
 
 Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invitato a scegliere i 3 corretti. Dopo aver scelto gli sviluppi e aver fatto clic su
 ![conferma](/stories/symm-4/img/confirm.png =40x40)
-, il programma mostra un nuovo set di sei reti. Vengono mostrati due set di questo tipo in totale. Il gioco è risolto quando gli sviluppi corretti sono selezionati.
+, il programma mostra un nuovo set di sei sviluppi. Vengono mostrati due set di questo tipo in totale. Il gioco è risolto quando gli sviluppi corretti sono selezionati.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
