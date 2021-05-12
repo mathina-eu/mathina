@@ -361,7 +361,7 @@
 
         function Finisci() {
             document.getElementById("successMessage").style.display = "block";
-			window.requestAnimationFrame(explode);
+			Yeah();
 
         }
 
@@ -469,7 +469,8 @@ let fireworks = [];
 
     return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
 }
- 
+
+function Yeah() { 
 for (let i = 0; i < max_fireworks; i++) {
   let firework = {
     sparks: []
@@ -493,6 +494,9 @@ for (let i = 0; i < max_fireworks; i++) {
   resetFirework(firework);
 }
 //
+window.requestAnimationFrame(explode);
+
+}
  
 function resetFirework(firework) {
   firework.x = Math.floor(Math.random() * canvas.width);
