@@ -1,14 +1,16 @@
-function Load() {
-	var S1=Math.floor((dimension[0]-1300)/2);
-	var S2=Math.floor((dimension[1]-600)/2);
-	AggiungiSegmento([0+S1,0+S2],[700+S1,0+S2]);
-	AggiungiSegmento([0+S1,200+S2],[700+S1,200+S2]);
-	AggiungiSegmento([0+S1,600+S2],[1300+S1,600+S2]);
-	AggiungiSegmento([0+S1,600+S2],[400+S1,0+S2]);
-	AggiungiSegmento([0+S1,0+S2],[0+S1,600+S2]);
-	AggiungiSegmento([400+S1,0+S2],[1300+S1,600+S2]);
-	AggiungiSegmento([700+S1,0+S2],[700+S1,600+S2]);
-	AggiungiSegmento([267+S1,0+S2],[267+S1,600+S2]);
+function Load(N) {
+	if (N==1) {
+		var S1=Math.floor((dimension[0]-1300)/2);
+		var S2=Math.floor((dimension[1]-600)/2);
+		AggiungiSegmento([0+S1,0+S2],[700+S1,0+S2]);
+		AggiungiSegmento([0+S1,200+S2],[700+S1,200+S2]);
+		AggiungiSegmento([0+S1,600+S2],[1300+S1,600+S2]);
+		AggiungiSegmento([0+S1,600+S2],[400+S1,0+S2]);
+		AggiungiSegmento([0+S1,0+S2],[0+S1,600+S2]);
+		AggiungiSegmento([400+S1,0+S2],[1300+S1,600+S2]);
+		AggiungiSegmento([700+S1,0+S2],[700+S1,600+S2]);
+		AggiungiSegmento([267+S1,0+S2],[267+S1,600+S2]);
+	}
 }
 
 function GeneraSegmento(EstremiFissi) {
