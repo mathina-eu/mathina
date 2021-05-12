@@ -169,6 +169,8 @@ function AggiungiSegmento(A,B) {
 			return 0;
 		}
 	}
+	
+	console.log("AggiungiSegmento("+A+","+B+");");
 
 	//Aggiungo tutte le nuove intersezioni
 	for (var i=0;i<Segmenti.length;i++) {
