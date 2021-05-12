@@ -100,18 +100,40 @@
             }
 
             if (N == 3) {
-                Polizia = [
-                    [100, 100],
-                    [100, 250],
-                    [100, 400]
-                ];
-                PoliziaIntersezioni = [
-                    [-1],
-                    [-1],
-                    [-1]
-                ];
-                GeneraGioco();
-                Trim();
+				LivelloScelto = gup('r', document.location.search);
+
+				if (!isNumeric(LivelloScelto)) {
+					Load(Math.floor(Math.random()*21)+1);
+					Trim();
+				
+				} else {
+					if (LivelloScelto==-1) {
+						Polizia = [
+							[100, 100],
+							[100, 250],
+							[100, 400]
+						];
+						PoliziaIntersezioni = [
+							[-1],
+							[-1],
+							[-1]
+						];
+						GeneraGioco();
+						Trim();					
+					} else {
+					
+						Load(Number(LivelloScelto));
+						Trim();
+					
+					}
+				
+				}
+
+				
+			
+			/*
+                
+				*/
                 //
 
             }
@@ -246,7 +268,6 @@
                 ctxMathina.strokeStyle = "rgba(90,102,108,1)";
                 for (var j = 0; j < PoliziaIntersezioni.length; j++) {
                     if (PoliziaIntersezioni[j] != -1 && Intersezioni[PoliziaIntersezioni[j]][1].indexOf(i) > -1) {
-                        console.log("preso!");
                         ctxMathina.strokeStyle = "rgb(0,200,50)";
                         if (ProssimoSegmento == 1) {
                             SegmentiPresi++;
