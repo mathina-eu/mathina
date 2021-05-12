@@ -1,0 +1,847 @@
+actions:
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+
+  - type: sceneText
+    text: >
+      <h1>Il pappagallo parlante</h1>        
+
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+
+      
+  - type: dialog
+    entries:
+      - text: "Corri, Mathina, corri! O perderai il traghetto per l'Isola dei Bucanieri!"
+        char: mathina
+        mood: happy
+
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 1;"
+  - type: image
+    id: Wave4
+    src: onda4.png
+    style: "width: 35%; bottom: 2.5%; left: 3%;  z-index: 2;"
+
+
+  - type: sceneText
+    text: >
+      <p>Duecento metri ... Biglietto controllato ... Attenzione al molo scivoloso ... Fatto!</p>
+      
+
+ 
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -11
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+ 
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+      
+  - type: sceneText
+    text: >
+      <p>Il traghetto partì con calma mentre Mathina riprendeva fiato su una delle sedie vicino alle finestre. </p>
+      
+
+      
+  - type: dialog
+    entries:
+      - text: "Mio fratello e i suoi amici stanno visitando una fiera particolare vicino a casa nostra, quindi ho tutto il tempo per esplorare l'isola. Sono così curiosa..."
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p>"La prima volta sull’Isola dei Bucanieri?" chiese una signora seduta accanto a Mathina.</p>
+  - type: dialog
+    entries:
+      - text: "Quasi! Ci sono già stata con mio fratello, ma non sono riuscita a scoprire tutti i suoi segreti. E te?"
+        char: mathina
+        mood: happy
+
+  - type: sceneText
+    text: >
+      <p>"Passo spesso da quelle parti, ed è sempre divertente andare lì e cercare qualche mistero. Sei fortunata: oggi è il giorno di mercato sull'isola. Merita sicuramente una visita.”</p>
+
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 3
+      x: 600
+      y: -100
+      ease: power1.inOut
+      width: 12%
+
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 3
+      x: 620
+      y: -110
+      ease: power1.inOut
+      width: 12%
+      
+
+  - type: sceneText
+    text: >
+      <p>"Molte grazie! Il mio nome è Mathina, e tu? " Chiese Mathina. In quel momento però il traghetto stava attraccando e molte persone iniziarono ad uscire.  </p>
+ 
+ 
+  - type: sceneText
+    text: >
+      <p>Mathina riuscì a sentire alcune parole prima che la ragazza venisse allontanata dal mucchio di persone “Mi chiamo… oh, non è importante! Sono sicura che ci rivedremo."
+      </p>
+
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+
+  - type: clearImage
+    id: Wave1
+  - type: clearImage
+    id: Wave2
+  - type: clearImage
+    id: Wave3
+  - type: clearImage
+    id: Wave4
+  - type: clearImage
+    id: Boat
+  - type: clearImage
+    id: Cloud1
+  - type: clearImage
+    id: Cloud2
+  - type: clearImage
+    id: Cloud3
+  - type: clearImage
+    id: Cloud4
+
+  - type: image
+    id: Fisherman1
+    src: barca3.png
+    style: "width: 13%; top: 12%; left: 0%;  z-index: 0;"
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 1;"
+  - type: image
+    id: Fisherman3
+    src: barca4.png
+    style: "width: 13%; top: 14%; right: 0%;  z-index: 0;"
+
+
+  - type: dialog
+    entries:
+      - text: "Bene, eccomi di nuovo sull’Isola dei Bucanieri"
+        char: mathina
+        mood: happy
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 6
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: -3
+      yoyo: true
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 5
+      xPercent: 5
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -2
+      yoyo: true
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 7
+      xPercent: -10
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 2
+      yoyo: true
+
+
+  - type: sceneText
+    text: >
+      <p>Il ricordo della signora sul traghetto svanì rapidamente, sostituito dalla fresca brezza dell'oceano e dai suoni vivaci delle campane delle barche dei pescatori. Che magnifica accoglienza!
+      </p>
+
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 70%; top: 40%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: sceneText
+    text: >
+      <p>Una strada sterrata collegava il porticciolo dell'isola con la città principale, ed oggi era piena di bancarelle.
+      </br> </br> 
+      “Mappa del tesoro! Ecco la mappa del tesoro nascosto dell'Isola dei Bucanieri "</br> 
+      “Le migliori mele dell’Isola dei Bucanieri! Assaggiatele! "</br> 
+      “Chi è il miglior cantante delle canzoni dei pirati? Sfidami! " </br> 
+      </p>
+
+  - type: sceneText
+    text: >
+      <p>Tante voci e tanti oggetti strani e misteriosi! Mathina si aggirava molto felice provando, assaggiando e cantando, mentre la sua attenzione veniva catturata da un forte stridio. 
+      </br> </br>  Che cos'è? Un altro stridio, questa volta più forte!
+      </p>
+  - type: clearImage
+    id: Mathina0
+ 
+  - type: image
+    id: Mathina00
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 5%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+ 
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 60%; left: 55%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 67%; left: 59%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 53%; left: 58%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 3;"
+   
+ 
+
+  
+  - type: sceneText
+    text: >
+      <p>Mathina si spostò finché non si trovò di fronte a un pappagallo dall'aspetto molto intelligente. Aveva delle bellissime piume rosse, gialle e blu, e quando si rese conto che Mathina lo stava guardando, rimase in silenzio, muovendo la testa, incuriosito.
+      </p>
+ 
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+
+  - type: dialog
+    entries:
+      - text: "Ciao!! Mi chiamo Mathina, posso accarezzarti?"
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "T-J !!"
+        char: parrot
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "...cosa hai detto?"
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    text: >
+      <p>Mathina era sconcertata, non capiva una parola di quello che diceva il pappagallo, ma stava chiaramente tentando di parlare con lei.
+      </p>
+      
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+      
+  - type: sceneText
+    text: >
+      <p>Una signora si avvicinò alla bancarella e salutò Mathina.
+      </p>
+      
+      
+  - type: dialog
+    entries:
+      - text: "Non preoccuparti: è sempre così. Sono Angela, piacere di conoscerti."
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Ciao! È il tuo pappagallo?"
+        char: mathina
+        mood: happy
+  - type: clearImage
+    id: Mathina00
+ 
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 45%; bottom: 5%; right: 5%;  z-index: 1;"
+        
+  - type: dialog
+    entries:
+      - text: "Non esattamente… Vive con me, ma la sua storia è molto interessante: una volta faceva parte della ciurma di una nave pirata, e ha preso parte a tante tante avventure. Da alcuni anni la ciurma ha smesso di navigare, e così ognuno ha preso la sua strada. Alcuni di loro sono probabilmente ancora presenti sull'isola."
+        char: angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Wow! Sembra che siate diventati amici!"
+        char: angela
+        mood: happy
+  - type: sceneText
+    text: >
+      <p>Il pappagallo stava giocando con Mathina, cercando di arruffarle i capelli con il becco.
+      </p>
+
+
+  - type: dialog
+    entries:
+      - text: "Vuoi un biscotto?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> Il pappagallo sembrava molto felice e ripeteva “T-J!! T-J!!”. Mathina era molto incuriosita... </p>
+  - type: dialog
+    entries:
+      - text: "sembra che dica sempre la stessa parola! E se mi dicesse solo “sì”?"
+        char: mathina
+        mood: thinking
+        
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+        
+        
+  - type: dialog
+    entries:
+      - text: "sembra proprio di sì: prima gli chiedevi di accarezzarlo, ora voleva un biscotto. Proviamo con qualcosa di diverso? Chiedigli qualcosa che abbia un “no” come risposta."
+        char: angela
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>Mathina ci pensò su per un po'. Quale domanda poteva fare per essere quasi sicura che il pappagallo avrebbe risposto di no?</p>
+  - type: dialog
+    entries:
+      - text: "Forse terrò questo biscotto per me, e lo mangerò più tardi. Va bene?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> "Il pappagallo questa volta sembrava infastidito e rispose “O-P! O-P!”. </br></br> Mathina sorrise e diede il biscotto al pappagallo.</p>
+       
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"             
+       
+       
+  - type: clearImage
+    id: Mathina1
+  
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+       
+        
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+  - type: animation
+    target: John1
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+       
+        
+  - type: dialog
+    entries:
+      - text: "Ora lo sappiamo, “T-J” significa “sì” e “O-P” significa “no”."
+        char: mathina
+        mood: happy
+               
+        
+  - type: sceneText
+    text: >
+      <p> Che strana lingua... Mathina sembrava confusa.</p>
+  - type: dialog
+    entries:
+      - text: "Sono confusa... “O-P” ha due lettere, proprio come “no”, ma capisco perché il pappagallo parli così! Non ne ho idea. Forse è solo un codice strampalato."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Forse sta solo cambiando le lettere! Pensa all'alfabeto K, M, N, O, P, ... "
+        char: angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Penso di avere capito! Sta sostituendo ogni lettera con quella immediatamente successiva nell'alfabeto. Quindi NO diventa OP, poiché O è immediatamente dopo N e P è immediatamente dopo O."
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> Angela sembrava felice, e anche il pappagallo lanciò uno strillo di gioia.</p>
+  - type: dialog
+    entries:
+      - text: "Molto brava Mathina! Questo è uno dei modi standard con cui i pirati comunicano in segreto ."
+        char: angela
+        mood: happy
+        
+        
+
+        
+  - type: sceneText
+    text: >
+      <p> Mathina era sbalordita e anche abbastanza felice dal momento che era in grado di capire almeno una parte di questo codice. </p>
+  - type: dialog
+    entries:
+      - text: "Come fai a saperlo? E... come riesci a tradurre così velocemente?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Non si sa mai chi su quest'isola è un pirata o no. Ti rivelerò un segreto: facevo parte della stessa ciurma di John, il pappagallo. John è molto intelligente ed è in grado di parlare abbastanza fluentemente. Ma a volte trova divertente ripetere alcune parole in codice, come  “sì” e “no”."
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Abbiamo un trucco per comunicare: una collana che può essere utilizzata per crittografare e decrittare parole e frasi."
+        char: angela
+        mood: normal
+  - type: image
+    id: CaesarJewel
+    src: disco_ba.png
+    style: "height: 50%; bottom: 5%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p> Angela diede a Mathina una piccola collana. </p>
+       
+  - type: sceneText
+    text: >
+      <p> Era fatta di ottone. Una catena sottile con un ciondolo molto strano: una sorta di due cerchi uno dentro l'altro, con incise le lettere dell'alfabeto.</p>
+  - type: dialog
+    entries:
+      - text: "È molto bella... come funziona? - disse Mathina - Vedo che le lettere appaiono due volte: una nel cerchio interno e una nel cerchio esterno, ma sono spostate. Perché?"
+        char: mathina
+        mood: excited
+      - text: "“Il cerchio interno è il tuo punto di partenza. Se vuoi crittografare la lettera A, ti basta cercare la A nel cerchio interno, e poi guardare la lettera che corrisponde alla A nel cerchio esterno. "
+        char: angela
+        mood: normal
+      - text: "In questo caso trovi B, quindi la lettera A viene tradotta nella lettera B. Se vuoi decifrare..."
+        char: angela
+        mood: normal        
+      - text: "... lo faccio solo all'indietro, giusto? Cerco la lettera che voglio tradurre nel cerchio esterno, quindi trovo la lettera corrispondente in quello interno."
+        char: mathina
+        mood: happy
+      - text: " Come se vedessi che la lettera J va alla lettera I, e se continuo a cercare T va in S. Quindi... TJ è SI!"
+        char: mathina
+        mood: happy
+      - text: "Bravissima - esclamò Angela. Vuoi provare a tradurre qualche altra frase?"
+        char: angela
+        mood: happy
+      - text: "Sì grazie! Proviamo!"
+        char: mathina
+        mood: happy
+      - text: "Ricorda, spostati dal cerchio esterno a quello interno per decifrare."
+        char: angela
+        mood: normal
+
+  - type: game
+    text: "Ricorda: per decifrare devi partire dal cerchio esterno."
+    toolbarText: "Seleziona la parola corretta."
+    cta: "Provaci tu!"
+    tag: app1
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=2
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina passò gran parte della giornata giocando insieme ad Angela e John. "E' quasi ora di riprendere il traghetto per tornare a casa...", pensò Mathina mentre restituiva la collana ad Angela.</p>
+  - type: dialog
+    entries:
+      - text: "Angela, è stata una giornata meravigliosa, spero di tornare presto a trovare te e John."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Certo che lo farai! Oh, e non restituirmi la collana. Tienilo come ricordo della giornata passata insieme a noi!"
+        char: angela
+        mood: happy   
+        
+  - type: clearImage
+    id: CaesarJewel
+        
+  - type: sceneText
+    text: >
+      <p> Mathina era molto felice! Si mise il gioiello al collo e, dopo aver dato a John un altro biscotto, tornò al molo, per prendere il traghetto. </p> 
+
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: Angela1
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+
+
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+               
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Boat
+    src: barca_flip.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
+  
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+  - type: sceneText
+    text: >
+      <p> Era molto eccitata, e quasi non si accorse che la stessa ragazza del viaggio di andata era seduta proprio di fronte a lei.</p> 
+ 
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: 2
+      repeat: -1
+      yoyo: true
+
+  - type: sceneText
+    text: >
+      <p> Com’è andata oggi? Ti sei divertita sull'Isola dei Bucanieri? Mathina quasi saltò sulla sedia. </p>
+  - type: dialog
+    entries:
+      - text: "Ciao!! Quasi non ti ho notato. È stato un giorno divertentissimo!"
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> Mathina iniziò a spiegare l'avventura con il pappagallo e con Angela, mentre l'altra persona ascoltava, lei stessa persa nei ricordi. </p>
+  - type: dialog
+    entries:
+      - text: "... E finalmente ho provato a tradurre alcune frasi, ma ho quasi perso l'ultimo traghetto! Ma eccomi qui ... e ... com'è andata la tua giornata ... uh ... non ricordo il tuo nome, scusa!"
+        char: mathina
+        mood: normal
+  - type: sceneText
+    text: >
+      <p> La signora sorrise. "Anche io ho passato una giornata avventurosa! Anzi, ti confido un segreto: sono stata sull’isola a nascondere un piccolo tesoro! Chissà chi lo troverà!" </p>
+  - type: dialog
+    entries:
+      - text: "Ora sono curiosa, dove l’hai nascosto?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> "Forse da qualche parte su un albero, ma non voglio rivelarti troppo. Piuttosto - disse guardando il nuovo ciondolo di Mathina - sei pronta per un ultimo enigma, prima che il traghetto arrivi al molo?" </p>
+  - type: dialog
+    entries:
+      - text: "Certo che lo sono! Dimmi!"
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> "Oh, non è qualcosa da dire... Eccolo qui - e porse a Mathina un vecchio pezzo di carta - C'è un indovinello cifrato in questo pezzo di carta, e mi sembra che tu abbia tutti gli strumenti di cui hai bisogno per decifrarlo... Buona fortuna!" </p>
+  - type: sceneText
+    text: >
+      <p> Mathina guardò il pezzo di carta: poche parole - ovviamente incomprensibili - che somigliavano molto a quelle che aveva imparato oggi da Angela e John. La aiuterai a tradurre il messaggio segreto? </p>
+
+  - type: game
+    text: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
+    toolbarText: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
+    cta: "Provaci tu!"
+    tag: app2
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=2
+    
+  - type: sceneText
+    text: >
+      <h1>Il pappagallo parlante - FINE</h1>        
+
+    
+      
+      
+      
+      
+      

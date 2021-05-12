@@ -30,10 +30,10 @@
         .PartContainer {
             position: absolute;
             top: 50%;
-            width: 95%;
+            width: 94%;
+			left:3%;
             -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
-            padding: 15px;
             text-align: center;
         }
 
@@ -140,12 +140,11 @@
         Lingua = 1;
 
 
-        Traduzioni = [
-            [
-                ["Trad1"], "Sum these numbers with the aid of this strange clock!",
-                "Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!", "Some esses n&uacute;meros com a ajuda deste estranho rel&oacute;gio!", "Summiere diese Zahlen mit Hilfe dieser seltsamen Uhr!"
-            ]
-        ];
+        Traduzioni=[
+[["Trad1"],"Sum these numbers with the aid of this strange clock!",
+"Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!","Soma esses n&uacute;meros com a ajuda deste estranho rel&oacute;gio!","Addiere diese Zahlen mit Hilfe dieser seltsamen Uhr!"]
+];
+
 
         function gup(name, url) {
             if (!url) url = location.href;
@@ -190,7 +189,7 @@
 
             Resize();
 
-            Reset();
+            
         }
 
 
@@ -213,11 +212,12 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
+			Reset();
         }
 
         function Reset() {
 
-            RaggioClock = dimension[1] * (4 / 5) / 2;
+            RaggioClock = Math.min(dimension[0] * (2 / 5) / 2,dimension[1] * (4 / 5) / 2);
             LungLancetta = RaggioClock * 3 / 4;
 
 
@@ -309,7 +309,7 @@
 
         function Up(ev) {
             ev.preventDefault();
-            if (InMovimento == 1) {
+            if (typeof(InMovimento) !== 'undefined' && InMovimento == 1) {
                 AngPosizione1 = AngPosizione1 + AngMouseFinale - AngMouseIniziale;
                 AngPosizione1 = Math.round(NumeroOre * AngPosizione1 / (2 * Math.PI)) * (2 * Math.PI / NumeroOre);
                 InMovimento = 0;

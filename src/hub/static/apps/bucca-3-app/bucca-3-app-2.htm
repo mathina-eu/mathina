@@ -14,14 +14,14 @@
         #Partenza {
             position: absolute;
             margin: auto;
-            top: 15%;
+            top: 10%;
             left: 2%;
             width: 25%;
-            height: 70%;
+            height: 80%;
             z-index: 2;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,4vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -30,19 +30,19 @@
         .PartContainer {
             position: absolute;
             top: 50%;
-            width: 95%;
+            width: 94%;
+			left:3%;
             -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
-            padding: 15px;
             text-align: center;
         }
 
         #Arrivo {
             position: absolute;
-            top: 15%;
+            top: 10%;
             right: 2%;
             width: 25%;
-            height: 70%;
+            height: 80%;
             z-index: 2;
             border: solid;
             border-color: #684213;
@@ -129,7 +129,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 32px;
+            font-size:min(1.6vw,3vh);
             width: 100%;
             word-break: break-all;
         }
@@ -153,17 +153,16 @@
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         ];
 
-        ParolaOriginale = [
-            [], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
-            "dnalsi eht no kcod eht raen bup eht ta gninrom worromot em teeM".toUpperCase(),
-            "alosi'llus olom la oniciv rab la anittam inamod icomairtnocnI".toUpperCase(),
+        ParolaOriginale=[
+[], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+"dnalsi eht no kcod eht raen bup eht ta gninrom worromot em teeM".toUpperCase(),
+"alosi llus olom la oniciv rab la anittam inamod icomairtnocnI".toUpperCase(),
+"AHNAM ED AHLI AD SIAC OA OTNUJ RAB OA OGIMOC RET MEV".toUpperCase()
+];
+Traduzioni=[
+[["Trad1"],"Try to decipher this sentence without knowing the key:","Prova a decifrare questa frase senza conoscere la chiave:","Tenta decifrar esta frase sem saber a chave:","Versuche, diesen Satz zu entschl&uuml;sseln, ohne die genaue Regel zu kennen:"]
+];
 
-        ];
-        Traduzioni = [
-            [
-                ["Trad1"], "Try to decipher this sentence without knowing the key:", "Prova a decifrare questa frase senza conoscere la chiave:", "Tente decifrar esta frase sem saber a chave:", "Versuchen Sie, diesen Satz zu entschl&uuml;sseln, ohne den Schl&uuml;ssel zu kennen:"
-            ]
-        ];
 
         function gup(name, url) {
             if (!url) url = location.href;
@@ -245,7 +244,7 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
-            Scale = necklace_dimension[1] / dimension[1];
+            Scale = Math.max(2* necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
             CentroCesare = [dimension[0] / 2, dimension[1] / 2];
             Draw(CentroCesare[0], CentroCesare[1], AngPosizione1, AngPosizione2, Scale);
         }
