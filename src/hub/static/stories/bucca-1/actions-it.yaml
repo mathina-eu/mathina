@@ -389,9 +389,9 @@ actions:
         mood: happy
   - type: game
     text: "Aiuta i bambini a creare i messaggi!"
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app1
-    url: /apps/bucca-1-app/bucca-1-app-1.htm?
+    url: /apps/bucca-1-app/bucca-1-app-1.htm?l=2
   - type: dialog
     entries:
       - text: "Ma cosa succede se qualcuno scopre i messaggi e sceglie di controllare tutti i quattro posti comunque?"
@@ -428,9 +428,9 @@ actions:
         mood: happy      
   - type: game
     text: "Aiuta i bambini, associando a ciascun messaggio un'immagine"
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app2
-    url: /apps/bucca-1-app/bucca-1-app-2.htm
+    url: /apps/bucca-1-app/bucca-1-app-2.htm?l=2
   - type: clearImage
     id: leo1
   - type: clearImage
@@ -708,9 +708,9 @@ actions:
       <p>Prima di andarsene quindi lasciarono un messaggio per comunicare agli amici il luogo del loro prossimo incontro, assieme ad altri messaggi falsi.</p>
   - type: game
     text: "Aiuta Rasha a preparare i messaggi!"
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app3
-    url: /apps/bucca-1-app/bucca-1-app-3.htm
+    url: /apps/bucca-1-app/bucca-1-app-3.htm?l=2
   - type: sceneText
     text: >
       <p>Avevano certamente trovato un modo interessante per comunicare ma i misteriosi simboli che aveva scoperto la mamma di Rasha e Lucy erano anch’essi molto interessanti. Essi avrebbero sicuramente portato Mathina e i suoi piccoli amici verso nuove eccitanti avventure!</p>
