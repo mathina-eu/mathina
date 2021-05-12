@@ -18,9 +18,11 @@ actions:
     parallax: back2
   - type: dialog
     entries:
-      - text: What’s that...? - Mathina asked, but Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
+      - text: What’s that...? 
         char: Mathina
-        mood: happy
+        mood: surprised
+  - type: sceneText
+    text: Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
   - type: animation
     target: leo-pointl
     vars:
@@ -32,9 +34,9 @@ actions:
     text: Leo rushed to the entrance of the building.
   - type: dialog
     entries:
-      - text: Lo-gi-ci-ty Sta-di-um - Leo syllabified the label.
+      - text: Lo-gi-ci-ty Sta-di-um.
         char: Leo
-        mood: happy
+        mood: surprised
   - type: clearImage
     id: leo-pointl
   - type: image
@@ -53,9 +55,9 @@ actions:
     text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside.
   - type: dialog
     entries:
-      - text: Sir, you can't do that to us, - the sound came from the hallway. - Simply give us our prize so that we can go home!
-        char: Trainer
-        mood: happy
+      - text: Sir, you can't do that to us. Simply give us our prize so that we can go home!
+        char: boys
+        mood: normal
   - type: image
     src: trainer.png
     id: trainer
@@ -67,41 +69,41 @@ actions:
     src: boys5.png 
     id: boys5
     style: "width: 60%; top: 45%; right: 15%; z-index: 3"
-    parallax: back2
+    parallax: front1
   - type: image
     src: georget.png
     id: georget
     style: "width: 10%; top: 30%; right: 30%; z-index: 2;"
-    parallax: back2
+    parallax: front1
   - type: sceneText
     text: Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
   - type: dialog
     entries:
-      - text: You can't simply leave like this! - they begged.
-        char: Boys
-        mood: happy
+      - text: You can't simply leave like this! 
+        char: boys
+        mood: normal
   - type: dialog
     entries:
       - text: Alright, I’ll give you another chance. Now you can guess!
-        char: Trainer
-        mood: happy
+        char: trainer
+        mood: normal
   - type: sceneText
     text: The guys looked at each other, tried to count on their fingers, uttered some numbers.
   - type: dialog
     entries:
-      - text: We can't figure this out! - two guys complained.
+      - text: We can't figure this out! 
         char: boys
-        mood: happy
+        mood: normal
   - type: dialog
     entries:
-      - text: What is it that you can't work out? - Mathina asked enthusiastically. 
+      - text: What is it that you can't work out? 
         char: Mathina
-        mood: happy
+        mood: talking
   - type: dialog
     entries:
-      - text: All right, if this little girl finds the solution for you, you'll get the gold medal! - the trainer said. 
-        char: Trainer
-        mood: happy
+      - text: All right, if this little girl finds the solution for you, you'll get the gold medal! 
+        char: trainer
+        mood: normal
   - type: image
     src: gold-medal.png
     id: gold
@@ -110,26 +112,26 @@ actions:
     text: Leo saw how annoyed Mathina was for being called “this little girl”.
   - type: dialog
     entries:
-      - text: The trainer explained the situation to Mathina - We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
-        char: Trainer
-        mood: happy
+      - text: We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
+        char: trainer
+        mood: normal
   - type: dialog
     entries:
       - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list. The first person on the list receives the sum of the digits of the number of gold medals received. 
         char: Trainer
-        mood: happy
+        mood: normal
       - text: For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
         char: Trainer
-        mood: happy
+        mood: normal
       - text: Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
         char: Trainer
-        mood: happy
-      - text: Where is George on the list? - Mathina asked.
+        mood: normal
+      - text: Where is George on the list?
         char: Mathina
-        mood: happy
-      - text: Little lady, we won't tell you that. Try to figure it out! - the trainer replied.
+        mood: talking
+      - text: Little lady, we won't tell you that. Try to figure it out!
         char: Trainer
-        mood: happy
+        mood: normal
   - type: clearImage
     id: mathina-think-t
   - type: image
@@ -141,27 +143,32 @@ actions:
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
     entries:
-      - text: So it has to be split between 7 people, right? - the boys nodded. - Between the 6 team members and the trainer. Mathina started scribbling and cried out after a few minutes - Yeah!
+      - text: So it has to be split between 7 people, right? Between the 6 team members and the trainer. 
         char: Mathina
+        exposition: Mathina started scribbling and cried "Yeah!" after a few minutes.
         mood: happy
-      - text: So how many do we get? How many? - The athletes inquired.
+      - text: So how many do we get? How many? 
         char: Boys
-        mood: happy
+        mood: normal
   - type: game
     text: Can you find out how many? 
     toolbarText: 
     cta: Generate a table by filling in the initial amount of gold medals received.
-    url: /app/logi-4-app/logi-4-app.htm?v=1
+    url: /apps/logi-4-app/logi-4-app.htm?v=1
   - type: dialog
     entries:
-      - text: I'm not going to simply tell you that, - Mathina grinned. She whispered something in the trainer’s ear. The trainer nodded contentedly. - I'd rather help you figure it out for yourselves, - Mathina said. 
+      - text: I'm not going to simply tell you that. 
         char: Mathina
+        exposition: Mathina whispered something in the trainer’s ear. The trainer nodded contentedly.       
         mood: happy
   - type: dialog
     entries:
-      - text: But I know, I know how to solve this! - Leo jumped up. - Let me tell you! Please!
+      - text: I'd rather help you figure it out for yourselves.
+        char: Mathina
+        mood: talking
+      - text: But I know, I know how to solve this! Let me tell you! Please!
         char: Leo
-        mood: happy
+        mood: arguing
   - type: animation
     target: leo-think
     vars:
@@ -177,7 +184,7 @@ actions:
     entries:
       - text: Well, I think we could go through all the cases, like what if all get 1 or 2 or 3 medals, except for George, and so on! And we’ll come across the right number. It won’t be a high number, I am sure…
         char: leo
-        mood: happy
+        mood: thinking
   - type: sceneText
     text: Leo began to count, thinking out loud.
   - type: dialog
@@ -187,7 +194,7 @@ actions:
         mood: thinking
       - text: If each of them takes 2, then it doesn’t work either, since in case the sum of the digits is 2, then the number less or more by two won’t have 2 as the sum of the digits - Leo slowed down and wiped the sweat off from his forehead.
         char: leo
-        mood: thinking
+        mood: arguing
       - text: What if we take 3? The sum of the digits is 3 with both 12, 21 and 30, but not with the following player. There is a problem with number 4, too. Is there a solution...?
         char: leo
         mood: thinking
@@ -197,110 +204,114 @@ actions:
     entries:
       - text: What if we made a try with my method as well?
         char: Mathina
-        mood: happy
-      - text: For sure! - answered the boys relieved. Mathina couldn’t suppress a triumphant smile as she turned to them.
+        mood: talking
+      - text: For sure!
         char: Boys
         mood: happy
+  - type: sceneText
+    text: Mathina couldn’t suppress a triumphant smile as she turned to them.
   - type: dialog
     entries:
       - text: Draw this table and make a try with, say, 116 medals.
         char: Mathina
-        mood: happy
+        mood: talking
   - type: game
     text: Do you notice any regularity with 116?
     toolbarText: 
     cta: Try it yourself!
-    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?n=116&s=2&f=7
+    url: /apps/logi-4-app/logi-4-app.htm?v=2
   - type: dialog
     entries:
-      - text: 116 isn’t good because we’ll run out of it soon, - George said, turning to Mathina.
+      - text: 116 isn’t good because we’ll run out of it soon.
         char: George
-        mood: happy
+        mood: normal
       - text: Yes, that's true. But that’s just an experiment for now. Maybe we can learn something from it.
         char: Mathina
-        mood: happy
-      - text: I may have done something wrong, but I almost always arrive at 9 medals, - George added.
+        mood: talking
+      - text: I may have done something wrong, but I almost always arrive at 9 medals.
         char: George
-        mood: happy
+        mood: normal
       - text: Yes, you are right! And we can also see an 18…
         char: Mathina
-        mood: happy
-      - text: But that's also divisible by 9, - George interrupted quickly.
+        mood: talking
+      - text: But that's also divisible by 9!
         char: George
-        mood: happy
-      - text: Yes! You can, if you want! - Mathina smiled. - And why do you think it is like this?
+        mood: normal
+      - text: Yes! You can, if you want! And why do you think it is like this?
         char: Mathina
         mood: happy
   - type: game
     text: Why is it like that, that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
     toolbarText: 
     cta: Experiment with a few numbers!
-    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
+    url: /apps/logi-4-app/logi-4-app.htm?v=3
   - type: dialog
     entries:
-      - text: I know! - George shouted. - Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
+      - text: I know! Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
         char: George
-        mood: happy
+        mood: normal
       - text: What happens if we subtract one from the other? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). This way it’s divisible by 9. And this is true for any number of digits, because the last digit is always dropped, and the rest always gets 9, 99, 999,…. 99999999 as a multiplier, because we subtract one from a power of ten.  
         char: George
-        mood: happy
+        mood: normal
   - type: sceneText
     text: The trainer raised his head and listened to the argument with bright eyes. He had always talked down to George, but now he saw that he could figure out quite a few good things with a little guidance.
   - type: dialog
     entries:
-      - text: Good, but we still don't know how much we'll get! - the others grumbled.
+      - text: Good, but we still don't know how much we'll get! 
         char: Boys
-        mood: happy
-      - text: Not really, but we're making progress - Mathina said.
+        mood: normal
+      - text: Not really, but we're making progress.
         char: Mathina
         mood: happy
-      - text: Listen - George took over again, - we saw in the example that we would get only 9 except for the first one in the line. So I think the first one will get more and the others will all get 2 times 9!
+      - text: Listen, we saw in the example that we would get only 9 except for the first one in the line. So I think the first one will get more and the others will all get 2 times 9!
         char: George
-        mood: happy
+        mood: normal
   - type: sceneText
     text: Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
   - type: dialog
     entries:
-      - text: Good, - George went on. - Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
+      - text: Good. Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
         char: George
-        mood: happy
+        mood: normal
       - text: However, the first in line will get more than 9 in the first round, so you need a number greater than 117, a number which has a larger sum of digits than 9. Let's say 127.
         char: George
-        mood: happy
+        mood: normal
   - type: game
     text: Do you think George is right, does it work with 127?
     toolbarText: 
     cta: Experiment with the number 127!
-    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?n=127&s=2&f=7
+    url: /apps/logi-4-app/logi-4-app.htm?v=4
   - type: dialog
     entries:
       - text: George, that doesn't work! On the one hand, we’ll run out of gold medals sooner, and on the other hand, the first and the fourth get a different amount, and the seventh as well, because he gets zero in the last round! - the others told George.
         char: Boys
-        mood: happy
-      - text: I think there is a mistake at the fourth, - Leo interrupted.
+        mood: normal
+      - text: I think there is a mistake at the fourth.
         char: Leo
-        mood: happy
-      - text: Shh, I didn't ask you, - Mathina shook her head, but then she smiled proudly at Leo.
+        mood: thinking
+      - text: Shh, I didn't ask you.
         char: Mathina
+        exposition: Mathina shook her head, but then she smiled proudly at Leo.
         mood: happy
-      - text: The boy is right, - George said. - I forgot that player four gets  9+9. - Then I’ll modify it like this - the first one must also get 9 in both rounds!
+      - text: The boy is right. I forgot that player four gets 9+9. Then I’ll modify it like this - the first one must also get 9 in both rounds!
         char: George
-        mood: happy
+        mood: normal
   - type: game
     text: Can you figure out how many medals are actually needed?
     toolbarText: 
     cta: Experiment with numbers!
-    url: http://www.rimosco.it/ew/LC_S4_gold/index.htm?c=1
+    url: /apps/logi-4-app/logi-4-app.htm?v=5
   - type: dialog
     entries:
       - text: So I thought 6 people would get 9 in both rounds, and one person would get 18 in the first, then 9 in the second round. This means, 7x18 + 9 = 135. And so the fifth person gets more than the others!
         char: George
-        mood: happy
-      - text: But George, we knew you were the fifth on the list, - the others laughed.
+        mood: normal
+      - text: But George, we knew you were the fifth on the list!
         char: Boys
-        mood: happy
-      - text: Oh really! - George shook his head. - But you didn't say so either! - They all laughed. - But it's okay, this way it feels even better to know the solution!
+        mood: normal
+      - text: Oh really! But you didn't say so either! But it's okay, this way it feels even better to know the solution!
         char: George
+        exposition: They all laughed.
         mood: happy
   - type: clearImage
     id: gold
@@ -326,7 +337,7 @@ actions:
     entries:
       - text: You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!
         char: Trainer
-        mood: happy
+        mood: normal
   - type: sceneText
     text: Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
   - type: clearImage
