@@ -3,16 +3,16 @@
 The main goal of this story is to explore, in an amusing way, notions related to **reflection symmetry**.
 
 In a first phase, the idea is to acquaint children with the concept of
-[“symmetry axis”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[“symmetry axis”](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg1)
 : the process used in the story to check if an image has symmetry axis is folding the image in half (horizontally or vertically) and see if the two parts overlap. And there are three types of images explored throughout the story: some images with a vertical symmetry axis, some with an horizontal one, and some without any symmetry axes.
 
 Later on, children can learn how to construct, by themselves, images with symmetry axes: not only images made up of 
-[polygons and circles]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[polygons and circles](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2)
 , but also images formed by 
-[segments]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[segments](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg3)
 
 In the app “Building Toys (I)”, notions related to the recognition of some geometric figures -- triangles, squares and circles -- are also 
-[explored]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[explored](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg4)
 , namely the distinction between congruent triangles, but with different orientations:
 
 ![Congruent Triangle](/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
@@ -46,36 +46,36 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Folding Images (I, II and III)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 1 - Folding Images (I, II and III)](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg5)
 
 An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she should fold the image in half (horizontally and vertically) and see if the two parts overlap.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](N9Z31NrSNic?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
-## [Game 2 - Finding the Good Toys]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 2 - Finding the Good Toys](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg6)
 
 A set of 16 drawings of animals is shown. The user is invited to choose all the images which are symmetric and place them in a box.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](9TVHgkmHE4w?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
-## [Game 3 - Building Toys (I)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 3 - Building Toys (I)](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg7)
 
 The following items are displayed on the screen: a vertical red line, a gray squared background and a non-symmetric image built with coloured shapes.The user is invited to drag some coloured shapes at his/her disposal and put them in the gray squares in order to create a symmetric image with respect to the red line.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](MjvHyj8jEIg?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
-## [Game 4 - Building Toys (II)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 4 - Building Toys (II)](https://mathina-hub.netlify.app/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg8)
 
 The following items are displayed on the screen: a red line, a geoboard and an image, made up of black segments, drawn in one of the sides of the red line. The user is invited to draw the missing segments in order to create a symmetric image with respect to the red line.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](5R5N0SJ59lQ?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
