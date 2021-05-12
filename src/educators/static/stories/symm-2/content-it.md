@@ -16,21 +16,21 @@ Una **simmetria di una figura** è un'isometria che mappa la figura esattamente 
 Si noti che identificare una simmetria assiale equivale a trovare un asse di simmetria della figura.
 
 Nella storia, l'app
-["Labirinto specchiato"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
+["Labirinto specchiato"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 è disponibile (collegamento al repository IO3).
-Utilizzando questo strumento, l'utente viene a conoscenza di: 1) il fatto che il segmento che unisce un punto *A* e la sua immagine riflessa *A'* è perpendicolare alla retta di riflessione *r* e 2) entrambi i punti (*A* e *A'*) sono alla stessa distanza da * r *.
+Utilizzando questo strumento, l'utente viene a conoscenza di: 1) il fatto che il segmento che unisce un punto *A* e la sua immagine riflessa *A'* è perpendicolare alla retta di riflessione *r* e 2) entrambi i punti (*A* e *A'*) sono alla stessa distanza da *r*.
 
-! [Riflessione] (/ stories / symm-2 / img / _align-center_ / AA1.jpg = 360x169)
+![Riflessione](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
 
 ## Simmetria di rotazione
 
 Una simmetria di rotazione di un'immagine è una rotazione che porta l'immagine esattamente su se stessa.
 
-! [Guarda il film qui] (/ stories / symm-2 / video / _align-center_ / ros_C_4.mp4 = 640x360)
+![Guarda il film qui](/stories/symm-2/video/_align-center_/ros_C_4.mp4 =640x360 )
 
 Nella storia, l'app
-["Il labirinto del mezzo giro"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
-è disponibile (collegamento al repository IO3). Esplorando questa app, l'utente acquisisce maggiore familiarità con un tipo specifico di rotazione, quello di * 180 * gradi. In particolare, può osservare che il centro di rotazione * O * è il punto medio di * [AA ’] *.
+["Il labirinto del mezzo giro"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+è disponibile (collegamento al repository IO3). Esplorando questa app, l'utente acquisisce maggiore familiarità con un tipo specifico di rotazione, quello di *180* gradi. In particolare, può osservare che il centro di rotazione *O* è il punto medio di *[AA ’]*.
 ![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
 
 &nbsp;
@@ -42,31 +42,30 @@ Considereremo ora immagini piatte che hanno simmetrie rotazionali e/o assiale: i
 Rispetto alla loro simmetria, le rosette possono essere divise in due classi: **diedrali**, se hanno almeno una simmetria assiale (quindi esiste almeno un asse di simmetria), e **ciclico**, se non hanno alcuna simmetria assiale.
 
 L'app
-["Il gioco dei rosoni"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
+["Il gioco dei rosoni"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 presente nella storia è un gioco in cui l'utente deve scegliere i rosoni con una simmetria assiale, cioè i rosoni diedrali.
 
 Come distinguere i rosoni diedrali l'uno dall'altro? Un modo naturale è contare i loro assi di simmetria... Questo è precisamente l'obiettivo dell'app
-["Il gioco dei sacchetti I":] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12):
+["Il gioco dei sacchetti I"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12):
 giocandoci classifichiamo i rosoni diedrali in base alla loro simmetria.
 
-! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-diedrais.png = 1000x194)
+![Il gioco dei sacchetti I](/stories/symm-2/img/_align-center_/rosaceas-diedrais.png =1000x194)
 
-**Nota**: Nella storia, abbiamo considerato solo rosoni con sei o meno assi di simmetria, tuttavia possiamo creare rosoni con un numero qualsiasi diassi di simmetria. Quindi ci ne sono infiniti rosoni diedrali ^ [Allo stesso modo, ci sono infiniti rosoni ciclici]
+**Nota**: Nella storia, abbiamo considerato solo rosoni con sei o meno assi di simmetria, tuttavia possiamo creare rosoni con un numero qualsiasi diassi di simmetria. Quindi ci ne sono infiniti rosoni diedrali^[Allo stesso modo, ci sono infiniti rosoni ciclici]
 , tutti con diverso tipo di simmetria ...
 
-! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-d.png = 1000x179)
+![Il gioco dei sacchetti I](/stories/symm-2/img/_align-center_/rosaceas-d.png =1000x179)
 
 Come distinguere (classificare) i rosoni ciclici?
 
-! [Guarda il video] (/ stories / symm-2 / video / _align-center_ / rot_3.mp4 = 640x360)
+![Guarda il video](/stories/symm-2/video/_align-center_/rot_3.mp4 =640x360)
 
-Nell'esempio precedente, la rosetta ha **3** simmetrie di rotazione. Tuttavia, anche se non avessimo verificato le simmetrie di rotazione, sapremmo che il rosone ha almeno **una** simmetria di rotazione: l'**identità**, che corrisponde a una rotazione di *0* gradi (o, equivalentemente, di *360* gradi), detta anche simmetria banale ^ [In generale, quando ci chiediamo se esiste una simmetria, stiamo pensando a una simmetria non banale.].
+Nell'esempio precedente, la rosetta ha **3** simmetrie di rotazione. Tuttavia, anche se non avessimo verificato le simmetrie di rotazione, sapremmo che il rosone ha almeno **una** simmetria di rotazione: l'**identità**, che corrisponde a una rotazione di *0* gradi (o, equivalentemente, di *360* gradi), detta anche simmetria banale^[In generale, quando ci chiediamo se esiste una simmetria, stiamo pensando a una simmetria non banale.].
 
 Classifichiamo i rosoni ciclici in base al numero delle simmetrie di rotazione che hanno. Questo è precisamente l'obiettivo dell'app
-["Il gioco dei sacchetti II"] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = 12)
-.
+["Il gioco dei sacchetti II"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
 
-! [Il gioco dei sacchetti I] (/ stories / symm-2 / img / _align-center_ / rosaceas-ciclicas.png = 1000x195)
+![Il gioco dei sacchetti I](/stories/symm-2/img/_align-center_/rosaceas-ciclicas.png =1000x195)
 
 Si noti che i rosoni diedrali hanno anche simmetrie di rotazione e in un rosone diedrale ci sono tante simmetrie assiali quante simmetrie di rotazione.
 ![Guarda il video](/stories/symm-2/video/_align-center_/ros_D_4.mp4 =640x360)
@@ -86,7 +85,7 @@ Giochi simili a quelli presentati nella storia possono essere sviluppati dagli e
 `*` Il controllo se un'immagine ha assi di simmetria può essere simulato fisicamente con gli studenti, utilizzando uno specchio.
 
 `*` I giochi “Il gioco dei rosoni”, “Il gioco dei sacchetti I” e “Il gioco dei sacchetti II”, possono essere ricreati fisicamente: è sufficiente stampare carte contenenti diversi tipi di rosoni. Tali rosoni possono essere costruiti anche dagli stessi studenti: per crearle suggeriamo di utilizzare il programma (gratuito) di Atractor
-["GeCla"] (http://www.atractor.pt/mat/GeCla/index-_en.html)
+[“GeCla”](http://www.atractor.pt/mat/GeCla/index-_en.html).
 
 &nbsp;
 
@@ -131,7 +130,7 @@ Viene presentato un set di dodici rosoni. L'utente è invitato a trascinare cias
 
 ## [App 4 - Il gioco dei sacchetti II]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-Questa app è simile al Gioco 3. Tuttavia, invece di contare gli assi di simmetria, l'utente dovrebbe contare il numero di simmetrie di rotazione di ciascuna rosetta.
+Questa app è simile alla **App 3**. Tuttavia, invece di contare gli assi di simmetria, l'utente dovrebbe contare il numero di simmetrie di rotazione di ciascuna rosetta.
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
@@ -152,7 +151,7 @@ Tuttavia, il labirinto originale diventerà sempre più trasparente e, dopo un c
 
 ## [App 6 - Il labirinto del mezzo giro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
 
-Quest app è simile all'App. 5. In questo caso, però, invece di essere riflesso, il labirinto è ruotato di 180 gradi.
+Quest app è simile alla **App 5**. In questo caso, però, invece di essere riflesso, il labirinto è ruotato di 180 gradi.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
