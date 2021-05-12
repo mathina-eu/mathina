@@ -111,7 +111,7 @@ actions:
   
   - type: dialog
     entries:
-      - text: ""CHE COSA? No, non è possibile, chi avrebbe potuto seguirci? Perché? Che cosa vogliono da noi? "
+      - text: "CHE COSA? No, non è possibile, chi avrebbe potuto seguirci? Perché? Che cosa vogliono da noi? "
         char: leo
         mood: arguing
       - text: "Non so Leo, ma dobbiamo andare a scoprirlo!"
@@ -287,7 +287,7 @@ actions:
       - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
         char: angela
         mood: normal
-     - text: "Ma aspetta, questa persona potrebbe intercettare i nostri messaggi ... Anche se decidessimo una chiave ora ... potrebbe essere in ascolto! Ricordo anche che il metodo non era così sicuro... Dopo un po', diciamo alcuni minuti, si possono provare varie combinazioni e ottenere la chiave"
+      - text: "Ma aspetta, questa persona potrebbe intercettare i nostri messaggi... Anche se decidessimo una chiave ora ... potrebbe essere in ascolto! Ricordo anche che il metodo non era così sicuro... Dopo un po', diciamo alcuni minuti, si possono provare varie combinazioni e ottenere la chiave"
         char: leo
         mood: thinking
       - text: "Ho un'idea! Ogni volta che comunichiamo, cambieremo la chiave! Quindi non importa se questa misteriosa presenza riesce a ottenere la chiave: a quel punto ne avremo una diversa!"
@@ -296,7 +296,7 @@ actions:
       - text: "Questo è davvero intelligente! Ma come? Se dobbiamo tornare qui ogni volta perderemo molto tempo e non possiamo semplicemente metterci d'accordo su un'altra chiave in un messaggio: se questa persona riesce a decodificare la comunicazione decodificherà anche la nuova chiave!"
         char: mathina
         mood: arguing
-     - text: "E se ti dicessi che c'è un modo per concordare una chiave segreta in pubblico, senza che nessuno sappia il nostro segreto anche se gridiamo tutte le informazioni in mezzo al parco?"
+      - text: "E se ti dicessi che c'è un modo per concordare una chiave segreta in pubblico, senza che nessuno sappia il nostro segreto anche se gridiamo tutte le informazioni in mezzo al parco?"
         char: angela
         mood: normal
       - text: "Wow, bello, com'è possibile?"
@@ -339,7 +339,7 @@ actions:
       - text: "Il trucco è usare i numeri: la nostra operazione di mescolamento sarà elevare un certo numero a una data potenza, come… 3 ^ 7 = 2187. Certo che puoi tornare indietro, ma ci vuole tempo e fatica!"
         char: angela
         mood: normal
-      - text: "Ok, ma ci hai detto che ci possiamo mettere d'accordo sulla chiave in pubblico. Se mi dici qualcosa del tipo "la chiave è l'esponente a cui devi elevare 3 per ottenere 2187, o anch'io devo fare tutto lo sforzo di calcolo, oppure mi dici direttamente 7, e chiunque ascolti conoscerà anche la chiave."
+      - text: "Ok, ma ci hai detto che ci possiamo mettere d'accordo sulla chiave in pubblico. Se mi dici qualcosa del tipo 'la chiave è l'esponente a cui devi elevare 3 per ottenere 2187', o anch'io devo fare tutto lo sforzo di calcolo, oppure mi dici direttamente 7, e chiunque ascolti conoscerà anche la chiave."
         char: mathina
         mood: arguing
       - text: "Ecco il trucco. Questo particolare metodo è chiamato scambio di chiavi Diffie-Hellman. Proviamolo. Per prima cosa dobbiamo scegliere un numero primo p e poi un numero compreso tra 2 e p-2, che chiameremo base, quindi dobbiamo scegliere un numero casuale in quell'intervallo e fare alcune semplici operazioni modulo p. Date un'occhiata!"
@@ -348,9 +348,9 @@ actions:
   - type: game
     text: "Aiuta Leo e Mathina a imparare questo metodo"
     toolbarText: "Segui i passi e costruisci il segreto condiviso"
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app1
-    url: /apps/bucca-4-app/bucca-4-app-1.htm?
+    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=2
   - type: dialog
     entries:     
       - text: "Vedi, ora abbiamo il segreto comune che possiamo usare come chiave per tutti i codici che hai già incontrato prima."
@@ -393,8 +393,7 @@ actions:
     style: "height: 10%; top: 60%; right: 40%;  z-index: 1; transform: ScaleX(1);"
   - type: sceneText
     text: >
-      <p> Mathina e Leo si separarono, il giovane si diresse verso la costa e Mathina iniziò a salire per la collina. Il loro unico indizio riguardo il segreto dei pirati erano le incisioni nella grotta del parco che Leo e i suoi amici avevano trovato durante il loro primo viaggio sull’isola. Sarebbe  stato un indizio da poco, inutile, se non fosse stato per la misteriosa figura che Leo diceva di aver visto prima di lasciare l'isola che, ne era convinto, li aveva seguiti dal parco fino al molo. Se c’era qualcuno interessato alla loro piccola scoperta, forse c’era davvero qualcosa di grande da scoprire e i segni nella grotta avevano davvero un significato più profondo. Indubbiamente l’Isola dei Bucanieri era un posto pieno di sorprese, valeva la pena provare!
-</p>
+      <p> Mathina e Leo si separarono, il giovane si diresse verso la costa e Mathina iniziò a salire per la collina. Il loro unico indizio riguardo il segreto dei pirati erano le incisioni nella grotta del parco che Leo e i suoi amici avevano trovato durante il loro primo viaggio sull’isola. Sarebbe  stato un indizio da poco, inutile, se non fosse stato per la misteriosa figura che Leo diceva di aver visto prima di lasciare l'isola che, ne era convinto, li aveva seguiti dal parco fino al molo. Se c’era qualcuno interessato alla loro piccola scoperta, forse c’era davvero qualcosa di grande da scoprire e i segni nella grotta avevano davvero un significato più profondo. Indubbiamente l’Isola dei Bucanieri era un posto pieno di sorprese, valeva la pena provare!</p>
   - type: clearImage
     id: Mathina1
   - type: image
@@ -411,9 +410,9 @@ actions:
   - type: game
     text: "Scopri quali interessanti novità ha Mathina per noi!"
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina"
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app2
-    url: /apps/bucca-4-app/bucca-4-app-2.htm
+    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=2
   - type: dialog
     entries:     
       - text: "Wow! Ne sai qualcosa, Angela?"
@@ -464,9 +463,9 @@ actions:
   - type: game
     text: "Prova ad aiutare Leo a violare il sistema"
     toolbarText: "Segui i passaggi e aiuta Leo a capire quanto è sicuro il sistema"
-    cta: "Try it yourself!"
+    cta: "Provaci tu!"
     tag: app3
-    url: /apps/bucca-4-app/bucca-4-app-3.htm
+    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=2
   - type: clearImage
     id: Leo2  
   - type: clearImage
@@ -593,9 +592,9 @@ actions:
   - type: game
     text: "Scopriamo le ultime novità da Mathina"
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina."
-    cta: "Prova!"
+    cta: "Provaci tu!"
     tag: app4
-    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=2
      
   - type: dialog
     entries:      
