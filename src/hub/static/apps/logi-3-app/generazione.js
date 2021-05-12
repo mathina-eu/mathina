@@ -150,7 +150,7 @@ function TrovaRiempi() {
 function AggiungiSegmento(A,B) {
 
 	if (CercaSegmento([A,B])>-1) {
-		console.log("Segmento duplicato: " + [A,B]);
+		//console.log("Segmento duplicato: " + [A,B]);
 		return 0;
 	}
 	
@@ -158,19 +158,19 @@ function AggiungiSegmento(A,B) {
 		var DA=Distanza(Intersezioni[i][0],A);
 		var DB=Distanza(Intersezioni[i][0],B);
 		if ((DA<SogliaPuntiVicini && DA>SogliaPuntiCoincidenti) || (DB<SogliaPuntiVicini && DB>SogliaPuntiCoincidenti)) {
-			console.log("Estremo vicino a un punto gia noto: " + i);
+			//console.log("Estremo vicino a un punto gia noto: " + i);
 			return 0;
 		}
 	}
 
 	for (var i=0;i<Segmenti.length;i++) {
 		if (SegmentiConfondibili([A,B],Segmenti[i])) {
-			console.log("Segmento confondibile: "+i);
+			//console.log("Segmento confondibile: "+i);
 			return 0;
 		}
 	}
 	
-	console.log("AggiungiSegmento("+A+","+B+");");
+	console.log("AggiungiSegmento("+Math.floor(A)+","+Math.floor(B)+");");
 
 	//Aggiungo tutte le nuove intersezioni
 	for (var i=0;i<Segmenti.length;i++) {
