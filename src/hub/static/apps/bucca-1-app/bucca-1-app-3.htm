@@ -26,6 +26,11 @@
         text-align: center;
     }
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
     .divimg {
         cursor: move;
         position: absolute;
@@ -33,11 +38,16 @@
         text-align: center;
         border: 5px solid #F87595;
         width: 23%;
-        height: 20%;
+        height: 26%;
 
         text-align: center;
         font-size: 24px;
         z-index: 10;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
     }
 
     #QuadratoCentrale {
@@ -91,7 +101,7 @@
     }
 
     #Div1 {
-        top: 20%;
+        top: 10%;
 		right: 5%;
     }
 
@@ -101,7 +111,7 @@
     }
 
     #Div3 {
-        top: 20%;
+        top: 10%;
 		left: 5%;
     }
 
@@ -163,7 +173,7 @@
     <div id="messaggio">Trova il messaggio corretto</div>
     <div id="chiave">Chiave: il cielo ne &egrave; pieno</div>
 
-    <div id="Div1" class="divimg"><span id="Testo1">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.</span><br><img src="img/f09.png" width="30%"></div>
+    <div id="Div1" class="divimg"><span id="Testo1">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.</span><br><img src="img/f09.png" width="40%"></div>
     <div id="Div2" class="divimg"><span id="Testo2">Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.</span><br><img src="img/f07.png" width="30%"></div>
     <div id="Div3" class="divimg"><span id="Testo3">Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.</span><br><img src="img/f08.png" width="30%"></div>
     <div id="Div4" class="divimg"><span id="Testo4">Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.</span><br><img src="img/f10.png" width="30%"></div>
