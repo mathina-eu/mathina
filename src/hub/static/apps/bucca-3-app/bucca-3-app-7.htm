@@ -20,10 +20,9 @@
             width: 25%;
             height: 72%;
             z-index: 2;
-            font-size: 32px;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,3vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -37,10 +36,9 @@
             width: 25%;
             height: 72%;
             z-index: 2;
-            font-size: 32px;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,3vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -49,10 +47,10 @@
         .PartContainer {
             position: absolute;
             top: 50%;
-            width: 95%;
+            width: 94%;
+			left:3%;
             -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
-            padding: 10px;
             text-align: center;
         }
 
@@ -157,6 +155,7 @@
             [], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
             "Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt".toUpperCase(),
             "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
+            "Gmimsqee gai pvozrimi m dqeersvy. Vztaefiqz gee tacmiqj qjfimetfe hgv brdvovy iqcmtufzrpfe tad zlyvdfe gdzyfe. Aoya hgv era r oymmq gmim lyr zfhr rfddm uq tuwdrd dqeersvzj evoiqkmj. Sv clujqi qeofzkdrxfe mm r yzzym rzkuxm tmjm. F ordmmctf pf vrduud qjofzuq lyr oruom caxa rozyr pf biudqzdf simepv srxya".toUpperCase(),
         ];
         Traduzioni = [];
 
@@ -240,7 +239,7 @@
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
-            Scale = necklace_dimension[1] / dimension[1];
+            Scale = Math.max(2* necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
             CentroCesare = [dimension[0] / 2, dimension[1] / 2];
             Draw(CentroCesare[0], CentroCesare[1], AngPosizione1, AngPosizione2, Scale);
         }
