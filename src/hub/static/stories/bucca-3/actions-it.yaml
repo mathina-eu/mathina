@@ -79,7 +79,7 @@ actions:
     toolbarText: "Prova a decodificare qualche parola utilizzando la chiave"
     cta: "Provaci tu!"
     tag: app1
-    url: /apps/bucca-3-app/bucca-3-app-1.htm
+    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=2
 
   - type: clearImage
     id: CaesarJewel
@@ -126,7 +126,7 @@ actions:
     toolbarText: "Seleziona il testo decifrato corretto"
     cta: "Provaci tu!"
     tag: app2
-    url: /apps/bucca-3-app/bucca-3-app-2.htm
+    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=2
 
   - type: dialog
     entries:
@@ -532,7 +532,7 @@ actions:
     toolbarText: "Esegui alcune somme utilizzando l'orologio che ti viene dato"
     cta: "Provaci tu!"
     tag: app3
-    url: /apps/bucca-3-app/bucca-3-app-3.htm
+    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=2
 
   - type: image
     id: Angela3
@@ -852,7 +852,7 @@ actions:
     toolbarText: "Seleziona il risultato della cifratura della parola suggerita utilizzando le due chiavi"
     cta: "Provaci tu!"
     tag: app4
-    url: /apps/bucca-3-app/bucca-3-app-4.htm
+    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=2
 
   - type: sceneText
     text: >
@@ -911,7 +911,7 @@ actions:
     toolbarText: "Il disco grande cifra le parole come i due dischi piccoli utilizzati uno dopo l’altro. Mettilo nella posizione corretta!"
     cta: "Provaci tu!"
     tag: app5
-    url: /apps/bucca-3-app/bucca-3-app-5.htm
+    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=2
     
   - type: clearImage
     id: Dipinto
@@ -1018,7 +1018,7 @@ actions:
     toolbarText: "Verifica che il testo non è stato cifrato nel solito modo."
     cta: "Provaci tu!"
     tag: app6
-    url: /apps/bucca-3-app/bucca-3-app-6.htm
+    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=2
 
   - type: clearImage
     id: Angela6
@@ -1089,7 +1089,7 @@ actions:
     toolbarText: "Convinciamoci che non dobbiamo usare il gioiello nel solito modo. Concentriamoci a provare a tradurre le lettere evidenziate."
     cta: "Provaci tu!"
     tag: app7
-    url: /apps/bucca-3-app/bucca-3-app-7.htm
+    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=2
  
   - type: clearImage
     id: Angela7
@@ -1122,7 +1122,7 @@ actions:
     toolbarText: "Mathina suggerisce di usare due gioielli: uno per decifrare le parole alla posizione dispari e uno per decifrare le parole alla posizione pari. Convinciamoci che nemmeno questo espediente funziona..."
     cta: "Try it yourself!"
     tag: app8
-    url: /apps/bucca-3-app/bucca-3-app-8.htm
+    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=2
 
 
 
@@ -1144,7 +1144,7 @@ actions:
     toolbarText: "I due gioielli servono per decifrare le lettere alle posizioni dispari e pari rispettivamente! Prova a decifrare il messaggio"
     cta: "Provaci tu!"
     tag: app9
-    url: /apps/bucca-3-app/bucca-3-app-9.htm
+    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=2
 
 
   - type: dialog

@@ -618,7 +618,7 @@ actions:
     text: "Lembra-te: para descodificar deves começar do disco externo"
     toolbarText: "Seleciona a palavra correta"
     cta: "Tenta tu mesmo!"
-    url: /apps/bucca-2-app/bucca-2-app-1.htm
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=3
 
 
   - type: sceneText
@@ -831,7 +831,7 @@ actions:
     text: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     toolbarText: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     cta: "Tenta tu mesmo!"
-    url: /apps/bucca-2-app/bucca-2-app-2.htm
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=3
     
   - type: sceneText
     text: >
