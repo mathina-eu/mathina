@@ -1,4 +1,5 @@
 function Load(N) {
+	console.log("loading "+N);
 	if (N==1) {
 		var S1=Math.floor((dimension[0]-1300)/2);
 		var S2=Math.floor((dimension[1]-600)/2);
