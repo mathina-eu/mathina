@@ -21,7 +21,7 @@
         heigth: 10%;
         position: absolute;
         left: 100px;
-        font-size: 25px;
+        font-size:min(4vw,3vh);
         font-family: sans-serif;
         text-align: center;
     }
@@ -34,14 +34,13 @@
         border: 5px solid #F87595;
         width: 11%;
         heigth: 5%;
-        right: 100px;
         z-index: 10;
     }
 
 
     #QuadratoCentrale1 {
         position: absolute;
-        left: 25vw;
+        left: 28vw;
         top: 15vh;
         width: 20vw;
         height: 15vw;
@@ -51,7 +50,7 @@
 
     #QuadratoCentrale2 {
         position: absolute;
-        left: 55vw;
+        left: 52vw;
         top: 15vh;
         width: 20vw;
         height: 15vw;
@@ -62,8 +61,8 @@
 
     #QuadratoCentrale3 {
         position: absolute;
-        left: 25vw;
-        top: 50vh;
+        left: 28vw;
+        top: 52vh;
         width: 20vw;
         height: 15vw;
         border: solid 3px;
@@ -73,8 +72,8 @@
 
     #QuadratoCentrale4 {
         position: absolute;
-        left: 55vw;
-        top: 50vh;
+        left: 52vw;
+        top: 52vh;
         width: 20vw;
         height: 15vw;
         border: solid 3px;
@@ -91,7 +90,7 @@
         padding-bottom: 10px;
         background-color: #C8F4F9;
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
     }
 
     #chiave {
@@ -103,47 +102,53 @@
         padding-bottom: 10px;
         background-color: #FFF3EC;
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
     }
 
-    #Head1 {
-        top: 200px;
+ #Head1 {
+        top: 15%;
     }
 
     #Head2 {
-        top: 350px;
+        top: 35%;
     }
 
     #Head3 {
-        top: 550px;
+        top: 55%;
     }
 
     #Head4 {
-        top: 700px;
+        top: 75%;
     }
 
     #Div1 {
-        top: 50px;
+        top: 15%;
+		right: 1%;
     }
 
     #Div2 {
-        top: 200px;
+        top: 25%;
+		right: 13%;
     }
 
     #Div3 {
-        top: 350px;
+        top: 35%;
+		right: 1%;
     }
 
     #Div4 {
-        top: 500px;
+        top: 45%;
+		right: 13%;
     }
 
     #Div5 {
-        top: 650px;
+        top: 55%;
+		right: 1%;
     }
 
     #Div6 {
-        top: 800px;
+        top: 65%;
+		right: 13%;
     }
 
     #successMessage {
@@ -226,26 +231,15 @@
     </div>
 
     <script>
-        Traduzioni = [
-            [
-                ["messaggio"], "Message: Look at the third tree, east from the entrance.", "Messaggio: guardate il settimo albero a est dell'entrata.", "Mensagem: Olhe para a terceira &aacute;rvore, a leste da entrada.", "Nachricht: Sehen Sie sich den dritten Baum &ouml;stlich vom Eingang an."
-            ],
-            [
-                ["chiave"], "Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.", "Chave: o c&eacute;u est&aacute; cheio deles.", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
-            ],
-            [
-                ["Head1"], "Look at the third tree, east from the entrance.", "Guardate il settimo albero a est dell'entrata.", "Olhe para a terceira &aacute;rvore, a leste da entrada", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
-            ],
-            [
-                ["Head2"], "Look at the third tree going right from the entrance.", "Guardate il terzo albero a destra dall'entrata.", "Olhe para a terceira &aacute;rvore indo bem na entrada.", "Schauen Sie sich den dritten Baum an, der direkt vom Eingang aus verl&auml;uft."
-            ],
-            [
-                ["Head3"], "Look at the seventh tree north of the fountains.", "Guardate il settimo albero a nord delle fontane.", "Olhe para a s&eacute;tima &aacute;rvore ao norte das fontes.", "Schauen Sie sich den siebten Baum n&ouml;rdlich der Brunnen an."
-            ],
-            [
-                ["Head4"], "Look at the tree near the bench.", "Guardate l'albero vicino alla panchina.", "Olhe para a &aacute;rvore perto do banco.", "Schau dir den Baum in der N&auml;he der Bank an."
-            ]
-        ];
+        Traduzioni=[
+[["messaggio"],"Message: Look at the third tree, east from the entrance.","Messaggio: guardate il settimo albero a est dell'entrata.","Mensagem: Procura a terceira &aacute;rvore, a este da entrada.","Nachricht: Suche den dritten Baum &ouml;stlich vom Eingang."],
+[["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.","Chave: o c&eacute;u est&aacute; cheio deles.","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
+[["Head1"],"Look at the third tree, east from the entrance.","Guardate il settimo albero a est dell'entrata.","Procura a terceira &aacute;rvore, a este da entrada","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
+[["Head2"],"Look at the third tree going right from the entrance.","Guardate il terzo albero a destra dall'entrata.","Procura a terceira &aacute;rvore à direita da entrada.","Suche den dritten Baum, rechts vom Eingang aus."],
+[["Head3"],"Look at the seventh tree north of the fountains.","Guardate il settimo albero a nord delle fontane.","Procura a s&eacute;tima &aacute;rvore a norte das fontes.","Suche den siebten Baum n&ouml;rdlich der Springbrunnen."],
+[["Head4"],"Look at the tree near the bench.","Guardate l'albero vicino alla panchina.","Procura a &aacute;rvore perto do banco.","Suche den Baum in der N&auml;he der Bank."]
+];
+
 
         function gup(name, url) {
             if (!url) url = location.href;
