@@ -1,0 +1,986 @@
+# FIRE-2. Talking to the unidragon
+actions:
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+    
+  - type: image
+    src: bg_clouds.png 
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: back3
+    
+  - type: image
+    src: bg_castle.png 
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: back2
+    
+  - type: image
+    src: bg_fields.png 
+    id: fields
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    parallax: mid1
+    
+  - type: image
+    src: white.png 
+    id: white
+    style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
+    parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: -25%; left: 5%;" 
+    parallax: mid2 
+    
+  # - type: animation
+    # target: uni
+    # vars:
+      # duration: 6
+      # xPercent: -800
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 35%; top: 30%; left: 1%;"  
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 35%; top: 20%; left: 100%;" 
+    parallax: front1
+    
+  - type: animation
+    target: fla
+    vars:
+        duration: 0.01
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        #ease: power3.out
+
+  - type: sceneText
+    text: Mathina und Leo kamen wieder einmal zum Feld, wo sie Flamma, die Feuervogeltrainerin, getroffen hatten.
+      Seit einiger Zeit trainierten sie nun schon Einhorndrachen, meist mehrere Tage in der Woche.
+      Immer wenn sie ein großes, geflügeltes Wesen am Himmel sahen, kamen sie um zu sehen, ob Flamma da war und trainierte.
+      Sie wollten noch besser werden im Führen von Einhorndrachen und bald beim großen Feuervogel-Festival an den Trainingswettkämpfen teilnehmen.
+      An diesem Morgen hatten sie einen Drachen in der Ferne fliegen sehen und dachten, Flamma trainierte ihn.
+    #Mathina and Leo returned to the field where Flamma, the firebird
+    #trainer, used to be. They had been training unidragons several days
+    #per week, every time they saw a big flying animal in the sky they came
+    #to see if Flamma was there, training it. They wanted to get better at
+    #leading unidragons, to participate in the trainers’ festival that was
+    #going to be held soon. That morning they had seen a dragon flying in
+    #the distance and they thought that Flamma must be training it.
+
+    
+  - type: animation
+    target: clouds
+    vars:
+      duration: 1.5
+      width: 100%
+      height: 100%
+      ease: power3.Out
+      
+  # - type: animation
+    # target: bg
+    # vars:
+       # duration: 2
+       # width: 100%
+       # height: 100%
+      # # ease: power1.inOut
+      
+  - type: animation
+    target: fields
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+      
+  - type: animation
+    target: castle
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+      
+  - type: animation
+    target: matleo
+    vars:
+        duration: 4
+        xPercent: 220
+        yPercent: 75
+        width: 20% 
+        ease: power3.out
+        
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        #xPercent: 
+        yPercent: 85
+        width: 20% 
+        ease: power3.out
+        
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        xPercent: -160
+        yPercent: 60
+        width: 22% 
+        ease: power2.out
+
+  - type: sceneText
+    text: Und tatsächlich, Flamma war da. Sie machte große Bewegungen und schrie unverständliche Worte in Richtung Himmel, fast wie Gesang.
+      Mathina und Leo rannten über das Feld, um Flamma zu begrüßen.
+      Sie hatten erwartet, dass Flamma den Einhorndrachen führen würde, so wie eine Dirigentin die Musik des Orchesters, mit dem Horn als Taktstock.
+      Aber Flamma hielt nichts in ihren Händen.
+    #Indeed, Flamma was there, moving intensely and screaming incomprehensible
+    #words into the air, almost like singing. Mathina and Leo ran over the
+    #field to meet her. They were expecting to see Flamma leading the
+    #unidragon as an orchestra director conducts the music, with the horn
+    #of the unidragon as a stick. However, Flamma had nothing in her hands.
+
+  - type: clearImage
+    id: matleo
+    
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"  
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent: 
+        yPercent: 10
+        width: 30% 
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Flamma, wir haben den Einhorndrachen gesehen. Trainierst Du ihn?
+      #Flamma, we saw the unidragon, are you training him?
+        char: mathina
+        mood: happy
+ 
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent: 
+        yPercent: 20
+        width: 40% 
+        ease: power3.out
+
+
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+
+
+  
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: Das ist aber ein anderer Drache! Und Du hast sein Horn gar nicht!! Warum fliegt er denn nicht weg?
+      #This is another dragon! And you don’t have his horn!! Why is he not flying away?
+        char: leo
+        mood: talking
+        
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        xPercent: -10
+        yPercent: 5
+        width: 50% 
+        ease: power3.out
+        
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  - type: sceneText
+    text: Flamma hörte auf, gen Himmel zu schreien, und der Einhorndrache flog gemächlich herunter, um sich am Boden auszuruhen.
+    #Flamma stopped screaming to the sky and the unidragon descended
+    #gently to the land to rest.
+
+  
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleY(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+  
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 2
+        # #transform: scaleY(-1)
+        # #filter: FlipH
+        # #transform: scale(1,-1)
+        # transform: rotateY(180deg)
+        # ease: power3.out
+  
+  - type: clearImage
+    id: uni
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Stimmt, Leo, das ist ein anderer Einhorndrache.
+          Und diesem armen Kerlchen ist etwas Trauriges passiert. Sein frühes Horn ist abgefallen, wie bei jedem Einhorndrachen, der erwachsen wird.
+          Aber genau in dem Moment, als das Horn abfiel, flog er gerade über einem großen See, so dass das Horn ins Wasser fiel, und niemand hat es jemals gefunden.
+        #You are right Leo, this is another unidragon. And this poor boy
+        #had a sad incident. His early horn came off, as with any unidragon,
+        #when he reached adulthood. But in the precise moment that the horn
+        #fell he was flying over a lake, so the horn fell into the water
+        #and nobody has ever found it.
+        char: flamma
+        mood: normal
+  
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%;"  
+    parallax: mid2    
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:      
+
+      - text:  Normalerweise, wenn so etwas passiert, wird so ein Einhorndrache nicht zahm sondern bleibt wild.
+          Aber er fühlt sein verlorenes Horn, wenn es bewegt wird, auch wenn es viele Kilometer entfernt ist oder gar an einem versteckten Ort.
+          Wenn jemand das Horn findet und damit spielt, ohne zu wissen, was es ist,
+          kann der Einhorndrache sogar verrückt werden, wenn er nicht lernt, das Gefühl zu verdrängen.
+          Deshalb habe ich beschlossen, diesen Drachen zu trainieren. Da ich aber sein Horn nicht habe, muss ich mir anders behelfen.
+        #Normally when that happens, the unidragons are not tamed and
+        #they remain wild, but they still feel their lost horn when it moves,
+        #even if it is kilometers away or hidden far away. If someone finds
+        #it and plays with it without knowing, the unidragon can become mad
+        #if he doesn’t learn to ignore the feeling. So, I decided to train
+        #this unidragon as I do with the others. Of course, since we don’t
+        #have his horn, we need to use something else.
+        char: flamma
+        mood: normal
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(0deg)
+        ease: power3.out
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Die Sprache der Einhorndrachen ist anders als die der Menschen.
+          Sie können sagen, was sie fühlen, und in diesem Fall, können sie die Richtung des Horns fühlen und auch genau beschreiben.
+          Wir Menschen haben dafür keine Worte, denn wir können soetwas auch nicht fühlen.
+          Aber wir können magische Zahlen benutzen, um die Einhorndrachen zu verstehen und mit ihnen zu kommunizieren.
+          So können wir ihnen sagen, was wir meinen, und sie verstehen uns.
+        #Unidragons have a kind of language, different from humans.
+        #Their language expresses what they can feel, and in this case,
+        #also the feeling of the direction of the horn. We humans don’t
+        #have words for that, because we don’t have such feelings, but
+        #we can use magical numbers to understand and communicate with
+        #the unidragons, translating from what we mean to what they can
+        #understand.
+        char: flamma
+        mood: normal
+
+      - text: Magische Zahlen! Wie kann man denn mit Zahlen sprechen?
+        #Magical numbers! How can you talk with numbers?
+        char: leo
+        mood: surprised
+        
+        
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2    
+        
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:  
+
+      - text: Ich habe das Gefühl, ein unsichtbares Gebilde vernetzt irgendwie alles miteinander...
+        #I have the feeling that an invisible structure is somehow connecting everything…
+        char: mathina
+        mood: arguing
+
+      - text: Aber wie können wir ihm nun sagen, wie er fliegen soll?
+        #So, how can we tell him how to fly?
+        char: leo
+        mood: thinking
+
+      - text: Wie ich schon sagte, wir haben keine Worte, die zu ihrer Sprache passen,
+          aber wir können Magie nutzen, um die Flugbahn zu beschreiben, die er entlang fliegen soll.
+          Ihr könnt mir in Zahlen sagen, was ihr machen wollt, und ich übersetze sie für euch in die Sprache der Einhorndrachen.
+        #Well, as I said, we don’t have words that correspond to his
+        #language, but we can use some magic to describe the path we want to
+        #make him follow. You can tell me in numbers what you want to do,
+        #and I will translate them into unidragon language.
+        char: flamma
+        mood: normal
+
+      - text: Was können wir denn sagen?
+        #What can we say?
+        char: mathina
+        mood: talking
+
+      - text: Lasst uns mit etwas Einfachem anfangen. Wir sagen ihm, er
+          soll geradeaus kurz über dem Boden fliegen, wagerecht in einer geraden Linie.
+        #Let us start with something easy. Let us tell him to fly just
+        #over the land, horizontally in a straight line.
+        char: flamma
+        mood: normal
+
+      - text: Okay, das sagen wir ihm.
+        #Ok, let’s tell him to do that.
+        char: leo
+        mood: talking
+
+      - text: Nein, Du kannst nicht einfach die menschlichen Worte benutzen, die sind zu verwirrend und ungenau für ihn.
+          Du sagst ihm einfach die Zauberzahl Eins.
+        #No, you can’t use the human words, they are too confusing
+        #and imprecise for him. You just tell him the magical number one.
+        char: flamma
+        mood: normal
+
+      - text: Die Zauberzahl Eins?
+        #The magical number one?
+        char: leo
+        mood: thinking
+
+      - text: Das bedeutet, er soll mit seiner normalen Geschwindigkeit vorwärts fliegen.
+        #It means to advance at his normal speed.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 8%; top: 70%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 8%; top: 70%; left: 45%;"  
+    parallax: mid2  
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;" 
+    parallax: front2 
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+       # yPercent: 5
+        #width: 50% 
+        #ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 0.1
+        xPercent: 100
+        delay: 5
+        transform: rotateY(180deg)
+
+        
+  - type: animation
+    target: uni
+    vars:
+        duration: 1
+        delay: 5
+        xPercent: -10
+        #yPercent: 5
+        #width: 50% 
+        ease: power3.out
+
+  - type: sceneText
+    text: Flamma sagte die Zahl Eins in der Einhorndrachensprache,
+      und der Drache bewegte sich vorwärts, ein bisschen so als ob er rennen würde statt zu fliegen.
+      Flamma rief etwas, und der Eihorndrache kam zurück zu der Stelle, wo er gestartet war.
+    #Flamma said the number one in unidragon language, and the animal
+    #started moving forward, quite as if it was running instead of flying.
+    #At a shout of Flamma, the unidragon returned to the base of the tree,
+    #where he was before moving.
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2   
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Und was passiert, wenn wir ihm die Zahl Zwei sagen?
+        #And what if we tell him 2?
+        char: leo
+        mood: talking
+
+      - text: Dann wird er doppelt so schnell fliegen.
+        #He will move twice as fast.
+        char: flamma
+        mood: normal
+
+      - text: Ah, ich glaube, ich verstehe. Die Zahl ist die Geschwindigkeit. Aber wie sagen wir ihm, dass er hoch fliegen soll?
+        #Oh, I start to understand, so the number is the speed. But how do we make him fly?
+        char: mathina
+        mood: arguing
+
+      - text: Nun, dafür musst Du ihm zwei Zahlen sagen. Die erste steht dafür, wie weit er fliegen soll, und die zweite dafür wie hoch.
+        #Well, for that you need to tell him two numbers. The first is
+        #how much he advances, the second is how much he rises in the air.
+        char: flamma
+        mood: normal
+
+      - text: Aha! Also sagen wir ihm vorwärts und aufwärts zu fliegen!
+        #Aha!, so we are telling him to advance and rise up!
+        char: mathina
+        mood: talking
+
+      - text: In der Zaubersprache würden wir dafür (1,1) schreiben, und in der Eihorndrachensprache hört es sich so an...
+        #In magical language, we would write that as (1,1), and in unidragon it is pronounced…
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;" 
+    parallax: front2 
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
+    parallax: mid2  
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -50
+        #width: 50% 
+        #ease: power3.out
+        
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        #xPercent: 100
+        delay: 3
+        transform: rotateY(180deg)
+        
+  - type: sceneText
+    text: ...und sie machte ein Geräusch.
+      Der Einhorndrache flog in gerader Line gleichzeitig vorwärts und aufwärts.
+    #...and she made a sound. The unidragon started flying in a straight line, advancing and lifting up.
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+      - text: Er fliegt, er fliegt!
+        #It flies, it flies!!
+        char: leo
+        mood: happy
+        exposition: riefen Mathina und Leo gleichzeitig.
+          #Both Mathina and Leo exclaimed.
+
+  - type: clearImage
+    id: mat
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:       
+        
+
+      - text: Ja, er fliegt. Aber ich werde ihn mal wieder zurückrufen, bevor er zu weit weg ist.
+        #Yes, it does! But let me make him come back before he is too far away.
+        char: flamma
+        mood: happy
+        exposition: Flamma rief den Drachen, und er kam zurück.
+        #And Flamma made the animal come back.
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla 
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+      - text: Ihr habt gesehen, dass er genauso schnell vorwärts kam, wie er nach oben kam.
+          Könnt Ihr herausfinden, wie er eine steilere Bahn fliegen kann?
+        #You see that it was rising at the same speed as it was advancing.
+        #Can you figure out how to tell him to fly in a steeper path?
+        char: flamma
+        mood: normal
+
+      - text: Hm, vielleicht können wir ihm eine 2 sagen statt der 1 vorher?
+        #Hmm… maybe we can tell him a 2 instead of a 1, as before?
+        char: leo
+        mood: arguing
+
+      - text: Ja, aber es muss die zweite Zahl sein, denn er soll ja schneller hoch fliegen.
+        #Yes, but in the second number, because we want him to rise faster.
+        char: mathina
+        mood: arguing
+
+      - text: Nun gut, dann sage ich ihm also (1,2),
+        #Very well, I will tell him (1,2)
+        exposition: sagte Flamma und sprach die Zauberworte dafür.
+        #said Flamma, and pronounced the magical words.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: mat
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"  
+    parallax: mid2
+    
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)" 
+    parallax: front1
+    
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 45%; left: 0%;" 
+    parallax: front2 
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"  
+    parallax: mid2  
+    
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -100
+        width: 30% 
+        #ease: power3.out
+        
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 1
+        # #xPercent: 100
+        # delay: 3
+        # transform: rotateY(180deg)
+        
+
+
+  - type: sceneText
+    text: Als Flamma dem Einhorndrachen die beiden Zahlen nannte, flog er in einer steileren Bahn in die Luft.
+    #Flamma communicated the pair of numbers to the unidragon and he made a steeper path in the air.
+
+
+  - type: clearImage
+    id: uni
+    
+  - type: clearImage
+    id: leo
+    
+  - type: clearImage
+    id: fla 
+    
+  - type: clearImage
+    id: mat
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"  
+    parallax: mid2  
+    
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"    
+    parallax: mid2
+    
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;" 
+    parallax: front1
+    
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)" 
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Ich kann Euch beibringen, wie man das übersetzt. Ich habe alle Zahlen in Einhorndrachensprache in meinem Notizbuch.
+          Versuch' es mal, Mathina!
+        #I can teach you the translation, I have all the numbers in unidragon language in my notebook. Try Mathina!
+        char: flamma
+        mood: normal
+
+  - type: game
+    text: "Versuche, den Einhorndrachen mit Zahlenpaaren fliegen zu lassen."
+    toolbarText: Fliege den Einhorndrachen mit Zahlenpaaren!
+    #"Try to fly the unidragon with pairs of numbers"
+    url:
+    cta: Fliege den Einhorndrachen!
+
+  - type: sceneText
+    text: Flamma gefiel, wie Mathina diese neue Sprache benutzte.
+    #Flamma was pleased to see how Mathina handled that language.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+     - text: Super! Weißt Du, Du kannst dem Einhorndrachen auch mehrere Zahlenpaare nennen, die er dann nacheinander fliegt.
+        Einhorndrachen haben ein gutes Gedächtnis, sie können sich eine ganze Reihen von Paaren merken.
+        Das ist ganz praktisch, wenn man Einhorndrachen trainiert, denn so kann man schon vorher planen, wie der Drache fliegen soll,
+        zum Beispiel um Hindernissen auszuweichen.
+      #Very well! You see, you can tell the unidragon a few pairs of
+      #numbers, to be flown in sequence, one after another. Unidragons have
+      #a good memory and they will remember the sequence. This is very useful
+      #for the unidragon trainers because you can plan the path they will fly
+      #in advance, for instance avoiding obstacles.
+       char: flamma
+       mood: normal
+
+     - text: Aber, wenn Du ihm so viele Zahlenpaare sagts, woher weißt Du dann, wohin der Drache am Ende fliegt, Flamma?
+      #But Flamma, if you tell him so many pairs of numbers,
+      #how can you know where the unidragon will end?
+       char: leo
+       mood: thinking
+
+     - text: Das lasse ich euch selbst herausfinden.
+      #I will let you figure that out.
+       char: flamma
+       mood: normal
+
+  - type: game
+    text: "Fliege den Einhorndrachen zum Schloss und weiche den Hindernissen aus.
+      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke oder einen Berg triffst, musst Du noch einmal von vorn anfangen."
+    #"Fly the unidragon to the castle avoiding the obstacles. You can
+    #only fly over the blue sky, if you hit a cloud or a mountain, you
+    #will have to start again."
+    toolbarText: Fliege zum Schloss!
+    url:
+    cta: Fliege den Einhorndrachen!
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Ist Euch etwas aufgefallen? Woher wisst Ihr, wo der Einhorndrache sein wird? Könnt Ihr es erraten?
+        #Did you notice something? How can you guess where the unidragon
+        #will be?
+        char: flamma
+        mood: normal
+
+      - text: Das muss ich nicht raten, das ist einfach! Du musst nur alle Zahlen zusammenrechnen, erst alle ersten, dann alle zweiten von den Zahlenpaaren.
+          So kriegtst Du heraus, wo der Drache am Ende ist, wenn er alle Zahlenpaare befolgt hat.
+          #It’s not a guess, it’s easy! You only need to add all the first
+          #numbers and all the second numbers of the pairs! What you get
+          #is where you will be after following the list of pairs.
+        char: mathina
+        mood: happy
+
+      - text: Ganz genau, Mathina!
+        #Mathina, that is exactly right!
+        exposition: sagte Flamma stolz.
+        #said Flamma with great pride.
+        char: flamma
+        mood: normal
+
+  - type: sceneText
+    text: Leo war ganz erstaunt darüber, was Mathina gesagt hatte, und verglich es mit seinen Notizen, die er während des Flugs gemacht hatte.
+    #Leo was astonished and checking what Mathina just said,
+    #since he had been taking notes of what was happening on the flight.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Ich gebe Euch nun eine Aufgabe. Diese Feuerbälle finden Einhorndrachen total lecker.
+          Sagt dem Drachen, wie er fliegen muss, um alle zu bekommen. Er darf aber keine wolken berühren.
+        #I will pose a challenge to you then. I have these fireballs
+        #that unidragons love to eat. You have to tell the dragon the path
+        #to reach all the fireballs but without touching any of the clouds
+        #in the sky.
+        char: flamma
+        mood: normal
+
+      - text: Kein Problem. Mit dem Trick schaffen wir das!
+        #No problem, with this trick we can do that!
+        char: leo
+        mood: happy
+
+  - type: game
+    text: "Schnappt Euch alle Feuerbälle, ohne die Wolken zu berühren, und fliegt dann zum Schloss."
+    #"Eat all the fireballs without touching the clouds and then reach the castle"
+    url:
+    toolbarText: Nimm alle Feuerbälle mit und fliege zum Schloss!
+    cta: Fliege den Einhorndrachen!
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Super gemacht! Jetzt könnt ihr wirklich Feuervögel trainieren.
+          Das nächste Mal gehen wir zum Schloss von Arisa, wo sich alle treffen, die Feuervögel trainieren, und ihr Können miteinander messen.
+        #Fantastic, Mathina. Now you are really becoming a firebird trainer.
+        #Next time we will go to the Arisa castle, where all the firebird
+        #trainers meet and challenge each other.
+        char: flamma
+        mood: normal
