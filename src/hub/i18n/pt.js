@@ -7,18 +7,18 @@ export default {
     'help': 'Visite um território!',
   },
   cities: {
-    'island': 'Buccaneer Island',
-    'logicity': 'Logicity',
-    'birds-of-fire': 'Birds of Fire',
-    'symmetry-fair': 'Symmetry Fair',
+    'island': 'Ilha de Buccaneer',
+    'logicity': 'Cidade Logi',
+    'birds-of-fire': 'Pássaros de Fogo',
+    'symmetry-fair': 'Feira da Simetria',
   },
   story: {
     'next': 'Seguinte',
     'back': 'Anterior',
-    'back-to-world': 'Back to World Map',
+    'back-to-world': 'De volta ao mapa',
     titles: {
       'logi-1': 'O desafio do semáforo',
-      'logi-2': 'Edadic-igol',
+      'logi-2': 'igol-edadiC',
       'logi-3': 'Gatos e cães',
       'logi-4': 'O meu ouro por favor',
       'bucca-1': 'As mensagens secretas',
@@ -51,6 +51,7 @@ export default {
     wizard: 'Feiticeiro',
     leo: 'Leo',
     jane: 'Jane',
-    technician: 'técnico',
+    technician: 'Técnico',
+    flamma: 'Flama',	
   },
 };
