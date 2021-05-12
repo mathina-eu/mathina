@@ -277,6 +277,26 @@
         dragElement(document.getElementById("Head3"));
         dragElement(document.getElementById("Head4"));
 
+		function getMousePos(canvas, evt) {
+			if (evt.changedTouches != null) {
+				touchobject = evt.changedTouches[0];
+				mousex = touchobject.clientX;
+				mousey = touchobject.clientY;
+			} else {
+				if (evt.clientX || evt.clientY == 0) { // Firefox
+					mousex = evt.clientX;
+					mousey = evt.clientY;
+				} else if (evt.offsetX || evt.offsetX == 0) { // Opera
+					mousex = evt.offsetX;
+					mousey = evt.offsetY;
+				}
+			}
+			return {
+				x: mousex,
+				y: mousey
+			};
+		}
+		
         function dragElement(elmnt) {
             var pos1 = 0,
                 pos2 = 0,
@@ -285,35 +305,38 @@
             if (document.getElementById(elmnt.id + "header")) {
                 /* if present, the header is where you move the DIV from:*/
                 document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
             } else {
                 /* otherwise, move the DIV from anywhere inside the DIV:*/
                 elmnt.onmousedown = dragMouseDown;
+                elmnt.ontouchstart = dragMouseDown;
             }
-
-            function Link() {
-                location.reload();
-
-            }
+			
+			
 
             function dragMouseDown(e) {
                 e = e || window.event;
                 e.preventDefault();
+				MyPos=getMousePos(window,e);
                 // get the mouse cursor position at startup:
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 document.onmouseup = closeDragElement;
+                document.ontouchend = closeDragElement;
                 // call a function whenever the cursor moves:
                 document.onmousemove = elementDrag;
+                document.ontouchmove = elementDrag;
             }
 
             function elementDrag(e) {
                 e = e || window.event;
                 e.preventDefault();
                 // calculate the new cursor position:
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+				MyPos=getMousePos(window,e);
+                pos1 = pos3 - MyPos.x;
+                pos2 = pos4 - MyPos.y;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 // set the element's new position:
                 elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
@@ -323,9 +346,12 @@
                 /* stop moving when mouse button is released:*/
                 document.onmouseup = null;
                 document.onmousemove = null;
+				document.ontouchmove = null;
+				document.ontouchend = null;
                 CheckRects();
             }
         }
+
 
         function CheckSameRect(A, B) {
             for (let i = 1; i <= 4; i++) {
