@@ -1,17 +1,554 @@
+#FIRE-1
 actions:
+  - type: background
+    src: bg_full.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: image
+    src: bg_castle.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+
+  - type: image
+    src: bg_fields.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 15%; top: 30%; left: 1%;"
+    parallax: mid2
+    #valign: bottom
+    #style: "height: 25vh"
+  #- type: image
+    #src: $COMMON/img/leo3.png
+    #id: leo1
+    #style: "width: 15%; top: 57%; left: 0%; "
+    #valign: bottom
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%;"
+    parallax: front1
+
+  # - type: image
+    # src: unidragon.gif
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;"
+    # parallax: mid2
+
   - type: sceneText
     text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+      It was a sunny morning, Mathina and Leo were going on a stroll
+      in the fields near their village when they suddenly saw an old woman
+      waving her hands towards the sky and uttering incomprehensible words.
+
+  - type: animation
+    target: matleo
+    vars:
+        duration: 5
+        xPercent: 155
+        yPercent: 75
+        width: 20%
+        ease: power3.out
+
+  - type: sceneText
+    text: >
+      The woman was old but fiery and strong, like a retired ranger,
+      for whom time had stopped passing by. Her hair was white and long.
+      She was wearing strong leather clothes, an old worn dusty cape, boots
+      like those used for riding horses, and she carried a bag, a thick rope,
+      a book on her hand, and a short stick decorated with color stripes,
+      too short to be used as a walking support but long enough to extend
+      her arm to the floor.
+
+  - type: clearImage
+    id: matleo
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: sceneText
+    text: >
+      Mathina, who wasn’t shy at all, approached the woman.
+  - type: animation
+    target: fla
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
   - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
     entries:
-      - text: "I love these toys!"
+
+      - text: Ms, are you a warrior?
+        char: mathina
+        mood: talking
+      - text: Oh, my friend, I wouldn’t say that. I have never fought, at least not with any human being.
+        char: flamma
+        mood: normal
+      - text: Are you a wizard then?
+        char: mathina
+        mood: arguing
+      - text: I wouldn’t say that either, although I know some of them and they have helped me more than once.
+        char: flamma
+        mood: normal
+      - text: Then who are you? You speak a strange language.
+        char: mathina
+        mood: surprised
+      - text: I am a firebird trainer.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: What is that?
+        char: leo
+        exposition: Replied Leo, with increasing interest.
+        mood: talking
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7.5%; top: 52%; left: 46%"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: My name is Flamma, I come from Arisa, a land full of strange
+          creatures and wizards. In Arisa there are many types of firebirds,
+          or birds of fire. These creatures are extremely intelligent, but their
+          minds and language are different from ours.
+        char: flamma
+        mood: normal
+      - text:   They use a very precise
+          language to communicate where they are, how they fly, and where they go.
+          We humans don’t have such precise words for describing their flight,
+          but there are magical languages, with numbers, symbols, and secret words which allow us to translate what we mean to their language. The creatures, if well trained, understand us and fly as we ask them. That is what I do, I train firebirds.
+        char: flamma
+        mood: normal
+      - text: Oh, that is fascinating. Can we see some of these firebirds?
+          You say there are different types…
+        char: mathina
+        mood: talking
+      - text: I came here looking for a small unidragon which I lost two
+          days ago. I think he wanted to explore the world but flew too far away.
+          You will see it, once I manage to tell him where I am.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: fla
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo3.png
+    id: leo
+    style: "width: 8%; top: 50%; left: 38%"
+    parallax: mid2
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma1.png
+    id: fla
+    style: "width: 20%; top: 33%; left: 53%;"
+    parallax: front3
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        width: 25%
+        xPercent: -130
+        yPercent: 40
+
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        delay: 3
+        xPercent: -230
+        yPercent: -30
+        width: 20%
+        ease: power1.out
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        transform: rotateY(0deg)
+        delay: 6
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 6
+        transform: rotateY(0deg)
+        width: 5%
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 10
+        transform: rotateY(180deg)
+        width: 10%
+        ease: power1.out
+
+
+  - type: sceneText
+    text: Flamma let out a deep and loud scream to the sky. It didn’t remind
+        of any language, but it seemed to have a meaning. Suddenly, a kind of
+        dragon appeared in the sky, leaving a colorful smokey trail in the air.
+        The dragon moved gracefully and responded to Flamma as she moved her
+        arm and the stick.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: What is that? Is it a dragon? I am not afraid
+          of them!
+        char: leo
+        exposition: he added, although he was a bit nervous of the animal
+          getting closer.
+        mood: surprised
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 20
+        delay: 3
+        transform: rotateY(180deg)
+        xPercent: -65
+        yPercent: -10
+        #xPercent: -530
+        #yPercent: -20
+        width: 30%
+        ease: power1.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: This is a unidragon. Unidragons are very similar to dragons,
+          but they are born with a horn on their heads. Like milk teeth in
+          children, that horn is fragile and eventually, it falls off their head
+          when a stronger and bigger horn grows. But the fallen horn is not a dead
+          material, the dragon can still feel it.
+        char: flamma
+        mood: normal
+      - text: Trainers of unidragons, as I am,
+          must find a unidragon and take care of its horn. It is a big
+          responsibility, since the horn is a sensitive part of the dragon, and
+          the animal can feel it when we move it or point with it in a certain
+          direction. We use that to guide the dragons in the air. The stick that
+          I am carrying is not a walking support, it is the horn of this
+          unidragon. Would you like to try to move the unidragon in the sky?
+        char: flamma
+        mood: normal
+      - text: Yes! Yes!
         char: mathina
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
+      - text: Let’s become unidragon trainers!
+        char: leo
+        mood: happy
+      - text: You just have to point the horn in the direction that you
+          want the unidragon to fly.
+        char: flamma
+        mood: normal
+
+#Game 1.1
   - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+    text: |
+      Use the horn to guide the unidragon.
+      Try to draw some nice shapes in the air.
+    toolbarText: Fly the unidragon
+    url: /apps/imaginary-tests/app_1/1_1/index.html
+    cta: Fly the unidragon!
+
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 5%; top: 48%; left: 52%;"
+    parallax: front1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Very well! Now try to catch these fireballs
+          with the unidragon! Fireballs is the main food for unidragons,
+          and they love to eat these.
+        char: flamma
+        exposition: She threw some balls of fire into the air
+          that floated like balloons.
+        mood: normal
+
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.5
+        xPercent: 150
+        yPercent: -150
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 0.5
+        repeat: 3
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 1.5
+        delay: 0.5
+        xPercent: 550
+        yPercent: 60
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 2
+        repeat: 300
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+#Game 1.2
+  - type: game
+    text: Fly the unidragon to eat all the fireballs. Do not touch the clouds, firedragons hate them!
+    toolbarText: Catch the fireballs!
+    url: /apps/imaginary-tests/app_1/1_2/index.html
+    cta: Catch the fireballs!
+
+  - type: clearImage
+    id: fire1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Not bad! but if you want to become a
+          unidragon trainer, you have to practice. Can you make the
+          unidragon draw shapes in the sky with his smoke trail? Try it!
+        char: flamma
+        mood: normal
+
+#Game 1.3
+  - type: game
+    text: Try to fly as close as possible to the lines in the sky.
+    toolbarText: Follow the lines!
+    url: /apps/imaginary-tests/app_1/1_3/index.html
+    cta: Follow the lines!
+
+  - type: sceneText
+    text: >
+      Flamma voice suddenly got all serious and she said:
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Mathina, I noticed you practised well and have now a good understanding of how to communicate with unidragons.
+          In a few weeks, there is a big
+          festival of firebirds trainers in the castle of Arisa. I think you
+          should come with me to see it and to try to fly in some more
+          challenging competitions, with the best trainers in the country.
+        char: flamma
+        mood: normal
+      - text: Oh, that would be fantastic. Could we get our own
+          unidragon?
+        char: leo
+        exposition: Leo was immediately counting himself in.
+        mood: happy
+      - text: Well, a unidragon is a big pet to have, it is a great
+          responsibility, and it has to accept you. If you do well in the
+          festival, yes, you could become a firebird trainer and get
+          your own unidragon.
+        char: flamma
+        mood: normal
+      - text: I would love to try. I am always up for adventures!
+          We will have a unidragon, Leo!
+        char: mathina
+        mood: happy
+      - text: Then it is set. But you will have to practise a lot.
+          I will let you train with this unidragon more and once you are
+          ready we will go to the festival.
+        char: flamma
+        mood: normal
+
+# Game 1.1 again (?)
+  - type: game
+    text: You can practise again flying the unidragon. What shapes can you make?
+    cta: "Practise!"
+    url: /apps/imaginary-tests/app_1/1_1/index.html

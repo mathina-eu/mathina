@@ -332,12 +332,21 @@ Display a passive text, that's meant to describe what's happening and set up a g
   text: At the stall, Mathina is greeted by a smiling wizard.
 ```
 
+**Example custom position**
+
+```yaml
+- type: sceneText
+  style: "position: absolute; left: 10px; top: 10px;"
+  text: At the stall, Mathina is greeted by a smiling wizard.
+```
+
 **Params**
 
 | Name | Valid values | Description |
 | --- | --- | --- |
 | **type** | `sceneText` | action type |
 | **text** | Any `<string>` | Text which can also include html tags like <p></p>, etc |
+| style | `<string>` | Optionally you can set the action's style. This can be used to position the element using something like `style: "position: absolute; left: 10px; top: 10px;"` |
 
 ### Display Dialog
 
@@ -377,6 +386,16 @@ Dialog entries support various moods which use images defined in `src/hub/static
       char: wizard
 ```
 
+**Example with custom style**
+
+```yaml
+- type: dialog
+  style: "position: absolute; left: 10px; top: 10px;"
+  entries:
+    - text: "I love these toys!"
+      char: mathina
+```
+
 **Params**
 
 | Name | Valid values | Description |
@@ -384,6 +403,7 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | **type** | `dialog` | action type |
 | **entries** | `<array>` of Entries | Dialog entries |
 | avatarAlign | `<object>` { char: left or right } | Optionally set position of characters images in this dialog to `left` or `right`. Defaults to `left`. |
+| style | `<string>` | Optionally you can set the action's style. This can be used to position the element using something like `style: "position: absolute; left: 10px; top: 10px;"` |
 
 **Entries**
 

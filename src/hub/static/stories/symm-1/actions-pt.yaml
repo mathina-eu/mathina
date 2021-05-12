@@ -216,7 +216,7 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
+        char: leo
         exposition: "O Leo tinha acabado de chegar à Feira da Simetria."        
         mood: excited
   - type: animation
@@ -240,7 +240,7 @@ actions:
   - type: dialog
     entries:    
       - text: "A sério!?"
-        char: Leo
+        char: leo
         mood: excited  
       - text: "Sim, só tive de ajudar o feiticeiro a escolher alguns brinquedos!"
         char: mathina
@@ -265,17 +265,17 @@ actions:
   - type: dialog
     entries:       
       - text: "A sério??"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Sim. Só precisam de me ajudar a terminar os brinquedos que estou a construir. Se o fizerem,  no final, ganham metade dos brinquedos."
         char: wizard
       - text: "Existem dois tipos de brinquedos: alguns são mais difíceis de construir do que outros. Quais preferem?"
         char: wizard
       - text: "Os difíceis."
-        char: Leo
+        char: leo
         mood: excited
       - text: "Os mais fáceis."
-        char: Mathina
+        char: mathina
         mood: excited
   - type: clearImage
     id: Leo2
@@ -335,8 +335,8 @@ actions:
       - text: "Deixa-me ajudar-te!"
         char: wizard
   - type: game
-    text: "Ver o filme aqui!"
-    cta: "Ver!"
+    text: "Observa o filme!"
+    cta: "Ver"
     url: /stories/symm-1/video/geoplano-anim2.mp4          
   - type: game
     tag: polygons
@@ -354,7 +354,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Já consegui! Como estarão a correr as coisas com o Leo?"
-        char: Mathina
+        char: mathina
         exposition: "A Mathina recolheu todos os novos brinquedos que tinha ganho."        
         mood: excited
   - type: image
@@ -391,7 +391,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Porque é que isto não funciona? Porque é que não funciona?"
-        char: Leo
+        char: leo
         exposition: "Perguntava o Leo, enquanto tentava terminar um brinquedo, mas falhando sempre."        
         mood: angry
   - type: sceneText
@@ -400,7 +400,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Qual é o problema, Leo?"
-        char: Mathina
+        char: mathina
         mood: surprised
   - type: clearImage
     id: Mathina5
@@ -414,7 +414,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Mathina, estou a tentar terminar este barco, mas não consigo!"
-        char: Leo
+        char: leo
         exposition: "O Leo mostrou à Mathina o que estava a tentar fazer."
   - type: clearImage
     id: barco
@@ -429,7 +429,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Leo, repara que, aqui, na Feira da Simetria, tudo tem de ser simétrico!"
-        char: Mathina
+        char: mathina
         exposition: "Disse a Mathina, repetindo as palavras do feiticeiro."
   - type: game
     tag: lines
@@ -445,15 +445,15 @@ actions:
   - type: dialog
     entries:    
       - text: "Uau, ganhámos tantos brinquedos novos!"
-        char: Leo
+        char: leo
         mood: excited    
   - type: animation
     target: Leo2
     vars:
-      duration: 1
+      duration: 0.25
       xPercent: 0
       yPercent: -40
-      repeat: 1
+      repeat: 5
       yoyo: true
       ease: power1.inOu   
   - type: sceneText
@@ -462,10 +462,10 @@ actions:
   - type: dialog
     entries:    
       - text: "E foi tão fácil! Só não sei como estava a ter tantos problemas antes de a Mathina aparecer ..."
-        char: Leo
+        char: leo
         mood: surprised
       - text: "Bem, Leo, da próxima vez deves ouvir o feiticeiro e começar pelas tarefas mais fáceis."
-        char: Mathina
+        char: mathina
   - type: clearImage
     id: Leo2
   - type: clearImage

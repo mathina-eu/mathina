@@ -6,9 +6,16 @@ export default {
     'title': 'Mathina',
     'help': 'Visite um território!',
   },
+  cities: {
+    'island': 'Buccaneer Island',
+    'logicity': 'Logicity',
+    'birds-of-fire': 'Birds of Fire',
+    'symmetry-fair': 'Symmetry Fair',
+  },
   story: {
     'next': 'Seguinte',
     'back': 'Anterior',
+    'back-to-world': 'Back to World Map',
     titles: {
       'logi-1': 'O desafio do semáforo',
       'logi-2': 'Edadic-igol',
@@ -44,6 +51,6 @@ export default {
     wizard: 'Feiticeiro',
     leo: 'Leo',
     jane: 'Jane',
-    technician: 'técnico',	
+    technician: 'técnico',
   },
 };
