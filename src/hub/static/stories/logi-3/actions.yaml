@@ -74,7 +74,7 @@ actions:
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
   - type: sceneText
-    text: A second police officer was slowing down right beside her to catch a breath.
+    text: A second policeman was slowing down right beside her to catch a breath.
   - type: sceneText
     text: The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
@@ -326,7 +326,7 @@ actions:
     id: sugar3
     style: "width: 9.5%; top: 9%; right: 82%;"
   - type: sceneText
-    text: Mathina and Leo snucked the sugar cubes from the cops' coffee plates and launched the experiment. 
+    text: Mathina and Leo snuck the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
     text: Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
     toolbarText: Try it yourself!
