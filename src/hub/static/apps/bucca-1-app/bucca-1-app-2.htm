@@ -340,6 +340,22 @@
             }
             return false;
         }
+		
+		function HowManyHeadsInRect(A) {
+			var Tot=0;
+            for (let i = 1; i <= 4; i++) {
+                if (IsRectInRect(A, "Head"+i)) Tot++; 
+            }
+            return Tot;
+        }
+		
+		function HowManyDivsInRect(A) {
+			var Tot=0;
+            for (let i = 1; i <= 6; i++) {
+                if (IsRectInRect(A, "Div"+i)) Tot++; 
+            }
+            return Tot;
+        }
 
         function CheckRects() {
             if (!CheckInRect("Head1")) return;
@@ -355,6 +371,11 @@
             if (!CheckInRect("Div6")) NFuori++;
 
             if (NFuori != 2) return;
+			
+			for (let i=0;i<4;i++) {
+				if (HowManyHeadsInRect("QuadratoCentrale"+(i+1))!=1) return;
+				if (HowManyDivsInRect("QuadratoCentrale"+(i+1))!=1) return;
+			}
 
             if (CheckSameRect(1, 1) || CheckSameRect(1, 3)) Finisci();
             else Sconfitta();
