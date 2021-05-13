@@ -149,6 +149,7 @@
         }
     </style>
     <script>
+	
         function Link() {
             location.reload();
 
@@ -178,7 +179,7 @@
             "Gmimsqee gai pvozrimi m dqeersvy. Vztaefiqz gee tacmiqj qjfimetfe hgv brdvovy iqcmtufzrpfe tad zlyvdfe gdzyfe. Aoya hgv era r oymmq gmim lyr zfhr rfddm uq tuwdrd dqeersvzj evoiqkmj. Sv clujqi qeofzkdrxfe mm r yzzym rzkuxm tmjm. F ordmmctf pf vrduud qjofzuq lyr oruom caxa rozyr pf biudqzdf simepv srxya".toUpperCase(),
         ];
          Traduzioni = [
-[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["SuccMess"],"You are right, I cannot decipher it!","Hai ragione, non riesco a decifrarlo!","Voc&ecirc; est&aacute; certo, n&atilde;o consigo decifrar!","Du hast recht, ich kann es nicht entziffern!"],
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 ];
 
@@ -226,6 +227,8 @@
                 CheckCaricamento();
             }, 10);
             GenerateEx();
+			
+			setTimeout(function(){ Finisci(); }, 60000);
 
         }
 
@@ -611,7 +614,7 @@
         function Finisci() {
             //document.getElementById("successMessage").style.display = "block";
             document.getElementById("successMessage").style.visibility = "visible";
-			Yeah();
+
 
         }
 
