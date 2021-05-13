@@ -192,6 +192,16 @@
         height: 58%;
 
     }
+	
+.FinalMessage {
+position: absolute; 
+top: 45%; 
+left:0%;
+width:100%;
+text-align:center;
+font-size:min(5vw,4vh);
+font-family: "Roboto", sans-serif;
+}
 </style>
 
 <body onload="Init()">
@@ -397,10 +407,10 @@
 	<div id="successMessage" style="display:none">
 	<canvas id='myCanvas'></canvas>
         <img src="img/fleo1.png" id="certo"  style=" position: absolute;
-  top: 15%;
+  top: 10%;
   right: 43%;"></img>
         
-
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
