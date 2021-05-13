@@ -62,6 +62,7 @@ export default {
 	sean: 'Sean',
 	rasha: 'Rasha',
 	rashamom: 'Prof. Levasseur',
+	technician: 'Technician',
 	Leo: 'Leo',
     Mathina: 'Mathina',
 	Parrot: 'John',

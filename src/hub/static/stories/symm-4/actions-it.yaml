@@ -1079,9 +1079,9 @@ actions:
       - text: "Cosa?!"
         char: leo
         exposition: "Esclamarono simultaneamente Leo e Mathina."
-      - text: "È molto facile! Basta pensare ai prismi retti le cui basi sono poligoni regolari e le cui facce laterali sono quadrati. Questi tipi di prismi sono anche poliedri uniformi.
+      - text: "È molto facile! Basta pensare ai prismi retti le cui basi sono poligoni regolari e le cui facce laterali sono quadrati. Questi tipi di prismi sono anche poliedri uniformi."
         char: technician
-      - text: "E possiamo anche creare altri poliedri uniformi trasformando i prismi in antiprismi con triangoli equilateri come facce laterali; ma a parte i prismi e gli antiprismi, quelli nella borsa sono gli unici."
+      - text: "Possiamo anche creare altri poliedri uniformi trasformando i prismi in antiprismi con triangoli equilateri come facce laterali; ma a parte i prismi e gli antiprismi, quelli nella borsa sono gli unici."
         char: technician
         exposition: "Aggiunse il tecnico."
   - type: clearBackground
