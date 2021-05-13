@@ -222,51 +222,67 @@
             background: white !important;
         }
 
-        #successMessage {
-            position: absolute;
-            /*left: 50%;
+              #successMessage {
+        position: absolute;
+        /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
-        }
+        z-index: 100;
+        background: url(img/bgs.jpg) no-repeat center center fixed;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
 
-        #failMessage {
-            position: absolute;
-            /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
-        }
+    }
+
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg) no-repeat center center fixed;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
     </style>
     <link href='./css/jquery-ui.min.css' rel="stylesheet" />
     <link href='./css/keyboard.css' rel="stylesheet" />
@@ -315,7 +331,9 @@
 	[["Trad15"],"Now that Leo knows Mathina's answer, he can calculate the shared secret. How does he do it?","Ora Leo conosce la risposta di Mathina pu&ograve; calcolare il segreto condiviso. Come fa?","Agora que Leo sabe a resposta da Mathina, pode calcular o segredo partilhado. Como pode fazer isso?","Jetzt kennt Leo Mathinas Antwort und kann damit das gemeinsame Geheimnis berechnen. Wie macht er das?"],
 	[["Trad16"],"Now let's try to decipher Mathina's message","Ora proviamo a decifrare il messaggio di Mathina","Agora vamos tentar decifrar a mensagem da Mathina","Versuche nun, Mathinas Botschaft zu entschlüsseln"],
 	[["Trad17"],"Enter the key:","Inserisci la chiave:","Insere a chave:","Gib den Schlüssel ein:"],
-	[["Trad18"],"The decoded message is <br> FOLLOW THE PARROTS OF THE STONES OF THE PASS","Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO","A mensagem descodificada &eacute; <br> SEGUE OS PAPAGAIOS DAS PEDRAS DO PASSADO","Die dekodierte Nachricht lautet <br> FOLGE DEN PAPAGEIEN DER STEINE DES WEGES"]
+	[["Trad18"],"The decoded message is <br> FOLLOW THE PARROTS OF THE STONES OF THE PASS","Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO","A mensagem descodificada &eacute; <br> SEGUE OS PAPAGAIOS DAS PEDRAS DO PASSADO","Die dekodierte Nachricht lautet <br> FOLGE DEN PAPAGEIEN DER STEINE DES WEGES"],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 	];
 
 
@@ -358,6 +376,9 @@
             }
 
             window.dimension = [width, height];
+			
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
             console.log(dimension);
 			
 			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
@@ -381,6 +402,7 @@
             Giusta1 = Math.floor(Math.random() * 4) + 1;
             Giusta2 = Math.floor(Math.random() * 4) + 1;
             UpdateLabels();
+			Resize();
         }
 
         function RiempiForm(l) {
@@ -545,12 +567,16 @@
             }
         }
 
-        function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+          function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
+
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
+
         }
 
         function Link() {
@@ -602,26 +628,130 @@
         </div>
     </div>
     <div class="block" style="display:none"> <input id="text" type="text" /> </div>
-    <div id="successMessage" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 35%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
-        <p id="Trad18">Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO</p>
+       <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
+
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
+	
+	<script>
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>
