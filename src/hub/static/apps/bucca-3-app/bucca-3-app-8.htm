@@ -236,7 +236,7 @@
 [["Trad2"],"Even words:","Parole pari:","Palavras pares:","Gerade Worte:"],
 [["Trad3"],"Change the position of the disks and look what happen:","Modifica la posizione dei dischi e osserva cosa succede:","Muda a posi&ccedil;&atilde;o dos discos e v&ecirc; o que acontece:","Drehe die beiden Anh&auml;nger und schaue, was passiert:"],
 [["Trad4"],"Here is the deciphered text:","Ecco il testo decifrato:","Aqui est&aacute; o texto decifrado:","Hier ist der entschl&uuml;sselte Text:"],
-[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["SuccMess"],"It seems this method does not work!","Sembra che anche questo approccio non funzioni!","Parece que esse m&eacute;todo n&atilde;o funciona!","Es scheint, dass diese Methode nicht funktioniert!"],
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 ];
 
@@ -299,7 +299,7 @@
                 CheckCaricamento();
             }, 10);
 
-
+setTimeout(function(){ Finisci(); }, 100000);
         }
 
 
@@ -724,7 +724,6 @@
        function Finisci() {
             //document.getElementById("successMessage").style.display = "block";
             document.getElementById("successMessage").style.visibility = "visible";
-			Yeah();
 
         }
 
