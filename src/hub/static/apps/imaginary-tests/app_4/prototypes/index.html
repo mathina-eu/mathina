@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>App 4-p</title>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
+
+    <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
+</head>
+
+<body style="font-family:Palatino; margin:0; font-size:16pt">
+
+
+
+
+<script id='csinit' type='text/x-cindyscript'>
+  getState(pos) := imagergb(L, R, "computeTexture", pos, interpolate->false, repeat->false);
+  getGradient(pos) := imagergb(L, R, "gradientTexture", pos, interpolate->false, repeat->false);
+
+  
+  iterate() := (
+    colorplot(L, R, "computeTexture", newState(#));
+    colorplot(L, R, "renderTarget", newColor(#));
+    repaint();
+    );
+    
+  neighbours(pos) := apply(directproduct(-1..1, -1..1), pos + #);
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  newState(pos) := (
+    regional(totalWeight, centerState, centerGrad, state, grad, values, dist);
+    
+    centerState   = getState(pos);
+    centerGrad = getGradient(pos);
+
+
+    totalWeight = (1 - clamp(g(pos.x, pos.y), 0, 1)) * state.r;
+
+    values = apply(surround, p, f(pos.x + p.x, pos.y + p.y));
+    forall(1..4, k, values_(2*k) = 2 * f(pos.x, pos.y) - values_(2*k) );
+    if(min(values) < 0 & max(values) > 0 & centerState.r > 0.9,
+
+        totalWeight = 1;
+
+    );
+
+
+    forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
+
+      dist = clamp(g(pos.x, pos.y), 0, 0.1) / 0.1 * clamp(abs(centerGrad), 0, 0.1) / 0.1 * newtonEpsilon;
+      state   = getState(pos + dist * dir);
+      grad = getGradient(pos + dist * dir);
+      totalWeight = oplus(totalWeight, (dir.x * grad.x + dir.y * grad.y) * state.r);
+    );
+
+  
+    
+
+    (clamp(totalWeight, 0, 1), 0, 0, 1);
+  );  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  newColor(pos) := (
+    regional(state);
+
+    state = getState(pos);
+    if(state.r == 0,
+      (0,0,0,0);
+    , // else //
+      sparkColor * clamp(state.r, 0, 1);
+    );
+  );
+
+
+
+  cindyToTexture(pos) := (pos - canvasCenter) / renderArea.w * 2 * axesMax - (0.5,0.5);
+
+
+
+
+
+  placeBugs(pos) := (
+    if(rectContainsPoint(renderArea, pos),
+      colorplot(L, R, "computeTexture", 
+        if(dist(#, cindyToTexture(pos)) < 0.3, 1, getState(#)_1);
+      );
+    );
+  );
+
+
+
+
+  computeGradient(pos) := (
+    [
+        (g(pos.x + gradEpsilon, pos.y) - g(pos.x - gradEpsilon, pos.y)) / 2 / gradEpsilon,
+        (g(pos.x, pos.y + gradEpsilon) - g(pos.x, pos.y - gradEpsilon)) / 2 / gradEpsilon;
+    ];
+  );
+
+
+
+
+  // **********************************************************************************************************
+  // Start ****************************************************************************************************
+  // **********************************************************************************************************
+  canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
+  canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
+  canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
+  canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+  [canvasLeft, canvasTop] = canvasCorners_1;
+  [canvasRight, canvasBottom] = canvasCorners_3;
+
+
+  
+  
+  
+  gradEpsilon = 0.001;
+  newtonEpsilon = 0.03;
+  
+  //f(x,y) := (x * y^2 - 3 * x^3 + x^2 - x + sin(y) * x + 5 - pi * y) * (y^9-1.4*x^2*y^2+1.4*x^3) * ((y-x^5)^2-y^10)  * (y^4 + 3 * x^4 - 7);
+  f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
+  g(x,y) := abs(f(x,y));
+  
+  thickness = 0.0;
+  sparkColor = [255,200,44] / 255 :> 1;
+  
+  
+  surround = apply(1..8, k, gauss(exp(i*k/8*2*pi))) * 0.01;
+  
+
+
+  computeResolution = 1024;
+  renderResolution = 1024;
+  
+  
+  axesMax = 10;
+  L = (-axesMax, -axesMax)-(0.5,0.5); 
+  R = (axesMax, -axesMax)-(0.5,0.5);
+  
+  createimage("computeTexture", computeResolution, computeResolution);
+  createimage("gradientTexture", computeResolution, computeResolution);
+  createimage("renderTarget", renderResolution, renderResolution);
+
+
+  renderSize = canvasWidth;
+  renderPos = canvasCenter - 0.5 * renderSize * (1,1);
+  renderArea = rect(renderPos, renderSize, renderSize);
+
+
+
+  colorplot(L, R, "gradientTexture", 
+    grad = computeGradient(#);
+  
+    (grad.x, grad.y, 0, 1);
+  
+  );
+
+
+
+  //colorplot("computeTexture", if(random()>0.999, 1, 0));
+  
+
+
+
+
+
+</script>
+<script src="../../Egdod/egdodUI.js"></script>
+<script src="../../Egdod/egdodMath.js"></script>
+<script src="../../Egdod/egdodArray.js"></script>
+<script src="../../Egdod/egdodColor.js"></script>
+<script src="../../Egdod/egdodMisc.js"></script>
+<script src="../../Egdod/egdodAnim.js"></script>
+<script src="../../Egdod/egdodShader.js"></script>
+
+
+
+
+<script id='csdraw' type='text/x-cindyscript'>
+  //fillpoly(screenbounds(), color->0.2 * (1,1,1));
+  drawimage(canvasCorners_4, canvasCorners_3, "back");
+  
+  drawimage(renderPos, renderPos + (renderSize, 0), "renderTarget");
+  drawimage(canvasCorners_4, canvasCorners_3, "front");
+  iterate();
+</script>
+
+
+<script id='cstick' type='text/x-cindyscript'>
+</script>
+
+
+
+<script id='csmousedown' type='text/x-cindyscript'>
+placeBugs(mouse().xy);
+</script>
+
+<script id='csmousedrag' type='text/x-cindyscript'>
+placeBugs(mouse().xy);
+
+</script>
+
+<script id='csmousemove' type='text/x-cindyscript'>
+</script>
+
+<script id='csmouseup' type='text/x-cindyscript'>
+</script>
+
+<canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
+</canvas>
+
+<script>
+
+    cindy = createCindy({canvasname:"CSCanvas",
+                 scripts:"cs*",
+                 images:{
+                    back: "../../assets/forest2.png",
+                    front: "../../assets/forest3.png"
+                 }
+                });
+
+</script>
+
+
+
+</body>
+
+</html>

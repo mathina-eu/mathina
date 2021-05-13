@@ -24,17 +24,17 @@
 		actualTime_1 * 3600 + actualTime_2 * 60 + actualTime_3 + actualTime_4 * 0.001;
 	);
 
-	timeBufferEABOW = 0;
-	scriptStartTimeEABOW = 0;
+	timeBufferEBOW = 0;
+	scriptStartTimeEBOW = 0;
 	// ************************************************************************************************
 	// Sets up time-keeping variables. Will be automatically called when included.
 	// Has to be called together with playanimation()!
 	// ************************************************************************************************
 	setupTime() := (
-		timeBufferEABOW = computerSeconds();
-		scriptStartTimeEABOW = timeBufferEABOW;
+		timeBufferEBOW = computerSeconds();
+		scriptStartTimeEBOW = timeBufferEBOW;
 	);
-	now() := computerSeconds() - scriptStartTimeEABOW;
+	now() := computerSeconds() - scriptStartTimeEBOW;
 
 	// ************************************************************************************************
 	// Returns the duration ofthe last frame/tick in seconds.
@@ -43,8 +43,8 @@
 	deltaTime() := (
 		regional(result);
 
-		result = computerSeconds() - timeBufferEABOW;
-		timeBufferEABOW = computerSeconds();
+		result = computerSeconds() - timeBufferEBOW;
+		timeBufferEBOW = computerSeconds();
 
 		result;
 	);
@@ -227,17 +227,23 @@
 		absoluteStroke = apply(obj.stroke, obj.pos + #);
 		ratio = 1..ceil(obj.drawPercent * length(absoluteStroke));
 		fillpoly(absoluteStroke_ratio, color->obj.fillColor, alpha->obj.fillAlpha);
-		connect(absoluteStroke_ratio, size->obj.lineSize, color->obj.lineColor);
-		if(obj.arrow & length(ratio) > 3, connect(arrowTip(absoluteStroke_(ratio_(-1)), absoluteStroke_(ratio_(-1)) - absoluteStroke_(ratio_(-3)), obj.arrowSize), size->obj.lineSize, color->obj.lineColor));
+		connect(absoluteStroke_ratio, size->obj.lineSize, color->obj.lineColor, alpha->obj.lineAlpha);
+		if(obj.arrow, 
+			 if(length(ratio) >= 3,
+				connect(arrowTip(absoluteStroke_(ratio_(-1)), absoluteStroke_(ratio_(-1)) - absoluteStroke_(ratio_(-3)), obj.arrowSize), size->obj.lineSize, color->obj.lineColor, alpha->obj.lineAlpha);
+			,if(length(ratio) >= 2,
+				connect(arrowTip(absoluteStroke_(ratio_(-1)), absoluteStroke_(ratio_(-1)) - absoluteStroke_(ratio_(-2)), obj.arrowSize), size->obj.lineSize, color->obj.lineColor, alpha->obj.lineAlpha);
+			));
+		);
 	);
-	arrowTipAngleEABOW = pi/ 6;
+	arrowTipAngleEBOW = pi/ 6;
 	arrowTip(tipPos, dir, size) := (
 		if(abs(dir) > 0, dir = dir / abs(dir));
 
 		[
-			tipPos - size * rotation(arrowTipAngleEABOW) * dir,
+			tipPos - size * rotation(arrowTipAngleEBOW) * dir,
 			tipPos,
-			tipPos - size * rotation(-arrowTipAngleEABOW) * dir
+			tipPos - size * rotation(-arrowTipAngleEBOW) * dir
 		];		
 	);
 
@@ -267,13 +273,13 @@
 
 
 		
-	strokeSampleRateEABOW = 128;
+	strokeSampleRateEBOW = 128;
 	// ************************************************************************************************
 	// Setting up a stroke object.
 	// ************************************************************************************************
 	createRootStrokeObject(pos, lineColor, fillColor, fillAlpha) := {
 		"pos": pos,
-		"stroke": apply(1..strokeSampleRateEABOW, [0,0]),
+		"stroke": apply(1..strokeSampleRateEBOW, [0,0]),
 		"drawPercent": 0,
 		"lineSize": 0,
 		"lineColor": lineColor,
@@ -286,13 +292,13 @@
 	// ************************************************************************************************
 	// Zero strokes.
 	// ************************************************************************************************
-	zeroStrokeCenter() := apply(1..strokeSampleRateEABOW, [0,0]);
-	zeroStrokeRight() := apply(1..strokeSampleRateEABOW, [1,0]);
+	zeroStrokeCenter() := apply(1..strokeSampleRateEBOW, [0,0]);
+	zeroStrokeRight() := apply(1..strokeSampleRateEBOW, [1,0]);
 	
 	// ************************************************************************************************
 	// Creates stroke around a circle.
 	// ************************************************************************************************
-	sampleCircle(rad, angle) := apply(0..strokeSampleRateEABOW - 1, rad * [cos(angle * # / (strokeSampleRateEABOW - 1)), sin(angle * # / (strokeSampleRateEABOW - 1))]);
+	sampleCircle(rad, angle) := apply(0..strokeSampleRateEBOW - 1, rad * [cos(angle * # / (strokeSampleRateEBOW - 1)), sin(angle * # / (strokeSampleRateEBOW - 1))]);
 	
 	
 	// ************************************************************************************************
@@ -315,7 +321,7 @@
 		dists = apply(pairs, dist(#_1, #_2));
 		totalDist = sum(dists);
 		
-		effectiveNumber = strokeSampleRateEABOW - length(poly) - 1;
+		effectiveNumber = strokeSampleRateEBOW - length(poly) - 1;
 		splitNumbers = [];
 
 		forall(1..length(poly) - 1,
@@ -334,24 +340,24 @@
 	// ************************************************************************************************
 	sampleBezierLin(a, b) := (
 		regional(t);
-		apply(0..strokeSampleRateEABOW - 1, 
-			t = # / (strokeSampleRateEABOW - 1);
+		apply(0..strokeSampleRateEBOW - 1, 
+			t = # / (strokeSampleRateEBOW - 1);
 
 			t*b + (1-t)*a;
 		);
 	);
 	sampleBezierQuad(a, b, c) := (
 		regional(t);
-		apply(0..strokeSampleRateEABOW - 1, 
-			t = # / (strokeSampleRateEABOW - 1);
+		apply(0..strokeSampleRateEBOW - 1, 
+			t = # / (strokeSampleRateEBOW - 1);
 
 			t^2*c + 2*t*(1-t)*b + (1-t)^2*a;
 		);
 	);
 	sampleBezierCube(a, b, c, d) := (
 		regional(t);
-		apply(0..strokeSampleRateEABOW - 1, 
-			t = # / (strokeSampleRateEABOW - 1);
+		apply(0..strokeSampleRateEBOW - 1, 
+			t = # / (strokeSampleRateEBOW - 1);
 
 			t^3*d + 3*t^2*(1-t)*c + 3*t*(1-t)^2*b + (1-t)^3*a;
 		);
@@ -362,15 +368,15 @@
 	// Creates a stroke based on a function graph.
 	// ************************************************************************************************
 	sampleFunctionGraph(func, start, end) := (
-		apply(0..strokeSampleRateEABOW-1,
-			t = lerp(start, end, #, 0, strokeSampleRateEABOW-1);
+		apply(0..strokeSampleRateEBOW-1,
+			t = lerp(start, end, #, 0, strokeSampleRateEBOW-1);
 
 			(t, parse(func + "(" + t + ")"));	
 		);
 	);
 	sampleCurve(curve, start, end) := (
-		apply(0..strokeSampleRateEABOW-1,
-			t = lerp(start, end, #, 0, strokeSampleRateEABOW-1);
+		apply(0..strokeSampleRateEBOW-1,
+			t = lerp(start, end, #, 0, strokeSampleRateEBOW-1);
 
 			parse(curve + "(" + t + ")");	
 		);

@@ -262,13 +262,16 @@ newObstaclePoint(list, minDist, count) := (
 
 
 lissajoue(t) := lissajoue(1, 2, pi/3, 2 * pi * t);
+lissajoueHard(t) := lissajoue(2, 3, pi/3, 2 * pi * t);
 lemiscate(t) := [cos(2 * pi * t), sin(2 * pi * t) * cos(2 * pi * t)]; // Lemiscate of Gerono
 
 createCurveStroke(name) := (
   result = sampleCircle(1, 2*pi);
 
   if(name == "lissajoue", result = sampleCurve("lissajoue", 0, 1));
+  if(name == "lissajoueHard", result = sampleCurve("lissajoueHard", 0, 1));
   if(name == "circle",    result = sampleCircle(1, 2*pi));
+  //if(name == "ellipse",    result = apply(sampleCircle(1, 2*pi), [1.2*#.x, 0.8 * #.y]));
   if(name == "square",    result = samplePolygon([(-1,1), (1,1), (1,-1), (-1,-1)]));
   if(name == "lemiscate", result = sampleCurve("lemiscate", 0, 1));
   if(name == "triangle", result = samplePolygon([(0,1), 0.5 * (-sqrt(3), -1), 0.5 * (sqrt(3), -1)]));
@@ -282,9 +285,29 @@ createCurveStroke(name) := (
 
 
 generateCurve() := (
-  currCurve = randchoose(curveNames);
+  regional(angle, squish);
+
+  if(length(activeRun) == 0,
+    firstRun = false;
+    activeRun = randsort(curveNames ++ ["lissajoueHard"]);
+    while(currCurve == activeRun_1, activeRun = randsort(curveNames));
+  );
+
+  currCurve = activeRun_1;
+  activeRun = bite(activeRun);
+
+
+
   followCurve.pos = randchoose(curvePositions);
-  followCurve.stroke = curveScales_currCurve * createCurveStroke(currCurve);
+
+  if(firstRun, 
+    angle = 0;
+    squish = [1,1];
+  , // else //
+    angle = 2*pi * random();
+    squish = [0.8 + 0.4 * random(), 0.8 + 0.4 * random()];
+  );
+  followCurve.stroke = apply(createCurveStroke(currCurve), curveScales_currCurve * rotation(angle) * [squish.x * #.x, squish.y * #.y]);
   
   followScore = [];
 );
@@ -379,7 +402,7 @@ dragon = {
   "trailAMaxSize": 1,
   "trailAMaxLength": 100,
   "trailB": [],
-  "trailBMaxLength": 100,
+  "trailBMaxLength": 0,
   "flipbook": ["dragon1", "dragon2", "dragon3", "dragon2"],
   "scale": 0.3,
   "rotation": 0,
@@ -522,15 +545,20 @@ recallStart = [];
 
 
 
-curveNames = ["lissajoue", "circle", "square", "lemiscate", "triangle"];
-curvePositions = apply(-1..1, dragonHome + [lerp(-20, 20, #, -2, 2), -2]);
+curveNames = ["circle", "square", "triangle", "lemiscate", "lissajoue"];
+curvePositions = apply(0..2, dragonHome + [lerp(0, 20, #, 0, 2), -2]);
 curveScales = {
-  "circle": 15,
-  "square": 13,
-  "lemiscate": 20,
-  "triangle": 17,
-  "lissajoue": 15
+  "circle": 13,
+  "ellipse": 12,
+  "square": 11,
+  "lemiscate": 15,
+  "triangle": 15,
+  "lissajoue": 13,
+  "lissajoueHard": 13
 };
+
+activeRun = curveNames;
+firstRun = true;
 
 followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
 followCurve.lineSize = 5;
