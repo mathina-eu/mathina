@@ -669,7 +669,7 @@ background-repeat: no-repeat;
             var NumeriTot = Array.from(Array(ElencoParole[Lingua].length).keys());
             NumeriTot.splice(NumeriTot.indexOf(NumeroParola), 1);
             NumeriTot = shuffle(NumeriTot);
-            ChiaveV = Math.floor(Math.random() * Alphabet[Lingua].length);
+            ChiaveV = Math.floor(1+Math.random() * (Alphabet[Lingua].length-1));
             ParolaTradotta = Cesare(ParolaOriginale, Alphabet[Lingua], -ChiaveV);
             document.getElementById("paroladatradurre").innerHTML = ParolaTradotta;
             document.getElementById("ch").innerHTML = "A &rarr; " + Alphabet[Lingua][ChiaveV] + " (" + ChiaveV + ")";
@@ -700,7 +700,7 @@ background-repeat: no-repeat;
     <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
     <div id="Partenza">
         <div class="PartContainer">
-            <p><span id="Trad1">Prova a <b id="TextAction">decifrare</b> questa parola, sapendo che la chiave &egrave</span> <span id="ch"></span>:</p>
+            <p><span id="Trad1">Prova a <b id="TextAction">decifrare</b> questa parola, sapendo che la chiave &egrave</span><br> <span id="ch"></span>:</p>
             <p id="paroladatradurre"></p>
         </div>
     </div>
