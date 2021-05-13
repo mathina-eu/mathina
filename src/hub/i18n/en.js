@@ -46,8 +46,8 @@ export default {
     jane: 'Jane',
 	flamma: 'Flamma',
     kangaroo: 'Kangaroo'
-    first policeman: 'First policeman'
-    second policeman: 'Second policeman'
+    first_policeman: 'First policeman'
+    second_policeman: 'Second policeman'
     owl: 'Owl'
     trainer: 'Trainer'
     george: 'George'
