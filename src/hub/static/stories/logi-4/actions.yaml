@@ -19,7 +19,7 @@ actions:
   - type: dialog
     entries:
       - text: What’s that...? 
-        char: Mathina
+        char: mathina
         mood: surprised
   - type: sceneText
     text: Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
@@ -52,12 +52,7 @@ actions:
       yPercent: -40
       ease: power3.out    
   - type: sceneText
-    text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside.
-  - type: dialog
-    entries:
-      - text: Sir, you can't do that to us. Simply give us our prize so that we can go home!
-        char: boys
-        mood: normal
+    text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside - "Sir, you can't do that to us. Simply give us our prize so that we can go home!"
   - type: image
     src: trainer.png
     id: trainer
@@ -81,7 +76,7 @@ actions:
     entries:
       - text: You can't simply leave like this! 
         char: boys
-        mood: normal
+        mood: talking
   - type: dialog
     entries:
       - text: Alright, I’ll give you another chance. Now you can guess!
@@ -93,7 +88,7 @@ actions:
     entries:
       - text: We can't figure this out! 
         char: boys
-        mood: normal
+        mood: talking
   - type: dialog
     entries:
       - text: What is it that you can't work out? 
@@ -117,20 +112,23 @@ actions:
         mood: normal
   - type: dialog
     entries:
-      - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list. The first person on the list receives the sum of the digits of the number of gold medals received. 
-        char: Trainer
+      - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list.  
+        char: trainer
         mood: normal
-      - text: For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
-        char: Trainer
+      - text: The first person on the list receives the sum of the digits of the number of gold medals received. For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. 
+        char: trainer
+        mood: normal
+      - text: The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
+        char: trainer
         mood: normal
       - text: Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
-        char: Trainer
+        char: trainer
         mood: normal
       - text: Where is George on the list?
-        char: Mathina
+        char: mathina
         mood: talking
       - text: Little lady, we won't tell you that. Try to figure it out!
-        char: Trainer
+        char: trainer
         mood: normal
   - type: clearImage
     id: mathina-think-t
@@ -148,13 +146,13 @@ actions:
         exposition: Mathina started scribbling and cried "Yeah!" after a few minutes.
         mood: happy
       - text: So how many do we get? How many? 
-        char: Boys
-        mood: normal
+        char: boys
+        mood: talking
   - type: game
-    text: Can you find out how many? 
+    text: Generate a table by filling in the initial amount of gold medals received.
     toolbarText: 
-    cta: Generate a table by filling in the initial amount of gold medals received.
-    url: /apps/logi-4-app/logi-4-app.htm?v=1
+    cta: Can you find out how many gold medals they receive? 
+    url: /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
     entries:
       - text: I'm not going to simply tell you that. 
@@ -206,8 +204,8 @@ actions:
         char: Mathina
         mood: talking
       - text: For sure!
-        char: Boys
-        mood: happy
+        char: boys
+        mood: talking
   - type: sceneText
     text: Mathina couldn’t suppress a triumphant smile as she turned to them.
   - type: dialog
@@ -219,73 +217,73 @@ actions:
     text: Do you notice any regularity with 116?
     toolbarText: 
     cta: Try it yourself!
-    url: /apps/logi-4-app/logi-4-app.htm?v=2
+    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
   - type: dialog
     entries:
       - text: 116 isn’t good because we’ll run out of it soon.
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: Yes, that's true. But that’s just an experiment for now. Maybe we can learn something from it.
         char: Mathina
         mood: talking
       - text: I may have done something wrong, but I almost always arrive at 9 medals.
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: Yes, you are right! And we can also see an 18…
         char: Mathina
         mood: talking
       - text: But that's also divisible by 9!
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: Yes! You can, if you want! And why do you think it is like this?
         char: Mathina
         mood: happy
   - type: game
-    text: Why is it like that, that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
+    text: Why is it that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
     toolbarText: 
     cta: Experiment with a few numbers!
-    url: /apps/logi-4-app/logi-4-app.htm?v=3
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
     entries:
       - text: I know! Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: What happens if we subtract one from the other? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). This way it’s divisible by 9. And this is true for any number of digits, because the last digit is always dropped, and the rest always gets 9, 99, 999,…. 99999999 as a multiplier, because we subtract one from a power of ten.  
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
   - type: sceneText
     text: The trainer raised his head and listened to the argument with bright eyes. He had always talked down to George, but now he saw that he could figure out quite a few good things with a little guidance.
   - type: dialog
     entries:
       - text: Good, but we still don't know how much we'll get! 
-        char: Boys
-        mood: normal
+        char: boys
+        mood: talking
       - text: Not really, but we're making progress.
         char: Mathina
         mood: happy
       - text: Listen, we saw in the example that we would get only 9 except for the first one in the line. So I think the first one will get more and the others will all get 2 times 9!
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
   - type: sceneText
     text: Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
   - type: dialog
     entries:
       - text: Good. Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: However, the first in line will get more than 9 in the first round, so you need a number greater than 117, a number which has a larger sum of digits than 9. Let's say 127.
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
   - type: game
     text: Do you think George is right, does it work with 127?
     toolbarText: 
     cta: Experiment with the number 127!
-    url: /apps/logi-4-app/logi-4-app.htm?v=4
+    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
   - type: dialog
     entries:
       - text: George, that doesn't work! On the one hand, we’ll run out of gold medals sooner, and on the other hand, the first and the fourth get a different amount, and the seventh as well, because he gets zero in the last round! - the others told George.
-        char: Boys
-        mood: normal
+        char: boys
+        mood: talking
       - text: I think there is a mistake at the fourth.
         char: Leo
         mood: thinking
@@ -294,25 +292,25 @@ actions:
         exposition: Mathina shook her head, but then she smiled proudly at Leo.
         mood: happy
       - text: The boy is right. I forgot that player four gets 9+9. Then I’ll modify it like this - the first one must also get 9 in both rounds!
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
   - type: game
     text: Can you figure out how many medals are actually needed?
     toolbarText: 
     cta: Experiment with numbers!
-    url: /apps/logi-4-app/logi-4-app.htm?v=5
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
     entries:
       - text: So I thought 6 people would get 9 in both rounds, and one person would get 18 in the first, then 9 in the second round. This means, 7x18 + 9 = 135. And so the fifth person gets more than the others!
-        char: George
-        mood: normal
+        char: george
+        mood: thinking
       - text: But George, we knew you were the fifth on the list!
-        char: Boys
-        mood: normal
+        char: boys
+        mood: talking
       - text: Oh really! But you didn't say so either! But it's okay, this way it feels even better to know the solution!
-        char: George
+        char: george
         exposition: They all laughed.
-        mood: happy
+        mood: thinking
   - type: clearImage
     id: gold
   - type: image
@@ -336,7 +334,7 @@ actions:
   - type: dialog
     entries:
       - text: You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!
-        char: Trainer
+        char: trainer
         mood: normal
   - type: sceneText
     text: Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
