@@ -272,7 +272,7 @@ actions:
       - text: "Well, if you didn't know what it was, you shouldn't have offered to help!"
         char: mathina
         exposition: "Answered Mathina annoyed"
-        mood: angry
+        mood: arguing
   - type: image
     src: rombus.png
     id: rombus

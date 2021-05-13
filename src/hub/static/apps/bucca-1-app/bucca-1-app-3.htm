@@ -41,7 +41,7 @@
         height: 26%;
 
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
         z-index: 10;
 		text-align: center;
 		display: flex;
@@ -129,7 +129,9 @@
   width: 98%;
   height: 58%;*/
         z-index: 100;
-        background: url(img/bgs.jpg) no-repeat center center fixed;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -146,14 +148,12 @@
 
     }
 
-    #successMessage2 {
+    #failMessage {
         position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -168,30 +168,25 @@
         height: 98%;
 
     }
-
-    #failMessage {
-        position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
-        z-index: 100;
-        background: #f3f1cd;
-        border: 2px solid #333;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
-        text-align: center;
-        left: 1%;
-        top: 1%;
-        width: 98%;
-        height: 58%;
-
-    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
 </style>
 
 <body onload="Init()">
@@ -214,7 +209,9 @@
 [["Testo1"],"We made a great discovery! See you in two Mondays at the ice cream shop.","Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.","Fizemos uma grande descoberta! Vejo-vos numa segunda-feira, daqui a duas semanas na gelataria.","Wir haben eine gro&szlig;artige Entdeckung gemacht! Wir treffen uns in zwei Montagen in der Eisdiele."],
 [["Testo2"],"We found the treasure map! See you in two Mondays the park.","Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.","Encontr&aacute;mos o mapa do tesouro! Vejo-vos numa segunda-feira, daqui a a duas semanas no parque.","Wir haben die Schatzkarte gefunden! Wir treffen uns in zwei Montagen im Park."],
 [["Testo3"],"Let's meet in two Tuesdays at the park to share the pirate treasure.","Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.","Vamo-nos encontrar numa ter&ccedil;a-feira, daqui a duas semanas no parque para partilharmos o tesouro dos piratas.","Wir treffen uns in zwei Dienstagen im Park, um den Schatz zu teilen."],
-[["Testo4"],"We found a talking parrot: let's meet at our house in two Tuesdays.","Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.","Encontr&aacute;mos um papagaio falante: vamo-nos encontrar em nossa casa numa ter&ccedil;a-feira, daqui a duas semanas.","Wir haben einen sprechenden Papagei entdeckt: Wir treffen uns in zwei Dienstagen bei uns zu Hause."]
+[["Testo4"],"We found a talking parrot: let's meet at our house in two Tuesdays.","Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.","Encontr&aacute;mos um papagaio falante: vamo-nos encontrar em nossa casa numa ter&ccedil;a-feira, daqui a duas semanas.","Wir haben einen sprechenden Papagei entdeckt: Wir treffen uns in zwei Dienstagen bei uns zu Hause."],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 ];
 
 
@@ -360,63 +357,38 @@
 
 
         function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
 			Yeah();
 
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
 
         }
     </script>
-    <div id="successMessage2" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
 
-        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
-  top: 60%;
-  right: 45%;"></img>
-    </div>
-
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-
+    <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
 	
-	<div id="successMessage" style="display:none">
+	<div id="successMessage" style="visibility:hidden;">
 	<canvas id='myCanvas'></canvas>
-        <img src="img/fleo1.png" id="certo"  style=" position: absolute;
-  top: 15%;
-  right: 43%;"></img>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
         
-
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
 
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
 
-
-        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
-  top: 60%;
-  right: 45%;"></img>
-    </div>
-	
 <script>
 function Resize() {
             var doc = document,

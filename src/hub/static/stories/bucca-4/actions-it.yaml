@@ -824,11 +824,20 @@ actions:
        char: charmingparrot
        mood: happy 
   - type: sceneText
-    text: >
-      <p>Ahoy Captain,<br/>tempi terribili ci attendono, tutto il tesoro è perduto. L'equipaggio ha dilapidato tutto in ogni sorta di dissolutezza quando è arrivato su quest'isola. Il nostro nome di Bucanieri è compromesso, dobbiamo tornare in mare e iniziare a ricostruire il nostro tesoro. Ho trovato un piccolo gruppo di uomini fidati, che non sono stati coinvolti nello sperpero del tesoro e li lascerò sull'isola per ricominciare dopo questa disgrazia. Saranno uomini d'onore e insegneranno alla posterità una vita di onestà e rettitudine.<br/>Tutti gli altri membri dell'equipaggio ci seguiranno in mare. Solo il Fato dirà cosa sarà di noi!<br/>Non appena il capitano Charmingparrot finì la lettera, i suoi occhi iniziarono a inumidirsi, le mani tremanti, mentre si gettava a terra inveendo.</p> 
+    text: >    
+        <p>“<i>Ahoy Capitano!</br>
+        </br>
+        Tempi terribili ci attendono e tutto il tesoro è perduto. L'equipaggio ha dilapidato tutto in ogni sorta di dissolutezza quando è arrivato su quest'isola. Il nostro nome di Bucanieri è compromesso, dobbiamo tornare in mare e iniziare a ricostruire il nostro tesoro. Ho trovato un piccolo gruppo di uomini fidati, che non sono stati coinvolti nello sperpero del tesoro e li lascerò sull'isola per ricominciare dopo questa disgrazia. Saranno uomini d'onore e insegneranno alla posterità una vita di onestà e rettitudine.<br/>
+        Tutti gli altri membri dell'equipaggio ci seguiranno in mare.
+        </br>
+        </br>
+        Solo il Fato dirà cosa sarà di noi!“</i></p>
+  - type: sceneText
+    text: >    
+      <p>Non appena il capitano Charmingparrot finì la lettera, i suoi occhi iniziarono a inumidirsi, le mani tremanti, mentre si gettava a terra inveendo.</p> 
   - type: dialog
     entries:        
-     - text: "La mia intera ricerca è stata vana e inutile. Il vero tesoro non è mai stato qui!"
+     - text: "La mia intera ricerca è stata vana e inutile! Il vero tesoro non è mai stato qui!"
        char: charmingparrot
        mood: sad 
   - type: sceneText
@@ -836,7 +845,7 @@ actions:
       <p>Mathina cercò di confortarlo.</p> 
   - type: dialog
     entries:        
-     - text: "No, era qui. Guardaci, proprio come i tuoi compagni antenati, la mia amica Angela, mio ​​fratello Leo e io, siamo qui uniti nelle avversità e lottiamo per andare avanti, proprio come hanno fatto i tuoi antenati secoli fa!"
+     - text: "No: era qui. Guardaci, proprio come i tuoi compagni antenati, la mia amica Angela, mio ​​fratello Leo e io, siamo qui uniti nelle avversità e lottiamo per andare avanti, proprio come hanno fatto i tuoi antenati secoli fa!"
        char: mathina
        mood: happy
      - text: "..."

@@ -272,7 +272,7 @@ actions:
       - text: "Bem, se não sabias o que era, não devias ter oferecido ajuda!"
         char: mathina
         exposition: "Respondeu a Mathina irritada"
-        mood: angry
+        mood: arguing
   - type: image
     src: rombus.png
     id: rombus
