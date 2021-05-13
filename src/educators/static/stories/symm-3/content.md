@@ -39,11 +39,11 @@ In the story, four different isometries (in the following order) - reflection, r
 A **symmetry of a figure** is an isometry that maps the figure exactly onto itself, so that it looks the same before and after the mapping: it should not be possible to distinguish the initial figure from the final one (either by shape, position, or colour).
 
 The following animations -- 
-[**anim 1**](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg1)
+[**anim 1**]($HUB_URL/story/stamping-friezes/?actionLink=tg1)
 , 
-[**anim 2**](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg2)
+[**anim 2**]($HUB_URL/story/stamping-friezes/?actionLink=tg2)
  and 
-[**anim 3**](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg3)
+[**anim 3**]($HUB_URL/story/stamping-friezes/?actionLink=tg3)
  -- which are available in the story, illustrate, respectively, a rotation symmetry, a glide reflection symmetry and a translation symmetry of 3 different friezes.
  
  ## Classification of friezes
@@ -55,21 +55,21 @@ Such discovery is achieved, in a constructive way, by studying the frieze symmet
 `*` **Reflection Symmetry**: the first difference perceived by the characters is that there are friezes which have
 symmetry axes^[We are assuming the direction of the translation symmetries to be horizontal.]
  -- or, in another formulation, friezes which have 
-[reflection symmetry](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg4)
+[reflection symmetry]($HUB_URL/story/stamping-friezes/?actionLink=tg4)
  -- and others which do not. Examining the friezes more closely, new differences arise: there are friezes which only have vertical symmetry axes, others only have an horizontal symmetry axis and there are others which have both types. In the story, the friezes with symmetry axes are separated into 3 bags: 
-[1, 2 and 3](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg5)
+[1, 2 and 3]($HUB_URL/story/stamping-friezes/?actionLink=tg5)
 .
 
 `*` **Rotation Symmetry**: After exploring reflection symmetry, it is natural to move on to another isometry, for instance
-[rotation](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg6). 
+[rotation]($HUB_URL/story/stamping-friezes/?actionLink=tg6). 
 Let us now consider 2 different cases: 1) the friezes without reflection symmetry (which, in the story, are outside the bags) and 2) the friezes with reflection symmetry:
 
   * in the first case, let us select the friezes which have rotation symmetry and consider a 
-[new bag (the 4th) for them](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg7)
+[new bag (the 4th) for them]($HUB_URL/story/stamping-friezes/?actionLink=tg7)
 ;
 
   * in the second case, there is a relevant difference concerning the friezes in **bag 1**: here, 
-[there are friezes which have rotation symmetry and others that do not](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg8)
+[there are friezes which have rotation symmetry and others that do not]($HUB_URL/story/stamping-friezes/?actionLink=tg8)
 . Let us separate these 2 kinds of friezes, by adding a new bag (the 5th) for the friezes, previously in bag 1, which have also rotation symmetry.
 
 **Remark 1**: Notice that, until now, by studying the reflection and rotation symmetries of the friezes, we have already reached 5 different types (“groups”) of friezes:
@@ -86,7 +86,7 @@ Let us now consider 2 different cases: 1) the friezes without reflection symmetr
 **Remark 3**: There are friezes (for now, outside the bags) which have neither reflection symmetry nor rotation symmetry. 
 
 `*` **Glide Reflection Symmetry**: Moving on to the glide reflection symmetry (in the story this kind of symmetry is found by chance, when 
-[Leo stamps a frieze incorrectly](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg9)
+[Leo stamps a frieze incorrectly]($HUB_URL/story/stamping-friezes/?actionLink=tg9)
 , we may conclude that there are 2 different kinds of friezes, among thouse outside the bags: some have glide reflection symmetry, while others don’t. Let us split them in two bags: the 6th, which contain the friezes with glide reflection symmetry and the 7th for the remaining friezes.
 
 **Remark 4**: Note that at this stage we have already found 7 different types of friezes according to their symmetry:
@@ -100,7 +100,7 @@ Let us now consider 2 different cases: 1) the friezes without reflection symmetr
 |  |  |  |  |  | Glide reflection symmetry | No glide reflection symmetry |
 
 `*` **Translation Symmetry**: by definition, 
-[all friezes have translation symmetry](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg10)
+[all friezes have translation symmetry]($HUB_URL/story/stamping-friezes/?actionLink=tg10)
 
 **Remark 5**: The friezes in bag 7 correspond to the ones **which only have translation symmetry**.
 
@@ -140,7 +140,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Stamping friezes with a “roll”](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg11)
+## [Game 1 - Stamping friezes with a “roll”]($HUB_URL/story/stamping-friezes/?actionLink=tg11)
 
 In this app, the user is invited to choose an image from a total of 20 figures. Then, the creation of a cylinder with the selected image is presented. Clicking 
 ![Stamp](/stories/symm-3/img/stamp.png =40x40)
@@ -151,7 +151,7 @@ In this app, the user is invited to choose an image from a total of 20 figures. 
 
 &nbsp;
 
-## [Game 2 - Separating friezes with symmetry axes](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg12)
+## [Game 2 - Separating friezes with symmetry axes]($HUB_URL/story/stamping-friezes/?actionLink=tg12)
 
 A set of 7 friezes is presented. The user is invited to choose the 4 friezes with symmetry axes. After choosing the correct friezes and clicking
 ![Confirm](/stories/symm-3/img/confirm.png =40x40)
@@ -162,7 +162,7 @@ A set of 7 friezes is presented. The user is invited to choose the 4 friezes wit
 
 &nbsp;
 
-## [Game 3 - Separating the friezes with symmetry axes into 3 bags](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg13)
+## [Game 3 - Separating the friezes with symmetry axes into 3 bags]($HUB_URL/story/stamping-friezes/?actionLink=tg13)
 
 A set of 12 friezes is presented. The user is invited to drag each frieze to the corresponding bag, according to its reflection symmetry: **bag 1** contains the friezes which only have vertical symmetry axes; **bag 2**, those only with a horizontal symmetry axis; and **bag 3** those with vertical and horizontal axes.
 
@@ -171,7 +171,7 @@ A set of 12 friezes is presented. The user is invited to drag each frieze to the
 
 &nbsp;
 
-## [Game 4 - Stamping friezes with a “board”](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg14)
+## [Game 4 - Stamping friezes with a “board”]($HUB_URL/story/stamping-friezes/?actionLink=tg14)
 
 In this app, the user is invited to choose an image from a total of 20 figures. Then, the user can watch a board stamping a frieze, with both vertical and horizontal symmetry axes, which has the chosen image as motif.
 
@@ -180,28 +180,28 @@ In this app, the user is invited to choose an image from a total of 20 figures. 
 
 &nbsp;
 
-## [Game 5 - Separating the friezes with rotation symmetry](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg15)
+## [Game 5 - Separating the friezes with rotation symmetry]($HUB_URL/story/stamping-friezes/?actionLink=tg15)
 
 This app is similar to **Game 3**. However, instead of choosing friezes with symmetry axes, the user should pick the ones with rotation symmetry. 
 
 &nbsp;
 
 
-## [Game 6 - Still the friezes with rotation symmetry…](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg16)
+## [Game 6 - Still the friezes with rotation symmetry…]($HUB_URL/story/stamping-friezes/?actionLink=tg16)
 
 This app is similar to **Game 5**. The only difference concerns the friezes displayed: here, the friezes presented are the ones which belonged originally to bag 1.
 
 &nbsp;
 
 
-## [Game 7 - Separating the friezes with glide reflection symmetry](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg17)
+## [Game 7 - Separating the friezes with glide reflection symmetry]($HUB_URL/story/stamping-friezes/?actionLink=tg17)
 
 This app is similar to **Game 3**. However, instead of choosing friezes with symmetry axes, the user should pick the ones with glide reflection symmetry.
 
 &nbsp;
 
 
-## [Game 8 - Labeling the bags](https://mathina-hub.netlify.app/story/stamping-friezes/?actionLink=tg18)
+## [Game 8 - Labeling the bags]($HUB_URL/story/stamping-friezes/?actionLink=tg18)
 
 In this app, the user can observe the 7 bags obtained and see the friezes inside. For each bag, the user is invited to select, from a list of symbols – 
 ![horizontal reflection](/stories/symm-3/img/Icon-refH.png =40x40)

@@ -18,7 +18,7 @@ Uma **simetria de uma figura** é uma isometria que envia a figura exatamente so
 Note-se que para identificar uma simetria de reflexão é crucial encontrar um eixo de simetria.
 
 Na história, está disponível um
-[“labirinto de espelhos”](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg1)
+[“labirinto de espelhos”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg1)
 . Ao usar esta ferramenta, o utilizador familiariza-se com o facto de: 1) o segmento que une um ponto *A* à sua imagem refletida *A'* ser perpendicular à linha de reflexão e 2) ambos os pontos (*A* e *A'*) estarem à mesma distância de *r*.
 
 ![Reflexão](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
@@ -30,7 +30,7 @@ Uma simetria de rotação de uma imagem é uma rotação que envia a imagem exat
 ![Ver o filme aqui](/stories/symm-2/video/_align-center_/ros_C_4.mp4 =640x360 )
 
 Na história, também está disponível um
-[“labirinto de meia volta”](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg2)
+[“labirinto de meia volta”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg2)
 . Ao explorar esta ferramenta, o utilizador familiariza-se com um tipo específico de rotação, a de 180 graus. Em particular, pode observar que o centro de rotação *O* é o ponto médio de *[AA ']*. 
 
 ![Rotação](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
@@ -44,11 +44,11 @@ Vamos agora considerar imagens planas que possuem algum tipo de simetria de rota
 Relativamente à sua simetria, as rosáceas podem dividir-se em duas classes: **diedrais**, se tiverem pelo menos uma simetria de reflexão (existe, pois, pelo menos um eixo de simetria) e **cíclicas**, se não possuírem qualquer simetria de reflexão.
 
 O
-[“Jogo das Rosáceas”](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg3)
+[“Jogo das Rosáceas”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg3)
 apresentado na história é um jogo no qual o jogador tem de escolher as rosáceas com simetria de reflexão, ou seja, as rosetas diedrais.
 
 Como podemos distinguir as rosáceas diedrais umas das outras? Uma forma natural é contar os seus eixos de simetria… Esse é exatamente o objetivo do
-[“Jogo dos sacos I”](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg4)
+[“Jogo dos sacos I”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg4)
 : ao jogá-lo, estamos a classificar as rosáceas diedrais de acordo com a sua simetria.
 
 ![Jogo dos Sacos I](/stories/symm-2/img/_align-center_/rosaceas-diedrais.png =1000x194)
@@ -66,7 +66,7 @@ No exemplo anterior, a rosácea tem **3** simetrias de rotação. Contudo, mesmo
 .
 
 Vamos classificar as rosáceas cíclicas de acordo com o número de simetrias de rotação que possuem. Esse é precisamente o objetivo do
-[“Jogo dos sacos II”](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg5)
+[“Jogo dos sacos II”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg5)
 .
 
 ![Jogo dos Sacos I](/stories/symm-2/img/_align-center_/rosaceas-ciclicas.png =1000x195)
@@ -107,7 +107,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 1 - Usando espelhos (I e II)](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg6)
+## [Jogo 1 - Usando espelhos (I e II)]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg6)
 
 É apresentada uma imagem. O utilizador é convidado a verificar se a imagem dada tem um eixo de simetria. Para tal, poderá mover o espelho existente, arrastando-o para a frente e para trás.
 
@@ -116,7 +116,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 2 - Jogo das Rosáceas](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg7)
+## [Jogo 2 - Jogo das Rosáceas]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg7)
 
 É exibido um conjunto de 8 rosáceas. O utilizador é convidado a escolher 4 rosáceas com eixos de simetria. Depois de escolher as rosáceas corretas e clicar
 ![Confirmar](/stories/symm-2/img/confirm.png =40x40)
@@ -127,7 +127,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 3 - Jogo dos Sacos I](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg8)
+## [Jogo 3 - Jogo dos Sacos I]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg8)
 
 São exibidas 12 rosáceas O utilizador é convidado a arrastar cada rosácea para o saco correspondente, de acordo com o número de eixos de simetria das rosáceas: o saco 1 contém as rosáceas com 1 eixo de simetria; o saco 2 contém as rosáceas com 2 eixos de simetria; .... Ao clicar em
 ![Eixo de simetria](/stories/symm-2/img/vertical.png =40x40)
@@ -138,7 +138,7 @@ São exibidas 12 rosáceas O utilizador é convidado a arrastar cada rosácea pa
 
 &nbsp;
 
-## [Jogo 4 - Jogo dos Sacos II](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg9)
+## [Jogo 4 - Jogo dos Sacos II]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg9)
 
 Esta app é muito semelhante à do Jogo 3. Contudo, em vez de contar os eixos de simetria, o utilizador terá de contar o número de simetrias de rotação de cada rosácea.
 
@@ -147,7 +147,7 @@ Esta app é muito semelhante à do Jogo 3. Contudo, em vez de contar os eixos de
 
 &nbsp;
 
-## [Jogo 5 - Labirinto de espelhos](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg10)
+## [Jogo 5 - Labirinto de espelhos]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg10)
 
 São apresentados dois labirintos lado a lado: o original (à esquerda) e o refletido à direita. O utilizador deve deslocar-se da entrada do labirinto original
 ![Entrada](/stories/symm-2/img/pegadas.png =40x40)
@@ -163,6 +163,6 @@ e ver os dois labirintos durante todo o tempo.
 &nbsp;
 
 
-## [Jogo 6 - Labirinto de meia-volta](https://mathina-hub.netlify.app/pt/story/mathina-the-rossete-game/?actionLink=tg11)
+## [Jogo 6 - Labirinto de meia-volta]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg11)
 
 Esta app é muito semelhante à do Jogo 5. Contudo, em vez de o labirinto (direito) estar refletido, ele está rodado de 180º.
