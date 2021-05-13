@@ -159,7 +159,9 @@
   width: 98%;
   height: 58%;*/
         z-index: 100;
-        background: url(img/bgs.jpg) no-repeat center center fixed;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -179,7 +181,9 @@
     #failMessage {
         position: absolute;
         z-index: 100;
-        background: url(img/bgs.jpg) no-repeat center center fixed;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -339,7 +343,8 @@ Traduzioni=[
 	[[], "If you want you can try again, but this is still very long! Are you convinced?", "Se vuoi puoi provare ancora, ma impiegherai molto tempo! Sei convinto?", "Se quiser, pode tentar de novo, mas ainda &eacute; muito longo! Voc&ecirc; est&aacute; convencido?", "Wenn Du willst, kannst Du es gleich nochmal versuchen, aber es kann wieder sehr lange dauern! Bist du &uuml;berzeugt?"],
 	[["Trad19b"],"We can still try with all the possible keys...","Possiamo ancora provare tutte le possibili chiavi...","Ainda podemos tentar com todas as chaves poss&iacute;veis...","Wir k&ouml;nnen immernoch alle m&ouml;glichen Schl&uuml;sseln ausprobieren..."],
 [["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
-[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"],
+[["Trad24"],"I understand, thank you!","Ho capito, grazie!","Eu entendo, obrigado!","Ich verstehe, vielen Dank!"]
 	];
 
 
@@ -387,7 +392,7 @@ Traduzioni=[
 			document.getElementById('myCanvas').height=dimension[1]*98/100;
             console.log(dimension);
 			
-			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
 			document.body.style.zoom=ScalaCalcolata;
         }
 
@@ -543,8 +548,11 @@ Traduzioni=[
             ChiaveUtente = parseInt(document.getElementById("chiavetrovata").value);
             if (ChiaveUtente == segretoB) {
                 document.getElementById("messdec").innerHTML = Traduzioni[21][Lingua] + "<br><br>" + Traduzioni[22][Lingua];
+				document.getElementById("Trad24").style.visibility="visible";
+				
             } else {
                 document.getElementById("messdec").innerHTML = RandomString(25,Alphabet)+ "<br><br>" + Traduzioni[23][Lingua];
+				document.getElementById("Trad24").style.visibility="visible";
             }
         }
 
@@ -568,7 +576,7 @@ Traduzioni=[
 		   function Finisci() {
             //document.getElementById("successMessage").style.display = "block";
             document.getElementById("successMessage").style.visibility = "visible";
-			Yeah();
+			
 
         }
 
@@ -613,6 +621,7 @@ Traduzioni=[
             <p class="titolo" id="Trad19">Riusciamo a decodificare il messaggio?</p>
             <p><span id="Trad19b"></span><br><span id="Trad20">Inserisci la chiave</span> <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <span id="messdec"></span>
             </p>
+			<center><p><button onclick="Finisci()" id="Trad24" style="visibility:hidden;">Ho capito grazie</button></p></center>
         </div>
     </div>
     <div class="block" style="display:none"> <input id="text" type="text" /> </div>
