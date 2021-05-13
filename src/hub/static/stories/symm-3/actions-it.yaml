@@ -129,11 +129,11 @@ actions:
       - text: "Sto abbellendo questa strada stampando fregi. Ma la vernice sulla tavola sta svanendo e devo portarla al mio castello e aggiustarla; la parte peggiore è che la tavola è molto grande e difficile da portare sulla mia scopa magica."
         char: wizard
       - text: "Perché non la arrotoli e la metti sulla scopa?"
-        char: Leo
+        char: leo
       - text: "Scusa, come ti chiami?"
         char: wizard
       - text: "Leo."
-        char: Leo
+        char: leo
       - text: "Io invece sono Mathina."
         char: mathina  
       - text: "Bene, Leo, la tua è proprio un'ottima idea!"
@@ -187,7 +187,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Oh, no! Dobbiamo fermarlo!"
-        char: Leo
+        char: leo
         mood: surprised
   - type: sceneText
     text: >
@@ -241,12 +241,12 @@ actions:
   - type: dialog
     entries:    
       - text: "Stampare fregi in questo modo è molto bello!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Voglio stampare molti fregi per le strade della Fiera della Simmetria. Vieni a vedere i miei disegni!"
         char: wizard
       - text: "Yes!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: 'fundo'
@@ -271,7 +271,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Ti aiuteremo a decorare le strade con i fregi!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearImage
     id: todos_frisos
@@ -286,7 +286,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Iniziamo con questo!"
-        char: Leo
+        char: leo
   - type: clearImage
     id: friso2
   - type: image
@@ -335,7 +335,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Che ne dici, Mathina, aiutiamo il mago a stampare i suoi fregi?"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -369,7 +369,7 @@ actions:
       - text: "Hai notato che il fregio che hai scelto ha assi di simmetria, ma ce ne sono altri qui che non ne hanno nessuno?"
         char: mathina
       - text: "Hai ragione! Non ci avevo fatto caso!"
-        char: Leo
+        char: leo
       - text: "Proviamo a separarli dagli altri."
         char: mathina
   - type: game
@@ -391,7 +391,7 @@ actions:
   - type: dialog
     entries:         
       - text: "C'è dell'altro... Ci sono fregi che hanno solo assi di simmetria verticale, altri che hanno solo assi di simmetria orizzontale e ce ne sono che hanno di entrambi i tipi..."
-        char: Leo
+        char: leo
       - text: "Non me ne ero accorta! Proviamo a raggrupparli."
         char: mathina
   - type: image
@@ -470,7 +470,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Sì! Quindi, questo è quello che farò: userò questo disegno sulla tavola."
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: fundo
@@ -483,7 +483,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Lo farò rotolare così."
-        char: Leo
+        char: leo
   - type: clearBackground
     id: fundo
   - type: background
@@ -493,7 +493,7 @@ actions:
   - type: dialog
     entries:    
       - text: "E stamperò il fregio proprio come prima!"
-        char: Leo
+        char: leo
         mood: excited
   - type: game
     text: "Guarda il film!"
@@ -656,7 +656,7 @@ actions:
   - type: dialog
     entries:   
       - text: "I want to go outside and stamp friezes!"
-        char: Leo
+        char: leo
   #
   # Voltando para o exterior
   - type: clearBackground
@@ -703,7 +703,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Sì! Sceglierò questo disegno per la tavola."
-        char: Leo
+        char: leo
         mood: excited
   #
   # Leo enrola o friso3
@@ -717,7 +717,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Lo farò rotolare..."
-        char: Leo
+        char: leo
   #
   # Leo carimba o friso3
   - type: clearImage
@@ -730,7 +730,7 @@ actions:
   - type: dialog
     entries:    
       - text: "... e stamperò il fregio!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Animação a carimbar o friso3 com o cilindro
@@ -745,7 +745,7 @@ actions:
       - text: "Ben fatto, Leo! Penso però che possiamo riuscire a stampare il fregio usando solo metà del rotolo..."
         char: mathina
       - text: "Cosa intendi?"
-        char: Leo
+        char: leo
         mood: surprised
   #
   # Mathina mostra metade do carimbo do friso3
@@ -785,7 +785,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Puoi stampare metà del fregio!"
-        char: Mathina
+        char: mathina
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
@@ -797,7 +797,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Vero. Ma come facciamo per l'altra metà?"
-        char: Leo
+        char: leo
         mood: angry
   #
   # Mathina explica a Leo (parte 1)
@@ -863,7 +863,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Oh, ho capito, ho capito! Voglio provarci anch'io!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Muito apressado, Leo começa a carimbar
@@ -892,7 +892,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Fatto!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Mathina diz a Leo que este não era o friso esperado
@@ -939,7 +939,7 @@ actions:
       - text: "Il fregio che hai prodotto ha una glissoriflessione."
         char: wizard
       - text: "Che cos'è che ha?!"
-        char: Leo
+        char: leo
         mood: surprised
       - text: "Glissoriflessione. Guarda il fregio. Immagina una copia, che ci metti esattamente sopra. È possibile riflettere orizzontalmente la copia al centro e trascinarla leggermente in avanti o indietro, in modo che l'aspetto dell'immagine ottenuta sia identico a quello dell'immagine iniziale. In questo caso si dice che il fregio ha una glissoriflessione."
         char: wizard
@@ -1120,7 +1120,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Beh, mi è piaciuto molto essere qui, ma voglio esplorare altri divertimenti alla Fiera della Simmetria!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Sure, Leo."
         char: wizard

@@ -160,7 +160,7 @@ actions:
   - type: dialog
     entries:
       - text: "Cosa intendi per “poliedro convesso”?"
-        char: Leo
+        char: leo
   - type: image
     src: imagem1.png
     id: imagem1
@@ -177,7 +177,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Non sono sicuro di aver capito quello che hai appena detto..."
-        char: Leo        
+        char: leo        
   - type: clearImage
     id: Leo5
   - type: clearImage
@@ -254,7 +254,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Possiamo restare e aiutarti a configurare il modello della giostra!"
-        char: Leo
+        char: leo
         exposition: "Leo si offrì volontario con entusiasmo."
   - type: clearBackground
     id: c1-bg8
@@ -268,11 +268,11 @@ actions:
   - type: dialog
     entries:        
       - text: "Hai idea di cosa stesse parlando quando ha parlato di “Poliedri uniformi e platonici”?"
-        char: Leo
+        char: leo
       - text: "Bene, se non sapevi cosa fosse, non avresti dovuto offrirti di aiutare!"
         char: mathina
         exposition: "Mathina disse annoiata."
-        mood: angry
+        mood: arguing
   - type: image
     src: rombus.png
     id: rombus
@@ -304,7 +304,7 @@ actions:
       - text: "Likewise, we call Platonic solids the polyhedra which are “as regular as possible”. These polyhedra must satisfy, in particular, the following conditions: “the faces are all regular polygons and equal to each other”; “at each vertex the same number of faces meet”; “the angles between contiguous faces are equal”; “the solid angles at each vertex are equal”."
         char: mathina
       - text: "Cosa intendi con “gli angoli solidi su ciascun vertice sono uguali”? E per “gli angoli tra le facce contigue devono essere gli stessi”?"
-        char: Leo
+        char: leo
         mood: surprised
   - type: clearBackground
     id: c1-bg9
@@ -352,7 +352,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Quindi il cubo è un solido platonico?"
-        char: Leo
+        char: leo
       - text: "Sì. Ma non me ne vengono in mente altri."
         char: mathina
   - type: clearBackground
@@ -377,7 +377,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Un cubo ha 6 facce. Taglierò solo 6 quadrati di fila e sistemerò il cubo."
-        char: Leo
+        char: leo
   - type: game
     text: "Guarda il video!"
     cta: "Play!"
@@ -632,7 +632,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Ah! È come nel caso dei 4 quadrati nello stesso vertice ..."
-        char: Leo
+        char: leo
   - type: clearImage
     id: mesmovertice3
   - type: clearBackground
@@ -732,7 +732,7 @@ actions:
       - text: Quindi, ora è molto più facile confermare se un poliedro è davvero un solido platonico!"
         char: mathina
       - text: "Sì, non abbiamo nemmeno bisogno della plastilina!"
-        char: Leo
+        char: leo
   - type: game
     text: "Guarda il video!"
     cta: "Play!"
@@ -743,7 +743,7 @@ actions:
         char: technician
         mood: impressed        
       - text: "Ma non possiamo semplicemente dire che i solidi platonici sono poliedri le cui facce sono tutte poligoni regolari e uguali?"
-        char: Leo
+        char: leo
         exposition: "Chiese Leo, dubbioso."
       - text: "No, non possiamo, anche se li assumiamo convessi. Perché non cerchi di trovare, tra i miei modelli di poliedri, esempi di poliedri che non sono solidi platonici, ma le cui facce sono tutte poligoni regolari e uguali?"    
         char: technician
@@ -805,10 +805,10 @@ actions:
   - type: dialog
     entries:        
       - text: "Che cos'è un poliedro uniforme?"
-        char: Leo
+        char: leo
         exposition: "Chiese Leo a Mathina."
       - text: "Ebbene, guardando il cubottaedro, sembra essere un poliedro le cui facce sono tutte poligoni regolari, ma non tutte con lo stesso numero di lati. Anche gli angoli solidi su ciascun vertice sembrano uguali."
-        char: Mathina
+        char: mathina
         exposition: "Disse Mathina, dopo aver controllato, con uno stampo di plastilina, se il cubottaedro avesse gli stessi angoli solidi e concludendo sperimentalmente che la cosa era vera."
   - type: clearBackground
     id: c1-bg20
@@ -827,7 +827,7 @@ actions:
   - type: dialog
     entries:        
       - text: "E pensi che questo poliedro sia uniforme?"
-        char: Leo
+        char: leo
         exposition: "Chiese Leo, afferrando un modello nelle vicinanze."
   - type: game
     text: "Guarda il video!"
@@ -890,7 +890,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Questo invece? Si tratta di un poliedro uniforme?"
-        char: Leo
+        char: leo
   - type: game
     text: "Guarda il video!"
     cta: "Play!"
@@ -916,7 +916,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Vuoi aggiungere questo poliedro al modello della giostra? È uniforme ?"
-        char: Leo
+        char: leo
   - type: sceneText
     text: >
       <p>Con sorpresa di Leo, il tecnico apparve completamente sorpreso dalla sua domanda.</p>
@@ -961,7 +961,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Non capisco! Cos'è una simmetria di un poliedro?"
-        char: Leo
+        char: leo
       - text: "Ok! Cominciamo dall'inizio: una simmetria di un poliedro è un'isometria (cioè una funzione che preserva le distanze) che manda il poliedro su se stesso: il poliedro dovrebbe apparire esattamente lo stesso prima e dopo l'applicazione dell'isometria."
         char: technician
       - text: "Prendiamo ad esempio un cubo e consideriamo una rotazione di 90 gradi attorno a un asse che passa per i centri di due facce opposte. Se lo ruotiamo, il cubo viene mandato in se stesso. Questa rotazione è quindi una simmetria cubica."
@@ -1002,7 +1002,7 @@ actions:
   - type: dialog
     entries:        
       - text: "È uniforme: se consideriamo, ad esempio, questi 2 vertici (in rosso e blu), c'è una rotazione che prende l'uno sull'altro! Guarda!"
-        char: Leo
+        char: leo
         exposition: "Disse Leo."        
   - type: game
     text: "Guarda il poliedro!"
@@ -1039,11 +1039,11 @@ actions:
       - text: "Quindi, se consideriamo un vertice sull'anello, chiamiamolo A, e uno fuori dall'anello, chiamiamolo B, non c'è simmetria del poliedro che porta A su B."
         char: mathina
       - text: "Non capisco!"
-        char: Leo
+        char: leo
       - text: "Qualsiasi isometria che prenda A in B rimuoverà l'anello di quadrati dall'equatore, cambiando così l'aspetto finale del poliedro."
         char: mathina
       - text: "Oh! Ora ho capito!"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: c1-bg27    
   - type: background
@@ -1070,14 +1070,14 @@ actions:
   - type: dialog
     entries:    
       - text: "Abbiamo trovato tutti i poliedri dell'uniforme: li abbiamo messi in questa borsa. Ce ne sono 13."
-        char: Leo
+        char: leo
         exposition: "Concluse Leo."
       - text: "Sono curioso. Esistono altri poliedri uniformi, diversi da quelli che abbiamo trovato nella borsa?"
-        char: Leo        
+        char: leo        
       - text: "In realtà, esiste un numero infinito di poliedri uniformi."
         char: technician
       - text: "Cosa?!"
-        char: Leo
+        char: leo
         exposition: "Esclamarono simultaneamente Leo e Mathina."
       - text: "È molto facile! Basta pensare ai prismi retti le cui basi sono poligoni regolari e le cui facce laterali sono quadrati. Questi tipi di prismi sono anche poliedri uniformi.
         char: technician

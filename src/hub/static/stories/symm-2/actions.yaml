@@ -311,7 +311,7 @@ actions:
       - text: "I also want to try, but first I want to understand what I am expected to do!"
         char: mathina
         exposition: "Mathina shouted to Leo, who had meanwhile disappeared."         
-        mood: angry
+        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image

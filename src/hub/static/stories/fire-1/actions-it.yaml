@@ -1,0 +1,524 @@
+#FIRE-1
+actions:
+  - type: background
+    src: bg_full.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: image
+    src: bg_castle.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+
+  - type: image
+    src: bg_fields.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 15%; top: 30%; left: 1%;"
+    parallax: mid2
+    #valign: bottom
+    #style: "height: 25vh"
+  #- type: image
+    #src: $COMMON/img/leo3.png
+    #id: leo1
+    #style: "width: 15%; top: 57%; left: 0%; "
+    #valign: bottom
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%;"
+    parallax: front1
+
+  # - type: image
+    # src: unidragon.gif
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;"
+    # parallax: mid2
+
+  - type: sceneText
+    text: >
+      Era una mattina di sole e Mathina e Leo stavano andando a fare una passeggiata
+       nei campi vicino al loro villaggio quando videro all'improvviso un'anziana signora
+       che agitava le mani verso il cielo e pronunciava parole incomprensibili.
+
+  - type: animation
+    target: matleo
+    vars:
+        duration: 5
+        xPercent: 155
+        yPercent: 75
+        width: 20%
+        ease: power3.out
+
+  - type: sceneText
+    text: >
+      La donna era anziana ma aveva lo sguardo fiero e forte, e sembrava che il tempo per lei avesse smesso di scorrere. I suoi capelli erano bianchi e lunghi e indossava robusti abiti di pelle, un vecchio mantello polveroso consumato, stivali
+       come quelli usati per andare a cavallo. Portava con se una borsa, una corda spessa,
+       un libro e un bastoncino decorato con strisce colorate,
+       troppo corto per essere utilizzato come aiuto per camminare, ma abbastanza lungo per arrivare a toccare il pavimento.
+
+  - type: clearImage
+    id: matleo
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: sceneText
+    text: >
+      Mathina, che non era affatto timida, si avvicinò alla donna.
+  - type: animation
+    target: fla
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Signora, ma tu sei una guerriera?
+        char: mathina
+        mood: talking
+      - text: Oh, amica mia, non direi proprio. Non ho mai combattuto, almeno non con nessun essere umano.
+        char: flamma
+        mood: normal
+      - text: Sei una maga allora?
+        char: mathina
+        mood: arguing
+      - text: Non direi nemmeno questo, Mathina... anche se ne conosco alcuni e mi hanno aiutato più di una volta.
+        char: flamma
+        mood: normal
+      - text: Allora chi sei? Parli una lingua strana. A proposito, io sono Mathina e lui è Leo!
+        char: mathina
+        mood: surprised
+      - text: Piacere di conoscervi. Io sono Flamma, un'addestratrice di uccelli di fuoco.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Che cosa sono?
+        char: leo
+        exposition: Disse Leo, con interesse crescente.
+        mood: talking
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7.5%; top: 52%; left: 46%"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Vengo da una terra lontana, Arisa, piena maghi e di strane creature. Tra queste, ci sono molti tipi di uccelli di fuoco. Queste creature sono estremamente intelligenti, ma le loro menti e il linguaggio sono diversi dai nostri.
+        char: flamma
+        mood: normal
+      - text: Usano un linguaggio molto preciso per comunicare dove sono, come volano e dove vanno. Noi umani non abbiamo parole così precise per descrivere il loro volo, ma ci sono linguaggi magici, con numeri, simboli e parole segrete che ci permettono di tradurre ciò che intendiamo nella loro lingua. Le creature, se ben addestrate, ci capiscono e volano come chiediamo loro. Questo è quello che faccio: alleno gli uccelli di fuoco.  
+        char: flamma
+        mood: normal
+      - text: Oh, che cosa affascinante Flamma! Possiamo vederne uno? Dici che ce ne sono di diversi tipi ...
+        char: mathina
+        mood: talking
+      - text: Sono venuta qui alla ricerca di un piccolo unidrago che ho perso di vista due giorni fa. Penso che volesse esplorare il mondo ma volò troppo lontano. Lo vedrai, una volta che riuscirò a fargli capire dove siamo.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: fla
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo3.png
+    id: leo
+    style: "width: 8%; top: 50%; left: 38%"
+    parallax: mid2
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma1.png
+    id: fla
+    style: "width: 20%; top: 33%; left: 53%;"
+    parallax: front3
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        width: 25%
+        xPercent: -130
+        yPercent: 40
+
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        delay: 3
+        xPercent: -230
+        yPercent: -30
+        width: 20%
+        ease: power1.out
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        transform: rotateY(0deg)
+        delay: 6
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 6
+        transform: rotateY(0deg)
+        width: 5%
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 10
+        transform: rotateY(180deg)
+        width: 10%
+        ease: power1.out
+
+
+  - type: sceneText
+    text: Flamma lanciò un urlo profondo e forte al cielo. Non ricordava nessuna lingua
+         che Mathina o Leo conoscessero, ma sembrava avere un significato. All'improvviso, una specie di drago
+         apparve nel cielo, lasciando una scia colorata di fumo nell'aria. Il drago si mosse con grazia e rispose a Flamma mentre lei muoveva
+         braccio e il bastone.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Che cos'è? È un drago? Non mi fanno paura i draghi!
+        char: leo
+        exposition: Aggiunse, sebbene fosse un po' nervoso mentre l'animale si avvicinava.
+        mood: surprised
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 20
+        delay: 3
+        transform: rotateY(180deg)
+        xPercent: -65
+        yPercent: -10
+        #xPercent: -530
+        #yPercent: -20
+        width: 30%
+        ease: power1.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: Questo è un unidrago. Gli unidraghi sono molto simili ai draghi,
+           ma sono nati con un corno in testa. Come i denti da latte per i
+           bambini, quel corno è fragile e alla fine cade dalla loro testa
+           quando cresce un corno più forte e più grande. Ma il corno caduto non è un materiale morto, il drago può ancora sentirlo.
+        char: flamma
+        mood: normal
+      - text: Gli addestratori di unidraghi, come lo sono io,
+           deve trovare un unidrago e prendersi cura del suo corno. Si tratta di una grande
+           responsabilità, poiché il corno, anche se separato dall'unidrago, è una parte sensibile dell'unidrago, e
+           l'animale lo può percepire quando lo muoviamo o lo indichiamo in un certo
+           direzione.
+        char: flamma
+        mood: normal
+      - text: Noi addestratori usiamo il corno per guidare i draghi nell'aria. Il bastone che
+           sto portando è  proprio il corno di questo unidrago. Vorresti provare a muovere l'unidrago nel cielo?
+        char: flamma
+        mood: normal
+      - text: Sì! Molto volentieri!
+        char: mathina
+        mood: happy
+      - text: Diventiamo addestratori di unidraghi!
+        char: leo
+        mood: happy
+      - text: Devi solo puntare il corno nella direzione in cui vuoi che l'unidrago voli. 
+        char: flamma
+        mood: normal
+
+#Game 1.1
+  - type: game
+    text: |
+       Usa il corno per guidare l'unidrago. Prova a disegnare delle belle forme nell'aria.
+    toolbarText: Fai volare l'unidrago!
+    url: /apps/imaginary-tests/app_1/1_1/index.html
+    cta: Fai volare l'unidrago!
+
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 5%; top: 48%; left: 52%;"
+    parallax: front1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Ottimo! Ora prova a prendere queste palle di fuoco con l'unidragon! Le palle di fuoco sono il cibo principale per gli unidraghi:
+           ne vanno ghiotti!
+        char: flamma
+        exposition: Lanciò quindi alcune palle di fuoco in aria che galleggiavano come palloncini.
+        mood: normal
+
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.5
+        xPercent: 150
+        yPercent: -150
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 0.5
+        repeat: 3
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 1.5
+        delay: 0.5
+        xPercent: 550
+        yPercent: 60
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 2
+        repeat: 300
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+#Game 1.2
+  - type: game
+    text: Fai volare l'unidrago per mangiare tutte le palle di fuoco! Gli unidraghi sono infastiditi dalle nuvole: cerca di evitarle!
+    toolbarText: Prendi le palle di fuoco evitando le nuvole!
+    url: /apps/imaginary-tests/app_1/1_2/index.html
+    cta: Prendi tutte le palle di fuoco evitando le nuvole!
+
+  - type: clearImage
+    id: fire1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Non male! Ma se vuoi diventare un addestratore di unidraghi, devi esercitarti parecchio. Puoi fare in modo che l'unidrago disegna forme nel cielo con la sua scia di fumo? Provaci!
+        char: flamma
+        mood: normal
+
+#Game 1.3
+  - type: game
+    text: Prova a volare quanto più possibile vicino alla linea.
+    toolbarText: Segui le linee!
+    url: /apps/imaginary-tests/app_1/1_3/index.html
+    cta: Segui le linee!
+
+  - type: sceneText
+    text: >
+      La voce di Flamma si fece improvvisamente seria e disse:
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Mathina, ho notato che ti sei esercitata bene e ora hai una buona comprensione di come comunicare con gli unidraghi.
+           Tra poche settimane, al castello di Arisa, ci sarà un grande festa alla quale partecipano gli addestratori di uccelli di fuoco. Vi piacerebbe venire con me per vedere il castello e per provare a far volare gli unidraghi in gare un più impegnative, con i migliori allenatori del paese?
+        char: flamma
+        mood: normal
+      - text: Oh, sarebbe fantastico! Potremmo avere il nostro unidrago?
+        char: leo
+        exposition: Leo era entusiasta e aveva già deciso che voleva andare!
+        mood: happy
+      - text: Beh, un unidrago è un grande animale domestico da avere... è fantastico ma è anche una grande responsabilità. Inoltre deve accettarti. Se riuscirete a far vedere quanto valete al festival... Sì, potreste diventare degli addestratori di uccelli di fuoco e ottenere il vostro unidrago.
+        char: flamma
+        mood: normal
+      - text: Mi piacerebbe provare. Sono sempre pronta per le avventure! Avremo un unidrago, Leo!
+        char: mathina
+        mood: happy
+      - text: Quindi è deciso. Ma dovrai esercitarti molto! Ti lascerò allenare un po' con questo unidrago e una volta che lo sarete pronti, andremo al festival.
+        char: flamma
+        mood: normal
+
+# Game 1.1 again (?)
+  - type: game
+    text: Esercitarti a guidare l'unidrago di Flamma. Quali forme riesci a creare?
+    cta: "Fai pratica!"
+    url: /apps/imaginary-tests/app_1/1_1/index.html
