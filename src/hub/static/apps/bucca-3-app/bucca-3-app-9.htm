@@ -236,6 +236,14 @@
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 ];
 
+Soluzioni=[
+[],
+[14,9],
+[12,17],
+[4,4],
+[14,9]
+]
+
 
         function gup(name, url) {
             if (!url) url = location.href;
@@ -712,6 +720,7 @@
 
 
                 Draw(document.getElementById(ChiStoMuovendo), document.getElementById(ChiStoMuovendo).CentroCesare[0], document.getElementById(ChiStoMuovendo).CentroCesare[1], Angolo1, Angolo2, document.getElementById(ChiStoMuovendo).Scale);
+				Check();
             }
         }
 
@@ -788,14 +797,27 @@
             document.getElementById("TestIni").innerHTML = TestoIniziale[Lingua];
             document.getElementById("TestFin").innerHTML = TestoIniziale[Lingua];
         }
+		
+		
+		 function CalcolaMod(A, n) {
+            return ((A % n) + n) % n;
+        };
+
+
+		CheckFine=0;
 
         function Check() {
-            if (document.getElementById("CanvasMathina3").CaesarShift % Alphabet[Lingua].length == (Chiave1 + Chiave2) % Alphabet[Lingua].length) Finisci();
-            else Sconfitta();
+            if (CheckFine==0 && CalcolaMod(document.getElementById("CanvasMathina").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][0] && CalcolaMod(document.getElementById("CanvasMathina2").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][1]) {
+			CheckFine=1;
+			setTimeout(function(){ Finisci(); }, 2000);
+			}
 
 
         }
+function Link() {
+            location.reload();
 
+        }
 
 
         function Traduci(Testo, N1, N2) {
