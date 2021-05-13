@@ -58,6 +58,7 @@ export default {
     this.$refs.markdown.use(MarkdownToc, { includeLevel: [1,2,3] });
     this.$refs.markdown.use(MarkdownVideo);
     let { data } = await this.$axios.get(this.mdPath);
+    data = data.replaceAll('$HUB_URL', process.env.HUB_URL);
     if (data.startsWith('!HTML!')) {
       data = data.replace('!HTML!', '');
       this.type = TYPE_HTML;

@@ -6,31 +6,41 @@ actions:
     src: leo-pointing.png
     id: leo-pointing
     style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
+    parallax: back2
   - type: image
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
   - type: image
     src: bag.png
     id: bag
-    style: "width: 13%; top: 55%; right: 71%; z-index: 1;"
-    parallax: mid1  
+    style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
+    parallax: back1  
   - type: dialog
     entries:
-      - text: That's it! - Leo pointed at the sign on the skyscraper's facade, where it read “YTIC-IGOL” in giant letters. Leo would have headed inside, but Mathina quickly grabbed his hand.
+      - text: That's it! 
         char: leo
-        mood: happy
+        mood: talking
+  - type: sceneText
+    text: Leo pointed at the sign on the skyscraper's facade, where it read “YTIC-IGOL” in giant letters. Leo would have headed inside, but Mathina quickly grabbed his hand.
   - type: clearImage
     id: leo-pointing
   - type: image
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
+    parallax: back2
   - type: dialog
     entries: 
       - text: Isn't it strange that it says YTIC-IGOL? 
         char: mathina
-        mood: happy
+        mood: thinking
+  - type: dialog
+    entries:
+      - text: No, it's not strange at all, let's go!
+        char: leo
+        mood: talking
   - type: animation
     target: leo-thinking
     vars:
@@ -40,17 +50,15 @@ actions:
       repeat: 3
       yoyo: true
       ease: power1.inOut
-  - type: dialog
-    entries:
-      - text: No, it's not strange at all, let's go! - Leo jumped up but was immediately stopped by an invisible wall.
-        char: leo
-        mood: sad
+  - type: sceneText
+    text: Leo jumped up but was immediately stopped by an invisible wall.
   - type: clearImage
     id: mathina-thinking
   - type: image
     src: mathina-thinking-turned.png
     id: mathina-thinking-t
     style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
   - type: sceneText
     text: Mathina thought for a while, and while deep in thought, she turned around…
   - type: clearImage
@@ -59,36 +67,42 @@ actions:
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
   - type: sceneText
-    text: ... and then she turned back to the facade. She slapped her forehead in surprise.
+    text: ...and then she turned back to the facade. She slapped her forehead in surprise.
   - type: clearImage
     id: mathina-thinking
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
   - type: dialog
     entries:
       - text: Logi-city, just the other way round!
         char: mathina
-        mood: sad
+        mood: talking
   - type: dialog
     entries:
-      - text: This means, we should do everything backwards! - This said, Mathina and Leo turned around.
+      - text: This means, we should do everything backwards!
         char: mathina
-        mood: sad
+        mood: arguing
+  - type: sceneText
+    text: This said, Mathina and Leo turned around.
   - type: clearImage
     id: mathina-runs
   - type: image
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
   - type: clearImage
     id: leo-thinking
   - type: image
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
+    parallax: back2
   - type: sceneText
     text: They were leaping backwards towards the entrance.
   - type: animation
@@ -98,6 +112,7 @@ actions:
       xPercent: 50
       yPercent: 0
       ease: power3.out      
+      parallax: back2
   - type: animation
     target: mathina-runs-t
     vars:
@@ -109,8 +124,9 @@ actions:
     src: owl-wing-up.png
     id: owl-w-up
     style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
   - type: sceneText
-    text: They heard someone shouting at them.
+    text: Then they heard someone shouting at them.
   - type: clearImage
     id: leo-runs-t
   - type: clearImage
@@ -119,35 +135,42 @@ actions:
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
   - type: image
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
+    parallax: back2
   - type: dialog
     entries:
-      - text: Stop, stop immediately! - the voice cried. They turned around and saw a giant owl. Stop! - he repeated.
+      - text: Stop, stop immediately! Stop!
         char: owl
-        mood: sad
-      - text: We have an important mission to complete here, Mr Owl - Mathina said confidently. - We need to deliver this birthday gift to the Head of Logical Matters of Logi-city. Leo pointed at the bag at his feet.
+        mood: serious
+      - text: We have an important mission to complete here, Mr Owl. We need to deliver this birthday gift to the Head of Logical Matters of Logi-city.
         char: mathina
-        mood: sad
+        mood: talking
+  - type: sceneText
+    text: Leo pointed at the bag at his feet.
+  - type: dialog
+    entries:
       - text: Yes, I was notified. But you are no exception to the rule. 
         char: owl
-        mood: sad
+        mood: serious
   - type: clearImage
     id: owl-w-up
   - type: image
     src: owl-wing-front.png
     id: owl-w-f
     style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
+    parallax: back2
   - type: dialog
     entries:
-      - text: Observe the marble floor here in the doorway - the owl pointed at the colored tiles. - As a matter of fact, there is a purpose behind the pattern.
+      - text: Observe the marble floor here in the doorway. As a matter of fact, there is a purpose behind the pattern.
         char: owl
-        mood: sad
+        mood: serious
       - text: You are not allowed to stomp simply across it, unless you reveal the logic behind. This is how we ensure that only worthy people pass through to the boss.
         char: owl
-        mood: sad
+        mood: serious
   - type: animation
     target: mathina-thinking
     vars:
@@ -176,11 +199,12 @@ actions:
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
+    parallax: back2
   - type: dialog
     entries:      
-      - text: That's so simple! - cried the reckless friend and jumped. 
+      - text: That's so simple!  
         char: leo
-        mood: sad
+        mood: talking
   - type: animation
     target: leo-runs
     vars:
@@ -189,12 +213,12 @@ actions:
       yPercent: 0
       ease: power3.out
   - type: sceneText
-    text: The owl was in despair as Leo kept jumping from one field to another.
+    text: This said, Leo jumped! The owl was in despair as Leo kept jumping from one field to another.
   - type: animation
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 60
+      xPercent: 10
       yPercent: -24
       ease: power3.out  
   - type: sceneText
@@ -203,53 +227,56 @@ actions:
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 70
-      yPercent: -8
+      xPercent: 30
+      yPercent: 10
       ease: power3.out  
   - type: sceneText
-    text: Then to the orange square.
+    text: Then to the orange square...
   - type: animation
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 97
-      yPercent: -18
+      xPercent: 30
+      yPercent: -5
       ease: power3.out  
   - type: sceneText
-    text: from there to the orange triangle
-  - type: sceneText
-    text: but stopped on the orange triangle, before swinging to the wrong field.
+    text: ...from there to the orange triangle - but stopped there, before swinging to the wrong field.
   - type: clearImage
     id: leo-runs
   - type: image
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
+    parallax: back2
   - type: dialog
     entries:
-      - text: Stop! You stop immediately! - Leo was so terrified that he stood still on the orange triangle. 
-        char: leo
-        mood: sad
+      - text: Stop! You stop immediately!
+        char: owl
+        mood: serious
+  - type: sceneText
+    text: Leo was so terrified that he stood still on the orange triangle. 
   - type: clearImage
     id: owl-w-f
   - type: image
     src: owl-wing-up.png
     id: owl-w-up
     style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
   - type: dialog
     entries:
-      - text: I wasn't done yet – said the owl. - If you miss just one step, the tile will turn over and you find yourself in the sewer system of the house. And there is no way back! 
+      - text: I wasn't done yet. If you miss just one step, the tile will turn over and you find yourself in the sewer system of the house. And there is no way back! 
         char: owl
-        mood: sad
-      - text: But this time – he added -, I’ll make a very special exception. Now you can return to the starting point, and try again, but that's absolutely, my last favor.
+        mood: serious
+      - text: But this time, I’ll make a very special exception. Now you can return to the starting point, and try again, but that's absolutely, my last favor.
         char: owl
-        mood: sad
+        mood: serious
   - type: clearImage
     id: owl-w-up
   - type: image
     src: owl-wing-down.png
     id: owl-w-d
     style: "width: 20%; top: 41%; right: 29%;"  
+    parallax: back2
   - type: sceneText
     text: Leo stared at Mathina with a disgusted frown, really frightened by the owl's promise.
   - type: clearImage
@@ -258,60 +285,66 @@ actions:
     src: mathina-standing.png
     id: mathina-standing
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
   - type: dialog
     entries:
-      - text: You stay here now and don't do anything! - Mathina said to Leo. She wondered what to do.
+      - text: You stay here now and don't do anything!
         char: mathina
-        mood: sad
+        mood: talking
+  - type: sceneText
+    text: Mathina wondered what to do.
   - type: clearImage
     id: leo-thinking
   - type: image
     src: leo-sitting.png
     id: leo-sitting
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
+    parallax: back2
   - type: game
     text: What advice would you give them? 
     toolbarText: You can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
     cta: Try it yourself!
-    url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
+    url: \apps\logi-2-app\logi-2-app-1.htm
   - type: clearImage
     id: mathina-standing
   - type: image
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
   - type: sceneText
     text: Mathina carried through solution possibilities in her head but always encountered an obstacle. She scratched her head, looked around, and again noticed the script on the facade - YTIC-IGOL.
   - type: dialog
     entries:
-      - text: Oh, got it! - she shouted. She remembered that the script had to be read backwards. 
+      - text: Oh, got it!
         char: mathina
-        mood: sad
+        mood: surprised
   - type: sceneText
-    text: So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
+    text: Mathina remembered that the script had to be read backwards. So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
   - type: game
     text: Can you get from the doorway to Mathina, does this work?
     toolbarText: 
     cta: Try it yourself!
-    url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
+    url: \apps\logi-2-app\logi-2-app-2.htm
   - type: sceneText
     text: Mathina traced the now absolutely self-evident route backwards. She strove to memorize the fields.
   - type: dialog
     entries:
-      - text: Red circle, red triangle, blue triangle... - Mathina murmured.
+      - text: Red circle, red triangle, blue triangle... 
         char: mathina
-        mood: sad
+        mood: thinking
   - type: clearImage
     id: leo-sitting
   - type: image
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
+    parallax: back2
   - type: dialog
     entries:
       - text: Come on, Leo, follow me, I found the way!
         char: mathina
-        mood: sad
+        mood: happy
   - type: animation
     target: leo-runs-t
     vars:
@@ -319,6 +352,7 @@ actions:
       xPercent: -110
       yPercent: 10
       ease: power3.out  
+      parallax: back2
   - type: sceneText
     text: Leo stepped next to Mathina and grabbed the bag.
   - type: clearImage
@@ -327,12 +361,14 @@ actions:
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
+    parallax: back2  
   - type: clearImage
     id: mathina-thinking
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
+    parallax: back2
   - type: sceneText
     text: The owl watched them with satisfaction as they loaded off the bag and set out to leave.
   - type: animation
@@ -342,6 +378,7 @@ actions:
       xPercent: 350
       yPercent: -2
       ease: power3.out  
+      parallax: back2
   - type: animation
     target: mathina-runs
     vars:
@@ -349,6 +386,7 @@ actions:
       xPercent: 350
       yPercent: -5
       ease: power3.out  
+      parallax: back2  
   - type: animation
     target: bag
     vars:
@@ -356,11 +394,12 @@ actions:
       xPercent: 410
       yPercent: 0
       ease: power3.out  
+    parallax: back2
   - type: dialog
     entries:
-      - text: Congratulations, young lady, congratulations! - He shouted after them. 
+      - text: Congratulations, young lady, congratulations! 
         char: owl
-        mood: sad
+        mood: serious
   - type: clearImage
     id: leo-runs
   - type: clearImage
@@ -369,10 +408,12 @@ actions:
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
+    parallax: back2
   - type: image
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 19%; top: 44%; right: 15%; z-index:2"
+    parallax: back2
   - type: sceneText
     text: Mathina nodded politely because she hated being called a young lady, she was the smart and strong Mathina…
   - type: animation
@@ -382,6 +423,7 @@ actions:
       xPercent: -350
       yPercent: 0
       ease: power3.out  
+      parallax: back2
   - type: animation
     target: mathina-runs-t
     vars:
@@ -389,5 +431,6 @@ actions:
       xPercent: -350
       yPercent: 0
       ease: power3.out  
+      parallax: back2
   - type: sceneText
     text: They skillfully walked back on the colored tiles and said goodbye to the owl.

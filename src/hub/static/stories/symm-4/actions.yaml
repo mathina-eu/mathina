@@ -160,7 +160,7 @@ actions:
   - type: dialog
     entries:
       - text: "What do you mean by “convex polyhedron”?"
-        char: Leo
+        char: leo
   - type: image
     src: imagem1.png
     id: imagem1
@@ -177,7 +177,7 @@ actions:
   - type: dialog
     entries:        
       - text: "I’m not sure if I understood what you’ve just said."
-        char: Leo        
+        char: leo        
   - type: clearImage
     id: Leo5
   - type: clearImage
@@ -254,7 +254,7 @@ actions:
   - type: dialog
     entries:        
       - text: "We can stay and help you set up the carousel model!"
-        char: Leo
+        char: leo
         exposition: "Leo volunteered enthusiastically."
   - type: clearBackground
     id: c1-bg8
@@ -268,7 +268,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Do you have any idea what he was talking about when he mentioned “Platonic and uniform polyhedra”?"
-        char: Leo
+        char: leo
       - text: "Well, if you didn't know what it was, you shouldn't have offered to help!"
         char: mathina
         exposition: "Answered Mathina annoyed"
@@ -304,7 +304,7 @@ actions:
       - text: "Likewise, we call Platonic solids the polyhedra which are “as regular as possible”. These polyhedra must satisfy, in particular, the following conditions: “the faces are all regular polygons and equal to each other”; “at each vertex the same number of faces meet”; “the angles between contiguous faces are equal”; “the solid angles at each vertex are equal”."
         char: mathina
       - text: "What do you mean by “the solid angles at each vertex are equal”? And by “the angles between contiguous faces must be the same”?"
-        char: Leo
+        char: leo
         mood: surprised
   - type: clearBackground
     id: c1-bg9
@@ -352,7 +352,7 @@ actions:
   - type: dialog
     entries:        
       - text: "So, is the cube a Platonic solid?"
-        char: Leo
+        char: leo
       - text: "Yes, it is. But I don’t remember other Platonic solids."
         char: mathina
   - type: clearBackground
@@ -377,7 +377,7 @@ actions:
   - type: dialog
     entries:        
       - text: "A cube has 6 faces. I’ll just cut 6 squares in a row and set up the cube"
-        char: Leo
+        char: leo
   - type: game
     text: "Watch the movie!"
     cta: "Play!"
@@ -632,7 +632,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Ah! It’s like in the case of the 4 squares in the same vertex…"
-        char: Leo
+        char: leo
   - type: clearImage
     id: mesmovertice3
   - type: clearBackground
@@ -732,7 +732,7 @@ actions:
       - text: "So, now it’s much easier to confirm if a polyhedron is indeed a Platonic solid!"
         char: mathina
       - text: "Yes, we don’t even need plasticine!"
-        char: Leo
+        char: leo
   - type: game
     text: "Watch the Platonic solids!"
     cta: "Play!"
@@ -743,7 +743,7 @@ actions:
         char: technician
         mood: impressed        
       - text: "But can’t we just say that Platonic solids are polyhedra whose faces are all regular and equal polygons?"
-        char: Leo
+        char: leo
         exposition: "Leo still had a doubt."
       - text: "No, we can’t, even if we assume them convex. Why don’t you try to find, among my polyhedra models, examples of polyhedra which are not Platonic solids, but whose faces are all regular and equal polygons?"    
         char: technician
@@ -805,10 +805,10 @@ actions:
   - type: dialog
     entries:        
       - text: "What is a uniform polyhedron?"
-        char: Leo
+        char: leo
         exposition: "Leo asked Mathina."
       - text: "Well, looking at the cuboctahedron, it seems to be a polyhedron whose faces are all regular polygons, but not all with the same number of sides. Also the solid angles at each vertex seem equal."
-        char: Mathina
+        char: mathina
         exposition: "Mathina said, after checking, with a plasticine mould, if the cuboctahedron had the same solid angles and concluding experimentally that they did."
   - type: clearBackground
     id: c1-bg20
@@ -827,7 +827,7 @@ actions:
   - type: dialog
     entries:        
       - text: "And do you think this polyhedron is uniform?"
-        char: Leo
+        char: leo
         exposition: "Asked Leo, grabbing a model nearby."
   - type: game
     text: "Watch the movie!"
@@ -890,7 +890,7 @@ actions:
   - type: dialog
     entries:        
       - text: "What about this one? Is it uniform?"
-        char: Leo
+        char: leo
   - type: game
     text: "Watch the movie!"
     cta: "Play!"
@@ -916,7 +916,7 @@ actions:
   - type: dialog
     entries:        
       - text: "Do you want to add this polyhedron to the carousel model? Is it uniform?"
-        char: Leo
+        char: leo
   - type: sceneText
     text: >
       <p>To Leo’s surprise, the technician appeared completely startled by his question.</p>
@@ -961,7 +961,7 @@ actions:
   - type: dialog
     entries:        
       - text: "I don’t understand! What is a symmetry of a polyhedron?"
-        char: Leo
+        char: leo
       - text: "Ok! Let’s start by the beginning: a symmetry of a polyhedron is an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself: the polyhedron should look exactly the same before and after applying the isometry."
         char: technician
       - text: "Take for instance a cube and consider a rotation of 90º around an axis that passes through the centers of two opposite faces. If we rotate, the cube is taken onto itself. This rotation is therefore a cube symmetry."
@@ -1002,7 +1002,7 @@ actions:
   - type: dialog
     entries:        
       - text: "It’s uniform: if we consider, for instance, these 2 vertices (in red and blue), there’s a rotation taking one onto the other! Look!"
-        char: Leo
+        char: leo
         exposition: "Leo exclaimed."        
   - type: game
     text: "Watch the polyhedron!"
@@ -1039,11 +1039,11 @@ actions:
       - text: "So, if we consider a vertex on the ring, let’s call it A, and one outside the ring, let’s call it B, there is no symmetry of the polyhedron taking A onto B."
         char: mathina
       - text: "I don’t understand!"
-        char: Leo
+        char: leo
       - text: "Leo, any isometry taking A into B will remove the ring of squares from the equator, thus changing the final aspect of the polyhedron."
         char: mathina
       - text: "Oh! I get it!"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: c1-bg27    
   - type: background
@@ -1070,14 +1070,14 @@ actions:
   - type: dialog
     entries:    
       - text: "We’ve found all the uniform polyhedra: we’ve put them in this bag. There are 13 of them."
-        char: Leo
+        char: leo
         exposition: "Concluded Leo."
       - text: "I am curious. Do other uniform polyhedra exist, different from those we found in the bag?"
-        char: Leo        
+        char: leo        
       - text: "In reality, there is an infinite number of uniform polyhedra."
         char: technician
       - text: "What?"
-        char: Leo
+        char: leo
         exposition: "Asked Leo and Mathina simultaneously."
       - text: "It’s very easy! Just think of straight prisms whose bases are regular polygons and whose side faces are squares. These kinds of prisms are also uniform polyhedra."
         char: technician
