@@ -265,7 +265,7 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
+        char: leo
         exposition: Leo war gerade auf dem Symmel-Rummel angekommen.
         #"Leo had just arrived at Symmetry Fair."        
         mood: excited
@@ -292,7 +292,7 @@ actions:
     entries:    
       - text: Echt?
       #"Really??"
-        char: Leo
+        char: leo
         mood: excited  
       - text: Ja, ich habe dem Zauberer beim Sortieren geholfen. Diese Kuscheltiere dürfen nicht auf dem Rummel bleiben, weil sie die Symmel-Wichtel anlocken. Deshalb darf ich sie mitnehmen.
       #"Yes, I just had to help the wizard choose some toys!"
@@ -321,7 +321,7 @@ actions:
     entries:       
       - text: Wirklich? Können wir Dir auch noch bei anderen Dingen helfen?
       #"Really??"
-        char: Leo
+        char: leo
         mood: excited
       - text: Ja, gern. Ihr könnt mir helfen, ein paar Spielzeuge fertig zu bauen.
       #"Yes. Just help me finish the toys which I'm building. And you can get half of the toys in the end."
@@ -331,11 +331,11 @@ actions:
         char: wizard
       - text: Ich würde gern bei den Linien helfen.
       #"The difficult ones."
-        char: Leo
+        char: leo
         mood: excited
       - text: Dann helfe ich bei den Bausteinen.
       #"The easier ones."
-        char: Mathina
+        char: mathina
         mood: excited
   - type: clearImage
     id: Leo2
@@ -409,7 +409,7 @@ actions:
     entries:    
       - text: Ah, ja, jetzt weiß ich, wie es geht! Ich baue die Burg gleich fertig!
       #"Ok, I got it! I’m going to finish the toys."
-        char: Mathina
+        char: mathina
         mood: excited            
   - type: game
     tag: polygons
@@ -430,7 +430,7 @@ actions:
     entries:    
       - text: Ich bin fertig! Mal sehen, wie Leo voran kommt...
       #"I’ve done it!  I wonder how Leo is getting along."
-        char: Mathina
+        char: mathina
         #exposition: "Mathina gathered all the new toys she collected."        
         mood: excited
   - type: image
@@ -468,7 +468,7 @@ actions:
     entries:    
       - text: Warum klappt das denn bloß nicht? Irgendwie muss das doch gehen...
       #"Why isn’t this working? Why isn’t this working?"
-        char: Leo
+        char: leo
         exposition: Leo sprach vor sich hin, während er versuchte, das Spielzeug fertigzubauen.
         #"Leo asked while trying to finish a toy, but without success."        
         mood: angry
@@ -479,7 +479,7 @@ actions:
     entries:    
       - text: Was ist denn los, Leo?
       #"What’s the matter, Leo?"
-        char: Mathina
+        char: mathina
         mood: surprised
   - type: clearImage
     id: Mathina5
@@ -494,7 +494,8 @@ actions:
     entries:    
       - text: Ich versuche die ganze Zeit, dieses Boot fertig zu bauen, aber es geht einfach nicht!
       #"Mathina, I’m trying to finish this boat, but it’s not possible!"
-        char: Leo
+        char: leo
+        mood: thinking
         exposition: Leo zeigte Mathina, was er probierte.
         #"Leo showed Mathina what he was doing."
   - type: clearImage
@@ -511,7 +512,7 @@ actions:
     entries:    
       - text: Vergiss nicht, dass auf dem Symmel-Rummel alles symmetrisch sein muss, Leo.
       #"Leo, notice that, here, in Symmetry Fair, everything has to be symmetric!"
-        char: Mathina
+        char: mathina
         exposition: wiederholte Mathina die Worte des Zauberers.
         #"Mathina said, repeating the wizard’s words."        
   - type: game
@@ -531,7 +532,7 @@ actions:
     entries:    
       - text: Super, wir haben es geschafft!
       #"Wow, we gained so many new toys!"
-        char: Leo
+        char: leo
         mood: excited    
   - type: animation
     target: Leo2
@@ -553,11 +554,11 @@ actions:
     entries:    
       - text: Und was machen wir jetzt mit den ganzen Spielzeugen, die wir mitnehmen dürfen?
       #"And it was so easy to get them! I wonder why I had so much trouble before Mathina came along …"
-        char: Leo
+        char: leo
         mood: surprised
       - text: Wir teilen sie mit den Kindern im Dorf.
       #"Well Leo, next time you should listen to the wizard and try the easiest tasks first."
-        char: Mathina
+        char: mathina
   - type: clearImage
     id: Leo2
   - type: clearImage
