@@ -22,12 +22,11 @@
             border-width: 1px;
             color: #444;
             font-family: Arial, sans-serif;
-            font-size: 14px;
+            font-size: min(1.7vw,4vh);
             overflow: hidden;
             padding: 10px 5px;
             word-break: normal;
             border-color: #000000;
-            font-size: 30px;
             font-weight: bold;
             text-align: center;
             vertical-align: top
@@ -52,8 +51,7 @@
         .tg .tg-e4ml {
             border-color: #000000;
             font-family: "Arial Black", Gadget, sans-serif !important;
-            ;
-            font-size: 20px;
+            font-size: min(1.4vw,3vh);
             font-weight: bold;
             text-align: center;
             vertical-align: top
@@ -62,7 +60,6 @@
         .tg .tg-ndxe {
             background-color: #D2E4FC;
             border-color: #000000;
-            font-size: 32px;
             font-weight: bold;
             text-align: center;
             vertical-align: top
@@ -256,7 +253,7 @@
                 var cell2 = row.insertCell(1);
                 var cell3 = row.insertCell(2);
 
-                if (CurrentLine % 2 == 1) {
+                if (CurrentLine % 2 == Amici % 2) {
                     cell1.classList.add("tg-ndxe");
                     cell2.classList.add("tg-ndxe");
                     cell3.classList.add("tg-ndxe");
@@ -293,7 +290,13 @@
                 cell2.innerHTML = GiveOld;
                 cell3.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
 
-                if (CurrentLine % 2 == 0) cell1.classList.add("tg-ndxe");
+                if (CurrentLine % 2 == 0) {
+					cell1.classList.add("tg-ndxe");
+					cell2.classList.add("tg-ndxe");
+					cell3.classList.add("tg-ndxe");
+					
+					
+					}
 
                 var DaRimuovere = document.getElementById('K' + (CurrentLine - 1));
                 var Genitore = DaRimuovere.parentNode;
@@ -317,6 +320,14 @@
                 cell3.innerHTML = "<span id='N" + CurrentLine + "'></span>";
                 cell1.innerHTML = GiveOld;
                 cell2.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
+				
+				if (CurrentLine % 2 == Amici % 2) {
+					cell1.classList.add("tg-ndxe");
+					cell2.classList.add("tg-ndxe");
+					cell3.classList.add("tg-ndxe");
+					
+					
+					}
 
                 var DaRimuovere = document.getElementById('K' + (CurrentLine - 1));
                 var Genitore = DaRimuovere.parentNode;
