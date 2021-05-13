@@ -174,7 +174,7 @@ actions:
       - text: Vengo da una terra lontana, Arisa, piena maghi e di strane creature. Tra queste, ci sono molti tipi di uccelli di fuoco. Queste creature sono estremamente intelligenti, ma le loro menti e il linguaggio sono diversi dai nostri.
         char: flamma
         mood: normal
-      - text: Usano un linguaggio molto preciso per comunicare dove sono, come volano e dove vanno. Noi umani non abbiamo parole così precise per descrivere il loro volo, ma ci sono linguaggi magici, con numeri, simboli e parole segrete che ci permettono di tradurre ciò che intendiamo nella loro lingua. Le creature, se ben addestrate, ci capiscono e volano come chiediamo loro. Questo è quello che faccio: alleno gli uccelli di fuoco.  
+      - text: "Usano un linguaggio molto preciso per comunicare dove sono, come volano e dove vanno. Noi umani non abbiamo parole così precise per descrivere il loro volo, ma ci sono linguaggi magici, con numeri, simboli e parole segrete che ci permettono di tradurre ciò che intendiamo nella loro lingua. Le creature, se ben addestrate, ci capiscono e volano come chiediamo loro. Questo è quello che faccio: alleno gli uccelli di fuoco."  
         char: flamma
         mood: normal
       - text: Oh, che cosa affascinante Flamma! Possiamo vederne uno? Dici che ce ne sono di diversi tipi ...
@@ -416,8 +416,8 @@ actions:
       leo: left
 
     entries:
-      - text: Ottimo! Ora prova a prendere queste palle di fuoco con l'unidragon! Le palle di fuoco sono il cibo principale per gli unidraghi:
-           ne vanno ghiotti!
+      - text: "Ottimo! Ora prova a prendere queste palle di fuoco con l'unidragon! Le palle di fuoco sono il cibo principale per gli unidraghi:
+           ne vanno ghiotti!"
         char: flamma
         exposition: Lanciò quindi alcune palle di fuoco in aria che galleggiavano come palloncini.
         mood: normal
@@ -462,7 +462,7 @@ actions:
 
 #Game 1.2
   - type: game
-    text: Fai volare l'unidrago per mangiare tutte le palle di fuoco! Gli unidraghi sono infastiditi dalle nuvole: cerca di evitarle!
+    text: "Fai volare l'unidrago per mangiare tutte le palle di fuoco! Gli unidraghi sono infastiditi dalle nuvole: cerca di evitarle!"
     toolbarText: Prendi le palle di fuoco evitando le nuvole!
     url: /apps/imaginary-tests/app_1/1_2/index.html
     cta: Prendi tutte le palle di fuoco evitando le nuvole!
