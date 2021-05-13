@@ -146,14 +146,10 @@
 
     }
 
-    #successMessage2 {
+    #failMessage {
         position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg) no-repeat center center fixed;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -168,39 +164,23 @@
         height: 98%;
 
     }
-
-    #failMessage {
-        position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
-        z-index: 100;
-        background: #f3f1cd;
-        border: 2px solid #333;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
-        text-align: center;
-        left: 1%;
-        top: 1%;
-        width: 98%;
-        height: 58%;
-
-    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+}	
 	
 .FinalMessage {
-position: absolute; 
-top: 45%; 
-left:0%;
-width:100%;
-text-align:center;
-font-size:min(5vw,4vh);
-font-family: "Roboto", sans-serif;
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
 }
 </style>
 
@@ -380,24 +360,10 @@ font-family: "Roboto", sans-serif;
 
         }
     </script>
-    <div id="successMessage2" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
-
-        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
-  top: 60%;
-  right: 45%;"></img>
-    </div>
 
     <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-
+         <div class="FinalImage"><img src="img/fleo2.png"></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
@@ -406,9 +372,7 @@ font-family: "Roboto", sans-serif;
 	
 	<div id="successMessage" style="display:none">
 	<canvas id='myCanvas'></canvas>
-        <img src="img/fleo1.png" id="certo"  style=" position: absolute;
-  top: 10%;
-  right: 43%;"></img>
+        <div class="FinalImage"><img src="img/fleo1.png"></img></div>
         
 <span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
@@ -416,16 +380,7 @@ font-family: "Roboto", sans-serif;
   right: 45%;"></img>
     </div>
 
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
 
-
-        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
-  top: 60%;
-  right: 45%;"></img>
-    </div>
 	
 <script>
 function Resize() {
