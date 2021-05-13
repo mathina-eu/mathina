@@ -74,7 +74,7 @@
 
         #Text1 {
             position: absolute;
-            width: 920px;
+            width: 50%;
             height: 180px;
             z-index: 2;
             left: 25%;
@@ -91,7 +91,7 @@
 
         #Text2 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 255px;
             z-index: 2;
             left: 1%;
@@ -101,14 +101,14 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 20px;
+            padding: 1%;
             display: none;
 			padding-top: 0px;
         }
 
         #Text3 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 255px;
             z-index: 2;
             right: 1%;
@@ -118,14 +118,14 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 20px;
+            padding: 1%;
             display: none;
 			padding-top: 0px;
         }
 
         #Text6 {
             position: absolute;
-            width: 920px;
+            width: 50%;
             height: 70px;
             z-index: 2;
             left: 25%;
@@ -140,7 +140,7 @@
 
         #Text4 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 200px;
             z-index: 2;
             left: 1%;
@@ -150,14 +150,14 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 20px;
+            padding: 1%;
 			padding-top: 0px;
             display: none;
         }
 
         #Text5 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 200px;
             z-index: 2;
             right: 1%;
@@ -167,7 +167,7 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 20px;
+            padding: 1%;
 			padding-top: 0px;
             display: none;
         }
@@ -410,9 +410,15 @@
 			document.getElementById('myCanvas').height=dimension[1]*98/100;
             console.log(dimension);
 			
-			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
 			document.body.style.zoom=ScalaCalcolata;
         }
+		
+		  function Link() {
+            location.reload();
+
+        }
+
 
 
         function Init() {
@@ -613,6 +619,7 @@
             <p><span id="Trad22">Ecco il valore che calcola Mathina</span> <br><em>S</em> = <em>A<sup>b</sup></em> <span id="Trad10f">modulo</span> <em>p</em> = <em class="SegCondA">A</em><sup class="SegMatB">b</sup> <span id="Trad10g">modulo</span> <em class="SegP">p</em> = <span id="segrb"></span>
                 <br> <span id="Trad23">&Egrave; lo stesso numero che ha trovato Leo!</span>
             </p>
+			<center><p><button onclick="Finisci()" id="Trad24">Controlliamo</button></p></center>
         </div>
     </div>
     <div class="block" style="display:none"> <input id="text" type="text" /> </div>
