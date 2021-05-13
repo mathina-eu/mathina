@@ -51,6 +51,7 @@ export default {
     wizard: 'Wizard',
     leo: 'Leo',
     jane: 'Jane',
+<<<<<<< HEAD
 	flamma: 'Flamma',
 	angela: 'Angela',
 	rasha: 'Rasha',
@@ -64,8 +65,29 @@ export default {
 	rashamom: 'Prof. Levasseur',
 	technician: 'Technician',
 	Leo: 'Leo',
+=======
+    flamma: 'Flamma',
+    angela: 'Angela',
+    rasha: 'Rasha',
+    carla: 'Carla',
+    sean: 'Sean',
+    charmingparrot: 'Captain Charmingparrot',
+    parrot: 'John the parrot',
+    mysteriousfigure: 'Mysterious figure',
+    sean: 'Sean',
+    rasha: 'Rasha',
+    rashamom: 'Prof. Levasseur',
+    Leo: 'Leo',
+>>>>>>> develop
     Mathina: 'Mathina',
-	Parrot: 'John',
-	Angela: 'Angela'
+    Parrot: 'John',
+    Angela: 'Angela',
+    owl: 'Owl',
+    kangaroo: 'Kangaroo',
+    first_policeman: 'First policeman',
+    second_policeman: 'Second policeman',
+    george: 'George',
+    trainer: 'Trainer',
+    boys: 'Boys'
   },
 };
