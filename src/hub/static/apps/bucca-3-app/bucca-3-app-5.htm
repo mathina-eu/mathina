@@ -216,13 +216,13 @@ background-repeat: no-repeat;
 
         Lingua = 1;
 
-        Alphabet = [
+       /* Alphabet = [
             "", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
             "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        ];
+        ];*/
 
 
 
@@ -786,7 +786,7 @@ background-repeat: no-repeat;
         function Check() {
 
 
-            if (CalcolaMod(document.getElementById("CanvasMathina3").CaesarShift, Alphabet[Lingua].length) == CalcolaMod(Chiave1 + Chiave2, Alphabet[Lingua].length)) Finisci();
+            if (CalcolaMod(document.getElementById("CanvasMathina3").CaesarShift, Alphabet.length) == CalcolaMod(Chiave1 + Chiave2, Alphabet.length)) Finisci();
 
             //if (((document.getElementById("CanvasMathina3").CaesarShift % Alphabet.length)+Alphabet.length)==((Chiave1+Chiave2) % Alphabet.length)+) Finisci();
             else Sconfitta();
