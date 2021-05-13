@@ -41,7 +41,7 @@
         height: 26%;
 
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
         z-index: 10;
 		text-align: center;
 		display: flex;
@@ -353,18 +353,19 @@
 
 
         function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
 			Yeah();
 
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
 
         }
     </script>
 
-    <div id="failMessage" style="display:none">
+    <div id="failMessage" style="visibility:hidden;">
          <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
 <span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
@@ -373,7 +374,7 @@
   right: 45%;"></img>
     </div>
 	
-	<div id="successMessage" style="display:none">
+	<div id="successMessage" style="visibility:hidden;">
 	<canvas id='myCanvas'></canvas>
         <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
         
