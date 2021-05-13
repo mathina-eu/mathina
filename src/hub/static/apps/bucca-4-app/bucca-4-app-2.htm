@@ -74,7 +74,7 @@
 
         #Text1 {
             position: absolute;
-            width: 920px;
+            width: 50%;
             height: 140px;
             z-index: 2;
             left: 25%;
@@ -90,7 +90,7 @@
 
         #Text2 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 320px;
             z-index: 2;
             left: 1%;
@@ -100,13 +100,13 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
         #Text3 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 320px;
             z-index: 2;
             right: 1%;
@@ -116,13 +116,13 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
         #Text4 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 235px;
             z-index: 2;
             left: 1%;
@@ -132,7 +132,7 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 		
@@ -156,7 +156,7 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
@@ -386,7 +386,7 @@
 			document.getElementById('myCanvas').height=dimension[1]*98/100;
             console.log(dimension);
 			
-			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
 			document.body.style.zoom=ScalaCalcolata;
         }
 
