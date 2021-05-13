@@ -39,8 +39,8 @@
         </template>
         <v-card>
           <v-toolbar
-            dark
-            color="primary"
+            light
+            color="grey lighten-5"
           >
             <img
               v-if="toolbarImgPath"
@@ -54,7 +54,7 @@
             <v-toolbar-items>
               <v-btn
                 icon
-                dark
+                light
                 @click="showGameDialog=false; $emit('lastGameFinished');"
               >
                 <v-icon>mdi-close</v-icon>
