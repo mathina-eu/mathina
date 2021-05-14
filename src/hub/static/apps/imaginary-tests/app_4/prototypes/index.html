@@ -18,6 +18,8 @@
 <script id='csinit' type='text/x-cindyscript'>
   getState(pos) := imagergb(L, R, "computeTexture", pos, interpolate->false, repeat->false);
   getGradient(pos) := imagergb(L, R, "gradientTexture", pos, interpolate->false, repeat->false);
+  getNewton(pos) := imagergb(L, R, "newtonTexture", pos, interpolate->false, repeat->false);
+  getTrueCurve(pos) := imagergb(L, R, "trueCurve", pos, interpolate->false, repeat->false);
 
   
   iterate() := (
@@ -59,32 +61,44 @@
 
 
   newState(pos) := (
-    regional(totalWeight, centerState, centerGrad, state, grad, values, dist);
+    regional(totalWeight, state, grad, dist, closeToTrue);
     
-    centerState   = getState(pos);
-    centerGrad = getGradient(pos);
+
+    state = getState(pos);
+    totalWeight = 0;
+
+    closeToTrue = false;
 
 
-    totalWeight = (1 - clamp(g(pos.x, pos.y), 0, 1)) * state.r;
 
-    values = apply(surround, p, f(pos.x + p.x, pos.y + p.y));
-    forall(1..4, k, values_(2*k) = 2 * f(pos.x, pos.y) - values_(2*k) );
-    if(min(values) < 0 & max(values) > 0 & centerState.r > 0.9,
 
-        totalWeight = 1;
-
+    forall(-1..1, i, forall(-1..1, j, 
+      closeToTrue = closeToTrue % (getTrueCurve(pos + 0.01 * [i, j])_1) > 0);
     );
 
 
-    forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
 
-      dist = clamp(g(pos.x, pos.y), 0, 0.1) / 0.1 * clamp(abs(centerGrad), 0, 0.1) / 0.1 * newtonEpsilon;
-      state   = getState(pos + dist * dir);
-      grad = getGradient(pos + dist * dir);
-      totalWeight = oplus(totalWeight, (dir.x * grad.x + dir.y * grad.y) * state.r);
+
+    if(closeToTrue,
+      if(state.r > 0.9,
+        totalWeight = state.r * getTrueCurve(pos).r;
+      , // else //
+        forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
+          dist = 0.05;
+          state = getState(pos + dist * dir);
+          totalWeight = totalWeight + state.r * getTrueCurve(pos).r * (1 - getTrueCurve(pos + dist * dir).r);
+        );
+      );
+    , // else //
+      forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
+        dist = newtonEpsilon;
+        state = getState(pos + dist * dir);
+        grad = computeGradient(pos + dist * dir);
+        totalWeight = oplus(totalWeight, (dir.x * grad.x + dir.y * grad.y) * state.r);
+      );
     );
 
-  
+
     
 
     (clamp(totalWeight, 0, 1), 0, 0, 1);
@@ -94,7 +108,16 @@
 
 
 
+  isOnTrueCurve(pos) := (
+    regional(values);
+    
+    values = apply(surround, f(pos.x + #.x, pos.y + #.y));
+    forall(1..4, 
+      values_(2*#) = 2 * f(pos.x, pos.y) - values_(2*#);
+    );
 
+    (min(values) < 0) & (max(values) > 0);
+  );
 
 
 
@@ -143,7 +166,7 @@
   placeBugs(pos) := (
     if(rectContainsPoint(renderArea, pos),
       colorplot(L, R, "computeTexture", 
-        if(dist(#, cindyToTexture(pos)) < 0.3, 1, getState(#)_1);
+        if(dist(#, cindyToTexture(pos)) < 0.5, 1, getState(#)_1);
       );
     );
   );
@@ -153,11 +176,21 @@
 
   computeGradient(pos) := (
     [
-        (g(pos.x + gradEpsilon, pos.y) - g(pos.x - gradEpsilon, pos.y)) / 2 / gradEpsilon,
-        (g(pos.x, pos.y + gradEpsilon) - g(pos.x, pos.y - gradEpsilon)) / 2 / gradEpsilon;
+        (g(pos.x + gradEpsilon, pos.y) - g(pos.x, pos.y)) / gradEpsilon,
+        (g(pos.x, pos.y + gradEpsilon) - g(pos.x, pos.y)) / gradEpsilon;
     ];
   );
 
+
+  computeNewton(pos) := (
+    regional(grad);
+    grad = [
+        (f(pos.x + gradEpsilon, pos.y) - f(pos.x, pos.y)) / gradEpsilon,
+        (f(pos.x, pos.y + gradEpsilon) - f(pos.x, pos.y)) / gradEpsilon;
+    ];
+
+    pos - grad * f(pos.x, pos.y) / abs(grad);
+  );
 
 
 
@@ -176,10 +209,13 @@
   
   
   gradEpsilon = 0.001;
-  newtonEpsilon = 0.03;
+  newtonEpsilon = 0.02;
   
   //f(x,y) := (x * y^2 - 3 * x^3 + x^2 - x + sin(y) * x + 5 - pi * y) * (y^9-1.4*x^2*y^2+1.4*x^3) * ((y-x^5)^2-y^10)  * (y^4 + 3 * x^4 - 7);
-  f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
+  //f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
+  f(x,y) := x^2 + 3 * y^2 - 10;
+  
+  
   g(x,y) := abs(f(x,y));
   
   thickness = 0.0;
@@ -199,7 +235,9 @@
   R = (axesMax, -axesMax)-(0.5,0.5);
   
   createimage("computeTexture", computeResolution, computeResolution);
+  createimage("trueCurve", computeResolution, computeResolution);
   createimage("gradientTexture", computeResolution, computeResolution);
+  createimage("newtonTexture", computeResolution, computeResolution);
   createimage("renderTarget", renderResolution, renderResolution);
 
 
@@ -211,15 +249,27 @@
 
   colorplot(L, R, "gradientTexture", 
     grad = computeGradient(#);
-  
-    (grad.x, grad.y, 0, 1);
-  
+    (grad.x, grad.y, 0, 1); 
+  );
+
+  colorplot(L, R, "newtonTexture", 
+    newt = computeNewton(#);
+    (newt.x, newt.y, 0, 1); 
+  );
+
+  colorplot(L, R, "trueCurve", 
+    if(isOnTrueCurve(#), 1, 0); 
   );
 
 
 
-  //colorplot("computeTexture", if(random()>0.999, 1, 0));
+
+
+  //colorplot("computeTexture", if(random()>0.99, 1, 0));
   
+
+
+
 
 
 
@@ -240,7 +290,7 @@
 <script id='csdraw' type='text/x-cindyscript'>
   //fillpoly(screenbounds(), color->0.2 * (1,1,1));
   drawimage(canvasCorners_4, canvasCorners_3, "back");
-  
+  //drawimage(renderPos, renderPos + (renderSize, 0), "trueCurve");
   drawimage(renderPos, renderPos + (renderSize, 0), "renderTarget");
   drawimage(canvasCorners_4, canvasCorners_3, "front");
   iterate();
