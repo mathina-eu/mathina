@@ -102,22 +102,22 @@
 
     #Div1 {
         top: 10%;
-		right: 5%;
+		
     }
 
     #Div2 {
         top: 50%;
-		right: 5%;
+		
     }
 
     #Div3 {
         top: 10%;
-		left: 5%;
+		
     }
 
     #Div4 {
         top: 50%;
-		left: 5%;
+		
     }
 
 
@@ -340,11 +340,47 @@ background-repeat: no-repeat;
             if (DimContenitore.left < DimContenuto.left && DimContenitore.right > DimContenuto.right && DimContenitore.top < DimContenuto.top && DimContenitore.bottom > DimContenuto.bottom) return true;
             return false;
         }
+		
+		
+		function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
+function Scramble() {
+	var Ids=[1,2,3,4];
+	shuffle(Ids);
+	var Perc2=["10%","50%","10%","50%"];
+	var PercR=["right","right","left","left"];
+	for (let i=0;i<4;i++) {
+		document.getElementById("Div"+Ids[i]).style.right="";
+		document.getElementById("Div"+Ids[i]).style.left="";
+		document.getElementById("Div"+Ids[i]).style.top=Perc2[i];
+		document.getElementById("Div"+Ids[i]).style[PercR[i]]="5%";
+	}
+}
 
 
         function Init() {
 			window.addEventListener('resize', Resize, false);
             Vittoria = ["H1", "D3"];
+			
+			Scramble();
 
             Lingua = Number(gup('l', document.location.search));
 
