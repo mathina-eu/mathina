@@ -77,7 +77,7 @@ actions:
     src: n16.png
     id: n16
     align: center
-    style: "width: 23%; top: 62%"
+    style: "width: 30%; bottom: 0%"
   - type: dialog
     entries:
       - text: "Mas se escolheres agora esta imagem:"
@@ -176,7 +176,7 @@ actions:
         char: wizard      
   - type: game
     text: "Ver o filme!"
-    cta: "Ver!"
+    cta: "Ver"
     url: /stories/symm-2/video/rot_3.mp4
   - type: dialog
     entries:
@@ -246,12 +246,11 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
-        exposition: "Leo tinha acabado de chegar à Feira da Simetria e chamou a Mathina."         
+        char: leo        
         mood: excited     
   - type: dialog
     entries:    
-      - text: "Anda! – gritou a Mathina, entusiasmada para o Leo – Vamos experimentar todas estas diversões. Nem sei para onde ir. Para os carrosséis?"
+      - text: "Anda! Vamos experimentar todas estas diversões. Nem sei para onde ir. Para os carrosséis?"
         char: mathina
         exposition: "Mathina gritou entusiasmada para o Leo."          
         mood: excited
@@ -266,7 +265,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Olha, existem aqui labirintos. Vamos escolher um!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: mathina-leo
@@ -296,7 +295,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Vou experimentar!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: Leo3
@@ -312,7 +311,7 @@ actions:
     entries:         
       - text: "Também quero experimentar, mas primeiro quero entender o que é para fazer!"
         char: mathina
-        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: angry
+        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image

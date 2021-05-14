@@ -160,10 +160,11 @@ export class ImageAction extends Action {
 }
 
 export class SceneTextAction extends Action {
-  constructor({ text, ...rest }) {
+  constructor({ text, style, ...rest }) {
     super(rest);
     this.type = 'sceneText';
     this.text = text;
+    this.style = style;
   }
 }
 
@@ -174,8 +175,9 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, avatarAlign, ...rest }) {
+  constructor({ entries, style, avatarAlign, ...rest }) {
     super(rest);
+    this.style = style;
     this.type = 'dialog';
     this.avatarAlign = avatarAlign || {};
     this.entries = entries.map((
@@ -200,6 +202,7 @@ export class DialogAction extends Action {
     }
     context.dialog.entries = this.entries;
     context.dialog.avatarAlign = this.avatarAlign;
+    context.dialog.style = this.style;
   }
 }
 

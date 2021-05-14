@@ -6,9 +6,16 @@ export default {
     'title': 'Mathina',
     'help': 'Besuche einen Ort!',
   },
+  cities: {
+    'island': 'Buccaneer Island',
+    'logicity': 'Logicity',
+    'birds-of-fire': 'Birds of Fire',
+    'symmetry-fair': 'Symmetry Fair',
+  },
   story: {
     'next': 'Weiter',
     'back': 'Zurück',
+    'back-to-world': 'Back to World Map',
     titles: {
       'logi-1': 'The traffic light challenge',
       'logi-2': 'Ytic-igol',
@@ -44,6 +51,6 @@ export default {
     wizard: 'Zauberer',
     leo: 'Leo',
     jane: 'Jane',
-	flamma: 'Flamma',
+    flamma: 'Flamma',
   },
 };

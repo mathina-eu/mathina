@@ -1,0 +1,845 @@
+actions:
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+
+  - type: sceneText
+    text: >
+      <h1>O papagaio falante</h1>
+
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+
+      
+  - type: dialog
+    entries:
+      - text: "Corre, Mathina, corre! Ou vais perder a barca para a Ilha do Corsário!"
+        char: mathina
+        mood: happy
+
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 1;"
+  - type: image
+    id: Wave4
+    src: onda4.png
+    style: "width: 35%; bottom: 2.5%; left: 3%;  z-index: 2;"
+
+
+  - type: sceneText
+    text: >
+      <p>Duzentos metros ... Bilhete verificado ... Preste atenção ao cais escorregadio ... Pronto!</p>
+      
+
+ 
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -11
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+ 
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+      
+  - type: sceneText
+    text: >
+      <p>A barca partiu calmamente enquanto Mathina recuperava o fôlego numa das cadeiras junto das janelas.</p>
+      
+
+      
+  - type: dialog
+    entries:
+      - text: "Desta vez, o meu irmão e os seus amigos estão a visitar uma feira singular perto da nossa casa, e portanto tenho todo o tempo para explorar a ilha. Estou tão curiosa..."
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p>"É a primeira vez que vais à Ilha do Corsário?" Perguntou uma senhora sentada ao lado de Mathina.</p>
+  - type: dialog
+    entries:
+      - text: "Quase! Já lá fui com o meu irmão, mas não tive oportunidade de a explorar à vontade. E você, já lá foi?"
+        char: mathina
+        mood: happy
+
+  - type: sceneText
+    text: >
+      <p>"Eu tenho lá uns negócios, e bem... é sempre divertido lá ir e procurar algum mistério. Tu tens sorte: hoje é dia de feira na ilha. Certamente merece uma visita."</p>
+
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 3
+      x: 600
+      y: -100
+      ease: power1.inOut
+      width: 12%
+
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 3
+      x: 620
+      y: -110
+      ease: power1.inOut
+      width: 12%
+      
+
+  - type: sceneText
+    text: >
+      <p>“Muito obrigado! Chamo-me Mathina, e você?” perguntou Mathina, mas naquele momento a barca estava já a atracar e muitas pessoas começaram a sair.” </p>
+ 
+ 
+  - type: sceneText
+    text: >
+      <p>“Mathina conseguiu apenas ouvir algumas palavras antes dela e a senhora terem sido separadas pela fila “O meu nome é… ah, não importa! Tenho a certeza de que nos encontraremos novamente.”
+      </p>
+
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+
+  - type: clearImage
+    id: Wave1
+  - type: clearImage
+    id: Wave2
+  - type: clearImage
+    id: Wave3
+  - type: clearImage
+    id: Wave4
+  - type: clearImage
+    id: Boat
+  - type: clearImage
+    id: Cloud1
+  - type: clearImage
+    id: Cloud2
+  - type: clearImage
+    id: Cloud3
+  - type: clearImage
+    id: Cloud4
+
+  - type: image
+    id: Fisherman1
+    src: barca3.png
+    style: "width: 13%; top: 12%; left: 0%;  z-index: 0;"
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 1;"
+  - type: image
+    id: Fisherman3
+    src: barca4.png
+    style: "width: 13%; top: 14%; right: 0%;  z-index: 0;"
+
+
+  - type: dialog
+    entries:
+      - text: "Estou finalmente de volta à Ilha do Corsário!"
+        char: mathina
+        mood: happy
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 6
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: -3
+      yoyo: true
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 5
+      xPercent: 5
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -2
+      yoyo: true
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 7
+      xPercent: -10
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 2
+      yoyo: true
+
+
+  - type: sceneText
+    text: >
+      <p>A memória da senhora desapareceu rapidamente, substituída pela brisa fresca do oceano e pelos sons alegres dos sinos dos barcos de pescadores. Que boas-vindas maravilhosas!
+      </p>
+
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 70%; top: 40%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: sceneText
+    text: >
+      <p>Havia uma estrada de terra que ligava o pequeno porto da ilha à cidade principal, que hoje estava cheia de barracas para o dia do mercado. </br> </br>
+        “Mapa do tesouro! Aqui está o mapa do tesouro escondido na Ilha do Corsário” </br>
+        “As melhores maçãs da Ilha do Corsário! Prove-as!”  </br>
+        “Quem é o melhor cantor de canções de piratas? Desafie-me!” </br>
+      </p>
+
+  - type: sceneText
+    text: >
+      <p>Tantas vozes e tantos objetos estranhos e misteriosos! Mathina vagueava por ali muito feliz, tentando, provando e cantando, quando a sua atenção foi capturada por um grito alto.
+      </br> </br> O que é isto? Outro grito, desta vez mais alto!
+      </p>
+  - type: clearImage
+    id: Mathina0
+ 
+  - type: image
+    id: Mathina00
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 5%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+ 
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 60%; left: 55%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 67%; left: 59%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 53%; left: 58%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 3;"
+   
+ 
+
+  
+  - type: sceneText
+    text: >
+      <p>Mathina foi na direção do grito até que se encontrou em frente a um papagaio de aparência muito inteligente. Tinha lindas penas vermelhas, amarelas e azuis, e quando percebeu que Mathina o observava, ficou em silêncio, mexendo a cabeça, intrigado.
+      </p>
+ 
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+
+  - type: dialog
+    entries:
+      - text: "Olá!! O meu nome é Mathina, posso te fazer festas?"
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "T-J-N!!"
+        char: Parrot
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "O quê?"
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    text: >
+      <p>Mathina ficou perplexa, não entendendo uma palavra do que o papagaio disse, mas ele estava claramente a falar nalgum tipo de linguagem.
+      </p>
+      
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+      
+  - type: sceneText
+    text: >
+      <p>Uma senhora aproximou-se da barraca e dirigiu-se a Mathina.
+      </p>
+      
+      
+  - type: dialog
+    entries:
+      - text: "Não te preocupes: ele é sempre assim. Eu sou a Ângela, prazer em conhecê-la."
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Olá! Este papagaio é teu?"
+        char: mathina
+        mood: happy
+  - type: clearImage
+    id: Mathina00
+ 
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 45%; bottom: 5%; right: 5%;  z-index: 1;"
+        
+  - type: dialog
+    entries:
+      - text: "Não exatamente ... Ele mora comigo, mas a sua história é muito interessante: ele já fez parte da tripulação de um navio pirata e participou em muitas e muitas aventuras. Há alguns anos, a tripulação se aposentou-se e cada um seguiu o seu caminho. Alguns estão provavelmente ainda aqui na ilha."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Uau! Parece que vocês se tornaram amigos!"
+        char: Angela
+        mood: happy
+  - type: sceneText
+    text: >
+      <p>O papagaio estava a brincar com Mathina, despenteando os seus cabelos com o bico.
+      </p>
+
+
+  - type: dialog
+    entries:
+      - text: "Queres uma bolacha"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> O papagaio parecia muito feliz e respondeu “T-J-N! T-J-N!”. Mathina estava muito curiosa... </p>
+  - type: dialog
+    entries:
+      - text: "Parece a mesma palavra que ele disse antes. E se estiver dizendo apenas “sim”?"
+        char: mathina
+        mood: distracted
+        
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+        
+        
+  - type: dialog
+    entries:
+      - text: "Faz sentido: antes pediste-lhe para o acariciar, agora ele quer um biscoito. Devemos tentar algo diferente? Pergunta-lhe algo que tenha “não” como resposta."
+        char: Angela
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>Mathina pensou um pouco sobre isso. Que pergunta poderia ela fazer para ser quase certo que o papagaio responderia não? </p>
+  - type: dialog
+    entries:
+      - text: "Talvez afinal eu fique com este biscoito. Pode ser?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> O papagaio pareceu ficar um pouco irritado e respondeu “O-B-P! O-B-P!”. </br></br> Mathina sorriu e deu o biscoito ao papagaio.</p>
+       
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"             
+       
+       
+  - type: clearImage
+    id: Mathina1
+  
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+       
+        
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+  - type: animation
+    target: John1
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+       
+        
+  - type: dialog
+    entries:
+      - text: "Agora sabemos que T-J-N significa “sim” e O-B-P significa “não”."
+        char: mathina
+        mood: happy
+               
+        
+  - type: sceneText
+    text: >
+      <p> Que língua estranha ... Mathina parecia perplexa.</p>
+  - type: dialog
+    entries:
+      - text: "Estou confusa. O-B-P tem três letras, as mesmas que “não”, mas não tenho nenhuma ideia para além disso. Talvez seja apenas um código maluco."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Talvez ele esteja apenas a trocar as letras! Pensa no alfabeto K, M, N, O, P,..."
+        char: Angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Ah! Já entendi. Ele está a substituir cada letra pela letra imediatamente seguinte no alfabeto. Portanto, “não” fica “O-B-P”, já que O está imediatamente após N, B imediatamente após A e P está imediatamente após O."
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> Ângela parecia feliz e o papagaio também soltou um grito de alegria.</p>
+  - type: dialog
+    entries:
+      - text: "Muito bom Mathina! Esta é uma das formas mais comuns que os piratas usam para comunicarem em segredo."
+        char: Angela
+        mood: happy
+        
+        
+
+        
+  - type: sceneText
+    text: >
+      <p> Mathina ficou maravilhada, e também muito feliz por conseguir entender pelo menos uma parte deste código.</p>
+  - type: dialog
+    entries:
+      - text: "Como você sabe isto? E ... como conseguiu traduzir tão rápido?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Nunca se sabe quem nesta ilha foi pirata ou não, mas, mantenha isso em segredo, eu fazia parte da mesma tripulação que John --- o papagaio. Ele é muito inteligente. Na verdade, ele pode falar com bastante fluência, mas às vezes acha engraçado repetir algumas palavras em código, como “sim” e “não”."
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Temos um truque para nos comunicar: um colar que pode ser usado para cifrar e decifrar palavras e frases."
+        char: Angela
+        mood: normal
+  - type: image
+    id: CaesarJewel
+    src: disco_ba.png
+    style: "height: 50%; bottom: 5%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p> Angela deu a Mathina um pequeno colar. </p>
+       
+  - type: sceneText
+    text: >
+      <p> Era feito de latão. Uma fina corrente com um pendente muito estranho, com dois discos, um dentro do outro, com as letras do alfabeto gravadas. </p>
+  - type: dialog
+    entries:
+      - text: "É lindo --- disse Mathina --- como funciona? Vejo que as letras aparecem duas vezes: uma no disco interno e outra no disco externo, mas estão deslocadas. Porquê?"
+        char: mathina
+        mood: excited
+      - text: "O disco interno --- Ângela começou a explicar --- é o ponto de partida. Se quiseres cifrar a letra A, basta encontrar o A no disco interno e, em seguida, olhar para a letra que corresponde a A no disco externo."
+        char: Angela
+        mood: normal
+      - text: "Neste caso, encontras B, e portanto a letra A é cifrada na letra B. Se quiseres decifrar ..."
+        char: Angela
+        mood: normal        
+      - text: "... Faço isso ao contrário, certo? Procuro a letra que desejo decifrar no disco externo e, em seguida, encontro a letra correspondente no disco interno."
+        char: mathina
+        mood: happy
+      - text: "Tipo, vejo que a letra T vai para a letra S, e se continuar a procurar, J vai para I, e N vai para M. Então… TJN é SIM!"
+        char: mathina
+        mood: happy
+      - text: "Rapariga inteligente --- disse Ângela. Então ... queres tentar traduzir outra coisa?"
+        char: Angela
+        mood: happy
+      - text: "Sim por favor! Vamos tentar!"
+        char: mathina
+        mood: happy
+      - text: "Lembra-te, lê de fora para dentro para descodificar."
+        char: Angela
+        mood: normal
+
+  - type: game
+    text: "Lembra-te: para descodificar deves começar do disco externo"
+    toolbarText: "Seleciona a palavra correta"
+    cta: "Tenta tu mesmo!"
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=3
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina passou muito tempo a brincar com o papagaio. "Está quase na hora de apanhar a barca de volta para casa ...", pensava Mathina ao devolver o colar à Ângela.</p>
+  - type: dialog
+    entries:
+      - text: "Ângela, foi um dia maravilhoso, espero voltar a visitá-la e ao John."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Sem dúvida! Ah, e não me devolva o colar. Guarde-o como um presente! Para se lembrar de nós."
+        char: Angela
+        mood: happy   
+        
+  - type: clearImage
+    id: CaesarJewel
+        
+  - type: sceneText
+    text: >
+      <p> Mathina estava muito feliz! Colocou a jóia no pescoço e, depois de dar outro biscoito a John, voltou ao cais para apanhar a barca. </p>
+
+
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: Angela1
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+
+
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+               
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Boat
+    src: barca_flip.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
+  
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+  - type: sceneText
+    text: >
+      <p> Estava tão excitada que quase não percebeu que a mesma senhora da viagem para a ilha estava sentada bem na sua frente.</p>
+ 
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: 2
+      repeat: -1
+      yoyo: true
+
+  - type: sceneText
+    text: >
+      <p> "Como foi o teu dia na Ilha do Corsário? "Mathina pulou da cadeira.</p>
+  - type: dialog
+    entries:
+      - text: "Olá!! Uau, nem a vi. Foi um belíssimo dia!"
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> Mathina começou a explicar a aventura com o papagaio e com Ângela, enquanto a senhora a ouvia, ela própria perdida nas suas memórias. </p>
+  - type: dialog
+    entries:
+      - text: "... e finalmente tentei traduzir algumas frases, mas quase perdi a última barca! Mas aqui estou... e... como foi o seu dia... ah ... não me lembro do seu nome, desculpe."
+        char: mathina
+        mood: normal
+  - type: sceneText
+    text: >
+      <p> A senhora sorriu. "Eu também tive as minhas próprias aventuras hoje! Estive na ilha a esconder um tesouro meu! Quem sabe quem o vai encontrar!" </p>
+  - type: dialog
+    entries:
+      - text: "Agora fiquei curiosa, onde o escondeu?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <p> "Algures numa árvore, mas não te quero mimar muito! Bem --- disse ela enquanto olhava para o novo pingente de Mathina --- estás pronta para um último enigma, antes que a barca chegue ao cais?" </p>
+  - type: dialog
+    entries:
+      - text: "Claro que estou, diga-me!"
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: >
+      <p> "Oh, não é algo de contar ... Aqui está --- disse ela enquanto entregava a Mathina um pedaço de papel velho. Há um enigma codificado neste pedaço de papel e, parece a mim, que tens todas as ferramentas necessárias para o descodificar ... Boa sorte!" </p>
+  - type: sceneText
+    text: >
+      <p> Mathina olhou para o pedaço de papel: algumas palavras --- claro que incompreensíveis --- que pareciam muito semelhantes às que ela tinha aprendido com a Ângela e com o John. Ajudas a traduzir a mensagem secreta? </p>
+
+  - type: game
+    text: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
+    toolbarText: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
+    cta: "Tenta tu mesmo!"
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=3
+    
+  - type: sceneText
+    text: >
+      <h1>O papagaio falante - Fim</h1>        
+
+    
+      
+      
+      
+      
+      
