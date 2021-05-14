@@ -5,7 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Besuche einen Ort!',
-    'map': 'Weld karte',
+    'map': 'Weltkarte',
   },
   cities: {
     'island': 'Schatzinsel',
@@ -29,7 +29,7 @@ export default {
       'fire-1': 'Die Feuervogeltrainerin',
       'fire-2': 'Wie spricht man mit einem Einhorndrachen?',
       'fire-3': 'The phoenix race',
-      'fire-4': 'The mysterious sparkbugs',
+      'fire-4': 'Die geheimnisvollen Funkelflöhe',
       'symm-1': 'Mathina schützt den Symmel-Rummel',
       'symm-2': 'Mathina, the rosette game and the magic mazes',
       'symm-3': 'Stamping friezes',
