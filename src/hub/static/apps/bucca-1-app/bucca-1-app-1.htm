@@ -210,6 +210,38 @@ background-repeat: no-repeat;
 ];
 
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
+function Scramble() {
+	var Perc=["10%","30%","50%","70%"];
+	shuffle(Perc);
+	for (let i=0;i<4;i++) {
+		document.getElementById("Head"+(i+1)).style.top=Perc[i];
+	}
+	shuffle(Perc);
+	for (let i=0;i<4;i++) {
+		document.getElementById("Div"+(i+1)).style.top=Perc[i];
+	}
+}
+
         function gup(name, url) {
             if (!url) url = location.href;
             name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -345,7 +377,7 @@ background-repeat: no-repeat;
 
         function Init() {
             Vittoria = ["H1", "D3"];
-
+			Scramble();
             Lingua = Number(gup('l', document.location.search));
 
             if (!isNumeric(Lingua)) Lingua = 1;
