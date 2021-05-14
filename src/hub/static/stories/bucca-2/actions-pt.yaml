@@ -420,7 +420,7 @@ actions:
         
   - type: dialog
     entries:
-      - text: "Não exatamente ... Ele mora comigo, mas a sua história é muito interessante: ele já fez parte da tripulação de um navio pirata e participou em muitas e muitas aventuras. Há alguns anos, a tripulação se aposentou-se e cada um seguiu o seu caminho. Alguns estão provavelmente ainda aqui na ilha."
+      - text: "Não exatamente ... Ele mora comigo, mas a sua história é muito interessante: ele já fez parte da tripulação de um navio pirata e participou em muitas e muitas aventuras. Há alguns anos, a tripulação aposentou-se e cada um seguiu o seu caminho. Alguns estão provavelmente ainda aqui na ilha."
         char: Angela
         mood: normal
   - type: dialog

@@ -37,7 +37,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: ['~/assets/styles/main.pcss'],
+  css: ['../shared/assets/styles/main.pcss'],
   /*
   ** Plugins to load before mounting the App
   */
@@ -135,6 +135,7 @@ export default {
               '~~': rootDir,
               '@': srcDir,
               '@@': rootDir,
+              '~vars': path.resolve(__dirname, `./assets/styles/base/_settings.pcss`),
             },
             modules: [srcDir, rootDir],
           }),

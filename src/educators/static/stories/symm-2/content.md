@@ -17,8 +17,8 @@ A **symmetry of a figure** is an isometry that maps the figure exactly onto itse
 Note that to identify a reflection symmetry is tantamount to find a symmetry axis.
 
 In the story, a 
-[“mirror maze”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
- is available (link to the IO3 Repository).
+[“mirror maze”]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg1)
+ is available.
 By using this tool, the user gets acquainted with: 1) the fact that the segment joining a point *A* and its reflected image *A’* is perpendicular to the reflection line *r* and 2) both points (*A* and *A’*) are at equal distance from *r*.
 
 ![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
@@ -30,10 +30,10 @@ A rotation symmetry of an image is a rotation which takes the image exactly onto
 ![Watch the movie here](/stories/symm-2/video/_align-center_/ros_C_4.mp4 =640x360 )
 
 In the story, a
-[“half-turn maze”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-is also available (link to the IO3 Repository). By exploring this tool, the user becomes more familiar to a specific kind of rotation, the one of *180* degrees. In particular, he/she may observe that the rotation center *O* is the midpoint of *[AA’]*.
+[“half-turn maze”]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg2)
+is also available. By exploring this tool, the user becomes more familiar to a specific kind of rotation, the one of *180* degrees. In particular, he/she may observe that the rotation center *O* is the midpoint of *[AA’]*.
 
-![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
+![Rotation](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
 
 &nbsp;
 
@@ -44,11 +44,11 @@ We will now consider flat images which have some kind of symmetry of rotation or
 With respect to their symmetry, rosettes can be divided into two classes: **dihedral**, if they have at least one reflection symmetry (so there exits at least one symmetry axis), and **cyclic**, if they don’t possess any reflection symmetry.
 
 The
-[“Rosette Game”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[“Rosette Game”]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg3)
 presented in the story is a game in which the player must choose the rosettes with reflection symmetry, i.e. the dihedral rosettes.
 
 And how can we distinguish dihedral rosettes from each other? A natural way is counting their symmetry axes… That is precisely the goal of
-[“Bag Game I”:]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[“Bag Game I”:]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg4)
 by playing it, we are classifying dihedral rosettes according to their symmetry.
 
 ![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-diedrais.png =1000x194)
@@ -68,7 +68,7 @@ trivial symmetry^[In general, when we ask if there is a symmetry, we are thinkin
 .
 
 We classify the cyclic rosettes according to the number of the rotation symmetries they have. That is precisely the goal of 
-[“Bag Game II”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[“Bag Game II”]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg5)
 .
 
 ![Bag Game I](/stories/symm-2/img/_align-center_/rosaceas-ciclicas.png =1000x195)
@@ -109,7 +109,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Using mirrors (I and II)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 1 - Using mirrors (I and II)]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg6)
 
 An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she can move the existing mirror, by dragging it back and forth.
 
@@ -118,7 +118,7 @@ An image is provided. The user is invited to check if the given image has a symm
 
 &nbsp;
 
-## [Game 2 - Rosette Game]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 2 - Rosette Game]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg3)
 
 A set of 8 rosettes is presented. The user is invited to choose the 4 rosettes with symmetry axes. After choosing the correct rosettes and clicking
 ![Confirm](/stories/symm-2/img/confirm.png =40x40),
@@ -129,7 +129,7 @@ the program shows a new set of 8 rosettes. A total of 3 sets are shown. The game
 
 &nbsp;
 
-## [Game 3 - Bag Game I]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 3 - Bag Game I]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg4)
 
 A set of 12 rosettes is presented. The user is invited to drag each rosette to the corresponding bag, according to its number of symmetry axes: bag 1 contains the rosettes which only have 1 symmetry axis; bag 2, those only with 2 symmetry axes; .... By clicking
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
@@ -140,7 +140,7 @@ it is possible to get help for counting the number of symmetry axes.
 
 &nbsp;
 
-## [Game 4 - Bag Game II]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 4 - Bag Game II]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg5)
 
 This app is similar to Game 3. However, instead of counting symmetry axes, the user should count the number of rotation symmetries of each rosette.
 
@@ -149,7 +149,7 @@ This app is similar to Game 3. However, instead of counting symmetry axes, the u
 
 &nbsp;
 
-## [Game 5 - Mirror maze]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 5 - Mirror maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg1)
 
 Two mazes are shown side by side: the original one (on the left) and the reflected one on the right. The user should go from the entrance of the original maze
 ![Entrance](/stories/symm-2/img/pegadas.png =40x40)
@@ -165,9 +165,6 @@ button and see both mazes all the time.
 &nbsp;
 
 
-## [Game 6 - Half-turn maze]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Game 6 - Half-turn maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg2)
 
 This app is similar to Game 5. However, instead of the (right) maze being reflected, it is rotated by 180º.
-
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-2/transcripts/Script2.pdf)

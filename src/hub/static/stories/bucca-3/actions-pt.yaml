@@ -401,7 +401,7 @@ actions:
       - text: "...aqui está! Dá uma olhada e lembra-te que o número de passos é três."
         char: Angela
         mood: normal
-      - text: "Uau, bem, é muito mais fácil agora: é só somar. O A, isto é, o 0 é enviado em D, que é 3. Ou seja, basta somae apenas o número de etapas. Isto é engenhoso. Mas ... Como faz isto sentido?"
+      - text: "Uau, bem, é muito mais fácil agora: é só somar. O A, isto é, o 0 é enviado em D, que é 3. Ou seja, basta somar apenas o número de etapas. Isto é engenhoso. Mas ... Como faz isto sentido?"
         char: mathina
         mood: normal
       - text: "Pode-se mesmo... somar letras? Na escola, aprendi a lidar com expressões nas quais se somam letras, mas é algo mais parecido com x+x=2x."
@@ -444,7 +444,7 @@ actions:
       - text: "Bem, cifrar é fácil: há que simplesmente realizar uma soma, mas o interessante sobre as somas é que elas podem ser invertidas: por exemplo, se A + 3 é igual a D, então há uma operação inversa que pode ser feita para passar de D para A. Consegues adivinhar qual é?"
         char: Angela
         mood: normal
-      - text: "É fácil: a subtração! Se A+3=D, entãi D-3 deve ser igual a A..."
+      - text: "É fácil: a subtração! Se A+3=D, então D-3 deve ser igual a A..."
         char: mathina
         mood: normal
       - text: "... e a 26..."
@@ -775,7 +775,7 @@ actions:
         
   - type: dialog
     entries:     
-      - text: "Oh espere! Isso é algo em que tenho pensado nestes últimos dias. Você disse que eles quebraram o seu código, certo?"
+      - text: "Oh espere! Isso é algo em que tenho pensado nestes últimos dias. Disse que eles quebraram o seu código, certo?"
         char: mathina
         mood: normal
       - text: "Sim."
@@ -1028,7 +1028,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p> Após algum tempo a tentae decifrar o texto, Mathina olhou para Angela meio perplexa. </p>
+      <p> Após algum tempo a tentar decifrar o texto, Mathina olhou para Angela meio perplexa. </p>
 
   - type: dialog
     entries:            
@@ -1124,10 +1124,10 @@ actions:
       - text: "Nada ... Mas, reparo agora que há uma palavra muito estranha: “MM”. Não estou a ver nenhuma palavra em português com duas letras iguais!"
         char: mathina
         mood: sad
-      - text: "Bem... será que a maneira de usar o colar duas vezes é um pouco difrente? Talvez precisemos mudar a forma como o traduzimos. Que tal usar apenas letras em vez de palavras? Podemos tentar usar uma chave para letras em posições ímpares e outra chave para letras em posições pares."
+      - text: "Bem... será que a maneira de usar o colar duas vezes é um pouco diferente? Talvez precisemos mudar a forma como o traduzimos. Que tal usar apenas letras em vez de palavras? Podemos tentar usar uma chave para letras em posições ímpares e outra chave para letras em posições pares."
         char: Angela
         mood: normal
-      - text: "Claro! Esses dois “M” consecutivos estão em posições de paridades diferentes, pelo que assim corresponderiam a letras distintas!."
+      - text: "Claro! Esses dois “M” consecutivos estão em posições de paridades diferentes, pelo que assim corresponderiam a letras distintas!"
         char: mathina
         mood: normal
 
