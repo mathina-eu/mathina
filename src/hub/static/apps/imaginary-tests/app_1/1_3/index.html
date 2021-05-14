@@ -298,7 +298,6 @@ generateCurve() := (
 
 
 
-  followCurve.pos = randchoose(curvePositions);
 
   if(firstRun, 
     angle = 0;
@@ -307,9 +306,14 @@ generateCurve() := (
     angle = 2*pi * random();
     squish = [0.8 + 0.4 * random(), 0.8 + 0.4 * random()];
   );
+  followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
   followCurve.stroke = apply(createCurveStroke(currCurve), curveScales_currCurve * rotation(angle) * [squish.x * #.x, squish.y * #.y]);
-  
+  followCurve.pos = randchoose(curvePositions);
+
   followScore = [];
+
+  curveConstructTrack = setupAnimationTrack(now(), now() + 2);
+  draw = true;
 );
 
 
@@ -318,13 +322,20 @@ scoreCurve() := (
   if(and(length(followScore) >= scoreLength, sum(followScore) <= scoreGoal * scoreLength),
     scoreLabel.score = scoreLabel.score + 1;
     scoreLabel.text = scoreLabel.score;
-    generateCurve();
+    followScore = [];
+    //generateCurve();
+    
+    curveDestroyTrack = setupAnimationTrack(now(), now() + 2);
+    destroy = true;
+
 
     if(!flammaIn,
     flammaOut = false;
     flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
     flammaIn = true;
     flammaInStart = flamma.pos;
+
+
   );
   );
 );
@@ -568,9 +579,11 @@ scoreLength = 200;
 scoreGoal = 1.5;
 
 
-generateCurve();
-followCurve.pos = curvePositions_(-1);
 
+draw = false;
+destroy = false;
+targetStroke = [];
+followCurve.pos = curvePositions_(-1);
 
 
 
@@ -580,6 +593,10 @@ followCurve.pos = curvePositions_(-1);
 
 playanimation();
 setupTime();
+
+
+generateCurve();
+
 </script>
 <script src="../../Egdod/egdodUI.js"></script>
 <script src="../../Egdod/egdodMath.js"></script>
@@ -636,7 +653,21 @@ setupTime();
     //collideWithObstacles();
   );
 
-
+  if(draw,
+    updateAnimationTrack(curveConstructTrack, delta);
+    constructStrokeDraw(followCurve, 10, 0, curveConstructTrack);
+    if(curveConstructTrack.timeLeft <= 0,
+      draw = false;
+    );
+  );
+  if(destroy,
+    updateAnimationTrack(curveDestroyTrack, delta);
+    destroyStrokeDraw(followCurve, 10, 0, curveDestroyTrack);
+    if(curveDestroyTrack.timeLeft <= 0,
+      destroy = false;
+      generateCurve();
+    );
+  );
   processFlamma();
 </script>
 

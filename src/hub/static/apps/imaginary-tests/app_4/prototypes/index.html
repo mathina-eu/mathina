@@ -86,7 +86,7 @@
         forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
           dist = 0.05;
           state = getState(pos + dist * dir);
-          totalWeight = totalWeight + state.r * getTrueCurve(pos).r * (1 - getTrueCurve(pos + dist * dir).r);
+          totalWeight = totalWeight + state.r * getTrueCurve(pos).r; // * (1 - getTrueCurve(pos + dist * dir).r);
         );
       );
     , // else //
@@ -212,8 +212,8 @@
   newtonEpsilon = 0.02;
   
   //f(x,y) := (x * y^2 - 3 * x^3 + x^2 - x + sin(y) * x + 5 - pi * y) * (y^9-1.4*x^2*y^2+1.4*x^3) * ((y-x^5)^2-y^10)  * (y^4 + 3 * x^4 - 7);
-  //f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
-  f(x,y) := x^2 + 3 * y^2 - 10;
+  f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
+  //f(x,y) := x^2 + 3 * y^2 - 10;
   
   
   g(x,y) := abs(f(x,y));
@@ -265,7 +265,7 @@
 
 
 
-  //colorplot("computeTexture", if(random()>0.99, 1, 0));
+  //colorplot("computeTexture", if(random()>0.999, 1, 0));
   
 
 

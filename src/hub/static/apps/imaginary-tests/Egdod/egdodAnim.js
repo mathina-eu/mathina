@@ -391,6 +391,11 @@
 		tween(obj, "drawPercent", 0, 1, track, "easeInOutCubic");
 		tween(obj, "arrowSize", 0, arrowSize, track);	
 		);
+	destroyStrokeDraw(obj, lineSize, arrowSize, track) := (
+		tween(obj, "lineSize", lineSize, 0, track, "easeInCirc");
+		tween(obj, "drawPercent", 1, 0, track, "easeInOutCubic");
+		tween(obj, "arrowSize", arrowSize, 0, track);	
+	);
 	
 	constructStrokeDrawMany(list, lineSize, arrowSize, track, delay) := (
 		tweenMany(list, "lineSize", 0, lineSize, track, delay, "easeOutCirc");
