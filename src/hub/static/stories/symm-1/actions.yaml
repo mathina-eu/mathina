@@ -78,11 +78,11 @@ actions:
   - type: dialog
     entries:
       - text: "I’ll show you an example! Look at this image."
-        char: wizard      
+        char: wizard
       - text: "If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
-    tag: firstGame
+    tag: tg1
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
     url: /apps/dobrar_1/index.html
@@ -193,6 +193,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    tag: tg4
     text: "Put the \"good\" toys in the box"
     url: /apps/arrumar_figuras/index.html
     cta: "Try it!"      
@@ -344,7 +345,7 @@ actions:
     cta: "Play!"
     url: /stories/symm-1/video/geoplano-anim2.mp4          
   - type: game
-    tag: polygons
+    tag: tg2
     text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
     cta: "Try it yourself!"
     url: /apps/geoplano_polys0/index.html     
@@ -437,7 +438,7 @@ actions:
         char: mathina
         exposition: "Mathina said, repeating the wizard’s words."        
   - type: game
-    tag: lines
+    tag: tg3
     text: "How can Mathina finish the toys? You just need to draw the missing lines."
     cta: "Try it yourself!"
     url: /apps/geoplano_lin1/index.html 
