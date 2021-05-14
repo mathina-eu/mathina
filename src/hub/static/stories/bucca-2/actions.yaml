@@ -583,6 +583,7 @@ actions:
     text: >
       <p> Angela gave to Mathina a small necklace. </p>
        
+       
   - type: sceneText
     text: >
       <p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>

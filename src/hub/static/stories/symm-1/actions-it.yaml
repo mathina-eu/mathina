@@ -82,7 +82,7 @@ actions:
       - text: "Se ripieghiamo l'immagine in un modo preciso, le due parti si sovrappongono!"
         char: wizard
   - type: game
-    tag: firstGame
+    tag: tg1
     text: "Quest'immagine è giusta (cioè simmetrica)?"
     cta: "Prova da solo!"
     url: /apps/dobrar_1/index.html
@@ -190,6 +190,7 @@ actions:
         mood: happy
   - type: game
     text: "Metti i giocattoli \"perfetti\" nella scatola"
+    tag: tg4
     cta: "Prova da solo!"
     url: /apps/arrumar_figuras/index.html
   - type: clearImage
@@ -344,8 +345,8 @@ actions:
       - text: "Ok, ho capito! Finirò i giocattoli."
         char: mathina
         mood: excited            
-  - type: game
-    tag: polygons
+  - type: game 
+    tag: tg2
     text: "Come può Mathina finire di costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
     cta: "Prova da solo!"
     url: /apps/geoplano_polys0/index.html     
@@ -435,7 +436,7 @@ actions:
         char: mathina
         exposition: "Gli disse Mathina, ripetendo le parole del mago."        
   - type: game
-    tag: lines
+    tag: tg3
     text: "Aiuta Leo a concludere i giocattoli, disegna le linee mancanti."
     cta: "Prova da solo!"
     url: /apps/geoplano_lin1/index.html 

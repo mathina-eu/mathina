@@ -63,6 +63,7 @@ actions:
       - text: "Possiamo immaginare una linea che divida in due parti l'immagine come se fosse uno specchio, la parte di fronte allo specchio insieme con il suo riflesso “forma” un'immagine uguale a quelle iniziale."
         char: wizard
   - type: game
+    tag: tg6
     text: "Prova a controllare se l'immagine ha un asse di simmetria. Per farlo sposta lo specchio, trascinandolo avanti e indietro con la barra di scorrimento"
     toolbarText: "Scopri se l'immagine ha un asse di simmetria."
     cta: "Giochiamo!"
@@ -111,6 +112,7 @@ actions:
         char: mathina
         mood: excited
   - type: game
+    tag: tg3
     text: "Come può vincere Mathina? In ogni turno, aiutala scegliendo i rosoni che hanno degli assi di simmetria."
     cta: "Prova da solo!"
     url: /apps/EscolheRosaceas/index.html?lang=en    
@@ -128,6 +130,7 @@ actions:
       - text: "Funziona così: ci sono sei borse numerate dall'1 al 6. Se un rosone avrà un solo asse di simmetria, andrà messo nella borsa 1, se ne avrà due, andrà messo nella borsa 2, e così via…"
         char: wizard        
   - type: game
+    tag: tg4
     text: "Mathina come può vincere i rosoni? Se hai dei dubbi, clicca qui"
     toolbarText: "Riponi i rosoni nelle borse corrette!"
     cta: "Prova a risolvere il gioco, mettendo i rosoni nelle borse corrette!"
@@ -198,6 +201,7 @@ actions:
       - text: "Ora separiamo tutte questi rosoni nelle borse giuste. Quando avrai finito, tutti questi rosoni saranno tuoi."
         char: wizard
   - type: game
+    tag: tg5
     text: "Aiuta Mathina a vincere i rosoni! Se hai dubbi clicca su"
     toolbarText: "Metti i rosoni nella borsa corretta."
     cta: "Metti i rosoni nella borsa corretta!"
@@ -369,6 +373,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
+    tag: tg1
     text: "Dai una mano a Mathina ad uscire dal labirinto!"
     cta: "Provaci tu!"
     url: /apps/labirinto-s/index.html?lang=en&sim=ref
@@ -450,6 +455,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
+    tag: tg2
     text: "Aiuta Mathina a uscire dal labirinto del mezzo giro!"
     cta: "Provaci tu!"
     url: /apps/labirinto-s/index.html?lang=en&sim=rot
