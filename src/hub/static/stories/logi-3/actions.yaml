@@ -326,7 +326,7 @@ actions:
     entries:
       - text: You are both fantastic! Would you please tell us how many policemen we actually need as a minimum? It would be good to approach the Chief of Police with a concrete proposal.
         char: first_policeman
-        mood: serious
+        mood: normal
       - text: If not two, then three!.
         char: Leo
         mood: happy
