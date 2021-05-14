@@ -12,7 +12,7 @@
             z-index: 2;
             border: solid;
             border-color: #684213;
-            font-size: 32px;
+            font-size:min(5vw,4vh);
             background: #FFFBEB;
             box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
             border-radius: 15px;
@@ -21,10 +21,10 @@
         .PartContainer {
             position: absolute;
             top: 50%;
-            width: 95%;
+            width: 94%;
+			left:3%;
             -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%);
-            padding: 15px;
             text-align: center;
         }
 
@@ -61,54 +61,71 @@
             visibility: visible;
         }
 
-        #successMessage {
-            position: absolute;
-            /*left: 50%;
+         #successMessage {
+        position: absolute;
+        /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
 
-        }
+    }
 
-        #failMessage {
-            position: absolute;
-            /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
 
-        }
-
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
         .button {
             background-color: #4CAF50;
             /* Green */
@@ -120,7 +137,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 32px;
+            font-size:min(1.6vw,3vh);
             border-radius: 5px;
         }
 
@@ -194,13 +211,17 @@
             }
 
             window.dimension = [width, height];
+			
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+			
             Border = dimension[0] / 100;
             window.MenuDim = [dimension[0] * 8 / 10 + Border, Border, dimension[0] * 2 / 10 - 2 * Border, dimension[1] - 2 * Border];
 
             CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
-            Scale = necklace_dimension[1] / dimension[1];
+            Scale = Math.max(2* necklace_dimension[0] / dimension[0],necklace_dimension[1] / dimension[1]);
             CentroCesare = [dimension[0] / 2, dimension[1] / 2];
             Draw(CentroCesare[0], CentroCesare[1], AngPosizione1, AngPosizione2, Scale);
         }
@@ -541,15 +562,18 @@
             }
         }
 
-        function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+          function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
 
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
 
         }
+
 
         function Cesare(Str, Alfabeto, T) {
             Str = Str.toUpperCase();
@@ -590,73 +614,66 @@
 
         Lingua = 1;
 
-        Alphabet = [
-            "", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-            "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        ];
+        Alphabet=[
+"", //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+];
 
-        ElencoParole = [
-            [],
-            [
-                'I am looking for the treasure of the pirates',
-                'I do have a strange sense of humor',
-                'I am very happy when someone smiles at me',
-                'A good pirate has good dialogue skills',
-                'A very nice tree is planted in the garden',
-                'I am so happy when the sun is shining',
-                'A brave gardener do not stop gardening',
-                'A small mouse was stealing the cheese',
-                'A nice and happy flower is sprouting',
-                'I will study all the afternoon',
-                'I will be at home tomorrow',
-                'I know a fun fact about mathematics'
-            ],
-            [
-                "Sto cercando il tesoro dei pirati e non ho nascosto niente",
-                "Non troverai mai i diamanti e i rubini che ho nascosto al parco",
-                "Una mappa del tesoro dei pirati si trova nel bosco",
-                "Per trovare il tesoro dovrai prima trovare la mappa dei pirati",
-                "Tre passi a destra e tre passi in avanti devi fare",
-                "Sta nascosto dentro a un albero particolare",
-                "Chi ha preso tre dobloni ha dimenticato il tesoro vero",
-                "Sul nascondiglio scelto non ho niente da rivelare"
-            ],
-            ['Estou procurando o tesouro dos piratas',
-                'Eu tenho um estranho senso de humor',
-                'Fico muito feliz quando algu&eacute;m sorri para mim',
-                'Um bom pirata tem boas habilidades de di&aacute;logo',
-                'Uma &aacute;rvore muito bonita &eacute; plantada no jardim',
-                'Estou t&atilde;o feliz quando o sol est&aacute; brilhando',
-                'Um bravo jardineiro n&atilde;o p&aacute;ra de jardinar',
-                'Um pequeno rato estava roubando o queijo',
-                'Uma flor bonita e feliz est&aacute; brotando',
-                'Vou estudar a tarde toda',
-                'Eu estarei em casa amanh&atilde;',
-                'Eu conhe&ccedil;o um fato engra&ccedil;ado sobre matem&aacute;tica'
-            ],
-            ['Ich suche den Schatz der Piraten',
-                'Ich habe einen seltsamen Sinn f&uuml;r Humor',
-                'Ich bin sehr gl&uuml;cklich, wenn mich jemand anl&auml;chelt',
-                'Ein guter Pirat hat gute Dialogf&auml;higkeiten',
-                'Im Garten wird ein sehr sch&ouml;ner Baum gepflanzt',
-                'Ich bin so gl&uuml;cklich, wenn die Sonne scheint',
-                'Ein tapferer G&auml;rtner h&ouml;rt nicht auf, im Garten zu arbeiten',
-                'Eine kleine Maus hat den K&auml;se gestohlen',
-                'Eine sch&ouml;ne und gl&uuml;ckliche Blume sprie&szlig;t',
-                'Ich werde den ganzen Nachmittag lernen',
-                'Ich werde morgen zu Hause sein',
-                'Ich kenne eine lustige Tatsache &uuml;ber Mathematik'
-            ]
-        ];
+ElencoParole=[
+[],
+[
+'I am looking for the treasure of the pirates',
+'I do have a strange sense of humor',
+'I am very happy when someone smiles at me',
+'A good pirate has good dialogue skills',
+'A very nice tree is planted in the garden',
+'I am so happy when the sun is shining',
+'A brave gardener does not stop gardening',
+'A small mouse was stealing the cheese',
+'A nice and happy flower is sprouting',
+'I will study all afternoon',
+'I will be at home tomorrow',
+'I know a fun fact about mathematics'
+],
+[
+"Sto cercando il tesoro dei pirati e non ho nascosto niente",
+"Non troverai mai i diamanti e i rubini che ho nascosto al parco",
+"Una mappa del tesoro dei pirati si trova nel bosco",
+"Per trovare il tesoro dovrai prima trovare la mappa dei pirati",
+"Tre passi a destra e tre passi in avanti devi fare",
+"Sta nascosto dentro a un albero particolare", 
+"Chi ha preso tre dobloni ha dimenticato il tesoro vero", 
+"Sul nascondiglio scelto non ho niente da rivelare"
+],
+['Eu tenho um estranho sentido de humor',
+'Um pequeno rato estava a roubar o queijo',
+'Vou estudar a tarde toda',
+'Eu gosto de gatos',
+'Estou procurando um tesouro',
+'Ele vai encontrar o tesouro na caixa'],
+['Ich suche den geheimen Schatz',
+'Ich habe einen seltsamen Humor',
+'Ich lache wenn ich froh bin',
+'Ein Schatz muss gut versteckt sein',
+'Ein hoher Baum wird im Garten gepflanzt',
+'Ich bin froh wenn die Sonne scheint',
+'Auf gutes Wetter lohnt es sich nicht zu warten',
+'Die kleine Maus hat den Speck gestohlen',
+'Das ist ein bunte und wundersame Blume',
+'Ich werde den ganzen Nachmittag lernen',
+'Ich werde morgen zu Hause sein',
+'Ich kenne etwas Lustiges in der Mathematik']
+];
 
-        Traduzioni = [
-            [
-                ["Trad1"], "Try to decipher this sentence without knowing the key:", "Prova a decifrare questa frase senza conoscere la chiave:", "Tente decifrar esta frase sem saber a chave:", "Versuchen Sie, diesen Satz zu entschl&uuml;sseln, ohne den Schl&uuml;ssel zu kennen:"
-            ]
-        ];
+Traduzioni=[
+[["Trad1"],"Try to decipher this sentence without knowing the key:","Prova a decifrare questa frase senza conoscere la chiave:","Tenta decifrar esta frase sem saberes a chave:","Versuche, diesen Satz zu entschl&uuml;sseln, ohne die genaue Regel zu kennen:"],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+];
+
 
         function isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
@@ -728,29 +745,130 @@
             <button type="button" onclick="Check(4)" id="Btn4" class="button"></button><br>
         </div>
     </div>
-    <div id="successMessage" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
+    <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fmat2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
-
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-
-
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fmat1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
+	
+	<script>
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>
