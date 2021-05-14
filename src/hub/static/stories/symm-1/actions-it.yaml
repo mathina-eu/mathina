@@ -217,7 +217,7 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
+        char: leo
         exposition: "Leo era appena arrivato alla Fiera della Simmetria."        
         mood: excited
   - type: animation
@@ -241,7 +241,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Davvero???"
-        char: Leo
+        char: leo
         mood: excited  
       - text: "Sì, ho solo dovuto aiutare il mago a scegliere i peluche!"
         char: mathina
@@ -266,17 +266,17 @@ actions:
   - type: dialog
     entries:       
       - text: "Davvero???"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Sì. Dovrai solo aiutarmi a finire i giocattoli che sto costruendo. E alla fine avrai la metà di quelli che avremo costruito."
         char: wizard
       - text: "Ci sono due tipi di giocattoli: alcuni sono più difficili da costruire rispetto agli altri. Quali preferisci?"
         char: wizard
       - text: "I più difficili."
-        char: Leo
+        char: leo
         mood: excited
       - text: "I più facili."
-        char: Mathina
+        char: mathina
         mood: excited
   - type: clearImage
     id: Leo2
@@ -342,7 +342,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Ok, ho capito! Finirò i giocattoli."
-        char: Mathina
+        char: mathina
         mood: excited            
   - type: game
     tag: polygons
@@ -360,7 +360,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Ho finito! Chissà a che punto sarà Leo."
-        char: Mathina
+        char: mathina
         exposition: "Mathina raccolse tutti i suoi nuovi giocattoli."        
         mood: excited
   - type: image
@@ -397,13 +397,13 @@ actions:
   - type: dialog
     entries:    
       - text: "Perché non funziona? Perché non funziona?"
-        char: Leo
+        char: leo
         exposition: "Si domandava Leo mentre tentava di finire un giocattolo, ma senza successo."        
         mood: angry
   - type: dialog
     entries:    
       - text: "Leo, cosa succede?"
-        char: Mathina
+        char: mathina
         mood: surprised
   - type: clearImage
     id: Mathina5
@@ -417,7 +417,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Mathina, sto tentando di finire questa barchetta, ma non è possibile!"
-        char: Leo
+        char: leo
         exposition: "Leo mostrò a Mathina cosa stava facendo."
   - type: clearImage
     id: barco
@@ -432,7 +432,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Leo, ricordati che qui, alla Fiera della Simmetria, ogni cosa deve essere simmetrica!"
-        char: Mathina
+        char: mathina
         exposition: "Gli disse Mathina, ripetendo le parole del mago."        
   - type: game
     tag: lines
@@ -448,7 +448,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Wow, abbiamo guadagnato così tanti giocattoli nuovi!"
-        char: Leo
+        char: leo
         mood: excited    
   - type: animation
     target: Leo2
@@ -469,10 +469,10 @@ actions:
   - type: dialog
     entries:    
       - text: "Ed è stato così facile ottenerli! Mi chiedo come mai ho avuto così tanti problemi prima del tuo arrivo…"
-        char: Leo
+        char: leo
         mood: surprised
       - text: "Beh Leo, la prossima volta dovresti ascoltare meglio il mago e provare prima a risolvere i compiti più facili."
-        char: Mathina
+        char: mathina
   - type: clearImage
     id: Leo2
   - type: clearImage
