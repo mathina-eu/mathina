@@ -52,14 +52,6 @@ export default {
     leo: 'Leo',
     jane: 'Jane',
 	flamma: 'Flamma',
-<<<<<<< HEAD
-    kangaroo: 'Kangaroo',
-    first_policeman: 'First policeman',
-    second_policeman: 'Second policeman',
-    owl: 'Owl',
-    trainer: 'Trainer',
-    george: 'George',
-=======
 	angela: 'Angela',
 	rasha: 'Rasha',
 	carla: 'Carla',
@@ -81,7 +73,6 @@ export default {
     second_policeman: 'Second policeman',
     george: 'George',
     trainer: 'Trainer',
->>>>>>> develop
     boys: 'Boys'
   },
 };
