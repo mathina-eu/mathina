@@ -118,7 +118,7 @@ An image is provided. The user is invited to check if the given image has a symm
 
 &nbsp;
 
-## [Game 2 - Rosette Game]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg7)
+## [Game 2 - Rosette Game]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg3)
 
 A set of 8 rosettes is presented. The user is invited to choose the 4 rosettes with symmetry axes. After choosing the correct rosettes and clicking
 ![Confirm](/stories/symm-2/img/confirm.png =40x40),
@@ -129,7 +129,7 @@ the program shows a new set of 8 rosettes. A total of 3 sets are shown. The game
 
 &nbsp;
 
-## [Game 3 - Bag Game I]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg8)
+## [Game 3 - Bag Game I]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg4)
 
 A set of 12 rosettes is presented. The user is invited to drag each rosette to the corresponding bag, according to its number of symmetry axes: bag 1 contains the rosettes which only have 1 symmetry axis; bag 2, those only with 2 symmetry axes; .... By clicking
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
@@ -140,7 +140,7 @@ it is possible to get help for counting the number of symmetry axes.
 
 &nbsp;
 
-## [Game 4 - Bag Game II]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg9)
+## [Game 4 - Bag Game II]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg5)
 
 This app is similar to Game 3. However, instead of counting symmetry axes, the user should count the number of rotation symmetries of each rosette.
 
@@ -149,7 +149,7 @@ This app is similar to Game 3. However, instead of counting symmetry axes, the u
 
 &nbsp;
 
-## [Game 5 - Mirror maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg10)
+## [Game 5 - Mirror maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg1)
 
 Two mazes are shown side by side: the original one (on the left) and the reflected one on the right. The user should go from the entrance of the original maze
 ![Entrance](/stories/symm-2/img/pegadas.png =40x40)
@@ -165,6 +165,6 @@ button and see both mazes all the time.
 &nbsp;
 
 
-## [Game 6 - Half-turn maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg11)
+## [Game 6 - Half-turn maze]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg2)
 
 This app is similar to Game 5. However, instead of the (right) maze being reflected, it is rotated by 180º.

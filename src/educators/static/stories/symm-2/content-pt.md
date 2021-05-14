@@ -92,7 +92,7 @@ Outras experiências semelhantes às apresentadas na história podem ser desenvo
 `*` verificar se uma imagem possui eixos de simetria é algo que se pode simular fisicamente com os alunos, usando um espelho;
 
 `*` os “Jogo das rosáceas”, “Jogo dos sacos I” e “Jogo dos sacos II” podem ser jogados fisicamente: basta imprimir cartas contendo diferentes tipos de rosáceas. Tais rosáceas podem até ser construídas pelos próprios alunos: para criá-las, sugerimos a utilização do programa (gratuito) do Atractor
-[“GeCla”](http://www.atractor.pt/mat/GeCla/index-_en.html)
+[“GeCla”](http://www.atractor.pt/mat/GeCla/index.html)
 .
 
 &nbsp;
@@ -116,7 +116,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 2 - Jogo das Rosáceas]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg7)
+## [Jogo 2 - Jogo das Rosáceas]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg3)
 
 É exibido um conjunto de 8 rosáceas. O utilizador é convidado a escolher 4 rosáceas com eixos de simetria. Depois de escolher as rosáceas corretas e clicar
 ![Confirmar](/stories/symm-2/img/confirm.png =40x40)
@@ -127,7 +127,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 3 - Jogo dos Sacos I]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg8)
+## [Jogo 3 - Jogo dos Sacos I]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg4)
 
 São exibidas 12 rosáceas O utilizador é convidado a arrastar cada rosácea para o saco correspondente, de acordo com o número de eixos de simetria das rosáceas: o saco 1 contém as rosáceas com 1 eixo de simetria; o saco 2 contém as rosáceas com 2 eixos de simetria; .... Ao clicar em
 ![Eixo de simetria](/stories/symm-2/img/vertical.png =40x40)
@@ -138,7 +138,7 @@ São exibidas 12 rosáceas O utilizador é convidado a arrastar cada rosácea pa
 
 &nbsp;
 
-## [Jogo 4 - Jogo dos Sacos II]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg9)
+## [Jogo 4 - Jogo dos Sacos II]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg5)
 
 Esta app é muito semelhante à do Jogo 3. Contudo, em vez de contar os eixos de simetria, o utilizador terá de contar o número de simetrias de rotação de cada rosácea.
 
@@ -147,7 +147,7 @@ Esta app é muito semelhante à do Jogo 3. Contudo, em vez de contar os eixos de
 
 &nbsp;
 
-## [Jogo 5 - Labirinto de espelhos]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg10)
+## [Jogo 5 - Labirinto de espelhos]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg1)
 
 São apresentados dois labirintos lado a lado: o original (à esquerda) e o refletido à direita. O utilizador deve deslocar-se da entrada do labirinto original
 ![Entrada](/stories/symm-2/img/pegadas.png =40x40)
@@ -163,6 +163,6 @@ e ver os dois labirintos durante todo o tempo.
 &nbsp;
 
 
-## [Jogo 6 - Labirinto de meia-volta]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg11)
+## [Jogo 6 - Labirinto de meia-volta]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg2)
 
 Esta app é muito semelhante à do Jogo 5. Contudo, em vez de o labirinto (direito) estar refletido, ele está rodado de 180º.

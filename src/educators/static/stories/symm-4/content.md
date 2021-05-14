@@ -12,7 +12,7 @@ In the story, an example of a non convex polyhedron is found by chance, when Leo
 
 | ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
-| Icosahedron | Non convex polyhedron, created by placing a vertex of the icosahedron into its interior and considering the polyhedron thus obtained ([Click here to manipulate the polyhedron](https://www.atractor.pt/temp/apps-tests/poliedros.html?pre=pol_1)) |
+| Icosahedron | Non convex polyhedron, created by placing a vertex of the icosahedron into its interior and considering the polyhedron thus obtained ([Click here to manipulate the polyhedron]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)) |
 
 This way, instead of getting an icosahedron, a non convex polyhedron is obtained. 
 
@@ -93,20 +93,20 @@ This discrepancy is related to the definition of uniform polyhedron. For the tec
 
 `*` for each pair of vertices, there is at least one symmetry of the polyhedron that takes one vertex onto the other.
 
-In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg20), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
+In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg20), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"](https://mathina-edu.netlify.app/story/stamping-friezes).
 
-Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg22).
+Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 
-![Icosahedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
-[Manipulate the polyhedron here](https://www.atractor.pt/temp/apps-tests/Miller_manip.html).
+![Miller polyhedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
+[Manipulate the polyhedron here]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
-However if we [rotate the octagonal dome on the top of the Miller polyhedron by 45º]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23), we get a new uniform polyhedron: the small rhombicuboctahedron.
+However if we [rotate the octagonal dome on the top of the Miller polyhedron by 45º]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg22), we get a new uniform polyhedron: the small rhombicuboctahedron.
 
-Throughout the story, the characters get acquainted with **all uniform polyhedra**: 1) an infinite family of prisms, [whose bases are regular polygons and whose side faces are squares]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 2) an infinite family of anti-prisms, [whose bases are regular polygons and whose side faces are equilateral triangles]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg25); 3) other 13 polyhedron:
+Throughout the story, the characters get acquainted with **all uniform polyhedra**: 1) an infinite family of prisms, [whose bases are regular polygons and whose side faces are squares]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23); 2) an infinite family of anti-prisms, [whose bases are regular polygons and whose side faces are equilateral triangles]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 3) other 13 polyhedron:
 
 ![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
-In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg26). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
+In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg25). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
 
 &nbsp;
 
@@ -143,7 +143,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Separating convex polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg27)
+## [Game 1 - Separating convex polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg26)
 
 A set of 8 polyhedra is presented. The user is invited to choose the 4 convex ones. After choosing the correct polyhedra and clicking 
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
@@ -154,7 +154,7 @@ A set of 8 polyhedra is presented. The user is invited to choose the 4 convex on
 
 &nbsp;
 
-## [Game 2 - Choosing the right nets for the cube]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg28)
+## [Game 2 - Choosing the right nets for the cube]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg27)
 
 A set of 6 proposals for cube nets is presented. The user is invited to choose the 3 “right” ones. After choosing the correct nets and clicking 
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
@@ -165,7 +165,7 @@ A set of 6 proposals for cube nets is presented. The user is invited to choose t
 
 &nbsp;
 
-## [Game 3 - Choosing the right nets for the octahedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg29)
+## [Game 3 - Choosing the right nets for the octahedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg28)
 
 This app is similar to **Game 2**. However, the chosen polyhedron is an octahedron.
 
@@ -174,7 +174,7 @@ This app is similar to **Game 2**. However, the chosen polyhedron is an octahedr
 
 &nbsp;
 
-## [Game 4 - Choosing non Platonic polyhedra whose faces are all regular and equal polygons]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg30)
+## [Game 4 - Choosing non Platonic polyhedra whose faces are all regular and equal polygons]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg13)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the non Platonic polyhedra whose faces are all regular and equal polygons.
 
@@ -183,7 +183,7 @@ This app is similar to **Game 1**. However, instead of choosing convex polyhedra
 
 &nbsp;
 
-## [Game 5 - Separating uniform polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg31)
+## [Game 5 - Separating uniform polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg29)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the uniform polyhedra. 
 

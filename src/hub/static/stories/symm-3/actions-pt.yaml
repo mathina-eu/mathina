@@ -230,6 +230,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    tag: tg10
     text: "Escolhe uma imagem, observa a formação do cilindro (“rolo”) e, depois, clica em"
     toolbarText: "Escolhe uma imagem e observa a formação do cilindro (“rolo”)"
     cta: "Experimenta carimbar outros frisos usando um “rolo”!"
@@ -373,6 +374,7 @@ actions:
       - text: "Vamos separá-los!"
         char: mathina
   - type: game
+    tag: tg4
     text: "De cada vez, escolhe os 4 frisos com eixos de simetria e clica em"
     toolbarText: "Escolhe os 4 frisos com eixos de simetria"
     cta: "Experimenta separar os frisos!"
@@ -399,7 +401,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
-    tag: 3Game
+    tag: tg5
     text: "Separa os frisos, arrastando cada friso para o saco correspondente."
     cta: "Experimenta!"
     url: /apps/frisos_simref/
@@ -524,6 +526,7 @@ actions:
       - text: "E, usando um processo parecido, podemos até criar um friso que tenha também simetria de reflexão horizontal. Ora vamos lá ver!"
         char: wizard
   - type: game
+    tag: tg11
     text: "Experimenta carimbar frisos com simetria de reflexão horizontal e vertical usando uma “placa”. Escolhe uma imagem e observa a animação exibida na app."
     cta: "Ver"
     url: /apps/Sfriso_refVH/
@@ -566,6 +569,7 @@ actions:
     text: >
       <p>Enquanto aguardava, observava os desenhos dos frisos que tinham ficado fora dos sacos. Um deles era um pouco bizarro: se o rodarmos meia volta, ele fica exatamente com o mesmo aspeto!</p>
   - type: game
+    tag: tg1
     text: "Observa o filme!"
     cta: "Ver aqui!"
     url: /stories/symm-3/video/Anim%20Rotacao.mp4
@@ -591,6 +595,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    tag: tg6
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de rotação"
     cta: "Experimenta separar os frisos!"
@@ -634,6 +639,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    tag: tg7
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de rotação"
     cta: "Experimenta!"
@@ -876,6 +882,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    tag: tg8
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_refdeslizante_leo.html
@@ -945,6 +952,7 @@ actions:
   #
   # Filme sobre a reflexão deslizante        
   - type: game
+    tag: tg2
     text: "Observa o filme!"
     cta: "Ver"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
@@ -990,6 +998,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    tag: tg12
     text: "Escolhe os 3 frisos com simetria de reflexão deslizante e clica em"
     toolbarText: "Escolhe os 3 frisos com simetria de reflexão deslizante"
     cta: "Experimenta separar os frisos aqui!"
@@ -1061,6 +1070,7 @@ actions:
   #
   # Animação sobre o que é a translação
   - type: game
+    tag: tg3
     text: "Observa o filme!"
     cta: "Ver"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
@@ -1084,7 +1094,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
-    tag: 8Game
+    tag: tg9
     text: "Observa os frisos patentes em cada um dos 7 sacos obtidos. Para cada saco, arrasta os símbolos que correspondem às simetrias existentes nos frisos aí patentes."
     cta: "Jogar!"
     url: /apps/RotularFrisos/?lang=pt

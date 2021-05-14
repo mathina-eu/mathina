@@ -13,7 +13,7 @@ Na história, é encontrado, por acaso, um exemplo de um poliedro não convexo, 
 
 | ![Icosaedro](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Poliedro não convexo](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
-| Icosaedro | Poliedro não convexo, criado depois de se colocar um vértice do icosaedro no seu interior e de se considerar o poliedro assim obtido ([Manipule o poliedro aqui](https://www.atractor.pt/temp/apps-tests/poliedros.html?pre=pol_1)) |
+| Icosaedro | Poliedro não convexo, criado depois de se colocar um vértice do icosaedro no seu interior e de se considerar o poliedro assim obtido ([Manipule o poliedro aqui]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)) |
 
 Desta forma, em vez de um icosaedro, obtém-se um poliedro não convexo.
 
@@ -120,31 +120,31 @@ Esta discrepância está relacionada com a definição de poliedro uniforme. Par
 
 Na história, uma simetria de um poliedro é definida como uma isometria (ou seja, uma função que preserva distâncias) que leva o poliedro em si mesmo. Para mais informações sobre o assunto, consulte: 1) 
 [os exemplos fornecidos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg20)
-, e 2) o “O que é uma simetria?” Capítulo apresentado no texto sobre a história ["Carimbando frisos"]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg21)
+, e 2) o “O que é uma simetria?” Capítulo apresentado no texto sobre a história ["Carimbando frisos"](https://mathina-edu.netlify.app/pt/story/stamping-friezes)
 .
 
 Por que motivo o poliedro Miller não é uniforme? Se considerarmos os vértices *A* e *B*, qualquer isometria que leve *A* em *B* removerá o anel de quadrados do equador, 
-[mudando assim o aspecto final do poliedro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg22)
+[mudando assim o aspecto final do poliedro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg21)
 .
 
 ![Poliedro de Miller](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
-[Manipule o poliedro aqui](https://www.atractor.pt/temp/apps-tests/Miller_manip.html)
+[Manipule o poliedro aqui]($HUB_URL/apps/anims/poliedros.html?pre=pol_68)
 .
 
 No entanto, 
-[se rodarmos a cúpula octogonal no topo do poliedro de Miller de 45º]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg23)
+[se rodarmos a cúpula octogonal no topo do poliedro de Miller de 45º]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg22)
 , obteremos um novo poliedro uniforme: rombicuboctaedro.
 
 Ao longo da história, as personagens têm a oportunidade de conhecer **todos os poliedros uniformes**: 1) uma família infinita de prismas, 
-[cujas bases são polígonos regulares e cujas faces laterais são quadrados]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg24)
-; 2) ma família infinita de antiprismas, 
-[cujas bases são polígonos regulares e cujas faces laterais são triângulos equiláteros]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg25)
+[cujas bases são polígonos regulares e cujas faces laterais são quadrados]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg23)
+; 2) uma família infinita de antiprismas, 
+[cujas bases são polígonos regulares e cujas faces laterais são triângulos equiláteros]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg24)
 ; 3) outros 13 poliedros:
 
 ![Poliedros Uniformes](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 No final, as personagens constroem um modelo para o carrossel dos 
-[“poliedros platónicos e uniformes”]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg26)
+[“poliedros platónicos e uniformes”]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg25)
 . Tratam-se de poliedros extremamente simétricos: de facto, para cada poliedro, e para cada par de vértices, há pelo menos uma simetria do poliedro que leva um vértice no outro.
 
 &nbsp;
@@ -182,7 +182,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 1 - Separando poliedros convexos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg27)
+## [Jogo 1 - Separando poliedros convexos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg26)
 
 É exibido um conjunto de 8 poliedros. O utilizador é convidado a escolher os 4 poliedros convexos. Depois de escolher os poliedros corretos e clicar 
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
@@ -193,7 +193,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 2 - Escolhendo as planificações do cubo]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg28)
+## [Jogo 2 - Escolhendo as planificações do cubo]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg27)
 
 É exibido um conjunto de 6 propostas para planificações do cubo. O utilizador é convidado a escolher as 3 “certas”. Depois de escolher as planificações corretas e clicar 
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
@@ -204,18 +204,18 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 3 - Escolhendo as planificações do octaedro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg29)
+## [Jogo 3 - Escolhendo as planificações do octaedro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg28)
 
 Esta app é semelhante à do **Jogo 2**, mas agora o poliedro em análise é o octaedro.
 
 &nbsp;
 
-## [Jogo 4 - Escolhendo poliedros não-platónicos cujas faces são todas polígonos regulares e iguais]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg30)
+## [Jogo 4 - Escolhendo poliedros não-platónicos cujas faces são todas polígonos regulares e iguais]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg13)
 
 Esta app é muito semelhante à do **Jogo 1**. Contudo, em vez de escolher poliedros convexos, o utilizador deverá selecionar Sólidos não Platónicos cujas faces são todas polígonos regulares e iguais entre si.
 
 &nbsp;
 
-## [Jogo 5 - Separando poliedros uniformes]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg31)
+## [Jogo 5 - Separando poliedros uniformes]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg29)
 
 Esta app é muito semelhante à do **Jogo 1**, mas, em vez de escolher poliedros convexos, o utilizador deverá selecionar poliedros uniformes.

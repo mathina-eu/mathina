@@ -60,15 +60,15 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 .
 
 `*` **Simetria de rotação**: Depois de explorarmos a simetria de reflexão, é natural passarmos para outra isometria, por exemplo, a
-[rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg6)
+[rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg1)
 . Consideremos agora 2 casos diferentes: 1) frisos sem simetria de reflexão (que, na história, estão fora dos sacos) e 2) frisos com simetria de reflexão:
 
   * no primeiro caso, vamos selecionar os frisos que possuem simetria de rotação e considerar um 
-[um novo saco (o 4º)]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg7)
+[um novo saco (o 4º)]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg6)
 ;
 
   * no segundo caso, há uma diferença relevante no que diz respeito aos frisos do **saco 1**: aqui, 
-[há não só frisos com simetria de rotação como também outros que não a têm]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg8)
+[há não só frisos com simetria de rotação como também outros que não a têm]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg7)
 . Vamos separar esses 2 tipos de frisos, adicionando um novo saco (o 5º) para os frisos com simetria de rotação que estavam no saco 1.
 
 **Nota 1**: Note que, até agora, ao estudarmos as simetrias de reflexão e de rotação dos frisos, já chegámos a 5 diferentes tipos (“grupos”) de frisos:
@@ -85,7 +85,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 **Nota 3**: Existem frisos (por enquanto, fora dos sacos) que nem têm simetria de reflexão nem de rotação.
 
 `*` **Simetria de reflexão deslizante**: Passando para a simetria de reflexão deslizante (na história, este tipo de simetria é encontrada por acaso, quando o
-[Leo carimba um friso incorretamente]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg9)
+[Leo carimba um friso incorretamente]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg8)
 , podemos concluir que há 2 tipos de frisos diferentes, entre os que ficaram fora dos sacos: uns têm simetria de reflexão deslizante, outros não. Vamos dividi-los em dois sacos: o 6º, que contém os frisos com simetria de reflexão deslizante, e o 7º para os restantes frisos.
 
 **Nota 4**: Note que, nesta fase, já encontrámos 7 diferentes tipos de frisos de acordo com a sua simetria:
@@ -98,7 +98,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 |Não há simetria de rotação |  |  | | Há simetria de rotação |  | Não há simetria de reflexão deslizante |
 
 `*` **Simetria de Translação**: por definição, 
-[todos os frisos têm simetria de translação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg10)
+[todos os frisos têm simetria de translação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg9)
 
 **Nota 5**: Os frisos no saco 7 correspondem aos **que apenas têm simetria de translação**.
 
@@ -138,7 +138,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 &nbsp;
 
-## [Jogo 1 - Carimbando frisos com um “rolo”]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg11)
+## [Jogo 1 - Carimbando frisos com um “rolo”]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg10)
 
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. A seguir, é apresentada a formação de um cilindro com a imagem selecionada. Clicando em 
 ![Carimbar](/stories/symm-3/img/stamp.png =40x40)
@@ -149,7 +149,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 &nbsp;
 
-## [Jogo 2 - Separando os frisos com eixos de simetria]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg12)
+## [Jogo 2 - Separando os frisos com eixos de simetria]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg4)
 
 É exibido um conjunto de 7 frisos. O utilizador é convidado a escolher 4 frisos com eixos de simetria. Depois de escolher os frisos corretos e clicar
 ![Confirmar](/stories/symm-3/img/confirm.png =40x40)
@@ -160,7 +160,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 &nbsp;
 
-## [Jogo 3 - Separando os frisos com eixos de simetria em 3 sacos]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg13)
+## [Jogo 3 - Separando os frisos com eixos de simetria em 3 sacos]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg5)
 
 É exibido um conjunto de 12 frisos. O utilizador é convidado a arrastar cada friso para o saco correspondente, de acordo com as suas simetrias de reflexão: o **saco 1** contém os frisos que só têm eixos de simetria verticais; o **saco 2**, os que têm um eixo de simetria horizontal; e o **saco 3** os frisos com eixos de simetria verticais e horizontal.
 
@@ -169,7 +169,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 &nbsp;
 
-## [Jogo 4 - Carimbando frisos com uma "placa"]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg14)
+## [Jogo 4 - Carimbando frisos com uma "placa"]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg11)
 
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. De seguida, o utilizador pode visualizar uma “placa” a carimbar um friso, com eixos de simetria verticais e horizontal, que tem como motivo a imagem escolhida.
 
@@ -178,28 +178,28 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 &nbsp;
 
-## [Jogo 5 - Separando os frisos com simetria de rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg15)
+## [Jogo 5 - Separando os frisos com simetria de rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg6)
 
 Esta app é muito semelhante à do **Jogo 3**. Contudo, em vez de escolher os frisos com eixos de simetria, o utilizador deverá selecionar os que têm simetria de rotação.
 
 &nbsp;
 
 
-## [Jogo 6 - Ainda os frisos com simetria de rotação...]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg16)
+## [Jogo 6 - Ainda os frisos com simetria de rotação...]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg7)
 
 Esta app é muito semelhante à do **Jogo 5**. A única diferença diz respeito aos frisos apresentados: aqui, os frisos exibidos são os que originalmente pertenciam ao saco 1.
 
 &nbsp;
 
 
-## [Separando os frisos com simetria de reflexão deslizante]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg17)
+## [Separando os frisos com simetria de reflexão deslizante]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg12)
 
 Esta app é muito semelhante à do **Jogo 3**. Contudo, em vez de escolher os frisos com eixos de simetria, o utilizador deverá selecionar os que têm simetria de reflexão deslizante.
 
 &nbsp;
 
 
-## [Jogo 8 - Rotulando os sacos]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg18)
+## [Jogo 8 - Rotulando os sacos]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg9)
 
 Nesta app, o utilizador pode ver os 7 sacos obtidos e observar os frisos no interior desses sacos. Para cada saco, o utilizador é convidado a selecionar, de uma lista de símbolos – 
 ![reflexão horizontal](/stories/symm-3/img/Icon-refH.png =40x40)
