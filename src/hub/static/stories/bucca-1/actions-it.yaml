@@ -554,11 +554,11 @@ actions:
   - type: sceneText
     style: "position: absolute; right: 10%;"
     text: >
-      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy.</p>
+      <p>Appena arrivato a casa dopo la giornata sull'isola, Leo chiamò Lucy.</p>
   - type: dialog
     style: "position: absolute; right: 10%;"
     entries:
-      - text: "Appena arrivato a casa dopo la giornata sull'isola, Leo chiamò Lucy: Quando arriverete nel luogo di ritrovo c'è un messaggio nascosto. Per trovare quello giusto ricordati questa frase: 'Il cielo ne è pieno'."
+      - text: "Ciao Lucy! Quando arriverete nel luogo di ritrovo troverete un messaggio nascosto. Per trovare quello giusto ricordati questa frase: 'Il cielo ne è pieno'. Non ti dico altro su questo..."
         char: leo
         mood: talking
   - type: clearImage
@@ -716,4 +716,4 @@ actions:
       <p>Avevano certamente trovato un modo interessante per comunicare ma i misteriosi simboli che aveva scoperto la mamma di Rasha e Lucy erano anch’essi molto interessanti. Essi avrebbero sicuramente portato Mathina e i suoi piccoli amici verso nuove eccitanti avventure!</p>
   - type: sceneText
     text: >
-      <h1>The secret messages - The End</h1>  
+      <h1>I messaggi segreti - Fine</h1>  

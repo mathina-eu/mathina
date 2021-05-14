@@ -311,7 +311,7 @@ actions:
     entries:         
       - text: "Também quero experimentar, mas primeiro quero entender o que é para fazer!"
         char: mathina
-        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: angry
+        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image
