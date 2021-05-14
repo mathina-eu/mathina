@@ -81,7 +81,7 @@ actions:
       - text: "Se dobrarmos a figura de uma certa maneira, as duas partes sobrepõem-se!"
         char: wizard
   - type: game
-    tag: firstGame
+    tag: tg1
     text: "A imagem seguinte é boa (simétrica)?"
     cta: "Experimenta!"
     url: /apps/dobrar_1/index.html
@@ -188,6 +188,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    tag: tg4
     text: "Arrasta os brinquedos \"bons\" para a caixa"
     url: /apps/arrumar_figuras/index.html
     cta: "Experimenta!"    
@@ -339,7 +340,7 @@ actions:
     cta: "Ver"
     url: /stories/symm-1/video/geoplano-anim2.mp4          
   - type: game
-    tag: polygons
+    tag: tg2
     text: "Como pode a Mathina terminar os brinquedos? Só precisas de arrastar algumas das figuras coloridas e colocá-las nos quadrados cinzentos adequados."
     cta: "Experimenta!"
     url: /apps/geoplano_polys0/index.html     
@@ -432,7 +433,7 @@ actions:
         char: mathina
         exposition: "Disse a Mathina, repetindo as palavras do feiticeiro."
   - type: game
-    tag: lines
+    tag: tg3
     text: "Como podem a Mathina e o Leo terminar os brinquedos? Só precisas de desenhar as linhas em falta."
     cta: "Experimenta!"
     url: /apps/geoplano_lin1/index.html 

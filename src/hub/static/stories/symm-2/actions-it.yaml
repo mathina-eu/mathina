@@ -244,7 +244,7 @@ actions:
   - type: dialog
     entries:
       - text: "Mathina, Mathina!"
-        char: Leo
+        char: leo
         exposition: "Leo era appena arrivato alla Fiera della Simmetria e, vedendola, aveva iniziato a chiamarla."         
         mood: excited     
   - type: dialog
@@ -264,7 +264,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Guarda, ci sono labirinti qui. Scegline uno!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: mathina-leo
@@ -294,7 +294,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Ci provo subito!"
-        char: Leo
+        char: leo
         mood: excited
   - type: animation
     target: Leo3
@@ -311,7 +311,7 @@ actions:
       - text: "Anch'io voglio provare, ma prima voglio capire cosa devo fare!"
         char: mathina
         exposition: "Disse Mathina tra sè, mentre guardava Leo scomparire nel labirinto."         
-        mood: angry
+        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image

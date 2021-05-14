@@ -74,7 +74,7 @@
 
         #Text1 {
             position: absolute;
-            width: 920px;
+            width: 50%;
             height: 140px;
             z-index: 2;
             left: 25%;
@@ -90,7 +90,7 @@
 
         #Text2 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 320px;
             z-index: 2;
             left: 1%;
@@ -100,13 +100,13 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
         #Text3 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 320px;
             z-index: 2;
             right: 1%;
@@ -116,13 +116,13 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
         #Text4 {
             position: absolute;
-            width: 890px;
+            width: 46%;
             height: 235px;
             z-index: 2;
             left: 1%;
@@ -132,7 +132,7 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #FF9900;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 		
@@ -156,7 +156,7 @@
             overflow-y: scroll;
             resize: none;
             border: 1px solid #0000FF;
-            padding: 10px;
+            padding: 1%;
             display: none;
         }
 
@@ -222,51 +222,71 @@
             background: white !important;
         }
 
-        #successMessage {
-            position: absolute;
-            /*left: 50%;
+              #successMessage {
+        position: absolute;
+        /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
-        }
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
 
-        #failMessage {
-            position: absolute;
-            /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
-            z-index: 100;
-            background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            padding: 10% 0%;
-            text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
-        }
+    }
+
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
     </style>
     <link href='./css/jquery-ui.min.css' rel="stylesheet" />
     <link href='./css/keyboard.css' rel="stylesheet" />
@@ -298,24 +318,26 @@
         Lingua = 1;
 
         Traduzioni=[
-	[["Trad1"],"Phase 1 (Angela): I will choose two numbers for you:","Fase 1 (Angela): Sceglierò per voi due numeri:","Fase 1 (&Acirc;ngela): Vou escolher dois n&uacute;meros para voc&ecirc;:","Phase 1 (Angela): Ich werde zwei Zahlen f&uuml;r Dich ausw&auml;hlen:"],
+	[["Trad1"],"Phase 1 (Angela): I will choose two numbers for you:","Fase 1 (Angela): Sceglierò per voi due numeri:","Fase 1 (&Acirc;ngela): Vou escolher dois n&uacute;meros para voc&ecirc;s:","Phase 1 (Angela): Ich werde zwei Zahlen f&uuml;r Dich ausw&auml;hlen:"],
 	[["Trad2"],"a prime number <em>p</em>","un numero primo <em>p</em>: ","um n&uacute;mero primo <em>p</em>","eine Primzahl <em>p</em>"],
 	[["Trad3"],"and a number <em>g</em> which will be our base:","e un numero <em>g</em> che sarà la nostra base:","e um n&uacute;mero <em>g</em> que ser&aacute; a nossa base:","und eine Zahl <em> g </ em>, die unsere Basis sein wird:"],
 	[["Trad4"],"Let's get started!","Ok, iniziamo!","Vamos começar!","Ok, los geht’s!"],
 	[["Trad5"],"Phase 2 (Leo): Leo's secret","Fase 2 (Leo): il segreto di Leo","Fase 2 (Leo): o segredo de Leo","Phase 2 (Leo): Leos Geheimnis"],
-	[["Trad6"],"Choose Leo's secret number between <em>2</em> and","Scegli il numero segreto di Leo tra <em>2</em> e ","Escolhe o n&uacute;mero secreto de Leo entre <em>2</em> e","W&auml;hle Leos Geheimzahl zwischen <em>2</em> und"],
+	[["Trad6"],"Choose Leo's secret number between <em>2</em> and","Scegli il numero segreto di Leo tra <em>2</em> e ","Escolhe o n&uacute;mero secreto do Leo entre <em>2</em> e","W&auml;hle Leos Geheimzahl zwischen <em>2</em> und"],
 	[["Trad7","Trad7a","Trad7b","Trad7c"],"Caution!","Attenzione!","Aten&ccedil;&atilde;o!","Pass auf!"],
 	[["Trad8","Trad8a","Trad8b","Trad8c"],"is not between <em>2</em> and","non sta tra <em>2</em> e","n&atilde;o est&aacute; entre <em>2</em> e","liegt nicht zwischen <em>2</em> und"],
-	[["Trad9"],"What number do you communicate to Mathina?","Che numero comunichi a Mathina?","Que n&uacute;mero comunicas &agrave; Mathina?","Welche Zahl sendest du an Mathina?"],
-	[["Trad10"],"Leo computed the number to send to Mathina:","Leo ha calcolato il numero da mandare a Mathina:","O Leo calculou o n&uacute;mero para enviar &agrave; Mathina:","Leo berechnete die Zahl, die er an Mathina senden will:"],
+	[["Trad9"],"What number do you communicate to Mathina?","Che numero comunichi a Mathina?","Qual o n&uacute;mero a comunicar &agrave; Mathina?","Welche Zahl sendest Du an Mathina?"],
+	[["Trad10"],"Leo computed the number to send to Mathina:","Leo ha calcolato il numero da mandare a Mathina:","Leo calculou o n&uacute;mero para enviar para a Mathina:","Leo berechnete die Zahl, die er an Mathina senden will:"],
 	[["Trad11"],"Mathina's answer","La risposta di Mathina","Resposta da Mathina","Mathinas Antwort"],
 	[["Trad12"],"Hi Leo! Thanks for the message. The number I calculated is B =","Ciao Leo! Grazie del messaggio. Il numero che ho calcolato io &egrave; B=","Ol&aacute; Leo! Obrigada pela mensagem. O n&uacute;mero que calculei &eacute; B =","Hallo Leo! Danke f&uuml;r deine Nachricht. Die Zahl, die ich berechnet habe, ist B ="],
 	[["Trad13"],"Thanks Mathina!","Grazie Mathina!","Obrigado Mathina!","Danke Mathina!"],
 	[["Trad14"],"The shared secret","Il segreto condiviso","O segredo partilhado","Das gemeinsame Geheimnis"],
-	[["Trad15"],"Now that Leo knows Mathina's answer can calculate the shared secret. How does he do it?","Ora Leo conosce la risposta di Mathina pu&ograve; calcolare il segreto condiviso. Come fa?","Agora que o Leo sabe a resposta da Mathina, pode calcular o segredo partilhado. Como pode ele fazer isso?","Jetzt kennt Leo Mathinas Antwort und kann damit das gemeinsame Geheimnis berechnen. Wie macht er das?"],
+	[["Trad15"],"Now that Leo knows Mathina's answer, he can calculate the shared secret. How does he do it?","Ora Leo conosce la risposta di Mathina pu&ograve; calcolare il segreto condiviso. Come fa?","Agora que Leo sabe a resposta da Mathina, pode calcular o segredo partilhado. Como pode fazer isso?","Jetzt kennt Leo Mathinas Antwort und kann damit das gemeinsame Geheimnis berechnen. Wie macht er das?"],
 	[["Trad16"],"Now let's try to decipher Mathina's message","Ora proviamo a decifrare il messaggio di Mathina","Agora vamos tentar decifrar a mensagem da Mathina","Versuche nun, Mathinas Botschaft zu entschlüsseln"],
 	[["Trad17"],"Enter the key:","Inserisci la chiave:","Insere a chave:","Gib den Schlüssel ein:"],
-	[["Trad18"],"The decoded message is <br> COME HERE I FOUND IT","Il messaggio decifrato &egrave;<br>VIENI, PRESTO, l’HO TROVATO","A mensagem decodificada &eacute; <br> VENHA AQUI EU ENCONTREI","Die dekodierte Nachricht lautet <br> KOMM HER, ICH HABE IHN GEFUNDEN"]
+	[["Trad18"],"The decoded message is <br> COME HERE I FOUND IT","Il messaggio decifrato &egrave;<br>VIENI, PRESTO, l’HO TROVATO","A mensagem decodificada &eacute; <br> VENHA AQUI EU ENCONTREI","Die dekodierte Nachricht lautet <br> KOMM HER, ICH HABE IHN GEFUNDEN"],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 	];
 
 
@@ -330,6 +352,11 @@
             var regex = new RegExp(regexS);
             var results = regex.exec(url);
             return results == null ? null : results[1];
+        }
+
+  function Link() {
+            location.reload();
+
         }
 
 
@@ -358,9 +385,12 @@
             }
 
             window.dimension = [width, height];
+			
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
             console.log(dimension);
 			
-			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/1080);
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
 			document.body.style.zoom=ScalaCalcolata;
         }
 
@@ -381,6 +411,7 @@
             Giusta1 = Math.floor(Math.random() * 4) + 1;
             Giusta2 = Math.floor(Math.random() * 4) + 1;
             UpdateLabels();
+			Resize();
         }
 
         function RiempiForm(l) {
@@ -545,12 +576,16 @@
             }
         }
 
-        function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+          function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
+
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
+
         }
 
         function Link() {
@@ -602,26 +637,130 @@
         </div>
     </div>
     <div class="block" style="display:none"> <input id="text" type="text" /> </div>
-    <div id="successMessage" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 35%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
-        <p id="Trad18">Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO</p>
+       <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
+
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
+	
+	<script>
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>

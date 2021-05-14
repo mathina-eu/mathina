@@ -63,6 +63,7 @@ actions:
       - text: "Podemos imaginar uma reta que divide a imagem em duas metades de tal forma que, quando colocas um espelho sobre essa reta, a metade que fica frente ao espelho, juntamente com o seu reflexo, “formam” uma imagem igual à inicial."
         char: wizard
   - type: game
+    tag: tg6
     text: "Move o espelho, arrastando-o para a frente e para trás através do botão"
     toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
     cta: "Vamos jogar!"
@@ -111,6 +112,7 @@ actions:
         char: mathina
         mood: excited
   - type: game
+    tag: tg3
     text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
     cta: "Experimenta!"
     url: /apps/EscolheRosaceas/index.html?lang=pt    
@@ -128,6 +130,7 @@ actions:
       - text: "Funciona assim: existem seis sacos numerados de 1 a 6. Se uma rosácea tem um eixo de simetria, deve ir para o saco 1, se tiver dois, deve ir para o saco 2, e assim por diante…"
         char: wizard
   - type: game
+    tag: tg4
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
     cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
@@ -199,6 +202,7 @@ actions:
       - text: "Agora vamos distribuir todas estas rosáceas pelos sacos certos. Quando acabares, todas as rosáceas serão tuas."
         char: wizard
   - type: game
+    tag: tg5
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
     cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
@@ -311,7 +315,8 @@ actions:
     entries:         
       - text: "Também quero experimentar, mas primeiro quero entender o que é para fazer!"
         char: mathina
-        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."        mood: angry
+        exposition: "Mathina gritou ao Leo, que entretanto tinha desaparecido."
+        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image
@@ -369,6 +374,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
+    tag: tg1
     text: "Como pode a Mathina resolver o labirinto de espelhos?"
     cta: "Experimenta!"
     url: /apps/labirinto-s/index.html?lang=pt&sim=ref
@@ -450,6 +456,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
+    tag: tg2
     text: "Como pode a Mathina resolver o labirinto de meia-volta?"
     cta: "Experimenta!"
     url: /apps/labirinto-s/index.html?lang=pt&sim=rot

@@ -5,6 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visita un luogo!',
+    'map': 'Mappa del mondo',
   },
   cities: {
     'island': 'Isola dei Bucanieri',
@@ -59,6 +60,8 @@ export default {
 	flamma: 'Flamma',
 	charmingparrot: 'Capitano Charmingparrot',
 	mysteriousfigure: 'Figura misteriosa',
+	rashamom: 'Prof. Levasseur',
+	technician: 'Tecnico',
     Leo: 'Leo',
     Mathina: 'Mathina',
 	Parrot: 'John',

@@ -5,6 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Besuche einen Ort!',
+    'map': 'Weld karte',
   },
   cities: {
     'island': 'Schatzinsel',

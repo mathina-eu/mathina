@@ -230,6 +230,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    tag: tg10
     text: "Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
     toolbarText: "Choose an image and watch the creation of the cylinder (“roll”)"
     cta: "Try stamping other friezes using a “roll”!"
@@ -373,6 +374,7 @@ actions:
       - text: "Let's separate them."
         char: mathina
   - type: game
+    tag: tg4
     text: "Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Choose the friezes with symmetry axes"
     cta: "Try separating the friezes!"
@@ -399,7 +401,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
-    tag: 3Game
+    tag: tg5
     text: "Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Try it!"
     url: /apps/frisos_simref-_en/
@@ -524,6 +526,7 @@ actions:
       - text: "And, using a similar process, we can even create a frieze which also has a horizontal axis of symmetry. Let’s see."
         char: wizard
   - type: game
+    tag: tg11
     text: "Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
     cta: "Play!"
     url: /apps/Sfriso_refVH/
@@ -566,6 +569,7 @@ actions:
     text: >
       <p>While Mathina waited, she looked at the drawings of the friezes which were left out of the bags. One of them was quite strange: if we spin it half way around it ends up looking the same as before.</p>
   - type: game
+    tag: tg1
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Rotacao.mp4
@@ -591,6 +595,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    tag: tg6
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Select the friezes with rotation symmetry"
     cta: "Try separating the friezes!"
@@ -634,6 +639,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    tag: tg7
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Select the friezes with rotation symmetry"
     cta: "Try separating the friezes!"
@@ -876,6 +882,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_refdeslizante_leo.html
@@ -945,6 +952,7 @@ actions:
   #
   # Filme sobre a reflexão deslizante        
   - type: game
+    tag: tg2
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
@@ -990,6 +998,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    tag: tg12
     text: "Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Choose the friezes with glide reflection symmetry"
     cta: "Try separating the friezes!"
@@ -1061,6 +1070,7 @@ actions:
   #
   # Animação sobre o que é a translação
   - type: game
+    tag: tg3
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
@@ -1084,7 +1094,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
-    tag: 8Game
+    tag: tg9
     text: "Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     cta: "Play!"
     url: /apps/RotularFrisos/?lang=en

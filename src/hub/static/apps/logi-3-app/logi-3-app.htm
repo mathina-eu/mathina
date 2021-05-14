@@ -33,7 +33,7 @@
             overflow: hidden;
         }
 
-        #successMessage {
+                    #successMessage {
             position: absolute;
             /*left: 50%;
   top:50%;
@@ -41,20 +41,15 @@
   height: 58%;*/
             z-index: 100;
             background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
             padding: 10% 0%;
             text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
+            left: 0%;
+			right:0%;
+            top: 0%;
+			bottom:0%;
         }
+
+
     </style>
     <script src="generazione.js"></script>
     <script>
@@ -82,7 +77,7 @@
                     [-1],
                     [-1]
                 ];
-                Load();
+                Load(1);
             }
 
             if (N == 2) {
@@ -96,22 +91,44 @@
                     [-1],
                     [-1]
                 ];
-                Load();
+                Load(1);
             }
 
             if (N == 3) {
-                Polizia = [
-                    [100, 100],
-                    [100, 250],
-                    [100, 400]
-                ];
-                PoliziaIntersezioni = [
-                    [-1],
-                    [-1],
-                    [-1]
-                ];
-                GeneraGioco();
-                Trim();
+				LivelloScelto = gup('r', document.location.search);
+
+				if (!isNumeric(LivelloScelto)) {
+					Load(Math.floor(Math.random()*20)+2);
+					Trim();
+				
+				} else {
+					if (LivelloScelto==-1) {
+						Polizia = [
+							[100, 100],
+							[100, 250],
+							[100, 400]
+						];
+						PoliziaIntersezioni = [
+							[-1],
+							[-1],
+							[-1]
+						];
+						GeneraGioco();
+						Trim();					
+					} else {
+					
+						Load(Number(LivelloScelto));
+						Trim();
+					
+					}
+				
+				}
+
+				
+			
+			/*
+                
+				*/
                 //
 
             }
@@ -246,7 +263,6 @@
                 ctxMathina.strokeStyle = "rgba(90,102,108,1)";
                 for (var j = 0; j < PoliziaIntersezioni.length; j++) {
                     if (PoliziaIntersezioni[j] != -1 && Intersezioni[PoliziaIntersezioni[j]][1].indexOf(i) > -1) {
-                        console.log("preso!");
                         ctxMathina.strokeStyle = "rgb(0,200,50)";
                         if (ProssimoSegmento == 1) {
                             SegmentiPresi++;

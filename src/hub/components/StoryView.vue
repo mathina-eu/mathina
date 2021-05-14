@@ -21,6 +21,11 @@
       >
         <slot />
       </div>
+      <div
+        v-if="!isLoading"
+        class="background-blur"
+        :style="setBg"
+      />
     </v-col>
   </v-row>
 </template>
@@ -39,11 +44,22 @@ export default {
       required: false,
       default: false,
     },
+    background: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
       style: '',
     };
+  },
+  computed: {
+    setBg() {
+      return {
+        background: `url(${this.background})`
+      };
+    }
   },
   watch: {
     isLoading: {
@@ -91,6 +107,9 @@ export default {
   grid-template-columns: 1fr;
   max-width: 1200px;
   margin: auto;
+  box-shadow: #0000000d 0 0 0 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .ratio-wrapper {
@@ -109,5 +128,18 @@ export default {
 
 .ratio > *:first-child {
   grid-area: 1 / 1 / 1 / 1; /* the same as ::before */
+}
+
+.background-blur {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(50px);
+  z-index: 0;
+  opacity: 0.55;
 }
 </style>
