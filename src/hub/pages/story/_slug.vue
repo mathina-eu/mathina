@@ -2,6 +2,7 @@
   <StoryView
     :is-loading="isLoading"
     :full-width="fullWidth"
+    :background="storyBackground"
   >
     <Parallax class="root">
       <template
@@ -11,6 +12,7 @@
         <StoryBackgrounds
           :key="layer"
           :backgrounds="parallaxedBackgrounds(layer)"
+          @base-bg="getBg"
         />
         <StoryImages
           :key="`${layer}img`"
@@ -21,21 +23,23 @@
         <v-btn
           v-if="!isFirstAction"
           class="navigation__button"
+          color="grey lighten-5"
           title="You can use the left arrow on your keyboard as well!"
           @click="back"
         >
           <v-icon>
-            mdi-arrow-left
+            mdi-chevron-left
           </v-icon>
         </v-btn>
         <v-btn
           v-if="hasMoreActions"
           class="navigation__button right"
+          color="grey lighten-5"
           title="You can use the right arrow on your keyboard as well!"
           @click="next"
         >
           <v-icon>
-            mdi-arrow-right
+            mdi-chevron-right
           </v-icon>
         </v-btn>
       </div>
@@ -135,6 +139,7 @@ export default {
       activeDirection: NEXT,
       showGameDialog: false,
       isLastGameFinished: true,
+      storyBackground: null,
     };
   },
   computed: {
@@ -187,7 +192,7 @@ export default {
     this.isLoading = false;
 
     this.$store.dispatch('setBreadcrumbs', [
-      { path: `/world/`, text: 'World Map' },
+      { path: `/world/`, text: this.$t(`world.map`) },
       { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
     ]);
 
@@ -319,11 +324,16 @@ export default {
       this.dialog.current++;
       return true;
     },
+    getBg(bgUrl) {
+      this.storyBackground = bgUrl;
+    }
   },
 };
 </script>
 
 <style scoped>
+@import "~vars";
+
 .root {
   height: 100%;
   width: 100%;
@@ -341,32 +351,35 @@ export default {
 }
 
 .navigation {
-  --button-size: 50px;
-
   margin: auto;
   position: absolute;
-  left: 0;
+  left: calc(-1 * var(--navigation-button-size));
   top: 50%;
   z-index: 5;
-  width: 100%;
+  width: calc(100% + (2 * var(--navigation-button-size)));
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
 
   &__button {
-    width: var(--button-size, 50px);
-    min-width: var(--button-size, 50px) !important;
-    height: var(--button-size, 50px) !important;
+    width: var(--navigation-button-size);
+    min-width: var(--navigation-button-size) !important;
+    height: var(--navigation-button-size) !important;
     border-radius: 50%;
     position: sticky;
-    margin: 0 1rem;
-    left: 0;
+    margin: 0 0.5rem;
+    left: 0.5rem;
+    box-shadow: #0000000d 0 0 0 5px;
 
     &.right {
-      right: 0;
+      right: 0.5rem;
       left: unset;
       margin-left: auto;
+    }
+
+    .v-icon {
+      font-size: 48px;
     }
   }
 }

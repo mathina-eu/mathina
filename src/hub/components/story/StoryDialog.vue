@@ -4,7 +4,7 @@
     :style="styleText"
   >
     <div
-      class="d-flex flex-no-wrap"
+      class="d-flex flex-no-wrap dialog"
       :class="{'justify-space-between': alignment === 'right'}"
     >
       <v-avatar
@@ -17,17 +17,16 @@
       </v-avatar>
       <div>
         <v-card-title
-          class="headline"
-          style="text-transform: capitalize;"
+          class="dialog__char-name"
           v-text="charName ? charName : $t(`chars.${displayName}`)"
         />
         <v-card-text
-          class="text-body-1"
+          class="dialog__content"
           v-text="text"
         />
         <v-card-text
           v-if="exposition"
-          class="text-body-1 font-italic"
+          class="dialog__exposition"
           v-text="exposition"
         />
       </div>
@@ -107,3 +106,29 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@import "~vars";
+
+.dialog {
+  &__char-name {
+    color: var(--text-color);
+    font-size: 1.75em;
+    font-weight: 600;
+    padding: 1.25rem 1rem;
+  }
+
+  &__content {
+    color: var(--text-color);
+    font-family: var(--story-font-family);
+    font-size: 1.125em;
+  }
+
+  &__exposition {
+    color: var(--text-color-light);
+    font-size: 0.75em;
+    font-style: italic;
+    padding-top: 0;
+  }
+}
+</style>
