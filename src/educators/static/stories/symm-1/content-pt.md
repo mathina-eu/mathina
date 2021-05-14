@@ -11,7 +11,7 @@ Posteriormente, as crianças podem aprender a construir, por si mesmas, imagens 
 [segmentos]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg3).
 
 Na app “Construindo brinquedos (I)”, são também exploradas noções relacionadas com o reconhecimento de algumas figuras geométricas - 
-[triângulos, quadrados e círculos]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg4), nomeadamente a distinção entre triângulos congruentes, mas com diferentes orientações:
+[triângulos, quadrados e círculos]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2), nomeadamente a distinção entre triângulos congruentes, mas com diferentes orientações:
 
 ![Triângulos Congruentes](/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
 
@@ -43,7 +43,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 
 &nbsp;
 
-## [Jogo 1 - Dobrando Imagens (I, II e III)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg5)
+## [Jogo 1 - Dobrando Imagens (I, II e III)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg1)
 
 É apresentada uma imagem. O utilizador é convidado a verificar se essa imagem possui eixo de simetria. Para isso, deve dobrar a imagem ao meio (horizontalmente e verticalmente) e ver se as duas partes se sobrepõem.
 
@@ -53,7 +53,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 
 &nbsp;
 
-## [Jogo 2 -  Procurando os bons peluches]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg6)
+## [Jogo 2 -  Procurando os bons peluches]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg4)
 
 É exibido um conjunto de 16 desenhos de animais. O utilizador é convidado a escolher todas as imagens simétricas e a colocá-las dentro de uma caixa.
 
@@ -62,7 +62,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 
 &nbsp;
 
-## [Jogo 3 -  Construindo brinquedos (I)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg7)
+## [Jogo 3 -  Construindo brinquedos (I)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2)
 
 São exibidos no ecrã os seguintes itens: uma linha vermelha vertical, uma malha quadriculada cinzenta e uma imagem não simétrica construída com formas coloridas. O utilizador é convidado a arrastar algumas das formas coloridas à sua disposição e colocá-las nos quadrados cinzentos de modo a criar uma imagem simétrica em relação à linha vermelha.
 
@@ -71,7 +71,7 @@ São exibidos no ecrã os seguintes itens: uma linha vermelha vertical, uma malh
 
 &nbsp;
 
-## [Jogo 4 -  Construindo brinquedos (II)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg8)
+## [Jogo 4 -  Construindo brinquedos (II)]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg3)
 
 São exibidos os seguintes itens no ecrã: uma linha vermelha vertical, um geoplano e uma imagem feita de segmentos pretos, desenhados de um dos lados da linha vermelha. O utilizador é convidado a desenhar os segmentos em falta, de modo a criar uma imagem simétrica em relação à linha vermelha.
 
