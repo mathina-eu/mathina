@@ -59,6 +59,8 @@ export default {
 	flamma: 'Flamma',
 	charmingparrot: 'Capitano Charmingparrot',
 	mysteriousfigure: 'Figura misteriosa',
+	rashamom: 'Prof. Levasseur',
+	technician: 'Tecnico',
     Leo: 'Leo',
     Mathina: 'Mathina',
 	Parrot: 'John',

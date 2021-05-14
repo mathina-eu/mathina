@@ -820,9 +820,19 @@ actions:
      - text: "Yes, finally, I knew you would be useful after all, finally a real hint about the treasure!"
        char: charmingparrot
        mood: happy 
+       
   - type: sceneText
-    text: >
-      <p>Ahoy Captain,<br/>terrible times lay ahead of us, all the treasure is lost. The crew dilapidated it all in every sort of debauchery when arriving on this island. Our name as Buccaneers is compromised, we must go back to sea and start rebuilding our treasure. I found a small group of trusted men, who were not involved in the squandering of the treasure and will leave them on the island to build from our misfortune. They shall be honourable men and teach to the posterity a life of honesty and righteousness.<br/>All the other members of the crew will follow us at sea. Only Fate shall know our destiny! <br/>As soon as Captain Charmingparrot ended the letter, his eyes started to moist, his hands shaking as he fell to the ground shouting.</p> 
+    text: >    
+        <p>“<i>Ahoy Captain!</br>
+        </br>
+        Terrible times lay ahead of us and all the treasure is lost. The crew dilapidated it all in every sort of debauchery when arriving on this island. Our name as Buccaneers is compromised, we must go back to sea and start rebuilding our treasure. I found a small group of trusted men, who were not involved in the squandering of the treasure and will leave them on the island to build from our misfortune. They shall be honourable men and teach to the posterity a life of honesty and righteousness.<br/>All the other members of the crew will follow us at sea. 
+        </br>
+        </br>
+        Only Fate shall know our destiny!“</i></p>
+  - type: sceneText
+    text: >    
+      <p>As soon as Captain Charmingparrot ended the letter, his eyes started to moist, his hands shaking as he fell to the ground shouting.</p> 
+       
   - type: dialog
     entries:        
      - text: "My whole quest has been void and null. The real treasure was not here this whole time!"

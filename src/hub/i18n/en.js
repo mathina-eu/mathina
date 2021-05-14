@@ -18,7 +18,7 @@ export default {
     'back-to-world': 'Back to World Map',
     titles: {
       'logi-1': 'The traffic light challenge',
-      'logi-2': 'Ytic-igol',
+      'logi-2': 'The tiled floor trap',
       'logi-3': 'Cats and dogs',
       'logi-4': 'My gold, please',
       'bucca-1': 'The secret messages',
@@ -62,9 +62,17 @@ export default {
 	sean: 'Sean',
 	rasha: 'Rasha',
 	rashamom: 'Prof. Levasseur',
+	technician: 'Technician',
 	Leo: 'Leo',
     Mathina: 'Mathina',
-	Parrot: 'John',
-	Angela: 'Angela'
+    Parrot: 'John',
+    Angela: 'Angela',
+    owl: 'Owl',
+    kangaroo: 'Kangaroo',
+    first_policeman: 'First policeman',
+    second_policeman: 'Second policeman',
+    george: 'George',
+    trainer: 'Trainer',
+    boys: 'Boys'
   },
 };
