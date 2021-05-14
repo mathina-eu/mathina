@@ -17,7 +17,7 @@ export default {
     'back': 'Zurück',
     'back-to-world': 'zurück zur Karte',
     titles: {
-      'logi-1': 'The traffic light challenge',
+      'logi-1': 'Deutscher Titel der Geschchte: The traffic light challenge', 
       'logi-2': 'Ytic-igol',
       'logi-3': 'Cats and dogs',
       'logi-4': 'My gold, please',
@@ -52,5 +52,6 @@ export default {
     leo: 'Leo',
     jane: 'Jane',
     flamma: 'Flamma',
+	kangaroo: 'Känguru',
   },
 };
