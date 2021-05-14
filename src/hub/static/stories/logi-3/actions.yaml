@@ -101,7 +101,7 @@ actions:
     vars:
       duration: 3
       xPercent: 300
-      yPercent: 330
+      yPercent: 200
       ease: power3.out
   - type: clearImage
     id: pm1
@@ -122,7 +122,7 @@ actions:
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 170
+      xPercent: 160
       yPercent: 400
       ease: power3.out
   - type: sceneText
@@ -131,8 +131,8 @@ actions:
     target: leo-i2
     vars:
       duration: 1
-      xPercent: 330
-      yPercent: 330
+      xPercent: 20
+      yPercent: 0
       ease: power3.out
   - type: sceneText
     text: The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4. 
