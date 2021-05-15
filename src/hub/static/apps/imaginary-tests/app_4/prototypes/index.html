@@ -10,11 +10,41 @@
 
 
     <style type="text/css">
+      body {
+          margin: 0px;
+          padding: 0px;
+      }
+
+      #App {
+          position: absolute;
+          width: 1920px; height: 1080px;
+          background-image: url('forest1.jpg');
+          background-size: 1920px 1080px;
+          background-repeat: no-repeat;
+          margin: auto;
+      }
+
+      #CSCanvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+      }
+
+      #Select-menu{
+        position: absolute;
+        right:120px;
+        top: 300px;
+
+      }
+
       #Input-box{
         position: absolute;
         left:500px;
         right: 500px;
-        bottom: 150px;
+        bottom: 100px;
         text-align: center;
 
       }
@@ -218,7 +248,7 @@
       clearimage("codeTexture");
       canvas(canvasCorners_4, canvasCorners_3, "codeTexture",
         forall(1..length(codes),
-          drawtext(codePos + posOfLine(#) + (0, -1.5), renders_#, size-> 30);
+          drawtext(codePos + posOfLine(#) + (0, -lerp(1.2, 2.1, codeHeight, 2.3, 5)), renders_#, size-> 30);
         );
       );
     );
@@ -304,18 +334,22 @@
     "x^2 + y^2 - 5",
     "(y - x^5)^2 - y^10",
     "x^2 - y^2 + x*y - 4",
-    "x^12 + y^12 - 30"
+    "x^12 + y^12 - 30",
+    "x^3 - y^2",
+    "x^3 -2 * x + 0.5 -y^2"
   ];
   renders = [
     "$x^2 + 3 \cdot y^2 - 10$",
     "$x^2 + y^2 - 5$",
     "$(y - x^5)^2 - y^{10}$",
     "$x^2 - y^2 + x \cdot y - 4$",
-    "$x^{12} + y^{12} - 30$"
+    "$x^{12} + y^{12} - 30$",
+    "$x^3-y^2$",
+    "$x^3 -2 \cdot x + 0.5 -y^2$"
   ];
   
   codePos = canvasCorners_3 + (-19.5, 17);
-  codeHeight = 3;
+  codeHeight = 2.3;
   codeIndex = randomint(length(codes)) + 1;
 
   highlightPos = codePos + posOfLine(codeIndex) + (-1, 0);
@@ -461,15 +495,15 @@
 
 
 
-<div>
+<div id="App">
+  <div id="CSCanvas" class="CindyJS-widget"><canvas style="position: absolute; border: medium none; top: 0px; left: 0px; padding: 0px; margin: 0px; height: 100%; width: 100%;" width="1920" height="1080"></canvas><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 100000px; height: 100000px"></div></div><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 200%; height: 200%"></div></div></div>
 
-  <canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="position: absolute; zborder:1px solid #000000;"></canvas>
-  <div id="Input-box" data-form-type="other">
-    <input type="text" id="inp" value="x^2+3*y^2-4" onkeypress="if((event.which ? event.which : event.keyCode)==13) { cindy.evokeCS('f(x,y):=(' + this.value + '); outsideUpdate();'); }" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
+
+<div id="Input-box" data-dashlane-rid="3796e6737f4c7b8b" data-form-type="other">
+      <input type="text" id="inp" value="x^2+3*y^2-4" onkeypress="if((event.which ? event.which : event.keyCode)==13) { cindy.evokeCS('f(x,y) := (' + this.value + '); outsideUpdate();'); }" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
 </div>
+
 </div>
-
-
   
 <script>
 
@@ -494,7 +528,9 @@ cindy = createCindy({canvasname:"CSCanvas",
     "x^2 + y^2 - 5",
     "(y - x^5)^2 - y^10",
     "x^2 - y^2 + x*y - 4",
-    "x^12 + y^12 - 30"
+    "x^12 + y^12 - 30",
+    "x^3-y^2",
+    "x^3 -2 * x + 0.5 -y^2"
   ];
   function updateInputArea() {
     document.getElementById('inp').value = allCodes[code - 1];
