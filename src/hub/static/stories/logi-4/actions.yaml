@@ -17,11 +17,13 @@ actions:
     style: "width: 22%; top: 35%; right: 12%; z-index: 1"
     parallax: back2
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: What’s that...? 
         char: mathina
         mood: surprised
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
   - type: animation
     target: leo-pointl
@@ -31,8 +33,10 @@ actions:
       yPercent: 15
       ease: power3.out    
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo rushed to the entrance of the building.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Lo-gi-ci-ty Sta-di-um.
         char: Leo
@@ -43,58 +47,67 @@ actions:
     src: leo-thinking.png 
     id: leo-think
     style: "width: 17%; top: 43%; right: 74%;"
-    parallax: back2
+    parallax: back3
   - type: animation
     target: mathina-think-t
     vars:
       duration: 3
-      xPercent: -140
-      yPercent: -40
+      xPercent: -153
+      yPercent: -28
       ease: power3.out    
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside - "Sir, you can't do that to us. Simply give us our prize so that we can go home!"
   - type: image
     src: trainer.png
     id: trainer
-    style: "width: 22%; top: 20%; right: 55%; z-index: 2"
+    style: "width: 22%; top: 25%; right: 60%; z-index: 2"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
   - type: image
     src: boys5.png 
     id: boys5
-    style: "width: 60%; top: 45%; right: 15%; z-index: 3"
+    style: "width: 60%; top: 45%; right: 6%; z-index: 3"
     parallax: front1
   - type: image
     src: georget.png
     id: georget
-    style: "width: 10%; top: 30%; right: 30%; z-index: 2;"
+    style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
     parallax: front1
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: You can't simply leave like this! 
         char: boys
         mood: talking
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Alright, I’ll give you another chance. Now you can guess!
         char: trainer
         mood: normal
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The guys looked at each other, tried to count on their fingers, uttered some numbers.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: We can't figure this out! 
         char: boys
         mood: talking
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: What is it that you can't work out? 
         char: Mathina
         mood: talking
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: All right, if this little girl finds the solution for you, you'll get the gold medal! 
         char: trainer
@@ -102,15 +115,18 @@ actions:
   - type: image
     src: gold-medal.png
     id: gold
-    style: "width: 2%; top: 25%; right: 55.5%; z-index: 3;"
+    style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo saw how annoyed Mathina was for being called “this little girl”.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
         char: trainer
         mood: normal
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list.  
         char: trainer
@@ -135,11 +151,13 @@ actions:
   - type: image
     src: mathina-standing.png
     id: mathina-stand
-    style: "width: 19%; top: 16%; right: 43%;"
+    style: "width: 19%; top: 21%; right: 47%;"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: So it has to be split between 7 people, right? Between the 6 team members and the trainer. 
         char: Mathina
@@ -154,12 +172,14 @@ actions:
     cta: Can you find out how many gold medals they receive? 
     url: /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: I'm not going to simply tell you that. 
         char: Mathina
         exposition: Mathina whispered something in the trainer’s ear. The trainer nodded contentedly.       
         mood: happy
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: I'd rather help you figure it out for yourselves.
         char: Mathina
@@ -177,15 +197,19 @@ actions:
       yoyo: true
       ease: power1.inOut
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Seeing how excited he was, Mathina and the trainer gave him the go ahead.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Well, I think we could go through all the cases, like what if all get 1 or 2 or 3 medals, except for George, and so on! And we’ll come across the right number. It won’t be a high number, I am sure…
         char: leo
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo began to count, thinking out loud.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: If all take always the same amount, except for George, then two consecutive ones will get the same amount. They cannot take 1, because there are no two neighbouring numbers with 1 as a sum of the digits. 
         char: leo
@@ -197,8 +221,10 @@ actions:
         char: leo
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo felt dizzy, although he only considered 4 cases. Mathina looked at him with a questioning look.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: What if we made a try with my method as well?
         char: Mathina
@@ -207,8 +233,10 @@ actions:
         char: boys
         mood: talking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina couldn’t suppress a triumphant smile as she turned to them.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Draw this table and make a try with, say, 116 medals.
         char: Mathina
@@ -219,6 +247,7 @@ actions:
     cta: Try it yourself!
     url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: 116 isn’t good because we’ll run out of it soon.
         char: george
@@ -244,6 +273,7 @@ actions:
     cta: Experiment with a few numbers!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: I know! Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
         char: george
@@ -252,8 +282,10 @@ actions:
         char: george
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The trainer raised his head and listened to the argument with bright eyes. He had always talked down to George, but now he saw that he could figure out quite a few good things with a little guidance.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Good, but we still don't know how much we'll get! 
         char: boys
@@ -265,8 +297,10 @@ actions:
         char: george
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Good. Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
         char: george
@@ -280,6 +314,7 @@ actions:
     cta: Experiment with the number 127!
     url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: George, that doesn't work! On the one hand, we’ll run out of gold medals sooner, and on the other hand, the first and the fourth get a different amount, and the seventh as well, because he gets zero in the last round! - the others told George.
         char: boys
@@ -300,6 +335,7 @@ actions:
     cta: Experiment with numbers!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: So I thought 6 people would get 9 in both rounds, and one person would get 18 in the first, then 9 in the second round. This means, 7x18 + 9 = 135. And so the fifth person gets more than the others!
         char: george
@@ -316,27 +352,34 @@ actions:
   - type: image
     src: gold-medal.png
     id: gold
-    style: "width: 2%; top: 43%; right: 33.5%; z-index: 3;"
+    style: "width: 2%; top: 46%; right: 33%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold2
-    style: "width: 2%; top: 57%; right: 62%; z-index: 3;"
+    style: "width: 2%; top: 58%; right: 52%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold3
-    style: "width: 2%; top: 86%; right: 32.5%; z-index: 3;"
+    style: "width: 2%; top: 85%; right: 23%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold4
-    style: "width: 2%; top: 59%; right: 42%; z-index: 3;"
+    style: "width: 2%; top: 59%; right: 33%; z-index: 3;"
+    parallax: front3
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The trainer passed out the medals one after the other. He gave Mathina a round of applause.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!
         char: trainer
         mood: normal
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
   - type: clearImage
     id: leo-think

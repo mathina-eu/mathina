@@ -90,11 +90,19 @@ export default {
       }
       let el = this.$refs.ratio;
       let elementWidth = el.clientWidth;
+      let elementHeight = el.clientHeight;
       let bodyWidth = document.body.clientWidth;
+      let bodyHeight = document.body.clientHeight;
       if (!elementWidth || !bodyWidth) {
         return false;
       }
+
       let ratio = bodyWidth / elementWidth;
+      let newHeight = ratio * elementHeight;
+      let rect = el.getBoundingClientRect();
+      if (newHeight > (bodyHeight - rect.y)) {
+        ratio = (bodyHeight - rect.y - 40) / elementHeight;
+      }
       this.style = `transform: scale(${ratio}); transform-origin: top;`;
     },
   }
@@ -116,6 +124,11 @@ export default {
   &--scaled {
     align-self: start;
     margin-top: -20px;
+
+    >>> .navigation {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 
