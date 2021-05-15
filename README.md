@@ -259,6 +259,7 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | valign | bottom, center, left | Vertical alignment of image |
 | style | <string> css style | CSS styles can be used for various effects, for instance to scale an image. Setting position via style can override align and valign parameters. |
 | parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
+| noOverflow | boolean | Default: `false`. Setting `noOverflow: true` for an image in a parallax layer will cause that layer to have overflow: hidden while this image is displayed. |
 
 ### Animate Image
 
