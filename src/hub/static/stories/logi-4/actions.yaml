@@ -23,6 +23,7 @@ actions:
         char: mathina
         mood: surprised
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
   - type: animation
     target: leo-pointl
@@ -32,6 +33,7 @@ actions:
       yPercent: 15
       ease: power3.out    
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo rushed to the entrance of the building.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -50,10 +52,11 @@ actions:
     target: mathina-think-t
     vars:
       duration: 3
-      xPercent: -150
-      yPercent: -22
+      xPercent: -153
+      yPercent: -28
       ease: power3.out    
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside - "Sir, you can't do that to us. Simply give us our prize so that we can go home!"
   - type: image
     src: trainer.png
@@ -61,6 +64,7 @@ actions:
     style: "width: 22%; top: 25%; right: 60%; z-index: 2"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
   - type: image
     src: boys5.png 
@@ -73,6 +77,7 @@ actions:
     style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
     parallax: front1
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -87,6 +92,7 @@ actions:
         char: trainer
         mood: normal
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The guys looked at each other, tried to count on their fingers, uttered some numbers.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -111,6 +117,7 @@ actions:
     id: gold
     style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo saw how annoyed Mathina was for being called “this little girl”.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -144,9 +151,10 @@ actions:
   - type: image
     src: mathina-standing.png
     id: mathina-stand
-    style: "width: 19%; top: 16%; right: 43%;"
+    style: "width: 19%; top: 21%; right: 47%;"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina produced her pen and notebook from her pocket.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -189,6 +197,7 @@ actions:
       yoyo: true
       ease: power1.inOut
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Seeing how excited he was, Mathina and the trainer gave him the go ahead.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -197,6 +206,7 @@ actions:
         char: leo
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo began to count, thinking out loud.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -211,6 +221,7 @@ actions:
         char: leo
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Leo felt dizzy, although he only considered 4 cases. Mathina looked at him with a questioning look.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -222,6 +233,7 @@ actions:
         char: boys
         mood: talking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina couldn’t suppress a triumphant smile as she turned to them.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -270,6 +282,7 @@ actions:
         char: george
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The trainer raised his head and listened to the argument with bright eyes. He had always talked down to George, but now he saw that he could figure out quite a few good things with a little guidance.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -284,6 +297,7 @@ actions:
         char: george
         mood: thinking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -338,20 +352,25 @@ actions:
   - type: image
     src: gold-medal.png
     id: gold
-    style: "width: 2%; top: 43%; right: 33.5%; z-index: 3;"
+    style: "width: 2%; top: 46%; right: 33%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold2
-    style: "width: 2%; top: 57%; right: 62%; z-index: 3;"
+    style: "width: 2%; top: 58%; right: 52%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold3
-    style: "width: 2%; top: 86%; right: 32.5%; z-index: 3;"
+    style: "width: 2%; top: 85%; right: 23%; z-index: 3;"
+    parallax: front3
   - type: image
     src: gold-medal.png
     id: gold4
-    style: "width: 2%; top: 59%; right: 42%; z-index: 3;"
+    style: "width: 2%; top: 59%; right: 33%; z-index: 3;"
+    parallax: front3
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: The trainer passed out the medals one after the other. He gave Mathina a round of applause.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -360,6 +379,7 @@ actions:
         char: trainer
         mood: normal
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
   - type: clearImage
     id: leo-think
