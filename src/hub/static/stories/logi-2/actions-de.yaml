@@ -142,7 +142,7 @@ actions:
       # Stop, stop immediately! - the voice cried. They turned around and saw a giant owl. Stop! - he repeated.
         char: owl
         mood: sad
-      - text: Wir müssen eine wichtige Aufgabe erfüllen, Frau Eule. Wir müssen dieses Geburtstagsgeschenk an den Chef der “Abteilung für Logik” von Logi-City übergeben
+      - text: Wir müssen eine wichtige Aufgabe erfüllen, Frau Eule. Wir müssen dieses Geburtstagsgeschenk an die Leitung der “Abteilung für Logik” von Logi-City übergeben
         exposition: sagte Mathina, während Leo den Koffer auf den Boden abstellte.
         # We have an important mission to complete here, Mr Owl - Mathina said confidently. - We need to deliver this birthday gift to the Head of Logical Matters of Logi-city. Leo pointed at the bag at his feet.
         char: mathina
@@ -164,7 +164,7 @@ actions:
       # Observe the marble floor here in the doorway - the owl pointed at the colored tiles. - As a matter of fact, there is a purpose behind the pattern.
         char: owl
         mood: sad
-      - text: Es ist verboten, einfach so über diese Felder zu stapfen. Ihr müsst erst die Logik des Musters entdecken. Auf diese Weise können wir sicherstellen, dass nur schlaue Leute zum Chef gelangen.
+      - text: Es ist verboten, einfach so über diese Felder zu stapfen. Ihr müsst erst die Logik des Musters entdecken. Auf diese Weise können wir sicherstellen, dass nur schlaue Leute zu unserer Leitung gelangen.
       # You are not allowed to stomp simply across it, unless you reveal the logic behind. This is how we ensure that only worthy people pass through to the boss.
         char: owl
         mood: sad
@@ -268,7 +268,7 @@ actions:
     style: "width: 17%; top: 35%; right: 30%;"  
   - type: dialog
     entries:
-      - text: Sofort stehen bleiben! Ich war noch nicht fertig! Wenn Du nur einen falschen Schritt machst, dreht sich das Feld um und du plumpst in den Abwasserkanal unter der Straße. Und von da gibt es keinen Weg zurück!
+      - text: Sofort stehen bleiben! Ich war noch nicht fertig! Wenn Du auch nur einen falschen Schritt machst, dreht sich das Feld um und du plumpst in den Abwasserkanal. Da ist es ganz schön dunkel und du wirst ganz nass und schmutzig!
       # I wasn't done yet – said the owl. - If you miss just one step, the tile will turn over and you find yourself in the sewer system of the house. And there is no way back! 
         char: owl
         mood: sad
@@ -283,7 +283,7 @@ actions:
     id: owl-w-d
     style: "width: 20%; top: 41%; right: 29%;"  
   - type: sceneText
-    text: Mit einem leichten Schaudern lief Leo zurück zu Mathina. Was die Eule gesagt hatte, machte ihm ganz schön Angst. 
+    text: Mit einem leichten Schütteln lief Leo zurück zu Mathina. Er hatte wirklich keine Lust, in den dunklen Kanal hineinzufallen. 
     # Leo stared at Mathina with a disgusted frown, really frightened by the owl's promise.
   - type: clearImage
     id: mathina-thinking
@@ -293,7 +293,7 @@ actions:
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
   - type: dialog
     entries:
-      - text: Du bleibst hier und bewegst dich nicht von der Stelle!
+      - text: Du bleibst hier und bewegst dich nicht von der Stelle
         exposition: sagte Mathina zu Leo. Dann überlegte sie angestrengt, was sie tun sollte.
       # You stay here now and don't do anything! - Mathina said to Leo. She wondered what to do.
         char: mathina
@@ -305,9 +305,9 @@ actions:
     id: leo-sitting
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
   - type: game
-    text: Welchen Rat würdest Du Leo und Mathina geben?
+    text: Welchen Rat würdest Du Leo und Mathina geben? Du kannst nur von Rot nach Rot, Blau nach Blau, Grün nach Grün oder Gelb zu Gelb hüpfen. Oder du springst von Kreis zu Kreis, Quadrat zu Quadrat oder Dreieck zu Dreieck.
     # What advice would you give them? 
-    toolbarText: Du kannst nur von Rot nach Rot, Blau nach Blau, Grün nach Grün oder Gelb zu Gelb hüpfen. Oder du springst von Kreis zu Kreis, Quadrat zu Quadrat oder Dreieck zu Dreieck.
+    toolbarText: Wie kommen Mathina und Leo auf die andere Seite?
     # You can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
     cta: Probiere es aus!
     # Try it yourself!
@@ -334,7 +334,7 @@ actions:
   - type: game
     text: Kannst Du den Weg vom Türeingang zurück zu Mathina finden?
     # Can you get from the doorway to Mathina, does this work?
-    toolbarText: 
+    toolbarText: Kannst du den Weg vom blauen Dreieck mit dem gelben Punkt zu Leo finden?
     cta: Probiere es aus!
     # Try it yourself!
     url: http://www.rimosco.it/ew/LC_S2_Yticigol/index.htm
