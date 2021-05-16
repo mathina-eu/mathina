@@ -177,6 +177,17 @@
 		drawRect(rect, size, color, alpha) := drawpoly(expandrect(rect), size -> size, color -> color, alpha -> alpha);
 		fillRect(rect, color, alpha) := fillpoly(expandrect(rect), color -> color, alpha -> alpha);
 
+		updateRectPos(rect, x, y) := (
+			rect.x = x;
+			rect.y = y;
+			rect.xy = [x,y];
+		);
+		updateRectPos(rect, pos) := (
+			rect.x = pos.x;
+			rect.y = pos.y;
+			rect.xy = pos;
+		);
+
 		rectContainsPoint(rect, point) := (
 		  regional(expanded);
 

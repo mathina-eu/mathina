@@ -333,23 +333,21 @@
     "x^2 + 3 * y^2 - 10",
     "x^2 + y^2 - 5",
     "(y - x^5)^2 - y^10",
-    "x^2 - y^2 + x*y - 4",
     "x^12 + y^12 - 30",
     "x^3 - y^2",
-    "x^3 -2 * x + 0.5 -y^2"
+    "x^3 - 2 * x + 0.5 - y^2"
   ];
   renders = [
-    "$x^2 + 3 \cdot y^2 - 10$",
+    "$x^2 + 3y^2 - 10$",
     "$x^2 + y^2 - 5$",
     "$(y - x^5)^2 - y^{10}$",
-    "$x^2 - y^2 + x \cdot y - 4$",
     "$x^{12} + y^{12} - 30$",
     "$x^3-y^2$",
-    "$x^3 -2 \cdot x + 0.5 -y^2$"
+    "$x^3 -2x + 0.5 -y^2$"
   ];
   
-  codePos = canvasCorners_3 + (-19.5, 17);
-  codeHeight = 2.3;
+  codePos = canvasCorners_3 + (-16.5, 17);
+  codeHeight = 2.8;
   codeIndex = randomint(length(codes)) + 1;
 
   highlightPos = codePos + posOfLine(codeIndex) + (-1, 0);
@@ -358,7 +356,7 @@
   highlightAccel = 0.2;
 
 
-  paperPos = canvasCorners_3 + (-12, 9);
+  paperPos = canvasCorners_3 + (-9, 9);
   paperRect = rect(paperPos.x -11.27, paperPos.y + 17.27, 7, canvasWidth, canvasHeight);
 
 
@@ -510,8 +508,8 @@
 cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
-                    back: "../../assets/forest2.png",
-                    front: "../../assets/forest3.png",
+                    back: "../../assets/back_4.png",
+                    front: "../../assets/front_3.png",
                     paper: "../../assets/paper.png"
                  }
                 });
@@ -527,10 +525,9 @@ cindy = createCindy({canvasname:"CSCanvas",
     "x^2 + 3 * y^2 - 10",
     "x^2 + y^2 - 5",
     "(y - x^5)^2 - y^10",
-    "x^2 - y^2 + x*y - 4",
     "x^12 + y^12 - 30",
-    "x^3-y^2",
-    "x^3 -2 * x + 0.5 -y^2"
+    "x^3 - y^2",
+    "x^3 - 2 * x + 0.5 - y^2"
   ];
   function updateInputArea() {
     document.getElementById('inp').value = allCodes[code - 1];
