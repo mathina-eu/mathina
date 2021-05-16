@@ -111,8 +111,8 @@ actions:
     target: leo-i2
     vars:
       duration: 3
-      xPercent: 300
-      yPercent: 200
+      left: '360px'
+      top: '450px'
       ease: power3.out
   - type: clearImage
     id: pm1
@@ -146,8 +146,8 @@ actions:
     target: leo-i2
     vars:
       duration: 1
-      xPercent: 20
-      yPercent: 0
+      left: '400px'
+      top: '450px'
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
@@ -178,8 +178,8 @@ actions:
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 500
-      yPercent: 0
+      left: '300px'
+      top: '200px'
       ease: power3.out
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
@@ -201,8 +201,8 @@ actions:
     target: leo-i2
     vars:
       duration: 1
-      xPercent: 50
-      yPercent: -100
+      left: '530px'
+      top: '320px'
       ease: power3.out
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
@@ -232,22 +232,22 @@ actions:
     target: leo-i2
     vars:
       duration: 3
-      xPercent: 90
-      yPercent: -10
+      left: '200px'
+      top: '160px'
       ease: power3.out
   - type: animation
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 250
-      yPercent: 50
+      left: '165px'
+      top: '-10px'
       ease: power3.out
   - type: animation
     target: pm2
     vars:
       duration: 3
-      xPercent: 130
-      yPercent: 20
+      left: '70px'
+      top: '-20px'
       ease: power3.out
   - type: animation
     target: pm1
@@ -422,22 +422,22 @@ actions:
     target: sugar1
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-170px'
+      top: '-130px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-200px'
+      top: '-420px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-400px'
+      top: '-220px'
       ease: power3.out
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -449,22 +449,22 @@ actions:
     target: sugar1
     vars:
       duration: 2
-      xPercent: 57
-      yPercent: 45
+      left: '160px'
+      top: '120px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 52
-      yPercent: 200
+      left: '100px'
+      top: '40px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 20
-      yPercent: 470
+      left: '-100px'
+      top: '-130px'
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
@@ -473,22 +473,22 @@ actions:
     target: sugar1
     vars:
       duration: 2
-      xPercent: 240
-      yPercent: 40
+      left: '330px'
+      top: '120px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 500
-      yPercent: 200
+      left: '-150px'
+      top: '40px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 20
-      yPercent: 470
+      left: '-310px'
+      top: '-120px'
       ease: power3.out
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
