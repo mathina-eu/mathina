@@ -18,7 +18,7 @@
         border: 5px solid #565A6E;
         color: #000;
         width: 15%;
-        heigth: 10%;
+        height: 10%;
         position: absolute;
         left: 100px;
         font-size:min(4vw,3vh);
@@ -37,7 +37,7 @@
         text-align: center;
         border: 5px solid #F87595;
         width: 11%;
-        heigth: 5%;
+        height: 14%;
         z-index: 10;
     }
 
@@ -400,10 +400,21 @@ function Scramble() {
                 pos3 = MyPos.x;
                 pos4 = MyPos.y;
 				
+				if (elmnt.id.indexOf("D")>-1) {
+				
+				if (Number(elmnt.style.left.slice(0,-2))+DimImg[0]>dimension[0]) elmnt.style.left = dimension[0]-DimImg[0] + "px";
+				if (Number(elmnt.style.top.slice(0,-2))+DimImg[1]>dimension[1]) elmnt.style.top = dimension[1]-DimImg[1] + "px";
+				if (Number(elmnt.style.left.slice(0,-2))<0) elmnt.style.left = "0px";
+				if (Number(elmnt.style.top.slice(0,-2))<0) elmnt.style.top = "0px";
+				
+				} else {
+				
 				if (Number(elmnt.style.left.slice(0,-2))+DimDiv[0]>dimension[0]) elmnt.style.left = dimension[0]-DimDiv[0] + "px";
 				if (Number(elmnt.style.top.slice(0,-2))+DimDiv[1]>dimension[1]) elmnt.style.top = dimension[1]-DimDiv[1] + "px";
 				if (Number(elmnt.style.left.slice(0,-2))<0) elmnt.style.left = "0px";
 				if (Number(elmnt.style.top.slice(0,-2))<0) elmnt.style.top = "0px";
+				
+				}
 				
                 // set the element's new position:
                 elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
@@ -554,7 +565,8 @@ function Resize() {
 			document.getElementById('myCanvas').width=dimension[0]*98/100;
 			document.getElementById('myCanvas').height=dimension[1]*98/100;
 			
-			window.DimDiv=[dimension[0]*23/100,dimension[1]*26/100];
+			window.DimDiv=[dimension[0]*15/100,dimension[1]*10/100];
+			window.DimImg=[dimension[0]*11/100,dimension[1]*14/100];
         }
 
 
