@@ -3,7 +3,7 @@
   <head>
     <script src="../atractor-apps-all/scripts/konva.min.js"></script>
     <meta charset="utf-8" />
-    <title>Arrumar frisos</title>
+    <title>App</title>
     <style>
     html {
   touch-action: pan-down;
@@ -114,13 +114,13 @@ var delta=150;
 	  
 	  
 	  
-	   function isNearPos(animal,ox,oy) {
+	     function isNearPos(animal,ox,oy) {
         var a = animal;
         var ax = a.x();
         var ay = a.y();
-var delta=0.04*width;
-        if (ax > ox - 2*delta && ax < ox + 2*delta && ay > oy - 3.5*delta &&
-		ay < oy + 8*delta) {
+var delta=0.05*window.innerWidth;
+        if (ax > ox - 2*delta && ax < ox + 2*delta && ay > oy - 3*delta &&
+		ay < oy + 12*delta) {
           return true;
         } else {
           return false;
