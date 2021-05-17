@@ -389,6 +389,7 @@ actions:
         mood: happy
   - type: game
     text: "Want to help the kids?"
+    toolbarText: "Associate to the correct message the image described by the key."
     cta: "Let's try!"
     tag: app1
     url: /apps/bucca-1-app/bucca-1-app-1.htm?l=1
@@ -428,6 +429,7 @@ actions:
         mood: happy      
   - type: game
     text: "Want to help the kids?"
+    toolbarText: "Associate an image to each message. Use an image described by the key only for the correct message."
     cta: "Let's try!"
     tag: app2
     url: /apps/bucca-1-app/bucca-1-app-2.htm?l=1
@@ -707,8 +709,8 @@ actions:
     text: >
       <p>They leave the answer as well as their four new messages.</p>
   - type: game
-    text: "Want to help Rasha leave the messages?"
-    cta: "Let's try!"
+    text: "Which is the message that Rasha and Lucy wrote to Mathina and Leo?"
+    cta: "Find the secret message!"
     tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=1
   - type: sceneText

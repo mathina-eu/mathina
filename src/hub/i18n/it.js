@@ -49,7 +49,7 @@ export default {
   chars: {
     mathina: 'Mathina',
     leo: 'Leo',
-    wizard: 'Wizard',
+    wizard: 'Mago',
 	angela: 'Angela',
 	parrot: 'John',
 	carla: 'Carla',
@@ -59,7 +59,7 @@ export default {
 	flamma: 'Flamma',
 	charmingparrot: 'Capitano Charmingparrot',
 	mysteriousfigure: 'Figura misteriosa',
-	rashamom: 'Prof. Levasseur',
+	rashamom: 'Prof.ssa Levasseur',
 	technician: 'Tecnico',
     Leo: 'Leo',
     Mathina: 'Mathina',

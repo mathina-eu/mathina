@@ -502,7 +502,7 @@ actions:
     style: "width: 15.5%; top: 61%; right: 30%;"     
   - type: sceneText
     text: >
-      <p> Alla fine, come promesso, il mago diede a Mathina e Leo tanti dei giocattoli che avevano costruito.</p><p> Prima che se ne andassero, il mago disse loro che era stupito dalle loro capacità! Non solo erano stati capaci di identificare le immagini simmetriche, ma lo avevano anche aiutato a creare nuovi giocattoli simmetrici, alcuni dei quali sarebbero stati per gli altri bambini che avrebbero visitato la Fiera della Simmetria.</p>
+      <p> Alla fine, come promesso, il mago diede a Mathina e Leo tanti giocattoli.</p><p> Prima che se ne andassero, il mago disse loro che era stupito dalle loro capacità! Non solo erano stati capaci di identificare le immagini simmetriche, ma lo avevano anche aiutato a creare nuovi giocattoli simmetrici, alcuni dei quali sarebbero stati per gli altri bambini che avrebbero visitato la Fiera della Simmetria.</p>
   - type: clearImage
     id: Leo2
   - type: clearImage
