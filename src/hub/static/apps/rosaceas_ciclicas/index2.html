@@ -5,7 +5,7 @@
   <head>
     <script src="../atractor-apps-all/scripts/konva.min.js"></script>
     <meta charset="utf-8" />
-    <title>App</title>
+    <title>Arrumar rosáceas</title>
     <style>
     html {
   touch-action: pan-down;
@@ -15,18 +15,11 @@ html, body {
   overflow:hidden;
 }
 
-html {
-  width: 100%;
-  height: 100%;
-   margins:0 px;
-  background: #E6BC6C;
-}
-
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #E6BC6C;
+        background-color: #f0f0f0;
       }
 	  
 	  .image-upload>input {
@@ -59,7 +52,7 @@ img:hover {
   
   
 
-<img src="../atractor-apps-all/icons/confirm.png" id="correct"   width=5%  onclick="mycorrect()" style="position:absolute; left: 90%;
+<img src="../atractor-apps-all/icons/confirm.png" id="correct"  width=80px onclick="mycorrect()" style="position:absolute; left: 90%;
   top: 3%; display:none"></img>
 
 
@@ -92,32 +85,6 @@ img:hover {
     e.preventDefault();
   }
 );
-
-
-	  
-var ini=true; var stage;
-
-window.addEventListener('resize', function(){
-	
-	width = window.innerWidth; height = window.innerHeight;
-	
-		if(ini){fitStageIntoParentContainer()};
-	 if(!ini) {
-	 
-	 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-var width=.99*width0;
-var height=.99*Math.min(width0/2,height0);
-var width2=width;
-var height2=height;
-renderer.setSize(width,height);
-
-camera.aspect=width/height;
-camera.updateProjectionMatrix();
-	 }; 
-	 } );
-	 
-	 
 
 	var planeicon; 
 	
@@ -164,15 +131,7 @@ var imgsangs=[
   
   	function Link(ii) 
 	{ang=0; objects = [];
-	
-		 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
- width=.99*width0;
- height=.99*Math.min(width0/2,height0);
-
-ASPECT=width/height;
-
-	 
+		
 		angscertos=imgsangs[ii];
 			
 			var x = 0;
@@ -264,16 +223,11 @@ loader.load(
 	var dif2=0;
 	var posc=0;
 			// scene size
-				 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-var width=.99*width0;
-var height=.99*Math.min(width0/2,height0);
-var width2=width;
-var height2=height;
-
+			var WIDTH = window.innerWidth*.99;
+			var HEIGHT = window.innerHeight*.99;
 			// camera
 			var VIEW_ANGLE = 11
-			var ASPECT = width / height;
+			var ASPECT = WIDTH / HEIGHT;
 			var NEAR = 1;
 			var FAR = 5000;
 			var camera, scene, renderer;
@@ -422,7 +376,7 @@ mapCanvas = document.createElement( 'canvas' );
 	
 	
 	
-function home(){ini=true;fitStageIntoParentContainer();
+function home(){
 	document.getElementById("container0").style.display="none"
 		document.getElementById("container").style.display="inline"
 		container.removeChild( renderer.domElement );
@@ -434,18 +388,16 @@ var container = document.getElementById( 'container0' );
 		
 		function init() {
 		
-		ini=false;
-		
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( width, height);
+				renderer.setSize( WIDTH, HEIGHT );
 				//renderer.setClearColor(0xd2d1b8,1);
 				container.appendChild( renderer.domElement );
 				
 				renderer.localClippingEnabled = true;
 				
 var loader = new THREE.TextureLoader();
-loader.load('../atractor-apps-all/imgs/background-golden-ochre.jpg' , 
+loader.load('../atractor-apps-all/imgs/background-ochre.jpg' , 
 function(texture)
             {
              scene.background = texture;  
@@ -932,7 +884,7 @@ var delta=60;
   } );
   
   
-        stage = new Konva.Stage({
+        var stage = new Konva.Stage({
           container: 'container',
           width: width,
           height: height
@@ -1157,7 +1109,7 @@ icon[privKey.substring(2)-1].opacity(0)
 	}
 	
 	
-	imageObj2.src = '../atractor-apps-all/imgs/fundo-rosaceas1.jpg';
+	imageObj2.src = '../atractor-apps-all/imgs/fundo-rosaceas2.jpg';
         stage.add(background);
         stage.add(animalLayer);
 	  stage.add(textLayer);
@@ -1454,20 +1406,7 @@ im12_black: {x: posxx[11], y: posyy[11]} 	,
       loadImages(sources, initStage);
 	  
 	
- var stageWidth = window.innerWidth;
-      var stageHeight = window.innerHeight;
-	  
- function fitStageIntoParentContainer() {
-       
-        // to do this we need to scale the stage
-        var scale = Math.min(window.innerWidth / stageWidth,window.innerHeight / stageHeight);
 
-	
-        stage.width(stageWidth * scale);
-        stage.height(stageHeight * scale);
-        stage.scale({ x: scale, y: scale });
-        stage.draw();
-      }
    
 
     </script>

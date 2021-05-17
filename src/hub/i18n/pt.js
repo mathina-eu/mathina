@@ -74,6 +74,6 @@ export default {
     george: 'Jorge',
     trainer: 'Treinador',
     boys: 'Rapazes',
-	technician: 'técnico',	
+	technician: 'Técnico',	
   },
 };

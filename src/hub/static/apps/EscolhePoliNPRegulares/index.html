@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
 
-<title>Poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si</title>
+<title id="barra">Poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePoli_style.css">
 
@@ -383,14 +383,29 @@
     function setLanguage(){
         //console.log(lang);
         if(lang=="en"){
-            console.log(lang);
-            document.getElementById('titulo').textContent="Choose "+n_certos+" non-platonic polyhedra whose faces are all regular and equal polygons";
+            document.getElementById('barra').textContent="Non-platonic polyhedra whose faces are all regular and equal polygons";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" non-platonic polyhedra whose faces are all regular and equal polygons";
             document.getElementById('sucessText').textContent="Very well!";
             document.getElementById('errorText').textContent="You haven't yet discovered all the non-platonic polyhedra whose faces are all regular and equal polygons";
             document.getElementById('errorText2').textContent="Try again!";
             document.getElementById('finalText').textContent="End of the game!";
+        }else if(lang=="it"){
+            document.getElementById('barra').textContent="Non platonici che hanno facce regolari e tutte uguali tra loro";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" non-platonic polyhedra whose faces are all regular and equal polygons";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora scoperto tutti i poliedri non platonici che hanno facce regolari e tutte uguali tra loro";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            document.getElementById('barra').textContent="Noch nicht alle platonischen Polyeder, deren Seitenfllächen alle reguläre und gleiche Flächen sind, entdeckt.";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" non-platonic polyhedra whose faces are all regular and equal polygons";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle platonischen Polyeder, deren Seitenfllächen alle reguläre und gleiche Flächen sind, entdeckt.";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
         }else{
-            document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si";
+            document.getElementById('barra').textContent="Poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si";
+            //document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si";
             document.getElementById('sucessText').textContent="Muito bem!";
             document.getElementById('errorText').textContent="Ainda não descobriste todas os poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si";
             document.getElementById('errorText2').textContent="Volta a tentar.";
