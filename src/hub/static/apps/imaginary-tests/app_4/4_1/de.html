@@ -61,6 +61,8 @@
 
 
 <script id='csinit' type='text/x-cindyscript'>
+
+
   getState(pos) := imagergb(L, R, "computeTexture", pos, interpolate->false, repeat->false);
   getGradient(pos) := imagergb(L, R, "gradientTexture", pos, interpolate->false, repeat->false);
   getNewton(pos) := imagergb(L, R, "newtonTexture", pos, interpolate->false, repeat->false);
@@ -202,7 +204,7 @@
 
 
 
-  cindyToTexture(pos) := (pos - canvasCenter) / renderArea.w * 2 * axesMax - (0.5,0.5);
+  cindyToTexture(pos) := (pos - (renderPos + 0.5 * renderSize * (1,1))) / renderArea.w * 2 * axesMax - (0.5,0.5);
 
 
 
@@ -241,17 +243,10 @@
 
 
   drawCodes() := (
-    if(now() > 1.5,
-      if(showHighlight, fillpoly(roundedrectangle(highlightRect.xy, highlightRect.w, highlightRect.h, 1), color->(0,0,0), alpha->0.2));
-      drawimage(canvasCorners_4, canvasCorners_3, "codeTexture");
-    , // else //
-      clearimage("codeTexture");
-      canvas(canvasCorners_4, canvasCorners_3, "codeTexture",
-        forall(1..length(codes),
-          drawtext(codePos + posOfLine(#) + (0, -lerp(1.2, 2.1, codeHeight, 2.3, 5)), renders_#, size-> 30);
-        );
-      );
-    );
+    if(showHighlight, fillpoly(roundedrectangle(highlightRect.xy, highlightRect.w, highlightRect.h, 1), color->(0,0,0), alpha->0.2));
+    forall(1..length(codes),
+      drawtext(codePos + posOfLine(#) + (0, -lerp(1.2, 2.1, codeHeight, 2.3, 5)), renders_#, size-> 30);
+    ); 
   );
 
 
@@ -401,7 +396,7 @@
 
 
   renderSize = canvasWidth;
-  renderPos = canvasCenter - 0.5 * renderSize * (1,1);
+  renderPos = canvasCenter - 0.5 * renderSize * (1,1) + (-3, 0);
   renderArea = rect(renderPos, renderSize, renderSize);
 
 
@@ -435,8 +430,6 @@
   createimage("codeTexture", 1920, 1080);
   
 
-
-
   playanimation();
   setupTime();
 
@@ -464,6 +457,7 @@
 
   drawimage(paperPos, "paper", flipx->true, scale->1.5, rotation->5°);
   drawCodes();
+
 
 </script>
 
@@ -511,7 +505,8 @@ cindy = createCindy({canvasname:"CSCanvas",
                     back: "../../assets/back_4.png",
                     front: "../../assets/front_3.png",
                     paper: "../../assets/paper.png"
-                 }
+                 },
+                 use:["katex"]
                 });
 
 </script>
