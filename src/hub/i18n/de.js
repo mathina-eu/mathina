@@ -5,7 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Besuche einen Ort!',
-    'map': 'Weld karte',
+    'map': 'Weltkarte',
   },
   cities: {
     'island': 'Schatzinsel',
@@ -18,8 +18,8 @@ export default {
     'back': 'Zurück',
     'back-to-world': 'zurück zur Karte',
     titles: {
-      'logi-1': 'Deutscher Titel der Geschchte: The traffic light challenge', 
-      'logi-2': 'Ytic-igol',
+      'logi-1': 'Mathinas Ampel-Abenteuer', 
+      'logi-2': 'ytiC-igoL',
       'logi-3': 'Cats and dogs',
       'logi-4': 'My gold, please',
       'bucca-1': 'Mathina und die geheime Botschaft',
@@ -54,5 +54,6 @@ export default {
     jane: 'Jane',
     flamma: 'Flamma',
 	kangaroo: 'Känguru',
+	owl: 'Eule',
   },
 };
