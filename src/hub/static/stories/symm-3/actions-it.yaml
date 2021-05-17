@@ -378,7 +378,7 @@ actions:
     text: "Scegli i 4 fregi con assi di simmetria e clicca"
     toolbarText: "Scegli i 4 fregi con assi di simmetria"
     cta: "Dividi i fregi che hanno assi di simmetria dagli altri!"
-    url: /apps/EscolheFrisos_ref/?lang=en
+    url: /apps/EscolheFrisos_ref/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -404,7 +404,7 @@ actions:
     tag: tg5
     text: "Separare i fregi trascinando ogni fregio nella borsa corrispondente."
     cta: "Provaci tu!"
-    url: /apps/frisos_simref-_en/
+    url: /apps/frisos_simref-_it/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -600,7 +600,7 @@ actions:
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
     cta: "Try separating the friezes!"
-    url: /apps/EscolheFrisos_rot/?lang=en
+    url: /apps/EscolheFrisos_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -644,7 +644,7 @@ actions:
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_ref_rot/?lang=en
+    url: /apps/EscolheFrisos_ref_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1003,7 +1003,7 @@ actions:
     text: "Scegli i 3 fregi con glissoriflessioni e clicca"
     toolbarText: "Scegli i fregi con glissoriflessioni"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_refDesl/?lang=en
+    url: /apps/EscolheFrisos_refDesl/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1098,7 +1098,7 @@ actions:
     tag: tg9
     text: "Guarda i fregi in ciascuna delle 7 borse che sono state ottenute. Per ogni borsa trascinare i simboli che corrispondono alle simmetrie sui fregi presentati."
     cta: "Play!"
-    url: /apps/RotularFrisos/?lang=en
+    url: /apps/RotularFrisos/?lang=it
   #
   # Parte final da história
   - type: clearBackground

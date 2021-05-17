@@ -57,13 +57,13 @@ actions:
         mood: angry
       - text: "Beh, a me sembrano tutti così carini!"
         char: mathina
-      - text: "Ho appena avuto un'idea! Perché non mi aiuti, scegliendo i giocattoli perfetti? Così potrò tenere sulla bancarella solo quelli, tu invece potrai portarti a casa gli altri!"
+      - text: "Ho appena avuto un'idea! Perché non mi aiuti, scegliendo i giocattoli fatti bene? Così potrò tenere sulla bancarella solo quelli, tu invece potrai portarti a casa gli altri!"
         char: wizard
         mood: excited
-      - text: "Mi piacerebbe avere dei nuovi peluche! Ma non so come scegliere quelli perfetti!"
+      - text: "Mi piacerebbe avere dei nuovi peluche! Ma non so come scegliere quelli fatti bene!"
         char: mathina
         mood: sad
-      - text: "Aspetta, lascia che ti aiuti! Ti mostrerò delle immagini di alcuni adorabili peluche e tu dovrai scegliere le immagini simmetriche."
+      - text: "Aspetta, lascia che ti aiuti! Ti mostrerò delle immagini di alcuni adorabili peluche e tu dovrai scegliere quelli fatti bene."
         char: wizard
         exposition: "Mathina era ancora confusa..."         
   - type: clearImage
@@ -83,8 +83,8 @@ actions:
         char: wizard
   - type: game
     tag: tg1
-    text: "Quest'immagine è giusta (cioè simmetrica)?"
-    cta: "Prova da solo!"
+    text: "Quest'immagine è simmetrica?"
+    cta: "Prova a piegarla a metà!"
     url: /apps/dobrar_1/index.html
   - type: clearImage
     id: c1-3
@@ -116,8 +116,8 @@ actions:
       - text: "Ora ti propongo un altro esempio! Guarda questa immagine di un'ape!"
         char: wizard        
   - type: game
-    text: "Quest'immagine è giusta (cioè simmetrica)?"
-    cta: "Prova da solo!"
+    text: "Quest'immagine è simmetrica?"
+    cta: "Prova a piegarla a metà!"
     url: /apps/dobrar_2/index.html
   - type: dialog
     entries:        
@@ -137,7 +137,7 @@ actions:
     position: center
   - type: game
     text: "Quest'immagine è simmetrica?"
-    cta: "Prova da solo!"
+    cta: "Prova a piegarla a metà!"
     url: /apps/dobrar_3/index.html
   - type: clearImage
     id: c1-5
@@ -155,7 +155,7 @@ actions:
       - text: "Questo peluche non è simmetrico!"
         char: wizard
         exposition: "Le disse il mago."        
-      - text: "Credo di aver capito come scegliere i giocattoli perfetti! Posso aiutarti?"
+      - text: "Credo di aver capito come scegliere i giocattoli fatti bene! Posso aiutarti?"
         char: mathina
   - type: clearImage
     id: Mathina2
@@ -168,7 +168,7 @@ actions:
     style: "width: 40%; top: 63%; left: 45%"     
   - type: dialog
     entries:         
-      - text: "Certamente, Mathina! Le immagini simmetriche dovranno essere riposte in questa scatola!"
+      - text: "Certamente, Mathina! I giocattoli fatti bene dovranno essere riposti in questa scatola!"
         char: wizard
   - type: clearImage
     id: toys
@@ -189,9 +189,10 @@ actions:
         char: wizard
         mood: happy
   - type: game
-    text: "Metti i giocattoli \"perfetti\" nella scatola"
+    text: "Metti i giocattoli fatti bene nella scatola."
+    toolbarText: "Metti i giocattoli fatti bene (cioè simmetrici) nella scatola"
     tag: tg4
-    cta: "Prova da solo!"
+    cta: "Provaci!"
     url: /apps/arrumar_figuras/index.html
   - type: clearImage
     id: c1-1
@@ -266,10 +267,10 @@ actions:
       ease: power3.out
   - type: dialog
     entries:       
-      - text: "Davvero???"
+      - text: "Davvero?!?"
         char: leo
         mood: excited
-      - text: "Sì. Dovrai solo aiutarmi a finire i giocattoli che sto costruendo. E alla fine avrai la metà di quelli che avremo costruito."
+      - text: "Sì. Dovrai solo aiutarmi a finire i giocattoli che sto costruendo. Alla fine ti regalerò la metà di quelli che avremo costruito."
         char: wizard
       - text: "Ci sono due tipi di giocattoli: alcuni sono più difficili da costruire rispetto agli altri. Quali preferisci?"
         char: wizard
@@ -326,7 +327,7 @@ actions:
     id: box       
   - type: sceneText
     text: >
-      <p>Mathina provò a finire la casa delle bambole, ma ogni volta che trascinava un pezzo e lo posizionava in un quadrato, il pezzo scappava via.</p> 
+      <p>Mathina provava a finire la casa delle bambole, ma ogni volta che trascinava un pezzo e lo posizionava in un quadrato, il pezzo scappava via.</p> 
   - type: dialog
     entries:
       - text: "Dove sto sbagliando?"
@@ -347,8 +348,8 @@ actions:
         mood: excited            
   - type: game 
     tag: tg2
-    text: "Come può Mathina finire di costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
-    cta: "Prova da solo!"
+    text: "Aiuta Mathina a costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
+    cta: "Provaci!"
     url: /apps/geoplano_polys0/index.html     
   - type: clearImage
     id: Mathina4
@@ -438,7 +439,7 @@ actions:
   - type: game
     tag: tg3
     text: "Aiuta Leo a concludere i giocattoli, disegna le linee mancanti."
-    cta: "Prova da solo!"
+    cta: "Provaci!"
     url: /apps/geoplano_lin1/index.html 
   - type: clearImage
     id: Leo4
@@ -524,4 +525,4 @@ actions:
       yPercent: 0      
   - type: sceneText
     text: >
-      <p> ... trascinando tutti i loro giocattoli nuovi.</p>         
+      <p> ... portando con se tutti i nuovi giocattoli che gli avevano regalato!</p>         

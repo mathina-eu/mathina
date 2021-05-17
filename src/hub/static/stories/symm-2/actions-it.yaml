@@ -115,7 +115,7 @@ actions:
     tag: tg3
     text: "Come può vincere Mathina? In ogni turno, aiutala scegliendo i rosoni che hanno degli assi di simmetria."
     cta: "Prova da solo!"
-    url: /apps/EscolheRosaceas/index.html?lang=en    
+    url: /apps/EscolheRosaceas/index.html?lang=it    
   - type: dialog
     entries:    
       - text: "Fatto! Posso tenerli?"
@@ -376,7 +376,7 @@ actions:
     tag: tg1
     text: "Dai una mano a Mathina ad uscire dal labirinto!"
     cta: "Provaci tu!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=ref
+    url: /apps/labirinto-s/index.html?lang=it&sim=ref
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -458,7 +458,7 @@ actions:
     tag: tg2
     text: "Aiuta Mathina a uscire dal labirinto del mezzo giro!"
     cta: "Provaci tu!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=rot
+    url: /apps/labirinto-s/index.html?lang=it&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground

@@ -245,7 +245,7 @@ actions:
     text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e clicca su"
     toolbarText: "Seleziona i poliedri convessi"
     cta: "Riconosci i poliedri convessi!"
-    url: /apps/EscolhePoliConvexos/index.html?lang=en
+    url: /apps/EscolhePoliConvexos/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -422,7 +422,7 @@ actions:
     text: "Scegli gli sviluppi del cubo. Selezionane 3  e clicca"
     toolbarText: "Seleziona gli sviluppi del cubo."
     cta: "Separa gli sviluppi da quelli che non lo sono!"
-    url: /apps/EscolhePlanCubo/index.html?lang=en
+    url: /apps/EscolhePlanCubo/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -572,7 +572,7 @@ actions:
     text: "Scegli gli sviluppi dell'ottaedro. Seleziona configurazioni e clicca"
     toolbarText: "Scegli gli sviluppi dell'ottaedro."
     cta: "Isola gli sviluppi dell'ottaedro!"
-    url: /apps/EscolhePlanOcta/index.html?lang=en
+    url: /apps/EscolhePlanOcta/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -768,7 +768,7 @@ actions:
     text: "Seleziona i poliedri non platonici che hanno tutte le facce uguali. Scegli due poliedri e clicca"
     toolbarText: "Seleziona i poliedri non platonici che hanno tutte le facce uguali."
     cta: "Separa i seguenti poliedri che hanno tutte le facce uguali tra platonici e non platonici."
-    url: /apps/EscolhePoliNPRegulares/index.html?lang=en
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1088,7 +1088,7 @@ actions:
     text: "Scegli i poliedri uniformi. Scegli 4 poliedri e clicca"
     toolbarText: "Seleziona i poliedri uniformi."
     cta: "Seleziona i poliedri uniformi!"
-    url: /apps/EscolhePoliUnif/index.html?lang=en
+    url: /apps/EscolhePoliUnif/index.html?lang=it
     img:
       src: confirm.png
       height: 40
