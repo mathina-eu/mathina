@@ -49,8 +49,10 @@ img:hover {
   </div>
   
    <div id="errorMessage" style = 'display:none'>
-        <h2 id="errorText">Ainda não colocaste todos os frisos de forma correta.</h2>
-        <h2 id="errorText2">Tenta outra vez!</h2>
+        
+
+		<h2 id="errorText">Du hast noch nicht alle Friesen richtig arrangiert! </h2>
+        <h2 id="errorText2">Versuch's noch mal...</h2>
        <img src="../atractor-apps-all/icons/back.png" onclick="corrigir();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
@@ -61,10 +63,6 @@ img:hover {
 
 		
     <script>
-	
-	
-
-		
 	var certos1=[];
 	var certos2=[];
 	var certos3=[];
@@ -100,9 +98,23 @@ var imagenames=['Cereja-p1m1.png',
  var numbers = [ 0,1, 2, 3, 4, 5, 6, 7, 8,9,10,11];
   
    
+      function isNearOutline(animal, outline) {
+        var a = animal;
+        var o = outline;
+        var ax = a.x();
+        var ay = a.y();
+var delta=150;
+        if (ax > o.x - 2*delta && ax < o.x + delta && ay > o.y - 2*delta && ay < o.y + 3*delta) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 	  
 	  
-	           function isNearPos(animal,ox,oy) {
+	  
+	  
+	     function isNearPos(animal,ox,oy) {
         var a = animal;
         var ax = a.x();
         var ay = a.y();
@@ -114,7 +126,6 @@ var delta=0.05*window.innerWidth;
           return false;
         }
       }
-	   
 	  
 	  
 
@@ -146,8 +157,7 @@ var delta=0.05*window.innerWidth;
 var textLayer=	new Konva.Layer();   var animalShapes = [];
         var score = 0;
 
-
-        	
+	
 	var imageObj2 = new Image(); 
       imageObj2.onload = function() { 
 	  back=new Konva.Image({
@@ -173,26 +183,26 @@ var textLayer=	new Konva.Layer();   var animalShapes = [];
         stage.add(background);
 
 var textscore = new Konva.Text({
-        text: 'Arrasta os frisos para as pastas correspondentes!',
+        text: 'Ziehe die Friesen, die zusammenpassen, in die entsprechenden Ordner!',
         x: 0.1*window.innerWidth,
         y: 0.01*window.innerHeight,  
         fontSize: 20
       });
 
 	  var textscore2 = new Konva.Text({
-        text: 'Eixo de simetria horizontal',
+        text: 'Waagerechte Symmetrieachse',
         x: 0.57*window.innerWidth,
         y: 0.001*window.innerHeight,  
-        fontSize: window.innerWidth/60,
+       fontSize: window.innerWidth/70,
 		fontFamily: 'Calibri',
   fill: 'green'
       });
 	  
 	   var textscore3 = new Konva.Text({
-        text: 'Eixos de simetria verticais',
+        text: 'Senkrechte Symmetrieachse',
         x: 0.77*window.innerWidth,
         y: 0.001*window.innerHeight,  
-        fontSize: window.innerWidth/60,
+        fontSize: window.innerWidth/70,
 		fontFamily: 'Calibri',
   fill: 'green'
       });
@@ -230,7 +240,7 @@ var textscore = new Konva.Text({
           x: 0.83*window.innerWidth,
           y: 0.025*window.innerHeight,
           image: imageObjicon2,
-         width: 0.04*window.innerWidth,
+           width: 0.04*window.innerWidth,
           height: 0.04*window.innerWidth,
         });
 
@@ -290,8 +300,8 @@ var textscore = new Konva.Text({
           x: frisospos[0][0],
               y: frisospos[0][1],
           image: friso1,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso1.width*friso1.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso1.width*friso1.height,
              draggable: true
         });
 
@@ -314,13 +324,13 @@ var textscore = new Konva.Text({
 			  var posx=(0.41)
 			
 			
-if(isNearPos(friso1i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso1i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso1');certos1im.push(friso1i)} else {
 errados.push('friso1'); erradosim.push(friso1i)};
 
 friso1i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso1i.draggable(false);
@@ -356,14 +366,14 @@ friso1i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso1i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso1i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso1');
 certos2im.push(friso1i);} else {errados.push('friso1'); erradosim.push(friso1i)};
 
 
  friso1i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso1i.draggable(false);
                
@@ -397,13 +407,13 @@ certos2im.push(friso1i);} else {errados.push('friso1'); erradosim.push(friso1i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso1i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso1i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso1');certos3im.push(friso1i);} else
  {errados.push('friso1'); erradosim.push(friso1i)};
 
 friso1i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso1i.draggable(false);
                
@@ -458,8 +468,8 @@ friso1i.position({
           x: frisospos[1][0],
               y: frisospos[1][1],
           image: friso2,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso2.width*friso2.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso2.width*friso2.height,
              draggable: true
         });
 
@@ -482,13 +492,13 @@ friso1i.position({
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso2i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso2i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso2');certos1im.push(friso2i)} else {
 errados.push('friso2'); erradosim.push(friso2i)};
 
 friso2i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso2i.draggable(false);
@@ -524,14 +534,14 @@ friso2i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso2i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso2i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso2');
 certos2im.push(friso2i);} else {errados.push('friso2'); erradosim.push(friso2i)};
 
 
  friso2i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso2i.draggable(false);
                
@@ -565,13 +575,13 @@ certos2im.push(friso2i);} else {errados.push('friso2'); erradosim.push(friso2i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso2i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso2i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso2');certos3im.push(friso2i);} else
  {errados.push('friso2'); erradosim.push(friso2i)};
 
 friso2i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso2i.draggable(false);
                
@@ -626,8 +636,8 @@ var friso3 = new Image();
           x: frisospos[2][0],
               y: frisospos[2][1],
           image: friso3,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso3.width*friso3.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso3.width*friso3.height,
              draggable: true
         });
 
@@ -650,13 +660,13 @@ var friso3 = new Image();
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso3i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso3i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso3');certos1im.push(friso3i)} else {
 errados.push('friso3'); erradosim.push(friso3i)};
 
 friso3i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso3i.draggable(false);
@@ -692,14 +702,14 @@ friso3i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso3i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso3i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso3');
 certos2im.push(friso3i);} else {errados.push('friso3'); erradosim.push(friso3i)};
 
 
  friso3i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso3i.draggable(false);
                
@@ -733,13 +743,13 @@ certos2im.push(friso3i);} else {errados.push('friso3'); erradosim.push(friso3i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso3i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso3i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso3');certos3im.push(friso3i);} else
  {errados.push('friso3'); erradosim.push(friso3i)};
 
 friso3i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso3i.draggable(false);
                
@@ -793,8 +803,8 @@ friso3i.position({
           x: frisospos[3][0],
               y: frisospos[3][1],
           image: friso4,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso4.width*friso4.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso4.width*friso4.height,
              draggable: true
         });
 
@@ -817,13 +827,13 @@ friso3i.position({
 			  var posx=(0.74)
 			
 			
-if(isNearPos(friso4i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso4i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso4');certos1im.push(friso4i)} else {
 errados.push('friso4'); erradosim.push(friso4i)};
 
 friso4i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso4i.draggable(false);
@@ -859,14 +869,14 @@ friso4i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso4i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso4i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso4');
 certos2im.push(friso4i);} else {errados.push('friso4'); erradosim.push(friso4i)};
 
 
  friso4i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso4i.draggable(false);
                
@@ -900,13 +910,13 @@ certos2im.push(friso4i);} else {errados.push('friso4'); erradosim.push(friso4i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso4i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso4i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso4');certos3im.push(friso4i);} else
  {errados.push('friso4'); erradosim.push(friso4i)};
 
 friso4i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso4i.draggable(false);
                
@@ -959,8 +969,8 @@ friso4i.position({
           x: frisospos[4][0],
               y: frisospos[4][1],
           image: friso5,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso5.width*friso5.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso5.width*friso5.height,
              draggable: true
         });
 
@@ -983,13 +993,13 @@ friso4i.position({
 			  var posx=(0.41)
 			
 			
-if(isNearPos(friso5i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso5i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso5');certos1im.push(friso5i)} else {
 errados.push('friso5'); erradosim.push(friso5i)};
 
 friso5i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso5i.draggable(false);
@@ -1025,14 +1035,14 @@ friso5i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso5i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso5i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso5');
 certos2im.push(friso5i);} else {errados.push('friso5'); erradosim.push(friso5i)};
 
 
  friso5i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso5i.draggable(false);
                
@@ -1066,13 +1076,13 @@ certos2im.push(friso5i);} else {errados.push('friso5'); erradosim.push(friso5i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso5i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso5i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso5');certos3im.push(friso5i);} else
  {errados.push('friso5'); erradosim.push(friso5i)};
 
 friso5i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso5i.draggable(false);
                
@@ -1125,8 +1135,8 @@ friso5i.position({
           x: frisospos[5][0],
               y: frisospos[5][1],
           image: friso6,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso6.width*friso6.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso6.width*friso6.height,
              draggable: true
         });
 
@@ -1149,13 +1159,13 @@ friso5i.position({
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso6i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso6i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso6');certos1im.push(friso6i)} else {
 errados.push('friso6'); erradosim.push(friso6i)};
 
 friso6i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso6i.draggable(false);
@@ -1191,14 +1201,14 @@ friso6i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso6i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso6i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso6');
 certos2im.push(friso6i);} else {errados.push('friso6'); erradosim.push(friso6i)};
 
 
  friso6i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso6i.draggable(false);
                
@@ -1232,13 +1242,13 @@ certos2im.push(friso6i);} else {errados.push('friso6'); erradosim.push(friso6i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso6i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso6i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso6');certos3im.push(friso6i);} else
  {errados.push('friso6'); erradosim.push(friso6i)};
 
 friso6i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso6i.draggable(false);
                
@@ -1291,8 +1301,8 @@ friso6i.position({
           x: frisospos[6][0],
               y: frisospos[6][1],
           image: friso7,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso7.width*friso7.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso7.width*friso7.height,
              draggable: true
         });
 
@@ -1315,13 +1325,13 @@ friso6i.position({
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso7i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso7i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso7');certos1im.push(friso7i)} else {
 errados.push('friso7'); erradosim.push(friso7i)};
 
 friso7i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso7i.draggable(false);
@@ -1357,14 +1367,14 @@ friso7i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso7i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso7i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso7');
 certos2im.push(friso7i);} else {errados.push('friso7'); erradosim.push(friso7i)};
 
 
  friso7i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso7i.draggable(false);
                
@@ -1398,13 +1408,13 @@ certos2im.push(friso7i);} else {errados.push('friso7'); erradosim.push(friso7i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso7i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso7i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso7');certos3im.push(friso7i);} else
  {errados.push('friso7'); erradosim.push(friso7i)};
 
 friso7i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso7i.draggable(false);
                
@@ -1458,8 +1468,8 @@ friso7i.position({
           x: frisospos[7][0],
               y: frisospos[7][1],
           image: friso8,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso8.width*friso8.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso8.width*friso8.height,
              draggable: true
         });
 
@@ -1482,13 +1492,13 @@ friso7i.position({
 			  var posx=(0.74)
 			
 			
-if(isNearPos(friso8i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso8i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso8');certos1im.push(friso8i)} else {
 errados.push('friso8'); erradosim.push(friso8i)};
 
 friso8i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso8i.draggable(false);
@@ -1524,14 +1534,14 @@ friso8i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso8i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso8i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso8');
 certos2im.push(friso8i);} else {errados.push('friso8'); erradosim.push(friso8i)};
 
 
  friso8i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso8i.draggable(false);
                
@@ -1565,13 +1575,13 @@ certos2im.push(friso8i);} else {errados.push('friso8'); erradosim.push(friso8i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso8i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso8i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso8');certos3im.push(friso8i);} else
  {errados.push('friso8'); erradosim.push(friso8i)};
 
 friso8i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso8i.draggable(false);
                
@@ -1625,8 +1635,8 @@ friso8i.position({
           x: frisospos[8][0],
               y: frisospos[8][1],
           image: friso9,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso9.width*friso9.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso9.width*friso9.height,
              draggable: true
         });
 
@@ -1649,13 +1659,13 @@ friso8i.position({
 			  var posx=(0.41)
 			
 			
-if(isNearPos(friso9i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso9i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso9');certos1im.push(friso9i)} else {
 errados.push('friso9'); erradosim.push(friso9i)};
 
 friso9i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso9i.draggable(false);
@@ -1691,14 +1701,14 @@ friso9i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso9i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso9i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso9');
 certos2im.push(friso9i);} else {errados.push('friso9'); erradosim.push(friso9i)};
 
 
  friso9i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso9i.draggable(false);
                
@@ -1732,13 +1742,13 @@ certos2im.push(friso9i);} else {errados.push('friso9'); erradosim.push(friso9i)}
                 
               }  else 
 			  
-			  { if(isNearPos(friso9i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso9i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso9');certos3im.push(friso9i);} else
  {errados.push('friso9'); erradosim.push(friso9i)};
 
 friso9i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso9i.draggable(false);
                
@@ -1791,8 +1801,8 @@ friso9i.position({
           x: frisospos[9][0],
               y: frisospos[9][1],
           image: friso10,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso10.width*friso10.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso10.width*friso10.height,
              draggable: true
         });
 
@@ -1815,13 +1825,13 @@ friso9i.position({
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso10i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso10i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso10');certos1im.push(friso10i)} else {
 errados.push('friso10'); erradosim.push(friso10i)};
 
 friso10i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso10i.draggable(false);
@@ -1857,14 +1867,14 @@ friso10i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso10i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso10i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso10');
 certos2im.push(friso10i);} else {errados.push('friso10'); erradosim.push(friso10i)};
 
 
  friso10i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso10i.draggable(false);
                
@@ -1898,13 +1908,13 @@ certos2im.push(friso10i);} else {errados.push('friso10'); erradosim.push(friso10
                 
               }  else 
 			  
-			  { if(isNearPos(friso10i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso10i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso10');certos3im.push(friso10i);} else
  {errados.push('friso10'); erradosim.push(friso10i)};
 
 friso10i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso10i.draggable(false);
                
@@ -1957,8 +1967,8 @@ friso10i.position({
           x: frisospos[10][0],
               y: frisospos[10][1],
           image: friso11,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso11.width*friso11.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso11.width*friso11.height,
              draggable: true
         });
 
@@ -1981,13 +1991,13 @@ friso10i.position({
 			  var posx=(0.08)
 			
 			
-if(isNearPos(friso11i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso11i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso11');certos1im.push(friso11i)} else {
 errados.push('friso11'); erradosim.push(friso11i)};
 
 friso11i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso11i.draggable(false);
@@ -2023,14 +2033,14 @@ friso11i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso11i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso11i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso11');
 certos2im.push(friso11i);} else {errados.push('friso11'); erradosim.push(friso11i)};
 
 
  friso11i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso11i.draggable(false);
                
@@ -2064,13 +2074,13 @@ certos2im.push(friso11i);} else {errados.push('friso11'); erradosim.push(friso11
                 
               }  else 
 			  
-			  { if(isNearPos(friso11i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso11i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso11');certos3im.push(friso11i);} else
  {errados.push('friso11'); erradosim.push(friso11i)};
 
 friso11i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso11i.draggable(false);
                
@@ -2124,8 +2134,8 @@ friso11i.position({
           x: frisospos[11][0],
               y: frisospos[11][1],
           image: friso12,
-           width: window.innerWidth/7.5,
-			  height: (window.innerWidth/7.5)/friso12.width*friso12.height,
+           width: width/7.5,
+			  height: (width/7.5)/friso12.width*friso12.height,
              draggable: true
         });
 
@@ -2148,13 +2158,13 @@ friso11i.position({
 			  var posx=(0.74)
 			
 			
-if(isNearPos(friso12i, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+if(isNearPos(friso12i, 0.102* width,0.48*height)) 
 {ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso12');certos1im.push(friso12i)} else {
 errados.push('friso12'); erradosim.push(friso12i)};
 
 friso12i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
 				  
                 });
 				friso12i.draggable(false);
@@ -2190,14 +2200,14 @@ friso12i.position({
 			 
 			  else
 			  
-			  { if(isNearPos(friso12i, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso12i, 0.435* width,0.48*height)) 
 {ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso12');
 certos2im.push(friso12i);} else {errados.push('friso12'); erradosim.push(friso12i)};
 
 
  friso12i.position({
-                  x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
   });
   friso12i.draggable(false);
                
@@ -2231,13 +2241,13 @@ certos2im.push(friso12i);} else {errados.push('friso12'); erradosim.push(friso12
                 
               }  else 
 			  
-			  { if(isNearPos(friso12i, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+			  { if(isNearPos(friso12i, 0.76* width,0.48*height)) 
 {ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso12');certos3im.push(friso12i);} else
  {errados.push('friso12'); erradosim.push(friso12i)};
 
 friso12i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
   });
                 friso12i.draggable(false);
                
@@ -2299,11 +2309,11 @@ friso12i.position({
 var saco1 = new Image();
       saco1.onload = function () {
         var saco1i = new Konva.Image({
-        x: 0.05* window.innerWidth,
-              y: 0.99*window.innerHeight-window.innerWidth/4*1.2,
+        x: 0.05* width,
+              y: 0.99*height-width/4*1.2,
           image: saco1,
-           width: 1.2*window.innerWidth/5,
-			  height: 1.2*(window.innerWidth/5)/saco1.width*saco1.height,
+           width: 1.2*width/5,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
              draggable: false
         });
 
@@ -2318,11 +2328,11 @@ var saco1 = new Image();
 var saco2 = new Image();
       saco2.onload = function () {
         var saco2i = new Konva.Image({
-        x: 0.38* window.innerWidth,
-              y: 0.99*window.innerHeight-window.innerWidth/4*1.2,
+        x: 0.38* width,
+              y: 0.99*height-width/4*1.2,
           image: saco2,
-           width: window.innerWidth/5*1.2,
-			  height: 1.2*(window.innerWidth/5)/saco1.width*saco1.height,
+           width: width/5*1.2,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
              draggable: false
         });
 
@@ -2338,11 +2348,11 @@ var saco2 = new Image();
 var saco3 = new Image();
       saco3.onload = function () {
         var saco3i = new Konva.Image({
-        x: 0.71* window.innerWidth,
-              y: 0.99*window.innerHeight-window.innerWidth/4*1.2,
+        x: 0.71* width,
+              y: 0.99*height-width/4*1.2,
           image: saco3,
-           width: 1.2*window.innerWidth/5,
-			  height: 1.2*(window.innerWidth/5)/saco1.width*saco1.height,
+           width: 1.2*width/5,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
              draggable: false
         });
 
@@ -2371,8 +2381,8 @@ function corrigir() {
                 friso1i.draggable(true);
                } else 
 			   if(certos2.indexOf('friso1')!=-1) {friso1i.position({
-                   x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos2.indexOf('friso1')+1)*window.innerWidth/22
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso1')+1)*width/22
 
   });
                 friso1i.draggable(false);
@@ -2385,8 +2395,8 @@ function corrigir() {
                 friso2i.draggable(true);
                } else 
 			   if(certos1.indexOf('friso2')!=-1) {friso2i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso2')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso2')+1)*width/22
 
   });
                 friso2i.draggable(false);
@@ -2399,8 +2409,8 @@ function corrigir() {
                 friso3i.draggable(true);
                }else 
 			   if(certos1.indexOf('friso3')!=-1) {friso3i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso3')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso3')+1)*width/22
 
   });
                 friso3i.draggable(false);
@@ -2413,8 +2423,8 @@ function corrigir() {
                 friso4i.draggable(true);
                }else 
 			   if(certos3.indexOf('friso4')!=-1) {friso4i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos3.indexOf('friso4')+1)*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso4')+1)*width/22
 
   });
                 friso4i.draggable(false);
@@ -2427,8 +2437,8 @@ function corrigir() {
                 friso5i.draggable(true);
                }else 
 			   if(certos2.indexOf('friso5')!=-1) {friso5i.position({
-                   x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos2.indexOf('friso5')+1)*window.innerWidth/22
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso5')+1)*width/22
 
   });
                 friso5i.draggable(false);
@@ -2441,8 +2451,8 @@ function corrigir() {
                 friso6i.draggable(true);
                }else 
 			   if(certos1.indexOf('friso6')!=-1) {friso6i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso6')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso6')+1)*width/22
 
   });
                 friso6i.draggable(false);
@@ -2456,8 +2466,8 @@ function corrigir() {
                 friso7i.draggable(true);
                }else 
 			   if(certos1.indexOf('friso7')!=-1) {friso7i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso7')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso7')+1)*width/22
 
   });
                 friso7i.draggable(false);
@@ -2470,8 +2480,8 @@ function corrigir() {
                 friso8i.draggable(true);
                }else 
 			   if(certos3.indexOf('friso8')!=-1) {friso8i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos3.indexOf('friso8')+1)*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso8')+1)*width/22
 
   });
                 friso8i.draggable(false);
@@ -2484,8 +2494,8 @@ function corrigir() {
                 friso9i.draggable(true);
                }else 
 			   if(certos2.indexOf('friso9')!=-1) {friso9i.position({
-                   x: 0.435* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos2.indexOf('friso9')+1)*window.innerWidth/22
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso9')+1)*width/22
 
   });
                 friso9i.draggable(false);
@@ -2498,8 +2508,8 @@ function corrigir() {
                 friso10i.draggable(true);
                }else 
 			   if(certos1.indexOf('friso10')!=-1) {friso10i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso10')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso10')+1)*width/22
 
   });
                 friso10i.draggable(false);
@@ -2512,8 +2522,8 @@ function corrigir() {
                 friso11i.draggable(true);
                }else 
 			   if(certos1.indexOf('friso11')!=-1) {friso11i.position({
-                  x: 0.102* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos1.indexOf('friso11')+1)*window.innerWidth/22
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso11')+1)*width/22
 
   });
                 friso11i.draggable(false);
@@ -2526,8 +2536,8 @@ function corrigir() {
                 friso12i.draggable(true);
                }else 
 			   if(certos3.indexOf('friso12')!=-1) {friso12i.position({
-                  x: 0.76* window.innerWidth,
-                  y: 0.99*window.innerHeight-window.innerWidth/60-(certos3.indexOf('friso12')+1)*window.innerWidth/22
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso12')+1)*width/22
 
   });
                 friso12i.draggable(false);
@@ -2808,8 +2818,8 @@ animal.position({
 		
 	*/	
 
-
-              stage.add(animalLayer);
+  
+        stage.add(animalLayer);
 	  stage.add(textLayer);
     	
 
@@ -2875,23 +2885,23 @@ animal.position({
 		
         
 			black1: {
-            x: 0.05* window.innerWidth,
-          y: 0.99*window.innerHeight-window.innerWidth/4*1.2
+            x: 0.05* width,
+          y: 0.99*height-width/4*1.2
 			
           },
 		  
 		
 		  		  black2: {
-            x: 0.38* window.innerWidth,
-          y: 0.99*window.innerHeight-window.innerWidth/4*1.2
+            x: 0.38* width,
+          y: 0.99*height-width/4*1.2
 			
           },
 		  
 
 		  
 		    black3: {
-            x: 0.71* window.innerWidth,
-          y:0.99*window.innerHeight-window.innerWidth/4*1.2
+            x: 0.71* width,
+          y:0.99*height-width/4*1.2
 			
           },
 			
@@ -2930,9 +2940,7 @@ im12_black: {x: posxx[11], y: posyy[11]} 	,
       }
 	    
 	 
-	   
-	
-
+	  
 
    
 

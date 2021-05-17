@@ -2,13 +2,13 @@
 <html lang="pt">
 <head>
 
-<title>Poliedros convexos</title>
+<title id="barra">Poliedros convexos</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePoli_style.css">
 
 <body>
     <div class="wideBox">
-      <h1 id="titulo">Escolhe os 2 poliedros com eixos de simetria</h1>
+      <h1 id="titulo"></h1>
     </div>
     <div align="center" class="buttons">
         <table>
@@ -384,14 +384,29 @@
     function setLanguage(){
         //console.log(lang);
         if(lang=="en"){
-            console.log(lang);
-            document.getElementById('titulo').textContent="Choose "+n_certos+" convex polyhedra";
+            document.getElementById('barra').textContent="Convex polyhedra";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" convex polyhedra";
             document.getElementById('sucessText').textContent="Very well!";
             document.getElementById('errorText').textContent="You haven't yet discovered all the convex polyhedra";
             document.getElementById('errorText2').textContent="Try again!";
             document.getElementById('finalText').textContent="End of the game!";
+        }else if(lang=="it"){
+            document.getElementById('barra').textContent="Poliedri convessi";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" convex polyhedra";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora trovato tutti i poliedri convessi";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            document.getElementById('barra').textContent="Konvexe Polyeder";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" convex polyhedra";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle konvexen Polyeder entdeckt";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
         }else{
-            document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros convexos";
+            document.getElementById('barra').textContent="Poliedros convexos";
+            //document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros convexos";
             document.getElementById('sucessText').textContent="Muito bem!";
             document.getElementById('errorText').textContent="Ainda não descobriste todas os poliedros convexos.";
             document.getElementById('errorText2').textContent="Volta a tentar.";

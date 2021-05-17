@@ -3,20 +3,22 @@ actions:
     src: logi-bg32.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
-    text: Este é o mapa das ruas da Cidade Logi. 
+    text: Este é o mapa das ruas da Cidade Logi.
   - type: background
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
   - type: sceneText
-    text: Todas as ruas têm nomes de matemáticos famoso de todo o mundo.
+    text: Todas as ruas têm nomes de matemáticos famoso de todo o mundo. 
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 13%; top: 55%; right: 87%;"
+    parallax: back2
   - type: image
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 12%; top: 54%; right: 36%;"
+    parallax: back3
   - type: sceneText
     text: Mathina e Leo seguiam pelas ruas da cidade Logi. A Mathina tinha o lápis à mão e o Leo estava com o seu boné verde.
   - type: image
@@ -28,22 +30,23 @@ actions:
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
   - type: sceneText
-    text: Foram até a Rua Hilbert em direção à esquina da Rua Péter.
+    text: Foram até a Rua Hilbert em direção à esquina da Rua Péter. 
   - type: image
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
   - type: image
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
   - type: sceneText
-    text: Viram um polícia correndo à frente deles. Estava quase sem fôlego.
+    text: Viram um polícia correndo à frente deles. Estava quase sem fôlego. 
   - type: dialog
     entries:
-      - text: Apanhem-no, por favor, apanhem-no! - gritou o polícia.
-        char: first policeman
-        mood: happy
+      - text: Apanhem-no, por favor, apanhem-no!
+        char: first_policeman
+        mood: normal
   - type: animation
     target: pm1
     vars:
@@ -62,13 +65,14 @@ actions:
     text: O Leo seguiu-o imediatamente, correndo o mais rapidamente que podia, mal tocando no chão com os pés.
   - type: dialog
     entries:
-      - text: Quem é que devemos apanhar? Onde?- perguntou a Mathina.
+      - text: Quem é que devemos apanhar? Onde?
         char: mathina
-        mood: sad
+        mood: surprised
   - type: image
     src: policeman-nr2.png
     id: policeman2
     style: "width: 18%; top: 20%; right: 30%;"
+    parallax: back2
   - type: image
     src: pm-icon-2.png
     id: pm2
@@ -85,11 +89,13 @@ actions:
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
   - type: dialog
     entries:
-      - text: Um  ladrão, um ladrão roubou todos os números pares desta cidade! - disse ele, ofegante.
-        char: second policeman
-        mood: sad
+      - text: Um  ladrão, um ladrão roubou todos os números pares desta cidade! 
+        char: second_policeman
+        exposition: O polícia estava ofegante.
+        mood: serious
   - type: animation
     target: leo-i2
     vars:
@@ -102,9 +108,9 @@ actions:
   - type: clearImage
     id: policeman1-t
   - type: sceneText
-    text: O Leo já tinha chegado à esquina e rapidamente desapareceu na Rua Péter.
+    text: O Leo já tinha chegado à esquina e rapidamente desapareceu na Rua Péter. 
   - type: sceneText
-    text: Mathina tirou algumas sacolas do ombro do polícia para acelerar a perseguição.
+    text: A Mathina tirou algumas sacolas do ombro do polícia para acelerar a perseguição. 
   - type: animation
     target: pm2
     vars:
@@ -120,7 +126,7 @@ actions:
       yPercent: 400
       ease: power3.out
   - type: sceneText
-    text: Quando chegaram à esquina da Rua Hilbert-Péter, viram que o Leo estava a apenas a alguns metros de distância do ladrão.
+    text: Quando chegaram à esquina da Rua Hilbert-Péter, viram que o Leo estava a apenas a alguns metros de distância do ladrão. 
   - type: animation
     target: leo-i2
     vars:
@@ -129,7 +135,7 @@ actions:
       yPercent: 330
       ease: power3.out
   - type: sceneText
-    text: O rapaz deu um passo em frente, estendeu a mão para o homem e quase agarrou a placa do dígito 4. 
+    text: O rapaz deu um passo em frente, estendeu a mão para o homem e quase agarrou a placa do dígito 4.  
   - type: animation
     target: thief-i
     vars:
@@ -147,6 +153,7 @@ actions:
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
   - type: sceneText
     text: O Leo não conseguiu reduzir a velocidade e deu por si a embater com o  primeiro polícia que vinha a correr da outra ponta da Rua Péter.
   - type: animation
@@ -158,9 +165,11 @@ actions:
       ease: power3.out
   - type: dialog
     entries:
-      - text: Deixe-me ajudá-lo - a Mathina estendeu a mão para o polícia caído no chão.
-        char: mathina
-        mood: sad
+      - text: Deixe-me ajudá-lo. 
+        char: Mathina
+        mood: talking
+  - type: sceneText
+    text: A Mathina estendeu a mão para o polícia caído no chão.
   - type: sceneText
     text: Mathina viu o Leo a entrar na Rua Gödel para apanhar o ladrão.
   - type: clearImage
@@ -176,18 +185,22 @@ actions:
       ease: power3.out
   - type: dialog
     entries:
-      - text: Volta, não tens nenhuma hipótese! - gritou o polícia, recompondo-se
-        char: First policeman
-        mood: sad
-      - text: Eu ajudo os outros polícias, vamos apanhá-lo juntos - gritou o Leo, voltando-se.
-        char: leo
-        mood: sad
-      - text: Não há mais polícias! Somos apenas nós os dois, um de cada lado da cidade! - os polícias entreolharam-se desesperados. 
-        char: First policeman
-        mood: sad
-      - text: O Leo parou imediatamente, sentindo-se arrasado. - O quê? Só vocês os dois?
-        char: leo
-        mood: sad
+      - text: Volta, não tens nenhuma hipótese!
+        char: first_policeman
+        mood: normal
+      - text: Eu ajudo os outros polícias, vamos apanhá-lo juntos!
+        char: Leo
+        mood: talking
+      - text: Não há mais polícias! Somos apenas nós os dois, um de cada lado da cidade!
+        char: first_policeman
+        mood: normal
+  - type: sceneText
+    text: Os polícias entreolharam-se desesperados. O Leo parou imediatamente, sentindo-se arrasado.
+  - type: dialog
+    entries:
+      - text: O quê? Só vocês os dois?
+        char: Leo
+        mood: surprised
   - type: sceneText
     text: Os polícias acenaram afirmativamente com a cabeça de forma tão veemente que até o Leo conseguiu vê-los ao longe.
   - type: animation
@@ -222,24 +235,25 @@ actions:
     text: Eles alcançaram o Leo, e, por fim, sentaram-se num café na Praça Russel, a praça central da cidade.
   - type: dialog
     entries:
-      - text: Como é que são só vocês os dois? - a Mathina estava confusa.
-        char: mathina
-        mood: sad
+      - text: Como é que são só vocês os dois?
+        char: Mathina
+        mood: surprised
       - text: O chefe da polícia da cidade Logi acha que dois polícias são mais do que suficientes. Todos os outros foram transferidos para a unidade de segurança cibernética.
-        char: Second policeman
-        mood: sad
-      - text: Claro que eu entendo que a maioria dos crimes é cometida no ciberespaço, mas não podemos suportar mais isto. Tentei convencê-lo, mas ele respondeu-me que não estamos a fazer o nosso trabalho suficientemente bem.
-        char: First policeman
-        mood: sad
-      - text: Não me parece que duas pessoas consigam supervisionar esta cidade - acrescentou o Leo, dando uma dentada no seu bolo Barcan-Marcus.
-        char: leo
-        mood: sad
-      - text: Sim, esse também foi o nosso argumento - respondeu o outro polícia - mas ele não acredita em nós.
-        char: First policeman
-        mood: sad
-      - text: Mostrem-nos o mapa da cidade, por favor. Estamos na cidade Logi, não estamos? Talvez o vosso chefe possa ser persuadido pelo poder da lógica - disse a Mathina. 
-        char: mathina
-        mood: sad
+        char: second_policeman
+        mood: serious
+      - text:  Claro que eu entendo que a maioria dos crimes é cometida no ciberespaço, mas não podemos suportar mais isto. Tentei convencê-lo, mas ele respondeu-me que não estamos a fazer o nosso trabalho suficientemente bem.
+        char: first_policeman
+        mood: normal
+      - text: Não me parece que duas pessoas consigam supervisionar esta cidade.
+        char: Leo
+        exposition: Acrescentou o Leo, dando uma dentada no seu bolo Barcan-Marcus.
+        mood: thinking
+      - text: Sim, esse também foi o nosso argumento, mas ele não acredita em nós.
+        char: first_policeman
+        mood: normal
+      - text: Mostrem-nos o mapa da cidade, por favor. Estamos na cidade Logi, não estamos? Talvez o vosso chefe possa ser persuadido pelo poder da lógica. 
+        char: Mathina
+        mood: talking
   - type: clearImage
     id: leo-i2
   - type: clearImage
@@ -256,82 +270,91 @@ actions:
   - type: sceneText
     text: A Mathina e o Leo ficaram perplexos ao ver a cidade representada num suporte tão desatualizado. Os polícias explicaram que isso demonstrava bem o quanto a polícia se afastou da realidade atual e que quase não recebe qualquer apoio. O equipamento lógico desatualizado ainda estava disponível, mas era totalmente inútil.
   - type: sceneText
-    text: Mathina observou detalhadamente o mapa.
+    text: A Mathina observou detalhadamente o mapa. 
   - type: dialog
     entries:
-      - text: Então, na verdade, a questão é a seguinte ... É possível colocar dois polícias na cidade de forma que eles possam vigiar todas as ruas, - pensou ela para si mesmo.
-        char: mathina
-        mood: sad
+      - text: Então, na verdade, a questão é a seguinte ... É possível colocar dois polícias na cidade de forma que eles possam vigiar todas as ruas.
+        char: Mathina
+        mood: thinking
   - type: game
     text: Ajuda a Mathina e o Leo a encontrarem um bom plano, movendo os 2 polícias no mapa.
-    toolbarText: o utilizador pode movimentar 2 polícias no mapa.
-    cta: dst
-    url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1
+    toolbarText: 
+    cta: Experimenta!
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
     entries:
-      - text: Claro, dois polícias não são suficientes! - exclamou a Mathina.
-        char: mathina
-        mood: sad
-      - text: Claro que sabemos que não são suficientes por experiência própria. Mas será que podia provar isso ao chefe, menina? - perguntou um dos polícias. A Mathina lançou-lhe um olhar assassino.
-        char: Second policeman
-        mood: sad
-      - text: Se nunca mais me chamar de menina, eu provarei. - o Leo riu-se e deu uma palmadinha no ombro da Mathina, enquanto um dos polícias concordava, quase a medo.
-        char: mathina
-        mood: sad
+      - text: Claro, dois polícias não são suficientes!
+        char: Mathina
+        mood: surprised
+      - text: Claro que sabemos que não são suficientes por experiência própria. Mas será que podia provar isso ao chefe, menina?
+        char: second_policeman
+        mood: serious
+      - text: Se nunca mais me chamar de menina, eu provarei. 
+        char: Mathina
+        mood: arguing
+  - type: sceneText
+    text: O Leo riu-se e deu uma palmadinha no ombro da Mathina, enquanto um dos polícias concordava, quase a medo.
+  - type: dialog
+    entries:
       - text: Então, olhem, aqui estão estas três ruas horizontais Euler, Hemachandra, Péter. São paralelas e não têm interseção. Agora, se o senhor controlar a primeira rua horizontal e o seu colega a segunda, de certeza que nenhum de vocês será capaz de inspecionar a terceira, porque não conseguem encontrar nenhum ponto na cidade onde possam ver duas ruas paralelas!
-        char: mathina
-        mood: sad
+        char: Mathina
+        mood: talking
   - type: sceneText
     text: Os polícias ficaram fascinados com o argumento da Mathina. Por experiência, sabiam que duas pessoas não eram suficientes, mas não conseguiam explicar isso de forma lógica.
   - type: dialog
     entries:
-      - text: Encontrei outra explicação! - vangloriou-se o Leo, enfiando um último pedaço de bolo na boca.
-        char: leo
-        mood: sad
-      - text: Diz-me, espertinho! - disse a Mathina, esperando que Leo referisse algo estúpido.
-        char: mathina
-        mood: sad
-      - text: Observem, senhores. Quantas ruas existem na cidade Logi? O senhor estava na Rua Hilbert, enquanto o seu colega estava na Rua Péter. O ladrão virou na Rua Gödel, nós viramos aqui, na Rua Hemachandra.
-        char: leo
-        mood: sad
-      - text: A Rua Barcan-Marcus é perpendicular a ela, enquanto a Rua Constance-Jones atravessa as duas. A Rua Ladd-Franklin é perpendicular a Constance-Jones e ainda há a Rua Euler na fronteira norte da cidade. São, ao todo, oito estradas ou ruas.
-        char: leo
-        mood: sad
+      - text: Encontrei outra explicação!
+        char: Leo
+        exposition: O Leo enfiou um último pedaço de bolo na boca.
+        mood: talking
+      - text: Diz-me, espertinho!
+        char: Mathina
+        exposition: A Mathina esperava que o Leo referisse algo estúpido.
+        mood: talking
+      - text: Observem, senhores. Quantas ruas existem na cidade Logi? O senhor estava na Rua Hilbert, enquanto o seu colega estava na Rua Péter. O ladrão virou na Rua Gödel, nós viramos aqui, na Rua Hemachandra. 
+        char: Leo
+        mood: arguing
+      - text: A Rua Barcan-Marcus é perpendicular a ela, enquanto a Rua Constance-Jones atravessa as duas. A Rua Ladd-Franklin é perpendicular a Constance-Jones e ainda há a Rua Euler na fronteira norte da cidade. São, ao todo, oito estradas ou ruas. 
+        char: Leo
+        mood: arguing
       - text: Agora, vamos verificar os cruzamentos. Qualquer que seja o cruzamento considerado, não há mais do que três estradas a cruzarem-se. Se encontrássemos dois cruzamentos com três estradas diferentes a cruzarem-se em cada um deles, mesmo assim vocês só poderiam supervisionar um máximo de seis ruas! Mas existem oito ruas na cidade!
-        char: leo
-        mood: sad
+        char: Leo
+        mood: arguing
   - type: sceneText
     text: A Mathina acenou com a cabeça. Ela sabia que o Leo não era parvo. O facto de, na grande maioria dos casos, ele agir antes de pensar, não significava que não fosse capaz de pensar.
   - type: dialog
     entries:
-      - text: Vocês os dois são fantásticos! - os polícias estavam maravilhados. - Podem dizer-nos quantos polícias são realmente no mínimo necessários? Seria bom abordar o Chefe da Polícia com uma proposta concreta.
-        char: First policeman
-        mood: sad
-      - text: Se não são dois, então são três! - anunciou Leo.
-        char: leo
-        mood: sad
-      - text: Não podemos dizer isso ainda - disse a Mathina. - Pelo menos três. - Se encontrarmos um bom plano em que três polícias fiscalizem todas as ruas, então três serão realmente suficientes.
-        char: mathina
-        mood: sad
+      - text: Vocês os dois são fantásticos! Podem dizer-nos quantos polícias são realmente no mínimo necessários? Seria bom abordar o Chefe da Polícia com uma proposta concreta.
+        char: first_policeman
+        mood: normal
+      - text: Se não são dois, então são três!
+        char: Leo
+        mood: happy
+      - text: Não podemos dizer isso ainda. Pelo menos três. Se encontrarmos um bom plano em que três polícias fiscalizem todas as ruas, então três serão realmente suficientes.
+        char: Mathina
+        mood: talking
   - type: image
     src: sugarcube1.png
     id: sugar1
     style: "width: 8%; top: 14%; right: 90%;"
+    parallax: back2
   - type: image
     src: sugarcube2.png
     id: sugar2
     style: "width: 8%; top: 4%; right: 89%;"
+    parallax: back2
   - type: image
     src: sugarcube3.png
     id: sugar3
     style: "width: 9.5%; top: 9%; right: 82%;"
+    parallax: back2
   - type: sceneText
-    text: A Mathina e o Leo retiraram os cubos de açúcar dos pires das chávenas de café dos polícias e iniciaram uma experiência.
+    text: A Mathina e o Leo retiraram os cubos de açúcar dos pires das chávenas de café dos polícias e iniciaram uma experiência. 
   - type: game
-    text: Ajuda a Mathina e o Leo a encontrarem um bom plano, colocando cubos de açúcar no mapa.
+    text: Ajuda a Mathina e o Leo a encontrarem um bom plano, colocando cubos de açúcar no mapa. 
     toolbarText: O utilizador pode mover cubos de açúcar no mapa.
-    cta: dst
-    url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=1
+    cta: Experimenta!
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
     vars:
@@ -378,9 +401,9 @@ actions:
       ease: power3.out
   - type: dialog
     entries:
-      - text: Com cabeça, por favor! - ordenou a Mathina. - Lembram-se? Devemos começar pelas três ruas paralelas.
-        char: mathina
-        mood: sad
+      - text: Com cabeça, por favor! Lembram-se? Devemos começar pelas três ruas paralelas.
+        char: Mathina
+        mood: arguing
   - type: animation
     target: sugar1
     vars:
@@ -427,16 +450,16 @@ actions:
       ease: power3.out
   - type: dialog
     entries:
-      - text: Já entendi! - gritou o Leo, mostrando o mapa aos polícias.
-        char: leo
-        mood: sad
+      - text: Já entendi! 
+        char: Leo
+        mood: happy
   - type: sceneText
-    text: Eles olharam, por um ou dois segundos, para a disposição apresentada e acenaram apreciativamente com a cabeça.
+    text: O Leo mostrou o mapa aos polícias. Eles olharam, por um ou dois segundos, para a disposição apresentada e acenaram apreciativamente com a cabeça.
   - type: dialog
     entries:
-      - text: Isso é muito convincente, muito e muito obrigado - os polícias estavam muito gratos.
-        char: First policeman
-        mood: sad
+      - text: Isso é muito convincente, muito e muito obrigado!
+        char: first_policeman
+        mood: normal
   - type: clearImage
     id: sugar1
   - type: clearImage
@@ -468,6 +491,7 @@ actions:
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
   - type: image
     src: thief-icon.png
     id: thief-i
@@ -480,18 +504,18 @@ actions:
     id: thief
   - type: dialog
     entries:
-      - text: Ora bolas, não devíamos estar aqui sentados, enquanto há ladrões a correr pela cidade Logi! - afirmou um polícia.
-        char: Second policeman
-        mood: sad
+      - text: Ora bolas, não devíamos estar aqui sentados, enquanto há ladrões a correr pela cidade Logi!
+        char: second_policeman
+        mood: serious
   - type: dialog
     entries:
-      - text: Às vezes é melhor sentar e pensar, acreditem - disse a Mathina, piscando-lhes o olho.
-        char: mathina
-        mood: sad
+      - text: Às vezes é melhor sentar e pensar, acreditem.
+        char: Mathina
+        mood: happy
   - type: sceneText
     text: Os polícias decidiram falar imediatamente com o Chefe da Polícia para o informar das suas descobertas. A Mathina e o Leo entretanto partiram para continuar a sua exploração da cidade Logi.
   - type: game
-    text: Gostaste da app? Continua a jogar com outros mapas.
+    text: Gostaste da app? Continua a jogar com outros mapas..
     toolbarText: 
-    cta: 
-    url: http://www.rimosco.it/ew/LC_S3_CatsDogs/index.htm?v=3
+    cta: Clica aqui!
+    url: /apps/logi-3-app/logi-3-app.htm?v=3

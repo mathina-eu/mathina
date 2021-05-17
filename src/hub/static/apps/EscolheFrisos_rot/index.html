@@ -9,7 +9,7 @@
 
 <body>
     <div class="wideBox">
-      <h1 id="titulo">Escolhe os 3 frisos com simetria de rotação</h1>
+      <h1 id="titulo"></h1>
     </div>
     <div align="center" class="buttons">
         <table>
@@ -103,14 +103,30 @@
         if(lang=="en"){
             //console.log(lang);
             document.getElementById('titBarra').textContent="Choose friezes with rotation symmetry";
-            document.getElementById('titulo').textContent="Choose "+jogada_certos+" friezes with rotation symmetry";
+            //document.getElementById('titulo').textContent="Choose "+jogada_certos+" friezes with rotation symmetry";
             document.getElementById('sucessText').textContent="Very well!";
             document.getElementById('errorText').textContent="You haven't yet discovered all the friezes with rotation symmetry";
             document.getElementById('errorText2').textContent="Try again!";
             document.getElementById('finalText').textContent="End of the game!";
+        }else if(lang=="it"){
+            //console.log(lang);
+            document.getElementById('titBarra').textContent="Scegli fregi con simmetrie rotazionali";
+            //document.getElementById('titulo').textContent="Choose "+jogada_certos+" friezes with rotation symmetry";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora trovato tutti i fregi con simmetrie rotazionali";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            //console.log(lang);
+            document.getElementById('titBarra').textContent="Wähle Friesen mit Rotationssymmetrie";
+            //document.getElementById('titulo').textContent="Choose "+jogada_certos+" friezes with rotation symmetry";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle Friesen mit Rotationssymmetrie entdeckt";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
         }else{
             document.getElementById('titBarra').textContent="Escolhe frisos com simetria de rotação";
-            document.getElementById('titulo').textContent="Escolhe os "+jogada_certos+" frisos com simetria de rotação";
+            //document.getElementById('titulo').textContent="Escolhe os "+jogada_certos+" frisos com simetria de rotação";
             document.getElementById('sucessText').textContent="Muito bem!";
             document.getElementById('errorText').textContent="Ainda não descobriste todos os frisos com simetria de rotação.";
             document.getElementById('errorText2').textContent="Volta a tentar.";
