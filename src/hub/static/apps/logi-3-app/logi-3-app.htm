@@ -220,9 +220,16 @@
 
             window.dimension = [width, height];
 
-            CanvasMathina.width = dimension[0];
+			CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
+			ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
+			ctxMathina.scale(ScalaCalcolata,ScalaCalcolata);
+			
+			if (typeof(SogliaPuntiCoincidenti) !== 'undefined') {
+				DisegnaSegmenti();
+				DisegnaPolizia();
+			}
         }
 
         function Reset() {
