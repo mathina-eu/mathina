@@ -533,7 +533,7 @@ actions:
       <p> Che strana lingua... Mathina sembrava confusa.</p>
   - type: dialog
     entries:
-      - text: "Sono confusa... “O-P” ha due lettere, proprio come “no”, ma capisco perché il pappagallo parli così! Non ne ho idea. Forse è solo un codice strampalato."
+      - text: "Sono confusa... “O-P” ha due lettere, proprio come “no”.. non capisco perché il pappagallo parli così! Non ne ho idea. Forse è solo un codice strampalato."
         char: mathina
         mood: normal
   - type: dialog
@@ -602,7 +602,7 @@ actions:
       - text: "... lo faccio solo all'indietro, giusto? Cerco la lettera che voglio tradurre nel cerchio esterno, quindi trovo la lettera corrispondente in quello interno."
         char: mathina
         mood: happy
-      - text: " Come se vedessi che la lettera J va alla lettera I, e se continuo a cercare T va in S. Quindi... TJ è SI!"
+      - text: "Ad esempio, la lettera T nel cerchio esterno corrisponde alla lettera S in quello interno, e se cerco la J... corrisponde alla I! Quindi TJ è SI!"
         char: mathina
         mood: happy
       - text: "Bravissima - esclamò Angela. Vuoi provare a tradurre qualche altra frase?"
@@ -611,17 +611,16 @@ actions:
       - text: "Sì grazie! Proviamo!"
         char: mathina
         mood: happy
-      - text: "Ricorda, spostati dal cerchio esterno a quello interno per decifrare."
+      - text: "Ricorda, spostati dal cerchio interno a quello esterno per cifrare."
         char: angela
         mood: normal
-
+	
   - type: game
-    text: "Ricorda: per decifrare devi partire dal cerchio esterno."
-    toolbarText: "Seleziona la parola corretta."
+    text: "Codifica correttamente la parola."
+    toolbarText: "Codifica la parola. Ricorda, spostati dal cerchio interno a quello esterno per cifrare"
     cta: "Provaci tu!"
     tag: app1
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=2
-
 
   - type: sceneText
     text: >

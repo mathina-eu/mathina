@@ -25,6 +25,10 @@
         font-family: sans-serif;
         text-align: center;
     }
+	
+	body {
+		overflow:hidden;
+	}
 
 .break {
   flex-basis: 100%;
@@ -102,22 +106,22 @@
 
     #Div1 {
         top: 10%;
-		right: 5%;
+		
     }
 
     #Div2 {
         top: 50%;
-		right: 5%;
+		
     }
 
     #Div3 {
         top: 10%;
-		left: 5%;
+		
     }
 
     #Div4 {
         top: 50%;
-		left: 5%;
+		
     }
 
 
@@ -206,8 +210,8 @@ background-repeat: no-repeat;
         Traduzioni=[
 [["messaggio"],"Select the right message","Trova il messaggio corretto","Seleciona a mensagem certa","W&auml;hle die richtige Botschaft"],
 [["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.","Chave: o c&eacute;u est&aacute; cheio deles.","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
-[["Testo1"],"We made a great discovery! See you in two Mondays at the ice cream shop.","Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.","Fizemos uma grande descoberta! Vejo-vos numa segunda-feira, daqui a duas semanas na gelataria.","Wir haben eine gro&szlig;artige Entdeckung gemacht! Wir treffen uns in zwei Montagen in der Eisdiele."],
-[["Testo2"],"We found the treasure map! See you in two Mondays the park.","Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.","Encontr&aacute;mos o mapa do tesouro! Vejo-vos numa segunda-feira, daqui a a duas semanas no parque.","Wir haben die Schatzkarte gefunden! Wir treffen uns in zwei Montagen im Park."],
+[["Testo2"],"We made a great discovery! See you in two Mondays at the ice cream shop.","Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.","Fizemos uma grande descoberta! Vejo-vos numa segunda-feira, daqui a duas semanas na gelataria.","Wir haben eine gro&szlig;artige Entdeckung gemacht! Wir treffen uns in zwei Montagen in der Eisdiele."],
+[["Testo1"],"We found the treasure map! See you in two Mondays the park.","Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.","Encontr&aacute;mos o mapa do tesouro! Vejo-vos numa segunda-feira, daqui a a duas semanas no parque.","Wir haben die Schatzkarte gefunden! Wir treffen uns in zwei Montagen im Park."],
 [["Testo3"],"Let's meet in two Tuesdays at the park to share the pirate treasure.","Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.","Vamo-nos encontrar numa ter&ccedil;a-feira, daqui a duas semanas no parque para partilharmos o tesouro dos piratas.","Wir treffen uns in zwei Dienstagen im Park, um den Schatz zu teilen."],
 [["Testo4"],"We found a talking parrot: let's meet at our house in two Tuesdays.","Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.","Encontr&aacute;mos um papagaio falante: vamo-nos encontrar em nossa casa numa ter&ccedil;a-feira, daqui a duas semanas.","Wir haben einen sprechenden Papagei entdeckt: Wir treffen uns in zwei Dienstagen bei uns zu Hause."],
 [["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
@@ -309,6 +313,13 @@ background-repeat: no-repeat;
                 pos2 = pos4 - MyPos.y;
                 pos3 = MyPos.x;
                 pos4 = MyPos.y;
+
+				
+				if (Number(elmnt.style.left.slice(0,-2))+DimDiv[0]>dimension[0]) elmnt.style.left = dimension[0]-DimDiv[0] + "px";
+				if (Number(elmnt.style.top.slice(0,-2))+DimDiv[1]>dimension[1]) elmnt.style.top = dimension[1]-DimDiv[1] + "px";
+				if (Number(elmnt.style.left.slice(0,-2))<0) elmnt.style.left = "0px";
+				if (Number(elmnt.style.top.slice(0,-2))<0) elmnt.style.top = "0px";
+				
                 // set the element's new position:
                 elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
@@ -340,11 +351,47 @@ background-repeat: no-repeat;
             if (DimContenitore.left < DimContenuto.left && DimContenitore.right > DimContenuto.right && DimContenitore.top < DimContenuto.top && DimContenitore.bottom > DimContenuto.bottom) return true;
             return false;
         }
+		
+		
+		function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
+function Scramble() {
+	var Ids=[1,2,3,4];
+	shuffle(Ids);
+	var Perc2=["10%","50%","10%","50%"];
+	var PercR=["right","right","left","left"];
+	for (let i=0;i<4;i++) {
+		document.getElementById("Div"+Ids[i]).style.right="";
+		document.getElementById("Div"+Ids[i]).style.left="";
+		document.getElementById("Div"+Ids[i]).style.top=Perc2[i];
+		document.getElementById("Div"+Ids[i]).style[PercR[i]]="5%";
+	}
+}
 
 
         function Init() {
 			window.addEventListener('resize', Resize, false);
             Vittoria = ["H1", "D3"];
+			
+			Scramble();
 
             Lingua = Number(gup('l', document.location.search));
 
@@ -408,6 +455,8 @@ function Resize() {
             window.dimension = [width, height];
 			document.getElementById('myCanvas').width=dimension[0]*98/100;
 			document.getElementById('myCanvas').height=dimension[1]*98/100;
+			
+			window.DimDiv=[dimension[0]*23/100,dimension[1]*26/100];
         }
 
 

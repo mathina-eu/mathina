@@ -1,0 +1,571 @@
+actions:
+  - type: background
+    src: logi-bg32.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Questa è la mappa che mostra come sono disposte le vie della Città della Logica. 
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Tutte le strade portano nomi di famosi matematici provenienti da tutto il mondo. 
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 13%; top: 55%; right: 87%;"
+    parallax: back2
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 12%; top: 54%; right: 36%;"
+    parallax: back3
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina e Leo stavano camminando per le strade della Città della Logica. Mathina teneva la sua matita a portata di mano e Leo indossava il suo berretto verde.
+  - type: image
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 45%; right: 83%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 29%; right: 87%;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Percorsero via Hilbert verso l'angolo con via Péter quando...
+  - type: image
+    src: policeman-nr1-turn.png
+    id: policeman1-t
+    style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 57%; right: 83%;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: ...videro un poliziotto correre verso di loro. Era quasi senza fiato. 
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Fermatelo! Per favore, fermatelo!
+        char: first_policeman
+        mood: normal
+  - type: animation
+    target: pm1
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 130
+      ease: power3.out
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 100
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo immediately followed him, running as fast as he could, barely touching the ground with his feet.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Chi dovremmo fermare, scusi?
+        char: mathina
+        mood: surprised
+  - type: image
+    src: policeman-nr2.png
+    id: policeman2
+    style: "width: 18%; top: 27%; right: 24%;"
+    parallax: back2
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 30%; right: 83%;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Un secondo poliziotto si stava fermando proprio accanto a lei per riprendere fiato.
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Il poliziotto portava un notevole assortimento di vecchi strumenti, tra cui un travestimento, un voltmetro a tubo e una livella. Questi, oltre a dare l'impressione di pesare parecchio, erano anche ingombranti e continuavano a scivolare dalle spalle dell'uomo.
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 75%; right: 55%;"
+  - type: image
+    src: thief.png
+    id: thief
+    style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Un ladro! Un ladro ha rubato tutti i numeri pari di questa città! 
+        char: second_policeman
+        exposition: Disse il poliziotto annaspando.
+        mood: serious
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      left: '360px'
+      top: '450px'
+      ease: power3.out
+  - type: clearImage
+    id: pm1
+  - type: clearImage
+    id: policeman1-t
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo era già arrivato all'angolo e rapidamente scomparve in via Péter. 
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina tolse un paio di borse dalla spalla del poliziotto per accelerare l'inseguimento.
+  - type: animation
+    style: "position: absolute; left: 620px; top: 5px;"
+    target: pm2
+    vars:
+      duration: 3
+      xPercent: 150
+      yPercent: 385
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 160
+      yPercent: 400
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Quando raggiunsero l'angolo tra via Hilbert e via Péter, videro che Leo era a pochi metri dal ladro. 
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      left: '400px'
+      top: '450px'
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Il ragazzo si fece avanti, allungò una mano verso l'uomo e quasi riuscì ad afferrare il gambo del numero "4". 
+  - type: animation
+    target: thief-i
+    vars:
+      duration: 1
+      xPercent: 80
+      yPercent: -190
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Ma il ladro improvvisamente svoltò a sinistra in via Gödel.
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 77%; right: 58%;"
+  - type: image
+    src: policeman-nr1-turn.png
+    id: policeman1-t
+    style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo non riuscì più a rallentare e si ritrovò a sbattere contro il primo poliziotto che correva dall'altra parte di via Péter.
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      left: '300px'
+      top: '200px'
+      ease: power3.out
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Lascia che ti dia una mano.
+        char: Mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina allungò la mano per dare una mano ad alzarsi al poliziotto.
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Intanto, con la coda dell'occhio, Mathina vide Leo già ripartire per via Gödel Street per rincorrere il ladro.
+  - type: clearImage
+    id: thief-i
+  - type: clearImage
+    id: thief
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      left: '530px'
+      top: '320px'
+      ease: power3.out
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Torna indietro! Così non possiamo farcela!
+        char: first_policeman
+        mood: normal
+      - text: Aiuterò altri poliziotti, gli daremo la caccia insieme!
+        char: Leo
+        mood: talking
+      - text: Non ci sono altri poliziotti! Siamo solo noi due, uno alle due estremità della città!
+        char: first_policeman
+        mood: normal
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: I poliziotti si guardarono disperati. Leo si fermò immediatamente. Era senza fiato.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Che cosa? Solo voi due?
+        char: Leo
+        mood: surprised
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: I poliziotti annuirono così enfaticamente che persino Leo riuscì a vederlo da lontano.
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      left: '200px'
+      top: '160px'
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      left: '165px'
+      top: '-10px'
+      ease: power3.out
+  - type: animation
+    target: pm2
+    vars:
+      duration: 3
+      left: '70px'
+      top: '-20px'
+      ease: power3.out
+  - type: animation
+    target: pm1
+    vars:
+      duration: 3
+      xPercent: -300
+      yPercent: -300
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Raggiunsero Leo e alla fine si sedettero in un caffè di piazza Russell, la piazza principale della città.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Perchè siete solo in due?
+        char: Mathina
+        mood: surprised
+      - text: Il capo della polizia della Città della Logica dice che due poliziotti sono più che sufficienti. Tutti gli altri sono stati trasferiti all'unità di sicurezza informatica.
+        char: second_policeman
+        mood: serious
+      - text: Ovviamente capisco che la maggior parte dei crimini vengono commessi nel cyberspazio, ma qui non possiamo più sopportarlo. Ho provato a convincerlo ma mi ha risposto che non stiamo facendo abbastanza bene il nostro lavoro.
+        char: first_policeman
+        mood: normal
+      - text: Non credo che due persone siano in grado di pattugliare questa città.
+        char: Leo
+        exposition: Disse Leo addentando la sua fetta di torta Barcan-Marcus.
+        mood: thinking
+      - text: La stessa cosa he abbiamo detto noi, ma non ci crede.
+        char: first_policeman
+        mood: normal
+      - text: Mostraci la mappa della città, per favore. Siamo alla Città della Logica, no? Forse il capo può essere persuaso dal potere della logica e del ragionamento. 
+        char: Mathina
+        mood: talking
+  - type: clearImage
+    id: leo-i2
+  - type: clearImage
+    id: mathina-i2
+  - type: clearImage
+    id: pm1
+  - type: clearImage
+    id: pm2
+  - type: background
+    src: logi-bg3-old.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Uno dei poliziotti tirò fuori dalla tasca un foglio giallastro e lo aprì.
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina e Leo erano perplessi nel vedere la città su un mezzo così antiquato. I poliziotti spiegarono che questo mostrava quanto la polizia si fosse allontanata dalla realtà fisica e che ricevessero a malapena alcun supporto. L'attrezzatura che avevano a disposizione era obsoleta e era completamente inutile.
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"    
+    text: Mathina guardò con attenzione la mappa. 
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Quindi, la domanda, in realtà, è la seguente... È possibile collocare due poliziotti in città in modo tale che siano in grado di sorvegliare tutte le strade?
+        char: Mathina
+        mood: thinking
+  - type: game
+    text: Prova ad aiutare Mathina a disporre i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città?
+    toolbarText: 
+    cta: Aiuta Mathina!
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Ma certo, due poliziotti non bastano!
+        char: Mathina
+        mood: surprised
+      - text: Ovviamente sappiamo che non è abbastanza. Lo sperimentiamo tutti i giorni! Ma potrebbe, per favore, dimostrarlo senza ombra di dubbio anche al capo, signorina?
+        char: second_policeman
+        mood: serious
+      - text: Se la smette di chiamarmi signorina, lo farò!
+        char: Mathina
+        mood: arguing
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo rise e diede una pacca sulla spalla di Mathina, mentre uno dei poliziotti annuì quasi spaventato.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: "Guardate queste tre vie orizzontali: Euler, Hemachandra e Péter. Sono parallele e non hanno intersezioni. Ora, se voi due state su due delle vie orizzontale, nessuno di voi sarà in grado di sorvegliare la terza! Questo, perché non riesci a trovare nessun punto in città da cui puoi vedere due strade parallele!"
+        char: Mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"    
+    text: I poliziotti erano affascinati dal ragionamento di Mathina. Per esperienza sapevano che due persone non erano abbastanza, eppure non erano riusciti a spiegarlo logicamente.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Ho un'altra spiegazione!
+        char: Leo
+        exposition: Disse Leo mentre si spingeva in bocca l'ultimo boccone di torta.
+        mood: talking
+      - text: Sentiamo un po', sapientone!
+        char: Mathina
+        exposition: Disse Mathina aspettandosi che Leo dicesse qualcosa stupido.
+        mood: talking
+      - text: Guardate, signori. Da quante strade è composta Logi-City? Uno di voi era in via Hilbert, mentre l'altro era in via Péter. Il ladro ha svoltato in via Gödel, mentre noi abbiamo voltato di qui, in via Hemachandra.
+        char: Leo
+        mood: arguing
+      - text: La via Barcan-Marcus è perpendicolare a quest'ultima, mentre via Constance-Jones li incrocia entrambi. La via Ladd-Franklin è perpendicolare alla via Constance-Jones e poi c'è ancora Corso Eulero al confine settentrionale della città. Abbiamo in totale otto strade.  
+        char: Leo
+        mood: arguing
+      - text: Ora, controlliamo gli incroci. Non ci sono mai più di tre strade che hanno un incrocio in comune. Se potessimo trovare due incroci con tre strade diverse che si incrociano, anche allora potresti sorvegliarne solo un massimo di sei! Ma ci sono otto strade in città!
+        char: Leo
+        mood: arguing
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina annuì. Sapeva che Leo non era così stupido come ogni tanto veniva da pensare. Il fatto era che nella stragrande maggioranza dei casi agiva prima di pensare... e questo non significa che uno non sia in grado di pensare.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
+    entries:
+      - text: Siete entrambi geniali! Ci può dire, per favore, di quanti poliziotti abbiamo effettivamente bisogno come minimo? Sarebbe bene rivolgersi al capo della polizia con una proposta concreta.
+        char: first_policeman
+        mood: normal
+      - text: Se due non bastano, perchè non tre?
+        char: Leo
+        mood: happy
+      - text: Non possiamo ancora dirlo. Sappiamo che ne servono almeno tre. Se troviamo un buon piano, in cui tre poliziotti pattugliano tutte le strade, allora tre saranno davvero sufficienti.
+        char: Mathina
+        mood: talking
+  - type: image
+    src: sugarcube1.png
+    id: sugar1
+    style: "width: 8%; top: 14%; right: 90%;"
+    parallax: back2
+  - type: image
+    src: sugarcube2.png
+    id: sugar2
+    style: "width: 8%; top: 4%; right: 89%;"
+    parallax: back2
+  - type: image
+    src: sugarcube3.png
+    id: sugar3
+    style: "width: 9.5%; top: 9%; right: 82%;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Mathina e Leo presero le zollette di zucchero dai piattini del caffè della polizia iniziarono a cercare un buon posizionamento.
+  - type: game
+    text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa. 
+    toolbarText: 
+    cta: Provaci!
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 185
+      yPercent: 130
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 270
+      yPercent: 480
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 450
+      yPercent: 250
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo stava semplicemente muovendo i cubi da un posto all'altro senza criterio.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      left: '-170px'
+      top: '-130px'
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      left: '-200px'
+      top: '-420px'
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      left: '-400px'
+      top: '-220px'
+      ease: power3.out
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Vuoi usare il cervello!? Non ti ricordi? Dobbiamo iniziare dalle tre strade parallele.
+        char: Mathina
+        mood: arguing
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      left: '160px'
+      top: '120px'
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      left: '100px'
+      top: '40px'
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      left: '-100px'
+      top: '-130px'
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina mise un cubo su ciascuna delle tre linee orizzontali e iniziò a avanti e indietro lungo le linee.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      left: '330px'
+      top: '120px'
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      left: '-150px'
+      top: '40px'
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      left: '-310px'
+      top: '-120px'
+      ease: power3.out
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Ce l'ho fatta! 
+        char: Leo
+        mood: happy
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Leo mostrò la mappa con sopra le zollette ai poliziotti. Si guardarono l'uno con l'altro per un secondo o due e annuirono con apprezzamento.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Questo è molto convincente! Grazie mille!
+        char: first_policeman
+        mood: normal
+  - type: clearImage
+    id: sugar1
+  - type: clearImage
+    id: sugar2
+  - type: clearImage
+    id: sugar3
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+  - type: image
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 40%; right: 77%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 35%; right: 75%;"
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 37%; right: 75%;"
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 42%; right: 74%;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina, Leo e i due poliziotti stavano per finire i loro caffè e le loro torte, quando improvvisamente ...
+  - type: image
+    src: thief.png
+    id: thief
+    style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 19%; right: 75%;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: ...il ladro che aveva rubato tutti i numeri pari della città, apparve al di là della vetrina del caffè, si accorse di loro e iniziò a fuggire di nuovo.
+  - type: clearImage
+    id: thief-i
+  - type: clearImage
+    id: thief
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Non dovremmo essere seduti qui quando i ladri corrono per la nostra città!
+        char: second_policeman
+        mood: serious
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"    
+    entries:
+      - text: A volte è meglio sedersi e pensare, credimi.
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: I poliziotti decisero di chiamare immediatamente il capo della polizia per condividere le loro scoperte. Mathina e Leo, nel frattempo, avevano ripreso a visitare la Città della Logica.
+  - type: game
+    text: Vuoi provare a disporre i poliziotti per pattugliare le strade di altre città?
+    toolbarText: 
+    cta: Clicca qui!
+    url: /apps/logi-3-app/logi-3-app.htm?v=3
