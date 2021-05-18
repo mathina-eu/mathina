@@ -55,7 +55,7 @@ export default {
     flamma: 'Flamma',
 	kangaroo: 'Känguru',
 	owl: 'Eule',
-	first policeman: 'erster Polizist',
-	second policeman: 'zweiter Polizist',
+	first_policeman: 'Erster Polizist',
+	second_policeman: 'Zweiter Polizist',
   },
 };
