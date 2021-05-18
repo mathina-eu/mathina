@@ -5,6 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visita un luogo!',
+    'map': 'Mappa del mondo',
   },
   cities: {
     'island': 'Isola dei Bucanieri',

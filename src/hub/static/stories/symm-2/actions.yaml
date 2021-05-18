@@ -63,6 +63,7 @@ actions:
       - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “makes” a picture equal to the initial one."
         char: wizard
   - type: game
+    tag: tg6
     text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
     toolbarText: "Check if the following image has a symmetry axis."
     cta: "Let’s play!"
@@ -111,6 +112,7 @@ actions:
         char: mathina
         mood: excited
   - type: game
+    tag: tg3
     text: "How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
     cta: "Try it yourself!"
     url: /apps/EscolheRosaceas/index.html?lang=en    
@@ -128,6 +130,7 @@ actions:
       - text: "It works like this: there are six bags numbered from 1 to 6. If a rosette has one symmetry axis, it should go to bag 1, if it has two, it should go to bag 2, and so on…"
         char: wizard        
   - type: game
+    tag: tg4
     text: "How can Mathina win the rosettes? If in doubt, click"
     toolbarText: "Store the rosettes in the right bags!"
     cta: "Try to solve the game, by storing the rosettes in the right bags!"
@@ -198,6 +201,7 @@ actions:
       - text: "Now let’s separate all these rosettes into the right bags. When you finish, all these rosettes will be yours."
         char: wizard
   - type: game
+    tag: tg5
     text: "How can Mathina win the rosettes? If in doubt, click"
     toolbarText: "Store the rosettes in the right bags!"
     cta: "Try to solve the game, by storing the rosettes in the right bags!"
@@ -369,6 +373,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
+    tag: tg1
     text: "How can Mathina solve the mirror maze?"
     cta: "Try it yourself!"
     url: /apps/labirinto-s/index.html?lang=en&sim=ref
@@ -450,6 +455,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
+    tag: tg2
     text: "How can Mathina solve the half-turn maze?"
     cta: "Try it yourself!"
     url: /apps/labirinto-s/index.html?lang=en&sim=rot

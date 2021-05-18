@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
 
-<title>Planificações do cubo</title>
+<title  id="barra">Planificações do cubo</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePlan_style.css">
 
@@ -390,15 +390,28 @@
 
     function setLanguage(){
         //console.log(lang);
-        if(lang=="en"){
-            console.log(lang);
-            document.getElementById('titulo').textContent="Choose the "+n_certos+" \"right\" nets for the cube";
+        if(lang=="en"){            
+            document.getElementById('barra').textContent="Nets for the cube";
+            //document.getElementById('titulo').textContent="Choose the "+n_certos+" \"right\" nets for the cube";
             document.getElementById('sucessText').textContent="Very well!";
             document.getElementById('errorText').textContent="You haven't yet discovered all the \"right\" nets for the cube";
             document.getElementById('errorText2').textContent="Try again!";
             document.getElementById('finalText').textContent="End of the game!";
+        }else if(lang=="it"){
+            document.getElementById('barra').textContent="Piani del cubo";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora scoperto tutti gli sviluppi \"giusti\" del cubo";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            document.getElementById('barra').textContent="Netze für den Würfel";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle \“richtigen\” Netze für den Würfel ausgewählt";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
         }else{
-            document.getElementById('titulo').textContent="Escolhe as "+n_certos+" planificações do cubo";
+            document.getElementById('barra').textContent="Planificações do cubo";
+            //document.getElementById('titulo').textContent="Escolhe as "+n_certos+" planificações do cubo";
             document.getElementById('sucessText').textContent="Muito bem!";
             document.getElementById('errorText').textContent="Ainda não descobriste todas as planificações do cubo";
             document.getElementById('errorText2').textContent="Volta a tentar.";

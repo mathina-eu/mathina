@@ -21,6 +21,11 @@
       >
         <slot />
       </div>
+      <div
+        v-if="!isLoading"
+        class="background-blur"
+        :style="setBg"
+      />
     </v-col>
   </v-row>
 </template>
@@ -39,11 +44,22 @@ export default {
       required: false,
       default: false,
     },
+    background: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
       style: '',
     };
+  },
+  computed: {
+    setBg() {
+      return {
+        background: `url(${this.background})`
+      };
+    }
   },
   watch: {
     isLoading: {
@@ -74,11 +90,19 @@ export default {
       }
       let el = this.$refs.ratio;
       let elementWidth = el.clientWidth;
+      let elementHeight = el.clientHeight;
       let bodyWidth = document.body.clientWidth;
+      let bodyHeight = document.body.clientHeight;
       if (!elementWidth || !bodyWidth) {
         return false;
       }
+
       let ratio = bodyWidth / elementWidth;
+      let newHeight = ratio * elementHeight;
+      let rect = el.getBoundingClientRect();
+      if (newHeight > (bodyHeight - rect.y)) {
+        ratio = (bodyHeight - rect.y - 40) / elementHeight;
+      }
       this.style = `transform: scale(${ratio}); transform-origin: top;`;
     },
   }
@@ -91,12 +115,20 @@ export default {
   grid-template-columns: 1fr;
   max-width: 1200px;
   margin: auto;
+  box-shadow: #0000000d 0 0 0 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .ratio-wrapper {
   &--scaled {
     align-self: start;
     margin-top: -20px;
+
+    >>> .navigation {
+      width: 100%;
+      left: 0;
+    }
   }
 }
 
@@ -109,5 +141,18 @@ export default {
 
 .ratio > *:first-child {
   grid-area: 1 / 1 / 1 / 1; /* the same as ::before */
+}
+
+.background-blur {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(50px);
+  z-index: 0;
+  opacity: 0.55;
 }
 </style>

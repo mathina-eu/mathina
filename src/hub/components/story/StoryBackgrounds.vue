@@ -21,6 +21,11 @@ export default {
       default: () => [],
     },
   },
+  mounted() {
+    if (this.backgrounds.length > 0) {
+      this.$emit('base-bg', this.backgrounds[0].src);
+    }
+  },
 };
 </script>
 

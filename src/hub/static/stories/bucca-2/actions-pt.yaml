@@ -420,7 +420,7 @@ actions:
         
   - type: dialog
     entries:
-      - text: "Não exatamente ... Ele mora comigo, mas a sua história é muito interessante: ele já fez parte da tripulação de um navio pirata e participou em muitas e muitas aventuras. Há alguns anos, a tripulação se aposentou-se e cada um seguiu o seu caminho. Alguns estão provavelmente ainda aqui na ilha."
+      - text: "Não exatamente ... Ele mora comigo, mas a sua história é muito interessante: ele já fez parte da tripulação de um navio pirata e participou em muitas e muitas aventuras. Há alguns anos, a tripulação aposentou-se e cada um seguiu o seu caminho. Alguns estão provavelmente ainda aqui na ilha."
         char: Angela
         mood: normal
   - type: dialog
@@ -610,14 +610,14 @@ actions:
       - text: "Sim por favor! Vamos tentar!"
         char: mathina
         mood: happy
-      - text: "Lembra-te, lê de fora para dentro para descodificar."
+      - text: "Lembra-te, lê de dentro para fora para descodificar."
         char: Angela
         mood: normal
 
   - type: game
-    text: "Lembra-te: para descodificar deves começar do disco externo"
-    toolbarText: "Seleciona a palavra correta"
-    cta: "Tenta tu mesmo!"
+    text: "Codifica corretamente a palavra."
+    toolbarText: "Codifica a palavra. Lembra-te: para codificar deves começar do disco interno"
+    cta: "Experimenta!"
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=3
 
 

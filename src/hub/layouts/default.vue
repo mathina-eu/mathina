@@ -2,14 +2,16 @@
   <v-app id="app">
     <v-navigation-drawer
       v-model="drawer"
-      style="z-index: 100;"
       :clipped="$vuetify.breakpoint.lgAndUp"
       disable-resize-watcher
       disable-route-watcher
+      overlay-color="#f1f1f1"
+      z-index="100"
       app
     >
       <v-list>
         <v-list-group
+          color="grey darken-3"
           :prepend-icon="`mdi-history`"
           append-icon=""
         >
@@ -93,13 +95,32 @@
           </v-list-group>
         </template>
       </v-list>
+      <v-divider />
+      <v-list-item
+        color="grey"
+        :to="localePath('/')"
+        text
+        nuxt
+      >
+        {{ $t('world.title') }}
+      </v-list-item>
+      <v-list-item
+        color="grey"
+        :to="localePath('/world/')"
+        text
+        nuxt
+      >
+        <v-list-item-content>
+          <v-list-item-title>{{ $t('world.map') }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-navigation-drawer>
 
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="blue darken-3"
-      dark
+      color="grey lighten-5"
+      light
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title
@@ -112,19 +133,24 @@
             text
             nuxt
           >
-            Mathina
+            {{ $t('world.title') }}
           </v-btn>
-          <v-btn
-            v-for="({ path, text }, iteration) in $store.state.breadcrumbs"
-            :key="path"
-            :to="localePath(path)"
-            :class="{'ml-4': iteration > 0}"
-            text
-            nuxt
-          >{{ text }}</v-btn>
+          <template v-for="({ path, text, icon }) in $store.state.breadcrumbs">
+            <v-icon :key="icon">mdi-chevron-right</v-icon>
+            <v-btn
+              :key="path"
+              :to="localePath(path)"
+              text
+              nuxt
+            >
+              {{ text }}
+            </v-btn>
+          </template>
         </span>
       </v-toolbar-title>
       <v-spacer />
+      <Logo class="header-logo" />
+      <v-spacer class="hidden-md-and-up" />
     </v-app-bar>
     <v-main>
       <v-container
@@ -203,7 +229,9 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo';
 export default {
+  components: { Logo },
   data() {
     return {
       dialog: false,
@@ -239,3 +267,14 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.header-logo {
+  @media (min-width: 960px) {
+    margin-right: -16px;
+  }
+  @media (max-width: 960px) {
+    margin-left: -48px;
+  }
+}
+</style>

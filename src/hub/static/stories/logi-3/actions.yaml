@@ -3,11 +3,13 @@ actions:
     src: logi-bg32.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: This is the street map of Logi-city. 
   - type: background
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: All streets bear names of famous mathematicians from all around the world. 
   - type: image
     src: mathina-runs.png
@@ -20,6 +22,7 @@ actions:
     style: "width: 12%; top: 54%; right: 36%;"
     parallax: back3
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina and Leo walked the streets of Logi-city. Mathina kept her pencil at hand and Leo was wearing his green cap.
   - type: image
     src: leo-icon2.png
@@ -30,6 +33,7 @@ actions:
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: They walked on Hilbert Road towards the corner of Péter Street. 
   - type: image
     src: policeman-nr1-turn.png
@@ -41,8 +45,10 @@ actions:
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: They saw a policeman rushing ahead of them. He was almost out of breath. 
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Catch him, please catch him!
         char: first_policeman
@@ -62,8 +68,10 @@ actions:
       yPercent: 100
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo immediately followed him, running as fast as he could, barely touching the ground with his feet.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Who are we supposed to catch?
         char: mathina
@@ -71,15 +79,17 @@ actions:
   - type: image
     src: policeman-nr2.png
     id: policeman2
-    style: "width: 18%; top: 20%; right: 30%;"
+    style: "width: 18%; top: 27%; right: 24%;"
     parallax: back2
   - type: image
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: A second policeman was slowing down right beside her to catch a breath.
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
     src: thief-icon.png
@@ -91,6 +101,7 @@ actions:
     style: "width: 14%; top: 45%; right: 57%;"
     parallax: back2
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: A thief, a thief stole all the even numbers of this town! 
         char: second_policeman
@@ -100,18 +111,21 @@ actions:
     target: leo-i2
     vars:
       duration: 3
-      xPercent: 300
-      yPercent: 330
+      left: '360px'
+      top: '450px'
       ease: power3.out
   - type: clearImage
     id: pm1
   - type: clearImage
     id: policeman1-t
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo had already reached the corner, and quickly disappeared onto Péter Street. 
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina took a couple of bags off the policeman's shoulder to speed up the chase. 
   - type: animation
+    style: "position: absolute; left: 620px; top: 5px;"
     target: pm2
     vars:
       duration: 3
@@ -122,19 +136,21 @@ actions:
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 170
+      xPercent: 160
       yPercent: 400
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: When they reached the Hilbert-Péter corner, they saw that Leo was only a few meters away from the thief. 
   - type: animation
     target: leo-i2
     vars:
       duration: 1
-      xPercent: 330
-      yPercent: 330
+      left: '400px'
+      top: '450px'
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4. 
   - type: animation
     target: thief-i
@@ -144,6 +160,7 @@ actions:
       yPercent: -190
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: But the thief suddenly turned left onto Gödel Street.
   - type: image
     src: pm-icon-1.png
@@ -155,22 +172,26 @@ actions:
     style: "width: 20%; top: 40%; right: 3%;"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo could not slow down anymore, and found himself crashing into the first policeman running from the other end of Péter Street.
   - type: animation
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 500
-      yPercent: 400
+      left: '300px'
+      top: '200px'
       ease: power3.out
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Let me help you. 
         char: Mathina
         mood: talking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina offered her hand to the policeman lying on the ground
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina saw Leo already setting off on Gödel Street to catch the thief.
   - type: clearImage
     id: thief-i
@@ -180,10 +201,11 @@ actions:
     target: leo-i2
     vars:
       duration: 1
-      xPercent: 490
-      yPercent: 170
+      left: '530px'
+      top: '320px'
       ease: power3.out
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Come back, you have no chance!
         char: first_policeman
@@ -195,34 +217,37 @@ actions:
         char: first_policeman
         mood: normal
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: The policemen looked at each other in despair. Leo stopped immediately. He was devastated.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: What? Only the two of you?
         char: Leo
         mood: surprised
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: The policemen nodded so emphatically that even Leo could see it from the distance.
   - type: animation
     target: leo-i2
     vars:
       duration: 3
-      xPercent: 90
-      yPercent: -10
+      left: '200px'
+      top: '160px'
       ease: power3.out
   - type: animation
     target: mathina-i2
     vars:
       duration: 3
-      xPercent: 250
-      yPercent: 50
+      left: '165px'
+      top: '-10px'
       ease: power3.out
   - type: animation
     target: pm2
     vars:
       duration: 3
-      xPercent: 130
-      yPercent: 20
+      left: '70px'
+      top: '-20px'
       ease: power3.out
   - type: animation
     target: pm1
@@ -232,8 +257,10 @@ actions:
       yPercent: -300
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: They caught up with Leo, and finally sat down in a cafe on Russell Square, the city’s main square.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Why are there only the two of you?
         char: Mathina
@@ -266,12 +293,16 @@ actions:
     src: logi-bg3-old.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: One of the policemen pulled out a yellowish paper from his pocket and unfolded it.
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina and Leo were perplexed to see the city on such an outdated medium. The policemen explained that this illustrated how far the police had withdrawn from physical reality and that they barely receive any support. The outdated logical equipment was still available, but it was entirely useless.
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"    
     text: Mathina took a long look at the map. 
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: So, the question actually is the following... Is it possible to place two cops in the city in such a way, that they are able to survey all of the streets.
         char: Mathina
@@ -282,6 +313,7 @@ actions:
     cta: Try it yourself!
     url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Of course, two cops are not enough!
         char: Mathina
@@ -293,15 +325,19 @@ actions:
         char: Mathina
         mood: arguing
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo laughed and patted Mathina's shoulder, while one of the cops nodded almost in fright.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
-      - text: So, look, here are these three horizontal streets - Euler, Hemachandra and Péter. They are parallel and have no intersection. Now, if you control the first horizontal road, that is Euler and your colleague the second, which is Hemachandra, then neither of you will be able to survey the third, Péter, for sure! Of course, because you can't find any spot in the city from where you can see two parallel streets!
+      - text: So, look, here are these three horizontal streets - Euler, Hemachandra and Péter. They are parallel and have no intersection. Now, if you control the first horizontal road, and your colleague the second, then neither of you will be able to survey the third, for sure! Of course, because you can't find any spot in the city from where you can see two parallel streets!
         char: Mathina
         mood: talking
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"    
     text: The cops were fascinated by Mathina's reasoning. From experience they knew that two people were not enough, yet they couldn't explain it logically.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: I found another explanation!
         char: Leo
@@ -321,12 +357,14 @@ actions:
         char: Leo
         mood: arguing
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina nodded. She knew that Leo wasn't as stupid as she thought. The fact that in the vast majority of cases he acts before thinking, doesn't mean that he is not able to think.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: You are both fantastic! Would you please tell us how many policemen we actually need as a minimum? It would be good to approach the Chief of Police with a concrete proposal.
         char: first_policeman
-        mood: serious
+        mood: normal
       - text: If not two, then three!.
         char: Leo
         mood: happy
@@ -349,6 +387,7 @@ actions:
     style: "width: 9.5%; top: 9%; right: 82%;"
     parallax: back2
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina and Leo snuck the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
     text: Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
@@ -377,29 +416,31 @@ actions:
       yPercent: 250
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo simply pulled the cubes from one place to the other.
   - type: animation
     target: sugar1
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-170px'
+      top: '-130px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-200px'
+      top: '-420px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 0
-      yPercent: 0
+      left: '-400px'
+      top: '-220px'
       ease: power3.out
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: With brains, please! Do you remember? We should start out from the three parallel roads.
         char: Mathina
@@ -408,54 +449,58 @@ actions:
     target: sugar1
     vars:
       duration: 2
-      xPercent: 57
-      yPercent: 45
+      left: '160px'
+      top: '120px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 52
-      yPercent: 200
+      left: '100px'
+      top: '40px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 20
-      yPercent: 470
+      left: '-100px'
+      top: '-130px'
       ease: power3.out
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina put a cube on each of the three horizontal lines and they started pushing and pulling them along the lines.
   - type: animation
     target: sugar1
     vars:
       duration: 2
-      xPercent: 240
-      yPercent: 40
+      left: '330px'
+      top: '120px'
       ease: power3.out
   - type: animation
     target: sugar2
     vars:
       duration: 2
-      xPercent: 500
-      yPercent: 200
+      left: '-150px'
+      top: '40px'
       ease: power3.out
   - type: animation
     target: sugar3
     vars:
       duration: 2
-      xPercent: 20
-      yPercent: 470
+      left: '-310px'
+      top: '-120px'
       ease: power3.out
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: I got it! 
         char: Leo
         mood: happy
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo showed the map to the policemen. They looked at the arrangement for a second or two and nodded with appreciation.
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: That's really convincing, thank you, thank you!
         char: first_policeman
@@ -486,6 +531,7 @@ actions:
     id: pm2
     style: "width: 7%; top: 42%; right: 74%;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina, Leo and the two policemen were just about to finish their coffees and cakes, when suddenly...
   - type: image
     src: thief.png
@@ -497,22 +543,26 @@ actions:
     id: thief-i
     style: "width: 7%; top: 19%; right: 75%;"
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: ...the thief who stole all even numbers of the city, appeared in the cafe window, noticed them, and fled again.
   - type: clearImage
     id: thief-i
   - type: clearImage
     id: thief
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
     entries:
       - text: Oh, we really shouldn't be sitting here, when thieves are running across Logi-city!
         char: second_policeman
         mood: serious
   - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"    
     entries:
       - text: Sometimes it's better to sit down and think, believe me.
         char: Mathina
         mood: happy
   - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"
     text: The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
   - type: game
     text: Have you enjoyed using the app? Continue playing with different maps.
