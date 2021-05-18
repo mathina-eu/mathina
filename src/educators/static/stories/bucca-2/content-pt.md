@@ -65,7 +65,7 @@ Todas as apps foram programadas em JavaScript e devem poder ser usadas quer em P
 Na primeira experiência, a chave para o método é a usada pelo papagaio João, ou seja, um salto de uma letra. Nesta app, o utilizador tem de tentar codificar corretamente algumas palavras com a cifra de César com um salto.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
-[Guião](/stories/bucca-2/transcripts/Script1-pt.pdf)
+[Guião](/stories/bucca-2/transcripts/Script2-pt.pdf)
 
 &nbsp;
 
