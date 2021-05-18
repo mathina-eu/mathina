@@ -1,17 +1,17 @@
 actions:
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
     id: c1-1  
     src: c1-1.png
-    style: "width: 37%; top: 42%; right: 0%;"
+    style: "width: 37%; top: 42%; right: 0%; z-index: 2;"
     align: right
   - type: image
     src: $COMMON/img/Mathina1.png
     id: Mathina1
-    style: "width: 13%; top: 57%; left: 0%;"   
+    style: "width: 13%; top: 57%; left: 0%; z-index: 3;"  
   - type: sceneText
     text: >
       <p>Mathina besuchte heute den Symmel-Rummel. Dort gab es Achterbahnen, Karussels und viele kleine Marktbuden mit unzähligen Spielen und Dingen zum Ausprobieren.
@@ -22,12 +22,12 @@ actions:
   - type: image
     id: feiticeiro
     src: $COMMON/img/Feiticeiro1.png
-    style: "width: 17%; top: 45%; left: 40%;"
+    style: "width: 17%; top: 45%; left: 40%; z-index: 4;"
     align: right
   - type: animation
     target: Mathina1
     vars:
-      duration: 4
+      duration: 2
       xPercent: 220
       yPercent: 0
       ease: power3.out    
@@ -41,9 +41,6 @@ actions:
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 32%;"    
   - type: dialog
-    avatarAlign:
-      - wizard: right
-      - mathina: left
     entries:
       - text: Das sind wirklich tolle Kuscheltiere!
       #"I love these toys!"
@@ -101,12 +98,12 @@ actions:
     entries:
       - text: Hier ist ein Beispiel. Schau Dir diesen Teddy an.
       #"I’ll show you an example! Look at this image."
-        char: wizard      
+        char: wizard
       - text: Wenn wir das Bild an einer bestimmten Stelle falten, liegen zwei Hälften übereinander. 
       #"If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
-    tag: firstGame
+    tag: tg1
     text: Ist der Teddy für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
             ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
     #"Is the following image good (i.e. symmetric)?"
@@ -179,6 +176,11 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     url: /apps/dobrar_3/index.html
+  - type: dialog
+    entries:        
+      - text: Wenn wir das Bild der Katze falten, gibt es keine zwei gleichen Seiten, die übereinander liegen, egal, wie wir es falten.
+		#"If we fold it, we will never find two parts that overlap!"
+        char: wizard    
   - type: clearImage
     id: c1-5
   - type: image
@@ -235,11 +237,13 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    tag: tg4
     text: Schiebe die symmetrischen Kuscheltiere in die Kiste.
     #"Put the \"good\" toys in the box"
+    url: /apps/arrumar_figuras/index.html
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/arrumar_figuras-_en/index.html
+
   - type: clearImage
     id: c1-1
   - type: image
@@ -250,7 +254,7 @@ actions:
   - type: image
     src: symm-box.png
     id: box
-    style: "width: 13%; top: 55%; left: 53%;" 
+    style: "width: 15%; top: 52%; left: 53%;" 
   - type: clearImage
     id: Mathina2
   - type: clearImage
@@ -272,7 +276,7 @@ actions:
   - type: animation
     target: Leo1
     vars:
-      duration: 3
+      duration: 2
       xPercent: -130
       yPercent: 0
       ease: power3.out         
@@ -313,7 +317,7 @@ actions:
   - type: animation
     target: Feiticeiro3
     vars:
-      duration: 3
+      duration: 2
       xPercent: 70
       yPercent: 0
       ease: power3.out
@@ -351,7 +355,7 @@ actions:
   - type: animation
     target: Leo3
     vars:
-      duration: 4
+      duration: 1
       xPercent: 230
       yPercent: 0
       ease: power3.out          
@@ -363,7 +367,9 @@ actions:
     id: casa
     src: casa.jpg
     style: "width: 35%; top: 60%"
-    align: center    
+    align: center
+  - type: clearImage
+    id: box     
   - type: dialog
     entries:      
       - text: Schau Dir mal diese Burg an, Mathina. Sie ist noch nicht fertig. Kannst Du sie zu Ende bauen?
@@ -381,9 +387,7 @@ actions:
   - type: image
     src: $COMMON/img/Mathina4.png
     id: Mathina4
-    style: "width: 7.5%; top: 56%; left: 50%;"
-  - type: clearImage
-    id: box       
+    style: "width: 7.5%; top: 56%; left: 50%;"      
   - type: sceneText
     text: Mathina versuchte es, aber immer, wenn sie einen Baustein setzen wollte, rutschte er wieder weg.
     #<p>Mathina tried to finish the dollhouse, but whenever she dragged a piece and placed it in a square, the piece just ran away.</p> 
@@ -405,14 +409,14 @@ actions:
     cta: Abspielen
     #"Play!"
     url: /stories/symm-1/video/geoplano-anim2.mp4
-  - type: dialog
-    entries:    
-      - text: Ah, ja, jetzt weiß ich, wie es geht! Ich baue die Burg gleich fertig!
-      #"Ok, I got it! I’m going to finish the toys."
-        char: mathina
-        mood: excited            
+#  - type: dialog
+#    entries:    
+#      - text: Ah, ja, jetzt weiß ich, wie es geht! Ich baue die Burg gleich fertig!
+#      #"Ok, I got it! I’m going to finish the toys."
+#        char: mathina
+#        mood: excited            
   - type: game
-    tag: polygons
+    tag: tg2
     text: Wie sieht das fertige Spielzeug aus? Ziehe die bunten Bausteine in das Bild und setze sie auf die grauen Felder.
     #"How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
     cta: Probiere es aus!
@@ -445,7 +449,7 @@ actions:
   - type: animation
     target: Mathina1
     vars:
-      duration: 3
+      duration: 2
       xPercent: 170
       yPercent: 0
       ease: power3.out
@@ -516,7 +520,7 @@ actions:
         exposition: wiederholte Mathina die Worte des Zauberers.
         #"Mathina said, repeating the wizard’s words."        
   - type: game
-    tag: lines
+    tag: tg3
     text: Wie muss das Spielzeug fertig gebaut werden? Zeichne die fehlenden Linien ein.
     #"How can Mathina finish the toys? You just need to draw the missing lines."
     cta: Probiere es aus!
@@ -537,19 +541,15 @@ actions:
   - type: animation
     target: Leo2
     vars:
-      duration: 2
+      duration: 0.25
       xPercent: 0
-      yPercent: -50
-      ease: power3.out  
+      yPercent: -40
+      repeat: 5
+      yoyo: true
+      ease: power1.inOu   
   - type: sceneText
     text: Leo sprang vor Freude in die Luft.
     #<p> Leo was jumping up and down from happiness.</p>
-  - type: animation
-    target: Leo2
-    vars:
-      duration: 2
-      xPercent: 0
-      yPercent: 2      
   - type: dialog
     entries:    
       - text: Und was machen wir jetzt mit den ganzen Spielzeugen, die wir mitnehmen dürfen?
@@ -597,7 +597,7 @@ actions:
   - type: image
     src: mathina-leo-caixa.png
     id: mathina-leo-caixa
-    style: "width: 38%; top: 48%; left: 7%;"       
+    style: "width: 47%; top: 43%; left: 7%;"       
   - type: sceneText
     text: Mathina und Leo gingen fröhlich nach Hause...
     #<p> Excited about the wizard's words, Mathina and Leo left Symmetry Fair ...</p>
@@ -605,8 +605,8 @@ actions:
     target: mathina-leo-caixa
     vars:
       duration: 7
-      xPercent: 140
-      yPercent: 0      
+      xPercent: 100
+      yPercent: 0
   - type: sceneText
     text: ... und die vielen Spielzeuge zogen sie stolz in der Kiste hinter sich her.
     #<p> ... dragging all their new toys behind.</p>         

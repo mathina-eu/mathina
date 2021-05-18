@@ -6,14 +6,17 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back3
   - type: image
     src: leo-runs.png
     id: leo-runs
     style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
+    parallax: back3
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back3
   - type: sceneText
     text: Mathina und ihr Bruder eilten dem Känguru in den Straßen von Logicity hinterher. Sie waren schon ganz erschöpft an diesem heißen und trockenen Sommertag und versuchten mit ihrem Stadtführer Schritt zu halten. Das Känguru hatte ihnen Eiscreme versprochen - aber erst mussten sie sich alle Sehenswürdigkeiten von Logicity ansehen! Mathina und Leo hatten bereits von dem berühmten Eis der Stadt gehört und konnten kaum erwarten, es auszuprobieren.
     # Mathina and her brother Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
@@ -23,13 +26,14 @@ actions:
     src: kangaroo-pointing.png
     id: kang-po
     style: "width: 28%; top: 29.5%; right: 65%;"
+    parallax: back2
   - type: dialog
     entries:
       - text: Hier ist es!
         exposition: Das Känguru zeigte auf ein großes rundes Eiscafé, das direkt zwischen den Hochhäusern stand. 
       # There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
         char: kangaroo
-        mood: nice
+        mood: happy
   - type: animation
     target: leo-runs
     vars:
@@ -69,6 +73,7 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back2
   - type: sceneText
     text: Alle drei sahen wie eine Ampel erschien und eine andere wieder verschwand.
     # They saw one column appearing, another one disappearing.
@@ -84,7 +89,7 @@ actions:
         exposition: Das Känguru lachte und bemerkte dabei Leos Verwunderung.
       # We can only cross if the three colors appear in all possible orders.” - The kangaroo smiled, noticing Leo’s amazement.
         char: kangaroo
-        mood: nice
+        mood: happy
   - type: clearImage
     id: lampsgif
   - type: image
@@ -97,7 +102,7 @@ actions:
         exposition: fragte das Känguru und alle sahen die drei Ampeln an.
       # Now they saw three lights only, and the kangaroo asked, - Do you think we can go now?
         char: kangaroo
-        mood: nice
+        mood: happy
   - type: animation
     target: leo-runs
     vars:
@@ -115,57 +120,56 @@ actions:
         exposition: Leo wollte bereits über die Straße rennen.
       # I think we've got it all! - Leo shouted, and was again ready to cross the street.  
         char: leo
-        mood: excited
-  - type: animation
+        mood: talking
+  - type: sceneText
+    text: Doch nun war es Mathina, die ihn davon abhielt, über die Straße zu laufen.
+    # Now it was Mathina who kept him from running across the street. - type: animation
     target: leo-runs
     vars:
       duration: 3
       xPercent: 0
       yPercent: 0
       ease: power3.out
-  - type: sceneText
-    text: Doch nun war es Mathina, die ihn davon abhielt, über die Straße zu laufen.
-    # Now it was Mathina who kept him from running across the street.
   - type: dialog
     entries:
       - text: Nein, noch nicht!
       # No way! - Mathina said.
         char: mathina
-        mood: angry
+        mood: arguing
       - text: Aber es sind doch überall drei Farben und sie sind auf jeder Ampel anders angeordnet. Das ist doch gut, oder nicht? Und jede Farbe erscheint doch auch einmal ganz oben, einmal in der Mitte und einmal ganz unten.
         exposition: Leo war ganz überzeugt von seiner Idee.
       # But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last - Leo argued convincingly.
         char: leo
-        mood: excited
+        mood: arguing
       - text: Aber was ist, wenn zum Beispiel Lila zuerst kommt und dann Rosa anstatt Orange? 
         exposition: Mathina grinste bei dieser Frage ganz breit.
       # And what if, for example, violet came first and then pink, instead of orange? - Mathina grinned like a little monkey.
         char: mathina
-        mood: happy
+        mood: arguing
       - text: Lass ihn, Leo ist wahrscheinlich nicht so gut wie Du darin, Rosa und Lila zu unterscheiden.
       # Leave him, Leo is probably not as good in distinguishing pink and violet as you are - said the kangaroo.
         char: kangaroo
-        mood: happy
+        mood: serious
       - text: Ach Känguru, das ist doch Quatsch! Nur weil ich ein Mädchen bin, kenne ich mich doch nicht besser bei Farben aus. Ich kann aber sehr gut nachdenken! 
         exposition: Mathina streckte dem Känguru die Zunge heraus.
       # Oh, kangaroo, don't be like that! - Mathina got angry. - I don't understand colors better just because I'm a girl! But I can think pretty well - and she stuck out her tongue at the kangaroo.
         char: mathina
-        mood: happy
+        mood: surprised
       - text: Okay okay... Die Sache ist, dass Mathina recht hat. Diese drei Ampeln sind nicht genug. Aber wieviele unterschedliche Ampeln müssen es sein?
       # Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
         char: kangaroo
-        mood: happy
+        mood: serious
   - type: game
     text: Was denkst Du? Wie viele Ampeln muss es geben, damit alle Farben in den unterschiedlichen Reihenfolgen vorkommen?
     # How many lights do you think would be enough to show all the variations? 
     toolbarText: Male die Farben in die Ampeln. Jede Farb-Reihenfolge darf nur einmal vorkommen.
     cta: Versuche alle zu finden!
     # Try to find them all!
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+    url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
     target: leo-runs
-    duration: 1
     vars:
+      duration: 1
       xPercent: 0
       yPercent: -30
       repeat: 1
@@ -185,13 +189,14 @@ actions:
     src: solution 8 lamps.png
     id: solution8
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
       - text: Falsch! Du hast ja einige Ampeln zweimal gemalt!
         exposition: Mathina schaute Leos Zeichnung genau an.
       # Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
         char: mathina
-        mood: happy
+        mood: talking
   - type: clearImage
     id: solution8
   - type: game
@@ -199,18 +204,19 @@ actions:
     # What do you think Leo has included twice? Pull identical lamps on top of each other, and the superfluous ones will disappear.
     toolbarText: Welche Ampeln hat Leo zweimal gemalt? Ziehe sie übereinander, damit eine von ihnen verschwindet.
     cta: Probiere es aus!
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=2
+    url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
     src: solution5lamps.png
     id: solution5
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
       - text: Siehst Du, jetzt sind es nur noch fünf. Aber es gibt auch noch eine sechste Ampel!
         exposition: rief Mathina aufgeregt. 
       # You see, it's only five now. And guess what, there's a sixth one, too! - Mathina said contemptuously.
         char: mathina
-        mood: happy
+        mood: talking
   - type: clearImage
     id: solution5
   - type: game
@@ -219,18 +225,19 @@ actions:
     toolbarText: Was glaubst Du? Welche Farb-Reihenfolge fehlt noch?
     # Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     cta: Probiere es aus!
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=3
+    url: \apps\logi-1-app\logi-1-app.htm?v=3
   - type: dialog
     entries:
       - text: Also, zwei Ampeln haben Lila ganz oben und zwei Rosa und nur eine hat beginnt mit Orange... Meint ihr, wir brauchen noch eine zweite, die Orange ganz oben hat?...
         exposition: Leo dachte angestrengt nach und kratzte sich am Kopf.
       # Well, two begin with violet and two with pink, and only one with orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
         char: leo
-        mood: happy
+        mood: surprised
   - type: image
     src: solution6lampss.png
     id: solution6
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1    
   - type: dialog
     entries:        
       - text: Ich hab's! Nach Orange kommt... nicht Lila, sondern Rosa. Das ist es! Orange-Rosa-Lila.
