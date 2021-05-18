@@ -9,15 +9,21 @@ var spriteBR;
 var mapC; 
 function init(DataPols) {
 if (typeof DataPols == 'undefined') DataPols=pol;	
+
 var width0=parseInt(WW);
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-var width=width0;
-if(S3PPre=="vplan")
-{var height=Math.min(width0/2,height0);}
-else
-{var height=Math.min(width0,height0);};
+var width=.99*width0;
+var height=.97*Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
+
+var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg2-02.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+			
 scene=new THREE.Scene();
 //scene.fog=new THREE.Fog(0x000000,1500,2100);
 sceneOrtho=new THREE.Scene();
@@ -216,13 +222,11 @@ document.getElementById("imgbt").src ="../atractor-apps-all/icons/pause.png"};}
 function OnResize()
 {var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-var width=width0;
-if(S3PPre=="vplan")
-{var height=Math.min(width0/2,height0);}
-else
-{var height=Math.min(width0,height0);};
+var width=.99*width0;
+var height=.97*Math.min(width0/2,height0);
 var width2=width;
 var height2=height;
+
 camera.aspect=width/height;
 camera.updateProjectionMatrix();
 renderer.setSize(width,height);

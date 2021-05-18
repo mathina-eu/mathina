@@ -11,7 +11,8 @@ export default {
   target: 'static',
   env: {
     IS_DEV,
-    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://dev.zabkar.net'
+    HUB_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
+    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
   },
 
   /*
@@ -36,7 +37,7 @@ export default {
   /*
   ** Global CSS
   */
-  css: ['~/assets/styles/main.pcss'],
+  css: ['../shared/assets/styles/main.pcss'],
   /*
   ** Plugins to load before mounting the App
   */
@@ -65,10 +66,6 @@ export default {
       }
     ]
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
   axios: {
     baseURL: process.env.BASE_URL,
   },
@@ -79,7 +76,6 @@ export default {
       { code: 'de', file: 'de.js', name: 'Deutsch' },
       { code: 'pt', file: 'pt.js', name: 'Português' },
       { code: 'it', file: 'it.js', name: 'Italiano' },
-      { code: 'sl', file: 'sl.js', name: 'Slovensko' }
     ],
     defaultLocale: 'en',
     vueI18n: {
@@ -139,6 +135,7 @@ export default {
               '~~': rootDir,
               '@': srcDir,
               '@@': rootDir,
+              '~vars': path.resolve(__dirname, `./assets/styles/base/_settings.pcss`),
             },
             modules: [srcDir, rootDir],
           }),

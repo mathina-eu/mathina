@@ -4,11 +4,19 @@ export default {
   },
   world: {
     'title': 'Mathina',
-    'help': 'Besuche eine Stadt!',
+    'help': 'Besuche einen Ort!',
+    'map': 'Weld karte',
+  },
+  cities: {
+    'island': 'Buccaneer Island',
+    'logicity': 'Logicity',
+    'birds-of-fire': 'Birds of Fire',
+    'symmetry-fair': 'Symmetry Fair',
   },
   story: {
     'next': 'Weiter',
     'back': 'Zurück',
+    'back-to-world': 'Back to World Map',
     titles: {
       'logi-1': 'The traffic light challenge',
       'logi-2': 'Ytic-igol',
@@ -26,7 +34,7 @@ export default {
       'symm-2': 'Mathina, the rosette game and the magic mazes',
       'symm-3': 'Stamping friezes',
       'symm-4': 'The polyhedron carousel',
-      'demo-story': 'German Demo Story',
+      'demo-story': 'Deutsch Demo Geschichte',
     },
   },
   index: {
@@ -41,8 +49,9 @@ export default {
   },
   chars: {
     mathina: 'Mathina',
-    wizard: 'Wizard',
+    wizard: 'Zauberer',
     leo: 'Leo',
     jane: 'Jane',
+    flamma: 'Flamma',
   },
 };

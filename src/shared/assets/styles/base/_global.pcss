@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Newsreader:wght@400;600;700');
+@import url('https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css');
+
+header {
+  box-shadow:
+    0 0 10px -10px rgba(0, 0, 0, 0.3),
+    0 0 32px -10px rgba(0, 0, 0, 0.2) !important;
+}
+
+iframe {
+  border: none;
+}
+
+.v-card {
+  font-family: var(--story-font-family);
+  box-shadow:
+    0 3px 4px -10px rgba(0, 0, 0, 0.5),
+    0 10px 32px -10px rgba(0, 0, 0, 0.2) !important;
+  background: transparent !important;
+  max-width: 90% !important;
+
+  &::before {
+    background: url('~assets/images/dialog_bg.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    display: block;
+    z-index: -1;
+    border-radius: 4px;
+  }
+}
+
+.v-toolbar__title .v-btn {
+  font-weight: 600;
+
+  &--active::before {
+    opacity: 0.06 !important;
+  }
+}

@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../atractor-apps-all/scripts/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>App</title>
+    <style>
+    html {
+  touch-action: pan-down;
+}
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+	  
+
+button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+    </style>
+	<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
+
+  </head>
+  <body>
+  <audio src="../atractor-apps-all/sons/aplausos.mp3" id="aplausosAudio" type="audio/mpeg"></audio>
+   
+
+    <div id="container"></div>
+	  <div id="successMessage" style="display:none">
+	  
+	  <img src="../atractor-apps-all/icons/happy.png" id="certo" width=8% style=" position: absolute;
+  top: 30%;
+  right: 46%;"></img>
+  <img src="../atractor-apps-all/gifs/Festejos.gif" width=40% style=" position: absolute;
+  top: 10%;
+  right: 30%; z-index: -1;"> </img>
+	   
+	<img src="../atractor-apps-all/icons/refresh.png" onclick="location.reload();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+  
+  </div>
+  
+   <div id="errorMessage" style = 'display:none'>
+        
+
+		<h2 id="errorText">You have not yet placed all friezes correctly.</h2>
+        <h2 id="errorText2">Try again...</h2>
+       <img src="../atractor-apps-all/icons/back.png" onclick="corrigir();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+  
+  <script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+
+		
+    <script>
+	var certos1=[];
+	var certos2=[];
+	var certos3=[];
+	var errados=[];
+	var certos1im=[];
+	var certos2im=[];
+	var certos3im=[];
+	var erradosim=[];
+	
+  var icon=[]; 
+  var ct1=0,ct2=0,ct3=0;
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+
+var imagenames=['Cereja-p1m1.png',
+  'Cereja-pm11.png',
+   'Cereja-pma2.png',
+  	'Cereja-pmm2.png',
+	'LetraP-p1m1.png',
+	'LetraP-pm11.png',
+	
+	'LetraP-pma2.png',
+  'LetraP-pmm2.png',
+   'Music-p1m1.png',
+  'Music-pm11.png',
+   'Music-pma2.png',
+  	'Music-pmm2.png'
+]
+		
+		var imgsim=['2','1','1','3','2','1','1','3','2','1','1','3']
+		
+ var numbers = [ 0,1, 2, 3, 4, 5, 6, 7, 8,9,10,11];
+  
+   
+      function isNearOutline(animal, outline) {
+        var a = animal;
+        var o = outline;
+        var ax = a.x();
+        var ay = a.y();
+var delta=150;
+        if (ax > o.x - 2*delta && ax < o.x + delta && ay > o.y - 2*delta && ay < o.y + 3*delta) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+	  
+	  
+	  
+	  
+	     function isNearPos(animal,ox,oy) {
+        var a = animal;
+        var ax = a.x();
+        var ay = a.y();
+var delta=0.05*window.innerWidth;
+        if (ax > ox - 2*delta && ax < ox + 2*delta && ay > oy - 3*delta &&
+		ay < oy + 12*delta) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+	  
+	  
+
+	  $('#successMessage').hide();
+  $('#successMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+  
+   $('#errorMessage').hide();
+  $('#errorMessage').css( {
+    left: '580px',
+    top: '250px',
+    width: 0,
+    height: 0
+  } );
+  
+  
+        var stage = new Konva.Stage({
+          container: 'container',
+          width: width,
+          height: height
+        });
+        var background = new Konva.Layer();
+        var animalLayer = new Konva.Layer();
+       
+var textLayer=	new Konva.Layer();   var animalShapes = [];
+        var score = 0;
+
+	
+	var imageObj2 = new Image(); 
+      imageObj2.onload = function() { 
+	  back=new Konva.Image({
+           x:  0*width,
+           y:0*height,
+          image: imageObj2,
+          width: window.innerWidth,
+          height: window.innerHeight,
+		  opacity:1
+        });
+		
+
+        // add the shape to the layer
+        background.add(back);
+		  
+     background.batchDraw();
+	  
+	  
+	}
+	
+	
+	imageObj2.src = '../atractor-apps-all/imgs/symm-bg1-01.jpg';
+        stage.add(background);
+
+var textscore = new Konva.Text({
+        text: 'Drag the friezes to the corresponding folders!',
+        x: 0.1*window.innerWidth,
+        y: 0.01*window.innerHeight,  
+        fontSize: 20
+      });
+
+	  var textscore2 = new Konva.Text({
+        text: 'Horizontal axis of symmetry',
+        x: 0.57*window.innerWidth,
+        y: 0.001*window.innerHeight,  
+       fontSize: window.innerWidth/60,
+		fontFamily: 'Calibri',
+  fill: 'green'
+      });
+	  
+	   var textscore3 = new Konva.Text({
+        text: 'Vertical axes of symmetry',
+        x: 0.77*window.innerWidth,
+        y: 0.001*window.innerHeight,  
+        fontSize: window.innerWidth/60,
+		fontFamily: 'Calibri',
+  fill: 'green'
+      });
+	  
+	  
+    //  textLayer.add(textscore);
+          textLayer.add(textscore2);
+		  textLayer.add(textscore3);
+		  textLayer.draw();
+		
+		
+		var layericons = new Konva.Layer();
+      stage.add(layericons);
+
+      // main API:
+      var imageObjicon = new Image();
+      imageObjicon.onload = function () {
+        var icon1 = new Konva.Image({
+          x: 0.63*window.innerWidth,
+          y: 0.025*window.innerHeight,
+          image: imageObjicon,
+          width: 0.04*window.innerWidth,
+          height: 0.04*window.innerWidth,
+        });
+
+        // add the shape to the layer
+        layericons.add(icon1);
+        layericons.draw();
+      };
+      imageObjicon.src = '../atractor-apps-all/imgs/Icon-refH.png';
+	  
+	   var imageObjicon2 = new Image();
+      imageObjicon2.onload = function () {
+        var icon2 = new Konva.Image({
+          x: 0.83*window.innerWidth,
+          y: 0.025*window.innerHeight,
+          image: imageObjicon2,
+           width: 0.04*window.innerWidth,
+          height: 0.04*window.innerWidth,
+        });
+
+        // add the shape to the layer
+        layericons.add(icon2);
+        layericons.draw();
+      };
+      imageObjicon2.src = '../atractor-apps-all/imgs/Icon-refV.png';
+		
+
+			
+        // image positions
+        var frisospos = [
+            [0.014*width,
+            0.1*height],
+          [0.181*width,
+           0.1*height],
+         [0.348*width,
+            0.1*height],
+         [0.515*width,
+            0.1*height],
+		  
+		   [0.682*width,
+            0.1*height
+          ],
+		  [ 0.849*width,
+            0.1*height
+          ],
+          [ 0.014*width,
+             0.22*height
+          ],
+         [0.181*width,
+             0.22*height
+          ],
+		 [0.348*width,
+             0.22*height
+          ],
+		  
+		   [0.515*width,
+            0.22*height
+          ],
+         [0.682*width,
+             0.22*height
+          ],
+         [0.849*width,
+             0.22*height
+]];
+
+   var layer = new Konva.Layer();
+      stage.add(layer);
+	  
+
+	 var friso1 = new Image();
+ var friso1i;
+      friso1.onload = function () {
+       friso1i = new Konva.Image({
+          x: frisospos[0][0],
+              y: frisospos[0][1],
+          image: friso1,
+           width: width/7.5,
+			  height: (width/7.5)/friso1.width*friso1.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso1i);
+        
+				layer.draw();
+				
+				
+			
+			  friso1i.on('dragstart', function() {console.log('drag1');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso1i.on('dragend', function() {console.log('fim1');
+			
+			    
+			  var posx=(0.41)
+			
+			
+if(isNearPos(friso1i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso1');certos1im.push(friso1i)} else {
+errados.push('friso1'); erradosim.push(friso1i)};
+
+friso1i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso1i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso1i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso1');
+certos2im.push(friso1i);} else {errados.push('friso1'); erradosim.push(friso1i)};
+
+
+ friso1i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso1i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso1i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso1');certos3im.push(friso1i);} else
+ {errados.push('friso1'); erradosim.push(friso1i)};
+
+friso1i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso1i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso1.src = '../atractor-apps-all/imgs/'+imagenames[0];
+	  
+
+	  
+ var friso2 = new Image();
+ var friso2i;
+      friso2.onload = function () {
+       friso2i = new Konva.Image({
+          x: frisospos[1][0],
+              y: frisospos[1][1],
+          image: friso2,
+           width: width/7.5,
+			  height: (width/7.5)/friso2.width*friso2.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso2i);
+        
+				layer.draw();
+				
+				
+			
+			  friso2i.on('dragstart', function() {console.log('drag2');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso2i.on('dragend', function() {console.log('fim2');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso2i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso2');certos1im.push(friso2i)} else {
+errados.push('friso2'); erradosim.push(friso2i)};
+
+friso2i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso2i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso2i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso2');
+certos2im.push(friso2i);} else {errados.push('friso2'); erradosim.push(friso2i)};
+
+
+ friso2i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso2i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso2i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso2');certos3im.push(friso2i);} else
+ {errados.push('friso2'); erradosim.push(friso2i)};
+
+friso2i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso2i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso2.src = '../atractor-apps-all/imgs/'+imagenames[1];
+	  
+	  
+	
+var friso3 = new Image();
+ var friso3i;
+      friso3.onload = function () {
+       friso3i = new Konva.Image({
+          x: frisospos[2][0],
+              y: frisospos[2][1],
+          image: friso3,
+           width: width/7.5,
+			  height: (width/7.5)/friso3.width*friso3.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso3i);
+        
+				layer.draw();
+				
+				
+			
+			  friso3i.on('dragstart', function() {console.log('drag3');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso3i.on('dragend', function() {console.log('fim3');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso3i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso3');certos1im.push(friso3i)} else {
+errados.push('friso3'); erradosim.push(friso3i)};
+
+friso3i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso3i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso3i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso3');
+certos2im.push(friso3i);} else {errados.push('friso3'); erradosim.push(friso3i)};
+
+
+ friso3i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso3i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso3i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso3');certos3im.push(friso3i);} else
+ {errados.push('friso3'); erradosim.push(friso3i)};
+
+friso3i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso3i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso3.src = '../atractor-apps-all/imgs/'+imagenames[2];
+	  
+	
+ var friso4 = new Image();
+ var friso4i;
+      friso4.onload = function () {
+       friso4i = new Konva.Image({
+          x: frisospos[3][0],
+              y: frisospos[3][1],
+          image: friso4,
+           width: width/7.5,
+			  height: (width/7.5)/friso4.width*friso4.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso4i);
+        
+				layer.draw();
+				
+				
+			
+			  friso4i.on('dragstart', function() {console.log('drag4');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso4i.on('dragend', function() {console.log('fim4');
+			
+			    
+			  var posx=(0.74)
+			
+			
+if(isNearPos(friso4i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso4');certos1im.push(friso4i)} else {
+errados.push('friso4'); erradosim.push(friso4i)};
+
+friso4i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso4i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso4i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso4');
+certos2im.push(friso4i);} else {errados.push('friso4'); erradosim.push(friso4i)};
+
+
+ friso4i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso4i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso4i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso4');certos3im.push(friso4i);} else
+ {errados.push('friso4'); erradosim.push(friso4i)};
+
+friso4i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso4i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso4.src = '../atractor-apps-all/imgs/'+imagenames[3];
+
+ var friso5 = new Image();
+ var friso5i;
+      friso5.onload = function () {
+       friso5i = new Konva.Image({
+          x: frisospos[4][0],
+              y: frisospos[4][1],
+          image: friso5,
+           width: width/7.5,
+			  height: (width/7.5)/friso5.width*friso5.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso5i);
+        
+				layer.draw();
+				
+				
+			
+			  friso5i.on('dragstart', function() {console.log('drag5');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso5i.on('dragend', function() {console.log('fim5');
+			
+			    
+			  var posx=(0.41)
+			
+			
+if(isNearPos(friso5i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso5');certos1im.push(friso5i)} else {
+errados.push('friso5'); erradosim.push(friso5i)};
+
+friso5i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso5i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso5i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso5');
+certos2im.push(friso5i);} else {errados.push('friso5'); erradosim.push(friso5i)};
+
+
+ friso5i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso5i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso5i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso5');certos3im.push(friso5i);} else
+ {errados.push('friso5'); erradosim.push(friso5i)};
+
+friso5i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso5i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso5.src = '../atractor-apps-all/imgs/'+imagenames[4];
+	 
+ var friso6 = new Image();
+ var friso6i;
+      friso6.onload = function () {
+       friso6i = new Konva.Image({
+          x: frisospos[5][0],
+              y: frisospos[5][1],
+          image: friso6,
+           width: width/7.5,
+			  height: (width/7.5)/friso6.width*friso6.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso6i);
+        
+				layer.draw();
+				
+				
+			
+			  friso6i.on('dragstart', function() {console.log('drag6');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso6i.on('dragend', function() {console.log('fim6');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso6i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso6');certos1im.push(friso6i)} else {
+errados.push('friso6'); erradosim.push(friso6i)};
+
+friso6i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso6i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso6i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso6');
+certos2im.push(friso6i);} else {errados.push('friso6'); erradosim.push(friso6i)};
+
+
+ friso6i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso6i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso6i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso6');certos3im.push(friso6i);} else
+ {errados.push('friso6'); erradosim.push(friso6i)};
+
+friso6i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso6i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso6.src = '../atractor-apps-all/imgs/'+imagenames[5];
+
+ var friso7 = new Image();
+ var friso7i;
+      friso7.onload = function () {
+       friso7i = new Konva.Image({
+          x: frisospos[6][0],
+              y: frisospos[6][1],
+          image: friso7,
+           width: width/7.5,
+			  height: (width/7.5)/friso7.width*friso7.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso7i);
+        
+				layer.draw();
+				
+				
+			
+			  friso7i.on('dragstart', function() {console.log('drag7');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso7i.on('dragend', function() {console.log('fim7');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso7i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso7');certos1im.push(friso7i)} else {
+errados.push('friso7'); erradosim.push(friso7i)};
+
+friso7i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso7i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso7i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso7');
+certos2im.push(friso7i);} else {errados.push('friso7'); erradosim.push(friso7i)};
+
+
+ friso7i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso7i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso7i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso7');certos3im.push(friso7i);} else
+ {errados.push('friso7'); erradosim.push(friso7i)};
+
+friso7i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso7i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso7.src = '../atractor-apps-all/imgs/'+imagenames[6];
+	  
+	  
+	   var friso8 = new Image();
+ var friso8i;
+      friso8.onload = function () {
+       friso8i = new Konva.Image({
+          x: frisospos[7][0],
+              y: frisospos[7][1],
+          image: friso8,
+           width: width/7.5,
+			  height: (width/7.5)/friso8.width*friso8.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso8i);
+        
+				layer.draw();
+				
+				
+			
+			  friso8i.on('dragstart', function() {console.log('drag8');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso8i.on('dragend', function() {console.log('fim8');
+			
+			    
+			  var posx=(0.74)
+			
+			
+if(isNearPos(friso8i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso8');certos1im.push(friso8i)} else {
+errados.push('friso8'); erradosim.push(friso8i)};
+
+friso8i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso8i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso8i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso8');
+certos2im.push(friso8i);} else {errados.push('friso8'); erradosim.push(friso8i)};
+
+
+ friso8i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso8i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso8i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso8');certos3im.push(friso8i);} else
+ {errados.push('friso8'); erradosim.push(friso8i)};
+
+friso8i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso8i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso8.src = '../atractor-apps-all/imgs/'+imagenames[7];
+	  
+	  
+	   var friso9 = new Image();
+ var friso9i;
+      friso9.onload = function () {
+       friso9i = new Konva.Image({
+          x: frisospos[8][0],
+              y: frisospos[8][1],
+          image: friso9,
+           width: width/7.5,
+			  height: (width/7.5)/friso9.width*friso9.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso9i);
+        
+				layer.draw();
+				
+				
+			
+			  friso9i.on('dragstart', function() {console.log('drag9');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso9i.on('dragend', function() {console.log('fim9');
+			
+			    
+			  var posx=(0.41)
+			
+			
+if(isNearPos(friso9i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso9');certos1im.push(friso9i)} else {
+errados.push('friso9'); erradosim.push(friso9i)};
+
+friso9i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso9i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso9i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso9');
+certos2im.push(friso9i);} else {errados.push('friso9'); erradosim.push(friso9i)};
+
+
+ friso9i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso9i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso9i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso9');certos3im.push(friso9i);} else
+ {errados.push('friso9'); erradosim.push(friso9i)};
+
+friso9i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso9i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso9.src = '../atractor-apps-all/imgs/'+imagenames[8];
+	  
+	   var friso10 = new Image();
+ var friso10i;
+      friso10.onload = function () {
+       friso10i = new Konva.Image({
+          x: frisospos[9][0],
+              y: frisospos[9][1],
+          image: friso10,
+           width: width/7.5,
+			  height: (width/7.5)/friso10.width*friso10.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso10i);
+        
+				layer.draw();
+				
+				
+			
+			  friso10i.on('dragstart', function() {console.log('drag10');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso10i.on('dragend', function() {console.log('fim10');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso10i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso10');certos1im.push(friso10i)} else {
+errados.push('friso10'); erradosim.push(friso10i)};
+
+friso10i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso10i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso10i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso10');
+certos2im.push(friso10i);} else {errados.push('friso10'); erradosim.push(friso10i)};
+
+
+ friso10i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso10i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso10i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso10');certos3im.push(friso10i);} else
+ {errados.push('friso10'); erradosim.push(friso10i)};
+
+friso10i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso10i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso10.src = '../atractor-apps-all/imgs/'+imagenames[9];
+	  
+	   var friso11 = new Image();
+ var friso11i;
+      friso11.onload = function () {
+       friso11i = new Konva.Image({
+          x: frisospos[10][0],
+              y: frisospos[10][1],
+          image: friso11,
+           width: width/7.5,
+			  height: (width/7.5)/friso11.width*friso11.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso11i);
+        
+				layer.draw();
+				
+				
+			
+			  friso11i.on('dragstart', function() {console.log('drag11');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso11i.on('dragend', function() {console.log('fim11');
+			
+			    
+			  var posx=(0.08)
+			
+			
+if(isNearPos(friso11i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso11');certos1im.push(friso11i)} else {
+errados.push('friso11'); erradosim.push(friso11i)};
+
+friso11i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso11i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso11i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso11');
+certos2im.push(friso11i);} else {errados.push('friso11'); erradosim.push(friso11i)};
+
+
+ friso11i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso11i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso11i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso11');certos3im.push(friso11i);} else
+ {errados.push('friso11'); erradosim.push(friso11i)};
+
+friso11i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso11i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso11.src = '../atractor-apps-all/imgs/'+imagenames[10];
+	  
+	  
+	   var friso12 = new Image();
+ var friso12i;
+      friso12.onload = function () {
+       friso12i = new Konva.Image({
+          x: frisospos[11][0],
+              y: frisospos[11][1],
+          image: friso12,
+           width: width/7.5,
+			  height: (width/7.5)/friso12.width*friso12.height,
+             draggable: true
+        });
+
+        // add the shape to the layer
+           layer.add(friso12i);
+        
+				layer.draw();
+				
+				
+			
+			  friso12i.on('dragstart', function() {console.log('drag12');
+              this.moveToTop();
+              animalLayer.draw();
+            });
+			
+			
+ friso12i.on('dragend', function() {console.log('fim12');
+			
+			    
+			  var posx=(0.74)
+			
+			
+if(isNearPos(friso12i, 0.102* width,0.48*height)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push('friso12');certos1im.push(friso12i)} else {
+errados.push('friso12'); erradosim.push(friso12i)};
+
+friso12i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-ct1*width/22
+				  
+                });
+				friso12i.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(friso12i, 0.435* width,0.48*height)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push('friso12');
+certos2im.push(friso12i);} else {errados.push('friso12'); erradosim.push(friso12i)};
+
+
+ friso12i.position({
+                  x: 0.435* width,
+                  y: 0.99*height-width/60-ct2*width/22
+  });
+  friso12i.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {$('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(friso12i, 0.76* width,0.48*height)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push('friso12');certos3im.push(friso12i);} else
+ {errados.push('friso12'); erradosim.push(friso12i)};
+
+friso12i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-ct3*width/22
+  });
+                friso12i.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { $('#errorMessage').show();
+    $('#errorMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    })
+  
+} 
+  }
+              } }}
+			
+			   animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+			
+		}
+			);
+			
+      };
+      friso12.src = '../atractor-apps-all/imgs/'+imagenames[11];
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+var saco1 = new Image();
+      saco1.onload = function () {
+        var saco1i = new Konva.Image({
+        x: 0.05* width,
+              y: 0.99*height-width/4*1.2,
+          image: saco1,
+           width: 1.2*width/5,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
+             draggable: false
+        });
+
+        // add the shape to the layer
+           layer.add(saco1i);
+        
+				layer.draw();
+      };
+      saco1.src = '../atractor-apps-all/imgs/PastaFrisos1.png';
+
+
+var saco2 = new Image();
+      saco2.onload = function () {
+        var saco2i = new Konva.Image({
+        x: 0.38* width,
+              y: 0.99*height-width/4*1.2,
+          image: saco2,
+           width: width/5*1.2,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
+             draggable: false
+        });
+
+        // add the shape to the layer
+           layer.add(saco2i);
+        
+				layer.draw();
+      };
+      saco2.src = '../atractor-apps-all/imgs/PastaFrisos2.png';
+
+
+
+var saco3 = new Image();
+      saco3.onload = function () {
+        var saco3i = new Konva.Image({
+        x: 0.71* width,
+              y: 0.99*height-width/4*1.2,
+          image: saco3,
+           width: 1.2*width/5,
+			  height: 1.2*(width/5)/saco1.width*saco1.height,
+             draggable: false
+        });
+
+        // add the shape to the layer
+           layer.add(saco3i);
+        
+				layer.draw();
+      };
+      saco3.src = '../atractor-apps-all/imgs/PastaFrisos3.png';
+
+
+
+
+
+
+function corrigir() {
+
+ $('#errorMessage').hide();
+	ct1=certos1.length; 
+	ct2=certos2.length;
+	ct3=certos3.length;
+	if(errados.indexOf('friso1')!=-1) {friso1i.position({
+                  x: frisospos[0][0],
+                  y: frisospos[0][1]
+  });
+                friso1i.draggable(true);
+               } else 
+			   if(certos2.indexOf('friso1')!=-1) {friso1i.position({
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso1')+1)*width/22
+
+  });
+                friso1i.draggable(false);
+               }
+			   
+	if(errados.indexOf('friso2')!=-1) {friso2i.position({
+                  x: frisospos[1][0],
+                  y: frisospos[1][1]
+  });
+                friso2i.draggable(true);
+               } else 
+			   if(certos1.indexOf('friso2')!=-1) {friso2i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso2')+1)*width/22
+
+  });
+                friso2i.draggable(false);
+               }
+			   
+			   if(errados.indexOf('friso3')!=-1) {friso3i.position({
+                  x: frisospos[2][0],
+                  y: frisospos[2][1]
+  });
+                friso3i.draggable(true);
+               }else 
+			   if(certos1.indexOf('friso3')!=-1) {friso3i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso3')+1)*width/22
+
+  });
+                friso3i.draggable(false);
+               }
+			   
+			   if(errados.indexOf('friso4')!=-1) {friso4i.position({
+                  x: frisospos[3][0],
+                  y: frisospos[3][1]
+  });
+                friso4i.draggable(true);
+               }else 
+			   if(certos3.indexOf('friso4')!=-1) {friso4i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso4')+1)*width/22
+
+  });
+                friso4i.draggable(false);
+               }
+			   
+			   if(errados.indexOf('friso5')!=-1) {friso5i.position({
+                  x: frisospos[4][0],
+                  y: frisospos[4][1]
+  });
+                friso5i.draggable(true);
+               }else 
+			   if(certos2.indexOf('friso5')!=-1) {friso5i.position({
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso5')+1)*width/22
+
+  });
+                friso5i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso6')!=-1) {friso6i.position({
+                  x: frisospos[5][0],
+                  y: frisospos[5][1]
+  });
+                friso6i.draggable(true);
+               }else 
+			   if(certos1.indexOf('friso6')!=-1) {friso6i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso6')+1)*width/22
+
+  });
+                friso6i.draggable(false);
+               }
+   
+   
+     if(errados.indexOf('friso7')!=-1) {friso7i.position({
+                  x: frisospos[6][0],
+                  y: frisospos[6][1]
+  });
+                friso7i.draggable(true);
+               }else 
+			   if(certos1.indexOf('friso7')!=-1) {friso7i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso7')+1)*width/22
+
+  });
+                friso7i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso8')!=-1) {friso8i.position({
+                  x: frisospos[7][0],
+                  y: frisospos[7][1]
+  });
+                friso8i.draggable(true);
+               }else 
+			   if(certos3.indexOf('friso8')!=-1) {friso8i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso8')+1)*width/22
+
+  });
+                friso8i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso9')!=-1) {friso9i.position({
+                  x: frisospos[8][0],
+                  y: frisospos[8][1]
+  });
+                friso9i.draggable(true);
+               }else 
+			   if(certos2.indexOf('friso9')!=-1) {friso9i.position({
+                   x: 0.435* width,
+                  y: 0.99*height-width/60-(certos2.indexOf('friso9')+1)*width/22
+
+  });
+                friso9i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso10')!=-1) {friso10i.position({
+                  x: frisospos[9][0],
+                  y: frisospos[9][1]
+  });
+                friso10i.draggable(true);
+               }else 
+			   if(certos1.indexOf('friso10')!=-1) {friso10i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso10')+1)*width/22
+
+  });
+                friso10i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso11')!=-1) {friso11i.position({
+                  x: frisospos[10][0],
+                  y: frisospos[10][1]
+  });
+                friso11i.draggable(true);
+               }else 
+			   if(certos1.indexOf('friso11')!=-1) {friso11i.position({
+                  x: 0.102* width,
+                  y: 0.99*height-width/60-(certos1.indexOf('friso11')+1)*width/22
+
+  });
+                friso11i.draggable(false);
+               }
+			   
+			     if(errados.indexOf('friso12')!=-1) {friso12i.position({
+                  x: frisospos[11][0],
+                  y: frisospos[11][1]
+  });
+                friso12i.draggable(true);
+               }else 
+			   if(certos3.indexOf('friso12')!=-1) {friso12i.position({
+                  x: 0.76* width,
+                  y: 0.99*height-width/60-(certos3.indexOf('friso12')+1)*width/22
+
+  });
+                friso12i.draggable(false);
+               }
+  /* for (var j=0;j<certos1.length;j++)
+   {var privKey=certos1im[j];
+   var privKey0=certos1[j];
+privKey.position({
+                  x: 0.102* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-(j+1)*window.innerWidth/22
+  }); 
+ 
+                animalLayer.draw();
+alert(privKey0)
+			          };
+					  
+					  for (var j=0;j<certos2.length;j++)
+   {
+   var privKey=certos2im[j];
+   var privKey0=certos2[j];
+  privKey.position({
+                  x: 0.435* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-(j+1)*window.innerWidth/22
+});
+                animalLayer.draw();
+				
+				alert(privKey0)
+
+			          };
+					  
+					   for (var k=0;k<certos3.length;k++)
+   {
+   var privKey=certos3im[k];
+   var privKey0=certos3[k];
+   privKey.position({
+                  x: 0.76* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-(k+1)*window.innerWidth/22
+});
+                animalLayer.draw
+				
+				alert(privKey0)
+
+			          };
+					  
+					
+  //images[privKey]
+  for(i=0;i<errados.length;i++ ) {
+  
+  var privKey=erradosim[i]
+  var privKey0=errados[i]
+  var privKey0i=errados[i]+'i';
+  var ni=errados[i].substr(5)
+ 
+  
+ privKey.draggable(true);
+                privKey.position({
+                  x: frisospos[ni-1][0],
+                  y: frisospos[ni-1][1]
+                });
+				//privKey.image(privKey0i); 
+				//alert( privKey.image);
+ privKey0.src = '../atractor-apps-all/imgs/'+imagenames[ni-1];
+	 
+                animalLayer.draw();
+                //animal.inRightPlace = false;
+				
+				layer.draw();
+				}*/
+				
+				errados=[];
+				
+				animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+  
+  }
+
+   /*   
+
+        // create draggable animals
+        for (var key in animals) {
+          // anonymous function to induce scope
+          (function() {
+            var privKey = key;
+            var anim = animals[key];
+
+            var animal = new Konva.Image({
+              image: images[key],
+              x: anim.x,
+              y: anim.y,
+			   width: window.innerWidth/7.5,
+			  height: (window.innerWidth/7.5)/images[key].width*images[key].height,
+             draggable: true
+            });
+
+            animal.on('dragstart', function() {
+              this.moveToTop();
+              animalLayer.draw();
+            });
+            //check if animal is in the right spot and snap into place if it is
+            
+			 
+            animal.on('dragend', function() {
+			
+			var outline = outlines[privKey + '_black'];
+              
+			  var posx=outline.x/window.innerWidth;
+			
+			
+			
+if(isNearPos(animal, 0.102* window.innerWidth,0.48*window.innerHeight)) 
+{ct1++;  if(Math.abs(posx-0.102)<.1) {certos1.push(privKey);certos1im.push(animal)} else {
+errados.push(privKey); erradosim.push(animal)};
+
+animal.position({
+                  x: 0.102* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-ct1*window.innerWidth/22
+				  
+                });
+				animal.draggable(false);
+                animalLayer.draw();
+
+			          
+	
+                if(ct1+ct2+ct3==12) {
+	   	if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {corrigir()} 
+  }
+                // disable drag and drop
+               
+              } 
+			 
+			  else
+			  
+			  { if(isNearPos(animal, 0.435* window.innerWidth,0.48*window.innerHeight)) 
+{ct2++;  if(Math.abs(posx-0.435)<.1) {certos2.push(privKey);certos2im.push(animal);} else {errados.push(privKey); erradosim.push(animal)};
+
+
+ animal.position({
+                  x: 0.435* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-ct2*window.innerWidth/22
+  });
+  animal.draggable(false);
+               
+                animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+				if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else {corrigir()} }
+                // disable drag and drop
+                
+              }  else 
+			  
+			  { if(isNearPos(animal, 0.76* window.innerWidth,0.48*window.innerHeight)) 
+{ct3++;   if(Math.abs(posx-0.76)<.1) {certos3.push(privKey);certos3im.push(animal);} else
+ {errados.push(privKey); erradosim.push(animal)};
+
+animal.position({
+                  x: 0.76* window.innerWidth,
+                  y: 0.99*window.innerHeight-window.innerWidth/60-ct3*window.innerWidth/22
+  });
+                animal.draggable(false);
+               
+			   animalLayer.draw();
+
+			          
+	
+                if (ct1+ct2+ct3==12) {
+				
+		if(errados.length==0) {
+				
+	   aplausosAudio.play();
+                  var text = 'You win! Enjoy your booty!';
+                     $('#successMessage').show();
+    $('#successMessage').animate( {
+      left: '1%',
+      top: '1%',
+      width: '98%',
+      height: '58%',
+      opacity: 0.8
+    } );
+  } else { corrigir()
+  
+} 
+  }
+              } else {if (!animal.inRightPlace ) {
+                animal.position({
+                  x: anim.x,
+                  y: anim.y
+                });
+                animalLayer.draw();
+               // animal.inRightPlace = false;
+				
+				layer.draw();
+				}
+				
+			
+			  
+			  
+            }}}
+			
+		}
+			);
+            // make animal glow on mouseover
+            animal.on('mouseover', function() {
+              document.body.style.cursor = 'pointer';
+            });
+            // return animal on mouseout
+            animal.on('mouseout', function() {
+              animal.image(images[privKey]);
+              animalLayer.draw();
+              document.body.style.cursor = 'default';
+            });
+
+            animal.on('dragmove', function() {
+              document.body.style.cursor = 'pointer';
+            });
+
+            animalLayer.add(animal);
+            animalShapes.push(animal);
+          })();
+        
+		
+		
+		//
+		
+	
+		//
+		
+		
+		}
+
+        // create animal outlines
+        for (var key in outlines) {
+          // anonymous function to induce scope
+          (function() {
+            var imageObj = images[key];
+            var out = outlines[key];
+
+            var outline = new Konva.Image({
+              image: imageObj,
+              x: out.x,
+              y: out.y,
+          width: window.innerWidth/5*1.2,
+          height: window.innerWidth/4*1.2,
+			  
+            });
+
+            animalLayer.add(outline);
+          })();
+        }
+		
+	*/	
+
+  
+        stage.add(animalLayer);
+	  stage.add(textLayer);
+    	
+
+
+
+
+    
+	       var imageObj = new Image(); 
+      imageObj.onload = function() { 
+      };
+     
+
+
+		
+		
+      
+//numbers.sort( function() { return Math.random() - .5 } );
+  //numbers=numbers.slice(0, 12);
+
+
+ 
+      var sources = {
+
+        im1: imagenames[numbers[0]],
+        im2: imagenames[numbers[1]],
+        im3: imagenames[numbers[2]],
+        im4: imagenames[numbers[3]],
+		im5: imagenames[numbers[4]],
+		im6: imagenames[numbers[5]],
+		im7: imagenames[numbers[6]],
+		im8: imagenames[numbers[7]],
+		im9: imagenames[numbers[8]],
+		im10: imagenames[numbers[9]],
+		im11: imagenames[numbers[10]],
+		im12: imagenames[numbers[11]],
+		
+		
+		
+        black1: 'PastaFrisos1.png',
+		 black2: 'PastaFrisos2.png',
+		  black3: 'PastaFrisos3.png',
+		  
+		  icon1:'Icon-refH.png',
+		  icon2:'Icon-refV.png'
+      };
+	  var posxx=[], posyy=[];
+	  var ct=0;
+	  var n1=0, n2=0, n3=0
+	   for(var i=0;i<12;i++) 
+	   {
+	  if(imgsim[numbers[i]]=='1')  {ct++; n1++; posxx[i]=(0.08); 
+ posyy[i]=(0.45+5*n1/68)*window.innerHeight;	  } else {
+	  
+	  if(imgsim[numbers[i]]=='2')  {ct++; n2++; posxx[i]=(0.41);
+ posyy[i]=(0.55+5*n2/50)*window.innerHeight;	  } else
+	  
+	  {   if(imgsim[numbers[i]]=='3')  {ct++; n3++; posxx[i]=(0.74) * window.innerWidth;
+ posyy[i]=(0.55+5*n3/50)*window.innerHeight;	  } }}};
+	  
+	
+	    var outlines = {
+		
+		
+        
+			black1: {
+            x: 0.05* width,
+          y: 0.99*height-width/4*1.2
+			
+          },
+		  
+		
+		  		  black2: {
+            x: 0.38* width,
+          y: 0.99*height-width/4*1.2
+			
+          },
+		  
+
+		  
+		    black3: {
+            x: 0.71* width,
+          y:0.99*height-width/4*1.2
+			
+          },
+			
+		im1_black: {x: posxx[0], y: posyy[0]} ,
+         im2_black: {x: posxx[1], y: posyy[1]} ,
+im3_black: {x: posxx[2], y: posyy[2]} ,
+im4_black: {x: posxx[3], y: posyy[3]} ,
+im5_black: {x: posxx[4], y: posyy[4]} ,
+im6_black: {x: posxx[5], y: posyy[5]},
+im7_black: {x: posxx[6], y: posyy[6]},
+im8_black: {x: posxx[7], y: posyy[7]}, 		 
+im9_black: {x: posxx[8], y: posyy[8]},
+im10_black: {x: posxx[9], y: posyy[9]} 	,
+im11_black: {x: posxx[10], y: posyy[10]} 	,
+im12_black: {x: posxx[11], y: posyy[11]} 	,
+
+        };
+	 
+	   function loadImages(sources, callback) {
+        var assetDir = '../atractor-apps-all/imgs/';
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        for (var src in sources) {
+          numImages++;
+        }
+        for (var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if (++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = assetDir + sources[src];
+        }
+      }
+	    
+	 
+	  
+
+   
+
+    </script>
+  </body>
+</html>

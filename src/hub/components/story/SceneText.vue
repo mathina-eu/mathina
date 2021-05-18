@@ -1,6 +1,10 @@
 <template>
-  <v-card max-width="600">
-    <v-card-text class="text-body-1">
+  <v-card
+    class="scene-text"
+    max-width="600"
+    :style="styleText"
+  >
+    <v-card-text>
       <div v-html="text" />
     </v-card-text>
   </v-card>
@@ -13,6 +17,27 @@ export default {
       type: String,
       required: true,
     },
+    styleText: {
+      type: String,
+      required: false,
+      default: '',
+    }
   },
 };
 </script>
+
+<style scoped>
+@import "~vars";
+
+.scene-text {
+  >>> .v-card__text {
+    font-family: var(--story-font-family);
+    font-size: 1.125em;
+    color: var(--text-color);
+
+    .v-card__text {
+      color: var(--text-color);
+    }
+  }
+}
+</style>

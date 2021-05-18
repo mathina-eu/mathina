@@ -1,5 +1,9 @@
 <template>
-  <StoryView :is-loading="isLoading">
+  <StoryView
+    :is-loading="isLoading"
+    :full-width="fullWidth"
+    :background="storyBackground"
+  >
     <Parallax class="root">
       <template
         v-for="layer in ['back1', 'back2', 'back3', 'mid1', 'mid2', 'mid3', 'front1', 'front2', 'front3']"
@@ -8,6 +12,7 @@
         <StoryBackgrounds
           :key="layer"
           :backgrounds="parallaxedBackgrounds(layer)"
+          @base-bg="getBg"
         />
         <StoryImages
           :key="`${layer}img`"
@@ -18,21 +23,23 @@
         <v-btn
           v-if="!isFirstAction"
           class="navigation__button"
+          color="grey lighten-5"
           title="You can use the left arrow on your keyboard as well!"
           @click="back"
         >
           <v-icon>
-            mdi-arrow-left
+            mdi-chevron-left
           </v-icon>
         </v-btn>
         <v-btn
           v-if="hasMoreActions"
           class="navigation__button right"
+          color="grey lighten-5"
           title="You can use the right arrow on your keyboard as well!"
           @click="next"
         >
           <v-icon>
-            mdi-arrow-right
+            mdi-chevron-right
           </v-icon>
         </v-btn>
       </div>
@@ -44,6 +51,7 @@
         <SceneText
           v-else-if="isSceneTextAction"
           :text="action.text"
+          :style-text="action.style"
         />
         <GameView
           v-else-if="isGameMode"
@@ -57,11 +65,11 @@
           @lastGameFinished="isLastGameFinished=true"
         />
         <v-btn
-          v-if="!hasMoreActions && isLastGameFinished"
+          v-if="!hasMoreActions"
           class="mt-12"
           @click="$router.back()"
         >
-          All done!
+          {{ $t('story.back-to-world') }}
         </v-btn>
       </div>
     </Parallax>
@@ -131,9 +139,13 @@ export default {
       activeDirection: NEXT,
       showGameDialog: false,
       isLastGameFinished: true,
+      storyBackground: null,
     };
   },
   computed: {
+    fullWidth() {
+      return this.story?.fullWidth || false;
+    },
     firstInteractiveActionId() {
       for (let [id, action] of this.actions.entries()) {
         if (!action.autoProgress) {
@@ -153,7 +165,7 @@ export default {
     },
     activeDialog() {
       if (this.dialog.current !== null) {
-        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign };
+        return { ...this.dialog.entries[this.dialog.current], avatarAlign: this.dialog.avatarAlign, styleText: this.dialog.style };
       }
       return {};
     },
@@ -180,7 +192,7 @@ export default {
     this.isLoading = false;
 
     this.$store.dispatch('setBreadcrumbs', [
-      { path: `/world/`, text: 'World Map' },
+      { path: `/world/`, text: this.$t(`world.map`) },
       { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
     ]);
 
@@ -312,11 +324,16 @@ export default {
       this.dialog.current++;
       return true;
     },
+    getBg(bgUrl) {
+      this.storyBackground = bgUrl;
+    }
   },
 };
 </script>
 
 <style scoped>
+@import "~vars";
+
 .root {
   height: 100%;
   width: 100%;
@@ -334,40 +351,37 @@ export default {
 }
 
 .navigation {
-  --button-size: 50px;
-
+  pointer-events: none;
   margin: auto;
   position: absolute;
-  left: 0;
+  left: calc(-1 * var(--navigation-button-size));
   top: 50%;
   z-index: 5;
-  width: 100%;
+  width: calc(100% + (2 * var(--navigation-button-size)));
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
 
-  @media (min-width: 1300px) {
-    width: calc(100% + 3 * (var(--button-size)));
-    left: calc(-1.5 * var(--button-size));
-  }
-
-  @media (min-width: 1400px) {
-    width: calc(100% + 4 * (var(--button-size)));
-    left: calc(-2 * var(--button-size));
-  }
-
   &__button {
-    width: var(--button-size, 50px);
-    min-width: var(--button-size, 50px) !important;
-    height: var(--button-size, 50px) !important;
+    pointer-events: all;
+    width: var(--navigation-button-size);
+    min-width: var(--navigation-button-size) !important;
+    height: var(--navigation-button-size) !important;
     border-radius: 50%;
     position: sticky;
-    margin: 0 1rem;
-    left: 0;
+    margin: 0 0.5rem;
+    left: 0.5rem;
+    box-shadow: #0000000d 0 0 0 5px;
 
     &.right {
+      right: 0.5rem;
+      left: unset;
       margin-left: auto;
+    }
+
+    .v-icon {
+      font-size: 48px;
     }
   }
 }

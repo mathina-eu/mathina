@@ -3,17 +3,18 @@
   <head>
     <script src="../atractor-apps-all/scripts/konva.min.js"></script>
     <meta charset="utf-8" />
-    <title>Arrumar brinquedos</title>
+    <title>App</title>
     <style>
 	html {
   touch-action: pan-down;
+        background-color: 	#FCE696;
 }
 
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #f0f0f0;
+        background-color: 	#FCE696;
       }
 	  
 	  .image-upload>input {
@@ -134,7 +135,7 @@ img:hover {
 		
 <input type="range" name="RangeVal" value="RangeVal" id="range" min="0" max="3.14" step=".01" 
 style=" position: absolute;
-  top: 13%;
+  top: 20px;
   right: 55%;" />
   
   <input type="range" class="range2" name="RangeVal" value="RangeVal" id="range2" min="0" max="3.14" step=".01" style=" position: absolute;
@@ -184,24 +185,44 @@ style=" position: absolute;
 	<script>
 	var ini=true; var stage;
 	
+
+	
 	window.addEventListener('resize', function(){
 	
 	width = window.innerWidth; height = window.innerHeight;
 	
 		if(ini){fitStageIntoParentContainer()};
-	 if(!ini) {WIDTH = .99*window.innerWidth;HEIGHT = .99*window.innerHeight;
-	 ASPECT = WIDTH / HEIGHT;container.removeChild( renderer.domElement );init(); animate();
-	document.getElementById("certo1").style.display="none"
+	 if(!ini) {
 	 
-	 }; 
+	 
+	     var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+renderer.setSize(width,height);
+
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+	 	 
+	var pos1y=height*0.47;
+
+
+document.getElementById('range2').style.top= parseInt(pos1y) + "px"; 
+ }; 
 	 } );
 	
 	// scene size
-			var WIDTH = .99*window.innerWidth;
-			var HEIGHT = .99*window.innerHeight;
+			 var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+ width=.99*width0;
+ height=.99*Math.min(width0/2,height0);
+
+var ASPECT=width/height;
 			// camera
 			var VIEW_ANGLE = 12;
-			var ASPECT = WIDTH / HEIGHT;
+			
 			var NEAR = 10;
 			var FAR = 10000;
 			var camera, scene;
@@ -361,12 +382,15 @@ function init() {
 				
 			document.getElementById("range").value=0;
 			document.getElementById("range2").value=0;
-			
+			var pos1y=height*0.47;
+
+
+document.getElementById('range2').style.top= parseInt(pos1y) + "px"; 
 			
 				// renderer
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				//renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( WIDTH, HEIGHT );
+				renderer.setSize( width, height );
 				renderer.setClearColor(0xd2d1b8,1);
 				container.appendChild( renderer.domElement );
 				// scene
@@ -447,8 +471,12 @@ scene.add( light );
 	var hori=false;
 	function Link(ii) 
 	{	if(ii==0||ii==2||ii==10||ii==13){hori=true} else {hori=false; if(imgsim[ii]=='s') {vert=true} else{vert=false}}; 
-	WIDTH = .99*window.innerWidth;HEIGHT = .99*window.innerHeight;
-	 ASPECT = WIDTH / HEIGHT;
+	 var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+ width=.99*width0;
+ height=.99*Math.min(width0/2,height0);
+
+ASPECT=width/height;
 	 
 	 var imgname = '../atractor-apps-all/imgs/'+imagenames[ii];
 	
@@ -555,7 +583,7 @@ texture4.repeat.set( 0.5,1 );
         var o = outline;
         var ax = a.x();
         var ay = a.y();
-var delta=60;
+var delta=120;
         if (ax > o.x - delta && ax < o.x + delta && ay > o.y - delta && ay < o.y + delta) {
           return true;
         } else {
@@ -595,7 +623,7 @@ var textLayer=	new Konva.Layer();   var animalShapes = [];
 
 
 var textscore = new Konva.Text({
-        text: String(score)+' de '+String(ct),
+        text: String(score)+' / '+String(ct),
         x: 0.25*window.innerWidth+ window.innerWidth/5,
         y: 0.35*window.innerHeight + window.innerWidth/5,
 		
@@ -730,7 +758,7 @@ var textscore = new Konva.Text({
 				icon[privKey.substring(2)-1].opacity(0)
 				layer.draw();
                 				
-			textscore.text(String(score+1)+' de '+String(ct))
+			textscore.text(String(score+1)+' / '+String(ct))
    
 
 	  textLayer.add(textscore);

@@ -1,0 +1,456 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2014-2017 Associação Atractor
+  All rights reserved
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>Animation</title>
+
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/three87.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/Detector.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/TrackballControls.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/platonicos.js"></script>
+<script type="text/javascript">
+
+
+
+WW=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;		  
+
+</script>
+<style type="text/css">
+html {
+  width: 100%;
+  height: 100%;
+  margins:0 px;
+  background: #fae47b; 
+}
+</style>
+<style type="text/css">
+.btrg_s3 { position: absolute; top: 2%; margin-left: 0px; margin-top: 0px; }
+.bt_s3 { left: 19px; }
+.rg_s3 { left: 210px; }
+</style>
+
+</head>
+
+<body onload="init(icosaedro);initsolids();animate();return false;">
+<div id="THREE" style="position:absolute; top: 0px; left: 0px;"></div>
+
+<noscript>
+<div>
+<h1><strong>To access all the functionalities of this site, you must activate JavaScript.</strong></h1>
+<br/>
+<h2><a href="http://www.enable-javascript.com/pt/" target="_blank">Follow these instructions to enable JavaScript in your browser and reload the page.</a></h2>
+<br/><br/><br/>
+</div>
+</noscript>
+
+<button class="button btrg_s3 bt_s3" id="pauseRotateButton" onClick="pauseRotation();"><img id=imgbt src="../atractor-apps-all/icons/pause.png"  width="50px"></img></button>
+<div id="btandinp"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+if(x=document.getElementById("btandinp")){
+ if(typeof pDataButtonText!=='undefined'&&pDataButtonText!=="")
+  x.innerHTML='<button class="button btrg_s3 bt_s3" id="pauseRotateButton" onClick="pauseRotation();">'+pDataButtonText+'</button>';
+ if(typeof pDataAddRange!=='undefined'&&pDataAddRange)
+  x.innerHTML+='<input class="btrg_s3 rg_s3" id="range" type="range"  min="0" max="199" step="1"  value="RangeVal">';
+}
+
+var isRotating=true; 
+//MAIN
+//standard global variables
+var container, scene, camera, renderer, controls;
+if (typeof S3PPre == 'undefined') S3PPre="pol";
+//custom global variables
+var mesh;
+var spriteBR;
+var mapC; 
+function init(DataPols) {
+if (typeof DataPols == 'undefined') DataPols=cubo;	
+var width0=parseInt(WW);
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=width0;
+if(S3PPre=="vplan")
+{var height=.96*Math.min(width0/2,height0);}
+else
+{var height=.96*Math.min(width0/2,height0);};
+var width2=width;
+var height2=height;
+
+var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/fundoSymm4.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+			
+			
+			
+scene=new THREE.Scene();
+
+
+if(S3PPre=="vplan")
+{var yy = [] 
+	for (var i = 0; i < DataPols.vertex.length; i++)
+		yy.push( Math.sqrt(Math.pow(DataPols.vertex[i][0],2)+Math.pow(DataPols.vertex[i][1],2)+Math.pow(DataPols.vertex[i][2],2) ));
+	var maxyy=yy.reduce(function(a, b) {
+  return Math.max(a, b);
+});
+		var view_angle=Math.atan(maxyy/(Math.sqrt(Math.pow(DataPols.camera[0],2)+Math.pow(DataPols.camera[1],2)+Math.pow(DataPols.camera[2],2))-maxyy))*2*(180/Math.PI);
+		}
+else
+{var view_angle=DataPols.pov};
+var aspect=width/height, near=0.1, far=2000;
+camera=new THREE.PerspectiveCamera(33,aspect,near,far);
+camera.position.set(20,6,0);
+scene.add(camera);
+
+
+//renderer 
+if (Detector.webgl) 
+renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
+else 
+renderer=new THREE.CanvasRenderer();
+renderer.autoClear=false;
+renderer.setSize(width,height);
+renderer.setClearColor(0xf3f1cd,1);
+container=document.getElementById('ThreeJS');
+document.getElementById("THREE").appendChild(renderer.domElement);
+window.addEventListener('resize',OnResize,false);
+if(S3PPre=="pol") 
+{controls=new THREE.TrackballControls(camera,renderer.domElement);
+controls.noPan=true;};
+//LIGHT 
+var light = new THREE.PointLight(0xffffff);
+light.position.set(-25,25,50);
+camera.add(light);
+var light2 = new THREE.PointLight(0xffffff);
+light2.position.set(20,20,0);
+//camera.add(light2);
+}
+
+var faces;
+function polyhedronDataToMesh(data)
+{
+var polyhedron = new THREE.Object3D();
+var opac= 0.85
+var kk=1;
+// convert vertex data to THREE.js vectors
+var vertex = [] 
+for (var i = 0; i < data.vertex.length; i++)
+vertex.push( new THREE.Vector3( data.vertex[i][1], data.vertex[i][2], data.vertex[i][0] ).multiplyScalar(1) );
+if(data.vertexf==undefined)
+{var vertexf = vertex}
+else
+{var vertexf = []; 
+for (var i = 0; i < data.vertexf.length; i++)
+vertexf.push( new THREE.Vector3( data.vertexf[i][1], data.vertexf[i][2], data.vertexf[i][0] ).multiplyScalar(1) );
+};
+var vertexGeometry = new THREE.SphereGeometry( 0.004*kk*data.camera[2], 20, 20 );
+var vertexMaterial = new THREE.MeshLambertMaterial( { color: 0xc0c0c0 } );
+var vertexSingleMesh = new THREE.Mesh( vertexGeometry );
+var vertexAmalgam = new THREE.Geometry();
+for (var i = 0; i < data.vertex.length; i++)
+{
+vertexSingleMesh.position.set(vertex[i].getComponent(0),vertex[i].getComponent(1),vertex[i].getComponent(2));
+THREE.GeometryUtils.merge( vertexAmalgam, vertexSingleMesh );
+}
+var vertexMesh = new THREE.Mesh( vertexAmalgam, vertexMaterial );
+polyhedron.add( vertexMesh );
+// convert edge data to cylinders
+var edgeMaterial = new THREE.MeshLambertMaterial( {color:0xdaa520} );
+var edgeAmalgam = new THREE.Geometry();
+for (var i = 0; i < data.edge.length; i++)
+{
+var index0 = data.edge[i][0];
+var index1 = data.edge[i][1];
+var eMesh = cylinderMesh( vertex[index0], vertex[index1], edgeMaterial,.003*kk*data.camera[2]);
+THREE.GeometryUtils.merge( edgeAmalgam, eMesh );
+}
+var edgeMesh = new THREE.Mesh( edgeAmalgam, edgeMaterial );
+polyhedron.add( edgeMesh );
+
+
+if(data.edge2!=undefined)
+{var edgeMaterial2 = new THREE.MeshLambertMaterial( {color:0xdaa520} );
+var edgeAmalgam2 = new THREE.Geometry();
+for (var i = 0; i < data.edge2.length; i++)
+{
+var index02 = data.edge2[i][0];
+var index12 = data.edge2[i][1];
+var eMesh2 = cylinderMesh( vertex[index02], vertex[index12], edgeMaterial,0.002*kk*data.camera[2]);
+THREE.GeometryUtils.merge( edgeAmalgam2, eMesh2 );
+}
+var edgeMesh2 = new THREE.Mesh( edgeAmalgam2, edgeMaterial2 );
+polyhedron.add( edgeMesh2 );}
+
+
+// convert face data to a single (triangulated) geometry
+var faceMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff, vertexColors: THREE.FaceColors,
+side: THREE.FrontSide, transparent:true, opacity: opac } );
+var geometry = new THREE.Geometry();
+geometry.vertices = vertexf;
+var faceIndex = 0;
+for (var faceNum = 0; faceNum < data.face.length; faceNum++)
+{
+for (var i = 0; i < data.face[faceNum].length - 2; i++)
+{
+geometry.faces[faceIndex] = new THREE.Face3( data.face[faceNum][0], data.face[faceNum][i+1], data.face[faceNum][i+2] );
+geometry.faces[faceIndex].color = new THREE.Color(data.facecolors[faceNum]);
+faceIndex++;
+}
+}
+geometry.computeFaceNormals();
+geometry.computeVertexNormals();
+faces = new THREE.Mesh(geometry, faceMaterial);
+//faces.scale.multiplyScalar(1.01);
+var interiorMaterial = new THREE.MeshLambertMaterial( { color: 0xffffff, vertexColors: THREE.FaceColors, side: THREE.BackSide,
+transparent:true, opacity: opac} );
+var interiorFaces = new THREE.Mesh(geometry, interiorMaterial);
+//interiorFaces.scale.multiplyScalar(0.99);
+polyhedron.add( interiorFaces );
+polyhedron.add( faces );
+return polyhedron;
+}
+function cylinderMesh(point1, point2, material,k)
+{
+var direction = new THREE.Vector3().subVectors(point2, point1);
+var orientation = new THREE.Matrix4();
+orientation.lookAt(point1, point2, new THREE.Object3D().up);
+orientation.multiply(new THREE.Matrix4().set(1, 0, 0, 0,
+                0, 0, 1, 0,
+                0, -1, 0, 0,
+                0, 0, 0, 1));
+    var edgeGeometry = new THREE.CylinderGeometry( k,k, direction.length(),10, 2 );
+    var edge = new THREE.Mesh(edgeGeometry, material); 
+ edge.applyMatrix(orientation);
+ edge.position.x = (point2.x + point1.x) / 2;
+     edge.position.y = (point2.y + point1.y) / 2;
+     edge.position.z = (point2.z + point1.z) / 2;
+return edge;
+}
+function update(DataPols)
+{if (typeof DataPols == 'undefined') DataPols=cubo;
+	
+	controls.update();
+}
+
+var obj=new THREE.Group();
+function initsolids()
+{
+var raio=9; 
+
+
+
+this.polyhedronMesh1 = new THREE.Object3D(); 
+polyhedronMesh1 = polyhedronDataToMesh(tetraedro)
+polyhedronMesh1.scale.set(2.5,2.5,2.5);
+polyhedronMesh1.position.x=raio*Math.cos(0)
+polyhedronMesh1.position.z=raio*Math.sin(0)
+obj.add(polyhedronMesh1);
+
+this.polyhedronMesh = new THREE.Object3D(); 
+polyhedronMesh = polyhedronDataToMesh(octaedro)
+polyhedronMesh.scale.set(2,2,2);
+polyhedronMesh.position.x=raio*Math.cos(2*Math.PI/18)
+polyhedronMesh.position.z=raio*Math.sin(2*Math.PI/18)
+obj.add(polyhedronMesh);
+
+this.polyhedronMesh2 = new THREE.Object3D(); 
+polyhedronMesh2 = polyhedronDataToMesh(icosaedro)
+polyhedronMesh2.scale.set(1.5,1.5,1.5);
+polyhedronMesh2.position.x=raio*Math.cos(4*Math.PI/18)
+polyhedronMesh2.position.z=raio*Math.sin(4*Math.PI/18)
+obj.add(polyhedronMesh2);
+
+
+this.polyhedronMesh3 = new THREE.Object3D(); 
+polyhedronMesh3 = polyhedronDataToMesh(cubo)
+polyhedronMesh3.scale.set(1.7,1.7,1.7);
+polyhedronMesh3.position.x=raio*Math.cos(6*Math.PI/18)
+polyhedronMesh3.position.z=raio*Math.sin(6*Math.PI/18)
+
+obj.add(polyhedronMesh3);
+
+
+this.polyhedronMesh4 = new THREE.Object3D(); 
+polyhedronMesh4 = polyhedronDataToMesh(dodecaedro)
+
+polyhedronMesh4.position.x=raio*Math.cos(8*Math.PI/18)
+polyhedronMesh4.position.z=raio*Math.sin(8*Math.PI/18)
+obj.add(polyhedronMesh4);
+
+
+this.polyhedronMesh5 = new THREE.Object3D(); 
+polyhedronMesh5 = polyhedronDataToMesh(tetraedrotruncado)
+polyhedronMesh5.scale.set(1.2,1.2,1.2);
+polyhedronMesh5.position.x=raio*Math.cos(10*Math.PI/18)
+polyhedronMesh5.position.z=raio*Math.sin(10*Math.PI/18)
+obj.add(polyhedronMesh5);
+
+this.polyhedronMesh6 = new THREE.Object3D(); 
+polyhedronMesh6 = polyhedronDataToMesh(cuboctaedro)
+polyhedronMesh6.scale.set(1.3,1.3,1.3);
+polyhedronMesh6.position.x=raio*Math.cos(12*Math.PI/18)
+polyhedronMesh6.position.z=raio*Math.sin(12*Math.PI/18)
+obj.add(polyhedronMesh6);
+
+this.polyhedronMesh7 = new THREE.Object3D(); 
+polyhedronMesh7 = polyhedronDataToMesh(octaedrotruncado)
+polyhedronMesh7.scale.set(.8,.8,.8);
+polyhedronMesh7.position.x=raio*Math.cos(14*Math.PI/18)
+polyhedronMesh7.position.z=raio*Math.sin(14*Math.PI/18)
+obj.add(polyhedronMesh7);
+
+this.polyhedronMesh8 = new THREE.Object3D(); 
+polyhedronMesh8 = polyhedronDataToMesh(cubotruncado)
+polyhedronMesh8.scale.set(.7,.7,.7);
+polyhedronMesh8.position.x=raio*Math.cos(16*Math.PI/18)
+polyhedronMesh8.position.z=raio*Math.sin(16*Math.PI/18)
+obj.add(polyhedronMesh8);
+
+
+this.polyhedronMesh9 = new THREE.Object3D(); 
+polyhedronMesh9 = polyhedronDataToMesh(rombicuboctaedro)
+polyhedronMesh9.position.x=raio*Math.cos(18*Math.PI/18)
+polyhedronMesh9.position.z=raio*Math.sin(18*Math.PI/18)
+obj.add(polyhedronMesh9);
+
+this.polyhedronMesh10 = new THREE.Object3D(); 
+polyhedronMesh10 = polyhedronDataToMesh(cuboctaedrorombitruncado)
+polyhedronMesh10.scale.set(.6,.6,.6);
+polyhedronMesh10.position.x=raio*Math.cos(20*Math.PI/18)
+polyhedronMesh10.position.z=raio*Math.sin(20*Math.PI/18)
+obj.add(polyhedronMesh10);
+
+this.polyhedronMesh11 = new THREE.Object3D(); 
+polyhedronMesh11 = polyhedronDataToMesh(cuboachatado)
+polyhedronMesh11.position.x=raio*Math.cos(22*Math.PI/18)
+polyhedronMesh11.position.z=raio*Math.sin(22*Math.PI/18)
+obj.add(polyhedronMesh11);
+
+this.polyhedronMesh12 = new THREE.Object3D(); 
+polyhedronMesh12 = polyhedronDataToMesh(icosidodecaedro)
+polyhedronMesh12.scale.set(.8,.8,.8);
+polyhedronMesh12.position.x=raio*Math.cos(24*Math.PI/18)
+polyhedronMesh12.position.z=raio*Math.sin(24*Math.PI/18)
+obj.add(polyhedronMesh12);
+
+this.polyhedronMesh13 = new THREE.Object3D(); 
+polyhedronMesh13 = polyhedronDataToMesh(icosaedrotruncado)
+polyhedronMesh13.scale.set(.5,.5,.5);
+polyhedronMesh13.position.x=raio*Math.cos(26*Math.PI/18)
+polyhedronMesh13.position.z=raio*Math.sin(26*Math.PI/18)
+obj.add(polyhedronMesh13);
+
+this.polyhedronMesh14 = new THREE.Object3D(); 
+polyhedronMesh14 = polyhedronDataToMesh(dodecaedrotruncado)
+polyhedronMesh14.scale.set(.4,.4,.4);
+polyhedronMesh14.position.x=raio*Math.cos(28*Math.PI/18)
+polyhedronMesh14.position.z=raio*Math.sin(28*Math.PI/18)
+obj.add(polyhedronMesh14);
+
+this.polyhedronMesh15 = new THREE.Object3D(); 
+polyhedronMesh15 = polyhedronDataToMesh(rombicosidodecaedro)
+polyhedronMesh15.scale.set(.6,.6,.6);
+polyhedronMesh15.position.x=raio*Math.cos(30*Math.PI/18)
+polyhedronMesh15.position.z=raio*Math.sin(30*Math.PI/18)
+obj.add(polyhedronMesh15);
+
+this.polyhedronMesh16 = new THREE.Object3D(); 
+polyhedronMesh16 = polyhedronDataToMesh(icosidodecaedrorombitruncado)
+polyhedronMesh16.scale.set(.3,.3,.3);
+polyhedronMesh16.position.x=raio*Math.cos(32*Math.PI/18)
+polyhedronMesh16.position.z=raio*Math.sin(32*Math.PI/18)
+obj.add(polyhedronMesh16);
+
+this.polyhedronMesh17 = new THREE.Object3D(); 
+polyhedronMesh17 = polyhedronDataToMesh(dodecaedroachatado)
+polyhedronMesh17.scale.set(.6,.6,.6);
+polyhedronMesh17.position.x=raio*Math.cos(34*Math.PI/18)
+polyhedronMesh17.position.z=raio*Math.sin(34*Math.PI/18)
+obj.add(polyhedronMesh17);
+
+obj.position.y=1.5;
+scene.add(obj)
+
+}
+
+
+function animate() {requestAnimationFrame(animate);
+render();
+update();}
+
+function render() {
+
+
+
+if(isRotating) 
+{
+obj.rotation.y+=0.002
+polyhedronMesh.rotation.y += 0.005;
+polyhedronMesh1.rotation.y += 0.005;
+polyhedronMesh2.rotation.y += 0.005;
+polyhedronMesh3.rotation.y += 0.005;
+polyhedronMesh4.rotation.y += 0.005;
+polyhedronMesh5.rotation.y += 0.005;
+polyhedronMesh6.rotation.y += 0.005;
+polyhedronMesh7.rotation.y += 0.005;
+polyhedronMesh8.rotation.y += 0.005;
+polyhedronMesh9.rotation.y += 0.005;
+polyhedronMesh10.rotation.y += 0.005;
+polyhedronMesh11.rotation.y += 0.005;
+polyhedronMesh12.rotation.y += 0.005;
+polyhedronMesh13.rotation.y += 0.005;
+polyhedronMesh14.rotation.y += 0.005;
+polyhedronMesh15.rotation.y += 0.005;
+polyhedronMesh16.rotation.y += 0.005;
+polyhedronMesh17.rotation.y += 0.005;} 
+renderer.clear();
+renderer.render(scene,camera);
+}
+
+if(S3PPre=="pol")
+{var isRotating=true}
+else{var isRotating=false};
+
+
+var isRotating=true
+function pauseRotation()
+{var str=imgbt.src;
+var str0=str.substring(str.length-9,str.length);
+	if(str0=="pause.png") 
+{isRotating=false;
+ document.getElementById("imgbt").src ="../atractor-apps-all/icons/play.png"} 
+else 
+{isRotating=true;
+document.getElementById("imgbt").src ="../atractor-apps-all/icons/pause.png"};}
+
+function OnResize()
+{var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=width0;
+if(S3PPre=="vplan")
+{var height=Math.min(width0/2,height0);}
+else
+{var height=Math.min(width0/2,height0);};
+var width2=width;
+var height2=height;
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+renderer.setSize(width,height);
+
+
+}
+//]]>
+</script>
+
+<div id="ThreeJS"></div>
+</body>
+</html>
+

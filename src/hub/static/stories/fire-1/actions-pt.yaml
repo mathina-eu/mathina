@@ -1,0 +1,504 @@
+#FIRE-1
+actions:
+  - type: background
+    src: bg_full.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: image
+    src: bg_castle.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+
+  - type: image
+    src: bg_fields.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 15%; top: 30%; left: 1%;"
+    parallax: mid2
+    #valign: bottom
+    #style: "height: 25vh"
+  #- type: image
+    #src: $COMMON/img/leo3.png
+    #id: leo1
+    #style: "width: 15%; top: 57%; left: 0%; "
+    #valign: bottom
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%;"
+    parallax: front1
+
+  # - type: image
+    # src: unidragon.gif
+    # id: uni1
+    # style: "width: 10%; top: 5%; left: 90%;"
+    # parallax: mid2
+
+  - type: sceneText
+    text: >
+      Era uma manhã de sol, a Mathina e o Leo passeavam nos campos perto da sua aldeia, quando de repente avistaram uma senhora idosa acenando com as mãos para o céu e proferindo palavras incompreensíveis.
+
+  - type: animation
+    target: matleo
+    vars:
+        duration: 5
+        xPercent: 155
+        yPercent: 75
+        width: 20%
+        ease: power3.out
+
+  - type: sceneText
+    text: >
+      Era uma senhora idosa, mas destemida e forte como um ranger aposentado, para quem o tempo havia parado. Tinha cabelo branco e comprido. Vestia roupas grossas de couro, uma velha capa branca, aliás mais cinzenta do que branca, botas de cavaleiro e transportava: uma bolsa, uma corda grossa, um livro e uma vara curta decorada com riscas coloridas, vara que era demasiado curta para ser usada como bengala, mas suficientemente comprida para prolongar um braço até ao chão.
+
+  - type: clearImage
+    id: matleo
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: sceneText
+    text: >
+      A Mathina, que não era nada tímida, aproximou-se da senhora.
+  - type: animation
+    target: fla
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: A senhora é uma guerreira? 
+        char: mathina
+        mood: talking
+      - text: Oh, minha amiga, eu não diria isso. Nunca lutei, pelo menos com nenhum ser humano. - respondeu a senhora.
+        char: flamma
+        mood: normal
+      - text: Então é uma feiticeira?
+        char: mathina
+        mood: arguing
+      - text: Também não diria isso, embora conheça alguns e até já me tenham ajudado mais que uma vez.
+        char: flamma
+        mood: normal
+      - text: Então o que é? Fala uma língua estranha.
+        char: mathina
+        mood: surprised
+      - text: Sou treinadora de pássaros de fogo.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: O que é isso?
+        char: leo
+        exposition: Perguntou o Leo, com crescente interesse.
+        mood: talking
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7.5%; top: 52%; left: 46%"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: O meu nome é Flama, e venho de Arisa, terra cheia de estranhas criaturas e feiticeiros. Em Arisa, existem muitos tipos de pássaros de fogo. Essas criaturas são extremamente inteligentes, mas possuem mentes e linguagem diferentes das nossas.
+        char: flamma
+        mood: normal
+      - text: Usam uma linguagem muito precisa para comunicar onde estão, como voam e para onde vão. Nós, humanos, não temos palavras tão precisas para descrever o seu voo, mas existem linguagens mágicas, com números, símbolos e palavras secretas que nos permitem traduzir para a sua linguagem aquilo que queremos dizer. Estas criaturas, se forem bem treinadas, entendem-nos e voam quando lhes pedimos. E é isso que faço - treino pássaros de fogo.
+        char: flamma
+        mood: normal
+      - text: Oh, mas isso é fascinante! Podemos ver alguns pássaros de fogo? Disse que existem de diferentes tipos…
+        char: mathina
+        mood: talking
+      - text: Vim aqui à procura de um pequeno uni-dragão que perdi há dois dias. Acho que ele queria explorar o mundo, mas voou para longe demais. Vais vê-lo, assim que eu consiga dizer-lhe onde estou.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: fla
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo3.png
+    id: leo
+    style: "width: 8%; top: 50%; left: 38%"
+    parallax: mid2
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 50%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma1.png
+    id: fla
+    style: "width: 20%; top: 33%; left: 53%;"
+    parallax: front3
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: 5%; left: 90%; transform: rotateY(180deg)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        width: 25%
+        xPercent: -130
+        yPercent: 40
+
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(180deg)
+        delay: 3.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        delay: 3
+        xPercent: -230
+        yPercent: -30
+        width: 20%
+        ease: power1.out
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        transform: rotateY(0deg)
+        delay: 6
+        ease: power1.out
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.5
+        ease: power1.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        transform: rotateY(0deg)
+        delay: 6.7
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 6
+        transform: rotateY(0deg)
+        width: 5%
+        ease: power1.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 4
+        delay: 10
+        transform: rotateY(180deg)
+        width: 10%
+        ease: power1.out
+
+
+  - type: sceneText
+    text: A Flama soltou um grito alto e grave para o céu. Não se assemelhava a nenhum idioma, mas parecia ter algum significado. De repente, uma espécie de dragão apareceu no céu, deixando um rasto de fumo colorido no ar. O dragão moveu-se graciosamente, respondendo à Flama, enquanto ela movimentava o braço e a vara.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 13%; top: 55%; left: 35%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: O que é aquilo? É um dragão?- Não tenho medo deles!
+        char: leo
+        exposition: acrescentou, embora ficasse um pouco nervoso com a aproximação do animal.
+        mood: surprised
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 40%; left: 50%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 20
+        delay: 3
+        transform: rotateY(180deg)
+        xPercent: -65
+        yPercent: -10
+        #xPercent: -530
+        #yPercent: -20
+        width: 30%
+        ease: power1.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: Este é um uni-dragão. Os uni-dragões são muito parecidos com os dragões, mas nascem com um chifre na cabeça. O chifre é frágil e acaba por cair da cabeça, deixando uma marca. Mas o chifre caído não é um material morto - o dragão ainda consegue senti-lo.
+        char: flamma
+        mood: normal
+      - text: Os treinadores de uni-dragões, como eu, devem encontrar um uni-dragão e cuidar do seu chifre. É uma grande responsabilidade, dado que o chifre é uma parte sensível do dragão, e o animal pode senti-lo quando o movemos ou o apontamos numa determinada direção. Usamos o chifre para guiar os dragões no ar. A vara que trago não é uma bengala, mas sim o chifre deste uni-dragão. Querem tentar pilotar o dragão no céu?
+        char: flamma
+        mood: normal
+      - text: Sim! Sim!
+        char: mathina
+        mood: happy
+      - text: Vamos ser treinadores de dragões!
+        char: leo
+        mood: happy
+      - text: Só precisam de apontar o chifre na direção em que pretendem que o dragão voe.
+        char: flamma
+        mood: normal
+
+#Game 1.1
+  - type: game
+    text: |
+      Usa o chifre para guiar o uni-dragão.
+      Tenta desenhar algumas formas bonitas no ar.
+    toolbarText: Faz voar o uni-dragão!
+    url: /apps/imaginary-tests/app_1/1_1/index.html
+    cta: Faz voar o uni-dragão!
+
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 5%; top: 48%; left: 52%;"
+    parallax: front1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Muito bem! Agora tentem apanhar estes insetos de fogo com o dragão! Os insetos de fogo são o principal alimento dos uni-dragões, que gostam muito deles.
+        char: flamma
+        exposition: Ela atirou alguns insetos de fogo para o ar que ficaram a flutuar como balões.
+        mood: normal
+
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.5
+        xPercent: 150
+        yPercent: -150
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 0.5
+        repeat: 3
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 1.5
+        delay: 0.5
+        xPercent: 550
+        yPercent: 60
+        ease: power0.out
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        delay: 2
+        repeat: 300
+        rotate: 360
+        #yoyo: true
+        #ease: power.out
+
+#Game 1.2
+  - type: game
+    text: Faz voar o uni-dragão para comer todos os insetos de fogo. Não toques nas nuvens, os pássaros de fogo detestam-nas!
+    toolbarText: Apanha os insetos de fogo!
+    url: /apps/imaginary-tests/app_1/1_2/index.html
+    cta: Apanha os insetos de fogo!
+
+  - type: clearImage
+    id: fire1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Nada mau! Mas se quiserem ser treinadores de dragões, têm de praticar. Conseguem fazer com que o uni-dragão desenhe formas no céu com o seu rasto de fumo? Ora tentem!
+        char: flamma
+        mood: normal
+
+#Game 1.3
+  - type: game
+    text: Tenta voar o mais próximo possível das linhas no céu
+    toolbarText: Segue as linhas!
+    url: /apps/imaginary-tests/app_1/1_3/index.html
+    cta: Segue as linhas!
+
+  - type: sceneText
+    text: >
+      Com uma voz séria, a Flama anunciou:
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+      - text: Mathina, vi que treinaste bem e tens um grande talento para comunicar com uni-dragões. Daqui a algumas semanas, vai haver um grande festival de treinadores de pássaros de fogo no castelo de Arisa. Acho que devias ir comigo para assistires e tentares pilotar dragões em competições mais desafiadoras e com os melhores treinadores neste país.
+        char: flamma
+        mood: normal
+      - text: Oh, isso seria fantástico. Podemos ter o nosso próprio uni-dragão?
+        char: leo
+        exposition: Leo incluíu-se logo na competição.
+        mood: happy
+      - text: Bem, um uni-dragão é um grande animal de estimação para se ter, é uma grande responsabilidade e ele tem de te aceitar. Se te saíres bem no festival, então, sim, podes tornar-te treinador de pássaros de fogo e teres o teu próprio uni-dragão.
+        char: flamma
+        mood: normal
+      - text: Adorava tentar. Estou sempre pronta para aventuras! Vamos ter um uni-dragão, Leo!
+        char: mathina
+        mood: happy
+      - text: Então está combinado. Mas vocês terão de praticar muito. Vou deixar-vos treinar mais com este uni-dragão e assim que estiverem preparados, vamos para o festival.
+        char: flamma
+        mood: normal
+
+# Game 1.1 again (?)
+  - type: game
+    text: Podes treinar outra vez a pilotar o uni-dragão. Que formas consegues fazer?
+    cta: "Treina!"
+    url: /apps/imaginary-tests/app_1/1_1/index.html
