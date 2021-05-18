@@ -9,7 +9,7 @@ actions:
   - type: image
     src: moon.png
     id: clouds
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    style: "position: absolute; left: 0; top: 10%; width: 100%; height: 100%; z-index: 1;"
     parallax: back2
 
   - type: image
@@ -31,26 +31,58 @@ actions:
     src: hill_ferns.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: mid2
-
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 25%; top: 40%; left: 0%;"
+    parallax: mid2
   - type: sceneText
-    text: Es war schon später Nachmittag, als Mathina und Leo durch den Wald von Arisa liefen, um Beeren und Pilze zu sammeln. Sie wussten, dass der Wald am Tage sicher war, aber sie hatten Geschichten über Zauberwesen gehört, denen man nachts im Wald begegnen konnte. Noch nie waren sie so lange im Wald geblieben, und die Sonne stand bereits tief am Himmel. Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
+    text: Es war schon später Nachmittag, als Mathina und Leo durch den Wald von Arisa liefen, um Beeren und Pilze zu sammeln. Sie wussten, dass der Wald am Tage sicher war, aber sie hatten Geschichten über Zauberwesen gehört, denen man nachts im Wald begegnen konnte. Noch nie waren sie so lange im Wald geblieben, und die Sonne stand bereits tief am Himmel. #Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
     #It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon. It was not a good idea to leave the path and go into the woods, although they were so happy to find a big bush of berries in a hidden clearing. Leo just realized that the sun was behind the mountains and he started to get nervous.
-
+  - type: animation
+    target: matleo
+    vars:
+        duration: 2
+        xPercent: 98
+        yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: sceneText
+    text: Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.     
+  - type: clearImage
+    id: matleo   
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 16%; top: 55%; left: 25%; transform: scalex(-1)"
+    parallax: mid2    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 14%; top: 49%; left: 36%;"
+    parallax: mid2  
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        xPercent: 50
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-
     entries:
-
       - text: Mathina, es ist schon ziemlich spät. Lass uns nach Hause gehen, ok?
       #Mathina, it is quite late, why don’t we go home?
         char: leo
-        mood: talking
+        exposition: Mathina aber pflückte gerade die letzten Beeren vom Strauch. Zu Hause wollten sie einen Kuchen mit den Waldbeeren backen. 
+        mood: arguing
 
   - type: sceneText
-    text: Mathina pflückte gerade die letzten Beeren vom Strauch. Zu Hause wollten sie einen Kuchen mit den Waldbeeren backen. Da hörte Leo plötzlich ein zischendes Geräusch um sie herum. Das Licht änderte auch irgendwie seine Farbe, und es gab auf der ganzen Lichtung viele bunte Spiegelungen in den Schatten. Es sah wunderschön aus, war aber auch ein bisschen unheimlich... Dann kam auch noch leichter Nebel zwischen den Bäumen hervor, so wie seidener Stoff. Er glänzte zart und wechselte immer wieder die Farbe von gelb und lila zu rot und grün. Das Zischen wurde lauter. Mathina und Leo schauten still und wie hypnotisiert um sich...
+    text: Da hörte Leo plötzlich ein zischendes Geräusch um sie herum. Das Licht änderte auch irgendwie seine Farbe, und es gab auf der ganzen Lichtung viele bunte Spiegelungen in den Schatten. Es sah wunderschön aus, war aber auch ein bisschen unheimlich... Dann kam auch noch leichter Nebel zwischen den Bäumen hervor, so wie seidener Stoff. Er glänzte zart und wechselte immer wieder die Farbe von gelb und lila zu rot und grün. Das Zischen wurde lauter. Mathina und Leo schauten still und wie hypnotisiert um sich...
     #Mathina was picking the last berries to bring home; they could make a great cake with all these berries… Suddenly, Leo heard a hissing noise surrounding them, and the colors of the light started changing, with many colorful reflections filling the shadows that started dominating the clearing of the forest. It was beautiful even if a bit mysterious… Then a type of subtle fog started moving between the trees. It was like a silk fabric appearing and disappearing, with a dim glow ranging from yellow and purple to red and green. The hissing was getting louder, and the full scene was getting hypnotic. Mathina and Leo observed in silence…
 
   - type: dialog
