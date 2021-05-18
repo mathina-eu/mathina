@@ -80,6 +80,30 @@ export class BackgroundAction extends Action {
   }
 }
 
+export class VideoAction extends Action {
+  constructor({ image, entries, width, height, text, ...rest }) {
+    super(rest);
+    this.type = 'video';
+    this.image = image || '';
+    this.entries = entries;
+    this.width = width;
+    this.text = text || '';
+  }
+
+  execute(context) {
+    super.execute();
+    for (let e of this.entries) {
+      e.path = `${context.storyRoot}/video/${e.src}`;
+    }
+
+    if (this.image) {
+      this.imagePath = `${context.storyRoot}/img/${this.image}`;
+    } else {
+      this.imagePath = null;
+    }
+  }
+}
+
 export class ClearBackgroundAction extends Action {
   constructor({ id, ...rest }) {
     super(rest);
@@ -277,6 +301,7 @@ export class ActionFactory {
     ClearImageAction,
     AnimationAction,
     ClearBackgroundAction,
+    VideoAction,
   }
 
   static create({ type, ...props }) {
