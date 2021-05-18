@@ -193,6 +193,7 @@
                 document.getElementById("DivComandi").style.display = "none";
                 //Scelgo 8 semafori
                 ArraySem = [];
+				/*
                 for (let i = 0; i < 8; i++) {
                     var ColCorr = [1, 2, 3];
                     var SemCorr = [];
@@ -203,6 +204,15 @@
                     }
                     ArraySem.push(SemCorr);
                 }
+				*/
+				ArraySem.push([1,2,3]);
+				ArraySem.push([3,1,2]);
+				ArraySem.push([2,1,3]);
+				ArraySem.push([1,3,2]);
+				ArraySem.push([3,2,1]);
+				ArraySem.push([1,3,2]);
+				ArraySem.push([3,2,1]);
+				ArraySem.push([3,1,2]);
                 SemaforiTotali = 8;
                 for (let i = 0; i < ArraySem.length; i++) {
                     AddColor(ArraySem[i][0]);
