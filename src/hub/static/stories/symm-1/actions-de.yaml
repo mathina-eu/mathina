@@ -179,7 +179,7 @@ actions:
   - type: dialog
     entries:        
       - text: Wenn wir das Bild der Katze falten, gibt es keine zwei gleichen Seiten, die übereinander liegen, egal, wie wir es falten.
-		#"If we fold it, we will never find two parts that overlap!"
+    #"If we fold it, we will never find two parts that overlap!"
         char: wizard    
   - type: clearImage
     id: c1-5
@@ -243,7 +243,6 @@ actions:
     url: /apps/arrumar_figuras/index.html
     cta: Probiere es aus!
     #"Try it yourself!"
-
   - type: clearImage
     id: c1-1
   - type: image
@@ -475,7 +474,7 @@ actions:
         char: leo
         exposition: Leo sprach vor sich hin, während er versuchte, das Spielzeug fertigzubauen.
         #"Leo asked while trying to finish a toy, but without success."        
-        mood: angry
+        mood: thinking
  # - type: sceneText
     #text: >
       #<p> Leo was trying to finish a toy, but without success.</p>
