@@ -22,7 +22,7 @@
             visibility: visible;
         }
 
-        #successMessage {
+             #successMessage {
             position: absolute;
             /*left: 50%;
   top:50%;
@@ -30,22 +30,15 @@
   height: 58%;*/
             z-index: 100;
             background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
             padding: 10% 0%;
             text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
+            left: 0%;
+			right:0%;
+            top: 0%;
+			bottom:0%;
         }
 
-        #failMessage {
+       #failMessage {
             position: absolute;
             /*left: 50%;
   top:50%;
@@ -53,19 +46,12 @@
   height: 58%;*/
             z-index: 100;
             background: #f3f1cd;
-            border: 2px solid #333;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            border-radius: 10px;
-            -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-            box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
             padding: 10% 0%;
             text-align: center;
-            left: 1%;
-            top: 1%;
-            width: 98%;
-            height: 58%;
+            left: 0%;
+			right:0%;
+            top: 0%;
+			bottom:0%;
         }
 
         html {
@@ -338,7 +324,7 @@
         }
 
         function DisegnaPG(Ctx, P) {
-            return;
+            
             PP = SetupPos[P[0]][P[1]];
             Img1_dim = [Img1.width, Img1.height];
             Scale = 2.5;
@@ -354,7 +340,7 @@
 
 
         function DisegnaFine(Ctx, PosFine) {
-            return;
+            
             PP2 = SetupPos[PosFine[0]][PosFine[1]];
             Img2_dim = [Img2.width, Img2.height];
             Scale = 8;

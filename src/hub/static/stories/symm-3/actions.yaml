@@ -10,7 +10,7 @@ actions:
     align: right    
   - type: sceneText
     text: >
-      <p>Mathina and Leo had just arrived at Symmetry Fair, a huge park with all kinds of amusements: coasters, carousels and a large number of stalls, with countless games and challenges.</p>
+      <p>Mathina and Leo had just arrived at Symmetry Fair, a huge park with all kinds of amusements: roller coasters, carousels and a large number of stalls, with countless games and challenges.</p>
   - type: animation
     target: mathina-leo
     vars:
@@ -97,20 +97,20 @@ actions:
   - type: image
     id: FrisoPlaca
     src: FrisoPlaca2.png
-    style: "width: 70%; top: 50%; left: 0%"
+    style: "width: 70%; top: 50%; left: 0%; z-index: 2;"
   - type: image
     id: feiticeiro
     src: feiticeiro-magia.png
-    style: "width: 17%; top: 35%; left: 30%;"
+    style: "width: 17%; top: 35%; left: 30%; z-index: 3;"
     align: right
   - type: image
     id: mathina
     src: mathina3.png
-    style: "width: 9%; top: 10%; left: 15%;"
+    style: "width: 9%; top: 10%; left: 15%; z-index: 4;"
   - type: image
     id: leo
     src: leo2.png
-    style: "width: 20%; top: 40%; left: 70%;"
+    style: "width: 20%; top: 40%; left: 70%; z-index: 5;"
   - type: sceneText
     text: >
       <p>The board left a trail on the ground, with a repetitive drawing.</p>
@@ -129,11 +129,11 @@ actions:
       - text: "I'm embellishing this street by stamping friezes. But the paint on the board is vanishing and I have to take it to my castle and fix it; the worst part is that the board is very big and difficult to carry on my magic broom."
         char: wizard
       - text: "Why don’t you curl it and stick it on your broom?"
-        char: Leo
+        char: leo
       - text: "I’m sorry, what’s your name?"
         char: wizard
       - text: "Leo."
-        char: Leo
+        char: leo
       - text: "Mine is Mathina."
         char: mathina  
       - text: "Well Leo, that’s a very good idea"
@@ -187,7 +187,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Oh, no! We have to catch the roll."
-        char: Leo
+        char: leo
         mood: surprised
   - type: sceneText
     text: >
@@ -230,6 +230,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    tag: tg10
     text: "Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
     toolbarText: "Choose an image and watch the creation of the cylinder (“roll”)"
     cta: "Try stamping other friezes using a “roll”!"
@@ -241,12 +242,12 @@ actions:
   - type: dialog
     entries:    
       - text: "Stamping friezes like this is very cool!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "I want to stamp a lot of friezes in the streets of Symmetry Fair. Come and see my drawings."
         char: wizard
       - text: "Yes!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: 'fundo'
@@ -271,7 +272,7 @@ actions:
   - type: dialog
     entries:    
       - text: "We will help you stamp friezes on the streets!"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearImage
     id: todos_frisos
@@ -286,7 +287,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Let's start with this one."
-        char: Leo
+        char: leo
   - type: clearImage
     id: friso2
   - type: image
@@ -335,7 +336,7 @@ actions:
   - type: dialog
     entries:    
       - text: "What do you say, Mathina, are we going to help the wizard to stamp friezes?"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -369,10 +370,11 @@ actions:
       - text: "Did you notice, Leo, that the frieze you’ve chosen has symmetry axes, but there are others here that have none?"
         char: mathina
       - text: "No. That’s true!"
-        char: Leo
+        char: leo
       - text: "Let's separate them."
         char: mathina
   - type: game
+    tag: tg4
     text: "Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Choose the friezes with symmetry axes"
     cta: "Try separating the friezes!"
@@ -391,7 +393,7 @@ actions:
   - type: dialog
     entries:         
       - text: "And there is something else. There are friezes that only have vertical symmetry axes, others only have horizontal symmetry axis and there are others that have both...."
-        char: Leo
+        char: leo
       - text: "I hadn't noticed.  Let’s separate them into bags."
         char: mathina
   - type: image
@@ -399,7 +401,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
-    tag: 3Game
+    tag: tg5
     text: "Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Try it!"
     url: /apps/frisos_simref-_en/
@@ -470,7 +472,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Yeeesss! So, this is what I’m going to do: I’ll use this drawing in the board"
-        char: Leo
+        char: leo
         mood: excited
   - type: clearBackground
     id: fundo
@@ -483,7 +485,7 @@ actions:
   - type: dialog
     entries:    
       - text: "I'll roll it like this:"
-        char: Leo
+        char: leo
   - type: clearBackground
     id: fundo
   - type: background
@@ -493,7 +495,7 @@ actions:
   - type: dialog
     entries:    
       - text: "And stamp the frieze in the same way as before!"
-        char: Leo
+        char: leo
         mood: excited
   - type: game
     text: "Watch the movie!"
@@ -524,6 +526,7 @@ actions:
       - text: "And, using a similar process, we can even create a frieze which also has a horizontal axis of symmetry. Let’s see."
         char: wizard
   - type: game
+    tag: tg11
     text: "Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
     cta: "Play!"
     url: /apps/Sfriso_refVH/
@@ -566,6 +569,7 @@ actions:
     text: >
       <p>While Mathina waited, she looked at the drawings of the friezes which were left out of the bags. One of them was quite strange: if we spin it half way around it ends up looking the same as before.</p>
   - type: game
+    tag: tg1
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Rotacao.mp4
@@ -591,6 +595,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    tag: tg6
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Select the friezes with rotation symmetry"
     cta: "Try separating the friezes!"
@@ -634,6 +639,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    tag: tg7
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Select the friezes with rotation symmetry"
     cta: "Try separating the friezes!"
@@ -655,7 +661,7 @@ actions:
   - type: dialog
     entries:   
       - text: "I want to go outside and stamp friezes!"
-        char: Leo
+        char: leo
   #
   # Voltando para o exterior
   - type: clearBackground
@@ -702,7 +708,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Yes! I’m going to choose this drawing for the board,:"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Leo enrola o friso3
@@ -716,7 +722,7 @@ actions:
   - type: dialog
     entries:    
       - text: "I'll roll it "
-        char: Leo
+        char: leo
   #
   # Leo carimba o friso3
   - type: clearImage
@@ -729,7 +735,7 @@ actions:
   - type: dialog
     entries:    
       - text: "and ... stamp the frieze!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Animação a carimbar o friso3 com o cilindro
@@ -744,7 +750,7 @@ actions:
       - text: "Sure, Leo. But I think we can manage to stamp the frieze using half the roll…"
         char: mathina
       - text: "What do you mean?"
-        char: Leo
+        char: leo
         mood: surprised
   #
   # Mathina mostra metade do carimbo do friso3
@@ -784,7 +790,7 @@ actions:
   - type: dialog
     entries:    
       - text: "You can print half of the frieze:"
-        char: Mathina
+        char: mathina
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
@@ -796,7 +802,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Sure. But how can I print the other half?"
-        char: Leo
+        char: leo
         mood: angry
   #
   # Mathina explica a Leo (parte 1)
@@ -862,7 +868,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Oh, I see, I see! I want to do it too."
-        char: Leo
+        char: leo
         mood: excited
   #
   # Muito apressado, Leo começa a carimbar
@@ -876,6 +882,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_refdeslizante_leo.html
@@ -891,7 +898,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Done!"
-        char: Leo
+        char: leo
         mood: excited
   #
   # Mathina diz a Leo que este não era o friso esperado
@@ -938,13 +945,14 @@ actions:
       - text: "The frieze you stamped has a glide reflection"
         char: wizard
       - text: "It has what?"
-        char: Leo
+        char: leo
         mood: surprised
       - text: "Glide reflection. Look at the frieze. Imagine a copy, which you place exactly over it. It is possible to reflect horizontally the copy in the middle and drag it slightly forward or backward, so that the appearance of the image obtained is identical to that of the initial image. The frieze is said to have a glide reflection symmetry."
         char: wizard
   #
   # Filme sobre a reflexão deslizante        
   - type: game
+    tag: tg2
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
@@ -990,6 +998,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    tag: tg12
     text: "Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Choose the friezes with glide reflection symmetry"
     cta: "Try separating the friezes!"
@@ -1061,6 +1070,7 @@ actions:
   #
   # Animação sobre o que é a translação
   - type: game
+    tag: tg3
     text: "Watch the movie!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
@@ -1084,7 +1094,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
-    tag: 8Game
+    tag: tg9
     text: "Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     cta: "Play!"
     url: /apps/RotularFrisos/?lang=en
@@ -1119,7 +1129,7 @@ actions:
   - type: dialog
     entries:    
       - text: "Well, I’ve loved being here, but I want to explore other amusements in Symmetry Fair!"
-        char: Leo
+        char: leo
         mood: excited
       - text: "Sure, Leo."
         char: wizard

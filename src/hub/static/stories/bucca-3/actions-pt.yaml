@@ -1,0 +1,1327 @@
+actions:
+  - type: background
+    src: bg3_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: sceneText
+    text: >
+      <h1>O tesouro perdido</h1>
+      
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+          
+  - type: sceneText
+    text: >
+      <p>Não há escola esta semana. Mathina pensave já no que fazer durante as férias. A sua mente vagueava em torno de umas belas aventuras e novas descobertas quando um ruído repentino ecoou do lado de fora das janelas. No jardim, havia um envelope preso a um pedaço de madeira.
+      </br >
+      </br >
+      Mathina saiu correndo e abriu o envelope com cuidado. Havia uma carta dentro.</p>
+                   
+  - type: image
+    id: Paper0
+    src: Pergamena.png
+    style: "height: 40%; bottom: 2%; left: 2%;  z-index: 2;"
+             
+
+      
+  - type: sceneText
+    text: >
+      <p>“<i>Cara Mathina,</br>
+        Espero que te lembres de mim. Conhecemo-nos há algum tempo no mercado da Ilha do Corsário, com o papagaio John. Se bem me lembro, gostaste muito das aventuras na ilha. Se quiseres, podes-me ajudar numa nova aventura. Temo que alguém me esteja a espionar, e envio-te uma mensagem codificada no verso desta carta. Essa mensagem te dirá onde e quando nos podemos encontrar. Não especifiquei a chave, mas tenho a certeza de que a encontrarás com apenas algumas tentativas. Ah, fiz uma pequena alteração para evitar espiões. Se quiseres uma dica, encontrarás uma bela peça de arte em madeira dentro do envelope.
+        </br>
+        </br>
+        Atenciosamente,</br>
+        Angela</i>“</p>
+  - type: sceneText
+    text: >
+      <p>Uma pequena mensagem foi escrita no verso, claramente codificada de alguma forma:
+      </br >
+      </br >
+      FMSFRJIFMSFRFFMQNFSXNFHTFTYSZOWFGTFTLNRTHWJYRJA
+      </p>
+  - type: image
+    id: CaesarJewel
+    src: disco_ba.png
+    style: "height: 50%; top: 45%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p>A mente de Mathina voltou imediatamente àquele dia no mercado. Foi até ao seu quarto e encontrou a jóia que Ângela lhe havia dado. Era um pingente de latão gravado com as letras do alfabeto mostradas em dois discos concêntricos que podiam ser girados.</p>
+
+  - type: clearImage
+    id: Paper0
+
+  - type: animation
+    target: CaesarJewel
+    vars:
+      duration: 3
+      xPercent: -150
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: >
+      <p>Graças a essa jóia, Mathina havia aprendido um dos métodos que os piratas da Ilha do Corsário usavam para cifrar mensagens. Afinal, era muito simples: cada letra da mensagem a ser decifrada deve ser procurada no disco interno e substituída pela letra correspondente no disco externo.</p>
+  - type: sceneText
+    text: >
+      <p>Como os dois discos podiam girar, era importante posicioná-los de uma forma precombinada com quem deveria decifrar a mensagem: por exemplo, no episódio do mercado, com Ângela, o "A" do disco interno correspondia ao "B" do disco externo.
+      </p>
+  - type: dialog
+    entries:
+      - text: "Vamos ver se ainda me lembro de como o fazer..."
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: "Recorda: para descodificar há que partir do disco externo"
+    toolbarText: "Tenta descodificar algumas palavras usando a chave sugerida"
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=3
+
+  - type: clearImage
+    id: CaesarJewel
+  - type: clearImage
+    id: Mathina0
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+  - type: image
+    id: Paper1
+    src: Pergamena.png
+    style: "height: 50%; bottom: 4%; left: 3%;  z-index: 2;"
+
+  - type: dialog
+    entries:
+      - text: "Eu diria que me lembro muito bem de como funciona este método! Agora vamos voltar à mensagem da Ângela..."
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>Antes de começar a descodificar a mensagem, olhou com atenção para o pedaço de madeira que acompanhava a carta. Era um pequeno cilindro, provavelmente um porta-chaves. Tinha muitos embutidos bonitos, que lembravam as decorações da jóia, talvez tivessem sido feitos pelo mesmo artista.
+      </p>
+  - type: sceneText
+    text: >
+      <p>Eram visíveis duas palavras: “DIREITA ADITREVNI”. As letras da segunda palavra tinham algo de… estranho, pois eram escritas num alfabeto diferente. </p>
+
+  - type: dialog
+    entries:
+      - text: "Isto é bizarro --- pensou Mathina."
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>O que significa a segunda palavra? Enquanto pensava, o porta-chaves caiu na cama e ficou virado ao contrário. Num momento, Mathina percebeu porque é que a palavra parecia tão estranha. Já percebi!! É a palavra “INVERTIDA” <i>invertida</i>! O que será que isto significa? ... Será uma dica? Bem ... hora de descobrir se é!
+      </p>
+
+  - type: game
+    text: "Seleciona o texto. Lembra-te da dica “INVERTIDA”..."
+    toolbarText: "Tenta selecionar o texto correto"
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=3
+
+  - type: dialog
+    entries:
+      - text: "Bem… foi mais difícil do que esperava, mas agora estou mesmo muito curiosa para ver o que a senhora tem para me dizer!"
+        char: mathina
+        mood: normal
+ 
+  - type: clearImage
+    id: Paper1
+  - type: clearImage
+    id: Mathina1
+
+
+
+
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Fisherman1
+    src: barca1.png
+    style: "width: 8%; bottom: 12%; left: 30%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 8%; bottom: 15%; left: 40%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman3
+    src: barca3.png
+    style: "width: 8%; bottom: 20%; left: 60%;  z-index: 0;"
+
+ 
+  - type: image
+    id: Gabbiano1
+    src: gabbiano1.png
+    style: "width: 8%; top: 10%; left: 10%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano2
+    src: gabbiano2.png
+    style: "width: 8%; top: 18%; left: 5%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano3
+    src: gabbiano3.png
+    style: "width: 8%; top: 35%; left: 20%;  z-index: 0;"
+ 
+ 
+ 
+ 
+  - type: sceneText
+    text: >
+      <p>No dia seguinte, depois de uma bela viagem na barca, Mathina vagueou mais uma vez pela ilha. Que bela maneira de passar o feriado! Entrou no bar perto do cais e localizou a senhora, que estava sentada a uma mesa estudando alguns documentos.
+      </p>
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 8
+      xPercent: 30
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 6
+      xPercent: 25
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 10
+      xPercent: 40
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano1
+    vars:
+      duration: 7
+      xPercent: 20
+      yPercent: 20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano2
+    vars:
+      duration: 5
+      xPercent: 20
+      yPercent: 30
+      ease: power1.inOut
+      repeat: -1
+      rotate: -10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano3
+    vars:
+      duration: 9
+      xPercent: 20
+      yPercent: -40
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
+
+
+ 
+  - type: dialog
+    entries:
+      - text: "Olá novamente, e bem-vinda de volta à Ilha do Corsário!" 
+        char: Angela
+        mood: happy
+
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+
+  - type: dialog
+    entries:
+      - text: "Olá! Fiquei muito surpreendida ao receber a sua mensagem ontem! Porquê todo este secretismo? E porque estamos neste lugar, que tem muita gente. Não tem medo de que alguém nos possa ouvir?"
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "O melhor lugar para falar em segredo é onde todos nos possam ouvir --- respondeu a velha senhora."
+        char: Angela
+        mood: normal
+  - type: sceneText
+    text: >
+      <p>"Isso é um outro enigma?" Mathina respondeu um pouco confusa.</p>
+  - type: dialog
+    entries:
+      - text: "AhAhAh!! Não, não! Já seriam demasiados enigmas! Mas diz-me, como encontraste a minha distorção da nossa velha cifra, na mensagem que te enviei?"
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Foi muito inteligente! Mesmo que... se torne complicado se todos tiverem que descobrir o código de todas as vezes. Mas, se eu consegui, outras pessoas também poderiam ter descoberto o significado da mensagem."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Tens razão! Sabes, há um ditado que afirma: “Compartilha o método que usas, mantém a chave para a tripulação”!"
+        char: Angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "O que significa isso?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Significa que se quiseremos comunicar em segredo, devemos sempre revelar as regras que estão a ser usadas ao cifrar a mensagem. Assim, só é necessário manter em segredo a chave."
+        char: Angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "Interessante! Conversei recentemente com o meu irmão mais novo sobre um assunto muito semelhante."
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "É um conhecimento comum entre piratas! Sabes, manter em segredo apenas a chave é uma coisa, manter um monte de informações em segredo é bem mais complicado, em particular depois de uma longa noite no bar. Ah, a propósito, já pediste alguma coisa? Estou muito curiosa para experimentar o novo sabor de gelado: pérolas e coco salgado."
+        char: Angela
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "Parece interessante! Também vou experimentar."
+        char: mathina
+        mood: happy
+
+
+
+
+
+
+  - type: sceneText
+    text: >
+      <p>O gelado era mesmo saboroso, não só pelo sabor, mas também aos olhos: a cobertura feita de pequenas pérolas de açúcar cintilava na luz ambiente. O colar também brilhava ali pousado na mesa.</p>
+
+  - type: dialog
+    entries:
+      - text: "Este colar é lindo: o artista conseguiu dispor o alfabeto num círculo para obter este efeito. Estou curiosa... Como consegue escrever e ler mensagens codificadas sem ele? Tem um outro?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Na verdade, o colar é único, mas depois de usá-lo durante muito tempo, percebi que há uma regra simples que ajuda bastante quando se quiser codificar ou descodificar algo. Queres saber qual é?"
+        char: Angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "Sim, por favor!"
+        char: mathina
+        mood: happy
+
+  - type: image
+    id: CaesarJewel2
+    src: CaesarJewelAD.png
+    style: "position:absolute; width: 25%; top: 45%; left: 22%"
+
+  - type: sceneText
+    text: >
+      <p>Angela olhou para o colar na mesa. Os discos estavam dispostos por forma a que o A do disco interno correspondia ao D do disco externo.</p>
+
+  - type: dialog
+    entries:
+      - text: "Repara: A vai para D, B vai para E e assim por diante. Certo? Observa que o espaço entre as letras é sempre o mesmo: três."
+        char: Angela
+        mood: normal
+      - text: "Portanto, é como se fosse uma rotação: cada passo é uma fração de uma volta inteira e, neste caso,  avança-se cada letra três passos para a frente. Certo?"
+        char: mathina
+        mood: normal
+      - text: "Correto, mas repara: estás focada em descrever o colar, mas podes descrever esta... operação de uma forma ainda mais simples: tenta usar números em vez de letras."
+        char: Angela
+        mood: normal
+
+  - type: image 
+    id: CaesarJewel3
+    src: CaesarJewelNumbers.png
+    style: "position:absolute; width: 25%; top: 45%; left: 55%"
+
+  - type: sceneText
+    text: >
+      <p>Ângela pegou numa caneta e num dos guardanapos de papel do gelado e rapidamente fez um esboço da jóia. Mas, em vez de letras, escreveu números.</p>
+
+  - type: clearImage
+    id: Mathina1
+
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+  - type: dialog
+    entries:
+      - text: "...aqui está! Dá uma olhada e lembra-te que o número de passos é três."
+        char: Angela
+        mood: normal
+      - text: "Uau, bem, é muito mais fácil agora: é só somar. O A, isto é, o 0 é enviado em D, que é 3. Ou seja, basta somar apenas o número de etapas. Isto é engenhoso. Mas ... Como faz isto sentido?"
+        char: mathina
+        mood: normal
+      - text: "Pode-se mesmo... somar letras? Na escola, aprendi a lidar com expressões nas quais se somam letras, mas é algo mais parecido com x+x=2x."
+        char: mathina
+        mood: normal
+      - text: "Podes somar letras, mas aqui é ainda mais simples: pensa apenas em usar letras como espaços reservados para números."
+        char: Angela
+        mood: normal
+      - text: "Mas há algo ainda mais estranho aqui: olhe para a letra Y, quero dizer, o número 24. Se fosse uma soma normal, obter-se-ia 24 + 3 = 27. Mas, em vez disso, damos a volta e obtemos a letra B, quer dizer, o número 1. Está-me a dizer que 24 + 3 = 1?"
+        char: mathina
+        mood: normal
+      - text: "É exatamente isso que te estou a dizer!"
+        char: Angela
+        mood: normal
+      - text: "Isso faz sentido? Se 24 + 3 = 1, significa... espere... significa que 24 + 2 = 0. Mas 24 + 2 é 26, como é que 26 pode ser igual a 0?"
+        char: mathina
+        mood: normal
+      - text: "Não é, de facto, assim tão estranho: decidimos que A deve corresponder a 0, mas quando se enrola o alfabeto num círculo, A é também a letra ao lado de Z, então A corresponde a 0 e a 26."
+        char: Angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "Vamos supor por um momento que eu confio em si --- você é uma senhora pirata, afinal. Como é que isso me ajuda na codificação e descodificação de mensagens?"
+        char: mathina
+        mood: normal
+
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela2
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+
+  - type: dialog
+    entries:
+      - text: "Bem, cifrar é fácil: há que simplesmente realizar uma soma, mas o interessante sobre as somas é que elas podem ser invertidas: por exemplo, se A + 3 é igual a D, então há uma operação inversa que pode ser feita para passar de D para A. Consegues adivinhar qual é?"
+        char: Angela
+        mood: normal
+      - text: "É fácil: a subtração! Se A+3=D, então D-3 deve ser igual a A..."
+        char: mathina
+        mood: normal
+      - text: "... e a 26..."
+        char: Angela
+        mood: normal
+      - text: "Estou confusa... Ainda estou com alguma dificuldade em entender este conceito..."
+        char: mathina
+        mood: normal
+        
+        
+  - type: clearImage
+    id: CaesarJewel2
+  - type: clearImage
+    id: CaesarJewel3
+        
+  - type: dialog
+    entries:        
+      - text: "Mmm, talvez isto ajude: pensa num relógio."
+        char: Angela
+        mood: normal
+      - text: "... um relógio?"
+        char: mathina
+        mood: normal
+
+
+  - type: image 
+    id: Clock1
+    src: Clock1.png
+    style: "position:absolute; width: 25%; bottom: 5%; left: 15%"
+
+  - type: clearImage
+    id: Angela2
+
+  - type: dialog
+    entries:
+      - text: "Sim: supõe que são 4 da tarde. Daqui a três horas serão 7, uma vez que 4 + 3 = 7."
+        char: Angela
+        mood: normal
+      - text: "...certo, não vejo qualquer problema aí. Acabamos de fazer uma soma usual."
+        char: mathina
+        mood: normal
+      - text: "E se forem 11 da manhã?"
+        char: Angela
+        mood: normal
+      - text: "..."
+        char: mathina
+        mood: normal
+      - text: "bem... não é realmente a soma usual!"
+        char: Angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "Bem, três horas depois das 11 da manhã são 2 da tarde, então 11+3... oh..."
+        char: mathina
+        mood: normal
+
+  - type: clearImage
+    id: Mathina2
+
+  - type: image 
+    id: Clock2
+    src: Clock2.png
+    style: "position:absolute; width: 25%; bottom: 5%; left: 60%"
+
+
+  - type: dialog
+    entries:
+      - text: "Vês? Há 12 horas no teu relógio e, portanto, 12 = 0, e depois das 11 começa-se do início. Com a jóia é o mesmo, mas desta vez com um relógio que tem 26 horas."
+        char: Angela
+        mood: normal
+      - text: "Queres praticar um pouco mais essa nova soma? Vamos tentar fazer algumas adições em relógios diferentes."
+        char: Angela
+        mood: normal
+
+  - type: clearImage
+    id: Clock1
+  - type: clearImage
+    id: Clock2
+ 
+
+  - type: game
+    text: "Tenta calcular a soma de algumas adições nos relógios"
+    toolbarText: "Tente calcular a soma de algumas adições nos relógios"
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=3
+
+  - type: image
+    id: Angela3
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+  - type: image
+    id: Mathina3
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+  - type: dialog
+    entries:
+      - text: "Muito bem! Mmm, falando em relógios, parece que está quase na hora de ir, se quiseres apanhar a barca! Mas terei todo o prazer em almoçar contigo num dos próximos dias."
+        char: Angela
+        mood: happy
+      - text: "Isso seria excelente!! Que tal na sexta?"
+        char: mathina
+        mood: happy
+
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: Angela3
+    
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+  - type: clearImage
+    id: Gabbiano1
+  - type: clearImage
+    id: Gabbiano2
+  - type: clearImage
+    id: Gabbiano3
+
+
+  - type: background
+    src: bg3_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+        
+  - type: sceneText
+    text: >
+      <p>Mathina regressou ao cais a tempo de apanhar a barca de volta para casa. Que dia intenso! No caminho de volta, pensou um pouco sobre como funcionava a nova soma que tinha acabado de aprender. Ângela disse-lhe que o número de horas no relógio também é chamado de <i>módulo</i>, de uma antiga palavra usada por um velho pirata que falava latim! Que coisa incrível! </p>
+
+ 
+  - type: sceneText
+    text: >
+      <p>Os dias passaram e Mathina pensava muito nas contas do relógio e em como isso estava relacionado com as mensagens secretas. O truque de usar números em vez de letras ajudava muito, e Mathina era agora bastante hábil em descodificar mensagens sem o colar, quando tinha a chave, é claro.</p>
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 27%; left: 2%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 34%; left: 6%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 20%; left: 5%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 23.5%; left: 11%;  z-index: 3;"
+          
+
+  - type: sceneText
+    text: >
+      <p> Quando chegou na Ilha do Corsário, encontrou Ângela que a esperava no cais. Não estava sozinha, e já da barca, Mathina pode notar as penas extravagantes de um lindo papagaio.</p>
+
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 60%; bottom: -10%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+      
+      
+        
+  - type: dialog
+    entries:        
+      - text: "Olá John! Há quanto tempo!"
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p> O papagaio ficou muito feliz por ser abraçado por Mathina e ainda mais feliz quando ela lhe deu um biscoito que Ângela lhe tinha dado.</p>
+
+  - type: dialog
+    entries:        
+      - text: "John estava ansioso por dar uma volta, e então decidimos vir os dois esperar por ti no cais."
+        char: Angela
+        mood: happy
+
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+  - type: clearImage
+    id: Mathina4 
+  - type: clearImage
+    id: Angela4  
+
+
+  - type: background
+    src: bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Barca
+    src: barca.png
+    style: "height: 16%; top: 16%; right: 14%;  z-index: -3;"
+
+  - type: image
+    id: Gabbiano
+    src: gabbiano3.png
+    style: "height: 6%; top: 16%; right: 19%;  z-index: -3;"
+
+  - type: image
+    id: Finestra
+    src: finestra.png
+    style: "width: 21.09%; top: 10.35%; right: 12.4%;  z-index: -2;"
+
+
+  - type: image
+    id: Dipinto
+    src: dipinto.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina seguiu-os até uma casa aconchegante não muito longe do mercado. Estava localizada numa boa posição perto do bosque, mas com uma excelente vista para o mar. </p>
+
+  - type: animation
+    target: Barca
+    vars:
+      duration: 8
+      xPercent: -30
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano
+    vars:
+      duration: 5
+      xPercent: -20
+      yPercent: -100
+      ease: power1.inOut
+      repeat: -1
+      rotate: -5
+      yoyo: true
+
+
+  - type: dialog
+    entries:        
+      - text: "Sabes, cada pirata tem as suas próprias receitas. É uma espécie de forma de se relacionar com a tripulação, quase um segredo para todos os outros."
+        char: Angela
+        mood: normal
+      - text: "Uau! E qual é a sua receita favorita?"
+        char: mathina
+        mood: happy
+      - text: "Eu deveria fazer-te adivinhá-la com uma cifra, mas tenho certeza de que tu és já muito boa nisso. Então… eu adoro cozinhar berinjelas! E acho que tu vais gostar da minha culinária! Mesmo o John não consegue resistir!"
+        char: Angela
+        mood: happy
+
+
+  - type: sceneText
+    text: >
+      <p> O almoço foi ótimo! Não só a comida era deliciosa, mas Ângela contava muitas histórias sobre as suas aventuras, e John divertia-se muito corrigindo-a quando os detalhes das histórias eram muito exagerados. </p>
+
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"            
+
+  - type: dialog
+    entries:     
+      - text: "...e então havia 20 bandidos..."
+        char: Angela
+        mood: normal
+      - text: "...3 bandidos..."
+        char: John
+        mood: normal
+      - text: "...ok, mesmo assim, eles conseguiram descodificar as nossas mensagens e estavam à nossa espera!"
+        char: Angela
+        mood: normal
+        
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 40%; bottom: 0%; right: 0%;  z-index: 1;"
+        
+  - type: dialog
+    entries:     
+      - text: "Oh espere! Isso é algo em que tenho pensado nestes últimos dias. Disse que eles quebraram o seu código, certo?"
+        char: mathina
+        mood: normal
+      - text: "Sim."
+        char: Angela
+        mood: normal
+      - text: "Afinal... se eles sabem como a cifra funciona, e você disse que basicamente todo pirata sabe isso, então é só uma questão de verificar todas as combinações, que na verdade não são assim tantas."
+        char: mathina
+        mood: normal
+        
+  - type: sceneText
+    text: >
+      <p> Ângela estava muito interessada nestes comentários. Ela olhou brevemente para o retrato de uma jovem pendurado na parede e respondeu. </p>
+
+
+  - type: dialog
+    entries:     
+      - text: "Isso é realmente interessante. No entanto, não é tão fácil tornar a cifra mais difícil. Já tentaste pensar em como o fazer?"
+        char: Angela
+        mood: happy
+      - text: "Bem, tive muitas ideias... Por exemplo... Porque não podemos usar um outro alfabeto, como o grego? Poderíamos substituir “a” por “𝛼” e assim por diante..."
+        char: mathina
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina começou a discutir truques muito complicados para tornar a cifra mais complicada. </p>
+
+
+  - type: clearImage
+    id: Angela4
+
+  - type: image
+    id: Angela5
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+    
+
+  - type: dialog
+    entries:     
+      - text: "Espera um pouco, lembra-te de que não se trata apenas de tornar a cifra mais complexa. Os piratas também precisam aprender a usá-la, de modo a que eles saberão que “𝛼” significa apenas “a”, portanto mesmo que seja necessário mais conhecimentos para aprender o método, o  esforço para quebrar a cifra ainda é o mesmo."
+        char: Angela
+        mood: normal
+      - text: "Tem razão. Eu teria ainda tentado todas as 26 letras e acabaria por encontrar a resposta. Mas você já teve alguma ideia nesse sentido? Principalmente depois daquela última história com os bandidos."
+        char: mathina
+        mood: normal
+      - text: "Oh, claro que sim. Durante algum tempo, tentamos ajustar um pouco a cifra usando a jóia duas vezes para codificar uma mensagem... o dobro do esforço, o dobro do resultado."
+        char: Angela
+        mood: normal
+        
+  - type: clearImage   
+    id: Mathina4
+    
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 1%;  z-index: 2; transform: ScaleX(-1);"
+
+
+        
+  - type: dialog
+    entries:             
+      - text: "Uau! Isso parece eficaz!"
+        char: mathina
+        mood: excited
+      - text: "Infelizmente, há uma grande falha no nosso raciocínio. Queres experimentar descobrir que é?"
+        char: Angela
+        mood: normal
+
+  - type: game
+    text: "Seleciona o resultado correto do método aplicado duas vezes com as chaves dadas."
+    toolbarText: "Selecione o resultado correto do método aplicado duas vezes com as chaves dadas."
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=3
+
+  - type: sceneText
+    text: >
+      <p> Depois de brincar um pouco com a jóia e as palavras, Ângela escreveu algo num pedaço de papel e mostrou à Mathina. </p>
+
+
+  - type: image 
+    id: TwoMessages
+    src: TwoMessages.png
+    style: "position:absolute; height: 20%; top: 60%;"
+    align: center
+
+
+  - type: dialog
+    entries:     
+      - text: "Dê uma olhadela nessas duas mensagens. Uma é cifrada usando a jóia apenas uma vez, e a outra foi cifrada usando a jóia duas vezes. Tente descobrir qual é qual."
+        char: Angela
+        mood: normal
+
+
+  - type: dialog
+    entries:     
+      - text: "Bem ... na verdade não parecem muito diferentes."
+        char: mathina
+        mood: normal
+      - text: "Exatamente. Podes tentar perceber porque é assim usando a nossa soma estranha. Supõe que a jóia esteja configurada para a adição +4. O que acontece se eu usar a jóia duas vezes?"
+        char: Angela
+        mood: normal
+      - text: "Começa-se com um número, digamos 3, então primeiro adicionamos 4, obtendo 7, e em seguida adicionamos 4 novamente, obtendo 11."
+        char: mathina
+        mood: normal
+      - text: "Exato, adicionamos 4 duas vezes, mas, ao somar, poder-se-ia escolher somar os dois 4 primeiro, então o que é que se obteria?"
+        char: Angela
+        mood: normal
+      - text: "Oh... certo! Se adicionarmos 4 duas vezes, estamos a adicionar 8."
+        char: mathina
+        mood: normal
+      - text: "...e assim, no final, mesmo que se use a jóia duas vezes, o resultado final pode ser obtido usando a jóia apenas uma vez. E isso funciona para quaisquer números. Se primeiro adicionarmos 5 e depois 6, poder-se-á obter o mesmo resultado adicionando..."
+        char: Angela
+        mood: normal
+      - text: "... 11 apenas uma vez. É incrível ... Agora que disse isso parece a coisa mais fácil do mundo, mas antes esse facto estava escondido por detrás da mecânica da jóia e eu não tinha percebido..."
+        char: mathina
+        mood: normal
+        
+  - type: clearImage
+    id: TwoMessages
+ 
+  - type: dialog
+    entries:            
+      - text: "Nós tivemos a mesma sensação. Sabe, foi o John quem percebeu isso pela primeira vez. Ele posicionou a jóia por forma a que quando usada duas vezes desse a mensagem original. Consegues adivinhar que posição é essa?"
+        char: Angela
+        mood: normal
+
+  - type: game
+    text: "O disco maior tem que cifrar palavras da mesma forma que os dois menores quando usados duas vezes, consecutivamente. Selecione a posição correta."
+    toolbarText: "Selecione a posição correta para o disco grande."
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=3
+    
+  - type: clearImage
+    id: Dipinto
+
+  - type: image
+    id: Dipinto1
+    src: dipinto_nohook.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
+    
+  - type: sceneText
+    text: >
+      <p> Foi divertido jogar aquele jogo e depois de brincar um pouco com John, Angela repetiu a pergunta. </p>
+    
+
+  - type: dialog
+    entries:            
+      - text: "Então, mais ideias para tornar a cifra mais segura?"
+        char: Angela
+        mood: normal
+      - text: "Mmm, porque pergunta? Tem alguma missão específica em mente para isso?"
+        char: mathina
+        mood: normal
+
+  - type: clearImage
+    id: Angela5
+
+  - type: image
+    id: Angela6
+    src: Angela_1.png
+    style: "height: 50%; bottom: 10%; left: 5%;  z-index: 1;"      
+
+
+  - type: animation
+    target: Dipinto1
+    vars:
+      duration: 4
+      x: 110
+      y: 120
+      rotate: -95
+    
+
+
+  - type: sceneText
+    text: >
+      <p> Ângela olhou para Mathina e depois para o retrato na parede. Sorriu, com uma expressão bastante semelhante à da mulher no quadro. Em seguida, tirou o quadro da parede, virando-se para Mathina e mostrando-lhe as costas do retrato. Uma mensagem havia sido escrita ali, com uma escrita ondulada e precisa. </p>
+      
+  - type: sceneText
+    text: >
+      <p> A primeira parte foi a única que fácil de perceber:
+      </br> 
+      </br>
+      “<i>Querida Angela, tenho certeza que encontrará uma maneira ...
+      </br> 
+      </br>
+      Gmimsqee gai pvozrimi m dqeersvy. Vztaefiqz gee tacmiqj qjfimetfe hgv brdvovy iqcmtufzrpfe tad zlyvdfe gdzyfe. Aoya hgv era r oymmq gmim lyr zfhr rfddm uq tuwdrd dqeersvzj evoiqkmj. Sv clujqi qeofzkdrxfe mm r yzzym rzkuxm tmjm. F ordmmctf pf vrduud qjofzuq lyr oruom caxa rozyr pf biudqzdf simepv srxya.
+      </i>”</p>
+    
+
+  - type: sceneText
+    text: >
+      <p> O retrato --- ou melhor, a parte de trás do retrato ali estava, olhando para todos em mistério. </p>
+
+  - type: dialog
+    entries:            
+      - text: "É certamente muito parecida com a nossa cifra, não é? Mas acho que você não sabe a chave, certo?"
+        char: mathina
+        mood: normal
+      - text: "Exatamente, é a escrita de uma velha amiga minha, também pirata, claro. Na verdade, foi ela que me deu o colar, alguns anos atrás, e foi ela que começou a usar o colar para cifrar mensagens."
+        char: Angela
+        mood: normal
+      - text: "Que aconteceu?"
+        char: mathina
+        mood: normal
+      - text: "Não temos a certeza, sabes, entre as nossas aventuras, todos passamos o nosso tempo de maneiras diferentes, alguns vão para a cidade ou para outras terras: ouvi dizer que existem lugares estranhos e engraçados para visitar."
+        char: Angela
+        mood: normal
+      - text: "Uma vez que voltou de uma viagem, contou-me que visitou uma feira estranha, onde alguém lhe vendeu alguns colares, semelhantes ao que usávamos, mas estranhamente simétricos."
+        char: Angela
+        mood: normal
+      - text: "Ela disse-me várias vezes que nesses colares havia uma nova forma de comunicação secreta, uma espécie de revolução no campo. E ela queria manter isso em segredo."
+        char: Angela
+        mood: normal
+      - text: "Uau! Como seriam esses novos colares? Teve alguma oportunidade de olhar para eles?"
+        char: mathina
+        mood: excited
+      - text: "Infelizmente não: ela desapareceu durante uma semana e depois voltou, dando-me este retrato e dizendo que escondeu os colares na ilha, para mantê-los seguros, e que o retrato contém as informações necessárias para os encontrar."
+        char: Angela
+        mood: normal
+      - text: "Onde estará ela agora?"
+        char: mathina
+        mood: normal
+      - text: "Mmm... ela estava cansada de ser pirata, e então foi para o norte, para as montanhas. Ouvi dizer que ela arranjou um emprego para treinar pássaros peculiares --- mas é melhor não dizer isso ao John: ele ficaria com ciúmes!"
+        char: Angela
+        mood: normal
+      - text: "Hihihi, certo! Bem... de volta à mensagem secreta! Bem, tenho a certeza que você já tentou, mas... uma vez que se parece com a nossa cifra, gostaria de saber se podemos apenas tentar decifrá-la, como de costume, mesmo sem a chave."
+        char: mathina
+        mood: normal
+      - text: "Força!"
+        char: Angela
+        mood: normal
+ 
+  - type: game
+    text: "Verifica que o texto não foi cifrado da maneira usual."
+    toolbarText: "Verifica que o texto não foi cifrado da maneira usual."
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=3
+
+  - type: clearImage
+    id: Angela6
+  - type: clearImage
+    id: Dipinto1
+
+  - type: image
+    id: Angela7
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: sceneText
+    text: >
+      <p> Após algum tempo a tentar decifrar o texto, Mathina olhou para Angela meio perplexa. </p>
+
+  - type: dialog
+    entries:            
+      - text: "Não tenho certeza do que fazer: tentei todas as combinações possíveis da jóia, mas os textos decifrados não fazem qualquer sentido."
+        char: mathina
+        mood: sad
+      - text: "Exatamente, e tenho certeza de que a mensagem original foi escrita num idioma que podemos entender. Mas espere, eu sei outra dica. Disseram-me que é preciso usar o colar duas vezes para encontrar a solução."
+        char: Angela
+        mood: normal
+      - text: "Duas vezes? Mas pensei que tal era inútil, estou enganada?"
+        char: mathina
+        mood: normal
+      - text: "Sim, mas talvez haja algo que nos esteja a falhar. Provamos que usar o colar duas vezes nada mais é do que usá-lo uma vez."
+        char: Angela
+        mood: normal
+      - text: "Mmm, e se tentarmos começar pela própria mensagem? Os espaços estão lá e não estão cifrados com o colar."
+        char: mathina
+        mood: normal
+      - text: "Isso é verdade, mas não será isso uma pista falsa?"
+        char: Angela
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p> Ângela escreveu algo num pedaço de papel:
+      </br>
+      </br>
+      <i>ES EAME NSAG EMFO IESC RITAAS SIM?</i></p>
+
+
+  - type: dialog
+    entries:            
+      - text: "Mmm, tem razão, mas talvez possamos simplesmente assumir que os espaços estão na posição correta e ver se podemos encontrar algo interessante."
+        char: mathina
+        mood: normal
+      - text: "Sim, parece uma boa ideia. E se nos concentrarmos nas palavras curtas?"
+        char: Angela
+        mood: normal
+      - text: "Sim: vamos começar com as palavras com uma só letra. Há um “M”, e depois um “R”, que aparece duas vezes, e finalmente um “F”."
+        char: mathina
+        mood: normal
+      - text: "Assumindo que os espaços estão corretos, talvez também a pontuação esteja. Bem, de qualquer maneira, talvez possamos tentar fazer estas palavras de uma só letra serem “A”, “E”, ou “O”."
+        char: Angela
+        mood: normal
+      - text: "Parece legítimo, vamos tentar verificar que mensagem dá."
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
+    toolbarText: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=3
+ 
+  - type: clearImage
+    id: Angela7
+  - type: image
+    id: Angela8
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+ 
+  - type: dialog
+    entries:            
+      - text: "Parece estranho, parece mesmo que não há possibilidade de encontrar um texto legível. Mas... espere, você disse que precisamos usar o colar duas vezes, certo?"
+        char: mathina
+        mood: sad
+      - text: "Exatamente, mas não sei bem como."
+        char: Angela
+        mood: normal
+      - text: "E se, por exemplo, tivermos que usar uma configuração para uma parte do texto e outras configurações para outras partes?"
+        char: mathina
+        mood: normal
+      - text: "Boa... podes ter razão! Mas é complicado: como decidimos qual parte do texto é qual?"
+        char: Angela
+        mood: happy
+      - text: "Podemos usar palavras! Talvez as palavras em posições ímpares tenham uma chave e as palavras em posições pares tenham outra chave. Vamos tentar!"
+        char: mathina
+        mood: excited
+
+  - type: game
+    text: "Mathina sugere o uso de duas posições da jóia: uma para cifrar palavras em posições pares e outra para cifrar palavras em posições ímpares. Convença-se de que este método também não funciona."
+    toolbarText: "Convença-se de que este método também não funciona."
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=3
+
+
+
+  - type: dialog
+    entries:            
+      - text: "Nada ... Mas, reparo agora que há uma palavra muito estranha: “MM”. Não estou a ver nenhuma palavra em português com duas letras iguais!"
+        char: mathina
+        mood: sad
+      - text: "Bem... será que a maneira de usar o colar duas vezes é um pouco diferente? Talvez precisemos mudar a forma como o traduzimos. Que tal usar apenas letras em vez de palavras? Podemos tentar usar uma chave para letras em posições ímpares e outra chave para letras em posições pares."
+        char: Angela
+        mood: normal
+      - text: "Claro! Esses dois “M” consecutivos estão em posições de paridades diferentes, pelo que assim corresponderiam a letras distintas!"
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: "Finalmente a cifra foi compreendida: as duas jóias devem ser usadas para codificar as letras nas posições ímpares e pares, respectivamente."
+    toolbarText: "Tente descodificar a mensagem!"
+    cta: "Tenta tu!"
+    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=3
+
+
+  - type: dialog
+    entries:            
+      - text: "Isto é... inacreditável! Tentei tanto tempo e agora... aqui está a solução!"
+        char: Angela
+        mood: normal
+      - text: "E isso foi muito, muito inteligente: desta forma, é mais difícil tentar todas as combinações possíveis. Quantas serão."
+        char: mathina
+        mood: normal
+      - text: "Sim, mas eu quero mais saber o que está escondido na árvore! Vamos ver?"
+        char: Angela
+        mood: normal
+
+  - type: clearImage
+    id: Gabbiano
+  - type: clearImage
+    id: Barca
+  - type: clearImage
+    id: Finestra
+  - type: clearImage
+    id: Angela8
+  - type: clearImage
+    id: Mathina5
+
+
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Tree
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 1;"      
+  
+
+  - type: sceneText
+    text: >
+      <p> Ângela, Mathina e John foram à caça ao tesouro. Bem ... Depois de saber onde este está escondido, é muito mais fácil. A casa não ficava muito longe dali, e o carvalho era muito evidente. </p>
+
+  - type: image
+    id: Angela9
+    src: Angela_2.png
+    style: "height: 70%; bottom: 10%; left: -1%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: image
+    id: Cassa
+    src: cassa.png
+    style: "width: 30%; bottom: 5%; left: 25%;  z-index: 1;"      
+
+
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 3%; left: 8%;  z-index: 2;"
+
+  - type: image
+    id: Stella1
+    src: stella1.png
+    style: "width: 10%; bottom: 40%; left: 20%;  z-index: 1;"      
+  - type: image
+    id: Stella2
+    src: stella2.png
+    style: "width: 10%; bottom: 48%; left: 30%;  z-index: 1;"      
+  - type: image
+    id: Stella3
+    src: stella3.png
+    style: "width: 10%; bottom: 50%; left: 40%;  z-index: 1;"      
+  - type: image
+    id: Stella4
+    src: stella4.png
+    style: "width: 10%; bottom: 48%; left: 50%;  z-index: 1;"      
+  - type: image
+    id: Stella5
+    src: stella5.png
+    style: "width: 10%; bottom: 40%; left: 60%;  z-index: 1;"      
+
+
+  - type: sceneText
+    text: >
+      <p> A caixa produziu um estranho som metálico ao ser extraída da árvore.</p>
+
+  - type: animation
+    target: Stella1
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella5
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella2
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella4
+    vars:
+      duration: 5
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella3
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
+
+
+  - type: dialog
+    entries:            
+      - text: "Uau ... o que são?"
+        char: mathina
+        mood: excited
+
+  - type: sceneText
+    text: >
+      <p> Vários colares tinham sido colocados na caixa. As suas formas era bastante estranhas: eram pequenas estrelas com um número diferente de raios.</p>
+
+
+  - type: dialog
+    entries:            
+      - text: "São lindos! Provavelmente uma sugestão para uma outra forma de cifrar mensagens."
+        char: Angela
+        mood: happy
+      - text: "Acho que isto ser uma grande aventura, assim como a que fizemos hoje."
+        char: mathina
+        mood: happy
+      - text: "Eu gostaria de um biscoito, por favor!"
+        char: John
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p> Mathina voltou para sua casa, com muitas, muitas coisas na sua mente. Acabou de descobrir não só como usar o colar de uma forma mais segura do que antes, mas também teve uma grande aventura com a amiga. Quem sabe que segredos estarão ainda escondidos na Ilha do Corsário? </p>
+      
+      
+  - type: sceneText
+    text: >
+      <h1>O tesouro perdido - Fim</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

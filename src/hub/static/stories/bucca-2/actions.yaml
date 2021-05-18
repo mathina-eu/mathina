@@ -108,8 +108,6 @@ actions:
       repeat: -1
       yoyo: true
 
-
-
       
   - type: dialog
     entries:
@@ -376,7 +374,7 @@ actions:
   - type: dialog
     entries:
       - text: "Z-F-T!!"
-        char: Parrot
+        char: parrot
         mood: happy
   - type: dialog
     entries:
@@ -403,12 +401,12 @@ actions:
   - type: dialog
     entries:
       - text: "Don’t worry: he is like that all the time. I’m Angela, nice to meet you."
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "Hi! Is this your parrot?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: clearImage
     id: Mathina00
@@ -422,12 +420,12 @@ actions:
     entries:
       - text: "Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. 
                Some years ago the crew retired, and so everybody went his own way. Some of them are probably still there on the island."
-        char: Angela
+        char: angela
         mood: normal
   - type: dialog
     entries:
       - text: "Wow! Looks like you became friends!"
-        char: Angela
+        char: angela
         mood: happy
   - type: sceneText
     text: >
@@ -438,7 +436,7 @@ actions:
   - type: dialog
     entries:
       - text: "Do you want a cookie?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -446,8 +444,8 @@ actions:
   - type: dialog
     entries:
       - text: "It seems the same word he said before. What if it is telling me just “yes”?"
-        char: Mathina
-        mood: distracted
+        char: mathina
+        mood: surprised
         
   - type: clearImage
     id: Angela1
@@ -461,7 +459,7 @@ actions:
   - type: dialog
     entries:
       - text: "It sounds right: before you asked to pet him, now he wants a cookie. Shall we try with something different? Ask him something with “no” as an answer."
-        char: Angela
+        char: angela
         mood: normal
   - type: sceneText
     text: >
@@ -469,7 +467,7 @@ actions:
   - type: dialog
     entries:
       - text: "Maybe I will keep this cookie. Is it ok?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -524,7 +522,7 @@ actions:
   - type: dialog
     entries:
       - text: "Now we know, Z-F-T means “yes”, and O-P means “no”."
-        char: Mathina
+        char: mathina
         mood: happy
                
         
@@ -534,17 +532,17 @@ actions:
   - type: dialog
     entries:
       - text: "I am confused. O-P has two letters, the same as “no”, but I don’t have any idea about that. Maybe is just some crazy code."
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "Maybe he is just changing the letters! Think about the alphabet K, M, N, O, P,..."
-        char: Angela
+        char: angela
         mood: normal
   - type: dialog
     entries:
       - text: "Hey! I got it. He is substituting the letter with the one immediately after it in the alphabet. So no becomes “no”, since O is immediately after N, and P is immediately after O."
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -552,7 +550,7 @@ actions:
   - type: dialog
     entries:
       - text: "Very good Mathina! This is one of the standard ways pirates use to communicate in secret."
-        char: Angela
+        char: angela
         mood: happy
         
         
@@ -564,17 +562,17 @@ actions:
   - type: dialog
     entries:
       - text: "How do you know this? And… how do you manage to translate so quickly?"
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "You never know who on this island was a pirate or not but, keep this as a secret, I was part of the same crew as John - the parrot. He is very intelligent. Actually, he can speak quite fluently. But sometimes he finds it funny to repeat some words in code, like “yes” and “no”."
-        char: Angela
+        char: angela
         mood: happy
   - type: dialog
     entries:
       - text: "We have a trick to communicate: a necklace that can be used to encrypt and decrypt words and sentences."
-        char: Angela
+        char: angela
         mood: normal
   - type: image
     id: CaesarJewel
@@ -591,34 +589,35 @@ actions:
   - type: dialog
     entries:
       - text: "It is beautiful - said Mathina - how does it work? I see that the letters appear twice: one in the inner circle and one in the outer circle, but they are shifted. Why?"
-        char: Mathina
+        char: mathina
         mood: excited
       - text: "The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle."
-        char: Angela
+        char: angela
         mood: normal
       - text: "In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
-        char: Angela
+        char: angela
         mood: normal        
       - text: "... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one."
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Clever girl - said Angela. So… wanna try to translate something else?"
-        char: Angela
+        char: angela
         mood: happy
       - text: "Yes, please! Let’s try!"
-        char: Mathina
+        char: mathina
         mood: happy
       - text: "Remember, move from the outside to the inside to decode."
-        char: Angela
+        char: angela
         mood: normal
 
   - type: game
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Select the correct word"
     cta: "Try it yourself!"
+    tag: app1
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1
 
 
@@ -628,12 +627,12 @@ actions:
   - type: dialog
     entries:
       - text: "Angela, it was a wonderful day, I hope to come again visiting you and John."
-        char: Mathina
+        char: mathina
         mood: normal
   - type: dialog
     entries:
       - text: "Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
-        char: Angela
+        char: angela
         mood: happy   
         
   - type: clearImage
@@ -795,7 +794,7 @@ actions:
   - type: dialog
     entries:
       - text: "Hi!! Wow, I almost did not notice you. It was a great day!"
-        char: Mathina
+        char: mathina
         mood: excited
   - type: sceneText
     text: >
@@ -803,7 +802,7 @@ actions:
   - type: dialog
     entries:
       - text: "... and finally I tried to translate some sentences, but almost missed the last ferry! But here I am… and… how was your day…. uh… don’t remember your name, sorry."
-        char: Mathina
+        char: mathina
         mood: normal
   - type: sceneText
     text: >
@@ -811,7 +810,7 @@ actions:
   - type: dialog
     entries:
       - text: "Now I am curious, where did you hide it?"
-        char: Mathina
+        char: mathina
         mood: happy
   - type: sceneText
     text: >
@@ -819,7 +818,7 @@ actions:
   - type: dialog
     entries:
       - text: "Of course, I am, tell me!"
-        char: Mathina
+        char: mathina
         mood: excited
   - type: sceneText
     text: >
@@ -832,6 +831,7 @@ actions:
     text: "Try to decipher the secret message with the help of the jewel"
     toolbarText: "Try to decipher the secret message with the help of the jewel"
     cta: "Try it yourself!"
+    tag: app2
     url: /apps/bucca-2-app/bucca-2-app-2.htm?l=1
     
   - type: sceneText

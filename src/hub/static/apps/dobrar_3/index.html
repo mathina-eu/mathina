@@ -2,17 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Dobrar</title>
+    <title>App</title>
     <style>
      html {
   touch-action: pan-down;
+   background-color: #FDE798;
 }
 
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #f0f0f0;
+        background-color: #FDE798;
       }
 	  
 	  .image-upload>input {
@@ -122,12 +123,12 @@ input[type=range]:focus::-ms-fill-upper {
 		<div id="container0" style=" display:inline">
 	
 <input type="range" name="RangeVal" value="RangeVal" id="range" min="0" max="3.14" step=".01" style=" position: absolute;
-  top: 13%;
+  top: 20px;
   right: 55%;" />
   
   <input type="range" class="range2" name="RangeVal" value="RangeVal" id="range2"
   min="0" max="3.14" step=".01" style=" position: absolute;
-  top: 45%;
+  top: 47%;
   right: 82%;" />
 
  
@@ -138,12 +139,30 @@ input[type=range]:focus::-ms-fill-upper {
 		  <script>
 		
 	window.addEventListener('resize', function(){
-	WIDTH = .99*window.innerWidth;HEIGHT = .99*window.innerHeight;
-	 ASPECT = WIDTH / HEIGHT;container.removeChild( renderer.domElement );init(); animate(); 
+	var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+WIDTH=.99*width0;
+HEIGHT=.99*Math.min(width0/2,height0);
+	 ASPECT = WIDTH / HEIGHT;
+	 
+	 camera.aspect=WIDTH / HEIGHT;
+camera.updateProjectionMatrix();
+renderer.setSize(WIDTH , HEIGHT);
+ var pos1y=HEIGHT*0.47;
+
+
+document.getElementById('range2').style.top= parseInt(pos1y) + "px"; 
 	 } );
 	 
-	var WIDTH = .99*window.innerWidth;
-			var HEIGHT = .99*window.innerHeight;
+	
+		
+					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var WIDTH=.99*width0;
+var HEIGHT=.99*Math.min(width0/2,height0);
+
+
+
 			// camera
 			var VIEW_ANGLE = 12;
 			var ASPECT = WIDTH / HEIGHT;
@@ -275,15 +294,24 @@ var renderer;
 
 
 function init() {
+
+var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+WIDTH=.99*width0;
+HEIGHT=.99*Math.min(width0/2,height0);
+	 ASPECT = WIDTH / HEIGHT;
 			
 			document.getElementById("range").value=0;
 			document.getElementById("range2").value=0;
 			
-			
+			 var pos1y=HEIGHT*0.47;
+
+
+document.getElementById('range2').style.top= parseInt(pos1y) + "px"; 
 				// renderer
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setSize( WIDTH, HEIGHT );
-				renderer.setClearColor(0xd2d1b8,1);
+				//renderer.setClearColor(0xd2d1b8,1);
 				container.appendChild( renderer.domElement );
 				// scene
 				
@@ -359,7 +387,7 @@ scene.add( light );
 	var materialpb,materialpb2, a, planeGeo2,planeGeo2v, materialpbv, materialpb2v;
 	
 	function exec() 
-	{	WIDTH = .99*window.innerWidth;HEIGHT = .99*window.innerHeight;
+	{	//WIDTH = .99*window.innerWidth;HEIGHT = .99*window.innerHeight;
 	 ASPECT = WIDTH / HEIGHT;
 		var imgname = '../atractor-apps-all/imgs/n3.png';
 	

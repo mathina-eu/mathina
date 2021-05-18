@@ -65,7 +65,7 @@
 
         #DivCanvas {
             position: absolute;
-            width: 1920px;
+            width: 100%;
             height: 1080px;
             z-index: 0;
             left: 0px;
@@ -77,8 +77,8 @@
             width: 920px;
             height: 140px;
             z-index: 2;
-            left: 480px;
-            top: 90px;
+            left: 25%;
+            top: 25px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
             overflow-y: scroll;
@@ -93,8 +93,8 @@
             width: 890px;
             height: 205px;
             z-index: 2;
-            left: 20px;
-            top: 300px;
+            left: 1%;
+            top: 230px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
             overflow-y: scroll;
@@ -109,8 +109,8 @@
             width: 890px;
             height: 205px;
             z-index: 2;
-            left: 970px;
-            top: 300px;
+            right: 1%;
+            top: 230px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
             overflow-y: scroll;
@@ -125,8 +125,8 @@
             width: 890px;
             height: 335px;
             z-index: 2;
-            left: 20px;
-            top: 545px;
+            left: 1%;
+            top: 500px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
             overflow-y: scroll;
@@ -139,10 +139,10 @@
         #Text5 {
             position: absolute;
             width: 890px;
-            height: 235px;
+            height: 335px;
             z-index: 2;
-            left: 970px;
-            top: 545px;
+            right: 1%;
+            top: 500px;
             background: rgba(255, 255, 255, 0.8);
             font: 20px DejaVu Sans Mono;
             overflow-y: scroll;
@@ -151,6 +151,72 @@
             padding: 20px;
             display: none;
         }
+		
+		        #successMessage {
+        position: absolute;
+        /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
 
         a {
             font: 17px Orbitron;
@@ -229,90 +295,59 @@
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
+				maxLength:3
             });
             $('#sceglib').keyboard({
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
+				maxLength:3
             });
             $('#chiavetrovata').keyboard({
                 layout: 'num',
                 restrictInput: true,
                 preventPaste: true,
-                autoAccept: true
+                autoAccept: true,
             });
         });
     </script>
     <script type="text/javascript">
         Lingua = 1;
 
-        Traduzioni = [
-            [
-                ["Trad1"], "Angela chose the two numbers: <br> a prime number <em> p </em>:", "Angela ha scelto i due numeri: <br>un numero primo <em>p</em>:", "&Acirc;ngela escolheu os dois n&uacute;meros: <br> um n&uacute;mero primo <em> p </em>:", "Angela w&auml;hlt die beiden Zahlen: <br> eine Primzahl <em> p </em>:"
-            ],
-            [
-                ["Trad2"], "and a number <em> g </em> which will be our base:", "e un numero <em>g</em> che sarà la nostra base:", "e um n&uacute;mero <em> g </em> que ser&aacute; nossa base:", "und eine Zahl <em> g </ em>, die unsere Basis sein wird:"
-            ],
-            [
-                ["Trad3"], "Let's get started!", "Ok, iniziamo!", "Vamos começar!", "Lass uns anfangen!"
-            ],
-            [
-                ["Trad4"], "Phase 2 (Leo): Leo's secret", "Fase 2 (Leo): il segreto di Leo", "Fase 2 (Leo): o segredo de Leo", "Phase 2 (Leo): Leos Geheimnis"
-            ],
-            [
-                ["Trad5"], "Hi Mathina! I secretly chose a number a, between 2 and", "Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e", "Oi Mathina! Eu secretamente escolhi um n&uacute;mero a, entre 2 e", "Hallo Mathina! Ich habe heimlich eine Zahl a zwischen 2 und 2 gew&auml;hlt"
-            ],
-            [
-                ["Trad6", "Trad6a"], "Then I computed", "Poi ho calcolato", "Ent&atilde;o eu calculei", "Dann habe ich berechnet"
-            ],
-            [
-                ["Trad7", "Trad7a"], "which is equal to", "che vale", "que &eacute; igual a", "das ist gleich"
-            ],
-            [
-                ["Trad8", "Trad8a"], "And now?", "E adesso?", "E agora?", "Und nun?"
-            ],
-            [
-                ["Trad9"], "Phase 2 (Mathina): Mathina's secret", "Fase 2 (Mathina): il segreto di Mathina", "Fase 2 (Mathina): o segredo de Mathina", "Phase 2 (Mathina): Leos Mathina"
-            ],
-            [
-                ["Trad10"], "Hi Leo! I secretly chose a number b, between 2 and", "Ciao Leo! Ho scelto segretamente un numero b, tra 2 e", "Oi Leo! Eu secretamente escolhi um n&uacute;mero b, entre 2 e", "Hallo Leo! Ich habe heimlich eine Zahl b zwischen 2 und 2 gew&auml;hlt"
-            ],
-            [
-                ["Trad11"], "How do we proceed?", "Come procediamo?", "Como procedemos?", "Wie Fahren wir fort?"
-            ],
-            [
-                ["Trad12"], "We need to find the key. We know that", "Dobbiamo trovare la chiave. Sappiamo che vale", "Precisamos encontrar a chave. N&oacute;s sabemos isso", "Wir m&uuml;ssen den Schl&uuml;ssel finden. Wir wissen das"
-            ],
-            [
-                ["Trad13"], "but also", "ma anche", "mas tamb&eacute;m", "aber auch"
-            ],
-            [
-                ["Trad14"], "only not knowing a and b we are forced to try various combinations.", "solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.", "apenas n&atilde;o conhecendo aeb, somos for&ccedil;ados a tentar v&aacute;rias combina&ccedil;&otilde;es.", "Nur wenn wir a und b nicht kennen, m&uuml;ssen wir verschiedene Kombinationen ausprobieren."
-            ],
-            [
-                ["Trad15", "Trad15a"], "Choose", "Scegli", "Escolher", "W&auml;hlen"
-            ],
-            [
-                ["Trad16", "Trad16a"], "with this choice", "Con questa scelta", "com esta escolha", "mit dieser Wahl"
-            ],
-            [
-                ["Trad17", "Trad17a"], "modulo", "modulo", "m&oacute;dulo", "Modulo"
-            ],
-            [
-                ["Trad18"], "Ok, I'm ready to decode the message", "Ok, sono pronto a decodificare il messaggio", "Ok, estou pronto para decodificar a mensagem", "Ok, ich bin bereit, die Nachricht zu entschl&uuml;sseln"
-            ],
-            [
-                ["Trad19"], "Can we decode the message?", "Riusciamo a decodificare il messaggio?", "Podemos decodificar a mensagem?", "K&ouml;nnen wir die Nachricht entschl&uuml;sseln?"
-            ],
-            [
-                ["Trad20"], "Enter the key:", "Inserisci la chiave:", "Insira a chave:", "Geben Sie den Schlüssel:"
-            ],
-            [
-                ["Trad21"], "Here is the decoded message", "Ecco il messaggio decodificato", "Aqui est&aacute; a mensagem decodificada", "Hier ist die dekodierte Nachricht"
-            ]
-        ];
+Traduzioni=[
+	[["Trad1"],"Angela chose the two numbers: <br> a prime number <em> p </em>:","Angela ha scelto i due numeri: <br>un numero primo <em>p</em>:","&Acirc;ngela escolheu os dois n&uacute;meros: <br> um n&uacute;mero primo <em> p </em>:","Angela w&auml;hlt die beiden Zahlen: <br> eine Primzahl <em> p </em>:"],
+	[["Trad2"],"and a number <em> g </em> which will be our base:","e un numero <em>g</em> che sarà la nostra base:","e um n&uacute;mero <em> g </em> que ser&aacute; a nossa base:","und eine Zahl <em> g </ em>, die unsere Basis sein wird:"],
+	[["Trad3"],"Let's get started!","Ok, iniziamo!","Vamos começar!","Ok, los geht’s!"],
+	[["Trad4"],"Phase 1 (Angela): Angela's secret","Fase 1 (Angela): il segreto di Angela","Fase 1 (Angela): o segredo de Angela","Phase 1 (Angela): Angelas Geheimnis"],
+	[["Trad5"],"Hi Mathina! I secretly chose a number a, between 2 and","Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e","Ol&aacute; Mathina! Eu escolhi secretamente um n&uacute;mero a, entre 2 e","Hallo Mathina! Ich habe heimlich eine Zahl a gew&auml;hlt, und zwar zwischen 2 und"],
+	[["Trad6","Trad6a"],"Then I computed","Poi ho calcolato","Ent&atilde;o eu calculei","Dann habe ich gerechnet"],
+	[["Trad7","Trad7a"],"which is equal to","che vale","que &eacute; igual a","das ist gleich"],
+	[["Trad8","Trad8a"],"And now?","E adesso?","E agora?","Und nun?"],
+	[["Trad9"],"Phase 2 (Mathina): Mathina's secret","Fase 2 (Mathina): il segreto di Mathina","Fase 2 (Mathina): o segredo de Mathina","Phase 2 (Mathina): Mathinas Geheimnis"],
+	[["Trad10"],"Hi Leo! I secretly chose a number b, between 2 and","Ciao Leo! Ho scelto segretamente un numero b, tra 2 e","Ol&aacute; Leo! Eu escolhi secretamente um n&uacute;mero b, entre 2 e","Hallo Leo! Ich habe heimlich eine Zahl b gew&auml;hlt, und zwar zwischen 2 und"],
+	[["Trad11"],"How do we proceed?","Come procediamo?","Como procedemos?","Und wie geht es jetzt weiter?"],
+	[["Trad12"],"We need to find the key. We know that it is equal to","Dobbiamo trovare la chiave. Sappiamo che vale","Precisamos de encontrar a chave. N&oacute;s sabemos que &eacute; igual a","Wir m&uuml;ssen den Schl&uuml;ssel finden. Wir wissen, er ist gleich"],
+	[["Trad14"],"only not knowing a and b we are forced to try various combinations. <br><b>Be aware</b>: finding the answer is veery long!","solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.<br><b>Stai attento</b>: trovare la risposta corretta &egrave; mooolto lungo!","s&oacute; que n&atilde;o conhecemos a e b, somos for&ccedil;ados a tentar v&aacute;rias combina&ccedil;&otilde;es.<br><b>Estar ciente</b>:encontrar a resposta &eacute; muiiito longo!","Aber weil wir a und b nicht kennen, m&uuml;ssen wir verschiedene Kombinationen ausprobieren.<br><b>Aber, sei dir bewusst</b>: es k&ouml;nnte seeeehr lange dauern, die Antwort zu finden!"],
+	[["Trad13"],"but also to","ma anche","mas tamb&eacute;m para","aber auch gleich"],
+	[["Trad15","Trad15a"],"Choose","Scegli","Escolher","W&auml;hle"],
+	[["Trad16","Trad16a"],"With this choice","Con questa scelta","Com esta escolha","Damit ist "],
+	[["Trad17","Trad17a"],"modulo","modulo","m&oacute;dulo","Modulo"],
+	[["Trad18"],"Phew! It is so long to find an answer. And now?","Caspita! Trovare la risposta &egrave; complicato! E adesso?","Ufa! &Eacute; muito longo encontrar uma resposta. E agora?","Puh! Es dauert so lange, eine Antwort zu finden. Und nun?"],
+	[["Trad19"],"Can we decode the message?","Riusciamo a decodificare il messaggio?","Podemos descodificar a mensagem?","Kannst Du die Nachricht entschl&uuml;sseln?"],
+	[["Trad20"],"Enter the key:","Inserisci la chiave:","Insire a chave:","Gib den Schlüssel ein:"],
+	[["Trad21"],"Here is the decoded message","Ecco il messaggio decodificato","Aqui est&aacute; a mensagem descodificada","Hier ist die dekodierte Nachricht"],
+	[[], "The sun is shining today", "Oggi il sole splende", "Hoje, o sol est&aacute; a brilhar", "Heute scheint die Sonne."],
+	[[], "Congratulations, but... was it just luck? Are you convinced?", "Complimenti, ma... &egrave; stata solo fortuna? Sei convinto?", "Parab&eacute;ns, mas ... foi apenas sorte? Voc&ecirc; est&aacute; convencido?", "Gl&uuml;ckwunsch, aber ... war das jetzt nur Gl&uuml;ck? Bist du &uuml;berzeugt?"],
+	[[], "If you want you can try again, but this is still very long! Are you convinced?", "Se vuoi puoi provare ancora, ma impiegherai molto tempo! Sei convinto?", "Se quiser, pode tentar de novo, mas ainda &eacute; muito longo! Voc&ecirc; est&aacute; convencido?", "Wenn Du willst, kannst Du es gleich nochmal versuchen, aber es kann wieder sehr lange dauern! Bist du &uuml;berzeugt?"],
+	[["Trad19b"],"We can still try with all the possible keys...","Possiamo ancora provare tutte le possibili chiavi...","Ainda podemos tentar com todas as chaves poss&iacute;veis...","Wir k&ouml;nnen immernoch alle m&ouml;glichen Schl&uuml;sseln ausprobieren..."],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"],
+[["Trad24"],"I understand, thank you!","Ho capito, grazie!","Eu entendo, obrigado!","Ich verstehe, vielen Dank!"]
+	];
+
+
 
         function isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
@@ -336,12 +371,39 @@
             }
         }
 
+		function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+			
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+            console.log(dimension);
+			
+			var ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
+			document.body.style.zoom=ScalaCalcolata;
+        }
+
         function Init() {
 
             Lingua = Number(gup('l', document.location.search));
             if (!isNumeric(Lingua)) Lingua = 1;
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
+			
+			window.addEventListener('resize', Resize, false);
 
             ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
             PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
@@ -352,6 +414,7 @@
             Giusta2 = Math.floor(Math.random() * 4) + 1;
             diffie();
             UpdateLabels();
+			Resize();
             //document.getElementById("codem").innerHTML=RandomString(25,Alphabet);
         }
 
@@ -415,12 +478,14 @@
         }
 
         function diffie() {
-            p = PrimoScelto;
-            g = BaseScelta;
-            a = 2 + Math.floor(Math.random() * (p - 3));
-            A = potmod(g, a, p);
-            b = 2 + Math.floor(Math.random() * (p - 3));
-            B = potmod(g, b, p);
+			do {
+				p = PrimoScelto;
+				g = BaseScelta;
+				a = 2 + Math.floor(Math.random() * (p - 3));
+				A = potmod(g, a, p);
+				b = 2 + Math.floor(Math.random() * (p - 3));
+				B = potmod(g, b, p);
+			} while (A==1 || B==1);
             segretoA = potmod(B, a, p);
             segretoB = potmod(A, b, p);
             RiempiForm(a);
@@ -482,9 +547,12 @@
         function CheckFinale() {
             ChiaveUtente = parseInt(document.getElementById("chiavetrovata").value);
             if (ChiaveUtente == segretoB) {
-                document.getElementById("messdec").innerHTML = "Giusto";
+                document.getElementById("messdec").innerHTML = Traduzioni[21][Lingua] + "<br><br>" + Traduzioni[22][Lingua];
+				document.getElementById("Trad24").style.visibility="visible";
+				
             } else {
-                document.getElementById("messdec").innerHTML = "Sbagliato";
+                document.getElementById("messdec").innerHTML = RandomString(25,Alphabet)+ "<br><br>" + Traduzioni[23][Lingua];
+				document.getElementById("Trad24").style.visibility="visible";
             }
         }
 
@@ -497,12 +565,31 @@
         }
 
         function ScegliB() {
-            nnb = document.getElementById("sceglia").value;
+            nnb = document.getElementById("sceglib").value;
             nb = parseInt(nnb);
             Cond2 = potmod(A, nb, p);
+			//console.log(A,nb,p,Cond2);
             document.getElementById("NCB").innerHTML = Cond2;
             $('#nascB').show();
         }
+		
+		   function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.visibility = "visible";
+
+        }
+
+  function Link() {
+            location.reload();
+
+        }
+
     </script>
 </head>
 
@@ -510,34 +597,158 @@
     <div id="DivCanvas">
         <div id="Text1">
             <p><span id="Trad1">Angela ha scelto per i due numeri: <br>un numero primo <em>p</em>:</span> <b id="Primo1"></b>, <br><span id="Trad2">e un numero <em>g</em> che sarà la nostra base:</span> <b id="Base1"></b></p>
-            <p><button onclick="$('#Text2').show();" id="Trad3">Ok, iniziamo!</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text2').show();" id="Trad3">Ok, iniziamo!</button></p>
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad4">Fase 2 (Leo): il segreto di Leo</p>
             <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
-            <p><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
             </p>
         </div>
         <div id="Text3">
             <p class="titolo" id="Trad9">Fase 2 (Mathina): il segreto di Mathina</p>
             <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
-            <p><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
         </div>
         <div id="Text4">
             <p class="titolo" id="Trad11">Come procediamo?</p>
             <p><span id="Trad12">Dobbiamo trovare la chiave. Sappiamo che vale</span> <span class="SegCondB"></span><sup>a</sup>, <span id="Trad13">ma anche</span> <span class="SegCondA"></span><sup>b</sup>, <span id="Trad14">solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.</span><br><br> <span id="Trad15">Scegli</span> a: <input type="text" id="sceglia" onchange="ScegliA()" />. <span id="nascA" style="display:none;"><span id="Trad16">Con questa scelta</span>, <span class="SegCondB"></span><sup id="NewA">a</sup> <span id="Trad17">modulo</span> <em class="SegP">p</em> = <em id="NCA"></em>
                 </span><br><br> <span id="Trad15a">Scegli</span> b: <input type="text" id="sceglib" onchange="ScegliB()" />. <span id="nascB" style="display:none;"><span id="Trad16a">Con questa scelta</Span>, <span class="SegCondA"></span><sup id="NewB">b</sup> <span id="Trad17a">modulo</span><em class="SegP">p</em> = <em id="NCB"></em></span><br>
             </p>
-            <p><button onclick="$('#Text5').show();" id="Trad18">Ok, sono pronto a decodificare il messaggio</button></p>
+            <p style="text-align:center;"><button onclick="$('#Text5').show();" id="Trad18">Ok, sono pronto a decodificare il messaggio</button></p>
         </div>
         <div id="Text5">
             <p class="titolo" id="Trad19">Riusciamo a decodificare il messaggio?</p>
-            <p><span id="Trad20">Inserisci la chiave</span>: <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <br>
-                <span id="messdec"></span>
+            <p><span id="Trad19b"></span><br><span id="Trad20">Inserisci la chiave</span> <input type="text" id="chiavetrovata" onchange="CheckFinale()" /> <br> <span id="Trad21">Ecco il messaggio decodificato</span>: <span id="messdec"></span>
             </p>
+			<center><p><button onclick="Finisci()" id="Trad24" style="visibility:hidden;">Ho capito grazie</button></p></center>
         </div>
     </div>
     <div class="block" style="display:none"> <input id="text" type="text" /> </div>
+	   <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+	
+	<script>
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>
