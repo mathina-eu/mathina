@@ -3,15 +3,15 @@
 L'obiettivo principale di questa storia è esplorare, in modo divertente, le nozioni relative alla **simmetria assiale**.
 
 In una prima fase, l'idea è di far conoscere ai bambini il concetto di
-[“asse di simmetria”]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[“asse di simmetria”]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg1)
 : il processo utilizzato nella storia per verificare se un'immagine ha l'asse di simmetria è piegare l'immagine a metà (orizzontalmente o verticalmente) e vedere se le due parti si sovrappongono. Ci sono tre tipi di immagini utilizzate nel corso della storia: alcune immagini con un asse di simmetria verticale, alcune con uno orizzontale e alcune senza assi di simmetria.
 
-Successivamente, i bambini imparano a costruire, da soli, immagini con assi di simmetria: non solo immagini composte da [poligoni e cerchi]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+Successivamente, i bambini imparano a costruire, da soli, immagini con assi di simmetria: non solo immagini composte da [poligoni e cerchi]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2)
 , ma anche formate da
-[segmenti]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[segmenti]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg3)
 
 Nell'app “Costruire giocattoli (I)” nozioni relative al riconoscimento di alcune figure geometriche - triangoli, quadrati e cerchi - vengono fatte 
-[testare]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) ai bambini. Una di queste nozioni è, ad esempio, la distinzione tra triangoli congruenti, ma con orientamenti diversi:
+[testare]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2) ai bambini. Una di queste nozioni è, ad esempio, la distinzione tra triangoli congruenti, ma con orientamenti diversi:
 
 &nbsp;
 
@@ -46,7 +46,7 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 &nbsp;
 
-## [App 1 - Piegando le immagini (I, II e III)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 1 - Piegando le immagini (I, II e III)]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg1)
 
 Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data ha un asse di simmetria. Per questo, dovrebbe piegare l'immagine a metà (orizzontalmente e verticalmente) e vedere se le due parti si sovrappongono.
 
@@ -55,7 +55,7 @@ Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data 
 
 &nbsp;
 
-## [App 2 - Cerca i giocattoli simmetrici]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 2 - Cerca i giocattoli simmetrici]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg4)
 
 Viene mostrata una serie di 16 disegni di animali. L'utente è invitato a scegliere tutte le immagini simmetriche e inserirle in un riquadro.
 
@@ -64,7 +64,7 @@ Viene mostrata una serie di 16 disegni di animali. L'utente è invitato a scegli
 
 &nbsp;
 
-## [App 3 - Costruisci i giocattoli (I)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 3 - Costruisci i giocattoli (I)]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2)
 
 Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa verticale, uno sfondo quadrato grigio e un'immagine non simmetrica costruita con forme colorate. L'utente è invitato a trascinare alcune forme colorate a sua disposizione e inserirle nei quadrati grigi in modo da creare un'immagine simmetrica rispetto alla linea rossa.
 
@@ -73,7 +73,7 @@ Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa vertical
 
 &nbsp;
 
-## [App 4 - Costruisci i giocattoli (II)]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 4 - Costruisci i giocattoli (II)]($HUB_URL/it/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg3)
 
 Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa, un geopiano e un'immagine, composta da segmenti neri, disegnata in uno dei lati della linea rossa. L'utente è invitato a disegnare i segmenti mancanti in modo da creare un'immagine simmetrica rispetto alla linea rossa.
 

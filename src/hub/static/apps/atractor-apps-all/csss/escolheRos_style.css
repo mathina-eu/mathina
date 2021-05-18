@@ -57,21 +57,16 @@ body {
 }
 
 /* Main content area */
-#content div{
-    /*padding: 0px;
-    max-width: 800px;
-    text-align: center;
-    margin:auto;
-    align: center;*/
-
-    margin-left: 100px;
-	margin-right: auto;
+.container {
+    margin: auto;
     width: 800px;
 	float: none;
-    
     /*border: 1px solid #333;*/
 }
-
+#loaders,#rosaceas,#targets,#errados,#buts {
+    width: 800px;
+    /*border: 1px solid #333;*/
+}
 
 /* "You did it!" message */
 #successMessage, #errorMessage, #finalMessage {

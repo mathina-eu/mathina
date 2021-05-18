@@ -113,7 +113,8 @@ actions:
         mood: excited
   - type: game
     tag: tg3
-    text: "How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
+    text: "How can Mathina solve the game? In each round, choose all of the rosettes with symmetry axes."
+    toolbarText: "Choose 4 rosettes with symmetry axes"
     cta: "Try it yourself!"
     url: /apps/EscolheRosaceas/index.html?lang=en    
   - type: dialog

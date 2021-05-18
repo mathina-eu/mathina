@@ -47,7 +47,7 @@ Na primeira experiência a chave é "tem cinco lados" e a mensagem a transmitir 
 A segunda app apresenta a mesma situação que a primeira, que é relacionada com a codificação da mensagem, mas a chave é diferente ("o céu está cheio delas"). Além disso, outras diferenças são as de haver mais imagens do que mensagens, e haver duas possíveis imagens que podem corresponder à chave: uma estrela e uma nuvem. O utilizador tem de associar uma dessas duas imagens com a mensagem correta e combinar as mensagens falsas com imagens que não sejam estas duas.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
-[Guião](/stories/bucca-1/transcripts/Script2-pt.pdf)
+[Guião](/stories/bucca-1/transcripts/Script1-pt.pdf)
 
 &nbsp;
 
@@ -56,6 +56,6 @@ A segunda app apresenta a mesma situação que a primeira, que é relacionada co
 Na terceira e última experiência, os leitores passam a estar envolvidos no processo de descodificação da mensagem: sabem a chave (outra vez "o céu está cheio delas") e têm de selecionar a mensagem secreta de entre as que são propostas.
 
 @[youtube](OYrrdu4y_7E?_align-center_)
-[Guião](/stories/bucca-1/transcripts/Script3-pt.pdf)
+[Guião](/stories/bucca-1/transcripts/Script1-pt.pdf)
 
 &nbsp;
