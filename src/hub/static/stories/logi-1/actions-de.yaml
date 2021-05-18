@@ -158,14 +158,14 @@ actions:
   - type: game
     text: Was denkst Du? Wie viele Ampeln muss es geben, damit alle Farben in den unterschiedlichen Reihenfolgen vorkommen?
     # How many lights do you think would be enough to show all the variations? 
-    toolbarText: 
+    toolbarText: Male die Farben in die Ampeln. Jede Farb-Reihenfolge darf nur einmal vorkommen.
     cta: Versuche alle zu finden!
     # Try to find them all!
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
   - type: animation
     target: leo-runs
+    duration: 1
     vars:
-      duration: 1
       xPercent: 0
       yPercent: -30
       repeat: 1
@@ -187,8 +187,8 @@ actions:
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
   - type: dialog
     entries:
-      - text: Mathina schaute auf Leos Zeichnung
-        exposition: Falsch! Du hast zwei von den Ampeln zweimal gemalt!
+      - text: Falsch! Du hast ja einige Ampeln zweimal gemalt!
+        exposition: Mathina schaute Leos Zeichnung genau an.
       # Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
         char: mathina
         mood: happy
@@ -197,7 +197,7 @@ actions:
   - type: game
     text: Welche Ampeln hat Leo zweimal gemalt? Ziehe die beiden gleich aussehenden Ampeln übereinander und lass die überzählige verschwinden.
     # What do you think Leo has included twice? Pull identical lamps on top of each other, and the superfluous ones will disappear.
-    toolbarText: 
+    toolbarText: Welche Ampeln hat Leo zweimal gemalt? Ziehe sie übereinander, damit eine von ihnen verschwindet.
     cta: Probiere es aus!
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=2
   - type: image
@@ -216,7 +216,7 @@ actions:
   - type: game
     text: Hier siehst Du die fünf richtigen Ampeln in einer Reihe. Eine Ampel hat noch keine Lichtsignale und Du kannst sie mit den Farben in der richtigen Reihenfolge bemalen. Außerdem kannst Du auch noch weitere Ampeln hinzufügen.
     # We see the 5 correct lamps lined up and a traffic light without colors which can be colored. Additional lamps can be added, too.
-    toolbarText: Was glaubst Du? Welche Farb-Reihenfolge fehlt noch? Vielleicht hilft es dir, wenn Du die Ampeln nach den ersten Farben ordnest. Du kannst erst mit Lila beginnen, danach mit Lila und Orange weitermachen.
+    toolbarText: Was glaubst Du? Welche Farb-Reihenfolge fehlt noch?
     # Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     cta: Probiere es aus!
     url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=3

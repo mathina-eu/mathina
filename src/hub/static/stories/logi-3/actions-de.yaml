@@ -1,0 +1,595 @@
+actions:
+  - type: background
+    src: logi-bg32.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
+  - type: sceneText
+    text: Das ist die Straßenkarte von Logicity.
+    # This is the street map of Logi-city. 
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
+  - type: sceneText
+    text: Alle Straßen haben Namen von berühmten Mathematikerinnen und Mathematikern aus aller Welt.
+    #All streets bear names of famous mathematicians from all around the world. 
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 13%; top: 55%; right: 87%;"
+    parallax: back2
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 12%; top: 54%; right: 36%;"
+    parallax: back3
+  - type: sceneText
+    text: Mathina und Leo liefen in diesen Straßen herum und schauten sich alles an. Mathina hatte ihren Stift zur Hand und Leo trug seine grüne Mütze.
+    #Mathina and Leo walked the streets of Logi-city. Mathina kept her pencil at hand and Leo was wearing his green cap.
+  - type: image
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 45%; right: 83%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 29%; right: 87%;"
+  - type: sceneText
+    text: Gerade liefen sie von der Hilbert-Straße zur Rozsa Peter-Straße.
+    #They walked on Hilbert Road towards the corner of Péter Street. 
+  - type: image
+    src: policeman-nr1-turn.png
+    id: policeman1-t
+    style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 57%; right: 83%;"
+  - type: sceneText
+    text: Da sahen sie einen Polizisten, der vor ihnen rannte. Er war ganz außer Atem.
+    #They saw a policeman rushing ahead of them. He was almost out of breath. 
+  - type: dialog
+    entries:
+      - text: Fangt ihn! Bitte fangt ihn!
+      #Catch him, please catch him!
+        char: first_policeman
+        mood: normal
+  - type: animation
+    target: pm1
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 130
+      ease: power3.out
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 100
+      ease: power3.out
+  - type: sceneText
+    text: Sofort rannte Leo hinter dem Polizisten her, so schnell er konnte.
+    #Leo immediately followed him, running as fast as he could, barely touching the ground with his feet.
+  - type: dialog
+    entries:
+      - text: Aber wen sollen wir denn fangen?
+      #Who are we supposed to catch?
+        char: mathina
+        mood: surprised
+  - type: image
+    src: policeman-nr2.png
+    id: policeman2
+    style: "width: 18%; top: 20%; right: 30%;"
+    parallax: back2
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 30%; right: 83%;"
+  - type: sceneText
+    text: Ein zweiter Polizist lief gerade zu Mathina und blieb neben ihr stehen, um nach Luft zu schnappen.
+    #A second policeman was slowing down right beside her to catch a breath.
+  - type: sceneText
+    text: Der zweite Polizist trug einen Rucksack mit einer ganzen Reihe alter Logik-Werkzeuge. Er hatte zum Beispiel eine Verkleidung, ein Spannungsmessgerät und ein Nivelliergerät. Die Sachen waren ganz schön schwer und der Rucksack rutschte dem Polizisten immer wieder von der Schulter herunter.
+    #The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 75%; right: 55%;"
+  - type: image
+    src: thief.png
+    id: thief
+    style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Ein Dieb hat alle geraden Zahlen von Logi-City gestohlen!
+      #A thief, a thief stole all the even numbers of this town! 
+        char: second_policeman
+        exposition: sagte der Polizist und atmete dabei schwer.
+        #The policeman was gasping heavily.
+        mood: serious
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      xPercent: 300
+      yPercent: 330
+      ease: power3.out
+  - type: clearImage
+    id: pm1
+  - type: clearImage
+    id: policeman1-t
+  - type: sceneText
+    text: Leo hatte bereits die Straßenecke erreicht und bog in die Rozsa Peter-Straße ein.
+    #Leo had already reached the corner, and quickly disappeared onto Péter Street. 
+  - type: sceneText
+    text: Mathina half dem zweiten Polizisten beim Tragen der Logik-Werkzeuge. So kamen sie schneller voran.
+    # Mathina took a couple of bags off the policeman's shoulder to speed up the chase. 
+  - type: animation
+    target: pm2
+    vars:
+      duration: 3
+      xPercent: 150
+      yPercent: 385
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 170
+      yPercent: 400
+      ease: power3.out
+  - type: sceneText
+    text: Als auch sie um die Ecke bogen, sahen sie, dass Leo nur wenige Schritte vom Dieb entfernt war.
+    #When they reached the Hilbert-Péter corner, they saw that Leo was only a few meters away from the thief. 
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      xPercent: 330
+      yPercent: 330
+      ease: power3.out
+  - type: sceneText
+    text: Leo streckte die Hand nach dem Dieb aus und beinähe hätte er die Zahl 4 erwischt und dem Mann wegnehmen können.
+    #The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4. 
+  - type: animation
+    target: thief-i
+    vars:
+      duration: 1
+      xPercent: 80
+      yPercent: -190
+      ease: power3.out
+  - type: sceneText
+    text: Aber der Dieb schlug einen Haken und rannte nach links in die Gödel-Straße.
+    #But the thief suddenly turned left onto Gödel Street.
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 77%; right: 58%;"
+  - type: image
+    src: policeman-nr1-turn.png
+    id: policeman1-t
+    style: "width: 20%; top: 40%; right: 3%;"
+    parallax: back2
+  - type: sceneText
+    text: Leo war so schnell gerannt, dass er nicht mehr bremsen konnte und mit dem ersten Polizisten zusammenstieß, der von der anderen Straßenseite heranlief.
+    #Leo could not slow down anymore, and found himself crashing into the first policeman running from the other end of Péter Street.
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 500
+      yPercent: 400
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Ich helfe Dir!
+      #Let me help you. 
+        char: Mathina
+        mood: talking
+  - type: sceneText
+    text: Mathina half dem Polizisten wieder auf die Beine.
+    #Mathina offered her hand to the policeman lying on the ground
+  - type: sceneText
+    text: Dann sah sie, wie Leo die Verfolgung des Diebs wieder aufnahm und in die Gödel-Straße rannte.
+    # Mathina saw Leo already setting off on Gödel Street to catch the thief.
+  - type: clearImage
+    id: thief-i
+  - type: clearImage
+    id: thief
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 1
+      xPercent: 490
+      yPercent: 170
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Bleib stehen, das schaffst du nicht alleine!
+      #Come back, you have no chance!
+        char: first_policeman
+        mood: normal
+      - text: Ich möchte aber den anderen Polizisten helfen. Gemeinsam fangen wir den Dieb!
+      #I’ll help other cops, we'll hunt him down together!
+        char: Leo
+        mood: talking
+      - text: Leider gibt es keine anderen Polizisten. Wir sind nur zu zweit. Jeder bewacht eine Hälfte der Stadt.
+      #There are no more policemen! It's only the two of us, one at both ends of the town!
+        char: first_policeman
+        mood: normal
+  - type: sceneText
+    text: Die Polizisten schauten sich verzweifelt an. Leo blieb verblüfft stehen.
+    #The policemen looked at each other in despair. Leo stopped immediately. He was devastated.
+  - type: dialog
+    entries:
+      - text: Was? Ihr seid nur zu zweit?
+      #What? Only the two of you?
+        char: Leo
+        mood: surprised
+  - type: sceneText
+    text: Die Polizisten nickten so heftig, dass Leo das aus riesiger Entfernung sehen konnte.
+    #The policemen nodded so emphatically that even Leo could see it from the distance.
+  - type: animation
+    target: leo-i2
+    vars:
+      duration: 3
+      xPercent: 90
+      yPercent: -10
+      ease: power3.out
+  - type: animation
+    target: mathina-i2
+    vars:
+      duration: 3
+      xPercent: 250
+      yPercent: 50
+      ease: power3.out
+  - type: animation
+    target: pm2
+    vars:
+      duration: 3
+      xPercent: 130
+      yPercent: 20
+      ease: power3.out
+  - type: animation
+    target: pm1
+    vars:
+      duration: 3
+      xPercent: -300
+      yPercent: -300
+      ease: power3.out
+  - type: sceneText
+    text: Mathina und die Polizisten holten Leo ein und zu viert gingen sie in ein Café am Russell-Platz. Das war der größte Platz der Stadt.
+    #They caught up with Leo, and finally sat down in a cafe on Russell Square, the city’s main square.
+  - type: dialog
+    entries:
+      - text: Wieso seid ihr denn nur zu zweit?
+      #Why are there only the two of you?
+        char: Mathina
+        mood: surprised
+      - text: Die Leitung der Polizei in Logi-City sagt, dass zwei Polizisten ausreichen. Alle anderen arbeiten jetzt in anderen Abteilungen, zm Beispiel in der Abteilung für Internetsicherheit.
+      # Logi-city's Chief of Police says two policemen are more than enough. Everyone else has been relocated to the cyber-security unit.
+        char: second_policeman
+        mood: serious
+      - text: Ich verstehe ja, das viele Verbrechen im Internet passieren. Aber so geht es nicht weiter. Ich habe versucht, die Polizei-Leitung davon zu überzeugen, dass wir hier auf den Straßen Verstärkung brauchen. Aber sie hat nur gesagt, dass wir unsere Arbeit ganz gut machen.
+      #Of course I understand that most crimes are committed in cyberspace, but we can't bear this anymore here. I tried to convince him but he replied we are not doing our job well enough.
+        char: first_policeman
+        mood: normal
+      - text: Ich glaube nicht, dass zwei Leute reichen, um eine ganze Stadt zu schützen.
+      #I don't think two people are able to patrol this city.
+        char: Leo
+        exposition: Leo biss in einen Barcan Marcus-Kuchen.
+        #Leo bit into his Barcan-Marcus cake.
+        mood: thinking
+      - text: Ja, das haben wir auch gesagt. Aber niemand glaubt uns.
+      #Yes, this was our argument, too, but he doesn't believe us.
+        char: first_policeman
+        mood: normal
+      - text: Zeigt uns mal die Straßenkarte, bitte. Ich meine, immerhin sind wir in Logi-City, oder nicht? Vielleicht können wir die Polizei-Leitung mit der Macht der Logik überzeugen.
+      #Show us the map of the city, please. We are in Logi-city, aren't we? Maybe the Chief can be persuaded by the power of logic. 
+        char: Mathina
+        mood: talking
+  - type: clearImage
+    id: leo-i2
+  - type: clearImage
+    id: mathina-i2
+  - type: clearImage
+    id: pm1
+  - type: clearImage
+    id: pm2
+  - type: background
+    src: logi-bg3-old.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+  - type: sceneText
+    text: Einer der Polizisten holte ein gelbliches Papier aus seiner Tasche und faltete es auseinander.
+    #One of the policemen pulled out a yellowish paper from his pocket and unfolded it.
+  - type: sceneText
+    text: Mathina und Leo schauten sich etwas überrascht an, so etwas altmodisches wie eine Straßenkarte hatten sie schon lange nicht mehr gesehen. Die Polizisten erklärten, dass sie nur alte Sachen hätten und sonst keine Hlilfe bekämen. Sie hatten diese alte Straßenkarte und ihr altes Logik-Werkzeug, das aber ziemlich nutzlos war.
+    #Mathina and Leo were perplexed to see the city on such an outdated medium. The policemen explained that this illustrated how far the police had withdrawn from physical reality and that they barely receive any support. The outdated logical equipment was still available, but it was entirely useless.
+  - type: sceneText
+    text: Mathina schaute sich die Karte an.
+    #Mathina took a long look at the map. 
+  - type: dialog
+    entries:
+      - text: Hmmm, die Frage ist doch die... Ist es möglich, zwei Polizisten so in der Stadt zu platzieren, dass sie alle Straßen überwachen können?
+      #So, the question actually is the following... Is it possible to place two cops in the city in such a way, that they are able to survey all of the streets.
+        char: Mathina
+        mood: thinking
+  - type: game
+    text: Hilf Mathina und Leo dabei, die beiden Polizisten bestmöglich auf der Karte zu platzieren
+    #Help Mathina and Leo find a good plan by moving 2 policemen on the map.
+    toolbarText: Wo sollen die Polizisten stehen?
+    cta: Probiere es aus!
+    #Try it yourself!
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
+  - type: dialog
+    entries:
+      - text: Zwei Polizisten sind einfach nicht genug!
+      #Of course, two cops are not enough!
+        char: Mathina
+        mood: surprised
+      - text: Natürlich, das haben wir ja auch schon festgestellt. Aber kannst Du das auch der Polizei-Leitung beweisen, junge Dame?
+      #Of course, we know that that's not enough. We experience it. But could you please prove this to the Chief, too, Miss?.
+        char: second_policeman
+        mood: serious
+      - text: Das kann ich - aber nenne mich niemals wieder “junge Dame”!
+      #If you never call me Miss again, I will.
+        char: Mathina
+        mood: arguing
+  - type: sceneText
+    text: Leo lachte und klopfte Mathina auf die Schulter. Die Polizisten nickten etwas verdattert.
+    #Leo laughed and patted Mathina's shoulder, while one of the cops nodded almost in fright.
+  - type: dialog
+    entries:
+      - text: Schaut! Es gibt drei horizontale Straßen - die Euler-Straße, die Hemachandra-Straße und die Rozsa Peter-Straße. Sie sind parallel und kreuzen sich nicht. Wenn einer von euch also die Euler-Straße bewacht und der andere die Hemachandra-Straße beschützt, dann kann natürlich keiner von euch auf der Rozsa Peter-Straße stehen. Es gibt einfach keinen Ort, von dem aus man zwei parallele Straßen gleichzeitig bewachen kann.
+      #So, look, here are these three horizontal streets - Euler, Hemachandra and Péter. They are parallel and have no intersection. Now, if you control the first horizontal road, that is Euler and your colleague the second, which is Hemachandra, then neither of you will be able to survey the third, Péter, for sure! Of course, because you can't find any spot in the city from where you can see two parallel streets!
+        char: Mathina
+        mood: talking
+  - type: sceneText
+    text: Die Polizisten hörten Mathina aufmerksam zu. Sie wussten ja aus Erfahrung, dass zwei Leute nicht genug waren, aber sie konnten es bisher nicht logisch erklären.
+    #The cops were fascinated by Mathina's reasoning. From experience they knew that two people were not enough, yet they couldn't explain it logically.
+  - type: dialog
+    entries:
+      - text: Ich habe noch eine andere Erklärung!
+      #I found another explanation!
+        char: Leo
+        exposition: Leo verdrückte noch schnell das letzte Stück Kuchen.
+        #Leo pushed the last bite of the cake into his mouth.
+        mood: talking
+      - text: Jetzt bin ich aber gespannt, Leo!
+      #Now tell me, you really smart guy!
+        char: Mathina
+        exposition: Mathina erwartete, dass Leo etwas albernes sagen würde.
+        #Mathina expected that Leo would say something stupid.
+        mood: talking
+      - text: Schauen wir uns doch einmal an, wieviele Straßen Logi-City insgesamt hat. Einer von euch Polizisten stand in der Hilbert-Straße, der andere war in der Rozsa Peter-Straße. Der Dieb bog in die Gödel-Straße ab und wir liefen alle über die Hemachandra-Straße ins Cafè.
+      #Look, gentlemen. How many streets does Logi-city consist of? One of you was standing on Hilbert Road, while your colleague on Péter Street. The thief turned into Gödel Street, we turned into here, Hemachandra Street. 
+        char: Leo
+        mood: arguing
+      - text: Die Barcan-Marcus-Straße verläuft senkrecht zur Hemachandra-Straße, während die Constance Jones-Straße diese beiden Straßen kreuzt. Die Ladd-Franklin-Straße verläuft senkrecht zur Constance Jones-Straße. Und dann gibt es noch die Euler-Straße ganz im Norden der Stadt. Das macht also acht Straßen insgesamt!
+      #Barcan-Marcus Street is perpendicular to this, while Constance-Jones Street crosses both. Ladd-Franklin is perpendicular to Constance-Jones and then there is still the Euler Street on the northern border of the city. This is, no matter what, eight roads or streets. 
+        char: Leo
+        mood: arguing
+      - text: Schauen wir mal die Kreuzungen an. Egal welche Stelle wir uns auf der Karte aussuchen, es gibt nirgendwo mehr als drei Straßen, die sich kreuzen. Wenn wir also eine Stelle mit zwei Schnittpunkten und drei unterschiedlichen Straßen finden, dann kann man von dort aus höchstens sechs Straßen gleichzeitig bewachen. Aber es gibt ja acht Straßen in Logi-City!
+      #Now, let's check the intersections. Whichever we take, there are no more than three roads crossing. If we could find two intersections with three different roads crossing each, even then you could only keep watch over a maximum of six of them! But there are eight roads in town!
+        char: Leo
+        mood: arguing
+  - type: sceneText
+    text: Mathina nickte. Sie wusste, dass Leo eigentlich ziemlich schlau war. Auch wenn er oft etwas machte, bevor er nachdachte. Aber das hieß ja nicht, dass er dumm war. 
+    #Mathina nodded. She knew that Leo wasn't as stupid as she thought. The fact that in the vast majority of cases he acts before thinking, doesn't mean that he is not able to think.
+  - type: dialog
+    entries:
+      - text: Ihr seid beide fantastisch! Könntet ihr uns bitte sagen wie viele Polizisten oder Polizistinnen wir mindestens brauchen? Es wäre gut, wenn wir der Polizei-Leitung gleich einen richtig guten Plan vorstellen könnten.
+      #You are both fantastic! Would you please tell us how many policemen we actually need as a minimum? It would be good to approach the Chief of Police with a concrete proposal.
+        char: first_policeman
+        mood: normal
+      - text: Ihr braucht nicht zwei, sondern drei Leute!
+      #If not two, then three!.
+        char: Leo
+        mood: happy
+      - text: Genau wissen wir das noch nicht. Es sind mindestens drei. Wir müssen uns gut überlegen, wo die Polizisten stehen sollen, damit sie alle Straßen sehen können. Wenn wir sie richtig platzieren, dann sind drei genug.
+      #We can't tell this yet. At least three. If we find a good plan, in which three cops patrol all the streets, then three really will be enough.
+        char: Mathina
+        mood: talking
+  - type: image
+    src: sugarcube1.png
+    id: sugar1
+    style: "width: 8%; top: 14%; right: 90%;"
+    parallax: back2
+  - type: image
+    src: sugarcube2.png
+    id: sugar2
+    style: "width: 8%; top: 4%; right: 89%;"
+    parallax: back2
+  - type: image
+    src: sugarcube3.png
+    id: sugar3
+    style: "width: 9.5%; top: 9%; right: 82%;"
+    parallax: back2
+  - type: sceneText
+    text: Mathina und Leo schnappten sich die übrig gelassenen Zuckerwürfel von den Kaffees der beiden Polizisten und experimentierten los.
+    #Mathina and Leo snuck the sugar cubes from the cops' coffee plates and launched the experiment. 
+  - type: game
+    text: Hilf Mathina und Leo dabei, einen guten Platz für die Zuckerwürfel zu finden.
+    #Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
+    toolbarText: Wo sollten die Polizisten stehen?
+    cta: Probiere es aus!
+    #Try it yourself!
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 185
+      yPercent: 130
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 270
+      yPercent: 480
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 450
+      yPercent: 250
+      ease: power3.out
+  - type: sceneText
+    text: Leo schob die Zuckerwürfel wahllos von einer Stelle zur anderen.
+    #Leo simply pulled the cubes from one place to the other.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Erst Nachdenken! Erinnerst Du Dich? Wir sollten bei den parallelen Straßen beginnen.
+      #With brains, please! Do you remember? We should start out from the three parallel roads.
+        char: Mathina
+        mood: arguing
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 57
+      yPercent: 45
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 52
+      yPercent: 200
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 20
+      yPercent: 470
+      ease: power3.out
+  - type: sceneText
+    text: Mathina legte einen Zuckerwürfel auf jede waagrechte Linie und Leo und sie begannen die Würfel hin- und herzuschieben.
+    #Mathina put a cube on each of the three horizontal lines and they started pushing and pulling them along the lines.
+  - type: animation
+    target: sugar1
+    vars:
+      duration: 2
+      xPercent: 240
+      yPercent: 40
+      ease: power3.out
+  - type: animation
+    target: sugar2
+    vars:
+      duration: 2
+      xPercent: 500
+      yPercent: 200
+      ease: power3.out
+  - type: animation
+    target: sugar3
+    vars:
+      duration: 2
+      xPercent: 20
+      yPercent: 470
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: Ich hab's!
+      #I got it! 
+        char: Leo
+        mood: happy
+  - type: sceneText
+    text: Leo zeigte die Karte den beiden Polizisten. Sie schauten sich die Einteilung ganz genau an und dann nickten sie zufrieden.
+    #Leo showed the map to the policemen. They looked at the arrangement for a second or two and nodded with appreciation.
+  - type: dialog
+    entries:
+      - text: Das ist wirklich sehr überzeugend, dankeschön!
+      #That's really convincing, thank you, thank you!
+        char: first_policeman
+        mood: normal
+  - type: clearImage
+    id: sugar1
+  - type: clearImage
+    id: sugar2
+  - type: clearImage
+    id: sugar3
+  - type: background
+    src: logi-bg3.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+  - type: image
+    src: leo-icon2.png
+    id: leo-i2
+    style: "width: 7%; top: 40%; right: 77%;"
+  - type: image
+    src: mathina-icon2.png
+    id: mathina-i2
+    style: "width: 4%; top: 35%; right: 75%;"
+  - type: image
+    src: pm-icon-1.png
+    id: pm1
+    style: "width: 7%; top: 37%; right: 75%;"
+  - type: image
+    src: pm-icon-2.png
+    id: pm2
+    style: "width: 7%; top: 42%; right: 74%;"
+  - type: sceneText
+    text: Mathina, Leo und die Polizisten waren gerade dabei, ihren Kuchen aufzuessen, als plötzlich...
+    #Mathina, Leo and the two policemen were just about to finish their coffees and cakes, when suddenly...
+  - type: image
+    src: thief.png
+    id: thief
+    style: "width: 14%; top: 45%; right: 57%;"
+    parallax: back2
+  - type: image
+    src: thief-icon.png
+    id: thief-i
+    style: "width: 7%; top: 19%; right: 75%;"
+  - type: sceneText
+    text: ...der Dieb, der alle geraden Zahlen gestohlen hatte, vor dem Fenster des Cafés auftauchte. Aber er bemerkte die vier und rannte schnell wieder davon.
+    #...the thief who stole all even numbers of the city, appeared in the cafe window, noticed them, and fled again.
+  - type: clearImage
+    id: thief-i
+  - type: clearImage
+    id: thief
+  - type: dialog
+    entries:
+      - text: Ach, wir sollten wirklich nicht hier herumsitzen, während Diebe in der Stadt herumlaufen!
+      #Oh, we really shouldn't be sitting here, when thieves are running across Logi-city!
+        char: second_policeman
+        mood: serious
+  - type: dialog
+    entries:
+      - text: Manchmal ist es besser, sich hinzusetzen und nachzudenken, glaub mir!
+        #Sometimes it's better to sit down and think, believe me.
+        char: Mathina
+        mood: happy
+  - type: sceneText
+    text: Die Polizisten riefen sofort die Polizei-Leitung an und berichteten von ihren Entdeckungen. Mathina und Leo verabschiedeten sich und setzten ihre Erkundungen auf den Straßen von Logi-City fort.
+    #The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
+  - type: game
+    text: Mochtest Du dieses Rätsel? Hier gibt es noch weitere.
+    #Have you enjoyed using the app? Continue playing with different maps.
+    toolbarText: 
+    cta: Hier klicken!
+    #Click here!
+    url: /apps/logi-3-app/logi-3-app.htm?v=3
