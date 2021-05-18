@@ -15,34 +15,35 @@ actions:
   - type: image
     src: trees_mid.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-    parallax: back2
+    parallax: mid1
 
   - type: image
     src: trees_owl_front.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-    parallax: back3
+    parallax: front1
     
   - type: image
     src: berries.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-    parallax: mid1
+    parallax: back3
     
   - type: image
     src: hill_ferns.png
+    id: fern
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-    parallax: mid2
+    parallax: front2
   - type: image
     src: mathinaleo.png
     id: matleo
-    style: "width: 25%; top: 40%; left: 0%;"
-    parallax: mid2
+    style: "width: 25%; top: 40%; left: -2%;"
+    parallax: mid3
   - type: sceneText
     text: Es war schon später Nachmittag, als Mathina und Leo durch den Wald von Arisa liefen, um Beeren und Pilze zu sammeln. Sie wussten, dass der Wald am Tage sicher war, aber sie hatten Geschichten über Zauberwesen gehört, denen man nachts im Wald begegnen konnte. Noch nie waren sie so lange im Wald geblieben, und die Sonne stand bereits tief am Himmel. #Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
     #It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon. It was not a good idea to leave the path and go into the woods, although they were so happy to find a big bush of berries in a hidden clearing. Leo just realized that the sun was behind the mountains and he started to get nervous.
   - type: animation
     target: matleo
     vars:
-        duration: 2
+        duration: 3
         xPercent: 98
         yPercent: 28
         #width: 20%
@@ -52,9 +53,9 @@ actions:
   - type: clearImage
     id: matleo   
   - type: image
-    src: $COMMON/img/characters/leo/leo4.png
+    src: leo4_mirrored.png
     id: leo
-    style: "width: 16%; top: 55%; left: 25%; transform: scalex(-1)"
+    style: "width: 16%; top: 55%; left: 25%; "
     parallax: mid2    
   - type: image
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -80,19 +81,96 @@ actions:
         char: leo
         exposition: Mathina aber pflückte gerade die letzten Beeren vom Strauch. Zu Hause wollten sie einen Kuchen mit den Waldbeeren backen. 
         mood: arguing
-
+  - type: clearImage
+    id: mat   
+  - type: image
+    src: mathina5_mirrored.png
+    id: mat
+    style: "width: 9.5%; top: 45%; left: 45%;"
+    parallax: mid2 
+  - type: image
+    src: sparkbugs_many.png
+    id: bug1
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+  - type: image
+    src: sparkbugs_many_rev.png
+    id: bug2
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+  - type: animation
+    target: bug1
+    vars:
+      duration: 30
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: bug2
+    vars:
+      duration: 21
+      xPercent: 5
+      yPercent: -5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: leo
+    vars:
+        duration: 7
+        xPercent: 35
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 5
+        xPercent: -15
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
   - type: sceneText
     text: Da hörte Leo plötzlich ein zischendes Geräusch um sie herum. Das Licht änderte auch irgendwie seine Farbe, und es gab auf der ganzen Lichtung viele bunte Spiegelungen in den Schatten. Es sah wunderschön aus, war aber auch ein bisschen unheimlich... Dann kam auch noch leichter Nebel zwischen den Bäumen hervor, so wie seidener Stoff. Er glänzte zart und wechselte immer wieder die Farbe von gelb und lila zu rot und grün. Das Zischen wurde lauter. Mathina und Leo schauten still und wie hypnotisiert um sich...
     #Mathina was picking the last berries to bring home; they could make a great cake with all these berries… Suddenly, Leo heard a hissing noise surrounding them, and the colors of the light started changing, with many colorful reflections filling the shadows that started dominating the clearing of the forest. It was beautiful even if a bit mysterious… Then a type of subtle fog started moving between the trees. It was like a silk fabric appearing and disappearing, with a dim glow ranging from yellow and purple to red and green. The hissing was getting louder, and the full scene was getting hypnotic. Mathina and Leo observed in silence…
-
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 28%; top: 25%; left: 60%;"
+    parallax: mid1
+  - type: animation
+    target: fla
+    vars:
+        duration: 2
+        xPercent: -70
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: leo
+    vars:
+        duration: 0.5
+        xPercent: -25
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 0.5
+        xPercent: -60
+        transform: rotateY(180deg)
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out  
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-
     entries:
-
       - text: Hallo, ihr zwei!
       #Hey!! You two!
         char: flamma
