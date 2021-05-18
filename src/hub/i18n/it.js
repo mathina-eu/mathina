@@ -5,12 +5,12 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visita un luogo!',
-    'map': 'Mappa del mondo',
+    'map': 'Vappa principale',
   },
   cities: {
     'island': 'Isola dei Bucanieri',
     'logicity': 'Città della Logica',
-    'birds-of-fire': 'La terra degli uccelli del fuoco',
+    'birds-of-fire': 'Terra degli uccelli del fuoco',
     'symmetry-fair': 'Fiera della Simmetria',
   },
   story: {
@@ -61,6 +61,11 @@ export default {
 	charmingparrot: 'Capitano Charmingparrot',
 	mysteriousfigure: 'Figura misteriosa',
 	rashamom: 'Prof.ssa Levasseur',
+	first_policeman: 'Primo poliziotto',
+    second_policeman: 'Secondo poliziotto',
+    george: 'George',
+    trainer: 'Trainer',
+    boys: 'Boys',
 	technician: 'Tecnico',
     Leo: 'Leo',
     Mathina: 'Mathina',
