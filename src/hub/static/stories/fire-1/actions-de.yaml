@@ -99,7 +99,7 @@ actions:
   - type: image
     src: $COMMON/img/characters/leo/leo1.png
     id: leo
-    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
+    style: "width: 10%; top: 65%; left: 38%; transform: scalex(-1)"
     parallax: mid2
 
   - type: sceneText
