@@ -2,7 +2,7 @@
 <html lang="pt">
 <head>
 
-<title>Poliedros uniformes</title>
+<title id="barra">Poliedros uniformes</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePoli_style.css">
 
@@ -381,14 +381,29 @@
     function setLanguage(){
         //console.log(lang);
         if(lang=="en"){
-            console.log(lang);
-            document.getElementById('titulo').textContent="Choose "+n_certos+" uniform polyhedra";
+            document.getElementById('barra').textContent="Uniform polyhedra";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" uniform polyhedra";
             document.getElementById('sucessText').textContent="Very well!";
             document.getElementById('errorText').textContent="You haven't yet discovered all the uniform polyhedra";
             document.getElementById('errorText2').textContent="Try again!";
             document.getElementById('finalText').textContent="End of the game!";
+        }else if(lang=="it"){
+            document.getElementById('barra').textContent="Poliedri uniformi";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" uniform polyhedra";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora trovato tutti i poliedri uniformi";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            document.getElementById('barra').textContent="Gleichförmigen Polyeder";
+            //document.getElementById('titulo').textContent="Choose "+n_certos+" uniform polyhedra";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle gleichförmigen Polyeder entdeckt";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
         }else{
-            document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros uniformes";
+            document.getElementById('barra').textContent="Poliedros uniformes";    
+            //document.getElementById('titulo').textContent="Escolhe os "+n_certos+" poliedros uniformes";
             document.getElementById('sucessText').textContent="Muito bem!";
             document.getElementById('errorText').textContent="Ainda não descobriste todas os poliedros uniformes";
             document.getElementById('errorText2').textContent="Volta a tentar.";

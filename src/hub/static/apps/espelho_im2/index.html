@@ -2,20 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head><script src="../atractor-apps-all/scripts/konva.min.js"></script>
-		<title>Simetria</title>
+		<title>App</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	
 	<style>
 	   html {
   touch-action: pan-down;
+   background-color: #EDECCD;
 }
 
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #f0f0f0;
+         background-color: #EDECCD;
       }
 	  
 	  .image-upload>input {
@@ -54,12 +55,28 @@
 <script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
 
 		<script>
+			
+window.addEventListener('resize', function(){
+	var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+WIDTH=.99*width0;
+HEIGHT=.99*Math.min(width0/2,height0);
+	 ASPECT = WIDTH / HEIGHT;
+	 
+	 camera.aspect=WIDTH / HEIGHT;
+camera.updateProjectionMatrix();
+renderer.setSize(WIDTH , HEIGHT);
+
+	 } );
+	 
 		 var icon=[]; 
   
-      var width = window.innerWidth;
-      var height = window.innerHeight;
-
+      var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var WIDTH=.99*width0;
+var HEIGHT=.99*Math.min(width0/2,height0);
 	
+
 	
 		
 		
@@ -77,9 +94,7 @@ var dragging = false;
 		var espelho=false;
 		var verticalMirror;var planeBack, geometry, planeGeo3;
 	
-			// scene size
-			var WIDTH = window.innerWidth;
-			var HEIGHT = window.innerHeight;
+			
 			// camera
 			var VIEW_ANGLE = 30;
 			var ASPECT = WIDTH / HEIGHT;

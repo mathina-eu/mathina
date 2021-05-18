@@ -1,0 +1,241 @@
+actions:
+  - type: background
+    src: logi-bg1-bg.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: image
+    src: kangaroo-standing.png
+    id: kang-st
+    style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back3
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
+    parallax: back3
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back3
+  - type: sceneText
+    text: A Mathina e o irmão Leo corriam atrás do canguru pelas ruas da cidade Logi. Era um dia quente e seco de verão e eles estavam bastante exaustos ao tentarem acompanhar o guia. O canguru tinha-lhes prometido um gelado se eles o acompanhassem, mas para isso teriam de visitar primeiro todos os pontos turísticos da cidade Logi! A Mathina e o Leo tinham ouvido falar do famoso sorvete da cidade e estavam ansiosos por o provar.
+  - type: clearImage
+    id: kang-st
+  - type: image
+    src: kangaroo-pointing.png
+    id: kang-po
+    style: "width: 28%; top: 29.5%; right: 65%;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Está ali!
+        char: kangaroo
+        mood: happy
+  - type: sceneText
+    text: O canguru apontou para a enorme banca redonda de gelados encurralada entre dois arranha-céus.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 45
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: O Leo estava prestes a atravessar a rua, mas o canguru estendeu a mão, agarrando-o.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: image
+    src: lamps-3.png
+    id: lamps
+    style: "width: 16%; top: 28%; right: 29%;"
+  - type: dialog
+    entries:
+      - text: Calma, jovem. Não podes atravessar esta passadeira assim. Vês aqueles semáforos do lado de lá?
+        char: kangaroo
+        mood: serious
+  - type: clearImage
+    id: lamps
+  - type: image
+    src: lampsgif2304.gif
+    id: lampsgif
+    style: "width: 11.5%; top: 31%; right: 31.7%;"
+  - type: clearImage
+    id: kang-po
+  - type: image
+    src: kangaroo-standing.png
+    id: kang-st
+    style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back2
+  - type: sceneText
+    text: Eles viram uma coluna a aparecer e outra a desaparecer no chão.
+  - type: sceneText
+    text: Estavam sempre a surgir diferentes colunas a aparecer e havia três luzes em cada uma delas.
+  - type: sceneText
+    text: ...violeta, laranja e rosa --, mas elas apareciam por ordem diferente em cada coluna.
+  - type: dialog
+    entries:
+      - text: Só podemos atravessar se as três cores aparecerem em todas as ordens possíveis.
+        char: kangaroo
+        mood: happy
+  - type: sceneText
+    text: O canguru sorriu, ao aperceber-se da surpresa do Leo.
+  - type: clearImage
+    id: lampsgif
+  - type: image
+    src: lamps-3.png
+    id: lamps
+    style: "width: 16%; top: 28%; right: 29%;"
+  - type: dialog
+    entries:
+      - text: Acham que podemos atravessar agora?
+        char: kangaroo
+        mood: happy
+  - type: sceneText
+    text: Depois viram só três luzes.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 45
+      yPercent: 0
+      ease: power3.out
+  - type: image
+    src: lamps-3.png
+    id: lamps
+    style: "width: 16%; top: 28%; right: 29%;"
+  - type: dialog
+    entries:
+      - text: Acho que temos tudo!
+        char: leo
+        mood: talking
+  - type: sceneText
+    text: O Leo estava novamente pronto para atravessar a rua. A Mathina agarrou na mochila dele, impedindo-o de correr entre os carros.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 3
+      xPercent: 0
+      yPercent: 0
+      ease: power3.out
+  - type: dialog
+    entries:
+      - text: De jeito nenhum!
+        char: mathina
+        mood: arguing
+      - text: Mas são três cores e três sequências. Isso é bom, não é? Afinal, cada uma das cores aparece uma vez como primeira, como segunda e como última.
+        char: leo
+        mood: arguing
+      - text: E se, por exemplo, viesse primeiro o violeta e depois o rosa em vez do laranja?
+        char: mathina
+        mood: arguing
+      - text: Deixa-o, o Leo provavelmente não é tão bom a distinguir o rosa do violeta como tu.
+        char: kangaroo
+        mood: serious
+      - text: Oh, canguru, não sejas assim! Não é por ser menina que entendo melhor as cores! Mas penso muito bem!
+        char: mathina
+        exposition: A Mathina ficou mesmo irritada.
+        mood: surprised
+      - text: Tudo bem ... A Mathina tem razão, estas três sequências não bastam. Mas então, quantas luzes seriam suficientes?
+        char: kangaroo
+        mood: serious
+  - type: game
+    text: Quantas luzes achas que seriam suficientes para obter todas as sequências?
+    toolbarText: 
+    cta: Tenta encontrá-las todas!
+    url: \apps\logi-1-app\logi-1-app.htm?v=1&l=3
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 0
+      yPercent: -30
+      repeat: 1
+      yoyo: true
+      ease: power1.inOut
+  - type: dialog
+    entries:
+      - text: Eu sei, eu sei, eu sei! Oito é a solução, oito é a solução, canguru, oooooiiiiiito!
+        char: leo
+        exposition: Gritou o Leo, saltando.
+        mood: happy  
+  - type: sceneText
+    text: A Mathina ergueu as sobrancelhas, desconfiada de que o Leo havia feito alguma asneira.
+  - type: image
+    src: solution 8 lamps.png
+    id: solution8
+    style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
+  - type: dialog
+    entries:
+      - text: Errado! Desenhaste algumas delas duas vezes!
+        char: mathina
+        mood: talking
+  - type: clearImage
+    id: solution8
+  - type: game
+    text: Qual delas achas que ele incluiu duas vezes?
+    toolbarText: Arrasta as lâmpadas iguais para cima umas das outras e as que estão a mais desaparecem.
+    url: \apps\logi-1-app\logi-1-app.htm?v=2&l=3
+  - type: image
+    src: solution5lamps.png
+    id: solution5
+    style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
+  - type: dialog
+    entries:
+      - text: YVês, agora são apenas cinco. E adivinha, há uma sexta também!
+        char: mathina
+        mood: talking
+  - type: clearImage
+    id: solution5
+  - type: game
+    text: Qual a ordem de 3 cores que está em falta?
+    toolbarText: Talvez ajude alinhar as luzes de acordo com a primeira cor, começando com o violeta, depois o rosa e depois o laranja.
+    url: \apps\logi-1-app\logi-1-app.htm?v=3&l=3
+  - type: dialog
+    entries:
+      - text: Bem, duas começam com o violeta, duas com o rosa e apenas uma começa com o laranja. Queres dizer que precisamos de outra a começar com laranja? Espera, espera...
+        char: leo
+        exposition: O Leo coçou a cabeça.
+        mood: surprised
+  - type: image
+    src: solution6lampss.png
+    id: solution6
+    style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
+  - type: dialog
+    entries:        
+      - text: "Já entendi! Agora, depois do laranja vem ... não o violeta, mas o rosa, ou seja: laranja-rosa-violeta."
+        char: leo
+        mood: happy  
+      - text: Bingo! 
+        char: mathina
+        mood: happy  
+  - type: clearImage
+    id: solution6
+  - type: clearImage
+    id: lamps
+  - type: image
+    src: lamps6.png
+    id: lamps6
+    style: "width: 23%; top: 30%; right: 27%;"
+  - type: sceneText
+    text: Neste ponto, seis semáforos aparecem no lado oposto e mostram a sequência que as personagens criaram.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 4
+      xPercent: 90
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: mathina-runs
+    vars:
+      duration: 4
+      xPercent: 80
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: O canguru ficou satisfeito com o desempenho da Mathina e do Leo. Então, eles atravessaram a rua a correr e entraram na enorme banca de gelados redonda  encurralada entre dois arranha-céus.
