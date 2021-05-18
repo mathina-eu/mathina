@@ -243,7 +243,7 @@ actions:
   - type: game
     tag: tg26
     text: "Choose the convex polyhedra. Each time, choose the 4 polyhedra and click"
-    toolbarText: "Choose the convex polyhedra"
+    toolbarText: "Choose 4 convex polyhedra"
     cta: "Try separating the convex polyhedra!"
     url: /apps/EscolhePoliConvexos/index.html?lang=en
     img:
@@ -420,7 +420,7 @@ actions:
   - type: game
     tag: tg27
     text: "Choose the right nets for the cube. Each time, choose the 3 “good” nets and click"
-    toolbarText: "Choose the right nets for the cube."
+    toolbarText: "Choose the 3 right nets for the cube."
     cta: "Try separating the right nets for the cube!"
     url: /apps/EscolhePlanCubo/index.html?lang=en
     img:
@@ -570,7 +570,7 @@ actions:
   - type: game
     tag: tg28
     text: "Choose the right nets for the octahedron. Each time, choose the 3 “good” nets and click"
-    toolbarText: "Choose the right nets for the octahedron."
+    toolbarText: "Choose the 3 right nets for the octahedron."
     cta: "Try separating the right nets for the octahedron!"
     url: /apps/EscolhePlanOcta/index.html?lang=en
     img:
@@ -766,7 +766,7 @@ actions:
   - type: game
     tag: tg13
     text: "Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
-    toolbarText: "Choose the non-platonic polyhedra whose faces are all regular and equal polygons"
+    toolbarText: "Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
     cta: "Try separating the non-platonic polyhedra whose faces are all regular and equal polygons!"
     url: /apps/EscolhePoliNPRegulares/index.html?lang=en
     img:
@@ -1086,7 +1086,7 @@ actions:
   - type: game
     tag: tg29
     text: "Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
-    toolbarText: "Choose the uniform polyhedra"
+    toolbarText: "Choose 4 uniform polyhedra"
     cta: "Try separating the uniform polyhedra!"
     url: /apps/EscolhePoliUnif/index.html?lang=en
     img:
