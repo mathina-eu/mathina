@@ -63,7 +63,7 @@ actions:
   - type: image
     src: kangaroo-standing.png
     id: kang-st
-    style: "width: 25%; top: 27%; right: 68%;"
+    style: "width: 25%; top: 27%; right: 68%; z-index:1;"
   - type: sceneText
     text: Guardando dall'altro lato della strada, Mathina e Leo vedevano apparire una colonna di luci e mentre l'altra scompariva.
   - type: sceneText
