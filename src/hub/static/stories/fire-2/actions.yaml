@@ -812,7 +812,7 @@ actions:
     text: Try to fly the unidragon with pairs of numbers.
     toolbarText: Fly the unidragon with pairs of numbers!
     cta: Fly the unidragon!
-    url:
+    url: /apps/imaginary/app_2/2_1/en.html
 
   - type: sceneText
     text: Flamma was pleased to see how Mathina handled that language.
@@ -848,7 +848,7 @@ actions:
       will have to start again.
     cta: Fly to the castle!
     toolbarText: Fly to the castle avoiding obstacles!
-    url:
+    url: /apps/imaginary/app_2/2_2/en.html
 
   - type: dialog
     avatarAlign:
@@ -898,7 +898,7 @@ actions:
   - type: game
     text: Eat all the fireballs without touching the clouds and then reach the castle.
     cta: Fly to eat the fireballs!
-    url:
+    url: /apps/imaginary/app_2/2_3/en.html
     toolbarText: Eat the fireballs and fly to the castle!
 
   - type: dialog
