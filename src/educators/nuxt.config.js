@@ -36,7 +36,7 @@ export default {
     '~': resolve(__dirname, '../hub'),
     'assets': resolve(__dirname, '../hub/assets/'),
   },
-  css: ['../hub/assets/styles/main.pcss'],
+  css: ['../shared/assets/styles/main.pcss'],
   srcDir: __dirname,
   buildDir: '.nuxt/educators',
   generate: {

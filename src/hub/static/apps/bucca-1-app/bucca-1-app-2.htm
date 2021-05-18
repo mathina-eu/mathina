@@ -21,7 +21,7 @@
         heigth: 10%;
         position: absolute;
         left: 100px;
-        font-size: 25px;
+        font-size:min(4vw,3vh);
         font-family: sans-serif;
         text-align: center;
     }
@@ -34,14 +34,13 @@
         border: 5px solid #F87595;
         width: 11%;
         heigth: 5%;
-        right: 100px;
         z-index: 10;
     }
 
 
     #QuadratoCentrale1 {
         position: absolute;
-        left: 25vw;
+        left: 28vw;
         top: 15vh;
         width: 20vw;
         height: 15vw;
@@ -51,7 +50,7 @@
 
     #QuadratoCentrale2 {
         position: absolute;
-        left: 55vw;
+        left: 52vw;
         top: 15vh;
         width: 20vw;
         height: 15vw;
@@ -62,8 +61,8 @@
 
     #QuadratoCentrale3 {
         position: absolute;
-        left: 25vw;
-        top: 50vh;
+        left: 28vw;
+        top: 52vh;
         width: 20vw;
         height: 15vw;
         border: solid 3px;
@@ -73,8 +72,8 @@
 
     #QuadratoCentrale4 {
         position: absolute;
-        left: 55vw;
-        top: 50vh;
+        left: 52vw;
+        top: 52vh;
         width: 20vw;
         height: 15vw;
         border: solid 3px;
@@ -91,7 +90,7 @@
         padding-bottom: 10px;
         background-color: #C8F4F9;
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
     }
 
     #chiave {
@@ -103,57 +102,65 @@
         padding-bottom: 10px;
         background-color: #FFF3EC;
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
     }
 
-    #Head1 {
-        top: 200px;
+ #Head1 {
+        top: 15%;
     }
 
     #Head2 {
-        top: 350px;
+        top: 35%;
     }
 
     #Head3 {
-        top: 550px;
+        top: 55%;
     }
 
     #Head4 {
-        top: 700px;
+        top: 75%;
     }
 
     #Div1 {
-        top: 50px;
+        top: 15%;
+		right: 1%;
     }
 
     #Div2 {
-        top: 200px;
+        top: 25%;
+		right: 13%;
     }
 
     #Div3 {
-        top: 350px;
+        top: 35%;
+		right: 1%;
     }
 
     #Div4 {
-        top: 500px;
+        top: 45%;
+		right: 13%;
     }
 
     #Div5 {
-        top: 650px;
+        top: 55%;
+		right: 1%;
     }
 
     #Div6 {
-        top: 800px;
+        top: 65%;
+		right: 13%;
     }
 
-    #successMessage {
+#successMessage {
         position: absolute;
         /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -161,22 +168,21 @@
         -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
+        //padding: 10% 0%;
         text-align: center;
         left: 1%;
         top: 1%;
         width: 98%;
-        height: 58%;
+        height: 98%;
+
     }
 
     #failMessage {
         position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -184,13 +190,32 @@
         -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
         text-align: center;
         left: 1%;
         top: 1%;
         width: 98%;
-        height: 58%;
+        height: 98%;
+
     }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
 </style>
 
 <body onload="Init()">
@@ -226,26 +251,17 @@
     </div>
 
     <script>
-        Traduzioni = [
-            [
-                ["messaggio"], "Message: Look at the third tree, east from the entrance.", "Messaggio: guardate il settimo albero a est dell'entrata.", "Mensagem: Olhe para a terceira &aacute;rvore, a leste da entrada.", "Nachricht: Sehen Sie sich den dritten Baum &ouml;stlich vom Eingang an."
-            ],
-            [
-                ["chiave"], "Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.", "Chave: o c&eacute;u est&aacute; cheio deles.", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
-            ],
-            [
-                ["Head1"], "Look at the third tree, east from the entrance.", "Guardate il settimo albero a est dell'entrata.", "Olhe para a terceira &aacute;rvore, a leste da entrada", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
-            ],
-            [
-                ["Head2"], "Look at the third tree going right from the entrance.", "Guardate il terzo albero a destra dall'entrata.", "Olhe para a terceira &aacute;rvore indo bem na entrada.", "Schauen Sie sich den dritten Baum an, der direkt vom Eingang aus verl&auml;uft."
-            ],
-            [
-                ["Head3"], "Look at the seventh tree north of the fountains.", "Guardate il settimo albero a nord delle fontane.", "Olhe para a s&eacute;tima &aacute;rvore ao norte das fontes.", "Schauen Sie sich den siebten Baum n&ouml;rdlich der Brunnen an."
-            ],
-            [
-                ["Head4"], "Look at the tree near the bench.", "Guardate l'albero vicino alla panchina.", "Olhe para a &aacute;rvore perto do banco.", "Schau dir den Baum in der N&auml;he der Bank an."
-            ]
-        ];
+        Traduzioni=[
+[["messaggio"],"Message: Look at the third tree, east from the entrance.","Messaggio: guardate il settimo albero a est dell'entrata.","Mensagem: Procura a terceira &aacute;rvore, a este da entrada.","Nachricht: Suche den dritten Baum &ouml;stlich vom Eingang."],
+[["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.","Chave: o c&eacute;u est&aacute; cheio deles.","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
+[["Head1"],"Look at the third tree, east from the entrance.","Guardate il settimo albero a est dell'entrata.","Procura a terceira &aacute;rvore, a este da entrada","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
+[["Head2"],"Look at the third tree going right from the entrance.","Guardate il terzo albero a destra dall'entrata.","Procura a terceira &aacute;rvore à direita da entrada.","Suche den dritten Baum, rechts vom Eingang aus."],
+[["Head3"],"Look at the seventh tree north of the fountains.","Guardate il settimo albero a nord delle fontane.","Procura a s&eacute;tima &aacute;rvore a norte das fontes.","Suche den siebten Baum n&ouml;rdlich der Springbrunnen."],
+[["Head4"],"Look at the tree near the bench.","Guardate l'albero vicino alla panchina.","Procura a &aacute;rvore perto do banco.","Suche den Baum in der N&auml;he der Bank."],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+];
+
 
         function gup(name, url) {
             if (!url) url = location.href;
@@ -283,6 +299,26 @@
         dragElement(document.getElementById("Head3"));
         dragElement(document.getElementById("Head4"));
 
+		function getMousePos(canvas, evt) {
+			if (evt.changedTouches != null) {
+				touchobject = evt.changedTouches[0];
+				mousex = touchobject.clientX;
+				mousey = touchobject.clientY;
+			} else {
+				if (evt.clientX || evt.clientY == 0) { // Firefox
+					mousex = evt.clientX;
+					mousey = evt.clientY;
+				} else if (evt.offsetX || evt.offsetX == 0) { // Opera
+					mousex = evt.offsetX;
+					mousey = evt.offsetY;
+				}
+			}
+			return {
+				x: mousex,
+				y: mousey
+			};
+		}
+		
         function dragElement(elmnt) {
             var pos1 = 0,
                 pos2 = 0,
@@ -291,35 +327,38 @@
             if (document.getElementById(elmnt.id + "header")) {
                 /* if present, the header is where you move the DIV from:*/
                 document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
             } else {
                 /* otherwise, move the DIV from anywhere inside the DIV:*/
                 elmnt.onmousedown = dragMouseDown;
+                elmnt.ontouchstart = dragMouseDown;
             }
-
-            function Link() {
-                location.reload();
-
-            }
+			
+			
 
             function dragMouseDown(e) {
                 e = e || window.event;
                 e.preventDefault();
+				MyPos=getMousePos(window,e);
                 // get the mouse cursor position at startup:
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 document.onmouseup = closeDragElement;
+                document.ontouchend = closeDragElement;
                 // call a function whenever the cursor moves:
                 document.onmousemove = elementDrag;
+                document.ontouchmove = elementDrag;
             }
 
             function elementDrag(e) {
                 e = e || window.event;
                 e.preventDefault();
                 // calculate the new cursor position:
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+				MyPos=getMousePos(window,e);
+                pos1 = pos3 - MyPos.x;
+                pos2 = pos4 - MyPos.y;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 // set the element's new position:
                 elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
@@ -329,9 +368,12 @@
                 /* stop moving when mouse button is released:*/
                 document.onmouseup = null;
                 document.onmousemove = null;
+				document.ontouchmove = null;
+				document.ontouchend = null;
                 CheckRects();
             }
         }
+
 
         function CheckSameRect(A, B) {
             for (let i = 1; i <= 4; i++) {
@@ -345,6 +387,22 @@
                 if (IsRectInRect("QuadratoCentrale" + i, A)) return true;
             }
             return false;
+        }
+		
+		function HowManyHeadsInRect(A) {
+			var Tot=0;
+            for (let i = 1; i <= 4; i++) {
+                if (IsRectInRect(A, "Head"+i)) Tot++; 
+            }
+            return Tot;
+        }
+		
+		function HowManyDivsInRect(A) {
+			var Tot=0;
+            for (let i = 1; i <= 6; i++) {
+                if (IsRectInRect(A, "Div"+i)) Tot++; 
+            }
+            return Tot;
         }
 
         function CheckRects() {
@@ -361,6 +419,11 @@
             if (!CheckInRect("Div6")) NFuori++;
 
             if (NFuori != 2) return;
+			
+			for (let i=0;i<4;i++) {
+				if (HowManyHeadsInRect("QuadratoCentrale"+(i+1))!=1) return;
+				if (HowManyDivsInRect("QuadratoCentrale"+(i+1))!=1) return;
+			}
 
             if (CheckSameRect(1, 1) || CheckSameRect(1, 3)) Finisci();
             else Sconfitta();
@@ -383,16 +446,19 @@
             if (!isNumeric(Lingua)) Lingua = 1;
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
+			Resize();
         }
 
 
-        function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+         function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
 
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
 
         }
 
@@ -401,29 +467,151 @@
 
         }
     </script>
-    <div id="successMessage" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
+   <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
-
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-
-
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
+
+
+<script>
+function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+        }
+
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>

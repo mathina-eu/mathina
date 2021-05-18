@@ -111,7 +111,7 @@ export class ClearBackgroundAction extends Action {
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
+  constructor({ id, noOverflow, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
@@ -121,6 +121,7 @@ export class ImageAction extends Action {
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
     this.parallax = parallax;
+    this.noOverflow = noOverflow || false;
   }
 
   execute(context) {
@@ -143,7 +144,8 @@ export class ImageAction extends Action {
       src: path,
       style: this.style,
       position: { vertical: this.valign, horizontal: this.align },
-      parallax: this.parallax
+      parallax: this.parallax,
+      noOverflow: this.noOverflow,
     });
     context.images = images;
   }

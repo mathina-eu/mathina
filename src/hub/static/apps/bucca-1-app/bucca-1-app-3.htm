@@ -26,6 +26,11 @@
         text-align: center;
     }
 
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
     .divimg {
         cursor: move;
         position: absolute;
@@ -33,12 +38,16 @@
         text-align: center;
         border: 5px solid #F87595;
         width: 23%;
-        height: 20%;
-        right: 100px;
+        height: 26%;
 
         text-align: center;
-        font-size: 24px;
+        font-size:min(4vw,3vh);
         z-index: 10;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
     }
 
     #QuadratoCentrale {
@@ -92,29 +101,37 @@
     }
 
     #Div1 {
-        top: 100px;
+        top: 10%;
+		right: 5%;
     }
 
     #Div2 {
-        top: 300px;
+        top: 50%;
+		right: 5%;
     }
 
     #Div3 {
-        top: 500px;
+        top: 10%;
+		left: 5%;
     }
 
     #Div4 {
-        top: 700px;
+        top: 50%;
+		left: 5%;
     }
 
-    #successMessage {
+
+
+#successMessage {
         position: absolute;
         /*left: 50%;
   top:50%;
   width: 98%;
   height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -122,23 +139,21 @@
         -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
+        //padding: 10% 0%;
         text-align: center;
         left: 1%;
         top: 1%;
         width: 98%;
-        height: 58%;
+        height: 98%;
 
     }
 
     #failMessage {
         position: absolute;
-        /*left: 50%;
-  top:50%;
-  width: 98%;
-  height: 58%;*/
         z-index: 100;
-        background: #f3f1cd;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
         border: 2px solid #333;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
@@ -146,21 +161,39 @@
         -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
         box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-        padding: 10% 0%;
         text-align: center;
         left: 1%;
         top: 1%;
         width: 98%;
-        height: 58%;
+        height: 98%;
 
     }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
 </style>
 
 <body onload="Init()">
     <div id="messaggio">Trova il messaggio corretto</div>
     <div id="chiave">Chiave: il cielo ne &egrave; pieno</div>
 
-    <div id="Div1" class="divimg"><span id="Testo1">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.</span><br><img src="img/f09.png" width="30%"></div>
+    <div id="Div1" class="divimg"><span id="Testo1">Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.</span><br><img src="img/f09.png" width="40%"></div>
     <div id="Div2" class="divimg"><span id="Testo2">Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.</span><br><img src="img/f07.png" width="30%"></div>
     <div id="Div3" class="divimg"><span id="Testo3">Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.</span><br><img src="img/f08.png" width="30%"></div>
     <div id="Div4" class="divimg"><span id="Testo4">Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.</span><br><img src="img/f10.png" width="30%"></div>
@@ -170,26 +203,17 @@
     </div>
 
     <script>
-        Traduzioni = [
-            [
-                ["messaggio"], "Select the right message", "Trova il messaggio corretto", "Selecione a mensagem certa", "W&auml;hlen Sie die richtige Nachricht"
-            ],
-            [
-                ["chiave"], "Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.", "Chave: o c&eacute;u est&aacute; cheio deles.", "Schl&uuml;ssel: Der Himmel ist voll von ihnen."
-            ],
-            [
-                ["Testo1"], "We made a great discovery! See you in two Mondays at the ice cream shop.", "Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.", "Fizemos uma grande descoberta! Vejo voc&ecirc; em duas segundas-feiras na sorveteria.", "Wir haben eine gro&szlig;artige Entdeckung gemacht! Wir sehen uns an zwei Montagen in der Eisdiele."
-            ],
-            [
-                ["Testo2"], "We found the treasure map! See you in two Mondays the park.", "Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.", "Encontramos o mapa do tesouro! Vejo voc&ecirc;s em duas segundas-feiras no parque.", "Wir haben die Schatzkarte gefunden! Wir sehen uns an zwei Montagen im Park."
-            ],
-            [
-                ["Testo3"], "Let's meet in two Tuesdays at the park to share the pirate treasure.", "Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.", "Vamos nos encontrar em duas ter&ccedil;as-feiras no parque para compartilhar o tesouro pirata.", "Treffen wir uns an zwei Dienstagen im Park, um den Piratenschatz zu teilen."
-            ],
-            [
-                ["Testo4"], "We found a talking parrot: let's meet at our house in two Tuesdays.", "Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.", "Encontramos um papagaio falante: vamos nos encontrar em nossa casa em duas ter&ccedil;as-feiras.", "Wir haben einen sprechenden Papagei gefunden: Treffen wir uns an zwei Dienstagen in unserem Haus."
-            ]
-        ];
+        Traduzioni=[
+[["messaggio"],"Select the right message","Trova il messaggio corretto","Seleciona a mensagem certa","W&auml;hle die richtige Botschaft"],
+[["chiave"],"Key: the sky is full of them.", "Chiave: il cielo ne &egrave; pieno.","Chave: o c&eacute;u est&aacute; cheio deles.","Schl&uuml;ssel: Der Himmel ist voll von ihnen."],
+[["Testo1"],"We made a great discovery! See you in two Mondays at the ice cream shop.","Abbiamo fatto una grande scoperta! Ci vediamo tra due luned&igrave; in gelateria.","Fizemos uma grande descoberta! Vejo-vos numa segunda-feira, daqui a duas semanas na gelataria.","Wir haben eine gro&szlig;artige Entdeckung gemacht! Wir treffen uns in zwei Montagen in der Eisdiele."],
+[["Testo2"],"We found the treasure map! See you in two Mondays the park.","Abbiamo trovato la mappa del tesoro! Ci vediamo tra due luned&igrave; al parco.","Encontr&aacute;mos o mapa do tesouro! Vejo-vos numa segunda-feira, daqui a a duas semanas no parque.","Wir haben die Schatzkarte gefunden! Wir treffen uns in zwei Montagen im Park."],
+[["Testo3"],"Let's meet in two Tuesdays at the park to share the pirate treasure.","Incontriamoci tra due marted&igrave; al parco per dividerci il tesoro dei pirati.","Vamo-nos encontrar numa ter&ccedil;a-feira, daqui a duas semanas no parque para partilharmos o tesouro dos piratas.","Wir treffen uns in zwei Dienstagen im Park, um den Schatz zu teilen."],
+[["Testo4"],"We found a talking parrot: let's meet at our house in two Tuesdays.","Abbiamo trovato un pappagallo parlante: vediamoci a casa nostra tra due marted&igrave;.","Encontr&aacute;mos um papagaio falante: vamo-nos encontrar em nossa casa numa ter&ccedil;a-feira, daqui a duas semanas.","Wir haben einen sprechenden Papagei entdeckt: Wir treffen uns in zwei Dienstagen bei uns zu Hause."],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+];
+
 
         function gup(name, url) {
             if (!url) url = location.href;
@@ -225,6 +249,26 @@
         dragElement(document.getElementById("Div3"));
         dragElement(document.getElementById("Div4"));
 
+		function getMousePos(canvas, evt) {
+			if (evt.changedTouches != null) {
+				touchobject = evt.changedTouches[0];
+				mousex = touchobject.clientX;
+				mousey = touchobject.clientY;
+			} else {
+				if (evt.clientX || evt.clientY == 0) { // Firefox
+					mousex = evt.clientX;
+					mousey = evt.clientY;
+				} else if (evt.offsetX || evt.offsetX == 0) { // Opera
+					mousex = evt.offsetX;
+					mousey = evt.offsetY;
+				}
+			}
+			return {
+				x: mousex,
+				y: mousey
+			};
+		}
+		
         function dragElement(elmnt) {
             var pos1 = 0,
                 pos2 = 0,
@@ -233,30 +277,38 @@
             if (document.getElementById(elmnt.id + "header")) {
                 /* if present, the header is where you move the DIV from:*/
                 document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
             } else {
                 /* otherwise, move the DIV from anywhere inside the DIV:*/
                 elmnt.onmousedown = dragMouseDown;
+                elmnt.ontouchstart = dragMouseDown;
             }
+			
+			
 
             function dragMouseDown(e) {
                 e = e || window.event;
                 e.preventDefault();
+				MyPos=getMousePos(window,e);
                 // get the mouse cursor position at startup:
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 document.onmouseup = closeDragElement;
+                document.ontouchend = closeDragElement;
                 // call a function whenever the cursor moves:
                 document.onmousemove = elementDrag;
+                document.ontouchmove = elementDrag;
             }
 
             function elementDrag(e) {
                 e = e || window.event;
                 e.preventDefault();
                 // calculate the new cursor position:
-                pos1 = pos3 - e.clientX;
-                pos2 = pos4 - e.clientY;
-                pos3 = e.clientX;
-                pos4 = e.clientY;
+				MyPos=getMousePos(window,e);
+                pos1 = pos3 - MyPos.x;
+                pos2 = pos4 - MyPos.y;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
                 // set the element's new position:
                 elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
                 elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
@@ -266,9 +318,12 @@
                 /* stop moving when mouse button is released:*/
                 document.onmouseup = null;
                 document.onmousemove = null;
+				document.ontouchmove = null;
+				document.ontouchend = null;
                 CheckRects();
             }
         }
+
 
         function CheckRects() {
             if (IsRectInRect("QuadratoCentrale", "Div" + 1)) Sconfitta();
@@ -288,6 +343,7 @@
 
 
         function Init() {
+			window.addEventListener('resize', Resize, false);
             Vittoria = ["H1", "D3"];
 
             Lingua = Number(gup('l', document.location.search));
@@ -295,44 +351,169 @@
             if (!isNumeric(Lingua)) Lingua = 1;
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
-
+			Resize();
 
         }
 
 
         function Finisci() {
-            document.getElementById("successMessage").style.display = "block";
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
 
         }
 
         function Sconfitta() {
-            document.getElementById("failMessage").style.display = "block";
+            document.getElementById("failMessage").style.visibility = "visible";
 
         }
     </script>
-    <div id="successMessage" style="display:none">
-        <img src="img/happy.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-        <img src="img/Festejos.gif" width=40% style=" position: absolute;
-  top: 10%;
-  right: 30%; z-index: -1;"> </img>
+
+    <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
 
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
-
-    <div id="failMessage" style="display:none">
-        <img src="img/sad.png" id="certo" width=8% style=" position: absolute;
-  top: 30%;
-  right: 46%;"></img>
-
-
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
     </div>
+
+
+<script>
+function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+        }
+
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
 </body>
 
 </html>

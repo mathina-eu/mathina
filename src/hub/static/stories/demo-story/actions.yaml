@@ -3,13 +3,104 @@ actions:
     src: c1-bg1.jpg
     id: bg1
     style: "width: 100%"
+  - type: image
+    id: img1
+    src: $COMMON/img/Mathina1.png
+    style: "height: 300px; bottom: -20px; left: -40px;"
+    noOverflow: true
+  - type: image
+    id: img2
+    src: $COMMON/img/Mathina1.png
+    style: "height: 300px; top: -20px; left: -40px;"
+  - type: image
+    id: img3
+    parallax: front2
+    src: $COMMON/img/Mathina1.png
+    style: "height: 300px; top: -40px; right: -60px;"
+
+# BEGIN PROVA
+
+  - type: dialog
+    entries:
+      - text: "mathina happy"
+        char: mathina
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "mathina talking"
+        char: mathina
+        mood: talking
+
+  - type: dialog
+    entries:
+      - text: "mathina surprised"
+        char: mathina
+        mood: surprised
+
+  - type: dialog
+    entries:
+      - text: "mathina thinking"
+        char: mathina
+        mood: thinking
+
+  - type: dialog
+    entries:
+      - text: "mathina arguing"
+        char: mathina
+        mood: arguing
+
+  - type: dialog
+    entries:
+      - text: "mathina sad"
+        char: mathina
+        mood: sad
+
+  - type: dialog
+    entries:
+      - text: "angela normal"
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "angela happy"
+        char: angela
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "angela sad"
+        char: angela
+        mood: sad
+
+  - type: dialog
+    entries:
+      - text: "john normal"
+        char: parrot
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: "john happy"
+        char: parrot
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: "john sad"
+        char: parrot
+        mood: sad
+
+# END PROVA
+
   - type: sceneText
     style: "position: absolute; left: 10px; top: 10px;"
     text: >
       <p>Lorem ipsum</p>
       <p>Lorem ipsum dolores est</p>
   - type: image
-    id: img1
+    id: img5
     src: $COMMON/img/Mathina1.png
     style: "height: 300px; bottom: 20%; left: 20%;"
   - type: sceneText
@@ -31,7 +122,7 @@ actions:
       <p>Lorem ipsum</p>
       <p>Lorem ipsum dolores est</p>
   - type: clearImage
-    id: img1
+    id: img6
   - type: image
     id: img2
     src: $COMMON/img/Mathina1.png

@@ -6,14 +6,17 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back3
   - type: image
     src: leo-runs.png
     id: leo-runs
     style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
+    parallax: back3
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back3
   - type: sceneText
     text: Mathina and her brother Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
   - type: clearImage
@@ -22,11 +25,14 @@ actions:
     src: kangaroo-pointing.png
     id: kang-po
     style: "width: 28%; top: 29.5%; right: 65%;"
+    parallax: back2
   - type: dialog
     entries:
-      - text: There it is! - pointed the kangaroo at the huge, round ice cream stand squeezed between two skyscrapers. 
+      - text: There it is! 
         char: kangaroo
-        mood: nice
+        mood: happy
+  - type: sceneText
+    text: The kangaroo pointed at the huge, round ice cream stand squeezed between two skyscrapers.
   - type: animation
     target: leo-runs
     vars:
@@ -35,7 +41,7 @@ actions:
       yPercent: 0
       ease: power3.out
   - type: sceneText
-    text: Leo was about to cross the street, but the kangaroo reached out after him. 
+    text: Leo was again ready to cross the street, but the kangaroo reached out after him. 
   - type: animation
     target: leo-runs
     vars:
@@ -64,6 +70,7 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 28%; right: 68%; z-index: 1;"
+    parallax: back2
   - type: sceneText
     text: They saw one column appearing, another one disappearing.
   - type: sceneText
@@ -72,9 +79,11 @@ actions:
     text: ...violet, orange, and pink, but in a different order on each column.
   - type: dialog
     entries:
-      - text: We can only cross if the three colors appear in all possible orders.” - The kangaroo smiled, noticing Leo’s amazement.
+      - text: We can only cross if the three colors appear in all possible orders.
         char: kangaroo
-        mood: nice
+        mood: happy
+  - type: sceneText
+    text: The kangaroo smiled, noticing Leo’s amazement.
   - type: clearImage
     id: lampsgif
   - type: image
@@ -83,9 +92,11 @@ actions:
     style: "width: 16%; top: 28%; right: 29%;"
   - type: dialog
     entries:
-      - text: Now they saw three lights only, and the kangaroo asked, - “Do you think we can go now?”
+      - text: Do you think we can go now?
         char: kangaroo
-        mood: nice
+        mood: happy
+  - type: sceneText
+    text: Now they saw three lights only.
   - type: animation
     target: leo-runs
     vars:
@@ -99,9 +110,11 @@ actions:
     style: "width: 16%; top: 28%; right: 29%;"
   - type: dialog
     entries:
-      - text: I think we've got it all! - Leo shouted, and was again ready to cross the street.  
+      - text: I think we've got it all! 
         char: leo
-        mood: excited
+        mood: talking
+  - type: sceneText
+    text: Leo was again ready to cross the street. Now it was Mathina who kept him from running across the street.
   - type: animation
     target: leo-runs
     vars:
@@ -109,33 +122,32 @@ actions:
       xPercent: 0
       yPercent: 0
       ease: power3.out
-  - type: sceneText
-    text: Now it was Mathina who kept him from running across the street.
   - type: dialog
     entries:
-      - text: No way! - Mathina said.
+      - text: No way! 
         char: mathina
-        mood: angry
-      - text: But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last - Leo argued convincingly.
+        mood: arguing
+      - text: But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last.
         char: leo
-        mood: excited
-      - text: And what if, for example, violet came first and then pink, instead of orange? - Mathina grinned like a little monkey.
+        mood: arguing
+      - text: And what if, for example, violet came first and then pink, instead of orange?
         char: mathina
-        mood: happy
-      - text: Leave him, Leo is probably not as good in distinguishing pink and violet as you are - said the kangaroo.
+        mood: arguing
+      - text: Leave him, Leo is probably not as good in distinguishing pink and violet as you are.
         char: kangaroo
-        mood: happy
-      - text: Oh, kangaroo, don't be like that! - Mathina got angry. - I don't understand colors better just because I'm a girl! But I can think pretty well - and she stuck out her tongue at the kangaroo.
+        mood: serious
+      - text: Oh, kangaroo, don't be like that! I don't understand colors better just because I'm a girl! But I can think pretty well.
         char: mathina
-        mood: happy
-      - text: Okay... The point is that Mathina is right, these three are not enough - said the kangaroo. - But then, how many lights would be enough?
+        exposition: Mathina got really angry.
+        mood: surprised
+      - text: Okay... The point is that Mathina is right, these three are not enough. But then, how many lights would be enough?
         char: kangaroo
-        mood: happy
+        mood: serious
   - type: game
     text: How many lights do you think would be enough to show all the variations? 
     toolbarText: 
     cta: Try to find them all!
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+    url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
     target: leo-runs
     vars:
@@ -147,8 +159,9 @@ actions:
       ease: power1.inOut
   - type: dialog
     entries:
-      - text: I know, I know, I know! Eight is the solution, eight is the solution, kangaroo, eeeeeiiiiiight! - Leo cried and jumped up in the air. 
+      - text: I know, I know, I know! Eight is the solution, eight is the solution, kangaroo, eeeeeiiiiiight!  
         char: leo
+        exposition: Leo cried and jumped up in the air.
         mood: happy  
   - type: sceneText
     text: Mathina raised her eyebrows, suspicious of Leo having messed up something.
@@ -156,47 +169,51 @@ actions:
     src: solution 8 lamps.png
     id: solution8
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
-      - text: Mathina looked at Leo's figures and said - Wrong! You've drawn some of them twice!
+      - text: Wrong! You've drawn some of them twice!
         char: mathina
-        mood: happy
+        mood: talking
   - type: clearImage
     id: solution8
   - type: game
-    text: What do you think Leo has included twice? Pull identical lamps on top of each other, and the superfluous ones will disappear.
-    toolbarText: 
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=2
+    text: What do you think Leo has included twice? 
+    toolbarText: Drag identical lamps on top of each other, and the superfluous ones will disappear.
+    url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
     src: solution5lamps.png
     id: solution5
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
-      - text: You see, it's only five now. And guess what, there's a sixth one, too! - Mathina said contemptuously.
+      - text: You see, it's only five now. And guess what, there's a sixth one, too! 
         char: mathina
-        mood: happy
+        mood: talking
   - type: clearImage
     id: solution5
   - type: game
-    text: We see the 5 correct lamps lined up and a traffic light without colors which can be colored. Additional lamps can be added, too.
-    toolbarText: Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=3
+    text: Which color order do you think is missing? 
+    toolbarText: It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
+    url: \apps\logi-1-app\logi-1-app.htm?v=3
   - type: dialog
     entries:
-      - text: Well, two begin with violet and two with pink, and only one with orange - Leo realized. - Do you mean we need another one starting with orange? - Wait, wait, he scratched his head.
+      - text: Well, two begin with violet and two with pink, and only one with orange. Do you mean we need another one starting with orange? - Wait, wait...
         char: leo
-        mood: happy
+        expostition: Leo scratched his head.
+        mood: surprised
   - type: image
     src: solution6lampss.png
     id: solution6
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1    
   - type: dialog
     entries:        
       - text: Got it! Now, after orange comes... not violet but pink, that is - orange-pink-violet.
         char: leo
         mood: happy  
-      - text: Bingo! - Mathina patted Leo on his shoulder.
+      - text: Bingo! 
         char: mathina
         mood: happy  
   - type: clearImage
