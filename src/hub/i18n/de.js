@@ -20,7 +20,7 @@ export default {
     titles: {
       'logi-1': 'Mathinas Ampel-Abenteuer', 
       'logi-2': 'ytiC-igoL',
-      'logi-3': 'Cats and dogs',
+      'logi-3': 'Mathina hilft der Polizei',
       'logi-4': 'My gold, please',
       'bucca-1': 'Mathina und die geheime Botschaft',
       'bucca-2': 'Mathina und der sprechende Papagei',
@@ -55,5 +55,7 @@ export default {
     flamma: 'Flamma',
 	kangaroo: 'Känguru',
 	owl: 'Eule',
+	first policeman: 'erster Polizist',
+	second policeman: 'zweiter Polizist',
   },
 };
