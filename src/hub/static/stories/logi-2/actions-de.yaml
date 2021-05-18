@@ -21,7 +21,7 @@ actions:
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
       - text: Da ist es!
-        exposition: Leo zeigte auf das Schild an der Fassade des Hochhauses. In großen Buchstaben stand da “YTIC-IGOL”. Leo wollte sofort hineingehen, aber Mathina griff nach seiner Hand und hielt ihn zurück.
+        exposition: Leo zeigte auf das Schild an der Fassade des Hochhauses. In großen Buchstaben stand da “YTIC-IGOL”. Leo wollte sofort hineingehen, aber Mathina hielt ihn zurück.
       # That's it! - Leo pointed at the sign on the skyscraper's facade, where it read “YTIC-IGOL” in giant letters. Leo would have headed inside, but Mathina quickly grabbed his hand.
         char: leo
         mood: talking
@@ -164,7 +164,7 @@ actions:
         char: owl
         mood: serious
       - text: Wir müssen eine wichtige Aufgabe erfüllen, Frau Eule. Wir müssen dieses Geburtstagsgeschenk an die Leitung der “Abteilung für Logik” von Logi-City übergeben
-        exposition: sagte Mathina, während Leo den Koffer auf den Boden abstellte.
+        exposition: sagte Mathina, während Leo auf den Koffer deutete.
         # We have an important mission to complete here, Mr Owl - Mathina said confidently. - We need to deliver this birthday gift to the Head of Logical Matters of Logi-city. Leo pointed at the bag at his feet.
         char: mathina
         mood: talking
@@ -214,8 +214,8 @@ actions:
   - type: sceneText
     text: "Die Eule erklärte Ihnen die Regeln: Sie durften nur von Rot nach Rot, von Blau nach Blau, von Grün nach Grün oder von Gelb nach Gelb laufen. Oder von Kreis zu Kreis, Quadrat zu Quadrat oder Dreieck zu Dreieck gehen. Mathina schaute sich alle Farben und Formen an und kratzte sich am Kinn."
     # The owl listed the rules - they can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. Mathina observed the figure, scratched her kin.
-  - type: clearImage
-    id: leo-thinking
+ # - type: clearImage
+ #   id: leo-thinking
   - type: clearImage
     id: tiled floor
   - type: image
@@ -262,7 +262,7 @@ actions:
       ease: power3.out  
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
-    text: Dann zu einem gelben Quadrat.
+    text: Dann zu einem gelben Rechteck.
     # Then to the orange square.
   - type: animation
     target: leo-runs
@@ -304,7 +304,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: Sofort stehen bleiben! Ich war noch nicht fertig! Wenn Du auch nur einen falschen Schritt machst, dreht sich das Feld um und du plumpst in den Abwasserkanal. Da ist es ganz schön dunkel und du wirst ganz nass und schmutzig!
+      - text: Sofort stehen bleiben! Ich war noch nicht fertig! Wenn Du auch nur einen falschen Schritt machst, dreht sich das Feld um und du plumpst in den Abwasserkanal. Da ist es ganz schön dunkel, und du wirst ganz nass und schmutzig!
       # I wasn't done yet – said the owl. - If you miss just one step, the tile will turn over and you find yourself in the sewer system of the house. And there is no way back! 
         char: owl
         mood: serious
@@ -321,7 +321,7 @@ actions:
     parallax: back2
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
-    text: Mit einem leichten Schütteln lief Leo zurück zu Mathina. Er hatte wirklich keine Lust, in den dunklen Kanal hineinzufallen. 
+    text: Leo schüttelte sich leicht und schaute Mathina an. Er hatte wirklich keine Lust, in den dunklen Kanal hineinzufallen. 
     # Leo stared at Mathina with a disgusted frown, really frightened by the owl's promise.
   - type: clearImage
     id: mathina-thinking
@@ -435,10 +435,6 @@ actions:
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
     parallax: back2
-  - type: sceneText
-    style: "position: absolute; left: 50px; top: 5px;"
-    text: Die Eule schaute die beiden zufrieden an. Leo und Mathina stellten den Koffer mit dem Geschenk ab und wollten gerade gehen.
-    # The owl watched them with satisfaction as they loaded off the bag and set out to leave.
   - type: animation
     target: leo-runs
     vars:
@@ -463,6 +459,10 @@ actions:
       yPercent: 0
       ease: power3.out  
     parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Die Eule schaute die beiden zufrieden an. Leo und Mathina stellten den Koffer mit dem Geschenk ab und wollten gerade gehen.
+    # The owl watched them with satisfaction as they loaded off the bag and set out to leave.
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:

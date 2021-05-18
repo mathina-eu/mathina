@@ -19,7 +19,7 @@ export default {
     'back-to-world': 'zurück zur Karte',
     titles: {
       'logi-1': 'Mathinas Ampel-Abenteuer', 
-      'logi-2': 'ytiC-igoL',
+      'logi-2': 'Die Fliesenboden-Falle',
       'logi-3': 'Mathina hilft der Polizei',
       'logi-4': 'My gold, please',
       'bucca-1': 'Mathina und die geheime Botschaft',
