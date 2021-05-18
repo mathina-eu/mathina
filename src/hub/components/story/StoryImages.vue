@@ -1,5 +1,8 @@
 <template>
-  <div class="images-wrapper">
+  <div
+    class="images-wrapper"
+    :class="{'images-wrapper--no-overflow': hasImageWithNoOverflow}"
+  >
     <transition-group
       appear
       name="fade"
@@ -27,6 +30,11 @@ export default {
       default: () => [],
     },
   },
+  computed: {
+    hasImageWithNoOverflow() {
+      return this.images.some(image => image?.noOverflow);
+    }
+  },
 };
 </script>
 
@@ -36,6 +44,10 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 2;
+
+  &--no-overflow {
+    overflow: hidden;
+  }
 
   &__image {
     position: absolute;

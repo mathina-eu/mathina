@@ -610,14 +610,14 @@ actions:
       - text: "Sim por favor! Vamos tentar!"
         char: mathina
         mood: happy
-      - text: "Lembra-te, lê de fora para dentro para descodificar."
+      - text: "Lembra-te, lê de dentro para fora para descodificar."
         char: Angela
         mood: normal
 
   - type: game
-    text: "Lembra-te: para descodificar deves começar do disco externo"
-    toolbarText: "Seleciona a palavra correta"
-    cta: "Tenta tu mesmo!"
+    text: "Codifica corretamente a palavra."
+    toolbarText: "Codifica a palavra. Lembra-te: para codificar deves começar do disco interno"
+    cta: "Experimenta!"
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=3
 
 

@@ -351,6 +351,7 @@ export default {
 }
 
 .navigation {
+  pointer-events: none;
   margin: auto;
   position: absolute;
   left: calc(-1 * var(--navigation-button-size));
@@ -363,6 +364,7 @@ export default {
   transform: translateY(-50%);
 
   &__button {
+    pointer-events: all;
     width: var(--navigation-button-size);
     min-width: var(--navigation-button-size) !important;
     height: var(--navigation-button-size) !important;

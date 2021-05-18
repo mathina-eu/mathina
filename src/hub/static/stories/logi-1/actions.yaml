@@ -169,6 +169,7 @@ actions:
     src: solution 8 lamps.png
     id: solution8
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
       - text: Wrong! You've drawn some of them twice!
@@ -184,6 +185,7 @@ actions:
     src: solution5lamps.png
     id: solution5
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1
   - type: dialog
     entries:
       - text: You see, it's only five now. And guess what, there's a sixth one, too! 
@@ -205,6 +207,7 @@ actions:
     src: solution6lampss.png
     id: solution6
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
+    parallax: front1    
   - type: dialog
     entries:        
       - text: Got it! Now, after orange comes... not violet but pink, that is - orange-pink-violet.
