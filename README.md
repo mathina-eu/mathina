@@ -261,6 +261,41 @@ This image should be located in `src/hub/stories/common/img/c1-5.png`
 | parallax | back1-3, mid1-3, front1-3 | Default: **back1**. Set parallax layer. A higher layer represents faster movement. |
 | noOverflow | boolean | Default: `false`. Setting `noOverflow: true` for an image in a parallax layer will cause that layer to have overflow: hidden while this image is displayed. |
 
+### Video
+
+Display a video.
+
+**Example**
+
+```yaml
+- type: video
+  width: 400
+  text: Lorem ipsum dolor
+  image: bg/c1-bg1.jpg
+  entries:
+    - src: video.mp4
+      type: 'video/mp4'
+    - src: video.webm
+      type: 'video/webm'
+```
+
+**Params**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **type** | `video` | action type |
+| **entries** | `<array>` of src Entries | Video src entries |
+| **width** | string | Width |
+| image | `<string>` path | *Optional* Poster image for Video HTML element. File should be located in `$STORY_DIR/img/`. |
+| text | `<string>` title| *Optional* A title text for the video |
+
+**Entries**
+
+| Name | Valid values | Description |
+| --- | --- | --- |
+| **src** | `<string>` path | Path to video. File should be located in `$STORY_DIR/video/`. |
+| **type** | `<string>` | Video type, eg `video/mp4`, `video/webm`, ... |
+
 ### Animate Image
 
 Animate an image using [gsap to()](https://greensock.com/docs/v3/GSAP/gsap.to()). 
