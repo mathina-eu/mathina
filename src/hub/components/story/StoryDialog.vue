@@ -126,7 +126,7 @@ export default {
 
   &__exposition {
     color: var(--text-color-light);
-    font-size: 0.75em;
+    font-size: 1em;
     font-style: italic;
     padding-top: 0;
   }

@@ -33,7 +33,7 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#c2d9e9', throttle: 0 },
+  loading: { color: '#3470b8', throttle: 0 },
   /*
   ** Global CSS
   */
@@ -52,6 +52,15 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
   ],
+  vuetify: {
+    theme: {
+      themes: {
+        light: {
+          primary: '#3470b8'
+        }
+      }
+    }
+  },
   /*
   ** Nuxt.js modules
   */
