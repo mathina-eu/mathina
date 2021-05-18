@@ -47,7 +47,8 @@ actions:
         duration: 600
         xPercent: 10
         yPercent: 60
-        #width: 20%
+        width: 90%
+        height: 90%
         ease: power3.out
   - type: sceneText
     text: Es war schon später Nachmittag, als Mathina und Leo durch den Wald von Arisa liefen, um Beeren und Pilze zu sammeln. Sie wussten, dass der Wald am Tage sicher war, aber sie hatten Geschichten über Zauberwesen gehört, denen man nachts im Wald begegnen konnte. Noch nie waren sie so lange im Wald geblieben, und die Sonne stand bereits tief am Himmel. #Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
