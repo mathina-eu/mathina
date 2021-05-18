@@ -237,8 +237,8 @@ actions:
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 10
-      yPercent: -24
+      left: '270px'
+      top: '160px'
       ease: power3.out  
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -247,8 +247,8 @@ actions:
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 30
-      yPercent: 10
+      left: '310px'
+      top: '200px'
       ease: power3.out  
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -257,8 +257,8 @@ actions:
     target: leo-runs
     vars:
       duration: 1
-      xPercent: 30
-      yPercent: -5
+      left: '380px'
+      top: '170px'
       ease: power3.out  
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"

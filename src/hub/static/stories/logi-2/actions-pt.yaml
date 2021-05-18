@@ -1,0 +1,437 @@
+actions:
+  - type: background
+    src: logi-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: image
+    src: leo-pointing.png
+    id: leo-pointing
+    style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: bag.png
+    id: bag
+    style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
+    parallax: back1  
+  - type: dialog
+    entries:
+      - text: É isto! 
+        char: leo
+        mood: talking
+  - type: sceneText
+    text: O Leo apontou para a placa na fachada do arranha-céus, onde se lia “Edadic-igol” em letras gigantes. O Leo teria entrado, mas a Mathina agarrou-o rapidamente pela mão.
+  - type: clearImage
+    id: leo-pointing
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
+    parallax: back2
+  - type: dialog
+    entries: 
+      - text: Não é estranho que diga Edadic-igol?
+        char: mathina
+        mood: thinking
+  - type: dialog
+    entries:
+      - text: Não, não é nada estranho, vamos lá!
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-thinking
+    vars:
+      duration: 0.5
+      xPercent: 0
+      yPercent: -40
+      repeat: 3
+      yoyo: true
+      ease: power1.inOut
+  - type: sceneText
+    text: O Leo deu um salto, mas foi imediatamente travado por uma parede invisível em frente à porta.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-thinking-turned.png
+    id: mathina-thinking-t
+    style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    text: A Mathina pensou um pouco e, enquanto pensava, voltou-se…
+  - type: clearImage
+    id: mathina-thinking-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    text: ...e depois virou-se outra vez para a fachada. Bateu na testa surpreendida.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Cidade-Logi ao contrário!
+        char: mathina
+        mood: talking
+  - type: dialog
+    entries:
+      - text: Isso significa que devemos fazer tudo ao contrário!
+        char: mathina
+        mood: arguing
+  - type: sceneText
+    text: Dito isto, a Mathina e o Leo viraram-se ao contrário
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
+    parallax: back2
+  - type: sceneText
+    text: Estavam a saltar para trás em direcção à entrada.
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: sceneText
+    text: De repente ouviram alguém a berrar com eles.
+  - type: clearImage
+    id: leo-runs-t
+  - type: clearImage
+    id: mathina-runs-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Parem, parem imediatamente!
+        char: owl
+        mood: serious
+      - text: Temos uma missão importante a cumprir aqui, senhora Coruja. Precisamos de entregar este presente de aniversário ao Chefe dos Assuntos Lógicos da Cidade Logi.
+        char: mathina
+        mood: talking
+  - type: sceneText
+    text: O Leo apontou para a mochila aos seus pés.
+  - type: dialog
+    entries:
+      - text: Sim, eu fui notificada. Mas vocês não são exceção à regra.
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-front.png
+    id: owl-w-f
+    style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Observem o piso de mármore aqui na entrada. Na verdade, há um propósito por trás deste padrão.
+        char: owl
+        mood: serious
+      - text: Vocês não têm permissão para o pisar, a menos que descubram a lógica que está por trás dele. É assim que garantimos que apenas pessoas dignas chegam ao chefe.
+        char: owl
+        mood: serious
+  - type: animation
+    target: mathina-thinking
+    vars:
+      duration: 1
+      xPercent: -30
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: owl-w-f
+    vars:
+      duration: 1
+      xPercent: 50
+      yPercent: -15
+      ease: power3.out
+  - type: image
+    src: tiled floor.jpg
+    id: tiled floor
+    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
+  - type: sceneText
+    text: "A coruja enumerou as regras: eles só podiam passar do vermelho para o vermelho, do azul para o azul, do verde para o verde, do amarelo para o amarelo; ou de círculo para círculo, quadrado para quadrado, triângulo para triângulo. A Mathina observou a figura e coçou a cabeça."
+  - type: clearImage
+    id: leo-thinking
+  - type: clearImage
+    id: tiled floor
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    entries:      
+      - text: É tão simples!
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 40
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: Acabando de dizer isto, o Leo saltou! A coruja estava desesperada enquanto o Leo continuava a saltar de um ladrilho para outro.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 10
+      yPercent: -24
+      ease: power3.out  
+  - type: sceneText
+    text: Ele passou do círculo vermelho para o quadrado vermelho
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 30
+      yPercent: 10
+      ease: power3.out  
+  - type: sceneText
+    text: Depois para o quadrado laranja...
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 30
+      yPercent: -5
+      ease: power3.out  
+  - type: sceneText
+    text: ... de lá para o triângulo laranja - mas parou ali, antes de passar para o ladrilho errado.
+  - type: clearImage
+    id: leo-runs
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Pára! Pára imediatamente!
+        char: owl
+        mood: serious
+  - type: sceneText
+    text: O Leo ficou tão apavorado que parou no triângulo laranja.
+  - type: clearImage
+    id: owl-w-f
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Ainda não terminei. Se errares apenas uma etapa, o ladrilho virará e cairás na rede de esgotos desta casa. E não há caminho de volta!
+        char: owl
+        mood: serious
+      - text: Mas desta vez, abrirei uma exceção muito especial. Agora, podes voltar ao ponto de partida e tentar novamente, mas este é certamente o meu último favor.
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-down.png
+    id: owl-w-d
+    style: "width: 20%; top: 41%; right: 29%;"  
+    parallax: back2
+  - type: sceneText
+    text: O Leo olhou para a Mathina com o sobrolho franzido de desgosto e muito assustado com a promessa da coruja.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-standing.png
+    id: mathina-standing
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Fica aqui agora e não faças nada!
+        char: mathina
+        mood: talking
+  - type: sceneText
+    text: A Mathina estava a pensar sobre o que havia de fazer.
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-sitting.png
+    id: leo-sitting
+    style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
+    parallax: back2
+  - type: game
+    text: Que conselho lhes darias?
+    toolbarText: Só podes passar do vermelho para o vermelho, do azul para o azul, do verde para o verde, do amarelo para o amarelo; ou de círculo a círculo, quadrado a quadrado, triângulo a triângulo.
+    cta: Experimenta!
+    url: \apps\logi-2-app\logi-2-app-1.htm
+  - type: clearImage
+    id: mathina-standing
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    text: "A Mathina refletiu sobre todas as possibilidades de resolução, mas encontrava sempre um obstáculo. Coçou a cabeça, olhou em volta e, uma vez mais, reparou na inscrição da fachada: Edadic-igol."
+  - type: dialog
+    entries:
+      - text: Oh, já sei!
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    text: A Mathina lembrou-se que o letreiro tinha de ser lido ao contrário. E se tentasse pensar “para trás” aqui também? E se tentasse ver como passar da porta para o local onde estava?
+  - type: game
+    text: Consegues ir da porta até à Mathina? Isso funciona?
+    toolbarText: 
+    cta: Experimenta!
+    url: \apps\logi-2-app\logi-2-app-2.htm
+  - type: sceneText
+    text: A Mathina planeou o percurso para trás, agora absolutamente evidente. E esforçou-se por memorizar os ladrilhos.
+  - type: dialog
+    entries:
+      - text: Círculo vermelho, triângulo vermelho, triângulo azul ...
+        char: mathina
+        mood: thinking
+  - type: clearImage
+    id: leo-sitting
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Anda, Leo, segue-me, encontrei o caminho!
+        char: mathina
+        mood: happy
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 2
+      xPercent: -110
+      yPercent: 10
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    text: O Leo seguiu os passos da Mathina e apanhou a mochila.
+  - type: clearImage
+    id: leo-runs-t
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
+    parallax: back2  
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    text: A coruja observou-os satisfeita enquanto eles tiravam o que estava na mochila e se preparavam para sair.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 4
+      xPercent: 350
+      yPercent: -2
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs
+    vars:
+      duration: 5
+      xPercent: 350
+      yPercent: -5
+      ease: power3.out  
+      parallax: back2  
+  - type: animation
+    target: bag
+    vars:
+      duration: 4
+      xPercent: 410
+      yPercent: 0
+      ease: power3.out  
+    parallax: back2
+  - type: dialog
+    entries:
+      - text: Parabéns menina, parabéns!
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: leo-runs
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 19%; top: 44%; right: 15%; z-index:2"
+    parallax: back2
+  - type: sceneText
+    text: A Mathina acenou com a cabeça educadamente porque odiava ser chamada de menina, ela era a inteligente e forte Mathina...
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 3
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    text: Eles voltaram habilmente para trás pelos ladrilhos coloridos e despediram-se da coruja.
+

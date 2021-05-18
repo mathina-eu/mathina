@@ -2,16 +2,16 @@
   <v-app id="app">
     <v-navigation-drawer
       v-model="drawer"
-      style="z-index: 100;"
       :clipped="$vuetify.breakpoint.lgAndUp"
       disable-resize-watcher
       disable-route-watcher
       overlay-color="#f1f1f1"
+      z-index="100"
       app
     >
       <v-list>
         <v-list-group
-          color="grey"
+          color="grey darken-3"
           :prepend-icon="`mdi-history`"
           append-icon=""
         >

@@ -5,10 +5,13 @@
       :clipped="$vuetify.breakpoint.lgAndUp"
       disable-resize-watcher
       disable-route-watcher
+      overlay-color="#f1f1f1"
+      z-index="100"
       app
     >
       <v-list>
         <v-list-group
+          color="blue darken-4"
           :prepend-icon="`mdi-history`"
           append-icon=""
         >
@@ -97,7 +100,7 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="purple darken-3"
+      color="blue darken-4"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
