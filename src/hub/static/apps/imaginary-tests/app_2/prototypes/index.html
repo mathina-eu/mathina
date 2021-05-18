@@ -126,17 +126,15 @@ collideWithPickUp() := (
 
 
 
-
 collideWithObstacles() := (
   forall(obstacles,
     if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
-    recallTarget = lastPickUpPos;
+      recallTarget = dragonHome;
+      dragonMoving = false;
       recallDragon();
     );
   );
 );
-
-
 
 
 
@@ -211,6 +209,7 @@ recallDragon() := (
   dragon.trailA = [];
   dragon.trailB = [];
   path.points = [(0,0)];
+  path.dragonIndex = 1;
   inputBuffer.record = [];
   inputDisplay.texts = [0,0];
   path.progress = 0;
@@ -370,7 +369,7 @@ drawGrid() := (
 drawInputDisplay() := (
   drawtext(inputDisplay.pos - [5 * inputDisplay.size, 0], "(", size->70 * inputDisplay.size, align->"mid");
   drawtext(inputDisplay.pos - [1.5 * inputDisplay.size, 0], inputDisplay.texts.x, size->50 * inputDisplay.size, align->"right");
-  drawtext(inputDisplay.pos, "|", size->70 * inputDisplay.size, align->"mid");
+  drawtext(inputDisplay.pos, ",", size->70 * inputDisplay.size, align->"mid");
   drawtext(inputDisplay.pos + [3.5 * inputDisplay.size, 0], inputDisplay.texts.y, size->50 * inputDisplay.size, align->"right");
   drawtext(inputDisplay.pos + [5 * inputDisplay.size, 0], ")", size->70 * inputDisplay.size, align->"mid");
 );
@@ -390,7 +389,7 @@ drawInputButtons() := (
 
 drawInputBuffer() := (
   forall(1..length(inputBuffer.record),
-    drawtext(inputBuffer.pos + ((# - 1) * (canvasRight - inputBuffer.pos.x) / inputBuffer.max , 0), "(" + inputBuffer.record_#.x + " | " + inputBuffer.record_#.y + ")", size-> 50 * inputBuffer.size);
+    drawtext(inputBuffer.pos + ((# - 1) * (canvasRight - inputBuffer.pos.x) / inputBuffer.max , 0), "(" + inputBuffer.record_#.x + " , " + inputBuffer.record_#.y + ")", size-> 50 * inputBuffer.size);
   );
 );
 
@@ -429,14 +428,16 @@ drawStartButton() := (
 
 
 drawPath() := (
-  regional(arrows);
+  regional(arrows, stroke);
 
   arrows = consecutive(path.points);
   forall(reverse(1..length(arrows)),
+    stroke = sampleBezierLin(lerp(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y), 0.02), lerp(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y), 0.98));
+
     if(# < path.dragonIndex,
       drawStrokeObject({
         "pos": (0,0), 
-        "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+        "stroke": stroke, 
         "drawPercent": 1,
         "lineColor": (1, 0.6, 0),
         "lineAlpha": 1,
@@ -450,7 +451,7 @@ drawPath() := (
     if(# == path.dragonIndex,
       drawStrokeObject({
         "pos": (0,0), 
-        "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+        "stroke": stroke, 
         "drawPercent": easeInOutCubic(path.progress),
         "lineColor": lerp((1, 0.8, 0), (1, 0.6, 0), path.progress),
         "lineAlpha": lerp(0, 1, path.progress),
@@ -464,7 +465,7 @@ drawPath() := (
     if(# > path.dragonIndex,
       drawStrokeObject({
           "pos": (0,0), 
-          "stroke": sampleBezierLin(gridToCindy(arrows_#.x), gridToCindy(arrows_#.y)), 
+          "stroke": stroke, 
           "drawPercent": 0,
           "lineColor": (1, 0.8, 0),
           "lineAlpha": 0,
@@ -496,6 +497,20 @@ collideWithMountains() := (
     );
   );
 );
+
+
+
+
+
+
+collideWithCastle() := (
+  if(pointInPolygon(dragon.pos, castlePolygon),
+    dragonMoving = false;
+    recallDragon();
+  );
+);
+
+
 
 
 
@@ -786,11 +801,12 @@ recallTarget = dragonHome;
 
 
 mountainPolygons = [
-  [[17.39, 13.09], [23.95, -10], [10.07, -10]],
-  [[37.51, 21.85], [42.55, -10], [29.87, -10]]
+  [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCorners_3 + (20, 2), canvasCorners_3 + (20, 0)], // floor
+  [[13.39, 9.09], [18.95, -10], [7.57, -10]], // mountain 1
+  [[37.51, 21.85], [42.55, -10], [29.87, -10]] // mountain 2
 ];
 
-
+castlePolygon = [[49.39, -10], [48.95, 0.25], [67, 18.37], [67, -10]];
 
 
 
@@ -814,6 +830,10 @@ setupTime();
   
   
   drawimage(canvasCorners_4, canvasCorners_3, "back");
+  drawimage(canvasCorners_4, canvasCorners_3, "floor");
+  drawimage(canvasCenter + (-16,-19), "mountain2");
+  drawimage(canvasCenter + (8,-8), "mountain1");
+  drawimage(canvasCenter + (40, -7), "castle", scale->0.75);
   drawGrid();
   drawDragonTrail();
   drawPath();
@@ -823,8 +843,6 @@ setupTime();
   //drawObstacles();
   //drawimage(canvasCorners_4, canvasCorners_3, "front");
 
-  drawimage(canvasCenter + (-12,-15), "mountain2");
-  drawimage(canvasCenter + (8,-8), "mountain1");
 
 
   //drawFlamma();
@@ -845,6 +863,7 @@ setupTime();
 
   drawRecallButton();
   //drawScoreLabel();
+
 </script>
 
 
@@ -862,12 +881,13 @@ setupTime();
     );
 
     if(dragonMoveTrack.timeLeft <= 0,
+      path.dragonIndex = path.dragonIndex + 1;
       if(path.dragonIndex >= length(path.points),
+
         dragonMoving = false;
         inputBuffer.record = [];
       , // else //
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
-        path.dragonIndex = path.dragonIndex + 1;
         updateDragon();
       );
       path.progress = 0;
@@ -890,6 +910,7 @@ setupTime();
     //collideWithPickUp();
     //collideWithObstacles();
     collideWithMountains();
+    collideWithCastle();
   );
 
 
@@ -901,14 +922,6 @@ setupTime();
 
 <script id='csmousedown' type='text/x-cindyscript'>
 
-  /*
-  if(!recallActive & dist(mouse().xy, wand.pos) <= wand.catchRadius,
-    wandActive = true;
-    updateWand();
-    updateDragon();
-    repaint();
-  );
-  */
 
   if(!recallActive & dist(mouse().xy, recallButton.pos) <= recallButton.rad,
     recallTarget = dragonHome;
@@ -993,6 +1006,8 @@ setupTime();
                    wand:   "../../assets/wand.png",
                    flamma:   "../../assets/flamma_wave.png",
                    bubble:   "../../assets/speech_bubble.png",
+                   castle:   "../../assets/castle.png",
+                   floor:   "../../assets/floor_2.png",
                  }
                 });
 
