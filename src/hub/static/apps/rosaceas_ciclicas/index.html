@@ -5,7 +5,7 @@
   <head>
     <script src="../atractor-apps-all/scripts/konva.min.js"></script>
     <meta charset="utf-8" />
-    <title>Arrumar rosáceas</title>
+    <title>App</title>
     <style>
     html {
   touch-action: pan-down;
@@ -15,11 +15,18 @@ html, body {
   overflow:hidden;
 }
 
+html {
+  width: 100%;
+  height: 100%;
+   margins:0 px;
+  background: #E6BC6C;
+}
+
       body {
         margin: 0;
         padding: 0;
         overflow: hidden;
-        background-color: #f0f0f0;
+        background-color: #E6BC6C;
       }
 	  
 	  .image-upload>input {
@@ -52,7 +59,7 @@ img:hover {
   
   
 
-<img src="../atractor-apps-all/icons/confirm.png" id="correct"  width=80px onclick="mycorrect()" style="position:absolute; left: 90%;
+<img src="../atractor-apps-all/icons/confirm.png" id="correct"   width=5%  onclick="mycorrect()" style="position:absolute; left: 90%;
   top: 3%; display:none"></img>
 
 
@@ -85,6 +92,32 @@ img:hover {
     e.preventDefault();
   }
 );
+
+
+	  
+var ini=true; var stage;
+
+window.addEventListener('resize', function(){
+	
+	width = window.innerWidth; height = window.innerHeight;
+	
+		if(ini){fitStageIntoParentContainer()};
+	 if(!ini) {
+	 
+	 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+renderer.setSize(width,height);
+
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+	 }; 
+	 } );
+	 
+	 
 
 	var planeicon; 
 	
@@ -131,7 +164,15 @@ var imgsangs=[
   
   	function Link(ii) 
 	{ang=0; objects = [];
-		
+	
+		 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+ width=.99*width0;
+ height=.99*Math.min(width0/2,height0);
+
+ASPECT=width/height;
+
+	 
 		angscertos=imgsangs[ii];
 			
 			var x = 0;
@@ -223,11 +264,16 @@ loader.load(
 	var dif2=0;
 	var posc=0;
 			// scene size
-			var WIDTH = window.innerWidth*.99;
-			var HEIGHT = window.innerHeight*.99;
+				 					       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+
 			// camera
 			var VIEW_ANGLE = 11
-			var ASPECT = WIDTH / HEIGHT;
+			var ASPECT = width / height;
 			var NEAR = 1;
 			var FAR = 5000;
 			var camera, scene, renderer;
@@ -376,7 +422,7 @@ mapCanvas = document.createElement( 'canvas' );
 	
 	
 	
-function home(){
+function home(){ini=true;fitStageIntoParentContainer();
 	document.getElementById("container0").style.display="none"
 		document.getElementById("container").style.display="inline"
 		container.removeChild( renderer.domElement );
@@ -388,14 +434,22 @@ var container = document.getElementById( 'container0' );
 		
 		function init() {
 		
+		ini=false;
+		
 				renderer = new THREE.WebGLRenderer( { antialias: true } );
 				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( WIDTH, HEIGHT );
-				renderer.setClearColor(0xd2d1b8,1);
+				renderer.setSize( width, height);
+				//renderer.setClearColor(0xd2d1b8,1);
 				container.appendChild( renderer.domElement );
 				
 				renderer.localClippingEnabled = true;
 				
+var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/background-golden-ochre.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
 				
 				// scene
 				scene = new THREE.Scene();
@@ -449,7 +503,7 @@ var container = document.getElementById( 'container0' );
 
 				// lights
 				var mainLight = new THREE.PointLight( 0xcccccc, 1.5, 1250 );
-				mainLight.position.y = 600;
+				mainLight.position.y = 400;
 				scene.add( mainLight );
 				
 				var mainLight2 = new THREE.PointLight( 0xcccccc, 1.5, 1250 );
@@ -878,7 +932,7 @@ var delta=60;
   } );
   
   
-        var stage = new Konva.Stage({
+        stage = new Konva.Stage({
           container: 'container',
           width: width,
           height: height
@@ -905,55 +959,55 @@ var textscore = new Konva.Text({
         // image positions
         var animals = {
           im1: {
-            x: 0.02*width,
-            y: 0.05*height
+            x: 0.07*width,
+            y: 0.12*height
           },
           im2: {
-            x: 0.19*width,
-            y:  0.05*height
+            x: 0.22*width,
+            y:  0.12*height
           },
          im3: {
-            x: 0.36*width,
-            y:  0.05*height
+            x: 0.37*width,
+            y:  0.12*height
           },
          im4: {
-            x: 0.53*width,
-            y:  0.05*height
+            x: 0.52*width,
+            y:  0.12*height
           },
 		  
 		   im5: {
-            x: 0.7*width,
-            y:  0.05*height
+            x: 0.67*width,
+            y:  0.12*height
           },
 		  
 		   im6: {
-            x: 0.87*width,
-            y: 0.05*height
+            x: 0.82*width,
+            y: 0.12*height
           },
           im7: {
-            x: 0.02*width,
-            y:  0.3*height
+            x: 0.07*width,
+            y:  0.39*height
           },
          im8: {
-            x: 0.19*width,
-            y:  0.3*height
+            x: 0.22*width,
+            y:  0.39*height
           },
 		   im9: {
-            x: 0.36*width,
-            y:  0.3*height
+            x: 0.37*width,
+            y:  0.39*height
           },
 		  
 		   im10: {
-            x: 0.53*width,
-            y: 0.3*height
+            x: 0.52*width,
+            y: 0.39*height
           },
           im11: {
-            x: 0.7*width,
-            y:  0.3*height
+            x: 0.67*width,
+            y:  0.39*height
           },
          im12: {
-            x: 0.87*width,
-            y:  0.3*height
+            x: 0.82*width,
+            y:  0.39*height
           }
 		
 		  
@@ -1080,6 +1134,30 @@ icon[privKey.substring(2)-1].opacity(0)
 		
 		
 
+       
+        	
+	var imageObj2 = new Image(); 
+      imageObj2.onload = function() { 
+	  back=new Konva.Image({
+           x:  0*width,
+           y:0*height,
+          image: imageObj2,
+          width: window.innerWidth,
+          height: window.innerHeight,
+		  opacity:1
+        });
+		
+
+        // add the shape to the layer
+        background.add(back);
+		  
+     background.batchDraw();
+	  
+	  
+	}
+	
+	
+	imageObj2.src = '../atractor-apps-all/imgs/fundo-rosaceas1.jpg';
         stage.add(background);
         stage.add(animalLayer);
 	  stage.add(textLayer);
@@ -1098,8 +1176,8 @@ icon[privKey.substring(2)-1].opacity(0)
 	  {
         icon[i] = new Konva.Image({
            
-		  x: (0.12+0.17*i)*width,
-          y:0.05*height,
+		  x: (0.168+0.15*i)*width,
+          y:0.12*height,
           image: imageObj,
           width: window.innerWidth/40,
           height: window.innerWidth/40,
@@ -1121,8 +1199,8 @@ icon[privKey.substring(2)-1].opacity(0)
 	 for(i=6;i<12;i++)
 	  {
       icon[i] = new Konva.Image({
-          x:  (0.12+0.17*(i-6))*width,
-           y:0.3*height,
+          x:  (0.168+0.15*(i-6))*width,
+           y:0.39*height,
           image: imageObj,
           width: window.innerWidth/40,
           height: window.innerWidth/40,
@@ -1322,36 +1400,36 @@ imagenames=["c1_1.png",
 		
 		black1: {
             x: 0.02 *window.innerWidth,
-          y: 0.75*window.innerHeight
+          y: 0.77*window.innerHeight
 			
           },
         
 			black2: {
-            x: 0.19* window.innerWidth,
-          y: 0.75*window.innerHeight
+            x: 0.185* window.innerWidth,
+          y: 0.77*window.innerHeight
 			
           },
 		  
 		  black3: {
-            x: 0.36* window.innerWidth,
-          y: 0.75*window.innerHeight
+            x: 0.35* window.innerWidth,
+          y: 0.77*window.innerHeight
 			
           },
 		  		  black4: {
-            x: 0.53* window.innerWidth,
-          y: 0.75*window.innerHeight
+            x: 0.515* window.innerWidth,
+          y: 0.77*window.innerHeight
 			
           },
 		  
 		   black5: {
-            x: 0.7* window.innerWidth,
-          y: 0.75*window.innerHeight
+            x: 0.68* window.innerWidth,
+          y: 0.77*window.innerHeight
 			
           },
 		  
 		    black6: {
-            x: 0.87* window.innerWidth,
-          y: 0.75*window.innerHeight
+            x: 0.845* window.innerWidth,
+          y: 0.77*window.innerHeight
 			
           },
 			
@@ -1376,7 +1454,20 @@ im12_black: {x: posxx[11], y: posyy[11]} 	,
       loadImages(sources, initStage);
 	  
 	
+ var stageWidth = window.innerWidth;
+      var stageHeight = window.innerHeight;
+	  
+ function fitStageIntoParentContainer() {
+       
+        // to do this we need to scale the stage
+        var scale = Math.min(window.innerWidth / stageWidth,window.innerHeight / stageHeight);
 
+	
+        stage.width(stageWidth * scale);
+        stage.height(stageHeight * scale);
+        stage.scale({ x: scale, y: scale });
+        stage.draw();
+      }
    
 
     </script>

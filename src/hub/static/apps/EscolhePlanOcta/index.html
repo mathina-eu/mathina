@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="pt">
+<head>
+
+<title id="barra">Planificações do octaedro</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePlan_style.css">
+
+<body>
+    <div class="wideBox">
+      <h1 id="titulo"></h1>
+    </div>
+    <div align="center" class="buttons">
+        <table>
+            <th>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
+                <button id="nextBut" onclick="novaJogada()" style="display:none"><image src='../atractor-apps-all/icons/next.png' width='60' height='60'></image></button>
+                <button id="resetBut" onclick="reloadApp()" style="display:none"><image src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image></button>
+            </th>
+            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th>
+                <image id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
+                <image id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <!--<image id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>-->
+            </th>
+        </table>
+    </div>
+    <div class="line"></div>
+
+    <div id="content">
+        <div id="loaders" style = 'position:absolute; z-index: 1'></div>
+        <div id="rosaceas" style = 'position:absolute; z-index: 2'> </div>
+        <div id="targets"  style = 'position:absolute; z-index: 3'> </div>
+        <div id="errados"  style = 'position:absolute; z-index: 4'> </div>
+        <div id="buts"  style = 'position:absolute; z-index: 5'> </div>
+    </div>
+    
+    <div id="successMessage" style = 'position:absolute; z-index: 7; text-align: center; visibility: hidden'>
+        <h2 id="sucessText">Muito bem!</h2>
+        <button onclick="hideDialog('#successMessage')"><image src="../atractor-apps-all/icons/next.png" width="100px"> </image> </button>
+    </div>
+    <div id="errorMessage" style = 'position:absolute; z-index: 7; text-align: center; visibility: hidden'>
+        <h2 id="errorText">Ainda não descobriste todas as rosáceas com eixo de simetria.</h2>
+        <h2 id="errorText2">Tenta outra vez!</h2>
+        <button onclick="hideDialog('#errorMessage')"><image src="../atractor-apps-all/icons/back.png" width="100px"> </image> </button>
+    </div>
+    <div id="finalMessage" style = 'position:absolute; z-index: 7; text-align: center; visibility: hidden'>
+        <h2 id="finalText">Fim de jogo!</h2>
+        <div>
+            <image id="finalFeedback1" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">
+            <image id="finalFeedback2" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">
+            <!--<image id="finalFeedback3" src="../atractor-apps-all/icons/feedbackCerto.png" width="100px">-->
+        </div>
+        <button onclick="reloadApp()"><image src="../atractor-apps-all/icons/refresh.png" width="100px"> </image> </button>
+        <div></div>
+        <div>
+            <image id="plan_fim1" width="100px"></image>
+            <image id="plan_fim2" width="100px">
+            <image id="plan_fim3" width="100px">
+            <image id="plan_fim4" width="100px">
+            <image id="plan_fim5" width="100px">
+            <image id="plan_fim6" width="100px">
+        </div>
+    </div>
+    
+</body>
+
+<audio src="../atractor-apps-all/sons/somErrado.mp3" id="somErrado" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/somEscolha.mp3" id="somEscolha" type="audio/mpeg"></audio>
+<audio src="../atractor-apps-all/sons/somCerto.mp3" id="somCerto" type="audio/mpeg"></audio>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    var lang = getUrlVars().lang;
+    if(lang==undefined){
+        lang="pt";
+    }
+    var plan_n_all = new Array();
+    var plan_s_all = new Array();
+    var plan_n = new Array();
+    var plan_s = new Array();
+    var lista_n = new Array();
+    var lista_s = new Array();
+    
+    var jogada = 0;
+    var max_jogadas = 2;
+	var jogada_imgs = 6;
+    var n_certos = 3;
+	
+    var imgWidth = 250;
+    var imgHeight = 225;
+    var kScale = 0.8;
+    var assetDir = '../atractor-apps-all/imgs/';
+    var iconsDir = '../atractor-apps-all/icons/';
+    var imgs;
+    var targets;
+    var errados;
+    var certos;
+    var buts;
+    var showAnimButs;
+    var animNumbers;
+
+    var feedbacks = new Array(feedback1,feedback2/*,feedback3*/);
+    var tentativas=0;
+    var myInterval;
+    init();
+
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    
+    function init() {
+        // Hide the success message
+        setLanguage();
+
+        $('#successMessage').hide();
+        $('#errorMessage').hide();
+        $('#finalMessage').hide();
+        document.getElementById('successMessage').style.visibility="visible";
+        document.getElementById('errorMessage').style.visibility="visible";
+        document.getElementById('finalMessage').style.visibility="visible";
+
+        imgs = new Array(jogada_imgs);
+        targets = new Array(jogada_imgs);
+        errados = new Array(jogada_imgs);
+        certos = new Array(jogada_imgs);
+        buts = new Array(jogada_imgs);
+        //manipular_buts = new Array(jogada_imgs);
+        
+        jogada = 0;
+        plan_n_all = ['nplan-octa-01','nplan-octa-02','nplan-octa-03','nplan-octa-04','nplan-octa-05','nplan-octa-06','nplan-octa-07'];
+        plan_s_all = ['plan-octa-01','plan-octa-02','plan-octa-03','plan-octa-04','plan-octa-05','plan-octa-06','plan-octa-07','plan-octa-08','plan-octa-09','plan-octa-10','plan-octa-11'];
+        animNumbers = [1,2,3,4,5,6,7,8,9,10,11];
+        for (var i=0; i<plan_n_all.length; i++) {plan_n[i]=plan_n_all[i]};
+        for (var i=0; i<plan_s_all.length; i++) {plan_s[i]=plan_s_all[i]};
+        lista_escolhidas = new Array();
+        loadImages();
+        //
+        showAnimButs=[plan_fim1, plan_fim2, plan_fim3, plan_fim4, plan_fim5, plan_fim6];
+        for(var i=0; i<showAnimButs.length; i++){
+            showAnimButs[i].addEventListener('click', openAnim, false);
+        }
+    }
+    
+    function reloadApp(){
+        location.reload();
+    }
+    
+
+    function showImages(){
+        var flag=true;
+        for (var i=0; i<jogada_imgs; i++) {
+            if(imgs[i].style.visibility="hidden" && imgs[i].complete){
+                imgs[i].style.visibility="visible";
+            }
+            flag = flag && imgs[i].complete;
+        }
+        if(flag){
+            clearInterval(myInterval);
+        }        
+    }
+    function novaJogada(){
+        tentativas = 0;
+        var escolhidos = getSelectImgs();
+        
+        for (var i=0; i<jogada_imgs; i++) {
+            imgs[i].style.visibility="hidden";
+            imgs[i].src = assetDir+escolhidos[i]+".png";
+            
+            targets[i].style.opacity=1;
+            targets[i].style.visibility = 'hidden';            
+            errados[i].style.visibility = 'hidden';
+            
+            buts[i].setAttribute('valor',escolhidos[i]);
+            buts[i].setAttribute('posicao',i);
+            buts[i].addEventListener('click', selectImg, false);
+        }
+        myInterval = setInterval(showImages, 200);
+
+        document.getElementById('confirmBut').style.display='inline';
+        document.getElementById('confirmBut').style.visibility='hidden';
+        document.getElementById('resetBut').style.display='none';
+        document.getElementById('nextBut').style.display='none';
+    }
+
+    function loadImages() {
+        var escolhidos = getSelectImgs();
+        
+        for (var i=0; i<jogada_imgs; i++) {
+            imgs[i] = loadImg('rosaceas',assetDir+escolhidos[i]+".png",imgWidth*kScale,imgHeight*kScale);
+            
+            targets[i] = loadImg('targets',iconsDir+"target_plan.png", imgWidth*kScale,imgHeight*kScale);
+            targets[i].style.visibility = 'hidden';
+            
+            errados[i] = loadImg('errados',iconsDir+"errado_plan.png",imgWidth*kScale,imgHeight*kScale);
+            errados[i].style.visibility = 'hidden';
+                        
+            buts[i] = loadImg('buts',iconsDir+"transp_plan.png", imgWidth*kScale,imgHeight*kScale);
+            buts[i].setAttribute('posicao',i);
+            buts[i].setAttribute('valor',escolhidos[i]);
+            buts[i].addEventListener('click', selectImg, false);
+        }
+        myInterval = setInterval(showImages, 500);
+    }
+    
+    function getSelectImgs(){
+        //enableBut("confirmBut",false);
+        document.getElementById('confirmBut').style.visibility='hidden';
+        feedbacks[jogada].src = iconsDir+"feedbackTalvez.png";
+        jogada++;
+        plan_n.sort( function() { return Math.random() - .5 } );
+        plan_s.sort( function() { return Math.random() - .5 } );
+        var escolhidos = new Array();
+        var convexos;
+        var nconvexos;
+        for (var i=0; i<jogada_imgs; i++) {
+            if(i<n_certos){
+                convexos = plan_s.shift();
+                escolhidos.push(convexos);
+                lista_s.push(convexos);  
+            }else{
+                nconvexos = plan_n.shift();
+                escolhidos.push(nconvexos);
+                lista_n.push(nconvexos);
+            }
+        }
+        escolhidos.sort( function() { return Math.random() - .5 } );
+        
+        if(jogada==max_jogadas){
+            sendData();
+        }
+        return escolhidos;
+    }
+    
+    function enableBut(butId, flag){
+        var butObj = document.getElementById(butId);
+        if(flag){
+            butObj.style.opacity = "1";
+        }else{
+            butObj.style.opacity = "0.1";
+        }
+        butObj.disabled = !flag;
+    }
+    
+    function loadImg(xdiv,source,largura=imgWidth){
+        var borderGross = Math.max(0,0.5*(imgWidth-largura));
+        var img = document.createElement("img");        
+        img.width=largura;
+        img.src = source;
+        document.getElementById(xdiv).appendChild(img);
+        if(borderGross>0){
+            img.style.border = borderGross+"px solid rgba(111,111,111,0.001)";
+        }
+        return img
+    }
+    
+    function selectImg(e){        
+        var qualRos = e.target;
+        var val = qualRos.getAttribute('valor'); 
+        somEscolha.play();
+        var pos = qualRos.getAttribute('posicao');
+        if (targets[pos].style.visibility=='hidden'){
+            targets[pos].style.visibility='visible';
+        }else{
+            targets[pos].style.visibility='hidden';
+        }
+        numEscolhidos = 0;
+        for(var i=0; i<targets.length; i++){
+            if(targets[i].style.visibility=='visible' && errados[i].style.visibility!='visible'){
+                numEscolhidos++;
+            }
+        }
+        
+        if(numEscolhidos==n_certos){
+            document.getElementById("confirmBut").style.visibility='visible';
+        }else{
+            document.getElementById("confirmBut").style.visibility='hidden';
+        }            
+    }
+    
+    function confirmar(){
+        var correctFlag;
+        var selectFlag;
+        var nErrados = 0;
+        var nCertos=0;
+        var numb;
+        for(var i=0; i<jogada_imgs; i++){
+            buts[i].removeEventListener('click', selectImg, false);
+            correctFlag = plan_s_all.includes(buts[i].getAttribute('valor'));
+            selectFlag = targets[i].style.visibility=='visible';
+            if(selectFlag){
+                if(correctFlag){
+                    nCertos++;
+                }else{
+                    errados[i].style.visibility = 'visible';
+                    nErrados++;
+                }
+            }
+        }
+
+        if(nCertos==n_certos){
+            var aplausosFile = somCerto;
+            if(tentativas==0){
+                feedbacks[jogada-1].src = iconsDir+"medalhaOuro.png";
+            }else if(tentativas==1){
+                feedbacks[jogada-1].src = iconsDir+"medalhaPrata.png";
+            }else if(tentativas==2){
+                feedbacks[jogada-1].src = iconsDir+"medalhaBronze.png";
+            }else{
+                feedbacks[jogada-1].src = iconsDir+"feedbackCerto.png";
+            }
+            aplausosFile.play();
+            if(jogada<max_jogadas){
+                showDialog('#successMessage');
+            }else{
+                document.getElementById("finalFeedback1").src = document.getElementById("feedback1").src;
+                document.getElementById("finalFeedback2").src = document.getElementById("feedback2").src;
+                //document.getElementById("finalFeedback3").src = document.getElementById("feedback3").src;
+                for(var i=0; i<lista_s.length;i++){
+                    document.getElementById("plan_fim"+(i+1)).src=assetDir+lista_s[i]+"-play.png";
+                    showAnimButs[i].setAttribute("valor",getListaindex(lista_s[i],plan_s_all));
+                }
+                showDialog('#finalMessage');
+            }
+        }else{
+            tentativas++;
+            showDialog('#errorMessage');
+            somErrado.play();
+            feedbacks[jogada-1].src = iconsDir+"feedbackErrado.png";
+            for(var i=0; i<jogada_imgs; i++){
+                selectFlag = targets[i].style.visibility=='visible';
+                if(!selectFlag){
+                    buts[i].addEventListener('click', selectImg, false);
+                }else{
+                    targets[i].style.opacity=0.5;
+                }
+            }
+        }
+
+        document.getElementById('confirmBut').style.visibility='hidden';
+    }
+    
+    function showDialog(tipo='#successMessage'){
+        $(tipo).show();
+        $(tipo).animate( {
+            left: '5%',
+            top: '5%',
+            width: '90%',
+            height: '90%',
+            opacity: 0.9
+        } );
+    }
+
+    function hideDialog(tipo='#successMessage'){
+        $(tipo).hide();
+        $(tipo).css( {
+            width: 0,
+            height: 0
+        } );
+        if(tipo=='#successMessage'){
+            novaJogada();
+        }
+    }
+    
+    function sendData(){
+        if (typeof(Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+            localStorage.setItem("nc", JSON.stringify(lista_n));
+            localStorage.setItem("c", JSON.stringify(lista_s));
+            //
+            console.log(typeof(Storage));
+        } else {
+          // Sorry! No Web Storage support..;
+          console.log("Sorry! No Web Storage support..");
+        }
+    }
+
+    function setLanguage(){
+        //console.log(lang);
+        if(lang=="en"){
+            document.getElementById('barra').textContent="Nets for the octahedron";
+            //document.getElementById('titulo').textContent="Choose the "+n_certos+" \"right\" nets for the octahedron";
+            document.getElementById('sucessText').textContent="Very well!";
+            document.getElementById('errorText').textContent="You haven't yet discovered all the \"right\" nets for the octahedron";
+            document.getElementById('errorText2').textContent="Try again!";
+            document.getElementById('finalText').textContent="End of the game!";
+         }else if(lang=="it"){
+            document.getElementById('barra').textContent="Piani dell'ottaedro";
+            document.getElementById('sucessText').textContent="Molto bene!";
+            document.getElementById('errorText').textContent="Non hai ancora scoperto tutti gli sviluppi piani \"giusti\" dell'ottaedro";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            document.getElementById('finalText').textContent="Fine del gioco!";
+        }else if(lang=="de"){
+            document.getElementById('barra').textContent="Netze für das Oktaeder";
+            document.getElementById('sucessText').textContent="Sehr gut";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle \“richtigen\” Netze für das Oktaeder entdeckt.";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            document.getElementById('finalText').textContent="Spielende";
+        }else{
+            document.getElementById('barra').textContent="Planificações do octaedro";
+            //document.getElementById('titulo').textContent="Escolhe as "+n_certos+" planificações do octaedro";
+            document.getElementById('sucessText').textContent="Muito bem!";
+            document.getElementById('errorText').textContent="Ainda não descobriste todas as planificações do octaedro";
+            document.getElementById('errorText2').textContent="Volta a tentar.";
+            document.getElementById('finalText').textContent="Final do jogo!";
+        }
+    }
+
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    function dist(P,Q){
+        return Math.sqrt(Math.pow(P.x-Q.x,2)+Math.pow(P.y-Q.y,2));
+    }
+
+    function openAnim(e){
+        var qualImg = e.target;
+        var num = Number(qualImg.getAttribute("valor"))+1;
+        window.open('./octaedro_plans.html?pre=p2pol_'+String(num));
+    }
+
+    function getListaindex(elem,lista){
+        var k=null;
+        for(var i=0; i<lista.length;i++){
+            if(elem==lista[i]){
+                k=i;
+                break;
+            }
+        }
+        return k;
+    }
+
+</script>
+
+</head>
+</html>

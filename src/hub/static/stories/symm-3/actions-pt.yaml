@@ -1,0 +1,1141 @@
+actions:
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    id: mathina-leo
+    src: mathina-leo.png
+    style: "width: 30%; top: 50%; left: 0%;"
+    align: right    
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo acabaram de chegar à Feira da Simetria, onde encontraram um enorme parque de diversões, com montanhas-russas, carrosséis e muitas barraquinhas, todas elas com inúmeros jogos e desafios.</p>
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 2
+      xPercent: 120
+      yPercent: 0
+      ease: power1.inOut
+  - type: sceneText
+    text: >
+      <p>Ficaram ambos fascinados com tantas diversões e atividades e muito ansiosos por experimentar tudo!</p>
+  - type: clearImage
+    id: mathina-leo
+  - type: clearBackground
+    id: fundo     
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    id: FrisoPlaca
+    src: FrisoPlaca.png
+    style: "width: 40%; top: 45%; left: 0%; z-index: 2;"
+    align: right
+  - type: image
+    id: feiticeiro-magia
+    src: feiticeiro-magia.png
+    style: "width: 17%; top: 25%; left: 10%; z-index: 3;"
+    align: right
+  - type: image
+    id: mathina
+    src: mathina4.png
+    style: "width: 9%; top: 28%; left: 50%; z-index: 4;"
+  - type: image
+    id: leo
+    src: leo2.png
+    style: "width: 20%; top: 45%; left: 55%; z-index: 5;"
+  - type: sceneText
+    text: >
+      <p>Mal chegaram à Feira da Simetria, depararam-se com um feiticeiro no meio da rua, que parecia estar a arranjar o pavimento.</p>
+  - type: sceneText
+    text: >
+      <p>O feiticeiro estava muito concentrado a executar algum tipo de magia: à sua frente, encontrava-se uma grande placa retangular e, depois de o feiticeiro murmurar algumas palavras, a placa elevava-se no ar, movia-se um pouco para a frente e caia novamente no chão, logo a seguir ao local onde havia caído antes.</p>
+  - type: clearBackground
+    id: fundo
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: FrisoPlaca
+  - type: clearImage
+    id: feiticeiro-magia
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    src: leo4.png
+    id: leo
+    style: "width: 17%%; top: 35%; left: 65%;"
+  - type: image
+    src: mathina5.png
+    id: mathina
+    style: "width: 20%; top: 35%; left: 17%;"
+  - type: image
+    src: placa.png
+    id: placa
+    style: "width: 20%; top: 60%; left: 42%;"
+  - type: sceneText
+    text: >
+      <p>A Mathina e o Leo examinaram a placa com muito cuidado – ela era muito fina e feita de um material estranho que eles nunca tinham visto; parecia borracha, mas era transparente e tinha uma figura (com tinta fresca dos dois lados da placa).</p>
+  - type: clearBackground
+    id: fundo
+  - type: clearImage
+    id: placa
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    id: FrisoPlaca
+    src: FrisoPlaca2.png
+    style: "width: 70%; top: 50%; left: 0%; z-index: 2;"
+  - type: image
+    id: feiticeiro
+    src: feiticeiro-magia.png
+    style: "width: 17%; top: 35%; left: 30%; z-index: 3;"
+    align: right
+  - type: image
+    id: mathina
+    src: mathina3.png
+    style: "width: 9%; top: 10%; left: 15%; z-index: 4;"
+  - type: image
+    id: leo
+    src: leo2.png
+    style: "width: 20%; top: 40%; left: 70%; z-index: 5;"
+  - type: sceneText
+    text: >
+      <p>A placa deixava um rasto no chão, com um desenho repetitivo.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-3/video/Anim%20Placa%20p111.mp4
+  - type: sceneText
+    text: >
+      <p>Tanto a Mathina como o Leo estavam espantados com o que o feiticeiro estava a fazer.</p>
+  - type: dialog
+    entries:
+      - text: "Desculpe, mas não estou a perceber o que está a fazer: o que é?"
+        char: mathina
+        mood: surprised
+      - text: "Estou a embelezar esta rua, carimbando frisos. Mas a tinta da placa está a desaparecer e tenho de ir ao meu castelo repô-la; o pior é que a placa é muito grande e difícil de transportar com a minha varinha mágica."
+        char: wizard
+      - text: "Porque é que não enrola a placa e a enfia na varinha?"
+        char: leo
+      - text: "Desculpa, como te chamas?"
+        char: wizard
+      - text: "Leo."
+        char: leo
+      - text: "E eu chamo-me Mathina."
+        char: mathina  
+      - text: "Bem Leo, essa é uma ideia muito boa!"
+        char: wizard    
+  - type: clearBackground
+    id: 'fundo'
+  - type: background
+    src: symm-bg4-04.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: FrisoPlaca
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: feiticeiro
+  - type: image
+    id: mathina
+    src: Mathina3.png
+    style: "width: 10%; top: 9%; left: 5%"
+  - type: image
+    id: leo
+    src: Leo5.png
+    style: "width: 11%; top: 50%; left: 12%"
+  - type: image
+    id: feiticeiro
+    src: Feiticeiro1.png
+    style: "width: 18%; top: 38%; left: 62%"
+  - type: sceneText
+    text: >
+      <p>Os três, juntos, enrolaram a placa e prenderam-na, usando alguns travessões da Mathina.</p>        
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_formcilindro.html
+  - type: clearBackground
+    id: 'fundo'
+  - type: background
+    src: symm-bg4-05.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: sceneText
+    text: >
+      <p>De seguida, enquanto o feiticeiro executava uma magia para chamar a varinha mágica, as crianças observaram-no, sem se aperceberem que o rolo, que estava pousado no chão, começara a rolar, dado que a rua tinha um certo declive.</p>
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_cilindro.html 
+  - type: dialog
+    entries:    
+      - text: "Oh, não! Temos de apanhar o rolo!"
+        char: leo
+        mood: surprised
+  - type: sceneText
+    text: >
+      <p>Os dois começaram a correr para apanhar o rolo. Contudo, quando se apercebeu que o rolo estava a carimbar exatamente o friso que pretendia, o feiticeiro exclamou entusiasmado:</p>
+  - type: clearBackground
+    id: 'fundo'
+  - type: background
+    src: symm-bg4-03.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: feiticeiro
+  - type: image
+    id: mathina
+    src: Mathina3.png
+    style: "width: 10%; top: 40%; left: 15%"
+  - type: image
+    id: leo
+    src: Leo2.png
+    style: "width: 20%; top: 45%; left: 25%"
+  - type: image
+    id: feiticeiro
+    src: Feiticeiro1.png
+    style: "width: 18%; top: 38%; left: 45%"
+  - type: dialog
+    entries:    
+      - text: "Olhem para o chão da rua! O rolo está a carimbar automaticamente o friso que eu queria!"
+        char: wizard
+        mood: excited
+  - type: sceneText
+    text: >
+      <p>Os três ficaram fascinados com tal acontecimento!</p>     
+  - type: dialog
+    entries:    
+      - text: "Isto é maravilhoso! Assim, posso carimbar as ruas muito mais facilmente! E reparem que, se mudarmos o desenho da placa, podemos criar muitos frisos diferentes!"
+        char: wizard
+        mood: excited
+  - type: game
+    tag: tg10
+    text: "Escolhe uma imagem, observa a formação do cilindro (“rolo”) e, depois, clica em"
+    toolbarText: "Escolhe uma imagem e observa a formação do cilindro (“rolo”)"
+    cta: "Experimenta carimbar outros frisos usando um “rolo”!"
+    url: /apps/Scilindro/index.html
+    img:
+      src: stamp.png
+      height: 40
+      width: 40
+  - type: dialog
+    entries:    
+      - text: "É muito fixe carimbar frisos assim!"
+        char: leo
+        mood: excited
+      - text: "Eu quero carimbar muitos frisos nas ruas da Feira da Simetria. Venham ver os meus desenhos."
+        char: wizard
+      - text: "Sim!"
+        char: leo
+        mood: excited
+  - type: clearBackground
+    id: 'fundo'
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: feiticeiro
+  - type: image
+    id: todos_frisos
+    src: todos_frisos.png
+    style: "width: 65%; top: 25%"
+    align: center        
+  - type: sceneText
+    text: >
+      <p>De um grupo de sacos guardados ao seu lado, o feiticeiro retirou uma grande quantidade de desenhos de frisos.</p>
+  - type: dialog
+    entries:    
+      - text: "Vamos ajudá-lo a carimbar frisos nas ruas!"
+        char: leo
+        mood: excited
+  - type: clearImage
+    id: todos_frisos
+  - type: image
+    id: friso2
+    src: friso2.png
+    style: "width: 50%; top: 30%"
+    align: center
+  - type: sceneText
+    text: >
+      <p>E, sem pedir autorização, o Leo agarrou num dos desenhos do feiticeiro:</p>
+  - type: dialog
+    entries:    
+      - text: "Vou começar por este!"
+        char: leo
+  - type: clearImage
+    id: friso2
+  - type: image
+    id: motivo-friso2
+    src: motivo-friso2.png
+    style: "width: 20%; top: 40%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Sim, Leo, tu vais poder carimbar o friso. Podes fazê-lo colocando este desenho na placa:"
+        char: wizard
+  - type: clearBackground
+    id: 'fundo'
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: motivo-friso2
+  - type: image
+    src: Mathina3.png
+    id: 'mathina'
+    style: "width: 11%; top: 30%; left:20%; z-index: 2;"
+  - type: image
+    src: Leo2.png
+    id: 'leo'
+    style: "width: 22%; top: 35%; left:30%; z-index: 3;"
+  - type: image
+    src: feiticeiro-vassoura.png
+    id: 'wizard'
+    style: "width: 30%; top: 30%; left:45%; z-index: 4;"
+  - type: dialog
+    entries:
+      - text: "Depois, podes carimbar o friso tal como antes! No entanto, antes disso, preciso de repor a tinta na placa. Até já!"
+        char: wizard
+  - type: animation
+    target: wizard
+    vars:
+      duration: 2
+      xPercent: 300
+      yPercent: 0
+      ease: power2.inOut
+  - type: sceneText
+    text: >
+      <p>E, sem mais demora, o feiticeiro desapareceu no ar com a placa, deixando as crianças para trás.</p>
+  - type: dialog
+    entries:    
+      - text: "Que dizes, Mathina, vamos ajudar o feiticeiro a carimbar frisos?"
+        char: leo
+  - type: clearBackground
+    id: 'fundo'
+  - type: clearImage
+    id: 'wizard'
+  - type: clearImage
+    id: 'mathina'
+  - type: clearImage
+    id: 'leo'    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    id: todos_frisos
+    src: todos_frisos.png
+    style: "width: 60%; top: 25%; z-index: 2;"
+    align: center
+  - type: image
+    src: Mathina3.png
+    id: 'mathina'
+    style: "width: 11%; top: 30%; left:5%; z-index: 3;"
+  - type: image
+    src: Leo2.png
+    id: 'leo'
+    style: "width: 22%; top: 35%; left:80%; z-index: 3;"
+  - type: dialog
+    entries:         
+      - text: "Siiim, Leo! Vamos começar por ver os desenhos que o feiticeiro deixou para trás."
+        char: mathina
+        mood: excited
+      - text: "Reparaste, Leo, que o friso que escolheste tem eixo de simetria, e que há outros aqui que não têm?"
+        char: mathina
+      - text: "Não. É verdade!"
+        char: leo
+      - text: "Vamos separá-los!"
+        char: mathina
+  - type: game
+    tag: tg4
+    text: "De cada vez, escolhe os 4 frisos com eixos de simetria e clica em"
+    toolbarText: "Escolhe os 4 frisos com eixos de simetria"
+    cta: "Experimenta separar os frisos!"
+    url: /apps/EscolheFrisos_ref/?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: clearImage
+    id: todos_frisos
+  - type: image
+    id: frisos_sacos
+    src: Sacos 123.png
+    style: "width: 50%; top: 35%; z-index: 2;"
+    align: center
+  - type: dialog
+    entries:         
+      - text: "E há mais! Há frisos que só têm eixos de simetria vertical, outros só têm horizontal e há os que têm ambos...."
+        char: leo
+      - text: "Não tinha reparado! Vamos separá-los em sacos!"
+        char: mathina
+  - type: image
+    src: feiticeiro-vassoura.png
+    id: 'wizard'
+    style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
+  - type: game
+    tag: tg5
+    text: "Separa os frisos, arrastando cada friso para o saco correspondente."
+    cta: "Experimenta!"
+    url: /apps/frisos_simref/
+  - type: clearBackground
+    id: 'fundo'
+  - type: clearImage
+    id: 'mathina'
+  - type: clearImage
+    id: 'leo'
+  - type: clearImage
+    id: frisos_sacos
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    src: Mathina3.png
+    id: 'mathina'
+    style: "width: 11%; top: 32%; left:25%; z-index: 4;"
+  - type: image
+    src: Leo2.png
+    id: 'leo'
+    style: "width: 22%; top: 37%; left:60%; z-index: 3;"
+  - type: animation
+    target: wizard
+    vars:
+      duration: 2
+      xPercent: 300
+      yPercent: 0
+      ease: power2.out
+  - type: sceneText
+    text: >
+      <p>Entretanto, as crianças ouviram um grande ruído no céu e, quase ao mesmo tempo, surgiu o feiticeiro ao lado delas.</p>
+  - type: dialog
+    entries:         
+      - text: "Olá novamente! O que é que estão a fazer?"
+        char: wizard
+      - text: "Estamos a examinar os seus desenhos. E reparámos que alguns deles têm eixos de simetria, mas outros não ..."
+        char: mathina
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: 'mathina'
+  - type: clearImage
+    id: 'leo'
+  - type: clearImage
+    id: 'wizard'
+  - type: image
+    id: friso2
+    src: friso2.png
+    style: "width: 50%; top: 35%"
+    align: center        
+  - type: dialog
+    entries:  
+      - text: "É verdade! E tu, Leo, sempre queres carimbar este friso?"
+        char: wizard
+  - type: clearImage
+    id: friso2
+  - type: image
+    id: motivo-friso2
+    src: motivo-friso2.png
+    style: "width: 20%; top: 40%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Siiiim! Então, basta fazer o seguinte: usar este desenho na placa"
+        char: leo
+        mood: excited
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg4-06.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: motivo-friso2
+  - type: dialog
+    entries:    
+      - text: "Enrolá-la assim:"
+        char: leo
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg4-07.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: dialog
+    entries:    
+      - text: "E carimbar o friso como antes!"
+        char: leo
+        mood: excited
+  - type: game
+    text: "Ver filme aqui!"
+    cta: "Ver"
+    url: /apps/anims/anim_cilindro2.html
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    src: friso2-carimbando.png
+    id: friso
+    style: "width: 50%; top: 50%; left: 20%"
+  - type: dialog
+    entries:    
+      - text: "Tens razão, Leo! Mas nem me parece que seja necessário usar um rolo! Acho que conseguimos carimbar o friso usando apenas uma placa com um “P”. Ora vê!"
+        char: mathina
+  - type: game
+    text: "Ver filme aqui!"
+    cta: "Ver"
+    url: /apps/anims/anim_friso_refV.html
+  - type: dialog
+    entries:    
+      - text: "Sim, Mathina, dessa forma é mais fácil! Isso resulta porque este friso tem simetria de reflexão vertical (ou eixo de simetria vertical)"
+        char: wizard
+      - text: "E, usando um processo parecido, podemos até criar um friso que tenha também simetria de reflexão horizontal. Ora vamos lá ver!"
+        char: wizard
+  - type: game
+    tag: tg11
+    text: "Experimenta carimbar frisos com simetria de reflexão horizontal e vertical usando uma “placa”. Escolhe uma imagem e observa a animação exibida na app."
+    cta: "Ver"
+    url: /apps/Sfriso_refVH/
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg5-01.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: friso
+  - type: sceneText
+    text: >
+      <p>Enquanto os três estavam concentrados a carimbar, apareceram nuvens negras no meio do céu. E, subitamente, começou a cair um aguaceiro!</p>     
+  - type: dialog
+    entries:    
+      - text: "Vamos abrigar-nos naquela barraquinha! Tragam os desenhos, não os deixem à chuva, senão vão estragar-se!"
+        char: wizard
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg5-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: sceneText
+    text: >
+      <p>Os três, encharcados, correram para a barraquinha mais próxima, à procura de abrigo.</p><p>Chovia torrencialmente na Feira da Simetria. A Mathina pensava para si mesma que nunca vira tanta chuva e só esperava que ela passasse rapidamente!</p>
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/symm-wooden-board.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    id: friso-roda
+    src: friso-roda.png
+    style: "width: 55%; top: 35%"
+    align: center    
+  - type: sceneText
+    text: >
+      <p>Enquanto aguardava, observava os desenhos dos frisos que tinham ficado fora dos sacos. Um deles era um pouco bizarro: se o rodarmos meia volta, ele fica exatamente com o mesmo aspeto!</p>
+  - type: game
+    tag: tg1
+    text: "Observa o filme!"
+    cta: "Ver aqui!"
+    url: /stories/symm-3/video/Anim%20Rotacao.mp4
+  - type: dialog
+    entries:    
+      - text: "Leo, olha para aqui, se rodarmos este friso, ele fica exatamente na mesma!"
+        char: mathina
+        mood: surprised       
+      - text: "Isso mesmo, Mathina, por isso dizemos que o friso tem simetria de rotação. Ora tenta ver, nos desenhos que tens aí, se há mais frisos com esta simetria!"
+        char: wizard
+  #
+  # App de escolher frisos com simetria de rotação
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg5-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: friso-roda
+  - type: image
+    src: Saco 4.png
+    id: saco4
+    style: "width: 15%; top: 35%; left: 70%"
+  - type: game
+    tag: tg6
+    text: "Seleciona os 3 frisos com simetria de rotação e clica em"
+    toolbarText: "Seleciona os 3 frisos com simetria de rotação"
+    cta: "Experimenta separar os frisos!"
+    url: /apps/EscolheFrisos_rot/?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  #
+  # Mathina pensa se haverá frisos com rotação nos outros sacos
+  - type: clearImage
+    id: saco4
+  - type: dialog
+    entries:    
+      - text: "Isto é muito interessante! Será que também há frisos com simetria de rotação entre os que já arrumei dentro dos sacos?"
+        char: mathina
+        mood: surprised
+  #
+  # Olhando para os 3 primeiros sacos
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/symm-wooden-board.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    src: Sacos 123_2.png
+    id: sacos123
+    style: "width: 50%; top: 40%"
+    align: center    
+  - type: sceneText
+    text: >
+      <p>Depois de examinar todos os sacos existentes, a Mathina fez uma descoberta! No primeiro saco, existiam frisos tanto com simetria de rotação, como sem ela...</p><p>A Mathina decidiu então retirar os frisos com simetria de rotação e metê-los num novo saco.</p>
+  #
+  # App de escolher frisos do saco 1 com rotação (saco 5)
+  - type: clearImage
+    id: sacos123
+  - type: image
+    src: Saco 5.png
+    id: saco5
+    style: "width: 40%; top: 40%"
+    align: center
+  - type: game
+    tag: tg7
+    text: "Seleciona os 3 frisos com simetria de rotação e clica em"
+    toolbarText: "Seleciona os 3 frisos com simetria de rotação"
+    cta: "Experimenta!"
+    url: /apps/EscolheFrisos_ref_rot/?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  #
+  # Leo quer voltar para o exterior
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: symm-bg5-03.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: saco5
+  - type: dialog
+    entries:   
+      - text: "Quero ir lá para fora carimbar frisos!"
+        char: leo
+  #
+  # Voltando para o exterior
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1-02.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: image
+    src: Mathina3.png
+    id: mathina
+    style: "width: 10%; top: 17%; left:4%; z-index:2"
+  - type: image
+    src: Leo2.png
+    id: leo
+    style: "width: 22%; top: 25%; left:15%; z-index:3"
+  - type: image
+    src: Feiticeiro2.png
+    id: wizard
+    style: "width: 19%; top: 35%; left:8%; z-index:4"
+  - type: sceneText
+    text: >
+      <p>Depois de o chão estar seco, e já na rua, o feiticeiro desafiou o Leo:</p>
+  #
+  # O Feiticeiro desafia o Leo a carimbar um friso
+  - type: image
+    id: friso3
+    src: friso3.png
+    style: "width: 40%; top: 60%"
+    align: center      
+  - type: dialog
+    entries:     
+      - text: "Então, Leo, queres carimbar este friso?"
+        char: wizard
+  #
+  # Leo quer carimbar usando o cilindro
+  - type: clearImage
+    id: friso3        
+  - type: image
+    id: motivo-friso3
+    src: motivo-friso3.png
+    style: "width: 10%; top: 50%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Sim! Eu vou escolher este desenho para a placa:"
+        char: leo
+        mood: excited
+  #
+  # Leo enrola o friso3
+  - type: clearImage
+    id: motivo-friso3
+  - type: image
+    id: motivo-friso3-enrolado
+    src: motivo-friso3-enrolado.png
+    style: "width: 25%; top: 50%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Vou enrolá-lo"
+        char: leo
+  #
+  # Leo carimba o friso3
+  - type: clearImage
+    id: motivo-friso3-enrolado
+  - type: image
+    id: friso3-carimbado
+    src: friso3-carimbado.png
+    style: "width: 40%; top: 55%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "e ... carimbar o friso!"
+        char: leo
+        mood: excited
+  #
+  # Animação a carimbar o friso3 com o cilindro
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_cilindro3.html
+  #
+  # Mathina pensa em carimbar o friso3 usando metade do carimbo
+  - type: dialog
+    entries:    
+      - text: "Tens razão, Leo! Mas até acho que conseguimos carimbar o friso usando meio rolo…"
+        char: mathina
+      - text: "O que estás a dizer?"
+        char: leo
+        mood: surprised
+  #
+  # Mathina mostra metade do carimbo do friso3
+  - type: clearImage
+    id: friso3-carimbado
+  - type: image
+    id: motivo-friso4
+    src: motivo-friso4.png
+    style: "width: 12%; top: 55%"
+    align: center
+  - type: dialog
+    entries:        
+      - text: "Repara, se escolhermos metade do desenho"
+        char: mathina
+  #
+  # Mathina enrola metade do carimbo
+  - type: clearImage
+    id: motivo-friso4
+  - type: image
+    id: motivo-friso4-enrolado
+    src: motivo-friso4-enrolado.png
+    style: "width: 20%; top: 55%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "e enrolarmos a placa assim"
+        char: mathina
+  #
+  # Mathina carimba metade do friso (parte 1)
+  - type: clearImage
+    id: motivo-friso4-enrolado
+  - type: image
+    id: friso4-carimbado
+    src: friso4-carimbado.png
+    style: "width: 35%; top: 55%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "carimbamos metade do friso:"
+        char: mathina
+  #
+  # Animação a carimbar a parte 1 do friso
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_cilindros_parte1.html
+  #
+  # Leo questiona Mathina sobre como carimbar a parte 2 do friso
+  - type: dialog
+    entries:    
+      - text: "Claro. Mas como é que carimbamos a outra metade?"
+        char: leo
+        mood: angry
+  #
+  # Mathina explica a Leo (parte 1)
+  - type: clearImage
+    id: friso4-carimbado
+  - type: image
+    id: motivo-friso5-enrolado1
+    src: motivo-friso5-enrolado1.png
+    style: "width: 40%; top: 60%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Calma, Leo! Só tens de voltar a abrir o cilindro e, em vez de o enrolar assim"
+        char: mathina
+  #
+  # Mathina explica a Leo (parte 2)
+  - type: clearImage
+    id: motivo-friso5-enrolado1        
+  - type: image
+    id: motivo-friso5-enrolado2
+    src: motivo-friso5-enrolado2.png
+    style: "width: 40%; top: 50%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "refletes a placa"
+        char: mathina
+  #
+  # Mathina explica a Leo (parte 3)
+  - type: clearImage
+    id: motivo-friso5-enrolado2        
+  - type: image
+    id: motivo-friso5-enrolado3
+    src: motivo-friso5-enrolado3.png
+    style: "width: 35%; top: 50%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "enrolas assim"
+        char: mathina
+  #
+  # Mathina explica a Leo (parte 4)
+  - type: clearImage
+    id: motivo-friso5-enrolado3        
+  - type: image
+    id: friso5-carimbado
+    src: friso5-carimbado.png
+    style: "width: 47%; top: 52%; left:30%"
+  - type: dialog
+    entries:    
+      - text: "e carimbas um novo friso, mesmo por baixo do anterior:"
+        char: mathina
+  #
+  # Animação a carimbar a parte 2 do friso
+  - type: game
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_cilindros_parte2.html
+  #
+  # Leo também quer carimbar
+  - type: clearImage
+    id: friso5-carimbado
+  - type: dialog
+    entries:    
+      - text: "Ah, já sei, já sei! Também quero carimbar!"
+        char: leo
+        mood: excited
+  #
+  # Muito apressado, Leo começa a carimbar
+  - type: image
+    id: friso6-carimbado
+    src: friso6-carimbado.png
+    style: "width: 47%; top: 52%; left:30%"
+  - type: sceneText
+    text: >
+      <p>Sempre com pressa, o Leo começou a carimbar o friso.</p>
+  #
+  # Animação do Leo a carimbar um friso com reflexão deslizante
+  - type: game
+    tag: tg8
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /apps/anims/anim_refdeslizante_leo.html
+  #
+  # Leo terminou!
+  - type: clearImage
+    id: friso6-carimbado
+  - type: image
+    id: friso4
+    src: friso4.png
+    style: "width: 40%; top: 60%"
+    align: center    
+  - type: dialog
+    entries:    
+      - text: "Pronto!"
+        char: leo
+        mood: excited
+  #
+  # Mathina diz a Leo que este não era o friso esperado
+  - type: dialog
+    entries:    
+      - text: "Mas, Leo, esse não é o friso que queremos! Repara que os “P” da tira de cima deviam ficar exatamente por cima das suas imagens refletidas na tira de baixo!"
+        char: mathina
+  #
+  # Oh não! - diz o Leo
+  - type: clearImage
+    id: friso4
+  - type: image
+    src: friso3.png
+    id: friso3
+    style: "width: 30%; top: 45%"
+    align: center
+  - type: image
+    id: friso4
+    src: friso4.png
+    style: "width: 30%; top: 70%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Oh, não!"
+        char: leo
+        mood: sad        
+  #
+  # Mathina explica a Leo o que é que correu mal e o Feiticeiro diz que quer este friso na feira da simetria
+  - type: clearImage
+    id: friso3
+  - type: clearImage
+    id: friso4
+  - type: image
+    id: friso4
+    src: friso4.png
+    style: "width: 40%; top: 60%"
+    align: center   
+  - type: dialog
+    entries:    
+      - text: "Repara que não fizeste o mesmo que eu, Leo, por exemplo tu cortaste o cilindro por cima e eu por baixo!"
+        char: mathina          
+      - text: "Mas não fiques desanimado, Leo! O friso que carimbaste não só é muito interessante, como também o pretendo ter na Feira da Simetria."
+        char: wizard
+      - text: "O friso que carimbaste tem o que se chama uma reflexão deslizante"
+        char: wizard
+      - text: "Tem o quê?"
+        char: leo
+        mood: surprised
+      - text: "Reflexão deslizante. Considera este friso e imagina uma cópia dele, que colocas exatamente por cima. É possível refletir a meio na horizontal e arrastar a cópia um pouco para a frente ou para trás, por forma a que o aspecto da imagem obtida seja idêntico ao da imagem inicial. Diz-se que o friso tem simetria de reflexão deslizante"
+        char: wizard
+  #
+  # Filme sobre a reflexão deslizante        
+  - type: game
+    tag: tg2
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-3/video/Anim%20RefDesl.mp4
+  #
+  # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: friso4
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: wizard
+  - type: image
+    src: Mathina4.png
+    id: mathina
+    style: "width: 10%; top: 17%; left:75%; z-index:2"
+  - type: image
+    src: Leo2.png
+    id: leo
+    style: "width: 22%; top: 40%; left:80%; z-index:3"
+  - type: image
+    src: Feiticeiro2.png
+    id: wizard
+    style: "width: 21%; top: 25%; left:2%; z-index:4"
+  - type: image
+    id: varios_frisos
+    src: varios_frisos.png
+    style: "width: 60%; top: 45%"
+    align: center
+  - type: dialog
+    entries:          
+      - text: "Ah! Já vi aqui frisos desse tipo!"
+        char: mathina
+      - text: "Vou separá-los num novo saco!"
+        char: mathina
+  #
+  # Jogo para separar os frisos com reflexão deslizante
+  - type: game
+    tag: tg12
+    text: "Escolhe os 3 frisos com simetria de reflexão deslizante e clica em"
+    toolbarText: "Escolhe os 3 frisos com simetria de reflexão deslizante"
+    cta: "Experimenta separar os frisos aqui!"
+    url: /apps/EscolheFrisos_refDesl/?lang=pt
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  #
+  # O Feiticeiro repara que Mathina tem estado a separar os frisos
+  - type: clearImage
+    id: varios_frisos
+  - type: image
+    id: quase_todos_sacos
+    src: quase_todos_sacos.png
+    style: "width: 60%; top: 30%"
+    align: center
+  - type: dialog
+    entries:
+      - text: "Mathina, reparei que separaste os desenhos dos frisos em vários sacos. Quantos sacos usaste?"
+        char: wizard
+  #
+  # Mathina dá conta de que os frisos estão distribuidos por 6 sacos
+  - type: dialog
+    entries:     
+      - text: "Bem, até agora, tenho seis sacos. Se arrumar os frisos que sobraram num novo saco, fico com sete."
+        char: mathina
+  #
+  # Mathina coloca os frisos restantes em 7 frisos
+  - type: clearImage
+    id: quase_todos_sacos
+  - type: image
+    id: todos_sacos
+    src: todos_sacos.png
+    style: "width: 60%; top: 30%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Esse último saco é o dos frisos que só têm simetria de translação."
+        char: wizard
+  #
+  # Mathina questiona o que será a simetria de translação
+  - type: clearImage
+    id: todos_sacos
+  - type: image
+    id: ultimo_saco
+    src: ultimo_saco.png
+    style: "width: 20%; top: 35%"
+    align: center
+  - type: dialog
+    entries:    
+      - text: "Simetria de translação? O que é isso?"
+        char: mathina
+  #
+  # O Feiticeiro explica a Mathina o que é a translação
+  - type: clearImage
+    id: ultimo_saco
+  - type: image
+    id: friso1
+    src: friso1.png
+    style: "width: 40%; top: 35%"
+    align: center
+  - type: dialog
+    entries:      
+      - text: "Considera por exemplo este friso:"
+        char: wizard
+      - text: "E imagina uma cópia dele, que colocas exatamente por cima. É sempre possível arrastar (diz-se translatar) a cópia um pouco para a frente ou para trás, por forma a que o aspecto da imagem obtida seja idêntico ao da imagem inicial. Diz-se que o friso tem simetria de translação."
+        char: wizard
+  #
+  # Animação sobre o que é a translação
+  - type: game
+    tag: tg3
+    text: "Observa o filme!"
+    cta: "Ver"
+    url: /stories/symm-3/video/Anim%20Translacao.mp4
+  #
+  # Volta a mostrar os 7 sacos com todos os frisos
+  - type: clearImage
+    id: friso1
+  - type: image
+    id: todos_sacos
+    src: todos_sacos.png
+    style: "width: 60%; top: 30%"
+    align: center    
+  - type: dialog
+    entries:      
+      - text: "O que vocês fizeram ao separar os frisos em sacos foi incrível! Na realidade, é possível separar os frisos de acordo com as suas simetrias, e há 7 (e só 7) tipos de frisos! Vocês encontraram-nos todos!"
+        char: wizard
+        mood: surprised
+      - text: "A sério?"
+        char: mathina
+        mood: surprised
+  #
+  # Jogo de rotular os sacos dos frisos
+  - type: game
+    tag: tg9
+    text: "Observa os frisos patentes em cada um dos 7 sacos obtidos. Para cada saco, arrasta os símbolos que correspondem às simetrias existentes nos frisos aí patentes."
+    cta: "Jogar!"
+    url: /apps/RotularFrisos/?lang=pt
+  #
+  # Parte final da história
+  - type: clearBackground
+    id: fundo
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: fundo
+  - type: clearImage
+    id: todos_sacos
+  - type: clearImage
+    id: mathina
+  - type: clearImage
+    id: leo
+  - type: clearImage
+    id: wizard
+  - type: image
+    src: Mathina3.png
+    id: mathina
+    style: "width: 10%; top: 40%; left:30%; z-index:2"
+  - type: image
+    src: Leo2.png
+    id: leo
+    style: "width: 22%; top: 40%; left:55%; z-index:3"
+  - type: image
+    src: Feiticeiro2.png
+    id: wizard
+    style: "width: 21%; top: 25%; left:40%; z-index:4"
+  - type: dialog
+    entries:    
+      - text: "Bem, adorei estar aqui, mas queria explorar outras diversões da Feira da Simetria!"
+        char: leo
+        mood: excited
+      - text: "Claro, Leo!"
+        char: wizard
+  - type: sceneText
+    text: >
+      <p>Antes de se despedirem, o feiticeiro quis agradecer à Mathina e ao Leo a sua valiosa contribuição para a Feira da Simetria: graças ao seu trabalho, não só existiam mais frisos, de diferentes tipos, a embelezar as ruas da Feira da Simetria, como também, com a ajuda deles, tinham sido descobertos novos métodos práticos para carimbar frisos.</p>
+  - type: sceneText
+    text: >
+      <p>Além disso, fora excecional a forma como a Mathina e o Leo, sozinhos, separaram os diferentes frisos, de acordo com o seu tipo de simetria. O feiticeiro ficou-lhes muito grato e declarou a Mathina e o Leo visitantes honorários da Feira de Simetria!</p>      

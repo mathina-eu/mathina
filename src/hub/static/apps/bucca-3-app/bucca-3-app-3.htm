@@ -1,0 +1,638 @@
+<html>
+
+<head>
+    <style>
+        html {
+            background: url(img/bg3_plain.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            font-family: "Roboto", sans-serif;
+        }
+
+        #Partenza {
+            position: absolute;
+            margin: auto;
+            top: 15%;
+            left: 2%;
+            width: 25%;
+            height: 70%;
+            z-index: 2;
+            border: solid;
+            border-color: #684213;
+            font-size: 32px;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
+
+        .PartContainer {
+            position: absolute;
+            top: 50%;
+            width: 94%;
+			left:3%;
+            -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
+            text-align: center;
+        }
+
+        #Arrivo {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+            width: 25%;
+            height: 70%;
+            z-index: 2;
+            border: solid;
+            border-color: #684213;
+            background: #FFFBEB;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            border-radius: 15px;
+        }
+
+        #DivCanvas {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        #CanvasMathina {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            visibility: visible;
+        }
+
+
+       #successMessage {
+        position: absolute;
+        /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: 2px;
+            margin: 5px;
+            width: 80%;
+            font-family: Monospace;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 32px;
+        }
+    </style>
+    <script>
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        Lingua = 1;
+
+
+        Traduzioni=[
+[["Trad1"],"Sum these numbers with the aid of this strange clock!",
+"Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!","Soma esses n&uacute;meros com a ajuda deste estranho rel&oacute;gio!","Addiere diese Zahlen mit Hilfe dieser seltsamen Uhr!"],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+];
+
+
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
+
+
+        function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
+
+        function Init() {
+            Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
+
+            window.CanvasMathina = document.getElementById('CanvasMathina');
+            window.ctxMathina = CanvasMathina.getContext('2d');
+
+            GenerateEx();
+
+            DivCanvas.addEventListener('mousedown', Down, false);
+            DivCanvas.addEventListener('mouseup', Up, false);
+            DivCanvas.addEventListener('mouseout', Up, false);
+            DivCanvas.addEventListener('mousemove', Move, false);
+
+            DivCanvas.addEventListener('touchstart', Down, false);
+            DivCanvas.addEventListener('touchend', Up, false);
+            DivCanvas.addEventListener('touchmove', Move, false);
+
+            window.addEventListener('resize', Resize, false);
+
+            Resize();
+
+            
+        }
+
+
+        function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ? doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+			
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+
+            CanvasMathina.width = dimension[0];
+            CanvasMathina.height = dimension[1];
+
+			Reset();
+        }
+
+        function Reset() {
+
+            RaggioClock = Math.min(dimension[0] * (2 / 5) / 2,dimension[1] * (4 / 5) / 2);
+            LungLancetta = RaggioClock * 3 / 4;
+
+
+            AngPosizione1 = 0;
+            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            DisegnaQuadrante();
+            DisegnaLancetta(0);
+
+        }
+
+        function DisegnaQuadrante() {
+
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(230,230,230)";
+            ctxMathina.lineWidth = 1;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            ctxMathina.arc(dimension[0] / 2, dimension[1] / 2, RaggioClock, 0, Math.PI * 2, true);
+            ctxMathina.fill();
+            ctxMathina.stroke();
+
+            for (let i = 0; i < NumeroOre; i++) {
+                var Angle = i * Math.PI * 2 / NumeroOre - Math.PI / 2;
+                var LX = dimension[0] / 2 + RaggioClock * Math.cos(Angle) * 6 / 7;
+                var LY = dimension[1] / 2 + RaggioClock * Math.sin(Angle) * 6 / 7;
+                ctxMathina.beginPath();
+                ctxMathina.fillStyle = "rgb(0,0,0)";
+                ctxMathina.textAlign = "center";
+                ctxMathina.font = "28px Arial";
+                ctxMathina.fillText(i, LX, LY);
+
+            }
+        }
+
+        function DisegnaLancetta(Deg) {
+            var Angle = Deg - Math.PI / 2;
+            var LX = dimension[0] / 2 + LungLancetta * Math.cos(Angle);
+            var LY = dimension[1] / 2 + LungLancetta * Math.sin(Angle);
+            ctxMathina.beginPath();
+            ctxMathina.lineWidth = 5;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            canvas_arrow(ctxMathina, dimension[0] / 2, dimension[1] / 2, LX, LY);
+            ctxMathina.stroke();
+        }
+
+
+        function canvas_arrow(context, fromx, fromy, tox, toy) {
+            var headlen = 10; // length of head in pixels
+            var dx = tox - fromx;
+            var dy = toy - fromy;
+            var angle = Math.atan2(dy, dx);
+            context.moveTo(fromx, fromy);
+            context.lineTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+            context.moveTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+        }
+
+
+
+
+        function Down(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
+
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
+
+            MousePos = [mousexMov, mouseyMov];
+            InMovimento = 1;
+
+            MouseStart = [mousexMov, mouseyMov];
+            if (MousePos[0] <= dimension[0] / 2) AngMouseIniziale = -find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+            else AngMouseIniziale = find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+
+            startAnima();
+        }
+
+        function find_angle(A, B, C) {
+            var AB = Math.sqrt(Math.pow(B[0] - A[0], 2) + Math.pow(B[1] - A[1], 2));
+            var BC = Math.sqrt(Math.pow(B[0] - C[0], 2) + Math.pow(B[1] - C[1], 2));
+            var AC = Math.sqrt(Math.pow(C[0] - A[0], 2) + Math.pow(C[1] - A[1], 2));
+            return Math.acos((BC * BC + AB * AB - AC * AC) / (2 * BC * AB));
+        }
+
+        function Up(ev) {
+            ev.preventDefault();
+            if (typeof(InMovimento) !== 'undefined' && InMovimento == 1) {
+                AngPosizione1 = AngPosizione1 + AngMouseFinale - AngMouseIniziale;
+                AngPosizione1 = Math.round(NumeroOre * AngPosizione1 / (2 * Math.PI)) * (2 * Math.PI / NumeroOre);
+                InMovimento = 0;
+            }
+            if (typeof CurrentAnim != 'undefined') {
+                cancelAnimationFrame(CurrentAnim);
+
+            }
+            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            DisegnaQuadrante();
+            DisegnaLancetta(AngPosizione1);
+        }
+
+        function Move(ev) {
+            ev.preventDefault();
+            if (ev.changedTouches != null) {
+                touchobject = ev.changedTouches[0];
+                var mousexMov = touchobject.clientX - this.offsetLeft;
+                var mouseyMov = touchobject.clientY - this.offsetTop;
+            } else {
+                var mousexMov = ev.clientX - this.offsetLeft;
+                var mouseyMov = ev.clientY - this.offsetTop;
+            }
+            MousePos = [mousexMov, mouseyMov];
+
+
+        }
+
+        function startAnima() {
+            fpsInterval = 1000 / 60;
+            then = Date.now();
+            startTime = then;
+            Anima();
+            AngoloPrec = AngPosizione1;
+            AngoloDelta = 0;
+            AngoloVero = 0;
+        }
+
+        function Link() {
+            location.reload();
+
+        }
+
+        function DisegnaSomma(Ang0, Ang1) {
+            //if (Ang0<0) Ang0+=2*Math.Pi;
+            Ang0 = Ang0 - Math.PI / 2;
+            AngFinale = Ang0 + Ang1;
+
+            ctxMathina.beginPath();
+            ctxMathina.lineWidth = 5;
+            ctxMathina.strokeStyle = "rgb(0,0,0)";
+            ctxMathina.arc(dimension[0] / 2, dimension[1] / 2, RaggioClock / 2, AngFinale, Ang0, true);
+            ctxMathina.stroke();
+
+
+            AGira = Ang0 + Ang1 / 2;
+            var TX = dimension[0] / 2 + RaggioClock * Math.cos(AGira) / 3;
+            var TY = dimension[1] / 2 + RaggioClock * Math.sin(AGira) / 3
+            ctxMathina.beginPath();
+            ctxMathina.fillStyle = "rgb(0,0,0)";
+            ctxMathina.textAlign = "center";
+            ctxMathina.font = "30px Arial";
+            ctxMathina.fillText(Math.floor((NumeroOre * AngoloVero + 0.8) / (2 * Math.PI)), TX, TY);
+
+        }
+
+        function Anima() {
+            window.CurrentAnim = requestAnimationFrame(Anima);
+            now = Date.now();
+            elapsed = now - then;
+            if (elapsed > fpsInterval) {
+                then = now - (elapsed % fpsInterval);
+                var Angolo1 = AngPosizione1;
+                if (InMovimento == 1) {
+                    if (MousePos[0] <= dimension[0] / 2) AngMouseFinale = -find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+                    else AngMouseFinale = find_angle([dimension[0] / 2, dimension[1] / 2 - 100], [dimension[0] / 2, dimension[1] / 2], MousePos);
+                    Angolo1 += AngMouseFinale - AngMouseIniziale;
+                }
+                AngoloDelta = Angolo1 - AngoloPrec;
+                AngoloPrec = Angolo1;
+
+                if (AngoloDelta < -1) AngoloDelta = AngoloDelta + 2 * Math.PI;
+                if (AngoloDelta > 1) AngoloDelta = AngoloDelta - 2 * Math.PI;
+                AngoloVero += AngoloDelta;
+
+                ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+                DisegnaQuadrante();
+                DisegnaLancetta(Angolo1);
+                console.log(AngoloVero);
+                if (AngoloVero > 0) DisegnaSomma(AngPosizione1, AngoloVero);
+            }
+        }
+
+       function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.visibility = "visible";
+
+        }
+
+        function shuffle(array) {
+            var currentIndex = array.length,
+                temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+        }
+
+        function GenerateEx() {
+            NumeroOre = 5 + Math.floor(Math.random() * 15);
+            LetA = Math.floor(Math.random() * NumeroOre);
+            LetB = Math.floor(Math.random() * NumeroOre);
+            LetC = Math.floor(Math.random() * NumeroOre);
+            if (LetA + LetB + LetC < NumeroOre) LetC = NumeroOre + Math.floor(Math.random() * NumeroOre) - LetA - LetB;
+            CorrectAnswer = Math.floor(Math.random() * 4 + 1);
+            RispostaCorretta = (((LetA + LetB + LetC) % NumeroOre) + NumeroOre) % NumeroOre;
+
+            var NumeriTot = Array.from(Array(NumeroOre).keys());
+            NumeriTot.splice(NumeriTot.indexOf(RispostaCorretta), 1);
+            NumeriTot = shuffle(NumeriTot);
+
+
+            ParolaOriginale = LetA + " + " + LetB;
+            //ParolaTradotta=Cesare(ParolaOriginale,Alphabet,Math.floor(Math.random()*Alphabet.length));
+            document.getElementById("paroladatradurre").innerHTML = LetA + " + " + LetB + " + " + LetC;
+            document.getElementById("Btn1").innerHTML = NumeriTot[0];
+            document.getElementById("Btn2").innerHTML = NumeriTot[1];
+            document.getElementById("Btn3").innerHTML = NumeriTot[2];
+            document.getElementById("Btn4").innerHTML = NumeriTot[3];
+            document.getElementById("Btn" + CorrectAnswer).innerHTML = RispostaCorretta;
+
+        }
+
+        function Check(N) {
+            if (CorrectAnswer == N) Finisci();
+            else Sconfitta();
+
+
+        }
+    </script>
+</head>
+
+<body onload="Init()">
+    <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
+    <div id="Partenza">
+        <div class="PartContainer">
+            <p><span id="Trad1">Proviamo a sommare questi numeri ed esprimere il risultato usando le ore di questo orologio!</span></p>
+            <b id="paroladatradurre"></b>
+        </div>
+    </div>
+    <div id="Arrivo">
+        <div class="PartContainer"><button type="button" onclick="Check(1)" id="Btn1" class="button"></button><br>
+            <button type="button" onclick="Check(2)" id="Btn2" class="button"></button><br>
+            <button type="button" onclick="Check(3)" id="Btn3" class="button"></button><br>
+            <button type="button" onclick="Check(4)" id="Btn4" class="button"></button><br>
+        </div>
+    </div>
+     <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fmat2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fmat1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+	
+	<script>
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
+</body>
+
+</html>

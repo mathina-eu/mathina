@@ -5,10 +5,13 @@
       :clipped="$vuetify.breakpoint.lgAndUp"
       disable-resize-watcher
       disable-route-watcher
+      overlay-color="#f1f1f1"
+      z-index="100"
       app
     >
       <v-list>
         <v-list-group
+          color="blue darken-4"
           :prepend-icon="`mdi-history`"
           append-icon=""
         >
@@ -90,21 +93,6 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-group>
-          <v-list-item
-            v-else
-            :key="item.text"
-            :to="localePath(item.to)"
-            link
-          >
-            <v-list-item-action>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-action>
-            <v-list-item-content>
-              <v-list-item-title>
-                {{ $t('menu.select-age') }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
         </template>
       </v-list>
     </v-navigation-drawer>
@@ -112,7 +100,7 @@
     <v-app-bar
       :clipped-left="$vuetify.breakpoint.lgAndUp"
       app
-      color="purple darken-3"
+      color="blue darken-4"
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
@@ -139,12 +127,6 @@
         </span>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-apps</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>mdi-bell</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container

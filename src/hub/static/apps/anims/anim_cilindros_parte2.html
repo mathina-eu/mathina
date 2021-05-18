@@ -1,0 +1,1534 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Animation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<script type="text/javascript">
+
+function getParameterByName(name,url){
+ name=name.replace(/[\[\]]/g,"\\$&");
+ var regex=new RegExp("[?&]"+name+"(=([^&#]*)|&|#|$)"),
+  results=regex.exec(url);
+ if(!results) return null;
+ if(!results[2]) return '';
+ return decodeURIComponent(results[2].replace(/\+/g," "));
+}
+function parseData(){
+ var u=window.location.href,num,nAzu;
+ num=getParameterByName("num",u)
+ nAzu=parseInt(num);
+ /*tip=getParameterByName("tip",u)
+ typ=parseInt(tip);
+ rua=getParameterByName("rua",u)
+ ruaA=parseInt(rua);
+ var dados=[];
+ dados.push(nAzu)
+ dados.push(typ)
+ dados.push(ruaA)
+ return dados*/
+ return nAzu
+}
+
+
+</script>
+<style type="text/css">
+html {
+  width: 100%;
+  height: 100%;
+  margins:0 px;
+  background: #fae47b; 
+}
+</style>	
+	<style type="text/css">
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 162px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 6px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -210%;
+    left: 0%;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    margin-left: 6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent  #555  transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+</style>
+	<script>
+	
+	
+nAzu=2;
+	
+	function dig3(n)
+{
+ if(n<10)
+ { var k = "00"+n}
+ else
+ {if(n<100)
+ var k = "0"+n
+ else
+ {var k = n};};
+ return k
+}
+	
+	
+	
+	function myFunction(image){
+    var img = new Image();
+    img.src = image;
+    img.onload = function() {   
+         a=this.width/this.height;
+		 return a
+        
+}}
+var imgname = "../atractor-apps-all/imgs/mot"+parseInt(nAzu)+".png";
+var a = myFunction(imgname)
+
+</script>
+</head>
+	<body onload="init();animate();return false">
+
+<div id="THREE" style="position:absolute; top: 0px;"></div>
+
+
+<img  src="../atractor-apps-all/icons/pause.png"  width=3.5% id=pauseRotateButton onClick=pauseRotation() style="position:absolute;  top: 10px;"></img>
+<img  src="../atractor-apps-all/icons/play.png"  width=3.5% id=playRotateButton onClick=playRotation() style="position:absolute; top: 10px; display: none;"></img>
+
+
+<input type="range" name="RangeVal" value="RangeVal" id="range" min="-2.5" max="3.5" step=".1" style="display:none"  />
+<input type="range" name="RangeVal2" value="RangeVal2" id="range2" min="0" max="4.2" step=".1" style="display:none" />
+<input type="range" name="RangeVal3" value="RangeVal3" id="range3" min="0" max="7" step=".1" style="display:none" />
+
+
+
+<img  src="../atractor-apps-all/icons/enrolarinvertido.png"  width=2.5% id=cilindroButton onClick=nextV() style="display: none;"></img>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="../atractor-apps-all/icons/girar.png"  width=2% id=moveButton onClick=movef() style="display: none;"></img>
+<input type="range" name="RangeValm" value="RangeValm" id="rangem" min="-1" max="0" 
+step=".01" style="display: none;" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="../atractor-apps-all/icons/stamp.png"  width=2.5% id=carimbButton onClick=carimb() style="display: none;"></img>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img  src="../atractor-apps-all/icons/camera.png"  width=2.5% id=viewpointButton onClick=viewpoint() style="display: none;"></img>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../atractor-apps-all/icons/back.png" width=2.5% onclick="home();" style="display: none;"></img>
+
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/three87.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/Detector.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/TrackballControls.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+
+function chgMode(md){
+ var u=window.location.href,
+  r=new RegExp("_md([a-z]+)(-_[a-z][a-z])?[.]html");
+
+
+   window.location.href=u.replace(r,"_md"+md+".html");
+  }
+ //]]>
+</script>
+
+<script>
+var fase=1; 
+var fim=false; 
+function home(){
+	window.location.href="Scilindros_ini.html"
+}
+
+
+function nextV(){document.getElementById('rangem').value =0;
+
+document.getElementById('range').style.display='none';
+document.getElementById('range2').style.display='inline';
+document.getElementById('cilindroButton').style.display='none';
+document.getElementById('pauseRotateButton').style.display='inline'; 
+		   document.getElementById('playRotateButton').style.display='none';
+fase=2;
+isRotating=true;
+}
+
+var ntt; 
+var texturep2; 
+function carimb(){
+
+	document.getElementById('range2').style.display='none';
+	document.getElementById('moveButton').style.display='none';
+	document.getElementById('carimbButton').style.display='none';
+	document.getElementById('rangem').style.display='none';
+document.getElementById('range3').style.display='none';
+document.getElementById('pauseRotateButton').style.display='inline'; 
+		   document.getElementById('playRotateButton').style.display='none';
+fase=3;
+isRotating=true;
+ntt=RangeValm
+texturep2 = new THREE.TextureLoader().load(imgname);
+
+
+// assuming you want the texture to repeat in both directions:
+texturep2.wrapS = THREE.RepeatWrapping; 
+texturep2.wrapT = THREE.RepeatWrapping;
+
+texturep2.offset.x=-nn*(ntt)
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+texturep2.repeat.set( 6*nn, -1 );
+}
+
+
+
+range3.oninput = function() {
+			
+    var tt = this.value;RangeVal3=parseFloat(this.value);
+	displaySupC(tt*nn);
+	if(tt==7){
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal3=0;}
+}
+range3.onchange = function() {
+
+var tt = this.value;RangeVal3=parseFloat(this.value);
+    displaySupC(tt*nn);
+	
+	if(tt==7){
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal3=0;}
+
+}
+
+
+
+
+range2.oninput = function() {
+    var tt = this.value;RangeVal2=parseFloat(this.value);
+	displaySup3(tt*nn);
+
+	if(tt==4.2){
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal2=0;ntt=0;RangeValm=0;document.getElementById('rangem').value =0}
+}
+range2.onchange = function() {var tt = this.value;RangeVal2=parseFloat(this.value);
+    displaySup3(tt*nn);
+if(tt==4.2){
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal2=0;ntt=0;RangeValm=0;document.getElementById('rangem').value =0}}
+
+
+rangem.oninput=function () {
+var tt2 = this.value;RangeValm=parseFloat(this.value);
+  displaySup2(-tt2*nn);
+
+				}
+
+
+rangem.onchange=function () {
+ 	
+var tt2 = this.value;RangeValm=parseFloat(this.value);
+  displaySup2(-tt2*nn);
+			
+				}
+
+
+var speed=0.015	
+
+var nn=1; 
+var initv = 0;	
+
+var materialtext2,
+materialtexti, materiali
+/*
+var imgnamei=imgname.substring(0,imgname.length - 4)+'a.png';
+var textcili= new THREE.TextureLoader().load(imgnamei);
+textcili.wrapS = THREE.RepeatWrapping; 
+textcili.wrapT = THREE.RepeatWrapping;
+textcili.repeat.set( -1, -1 );
+textcili.offset.x=0.5;
+
+var materiali = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgnamei) ,side: THREE.DoubleSide} );
+	
+	
+materialtexti =   new THREE.MeshLambertMaterial( { map:textcili } )
+	materialtexti.side=THREE.DoubleSide;
+	
+*/	
+var textcil2= new THREE.TextureLoader().load(imgname);
+textcil2.wrapS = THREE.RepeatWrapping; 
+textcil2.wrapT = THREE.RepeatWrapping;
+textcil2.repeat.set( -1, -1 );
+textcil2.offset.x=0.5;
+
+materialtext2 =   new THREE.MeshLambertMaterial( { map:textcil2 } )
+	materialtext2.side=THREE.DoubleSide;
+	
+
+var materialtext
+var textcol
+
+materialtext =   new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,side: THREE.DoubleSide} )
+			
+		texturecol = new THREE.TextureLoader().load('../atractor-apps-all/imgs/col1.png');
+
+
+// assuming you want the texture to repeat in both directions:
+texturecol.wrapS = THREE.RepeatWrapping; 
+texturecol.wrapT = THREE.RepeatWrapping;
+
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+texturecol.repeat.set( 1,.02 ); 		
+texturecol.needsUpdate = true;	
+		
+				
+var material = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,side: THREE.DoubleSide} );
+		
+		texturep = new THREE.TextureLoader().load(imgname);
+
+
+// assuming you want the texture to repeat in both directions:
+texturep.wrapS = THREE.RepeatWrapping; 
+texturep.wrapT = THREE.RepeatWrapping;
+
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+texturep.repeat.set( 6*nn, 1 ); 
+
+		
+ 
+
+
+
+
+var localPlane = new THREE.Plane( new THREE.Vector3( 1,0,0 ), 0 ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( - 1, 0, 0 ), 0 );
+			
+var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+var materialtap = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+var materialtap2 = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+		
+		RangeVal=-2.5;
+		RangeVal2=0;
+		RangeVal3=0;
+		RangeValm=0;
+			var camera, scene, renderer, controls, planef, tempo, tempo2;
+			var mesh;
+			var meshFunction;
+			var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;
+			var segments = 40;
+			var tapete;
+			var tapete2;
+
+var h_plane = -0.001;
+var h_pad = h_plane+0.0001;
+var h_tap = h_plane+0.0002;
+			
+			range.oninput = function() {
+    var tt = this.value;RangeVal=parseFloat(this.value);
+	displaySup(tt*nn);
+	if(tt==3.5) {
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal=-2.5;
+	cilindroButton.style.display="inline"} else {cilindroButton.style.display="none"};
+
+}
+range.onchange = function() {var tt = this.value;RangeVal=parseFloat(this.value);
+    displaySup(tt*nn);
+	if(tt==3.5) {isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal=-2.5;
+cilindroButton.style.display="inline"} else {cilindroButton.style.display="none"};
+
+}
+
+
+
+			
+			function init() {
+			
+			var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+
+				// CENA + PROCESSAMENTO DE IMAGEM WEBGL
+ 			var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg4-02.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+ 				scene = new THREE.Scene();
+				renderer = new THREE.WebGLRenderer();
+				renderer.setSize( width, height );
+				
+				
+				document.getElementById('THREE').appendChild( renderer.domElement );
+				renderer.setClearColor(0xfae47b,1);
+				
+				// CAMERA
+				var aspect=width/height, near=0.1, far=2000;
+				camera = new THREE.PerspectiveCamera(50,aspect,near,far);
+				var kc = 4*a*nn
+				camera.position.set(-2.4*kc,2*kc,1.3*kc);
+				//camera.position.set(0,2*kc,0);
+				camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+					
+				// LUZES
+				var light = new THREE.PointLight(0xf0f0f0);
+light.position.set(-25,20,-50);
+//scene.add(light);
+				var light2 = new THREE.PointLight(0xffffff);
+				light2.position.set(-20,20,0);
+				//scene.add(light2);
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );
+
+controls = new THREE.TrackballControls( camera, renderer.domElement );
+	controls.noPan = true;
+
+
+				this.mesh = new THREE.Object3D(); 
+mesh = Sup(RangeVal);
+
+	var translation0 = new THREE.Matrix4().makeTranslation(-a,0,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+				scene.add( mesh );
+				
+				
+
+
+planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn, 2), materialp);
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+var translation = new THREE.Matrix4().makeTranslation(a,0,0);
+
+//planef.applyMatrix(translation)
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+
+	
+var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn+1, 2*2+1), materialtap2);
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+planeff.position.z = 1;
+
+scene.add(planeff);
+
+				
+				// INSERIR EVENTO onWindowResize()
+window.addEventListener('resize', function() {
+       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+renderer.setSize(width,height);
+      });
+
+			}
+
+			
+
+
+function animate() {requestAnimationFrame(animate);
+if(fase==1) {render();} 
+else {if(fase==2) {render2()} else {renderC();}};}
+
+function render() {
+		
+				renderer.localClippingEnabled = true;
+
+				
+				
+var kc = 4*a*nn
+
+				camera.fov = 22;
+camera.updateProjectionMatrix();
+
+				camera.position.set(3.4*kc,3.4*kc,5.6*kc);
+						
+				camera.lookAt(new THREE.Vector3(0,2,0));
+				camera.up.set(0,55,0)
+				renderer.render( scene, camera )
+				
+				
+				
+				if(initv==1) {RangeVal = -2.5;
+	tt=-2.5;
+	document.getElementById('range').value = -2.5;
+	scene.remove.apply(scene,scene.children)
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );
+var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn+1, 2+1), materialtap2);
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+scene.add(planeff);		
+displaySup(-2.5); tempo=[];
+ initv=0;
+ 
+ isRotating=true;pauseRotateButton.innerHTML="Parar Animação";
+ }
+	
+else {	
+	
+	if(isRotating)
+    { RangeVal += speed;
+var tt=Math.min(RangeVal,3.5);cilindroButton.style.display="none";
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+	  displaySup(tt*nn); 
+	  
+	 	  if(RangeVal>=3.5) {isRotating=false;
+		   document.getElementById('pauseRotateButton').style.display='none'; 
+		   document.getElementById('playRotateButton').style.display='inline'; 
+		  cilindroButton.style.display="inline"
+		  
+
+		  RangeVal=-2.5;	    document.getElementById('range').value = -2.5;}
+    }};
+	
+	if(animvp) {	var pos= new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z )
+	 
+var posf=pos.clone().applyAxisAngle(new THREE.Vector3(0,1,0),speed/8) 
+	 camera.position.set(posf.x,posf.y,posf.z);
+	  	camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0, 55, 0)
+        camera.updateProjectionMatrix()
+		}
+			
+				renderer.render( scene, camera );}
+			
+	
+	
+			function Sup(clock)
+{
+
+					
+			var k = (a/Math.PI)
+	
+			var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;	
+		
+				// DEF DA FUNCAO (X,Y)
+				meshFunction = function(x, y) {
+				var x00 = (xMax-xMin) * x + xMin;
+					var y00 = (yMax-yMin) * y + yMin;
+					
+					
+					var x0 = k*Math.sin(x00/k);
+					var y0 = k-k*Math.cos(x00/k);
+					var z0 = y00;
+				
+				
+		
+					
+									
+						return new THREE.Vector3(x0, y0, -z0);
+					
+				};
+				
+				
+	
+
+				// SUPERFICIE
+				
+				var geometry = new THREE.ParametricGeometry( meshFunction, segments, segments/10 );
+					
+					mesh=new THREE.Group();		
+					
+				var mesh0 = new THREE.Mesh( geometry, material );
+				
+				mesh.add(mesh0);
+				
+				var espelhoi = new THREE.Curve();
+espelhoi.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,1)
+    return curvep;
+    };
+
+var geometryespi = new THREE.TubeGeometry( espelhoi, 60, .01, 20, false );
+var materialespi =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshespi = new THREE.Mesh( geometryespi, materialespi );
+mesh.add( meshespi );
+
+
+var espelho2i = new THREE.Curve();
+espelho2i.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,0)
+    return curvep;
+    };
+
+var geometryesp2i = new THREE.TubeGeometry( espelho2i, 60, .01, 20, false );
+var materialesp2i =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshesp2i = new THREE.Mesh( geometryesp2i, materialesp2i );
+mesh.add( meshesp2i );
+			
+				return mesh
+				
+
+}
+
+
+function Sup2(clock)
+{
+
+mesh=new THREE.Group();		
+			//var clock = document.getElementById('range').value;
+				var k = Math.max(50-Math.pow((clock),1/20)*(50-(a/Math.PI)),50-Math.pow((1),1/20)*(50-(a/Math.PI)));
+		
+var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;		
+				
+				// DEF DA FUNCAO (X,Y)
+				meshFunction = function(x, y) {
+				var x00 = (xMax-xMin) * x + xMin;
+					var y00 = (yMax-yMin) * y + yMin;
+					
+					
+					var x0 = k*Math.sin(x00/k);
+					var y0 = k-k*Math.cos(x00/k)-2*a/Math.PI;
+					var z0 = y00;
+					
+						return new THREE.Vector3(x0,-y0, z0);
+					
+				};
+				
+				
+	
+
+				// SUPERFICIE
+				
+			
+				
+				var geometry = new THREE.ParametricGeometry( meshFunction, segments, segments );
+					
+				mesh0 = new THREE.Mesh( geometry, materialtext2 );
+				
+			mesh.add(mesh0);
+			
+			var espelhoi = new THREE.Curve();
+espelhoi.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,1)
+    return curvep;
+    };
+
+var geometryespi = new THREE.TubeGeometry( espelhoi, 60, .01, 20, false );
+var materialespi =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshespi = new THREE.Mesh( geometryespi, materialespi );
+mesh.add( meshespi );
+
+
+var espelho2i = new THREE.Curve();
+espelho2i.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,0)
+    return curvep;
+    };
+
+var geometryesp2i = new THREE.TubeGeometry( espelho2i, 60, .01, 20, false );
+var materialesp2i =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshesp2i = new THREE.Mesh( geometryesp2i, materialesp2i );
+mesh.add( meshesp2i );
+			
+			
+			var espelho = new THREE.Curve();
+espelho.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+   
+	curvep = meshFunction(1,t)
+    return curvep;
+    };
+
+	var espelho2 = new THREE.Curve();
+espelho2.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment =  k*Math.sin(t/k);
+	curvep = meshFunction(0,t)
+    return curvep;
+    };
+	
+var geometryesp = new THREE.TubeGeometry( espelho, 60, .025, 20, false );
+	var geometryesp2 = new THREE.TubeGeometry( espelho2, 60, .025, 20, false );		
+			
+		
+	
+
+	var materialesp = new THREE.MeshPhongMaterial( {map: texturecol ,side: THREE.DoubleSide, transparent: true } );		
+			
+//var materialesp =new THREE.MeshStandardMaterial({ color: new THREE.Color (0xffffff), emissive: new THREE.Color (0xf0fff0), emissiveIntensity:.10,  metalness: 0, roughness: 0,  side : THREE.DoubleSide});
+meshesp = new THREE.Mesh( geometryesp2, materialesp );
+
+
+if(clock<1.1) {mesh.add( meshesp )};
+
+meshesp2 = new THREE.Mesh( geometryesp, materialesp );
+
+if(clock<1.1) {mesh.add( meshesp2 )};
+				
+				return mesh
+				
+
+}
+
+
+tempo=[];
+function displaySup(clock)
+{fase=2
+	scene.remove(mesh);
+	scene.remove(planef);
+	
+	
+	if(tempo.indexOf(clock) === -1) tempo.push(clock);
+min=-2.5;
+max=3.5;
+
+var localPlane = new THREE.Plane( new THREE.Vector3( -1,0,0 ), max*2*a-a*nn ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), -min*2*a+a*nn );
+					var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+	mesh = Sup(clock);
+	var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+		  
+	scene.add(mesh);
+	
+	
+	planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn, 2), materialp);
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+var translation = new THREE.Matrix4().makeTranslation(a,0,0);
+
+//planef.applyMatrix(translation)
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+ 	scene.add(planef);
+}	
+
+
+
+
+function displaySup3(tt)
+{
+	
+	
+			scene.remove(mesh); 	
+
+
+	    if(tt<1) 
+		
+		{mesh = Sup(3.5*nn);
+		  
+		
+		  
+		  var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+		  
+				
+		
+		var translation0=new THREE.Matrix4().makeTranslation(0,tt,0);	   
+		  mesh.applyMatrix(translation0)
+		} 
+		
+		else 
+		
+		{if(tt<2) {mesh = Sup2(2-tt);
+		  
+	
+		  var clock=3.5; 
+		  var k3 = -3.5*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+				} else {
+			if(tt<=3)	 {mesh = Sup2(0);
+		  var clock=3.5; 
+		  var k3 = -3.5*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 
+	 
+		  
+		  var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+		   var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,-1,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX((tt-2)*Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,1,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		  
+				} else {if(tt<=4.2) {
+				mesh = Sup3(tt-3);
+		  
+		  var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+		  
+				
+		
+		var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+		  
+		  var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,-1,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,1,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		  
+		  } 	 	  
+		  }
+		} }
+	  
+	 	
+	
+scene.add( mesh );
+
+			
+				renderer.render( scene, camera );
+			if(tt==4.2) {document.getElementById('moveButton').style.display='inline';
+				document.getElementById('rangem').style.display='inline';
+				document.getElementById('carimbButton').style.display='inline';}
+				else
+				{document.getElementById('moveButton').style.display='none';
+				document.getElementById('rangem').style.display='none';
+				document.getElementById('carimbButton').style.display='none';}
+	
+ 	
+}	
+
+
+
+function displaySup2(tt)
+{
+
+	
+			scene.remove(mesh); 	
+
+			mesh = Sup3(1.2);
+		  
+		  var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a	
+	var translationf = new THREE.Matrix4().makeTranslation(0, -3*a/Math.PI,0);		
+var rotationf = new THREE.Matrix4().makeRotationZ(tt*2*Math.PI)
+var translationf2 = new THREE.Matrix4().makeTranslation(0, 3*a/Math.PI,0);	
+	 	mesh.applyMatrix(translationf2.multiply(rotationf.multiply(translationf)))
+		
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+var transformation = translation1.multiply(rotation.multiply(translation));
+mesh.applyMatrix(transformation);
+
+		var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+
+		
+		  var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,-1,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,1,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+	
+	
+scene.add( mesh );
+			
+				renderer.render( scene, camera );
+ 	
+}	
+
+function render2() {
+		
+	
+			scene.remove(mesh); 	
+			
+
+	if(isRotating)
+    { RangeVal2 += speed;
+var tt=Math.min(RangeVal2,4.2);
+document.getElementById('range2').value = Math.round(tt*10)/10;
+
+if(tt==4.2) {carimb(); document.getElementById('moveButton').style.display='none';
+				document.getElementById('rangem').style.display='none';
+				document.getElementById('carimbButton').style.display='none';
+				//isRotating=true;
+		   document.getElementById('pauseRotateButton').style.display='inline'; 
+		   document.getElementById('playRotateButton').style.display='none';}
+				else
+				{document.getElementById('moveButton').style.display='none';
+				document.getElementById('rangem').style.display='none';
+				document.getElementById('carimbButton').style.display='none';}
+				
+
+	   
+	    if(tt<1) 
+		
+		{mesh = Sup(3.5*nn);
+		  
+		
+		  
+		  var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+		  
+				
+		
+		var translation0=new THREE.Matrix4().makeTranslation(0,tt,0);	   
+		  mesh.applyMatrix(translation0)
+		} 
+		
+		else 
+		
+		{if(tt<2) {mesh = Sup2(2-tt);
+		  
+	
+		  var clock=3.5; 
+		  var k3 = -3.5*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+				} else {
+			if(tt<=3)	 {mesh = Sup2(0);
+		  var clock=3.5; 
+		  var k3 = -3.5*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 
+	 
+		  
+		  var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+
+var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+		   var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,-1,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX((tt-2)*Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,1,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		  
+				} else {if(tt<=4.2) {
+				mesh = Sup3(tt-3);
+		  
+		  var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+
+var transformation = translation1.multiply(rotation.multiply(translation));
+
+mesh.applyMatrix(transformation);
+		  
+				
+		
+		var translation0=new THREE.Matrix4().makeTranslation(0,1,0);	   
+		  mesh.applyMatrix(translation0)
+		  
+		  
+		  var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,-1,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,1,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		  
+		  } 	 	  
+		  }
+		} }
+	  
+	 	}
+	
+scene.add( mesh );
+			
+				renderer.render( scene, camera );}
+			
+	
+
+function Sup3(clock)
+{
+
+mesh=new THREE.Group();		
+			//var clock = document.getElementById('range').value;
+				var k = Math.max(50-Math.pow((clock),1/20)*(50-(a/Math.PI)),50-Math.pow((1),1/20)*(50-(a/Math.PI)));
+		
+var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;		
+				
+				// DEF DA FUNCAO (X,Y)
+				meshFunction = function(x, y) {
+				var x00 = (xMax-xMin) * x + xMin;
+					var y00 = (yMax-yMin) * y + yMin;
+					
+					
+					var x0 = k*Math.sin(x00/k);
+					var y0 = k-k*Math.cos(x00/k)+2*a/Math.PI;
+					var z0 = y00;
+					
+						return new THREE.Vector3(x0, y0, z0);
+					
+				};
+				
+				
+	
+
+				// SUPERFICIE
+				
+				var geometry = new THREE.ParametricGeometry( meshFunction, segments, segments );
+					
+				mesh0 = new THREE.Mesh( geometry, materialtext2 );
+				
+			mesh.add(mesh0);
+			
+			var espelhoi = new THREE.Curve();
+espelhoi.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,1)
+    return curvep;
+    };
+
+var geometryespi = new THREE.TubeGeometry( espelhoi, 60, .01, 20, false );
+var materialespi =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshespi = new THREE.Mesh( geometryespi, materialespi );
+mesh.add( meshespi );
+
+
+var espelho2i = new THREE.Curve();
+espelho2i.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment = (2*Math.PI) * t;
+	curvep = meshFunction(t,0)
+    return curvep;
+    };
+
+var geometryesp2i = new THREE.TubeGeometry( espelho2i, 60, .01, 20, false );
+var materialesp2i =new THREE.MeshPhongMaterial({ color: new THREE.Color (0xbbbbbb), emissive: new THREE.Color (0x000000), side : THREE.DoubleSide});
+meshesp2i = new THREE.Mesh( geometryesp2i, materialesp2i );
+mesh.add( meshesp2i );
+			
+			
+			var espelho = new THREE.Curve();
+espelho.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+   
+	curvep = meshFunction(1,t)
+    return curvep;
+    };
+
+	var espelho2 = new THREE.Curve();
+espelho2.getPoint = function (t) {
+    // trace the arc as t ranges from 0 to 1
+    var segment =  k*Math.sin(t/k);
+	curvep = meshFunction(0,t)
+    return curvep;
+    };
+	
+var geometryesp = new THREE.TubeGeometry( espelho, 60, .025, 20, false );
+	var geometryesp2 = new THREE.TubeGeometry( espelho2, 60, .025, 20, false );		
+			
+
+	var materialesp = new THREE.MeshPhongMaterial( {map: texturecol ,side: THREE.DoubleSide, transparent: true } );		
+			
+//var materialesp =new THREE.MeshStandardMaterial({ color: new THREE.Color (0xffffff), emissive: new THREE.Color (0xf0fff0), emissiveIntensity:.10,  metalness: 0, roughness: 0,  side : THREE.DoubleSide});
+meshesp = new THREE.Mesh( geometryesp2, materialesp );
+
+
+if(clock<1.1) {mesh.add( meshesp )};
+
+meshesp2 = new THREE.Mesh( geometryesp, materialesp );
+
+if(clock<1.1) {mesh.add( meshesp2 )};
+				
+				return mesh
+				
+
+}
+
+
+
+
+function displaySupC(tt)
+{
+	
+	
+			scene.remove(mesh); 	
+
+
+	    if(tt<1.) 
+		
+		{	
+		 var k= 50-Math.pow((1),1/20)*(50-(a/Math.PI))
+	
+	
+	
+ mesh = Sup3(1.2);
+		  
+		   
+		
+		
+		 var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+			
+			var translationf = new THREE.Matrix4().makeTranslation(0, -3*a/Math.PI,0);		
+var rotationf = new THREE.Matrix4().makeRotationZ(-ntt*2*Math.PI)
+var translationf2 = new THREE.Matrix4().makeTranslation(0, 3*a/Math.PI,0);	
+	 	mesh.applyMatrix(translationf2.multiply(rotationf.multiply(translationf)))
+			
+			
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+var transformation = translation1.multiply(rotation.multiply(translation));
+mesh.applyMatrix(transformation);
+
+	
+
+		  var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,0,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,0,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		
+
+			var translation0=new THREE.Matrix4().makeTranslation(0,1*(1-tt)+0*tt,0);	   
+	mesh.applyMatrix(translation0);
+		} 
+		
+		else 
+		
+		{if(tt<=7) {
+
+
+ RangeVal3 += speed;
+var tt=Math.min(RangeVal3,20);
+	    document.getElementById('range3').value = Math.round(tt*10)/10;
+	  displaySupC2((tt-1)*nn); 
+	  
+
+
+		}  }
+	  
+	 	
+	
+scene.add( mesh );
+			
+				renderer.render( scene, camera );
+		
+ 	
+}	
+
+var planef2;
+tempo2=[];
+function displaySupC2(clock)
+{
+
+	scene.remove(mesh);
+	scene.remove(planef2);
+	
+	
+	if(tempo2.indexOf(-clock+3.5) === -1) tempo2.push(-clock+3.5);
+min2=Math.min(...tempo2);
+max2=3.5;
+
+
+
+var localPlane = new THREE.Plane( new THREE.Vector3( -1,0,0 ),  max2*2*a-a*nn ),
+	localPlane2 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ),  -min2*2*a+a*nn);
+					var materialp2 = new THREE.MeshLambertMaterial( { map: texturep2 ,side: THREE.DoubleSide
+					, clippingPlanes: [ localPlane, localPlane2 ]
+					} );
+
+	
+	
+	 var k= 50-Math.pow((1),1/20)*(50-(a/Math.PI))
+	 mesh = Sup3(1.2);
+		 var k3 = -3.5*2*Math.PI+(nn-1)*Math.PI+clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = 3.5*2*a-clock*2*a
+	
+		var translationf = new THREE.Matrix4().makeTranslation(0, -3*a/Math.PI,0);		
+var rotationf = new THREE.Matrix4().makeRotationZ(-ntt*2*Math.PI)
+var translationf2 = new THREE.Matrix4().makeTranslation(0, 3*a/Math.PI,0);	
+	 	mesh.applyMatrix(translationf2.multiply(rotationf.multiply(translationf)))
+		 
+		 
+		 var translation = new THREE.Matrix4().makeTranslation(0, -3*a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(-k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+var transformation = translation1.multiply(rotation.multiply(translation));
+mesh.applyMatrix(transformation);
+
+  var translation2 = new THREE.Matrix4().makeTranslation(0,0,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(0,2*a/Math.PI,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		 mesh.applyMatrix(transformation2)
+		  
+			var translation0=new THREE.Matrix4().makeTranslation(0,0,0);	   
+	mesh.applyMatrix(translation0);
+			
+		  
+	scene.add(mesh);
+	
+	
+	planef2 = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a*nn, 2), materialp2);
+planef2.side = THREE.DoubleSide;
+planef2.material.side = THREE.DoubleSide;
+planef2.position.z = h_plane;
+
+var translation = new THREE.Matrix4().makeTranslation(a,0,0);
+
+//planef.applyMatrix(translation)
+
+planef2.rotation.x = -Math.PI/2;
+planef2.position.z = 2;
+
+
+ scene.add(planef2);
+ 
+ 
+ if(clock>10) {isRotating=false;RangeVal3=0;	
+ document.getElementById('pauseRotateButton').style.display='none';
+ document.getElementById('playRotateButton').style.display='inline';     
+ document.getElementById('range3').value = 0;}
+   
+ 
+}		
+
+
+
+
+
+
+
+function phi(tt) {return Math.pow(tt-8,5)+8}
+
+
+
+function renderC() {
+		
+			renderer.localClippingEnabled = true;
+			
+				
+				
+	
+	if(isRotating)
+    { scene.remove(mesh); 
+	RangeVal3 += speed;
+var tt=Math.min(RangeVal3,8);
+document.getElementById('range3').value = Math.round(tt*10)/10;
+
+
+
+	    if(tt<1.) 
+		
+		{	
+		 var k= 50-Math.pow((1),1/20)*(50-(a/Math.PI))
+	
+	
+	
+ mesh = Sup3(1.2);
+		  
+		   			var translationf = new THREE.Matrix4().makeTranslation(0, -3*a/Math.PI,0);		
+var rotationf = new THREE.Matrix4().makeRotationZ(-ntt*2*Math.PI)
+var translationf2 = new THREE.Matrix4().makeTranslation(0, 3*a/Math.PI,0);	
+	 	mesh.applyMatrix(translationf2.multiply(rotationf.multiply(translationf)))
+		
+		
+		 var clock=3.5; 
+		  var k3 = -clock*2*Math.PI+(nn-1)*Math.PI
+			var k4 = clock*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(0, -a/Math.PI,0);
+		   var rotation = new THREE.Matrix4().makeRotationZ(k3);
+var translation1 = new THREE.Matrix4().makeTranslation(k4-a*nn, a/Math.PI,0);
+var transformation = translation1.multiply(rotation.multiply(translation));
+mesh.applyMatrix(transformation);
+
+	
+
+		  var translation2 = new THREE.Matrix4().makeTranslation(-k4+a*nn,0,-1);
+		  var rotation2 = new THREE.Matrix4().makeRotationX(Math.PI)
+		   var translation2i = new THREE.Matrix4().makeTranslation(k4-a*nn,0,1);
+		  var transformation2 = translation2i.multiply(rotation2.multiply(translation2));
+
+		  mesh.applyMatrix(transformation2)
+		
+
+			var translation0=new THREE.Matrix4().makeTranslation(0,1*(1-tt)+0*tt,0);	   
+	mesh.applyMatrix(translation0);
+	
+	scene.add(mesh);
+		} 
+		
+		else 
+		
+		{if(tt<=7) {{
+
+
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+	  displaySupC2((tt-1)*nn); 
+	  
+
+
+		}} else {if(tt<=8) {
+	  scene.remove(mesh)
+	  
+	   RangeVal3 += speed/2;
+var tt=Math.min(RangeVal3,8);
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+
+var kc = 4*a*nn
+
+
+
+				camera.position.set(3.4*kc*(1-phi(tt)+7),
+				3.4*kc,0.01*(phi(tt)-7)+5.6*kc*(1-phi(tt)+7));
+						
+				
+				camera.lookAt(new THREE.Vector3(0,2,0));
+				camera.up.set(0,55,0)
+				camera.fov = 22*(1-phi(tt)+7)+35*(phi(tt)-7);
+camera.updateProjectionMatrix();
+
+
+				
+				renderer.render( scene, camera )}} }
+	  
+	 	}
+	
+	
+	if(tt==8){ scene.remove(mesh)
+	isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal3=0;
+document.getElementById('range3').value = 0;
+RangeVal2=0;
+document.getElementById('range2').value = 0;
+RangeVal=0;
+document.getElementById('range').value = 0;
+fim=true;
+}
+	
+	
+//scene.add( mesh );
+			
+				renderer.render( scene, camera );}
+			
+	
+
+
+
+var isRotating=true
+function pauseRotation()
+{isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+
+ }
+
+
+function playRotation()
+{
+if(fim) {isRotating=false;tempo2=[];
+document.getElementById("THREE").removeChild( renderer.domElement );
+				 init();animate();fase=1;fim=false};
+isRotating=true;
+document.getElementById("pauseRotateButton").style.display='inline';
+document.getElementById("playRotateButton").style.display='none';
+}
+
+var animvp=false;
+var viewvar=false; 
+function viewpoint()
+{viewvar=!viewvar; 
+
+if(viewvar) 
+{
+var kc = 4*a*nn
+
+				camera.position.set(0,2*kc,0.01);
+				camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+				renderer.render( scene, camera )
+} 
+else 
+{
+var kc = 4*a*nn
+				camera.position.set(-2.4*kc,2*kc,1.3*kc);
+			camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+				renderer.render( scene, camera )
+};}
+
+		</script>
+
+	</body>
+</html>

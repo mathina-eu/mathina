@@ -1,0 +1,131 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Copyright (c) 2014-2017 AssociaÃ§Ã£o Atractor
+  All rights reserved
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<title>Animation</title>
+
+<style type="text/css">
+html {
+  width: 100%;
+  height: 100%;
+  margins:0 px;
+  background: #fae9c5; 
+}
+</style>
+<script type="text/javascript" src="../atractor-apps-all/scripts/three87.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/Detector.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+function getParameterByName(name,url){
+ name=name.replace(/[\[\]]/g,"\\$&");
+ var regex=new RegExp("[?&]"+name+"(=([^&#]*)|&|#|$)"),
+  results=regex.exec(url);
+ if(!results) return null;
+ if(!results[2]) return '';
+ return decodeURIComponent(results[2].replace(/\+/g," "));
+}
+function parseData(){//defines the globals pDataButtonText, pDataAddRange
+ var u=window.location.href,pno,sp,sc,dp,bt,
+  re=new RegExp("^(pol2p|p2pol|pol|vpol|vplan)_[1-9][0-9]?[0-9]?$");
+ function addScript(url){
+  var x=document.createElement("script");
+  x.src=url; x.type="text/javascript";
+  document.head.appendChild(x);
+ }
+ if((pre="p2pol_10")&&pre.match(re)&&
+    (md="mo")&&md.match(/^(mo|sbs|ana(|Color|Redcyan|Gray))$/)){
+  if(md==="ana") md="anaColor";
+  ViewMode=md; pDataAddRange=0; sp="pol";
+  switch((S3PPre=re.exec(pre)[1])){
+   case "pol": re=4; sc="pol"; dp=""; bt="Rotação"; break;
+   case "pol2p": case "p2pol":
+    pDataAddRange=1;
+    re=6; sc="polplan"; dp="anim"; bt="Animação"; break;
+   case "vpol": re=5; sc="pol"; dp=""; bt=""; break;
+   case "vplan": re=6; sp="plan"; sc="pol"; dp=""; bt=""; break;
+  }
+  pDataButtonText= bt!=="" ? "Parar "+bt : "";
+  pno=parseInt(pre.substring(re,re+3),10);
+  if(pno>0&&pno<196){
+  
+   if(pDataAddRange) RangeVal=0;
+   else if(S3PPre==="pol")
+    addScript("../atractor-apps-all/scripts/TrackballControls.js");
+   if(md.match(/^(ana|sbs)/)){
+    addScript("../atractor-apps-all/scripts/cmStereoCamera.js");
+    addScript("../atractor-apps-all/scripts/allStereoEffects.js");
+    u="_stap";
+   } else u=""; addScript("../atractor-apps-all/scripts/TrackballControls.js");
+   addScript("../atractor-apps-all/scripts/ext_poliganim.js");
+   addScript("../atractor-apps-all/scripts/animpolig_"+pno+".js");
+  }
+ }
+}
+parseData();
+WW=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;		  
+//]]>
+</script>
+
+<style type="text/css">
+.btrg_s3 { position: absolute; top: 2%; margin-left: 0px; margin-top: 0px; }
+.bt_s3 { left: 19px; }
+.rg_s3 { left: 210px; }
+</style>
+
+</head>
+
+<body onload="init();animate();return false;">
+<button style="position:absolute; right: 30%"  id="halfButton" onClick="half();">
+<img id=imgbthalf src="../atractor-apps-all/icons/half.png"  width="50px"></img>
+</button>
+<form style="position:absolute; right: 50%">
+ <label for="lados"><img src="../atractor-apps-all/icons/decagono.png" width="30" height="30"></label>
+  <select name="lados" id="cars" onchange="Link(this.selectedIndex+5);return false;">
+    <option  value="5">5</option>
+    <option   value="6" >6</option>
+    <option value="7">7</option>
+   <option  value="8" >8</option>
+<option  value="9" >9</option>
+<option selected value="10">10</option>
+ </select>
+  <br><br>
+</form>
+
+<noscript>
+<div>
+<h1><strong>To access all the functionalities of this site, you must activate JavaScript.</strong></h1>
+<br/>
+<h2><a href="http://www.enable-javascript.com/pt/" target="_blank">Follow these instructions to enable JavaScript in your browser and reload the page.</a></h2>
+<br/><br/><br/>
+</div>
+</noscript>
+
+<div id="btandinp"></div>
+
+<script type="text/javascript">
+
+function Link(ii){
+ var pg="4poligonos_";
+ window.location.href=pg+ii+".html";
+}
+
+if(x=document.getElementById("btandinp")){
+ if(typeof pDataButtonText!=='undefined'&&pDataButtonText!=="")
+  x.innerHTML='<button class="button btrg_s3 bt_s3" id="pauseRotateButton" onClick="pauseRotation();"><img id=imgbt src="../atractor-apps-all/icons/pause.png"  width="50px"></img></button>';
+ if(typeof pDataAddRange!=='undefined'&&pDataAddRange)
+  x.innerHTML+='<input class="btrg_s3 rg_s3" id="range" type="range"  min="0" max="199" step="1"  value="RangeVal">';
+}
+
+</script>
+
+<div id="ThreeJS"></div>
+
+</body>
+</html>
+

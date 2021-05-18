@@ -111,7 +111,7 @@ export class ClearBackgroundAction extends Action {
 }
 
 export class ImageAction extends Action {
-  constructor({ id, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
+  constructor({ id, noOverflow, src, align, valign, style, autoProgress, parallax = 'back1', ...rest }) {
     super(rest);
     this.type = 'image';
     this.id = id;
@@ -121,6 +121,7 @@ export class ImageAction extends Action {
     this.style = style;
     this.autoProgress = autoProgress !== 'false';
     this.parallax = parallax;
+    this.noOverflow = noOverflow || false;
   }
 
   execute(context) {
@@ -143,7 +144,8 @@ export class ImageAction extends Action {
       src: path,
       style: this.style,
       position: { vertical: this.valign, horizontal: this.align },
-      parallax: this.parallax
+      parallax: this.parallax,
+      noOverflow: this.noOverflow,
     });
     context.images = images;
   }
@@ -160,10 +162,11 @@ export class ImageAction extends Action {
 }
 
 export class SceneTextAction extends Action {
-  constructor({ text, ...rest }) {
+  constructor({ text, style, ...rest }) {
     super(rest);
     this.type = 'sceneText';
     this.text = text;
+    this.style = style;
   }
 }
 
@@ -174,8 +177,9 @@ export class DialogAction extends Action {
    * @param {Object}
    * @param rest
    */
-  constructor({ entries, avatarAlign, ...rest }) {
+  constructor({ entries, style, avatarAlign, ...rest }) {
     super(rest);
+    this.style = style;
     this.type = 'dialog';
     this.avatarAlign = avatarAlign || {};
     this.entries = entries.map((
@@ -200,6 +204,7 @@ export class DialogAction extends Action {
     }
     context.dialog.entries = this.entries;
     context.dialog.avatarAlign = this.avatarAlign;
+    context.dialog.style = this.style;
   }
 }
 
@@ -255,7 +260,7 @@ export class ClearImageAction extends Action {
     } else {
       const img = context.images.find(img => img.id === this.id);
       let el = document.getElementById(this.id);
-      img.style = el.style.cssText;
+      img.style = el?.style?.cssText;
       this.historyStack.push(img);
       context.images = context.images.filter(img => img.id !== this.id);
     }

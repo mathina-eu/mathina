@@ -1,17 +1,479 @@
 actions:
-  - type: sceneText
-    text: >
-      <p>Lorem ipsum</p>
-      <p>Lorem ipsum dolores est</p>
+  - type: background
+    src: logi-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: image
+    src: leo-pointing.png
+    id: leo-pointing
+    style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: bag.png
+    id: bag
+    style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
+    parallax: back1  
   - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: "I love these toys!"
+      - text: That's it! 
+        char: leo
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo pointed at the sign on the skyscraper's facade, where it read “YTIC-IGOL” in giant letters. Leo would have headed inside, but Mathina quickly grabbed his hand.
+  - type: clearImage
+    id: leo-pointing
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries: 
+      - text: Isn't it strange that it says YTIC-IGOL? 
+        char: mathina
+        mood: thinking
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: No, it's not strange at all, let's go!
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-thinking
+    vars:
+      duration: 0.5
+      xPercent: 0
+      yPercent: -40
+      repeat: 3
+      yoyo: true
+      ease: power1.inOut
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo jumped up but was immediately stopped by an invisible wall.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-thinking-turned.png
+    id: mathina-thinking-t
+    style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina thought for a while, and while deep in thought, she turned around…
+  - type: clearImage
+    id: mathina-thinking-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: ...and then she turned back to the facade. She slapped her forehead in surprise.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Logi-city, just the other way round!
+        char: mathina
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: This means, we should do everything backwards!
+        char: mathina
+        mood: arguing
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: This said, Mathina and Leo turned around.
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: They were leaping backwards towards the entrance.
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Then they heard someone shouting at them.
+  - type: clearImage
+    id: leo-runs-t
+  - type: clearImage
+    id: mathina-runs-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Stop, stop immediately! Stop!
+        char: owl
+        mood: serious
+      - text: We have an important mission to complete here, Mr Owl. We need to deliver this birthday gift to the Head of Logical Matters of Logi-city.
+        char: mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo pointed at the bag at his feet.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Yes, I was notified. But you are no exception to the rule. 
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-front.png
+    id: owl-w-f
+    style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Observe the marble floor here in the doorway. As a matter of fact, there is a purpose behind the pattern.
+        char: owl
+        mood: serious
+      - text: You are not allowed to stomp simply across it, unless you reveal the logic behind. This is how we ensure that only worthy people pass through to the boss.
+        char: owl
+        mood: serious
+  - type: animation
+    target: mathina-thinking
+    vars:
+      duration: 1
+      xPercent: -30
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: owl-w-f
+    vars:
+      duration: 1
+      xPercent: 50
+      yPercent: -15
+      ease: power3.out
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: tiled floor.jpg
+    id: tiled floor
+    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: The owl listed the rules - they can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. Mathina observed the figure, scratched her kin.
+  - type: clearImage
+    id: tiled floor
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:      
+      - text: That's so simple!  
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 40
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: This said, Leo jumped! The owl was in despair as Leo kept jumping from one field to another.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '270px'
+      top: '160px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: He moved from the red circle to the red square.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '310px'
+      top: '200px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Then to the orange square...
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '380px'
+      top: '170px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: ...from there to the orange triangle - but stopped there, before swinging to the wrong field.
+  - type: clearImage
+    id: leo-runs
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Stop! You stop immediately!
+        char: owl
+        mood: serious
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo was so terrified that he stood still on the orange triangle. 
+  - type: clearImage
+    id: owl-w-f
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: I wasn't done yet. If you miss just one step, the tile will turn over and you find yourself in the sewer system of the house. And there is no way back! 
+        char: owl
+        mood: serious
+      - text: But this time, I’ll make a very special exception. Now you can return to the starting point, and try again, but that's absolutely, my last favor.
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-down.png
+    id: owl-w-d
+    style: "width: 20%; top: 41%; right: 29%;"  
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo stared at Mathina with a disgusted frown, really frightened by the owl's promise.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-standing.png
+    id: mathina-standing
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: You stay here now and don't do anything!
+        char: mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina wondered what to do.
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-sitting.png
+    id: leo-sitting
+    style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
+    parallax: back2
+  - type: game
+    text: What advice would you give them? 
+    toolbarText: You can only step from red to red, blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle.
+    cta: Try it yourself!
+    url: \apps\logi-2-app\logi-2-app-1.htm
+  - type: clearImage
+    id: mathina-standing
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina carried through solution possibilities in her head but always encountered an obstacle. She scratched her head, looked around, and again noticed the script on the facade - YTIC-IGOL.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Oh, got it!
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina remembered that the script had to be read backwards. So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
+  - type: game
+    text: Can you get from the doorway to Mathina, does this work?
+    toolbarText: 
+    cta: Try it yourself!
+    url: \apps\logi-2-app\logi-2-app-2.htm
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina traced the now absolutely self-evident route backwards. She strove to memorize the fields.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Red circle, red triangle, blue triangle... 
+        char: mathina
+        mood: thinking
+  - type: clearImage
+    id: leo-sitting
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Come on, Leo, follow me, I found the way!
         char: mathina
         mood: happy
-      - text: "Some have defects!"
-        char: wizard
-        mood: sad
-  - type: game
-    text: "Want to hop around?"
-    cta: "Try it yourself!"
-    url: /apps/example-app/
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 2
+      xPercent: -110
+      yPercent: 10
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo stepped next to Mathina and grabbed the bag.
+  - type: clearImage
+    id: leo-runs-t
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
+    parallax: back2  
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: The owl watched them with satisfaction as they loaded off the bag and set out to leave.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 4
+      xPercent: 350
+      yPercent: -2
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs
+    vars:
+      duration: 5
+      xPercent: 350
+      yPercent: -5
+      ease: power3.out  
+      parallax: back2  
+  - type: animation
+    target: bag
+    vars:
+      duration: 4
+      xPercent: 410
+      yPercent: 0
+      ease: power3.out  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Congratulations, young lady, congratulations! 
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: leo-runs
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 19%; top: 44%; right: 15%; z-index:2"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina nodded politely because she hated being called a young lady, she was the smart and strong Mathina…
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 3
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: They skillfully walked back on the colored tiles and said goodbye to the owl.
+  - type: clearImage
+    id: mathina-runs-t
+  - type: clearImage
+    id: leo-runs-t

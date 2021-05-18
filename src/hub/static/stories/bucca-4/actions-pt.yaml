@@ -1,0 +1,861 @@
+actions:
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+  - type: sceneText
+    text: >
+      <h1>O homem no meio</h1>
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: sceneText
+    text: >
+     <p>Passou-se algum tempo desde que Mathina foi pela primeira vez à Ilha do Corsário. Com o seu irmão, ela agora está à beira de uma nova aventura.
+     <br/>Recebeu uma carta de uma pessoa misteriosa afirmando tê-los seguido, a ela e ao seu irmão nas últimas viagens que fizeram à Ilha do Corsário...</p>
+  
+  - type: dialog
+    entries:
+      - text: "O QUÊ?! Não, isso não é possível, quem poderia ter nos seguido? Porquê? O que querem eles de nós?"
+        char: leo
+        mood: arguing
+      - text: "Não sei, Leo, mas temos que ir e descobrir por nós próprios!"
+        char: mathina
+        mood: talking
+      - text: "Está bem, mas como podemos ter certeza de que eles não nos estão a seguir novamente? E se for uma armadilha? Estou com muito medo, Mathina!"
+        char: leo
+        mood: arguing
+      - text: "Não te preocupes, Leo, vai tudo correr bem, vamos à ilha e pensaremos em algo assim que lá chegarmos!"
+        char: mathina
+        mood: happy 
+        
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 1;"
+  - type: image
+    id: Wave4
+    src: onda4.png
+    style: "width: 35%; bottom: 2.5%; left: 3%;  z-index: 2;"      
+ 
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -11
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+ 
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+  - type: sceneText
+    text: >
+     <p>No dia seguinte, a Mathina e o seu irmão partiram para a ilha, naquela que viria a ser uma das suas últimas viagens ao lugar mágico e misterioso onde viveram tantas aventuras e se enredaram na história de piratas e de tesouros de tempos idos.<br/>O céu estava azul pérola naquela manhã e a viagem foi agradável e segura. A misteriosa carta era uma espécie de presença silenciosa nas mentes de Mathina e Leo, mas olhando para eles não se podia perceber que algo os inquietava. </p>
+  - type: animation
+    target: Boat
+    vars:
+      duration: 3
+      x: 600
+      y: -100
+      ease: power1.inOut
+      width: 12%
+
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 3
+      x: 620
+      y: -110
+      ease: power1.inOut
+      width: 12%
+      
+
+  - type: sceneText
+    text: >
+     <p>Quando a barca finalmente chegou ao cais da Ilha do Corsário, Mathina e Leo já sabiam que uma nova aventura estava para começar, desta vez perigosa! </p>
+  - type: dialog
+    entries:
+      - text: "Olá!! Como estás Mathina?"
+        char: angela
+        mood: happy
+      - text: "Olá Ângela! Este é o meu irmão Leo! Bem... estamos bastante intrigados!"
+        char: mathina
+        mood: happy
+
+  - type: clearImage
+    id: Wave1
+  - type: clearImage
+    id: Wave2
+  - type: clearImage
+    id: Wave3
+  - type: clearImage
+    id: Wave4
+  - type: clearImage
+    id: Boat
+  - type: clearImage
+    id: Cloud1
+  - type: clearImage
+    id: Cloud2
+  - type: clearImage
+    id: Cloud3
+  - type: clearImage
+    id: Cloud4
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+  - type: image
+    id: Fisherman1
+    src: barca3.png
+    style: "width: 13%; top: 12%; left: 0%;  z-index: 0;"
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 1;"
+  - type: image
+    id: Fisherman3
+    src: barca4.png
+    style: "width: 13%; top: 14%; right: 0%;  z-index: 0;"
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 6
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: -3
+      yoyo: true
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 5
+      xPercent: 5
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -2
+      yoyo: true
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 7
+      xPercent: -10
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 2
+      yoyo: true
+  - type: sceneText
+    text: >
+     <p>A Mathina, a Ângela e o Leo passaram algum tempo juntos perto do mar, discutindo a estranha mensagem. Chegaram à conclusão de que deviam explorar um pouco as áreas circundantes para obter algumas pistas sobre essa pessoa misteriosa. </p>
+  
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 40%; top: 55%; right: 2%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Leo0
+    src: $COMMON/img/characters/leo/leo1.png
+    style: "height: 40%; top: 50%; right: 12%;  z-index: 1; transform: ScaleX(1);"
+  
+  - type: image
+    id: Angela0
+    src: Angela_2.png
+    style: "height: 80%; top: 35%; right: 20%;  z-index: 2; transform: ScaleX(-1);" 
+    
+  - type: dialog
+    entries:     
+      - text: "Mas como poderemos comunicar com segurança enquanto exploramos os arredores?"
+        char: leo
+        mood: thinking
+      - text: "Leo, lembras-te do truque que te expliquei da última vez quando estávamos a jogar? Começas com uma mensagem e com uma chave e, de seguida, pode cifrá-la. A mesma chave funciona para decifrar e recuperar a mensagem original."
+        char: mathina
+        mood: arguing
+      - text: "Sim, lembro-me, a chave era um número que podemos usar para somar às letras do alfabeto, certo?"
+        char: leo
+        mood: thinking
+      - text: "Sim, exatamente!"
+        char: mathina
+        mood: normal
+      - text: "E se eu vos disser que existe uma maneira de combinar uma chave secreta em público, sem que ninguém descubra o nosso segredo, mesmo que gritemos todas as informações no meio do parque?"
+        char: angela
+        mood: normal
+      - text: "Uau, isso parece muito fixe, como é que é possível?"
+        char: leo
+        mood: happy
+
+    
+  - type: clearImage
+    id: Angela0
+  - type: image
+    id: Angela1
+    src: angela_card.png
+    style: "height: 80%; top: 35%; right: 23.1%;  z-index: 2; transform: ScaleX(-1);" 
+  - type: sceneText
+    text: >
+     <p>A Ângela retirou um baralho de cartas do seu casaco e mostrou-o ao Leo.</p>   
+     
+  - type: dialog
+    entries:     
+      - text: "Bom, há um truque. Olha estas cartas: estão todas em ordem, do ás de espadas ao rei de copas. Agora, vê quanto tempo preciso para as baralhar."
+        char: angela
+        mood: happy
+  - type: sceneText
+    text: >
+     <p>Com um movimento rápido, Ângela baralhou as cartas e mostrou-as, agora todas dispostas aleatoriamente, nas suas mãos. </p>
+  - type: dialog
+    entries:     
+      - text: "Agora, quanto tempo achas que demoraria para colocar o baralho de novo em ordem?"
+        char: angela
+        mood: normal
+      - text: "Mmm... bem, não muito, mas certamente mais do que o tempo que levou para baralhar."
+        char: leo
+        mood: thinking
+      - text: "Exatamente! Esta é uma operação muito fácil de fazer, mas um pouco mais complicada de ser desfeita. E esse é o truque!"
+        char: angela
+        mood: happy
+      - text: "Sim, mas como produzimos um método de cifrar? Não podemos simplesmente andar por aí a baralhar cartas!"
+        char: mathina
+        mood: arguing
+      - text: "O truque é usar números: a nossa operação de baralhamento será elevar um determinado número a um outro número, como ... 3^7=2187. Claro que se pode voltar atrás, mas isso leva tempo e esforço!"
+        char: angela
+        mood: normal
+      - text: "Ok, mas disse-nos que podemos concordar com a chave em público. Se você disser algo como 'a chave é o expoente ao qual se tem de elevar 3 para obter 2187', ou eu também terei que fazer todo o esforço, ou se me dizer diretamente que é o número 7, então qualquer pessoa que ouça ficará a conhecer a chave, tal como nós!"
+        char: mathina
+        mood: arguing
+      - text: "Vou te dizer onde está exatamente o truque. Este truque específico é conhecido pelo nome de 'protocolo de troca de chaves Diffie-Hellman'. Vamos lá tentar. Primeiro, devemos escolher um número primo p, depois um número g entre 2 e p-2, a que chamaremos de base, e finalmente devemos escolher um número aleatório nesse mesmo intervalo e fazer algumas operações simples. Dâ uma olhada!"
+        char: angela
+        mood: normal
+  - type: game
+    text: "Ajuda a Mathina e o Leo a entender o método"
+    toolbarText: "Siga os passos e tente criar o segredo partilhado"
+    cta: "Tenta tu!"
+    tag: app1
+    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=3
+  - type: dialog
+    entries:     
+      - text: "Olha, agora temos o segredo comum que podemos usar como chave para todas as cifras que já encontraste antes."
+        char: angela
+        mood: happy
+      - text: "Obrigado, então está decidido que esta será a chave que usaremos para comunicar. Agora podemos simplesmente trocar um SMS e concordar com uma nova chave se a antiga for comprometida, mesmo que estejamos em lugares distantes da ilha."
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: >
+      <h1>O ataque do <i>homem no meio</i></h1>
+  - type: dialog
+    entries:     
+      - text: "Ok, está combinado! É assim que comunicaremos entre nós aqui na Ilha do Corsário. Eu vou explorar a montanha, enquanto tu examinarás a costa e o parque com a Ângela. Para manter as mensagens secretas, mudaremos a chave da nossa cifra todas as vezes que comunicarmos, usando o método Diffie-Hellman para trocar a nova chave!"
+        char: mathina
+        mood: happy
+      - text: "Ok, vamos, mana!"
+        char: leo
+        mood: happy
+      - text: "Mas temos de ter cuidado! Essa figura misteriosa da qual tiveste um vislumbre durante a tua última viagem aqui não me parece lá muito tranquilizante."
+        char: mathina
+        mood: arguing
+        
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+  - type: clearImage
+    id: Mathina0
+  - type: clearImage
+    id: Leo0
+  - type: clearImage
+    id: Angela1     
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 10%; top: 60%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+  - type: sceneText
+    text: >
+      <p> A Mathina e o Leo separaram-se então, o jovem indo em direção ao litoral e Mathina iniciando a subida à colina. A única pista sobre o segredo dos corsários estava nas gravuras da caverna do parque que Leo e os seus amigos viram durante a sua viagem à ilha. Seria basicamente uma dica inútil, se não fosse pela figura misteriosa que Leo disse ter visto antes de deixar a ilha, e que ele achava que os estava seguindo desde o parque até o cais. Se havia alguém interessado na sua descoberta, talvez houvesse algo a descobrir e suas descobertas tivessem um significado mais profundo. Certamente a Ilha do Corsário é um lugar cheio de surpresas, e vale a pena tentar, pensaram.</p>
+  - type: clearImage
+    id: Mathina1
+  - type: image
+    id: Leo1
+    src: $COMMON/img/characters/leo/leo4.png 
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Angela2
+    src: angela_3.png 
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: sceneText
+    text: >
+      <p> Uma hora depois Leo e Ângela, que exploravam ainda a costa, receberam um SMS de Mathina.</p>
+  - type: game
+    text: "Vejamos que novidades interessantes Mathina tem para nos dar!"
+    toolbarText: "Siga os passos para decifrar a mensagem de Mathina"
+    cta: "Tenta tu!"
+    tag: app2
+    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=3
+  - type: dialog
+    entries:     
+      - text: "UAU! Sabe alguma coisa sobre isso, Ângela?"
+        char: leo
+        mood: surprised
+      - text: "Não, não sei. Mas Mathina deve certamente estar no caminho certo. Olha, vamos tentar seguir o caminho dela, mas daqui do litoral. Consegues vê-lo? A floresta onde vivem os papagaios está mesmo ali, entre nós e o caminho de Mathina. Se tentarmos nos posicionar por forma a que possamos ver tanto a floresta como o trilho, talvez possamos direcionar a Mathina ao longo do seu caminho."
+        char: angela
+        mood: sad
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+  - type: dialog
+    entries:      
+    - text: "Mmm, muito estranho. Combinamos que deveríamos confirmar as nossas mensagens e combinar uma nova chave artilhada, mas a Mathina não está a responder. Devemos nos preocupar com isso?"
+      char: leo
+      mood: surprised
+    - text: "Acho que não, talvez a Mathina tenha perdido a nossa última mensagem. Tenho a certeza que saberemos dela em breve."
+      char: angela
+      mood: normal
+  - type: clearImage
+    id: Leo1  
+  - type: clearImage
+    id: Angela2  
+  - type: background
+    src: alberi1.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi2.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    
+  - type: image
+    id: Leo2
+    src: $COMMON/img/characters/leo/leo5.png 
+    style: "height: 10%; top: 50%; right: 45%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Angela3
+    src: angela_1.png 
+    style: "height: 20%; top: 70%; right: 50%;  z-index: 0; transform: ScaleX(1);"  
+  - type: image
+    id: terreno
+    src: terreno.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);" 
+  
+  - type: sceneText
+    text: >
+      <p>Os dois continuaram então a explorar o caminho até a floresta dos papagaios, na esperança de que os pássaros fossem a chave para o sucesso de sua busca!</p>
+  - type: dialog
+    entries:      
+     - text: "Mas e se alguém conseguiu perceber a cifra?"
+       char: leo
+       mood: arguing
+     - text: "Isso é improvável, olha! vamos tentar fazer isso nós próprios!"
+       char: angela
+       mood: normal
+  - type: game
+    text: "Tenta ajudar Leo a quebrar o sistema"
+    toolbarText: "Siga os passos para ajudar o Leo a perceber como o sistema é seguro"
+    cta: "Tenta tu!"
+    tag: app3
+    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=3
+  - type: clearImage
+    id: Leo2  
+  - type: clearImage
+    id: Angela3 
+  - type: clearImage
+    id: terreno         
+  - type: background
+    src: alberi4.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+
+
+  - type: dialog
+    entries:      
+     - text: "Vês? Demora muito tempo para fazer isso, podemos estar seguros!"
+       char: angela
+       mood: normal
+  - type: background
+    src: bg-grey-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
+  - type: sceneText
+    text: >
+      <p>Entretanto, na montanha...</p>
+  - type: image
+    id: myst1
+    src: myst.png
+    style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);"         
+
+  - type: image
+    id: Mathina3
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 35%; top: 50%; right: 10%;  z-index: 1; transform: ScaleX(-1);"
+  - type: dialog
+    entries:      
+     - text: "Ei! Quem é você? Deixe-me ir! Pare! Quem é você? O que quer de mim?"
+       char: mathina
+       mood: arguing
+  - type: clearImage
+    id: myst1
+  - type: image
+    id: capt1
+    src: capt.png
+    style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);"         
+
+  - type: dialog
+    entries:  
+     - text: "Cala-te! Eu não vou te magoar, nem nada disso!"
+       char: charmingparrot
+       mood: happy
+     - text: "Sim, muito reconfortante, é o que qualquer ladrão ou pirata diria! Eu não tenho nada de valioso! Vá embora! Deixe-me ir!"
+       char: mathina
+       mood: arguing       
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: capt1    
+  - type: image
+    id: sedia
+    src: sedia.png
+    style: "height: 45%; top: 30%; right: 70%;  z-index: 1; transform: ScaleX(-1);"  
+  - type: sceneText
+    text: >
+      <p>Mathina estava metida em sarilhos! A misteriosa figura era real e mantinha-a presa numa caverna na montanha. Quem era ele? O que queria ele de Mathina?</p>
+  - type: clearImage
+    id: sedia   
+  - type: image
+    id: capt2
+    src: capt.png
+    style: "height: 80%; top: 30%; right: 10%;  z-index: 1; transform: ScaleX(1);"         
+    
+  - type: dialog
+    entries:      
+     - text: "Agora que não podes fugir, deixa-me apresentar-me. Ahoy, sou o Capitão Terry Papagaio Charmoso da Ilha do Corsário!"
+       char: charmingparrot
+       mood: normal
+     - text: "O que está para aí a dizer? Toda a gente sabe que já não há piratas ou corsários aqui. Tudo isso é uma coisa do passado!"
+       char: mathina
+       mood: arguing
+     - text: "Bem, não eu, jovem, não eu! Estou aqui e sou um verdadeiro pirata! Os meus antepassados deixaram um grande tesouro aqui na ilha e quando o seu irmãozinho fedorento e as pulgas dos seus companheiros encontraram a gravura no parque no ano passado, percebi que estava ali a primeira grande oportunidade de finalmente descobrir a verdade sobre o tesouro! Agora, deixa-me trazer para aqui o seu irmão mais novo também!"
+       char: charmingparrot
+       mood: normal
+     - text: "Como planeia você fazer isso? Decidimos que ele não virá aqui à montanha, mas que procurará pistas perto da costa."
+       char: mathina
+       mood: arguing
+     - text: "Eu sei tudo sobre o seu pequeno sistema criptográfico. Posso fingir ser tu, pois ele não sabe quem lhe envia as mensagens!"
+       char: charmingparrot
+       mood: happy
+  - type: clearImage
+    id: capt2        
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi1.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+
+  - type: background
+    src: alberi2.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: background
+    src: alberi4.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  
+  - type: background
+    src: alberi3.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"           
+  - type: sceneText
+    text: >
+      <p>Então, na Floresta dos Papagaios...</p>
+  - type: dialog
+    entries:      
+     - text: "Ei! Veja! Uma nova mensagem da Mathina!"
+       char: leo
+       mood: talking
+  - type: game
+    text: "Vejamos que novidades interessantes a Mathina tem para nos dar!"
+    toolbarText: "Siga os passos para decifrar a mensagem de Mathina"
+    cta: "Tenta tu!"
+    tag: app4
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=3
+     
+  - type: dialog
+    entries:      
+     - text: "Ok, Ângela, vamos ter com a Mathina! Parece que estamos perto do fim de nossa missão!"
+       char: leo
+       mood: talking
+   
+  - type: sceneText
+    text: >
+      <p>Os dois começaram então a subir a montanha seguindo o trilho dos papagaios descoberto por Mathina.</p>
+
+  - type: background
+    src: bg-grey-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
+    
+  - type: image
+    id: capt3
+    src: capt.png
+    style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);"         
+  - type: image
+    id: Leo3
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 40%; top: 50%; right: 15%;  z-index: 1; transform: ScaleX(1);"
+    
+  - type: dialog
+    entries:      
+     - text: "Então cá estamos! Bem-vindos à minha gruta!"
+       char: charmingparrot
+       mood: happy   
+     - text: "Quem é você? Onde está a Mathina?"
+       char: leo
+       mood: arguing
+  - type: sceneText
+    text: >
+      <p>Enquanto Leo gritava ao pirata misterioso, uma rede cobria a saída da gruta, prendendo-o a ele e a Ângela dentro.</p>
+  - type: dialog
+    entries: 
+     - text: "A tua irmã está segura, amiguinho, não te preocupes. Ela apenas se esqueceu de te ensinar alguns truques de segurança: é necessário ter a certeza de que se está mesmo a comunicar com a pessoa pretendida quando se usa o protocolo de troca de chaves! Agora, fica tranquilo e acomoda-te bem, pois serás meu convidado por um bom tempo!"
+       char: charmingparrot
+       mood: normal    
+  - type: sceneText
+    text: >
+      <p>O Leo e a Ângela foram levados à sala onde a Mathina estava detida.</p>        
+  - type: clearImage
+    id: Leo3
+  - type: clearImage
+    id: capt3
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; top: 50%; right: 75%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Leo4
+    src: $COMMON/img/characters/leo/leo2.png
+    style: "height: 30%; top: 45%; right: 60%;  z-index: 1; transform: ScaleX(-1);"  
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 35%; right: 30%;  z-index: 2; transform: ScaleX(1);" 
+ 
+
+  - type: dialog
+    entries:        
+     - text: "Desculpa, Leo, lamento, Ângela, caí na armadilha desse pirata e ele deve ter enviado alguma mensagem enganosa para os atrair até aqui. Ele diz que é o último verdadeiro pirata da ilha e quer descobrir o tesouro dos antigos corsários."
+       char: mathina
+       mood: thinking        
+     - text: "Mas pode perfeitamente não haver nenhum tesouro! Tudo o que sabemos é que havia alguns corsários na ilha, mas não temos quaisquer evidências de que o tesouro ainda aqui esteja --- ou que alguma vez tenha estado ---, para dizer a verdade. Até mesmo o trilho do papagaio pode não passar de um truque planeado pelo escritório de turismo para entreter os visitantes."
+       char: angela
+       mood: normal          
+  
+  - type: sceneText
+    text: >
+      <p>De repente, o capitão Terry Papagaio Charmoso abriu a porta com força.</p>
+  - type: clearImage
+    id: Leo4
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Angela4
+  - type: image
+    id: capt4
+    src: capt.png
+    style: "height: 80%; top: 30%; right: 10%;  z-index: 1; transform: ScaleX(1);"   
+  - type: dialog
+    entries:        
+     - text: "Calem a boca, seus vermes! Tenho certeza de que o tesouro é real! Sou o último pirata vivo da ilha! E vocês tem de me ajudar a encontrar o tesouro! Vamos!"
+       char: charmingparrot
+       mood: normal 
+  - type: clearImage
+    id: capt4  
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi1.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+  - type: background
+    src: alberi2.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    
+  - type: image
+    id: Leo5
+    src: $COMMON/img/characters/leo/leo4.png 
+    style: "height: 55%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina5.png 
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(-1);"
+  - type: image
+    id: terreno2
+    src: terreno.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);"   
+  - type: image
+    id: Angela5
+    src: angela_3.png 
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 2; transform: ScaleX(-1);"  
+  - type: sceneText
+    text: >
+      <p>Os dias seguintes foram terríveis para o grupo. Foram amarrados com correntes de plástico uns aos outros e forçados a vasculhar a floresta e a costa em busca de um tesouro escondido.</p>
+
+  - type: dialog
+    entries:        
+     - text: "Ele é tão pirata que nem tem correntes adequadas para nos amarrar! Fomos sequestrados pela paródia de um pirata. Provavelmente está meio doido. Devemos trazê-lo de volta à razão e convencê-lo de que não existe nenhum tesouro!"
+       char: mathina
+       mood: surprised 
+     - text: "Mas como podemos fazer isso?... Talvez possamos falsificar uma carta de algum velho pirata, dizendo que o tesouro foi todo gasto em pândegas e folias assim que os corsárioa chegaram à ilha."
+       char: leo
+       mood: arguing
+     - text: "Não, isso não vai funcionar, Leo, o capitão Papagaio Charmoso conhece bem a criptografia de chave pública, foi assim que ele nos trouxe aqui em primeiro lugar! Ele usou o chamado 'ataque do homem no meio' em que o recetor não é capaz de confirmar a identidade do remetente e confia que seja o verdadeiro."
+       char: mathina
+       mood: arguing
+     - text: "Sim, e as consequências podem ser terríveis, como no nosso caso. Poderíamos ter implementado algum sistema de assinatura para nossas mensagens, Mathina."
+       char: angela
+       mood: normal
+     - text: "Sim, definitivamente deveríamos tê-lo feito. Tu sabes como funciona, Leo?"
+       char: mathina
+       mood: talking
+  - type: sceneText
+    text: >
+      <p>Leo acenou com a cabeça que não.</p>
+  - type: dialog
+    entries:        
+     - text: "Esses sistemas de assinaturas são baseados em operações matemáticas que são muito fáceis de executar num sentido, mas muito mais difíceis de executar no sentido inverso. Por exemplo, Leo, lembras-te de quando na escola estudaste a divisão por números dois algarismo e te queixaste de como era muito mais difícil do que a multiplicação? O princípio é o mesmo, apenas muito mais difícil num dos sentidos."
+       char: angela
+       mood: normal       
+  - type: sceneText
+    text: >
+      <p>"Mas, Angela!" a Mathina interrompeu com um sorriso inesperado</p>
+  - type: dialog
+    entries:        
+     - text: "A criptografia de chave pública não tinha sido inventada na época dos corsários, e portanto o capitão Papagaio Charmoso deve confiar na mensagem tal como a vê!"
+       char: mathina
+       mood: happy      
+     - text: "Excelente ponto, Mathina, vamos tentar isso, oh, espere, ele está aí. Finja que estamos ocupados!"
+       char: leo
+       mood: happy  
+     - text: "Arrr, até hoje nada para além de um monte de garrafas velhas quebradas. Começo a questionar-me se vocês não estão apenas a fazer perder-me muito tempo na minha busca, suas pulgas do mar! Está a escurecer, vamos voltar para a gruta! Amanhã retomaremos a pesquisa."
+       char: charmingparrot
+       mood: sad
+  - type: clearImage
+    id: Leo5
+  - type: clearImage
+    id: Mathina5
+  - type: clearImage
+    id: Angela5
+  - type: clearImage
+    id: terreno2
+  - type: background
+    src: bg-grey-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+  - type: image
+    id: Mathina6
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; top: 55%; right: 75%;  z-index: 1; transform: ScaleX(1);"
+  - type: image
+    id: Leo6
+    src: $COMMON/img/characters/leo/leo2.png
+    style: "height: 30%; top: 45%; right: 60%;  z-index: 1; transform: ScaleX(-1);"  
+  - type: image
+    id: Angela6
+    src: Angela_2.png
+    style: "height: 80%; top: 35%; right: 30%;  z-index: 2; transform: ScaleX(1);" 
+  - type: sceneText
+    text: >
+      <p>Assim, durante a noite, Mathina, Ângela e Leo tiveram tempo de forjar uma carta de um velho pirata. Quando estivessem sozinhos no dia seguinte, iriam escondê-la debaixo de uma pedra e chamariam então o seu carcereiro para a resgatar, dizendo que não eram suficiente fortes para levantar a pedra que a escondia. <br/> <br/> Quando chegou o dia, o plano correu exatamente como planeado!</p>
+  - type: clearImage
+    id: Leo6
+  - type: clearImage
+    id: Mathina6
+  - type: clearImage
+    id: Angela6
+
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"   
+  - type: image
+    id: Mathina7
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; top: 45%; right: 23%;  z-index: 1; transform: ScaleX(-1);"
+  - type: image
+    id: Leo7
+    src: $COMMON/img/characters/leo/leo1.png
+    style: "height: 30%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"  
+  - type: image
+    id: Angela7
+    src: Angela_2.png
+    style: "height: 80%; top: 25%; right: 5%;  z-index: 2; transform: ScaleX(1);" 
+  - type: image
+    id: capt7
+    src: capt.png
+    style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);" 
+  - type: dialog
+    entries:        
+     - text: "Sim, finalmente, eu sabia que vocês seriam utéis, apesar de tudo. Finalmente uma dica real sobre o tesouro!"
+       char: charmingparrot
+       mood: happy 
+  - type: sceneText
+    text: >
+      <p>Ahoy capitão,<br/>tempos terríveis nos esperam, todo o tesouro está perdido. A tripulação dilapidou tudo em todo tipo de pândegas ao chegar a esta ilha. O nosso nome como Corsários está comprometido, devemos voltar ao mar e começar a reconstruir o nosso tesouro. Encontrei um pequeno grupo de homens de confiança, que não se envolveram no esbanjamento do tesouro e vou deixá-los na ilha para construir algo de positivo a partir de nosso infortúnio. Eles deverão ser homens honrados e ensinarão à posteridade uma vida de honestidade e retidão.<br/>Todos os outros membros da tripulação irão para o mar connosco. Somente a Sorte saberá o nosso destino!</p>
+  - type: dialog
+    entries:        
+     - text: "Toda a minha busca foi vazia e nula. O verdadeiro tesouro afinal não estava aqui!"
+       char: charmingparrot
+       mood: sad 
+  - type: sceneText
+    text: >
+      <p>Mathina tentou confortá-lo.</p>
+  - type: dialog
+    entries:        
+     - text: "Não, estava aqui. Olhe para nós. Assim como os seus companheiros ancestrais, a minha amiga Ângela, o meu irmão Leo e eu estamos aqui unidos na adversidade e a lutar para continuar em frente, como eles faziam séculos atrás!"
+       char: mathina
+       mood: happy
+     - text: "..."
+       char: charmingparrot
+       mood: sad
+  - type: clearImage
+    id: Leo7
+  - type: clearImage
+    id: Mathina7
+  - type: clearImage
+    id: Angela7
+  - type: clearImage
+    id: capt7
+  - type: background
+    src: bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
+  - type: background
+    src: terreno.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: captE
+    src: myst.png
+    style: "height: 15%; top: 60%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+  - type: sceneText
+    text: >
+      <p>O homem, suspirando silenciosamente, libertou os três das suas correntes, acenou-lhes um gesto de despedida e caminhou para a costa ensolarada, voltando para sua gruta, para nunca mais visto.</p> 
+  - type: clearImage
+    id: captE 
+  - type: sceneText
+    text: >
+      <h1>O homem no meio - Fim</h1>

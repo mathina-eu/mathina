@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Animation</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<script type="text/javascript">
+
+function getParameterByName(name,url){
+ name=name.replace(/[\[\]]/g,"\\$&");
+ var regex=new RegExp("[?&]"+name+"(=([^&#]*)|&|#|$)"),
+  results=regex.exec(url);
+ if(!results) return null;
+ if(!results[2]) return '';
+ return decodeURIComponent(results[2].replace(/\+/g," "));
+}
+function parseData(){
+ var u=window.location.href,num,nAzu;
+ num=getParameterByName("num",u)
+ nAzu=parseInt(num);
+ return nAzu
+}
+
+if (!Array.from) {
+  Array.from = (function () {
+    var toStr = Object.prototype.toString;
+    var isCallable = function (fn) {
+      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+    };
+    var toInteger = function (value) {
+      var number = Number(value);
+      if (isNaN(number)) { return 0; }
+      if (number === 0 || !isFinite(number)) { return number; }
+      return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+    };
+    var maxSafeInteger = Math.pow(2, 53) - 1;
+    var toLength = function (value) {
+      var len = toInteger(value);
+      return Math.min(Math.max(len, 0), maxSafeInteger);
+    };
+
+    // The length property of the from method is 1.
+    return function from(arrayLike/*, mapFn, thisArg */) {
+      // 1. Let C be the this value.
+      var C = this;
+
+      // 2. Let items be ToObject(arrayLike).
+      var items = Object(arrayLike);
+
+      // 3. ReturnIfAbrupt(items).
+      if (arrayLike == null) {
+        throw new TypeError("Array.from requires an array-like object - not null or undefined");
+      }
+
+      // 4. If mapfn is undefined, then let mapping be false.
+      var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+      var T;
+      if (typeof mapFn !== 'undefined') {
+        // 5. else
+        // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
+        if (!isCallable(mapFn)) {
+          throw new TypeError('Array.from: when provided, the second argument must be a function');
+        }
+
+        // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
+        if (arguments.length > 2) {
+          T = arguments[2];
+        }
+      }
+
+      // 10. Let lenValue be Get(items, "length").
+      // 11. Let len be ToLength(lenValue).
+      var len = toLength(items.length);
+
+      // 13. If IsConstructor(C) is true, then
+      // 13. a. Let A be the result of calling the [[Construct]] internal method of C with an argument list containing the single item len.
+      // 14. a. Else, Let A be ArrayCreate(len).
+      var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+
+      // 16. Let k be 0.
+      var k = 0;
+      // 17. Repeat, while k < len. (also steps a - h)
+      var kValue;
+      while (k < len) {
+        kValue = items[k];
+        if (mapFn) {
+          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+        } else {
+          A[k] = kValue;
+        }
+        k += 1;
+      }
+      // 18. Let putStatus be Put(A, "length", len, true).
+      A.length = len;
+      // 20. Return A.
+      return A;
+    };
+  }());
+}
+
+
+
+</script>
+	<style type="text/css">
+html {
+  width: 100%;
+  height: 100%;
+    margins:0 px;
+  background: #fae47b; 
+}
+</style>	
+<style type="text/css">
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+   
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 162px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 6px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: -210%;
+    left: 0%;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 0%;
+    margin-left: 6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:  transparent transparent  #555  transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/style1.css">
+	
+	<script>
+	
+nAzu=2;
+	
+	
+	
+	function myFunction(image){
+    var img = new Image();
+    img.src = image;
+    img.onload = function() {   
+         a=this.width/this.height;
+		 return a
+        
+}}
+
+var imgname = "../atractor-apps-all/imgs/mot"+parseInt(nAzu)+".png";
+
+var a = myFunction(imgname)
+
+</script>
+</head>
+	<body onload="init();animate();return false">
+<div id="THREE" style="position:absolute; top: 0px;"></div>
+
+
+<img  src="../atractor-apps-all/icons/pause.png"  width=3.5% id=pauseRotateButton onClick=pauseRotation() style="position:absolute;  top: 10px;"></img>
+<img  src="../atractor-apps-all/icons/play.png"  width=3.5% id=playRotateButton onClick=playRotation() style="position:absolute; top: 10px; display: none;"></img>
+
+
+
+<input type="range" name="RangeVal" value="RangeVal" id="range" min="-2.5" max="10.5" step=".1" style="display: none;" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="../atractor-apps-all/icons/back.png" width=2.5% onclick="home();" style="display: none;"></img>
+
+
+
+<script type="text/javascript" src="../atractor-apps-all/scripts/three87.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/Detector.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/TrackballControls.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="../atractor-apps-all/scripts/jquery-ui.min.js"></script>
+	
+<script type="text/javascript">
+	
+
+function home(){
+	//window.location.href='Sfriso_refVH_ini.html'
+  window.location.href='../Sfriso_refVH/'
+}
+
+
+		
+			function increaseValue(value,increment)
+{
+ value = value * increment;
+ animate();
+ return speed=value
+}
+var speed=0.01	
+
+var nn=2; 
+var initv = 0;			
+var material = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,side: THREE.DoubleSide} );
+		
+	
+var materialF = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,
+        side: THREE.FrontSide,
+        flatShading: true,
+        transparent: true,
+        opacity: 0.9
+    } );	
+
+var materialB = new THREE.MeshLambertMaterial( { map: new THREE.TextureLoader().load(imgname) ,
+        side: THREE.BackSide,
+        flatShading: true,
+        transparent: true,
+        opacity: 0.9
+    } );		
+
+	texturep = new THREE.TextureLoader().load(imgname);
+
+
+// assuming you want the texture to repeat in both directions:
+texturep.wrapS = THREE.MirroredRepeatWrapping; 
+texturep.wrapT = THREE.MirroredRepeatWrapping;
+
+// how many times to repeat in each direction; the default is (1,1),
+//   which is probably why your example wasn't working
+if(nn==1) {texturep.repeat.set(6, 1 )} else {texturep.repeat.set(6*nn+1, 1 )}; 
+
+var localPlane = new THREE.Plane( new THREE.Vector3( 1,0,0 ), 0 ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( - 1, 0, 0 ), 0 );
+			
+var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+var materialtap = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+var materialtap2 = new THREE.MeshBasicMaterial( { color : 0xf3f1cd,  side:THREE.DoubleSide } );
+
+		
+		var RangeVal=-2.51;
+			var camera, scene, renderer, controls, planef, tempo, kc, placa0;
+			var mesh;
+			var meshFunction;
+			var xMin = -a;
+			var xMax = a;
+			var yMin = -1;
+			var yMax = 1;
+			var segments = 40;
+			var tapete;
+			var tapete2;
+
+var h_plane = -0.005;
+var h_pad = h_plane+0.0001;
+var h_tap = h_plane+0.0002;
+
+		
+			range.oninput = function() {
+    var tt = this.value;
+	RangeVal=parseFloat(this.value);
+	 displaySup(RangeVal*nn);
+}
+
+
+range.onchange = function() {
+var tt = this.value;
+RangeVal=parseFloat(this.value);
+     displaySup(RangeVal*nn);
+}
+
+
+function reini() {initv=1};
+			
+			function init() {
+			RangeVal=-2.51;
+				var loader = new THREE.TextureLoader();
+loader.load('../atractor-apps-all/imgs/symm-bg4-02.jpg' , 
+function(texture)
+            {
+             scene.background = texture;  
+            });
+ 				scene = new THREE.Scene();
+				renderer = new THREE.WebGLRenderer();
+				 var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+renderer.setSize(width,height);
+
+
+				document.getElementById('THREE').appendChild( renderer.domElement );
+				renderer.setClearColor(0xfae47b,1);
+				
+				// CAMERA
+				var aspect=width/height, near=5, far=2000;
+				
+			
+				camera = new THREE.PerspectiveCamera(10,aspect,near,far);
+				var kc = 2*6*a*nn/1.4
+				camera.position.set(-2.4*kc,2*kc,1.3*kc);
+				//camera.position.set(0,2*kc,0);
+				camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0,55,0)
+					
+				// LUZES
+				var light = new THREE.PointLight(0xffffff);
+light.position.set(-25,25,-50);
+//scene.add(light);
+				var light2 = new THREE.PointLight(0xffffff);
+				light2.position.set(-20,20,0);
+				//scene.add(light2);
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );
+
+controls = new THREE.TrackballControls( camera, renderer.domElement );
+	controls.noPan = true;
+
+
+				this.mesh = new THREE.Object3D(); 
+				
+mesh = Sup(0)
+			  
+				scene.add( mesh );
+				
+		
+
+
+if(nn==1) {planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a, 2), materialp)} else 
+{planef = new THREE.Mesh(new THREE.PlaneGeometry((6*nn+1)*2*a, 2), materialp)};
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+
+
+
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+
+if(nn==1) {var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a+1, 2+1), materialtap2)} else 
+{var planeff = new THREE.Mesh(new THREE.PlaneGeometry((6*nn+1)*2*a+1, 2+1), materialtap2)};
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+
+
+
+
+var translation = new THREE.Matrix4().makeTranslation(a*(nn-1),0,0);
+
+planeff.applyMatrix(translation)
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+scene.add(planeff);	
+				
+				// INSERIR EVENTO onWindowResize()
+window.addEventListener('resize', function() {
+       var width0=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var height0=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+var width=.99*width0;
+var height=.99*Math.min(width0/2,height0);
+var width2=width;
+var height2=height;
+camera.aspect=width/height;
+camera.updateProjectionMatrix();
+renderer.setSize(width,height);
+      });
+
+			
+renderer.render( scene, camera );
+			}
+
+			
+
+
+function animate() {requestAnimationFrame(animate);
+render();}
+
+function phi(tt) {return Math.pow(tt-4.5,5)+4.5}
+
+
+function render() {
+		
+				renderer.localClippingEnabled = true;
+	
+if(initv==1&&isRotating) {RangeVal = -2.51;
+	tt=-2.51;
+	document.getElementById('range').value = -2.51;
+	scene.remove.apply(scene,scene.children)
+var lighta = new THREE.AmbientLight( 0xf0f0f0 ); // soft white light
+scene.add( lighta );if(nn==1) {var planeff = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a+1, 2+1), materialtap2)} else 
+{var planeff = new THREE.Mesh(new THREE.PlaneGeometry((6*nn+1)*2*a+1, 2+1), materialtap2)};
+planeff.side = THREE.DoubleSide;
+planeff.material.side = THREE.DoubleSide;
+
+
+
+
+
+var translation = new THREE.Matrix4().makeTranslation(a*(nn-1),0,0);
+
+planeff.applyMatrix(translation)
+planeff.position.y = h_plane;
+
+planeff.rotation.x = -Math.PI/2;
+
+scene.add(planeff);	
+displaySup(-2.51); tempo=[];
+ initv=0;
+ 
+ isRotating=true;pauseRotateButton.innerHTML="Parar Animação";
+ }
+	
+else {
+	
+	if(isRotating)
+    { 
+	
+	
+	if(RangeVal<=3.5) {
+	scene.remove(mesh);
+	RangeVal += speed;
+ tt=Math.min(RangeVal,4.5);
+	    document.getElementById('range').value = tt;
+		var kc = 1.5*6*a*nn/1.4
+camera.fov = 10;
+camera.updateProjectionMatrix();
+				camera.position.set(3.4*kc,3.4*kc,5.6*kc);
+						
+				camera.lookAt(new THREE.Vector3(0,3,0));
+				camera.up.set(0,55,0)
+		displaySup(parseFloat(tt)*nn);}
+		else{
+		scene.remove(mesh)
+	  
+	   RangeVal += speed/2;
+var tt=Math.min(RangeVal,4.5);
+	    document.getElementById('range').value = Math.round(tt*10)/10;
+
+var kc = 1.5*6*a*nn/1.3
+
+				camera.position.set(3.4*kc*(1-phi(tt)+3.5),
+				3.4*kc,0.01*(phi(tt)-3.5)+5.6*kc*(1-phi(tt)+3.5));
+						
+				camera.lookAt(new THREE.Vector3(0,3,0));
+				camera.up.set(0,55,0)
+				
+				camera.fov = 10*(1-phi(tt)+3.5)+20*(phi(tt)-3.5);
+camera.updateProjectionMatrix();
+				renderer.render( scene, camera )}
+	
+	 	  if(RangeVal>4.5) {initv=1;
+		  isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+pauseRotateButton.innerHTML="Animar";RangeVal=-2.51;	    document.getElementById('range').value = -2.5;}
+    }};
+			
+			
+			if(animvp) {	var pos= new THREE.Vector3(camera.position.x, camera.position.y, camera.position.z )
+	 
+var posf=pos.clone().applyAxisAngle(new THREE.Vector3(0,1,0),speed/8) 
+	 camera.position.set(posf.x,posf.y,posf.z);
+	  	camera.lookAt(new THREE.Vector3(0,0,0));
+				camera.up.set(0, 55, 0)
+        camera.updateProjectionMatrix()
+		}
+			
+				 renderer.render( scene, camera );}
+			
+	
+	
+
+	
+	
+			function Sup(clock)
+{
+
+			placa0=new THREE.Group();		
+			placa01 = new THREE.Mesh(new THREE.PlaneGeometry(2*a, 2), materialF);
+placa01.side = THREE.DoubleSide;
+//placa01.material.side = THREE.DoubleSide;
+placa01.position.z = h_plane
+
+placa0.add(placa01);
+
+placa02 = new THREE.Mesh(new THREE.PlaneGeometry(2*a, 2), materialB);
+placa02.side = THREE.DoubleSide;
+//placa02.material.side = THREE.DoubleSide;
+placa02.position.z = h_plane
+
+placa0.add(placa02);
+
+var geometryesp = new THREE.CylinderGeometry( .02,0.02,2, 40 );
+var materialesp =new THREE.MeshStandardMaterial({ color: new THREE.Color (0xffffff), emissive: new THREE.Color (0xf0fff0), emissiveIntensity:.10,  metalness: 0, roughness: 0,  side : THREE.DoubleSide});
+meshesp = new THREE.Mesh( geometryesp, materialesp );
+
+meshesp.position.x=-a;
+
+
+
+placa0.add( meshesp );
+
+meshesp2 = new THREE.Mesh( geometryesp, materialesp );
+
+meshesp2.position.x=a;
+
+
+
+placa0.add( meshesp2 );
+									
+						return placa0;
+					
+				};
+				
+
+tempo=[];
+
+
+
+
+function displaySup(clock)
+{
+	scene.remove(mesh);
+	scene.remove(planef);
+	
+	
+	if(tempo.indexOf(clock) === -1) tempo.push(clock);
+min=Math.min(...tempo);
+max=Math.max(...tempo);
+
+var localPlane = new THREE.Plane( new THREE.Vector3( -1,0,0 ), Math.round(max+.51)*2*a-2*a ),
+					localPlane2 = new THREE.Plane( new THREE.Vector3( 1, 0, 0 ), -Math.round(min+.49)*2*a+2*a );
+					var materialp = new THREE.MeshLambertMaterial( { map: texturep ,side: THREE.DoubleSide, clippingPlanes: [ localPlane, localPlane2 ]} );
+
+	mesh = Sup (clock);
+mesh.rotation.x = -Math.PI/2;
+	var k3 = (clock-Math.floor(clock))*Math.PI
+			var k4 = Math.floor(clock)*2*a
+	 var translation = new THREE.Matrix4().makeTranslation(a, 0,0);
+		   var rotation = new THREE.Matrix4().makeRotationX(-Math.PI/2);
+var translation1 = new THREE.Matrix4().makeTranslation(k4, 0,0);
+var rotation2 = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(0, 0, 1), Math.PI-k3);
+
+var transformation = translation1.multiply(rotation2.multiply(rotation.multiply(translation)));
+
+mesh.applyMatrix(transformation);
+
+if(Math.abs(Math.floor(clock)%2)==Math.abs((nn-1)%3)) {mesh.scale.set(-1,1,1)} else {mesh.scale.set(1,1,1)};
+	mesh.position.z = h_plane	  
+	scene.add(mesh);
+	
+	
+	if(nn==1) {planef = new THREE.Mesh(new THREE.PlaneGeometry(6*2*a, 2), materialp)} else 
+	{planef = new THREE.Mesh(new THREE.PlaneGeometry((6*nn+1)*2*a, 2), materialp)};
+planef.side = THREE.DoubleSide;
+planef.material.side = THREE.DoubleSide;
+planef.position.z = h_plane;
+
+
+var translation = new THREE.Matrix4().makeTranslation(a*(nn-1),0,0);
+
+planef.applyMatrix(translation)
+
+planef.rotation.x = -Math.PI/2;
+
+scene.add(planef);
+}	
+
+
+var isRotating=true
+function pauseRotation()
+{isRotating=false;
+document.getElementById("pauseRotateButton").style.display='none';
+document.getElementById("playRotateButton").style.display='inline';
+
+ }
+
+
+function playRotation()
+{isRotating=true;
+document.getElementById("pauseRotateButton").style.display='inline';
+document.getElementById("playRotateButton").style.display='none';
+}
+
+
+var animvp=false;
+
+		</script>
+
+	</body>
+</html>

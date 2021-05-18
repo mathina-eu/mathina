@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<style>
+    html {
+        background: url(img/bg1_plain.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: "Roboto", sans-serif;
+    }
+
+    .head {
+        padding: 10px;
+        cursor: move;
+        z-index: 10;
+        background-color: #C8F4F9;
+        border: 5px solid #565A6E;
+        color: #000;
+        width: 20%;
+        height: 15%;
+        position: absolute;
+        left: 5%;
+        font-size:min(4vw,3vh);
+        font-family: sans-serif;
+        text-align: center;
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+    }
+
+    .divimg {
+        cursor: move;
+        position: absolute;
+        background-color: #FFF3EC;
+        text-align: center;
+        border: 5px solid #F87595;
+        width: 15%;
+        height: 18%;
+        right: 5%;
+        z-index: 10;
+		display: flex;
+		justify-content: center; /* align horizontal */
+		align-items: center; /* align vertical */
+    }
+
+    #QuadratoCentrale {
+        position: absolute;
+        left: 35vw;
+        top: 20vh;
+        width: 30vw;
+        height: 30vw;
+        border: solid 5px #2F7604;
+        background-color: #F8FFCA;
+    }
+
+    #messaggio {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #C8F4F9;
+        text-align: center;
+        font-size:min(4vw,3vh);
+    }
+
+    #chiave {
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #FFF3EC;
+        text-align: center;
+        font-size:min(4vw,3vh);
+    }
+
+    #Head1 {
+        top: 10%;
+    }
+
+    #Head2 {
+        top: 30%;
+    }
+
+    #Head3 {
+        top: 50%;
+    }
+
+    #Head4 {
+        top: 70%;
+    }
+
+    #Div1 {
+        top: 10%;
+    }
+
+    #Div2 {
+        top: 30%;
+    }
+
+    #Div3 {
+        top: 50%;
+    }
+
+    #Div4 {
+        top: 70%;
+    }
+
+ #successMessage {
+        position: absolute;
+        /*left: 50%;
+  top:50%;
+  width: 98%;
+  height: 58%;*/
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        //padding: 10% 0%;
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+
+    #failMessage {
+        position: absolute;
+        z-index: 100;
+        background: url(img/bgs.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+        border: 2px solid #333;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+        text-align: center;
+        left: 1%;
+        top: 1%;
+        width: 98%;
+        height: 98%;
+
+    }
+	
+.FinalImage {
+	position: absolute; 
+	top: 8%; 
+	left:0%;
+	width:100%;
+	height:30%;
+	text-align:center;
+}	
+	
+.FinalMessage {
+	position: absolute; 
+	top: 45%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
+</style>
+
+<body onload="Init()">
+    <div id="messaggio">Messaggio: guardate il terzo albero a nord delle fontane.</div>
+    <div id="chiave">Chiave: ha cinque lati</div>
+
+    <div id="Head1" class="head">Guardate il terzo albero a nord delle fontane.</div>
+    <div id="Head2" class="head">Guardate il terzo albero andando a destra dall'entrata.</div>
+    <div id="Head3" class="head">Guardate il settimo albero a nord delle fontane.</div>
+    <div id="Head4" class="head">Guardate l'albero vicino alla panchina.</div>
+
+    <div id="Div1" class="divimg"><img src="img/f01.png" style="max-width:100%; max-height:100%;"></div>
+    <div id="Div2" class="divimg"><img src="img/f02.png" style="max-width:100%; max-height:100%;"></div>
+    <div id="Div3" class="divimg"><img src="img/f05.png" style="max-width:100%; max-height:100%;"></div>
+    <div id="Div4" class="divimg"><img src="img/f04.png" style="max-width:100%; max-height:100%;"></div>
+
+    <div id="QuadratoCentrale">
+
+    </div>
+
+    <script>
+        //Modifica
+
+        Traduzioni=[
+[["messaggio"],"Message: look at the third tree, north from the fountains.","Messaggio: guardate il terzo albero a nord delle fontane.","Mensagem: procura a terceira &aacute;rvore, a norte das fontes.","Nachricht: Suche den dritten Baum n&ouml;rdlich der Springbrunnen."],
+[["chiave"],"Key: it has five sides.", "Chiave: ha cinque lati.","Chave: possui cinco lados.","Schl&uuml;ssel: Es hat fuuml;nf Seiten."],
+[["Head1"],"Look at the third tree, north from the fountains.","Guardate il terzo albero a nord delle fontane.","Procura a terceira &aacute;rvore, a norte das fontes.","Suche den dritten Baum n&ouml;rdlich der Springbrunnen."],
+[["Head2"],"Look at the third tree going right from the entrance.","Guardate il terzo albero andando a destra dall'entrata.","Procura a terceira &aacute;rvore à direita da entrada.","Suche den dritten Baum rechts vom Eingang aus."],
+[["Head3"],"Look at the seventh tree north of the fountains.","Guardate il settimo albero a nord delle fontane.","Procura a s&eacute;tima &aacute;rvore a norte das fontes.","Suche den siebten Baum n&ouml;rdlich der Springbrunnen."],
+[["Head4"],"Look at the tree near the bench.","Guardate l'albero vicino alla panchina.","Procura a &aacute;rvore perto do banco.","Suche den Baum in der N&auml;he der Bank."],
+[["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+];
+
+
+        function gup(name, url) {
+            if (!url) url = location.href;
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(url);
+            return results == null ? null : results[1];
+        }
+
+
+        function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
+
+
+        //Make the DIV element draggagle:
+        dragElement(document.getElementById("Div1"));
+        dragElement(document.getElementById("Div2"));
+        dragElement(document.getElementById("Div3"));
+        dragElement(document.getElementById("Div4"));
+        dragElement(document.getElementById("Head1"));
+        dragElement(document.getElementById("Head2"));
+        dragElement(document.getElementById("Head3"));
+        dragElement(document.getElementById("Head4"));
+		
+		function getMousePos(canvas, evt) {
+			if (evt.changedTouches != null) {
+				touchobject = evt.changedTouches[0];
+				mousex = touchobject.clientX;
+				mousey = touchobject.clientY;
+			} else {
+				if (evt.clientX || evt.clientY == 0) { // Firefox
+					mousex = evt.clientX;
+					mousey = evt.clientY;
+				} else if (evt.offsetX || evt.offsetX == 0) { // Opera
+					mousex = evt.offsetX;
+					mousey = evt.offsetY;
+				}
+			}
+			return {
+				x: mousex,
+				y: mousey
+			};
+		}
+		
+        function dragElement(elmnt) {
+            var pos1 = 0,
+                pos2 = 0,
+                pos3 = 0,
+                pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                /* if present, the header is where you move the DIV from:*/
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+                document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
+            } else {
+                /* otherwise, move the DIV from anywhere inside the DIV:*/
+                elmnt.onmousedown = dragMouseDown;
+                elmnt.ontouchstart = dragMouseDown;
+            }
+			
+			
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+				MyPos=getMousePos(window,e);
+                // get the mouse cursor position at startup:
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
+                document.onmouseup = closeDragElement;
+                document.ontouchend = closeDragElement;
+                // call a function whenever the cursor moves:
+                document.onmousemove = elementDrag;
+                document.ontouchmove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                // calculate the new cursor position:
+				MyPos=getMousePos(window,e);
+                pos1 = pos3 - MyPos.x;
+                pos2 = pos4 - MyPos.y;
+                pos3 = MyPos.x;
+                pos4 = MyPos.y;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                /* stop moving when mouse button is released:*/
+                document.onmouseup = null;
+                document.onmousemove = null;
+				document.ontouchmove = null;
+				document.ontouchend = null;
+                CheckRects();
+            }
+        }
+
+        function CheckRects() {
+            Dentro = [];
+            for (let i = 1; i <= 4; i++) {
+                if (IsRectInRect("QuadratoCentrale", "Head" + i)) Dentro.push("H" + i);
+                if (IsRectInRect("QuadratoCentrale", "Div" + i)) Dentro.push("D" + i);
+            }
+
+            if (Dentro.length < 2) console.log("pochi");
+            if (Dentro.length > 2) Sconfitta();
+            if (Dentro.length == 2) {
+                if (Dentro.indexOf(Vittoria[0]) > -1 && Dentro.indexOf(Vittoria[1]) > -1) Finisci();
+                else Sconfitta();
+
+            }
+
+        }
+
+        function IsRectInRect(Contenitore, Contenuto) {
+            var DimContenitore = document.getElementById(Contenitore).getBoundingClientRect();
+            var DimContenuto = document.getElementById(Contenuto).getBoundingClientRect();
+            if (DimContenitore.left < DimContenuto.left && DimContenitore.right > DimContenuto.right && DimContenitore.top < DimContenuto.top && DimContenitore.bottom > DimContenuto.bottom) return true;
+            return false;
+        }
+
+        function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+
+        function Init() {
+            Vittoria = ["H1", "D3"];
+
+            Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
+			Resize();
+        }
+
+
+       function Finisci() {
+            //document.getElementById("successMessage").style.display = "block";
+            document.getElementById("successMessage").style.visibility = "visible";
+			Yeah();
+
+        }
+
+        function Sconfitta() {
+            document.getElementById("failMessage").style.visibility = "visible";
+
+        }
+
+        function Link() {
+            location.reload();
+
+        }
+    </script>
+    <div id="failMessage" style="visibility:hidden;">
+         <div class="FinalImage"><img src="img/fleo2.png" height=100%></img></div>
+<span id="FailMess" class="FinalMessage">TRY AGAIN!</span>
+
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+	
+	<div id="successMessage" style="visibility:hidden;">
+	<canvas id='myCanvas'></canvas>
+        <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
+        
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
+        <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
+  top: 60%;
+  right: 45%;"></img>
+    </div>
+
+
+<script>
+function Resize() {
+            var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimension = [width, height];
+			document.getElementById('myCanvas').width=dimension[0]*98/100;
+			document.getElementById('myCanvas').height=dimension[1]*98/100;
+        }
+
+
+const max_fireworks = 6,
+  max_sparks = 100;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+ 
+ function hslToRgb(h, s, l){
+    var r, g, b;
+
+    if(s == 0){
+        r = g = b = l; // achromatic
+    }else{
+        var hue2rgb = function hue2rgb(p, q, t){
+            if(t < 0) t += 1;
+            if(t > 1) t -= 1;
+            if(t < 1/6) return p + (q - p) * 6 * t;
+            if(t < 1/2) return q;
+            if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+
+        var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1/3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1/3);
+    }
+
+    return [Math.round(r * 255), Math.round(g * 255), Math.round(b * 255)];
+}
+
+function Yeah() { 
+for (let i = 0; i < max_fireworks; i++) {
+  let firework = {
+    sparks: []
+  };
+  for (let n = 0; n < max_sparks; n++) {
+	MioH=hslToRgb(Math.random(),1,0.6+Math.random()*0.2);
+    let spark = {
+      vx: Math.random() * 5 + .5,
+      vy: Math.random() * 5 + .5,
+      weight: Math.random() * .3 + .03,
+
+	  red:MioH[0],
+	  green:MioH[1],
+	  blue:MioH[2]
+    };
+    if (Math.random() > .5) spark.vx = -spark.vx;
+    if (Math.random() > .5) spark.vy = -spark.vy;
+    firework.sparks.push(spark);
+  }
+  fireworks.push(firework);
+  resetFirework(firework);
+}
+//
+window.requestAnimationFrame(explode);
+
+}
+ 
+function resetFirework(firework) {
+  firework.x = Math.floor(Math.random() * canvas.width);
+  firework.y = canvas.height;
+  firework.age = 0;
+  firework.phase = 'fly';
+}
+ 
+function explode() {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  fireworks.forEach((firework,index) => {
+    if (firework.phase == 'explode') {
+        firework.sparks.forEach((spark) => {
+        for (let i = 0; i < 10; i++) {
+          let trailAge = firework.age + i;
+          let x = firework.x + spark.vx * trailAge;
+          let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+          let fade = Math.min(1,(i * 20 - firework.age * 2)/1);
+          let r = Math.floor(spark.red);
+          let g = Math.floor(spark.green);
+          let b = Math.floor(spark.blue);
+          context.beginPath();
+          context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ','+1+')';
+          context.rect(x, y, 2, 2);
+          context.fill();
+        }
+      });
+      firework.age++;
+      if (firework.age > 100 && Math.random() < .05) {
+        resetFirework(firework);
+      }
+    } else {
+      firework.y = firework.y - 10;
+      for (let spark = 0; spark < 15; spark++) {
+        context.beginPath();
+        context.fillStyle = 'rgba(' + 255 + ',' + spark * 255/15 + ',0,1)';
+        context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 2, 2);
+        context.fill();
+      }
+      if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+    }
+  });
+  window.requestAnimationFrame(explode);
+}
+</script>
+</body>
+
+</html>
