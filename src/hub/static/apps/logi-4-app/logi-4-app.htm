@@ -278,7 +278,7 @@
         }
 
         function AddLine(Receive) {
-            if (CurrentLine < Amici) {
+            if (CurrentLine <= Amici) {
                 CurrentLine++;
                 SoldiAmici[CurrentLine - 1] += Number(Receive);
                 var Tabella = document.getElementById("Tabella");
@@ -307,7 +307,7 @@
                 Genitore.innerHTML = "<span style='color:#0000cc;'>" + Receive + "</span>";
             } else if (CurrentLine < 2 * Amici) {
 
-                SoldiAmici[CurrentLine - 1 - Amici] += Number(Receive)
+                SoldiAmici[CurrentLine -1 - Amici] += Number(Receive)
                 if (CurrentLine > Amici) document.getElementById("N" + CurrentLine).innerHTML = SoldiAmici[CurrentLine - 1 - Amici];
 
                 CurrentLine++;
@@ -333,6 +333,17 @@
 					}
 
                 var DaRimuovere = document.getElementById('K' + (CurrentLine - 1));
+                var Genitore = DaRimuovere.parentNode;
+                Genitore.removeChild(DaRimuovere);
+                Genitore.innerHTML = "<span style='color:#0000cc;'>" + Receive + "</span>";
+            }
+			else if (CurrentLine == 2 * Amici) {
+
+                SoldiAmici[CurrentLine -1 - Amici] += Number(Receive)
+                if (CurrentLine > Amici) document.getElementById("N" + CurrentLine).innerHTML = SoldiAmici[CurrentLine - 1 - Amici];
+
+                
+                var DaRimuovere = document.getElementById('K' + (CurrentLine));
                 var Genitore = DaRimuovere.parentNode;
                 Genitore.removeChild(DaRimuovere);
                 Genitore.innerHTML = "<span style='color:#0000cc;'>" + Receive + "</span>";
