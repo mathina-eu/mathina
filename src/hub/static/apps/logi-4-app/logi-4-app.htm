@@ -136,6 +136,25 @@
         function isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
+		
+			      Traduzioni=[
+		[["Testo1"],"Name of the <br>player","Nome del <br>giocatore","Nome do <br>jogador","Name des <br>Spielers"],
+		[["Testo2","Testo2b"],"Remaining amount <br>to give away","Somma rimanente <br>da distribuire","Quantidade restante <br>para dar","Restbetrag <br>zum Verschenken"],
+		[["Testo3"],"Amount received <br>in first round","Somma ricevuta <br>nel primo round","Valor recebido <br>na primeira rodada","Menge in der <br>ersten Runde erhalten"],
+		[["Testo4"],"Amount received <br>in second round","Somma ricevuta <br>nel secondo round","Valor recebido <br>na segunda rodada","Menge in der <br>zweiten Runde erhalten"],
+		[["Testo5"],"Total amount <br>received","Totale <br>ricevuto","Valor total <br>recebido","Gesamtbetrag <br>erhalten"],
+		[["Trad1"],"Initial amount of gold medals:","Numero iniziale di medaglie d'oro:","Quantidade inicial de medalhas de ouro","Anfangsmenge an Goldmedaillen"],
+		[["Trad2"],"Generate table","Genera tabella","Gerar tabela","Tabelle generieren"]
+];
+
+ function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
+
 
         function init() {
             Numero = gup('n', document.location.search);
@@ -144,6 +163,13 @@
 
             Custom = gup('c', document.location.search);
 
+
+			Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
+			
             if (Custom == 1) {
                 AddKeyboard("InAm");
                 //AddKeyboard("InFr");
@@ -278,9 +304,11 @@
         }
 
         function AddLine(Receive) {
-            if (CurrentLine <= Amici) {
-                CurrentLine++;
+		
+            if (CurrentLine < Amici) {
+                
                 SoldiAmici[CurrentLine - 1] += Number(Receive);
+				CurrentLine++;
                 var Tabella = document.getElementById("Tabella");
                 var row = Tabella.insertRow(CurrentLine);
                 var cell1 = row.insertCell(0);
@@ -306,8 +334,9 @@
                 Genitore.removeChild(DaRimuovere);
                 Genitore.innerHTML = "<span style='color:#0000cc;'>" + Receive + "</span>";
             } else if (CurrentLine < 2 * Amici) {
-
-                SoldiAmici[CurrentLine -1 - Amici] += Number(Receive)
+				if (CurrentLine==Amici) SoldiAmici[CurrentLine-1] += Number(Receive);
+				else SoldiAmici[CurrentLine - Amici-1] += Number(Receive);
+				
                 if (CurrentLine > Amici) document.getElementById("N" + CurrentLine).innerHTML = SoldiAmici[CurrentLine - 1 - Amici];
 
                 CurrentLine++;
@@ -394,12 +423,12 @@ setTimeout(function(){ $("#"+IdName).keyboard().getkeyboard().destroy(); AddLine
             <table class="tg" width="500">
                 <tbody>
                     <tr>
-                        <td>Initial amount of gold:</td>
+                        <td><span id="Trad1">Initial amount of gold:</span></td>
                         <td><textarea id="InAm" style="width:250px; height:80px;" class="ui-widget-content ui-corner-all ui-keyboard-preview"></textarea></td>
                     </tr>
                     <!--<tr><td>Number of friends:</td><td><textarea id="InFr"></textarea></td></tr>-->
                     <tr>
-                        <td><button onclick="Generate()" class="normbutton">Generate table</button></td>
+                        <td><button onclick="Generate()" class="normbutton" id="Trad2">Generate table</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -410,9 +439,9 @@ setTimeout(function(){ $("#"+IdName).keyboard().getkeyboard().destroy(); AddLine
             <table class="tg" id="Tabella" align="right">
                 <thead>
                     <tr>
-                        <th class="tg-e4ml">Name of the <br>player</th>
-                        <th class="tg-e4ml">Remaining amount<br>to give away</th>
-                        <th class="tg-e4ml">Amount received<br>in first round</th>
+                        <th class="tg-e4ml" id="Testo1">Name of the <br>player</th>
+                        <th class="tg-e4ml" id="Testo2">Remaining amount<br>to give away</th>
+                        <th class="tg-e4ml" id="Testo3">Amount received<br>in first round</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -423,9 +452,9 @@ setTimeout(function(){ $("#"+IdName).keyboard().getkeyboard().destroy(); AddLine
             <table class="tg" id="Tabella2">
                 <thead>
                     <tr>
-                        <th class="tg-e4ml">Remaining amount<br>to give away</th>
-                        <th class="tg-e4ml">Amount received<br>in second round</th>
-                        <th class="tg-e4ml">Total amout <br> received</th>
+                        <th class="tg-e4ml" id="Testo2b">Remaining amount<br>to give away</th>
+                        <th class="tg-e4ml" id="Testo4">Amount received<br>in second round</th>
+                        <th class="tg-e4ml" id="Testo5">Total amout <br> received</th>
                     </tr>
                 </thead>
                 <tbody>

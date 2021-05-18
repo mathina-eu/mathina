@@ -1,0 +1,492 @@
+actions:
+  - type: background
+    src: logi-bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: image
+    src: leo-pointing.png
+    id: leo-pointing
+    style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: bag.png
+    id: bag
+    style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
+    parallax: back1  
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Eccolo! 
+        char: leo
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo indicò il cartello sulla facciata del grattacielo, dove c'era scritto "YTIC-IGOL" in lettere giganti. Leo sarebbe entrato, ma Mathina gli afferrò rapidamente la mano.
+  - type: clearImage
+    id: leo-pointing
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries: 
+      - text: Non è strano che dica "YTIC-IGOL"? 
+        char: mathina
+        mood: thinking
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: No, non è affatto strano, andiamo!
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-thinking
+    vars:
+      duration: 0.5
+      xPercent: 0
+      yPercent: -40
+      repeat: 3
+      yoyo: true
+      ease: power1.inOut
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo fece per saltare in avanti ma fu subito fermato da un muro invisibile.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-thinking-turned.png
+    id: mathina-thinking-t
+    style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina si voltò assorta nei suoi pensieri...
+  - type: clearImage
+    id: mathina-thinking-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: ...e poi si voltò ancora per guardare la di nuovo la facciata.
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: C'è scritto "Logi-city", che è il nome in inglese della Città della Logica, solo che al contrario! 
+        char: mathina
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Ciò significa che dovremmo fare tutto al contrario!
+        char: mathina
+        mood: arguing
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Detto questo, Mathina e Leo si voltarono...
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back2
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: .. e iniziarono a saltellare all'indietro verso l'entrata!
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out      
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: A un certo punto, però, qualcuno gli intimò di fermarsi immediatamente.
+  - type: clearImage
+    id: leo-runs-t
+  - type: clearImage
+    id: mathina-runs-t
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Fermi! Fermatevi immediatamente! Fermi!
+        char: owl
+        mood: serious
+      - text: Abbiamo una missione importante da completare qui, Signor Gufo. Dobbiamo consegnare questo regalo di compleanno al Ministro delle Questioni Logiche della Città della Logica.
+        char: mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo indicò la borsa ai suoi piedi.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Sì, sono stato avvisato. Ma voi non fate eccezione alla regola.
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-front.png
+    id: owl-w-f
+    style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: "Osservate il pavimento di marmo qui sulla soglia. Non è stato fatto così per caso: c'è uno scopo per cui è stato costruito qui e in questo modo."
+        char: owl
+        mood: serious
+      - text: "Non è permesso camminare semplicemente sopra al pavimento di marmo: bisogna seguire un criterio logico particolare per passare da una piastrella all'altra. In questo modo ci assicuriamo che solo le persone degne passino per arrivare al Ministro."
+        char: owl
+        mood: serious
+  - type: animation
+    target: mathina-thinking
+    vars:
+      duration: 1
+      xPercent: -30
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: owl-w-f
+    vars:
+      duration: 1
+      xPercent: 50
+      yPercent: -15
+      ease: power3.out
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: tiled floor.jpg
+    id: tiled floor
+    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: "Ecco la regola: ad ogni salto, si può passare ad una piastrella adiacente solo se ha lo stesso colore oppure la stessa forma di quella in cui ci si trova."
+        char: owl
+        mood: serious
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: "Mathina osservò la figura, grattandosi il mento mentre rifletteva. Leo invece sembrava parecchio confuso!"
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: "Si può passare da una piastrella rossa ad un'altra rossa indipendentemente dalla forma, ad esempio, o da una quadrata a un'altra quadrata, indipendentemente dal colore."
+        char: owl
+        mood: serious
+        exposition: "Aggiunse, sperando di rendere più chiare le cose a Leo e Mathina."
+  - type: clearImage
+    id: tiled floor
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:      
+      - text: Ma allora è semplice! 
+        char: leo
+        mood: talking
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      xPercent: 40
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Detto questo, Leo iniziò a saltare da una piastrella all'altra! Il gufo, invece, era disperato mentre Leo continuava a saltare!
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '270px'
+      top: '160px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo saltò da un cerchio rosso a un quadrato rosso.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '310px'
+      top: '200px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: E poi a un quadrato arancione....
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 1
+      left: '380px'
+      top: '170px'
+      ease: power3.out  
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: ...e da lì a un triangolo arancione... Ma lì si fermò di colpo, prima di saltare inavvertitamente sulla piastrella sbagliata.
+  - type: clearImage
+    id: leo-runs
+  - type: image
+    src: leo-thinking.png
+    id: leo-thinking
+    style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Fermo! Fermati subito!
+        char: owl
+        mood: serious
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo era così terrorizzato che rimase fermo sul triangolo arancione. 
+  - type: clearImage
+    id: owl-w-f
+  - type: image
+    src: owl-wing-up.png
+    id: owl-w-up
+    style: "width: 17%; top: 35%; right: 30%;"  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Non avevo ancora finito. Se sbagli un solo salto, la piastrella si capovolgerà e ti ritroverai nella rete fognaria della città! 
+        char: owl
+        mood: serious
+      - text: Ma questa volta farò un'eccezione perchè avete un incarico importante da portare a termine. Torna al punto di partenza e riprova... questo è assolutamente il mio ultimo favore!
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: owl-w-up
+  - type: image
+    src: owl-wing-down.png
+    id: owl-w-d
+    style: "width: 20%; top: 41%; right: 29%;"  
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: "Leo fissò Mathina con una faccia a metà tra il disgustato e il preoccupato: ere davvero spaventato dalla promessa del gufo!"
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-standing.png
+    id: mathina-standing
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Stai lì fermo e non muoverti se non te lo diciamo!
+        char: mathina
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina si chiese cosa fare.
+  - type: clearImage
+    id: leo-thinking
+  - type: image
+    src: leo-sitting.png
+    id: leo-sitting
+    style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
+    parallax: back2
+  - type: game
+    text: Che consiglio gli daresti?
+    toolbarText: Puoi passare ad una piastrella adiacente solo se ha lo stesso colore oppure la stessa forma di quella in cui ti trovi.
+    cta: Dai una mano a Mathina e a Leo!
+    url: \apps\logi-2-app\logi-2-app-1.htm
+  - type: clearImage
+    id: mathina-standing
+  - type: image
+    src: mathina-thinking.png
+    id: mathina-thinking
+    style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina esaminava le varie possibilità nella sua testa ma incontrava sempre un ostacolo. Si grattò la testa, si guardò intorno e notò di nuovo la scritta sulla facciata con il nome della città scritta al contrario.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Oh, ho avuto un'idea!
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: "Mathina aveva giustamente notato che la scritta doveva essere letta al contrario. E se avesse provato a pensare al contrario? Partire dalla fine per tornare all'inizio per cercare il percorso corretto..."
+  - type: game
+    text: Aiuta Mathina a cercare un percorso che la porti indietro dal traguardo!
+    toolbarText: 
+    cta: Aiuta Mathina!
+    url: \apps\logi-2-app\logi-2-app-2.htm
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Mathina tracciò a ritroso il percorso ormai assolutamente evidente e si sforzò di memorizzare i passaggi.
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Cerchio rosso, triangolo rosso, triangolo blu... 
+        char: mathina
+        mood: thinking
+  - type: clearImage
+    id: leo-sitting
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: "Seguimi Leo: ho trovato la strada!"
+        char: mathina
+        mood: happy
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 2
+      xPercent: -110
+      yPercent: 10
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Leo tornò indietro, si avvicinò a Mathina e afferrò la borsa.
+  - type: clearImage
+    id: leo-runs-t
+  - type: image
+    src: leo-runs.png
+    id: leo-runs
+    style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
+    parallax: back2  
+  - type: clearImage
+    id: mathina-thinking
+  - type: image
+    src: mathina-runs.png
+    id: mathina-runs
+    style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Il gufo li guardò soddisfatto mentre attraversavano, oramai con facilità.
+  - type: animation
+    target: leo-runs
+    vars:
+      duration: 4
+      xPercent: 350
+      yPercent: -2
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs
+    vars:
+      duration: 5
+      xPercent: 350
+      yPercent: -5
+      ease: power3.out  
+      parallax: back2  
+  - type: animation
+    target: bag
+    vars:
+      duration: 4
+      xPercent: 410
+      yPercent: 0
+      ease: power3.out  
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 50px; top: 5px;"
+    entries:
+      - text: Congratulazioni, signorina, congratulazioni! 
+        char: owl
+        mood: serious
+  - type: clearImage
+    id: leo-runs
+  - type: clearImage
+    id: mathina-runs
+  - type: image
+    src: mathina-runs-turned.png
+    id: mathina-runs-t
+    style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
+    parallax: back2
+  - type: image
+    src: leo-runs-turned.png
+    id: leo-runs-t
+    style: "width: 19%; top: 44%; right: 15%; z-index:2"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: "Mathina annuì educatamente perché odiava essere chiamata una signorina: era la solita intelligente e forte Mathina!"
+  - type: animation
+    target: leo-runs-t
+    vars:
+      duration: 3
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: animation
+    target: mathina-runs-t
+    vars:
+      duration: 4
+      xPercent: -350
+      yPercent: 0
+      ease: power3.out  
+      parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 50px; top: 5px;"
+    text: Fu così che salutarono il gufo e tornarono indietro saltellando sulle piastrelle colorate.
+  - type: clearImage
+    id: mathina-runs-t
+  - type: clearImage
+    id: leo-runs-t

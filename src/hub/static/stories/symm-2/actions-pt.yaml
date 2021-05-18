@@ -114,6 +114,7 @@ actions:
   - type: game
     tag: tg3
     text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
+    toolbarText: "Escolhe as 4 rosáceas com eixos de simetria"
     cta: "Experimenta!"
     url: /apps/EscolheRosaceas/index.html?lang=pt    
   - type: dialog

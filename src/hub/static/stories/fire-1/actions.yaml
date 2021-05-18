@@ -92,7 +92,7 @@ actions:
   - type: image
     src: $COMMON/img/characters/leo/leo1.png
     id: leo
-    style: "width: 7.5%; top: 70%; left: 38%; transform: scalex(-1)"
+    style: "width: 10%; top: 65%; left: 38%; transform: scalex(-1)"
     parallax: mid2
 
   - type: sceneText
@@ -406,7 +406,7 @@ actions:
       Use the horn to guide the unidragon.
       Try to draw some nice shapes in the air.
     toolbarText: Fly the unidragon
-    url: /apps/imaginary-tests/app_1/1_1/index.html
+    url: /apps/imaginary/app_1/1_1/en.html
     cta: Fly the unidragon!
 
 
@@ -482,7 +482,7 @@ actions:
   - type: game
     text: Fly the unidragon to eat all the fireballs. Do not touch the clouds, firedragons hate them!
     toolbarText: Catch the fireballs!
-    url: /apps/imaginary-tests/app_1/1_2/index.html
+    url: /apps/imaginary/app_1/1_2/en.html
     cta: Catch the fireballs!
 
   - type: clearImage
@@ -505,7 +505,7 @@ actions:
   - type: game
     text: Try to fly as close as possible to the lines in the sky.
     toolbarText: Follow the lines!
-    url: /apps/imaginary-tests/app_1/1_3/index.html
+    url: /apps/imaginary/app_1/1_3/en.html
     cta: Follow the lines!
 
   - type: sceneText
@@ -551,4 +551,4 @@ actions:
   - type: game
     text: You can practise again flying the unidragon. What shapes can you make?
     cta: "Practise!"
-    url: /apps/imaginary-tests/app_1/1_1/index.html
+    url: /apps/imaginary/app_1/1_1/en.html

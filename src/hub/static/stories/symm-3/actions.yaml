@@ -376,7 +376,7 @@ actions:
   - type: game
     tag: tg4
     text: "Each time, choose the 4 friezes with symmetry axes and click"
-    toolbarText: "Choose the friezes with symmetry axes"
+    toolbarText: "Choose 4 friezes with symmetry axes"
     cta: "Try separating the friezes!"
     url: /apps/EscolheFrisos_ref/?lang=en
     img:
@@ -597,7 +597,7 @@ actions:
   - type: game
     tag: tg6
     text: "Select the 3 friezes with rotation symmetry and click"
-    toolbarText: "Select the friezes with rotation symmetry"
+    toolbarText: "Choose 3 friezes with rotation symmetry"
     cta: "Try separating the friezes!"
     url: /apps/EscolheFrisos_rot/?lang=en
     img:
@@ -641,7 +641,7 @@ actions:
   - type: game
     tag: tg7
     text: "Select the 3 friezes with rotation symmetry and click"
-    toolbarText: "Select the friezes with rotation symmetry"
+    toolbarText: "Choose 3 friezes with reflection and rotation symmetry"
     cta: "Try separating the friezes!"
     url: /apps/EscolheFrisos_ref_rot/?lang=en
     img:
@@ -1000,7 +1000,7 @@ actions:
   - type: game
     tag: tg12
     text: "Choose the 3 friezes with glide reflection symmetry and click"
-    toolbarText: "Choose the friezes with glide reflection symmetry"
+    toolbarText: "Choose 3 friezes with glide reflection symmetry"
     cta: "Try separating the friezes!"
     url: /apps/EscolheFrisos_refDesl/?lang=en
     img:

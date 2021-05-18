@@ -230,6 +230,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    tag: tg10
     text: "Scegli un'immagine, guarda la creazione del cilindro e, quindi, fai clic"
     toolbarText: "Scegli un'immagine e guarda la creazione del cilindro"
     cta: "Prova a stampare dei fregi con il tibro cilindrico!"
@@ -373,10 +374,11 @@ actions:
       - text: "Proviamo a separarli dagli altri."
         char: mathina
   - type: game
+    tag: tg4
     text: "Scegli i 4 fregi con assi di simmetria e clicca"
     toolbarText: "Scegli i 4 fregi con assi di simmetria"
     cta: "Dividi i fregi che hanno assi di simmetria dagli altri!"
-    url: /apps/EscolheFrisos_ref/?lang=en
+    url: /apps/EscolheFrisos_ref/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -399,10 +401,10 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
-    tag: 3Game
+    tag: tg5
     text: "Separare i fregi trascinando ogni fregio nella borsa corrispondente."
     cta: "Provaci tu!"
-    url: /apps/frisos_simref-_en/
+    url: /apps/frisos_simref-_it/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -524,6 +526,7 @@ actions:
       - text: "E, usando un processo simile, possiamo persino creare un fregio che ha anche un asse di simmetria orizzontale. Vediamo."
         char: wizard
   - type: game
+    tag: tg11
     text: "Prova a stampare fregi con simmetria di riflessione orizzontale e verticale usando una “tavola”. Scegli un'immagine e guarda l'animazione presentata nell'app."
     cta: "Play!"
     url: /apps/Sfriso_refVH/
@@ -567,6 +570,7 @@ actions:
     text: >
       <p>Mentre Mathina aspettava, guardò i disegni dei fregi che erano stati lasciati fuori dalle borse. Uno di loro era piuttosto strano: se lo giriamo a metà, finiva per sembrare lo stesso di prima.</p>
   - type: game
+    tag: tg1
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Rotacao.mp4
@@ -592,10 +596,11 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    tag: tg6
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
     cta: "Try separating the friezes!"
-    url: /apps/EscolheFrisos_rot/?lang=en
+    url: /apps/EscolheFrisos_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -635,10 +640,11 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    tag: tg7
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_ref_rot/?lang=en
+    url: /apps/EscolheFrisos_ref_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -877,6 +883,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    tag: tg8
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_refdeslizante_leo.html
@@ -946,6 +953,7 @@ actions:
   #
   # Filme sobre a reflexão deslizante        
   - type: game
+    tag: tg2
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
@@ -991,10 +999,11 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    tag: tg12
     text: "Scegli i 3 fregi con glissoriflessioni e clicca"
     toolbarText: "Scegli i fregi con glissoriflessioni"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_refDesl/?lang=en
+    url: /apps/EscolheFrisos_refDesl/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1062,6 +1071,7 @@ actions:
   #
   # Animação sobre o que é a translação
   - type: game
+    tag: tg3
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
@@ -1085,10 +1095,10 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
-    tag: 8Game
+    tag: tg9
     text: "Guarda i fregi in ciascuna delle 7 borse che sono state ottenute. Per ogni borsa trascinare i simboli che corrispondono alle simmetrie sui fregi presentati."
     cta: "Play!"
-    url: /apps/RotularFrisos/?lang=en
+    url: /apps/RotularFrisos/?lang=it
   #
   # Parte final da história
   - type: clearBackground

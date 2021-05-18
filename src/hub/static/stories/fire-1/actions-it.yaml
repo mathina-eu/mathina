@@ -72,7 +72,7 @@ actions:
 
   - type: sceneText
     text: >
-      La donna era anziana ma aveva lo sguardo fiero e forte, e sembrava che il tempo per lei avesse smesso di scorrere. I suoi capelli erano bianchi e lunghi e indossava robusti abiti di pelle, un vecchio mantello polveroso consumato, stivali
+      La donna era anziana ma aveva lo sguardo fiero e forte: sembrava che il tempo per lei avesse smesso di scorrere. I suoi capelli erano bianchi e lunghi e indossava robusti abiti di pelle, un vecchio mantello polveroso consumato, stivali
        come quelli usati per andare a cavallo. Portava con se una borsa, una corda spessa,
        un libro e un bastoncino decorato con strisce colorate,
        troppo corto per essere utilizzato come aiuto per camminare, ma abbastanza lungo per arrivare a toccare il pavimento.
@@ -122,7 +122,7 @@ actions:
       - text: Sei una maga allora?
         char: mathina
         mood: arguing
-      - text: Non direi nemmeno questo, Mathina... anche se ne conosco alcuni e mi hanno aiutato più di una volta.
+      - text: Non direi nemmeno questo... anche se ne conosco alcuni e mi hanno aiutato più di una volta.
         char: flamma
         mood: normal
       - text: Allora chi sei? Parli una lingua strana. A proposito, io sono Mathina e lui è Leo!
@@ -174,7 +174,7 @@ actions:
       - text: Vengo da una terra lontana, Arisa, piena maghi e di strane creature. Tra queste, ci sono molti tipi di uccelli di fuoco. Queste creature sono estremamente intelligenti, ma le loro menti e il linguaggio sono diversi dai nostri.
         char: flamma
         mood: normal
-      - text: "Usano un linguaggio molto preciso per comunicare dove sono, come volano e dove vanno. Noi umani non abbiamo parole così precise per descrivere il loro volo, ma ci sono linguaggi magici, con numeri, simboli e parole segrete che ci permettono di tradurre ciò che intendiamo nella loro lingua. Le creature, se ben addestrate, ci capiscono e volano come chiediamo loro. Questo è quello che faccio: alleno gli uccelli di fuoco."  
+      - text: "Usano un linguaggio molto preciso per comunicare dove sono, come volano e dove vanno. Noi umani non abbiamo parole così precise per descrivere il loro volo, ma ci sono linguaggi magici, con numeri, simboli e parole segrete che ci permettono di tradurre ciò che intendiamo nella loro lingua. Le creature, se ben addestrate, ci capiscono e volano come chiediamo loro. Questo è quello che faccio: alleno gli uccelli di fuoco."
         char: flamma
         mood: normal
       - text: Oh, che cosa affascinante Flamma! Possiamo vederne uno? Dici che ce ne sono di diversi tipi ...
@@ -358,10 +358,10 @@ actions:
       mathina: left
       leo: left
     entries:
-      - text: Questo è un unidrago. Gli unidraghi sono molto simili ai draghi,
+      - text: "Questo è un unidrago. Gli unidraghi sono molto simili ai draghi,
            ma sono nati con un corno in testa. Come i denti da latte per i
            bambini, quel corno è fragile e alla fine cade dalla loro testa
-           quando cresce un corno più forte e più grande. Ma il corno caduto non è un materiale morto, il drago può ancora sentirlo.
+           quando cresce un corno più forte e più grande. Ma il corno caduto non è inutile: il drago può ancora sentirlo."
         char: flamma
         mood: normal
       - text: Gli addestratori di unidraghi, come lo sono io,
@@ -381,7 +381,7 @@ actions:
       - text: Diventiamo addestratori di unidraghi!
         char: leo
         mood: happy
-      - text: Devi solo puntare il corno nella direzione in cui vuoi che l'unidrago voli. 
+      - text: Devi solo puntare il corno nella direzione in cui vuoi che l'unidrago voli.
         char: flamma
         mood: normal
 
@@ -390,7 +390,7 @@ actions:
     text: |
        Usa il corno per guidare l'unidrago. Prova a disegnare delle belle forme nell'aria.
     toolbarText: Fai volare l'unidrago!
-    url: /apps/imaginary-tests/app_1/1_1/index.html
+    url: /apps/imaginary/app_1/1_1/it.html
     cta: Fai volare l'unidrago!
 
 
@@ -464,7 +464,7 @@ actions:
   - type: game
     text: "Fai volare l'unidrago per mangiare tutte le palle di fuoco! Gli unidraghi sono infastiditi dalle nuvole: cerca di evitarle!"
     toolbarText: Prendi le palle di fuoco evitando le nuvole!
-    url: /apps/imaginary-tests/app_1/1_2/index.html
+    url: /apps/imaginary/app_1/1_2/it.html
     cta: Prendi tutte le palle di fuoco evitando le nuvole!
 
   - type: clearImage
@@ -485,7 +485,7 @@ actions:
   - type: game
     text: Prova a volare quanto più possibile vicino alla linea.
     toolbarText: Segui le linee!
-    url: /apps/imaginary-tests/app_1/1_3/index.html
+    url: /apps/imaginary/app_1/1_3/it.html
     cta: Segui le linee!
 
   - type: sceneText
@@ -521,4 +521,4 @@ actions:
   - type: game
     text: Esercitarti a guidare l'unidrago di Flamma. Quali forme riesci a creare?
     cta: "Fai pratica!"
-    url: /apps/imaginary-tests/app_1/1_1/index.html
+    url: /apps/imaginary/app_1/1_1/it.html

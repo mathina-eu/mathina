@@ -243,7 +243,7 @@ actions:
   - type: game
     tag: tg26
     text: "Escolhe os poliedros convexos. De cada vez, escolhe os 4 poliedros e clica em"
-    toolbarText: "Escolhe os poliedros convexos."
+    toolbarText: "Escolhe os 4 poliedros convexos."
     cta: "Tenta separar os poliedros que são convexos!"
     url: /apps/EscolhePoliConvexos/index.html?lang=pt
     img:
@@ -420,7 +420,7 @@ actions:
   - type: game
     tag: tg27
     text: "Escolhe as planificações do cubo. De cada vez, escolhe as 3 propostas “certas” e clica em"
-    toolbarText: "Escolhe as planificações corretas do cubo."
+    toolbarText: "Escolhe as 3 planificações corretas do cubo."
     cta: "Tenta separar as planificações do cubo que são corretas!"
     url: /apps/EscolhePlanCubo/index.html?lang=pt
     img:
@@ -570,7 +570,7 @@ actions:
   - type: game
     tag: tg28
     text: "Escolhe as planificações do octaedro. De cada vez, escolhe as 3 propostas “certas” e clica em"
-    toolbarText: "Escolhe as planificações corretas do octaedro."
+    toolbarText: "Escolhe as 3 planificações corretas do octaedro."
     cta: "Tenta separar as planificações do octaedro que são corretas!"
     url: /apps/EscolhePlanOcta/index.html?lang=pt
     img:
@@ -766,7 +766,7 @@ actions:
   - type: game
     tag: tg13
     text: "Escolhe os poliedros não-platónicos cujas faces são todas polígonos regulares e iguais. De cada vez, escolhe os 2 poliedros e clica em"
-    toolbarText: "Escolhe os poliedros não-platónicos cujas faces são todas polígonos regulares e iguais"
+    toolbarText: "Escolhe os 2 poliedros não-platónicos cujas faces são todas polígonos regulares e iguais"
     cta: "Tenta separar os poliedros que não são platónicos e cujas faces são polígonos regulares iguais!"
     url: /apps/EscolhePoliNPRegulares/index.html?lang=pt
     img:
@@ -1086,7 +1086,7 @@ actions:
   - type: game
     tag: tg29
     text: "Escolhe os poliedros uniformes. De cada vez, escolhe os 4 poliedros e clica em"
-    toolbarText: "Escolhe os poliedros uniformes"
+    toolbarText: "Escolhe os 4 poliedros uniformes"
     cta: "Tenta separar os poliedros que são uniformes!"
     url: /apps/EscolhePoliUnif/index.html?lang=pt
     img:

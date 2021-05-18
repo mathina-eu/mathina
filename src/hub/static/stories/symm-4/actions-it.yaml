@@ -81,6 +81,7 @@ actions:
     id: tecnico
     style: "width: 16%; top: 45%; left: 1%;"         
   - type: game
+    tag: tg1
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/icosaedro_concavo.html
@@ -107,7 +108,7 @@ actions:
     style: "width: 15.5%; top: 62%; right: 60%;"     
   - type: sceneText
     text: >
-      <p>Allertato dalle urla, un tecnico, che era nelle vicinanze, corse da loro.p>
+      <p>Allertato dalle urla, un tecnico, che era nelle vicinanze, corse da loro.</p>
   - type: dialog
     entries:
       - text: "Cosa è successo?! State bene? Ma soprattutto, chi siete?"
@@ -240,10 +241,11 @@ actions:
         char: technician
         exposition: "Disse il tecnico sfidandoli."
   - type: game
-    text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e fai clic"
+    tag: tg26
+    text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e clicca su"
     toolbarText: "Seleziona i poliedri convessi"
     cta: "Riconosci i poliedri convessi!"
-    url: /apps/EscolhePoliConvexos/index.html?lang=en
+    url: /apps/EscolhePoliConvexos/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -301,7 +303,7 @@ actions:
         char: mathina
   - type: dialog
     entries:        
-      - text: "Likewise, we call Platonic solids the polyhedra which are “as regular as possible”. These polyhedra must satisfy, in particular, the following conditions: “the faces are all regular polygons and equal to each other”; “at each vertex the same number of faces meet”; “the angles between contiguous faces are equal”; “the solid angles at each vertex are equal”."
+      - text: "Allo stesso modo, chiamiamo i solidi platonici i poliedri che sono “il più possibile regolari”. Tali poliedri devono soddisfare, in particolare, le seguenti condizioni: “le facce sono tutte poligoni regolari e uguali tra loro”, “Ad ogni vertice si incontrano lo stesso numero di facce”, “Gli angoli tra le facce contigue sono congruenti” e “Gli angoli solidi ad ogni vertice sono uguali”."
         char: mathina
       - text: "Cosa intendi con “gli angoli solidi su ciascun vertice sono uguali”? E per “gli angoli tra le facce contigue devono essere gli stessi”?"
         char: leo
@@ -330,6 +332,7 @@ actions:
     align: center
     style: "top: 57%; width: 13%"       
   - type: game
+    tag: tg3
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-4/video/CuboMolde.mp4
@@ -344,6 +347,7 @@ actions:
     align: center
     style: "top: 57%; width: 13%"       
   - type: game
+    tag: tg2
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-4/video/CuboMolde2.mp4
@@ -365,10 +369,10 @@ actions:
     id: Mathina1-cubo
   - type: sceneText
     text: >
-      <p></p>
+      <p>Mathina e Leo decisero quindi di costruire da zero modelli per tutti i solidi platonici utilizzando i materiali a loro disposizione in ufficio: cartoni, colla, forbici, plastilina e alcuni pezzi magnetici a forma di triangoli equilateri che potevano essere uniti senza utilizzare colla.</p>
   - type: sceneText
     text: >
-      <p>Mathina e Leo decisero quindi di costruire da zero modelli per tutti i solidi platonici utilizzando i materiali a loro disposizione in ufficio: cartoni, colla, forbici, plastilina e alcuni pezzi magnetici a forma di triangoli equilateri che potevano essere uniti senza utilizzare colla.</p>
+      <p>Cominciarono con il poliedro che conoscevano meglio: il cubo. Leo iniziò a tagliare i quadrati. Ne tagliò inizialmente due e li incollò insieme lungo un lato. Dopo aver fatto questo, si rese conto che sarebbe stato più facile tagliare una striscia di due quadrati di fila, in quanto avrebbe potuto piegare la striscia a metà, evitando di tagliarla a metà per incollare nuovamente i due pezzi.</p>
   - type: image
     src: cubo-tentativa.png
     id: cubo-tentativa
@@ -404,26 +408,29 @@ actions:
     text: >
       <p>Mathina cercò di realizzare un cubo usando lo sviluppo fatto da Leo. Quando incollava 3 facce su un vertice comune, Mathina usava una scatola da scarpe (che era in ufficio) come stampo per mantenere le tre facce in posizione mentre la colla si asciugava.</p>
   - type: game
+    tag: tg4
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=p2pol_24
   - type: sceneText
     text: >
-      <p>Nel frattempo, divertito dalla sua scoperta uno sviluppo del cubo, Leo creò altre proposte di sviluppi.</p>
+      <p>Nel frattempo, divertito dalla sua scoperta di uno sviluppo del cubo, Leo creò altre proposte di sviluppi.</p>
   - type: clearImage
     id: plan-cubo-01
   - type: game
+    tag: tg27
     text: "Scegli gli sviluppi del cubo. Selezionane 3  e clicca"
     toolbarText: "Seleziona gli sviluppi del cubo."
     cta: "Separa gli sviluppi da quelli che non lo sono!"
-    url: /apps/EscolhePlanCubo/index.html?lang=en
+    url: /apps/EscolhePlanCubo/index.html?lang=it
     img:
       src: confirm.png
       height: 40
       width: 40
   - type: sceneText
     text: >
-      <p></p>
+    tag: tg5
+      <p>Mathina suggerì di cercare un modo per trovare tutti i solidi platonici. Siccome in un solido platonico, il numero di facce che hanno un vertice in comune è lo stesso per ogni vertice, bisognava concentrarsi su questo numero. Per il cubo, ad esempio, questo numero è 3.</p>
   - type: image
     src: mesmovertice1.png
     id: mesmovertice1
@@ -431,7 +438,7 @@ actions:
     style: "top: 56%; width: 18%"        
   - type: sceneText
     text: >
-      <p>Mathina suggerì di cercare un modo per trovare tutti i solidi platonici. Siccome in un solido platonico, il numero di facce che hanno un vertice in comune è lo stesso per ogni vertice, bisognava concentrarsi su questo numero. Per il cubo, ad esempio, questo numero è 3.</p>
+      <p>E se fossero 2? Poiché, in un poliedro, ogni spigolo è il lato di due (e solo due) facce, conclusero che ciascuna delle facce quadrate doveva avere i lati coincidenti con quelli dell'altra, cioè il "poliedro" sarebbe stato piatto .</p>
   - type: clearImage
     id: mesmovertice1
   - type: image
@@ -458,6 +465,7 @@ actions:
     text: >
       <p>Poiché non c'erano più possibilità con i quadrati, decisero di passare ai triangoli equilateri. Utilizzando i triangoli magnetici equilateri che erano a loro disposizione in ufficio, unirono 3 triangoli attorno a un vertice, creando una sorta di piramide triangolare aperta. Poi, con un po' di plastilina, hanno preso uno stampo del vertice e hanno provato ad aggiungere un altro triangolo a uno dei bordi liberi usando lo stampo e improvvisamente ... chiusero la piramide con il nuovo triangolo!</p>
   - type: game
+    tag: tg6
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/tetraedro_form.html
@@ -531,6 +539,7 @@ actions:
     text: >
       <p>Come dovevano continuare per creare un solido platonico? Dopo aver sollevato la struttura, iniziarono unendo due triangoli ai bordi liberi contigui, in modo che due dei nuovi bordi, uno per ciascun triangolo, risultassero uniti. Successivamente avevano aggiunto, in modo simile, i due triangoli mancanti e verificato di aver ottenuto un nuovo poliedro che sembrava essere un solido platonico.</p>
   - type: game
+    tag: tg7
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/octaedro_form_3.html
@@ -559,10 +568,11 @@ actions:
     text: >
       <p>Leo decise quindi di procedere come prima (per il cubo), creando esempi alternativi di sviluppi per il poliedro.</p>
   - type: game
+    tag: tg28
     text: "Scegli gli sviluppi dell'ottaedro. Seleziona configurazioni e clicca"
     toolbarText: "Scegli gli sviluppi dell'ottaedro."
     cta: "Isola gli sviluppi dell'ottaedro!"
-    url: /apps/EscolhePlanOcta/index.html?lang=en
+    url: /apps/EscolhePlanOcta/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -585,6 +595,7 @@ actions:
     text: >
       <p>Dopo aver trovato questo nuovo solido platonico con 4 triangoli ad ogni vertice, sono passati alla ricerca di 5 triangoli, creando così una “piramide” aperta. Decisero di procedere come prima: posizionarono queste configurazioni sul tavolo in modo da ottenere angoli diedri identici. Poi, ad uno dei vertici liberi, aggiunsero 3 triangoli, in modo che il nuovo angolo solido fosse uguale a quello della piramide “aperta” iniziale. Successivamente, unirono, in successione, 2 triangoli in ogni vertice libero della piramide “aperta”, fino ad ottenere una striscia di 10 triangoli. Notarono che i bordi liberi del nastro formavano un pentagono su un piano parallelo al precedente, ma ruotato di un decimo di giro. Poi proseguirono con il procedimento precedente: prima aggiunsero 2 triangoli e poi,un altro un triangolo (unito al precedente). Il loro sforzo sembrava avere dato buoni frutti: avevano appena ottenuto un nuovo poliedro che sembrava essere un solido platonico!</p>
   - type: game
+    tag: tg8
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/icosaedro_form.html
@@ -643,6 +654,7 @@ actions:
     id: c1-bg13    
   - type: sceneText
     text: >
+    tag: tg9
       <p>Quando scoprirono che non c'erano più possibilità usando triangoli e quadrati, Mathina e Leo passarono ai pentagoni regolari. Impostarono una configurazione con 3 pentagoni regolari con un vertice comune.</p>
   - type: clearBackground
     id: c1-bg13    
@@ -655,6 +667,7 @@ actions:
       <p>Leo scoprì che un nuovo pentagono si adattava saldamente ai bordi liberi contigui di diversi pentagoni. Quindi aggiunse tre pentagoni in questo modo. Mathina ha cercò di riempire gli spazi tra le due configurazioni con tre nuovi pentagoni e che si adattarono perfettamente. Nuovi spazi vuoti simili ai precendenti si erano creati. Per riempirli, come prima, misero tre nuovi pentagoni: si adattavano molto bene, e si erano anche uniti tra loro creando un nuovo vertice con le nuove facce aggiunte. Per precauzione, controllarono anche con lo stampo di plastilina:  si adattava a tutti i vertici quindi avevano scoperto un nuovo poliedro regolare!</p>
   - type: game
     text: "Guarda il video!"
+    tag: tg10
     cta: "Play!"
     url: /apps/anims/dodecaedro_form.html
   - type: clearBackground
@@ -688,6 +701,7 @@ actions:
     text: >
       <p>Mathina e Leo continuarono con la loro ricerca dei solidi platonici. Ben presto si resero conto che non era possibile utilizzare più di tre pentagoni su un vertice comune con un angolo solido uguale a quello di una piramide regolare retta.</p>
   - type: game
+    tag: tg11
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/4poligonos_5.html
@@ -735,6 +749,7 @@ actions:
         char: leo
   - type: game
     text: "Guarda il video!"
+    tag: tg12
     cta: "Play!"
     url: /apps/anims/5platonicosi.html
   - type: dialog
@@ -749,10 +764,11 @@ actions:
         char: technician
         exposition: "Disse il tecnico."        
   - type: game
+    tag: tg13
     text: "Seleziona i poliedri non platonici che hanno tutte le facce uguali. Scegli due poliedri e clicca"
     toolbarText: "Seleziona i poliedri non platonici che hanno tutte le facce uguali."
     cta: "Separa i seguenti poliedri che hanno tutte le facce uguali tra platonici e non platonici."
-    url: /apps/EscolhePoliNPRegulares/index.html?lang=en
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -782,6 +798,7 @@ actions:
     text: >
       <p>Dalla sua collezione di poliedri, il tecnico scelse un poliedro uniforme, che chiamò cubottaedro.</p>
   - type: game
+    tag: tg14
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol_35
@@ -840,6 +857,7 @@ actions:
         exposition: "Disse Mathina mentre controllava gli angoli con uno stampo."
   - type: game
     text: "Guarda il video!"
+    tag: tg15
     cta: "Play!"
     url: /stories/symm-4/video/CuboRombiOcta.mp4
   - type: clearBackground
@@ -856,6 +874,7 @@ actions:
     text: >
       <p>Quando il tecnico tornò dalla sua telefonata, Leo e Mathina gli chiesero subito se quest'ultimo poliedro fosse uniforme: per Leo lo era - sembrava simile al cubottaedro - ma Mathina non era d'accordo: aveva testato gli angoli solidi con uno stampo e lo stampo si adattava solo alla metà di essi.</p>
   - type: dialog
+    tag: tg16
     entries:        
       - text: "Hai ragione riguardo allo stampo, Mathina. Qui sono necessari due diversi stampi: uno stampo e la sua immagine riflessa."
         char: technician
@@ -863,6 +882,7 @@ actions:
         char: technician
         exposition: "Continuò il tecnico."
   - type: game
+    tag: tg17
     text: "Guarda il video!"
     cta: "Play!"
     url: /stories/symm-4/video/Viramolde.mp4
@@ -872,6 +892,7 @@ actions:
         char: technician
   - type: game
     text: "Guarda il video!"
+    tag: tg18
     cta: "Play!"
     url: /stories/symm-4/video/CuboRombiOctaVM.mp4
   - type: clearBackground
@@ -893,6 +914,7 @@ actions:
         char: leo
   - type: game
     text: "Guarda il video!"
+    tag: tg19
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol_68
   - type: sceneText
@@ -937,6 +959,7 @@ actions:
     text: >
       <p>Per correggere il suo errore, il tecnico tagliò la cupola ottagonale sulla sommità del poliedro Miller e la ruotò di 45 gradi, in modo che i triangoli della cupola superiore fossero allineati ai triangoli di quella inferiore.</p>
   - type: game
+    tag: tg22
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/transfMiller.html
@@ -959,6 +982,7 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg24
   - type: dialog
+    tag: tg20
     entries:        
       - text: "Non capisco! Cos'è una simmetria di un poliedro?"
         char: leo
@@ -1025,7 +1049,8 @@ actions:
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg26
   - type: dialog
-    entries:        
+    tag: tg21
+    entries:    
       - text: "Guarda, Leo! Se guardi attentamente l' “equatore” di questo poliedro, vedrai un anello di quadrati. E questo è l'unico anello di quadrati che c'è sul poliedro!"
         char: mathina
   - type: clearBackground
@@ -1059,10 +1084,11 @@ actions:
       - text: "In questo modo, potresti aiutarmi a configurare il modello di giostra..."
         char: technician        
   - type: game
+    tag: tg29
     text: "Scegli i poliedri uniformi. Scegli 4 poliedri e clicca"
     toolbarText: "Seleziona i poliedri uniformi."
     cta: "Seleziona i poliedri uniformi!"
-    url: /apps/EscolhePoliUnif/index.html?lang=en
+    url: /apps/EscolhePoliUnif/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1079,6 +1105,7 @@ actions:
       - text: "Cosa?!"
         char: leo
         exposition: "Esclamarono simultaneamente Leo e Mathina."
+        tag: tg23
       - text: "È molto facile! Basta pensare ai prismi retti le cui basi sono poligoni regolari e le cui facce laterali sono quadrati. Questi tipi di prismi sono anche poliedri uniformi."
         char: technician
       - text: "Possiamo anche creare altri poliedri uniformi trasformando i prismi in antiprismi con triangoli equilateri come facce laterali; ma a parte i prismi e gli antiprismi, quelli nella borsa sono gli unici."
@@ -1096,6 +1123,7 @@ actions:
         char: technician
         exposition: "Spiegò il tecnico."
   - type: game
+    tag: tg24
     text: "Guarda i poliedri!"
     cta: "Play!"
     url: /apps/anims/prismas_antiprismas.html
@@ -1113,6 +1141,7 @@ actions:
     text: >
       <p>I tre finirono di allestire il modello della “Giostra dei Poliedri Platonici e Uniformi” e contemplarono il risultato: si trattava di un'opera bellissima, non solo per la diversità dei colori, ma anche, e principalmente, per la simmetria esistente su i poliedri scelti, che li rendono visivamente molto accattivanti.</p>
   - type: game
+    tag: tg25
     text: "Guarda i poliedri!"
     cta: "Play!"
     url: /apps/anims/carrossel.html      
