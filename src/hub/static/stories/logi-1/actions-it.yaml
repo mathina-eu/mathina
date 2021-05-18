@@ -6,14 +6,17 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 27%; right: 68%; z-index: 1;"
+    parallax: back3
   - type: image
     src: leo-runs.png
     id: leo-runs
     style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
+    parallax: back3
   - type: image
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
+    parallax: back3
   - type: sceneText
     text: Mathina e Leo si affrettarono a seguire il canguro per le strade della Città della Logica. Erano abbastanza esausti in quella calda e secca giornata estiva mentre cercavano di tenere il passo con la loro guida. Il canguro aveva promesso un gelato se si fossero uniti a lui, ma prima dovevano vedere tutte le attrazioni di della Città della Logica! Mathina e Leo avevano sentito parlare del famoso gelato della Città di Logica e non vedevano l'ora di provarlo...
   - type: clearImage
@@ -24,9 +27,10 @@ actions:
     style: "width: 28%; top: 29.5%; right: 65%;"
   - type: dialog
     entries:
-    - text: "Eccolo! disse il canguro verso indicando l'enorme bancarella rotonda dei gelati schiacciata tra due grattacieli."
+    - text: "Eccolo!"
       char: kangaroo
       mood: happy
+      exposition: "Disse il canguro verso indicando l'enorme bancarella rotonda dei gelati schiacciata tra due grattacieli."
   - type: animation
     target: leo-runs
     vars:
@@ -51,7 +55,7 @@ actions:
     entries:
       - text: Rallenta, giovanotto! Non puoi semplicemente attraversare queste strisce pedonali. Vedi quei semafori dalla parte opposta? 
         char: kangaroo
-        mood: sad
+        mood: serious
   - type: clearImage
     id: lamps
   - type: image
@@ -64,6 +68,7 @@ actions:
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 27%; right: 68%; z-index:1;"
+    parallax: back2
   - type: sceneText
     text: Guardando dall'altro lato della strada, Mathina e Leo vedevano apparire una colonna di luci e mentre l'altra scompariva.
   - type: sceneText
@@ -72,9 +77,10 @@ actions:
     text: ... viola, arancione e rosa, ma in un ordine diverso su ciascuna colonna.
   - type: dialog
     entries:
-      - text: "Possiamo attraversare solo se i tre colori compaiono in tutti gli ordini possibili - disse il canguro sorridendo mentre notava lo stupore di Leo."
+      - text: "Possiamo attraversare solo se i tre colori compaiono in tutti gli ordini possibili."
         char: kangaroo
         mood: happy
+        exposition: "Disse il canguro sorridendo mentre notava lo stupore di Leo."
   - type: clearImage
     id: lampsgif
   - type: image
@@ -99,9 +105,10 @@ actions:
     style: "width: 16%; top: 28%; right: 29%;"
   - type: dialog
     entries:
-      - text: "“Penso che siano tutte!”, urlò Leo metre stava per lanciarsi ad attraversare la strada."
+      - text: "Penso che siano tutte!"
         char: Leo
-        mood: happy
+        mood: talking
+        exposition: "Disse Leo metre stava per lanciarsi ad attraversare la strada."
   - type: animation
     target: leo-runs
     vars:
@@ -113,41 +120,49 @@ actions:
     text: Adesso era Mathina a impedirgli di attraversare la strada.
   - type: dialog
     entries:
-      - text: "“Direi proprio di no!”, disse Mathina."
+      - text: "Direi proprio di no!"
         char: Mathina
-        mood: happy
-      - text: "“Ma ci sono tre colori e tre sequenze. Va bene, no? Dopotutto, ognuno dei colori arriva una volta come primo, come secondo e come ultimo”, argomentò Leo con fare convincente."
+        mood: arguing
+        exposition: "Esclamò Mathina."
+      - text: "Ma ci sono tre colori e tre sequenze. Va bene, no? Dopotutto, ognuno dei colori arriva una volta come primo, come secondo e come ultimo."
         char: Leo
-        mood: happy
-      - text: "“E se, ad esempio, venisse prima il viola e poi il rosa, invece dell'arancio?”, disse sorridendo Mathina imitando una scimmietta."
+        mood: arguing
+        exposition: "Argomentò Leo con fare convincente."
+      - text: "E se, ad esempio, venisse prima il viola e poi il rosa, invece dell'arancio?"
         char: Mathina
-        mood: happy
-      - text: "“Lascialo, Leo probabilmente non è bravo a distinguere il rosa e il viola come te”, disse il canguro."
+        mood: arguing
+        exposition: "Disse sorridendo Mathina imitando una scimmietta."
+      - text: "Povero Leo! Probabilmente non è bravo a distinguere il rosa e il viola come te."
         char: kangaroo
-        mood: happy
-      - text: "“Dai canguro, non fare così! Non capisco meglio i colori solo perché sono una ragazza! Ma posso pensare abbastanza bene!”, disse Mathina facendo una linguaccia al canguro."
+        mood: serious
+        exposition: "Suggerì il canguro."
+      - text: "Dai canguro, non fare così! Non capisco meglio i colori solo perché sono una ragazza! Ma posso pensare abbastanza bene!"
         char: Mathina
-        mood: happy
+        mood: surprised
+        exposition: "Disse Mathina facendo una linguaccia al canguro."
       - text: "Va bene... Il punto è che Mathina ha ragione: questi tre non bastano. Quanti semafori sarebbero sufficienti?"
         char: kangaroo
-        mood: happy
+        mood: serious
   - type: game
     text: Quanti semafori pensi siano sufficienti per mostrare tutte le sequenze? 
     toolbarText: Quante semafori pensi siano sufficienti per mostrare tutte le sequenze? 
     cta: Prova a trovare tutte le combinazioni!
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+    url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
     target: leo-runs
     vars:
-      duration: 2
+      duration: 1
       xPercent: 0
-      yPercent: -10
+      yPercent: -30
+      repeat: 1
+      yoyo: true
       ease: power3.out
   - type: dialog
     entries:
-      - text: "“Lo so, lo so, lo so! Otto è la soluzione, otto è la soluzione, canguro, ottoooo!” - gridò Leo e continuando a saltare."
+      - text: "Lo so, lo so, lo so! Otto è la soluzione, otto è la soluzione, canguro, ottoooo!"
         char: Leo
         mood: happy  
+        exposition: "Gridò Leo e continuando a saltare."
   - type: animation
     target: leo-runs
     vars:
@@ -158,27 +173,28 @@ actions:
   - type: sceneText
     text: Mathina inarcò le sopracciglia, sospettando che Leo avesse fatto qualche casino.
   - type: image
-    src: solution 8 lamps.png
+    src: solution8lamps.png
     id: solution8
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
   - type: dialog
     entries:
-      - text: "“Sbagliato! Ne hai disegnati alcuni due volte!”, disse Mathina dopo avere visto le immagini di Leo."
+      - text: "Sbagliato! Ne hai disegnati alcuni due volte!"
         char: Mathina
-        mood: happy
+        mood: talking
+        exposition: "Disse Mathina dopo avere visto le immagini di Leo."
   - type: clearImage
     id: solution8
   - type: game
     text: Quali semafori pensi che Leo abbia disegnato due volte? Metti qui tutte le sequenze che Leo ha scelto (tutte e solo una volta)!
     toolbarText: Guarda i semafori. Puoi riorganizzarli come vuoi. Se ne metti due identici accando, uno dei due scompare.
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=2
+    url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
     src: solution5lamps.png
     id: solution5
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
   - type: dialog
     entries:
-      - text: "“Vedi, sono solo le cinque ora. E pensa un po', ce n'è anche un sesto!”, disse Mathina."
+      - text: "Vedi, sono solo le cinque ora. E pensa un po', ce n'è anche un sesto!"
         char: Mathina
         mood: happy
   - type: clearImage
@@ -186,10 +202,10 @@ actions:
   - type: game
     text: Ci sono 5 semafori colorati e un semaforo senza colori che può essere colorato. Realizza tutte le combinazioni possibili.
     toolbarText: Quale combinazione di colori pensi che manchi? Potrebbe essere utile allineare le luci in base ai primi colori, iniziando con il viola, poi il rosa, poi l'arancione.
-    url: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm?v=3
+    url: \apps\logi-1-app\logi-1-app.htm?v=3
   - type: dialog
     entries:
-      - text: "“Ebbene, due iniziano con il viola e due con il rosa, e solo uno con l'arancione. - pensò Leo - Vuoi dire che ci serve un altro che inizi con l'arancione?” - Aspetta, aspetta disse grattandosi la testa."
+      - text: "“Ebbene, due iniziano con il viola e due con il rosa, e solo uno con l'arancione. - pensò Leo - Vuoi dire che ci serve un altro che inizi con l'arancione?”"
         char: Leo
         mood: happy
   - type: image
@@ -198,12 +214,13 @@ actions:
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
   - type: dialog
     entries:        
-      - text: "Fatto! Ora, dopo l'arancione arriva ... non viola ma rosa, cioè - arancio-rosa-viola."
+      - text: "Fatto! Ora, dopo l'arancione arriva ... non viola ma rosa, cioè arancio-rosa-viola."
         char: Leo
         mood: happy  
-      - text: "“Bravo!”, disse Mathina congratulandosi con Leo."
+      - text: "Bravo!"
         char: kangaroo
         mood: happy  
+        exposition: "Disse Mathina congratulandosi con Leo."
   - type: clearImage
     id: solution6
   - type: clearImage
@@ -213,7 +230,7 @@ actions:
     id: lamps6
     style: "width: 23%; top: 30%; right: 27%;"
   - type: sceneText
-    text: A questo punto, sul lato opposto della strada, comparirono sei semafori che mostrano le sequenze che aveva trovato Leo.
+    text: A questo punto, sul lato opposto della strada, comparirono sei semafori che mostravano le sequenze che aveva trovato Leo.
   - type: animation
     target: leo-runs
     vars:
