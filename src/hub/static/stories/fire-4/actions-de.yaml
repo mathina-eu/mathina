@@ -380,12 +380,12 @@ actions:
         text: Du bist dicht dran, Mathina, sehr dicht... Du kannst die Funkelflöhe bestimmt bald komplizierte Figuren formen lassen.
         #You are close, Mathina, very close… with your intuition you could tell the bugs to make very intricate figures.
 
-# Game 4.2 (More examples and free exploration)
-  - type: game
-    text: Setze die Funkelflöhe durch klicken und ziehen in der Luft ab. Sie werden Dir eine Kurve zeigen. Du hast jeweils drei Versuche, die Gleichung zur Kurve zu erraten.
-    toolbarText: Welche Kurve zeigen Dir die Funkelflöhe?
-    cta: Löse die Rätsel der Funkelflöhe!
-    url: http://localhost:3000/apps/imaginary/app_4/4_2/de.html
+# # Game 4.2 (More examples and free exploration)
+  # - type: game
+    # text: Setze die Funkelflöhe durch klicken und ziehen in der Luft ab. Sie werden Dir eine Kurve zeigen. Du hast jeweils drei Versuche, die Gleichung zur Kurve zu erraten.
+    # toolbarText: Welche Kurve zeigen Dir die Funkelflöhe?
+    # cta: Löse die Rätsel der Funkelflöhe!
+    # url: http://localhost:3000/apps/imaginary/app_4/4_2/de.html
 
   - type: sceneText
     text: Flamma holte ihr Notizbuch hervor.
@@ -421,10 +421,10 @@ actions:
 
 # Game 4.3 (Goal shape, try to guess the formula)
   - type: game
-    text: (Dieses Spiel ist noch nicht fertig.)
-    toolbarText:
-    cta: (Hier kann man noch nicht klicken.)
-    url:
+    text: Setze die Funkelflöhe durch klicken und ziehen in der Luft ab. Sie werden Dir eine Kurve zeigen. Du hast jeweils drei Versuche, die Gleichung zur Kurve zu erraten.
+    toolbarText: Welche Kurve zeigen Dir die Funkelflöhe?
+    cta: Löse die Rätsel der Funkelflöhe!
+    url: http://localhost:3000/apps/imaginary/app_4/4_2/de.html
 
   - type: dialog
     avatarAlign:
@@ -452,9 +452,9 @@ actions:
 
 # Game 4.4 (Raytracer/Surfer)
   - type: game
-    text: (Dieses Spiel ist noch nicht fertig.)
-    toolbarText:
-    cta: (Hier kann man noch nicht klicken.)
+    text: "Hier kannst Du Flächen anschauen, die durch Gleichungen mit drei Variablen (x, y und z) bestimmt werden. Unten kannst Du auch eine eigene Gleichung erfinden und Dir dann die Fläche dazu anschauen."
+    toolbarText: Schaue Dir die Flächen und ihre Gleichungen an.
+    cta: Zu den Flächen im Raum.
     url:
 
   - type: dialog
