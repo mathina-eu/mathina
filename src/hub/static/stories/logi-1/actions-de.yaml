@@ -99,7 +99,7 @@ actions:
   - type: dialog
     entries:
       - text: Glaubt ihr, dass wir jetzt über die Straße können? 
-        exposition: fragte das Känguru und alle sahen die drei Ampeln an.
+        exposition: fragte das Känguru, und alle sahen die drei Ampeln an.
       # Now they saw three lights only, and the kangaroo asked, - Do you think we can go now?
         char: kangaroo
         mood: happy
@@ -136,7 +136,7 @@ actions:
       # No way! - Mathina said.
         char: mathina
         mood: arguing
-      - text: Aber es sind doch überall drei Farben und sie sind auf jeder Ampel anders angeordnet. Das ist doch gut, oder nicht? Und jede Farbe erscheint doch auch einmal ganz oben, einmal in der Mitte und einmal ganz unten.
+      - text: Aber es sind doch überall drei Farben, und sie sind auf jeder Ampel anders angeordnet. Das ist doch gut, oder nicht? Und jede Farbe erscheint doch auch einmal ganz oben, einmal in der Mitte und einmal ganz unten.
         exposition: Leo war ganz überzeugt von seiner Idee.
       # But there are three colors and three sequences. That's good, isn't it? After all, each of the colors comes once as first, as second and as last - Leo argued convincingly.
         char: leo
@@ -145,7 +145,7 @@ actions:
         exposition: Mathina grinste bei dieser Frage ganz breit.
       # And what if, for example, violet came first and then pink, instead of orange? - Mathina grinned like a little monkey.
         char: mathina
-        mood: arguing
+        mood: happy
       - text: Lass ihn, Leo ist wahrscheinlich nicht so gut wie Du darin, Rosa und Lila zu unterscheiden.
       # Leave him, Leo is probably not as good in distinguishing pink and violet as you are - said the kangaroo.
         char: kangaroo
