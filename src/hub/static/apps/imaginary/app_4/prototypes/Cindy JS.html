@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html data-lt-installed="true" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+    <title>Cindy JS</title>
+    <link rel="stylesheet" href="Cindy%20JS-Dateien/CindyJS.css">
+        <script type="text/javascript" src="Cindy%20JS-Dateien/Cindy.js"></script>
+        <script type="text/javascript" src="Cindy%20JS-Dateien/CindyGL.js"></script>
+  </head>
+    
+	<body style="font-family:Arial;">
+    
+    <script id="csinit" type="text/x-cindyscript">
+      use("CindyGL");
+      resetclock();
+      play();
+
+      f(x,y) := |x*x*x + y*y - 4|;
+    </script>
+    
+    
+    <script id="csdraw" type="text/x-cindyscript">
+
+      s=seconds();
+      C=[-8+s,-5];
+      draw(C);
+      print(C);
+
+
+      //colorplot(min(|x*x*y+y^3-4 + 0.5 + 10*exp(-s)*random()|,1));
+      colorplot(f(x,y));
+    </script>
+
+    <div id="CSCanvas" style="width: 600px; height: 600px; border: 2px solid rgb(0, 0, 0); position: relative;" class="CindyJS-widget"><canvas style="position: absolute; border: medium none; top: 0px; left: 0px; padding: 0px; margin: 0px; height: 100%; width: 100%;" width="537" height="537"></canvas><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 100000px; height: 100000px"></div></div><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 200%; height: 200%"></div></div></div>
+    
+    <script type="text/javascript">
+        
+        var gslp=[];
+        var cdy = CindyJS({canvasname:"CSCanvas",
+                    scripts: "cs*",
+                    geometry:gslp
+                  });
+    </script>  
+
+     
+        <div id="CSCanvas"></div>
+          <button onclick="cdy.play()" type="button">Play</button>
+        <button onclick="cdy.pause()" type="button">Pause</button>
+        <button onclick="cdy.stop()" type="button">Stop</button>
+
+                
+	
+<span class="px-viewport-dimensions px-viewport-dimensions--hidden tr"></span><canvas id="glcanvas" style="display: none;" height="537" width="537"></canvas><canvas id="tmpcanvas" style="display: none;" height="0" width="0"></canvas><canvas id="dummycanvas" style="display: none;" height="1" width="1"></canvas></body></html>
