@@ -2,9 +2,35 @@
 
 actions:
   - type: background
-    src: bg_full.png
+    src: fire-bg4.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
+    
+  - type: image
+    src: moon.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+
+  - type: image
+    src: trees_mid.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back2
+
+  - type: image
+    src: trees_owl_front.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+    
+  - type: image
+    src: berries.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+    
+  - type: image
+    src: hill_ferns.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid2
 
   - type: sceneText
     text: Es war schon später Nachmittag, als Mathina und Leo durch den Wald von Arisa liefen, um Beeren und Pilze zu sammeln. Sie wussten, dass der Wald am Tage sicher war, aber sie hatten Geschichten über Zauberwesen gehört, denen man nachts im Wald begegnen konnte. Noch nie waren sie so lange im Wald geblieben, und die Sonne stand bereits tief am Himmel. Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
