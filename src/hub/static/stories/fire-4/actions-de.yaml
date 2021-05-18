@@ -5,7 +5,7 @@ actions:
     src: fire-bg4.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
-    
+
   - type: image
     src: moon_full.png
     id: moon
@@ -29,7 +29,7 @@ actions:
     src: berries.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back3
-    
+
   - type: image
     src: hill.png
     id: hill
@@ -57,7 +57,7 @@ actions:
       ease: power1.inOut
       repeat: -1
       yoyo: true
-    
+
   - type: animation
     target: fern
     vars:
@@ -85,19 +85,19 @@ actions:
         #width: 20%
         ease: power3.out
   - type: sceneText
-    text: Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.     
+    text: Es war also eigentlich keine gute Idee, den Pfad zu verlassen und in den Wald zu gehen, aber sie hatten sich so gefreut, einen großen Strauch mit Beeren auf einer versteckten Lichtung zu finden. Leo bemerkte gerade, dass die Sonne schon hinter den Bergen war, und wurde langsam nervös.
   - type: clearImage
-    id: matleo   
+    id: matleo
   - type: image
     src: leo4_mirrored.png
     id: leo
     style: "width: 16%; top: 55%; left: 25%; "
-    parallax: mid2    
+    parallax: mid2
   - type: image
     src: $COMMON/img/characters/mathina/mathina3.png
     id: mat
     style: "width: 14%; top: 49%; left: 36%;"
-    parallax: mid2  
+    parallax: mid2
   - type: animation
     target: mat
     vars:
@@ -115,15 +115,15 @@ actions:
       - text: Mathina, es ist schon ziemlich spät. Lass uns nach Hause gehen, ok?
       #Mathina, it is quite late, why don’t we go home?
         char: leo
-        exposition: Mathina aber pflückte gerade die letzten Beeren vom Strauch. Zu Hause wollten sie einen Kuchen mit den Waldbeeren backen. 
+        exposition: Mathina aber pflückte gerade die letzten Beeren vom Strauch. Zu Hause wollten sie einen Kuchen mit den Waldbeeren backen.
         mood: arguing
   - type: clearImage
-    id: mat   
+    id: mat
   - type: image
     src: mathina5_mirrored.png
     id: mat
     style: "width: 9.5%; top: 45%; left: 45%;"
-    parallax: mid2 
+    parallax: mid2
   - type: image
     src: sparkbugs_many.png
     id: bug1
@@ -200,7 +200,7 @@ actions:
         transform: rotateY(180deg)
         #yPercent: 28
         #width: 20%
-        ease: power3.out  
+        ease: power3.out
   - type: dialog
     avatarAlign:
       flamma: right
@@ -226,7 +226,7 @@ actions:
       - text: Was macht ihr denn so spät noch hier?
       #But what are you doing here so late?
         char: flamma
-        #exposition: 
+        #exposition:
         #insisted Flamma
 
       - text: Wir haben nur Waldbeeren gepflückt, und dann ist plötzlich etwas merkwürdiges passiert, das Licht wurde so komisch ...
@@ -244,10 +244,10 @@ actions:
       leo: left
     entries:
 
-      - text: Das sind Funkelflöhe. Sie sind mikroskopisch kleine Wesen und bestehen aus einer Mischung von lebenden Zellen und Feuer. Man kann sich verbrennen, wenn man sie anfasst, aber sonst sind sie ungefährlich. 
+      - text: Das sind Funkelflöhe. Sie sind mikroskopisch kleine Wesen und bestehen aus einer Mischung von lebenden Zellen und Feuer. Man kann sich verbrennen, wenn man sie anfasst, aber sonst sind sie ungefährlich.
       #These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive. They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. The result is absolutely beautiful.
         char: flamma
-        
+
   - type: clearImage
     id: mat
   - type: image
@@ -255,15 +255,15 @@ actions:
     id: mat
     style: "width: 9%; top: 46%; left: 38%; "
     parallax: mid2
-     
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-    entries:     
-        
-      - text: Sie versprühen winzige Tröpfchen brennenden Gases um sich herum, und fliegen immer mit vielen anderen gemeinsam als Schwarm, so dass es für uns so aussieht, als wäre es ein feiner, weicher Stoff oder dünne Fäden, die in der Luft schweben. 
+    entries:
+
+      - text: Sie versprühen winzige Tröpfchen brennenden Gases um sich herum, und fliegen immer mit vielen anderen gemeinsam als Schwarm, so dass es für uns so aussieht, als wäre es ein feiner, weicher Stoff oder dünne Fäden, die in der Luft schweben.
       #These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive. They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. The result is absolutely beautiful.
         char: flamma
       - text: Sie fliegen in der Abenddämmerung und in der Nacht, dabei können sie verschiedene Gase versprühen, die in unterschiedlichen Farben brennen. Ihr Licht mischt sich mit den Schatten und dem Mondlicht, Sie führen eine Art Tanz auf und können verschiedene Formen in der Luft bilden. Das sieht dann besonders schön aus.
@@ -274,7 +274,7 @@ actions:
       #Flamma, we want to see that, can we, please?
         char: leo
 
-      - text: Ja, wir können noch etwas bleiben, und ich bringe euch dann später nach Hause. Ich wollte heute sowieso die Funkelflöhe beobachten. So wie Drachen und Phönixe sind auch alle anderen Feuerwesen sehr intelligent und haben ihre eigene Sprache, wisst ihr. 
+      - text: Ja, wir können noch etwas bleiben, und ich bringe euch dann später nach Hause. Ich wollte heute sowieso die Funkelflöhe beobachten. So wie Drachen und Phönixe sind auch alle anderen Feuerwesen sehr intelligent und haben ihre eigene Sprache, wisst ihr.
       #Yes, we can stay here a bit longer and later I will bring you home. Actually, I came here to study the sparkbugs. You know, as the dragons and phoenixes, all the fire creatures are very intelligent and have their own languages, and we can try to communicate with them using magical words. I still haven’t learned all their language, but I can tell you what I know.
         char: flamma
   - type: clearImage
@@ -283,28 +283,28 @@ actions:
     src: $COMMON/img/characters/mathina/mathina2.png
     id: mat
     style: "width: 12%; top: 65%; left: 38%; transform: scalex(-1)"
-    parallax: mid2     
+    parallax: mid2
   - type: clearImage
     id: leo
   - type: image
     src: $COMMON/img/characters/leo/leo2.png
     id: leo
     style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
-    parallax: mid2  
-      
+    parallax: mid2
+
   - type: dialog
     avatarAlign:
       flamma: right
       mathina: left
       leo: left
-    entries:  
+    entries:
 
       - text: Wir können versuchen, durch magische Worte mit ihnen zu sprechen. Ich weiß noch nicht alles über ihre Sprache, aber ich kann euch sagen, was ich schon herausgefunden habe.
       #Yes, we can stay here a bit longer and later I will bring you home. Actually, I came here to study the sparkbugs. You know, as the dragons and phoenixes, all the fire creatures are very intelligent and have their own languages, and we can try to communicate with them using magical words. I still haven’t learned all their language, but I can tell you what I know.
         char: flamma
         exposition: Mathina und Leo hörten ganz gespannt zu und setzten sich auf den Waldboden.
 
-      - text: Die Funkelflöhe orientieren sich an einer Basis, eine Art Referenz. Es ist als könnten sie zwei verschiedene Richtungen im Hintergrund spüren. Jeder Funkelfloh weiß immer, wo er gerade ist. 
+      - text: Die Funkelflöhe orientieren sich an einer Basis, eine Art Referenz. Es ist als könnten sie zwei verschiedene Richtungen im Hintergrund spüren. Jeder Funkelfloh weiß immer, wo er gerade ist.
       #The bugs orient themselves according to a reference. It is as if they could feel two perpendicular axes in the background. Each bug is always aware of its position in the space. You cannot tell one single bug how to move or where to place itself, but instead, you can say a sentence, a condition, to the whole swarm and, each bug will place itself somewhere where it satisfies that condition.
         char: flamma
       - text: Man kann aber nicht einem bestimmten Floh sagen, wie oder wohin er sich bewegen soll. Stattdessen kann man aber dem ganzen Schwarm einen Satz sagen, also eine Art Bedingung, und jeder Funkelfloh wird sich irgendwie so positionieren, dass die Bedingung erfüllt ist.
@@ -316,7 +316,7 @@ actions:
     text: Wähle eine Gleichung. Durch klicken und ziehen kannst Du die Funkelflöhe dort absetzen, wo Du magst. Sie positionieren sich dann entsprechend der Gleichung, die Du ausgewählt hast. Probiere auch die anderen Gleichungen aus. Am unteren Rand kannst Du sogar eine eigene Gleichung eingeben.
     toolbarText: Wähle eine Gleichung und lasse die Funkelflöhe auf der dazugehörigen Kurve tanzen.
     cta: Lass die Funkelfllöhe tanzen!
-    url: http://localhost:3000/apps/imaginary/app_4/4_1/de.html
+    url: /apps/imaginary/app_4/4_1/de.html
 
   - type: dialog
     avatarAlign:
@@ -330,10 +330,10 @@ actions:
         char: flamma
 
 
-      - text: Wenn wir ihnen den Satz sagen würden, der die Bedeutung von y=x hat, würden sie das nicht verstehen. Wir müssen ihnen dafür y-x=0 sagen, obwohl es für uns ja genau das gleiche ist. 
+      - text: Wenn wir ihnen den Satz sagen würden, der die Bedeutung von y=x hat, würden sie das nicht verstehen. Wir müssen ihnen dafür y-x=0 sagen, obwohl es für uns ja genau das gleiche ist.
       #We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same. Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
         char: flamma
-      - text: Eigentlich sagen wir ihnen nicht mal den Teil mit 'gleich Null', sondern nur den anderen Teil mit den Variablen x und y. Man kann x und y auch noch mit Zahlen multiplizieren, oder welche dazuaddieren. 
+      - text: Eigentlich sagen wir ihnen nicht mal den Teil mit 'gleich Null', sondern nur den anderen Teil mit den Variablen x und y. Man kann x und y auch noch mit Zahlen multiplizieren, oder welche dazuaddieren.
       #We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same. Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
         char: flamma
       - text: Bleiben wir bei unserem Beispiel, da bedeutet y-x=0 für die Funkelflöhe, dass sie sich an solche Orte in der Luft begeben sollen, wo ihre x-Koordinate genauso groß ist wie ihre y-Koordinate.
@@ -349,7 +349,7 @@ actions:
     src: $COMMON/img/characters/leo/leo1.png
     id: leo
     style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
-    parallax: mid2 
+    parallax: mid2
 
   - type: dialog
     avatarAlign:
@@ -368,7 +368,7 @@ actions:
     id: mat
     style: "width: 12%; top: 66%; left: 36%;"
     parallax: back3
-    
+
   - type: dialog
     avatarAlign:
       flamma: right
@@ -413,21 +413,21 @@ actions:
   - type: sceneText
     text: Flamma holte ihr Notizbuch hervor.
     #Flamma picked up a notebook from her bag.
-    
+
   - type: clearImage
     id: mat
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
     style: "width: 9.5%; top: 45%; left: 40%;"
-    parallax: mid2     
+    parallax: mid2
   - type: clearImage
     id: leo
   - type: image
     src: leo4_mirrored.png
     id: leo
     style: "width: 16%; top: 55%; left: 30%; "
-    parallax: mid2 
+    parallax: mid2
 
   - type: dialog
     avatarAlign:
@@ -447,7 +447,7 @@ actions:
     text: Setze die Funkelflöhe durch klicken und ziehen in der Luft ab. Sie werden Dir eine Kurve zeigen. Du hast jeweils drei Versuche, die Gleichung zur Kurve zu erraten.
     toolbarText: Welche Kurve zeigen Dir die Funkelflöhe?
     cta: Löse die Rätsel der Funkelflöhe!
-    url: http://localhost:3000/apps/imaginary/app_4/4_2/de.html
+    url: /apps/imaginary/app_4/4_2/de.html
 
   - type: dialog
     avatarAlign:
@@ -462,9 +462,9 @@ actions:
         #The relationship between these graphics and the formulas is still today a largely unknown field. Many wizards, or as they are known outside the magical world, mathematicians, call this field of study Algebraic Geometry because it studies the relationship between Geometry and Algebra.
 
       - char: flamma
-        text: Wir haben hier mit Kurven in einer Ebene gespielt. Wenn wir aber eine dritte Variable hinzufügen - die Tiefe - können wir mit einer Funktion F(x,y,z)=0 auch eine Fläche beschreiben. 
+        text: Wir haben hier mit Kurven in einer Ebene gespielt. Wenn wir aber eine dritte Variable hinzufügen - die Tiefe - können wir mit einer Funktion F(x,y,z)=0 auch eine Fläche beschreiben.
         #We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space. For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
-        
+
       - char: flamma
         text: In der Mathematik kann man sogar noch mehr Variablen hinzufügen, auch wenn man sich das dann nicht mehr in unserem dreidimensionalen Raum vorstellen kann.
         #We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space. For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
@@ -478,7 +478,7 @@ actions:
     text: "Hier kannst Du Flächen anschauen, die durch Gleichungen mit drei Variablen (x, y und z) bestimmt werden. Unten kannst Du auch eine eigene Gleichung erfinden und Dir dann die Fläche dazu anschauen."
     toolbarText: Schaue Dir die Flächen und ihre Gleichungen an.
     cta: Zu den Flächen im Raum.
-    url:
+    url: /apps/imaginary/app_4/4_3/en.html
 
   - type: dialog
     avatarAlign:
