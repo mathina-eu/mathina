@@ -192,7 +192,7 @@ Esta app é muito semelhante à do **Jogo 5**. A única diferença diz respeito 
 &nbsp;
 
 
-## [Separando os frisos com simetria de reflexão deslizante]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg12)
+## [Jogo 7 - Separando os frisos com simetria de reflexão deslizante]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg12)
 
 Esta app é muito semelhante à do **Jogo 3**. Contudo, em vez de escolher os frisos com eixos de simetria, o utilizador deverá selecionar os que têm simetria de reflexão deslizante.
 
