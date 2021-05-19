@@ -37,11 +37,11 @@ Nella storia, vengono menzionate quattro diverse isometrie (nel seguente ordine)
 Una **simmetria di una figura** è un'isometria che mappa la figura esattamente su se stessa, in modo che sia uguale prima e dopo la trasformazione: non è possibile distinguere la figura iniziale da quella finale (né per forma, posizione o colore).
 
 Le animazioni 
-[**anim 1**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[**anim 1**]($HUB_URL/it/story/stamping-friezes/?actionLink=tg1)
 , 
-[**anim 2**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[**anim 2**]($HUB_URL/it/story/stamping-friezes/?actionLink=tg2)
 e 
-[**anim 3**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12),
+[**anim 3**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg3),
 disponibili nella storia, illustrano, rispettivamente, una simmetria di rotazione, una glissoriflessione e una traslazione di tre diversi fregi.
  
 ## Classificazione dei fregi
@@ -53,19 +53,19 @@ Tale scoperta si ottiene, in modo costruttivo, studiando le simmetrie dei fregi.
 `*` **Simmetrie assiali**: la prima differenza percepita dai personaggi è che ci sono fregi che hanno
 assi di simmetria^[Assumiamo che la direzione delle simmetrie di traslazione sia orizzontale.]
  - o, in un'altra formulazione, fregi che hanno una
-[simmetria assiale]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[simmetria assiale]($HUB_URL/it/story/stamping-friezes/?actionLink=tg4)
  - mentre altri non hanno questa proprietà. Esaminando più da vicino i fregi, emergono nuove differenze: ci sono fregi che hanno solo assi di simmetria verticali, altri hanno solo un asse di simmetria orizzontale e altri ancora che presentano entrambi i tipi di assi di simmetria. Nella storia, i fregi con assi di simmetria sono separati in tre sacchetti:
-[1, 2 e 3]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+[1, 2 e 3]($HUB_URL/it/story/stamping-friezes/?actionLink=tg5).
 
 `*` **Simmetria di rotazione**: Dopo aver esplorato le simmetrie assiali dei fregi, è naturale passare a un altro tipo di isometria: cioè le 
-[rotazioni]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+[rotazioni]($HUB_URL/it/story/stamping-friezes/?actionLink=tg1).
 Consideriamo ora due casi diversi: 1) i fregi senza assi di simmetria (che, nel racconto, sono fuori dalle borse) e 2) i fregi con assi di simmetria:
 
   * nel primo caso, isoliamo i fregi che hanno simmetria di rotazione e li poniamo in una
-[nuova borsa]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)  (la quarta per loro);
+[nuova borsa]($HUB_URL/it/story/stamping-friezes/?actionLink=tg6)  (la quarta per loro);
 
   * nel secondo caso, c'è una differenza rilevante per quanto riguarda i fregi nella **borsa 1**: qui,
-[ci sono fregi che hanno simmetria di rotazione e altri che non lo hanno]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). 
+[ci sono fregi che hanno simmetria di rotazione e altri che non lo hanno]($HUB_URL/it/story/stamping-friezes/?actionLink=tg7). 
 Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per i fregi, precedentemente nella borsa 1, che hanno anche simmetria di rotazione.
 
 **Nota 1**: Si noti che, fino ad ora, studiando le simmetrie di riflessione e rotazione dei fregi, abbiamo già raggiunto cinque diversi tipi ("gruppi") di fregi:
@@ -82,7 +82,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 **Nota 3**: ci sono fregi (per ora, all'esterno delle borse) che non hanno né simmetria di riflessione né simmetria di rotazione.
 
 `*` **Glissoriflessioni**: Passando alle glissoriflessioni (nella storia questo tipo di simmetria si trova per un "errore" di Leo, quando 
-[Leo stampa un fregio seguendo male le istruzioni di Mathina]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12))
+[Leo stampa un fregio seguendo male le istruzioni di Mathina]($HUB_URL/it/story/stamping-friezes/?actionLink=tg8)
 , possiamo concludere che ci sono due diversi tipi di fregi tra quelli all'esterno delle borse: alcuni hanno glissoriflessioni, mentre altri non ne hanno. Dividiamoli in due sacchetti: il sesto, che contiene i fregi con glissoriflessioni e il settimo per i restanti fregi.
 
 **Nota 4**: Nota che in questa fase abbiamo già trovato sette diversi tipi di fregi in base alla loro simmetria:
@@ -96,7 +96,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 |  |  |  |  |  | Glissoriflessioni | Nessuna glissoriflessione |
 
 `*` **Traslazioni**: per definizione, 
-[tutti i fregi hanno delle traslazioni come simmetrie]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+[tutti i fregi hanno delle traslazioni come simmetrie]($HUB_URL/it/story/stamping-friezes/?actionLink=tg9)
 
 **Nota 5**: I fregi nella busta sette corrispondono a quelli **che hanno solo traslazioni come simmetrie**.
 
@@ -136,7 +136,7 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 &nbsp;
 
-## [App 1 - Stampando fregi con un rotolo]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 1 - Stampando fregi con un rotolo]($HUB_URL/it/story/stamping-friezes/?actionLink=tg10)
 
 In questa app, l'utente è invitato a scegliere un'immagine tra le venti proposte. Quindi, viene presentata la creazione di un cilindro, con l'immagine selezionata. Facendo clic
 ![Stampa](/stories/symm-3/img/stamp.png =40x40)
@@ -147,7 +147,7 @@ In questa app, l'utente è invitato a scegliere un'immagine tra le venti propost
 
 &nbsp;
 
-## [App 2 - Isolare i fregi con assi di simmetria]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 2 - Isolare i fregi con assi di simmetria]($HUB_URL/it/story/stamping-friezes/?actionLink=tg4)
 
 Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i quattro con assi di simmetria. Dopo aver scelto i fregi corretti e aver cliccato
 ![Conferma](/stories/symm-3/img/confirm.png =40x40)
@@ -158,7 +158,7 @@ Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i q
 
 &nbsp;
 
-## [App 3 - Isolare i fregi in base alle tipologie di assi di simmetria]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 3 - Isolare i fregi in base alle tipologie di assi di simmetria]($HUB_URL/it/story/stamping-friezes/?actionLink=tg5)
 
 Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni fregio nel sacchetto corrispondente, secondo la sua simmetria di riflessione. Il **sacchetto 1** contiene i fregi che hanno solo assi di simmetria verticali, il **sacchetto 2** quelli solo con asse di simmetria orizzontale. Infine, il **sacchetto 3** contiene i fregi con entrambi i tipi di assi di simmetria.
 
@@ -167,7 +167,7 @@ Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni 
 
 &nbsp;
 
-## [App 4 - Stampare i fregi con una "tavola"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 4 - Stampare i fregi con una "tavola"]($HUB_URL/it/story/stamping-friezes/?actionLink=tg11)
 
 In questa app, l'utente è invitato a scegliere un'immagine scelta tra venti. L'utente può guardare una tavola che timbra un fregio, con assi di simmetria sia verticale che orizzontale, che ha l'immagine scelta come modulo che si ripete.
 
@@ -176,7 +176,7 @@ In questa app, l'utente è invitato a scegliere un'immagine scelta tra venti. L'
 
 &nbsp;
 
-## [App 5 - Isolare i fregi che hanno rotazioni]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 5 - Isolare i fregi che hanno rotazioni]($HUB_URL/it/story/stamping-friezes/?actionLink=tg6)
 
 Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con assi di simmetria, l'utente dovrebbe scegliere quelli che possiedono rotazioni non banali come simmetrie.
 
@@ -186,7 +186,7 @@ Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con ass
 &nbsp;
 
 
-## [App 6 - Ancora sui fregi che hanno rotazioni...]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 6 - Ancora sui fregi che hanno rotazioni...]($HUB_URL/it/story/stamping-friezes/?actionLink=tg7)
 
 Questa app è simile alla **App 5**. L'unica differenza riguarda i fregi scelti: qui i fregi presentati sono quelli originariamente appartenuti al **sacchetto 1**.
 
@@ -196,7 +196,7 @@ Questa app è simile alla **App 5**. L'unica differenza riguarda i fregi scelti:
 &nbsp;
 
 
-## [App 7 - Isolare i fregi con glissoriflessione]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 7 - Isolare i fregi con glissoriflessione]($HUB_URL/it/story/stamping-friezes/?actionLink=tg12)
 
 Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con assi di simmetria, l'utente dovrebbe scegliere quelli con glissoriflessioni.
 
@@ -206,7 +206,7 @@ Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con ass
 &nbsp;
 
 
-## [App 8 - Etichettatura delle borse]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 8 - Etichettatura delle borse]($HUB_URL/it/story/stamping-friezes/?actionLink=tg9)
 
 In questa app l'utente può osservare i sette sacchetti ottenuti e vedere i fregi posti all'interno. Per ogni borsa, l'utente è invitato a selezionare, da un elenco di simboli 
 ![horizontal reflection](/stories/symm-3/img/Icon-refH.png =40x40)

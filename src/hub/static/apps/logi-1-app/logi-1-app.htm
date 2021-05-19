@@ -5,7 +5,7 @@
         #DivCanvas {
             position: absolute;
             top: 5%;
-            left: 75%;
+            left: 80%;
             width: 25%;
             height: 90%;
             z-index: 1;
@@ -193,6 +193,7 @@
                 document.getElementById("DivComandi").style.display = "none";
                 //Scelgo 8 semafori
                 ArraySem = [];
+				/*
                 for (let i = 0; i < 8; i++) {
                     var ColCorr = [1, 2, 3];
                     var SemCorr = [];
@@ -203,6 +204,15 @@
                     }
                     ArraySem.push(SemCorr);
                 }
+				*/
+				ArraySem.push([1,2,3]);
+				ArraySem.push([3,1,2]);
+				ArraySem.push([2,1,3]);
+				ArraySem.push([1,3,2]);
+				ArraySem.push([3,2,1]);
+				ArraySem.push([1,3,2]);
+				ArraySem.push([3,2,1]);
+				ArraySem.push([3,1,2]);
                 SemaforiTotali = 8;
                 for (let i = 0; i < ArraySem.length; i++) {
                     AddColor(ArraySem[i][0]);
@@ -336,6 +346,22 @@
         function isNumeric(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
+		
+		
+		
+		      Traduzioni=[
+		[["Bott1"],"Add traffic light","Aggiungi semaforo","Acrescenta um sem&aacute;foro","Ampel hinzuf&uuml;gen"],
+		[["Bott2"],"Reset color choice", "Reset scelta colori","Apaga a escolha de cor","Farbauswahl zur&uuml;cksetzen"]
+];
+
+ function Traduci(Lang) {
+            for (var k = 0; k < Traduzioni.length; k++) {
+                for (var kk = 0; kk < Traduzioni[k][0].length; kk++) {
+                    if (document.getElementById(Traduzioni[k][0][kk]) != null) document.getElementById(Traduzioni[k][0][kk]).innerHTML = Traduzioni[k][Lang];
+                }
+            }
+        }
+
 
 
         function Init() {
@@ -344,6 +370,13 @@
             Versione = gup('v', document.location.search);
 
             if (!isNumeric(Versione)) Versione = 1;
+			
+			Lingua = Number(gup('l', document.location.search));
+
+            if (!isNumeric(Lingua)) Lingua = 1;
+            if (Lingua == 0) Lingua = 1;
+            Traduci(Lingua);
+			
             window.CanvasMathina = document.getElementById('CanvasMathina');
             window.ctxMathina = CanvasMathina.getContext('2d');
 
@@ -659,7 +692,7 @@
             <button type="button" onclick="AddColor(2)" class="colbutton" id="Color2"><span>2</span></button>
             <button type="button" onclick="AddColor(3)" class="colbutton" id="Color3"><span>3</span></button>
         </p>
-        <p><button type="button" onclick="Add()" class="normbutton">Add traffic light</button><button type="button" onclick="NuovoSemaforo()" class="normbutton">Reset color choice</button></p>
+        <p><button type="button" onclick="Add()" class="normbutton" id="Bott1" >Add traffic light</button><button type="button" onclick="NuovoSemaforo()" class="normbutton" id="Bott2">Reset color choice</button></p>
         <div id="DivCanvas"><canvas id="CanvasMathina"></canvas></div>
     </div>
     <div id="ElencoSemafori" class="all-slides">

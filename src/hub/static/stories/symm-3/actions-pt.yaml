@@ -641,7 +641,7 @@ actions:
   - type: game
     tag: tg7
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
-    toolbarText: "Seleciona os 3 frisos com simetria de rotação"
+    toolbarText: "Escolhe os 3 frisos com simetria de reflexão e de rotação"
     cta: "Experimenta!"
     url: /apps/EscolheFrisos_ref_rot/?lang=pt
     img:

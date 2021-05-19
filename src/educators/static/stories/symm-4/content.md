@@ -149,7 +149,7 @@ A set of 8 polyhedra is presented. The user is invited to choose the 4 convex on
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 8 polyhedra. A total of 3 sets are shown. The game is solved when all "good" polyhedra (i.e. convex) are selected.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](PEeIzkvDG70?_align-center_)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
@@ -160,7 +160,7 @@ A set of 6 proposals for cube nets is presented. The user is invited to choose t
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 6 nets. A total of 2 sets are shown. The game is solved when all "good" cube nets are selected.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](UOZvfqpXVD4?_align-center_)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
@@ -169,23 +169,14 @@ A set of 6 proposals for cube nets is presented. The user is invited to choose t
 
 This app is similar to **Game 2**. However, the chosen polyhedron is an octahedron.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
-
 &nbsp;
 
 ## [Game 4 - Choosing non Platonic polyhedra whose faces are all regular and equal polygons]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg13)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the non Platonic polyhedra whose faces are all regular and equal polygons.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
-
 &nbsp;
 
 ## [Game 5 - Separating uniform polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg29)
 
 This app is similar to **Game 1**. However, instead of choosing convex polyhedra, the user should pick the uniform polyhedra. 
-
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)

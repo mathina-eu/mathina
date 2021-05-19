@@ -20,6 +20,16 @@ actions:
 
 # BEGIN PROVA
 
+  - type: video
+    width: 400
+    text: Lorem ipsum dolor
+    image: bg/c1-bg1.jpg
+    entries:
+      - src: video.mp4
+        type: 'video/mp4'
+      - src: video.webm
+        type: 'video/webm'
+
   - type: dialog
     entries:
       - text: "mathina happy"

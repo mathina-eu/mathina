@@ -220,9 +220,16 @@
 
             window.dimension = [width, height];
 
-            CanvasMathina.width = dimension[0];
+			CanvasMathina.width = dimension[0];
             CanvasMathina.height = dimension[1];
 
+			ScalaCalcolata=Math.min(dimension[0]/1920,dimension[1]/905);
+			ctxMathina.scale(ScalaCalcolata,ScalaCalcolata);
+			
+			if (typeof(SogliaPuntiCoincidenti) !== 'undefined') {
+				DisegnaSegmenti();
+				DisegnaPolizia();
+			}
         }
 
         function Reset() {
@@ -255,7 +262,7 @@
 
 
         function DisegnaSegmenti() {
-            ctxMathina.clearRect(0, 0, dimension[0], dimension[1]);
+            ctxMathina.clearRect(0, 0, dimension[0]/ScalaCalcolata, dimension[1]/ScalaCalcolata);
             SegmentiPresi = 0;
             for (var i = 0; i < Segmenti.length; i++) {
                 ProssimoSegmento = 1;
@@ -359,7 +366,7 @@
                 var mouseyMov = ev.clientY - this.offsetTop;
             }
 
-            MousePos = [mousexMov, mouseyMov];
+            MousePos = [mousexMov/ScalaCalcolata, mouseyMov/ScalaCalcolata];
 
             for (var i = 0; i < Polizia.length; i++) {
                 if (Distanza(Polizia[i], MousePos) < SogliaPuntoMouse) {
@@ -390,7 +397,7 @@
                 var mousexMov = ev.clientX - this.offsetLeft;
                 var mouseyMov = ev.clientY - this.offsetTop;
             }
-            MousePos = [mousexMov, mouseyMov];
+            MousePos = [mousexMov/ScalaCalcolata, mouseyMov/ScalaCalcolata];
 
             if (PuntoPreso > -1) {
                 Polizia[PuntoPreso] = MousePos;

@@ -1,3 +1,15 @@
-# See Demo Story example
+# Mathematical concepts
+Functions are transformations that take an input number x and give out an output value y=f(x). We can make a graph of the function, by plotting the points (x, f(x)) in cartesian coordinates, yielding a curve in the plane. Some important examples of such curves are straight lines (first degree), parabolas (second degree) or polynomial curves.
 
-[Demo Story Example](/story/demo-story-url-path)
+Those polynomials can be defined by their coefficients. An interesting technique is to find the (only) polynomial of degree n that passes through (n+1) selected points. This is called the Lagrange polynomial interpolation, and it is an algebraic manipulation exercise.
+
+The polynomial curves can also be traced with their speed vector. This vector is calculated from the derivative of the function that defines the curve. The derivative of a function describes the rate of change of the function, and thus, whether the function is increasing or decreasing when advancing in the variable.
+
+If we prescribe the derivative of the function (indicating the moments when the function should increase or decrease and how much), and we fix the value of the function at one starting point, we can reconstruct the original function.
+
+
+
+# Didactical remarks
+Children at this age are able to use symbolic expressions (functions and equations). This story exploits that to describe curves, and get exposed to the ideas of growth rate and derivative. Stories and apps are more open-ended, giving more options to explore.
+
+# About the Apps
