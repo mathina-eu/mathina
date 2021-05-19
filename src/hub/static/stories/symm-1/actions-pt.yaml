@@ -335,10 +335,11 @@ actions:
         char: wizard
       - text: "Deixa-me ajudar-te!"
         char: wizard
-  - type: game
-    text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-1/video/geoplano-anim2.mp4          
+  - type: video
+    text: Observa o filme!
+    entries:
+    - src: geoplano-anim2.mp4
+      type: 'video/mp4'    
   - type: game
     tag: tg2
     text: "Como pode a Mathina terminar os brinquedos? Só precisas de arrastar algumas das figuras coloridas e colocá-las nos quadrados cinzentos adequados."

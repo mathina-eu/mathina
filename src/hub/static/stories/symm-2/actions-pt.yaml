@@ -24,7 +24,7 @@ actions:
     align: right      
   - type: sceneText
     text: >
-      <p>Mesmo ao lado dela, encontrava-se uma barraquinha completamente cheia de discos gravados com belas imagens coloridas! Alguns tinham imagens de flores, outros imagens de heróis de banda-desenhada, outros de animais,…. Na barraquinha estavam várias crianças entusiasmadas a jogar um estranho jogo com esses discos.</p>
+      <p>Mesmo ao lado dela, encontrava-se uma barraquinha completamente cheia de discos gravados com belas imagens coloridas! Alguns tinham imagens de flores, outros de animais,…. Na barraquinha estavam várias crianças entusiasmadas a jogar um estranho jogo com esses discos.</p>
   - type: image
     id: feiticeiro
     src: Feiticeiro1.png
@@ -108,13 +108,13 @@ actions:
     align: right    
   - type: dialog
     entries:      
-      - text: "Já entendi! estou pronta para resolver o Jogo das Rosáceas."
+      - text: "Já entendi! Estou pronta para resolver o Jogo das Rosáceas."
         char: mathina
         mood: excited
   - type: game
     tag: tg3
     text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
-    toolbarText: "Escolhe as 4 rosáceas com eixos de simetria"
+    toolbarText: "Escolhe as quatro rosáceas com eixos de simetria."
     cta: "Experimenta!"
     url: /apps/EscolheRosaceas/index.html?lang=pt    
   - type: dialog
@@ -159,7 +159,7 @@ actions:
     style: "width: 100%; top: 50%"    
   - type: dialog
     entries:    
-      - text: "Aqui estão elas."
+      - text: "Aqui estão algumas delas."
         char: wizard       
       - text: "A única coisa que temos de fazer é guardá-las nos sacos certos. Temos novamente 6 sacos numerados de 1 a 6…"
         char: wizard
@@ -177,11 +177,12 @@ actions:
   - type: dialog
     entries:    
       - text: "Tens toda a razão. Mas aqui vamos usar outra regra. Vou ajudar-te. – ofereceu-se o feiticeiro – olha: aqui estão duas rosáceas iguais uma por cima da outra. Vamos fazer rodar a rosácea de cima (que tem alguma transparência) uma volta completa. Quantas vezes conseguimos que as duas se sobreponham?"
-        char: wizard      
-  - type: game
-    text: "Ver o filme!"
-    cta: "Ver"
-    url: /stories/symm-2/video/rot_3.mp4
+        char: wizard
+  - type: video
+    text: Ver o filme!
+    entries:
+    - src: rot_3.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:
       - text: "Viste? As duas rosáceas ficaram sobrepostas
@@ -281,12 +282,12 @@ actions:
       ease: power3.out        
   - type: sceneText
     text: >
-      <p>O Leo empurrou a Mathina para a entrada de um pavilhão fechado, de madeira, com uma grande placa onde se lia a palavra "labirinto".</p>
+      <p>O Leo puxou a Mathina para a entrada de um pavilhão fechado, de madeira, com uma grande placa onde se lia a palavra "labirinto".</p>
   - type: dialog
     entries:         
       - text: "Olha que este não é um labirinto normal: é um labirinto de espelhos."
         char: mathina
-        exposition: "Disse a Mathina, lendo o texto na placa ao lado da palavra \"labirinto\""          
+        exposition: "Disse a Mathina, lendo o texto na placa ao lado da expressão \"labirinto de espelhos\""          
   - type: clearImage
     id: mathina-leo
   - type: image
