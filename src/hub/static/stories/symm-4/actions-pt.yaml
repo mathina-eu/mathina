@@ -331,11 +331,12 @@ actions:
     id: cuboMolde
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg3
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/CuboMolde.mp4
+    entries:
+      - src: CuboMolde.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde    
   - type: sceneText
@@ -346,11 +347,12 @@ actions:
     id: cuboMolde2
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg2
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/CuboMolde2.mp4
+    entries:
+      - src: CuboMolde2.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde2    
   - type: dialog
@@ -855,11 +857,12 @@ actions:
       - text: "Bem, tal como antes, todas as faces são polígonos regulares, mas nem todas têm o mesmo número de lados. Deixa-me verificar se os ângulos sólidos em cada vértice são iguais."
         char: mathina
         exposition: "Foi a Mathina verificar os ângulos."
-  - type: game
+  - type: video
     tag: tg15
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/CuboRombiOcta.mp4
+    entries:
+      - src: CuboRombiOcta.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg19
   - type: clearImage
@@ -881,20 +884,22 @@ actions:
       - text: "Podemos obter esse segundo molde, virando o molde original “ao contrário”."
         char: technician
         exposition: "Continuou o técnico."
-  - type: game
+  - type: video
     tag: tg17
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/Viramolde.mp4
+    entries:
+      - src: Viramolde.mp4
+        type: 'video/mp4'
   - type: dialog
     entries:        
       - text: "Cada vértice pode ser moldado por um desses dois moldes – o original e o “virado ao contrário”. E, como cada um dos 2 moldes pode ser obtido por reflexão um do outro, consideramos os vértices do poliedro como sendo “do mesmo tipo”."
         char: technician
-  - type: game
+  - type: video
     tag: tg18
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/CuboRombiOctaVM.mp4
+    entries:
+      - src: CuboRombiOctaVM.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg17    
   - type: background
@@ -991,10 +996,11 @@ actions:
       - text: "Considera, por exemplo, um cubo e pensa numa rotação de 90º em torno de um eixo que passa pelos centros de duas faces opostas. Se rodarmos, o cubo é levado em si mesmo. Esta rotação é, pois, uma simetria de cubo."
         char: technician
         exposition: "Continuou o técnico."
-  - type: game
+  - type: video
     text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-4/video/AnimCubo.mp4
+    entries:
+      - src: AnimCubo.mp4
+        type: 'video/mp4'
   - type: image
     src: cubo-plano.png
     id: cubo-plano
