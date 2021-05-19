@@ -45,21 +45,25 @@ export default [
     slug: 'the-firebird-trainer',
     id: 'fire-1',
     ageMeta: AGE_GROUPS['0'],
+    fullWidth: true,
   },
   {
     slug: 'talking-to-the-unidragon',
     id: 'fire-2',
     ageMeta: AGE_GROUPS['1'],
+    fullWidth: true,
   },
   {
     slug: 'the-phoenix-race',
     id: 'fire-3',
     ageMeta: AGE_GROUPS['2'],
+    fullWidth: true,
   },
   {
     slug: 'the-mysterious-sparkbugs',
     id: 'fire-4',
     ageMeta: AGE_GROUPS['3'],
+    fullWidth: true,
   },
   {
     slug: 'mathina-wins-a-lot-of-new-toys',
