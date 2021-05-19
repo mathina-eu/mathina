@@ -974,7 +974,7 @@ actions:
   - type: game
     text: "Schnappt Euch alle Feuerbälle, ohne die Wolken zu berühren, und fliegt dann zum Schloss."
     #"Eat all the fireballs without touching the clouds and then reach the castle"
-    url: /apps/imaginary/app_2/2_3/en.html
+    url: /apps/imaginary/app_2/2_3/de.html
     toolbarText: Nimm alle Feuerbälle mit und fliege zum Schloss!
     cta: Fliege den Einhorndrachen!
 
