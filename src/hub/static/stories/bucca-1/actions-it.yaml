@@ -389,7 +389,8 @@ actions:
         mood: happy
   - type: game
     text: "Aiuta i bambini a creare i messaggi!"
-    cta: "Provaci tu!"
+    toolbarText: "Associa al messaggio corretto l'immagine descritta dalla chiave."
+    cta: "Provaci!"
     tag: app1
     url: /apps/bucca-1-app/bucca-1-app-1.htm?l=2
   - type: dialog
@@ -428,7 +429,8 @@ actions:
         mood: happy      
   - type: game
     text: "Aiuta i bambini, associando a ciascun messaggio un'immagine"
-    cta: "Provaci tu!"
+    toolbarText: "Associa un'immagine a ciascun messaggio. Usa un'immagine descritta dalla chiave solo per il messaggio corretto."
+    cta: "Provaci!"
     tag: app2
     url: /apps/bucca-1-app/bucca-1-app-2.htm?l=2
   - type: clearImage
@@ -707,8 +709,8 @@ actions:
     text: >
       <p>Prima di andarsene quindi lasciarono un messaggio per comunicare agli amici il luogo del loro prossimo incontro, assieme ad altri messaggi falsi.</p>
   - type: game
-    text: "Aiuta Rasha a preparare i messaggi!"
-    cta: "Provaci tu!"
+    text: "Qual è il messaggio che Rasha e Lucy hanno scritto per Mathina e Leo?"
+    cta: "Trova il messaggio segreto!"
     tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=2
   - type: sceneText

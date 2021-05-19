@@ -14,7 +14,7 @@ export default {
       id: 'logicity',
       slug: 'logicity',
       stories: ['logi-1', 'logi-2', 'logi-3', 'logi-4'],
-      colorScheme: 'teal lighten-1',
+      colorScheme: 'purple lighten-1',
     },
     'birds-of-fire': {
       id: 'birds-of-fire',
@@ -26,7 +26,7 @@ export default {
       id: 'symmetry-fair',
       slug: 'symmetry-fair',
       stories: ['symm-1', 'symm-2', 'symm-3', 'symm-4'],
-      colorScheme: 'purple lighten-1'
+      colorScheme: 'teal lighten-1'
     }
   },
   STORIES,

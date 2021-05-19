@@ -64,6 +64,13 @@
           :img-root="imgRoot"
           @lastGameFinished="isLastGameFinished=true"
         />
+        <VideoView
+          v-else-if="isVideoMode"
+          :entries="action.entries"
+          :width="action.width"
+          :text="action.text"
+          :image="action.imagePath"
+        />
         <v-btn
           v-if="!hasMoreActions"
           class="mt-12"
@@ -80,6 +87,7 @@
 import yaml from 'js-yaml';
 import constants from '~/constants';
 import StoryView from '~/components/StoryView';
+import VideoView from '~/components/story/VideoView';
 import StoryDialog from '~/components/story/StoryDialog';
 import SceneText from '~/components/story/SceneText';
 import GameView from '~/components/story/GameView';
@@ -94,6 +102,7 @@ import {
   BackgroundAction,
   ImageAction,
   AnimationAction,
+  VideoAction,
 } from '~/components/story/action-types';
 import { preloadImage } from '~/utils';
 
@@ -109,6 +118,7 @@ export default {
     SceneText,
     GameView,
     StoryDialog,
+    VideoView,
   },
   async asyncData({ $axios, params, app: { i18n } }) {
     const locale = i18n.locale === i18n.defaultLocale ? '' : `-${i18n.locale}`;
@@ -178,8 +188,14 @@ export default {
     isGameMode() {
       return this.action instanceof GameAction;
     },
+    isVideoMode() {
+      return this.action instanceof VideoAction;
+    },
     imgRoot() {
       return `/stories/${this.story.id}/img`;
+    },
+    storyRoot() {
+      return `/stories/${this.story.id}`;
     },
     isFirstAction() {
       // Find first action without auto progress

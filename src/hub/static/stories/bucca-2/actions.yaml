@@ -583,6 +583,7 @@ actions:
     text: >
       <p> Angela gave to Mathina a small necklace. </p>
        
+       
   - type: sceneText
     text: >
       <p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
@@ -609,13 +610,13 @@ actions:
       - text: "Yes, please! Let’s try!"
         char: mathina
         mood: happy
-      - text: "Remember, move from the outside to the inside to decode."
+      - text: "Remember, move from the inside to the outside to encode."
         char: angela
         mood: normal
-
+	
   - type: game
-    text: "Remember: to decode you have to start from the outer circle"
-    toolbarText: "Select the correct word"
+    text: "Encode correctly the word."
+    toolbarText: "Encode the word. Remember: to encode you have to start from the inner circle"
     cta: "Try it yourself!"
     tag: app1
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1

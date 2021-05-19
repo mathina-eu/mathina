@@ -8,9 +8,9 @@ Nella storia, prima di introdurre questi poliedri, ci soffermiamo su un importan
 
 ## Poliedri convessi
 
-Nella storia, un esempio di poliedro non convesso si trova per caso, quando Leo cerca di "chiudere" un veicolo di una giostra dei poliedri e [certe delle componenti del veicolo si piegano all'interno]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Nella storia, un esempio di poliedro non convesso si trova per caso, quando Leo cerca di "chiudere" un veicolo di una giostra dei poliedri e [certe delle componenti del veicolo si piegano all'interno]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg1).
 
-Possiamo costruire un esempio di poliedro non convesso, ad esempio, partendo da un icosaedro e spostando al suo interno uno dei suoi vertici e le facce ad esso adiacenti ([Clicca qui per manipolare il poliedro](https://www.atractor.pt/temp/apps-tests/poliedros.html?pre=pol_1)).
+Possiamo costruire un esempio di poliedro non convesso, ad esempio, partendo da un icosaedro e spostando al suo interno uno dei suoi vertici e le facce ad esso adiacenti ([Clicca qui per manipolare il poliedro]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)).
 
 | ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
@@ -28,30 +28,30 @@ L'idea principale che intendiamo trasmettere sull'argomento è che un **solido p
 
 `*` attorno ad ogni vertice si incontrano lo stesso numero di facce;
 
-`*` gli [**angoli diedri**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), cioè gli angoli tra facce contigue sono congruenti;
+`*` gli [**angoli diedri**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg2), cioè gli angoli tra facce contigue sono congruenti;
 
-`*` gli [**angoli solidi**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) in ogni vertice sono congruenti.
+`*` gli [**angoli solidi**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg3) in ogni vertice sono congruenti.
 
 ### Costruire tutti i solidi platonici
 
 Nella storia, Mathina e Leo ricordano un poliedro che soddisfa tutte queste proprietà: il **cubo**.
 
 Quando cerca di costruire un cubo, Leo scopre, sperimentalmente, uno
-[**sviluppo del cubo**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) 
+[**sviluppo del cubo**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg4) 
 e, in seguito, si rende conto che lo sviluppo non è unico (ce ne sono moltissimi). Nel corso della storia, le relazioni tra un poliedro e i suoi sviluppi vengono esplorate anche per gli altri solidi platonici.
 
 I due personaggi decidono quindi di abbracciare la sfida di **trovare, in modo costruttivo, tutti i restanti solidi platonici**. Osservano che, in un cubo, il numero di quadrati che arrivano a ciascun vertice è sempre **tre** (in particolare è sempre uguale, come richiesto dalle proprietà di cui sopra). E se il numero di quadrati fosse diverso da 3?
-[Essi poi concludono facilmente che questo non è possibile]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12): non ci sono solidi platonici diversi dal cubo con le facce quadrate.
+[Essi poi concludono facilmente che questo non è possibile]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg5): non ci sono solidi platonici diversi dal cubo con le facce quadrate.
 
 Quindi, decidono di passare ai triangoli, che devono essere equilateri (secondo le proprietà sopra menzionate).
 
-Seguendo lo stesso approccio di prima, i personaggi considerano il caso di tre triangoli che si uniscono in ogni vertice. Così facendo, ne scoprono un secondo: il [**tetraedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Seguendo lo stesso approccio di prima, i personaggi considerano il caso di tre triangoli che si uniscono in ogni vertice. Così facendo, ne scoprono un secondo: il [**tetraedro**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg6).
 
-Passando a quattro triangoli attorno a un vertice Mathina e Leo costruiscono l'[**ottaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Infine, scegliendo cinque triangoli attorno a ogni vertice, trovano l'[**icosaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Passando a quattro triangoli attorno a un vertice Mathina e Leo costruiscono l'[**ottaedro**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg7). Infine, scegliendo cinque triangoli attorno a ogni vertice, trovano l'[**icosaedro**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg8).
 
-Dopo aver concluso che non è possibile costruire solidi platonici con più di cinque triangoli attorno a ogni vertice, i personaggi passano ai [**pentagoni regolari**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Unendone tre attorno ad ogni vertice, Leo e Mathina trovano un altro solido platonico, il [**dodecaedro**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Dopo aver concluso che non è possibile costruire solidi platonici con più di cinque triangoli attorno a ogni vertice, i personaggi passano ai [**pentagoni regolari**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg9). Unendone tre attorno ad ogni vertice, Leo e Mathina trovano un altro solido platonico, il [**dodecaedro**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg10).
 
-Leo e Mathina concludono facilmente che non solo è impossibile costruire solidi platonici con più di tre pentagoni attorno ad ogni vertice, ma è anche impossibile costruire solidi platonici [**utilizzando poligoni con più di cinque lati**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Quindi, per esclusione, hanno costruito tutti (e cinque) i [**solidi platonici**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Leo e Mathina concludono facilmente che non solo è impossibile costruire solidi platonici con più di tre pentagoni attorno ad ogni vertice, ma è anche impossibile costruire solidi platonici [**utilizzando poligoni con più di cinque lati**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg11). Quindi, per esclusione, hanno costruito tutti (e cinque) i [**solidi platonici**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg12).
 
 | Cubo | Tetraedro | Ottaedro | Icosaedro | Dodecaedro |
 | ------ | ------ | ------ | ------ | ------ |
@@ -69,23 +69,23 @@ Una più semplice **definizione di solido platonico** è data dal tecnico: un so
 
 **Nota 1**: Si noti che, seguendo questa nuova definizione, per verificare se un poliedro è platonico, non è necessario confrontare i suoi angoli diedri o solidi su ciascun vertice (nella storia, i personaggi li hanno studiati perché non erano a conoscenza del risultato precedente).
 
-**Nota 2**: Se rimuoviamo la condizione "ad ogni vertice arriva lo stesso numero di facce", possiamo anche ottenere solidi non platonici, come mostrato nella [**App 4**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+**Nota 2**: Se rimuoviamo la condizione "ad ogni vertice arriva lo stesso numero di facce", possiamo anche ottenere solidi non platonici, come mostrato nella [**App 4**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg13).
 
 ## Poliedri uniformi
 
-Cos'è un poliedro uniforme? Esaminando un poliedro uniforme, il cubottaedro, Mathina ipotizza che sia un poliedro le cui facce sono tutte poligoni regolari, ma non tutte con lo stesso numero di lati, e per cui [gli angoli solidi in ciascun vertice sono congruenti]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Cos'è un poliedro uniforme? Esaminando un poliedro uniforme, il cubottaedro, Mathina ipotizza che sia un poliedro le cui facce sono tutte poligoni regolari, ma non tutte con lo stesso numero di lati, e per cui [gli angoli solidi in ciascun vertice sono congruenti]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg14).
 
 | Cubottaedro (poliedro uniforme) | Grande rombicubottaedro (poliedro uniforme) | Poliedro di Miller (poliedro non uniforme) | Piccolo rombicubottaedro (poliedro uniforme) |
 | ------ | ------ | ------ | ------ |
 |![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
-Tuttavia, seguendo la "definizione di Mathina" può sorgere un problema: se costruiamo uno stampo attorno a un angolo solido del grande rombicubottaedro, [lo stampo non si adatterà a tutti gli angoli solidi]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12): in questo caso, [due stampi saranno necessari]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Tuttavia, seguendo la "definizione di Mathina" può sorgere un problema: se costruiamo uno stampo attorno a un angolo solido del grande rombicubottaedro, [lo stampo non si adatterà a tutti gli angoli solidi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg15): in questo caso, [due stampi saranno necessari]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg16).
 
-Tuttavia, se guardiamo entrambi gli stampi, possiamo notare che [sono l'immagine riflessa l'uno dell'altro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Tuttavia, se guardiamo entrambi gli stampi, possiamo notare che [sono l'immagine riflessa l'uno dell'altro]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg17).
 
 In questo caso, considereremo tutti i vertici del poliedro come "dello stesso tipo".
 
-Con questa definizione estesa, possiamo ora affermare che tutti i vertici del Grande rombicubottaedro sono dello stesso tipo: infatti, i due stampi considerati - l'originale e quello riflesso - [si adattano perfettamente a tutti i vertici]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). La stessa cosa accade per tutti i quattro poliedri presentati sopra. Quindi, tenendo conto della definizione di Mathina, i quattro poliedri sembrano uniformi. Tuttavia, nella storia, il tecnico afferma che uno di loro non è uniforme, cioè il [**poliedro di Miller**]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Con questa definizione estesa, possiamo ora affermare che tutti i vertici del Grande rombicubottaedro sono dello stesso tipo: infatti, i due stampi considerati - l'originale e quello riflesso - [si adattano perfettamente a tutti i vertici]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg18). La stessa cosa accade per tutti i quattro poliedri presentati sopra. Quindi, tenendo conto della definizione di Mathina, i quattro poliedri sembrano uniformi. Tuttavia, nella storia, il tecnico afferma che uno di loro non è uniforme, cioè il [**poliedro di Miller**]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg19).
 
 Questa discrepanza è correlata alla definizione di poliedro uniforme. Per il tecnico, la condizione "tutti i vertici sono dello stesso tipo" dovrebbe essere sostituita da una più forte, che evidenzi l'aspetto simmetrico del poliedro: "per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro". Quindi, un **poliedro uniforme** è un poliedro:
 
@@ -93,20 +93,20 @@ Questa discrepanza è correlata alla definizione di poliedro uniforme. Per il te
 
 `*` per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro.
 
-Nella storia, una **simmetria di un poliedro** è definita come un'isometria (cioè una funzione che preserva le distanze) che manda il poliedro in se stesso. Per ulteriori informazioni sull'argomento, consultare: 1) [gli esempi forniti]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), e 2) il capitolo "Cos'è una simmetria?" presentato nel testo sulla storia["Stampando i fregi"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Nella storia, una **simmetria di un poliedro** è definita come un'isometria (cioè una funzione che preserva le distanze) che manda il poliedro in se stesso. Per ulteriori informazioni sull'argomento, consultare: 1) [gli esempi forniti]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg20), e 2) il capitolo "Cos'è una simmetria?" presentato nel testo sulla storia["Stampando i fregi"](https://mathina-edu.netlify.app/it/story/stamping-friezes).
 
-Perché il poliedro di Miller non è uniforme? Possiamo convincerci di questo fatto, ad esempio, osservando che se consideriamo i vertici *A* e *B* in figura, qualsiasi isometria che manda *A* in *B* rimuoverà "l'anello" dei quadrati dall'equatore, quindi [cambierà l'aspetto finale del poliedro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12).
+Perché il poliedro di Miller non è uniforme? Possiamo convincerci di questo fatto, ad esempio, osservando che se consideriamo i vertici *A* e *B* in figura, qualsiasi isometria che manda *A* in *B* rimuoverà "l'anello" dei quadrati dall'equatore, quindi [cambierà l'aspetto finale del poliedro]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg21).
 
 ![Icosahedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
-[Manipola il poliedro](https://www.atractor.pt/temp/apps-tests/Miller_manip.html).
+[Manipola il poliedro]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
-Tuttavia, se [ruotiamo la cupola ottagonale sulla sommità del poliedro di Miller di 45 gradi]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), otteniamo un nuovo poliedro uniforme: il piccolo rombicubottaedro.
+Tuttavia, se [ruotiamo la cupola ottagonale sulla sommità del poliedro di Miller di 45 gradi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg22), otteniamo un nuovo poliedro uniforme: il piccolo rombicubottaedro.
 
-Nel corso della storia, il tecnico dice a Mathina e Leo quali sono **tutti i poliedri uniformi**. Essi sono costituiti da una famiglia infinita di prismi, [le cui basi sono poligoni regolari e le cui facce laterali sono quadrati]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12), una famiglia infinita di antiprismi, [le cui basi sono poligoni regolari e le cui facce laterali sono triangoli equilateri]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12) più altri tredici poliedri che non ricadono nelle due famiglie appena citate.
+Nel corso della storia, il tecnico dice a Mathina e Leo quali sono **tutti i poliedri uniformi**. Essi sono costituiti da una famiglia infinita di prismi, [le cui basi sono poligoni regolari e le cui facce laterali sono quadrati]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg23), una famiglia infinita di antiprismi, [le cui basi sono poligoni regolari e le cui facce laterali sono triangoli equilateri]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg24) più altri tredici poliedri che non ricadono nelle due famiglie appena citate.
 
 ![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
-Alla fine, i personaggi costruiscono un modello per la giostra ["poliedri platonici e uniformi"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12). Esso è costituito da poliedri altamente simmetrici: infatti, per ogni poliedro, e per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro.
+Alla fine, i personaggi costruiscono un modello per la giostra ["poliedri platonici e uniformi"]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg25). Esso è costituito da poliedri altamente simmetrici: infatti, per ogni poliedro, e per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro.
 
 &nbsp;
 
@@ -140,7 +140,7 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 &nbsp;
 
-## [App 1 - Isola i poliedri convessi]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 1 - Isola i poliedri convessi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg26)
 
 Viene presentato un insieme di otto poliedri. L'utente è invitato a scegliere i quattro convessi. Dopo aver scelto i poliedri corretti e aver cliccato
 ![conferma](/stories/symm-4/img/confirm.png =40x40)
@@ -151,7 +151,7 @@ Viene presentato un insieme di otto poliedri. L'utente è invitato a scegliere i
 
 &nbsp;
 
-## [App 2 - Scegliere gli sviluppi corretti del cubo]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 2 - Scegliere gli sviluppi corretti del cubo]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg27)
 
 Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invitato a scegliere i 3 corretti. Dopo aver scelto gli sviluppi e aver fatto clic su
 ![conferma](/stories/symm-4/img/confirm.png =40x40)
@@ -162,7 +162,7 @@ Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invita
 
 &nbsp;
 
-## [App 3 - Scegliere gli sviluppi corretti dell'ottaedro]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 3 - Scegliere gli sviluppi corretti dell'ottaedro]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg28)
 
 Questa app è simile alla **App 2**. In questo caso, però, l'utente deve selezionare gli sviluppi dell'ottaedro. 
 
@@ -171,7 +171,7 @@ Questa app è simile alla **App 2**. In questo caso, però, l'utente deve selezi
 
 &nbsp;
 
-## [App 4 - Scegliere poliedri non platonici le cui facce sono tutte poligoni regolari e uguali]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 4 - Scegliere poliedri non platonici le cui facce sono tutte poligoni regolari e uguali]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg13)
 
 Questa app è simile alla **App 1**. Tuttavia, invece di scegliere poliedri convessi, l'utente dovrebbe scegliere i poliedri non platonici le cui facce sono tutte poligoni regolari e uguali. 
 
@@ -180,7 +180,7 @@ Questa app è simile alla **App 1**. Tuttavia, invece di scegliere poliedri conv
 
 &nbsp;
 
-## [App 5 - Scegliere poliedri uniformi]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [App 5 - Scegliere poliedri uniformi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg29)
 
 Questa app è simile alla **App 1**. Tuttavia, invece di scegliere i poliedri convessi, l'utente dovrebbe scegliere i poliedri uniformi.
 

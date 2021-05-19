@@ -72,7 +72,7 @@ actions:
 
   - type: sceneText
     text: >
-      La donna era anziana ma aveva lo sguardo fiero e forte, e sembrava che il tempo per lei avesse smesso di scorrere. I suoi capelli erano bianchi e lunghi e indossava robusti abiti di pelle, un vecchio mantello polveroso consumato, stivali
+      La donna era anziana ma aveva lo sguardo fiero e forte: sembrava che il tempo per lei avesse smesso di scorrere. I suoi capelli erano bianchi e lunghi e indossava robusti abiti di pelle, un vecchio mantello polveroso consumato, stivali
        come quelli usati per andare a cavallo. Portava con se una borsa, una corda spessa,
        un libro e un bastoncino decorato con strisce colorate,
        troppo corto per essere utilizzato come aiuto per camminare, ma abbastanza lungo per arrivare a toccare il pavimento.
@@ -122,7 +122,7 @@ actions:
       - text: Sei una maga allora?
         char: mathina
         mood: arguing
-      - text: Non direi nemmeno questo, Mathina... anche se ne conosco alcuni e mi hanno aiutato più di una volta.
+      - text: Non direi nemmeno questo... anche se ne conosco alcuni e mi hanno aiutato più di una volta.
         char: flamma
         mood: normal
       - text: Allora chi sei? Parli una lingua strana. A proposito, io sono Mathina e lui è Leo!
@@ -358,10 +358,10 @@ actions:
       mathina: left
       leo: left
     entries:
-      - text: Questo è un unidrago. Gli unidraghi sono molto simili ai draghi,
+      - text: "Questo è un unidrago. Gli unidraghi sono molto simili ai draghi,
            ma sono nati con un corno in testa. Come i denti da latte per i
            bambini, quel corno è fragile e alla fine cade dalla loro testa
-           quando cresce un corno più forte e più grande. Ma il corno caduto non è un materiale morto, il drago può ancora sentirlo.
+           quando cresce un corno più forte e più grande. Ma il corno caduto non è inutile: il drago può ancora sentirlo."
         char: flamma
         mood: normal
       - text: Gli addestratori di unidraghi, come lo sono io,
