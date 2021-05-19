@@ -3,36 +3,36 @@
     background="/splash_blur.jpg"
   >
     <Parallax class="overflow-hidden">
-      <template #back2>
-        <div class="layer background" />
-      </template>
-      <template #mid1>
-        <div class="layer castle" />
-      </template>
-      <template #mid3>
-        <div class="layer hills" />
-      </template>
-      <template #front1>
-        <div class="layer mathina" />
-        <div class="layer leo" />
-      </template>
-      <template #back3>
-        <div class="splash-content">
-          <svg class="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 157">
-            <defs>
-              <path id="ribbon" d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5" fill="none"/>
-            </defs>
-            <text>
-              <textPath href="#ribbon">
-                {{ $t('index.title') }}
-              </textPath>
-            </text>
-          </svg>
-        </div>
-      </template>
-      <template #mid2>
-        <div class="layer clouds" />
-      </template>
+      <div class="layer background" />
+      <div class="layer castle" />
+      <div class="layer hills" />
+      <div class="layer mathina" />
+      <div class="layer leo" />
+      <div class="splash-content">
+        <svg
+          class="ribbon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 157"
+        >
+          <defs>
+            <path
+              id="ribbon"
+              d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5"
+              fill="none"
+            />
+          </defs>
+          <text>
+            <textPath
+              href="#ribbon"
+              startOffset="50%"
+              text-anchor="middle"
+            >
+              {{ $t('index.title') }}
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <div class="layer clouds" />
       <div class="splash-content splash-content--start">
         <v-btn
           color="primary white--text"
