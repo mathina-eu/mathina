@@ -18,12 +18,24 @@
       </template>
       <template #back3>
         <div class="splash-content">
-          <svg class="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 157">
+          <svg
+            class="ribbon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 157"
+          >
             <defs>
-              <path id="ribbon" d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5" fill="none"/>
+              <path
+                id="ribbon"
+                d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5"
+                fill="none"
+              />
             </defs>
             <text>
-              <textPath href="#ribbon">
+              <textPath
+                href="#ribbon"
+                startOffset="50%"
+                text-anchor="middle"
+              >
                 {{ $t('index.title') }}
               </textPath>
             </text>

@@ -3,53 +3,32 @@
     background="/map_blur.jpg"
   >
     <Parallax class="overflow-hidden">
-      <div class="worldmap">
-        <v-menu
-          v-for="city in cities"
-          :key="city.id"
-          rounded="b x1"
-          offset-y
-        >
-          <template v-slot:activator="{ attrs, on }">
-            <v-btn
-              :class="`white--text worldmap__city--${city.id}`"
-              :color="city.colorScheme"
-              elevation="1"
-              class="worldmap__city"
-              v-bind="attrs"
-              v-on="on"
-            >
-              {{ $t(`cities.${city.id}`) }}
-            </v-btn>
-          </template>
-          <v-list
-            class="blue--background"
-            nav
-            dense
-          >
-            <v-subheader>Stories</v-subheader>
-            <v-list-item
-              v-for="story in city.stories"
-              :key="story.id"
-              :to="localePath({ name: 'story-slug', params: { slug: story.slug } })"
-              :ripple="true"
-              link
-              nuxt
-            >
-              <v-list-item-icon>
-                <v-icon small>
-                  {{ `mdi-numeric-${story.ageMeta.icon}-circle` }}
-                </v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title v-text="$t(`story.titles.${story.id}`)" />
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </div>
       <template #back1>
         <div class="map-background" />
+        <svg
+          v-for="city in cities"
+          :key="city.id"
+          :class="`ribbon ribbon--${city.id}`"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 157"
+        >
+          <defs>
+            <path
+              id="ribbon"
+              d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5"
+              fill="none"
+            />
+          </defs>
+          <text>
+            <textPath
+              href="#ribbon"
+              startOffset="50%"
+              text-anchor="middle"
+            >
+              {{ $t(`cities.${city.id}`) }}
+            </textPath>
+          </text>
+        </svg>
       </template>
       <template #back2>
         <div class="castle" />
@@ -120,33 +99,6 @@ export default {
 </script>
 
 <style scoped>
-.worldmap {
-  &__city {
-    position: absolute;
-    z-index: 7;
-
-    &--island {
-      bottom: 3%;
-      right: 23%;
-    }
-
-    &--logicity {
-      top: 49%;
-      right: 29%;
-    }
-
-    &--birds-of-fire {
-      top: 3%;
-      left: 2%;
-    }
-
-    &--symmetry-fair {
-      left: 17%;
-      bottom: 35%;
-    }
-  }
-}
-
 .map-background {
   background: url('~assets/images/map/background.jpg');
   background-size: cover;
@@ -188,9 +140,9 @@ export default {
 .dragon {
   position: absolute;
   width: 10%;
-  height: 23%;
-  left: 32%;
-  top: 33%;
+  height: 21%;
+  left: 30%;
+  top: 31%;
   background: url('~assets/images/map/dragon.png') no-repeat center;
   background-size: contain;
 }
@@ -337,10 +289,10 @@ export default {
 
 .owl {
   position: absolute;
-  width: 14%;
-  height: 28%;
-  right: 27%;
-  bottom: 49%;
+  width: 12%;
+  height: 27%;
+  right: 28%;
+  bottom: 50%;
   background: url('~assets/images/map/owl.png') no-repeat center;
   background-size: contain;
 }
@@ -363,5 +315,36 @@ export default {
   bottom: 44%;
   background: url('~assets/images/map/thief.png') no-repeat center;
   background-size: contain;
+}
+
+.ribbon {
+  background: url('~assets/images/splash/ribbon.png') no-repeat center bottom;
+  background-size: contain;
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  font-size: 2em;
+  font-family: var(--story-font-family);
+  font-weight: 600;
+
+  &--island {
+    bottom: 3%;
+    right: 23%;
+  }
+
+  &--logicity {
+    top: 44%;
+    right: 25%;
+  }
+
+  &--birds-of-fire {
+    top: 1%;
+    left: 1%;
+  }
+
+  &--symmetry-fair {
+    left: 15%;
+    bottom: 34%;
+  }
 }
 </style>
