@@ -56,6 +56,14 @@
         <div class="mysterious-figure" />
       </template>
     </Parallax>
+    <transition name="story-name">
+      <div
+        v-if="storyName"
+        class="story-name"
+      >
+        {{ storyName }}
+      </div>
+    </transition>
   </StoryView>
 </template>
 
@@ -69,6 +77,11 @@ export default {
   components: {
     StoryView,
     Parallax,
+  },
+  data() {
+    return {
+      storyName: ''
+    };
   },
   computed: {
     cities() {
@@ -329,7 +342,7 @@ export default {
 
   &--island {
     bottom: 3%;
-    right: 23%;
+    right: 15%;
   }
 
   &--logicity {
@@ -345,6 +358,31 @@ export default {
   &--symmetry-fair {
     left: 15%;
     bottom: 34%;
+  }
+}
+
+.story-name {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  padding: 0.5rem 1rem;
+  background: url('~assets/images/dialog_bg.png');
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875em;
+  transform: translateX(-50%);
+  box-shadow:
+    0 3px 4px -10px rgba(0, 0, 0, 0.5),
+    0 10px 32px -10px rgba(0, 0, 0, 0.2);
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.25s ease;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
   }
 }
 </style>
