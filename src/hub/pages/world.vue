@@ -53,23 +53,28 @@
       </template>
       <template #back2>
         <div class="castle" />
-        <div class="flamma" />
-        <div class="dragon" />
-        <div class="phoenix" />
-        <div class="carousel" />
         <div class="wizzard" />
-        <div class="toys" />
-        <div class="stalls" />
         <div class="pub" />
         <div class="market" />
-        <div class="tree" />
-        <div class="stadium" />
-        <div class="traffic" />
-        <div class="owl" />
-        <div class="thief" />
       </template>
       <template #mid1>
         <div class="mathina-leo" />
+        <div class="flamma" />
+        <div class="dragon" />
+        <div class="phoenix" />
+        <div class="forest" />
+        <div class="traffic" />
+        <div class="owl" />
+        <div class="thief" />
+        <div class="stadium" />
+        <div class="toys" />
+        <div class="stalls" />
+        <div class="frieze" />
+        <div class="carousel" />
+        <div class="tree" />
+        <div class="parrot" />
+        <div class="chest" />
+        <div class="mysterious-figure" />
       </template>
     </Parallax>
   </StoryView>
@@ -94,7 +99,14 @@ export default {
           stories: city.stories.map(storyId => this.getStoryData(storyId))
         };
       });
-    }
+    },
+    stories() {
+      return this.city.stories.map(storyId => {
+        return {
+          ...constants.STORIES.find(({ id }) => storyId === id),
+        };
+      });
+    },
   },
   mounted() {
     this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: 'World Map' }]);
@@ -114,23 +126,23 @@ export default {
     z-index: 7;
 
     &--island {
-      bottom: 6%;
-      right: 20%;
+      bottom: 3%;
+      right: 23%;
     }
 
     &--logicity {
       top: 49%;
-      right: 30%;
+      right: 29%;
     }
 
     &--birds-of-fire {
-      top: 7%;
-      left: 4%;
+      top: 3%;
+      left: 2%;
     }
 
     &--symmetry-fair {
-      left: 18%;
-      bottom: 33%;
+      left: 17%;
+      bottom: 35%;
     }
   }
 }
@@ -155,11 +167,21 @@ export default {
 
 .flamma {
   position: absolute;
-  width: 15%;
+  width: 8%;
   height: 17%;
-  left: 0;
+  left: 11%;
   top: 29%;
   background: url('~assets/images/map/flamma.png') no-repeat center;
+  background-size: contain;
+}
+
+.forest {
+  position: absolute;
+  width: 8%;
+  height: 22%;
+  left: 0.2%;
+  top: 31%;
+  background: url('~assets/images/map/forest.png') no-repeat center;
   background-size: contain;
 }
 
@@ -233,6 +255,16 @@ export default {
   background-size: contain;
 }
 
+.frieze {
+  position: absolute;
+  width: 19%;
+  height: 22%;
+  left: 0;
+  bottom: -4%;
+  background: url('~assets/images/map/frieze.png') no-repeat center;
+  background-size: contain;
+}
+
 .pub {
   position: absolute;
   width: 12%;
@@ -245,11 +277,41 @@ export default {
 
 .market {
   position: absolute;
-  width: 15%;
-  height: 16%;
+  width: 14%;
+  height: 14%;
   right: 20%;
-  bottom: 13%;
+  bottom: 18%;
   background: url('~assets/images/map/market.png') no-repeat center;
+  background-size: contain;
+}
+
+.parrot {
+  position: absolute;
+  width: 4%;
+  height: 9%;
+  right: 30%;
+  bottom: 12%;
+  background: url('~assets/images/map/parrot.png') no-repeat center;
+  background-size: contain;
+}
+
+.chest {
+  position: absolute;
+  width: 7%;
+  height: 8%;
+  right: 12%;
+  bottom: 16%;
+  background: url('~assets/images/map/chest.png') no-repeat center;
+  background-size: contain;
+}
+
+.mysterious-figure {
+  position: absolute;
+  width: 6%;
+  height: 11%;
+  right: 17%;
+  bottom: 29%;
+  background: url('~assets/images/map/mysterious_figure.png') no-repeat center;
   background-size: contain;
 }
 

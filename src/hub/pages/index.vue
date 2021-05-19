@@ -20,7 +20,7 @@
         <div class="splash-content">
           <svg class="ribbon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 157">
             <defs>
-              <path id="ribbon" d="M 79 101 S 110 60 259 89 S 431.67 78.5 431.67 78.5" fill="none"/>
+              <path id="ribbon" d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5" fill="none"/>
             </defs>
             <text>
               <textPath href="#ribbon">
@@ -214,7 +214,7 @@ export default {
   background-size: contain;
   width: 100%;
   height: 100%;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-family: var(--story-font-family);
   font-weight: 600;
 }

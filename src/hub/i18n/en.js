@@ -38,7 +38,7 @@ export default {
     },
   },
   index: {
-    title: 'Adventures of Mathina',
+    title: 'The adventures of Mathina',
     subtitle: 'Select an age group to start!',
     'start-exploring': 'Start exploring!',
   },
