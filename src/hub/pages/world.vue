@@ -5,6 +5,11 @@
     <Parallax class="overflow-hidden">
       <template #back1>
         <div class="map-background" />
+        <div class="castle" />
+        <div class="wizard" />
+        <div class="mathina-leo" />
+        <div class="pub" />
+        <div class="market" />
         <svg
           v-for="city in cities"
           :key="city.id"
@@ -29,39 +34,22 @@
             </textPath>
           </text>
         </svg>
-      </template>
-      <template #back2>
-        <div class="castle" />
-        <div class="wizzard" />
-        <div class="pub" />
-        <div class="market" />
-      </template>
-      <template #mid1>
-        <div class="mathina-leo" />
-        <div class="flamma" />
-        <div class="dragon" />
-        <div class="phoenix" />
-        <div class="forest" />
-        <div class="traffic" />
-        <div class="owl" />
-        <div class="thief" />
-        <div class="stadium" />
-        <div class="toys" />
-        <div class="stalls" />
-        <div class="frieze" />
-        <div class="carousel" />
-        <div class="tree" />
-        <div class="parrot" />
-        <div class="chest" />
-        <div class="mysterious-figure" />
+        <div
+          v-for="story of mapStories"
+          :key="story.id"
+          :class="`story-nav ${story.class} story-nav--age-${getStoryData(story.id).ageMeta.icon}`"
+          @click="openStory(story.id)"
+          @mouseover="onMouseOver(story.id)"
+          @mouseout="onMouseOut(story.id)"
+        />
       </template>
     </Parallax>
     <transition name="story-name">
       <div
-        v-if="storyName"
+        v-if="activeTitle"
         class="story-name"
       >
-        {{ storyName }}
+        {{ activeTitle }}
       </div>
     </transition>
   </StoryView>
@@ -80,7 +68,26 @@ export default {
   },
   data() {
     return {
-      storyName: ''
+      activeTitle: '',
+      titleTimeout: null,
+      mapStories: [
+        { id: 'fire-1', class: 'flamma' },
+        { id: 'fire-2', class: 'dragon' },
+        { id: 'fire-3', class: 'phoenix' },
+        { id: 'fire-4', class: 'forest' },
+        { id: 'logi-1', class: 'traffic' },
+        { id: 'logi-2', class: 'owl' },
+        { id: 'logi-3', class: 'thief' },
+        { id: 'logi-4', class: 'stadium' },
+        { id: 'symm-1', class: 'toys' },
+        { id: 'symm-2', class: 'stalls' },
+        { id: 'symm-3', class: 'frieze' },
+        { id: 'symm-4', class: 'carousel' },
+        { id: 'bucca-1', class: 'tree' },
+        { id: 'bucca-2', class: 'parrot' },
+        { id: 'bucca-3', class: 'chest' },
+        { id: 'bucca-4', class: 'mysterious-figure' },
+      ]
     };
   },
   computed: {
@@ -106,7 +113,25 @@ export default {
   methods: {
     getStoryData(storyId) {
       return { ...constants.STORIES.find(({ id }) => storyId === id) };
-    }
+    },
+    onMouseOver(storyId) {
+      clearTimeout(this.titleTimeout);
+      this.titleTimeout = setTimeout(() => {
+        this.activeTitle = this.$t(`story.titles.${storyId}`);
+      }, 200);
+    },
+    onMouseOut() {
+      clearTimeout(this.titleTimeout);
+      this.titleTimeout = setTimeout(() => {
+        this.activeTitle = '';
+      }, 500);
+    },
+    openStory(storyId) {
+      let story = this.getStoryData(storyId);
+      this.$router.push({
+        path: this.localePath({ name: 'story-slug', params: { slug: story.slug } })
+      });
+    },
   },
 };
 </script>
@@ -118,6 +143,45 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.story-nav {
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.35s cubic-bezier(0.17, 0.67, 0.55, 1.94);
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ff00003b;
+    display: block;
+    background: #21b3f36b;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+  }
+
+  &--age-1::after {
+    background: #00800091;
+  }
+
+  &--age-2::after {
+    background: #21b3f36b;
+  }
+
+  &--age-3::after {
+    background: #9c27b099;
+  }
+
+  &--age-4::after {
+    background: #ff5722cc;
+  }
 }
 
 .mathina-leo {
@@ -190,7 +254,7 @@ export default {
   background-size: contain;
 }
 
-.wizzard {
+.wizard {
   position: absolute;
   width: 9%;
   height: 29%;
