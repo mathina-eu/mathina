@@ -331,11 +331,12 @@ actions:
     id: cuboMolde
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg3
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboMolde.mp4
+    entries:
+      - src: CuboMolde.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde    
   - type: sceneText
@@ -346,11 +347,12 @@ actions:
     id: cuboMolde2
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg2
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboMolde2.mp4
+    entries:
+      - src: CuboMolde2.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde2    
   - type: dialog
@@ -855,11 +857,12 @@ actions:
       - text: "Well, as before, all faces are regular polygons, but not all have the same number of sides. Let me just check if the solid angles at each vertex are equal."
         char: mathina
         exposition: "Asked Mathina, and checked the angles with a mould."
-  - type: game
+  - type: video
     tag: tg15
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboRombiOcta.mp4
+    entries:
+      - src: CuboRombiOcta.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg19
   - type: clearImage
@@ -881,20 +884,22 @@ actions:
       - text: "We can get this second mold by turning the original one “inside out”."
         char: technician
         exposition: "Continued the technician."
-  - type: game
+  - type: video
     tag: tg17
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/Viramolde.mp4
+    entries:
+      - src: Viramolde.mp4
+        type: 'video/mp4'
   - type: dialog
     entries:        
       - text: "Each vertex can be moulded by one of these two moulds – the original and the mold “in reverse”. And, since each of the 2 moulds is obtained by reflection from the other, we consider the vertices of the polyhedron as being of “the same type”."
         char: technician
-  - type: game
+  - type: video
     tag: tg18
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboRombiOctaVM.mp4
+    entries:
+      - src: CuboRombiOctaVM.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg17    
   - type: background
@@ -991,10 +996,11 @@ actions:
       - text: "Take for instance a cube and consider a rotation of 90º around an axis that passes through the centers of two opposite faces. If we rotate, the cube is taken onto itself. This rotation is therefore a cube symmetry."
         char: technician
         exposition: "The technician continued."
-  - type: game
+  - type: video
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-4/video/AnimCubo.mp4
+    entries:
+      - src: AnimCubo.mp4
+        type: 'video/mp4'
   - type: image
     src: cubo-plano.png
     id: cubo-plano

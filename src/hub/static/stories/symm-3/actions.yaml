@@ -114,10 +114,11 @@ actions:
   - type: sceneText
     text: >
       <p>The board left a trail on the ground, with a repetitive drawing.</p>
-  - type: game
-    text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Placa%20p111.mp4
+  - type: video
+    text: Watch the movie!
+    entries:
+    - src: Anim%20Placa%20p111.mp4
+      type: 'video/mp4'
   - type: sceneText
     text: >
       <p>Both Mathina and Leo were amazed at what the wizard was doing.</p>
@@ -568,11 +569,12 @@ actions:
   - type: sceneText
     text: >
       <p>While Mathina waited, she looked at the drawings of the friezes which were left out of the bags. One of them was quite strange: if we spin it half way around it ends up looking the same as before.</p>
-  - type: game
+  - type: video
     tag: tg1
-    text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Rotacao.mp4
+    text: Watch the movie!
+    entries:
+    - src: Anim%20Rotacao.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:    
       - text: "Leo, look at this, if we rotate this frieze, it stays exactly the same!"
@@ -938,7 +940,7 @@ actions:
     align: center   
   - type: dialog
     entries:    
-      - text: "Notice that you didn’t do the same as me, Leo, for instance you have cut the cylinder from above and I have done it from below"
+      - text: "Notice that you didn’t do the same as me, Leo!"
         char: mathina          
       - text: "But don't be discouraged Leo! Actually, the frieze you’ve imprinted is very interesting and I also wanted to have it in Symmetry Fair."
         char: wizard
@@ -951,11 +953,12 @@ actions:
         char: wizard
   #
   # Filme sobre a reflexão deslizante        
-  - type: game
+  - type: video
     tag: tg2
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20RefDesl.mp4
+    entries:
+      - src: Anim%20RefDesl.mp4
+        type: 'video/mp4'
   #
   # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
   - type: clearBackground
@@ -1069,11 +1072,12 @@ actions:
         char: wizard
   #
   # Animação sobre o que é a translação
-  - type: game
+  - type: video
     tag: tg3
     text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Translacao.mp4
+    entries:
+      - src: Anim%20Translacao.mp4
+        type: 'video/mp4'
   #
   # Volta a mostrar os 7 sacos com todos os frisos
   - type: clearImage

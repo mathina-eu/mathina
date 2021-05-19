@@ -24,7 +24,7 @@ actions:
     align: right      
   - type: sceneText
     text: >
-      <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, others of comic book heroes, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
+      <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
   - type: image
     id: feiticeiro
     src: Feiticeiro1.png
@@ -113,8 +113,8 @@ actions:
         mood: excited
   - type: game
     tag: tg3
-    text: "How can Mathina solve the game? In each round, choose all of the rosettes with symmetry axes."
-    toolbarText: "Choose 4 rosettes with symmetry axes"
+    text: "How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
+    toolbarText: "Choose 4 rosettes with symmetry axes."
     cta: "Try it yourself!"
     url: /apps/EscolheRosaceas/index.html?lang=en    
   - type: dialog
@@ -159,7 +159,7 @@ actions:
     style: "width: 100%; top: 50%"    
   - type: dialog
     entries:    
-      - text: "Here they are."
+      - text: "Here are some of them."
         char: wizard       
       - text: "The only thing we need to do is to store them in the right bags. We have again 6 bags numbered from 1 to 6…"
         char: wizard
@@ -177,11 +177,12 @@ actions:
   - type: dialog
     entries:    
       - text: "You're absolutely right. But here we will use another rule. I will help you. – offered the wizard - Look here: there are two equal rosettes on top of each other. Let's rotate the top rosette (which has some transparency) a full turn. How many times do we get the two to overlap?"
-        char: wizard      
-  - type: game
-    text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-2/video/rot_3.mp4
+        char: wizard
+  - type: video
+    text: Watch the movie!
+    entries:
+    - src: rot_3.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:
       - text: "Did you see, the two rosettes overlapped three times. So this rosette goes to bag 3."
@@ -285,7 +286,7 @@ actions:
     entries:         
       - text: "Notice that this is not a normal maze: it is a mirror maze."
         char: mathina
-        exposition: "Mathina said reading the text on the sign, near the word maze."           
+        exposition: "Mathina said reading the text on the sign, near the expression mirror maze."           
   - type: clearImage
     id: mathina-leo
   - type: image

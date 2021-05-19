@@ -57,7 +57,8 @@ export default {
   computed: {
     setBg() {
       return {
-        background: `url(${this.background})`
+        background: `url(${this.background})`,
+        backgroundSize: '100% 100%',
       };
     }
   },
