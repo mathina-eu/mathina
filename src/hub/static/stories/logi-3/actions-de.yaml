@@ -89,7 +89,7 @@ actions:
     text: Ein zweiter Polizist lief gerade zu Mathina und blieb neben ihr stehen, um nach Luft zu schnappen.
     #A second policeman was slowing down right beside her to catch a breath.
   - type: sceneText
-    text: Der zweite Polizist trug einen Rucksack mit einer ganzen Reihe alter Logik-Werkzeuge. Er hatte zum Beispiel eine Verkleidung, ein Spannungsmessgerät und ein Nivelliergerät. Die Sachen waren ganz schön schwer und der Rucksack rutschte dem Polizisten immer wieder von der Schulter herunter.
+    text: Der zweite Polizist trug einen Rucksack mit einer ganzen Reihe alter mathematischer Werkzeuge. Er hatte zum Beispiel einen Zirkel, einen Abakus und eine riesige Rechenmaschine. Die Sachen waren ganz schön schwer und der Rucksack rutschte dem Polizisten immer wieder von der Schulter herunter.
     #The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
     src: thief-icon.png
@@ -123,7 +123,7 @@ actions:
     text: Leo hatte bereits die Straßenecke erreicht und bog in die Rozsa Peter-Straße ein.
     #Leo had already reached the corner, and quickly disappeared onto Péter Street. 
   - type: sceneText
-    text: Mathina half dem zweiten Polizisten beim Tragen der Logik-Werkzeuge. So kamen sie schneller voran.
+    text: Mathina half dem zweiten Polizisten beim Tragen der mathematischen Geräte. So kamen sie schneller voran.
     # Mathina took a couple of bags off the policeman's shoulder to speed up the chase. 
   - type: animation
     target: pm2
@@ -304,7 +304,7 @@ actions:
     text: Einer der Polizisten holte ein gelbliches Papier aus seiner Tasche und faltete es auseinander.
     #One of the policemen pulled out a yellowish paper from his pocket and unfolded it.
   - type: sceneText
-    text: Mathina und Leo schauten sich etwas überrascht an, so etwas altmodisches wie eine Straßenkarte hatten sie schon lange nicht mehr gesehen. Die Polizisten erklärten, dass sie nur alte Sachen hätten und sonst keine Hlilfe bekämen. Sie hatten diese alte Straßenkarte und ihr altes Logik-Werkzeug, das aber ziemlich nutzlos war.
+    text: Mathina und Leo schauten sich etwas überrascht an, so etwas altmodisches wie eine Straßenkarte hatten sie schon lange nicht mehr gesehen. Die Polizisten erklärten, dass sie nur alte Sachen hätten und sonst keine Hlilfe bekämen. Sie hatten diese alte Straßenkarte und die mathematischen Instrumente aus dem Rucksack, die bei der Suche nach Verbrechern aber oft nutzlos waren.
     #Mathina and Leo were perplexed to see the city on such an outdated medium. The policemen explained that this illustrated how far the police had withdrawn from physical reality and that they barely receive any support. The outdated logical equipment was still available, but it was entirely useless.
   - type: sceneText
     text: Mathina schaute sich die Karte an.

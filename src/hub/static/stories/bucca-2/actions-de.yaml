@@ -649,7 +649,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app1
-    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=4
 
 
   - type: sceneText
@@ -873,7 +873,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app2
-    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=1
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=4
     
   - type: sceneText
     text: <h1>Der sprechende Papagei - Ende<h1>
