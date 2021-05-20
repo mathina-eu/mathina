@@ -337,10 +337,11 @@ actions:
         char: wizard
       - text: "Lascia che ti aiuti!"
         char: wizard
-  - type: game
-    text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-1/video/geoplano-anim2.mp4
+  - type: video
+    text: Guarda il video!
+    entries:
+    - src: geoplano-anim2.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:    
       - text: "Ok, ho capito! Finirò i giocattoli."

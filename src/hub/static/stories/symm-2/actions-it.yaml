@@ -177,10 +177,11 @@ actions:
     entries:    
       - text: "Hai ragione. In questo caso però utilizzermeo una regola diversa. Ti aiuterò – le disse il mago - guarda: ci sono due rosoni uguali uno sopra l'altro. Ruotiamo il rosone superiore (che ha un po 'di trasparenza) di un giro completo. Quante volte riusciamo a far coincidere i due mentre facciamo il giro completo?"
         char: wizard      
-  - type: game
+  - type: video
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-2/video/rot_3.mp4
+    entries:
+    - src: rot_3.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:
       - text: "Hai visto? I due rosoni si sono sovrapposte tre volte. Quindi questo rosone va alla borsa con sopra il numero 3."
