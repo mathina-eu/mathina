@@ -1,15 +1,117 @@
-# FIRE-4
+# FIRE-4 - Englisch version
 
 actions:
   - type: background
-    src: bg_full.png
+    src: fire-bg4.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
 
-  - type: sceneText
-    text: >
-      It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon. It was not a good idea to leave the path and go into the woods, although they were so happy to find a big bush of berries in a hidden clearing. Leo just realized that the sun was behind the mountains and he started to get nervous.
 
+
+
+
+  - type: image
+    src: moon_full.png
+    id: moon
+    style: "position: absolute; left: 0; top: 10%; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+
+  - type: image
+    src: trees_mid.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: image
+    src: trees_owl_front.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front1
+  - type: image
+    src: owl.gif
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front1
+  - type: image
+    src: berries.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: image
+    src: hill.png
+    id: hill
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front2
+  - type: image
+    src: fern.png
+    id: fern
+    style: "width: 35%; left: 350; top: 52%;"
+    noOverflow: true
+    parallax: front2
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 25%; top: 40%; left: -2%;"
+    parallax: mid3
+
+  - type: animation
+    target: fern
+    vars:
+      duration: 20
+      rotation: 20
+      #xPercent: -40
+      #yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: fern
+    vars:
+        duration: 0.1
+        xPercent: 40
+        ease: power3.out
+  - type: animation
+    target: moon
+    vars:
+        duration: 600
+        xPercent: 10
+        yPercent: 60
+        width: 90%
+        height: 90%
+        ease: power3.out
+
+  - type: sceneText
+    text: It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon. 
+   #It was not a good idea to leave the path and go into the woods. Leo just realized that the sun was behind the mountains and he started to get nervous.
+  - type: animation
+    target: matleo
+    vars:
+        duration: 3
+        xPercent: 98
+        yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: sceneText
+    text: It was not a good idea to leave the path and go into the woods. But they were so happy to find a big bush of berries in a hidden clearing. Leo just realized that the sun was behind the mountains and he started to get nervous.
+  - type: clearImage
+    id: matleo
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 16%; top: 55%; left: 25%; "
+    parallax: mid2
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 14%; top: 49%; left: 36%;"
+    parallax: mid2
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        xPercent: 50
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
   - type: dialog
     avatarAlign:
       flamma: right
@@ -20,12 +122,95 @@ actions:
 
       - text: Mathina, it is quite late, why don’t we go home?
         char: leo
-        mood: talking
 
+
+        exposition: Mathina was picking the last berries to bring home; they could make a great cake with all these berries.
+        mood: arguing
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: mathina5_mirrored.png
+    id: mat
+    style: "width: 9.5%; top: 45%; left: 45%;"
+    parallax: mid2
+  - type: image
+    src: sparkbugs_many.png
+    id: bug1
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+  - type: image
+    src: sparkbugs_many_rev.png
+    id: bug2
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+  - type: animation
+    target: bug1
+    vars:
+      duration: 30
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: bug2
+    vars:
+      duration: 21
+      xPercent: 5
+      yPercent: -5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: leo
+    vars:
+        duration: 7
+        xPercent: 35
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 5
+        xPercent: -15
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
   - type: sceneText
-    text: >
-      Mathina was picking the last berries to bring home; they could make a great cake with all these berries… Suddenly, Leo heard a hissing noise surrounding them, and the colors of the light started changing, with many colorful reflections filling the shadows that started dominating the clearing of the forest. It was beautiful even if a bit mysterious… Then a type of subtle fog started moving between the trees. It was like a silk fabric appearing and disappearing, with a dim glow ranging from yellow and purple to red and green. The hissing was getting louder, and the full scene was getting hypnotic. Mathina and Leo observed in silence…
+    text: Suddenly, Leo heard a hissing noise surrounding them, and the colors of the light started changing, with many colorful reflections filling the shadows that started dominating the clearing of the forest. It was beautiful even if a bit mysterious… Then a type of subtle fog started moving between the trees. It was like a silk fabric appearing and disappearing, with a dim glow ranging from yellow and purple to red and green. The hissing was getting louder, and the full scene was getting hypnotic. Mathina and Leo observed in silence…
 
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 26%; top: 29%; left: 60%;"
+    parallax: mid1
+  - type: animation
+    target: fla
+    vars:
+        duration: 5
+        xPercent: -70
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: leo
+    vars:
+        duration: 0.5
+        xPercent: -25
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 0.5
+        xPercent: -60
+        transform: rotateY(180deg)
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
   - type: dialog
     avatarAlign:
       flamma: right
@@ -40,14 +225,15 @@ actions:
 
       - text: It is too late to stay in the forest!
         char: flamma
-        exposition: Mathina and Leo immediately recognized the voice of Flamma, the firebird trainer, and they were immediately reassured.
+        exposition: Mathina and Leo recognized the voice of Flamma, the firebird trainer, and they were immediately reassured.
 
       - text: Flamma, it is you! You scared us.
         char: mathina
 
       - text: But what are you doing here so late?
         char: flamma
-        exposition: insisted Flamma
+        #exposition:
+        #insisted Flamma
 
       - text: We were just picking berries, and then there was something strange happening between the trees, some lights…
         char: leo
@@ -60,27 +246,85 @@ actions:
       flamma: right
       mathina: left
       leo: left
+    entries:
+    - text: These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive. 
+  #They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. The result is absolutely beautiful.
+      char: flamma
 
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 9%; top: 46%; left: 38%; "
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
     entries:
 
-      - text: These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive. They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. The result is absolutely beautiful.
+      - text: They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. 
+  #They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air.
         char: flamma
 
+
+      - text: They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. 
+        char: flamma     
       - text: Flamma, we want to see that, can we, please?
         char: leo
 
-      - text: Yes, we can stay here a bit longer and later I will bring you home. Actually, I came here to study the sparkbugs. You know, as the dragons and phoenixes, all the fire creatures are very intelligent and have their own languages, and we can try to communicate with them using magical words. I still haven’t learned all their language, but I can tell you what I know.
+      - text: Yes, we can stay here a bit longer and later I will bring you home. Actually, I came here to study the sparkbugs. You know, as the dragons and phoenixes, all the fire creatures are very intelligent and have their own languages.
+    # and we can try to communicate with them using magical words. 
+    #I still haven’t learned all their language, but I can tell you what I know.
         char: flamma
 
-      - text: The bugs orient themselves according to a reference. It is as if they could feel two perpendicular axes in the background. Each bug is always aware of its position in the space. You cannot tell one single bug how to move or where to place itself, but instead, you can say a sentence, a condition, to the whole swarm and, each bug will place itself somewhere where it satisfies that condition.
-        char: flamma
+
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 12%; top: 65%; left: 38%; transform: scalex(-1)"
+    parallax: mid2
+  - type: clearImage
+    id: leo
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+
+    entries:
+     - text: We can try to communicate with them using magical words. I still haven’t learned all their language, but I can tell you what I know.
+       char: flamma
+       exposition: Mathina and Leo listened intently and sat on the forest floor.
+     - text: The bugs orient themselves according to a reference. It is as if they could feel two perpendicular axes in the background. Each bug is always aware of its position in the space. 
+       char: flamma
+     - text: You cannot tell one single bug how to move or where to place itself, but instead, you can say a sentence, a condition, to the whole swarm and, each bug will place itself somewhere where it satisfies that condition.
+       char: flamma
+
+
+
+
+
 
 # Game 4.1 (Guided examples)
   - type: game
-    text:
-    toolbarText:
-    cta:
-    url:
+    text: Choose an equation. You can release the sparkbugs whereever you like by clicking and dragging. They will position themselves according to the equation you chose. Try the other quations, too. In the lower pat of the screen, you can even enter your own equation.
+    toolbarText: Choose an equation and let the sparkbugs dance along the corresponding curve.
+    cta: Let the sparkbugs dance!
+    url: /apps/imaginary/app_4/4_1/en.html
 
   - type: dialog
     avatarAlign:
@@ -94,24 +338,63 @@ actions:
         char: flamma
 
 
-      - text: We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same. Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
+      - text: We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same. 
+       #Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
         char: flamma
 
+
+      - text:  Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
+        char: flamma    
       - text: If we say x·y=0, it becomes interesting, because they position themselves in all the places where the product of the x and y coordinates is zero.
         char: flamma
+
+  - type: clearImage
+    id: leo
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
 
       - char: leo
         text: And what shape is that?
 
+
+        mood: thinking
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina1.png
+    id: mat
+    style: "width: 12%; top: 66%; left: 36%;"
+    parallax: back3
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
       - char: mathina
         text: Well, if x·y is zero then either x or y must be zero, so all the points with x=0 and all the points with y=0 must be on the final shape.
 
+        mood: arguing
       - char: flamma
         text: That’s right. If we say x·y=0 we get two perpendicular lines.
 
       - char: leo
         text: I see. Can we make them form other shapes?
 
+
+        mood: arguing
       - char: flamma
         text: Sure. If we tell them x² + y² - 1 = 0, we obtain… a circle! Can you see why?
 
@@ -119,19 +402,29 @@ actions:
         text: Mm, these squares… I think it has to be something related to Pythagoras…
         exposition: adventured Mathina
 
+        mood: thinking     
       - char: flamma
         text: You are close, Mathina, very close… with your intuition you could tell the bugs to make very intricate figures.
 
-# Game 4.2 (More examples and free exploration)
-  - type: game
-    text:
-    toolbarText:
-    cta:
-    url:
+
 
   - type: sceneText
-    text: Flamma picked up a notebook from her bag.
+    text: Flamma picked up her notebook.
 
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 9.5%; top: 45%; left: 40%;"
+    parallax: mid2
+  - type: clearImage
+    id: leo
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 16%; top: 55%; left: 30%; "
+    parallax: mid2
   - type: dialog
     avatarAlign:
       flamma: right
@@ -143,12 +436,12 @@ actions:
       - char: flamma
         text: I have been coming here for weeks, and I have drawn in my notebook the shapes that I have observed. I haven’t yet figured out which formulas can make the bugs fly on these patterns, but maybe you can help me to figure it out.
 
-# Game 4.3 (Goal shape, try to guess the formula)
+# Game 4.2 (was 4.3) (Goal shape, try to guess the formula)
   - type: game
-    text:
-    toolbarText:
-    cta:
-    url:
+    text: Place the sparkbugs in the air by clicking and dragging. They will show you a curve. You have three guesses, to find the right equation of that curve
+    toolbarText: Which curve are the sparkbugs forming? Choose the right equation.
+    cta: Solve the riddles of the sparkbugs!
+    url: http://localhost:3000/apps/imaginary/app_4/4_2/en.html
 
   - type: dialog
     avatarAlign:
@@ -162,17 +455,21 @@ actions:
         text: The relationship between these graphics and the formulas is still today a largely unknown field. Many wizards, or as they are known outside the magical world, mathematicians, call this field of study Algebraic Geometry because it studies the relationship between Geometry and Algebra.
 
       - char: flamma
-        text: We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space. For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
+        text: We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space. 
+      #For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
+
+      - char: flamma
+        text: For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
 
       - char: flamma
         text: I will let you play with some surfaces in space.
 
-# Game 4.4 (Raytracer/Surfer)
+# Game 4.3 (was 4.4) (Raytracer/Surfer)
   - type: game
-    text:
-    toolbarText:
-    cta:
-    url:
+    text: "Here you can observe surfaces, which are defined by three variables (x, y, and z). Below the surface you can invent your own equation and look at the corresponding surface. You may alter each surface by using the sliders and rote it by clicking and dragging."
+    toolbarText: Observe the surfaces and their equations.
+    cta: Go to the surface in space!
+    url: /apps/imaginary/app_4/4_3/en.html
 
   - type: dialog
     avatarAlign:
@@ -183,7 +480,7 @@ actions:
     entries:
 
       - char: flamma
-        text: Come back to the 3D app and note for instance the singular points that appear on many surfaces. No one, not even the best-trained mathematicians can tell how many singular points are possible with a polynomial of a given degree. This is an open question for degrees greater than 6.
+        text: Did you just notice some singular points that appear on many surfaces. No one, not even the best-trained mathematicians can tell how many singular points are possible with a polynomial of a given degree. This is an open question for degrees greater than 6.
 
       - char: flamma
         text: Maybe you, Mathina, or you, Leo, or you, the reader that plays with these apps, maybe you will one day discover a new surface with many singular points, or even better, a rule that explains how all these surfaces behave.
