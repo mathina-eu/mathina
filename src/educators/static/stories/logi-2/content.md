@@ -53,10 +53,7 @@ The app was programmed in JavaScript and is optimized both for PCs and tablets/s
 The rule for this game is that users can only step from red field to red field, from blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. 
 
 
-## [Game - The tiled floor trap](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-Test page: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+## [Game - The tiled floor trap]
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
-
-[Script](https://docs.google.com/document/d/1JoX-oWfSPqPheFBopjWfu1lsRNl8zBMHrx6ylGm3zDM/edit#)
+@[youtube](ORR614pbLzk)
+[Script]
