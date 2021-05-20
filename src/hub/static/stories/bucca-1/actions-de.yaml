@@ -1,0 +1,763 @@
+actions:
+  - type: background
+    src: bg1.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: branch
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch2
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch3
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch2
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch3
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: image
+    id: albero1
+    src: albero_bambini.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
+  - type: sceneText
+    text: >
+      <h1>Die geheimen Botschaften</h1>
+    # The secret messages  
+  - type: dialog
+    style: "position: absolute; left: 5%;"
+    entries:
+      - text: Los geht’s! Ich zähl’ bis zehn, und dann fang ich an zu suchen. Versteckt euch!
+      #"Ok, so! I'll count to 10 and then come to find you all! Start hiding!"
+        char: leo
+        mood: happy
+      - text: Eins!
+      # "One!"
+        char: leo
+        mood: happy
+      - text: Zwei!
+      # "Two!"
+        char: leo
+        mood: happy
+  - type: sceneText
+    style: "position: absolute; left: 5%;"
+    text: Mathina, ihr Bruder Leo und seine Freunde, Sean, Carla und Sergio, fuhren manchmal für den Nachmittag auf die Schatzinsel. Die Geschichten von Abenteuern, Seeräuberei, versteckten Schätzen und längst vergangener Geschichte faszinierten sie so sehr, dass sie sich in diesen magischen und mystischen Ort verliebten. Jeder Tag war ein guter Tag um auf die Schatzinsel zu kommen und zu spielen. Nicht allzu weit von den alten Häusern der Stadt entfernt, gab es einen Park. In dem können alle Kinder, die auf der Insel leben, frei spielen, ohne wilde Gefahren.
+    #<p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island could freely play away from the dangers of the wilderness. </p>
+  - type: sceneText
+    style: "position: absolute; left: 5%;"
+    text: Während Mathina, die Älteste in der Gruppe, eine Runde spazieren ging, spielten Leo und die anderen Kinder ein spannendes Versteckspiel.
+      #<p>While Mathina, the oldest in the group, was having a walk nearby, Leo and his friend were playing an exciting match of "hide and seek".</p>
+  - type: dialog
+    style: "position: absolute; left: 5%;"
+    entries:
+      - text: Sieben!
+      #"Seven!"
+        char: leo
+        mood: happy      
+      - text: Hey, stoppt mal alle, wartet, kommt her, kommt her! Schaut, was ich gefunden habe!
+      #"Hey all, wait, come here, come here! Look what I've found!"
+        char: sean
+        mood: happy
+
+  - type: sceneText
+    style: "position: absolute; left: 5%;"
+    text: Alle Kinder rannten auf Sean zu und sahen einen großen Baum, der  ausgehöhlt war, gerade so, dass sie einen Schritt hinein machen konnten.
+      #<p>All the kids ran towards Sean and saw a big tree that was caved in enough for them to step in.</p>
+  - type: dialog
+    style: "position: absolute; left: 5%;"
+    entries:
+      - text: Leo, was, wenn wir hier eines der Verstecke der Freibeuter gefunden haben, wie in der Geschichte, die deine Schwester Mathina uns neulich erzählt hat?
+      #"Leo, what if this was one of the Buccaneers' hiding spots from the tale your sister Mathina told us the other day?"
+        char: sean
+        mood: happy      
+      - text: Ich weiß noch nicht, aber es sieht auf jeden Fall wie ein Versteck für einen alten Schatz aus.
+      #"I don't know, but it sure looks like one of them!"
+        char: leo
+        mood: happy
+  - type: clearImage
+    id: albero1
+  - type: clearImage
+    id: branch    
+  - type: clearImage
+    id: branch2   
+  - type: clearImage
+    id: branch3
+  - type: background
+    src: bg1b-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+  - type: image
+    id: bambino0
+    src: bambino3.png
+    style: "height: 55%; top: 42%; right: 50%;  z-index: 2; transform: ScaleX(1)"
+  - type: image
+    id: bambino00
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+  - type: image
+    id: leo0
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 55%; top: 42%; right: 77%;  z-index: 1;transform: ScaleX(-1)"
+
+  - type: dialog
+    entries:       
+      - text: "Ich frage mich wie es die Leute geschafft haben hier hereinzukommen: Es ist schon ziemlich eng!"
+      # "I wonder how the buccaneers could enter this area: it's so small here!"
+        char: carla
+        mood: happy
+      - text: Wir müssen aber vorsichtig sein! Wenn diese Höhle wirklich ein Geheimversteck ist, darf niemand wissen, dass wir sie entdeckt haben!
+      #"But we must be careful! If this cave is really a secret cove for pirates, we shouldn't let anyone know that we discovered it!"
+        char: sean
+        mood: happy
+      - text: Du hast recht! Aber was ist mit Rasha und Lucy? Die sind heute nicht hier. Wir sollten herausfinden, wie wir ihnen von unserer Entdeckung erzählen können!
+      # "You are right! But what about Rasha and Lucy? They are not here today. We should find out how to tell them about this discovery!"
+        char: carla
+        mood: happy
+  - type: sceneText
+    text: Die Kinder besprachen, auf welche Art sie ihren neuen geheimen Ort verstecken könnten und wie sie Rasha und Lucy davon erzählen.
+      #<p>The kids discussed methods for keeping their new secret place hidden, and how to tell Rasha and Lucy about that.</p>
+  - type: dialog
+    entries:
+      - text: Wir decken den Höhleneingang mit Büschen und Blättern ab, so dass ihn niemand findet. Dann hinterlassen wir eine Nachricht, die erklärt, wo der Baum steht.
+      #"Let's cover the cave entrance with bushes and leaves, so that no one finds it. Then we leave a message that explains the location of the tree."
+        char: carla
+        mood: happy      
+      - text: Aber wie soll das funktionieren? Wenn wir eine Nachricht hinterlassen, kann sie doch jeder lesen! Wir müssen sie irgendwie geheim halten. Was haltet ihr davon, wenn wir die Nachricht sehr gut verstecken?
+      #"But how will it work? If we leave a message, anybody can read it! We should find a way to keep it secret. What if we hide the message very thoroughly?"
+        char: sean
+        mood: happy
+  - type: clearImage
+    id: bambino0
+  - type: clearImage
+    id: bambino00
+  - type: clearImage
+    id: leo0
+  - type: background
+    src: bg1_nokids.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: branch3
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch4
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch5
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch3
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch4
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch5
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
+  - type: image
+    id: albero2
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: cespuglio
+    src: cespuglio.png
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 5; transform: scaleX(-1)"
+    parallax: mid2
+  - type: image
+    id: cespuglio2
+    src: cespuglio.png
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    parallax: mid1
+  - type: image
+    id: cespuglio3
+    src: cespuglio.png
+    style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
+    parallax: back3
+  - type: image
+    id: cespuglio4
+    src: cespuglio.png
+    style: "height: 55%; top: 50%; right: -5%;  z-index: 2; transform: scaleX(-1)"
+    parallax: back2
+  - type: image
+    id: cespuglio5
+    src: cespuglio.png
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    parallax: mid3
+  - type: dialog
+    style: "position: absolute; left: 5%;"
+    entries:
+      - text: Mathina sagt mir immer, dass wir uns nicht auf das Verstecken verlassen können, wenn wir im Geheimen kommunizieren wollen. Wenn wir die Nachricht verstecken, können wir nicht sicher sein, dass niemand sie findet!
+      #"Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
+        char: leo
+        mood: happy 
+        exposition: Leo hatte da einen wichtigen Einwand gefunden.
+        # Leo made a good point.
+      - text: Dann müssen wir sie eben sehr gut verstecken!
+      #"Then we have to hide it very well!"
+        char: sean
+        mood: happy
+      - text: "Wenn die Nachricht aber zu gut versteckt ist, werden wir auch Probleme haben, sie zu finden! Glaubt mir: Wir sollten uns etwas anderes überegen ... Hm... Ich habe eine Idee! Mathina hat mal darüber gesprochen, wie man eine geheime Nachricht schreiben kann, ohne dass sie geheim ist!"
+      #"If the message is hidden too well, we will also have problems finding it! Believe me: we should use another method… Uhm… I have an idea! Mathina once talked about how to communicate in secrecy without secrecy!"
+        char: leo
+        mood: happy
+      - text: Wie ist das möglich?!
+      #"How is this possible?!"
+        char: sean
+        mood: happy
+      - text: "Hört mal zu: Wir werden uns auf eine Sache einigen, die nur wir kennen werden. Mathina nennt es KEY, das ist auch sinnvoll, denn das bedeutet Schlüssel. Es ist der Schlüssel, damit alles funktioniert!"
+      #"Listen: we agree on some piece of information that only we will know. Mathina calls it KEY, and it makes sense to call it so, as it is the key to make everything work!"
+        char: leo
+        mood: happy
+  - type: clearImage
+    id: cespuglio
+  - type: clearImage
+    id: cespuglio2
+  - type: clearImage
+    id: cespuglio3   
+  - type: clearImage
+    id: cespuglio4 
+  - type: clearImage
+    id: cespuglio5
+  - type: clearImage
+    id: albero2  
+  - type: clearImage
+    id: branch3  
+  - type: clearImage
+    id: branch4
+  - type: clearImage
+    id: branch5  
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"        
+  - type: image
+    id: bambino3
+    src: bambino3.png
+    style: "height: 55%; top: 42%; right: 35%;  z-index: 2; transform: ScaleX(-1)"
+  - type: image
+    id: bambino4
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+  - type: image
+    id: leo1
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 55%; top: 42%; right: 47%;  z-index: 1;"    
+  - type: image
+    id: mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"    
+  - type: image
+    id: alberoB
+    src: albero_solo.png
+    style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
+  - type: image
+    id: cespuglioD
+    src: cespuglio.png
+    style: "height: 10%; top: 12.4%; right: -1%;  z-index: 0; transform: scaleX(-1)"    
+  - type: image
+    id: cespuglioB
+    src: cespuglio.png
+    style: "height: 9%; top: 7%; right: 0%;  z-index: 1;"
+  - type: image
+    id: cespuglioA1
+    src: cespuglio.png
+    style: "height: 18%; top: 24%; right: 7%;  z-index: 2;"
+  - type: image
+    id: cespuglioA2
+    src: cespuglio.png
+    style: "height: 18%; top: 24%; right: 17%;  z-index: 2;"
+  - type: image
+    id: cespuglioA3
+    src: cespuglio.png
+    style: "height: 18%; top: 23%; right: 12%;  z-index: 1;"
+  - type: image
+    id: cespuglioA4
+    src: cespuglio.png
+    style: "height: 18%; top: 22%; right: 9%;  z-index: 0;"
+  - type: image
+    id: cespuglioA5
+    src: cespuglio.png
+    style: "height: 18%; top: 22%; right: 15%;  z-index: 0;"
+  - type: image
+    id: cespuglioC1
+    src: cespuglio.png
+    style: "height: 10%; top: 12%; right: 79%;  z-index: 2;"
+  - type: image
+    id: cespuglioC2
+    src: cespuglio.png
+    style: "height: 10%; top: 12%; right: 85%;  z-index: 2;"
+  - type: image
+    id: cespuglioC3
+    src: cespuglio.png
+    style: "height: 10%; top: 11%; right: 82%;  z-index: 1;"
+  - type: image
+    id: cespuglioC4
+    src: cespuglio.png
+    style: "height: 10%; top: 10%; right: 80%;  z-index: 0;"
+  - type: image
+    id: cespuglioC5
+    src: cespuglio.png
+    style: "height: 10%; top: 10%; right: 83%;  z-index: 0;"
+  - type: animation
+    target: cespuglioC4
+    vars:
+      duration: 5
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: animation
+    target: cespuglioC5
+    vars:
+      duration: 5
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
+  - type: animation
+    target: cespuglioA4
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: animation
+    target: cespuglioA5
+    vars:
+      duration: 3
+      xPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true 
+  - type: sceneText
+    text: Die Kinder redeten weiter und nach einiger Zeit, als Mathina zurückkam, erzählten ihr die Kinder begeistert davon wie sie geheime Nachrichten schreiben wollten.
+      #<p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
+  - type: dialog
+    entries:
+      - text: Denkst du wir sind in einer dieser geheimen Buchten der Piraten, von denen du mir erzählt hast?
+      #"Do you think it is one of those secret pirates' coves you told me about?"
+        char: leo
+        mood: happy      
+      - text: "Hmm, es sieht hier schon irgendwie so aus. Das könnte sein. Ich werde meine Freunde von der Insel fragen und dir dann Bescheid sagen! Warte, vorhin hast du gesagt, dass du meine Hilfe bei einigen Nachrichten brauchst: Was hast du damit gemeint?"
+      #"Hmm, it looks strange enough to be one of those. I will check this with my friends on the island and I'll tell you! Wait, earlier you said that you needed my help with some messages: what did you mean?"
+        char: mathina
+        mood: happy
+      - text: Wir haben beschlossen diesen Ort versteckt zu halten und ihn wieder mit Ästen und Blättern zu bedecken. Aber wir wollten Rasha und Lucy, die heute nicht hier waren, eine Nachricht hinterlassen, damit sie ihn finden können wenn sie auf eigene Faust herkommen. Kannst du uns dabei helfen, so dass niemand anderes davon erfährt?
+      #"We decided to keep this place hidden and cover it again with branches and leaves, but we wanted to leave a message for our friends Rasha and Lucy, who were not here today, so that they can find it if they come here on their own. Can you explain how to communicate in secrecy?"
+        char: leo
+        mood: happy
+      - text: Natürlich! Das ist genau was wir jetzt brauchen. Zuerst erfinden wir einen SCHLÜSSEL. Ein Zeichen oder etwas mit dem wir die richtige Nachricht markieren werden. Sean, denk mal an etwas, das mit einer Form zu tun hat, die du besonders magst. Das kann alles Mögliche sein.
+      #"Of course! That is precisely what you need. First, we will need a KEY. A concept, or something with which we will mark the correct message. Sean, think about something related to a shape that you like. Anything will do the trick."
+        char: mathina
+        mood: happy
+      - text: Ähm... zum Beispiel mag ich Dreiecke, weil sie drei Ecken und drei Kanten haben. Das ist, weil ich am 3. September Geburtstag habe! Die drei ist meine Lieblingszahl. Meintest Du sowas?
+      #"Uhm… for example, I like the number of edges in a triangle? It is because my birthday is on the third of September!"
+        char: sean
+        mood: happy
+      - text: Wunderbar! Also nehmen wir ein Dreieck. Nur wir wissen, dass Sean Dreiecke mag. Nun bereiten wir unsere Nachrichten vor. Sagen wir, dass vier verschiedene in Ordnung sein sollten.
+      #"Wonderful! Let's decide that the piece of information we share and that only we know is that the shape Sean likes has 3 edges. Now we prepare our messages. Let's say that four should be ok."
+        char: mathina
+        mood: happy
+      - text: Vier Nachrichten?! Aber wir müssen doch nur eine einzige Nachricht schreiben!
+      #"Four messages?! But we need to write one message only!"
+        char: carla
+        mood: happy
+      - text: Hab noch etwas Geduld, Carla! Wir werden vier Botschaften vorbereiten, aber nur eine wird die echte sein. Wir werden eine wahre Botschaft und drei falsche Botschaften haben! Wir werden sie alle zusammen hier in den Busch legen, aber zuerst werden wir auf jede von ihnen eine Figur zeichnen. Der Trick ist, dass wir auf die richtige Nachricht ein Dreieck zeichnen, damit wir verstehen können, welche der Botschaften richtig ist!
+      #"Be patient, Carla! We will prepare four messages but only one will be the right one: we will have one true message and three fake messages! We will put them all together here in the bush but first, we will draw a figure on each of them. The trick is that on the correct message we will draw a triangle so we will be able to understand which is the correct one!"
+        char: mathina
+        mood: happy
+      - text: Jetzt habe ich es verstanden! Wenn unser Schlüssel “es riecht gut” wäre, dann können wir z.B. ein Dreieck, ein Auto, einen Kreis und eine Blume darauf malen.
+      #"Now I get it! If our key would be 'it smells nice' then we can choose, for example, a triangle, a car, a circle and a flower."
+        char: sean
+        mood: happy
+      - text: Ganz genau!
+      #"Exactly!"
+        char: leo
+        mood: happy
+      - text: Ich verstehe! Unsere Freunde sollen wissen, es ist der siebte Baum im Norden der Springbrunnen. Von uns bekommen sie für die Geheimhaltung aber nur den Schlüssel “er hat sechs Kanten”.
+      #"I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 5 edges', then we could write the following messages"
+        char: carla
+        mood: happy
+  - type: game
+    text: Willst Du den Kindern helfen?
+    #"Want to help the kids?"
+    cta: Probiere es aus!
+    #"Let's try!"
+    tag: app1
+    url: /apps/bucca-1-app/bucca-1-app-1.htm?l=4
+  - type: dialog
+    entries:
+      - text: Aber was ist, wenn jemand die Botschaften entdeckt und dann einfach an allen vier Stellen nachschaut?
+      #"But what if somebody discovers the messages and chooses to check all the four places anyway?"
+        char: sean
+        mood: normal
+      - text: Gutes Argument. Deshalb sind die Botschaften alle ziemlich ähnlich. Man weiß nicht genau, ob der Baum richtig ist. Vielleicht würde man anfangen, sich umzusehen... Wenn wir sicherer sein wollen, können wir mehr falsche Nachrichten dazulegen.
+      #"Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages!"
+        char: leo
+        mood: thinking      
+      - text: Oh, das stimmt, ich verstehe.
+      #"Oh, I see, that's right!"
+        char: sean
+        mood: normal      
+      - text: Dann machen wir es so! Lass uns jetzt den Schlüssel für unsere Nachrichten aussuchen.
+      #"It is decided then! Now let's choose the key for our messages."
+        char: leo
+        mood: talking      
+      - text: "Nehmen wir diesen:'Der Himmel ist voll von ihnen.'"
+      #"Let's use this one: 'The sky is full of them'."
+        char: sean
+        mood: normal            
+  - type: image
+    id: myst0
+    src: myst.png
+    style: "height: 12%; top: 8%; right: 83%;  z-index: 0;"
+  - type: animation
+    target: myst0
+    vars:
+      duration: 2
+      rotate: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: dialog
+    entries:
+      - text: Schöne Idee! So können wir die Informationen direkt hier hinterlassen, um unsere geheimen Entdeckungen später wiederzufinden!
+      #"Nice idea! So we can leave here the information to retrieve our secret findings!"
+        char: leo
+        mood: happy      
+  - type: game
+    text: Willst Du den Kindern helfen?
+    #"Want to help the kids?"
+    cta: Probiere es aus!
+    # "Let's try!"
+    tag: app2
+    url: /apps/bucca-1-app/bucca-1-app-2.htm?l=4
+  - type: clearImage
+    id: leo1
+  - type: clearImage
+    id: bambino3
+  - type: clearImage
+    id: bambino4
+  - type: image
+    id: leo11
+    src: $COMMON/img/characters/leo/leo4.png
+    style: "height: 15%; top: 20%; right: 15%;  z-index: 0;" 
+  - type: image
+    id: bambino33
+    src: bambino3.png
+    style: "height: 20%; top: 23%; right: 26%;  z-index: 0; transform: ScaleX(1)"
+  - type: image
+    id: bambino44
+    src: bambino4.png
+    style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"    
+  - type: sceneText
+    text: Mathina und die Kinder steckten alle Botschaften in einen Umschlag. Den  legten sie in die Nähe eines Baumes, der in der Mitte ihres Treffpunkts stand. Nun packten sie ihre Sachen für den Heimweg zusammen.
+      #<p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
+  - type: clearImage
+    id: bambino33
+  - type: clearImage
+    id: bambino44
+  - type: clearImage
+    id: leo11
+  - type: clearImage
+    id: mathina1
+  - type: clearImage
+    id: alberoB
+  - type: image
+    id: albero_n
+    src: albero_solo.png
+    style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
+  - type: clearImage
+    id: myst0
+  - type: image
+    id: myst
+    src: myst.png
+    style: "height: 30%; top: 17%; right: 15%;  z-index: 6;"
+  - type: sceneText
+    style: "position: absolute; left: 25%; top:50%;"
+    text: Sie waren kaum weg, da ging schon eine mysteriöse Gestalt, dunkel gekleidet und vermummt, zu den Büschen und begann nach den geheimen Botschaften zu suchen. 
+      #<p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>  
+  - type: sceneText
+    style: "position: absolute; left: 25%; top:50%;"  
+    text: Sie fand die vier Botschaften und war verwirrt, da nicht klar war, welche davon nun die richtige ist. Sie versuchte, den Baum ausfindig zu machen, aber nach einer Weile ging sie enttäuscht wieder weg.
+      #<p>He found the four messages and was puzzled as he did not understand which one was correct. He tried to locate the tree, but after a while, he left, feeling frustrated.</p>  
+  - type: clearImage
+    id: cespuglioB 
+  - type: clearImage
+    id: cespuglioA1
+  - type: clearImage
+    id: cespuglioA2 
+  - type: clearImage
+    id: cespuglioA3
+  - type: clearImage
+    id: cespuglioA4
+  - type: clearImage
+    id: cespuglioA5
+  - type: clearImage
+    id: cespuglioC1
+  - type: clearImage
+    id: cespuglioC2 
+  - type: clearImage
+    id: cespuglioC3
+  - type: clearImage
+    id: cespuglioC4
+  - type: clearImage
+    id: cespuglioC5
+  - type: clearImage
+    id: cespuglioD
+  - type: clearImage
+    id: myst
+  - type: clearImage
+    id: albero_n
+  - type: background
+    src: bg3_nopg.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: scaleX(-1)"
+  - type: image
+    id: leoC
+    src: $COMMON/img/characters/leo/leo1.png
+    style: "height: 35%; top: 57%; right: 11%;  z-index: 1;"  
+  - type: image
+    id: Barca
+    src: barca.png
+    style: "height: 16%; top: 13%; right: 72%;  z-index: -3;"
+
+  - type: image
+    id: Gabbiano
+    src: gabbiano3.png
+    style: "height: 6%; top: 15%; right: 75%;  z-index: -2;"
+
+  - type: image
+    id: Finestra
+    src: finestra.png
+    style: "width: 21.09%; top: 10.35%; right: 66.5%;  z-index: 0; transform: ScaleX(-1)"
+
+  - type: animation
+    target: Barca
+    vars:
+      duration: 8
+      xPercent: -30
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Gabbiano
+    vars:
+      duration: 5
+      xPercent: -20
+      yPercent: -100
+      ease: power1.inOut
+      repeat: -1
+      rotate: -5
+      yoyo: true
+
+  - type: sceneText
+    style: "position: absolute; right: 10%;"
+    text: Gleich als Leo nach dem aufregenden Nachmittag auf der Schatzinsel wieder nach Hause kam, rief er Lucy an.
+      # <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy.</p>
+  - type: dialog
+    style: "position: absolute; right: 10%;"
+    entries:
+      - text: "Wenn ihr am üblichen Treffpunkt ankommt, werdet ihr geheime Botschaften finden. Um zu wissen, welche die richtige ist, müsst ihr euch diesen Satz merken: 'Der Himmel ist voll von ihnen'."
+      #"When you will arrive at the usual meeting place, you will find a hidden message. To discover the correct one remember this sentence: 'The sky is full of them'."
+        char: leo
+        mood: talking
+  - type: clearImage
+    id: Barca
+  - type: clearImage
+    id: Gabbiano
+  - type: clearImage
+    id: Finestra
+  - type: clearImage
+    id: leoC
+  - type: background
+    src: bg1_nokids.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+  - type: image
+    id: cespuglio11
+    src: cespuglio.png
+    style: "height: 55%; top: 35%; right: -5%;  z-index: 5;"
+    parallax: mid2
+  - type: image
+    id: cespuglio12
+    src: cespuglio.png
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    parallax: mid1
+  - type: image
+    id: cespuglio13
+    src: cespuglio.png
+    style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
+    parallax: back3
+  - type: image
+    id: cespuglio14
+    src: cespuglio.png
+    style: "height: 55%; top: 50%; right: -5%;  z-index: 2;"
+    parallax: back2
+  - type: image
+    id: cespuglio15
+    src: cespuglio.png
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    parallax: mid3
+  - type: image
+    id: branch10
+    src: ramo.png
+    style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch11
+    src: ramo.png
+    style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
+  - type: image
+    id: branch12
+    src: ramo.png
+    style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
+  - type: animation
+    target: branch10
+    vars:
+      duration: 4
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true  
+  - type: animation
+    target: branch11
+    vars:
+      duration: 5
+      rotate: 2
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true        
+  - type: animation
+    target: branch12
+    vars:
+      duration: 2
+      rotate: 6
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true    
+  - type: image
+    id: albero10
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;" 
+  - type: sceneText
+    text: "Am nächsten Wochenende besuchten Rasha und Lucy mit ihren Eltern die Schatzinsel und fanden die Botschaften. Sie wussten ja den Schlüssel: 'Der Himmel ist voll von ihnen', also wählten sie ohne Mühe die richtige Botschaft."
+      #<p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
+  - type: sceneText
+    text: Als sie dann an dem ausgehöhlten Baum ankamen, erinnerte das ihre Mutter, eine Geschichtsprofessorin, sofort an ein Buch, das sie einmal gelesen hatte. In dem Buch wurde gesagt, dass die Piraten auf der Schatzinsel geheime Botschaften in seltsamen Öffnungen oder Höhlen versteckten, eingeritzt in Bäume oder in Felsen. Also begann sie sofort nach Zeichnungen zu suchen. In der Nähe eines ungewöhnlich aussehenden Felsens fand sie eine seltsame Reihe von Zeichen.
+      #<p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+  - type: clearImage
+    id: albero10  
+  - type: clearImage
+    id: branch10  
+  - type: clearImage
+    id: branch11
+  - type: clearImage
+    id: branch12  
+  - type: clearImage
+    id: cespuglio11
+  - type: clearImage
+    id: cespuglio12
+  - type: clearImage
+    id: cespuglio13
+  - type: clearImage
+    id: cespuglio14
+  - type: clearImage
+    id: cespuglio15
+  - type: background
+    src: bg1b-plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+  - type: image
+    id: sym1
+    src: sim1.png
+    style: "height: 10%; top: 50%; right: 16%;  z-index: 0;" 
+  - type: image
+    id: sym2
+    src: sim2.png
+    style: "height: 10%; top: 50%; right: 26%;  z-index: 0;" 
+  - type: image
+    id: sym3
+    src: sim3.png
+    style: "height: 10%; top: 50%; right: 36%;  z-index: 0;" 
+  - type: image
+    id: sym4
+    src: sim4.png
+    style: "height: 10%; top: 50%; right: 46%;  z-index: 0;" 
+  - type: image
+    id: sym5
+    src: sim5.png
+    style: "height: 10%; top: 50%; right: 56%;  z-index: 0;" 
+  - type: image
+    id: sym6
+    src: sim6.png
+    style: "height: 10%; top: 50%; right: 66%;  z-index: 0;" 
+  - type: image
+    id: sym7
+    src: sim7.png
+    style: "height: 10%; top: 50%; right: 76%;  z-index: 0;" 
+  - type: sceneText
+    text: Neben einem seltsam aussehenden Felsen fand sie einige noch seltsamer aussehende Symbole.
+      #<p>Near a strange-looking rock, she found a stranger series of symbols.</p>
+  - type: dialog
+    entries:
+      - text: Toll, Mama! Du hast das Geheimnis der Piraten gefunden! Wir sollten Mathina Bescheid sagen!
+      #"Great mom! You found the pirates' secret! We should let Mathina know!"
+        char: rasha
+        mood: normal      
+      - text: Ja, lass uns noch eine Reihe von Nachrichten hier lassen. Dort wo wir Leos und Mathinas Botschaften gefunden haben!
+      #"Yes, let's leave another set of messages here, where we found Leo's and Mathina's instructions!"
+        char: rashamom
+        mood: normal
+  - type: sceneText
+    text: Sie hinterließen also ihre vier neuen Nachrichten.
+      #<p>They leave the answer as well as their four new messages.</p>
+  - type: game
+    text: Hilfst Du Rasha dabei, die Nachrichten zu schreiben?
+    #"Want to help Rasha leave the messages?"
+    cta: Probiere es aus!
+    #"Let's try!"
+    tag: app3
+    url: /apps/bucca-1-app/bucca-1-app-3.htm?l=4
+  - type: sceneText
+    text: Sie haben haben einen spannenden Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
+      #<p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
+  - type: sceneText
+    text: Die geheimen Botschaften - Ende
+      # <h1>The secret messages - The End</h1>  
