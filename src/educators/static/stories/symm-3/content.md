@@ -146,7 +146,7 @@ In this app, the user is invited to choose an image from a total of 20 figures. 
 ![Stamp](/stories/symm-3/img/stamp.png =40x40)
 , the user can watch the cylinder stamping a frieze which has the chosen image as motif.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](xKiCkxAxdEs?_align-center_)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -157,7 +157,7 @@ A set of 7 friezes is presented. The user is invited to choose the 4 friezes wit
 ![Confirm](/stories/symm-3/img/confirm.png =40x40)
 , the program shows a new set of 7 friezes. A total of 3 sets are shown. The game is solved when all "good" friezes (i.e. with symmetry axes) are selected.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](ZRi96tPJW7Y?_align-center_)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -166,7 +166,7 @@ A set of 7 friezes is presented. The user is invited to choose the 4 friezes wit
 
 A set of 12 friezes is presented. The user is invited to drag each frieze to the corresponding bag, according to its reflection symmetry: **bag 1** contains the friezes which only have vertical symmetry axes; **bag 2**, those only with a horizontal symmetry axis; and **bag 3** those with vertical and horizontal axes.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](bIFqroBizaU?_align-center_)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -175,7 +175,7 @@ A set of 12 friezes is presented. The user is invited to drag each frieze to the
 
 In this app, the user is invited to choose an image from a total of 20 figures. Then, the user can watch a board stamping a frieze, with both vertical and horizontal symmetry axes, which has the chosen image as motif.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](moNr-MDIUs0?_align-center_)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -216,5 +216,5 @@ In this app, the user can observe the 7 bags obtained and see the friezes inside
  (translation)
  –,  those which correspond to the existing symmetries on the friezes of the bag.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](gzhAUhgIVp0?_align-center_)
 [Script](/stories/symm-3/transcripts/Script3.pdf)

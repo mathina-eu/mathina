@@ -149,7 +149,7 @@ A set of 8 polyhedra is presented. The user is invited to choose the 4 convex on
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 8 polyhedra. A total of 3 sets are shown. The game is solved when all "good" polyhedra (i.e. convex) are selected.
 
-@[youtube](PEeIzkvDG70?_align-center_)
+@[youtube](GDYOL7SnfY0?_align-center_)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
@@ -160,7 +160,7 @@ A set of 6 proposals for cube nets is presented. The user is invited to choose t
 ![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 6 nets. A total of 2 sets are shown. The game is solved when all "good" cube nets are selected.
 
-@[youtube](UOZvfqpXVD4?_align-center_)
+@[youtube](NspkoF8gH3k?_align-center_)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
