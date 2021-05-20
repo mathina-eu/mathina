@@ -340,10 +340,11 @@ actions:
         char: wizard
       - text: "Let me help you!"
         char: wizard
-  - type: game
-    text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-1/video/geoplano-anim2.mp4          
+  - type: video
+    text: Watch the movie!
+    entries:
+    - src: geoplano-anim2.mp4
+      type: 'video/mp4'
   - type: game
     tag: tg2
     text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."

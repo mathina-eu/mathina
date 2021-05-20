@@ -114,10 +114,11 @@ actions:
   - type: sceneText
     text: >
       <p>A placa deixava um rasto no chão, com um desenho repetitivo.</p>
-  - type: game
-    text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-3/video/Anim%20Placa%20p111.mp4
+  - type: video
+    text: Observa o filme!
+    entries:
+    - src: Anim%20Placa%20p111.mp4
+      type: 'video/mp4'
   - type: sceneText
     text: >
       <p>Tanto a Mathina como o Leo estavam espantados com o que o feiticeiro estava a fazer.</p>
@@ -568,11 +569,12 @@ actions:
   - type: sceneText
     text: >
       <p>Enquanto aguardava, observava os desenhos dos frisos que tinham ficado fora dos sacos. Um deles era um pouco bizarro: se o rodarmos meia volta, ele fica exatamente com o mesmo aspeto!</p>
-  - type: game
+  - type: video
     tag: tg1
-    text: "Observa o filme!"
-    cta: "Ver aqui!"
-    url: /stories/symm-3/video/Anim%20Rotacao.mp4
+    text: Observa o filme!
+    entries:
+      - src: Anim%20Rotacao.mp4
+        type: 'video/mp4'    
   - type: dialog
     entries:    
       - text: "Leo, olha para aqui, se rodarmos este friso, ele fica exatamente na mesma!"
@@ -641,7 +643,7 @@ actions:
   - type: game
     tag: tg7
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
-    toolbarText: "Escolhe os 3 frisos com simetria de reflexão e de rotação"
+    toolbarText: "Seleciona os 3 frisos com simetria de reflexão e de rotação"
     cta: "Experimenta!"
     url: /apps/EscolheFrisos_ref_rot/?lang=pt
     img:
@@ -938,7 +940,7 @@ actions:
     align: center   
   - type: dialog
     entries:    
-      - text: "Repara que não fizeste o mesmo que eu, Leo, por exemplo tu cortaste o cilindro por cima e eu por baixo!"
+      - text: "Repara que não fizeste o mesmo que eu, Leo!"
         char: mathina          
       - text: "Mas não fiques desanimado, Leo! O friso que carimbaste não só é muito interessante, como também o pretendo ter na Feira da Simetria."
         char: wizard
@@ -951,11 +953,12 @@ actions:
         char: wizard
   #
   # Filme sobre a reflexão deslizante        
-  - type: game
+  - type: video
     tag: tg2
-    text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-3/video/Anim%20RefDesl.mp4
+    text: Observa o filme!
+    entries:
+      - src: Anim%20RefDesl.mp4
+        type: 'video/mp4' 
   #
   # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
   - type: clearBackground
@@ -1069,11 +1072,12 @@ actions:
         char: wizard
   #
   # Animação sobre o que é a translação
-  - type: game
+  - type: video
     tag: tg3
-    text: "Observa o filme!"
-    cta: "Ver"
-    url: /stories/symm-3/video/Anim%20Translacao.mp4
+    text: Observa o filme!
+    entries:
+      - src: Anim%20Translacao.mp4
+        type: 'video/mp4' 
   #
   # Volta a mostrar os 7 sacos com todos os frisos
   - type: clearImage
