@@ -413,13 +413,15 @@ actions:
       #"Exactly!"
         char: leo
         mood: happy
-      - text: Ich verstehe! Angenommen, unsere Freunde sollen wissen, es ist der dritte Baum nördlich der Springbrunnen. Und angenommen, sie hätten von uns den Schlüssel bekommen “es hat fünf Kanten”. Dann könnten wir zum Beispiel diese Nachrichten schreiben...
+      - text: "Ich verstehe! Angenommen, unsere Freunde sollen wissen, es ist der dritte Baum nördlich der Springbrunnen. Und angenommen, sie hätten von uns den Schlüssel bekommen “es hat fünf Kanten”. Dann könnten wir zum Beispiel diese Nachrichten schreiben..."
       #"I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 5 edges', then we could write the following messages"
         char: carla
         mood: happy
   - type: game
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
+    toolbarText: Ordne die Nachricht dem Bild zu, das den Schlüssel beschreibt.
+    #Associate to the correct message the image described by the key.
     cta: Probiere es aus!
     #"Let's try!"
     tag: app1
@@ -467,6 +469,8 @@ actions:
   - type: game
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
+    toolbarText: Ordne jeder Nachricht ein Bild zu. Verwende das durch den Schlüssel beschriebene Bild nur für die richtige Nachricht.
+    #Associate an image to each message. Use an image described by the key only for the correct message.
     cta: Probiere es aus!
     # "Let's try!"
     tag: app2
@@ -751,14 +755,14 @@ actions:
     text: Sie hinterließen also ihre vier neuen Nachrichten.
       #<p>They leave the answer as well as their four new messages.</p>
   - type: game
-    text: Hilfst Du Rasha dabei, die Nachrichten zu schreiben?
-    #"Want to help Rasha leave the messages?"
-    cta: Probiere es aus!
-    #"Let's try!"
+    text: Was ist die Nachricht, die Rasha und Lucy an Mathina und Leo geschrieben haben?
+    #"Which is the message that Rasha and Lucy wrote to Mathina and Leo?"
+    cta: Finde die geheime Botschaft heraus!
+    #"Find the secret message!"
     tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=4
   - type: sceneText
-    text: Sie haben haben einen super Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
+    text: Mathina und ihre Freunde haben haben einen super Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
       #<p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
   - type: sceneText
     text: Die geheimen Botschaften - Ende
