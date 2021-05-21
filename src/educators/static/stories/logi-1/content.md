@@ -47,8 +47,16 @@ There are 3 apps accompanying the story. The first app enables free play with co
 
 All apps were programmed in JavaScript and are optimized both for PCs and tablets/smartphones. Below see the short description of each app. Links are provided both for apps and user guide videos. 
 
-## [Game 1 - The traffic light challenge](https://youtu.be/zdFCyi9WLkY)
+Story: ["The traffic light challenge"]($HUB_URL/story/the-traffic-light-challenge/)
+
+[First game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=firstGame)
+
 The user sees a conventional traffic light with three possible lights. In this game, the user sets the colors and is also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
 
 @[youtube](zdFCyi9WLkY)
-[Script]()
+
+[Second game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
+
+## Guide to the app ## 
+
+[Script (PDF)](/stories/the-traffic-light-challenge/transcripts/Script1.pdf)
