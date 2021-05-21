@@ -5,7 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visite um território!',
-    'map': 'Mapa mundial',
+    'map': 'Mapa mundo',
   },
   cities: {
     'island': 'Ilha do Corsário',
@@ -67,8 +67,8 @@ export default {
     Mathina: 'Mathina',
     Parrot: 'John',
     Angela: 'Ângela',
-    owl: 'Mocho',
-    kangaroo: 'Kanguru',
+    owl: 'Coruja',
+    kangaroo: 'Canguru',
     first_policeman: 'Primeiro polícia',
     second_policeman: 'Segundo polícia',
     george: 'Jorge',
