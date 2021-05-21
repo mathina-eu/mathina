@@ -51,11 +51,15 @@ Story: ["The traffic light challenge"]($HUB_URL/story/the-traffic-light-challeng
 
 [First game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=firstGame)
 
-The user sees a conventional traffic light with three possible lights. In this game, the user sets the colors and is also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
+You see a conventional traffic light with three possible lights. In this game, you can set the colors and are also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
 
 @[youtube](zdFCyi9WLkY)
 
 [Second game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
+
+Eight traffic lights are seen on the app screen in a row. You can merge identical traffic lights by dragging them from one place to another. Once identical lights are placed next to each other, superfluous items disappear. Once you’ve found the right solution, you’ll see this screen. By clicking on the green arrow, you go back to the initial app page.
+
+@[youtube](o7GglqqoNMs)
 
 ## Guide to the app ## 
 
