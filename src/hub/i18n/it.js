@@ -19,9 +19,9 @@ export default {
 	'back-to-world': 'Torna alla mappa',
     titles: {
       'logi-1': 'La sfida dei semafori',
-      'logi-2': 'La sfida delle piastrelle',
+      'logi-2': 'La sfida delle piastrelle colorate',
       'logi-3': 'Cani e gatti',
-      'logi-4': 'La mia medaglia, grazie!',
+      'logi-4': 'Le mie medaglie, grazie!',
       'bucca-1': 'I messaggi segreti',
       'bucca-2': 'Il pappagallo parlante',
       'bucca-3': 'Il tesoro perduto',
