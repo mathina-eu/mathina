@@ -280,7 +280,17 @@ background-repeat: no-repeat;
 	
 .FinalMessage {
 	position: absolute; 
-	top: 45%; 
+	top: 43%; 
+	left:0%;
+	width:100%;
+	text-align:center;
+	font-size:min(5vw,4vh);
+	font-family: "Roboto", sans-serif;
+}
+
+#TradMes {
+	position: absolute; 
+	top: 50%; 
 	left:0%;
 	width:100%;
 	text-align:center;
@@ -335,7 +345,7 @@ background-repeat: no-repeat;
 	[["Trad15"],"Now that Leo knows Mathina's answer, he can calculate the shared secret. How does he do it?","Ora Leo conosce la risposta di Mathina pu&ograve; calcolare il segreto condiviso. Come fa?","Agora que Leo sabe a resposta da Mathina, pode calcular o segredo partilhado. Como pode fazer isso?","Jetzt kennt Leo Mathinas Antwort und kann damit das gemeinsame Geheimnis berechnen. Wie macht er das?"],
 	[["Trad16"],"Now let's try to decipher Mathina's message","Ora proviamo a decifrare il messaggio di Mathina","Agora vamos tentar decifrar a mensagem da Mathina","Versuche nun, Mathinas Botschaft zu entschlüsseln"],
 	[["Trad17"],"Enter the key:","Inserisci la chiave:","Insere a chave:","Gib den Schlüssel ein:"],
-	[["Trad18"],"The decoded message is <br> FOLLOW THE PARROTS OF THE STONES OF THE PASS","Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO","A mensagem descodificada &eacute; <br> SEGUE OS PAPAGAIOS DAS PEDRAS DO PASSADO","Die dekodierte Nachricht lautet <br> FOLGE DEN PAPAGEIEN DER STEINE DES WEGES"],
+	[["Trad18","TradMes"],"The decoded message is <br> FOLLOW THE PARROTS OF THE STONES OF THE PASS","Il messaggio decifrato &egrave;<br> SEGUI I PAPPAGALLI DELLE PIETRE DEL PASSO","A mensagem descodificada &eacute; <br> SEGUE OS PAPAGAIOS DAS PEDRAS DO PASSADO","Die dekodierte Nachricht lautet <br> FOLGE DEN PAPAGEIEN DER STEINE DES WEGES"],
 [["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 	];
@@ -650,7 +660,10 @@ background-repeat: no-repeat;
 	<canvas id='myCanvas'></canvas>
         <div class="FinalImage"><img src="img/fleo1.png" height=100%></img></div>
         
-<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span><br>
+<span id="TradMes"></span>
+
+
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
   top: 60%;
   right: 45%;"></img>
