@@ -25,7 +25,7 @@ actions:
     parallax: back3
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Mathina und Leo liefen in diesen Straßen herum und schauten sich alles an. Mathina hatte ihren Stift zur Hand und Leo trug seine grüne Mütze.
+    text: Mathina und Leo liefen in diesen Straßen herum und schauten sich alles an. Mathina hatte ihren Stift zur Hand, und Leo trug seine grüne Mütze.
     #Mathina and Leo walked the streets of Logi-city. Mathina kept her pencil at hand and Leo was wearing his green cap.
   - type: image
     src: leo-icon2.png
@@ -37,7 +37,7 @@ actions:
     style: "width: 4%; top: 29%; right: 87%;"
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;" 
-    text: Gerade liefen sie von der Hilbert-Straße zur Rozsa Peter-Straße.
+    text: Gerade liefen sie von der Hilbert-Straße zur Rozsa-Peter-Straße.
     #They walked on Hilbert Road towards the corner of Péter Street. 
   - type: image
     src: policeman-nr1-turn.png
@@ -99,7 +99,7 @@ actions:
     # A second policeman was slowing down right beside her to catch a breath.
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Der zweite Polizist trug einen Rucksack mit einer ganzen Reihe alter mathematischer Werkzeuge. Er hatte zum Beispiel einen Zirkel, einen Abakus und eine riesige Rechenmaschine. Die Sachen waren ganz schön schwer und der Rucksack rutschte dem Polizisten immer wieder von der Schulter herunter.
+    text: Der zweite Polizist trug einen Rucksack mit einer ganzen Reihe alter mathematischer Werkzeuge. Er hatte zum Beispiel einen Zirkel, einen Abakus und einen riesigen Primfaktorzerleger. Die Sachen waren ganz schön schwer, und der Rucksack rutschte dem Polizisten immer wieder von der Schulter herunter.
     #The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
     src: thief-icon.png
@@ -166,7 +166,7 @@ actions:
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;" 
-    text: Leo streckte die Hand nach dem Dieb aus und beinähe hätte er die Zahl 4 erwischt und dem Mann wegnehmen können.
+    text: Leo streckte die Hand nach dem Dieb aus, und beinähe hätte er die Zahl 4 erwischt und dem Mann wegnehmen können.
     #The boy stepped forward, reached out for the man, and almost grabbed the stalk of the digit 4. 
   - type: animation
     target: thief-i
@@ -253,7 +253,7 @@ actions:
         mood: surprised
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Die Polizisten nickten so heftig, dass Leo das aus riesiger Entfernung sehen konnte.
+    text: Die Polizisten nickten so heftig, dass Leo das trotz der großen Entfernung sehen konnte.
     #The policemen nodded so emphatically that even Leo could see it from the distance.
   - type: animation
     target: leo-i2
@@ -305,7 +305,7 @@ actions:
       - text: Ich glaube nicht, dass zwei Leute reichen, um eine ganze Stadt zu schützen.
       #I don't think two people are able to patrol this city.
         char: Leo
-        exposition: Leo biss in einen Barcan Marcus-Kuchen.
+        exposition: Leo biss in einen Barcan-Marcus-Kuchen.
         #Leo bit into his Barcan-Marcus cake.
         mood: thinking
       - text: Ja, das haben wir auch gesagt. Aber niemand glaubt uns.
@@ -337,7 +337,7 @@ actions:
     #Mathina and Leo were perplexed to see the city on such an outdated medium. The policemen explained that this illustrated how far the police had withdrawn from physical reality and that they barely receive any support. The outdated logical equipment was still available, but it was entirely useless.
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"    
-    text: Mathina schaute sich die Karte an.
+    text: Mathina schaute sich die Karte genau an.
     #Mathina took a long look at the map. 
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
@@ -347,7 +347,7 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
-    text: Hilf Mathina und Leo dabei, die beiden Polizisten bestmöglich auf der Karte zu platzieren
+    text: Hilf Mathina und Leo dabei, die beiden Polizisten bestmöglich auf der Karte zu platzieren.
     #Help Mathina and Leo find a good plan by moving 2 policemen on the map.
     toolbarText: Wo sollen die Polizisten stehen?
     cta: Probiere es aus!
@@ -360,22 +360,22 @@ actions:
       #Of course, two cops are not enough!
         char: Mathina
         mood: surprised
-      - text: Natürlich, das haben wir ja auch schon festgestellt. Aber kannst Du das auch der Polizei-Leitung beweisen, junge Dame?
+      - text: Natürlich, das haben wir ja auch schon festgestellt. Aber kannst Du das auch der Polizei-Leitung beweisen?
       #Of course, we know that that's not enough. We experience it. But could you please prove this to the Chief, too, Miss?.
         char: second_policeman
         mood: serious
-      - text: Das kann ich - aber nenne mich niemals wieder “junge Dame”!
+      - text: Das werde ich versuchen!
       #If you never call me Miss again, I will.
         char: Mathina
         mood: arguing
-  - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"
-    text: Leo lachte und klopfte Mathina auf die Schulter. Die Polizisten nickten etwas verdattert.
+ # - type: sceneText
+ #   style: "position: absolute; left: 600px; top: 5px;"
+ #   text: Leo lachte und klopfte Mathina auf die Schulter. Die Polizisten nickten etwas verdattert.
     #Leo laughed and patted Mathina's shoulder, while one of the cops nodded almost in fright.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
-      - text: Schaut! Es gibt drei horizontale Straßen - die Euler-Straße, die Hemachandra-Straße und die Rozsa Peter-Straße. Sie sind parallel und kreuzen sich nicht. Wenn einer von euch also die Euler-Straße bewacht und der andere die Hemachandra-Straße beschützt, dann kann natürlich keiner von euch auf der Rozsa Peter-Straße stehen. Es gibt einfach keinen Ort, von dem aus man zwei parallele Straßen gleichzeitig bewachen kann.
+      - text: Schaut! Es gibt drei horizontale Straßen - die Euler-Straße, die Hemachandra-Straße und die Rozsa-Peter-Straße. Sie sind parallel und kreuzen sich nicht. Wenn einer von euch also die Euler-Straße bewacht und der andere die Hemachandra-Straße, dann kann natürlich keiner von euch auf der Rozsa-Peter-Straße stehen. Es gibt einfach keinen Ort, von dem aus man zwei parallele Straßen gleichzeitig bewachen kann.
       #So, look, here are these three horizontal streets - Euler, Hemachandra and Péter. They are parallel and have no intersection. Now, if you control the first horizontal road, that is Euler and your colleague the second, which is Hemachandra, then neither of you will be able to survey the third, Péter, for sure! Of course, because you can't find any spot in the city from where you can see two parallel streets!
         char: Mathina
         mood: talking
@@ -398,11 +398,11 @@ actions:
         exposition: Mathina erwartete, dass Leo etwas albernes sagen würde.
         #Mathina expected that Leo would say something stupid.
         mood: talking
-      - text: Schauen wir uns doch einmal an, wieviele Straßen Logi-City insgesamt hat. Einer von euch Polizisten stand in der Hilbert-Straße, der andere war in der Rozsa Peter-Straße. Der Dieb bog in die Gödel-Straße ab und wir liefen alle über die Hemachandra-Straße ins Cafè.
+      - text: Schauen wir uns doch einmal an, wieviele Straßen Logi-City insgesamt hat. Einer von euch Polizisten stand in der Hilbert-Straße, der andere war in der Rozsa-Peter-Straße. Der Dieb bog in die Gödel-Straße ab, und wir liefen alle über die Hemachandra-Straße ins Cafè.
       #Look, gentlemen. How many streets does Logi-city consist of? One of you was standing on Hilbert Road, while your colleague on Péter Street. The thief turned into Gödel Street, we turned into here, Hemachandra Street. 
         char: Leo
         mood: arguing
-      - text: Die Barcan-Marcus-Straße verläuft senkrecht zur Hemachandra-Straße, während die Constance Jones-Straße diese beiden Straßen kreuzt. Die Ladd-Franklin-Straße verläuft senkrecht zur Constance Jones-Straße. Und dann gibt es noch die Euler-Straße ganz im Norden der Stadt. Das macht also acht Straßen insgesamt!
+      - text: Die Barcan-Marcus-Straße verläuft senkrecht zur Hemachandra-Straße, während die Constance-Jones-Straße diese beiden Straßen kreuzt. Die Ladd-Franklin-Straße verläuft senkrecht zur Constance-Jones-Straße. Und dann gibt es noch die Euler-Straße ganz im Norden der Stadt. Das macht also acht Straßen insgesamt!
       #Barcan-Marcus Street is perpendicular to this, while Constance-Jones Street crosses both. Ladd-Franklin is perpendicular to Constance-Jones and then there is still the Euler Street on the northern border of the city. This is, no matter what, eight roads or streets. 
         char: Leo
         mood: arguing
@@ -412,7 +412,7 @@ actions:
         mood: arguing
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Mathina nickte. Sie wusste, dass Leo eigentlich ziemlich schlau war. Auch wenn er oft etwas machte, bevor er nachdachte. Aber das hieß ja nicht, dass er dumm war. 
+    text: Mathina nickte. Sie wusste, dass Leo eigentlich ziemlich schlau war. Auch wenn er oft Dinge tat, ohne vorher darüber nachzudenken. 
     #Mathina nodded. She knew that Leo wasn't as stupid as she thought. The fact that in the vast majority of cases he acts before thinking, doesn't mean that he is not able to think.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
@@ -531,7 +531,7 @@ actions:
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Mathina legte einen Zuckerwürfel auf jede waagrechte Linie und Leo und sie begannen die Würfel hin- und herzuschieben.
+    text: Mathina legte einen Zuckerwürfel auf jede waagrechte Linie, und sie begannen die Würfel hin- und herzuschieben.
     #Mathina put a cube on each of the three horizontal lines and they started pushing and pulling them along the lines.
   - type: animation
     target: sugar1
@@ -563,7 +563,7 @@ actions:
         mood: happy
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Leo zeigte die Karte den beiden Polizisten. Sie schauten sich die Einteilung ganz genau an und dann nickten sie zufrieden.
+    text: Leo zeigte die Karte den beiden Polizisten. Sie schauten sich die Einteilung ganz genau an, und dann nickten sie zufrieden.
     #Leo showed the map to the policemen. They looked at the arrangement for a second or two and nodded with appreciation.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
