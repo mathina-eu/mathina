@@ -225,7 +225,7 @@ actions:
       - text: "Como é isso possível?!"
         char: sean
         mood: happy
-      - text: "Ouçam, vamos escolher uma informação que só nós sabemos. Listen: we agree on some piece of information that only we will know. A Mathina chama-lhe a CHAVE, e faz sentido chamá-la assim, pois é a “chave” que permite que tudo funcione!"
+      - text: "Ouçam, vamos escolher uma informação que só nós sabemos. A Mathina chama-lhe a CHAVE, e faz sentido chamá-la assim, pois é a “chave” que permite que tudo funcione!"
         char: leo
         mood: happy
   - type: clearImage
@@ -389,6 +389,7 @@ actions:
         mood: happy
   - type: game
     text: "Queres ajudar as crianças?"
+    toolbartext: "Associa a mensagem correta à imagem descrita na chave."    
     cta: "Vamos tentar!"
     tag: app1
     url: /apps/bucca-1-app/bucca-1-app-1.htm?l=3
@@ -428,6 +429,7 @@ actions:
         mood: happy      
   - type: game
     text: "Queres ajudar as crianças?"
+    toolbartext: "Associa uma imagem a cada mensagem. Usa a imagem indicada pela chave apenas para a mensagem correta."    
     cta: "Vamos tentar!"
     tag: app2
     url: /apps/bucca-1-app/bucca-1-app-2.htm?l=3
@@ -707,8 +709,8 @@ actions:
     text: >
       <p>Elas deixaram não só a sua resposta, assim como quatro novas mensagens.</p>
   - type: game
-    text: "Queres ajudar a Rasha a deixar as mensagens?"
-    cta: "Vamos tentar!"
+    text: "Qual foi a mensagem que a Rasha e a Lucy escreverem à Mathina e ao Leo?"
+    cta: "Encontra a mensagem secreta!"
     tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=3
   - type: sceneText
