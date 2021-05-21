@@ -1,6 +1,6 @@
 # Concetti matematici
 
-La storia **La mia medaglia, grazie!** si basa sulla regola di divisibilità per 9. Se gli studenti si soffermano a riflettere, possono notare che, dopo la prima sottrazione, il numero di medaglie d'oro può essere diviso per 9.
+La storia **Le mie medaglie, grazie!** si basa sulla regola di divisibilità per 9. Se gli studenti si soffermano a riflettere, possono notare che, dopo la prima sottrazione, il numero di medaglie d'oro può essere diviso per 9.
 
 La matematica diventa stimolante ogni volta che incontriamo una domanda insolita. Trovare una soluzione è avventuroso e spesso richiede molto tempo e diversi tentativi senza successo, prima di scoprire la risposta. Gli studenti imparano a pensare in modo logico attraverso la riflessione, sviluppando così una capacità utile per tutta la vita.
 
@@ -44,7 +44,7 @@ In questa storia, i seguenti concetti matematici di base giocano un ruolo import
 
 È importante che l'insegnante o il genitore che accompagna il bambino mantenga il proprio ruolo. Questo ruolo consiste nel porre problemi e domande, incoraggiare ragionamenti, riflessioni, discutere strategie, condividere idee e collaborare per trovare soluzioni, senza imporre al bambino una strada prefissata, ma incoraggiando il più possibile l'esplorazione del problema.
 
-Leggere e giocare con **La mia medaglia, grazie!** non richiede alcun materiale aggiuntivo, né conoscenze preliminari.
+Leggere e giocare con **Le mie medaglie, grazie!** non richiede alcun materiale aggiuntivo, né conoscenze preliminari.
 
 L'approccio alla materia è, tuttavia, diverso da quello che viene solitamente utilizzato nell'istruzione formale. Nella storia possiamo infatti incontrare:
 + una linea narrativa sottostante,
