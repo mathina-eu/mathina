@@ -65,11 +65,15 @@ The story is accompanied by one app, which is used three times in the frameworks
 
 The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video. 
 
-Game - ["My gold"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/)
-[First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+Game - ["My gold"]($HUB_URL/story/my-gold-please/)
+[First Game in Story]($HUB_URL/story/my-gold-please/?actionLink=firstGame)
 
 The first person receives as many gold medals, which equal the sum of the digits of the total number of gold medals received by the team. For example, if the team won 721 gold medals, then the first team member gets 7 + 2 + 1, i.e. 10 gold medals. There remains 721 minus 10, or 711 gold medals. The next one gets the sum of the digits of the gold left this way. And so on.  
-The educator has the possibility to create variations of the exercise by using the last app in the story [Last Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+The educator has the possibility to create variations of the exercise by using the last app in the story 
+
+Explanatory film about the app @[youtube](https://youtu.be/A1vXg_DSolc)
+
+[Script (PDF)](/stories/my-gold-please/transcripts/Script4.pdf)
 
 
-Explanatory film about the app (link to the YouTube Channel)
+
