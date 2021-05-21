@@ -25,7 +25,7 @@ export default {
       'bucca-1': 'Mathina und die geheime Botschaft',
       'bucca-2': 'Mathina und der sprechende Papagei',
       'bucca-3': 'Mathina and the lost treasure',
-      'bucca-4': 'The man in the middle',
+      'bucca-4': 'Der Zwischenmann',
       'fire-1': 'Die Feuervogeltrainerin',
       'fire-2': 'Wie spricht man mit einem Einhorndrachen?',
       'fire-3': 'The phoenix race',
@@ -60,5 +60,6 @@ export default {
 	boys: 'Team',
 	trainer: 'Trainer',
 	parrot: 'John der Papagei',
+	charmingparrot: 'Kapitän Charmingparrot',
   },
 };

@@ -386,13 +386,13 @@ actions:
       #"See, now we have the common secret which we can use as the key for all the ciphers you already encountered before."
         char: angela
         mood: happy
-      - text: Voll gut, so ist es jetzt beschlossen! Dies ist der Schlüssel den wir zur Kommunikation verwenden. Wir können jetzt einfach SMS austauschen und uns auf einen neuen Schlüssel einigen, wenn der alte kompromittiert wurde - auch wenn wir uns an weit entfernten Orten auf der Insel befinden.
+      - text: Voll gut, so ist es jetzt beschlossen! Dies ist der Schlüssel den wir zur Kommunikation verwenden. Wir können jetzt einfach SMS austauschen und uns auf einen neuen Schlüssel einigen, wenn der alte kompromittiert wurde - auch wenn wir uns an weit entfernten Orten auf der Insel befinden. Ich werde den Berg erkunden, während du, Leo, mit Angela die Küste und den Park untersuchst. 
       #"Thank you, so it’s decided this will be the key we will use to communicate. We can now simply exchange SMS and agree on a new key if the old one got compromised even if we are in distant places on the island."
         char: mathina
         mood: happy   
-      - text: Ok, wir sind uns einig. Das ist die Technik, mit der wir hier auf der Schatzinsel kommunizieren werden. Ich werde den Berg erkunden, während du mit Angela die Küste und den Park untersuchst. Um die Nachrichten geheim zu halten, werden wir den Schlüssel unserer Chiffre jedes Mal ändern und die Diffie-Hellman-Methode verwenden, um den neuen Schlüssel auszutauschen.
+      - text: Ok, wir sind uns einig. Das ist die Technik, mit der wir hier auf der Schatzinsel kommunizieren werden. Um die Nachrichten geheim zu halten, werden wir den Schlüssel unserer Chiffre jedes Mal ändern und die Diffie-Hellman-Methode verwenden, um den neuen Schlüssel auszutauschen.
       #"Ok, it’s set. This is the way we will use to communicate here on Buccaneer’s Island. I will go exploring the mountain, while you will examine the coast and the park with Angela. To keep messages secret we will change the key of our cypher every time, using the Diffie-Hellman method to exchange the new key!"
-        char: mathina
+        char: angela
         mood: happy
       - text: Ok, los geht's, Schwesterchen!
       #"Ok let’s go, sis!"
