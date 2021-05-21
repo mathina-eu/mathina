@@ -106,13 +106,14 @@ actions:
       yoyo: true
   - type: sceneText
     text: >
-        <p>Es ist schon einige Zeit vergangen, seit Mathina zum ersten Mal auf der Schatzinsel war. Jetzt wartet dort auf sie und ihren Bruder ein neues Abenteuer. Sie hat einen Brief von einer mysteriösen Person erhalten, die behauptet, ihr und ihrem Bruder bei ihren letzten Ausflügen auf die Schatzinsel gefolgt zu sein...<p>
+        <p>Es ist schon einige Zeit vergangen, seit Mathina zum ersten Mal auf der Schatzinsel war. Jetzt wartet dort auf sie und ihren Bruder ein neues Abenteuer. 
+        <br/>Sie hat einen Brief von einer mysteriösen Person erhalten, die behauptet, ihr und ihrem Bruder bei ihren letzten Ausflügen auf die Schatzinsel gefolgt zu sein...</p>
     #<p>Some time has passed since Mathina went for the first time to Buccaneer’s Island and with her brother, she is now on the verge of a new adventure.
      #<br/>She has received a letter from a mysterious person claiming to have followed her and her brother during their last trips to Buccaneer’s Island...</p>
   
   - type: dialog
     entries:
-      - text: Was? Nein, das ist unmöglich. Wer könnte uns gefolgt sein? Und warum? Was will er von uns?
+      - text: Was? Nein, das ist unmöglich. Wer könnte uns gefolgt sein? Und warum? Was will die Person von uns?
       #"WHAT?! No, this is not possible, who could have followed us? Why? What do they want from us?"
         char: leo
         mood: arguing
@@ -120,7 +121,7 @@ actions:
       #"I don’t know Leo, but we must go and find out ourselves!"
         char: mathina
         mood: talking
-      - text: Ok, aber wie können wir sicher sein, dass er uns nicht wieder folgt? Was ist, wenn das eine Falle ist? Ich habe Angst, Mathina!
+      - text: Ok, aber wie können wir sicher sein, dass sie uns nicht wieder folgt? Was ist, wenn das eine Falle ist? Ich habe Angst, Mathina!
       #"Ok, but how can we be sure that they are not following us again? What if it is a trap? I am very scared, Mathina!"
         char: leo
         mood: arguing
@@ -162,7 +163,7 @@ actions:
       yoyo: true
   - type: sceneText
     text: >
-        <p>Am nächsten Tag machten sich Mathina und ihr Bruder auf den Weg zur Insel. Es sollte vielleicht eine ihrer letzten Reisen zu diesem magischen und geheimnisvollen Ort werden. Dorthin, wo sie so viele Abenteuer erlebt und sich in die Geschichte der Piraten und Schätzen aus einer längst vergangenen Zeit verstrickt hatten. Der Himmel war an diesem Morgen strahlend blau und die Reise verlief angenehm und ruhig. Der geheimnisvolle Brief nahm viel Raum in den Gedanken von Mathina und Leo ein, ohne dass sie viel darüber sprachen. Doch wenn man die beiden ansah, konnte man erkennen, dass sie etwas beunruhigte.<p>
+        <p>Am nächsten Tag machten sich Mathina und ihr Bruder auf den Weg zur Insel. Es würde ihre letzte Reise zu diesem magischen und geheimnisvollen Ort werden. Dorthin, wo sie so viele Abenteuer erlebt und sich in die Geschichte der Seeräuberei mit Schätzen aus einer längst vergangenen Zeit verstrickt hatten.<br/> Der Himmel war an diesem Morgen strahlend blau, und die Reise verlief angenehm und ruhig. Der geheimnisvolle Brief nahm viel Raum in den Gedanken von Mathina und Leo ein, ohne dass sie viel darüber sprachen. Doch wenn man die beiden ansah, konnte man erkennen, dass sie etwas beunruhigte.<p>
     #<p>The next day, Mathina and her brother left for the island, in what would become one of their last trips to the magical and mysterious place where they lived so many adventures and got so entangled in pirates history and treasures from a time long gone by.<br/>The sky was a blue pearl that morning and the travel was enjoyable and safe. The mysterious letter was sort of an unspoken presence in Mathina and Leo’s minds, but looking at them you could perceive that something was bugging them. </p>  
   - type: animation
     target: Boat
@@ -286,7 +287,7 @@ actions:
       #"But how do we manage to communicate safely while we are looking around?"
         char: leo
         mood: thinking
-      - text: Hm, Leo, also, erinnerst Du Dich an den Trick, den ich Dir letztes Mal erklärt habe, als wir gespielt haben? Man fängt mit einer Nachricht und einem Schlüssel an und dann kann man sie verschlüsseln. Mit demselben Schlüssel kann man die verschlüsselte Nachricht auch wieder entschlüsseln und erhält das Original zurück.
+      - text: Hm, Leo, also, erinnerst Du Dich an den Trick, den ich Dir letztes Mal erklärt habe, als wir gespielt haben? Man fängt mit einer Nachricht und einem Schlüssel an, und dann kann man sie verschlüsseln. Mit demselben Schlüssel kann man die verschlüsselte Nachricht auch wieder entschlüsseln und erhält das Original zurück.
       #"Yes, Leo, so, do you remember the trick I explained to you last time when we were playing? You start with a message and with a key, and then you can encrypt it. The same key works to decrypt the coded message and get back the original."
         char: mathina
         mood: arguing
@@ -302,19 +303,19 @@ actions:
       #"But wait, this person could intercept our messages... Even if we decide about a key now… he could be listening! I also remember that this method was not so safe... Like... after a bit, let’s say some minutes, one can try various combinations and get the key"
         char: leo
         mood: thinking
-      - text: Ich habe eine Idee dazu. Jedes Mal, wenn wir miteinander kommunizieren, werden wir den Schlüssel austauschen! Also egal, ob diese mysteriöse Person es schafft den Schlüssel zu bekommen, wir werden einen anderen haben!
+      - text: Ich habe eine Idee dazu. Jedes Mal, wenn wir miteinander kommunizieren, werden wir den Schlüssel austauschen! Also egal, ob diese mysteriöse Person es schafft, den Schlüssel zu bekommen, wir werden dann schon einen anderen haben!
       #"I have an idea about this. Every time we communicate, we will change the key! So no matter if this mysterious presence manages to get the key: we will have another one!"
         char: angela
         mood: normal
-      - text: Das ist in der Tat clever! Aber wie? Wenn wir immer hierher kommen müssen, verlieren wir viel Zeit. Wir können uns auch nicht einfach auf einen anderen Schlüssel in einer Nachricht einigen. Wenn diese Person es schafft, die Kommunikation zu entschlüsseln, entschlüsselt sie damit auch den neuen Schlüssel!
+      - text: Das ist in der Tat clever! Aber wie? Wenn wir immer hierher kommen müssen, verlieren wir viel Zeit. Wir können uns auch nicht einfach auf einen anderen Schlüssel in einer Nachricht einigen. Wenn diese Person es schafft, die Kommunikation zu entschlüsseln, erfährt sie damit auch den neuen Schlüssel!
       #"That is clever indeed! But... How? If we have to always come here we will lose a lot of time, but we cannot just agree on another key in a message: if this person manages to decode the communication will also decode the new key!"
         char: mathina
         mood: arguing
-      - text: Stell dir mal vor, es gibt einen Weg, sich auf einen geheimen Schlüssel in aller Öffentlichkeit zu einigen. Ohne dass jemand unser Geheimnis erfährt, selbst wenn wir die ganze Information mitten im Park schreien?
+      - text: Stellt Euch mal vor, es gäbe einen Weg, sich auf einen geheimen Schlüssel in aller Öffentlichkeit zu einigen. Selbst wenn wir die ganze Information mitten im Park schreien, würde niemand unser Geheimnis erfahren...
       #"What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
         char: angela
         mood: normal
-      - text: Wow, das klingt so cool! Wie ist das möglich?
+      - text: Wow, das klingt so cool! Aber, wie soll das funktionieren?
       #"Wow, this seems so cool, how is it possible?"
         char: leo
         mood: happy
@@ -328,12 +329,12 @@ actions:
     style: "height: 80%; top: 35%; right: 23.1%;  z-index: 2; transform: ScaleX(-1);" 
   - type: sceneText
     text: >
-     <p>Angela nahm ein Kartenspiel aus ihrer Jacke und zeigte es Leo.</p>
+     <p>Angela nahm ein Kartenspiel aus ihrer Jacke.</p>
     #Angela took a deck of cards from her jacket and showed it to Leo.   
      
   - type: dialog
     entries:     
-      - text: Nun, es gibt einen Trick. Schau her. Diese Karten sind alle in der richtigen Reihenfolge, vom Pik-Ass bis zum Herz-König. Jetzt beobachtet mal, wie viel Zeit ich brauche, um sie zu mischen.
+      - text: Nun, es gibt einen Trick. Schaut her. Diese Karten sind alle in der richtigen Reihenfolge, vom Pik-Ass bis zum Herz-König. Jetzt beobachtet mal, wie viel Zeit ich brauche, um sie zu mischen.
       #"Well, there is a trick. Look: these cards are all in order, from the ace of spades to the king of hearts. Now, look how much time I need to shuffle them."
         char: angela
         mood: happy
@@ -343,7 +344,7 @@ actions:
     #With a quick move, Angela shuffled the card, and showed them, now all randomly placed, in her hands.  
   - type: dialog
     entries:     
-      - text: Nun, was schätzt du wieviel Zeit du brauchen würdest, um dieses Blatt wieder in die Ordnung zu bringen, so wie es vorher war?
+      - text: Nun, was schätzt Ihr wieviel Zeit Ihr brauchen würdet, um dieses Blatt wieder in die Ordnung zu bringen, so wie es vorher war?
       #"Now, how much time do you think it would take for you to get back this deck in order, as it was before?"
         char: angela
         mood: normal
@@ -359,41 +360,41 @@ actions:
       #"Ok, but how do we produce a method? We can’t just go around shuffling cards!"
         char: mathina
         mood: arguing
-      - text: Der Trick ist, Zahlen zu verwenden. Unsere Misch-Operation wird es sein, eine bestimmte Zahl auf eine andere Zahl zu erhöhen, wie... 3^7=2187. Natürlich kann man zurückgehen, aber das kostet Zeit und Mühe.
+      - text: Der Trick ist, Zahlen zu verwenden. Unsere Misch-Operation wird es sein, eine bestimmte Zahl mit einer anderen Zahl zu potenzieren, wie... 3^7=2187. Natürlich kann man zurückgehen, aber das kostet Zeit und Mühe.
       #"The trick is to use numbers: our shuffling operation will be to raise a certain number to another number, like... 3^7=2187. Of course you can go back, but it takes time and effort!"
         char: angela
         mood: normal
-      - text: Ok, du sagtest, dass wir uns ganz offen auf den Schlüssel einigen können. Wenn du mir so etwas sagst wie „der Schlüssel ist der Exponent, mit dem man 3 erhöhen muss, um 2187 zu erhalten“, dann muss ich auch den ganzen Aufwand betreiben. Oder du sagst mir direkt 7. Dann kennt aber auch jeder, der mithört, den Schlüssel.
+      - text: Ok, du sagtest, dass wir uns ganz offen auf den Schlüssel einigen können. Wenn du mir so etwas sagst wie „der Schlüssel ist der Exponent, mit dem man 3 potenzieren muss, um 2187 zu erhalten“, dann muss ich auch den ganzen Aufwand betreiben. Oder du sagst mir direkt 7. Dann kennt aber auch jeder, der mithört, den Schlüssel.
       #"Ok, but you told us that we can agree on the key in public. If you tell me something like 'the key is the exponent to which you have to rise 3 to get 2187', either I also have to do all the effort, or you tell me directly 7, and anyone who listens will know the key as well!"
         char: mathina
         mood: arguing
-      - text: Stimmt. Doch dafür gibt es einen Trick. Dieser spezielle Trick heißt „Diffie-Hellman-Schlüsselaustausch“. Kommt, wir probieren es mal aus. Zuerst müssen wir eine Basis p und dann eine Zahl zwischen 2 und p-2 wählen. Dann müssen wir eine Zufallszahl in diesem Bereich wählen und einige einfache Operationen durchführen. Ich zeig es dir.
+      - text: Stimmt. Doch dafür gibt es einen Trick. Dieser spezielle Trick heißt „Diffie-Hellman-Schlüsselaustausch“. Kommt, wir probieren es mal aus. Zuerst müssen wir eine Primzahl p und dann eine Zahl g zwischen 2 und p-2 wählen. g nennen wir Basis. Dann müssen wir eine Zufallszahl auch in diesem Bereich wählen und einige einfache Operationen durchführen. Ich zeig es Euch.
       #"Here is where the trick happens. This particular trick is called 'Diffie-Hellman key exchange'. Let's try it. First, we must choose a prime number p, then a number g between 2 and p-2, that we will call base, and finally we must choose a random number in that same range and do some simple operations. Have a look!"
         char: angela
         mood: normal
   - type: game
-    text: Lerne zusammen mit Mathina und Leo die Methode.
+    text: Lerne zusammen mit Mathina und Leo die Methode kennen.
     #"Let's help Mathina and Leo understand the method"
     toolbarText: Folge den Arbeitsschritten und erstelle das gemeinsame Geheimnis.
     #"Follow the steps and try to create the shared secret"
     cta: Probiere es aus.
     #"Try it yourself!"
     tag: app1
-    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=4
   - type: dialog
     entries:     
-      - text: Siehst du, jetzt haben wir das gemeinsame Geheimnis. Das können wir als Schlüssel für alle Chiffren verwenden können, die du bisher schon kennengelernt hast.
+      - text: Seht ihr, jetzt haben wir das gemeinsame Geheimnis. Das können wir als Schlüssel für alle Verschlüsselungsverfahren verwenden, die ihr schon auf dieser Insel kennengelernt habt.
       #"See, now we have the common secret which we can use as the key for all the ciphers you already encountered before."
         char: angela
         mood: happy
-      - text: Voll gut, so ist es jetzt beschlossen! Dies ist der Schlüssel den wir zur Kommunikation verwenden. Wir können jetzt einfach SMS austauschen und uns auf einen neuen Schlüssel einigen, wenn der alte kompromittiert wurde - auch wenn wir uns an weit entfernten Orten auf der Insel befinden. Ich werde den Berg erkunden, während du, Leo, mit Angela die Küste und den Park untersuchst. 
+      - text: Voll gut, so werden wir jetzt auf der Schatzinsel kommunizieren. Wir können einfach Nachrichten mit dem Handy austauschen und uns auf einen neuen Schlüssel einigen, wenn der alte abgefangen oder sonst irgendwie herausgefunden wurde - auch wenn wir uns an weit entfernten Orten auf der Insel befinden. Am besten wechseln wir den Schlüssel jedes Mal. Ich werde den Berg erkunden, während du, Leo, mit Angela die Küste und den Park untersuchst. Einverstanden?
       #"Thank you, so it’s decided this will be the key we will use to communicate. We can now simply exchange SMS and agree on a new key if the old one got compromised even if we are in distant places on the island."
         char: mathina
         mood: happy   
-      - text: Ok, wir sind uns einig. Das ist die Technik, mit der wir hier auf der Schatzinsel kommunizieren werden. Um die Nachrichten geheim zu halten, werden wir den Schlüssel unserer Chiffre jedes Mal ändern und die Diffie-Hellman-Methode verwenden, um den neuen Schlüssel auszutauschen.
+     # - text: Ok, wir sind uns einig. Das ist die Technik, mit der wir hier auf der Schatzinsel kommunizieren werden. Um die Nachrichten geheim zu halten, werden wir den Schlüssel unserer Methode jedes Mal ändern und die Diffie-Hellman-Methode verwenden, um den neuen Schlüssel auszutauschen.
       #"Ok, it’s set. This is the way we will use to communicate here on Buccaneer’s Island. I will go exploring the mountain, while you will examine the coast and the park with Angela. To keep messages secret we will change the key of our cypher every time, using the Diffie-Hellman method to exchange the new key!"
-        char: angela
-        mood: happy
+     #   char: angela
+     #   mood: happy
       - text: Ok, los geht's, Schwesterchen!
       #"Ok let’s go, sis!"
         char: leo
@@ -427,7 +428,7 @@ actions:
     style: "height: 10%; top: 60%; right: 40%;  z-index: 1; transform: ScaleX(1);"
   - type: sceneText
     text: >
-      <p>So trennten sich die Wege von Mathina und Leo, wobei der Junge in Richtung Küste ging und Mathina begann, den Hügel hinaufzusteigen. Ihr einziger Hinweis auf das Geheimnis der Seeräuber waren die Gravuren in der Höhle im Park, die Leo und seine Freunde bei ihrem Ausflug auf die Insel gesehen hatten. Die Gravuren waren jedoch nur ein Puzzleteil. Aber dann tauchte auch noch die geheimnisvolle Gestalt auf, die Leo vor dem Verlassen der Insel gesehen hatte und die ihnen vom Park bis zum Pier folgte. Wenn es jemanden gab, der sich für ihre Entdeckung interessierte, dann gab es heute vielleicht wirklich noch etwas zu entdecken und ihre Funde hatten eine tiefere Bedeutung. Ganz sicher, die Schatzinsel ist ein Ort voller Überraschungen. Es ist einen Versuch wert, dachten sie.</p>
+      <p>So trennten sich ihre Wege, wobei Leo und Angela in Richtung Küste gingen, und Mathina begann, den Hügel hinaufzusteigen. Ihr einziger Hinweis auf das Geheimnis der Seeräuber waren die Gravuren in der Höhle im Park, die Leo und seine Freunde bei ihrem Ausflug auf die Insel gesehen hatten. Die Gravuren waren jedoch nur ein Puzzleteil. Und dann tauchte ja auch noch die geheimnisvolle Gestalt auf, die Leo vor dem Verlassen der Insel gesehen hatte und die ihnen vom Park bis zum Pier gefolgt war. Wenn es jemanden gab, der sich für ihre Entdeckung interessierte, dann gab es vielleicht wirklich noch etwas zu entdecken, und ihre Funde hatten eine tiefere Bedeutung. Ganz sicher, die Schatzinsel ist ein Ort voller Überraschungen. Es ist einen Versuch wert, dachten sie.</p>
     #So Mathina and Leo parted ways, the youngster heading toward the coastline, and Mathina starting to climb up the hill. Their only hint about the secret of the buccaneers laid onto the engravings in the cave at the park that Leo and his friends saw during their trip to the island. It would be basically a worthless hint, if not for the mysterious figure that Leo said he had seen before leaving the island that was, he was convinced, following them from the park to the pier. If there was someone interested in their discovery, maybe there was something to discover and their findings had a deeper meaning. Surely Buccaneer’s Island is a place full of surprises, it’s worth a try, they thought.
   - type: clearImage
     id: Mathina1
@@ -441,16 +442,16 @@ actions:
     style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"
   - type: sceneText
     text: >
-      <p>Eine Stunde später waren Leo und Angela immer noch dabei, die Küste zu erkunden, als sie eine SMS von Mathina erhielten.</p>
+      <p>Eine Stunde später waren Leo und Angela immer noch dabei, die Küste zu erkunden, als sie eine Nachricht von Mathina erhielten.</p>
     #An hour later Leo and Angela were still exploring the coast, when they received an SMS from Mathina.
   - type: game
     text: Welche spannende Nachricht hat Mathina?
     #"Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
-    cta: Schau nach!
+    cta: Schau nach und entschlüssele sie!
     #"Try it yourself!"
     tag: app2
-    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=4
   - type: dialog
     entries:     
       - text: Wow! Weißt du etwas darüber, Angela?
@@ -467,7 +468,7 @@ actions:
     #"Uhm, very strange. We agreed that we should confirm our messages and set a new shared key, but Mathina is not answering. Should we be worried about that?"
       char: leo
       mood: surprised
-    - text: Ich glaube nicht, vielleicht hat Mathina nur unsere letzte Nachricht übersehen. Ich bin sicher wir werden bald von ihr hören.
+    - text: Ich glaube nicht, vielleicht hat Mathina nur unsere letzte Nachricht übersehen. Ich bin sicher, wir werden bald von ihr hören.
     #"I don't think so, maybe Mathina just missed our last message, I’m sure we will know from her very soon." 
       char: angela
       mood: normal
@@ -493,15 +494,15 @@ actions:
     style: "height: 20%; top: 70%; right: 50%;  z-index: 2; transform: ScaleX(1);"  
   - type: sceneText
     text: >
-      <p>Also setzte das Duo seine Erkundung des Pfades zum Papageienwald fort, in der Hoffnung, dass die Vögel der Schlüssel zum Erfolg ihrer Suche waren.</p>
+      <p>Also setzten die beiden ihre Erkundung des Pfades zum Papageienwald fort, in der Hoffnung, dass die Vögel der Schlüssel zum Erfolg ihrer Suche sein würden.</p>
     #So the duo continued to explore the path up to the parrot forest, in the hope that the birds were the key to the success of their quest!
   - type: dialog
     entries:      
-     - text: Aber was ist, wenn es doch jemandem gelungen ist, den Code zu verstehen?
+     - text: Aber was ist, wenn es doch jemandem gelungen ist, den Code zu knacken?
      #"But what if somebody did manage to understand the code?"
        char: leo
        mood: arguing
-     - text: Das ist unwahrscheinlich. Hey, wir probieren einfach selbst mal aus, den Code zu knacken!
+     - text: Das ist unwahrscheinlich. Hey, wir probieren einfach selbst mal aus, ihn zu knacken!
      #"That's unlikely, look! let’s try to do it!"
        char: angela
        mood: normal
@@ -513,7 +514,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app3
-    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=4
   - type: clearImage
     id: Leo2  
   - type: clearImage
@@ -553,7 +554,7 @@ actions:
     style: "height: 35%; top: 50%; right: 10%;  z-index: 1; transform: ScaleX(-1);"
   - type: dialog
     entries:      
-     - text: Hey! Wer bist du? Lass mich los! Hilfe! Was willst du von mir?
+     - text: Hey! Wer bist du? Lass mich gehen! Hilfe! Was willst du von mir?
      #"Hey! Who are you? Let me go! Stop! Who are you? What do you want from me?"
        char: mathina
        mood: arguing
@@ -570,7 +571,7 @@ actions:
      #"Shut up! I'm not going to hurt you or anything!"
        char: charmingparrot
        mood: happy
-     - text: Ja, sehr beruhigend, das würde jeder Dieb oder Pirat sagen! Ich habe nichts Wertvolles! Geh weg! Lass mich los!
+     - text: Ja, sehr beruhigend, das würde jeder Dieb oder Pirat sagen! Ich habe nichts Wertvolles! Geh weg! Lass mich gehen!
      #"Yeah, very reassuring, that's what any thief or pirate would say! I don't have anything valuable! Go away! Let me go!"
        char: mathina
        mood: arguing       
@@ -658,7 +659,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app4
-    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=4
      
   - type: dialog
     entries:      
@@ -669,7 +670,7 @@ actions:
    
   - type: sceneText
     text: >
-      <p>So begann das Duo, die Berge hinaufzuklettern und folgte der von Mathina entdeckten Spur der Papageien.</p>
+      <p>So begannen die beiden, den Berg hinaufzuklettern und folgten der von Mathina entdeckten Spur der Papageien.</p>
     #So the duo started to climb up the mountains following the parrot trail discovered by Mathina.   
 
   - type: clearImage
@@ -711,7 +712,7 @@ actions:
     #Leo shouted at the mysterious pirate while a net covered the exit of the cove, trapping Angela and himself inside.</p>        
   - type: dialog
     entries: 
-     - text: Deine Schwester ist in Sicherheit, Kleiner, mach dir keine Sorgen. Sie hat nur vergessen, dir ein paar Sicherheitstricks beizubringen. Du musst schon sicher sein, dass du wirklich mit dem echten Empfänger deiner Nachricht sprichst, während du die Kryptographie des Schlüsselaustauschs benutzt! Und jetzt seid still und macht es euch so bequem es eben geht. Ihr werdet für eine ganze Weile mein Gast sein!
+     - text: Deine Schwester ist in Sicherheit, Kleiner, mach dir mal keine Sorgen. Sie hat nur vergessen, dir ein paar Sicherheitstricks beizubringen. Du musst schon sicher sein, dass du wirklich mit dem echten Empfänger deiner Nachricht sprichst, während du die Methode des Schlüsselaustauschs benutzt! Und jetzt seid still und macht es euch so bequem es eben geht. Ihr werdet für eine ganze Weile mein Gast sein!
      #"Your sister is safe little fella, don’t worry. She just forgot to teach you some safety tricks: you need to be certain that you're really talking to the real receiver of your message while using key exchange cryptography! Now, be quiet and make yourself comfortable, you will be my guest for quite a time!"
        char: charmingparrot
        mood: normal    
@@ -739,11 +740,11 @@ actions:
 
   - type: dialog
     entries:        
-     - text: Es tut mir leid, Leo, es tut mir leid, Angela, ich bin in die Falle dieses Piraten getappt. Er muss euch eine irreführende Nachricht geschickt haben, um euch hier in seine Bucht zu locken. Er sagt, er sei der letzte wahre Pirat auf der Insel und er wolle den Schatz seiner alten Seeräuberkollegen entdecken.
+     - text: Es tut mir leid, Leo, es tut mir leid, Angela, ich bin in die Falle dieses Piraten getappt. Er muss euch eine irreführende Nachricht geschickt haben, um euch hier in seine Höhle zu locken. Er sagt, er sei der letzte wahre Pirat auf der Insel, und er wolle den Schatz seiner alten Seeräubertruppe entdecken.
      #"I'm sorry Leo, I'm sorry Angela, I fell into the trap of this pirate and he must have sent you some misleading message to lure you here in his cove. He says he is the last true pirate on the island and he wants to discover the treasure of his ancient fellow buccaneers."
        char: mathina
        mood: thinking        
-     - text: Aber vielleicht gibt es gar keinen Schatz! Alles, was wir wissen, ist, dass es einige Seeräuber auf der Insel gab. Wir haben keinen Beweis dafür, dass der Schatz noch da ist - oder jemals da war, was das betrifft. Selbst die Spur des Papageis ist vielleicht nur ein Trick, den sich das Fremdenverkehrsamt ausgedacht hat, um ein paar Besucher zu unterhalten.
+     - text: Aber vielleicht gibt es ja gar keinen Schatz! Alles, was wir wissen, ist, dass es einige Seeräuber auf der Insel gab. Wir haben keinen Beweis dafür, dass der Schatz noch da ist - oder jemals da war. Selbst die Spur des Papageis ist vielleicht nur ein Trick, den sich das Fremdenverkehrsamt ausgedacht hat, um ein paar Gäste zu unterhalten.
      #"But there may be no treasure at all! All we know is that there were some buccaneers on the island, but we have no evidence that the treasure is still here – or it ever was, for that matters. Even the trail of the parrot may just be a trick engineered by the tourist office to entertain some visitors."
        char: angela
        mood: normal            
@@ -798,7 +799,7 @@ actions:
     style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"  
   - type: sceneText
     text: >
-      <p>Die folgenden Tage waren furchtbar für die Gruppe. Sie wurden mit Ketten, aber solchen aus Plastik, aneinander gefesselt und gezwungen den Wald und die Küsten auf der Suche nach einem versteckten Schatz zu durchkämmen.</p> 
+      <p>Die folgenden Tage waren furchtbar für die Gruppe. Sie wurden mit Ketten, aber solchen aus Plastik, aneinander gefesselt, und gezwungen den Wald und die Küsten auf der Suche nach einem versteckten Schatz zu durchkämmen.</p> 
     #The following days were dreadful for the party. They were bound with plastic chains to one another and forced to search the forest and the coasts looking for hidden treasure. 
   - type: dialog
     entries:        
@@ -806,11 +807,11 @@ actions:
      #"He is so much of a pirate that he couldn't even have proper chains to bound us! We've been kidnapped by the parody of a pirate. He's probably out of his mind, we must bring him back to reason and convince him that there's no treasure at all!"
        char: mathina
        mood: surprised 
-     - text: Aber wie können wir das machen? Vielleicht können wir einen Brief von einem alten Piraten fälschen, in dem steht, dass der Schatz für Ausschweifungen und Gelagen verbraucht wurde, als die Seeräuber auf diese Insel kamen.
+     - text: Aber wie können wir das machen? Vielleicht können wir einen Brief von einem alten Piraten fälschen, in dem steht, dass der Schatz für Prasserei und Völlerei ausgegeben wurde, als die Seeräuber auf diese Insel kamen.
      #"But how can we do it? Maybe we can fake a letter from some old pirate saying that the treasure has been all spent in debauchery and revelry once the buccaneers came to this island."
        char: leo
        mood: arguing
-     - text: Nein, das wird nicht funktionieren, Leo. Kapitän Charmingparrot kennt sich mit Öffentlicher-Schlüssel-Kryptographie aus, so hat er uns überhaupt erst hierher gebracht! Er hat eine sogenannte Zwischenmann-Attacke‚ benutzt, bei dem der Empfänger nicht in der Lage ist, die Identität des Absenders zu bestätigen und ihm vertraut, dass er der echte ist.
+     - text: Nein, das wird nicht funktionieren, Leo. Kapitän Charmingparrot kennt sich mit der Verschlüsselung von öffentlichen Schlüsseln aus, so hat er uns überhaupt erst hierher gebracht! Er hat eine sogenannte Man-in-the-Middle Attacke‚ benutzt, bei dem der Empfänger nicht in der Lage ist, die Identität des Absenders zu bestätigen und ihm vertraut, dass er der Echte ist.
      #"No, it won't work, Leo, Captain Charmingparrot knows about public-key cryptography, this was how he got us here in the first place! He used a so-called 'man in the middle attack' in which the receiver is not able to confirm the identity of the sender and trusts them to be the real one."
        char: mathina
        mood: arguing
@@ -832,20 +833,22 @@ actions:
      #"They are based on mathematical operations that are very easy to perform one way, but much more difficult to perform backway. For example, Leo, do you remember when in school you studied two-figure division and complained about how much more difficult it was than multiplication? The principle is the same, just way harder on one of the two sides."
        char: angela
        mood: normal       
-  - type: sceneText
-    text: „Aber, Angela!” Mathina unterbrach Angela mit einem unverhofften Lächeln.
-    #"But, Angela!" Mathina interrupted with an unhoped smile        
+     - text: „Aber, Angela!” 
+       exposition: Mathina unterbrach Angela mit einem unverhofften Lächeln.
+    #"But, Angela!" Mathina interrupted with an unhoped smile    
+       char: mathina
+       mood: happy
   - type: dialog
     entries:        
-     - text: Die Öffentlicher-Schlüssel-Kryptographie war zur Zeit der Seeräuber noch gar nicht erfunden. Also sollte Kapitän Charmingparrot der Nachricht vertrauen, so wie sie ist!
+     - text: Die Verschlüsselung mit öffentlichen Schlüsseln war zur Zeit der Seeräuber noch gar nicht erfunden. Also sollte Kapitän Charmingparrot der Nachricht vertrauen, so wie sie ist!
      #"Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot should trust the message as he sees it!"
        char: mathina
        mood: happy      
-     - text: Das stimmt, Mathina! Lass es uns tun, oh warte, da ist er. Tut einfach so als wären wir beschäftigt!
+     - text: Das stimmt, Mathina! Dann machen wir es so, oh warte, da ist er. Tut einfach so als wären wir beschäftigt!
      #"Very good point Mathina, let’s do it, oh wait he's there, just pretend we're busy!"
        char: leo
        mood: happy  
-     - text: Arrr, auch heute nichts als ein Haufen alter zerbrochener Flaschen. Ich fange an mich zu fragen, ob ihr mich nicht gerade in meiner Suche ganz schön auflaufen lasst, ihr Meeresflöhe! Es wird dunkel, los wir gehen zurück in meine Bucht! Morgen werden wir die Suche fortsetzen.
+     - text: Arrr, auch heute nichts als ein Haufen alter, zerbrochener Flaschen. Ich fange an mich zu fragen, ob ihr mich nicht gerade in meiner Suche viel zu sehr aufhaltet, ihr Meeresflöhe! Es wird dunkel, los wir gehen zurück in meine Höhle! Morgen suchen wir weiter.
      #"Arrr, even today nothing but a bunch of old broken bottles, I'm starting to question if you're not just making me lose big time in my quest, you sea fleas! It's getting dark, let's go back to the cove! Tomorrow we will resume the search."
        char: charmingparrot
        mood: sad
@@ -878,7 +881,8 @@ actions:
     style: "height: 80%; top: 35%; right: 30%;  z-index: 2; transform: ScaleX(1);" 
   - type: sceneText
     text: >
-      <p>So hatten Mathina, Angela und Leo in der Nacht Zeit, einen gefälschten Brief von einem alten Piraten herzustellen. Als sie am nächsten Tag allein waren, versteckten sie ihn unter einem Felsen. Der Plan war, ihren Kerkermeister heran zu rufen, um sich die Fesseln abnehmen zu lassen. Unter dem Vorwand das sie nicht stark genug seien, um den Felsen zu heben, unter dem er versteckt war. Ihr Plan entwickelte sich wie erhofft!</p> 
+      <p>So hatten Mathina, Angela und Leo in der Nacht Zeit, einen gefälschten Brief von einem alten Piraten herzustellen. Als sie am nächsten Tag allein waren, versteckten sie ihn unter einem Felsen. Der Plan war, ihren Kerkermeister heran zu rufen, um sich die Fesseln abnehmen zu lassen, denn damit wären sie nicht stark genug, um den Felsen zu heben, unter dem der Brief versteckt war.<br/><br/>
+      Gesagt, getan!</p> 
     #So, during the night, Mathina, Angela and Leo had time to produce a fake letter from an old pirate. When they would have been alone the following day, they would hide it under a rock, then they would have called their jailer to rescue it, telling him that they were not strong enough to lift the rock hiding it.<br/><br/>As the day came, their mischief developed as planned!
   - type: clearImage
     id: Leo6
@@ -907,7 +911,7 @@ actions:
     style: "height: 80%; top: 30%; right: 80%;  z-index: 1; transform: ScaleX(1);" 
   - type: dialog
     entries:        
-     - text: Ja, endlich, ich wusste doch, dass Ihr nützlich sein würdet. Endlich ein richtiger Hinweis auf den Schatz!
+     - text: Na endlich, ich wusste doch, dass Ihr nützlich sein würdet. Endlich ein richtiger Hinweis auf den Schatz!
      #"Yes, finally, I knew you would be useful after all, finally a real hint about the treasure!"
        char: charmingparrot
        mood: happy 
@@ -916,10 +920,10 @@ actions:
     text: >    
         <p>“<i>Ahoi Kapitän!</br>
         </br>
-        schreckliche Zeiten liegen vor uns, der ganze Schatz ist verloren. Die Besatzung hat bei der Ankunft auf dieser Insel alles in allerlei Ausschweifungen verkommen lassen. Unser Ruf als Freibeuter ist ruiniert, wir müssen zurück zur See fahren und mit dem Wiederaufbau des Schatzes beginnen. Ich habe eine kleine Gruppe von vertrauenswürdigen Männern gefunden, die nicht an der Verschwendung des Schatzes beteiligt waren und werde sie auf der Insel zurücklassen, um unsere Fehler wieder gut zu machen. Sie sollen ehrenhafte Männer sein und der Nachwelt ein Leben der Ehrlichkeit und Rechtschaffenheit lehren. <br/>Alle anderen Mitglieder der Besatzung werden uns auf See folgen.
+        schreckliche Zeiten liegen vor uns, der ganze Schatz ist verloren. Die Besatzung hat bei der Ankunft auf dieser Insel alles verprasst und verkommen lassen. Unser Ruf als Freibeuter ist ruiniert, wir müssen zurück zur See fahren und neue Schätze rauben. Ich habe eine kleine Gruppe von vertrauenswürdigen Menschen gefunden, die nicht an der Verschwendung des Schatzes beteiligt waren, und werde sie auf der Insel zurücklassen, um unsere Fehler wieder gut zu machen. Es sind ehrenhafte Menschen und sie werden der Nachwelt ein Leben der Ehrlichkeit und Rechtschaffenheit lehren. <br/>Alle anderen Mitglieder der Besatzung werden mit uns in See stechen.
         </br>
         </br>
-        Nur die Zukunft wird unser Schicksal kennen!“</i></p>
+        Nur die Zukunft kennt unser Schicksal!“</i></p>
     #Ahoi Kapitän!</br>
     #</br>
      #Terrible times lay ahead of us and all the treasure is lost. The crew dilapidated it all in every sort of debauchery when arriving on this island. Our name as Buccaneers is compromised, we must go back to sea and start rebuilding our treasure. I found a small group of trusted men, who were not involved in the squandering of the treasure and will leave them on the island to build from our misfortune. They shall be honourable men and teach to the posterity a life of honesty and righteousness.<br/>All the other members of the crew will follow us at sea. 
@@ -943,7 +947,7 @@ actions:
     #Mathina tried to comfort him.
   - type: dialog
     entries:        
-     - text: Nein, der Schatz war hier. Deine Vorfahren waren hier, genauso echt wie wir jetzt hier sind. Mit meiner Freundin Angela, meinem Bruder, bin ich auch an schlechten Tagen vereint. Gemeinsam lassen wir uns nicht unterkriegen. Genau wie sie es vor Jahrhunderten getan haben!
+     - text: Nein, der Schatz war hier. So wie deine Vorfahren, so sind auch meine Freundin Angela, mein Bruder Leo und ich an schlechten Tagen vereint. Gemeinsam lassen wir uns nicht unterkriegen. Genau wie sie es vor Jahrhunderten getan haben!
      #"No, it was here. Look at us, just as your fellow ancestors, my friend Angela, my brother Leo and me, we are here united in adversity, and fighting to carry on, just as they did centuries ago!"
        char: mathina
        mood: happy
@@ -971,7 +975,7 @@ actions:
     style: "height: 15%; top: 60%; right: 40%;  z-index: 1; transform: ScaleX(1);"
   - type: sceneText
     text: >
-      <p>Der Mann seufzte leise, winkte ihnen zum Abschied und ging in Richtung der sonnigen Küste davon, zurück zu seiner Bucht. Und er ward nie mehr gesehen.</p>
+      <p>Der Mann seufzte leise, winkte ihnen zum Abschied und ging in Richtung der sonnigen Küste davon, zurück zu seiner Höhle. Und er ward nie mehr gesehen.</p>
     #The man, sighing silently, freed the three from their chains, waved them goodbye and walked away into the sunny coast, heading back to his cove, just to be heard of no more. 
   - type: clearImage
     id: captE 
