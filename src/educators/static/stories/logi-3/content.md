@@ -46,8 +46,7 @@ The story is accompanied by one app in three slightly different versions. At the
 
 The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video.
 
-Game - Cats and dogs (link to the IO3 Repository)
-App page: /apps/bucca-3-app/logi-3-app.htm?l=1
+Story ["Cats and dogs"]($HUB_URL/story/cats-and-dogs/)
 
 The user sees a map and two police hats. The goal is to find out whether two policemen are able to oversee all roads of the city or more are needed. The user is able to move the icons on the map and the roads overseen will appear highlighted. Free play; no solutions are required this time. 
 
