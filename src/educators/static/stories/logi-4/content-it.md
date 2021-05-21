@@ -1,6 +1,6 @@
 # Concetti matematici
 
-La storia ** Il mio oro, grazie! ** si basa sulla regola di divisibilità per 9. Se gli studenti si soffermano a riflettere, possono notare che, dopo la prima sottrazione, il numero di medaglie d'oro può essere diviso per 9.
+La storia **La mia medaglia, grazie!** si basa sulla regola di divisibilità per 9. Se gli studenti si soffermano a riflettere, possono notare che, dopo la prima sottrazione, il numero di medaglie d'oro può essere diviso per 9.
 
 La matematica diventa stimolante ogni volta che incontriamo una domanda insolita. Trovare una soluzione è avventuroso e spesso richiede molto tempo e diversi tentativi senza successo, prima di scoprire la risposta. Gli studenti imparano a pensare in modo logico attraverso la riflessione, sviluppando così una capacità utile per tutta la vita.
 
@@ -44,7 +44,7 @@ In questa storia, i seguenti concetti matematici di base giocano un ruolo import
 
 È importante che l'insegnante o il genitore che accompagna il bambino mantenga il proprio ruolo. Questo ruolo consiste nel porre problemi e domande, incoraggiare ragionamenti, riflessioni, discutere strategie, condividere idee e collaborare per trovare soluzioni, senza imporre al bambino una strada prefissata, ma incoraggiando il più possibile l'esplorazione del problema.
 
-Leggere e giocare con **Il mio oro, grazie!** non richiede alcun materiale aggiuntivo, né conoscenze preliminari.
+Leggere e giocare con **La mia medaglia, grazie!** non richiede alcun materiale aggiuntivo, né conoscenze preliminari.
 
 L'approccio alla materia è, tuttavia, diverso da quello che viene solitamente utilizzato nell'istruzione formale. Nella storia possiamo infatti incontrare:
 + una linea narrativa sottostante,
@@ -66,7 +66,7 @@ La storia è accompagnata da una app, che viene utilizzata tre volte nei contest
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App - ["Il mio oro"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/)
+##App - ["La mia medaglia"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/)
 [First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
 
 The first person receives as many gold medals, which equal the sum of the digits of the total number of gold medals received by the team. For example, if the team won 721 gold medals, then the first team member gets 7 + 2 + 1, i.e. 10 gold medals. There remains 721 minus 10, or 711 gold medals. The next one gets the sum of the digits of the gold left this way. And so on.  
