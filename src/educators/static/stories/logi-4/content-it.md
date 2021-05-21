@@ -52,14 +52,15 @@ L'approccio alla materia è, tuttavia, diverso da quello che viene solitamente u
 + giochi e sfide nelle app. 
 
 ## Suggerimenti per ulteriori esercizi
-A game for two: Think of a four-digit number, calculate the sum of its digits, and subtract that from the number you are thinking of. Delete the first digit of the number received and show the remaining number to your mate. I will tell you which digit you erased.
+Un gioco per due giocatori: pensa a un numero di quattro cifre, calcola la somma delle sue cifre e sottraila dal numero a cui stai pensando. Elimina la prima cifra del numero ricevuto e mostra il numero rimanente al tuo compagno. Ti dirò quale cifra hai cancellato.
 
-How do I know?
+Come lo so?
 
-An example. Let the number be 5271. The sum of the digits is: x.
-The difference is y. Once the first digit is deleted, 256 remains.
-The magician sees the number 256 and is able to tell the deleted digit, 5. How??
-Good brainstorming, lots of fun to think about!
+Un esempio. Prendiamo il numero 5271. La somma delle cifre è: 15.
+La differenza è 5256. Una volta eliminata la prima cifra, rimane 256.
+Il mago vede il numero 256 ed è in grado di risalire alla cifra cancellata, 5. Come??
+Pensaci un po': buon brainstorming! 
+
 
 # Esperienze interattive 
 La storia è accompagnata da una app, che viene utilizzata tre volte nel contesto della storia. Gli utenti hanno la possibilità di giocare liberamente con la app.
@@ -69,6 +70,6 @@ La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/
 ##App - ["La mia medaglia"]($HUB_URL/story/my-gold-please/?actionLink=app1)
 
 La prima persona riceve una certa quantità di medaglie d'oro, pari alla somma delle cifre del numero totale di medaglie d'oro ricevute dalla squadra. Per esempio, se la squadra ha ricevuto 721 medaglie d'oro, il primo membro della squadra ottiene 7 + 2 + 1, cioè 10 medaglie d'oro. Rimangono 721-10=711 medaglie d'oro. Il giocatore successivo ottiene un numero di medaglie d'oro pari alla somma delle cifre delle medaglie d'oro rimaste e così via.
-L'educatore ha la possibilità di creare variazioni dell'esercizio utilizzando l'ultima app nella storia [Last Game in Story] ($ 
+L'educatore ha la possibilità di creare variazioni dell'esperienza utilizzando l'ultima app nella storia.
 @[youtube](A1vXg_DSolc?_align-center_)
 [Script](/stories/logi-3/transcripts/Script1.pdf)
