@@ -401,7 +401,7 @@ export default {
   height: 10%;
   position: absolute;
   font-size: 2em;
-  font-family: var(--story-font-family);
+  font-family: Newsreader, serif;
   font-weight: 600;
 
   &--island {

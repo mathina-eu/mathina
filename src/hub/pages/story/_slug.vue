@@ -305,10 +305,10 @@ export default {
         }
       }
 
+      this.currentActionId++;
       if (!this.hasMoreActions) {
         return false;
       }
-      this.currentActionId++;
 
       if (this.action instanceof AnimationAction) {
         this.$nextTick(() => {

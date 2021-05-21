@@ -60,7 +60,7 @@ export default {
   }
 
   >>> .v-card__text {
-    font-family: var(--story-font-family);
+    font-family: Newsreader, serif;
     font-size: 1.125em;
     color: var(--text-color);
 
