@@ -443,6 +443,7 @@ actions:
     cta: Solve the riddles of the sparkbugs!
     url: /apps/imaginary/app_4/4_2/en.html
 
+
   - type: dialog
     avatarAlign:
       flamma: right
