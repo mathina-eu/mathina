@@ -59,5 +59,6 @@ export default {
 	second_policeman: 'Zweiter Polizist',
 	boys: 'Team',
 	trainer: 'Trainer',
+	parrot: 'John der Papagei',
   },
 };
