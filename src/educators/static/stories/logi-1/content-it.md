@@ -58,7 +58,5 @@ Tutte le app sono state programmate in JavaScript e sono ottimizzate sia per PC 
 
 ## [App 1 - La sfida dei semafori]($HUB_URL/story/the-traffic-light-challenge/?actionLink=app1)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
-
-[Script](https://docs.google.com/document/d/1JoX-oWfSPqPheFBopjWfu1lsRNl8zBMHrx6ylGm3zDM/edit#)
+@[youtube](zdFCyi9WLkY?_align-center_)
+[Script](/stories/logi-1/transcripts/Script1.pdf)

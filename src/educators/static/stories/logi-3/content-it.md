@@ -43,18 +43,15 @@ La storia è accompagnata da una app in tre versioni leggermente diverse. Alla p
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App - Cani e gatti (link to the IO3 Repository)
-App page: /apps/bucca-3-app/logi-3-app.htm?l=1
+##App 1 - Cani e gatti I ($HUB_URL/story/cats-and-dogs/?actionLink=app1)
 
 L'utente vede una mappa e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
 
-Explanatory film about the app (link to the YouTube Channel)
+@[youtube](T6k8ftH5jMc?_align-center_)
+[Script](/stories/logi-3/transcripts/Script1.pdf)
+
+##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=app2)
 
 
-
-[First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
-
-![Some text](/stories/demo-story/video/video.mp4)
-
-
-![Some alt text](/stories/demo-story/img/test.png)
+@[youtube](uwkk_lkBqTk?_align-center_)
+[Script](/stories/logi-3/transcripts/Script2.pdf)

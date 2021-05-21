@@ -62,18 +62,13 @@ The magician sees the number 256 and is able to tell the deleted digit, 5. How??
 Good brainstorming, lots of fun to think about!
 
 # Esperienze interattive 
-La storia è accompagnata da una app, che viene utilizzata tre volte nei contesti della storia. Gli utenti hanno la possibilità di giocare liberamente con la app.
+La storia è accompagnata da una app, che viene utilizzata tre volte nel contesto della storia. Gli utenti hanno la possibilità di giocare liberamente con la app.
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App - ["La mia medaglia"]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/)
-[First Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
-
-The first person receives as many gold medals, which equal the sum of the digits of the total number of gold medals received by the team. For example, if the team won 721 gold medals, then the first team member gets 7 + 2 + 1, i.e. 10 gold medals. There remains 721 minus 10, or 711 gold medals. The next one gets the sum of the digits of the gold left this way. And so on.  
-The educator has the possibility to create variations of the exercise by using the last app in the story [Last Game in Story]($HUB_URL/story/mathina-wins-a-lot-of-new-toys/?actionLink=firstGame)
+##App - ["La mia medaglia"]($HUB_URL/story/my-gold-please/?actionLink=app1)
 
 La prima persona riceve una certa quantità di medaglie d'oro, pari alla somma delle cifre del numero totale di medaglie d'oro ricevute dalla squadra. Per esempio, se la squadra ha ricevuto 721 medaglie d'oro, il primo membro della squadra ottiene 7 + 2 + 1, cioè 10 medaglie d'oro. Rimangono 721-10=711 medaglie d'oro. Il giocatore successivo ottiene un numero di medaglie d'oro pari alla somma delle cifre delle medaglie d'oro rimaste e così via.
-L'educatore ha la possibilità di creare variazioni dell'esercizio utilizzando l'ultima app nella storia [Last Game in Story] ($ HUB_URL / story / mathina-wins-a-lot-of-new-toys /? ActionLink = firstGame)
-
-
-Explanatory film about the app (link to the YouTube Channel)
+L'educatore ha la possibilità di creare variazioni dell'esercizio utilizzando l'ultima app nella storia [Last Game in Story] ($ 
+@[youtube](A1vXg_DSolc?_align-center_)
+[Script](/stories/logi-3/transcripts/Script1.pdf)

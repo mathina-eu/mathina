@@ -51,14 +51,10 @@ La storia è accompagnata da una app, che appare nella storia due volte. La prim
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
+
+## [App - La sfida del pavimento colorato]($HUB_URL/story/the-tiled-floor-trap/?actionLink=app1)
 La regola del gioco è che gli utenti possono solo passare da un campo rosso a un campo rosso, da uno blu a uno blu, da uno verde a uno verde, da uno giallo a uno giallo oppure da cerchio a cerchio, da quadrato a quadrato, da triangolo a triangolo.
- 
 
+@[youtube](ORR614pbLzk?_align-center_)
+[Script](/stories/logi-2/transcripts/Script1.pdf)
 
-## [Game - The tiled floor trap](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-Test page: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
-
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
-
-[Script](https://docs.google.com/document/d/1JoX-oWfSPqPheFBopjWfu1lsRNl8zBMHrx6ylGm3zDM/edit#)
