@@ -333,7 +333,7 @@ Traduzioni=[
 	[["Trad13"],"but also to","ma anche","mas tamb&eacute;m para","aber auch gleich"],
 	[["Trad15","Trad15a"],"Choose","Scegli","Escolher","W&auml;hle"],
 	[["Trad16","Trad16a"],"With this choice","Con questa scelta","Com esta escolha","Damit ist "],
-	[["Trad17","Trad17a"],"modulo","modulo","m&oacute;dulo","Modulo"],
+	[["Trad17","Trad17a","Trad17c","Trad17d"],"modulo","modulo","m&oacute;dulo","Modulo"],
 	[["Trad18"],"Phew! It is so long to find an answer. And now?","Caspita! Trovare la risposta &egrave; complicato! E adesso?","Ufa! &Eacute; muito longo encontrar uma resposta. E agora?","Puh! Es dauert so lange, eine Antwort zu finden. Und nun?"],
 	[["Trad19"],"Can we decode the message?","Riusciamo a decodificare il messaggio?","Podemos descodificar a mensagem?","Kannst Du die Nachricht entschl&uuml;sseln?"],
 	[["Trad20"],"Enter the key:","Inserisci la chiave:","Insire a chave:","Gib den Schlüssel ein:"],
@@ -408,6 +408,8 @@ Traduzioni=[
             ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
             PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
             document.getElementById("Primo1").innerHTML = PrimoScelto;
+            document.getElementById("Primo1a").innerHTML = PrimoScelto;
+            document.getElementById("Primo1b").innerHTML = PrimoScelto;
             BaseScelta = 2 + Math.floor(Math.random() * (PrimoScelto - 3));
             document.getElementById("Base1").innerHTML = BaseScelta;
             Giusta1 = Math.floor(Math.random() * 4) + 1;
@@ -601,13 +603,13 @@ Traduzioni=[
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad4">Fase 2 (Leo): il segreto di Leo</p>
-            <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
+            <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup> <span id="Trad17c"></span> <span id="Primo1a"></span>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
             <p style="text-align:center;"><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
             </p>
         </div>
         <div id="Text3">
             <p class="titolo" id="Trad9">Fase 2 (Mathina): il segreto di Mathina</p>
-            <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
+            <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup> <span id="Trad17d"></span> <span id="Primo1b"></span>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
             <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
         </div>
         <div id="Text4">
