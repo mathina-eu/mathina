@@ -441,7 +441,7 @@ actions:
     text: Place the sparkbugs in the air by clicking and dragging. They will show you a curve. You have three guesses, to find the right equation of that curve
     toolbarText: Which curve are the sparkbugs forming? Choose the right equation.
     cta: Solve the riddles of the sparkbugs!
-    url: http://localhost:3000/apps/imaginary/app_4/4_2/en.html
+    url: /apps/imaginary/app_4/4_2/en.html
 
   - type: dialog
     avatarAlign:
