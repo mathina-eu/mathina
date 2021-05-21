@@ -402,12 +402,12 @@ actions:
       - text: Ich zeige es Dir, wenn Du möchtest.
       #"Let me help you!"
         char: wizard
-  - type: game
+  - type: video
     text: Schau Dir die Erklärung des Zauberers an.
     #"Watch the movie!"
-    cta: Abspielen
-    #"Play!"
-    url: /stories/symm-1/video/geoplano-anim2.mp4
+    entries:
+    - src: geoplano-anim2.mp4
+      type: 'video/mp4'
 #  - type: dialog
 #    entries:    
 #      - text: Ah, ja, jetzt weiß ich, wie es geht! Ich baue die Burg gleich fertig!

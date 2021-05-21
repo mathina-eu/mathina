@@ -50,7 +50,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she should fold the image in half (horizontally and vertically) and see if the two parts overlap.
 
-@[youtube](N9Z31NrSNic?_align-center_)
+@[youtube](Dm1r2igNWPs?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
@@ -59,7 +59,7 @@ An image is provided. The user is invited to check if the given image has a symm
 
 A set of 16 drawings of animals is shown. The user is invited to choose all the images which are symmetric and place them in a box.
 
-@[youtube](9TVHgkmHE4w?_align-center_)
+@[youtube](Tbhnd5IwoBs?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
@@ -68,7 +68,7 @@ A set of 16 drawings of animals is shown. The user is invited to choose all the 
 
 The following items are displayed on the screen: a vertical red line, a gray squared background and a non-symmetric image built with coloured shapes.The user is invited to drag some coloured shapes at his/her disposal and put them in the gray squares in order to create a symmetric image with respect to the red line.
 
-@[youtube](MjvHyj8jEIg?_align-center_)
+@[youtube](1Og0JeyURHs?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
@@ -77,5 +77,5 @@ The following items are displayed on the screen: a vertical red line, a gray squ
 
 The following items are displayed on the screen: a red line, a geoboard and an image, made up of black segments, drawn in one of the sides of the red line. The user is invited to draw the missing segments in order to create a symmetric image with respect to the red line.
 
-@[youtube](5R5N0SJ59lQ?_align-center_)
+@[youtube](0G862XD2Xzk?_align-center_)
 [Script](/stories/symm-1/transcripts/Script1.pdf)

@@ -114,10 +114,11 @@ actions:
   - type: sceneText
     text: >
       <p>La tavola ha lasciato una traccia sul terreno, con un disegno ripetitivo.</p>
-  - type: game
+  - type: video
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Placa%20p111.mp4
+    entries:
+    - src: Anim%20Placa%20p111.mp4
+      type: 'video/mp4'
   - type: sceneText
     text: >
       <p>Sia Mathina che Leo erano stupiti di ciò che stava facendo il mago.</p>
@@ -569,11 +570,12 @@ actions:
   - type: sceneText
     text: >
       <p>Mentre Mathina aspettava, guardò i disegni dei fregi che erano stati lasciati fuori dalle borse. Uno di loro era piuttosto strano: se lo giriamo a metà, finiva per sembrare lo stesso di prima.</p>
-  - type: game
+  - type: video
     tag: tg1
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Rotacao.mp4
+    entries:
+      - src: Anim%20Rotacao.mp4
+        type: 'video/mp4'
   - type: dialog
     entries:    
       - text: "Leo, guarda questo! Se ruotiamo questo fregio, rimane esattamente lo stesso!"
@@ -952,11 +954,12 @@ actions:
         char: wizard
   #
   # Filme sobre a reflexão deslizante        
-  - type: game
+  - type: video
     tag: tg2
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20RefDesl.mp4
+    entries:
+      - src: Anim%20RefDesl.mp4
+        type: 'video/mp4' 
   #
   # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
   - type: clearBackground
@@ -1070,11 +1073,12 @@ actions:
         char: wizard
   #
   # Animação sobre o que é a translação
-  - type: game
+  - type: video
     tag: tg3
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-3/video/Anim%20Translacao.mp4
+    entries:
+      - src: Anim%20Translacao.mp4
+        type: 'video/mp4' 
   #
   # Volta a mostrar os 7 sacos com todos os frisos
   - type: clearImage

@@ -47,11 +47,8 @@ There are 3 apps accompanying the story. The first app enables free play with co
 
 All apps were programmed in JavaScript and are optimized both for PCs and tablets/smartphones. Below see the short description of each app. Links are provided both for apps and user guide videos. 
 
-## [Game 1 - The traffic light challenge](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-Test page: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
+## [Game 1 - The traffic light challenge](https://youtu.be/zdFCyi9WLkY)
 The user sees a conventional traffic light with three possible lights. In this game, the user sets the colors and is also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
-
-[Script](https://docs.google.com/document/d/1JoX-oWfSPqPheFBopjWfu1lsRNl8zBMHrx6ylGm3zDM/edit#)
+@[youtube](zdFCyi9WLkY)
+[Script]()
