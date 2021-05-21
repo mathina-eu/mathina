@@ -1,6 +1,6 @@
 # Mathematical concepts
 ​
-The story entitled The traffic light challenge aims to offer a small but challenging set of combinatorics-based problems. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
+The story entitled **The traffic light challenge** aims to offer a small but challenging set of combinatorics-based problems. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
 
 Combinatorial problems are connected to different mathematical areas and can be explored at diﬀerent levels. Therefore, combinatorics is available as an overarching theme, which can be introduced already in kindergarten and built upon throughout the entire school education for developing problem-solving abilities of diﬀerent age groups.  
 
