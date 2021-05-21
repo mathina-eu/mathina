@@ -21,7 +21,7 @@ export default {
       'logi-1': 'Mathinas Ampel-Abenteuer', 
       'logi-2': 'Die Fliesenboden-Falle',
       'logi-3': 'Mathina hilft der Polizei',
-      'logi-4': 'My gold, please',
+      'logi-4': 'Wo ist mein Gold?',
       'bucca-1': 'Mathina und die geheime Botschaft',
       'bucca-2': 'Mathina und der sprechende Papagei',
       'bucca-3': 'Mathina and the lost treasure',
@@ -57,5 +57,7 @@ export default {
 	owl: 'Eule',
 	first_policeman: 'Erster Polizist',
 	second_policeman: 'Zweiter Polizist',
+	boys: 'Team',
+	trainer: 'Trainer',
   },
 };
