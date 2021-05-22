@@ -61,7 +61,7 @@ actions:
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
-      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island could freely play away from the dangers of the wilderness. </p>
+      <p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer Island. Not too distant from the old town there was a park where all kids living on the island could freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
@@ -83,7 +83,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
-      - text: "Leo, what if this was one of the Buccaneers' hiding spots from the tale your sister Mathina told us the other day?"
+      - text: "Leo, what if this was one of the hiding spots of the buccaneers from the tale your sister Mathina told us the other day?"
         char: sean
         mood: happy      
       - text: "I don't know, but it sure looks like one of them!"
@@ -556,7 +556,7 @@ actions:
   - type: sceneText
     style: "position: absolute; right: 10%;"
     text: >
-      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer's Island, he called Lucy.</p>
+      <p>As soon as Leo was back at home after the exciting afternoon at Buccaneer Island, he called Lucy.</p>
   - type: dialog
     style: "position: absolute; right: 10%;"
     entries:
@@ -641,10 +641,10 @@ actions:
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;" 
   - type: sceneText
     text: >
-      <p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
+      <p>On the following weekend, Rasha and Lucy visited Buccaneer Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
   - type: sceneText
     text: >
-      <p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
+      <p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
   - type: clearImage
     id: albero10  
   - type: clearImage
