@@ -31,7 +31,7 @@ x= cos(theta)
 y= sin(theta)
 ```
 
-Per ogni valore di `@theta@`, otteniamo `@(x,y)@` nel piano, che appartiene alla circonferenza.
+Per ogni valore di `@theta@`, otteniamo un punto di coordinate `@(x,y)@` nel piano, che appartiene alla circonferenza.
 
 
 Rette e circonferenze sono solo alcuni semplici esempi per prendere confidenza con le funzioni implicite. Possiamo poi utilizzare, alcune tecniche generare ulteriori curve:
