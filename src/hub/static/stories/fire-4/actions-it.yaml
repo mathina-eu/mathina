@@ -321,7 +321,7 @@ actions:
     text: Scegli un'equazione. Puoi rilasciare le lucciole scintillanti dove preferisci facendo clic e trascinando. Si posizioneranno in base all'equazione che hai scelto. Nella parte inferiore dello schermo, puoi persino inserire la tua equazione.
     toolbarText: Scegli un'equazione e lascia che le lucciole scintillanti danzino lungo la curva corrispondente.
     cta: Fai danzare le lucciole scintillanti!
-    url: /apps/imaginary/app_4/4_1/en.html
+    url: /apps/imaginary/app_4/4_1/it.html
 
   - type: dialog
     avatarAlign:
@@ -436,7 +436,7 @@ actions:
     text: Posiziona le lucciole scintillanti in aria facendo clic e trascinando. Ti mostreranno una curva. Hai tre tentativi per trovare l'equazione della curva.
     toolbarText: Quale curva stanno formando le lucciole scintillanti? Scegli l'equazione corretta.
     cta: Risolvi gli indovinelli delle lucciole scintillanti!
-    url: http://localhost:3000/apps/imaginary/app_4/4_2/en.html
+    url: /apps/imaginary/app_4/4_2/it.html
 
   - type: dialog
     avatarAlign:
