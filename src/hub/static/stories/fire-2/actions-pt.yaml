@@ -1,0 +1,860 @@
+# FIRE-2. Falando com o uni-dragão
+actions:
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: back3
+
+  - type: image
+    src: bg_castle.png
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: back2
+
+  - type: image
+    src: bg_fields.png
+    id: fields
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: mid1
+
+  # - type: image
+    # src: white.png
+    # id: white
+    # style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
+    # parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: -25%; left: 5%;"
+    parallax: mid2
+
+  # - type: animation
+    # target: uni
+    # vars:
+      # duration: 6
+      # xPercent: -800
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 35%; top: 30%; left: 1%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 35%; top: 20%; left: 100%;"
+    noOverflow: true
+    parallax: front1
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 0.01
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        #ease: power3.out
+
+  - type: sceneText
+    text: >
+      A Mathina e o Leo voltaram ao campo onde tinham conhecido a Flama, a treinadora de pássaros de fogo. Eles andavam a treinar uni-dragões vários dias por semana e, sempre que viam um grande animal voador no céu, verificavam se a Flama estava a treinar. Queriam melhorar o seu treino de uni-dragões, para participarem no festival de treinadores, que se iria realizar em breve. Naquela manhã, viram um dragão a voar e pensaram que a Flama devia estar a treiná-lo.
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 1.5
+      width: 100%
+      height: 100%
+      ease: power3.Out
+
+  # - type: animation
+    # target: bg
+    # vars:
+       # duration: 2
+       # width: 100%
+       # height: 100%
+      # # ease: power1.inOut
+
+  - type: animation
+    target: fields
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+
+  - type: animation
+    target: castle
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+
+  - type: animation
+    target: matleo
+    vars:
+        duration: 4
+        xPercent: 220
+        yPercent: 75
+        width: 20%
+        ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        #xPercent:
+        yPercent: 85
+        width: 20%
+        ease: power3.out
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        xPercent: -160
+        yPercent: 60
+        width: 22%
+        ease: power2.out
+
+  - type: sceneText
+    text: >
+      De facto, a Flama estava lá, movendo-se muito e gritando palavras incompreensíveis para o ar, quase como se estivesse a cantar. A Mathina e o Leo correram pelo campo fora ao seu encontro. Esperavam ver a Flama a conduzir o uni-dragão como maestro de uma orquestra, usando o chifre do uni-dragão como vara. No entanto, a Flama não tinha nada nas mãos.
+
+  - type: clearImage
+    id: matleo
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent:
+        yPercent: 10
+        width: 30%
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Flama, vimos um uni-dragão. Está a treiná-lo?
+        char: mathina
+        mood: happy
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent:
+        yPercent: 20
+        width: 40%
+        ease: power3.out
+
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: Este é outro dragão! E a Flama não tem o chifre dele!! Porque é que ele não foge?
+        char: leo
+        mood: talking
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        xPercent: -10
+        yPercent: 5
+        width: 50%
+        ease: power3.out
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  - type: sceneText
+    text: A Flama parou de gritar para o céu e o uni-dragão desceu suavemente para terra, para descansar.
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleY(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 2
+        # #transform: scaleY(-1)
+        # #filter: FlipH
+        # #transform: scale(1,-1)
+        # transform: rotateY(180deg)
+        # ease: power3.out
+
+  - type: clearImage
+    id: uni
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Tens razão, Leo, este é outro uni-dragão. E este pobre dragão teve um triste acidente. O chifre caiu como acontece a qualquer outro uni-dragão, quando atingiu a idade adulta. Mas no preciso momento em que o chifre caiu, ele voava sobre um lago, e, portanto, o chifre caiu na água e nunca ninguém o encontrou.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text:  Normalmente, quando isso acontece, os uni-dragões não são domesticados e permanecem selvagens, mas sentem o seu chifre perdido quando se movem, mesmo que ele esteja a quilómetros de distância ou escondido muito longe. Se alguém o encontrar e brincar com ele sem o saber, o uni-dragão pode enlouquecer se não aprender a ignorar a sensação. Portanto, decidi treinar este uni-dragão como faço com os outros. Claro que, como não temos o chifre, precisamos de usar outra coisa.
+        char: flamma
+        mood: normal
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(0deg)
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Os uni-dragões têm um tipo de linguagem diferente dos humanos. A sua linguagem exprime o que eles sentem e, neste caso, também a sensação da direção do chifre. Nós, humanos, não temos palavras para isso, porque não temos tais sensações, mas podemos usar números mágicos para eles nos compreenderem e comunicarmos com os uni-dragões, traduzindo o que queremos dizer para que nos consigam entender.
+        char: flamma
+        mood: normal
+
+
+
+      - text: Números mágicos! Como podemos falar com números?
+        char: leo
+        mood: surprised
+
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Tenho a sensação de que há uma estrutura invisível que está de alguma forma a conetar tudo…
+        char: mathina
+        mood: arguing
+
+      - text: Então, como lhe podemos dizer como deve voar?
+        char: leo
+        mood: thinking
+
+      - text: Bem, como já disse, não temos palavras que correspondam à sua linguagem, mas podemos usar um pouco de magia para descrever o percurso que queremos que ele siga. Podes dizer-me, em números, o que queres fazer e eu traduzo para a linguagem do uni-dragão.
+        char: flamma
+        mood: normal
+
+      - text: O que podemos dizer?
+        char: mathina
+        mood: talking
+
+      - text: Vamos começar por algo fácil. Vamos dizer-lhe para voar um pouco sobre a terra, horizontalmente, em linha reta.
+        char: flamma
+        mood: normal
+
+      - text: Sim, vamos dizer-lhe para fazer isso.
+        char: leo
+        mood: talking
+
+      - text: Não, não podes usar palavras humanas, elas são muito confusas e imprecisas para ele. Apenas lhe dizes o número mágico um.
+        char: flamma
+        mood: normal
+
+      - text: O número mágico um?
+        char: leo
+        mood: thinking
+
+      - text: Significa avançar na sua velocidade normal.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 8%; top: 70%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 8%; top: 70%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+       # yPercent: 5
+        #width: 50%
+        #ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 0.1
+        xPercent: 100
+        delay: 5
+        transform: rotateY(180deg)
+
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 1
+        delay: 5
+        xPercent: -10
+        #yPercent: 5
+        #width: 50%
+        ease: power3.out
+
+  - type: sceneText
+    text: A Flama disse o número um em linguagem uni-dragão e o animal começou a mover-se para a frente, como se estivesse a correr em vez de voar. Depois de um grito da Flama, o uni-dragão regressou para o sítio onde estava antes de se mover.
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: E se lhe dissermos 2?
+        char: leo
+        mood: talking
+
+      - text: Ele move-se duas vezes mais rápido.
+        char: flamma
+        mood: normal
+
+      - text: Ah, começo a entender, então o número é a velocidade. Mas como o fazemos voar para cima?
+        char: mathina
+        mood: arguing
+
+      - text: Bem, para isso precisas de lhe dizer dois números. O primeiro indica o quanto deve avançar, o segundo o quanto se deve elevar no ar.
+        char: flamma
+        mood: normal
+
+      - text: Ah! Então estamos a dizer-lhe para avançar e subir!
+        char: mathina
+        mood: talking
+
+      - text: Em linguagem mágica, escreveríamos isso como (1,1), e em linguagem de uni-dragão isso é dito...
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -50
+        #width: 50%
+        #ease: power3.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        #xPercent: 100
+        delay: 3
+        transform: rotateY(180deg)
+
+  - type: sceneText
+    text: ...e ela fez um som. O uni-dragão começou a voar em linha reta, avançando e subindo.
+
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+      - text: Ele voa, ele voa!!
+        char: leo
+        mood: happy
+        exposition: Exclamou o Leo.
+
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+
+      - text: Sim! Mas deixem-me fazê-lo voltar antes que ele esteja muito longe.
+        char: flamma
+        mood: happy
+        exposition: E a Flama fez a criatura regressar.
+
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+
+      - text: Viram que ele subia à mesma velocidade que avançava. Conseguem descobrir o que lhe devo dizer para ele voar um percurso mais íngreme?
+        char: flamma
+        mood: normal
+
+      - text: Hmm… talvez possamos dizer um 2 em vez de um 1, como antes?
+        char: leo
+        mood: arguing
+
+      - text: Sim, mas no segundo número, porque queremos que ele suba mais rápido.
+        char: mathina
+        mood: arguing
+
+      - text: Muito bem, vou dizer (1,2).
+        exposition: disse a Flama e pronunciou as palavras mágicas.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 45%; left: 0%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -100
+        width: 30%
+        #ease: power3.out
+
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 1
+        # #xPercent: 100
+        # delay: 3
+        # transform: rotateY(180deg)
+
+
+
+  - type: sceneText
+    text: A Flama comunicou o par de números ao uni-dragão e ele voou um percurso mais íngreme no ar.
+
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Posso-vos ensinar como traduzir, tenho todos os números em linguagem de uni-dragão no meu caderno. Tentem usá-lo!
+        char: flamma
+        mood: normal
+
+# Game 2.1
+  - type: game
+    text: Tenta guiar o uni-dragão com pares de números.
+    toolbarText: Guia o uni-dragão com pares de números!
+    cta: Guia o uni-dragão!
+    url: /apps/imaginary/app_2/2_1/en.html
+
+  - type: sceneText
+    text: A Flama estava contente ao ver como Mathina usava aquela linguagem.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+     - text: Muito bem! Agora podem dizer ao uni-dragão alguns pares de números, para ele voar sequencialmente... Os uni-dragões têm boa memória e conseguem lembrar-se de uma sequência. Isto é muito útil para os treinadores de uni-dragões porque assim podem planear antes o caminho que devem voar, por exemplo para evitar obstáculos.
+       char: flamma
+       mood: normal
+
+     - text: Mas, Flama, se lhe disseres tantos pares de números como é sabes onde ele irá parar?
+       char: leo
+       mood: thinking
+
+     - text: Depois digo-te como saber isso.
+       char: flamma
+       mood: normal
+
+#Game 2.2
+  - type: game
+    text: Guia o uni-dragão até ao castelo evitando os obstáculos. Só podes fazê-lo voar no céu azul, e se bater numa núvem ou na montanha, é preciso recomeçar do princípio.
+    cta: Voa até ao castelo!
+    toolbarText: Voa até ao castelo evitando obstáculos!
+    url: /apps/imaginary/app_2/2_2/en.html
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Notaste alguma coisa? Como podes adivinhar onde o uni-dragão ficará?
+        char: flamma
+        mood: normal
+
+      - text: Não é uma adivinha, é simples! Só precisas de somar todos os primeiros números, e somar todos os segundos números dos pares! O que obtens é onde ficarás depois de seguir a lista de pares.
+        char: mathina
+        mood: happy
+
+      - text: Mathina, é exactamente isso!
+        exposition: Disse a Flama com muito orgulho.
+        char: flamma
+        mood: normal
+
+  - type: sceneText
+    text: O Leo estava surpreendido e a verificar o que a Mathina tinha dito com as notas que tinha tirado sobre o que se passou no voo.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Vou propor-vos então um desafio. Tenho estas bolas de fogo que os uni-dragões gostam muito de comer. Têm de dizer ao dragão qual o caminho para apanhar todas bolas de fogo sem tocar em nenhuma das núvens no céu.
+        char: flamma
+        mood: normal
+
+      - text: Não há problema, com este truque conseguimos fazer isso!
+        char: leo
+        mood: happy
+
+# Game 2.3
+  - type: game
+    text: Apanha todas as bolas de fogo sem tocar nas núvens e depois vai até  ao castelo.
+    cta: Voa para apanhar as bolas de fogo!
+    url: /apps/imaginary/app_2/2_3/en.html
+    toolbarText: Apanha as bolas de fogo e voa para o castelo!
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Fantático, Mathina. Estás realmente a tornar-te numa treinadora de pássaros de fogo. Da próxima vez iremos ao castelo de Arisa, onde todos os treinadores de pássaros de fogo  se reunem e fazem competições.
+        char: flamma
+        mood: normal

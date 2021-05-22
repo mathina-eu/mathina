@@ -5,7 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visita un luogo!',
-    'map': 'Vappa principale',
+    'map': 'Mappa principale',
   },
   cities: {
     'island': 'Isola dei Bucanieri',
@@ -19,9 +19,9 @@ export default {
 	'back-to-world': 'Torna alla mappa',
     titles: {
       'logi-1': 'La sfida dei semafori',
-      'logi-2': 'Ytic-igol',
+      'logi-2': 'La sfida delle piastrelle colorate',
       'logi-3': 'Cani e gatti',
-      'logi-4': 'Il mio oro, grazie!',
+      'logi-4': 'Le mie medaglie, grazie!',
       'bucca-1': 'I messaggi segreti',
       'bucca-2': 'Il pappagallo parlante',
       'bucca-3': 'Il tesoro perduto',
@@ -64,8 +64,8 @@ export default {
 	first_policeman: 'Primo poliziotto',
     second_policeman: 'Secondo poliziotto',
     george: 'George',
-    trainer: 'Trainer',
-    boys: 'Boys',
+    trainer: 'Allenatore',
+    boys: 'Squadra',
 	technician: 'Tecnico',
     Leo: 'Leo',
     Mathina: 'Mathina',

@@ -74,7 +74,7 @@ actions:
   - type: sceneText
     text: Eles viram uma coluna a aparecer e outra a desaparecer no chão.
   - type: sceneText
-    text: Estavam sempre a surgir diferentes colunas a aparecer e havia três luzes em cada uma delas.
+    text: Estavam sempre a surgir diferentes colunas e havia três luzes em cada uma delas.
   - type: sceneText
     text: ...violeta, laranja e rosa --, mas elas apareciam por ordem diferente em cada coluna.
   - type: dialog
