@@ -809,7 +809,7 @@ actions:
     text: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     toolbarText: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     cta: Fai volare l'unidrago!
-    url: /apps/imaginary/app_2/2_1/en.html
+    url: /apps/imaginary/app_2/2_1/it.html
 
   - type: sceneText
     text: Flamma fu contenta di vedere come Mathina si cimentava con la nuova lingua.
@@ -844,7 +844,7 @@ actions:
     text: Fai volare l'unidrago al castello evitando gli ostacoli. Se colpisci una nuvola o una montagna, dovrà ricominciare.
     cta: Vola al castello!
     toolbarText: Vola al castello evitando gli ostacoli!
-    url: /apps/imaginary/app_2/2_2/en.html
+    url: /apps/imaginary/app_2/2_2/it.html
 
   - type: dialog
     avatarAlign:
@@ -893,7 +893,7 @@ actions:
   - type: game
     text: Mangia tutte le palle di fuoco senza toccare le nuvole e poi raggiungi il castello.
     cta: Mangia le palle di fuoco!
-    url: /apps/imaginary/app_2/2_3/en.html
+    url: /apps/imaginary/app_2/2_3/it.html
     toolbarText: Mangia le palle di fuoco e vola al castello!
 
   - type: dialog
