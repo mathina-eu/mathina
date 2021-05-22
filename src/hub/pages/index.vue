@@ -215,7 +215,7 @@ export default {
   width: 100%;
   height: 100%;
   font-size: 1.5rem;
-  font-family: var(--story-font-family);
+  font-family: Newsreader, serif;
   font-weight: 600;
 }
 </style>
