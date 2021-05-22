@@ -30,7 +30,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 Nella prima esperienza, la chiave è "ha cinque lati" e il messaggio che si vuole trasmettere è "Guardate il terzo albero a nord delle fontane". L'utente deve trascinare al centro dello schermo il messaggio da trasmettere e la figura che è descritta dalla chiave (un pentagono). In questa esperienza le immagini disponibili sono figure astratte.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](v5bwEKkhqc0?_align-center_)
 [Script](/stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;
@@ -40,8 +40,8 @@ Nella prima esperienza, la chiave è "ha cinque lati" e il messaggio che si vuol
 La seconda app ripropone la stessa situazione della prima, quella legata alla codifica del messaggio, ma con chiave diversa ("il cielo ne è pieno"). Diversamente dalla prima app ci sono più immagini che messaggi e ci sono due possibili immagini che soddisfano le richieste: una stella e una nuvola. L'utente deve associare una di queste due immagini al messaggio corretto e combinare i messaggi falsi con immagini diverse da queste due.
 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script2-it.pdf)
+@[youtube](Kh3v55aMQfk?_align-center_)
+[Script](/stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;
 
@@ -49,8 +49,7 @@ La seconda app ripropone la stessa situazione della prima, quella legata alla co
 
 Nella terza ed ultima esperienza, i lettori sono invece coinvolti nel processo di decodifica del messaggio: conoscono la chiave (che è ancora "il cielo ne è pieno") e devono selezionare il messaggio segreto tra quelli proposti
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script3-it.pdf)
+@[youtube](p2ehDaFkRFk?_align-center_)
+[Script](/stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;
-
