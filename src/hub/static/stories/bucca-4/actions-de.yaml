@@ -840,8 +840,9 @@ actions:
        mood: happy
   - type: dialog
     entries:        
-     - text: Die Verschlüsselung mit öffentlichen Schlüsseln war zur Zeit der Seeräuber noch gar nicht erfunden. Also sollte Kapitän Charmingparrot der Nachricht vertrauen, so wie sie ist!
+     - text: Die Verschlüsselung mit öffentlichen Schlüsseln war zur Zeit der Seeräuber noch gar nicht erfunden. Also kann Kapitän Charmingparrot die Methode nicht benutzen, um die Indentität des Absenders zu überprüfen. Er muss der Nachricht vertrauen, so wie sie ist!
      #"Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot should trust the message as he sees it!"
+     #Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot can't use it  to verify the sender identity and he should trust the message as he sees it!"
        char: mathina
        mood: happy      
      - text: Das stimmt, Mathina! Dann machen wir es so, oh warte, da ist er. Tut einfach so als wären wir beschäftigt!
