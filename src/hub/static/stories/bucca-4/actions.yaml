@@ -751,7 +751,7 @@ actions:
       <p>"But, Angela!" Mathina interrupted with an unhoped smile</p>        
   - type: dialog
     entries:        
-     - text: "Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot should trust the message as he sees it!"
+     - text: "Public-key cryptography wasn't invented at the buccaneers' time, so Captain Charmingparrot can't use it  to verify the sender identity and he should trust the message as he sees it!"
        char: mathina
        mood: happy      
      - text: "Very good point Mathina, let’s do it, oh wait he's there, just pretend we're busy!"
