@@ -67,7 +67,7 @@ La storia è accompagnata da una app, che viene utilizzata tre volte nel contest
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App - ["La mia medaglia"]($HUB_URL/story/my-gold-please/?actionLink=app1)
+## App - ["Le mie medaglie, grazie!"]($HUB_URL/story/my-gold-please/?actionLink=app1)
 
 La prima persona riceve una certa quantità di medaglie d'oro, pari alla somma delle cifre del numero totale di medaglie d'oro ricevute dalla squadra. Per esempio, se la squadra ha ricevuto 721 medaglie d'oro, il primo membro della squadra ottiene 7 + 2 + 1, cioè 10 medaglie d'oro. Rimangono 721-10=711 medaglie d'oro. Il giocatore successivo ottiene un numero di medaglie d'oro pari alla somma delle cifre delle medaglie d'oro rimaste e così via.
 L'educatore ha la possibilità di creare variazioni dell'esperienza utilizzando l'ultima app nella storia.

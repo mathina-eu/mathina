@@ -1,60 +1,60 @@
-# Mathematical concepts
-This story introduces the description of curves by implicit functions. We have seen in previous stories (phoenix race) the explicit description of a curve, where for each `@x@` value, we obtain a `@y@` value by a function, `@y=f(x)@`, and we represent all the points `@ (x,y) = (x,f(x)) @`.
+# Concetti matematici
+Questa storia introduce la descrizione delle curve attraverso funzioni implicite. Abbiamo visto nella storia precedente (**La corsa delle fenici**) la descrizione esplicita di una curva, dove per ogni valore `@x@`, otteniamo un valore `@y@` da una funzione, `@y=f(x)@`, e rappresentiamo tutti i punti `@(x,y)= (x,f(x))@` sul piano.
 
-With the implicit description, in contrast, we have a two-variable function `@F(x,y)@` that for any two input values of `@x@` and `@y@`, it returns a number. We represent our curve as all the points `@(x,y)@` that satisfy `@F(x,y)=0@`.
+Attraverso la descrizione implicita, al contrario, abbiamo una funzione di due variabili `@F(x,y)@` che per due valori di input qualsiasi di `@x@` e `@y@`, restituisce un numero. Rappresentiamo la nostra curva come l'insieme di tutti i punti `@(x,y)@` che soddisfano `@F(x,y)=0@`.
 
-With the explicit description we used in previous stories, we had a constructive method for obtaining all the points in the curve: we just feeded in values of x and we obtain points on the curve. On the other hand, with the implicit description, we have just a test method to decide whether a point belongs to the curve or not. This makes the implicit method more appropriate for describing relationships than to describe construction methods.
+Con la descrizione esplicita che abbiamo usato nella storia precedente, abbiamo utilizzato un metodo costruttivo per ottenere tutti i punti della curva: abbiamo semplicemente sostituito dei valori arbitrari a x nell'equazione e ottenuto così i punti della curva. D'altra parte, con la descrizione implicita, abbiamo solo un metodo di prova per decidere se un punto appartiene o meno alla curva. Ciò rende il metodo implicito più appropriato per descrivere relazioni che per ricavare il grafico.
 
-Take for instance the circle of radius `@r=2@` and centered at the origin `@(0,0)@`. The geometrical description states that a circle is the set of all points at distance `@2@` from the center.
+Prendiamo per esempio la circonferenza di raggio `@r=2@` e centrata nell'origine `@(0,0)@`. La descrizione come luogo geometrico ci dice che questa circonferenza è l'insieme di tutti i punti a distanza `@2@` dal centro.
 
-![Some alt text](/stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Circonferenza di raggio 2 centrata nell'origine](/stories/fire-4/img/_align-center_circtrig.png =300x300)
 
-Using the Pythagorean theorem, this translates into coordinates as the equation
-
+Usando il teorema di Pitagora, possiamo tradurre questa proprietà in coordinate, con l'equazione
 ```AsciiMath
  x^2+y^2=r^2=4
  ```
+oppure con una singola funzione implicita
 
-Or to write it as a single implicit function,
 ```AsciiMath
 F(x,y)=x^2+y^2-4=0.
 ```
-If we want to convert that expression into an explicit one, we can isolate the y as an expression of x, as
+Se vogliamo trasformare quest'ultima espressione in una esplicita, possiamo isolare la `@y@` in funzione di `@x@`
 ```AsciiMath
 y=pm sqrt {4-x^2}.
 ```
-Observe that we could not write y as a single function of x, these are two functions depending on the choice of the sign for the square root. The symmetry of the circle is somehow broken because we privilege x as the input variable, and the function does not admit values of x outside the domain `@[-2,2]@`.
-There is a third way of describing the curve in a constructive way: instead of writing `@y@` as an expression depending on `@x@`, we can write both `@x@` and `@y@` as a function of an independent variable, which we can understand as time or as a parameter. In the case of the circle, the most appropriate choice is the angle between the radius and the x-axis. Then, using trigonometric functions, we can describe the circle in parametric form as
+Osserviamo che non possiamo scrivere `@y@` come una singola funzione di `@x@`, dato che abbiamo ottenuto due diverse funzioni, a seconda della scelta del segno per davanti alla radice quadrata. La simmetria della circonferenza è in qualche modo interrotta perché privilegiamo `@x@` come variabile di input, e la funzione non ammette valori di `@x@` al di fuori del dominio `@[-2,2]@`.
+C'è un terzo modo per descrivere la curva in modo costruttivo: invece di scrivere `@y@` come un'espressione che dipende da `@x@`, possiamo scrivere sia `@x@` sia `@y@` come funzioni di una variabile indipendente, che possiamo intendere come tempo o come parametro. Nel caso della circonferenza, la scelta più appropriata è l'angolo tra il raggio associato a un punto `@P@` e l'asse `@x@`. Quindi, utilizzando le funzioni trigonometriche, possiamo descrivere la circonferenza in forma parametrica come
+
 ```AsciiMath
 x= cos(theta)
 
 y= sin(theta)
 ```
 
-For each value of `@theta@`, we obtain a point `@(x,y)@` in the plane.
+Per ogni valore di `@theta@`, otteniamo `@(x,y)@` nel piano, che appartiene alla circonferenza.
 
 
-Lines and circles are some easy examples to try with implicit functions. Additionally, some tricks and techniques can be used to generate more shapes:
+Rette e circonferenze sono solo alcuni semplici esempi per prendere confidenza con le funzioni implicite. Possiamo poi utilizzare, alcune tecniche generare ulteriori curve:
 
-* Deformation: Given a curve defined by `@F(x,y)=0@`, we can obtain a small deformation by changing the equation to `@F(x,y)=a@`, or equivalently `@F(x,y)-a=0@`, if the value of a is small (close to zero). Since the function `@F@` is continuous, the points that make `@F(x,y)=a@` will be close to the points that make `@F(x,y)=0@`. We obtain thus a deformation of the curve.
+* Deformazione: data una curva definita da `@F(x,y)=0@`, possiamo ottenere una piccola deformazione cambiando l'equazione in `@F(x, y)=a @`, o, equivalentemente, `@F(x,y)-a=0@`, se il valore di a è piccolo (vicino a zero). Poiché la funzione `@F@` è continua, i punti della curva `@F(x,y)=a@` saranno vicini ai punti della curva `@F(x,y)=0@`. Si ottiene così una deformazione della curva.
 
-Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
+Date due curve definite da `@F(x,y)=0@` e `@G(x,y)=0@`, possiamo ottenere la curva che contiene tutti i punti che appartengono ad almeno una delle due (unione), o l'insieme di punti che appartengono contemporaneamente a entrambe le curve (intersezione).
 
-* Union: We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` also are.
+* Unione: possiamo ottenere i punti dell'unione dall'equazione `@F(x,y)*G(x,y)=0@`. Infatti, se il prodotto `@F*G=0@`, allora o `@F=0@`, o `@G=0@` (o entrambi), e quindi tutti i punti che soddisfano `@F=0@` fanno parte della nuova curva, così come anche tutti i punti che soddisfano `@G=0@`.
 
-* Intersection: We can obtain these points by using the expression `@F(x,y)^2 + G(x,y)^2=0@`. Indeed, if the sum of two positive quantities is zero, then both must be zero at the same time, and hence only the points that make simultaneously `@F=0@` and `@G=0@` will belong to the new curve. In general, this construction will generate isolated points (by intersecting two curves), but we can re-obtain a curve by applying the deformation technique introduced earlier, that is, `@F(x,y)^2 + G(x,y)^2 -a =0@` for some value of `@a@` close to zero.
+* Intersezione: possiamo ottenere i punti dell'intersezione dall'equazione `@F(x,y)^2+G(x,y)^2=0@`. Infatti, se la somma di due quantità positive o nulle è zero, allora entrambe devono essere uguali a zero contemporaneamente e quindi solo i punti che fanno simultaneamente parte delle curve individuate da `@F=0@` e `@G=0@` apparterranno all'intersezione. In generale, questa costruzione genererà però punti isolati (i punti di intersezione delle due curve), ma possiamo riottenere una curva applicando la tecnica di deformazione introdotta in precedenza, cioè, `@F (x,y)^2+G(x,y)^2-a=0@` per un valore di `@a@`vicino a zero.
 
-On the last activity, we explore implicit surfaces in three-dimensional space. These are given by the zeroset of a three-valued function `@F(x,y,z)=0@`.
-
-
-# Didactical remarks
-The apps are proposed here mainly as an explorative exercise. Numerous examples are provided as both a display of the complexity that can be achieved, as well as simple examples that can be familiar (like lines, circles, ellipses, hyperbolas, etc).
-
-Some examples can be analysed to get an understanding of the geometric shape from the algebraic expression, as we did above with the circle, using the Pythagorean theorem. Guessing and trying to develop an intuition on the formulas is the main challenge for this story. An exercise of matching equations with curves is proposed.
-
-The tools provided by the app, together with the techniques pointed above, are powerful enough and allow great creativity, that should be exploited: Challenge the student to make a shape that resembles a star, a hexagon, a sea animal, a plant, etc.
-
-The app has an extensive list of examples of curves, each one shows its formula and the drawing. First examples can be understood and deducted after some reflection. A text box allows one to introduce and modify any (polynomial) equation in two variables.
+Nell'ultima attività esploriamo le superfici implicite nello spazio tridimensionale. Questi sono dati dallo zero di una funzione a tre valori `@F(x,y,z)=0@`.
 
 
-# About the apps
+
+# Commenti didattici
+Le app vengono qui proposte principalmente come esercizio esplorativo. Vengono forniti numerosi esempi sia per evidenziare la possibile complessità che può essere ottenuta, sia a livello di esempi semplici e già familiari dal percorso scolastico (rette, circonferenze, ellissi, iperboli ecc.).
+
+Alcuni esempi possono essere analizzati per cercare di associare una forma geometrica all'espressione algebrica, come abbiamo fatto sopra con la circonferenza, utilizzando il teorema di Pitagora. Cercare di indovinare e di sviluppare un'intuizione a partire dalla struttura delle formule è la sfida principale di questa storia. Viene proposto inoltre un esercizio di corrispondenza tra equazioni e curve.
+
+Gli strumenti forniti dalla app, insieme alle tecniche sopra indicate, sono abbastanza potenti e consentono di esplorare con grande creatività: è possibile sfidare lo studente a realizzare una forma che assomigli a una stella, un esagono, un animale marino, una pianta ecc.
+
+La app ha un ampio elenco di esempi di curve, ognuno dei quali mostra formula e rappresentazione grafica. I primi esempi, più semplici, possono essere compresi e utilizzati come base per i ragionamenti successivi. Una casella di testo consente di introdurre e modificare qualsiasi equazione (polinomiale) in due variabili.
+
+# Esperienze interattive
