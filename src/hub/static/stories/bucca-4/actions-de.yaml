@@ -596,7 +596,7 @@ actions:
     
   - type: dialog
     entries:      
-     - text: Da du jetzt nicht mehr weglaufen kannst, werde ich mich kurz vorstellen. Ahoi, ich bin Kapitän Terry Charmingparrot, ein Seeräuber der Schatzinsel!
+     - text: Da du jetzt nicht mehr weglaufen kannst, werde ich mich kurz vorstellen. Ahoi, ich bin Kapitän Gregor Gurgelqualle, ein Seeräuber der Schatzinsel!
      #"Now that you can not run away, let me introduce myself. Ahoy, I'm Captain Terry Charmingparrot, from Buccaneer's Island!"
        char: charmingparrot
        mood: normal
@@ -712,7 +712,7 @@ actions:
     #Leo shouted at the mysterious pirate while a net covered the exit of the cove, trapping Angela and himself inside.</p>        
   - type: dialog
     entries: 
-     - text: Deine Schwester ist in Sicherheit, Kleiner, mach dir mal keine Sorgen. Sie hat nur vergessen, dir ein paar Sicherheitstricks beizubringen. Du musst schon sicher sein, dass du wirklich mit dem echten Empfänger deiner Nachricht sprichst, während du die Methode des Schlüsselaustauschs benutzt! Und jetzt seid still und macht es euch so bequem es eben geht. Ihr werdet für eine ganze Weile mein Gast sein!
+     - text: Deine Schwester ist in Sicherheit, Kleiner, mach dir mal keine Sorgen. Sie hat nur vergessen, dir ein paar Sicherheitstricks beizubringen. Du musst schon sicher sein, dass du wirklich mit dem echten Empfänger deiner Nachricht sprichst, während du die Methode des Schlüsselaustauschs benutzt! Und jetzt seid still, und macht es euch so bequem es eben geht. Ihr werdet für eine ganze Weile meine Gäste sein!
      #"Your sister is safe little fella, don’t worry. She just forgot to teach you some safety tricks: you need to be certain that you're really talking to the real receiver of your message while using key exchange cryptography! Now, be quiet and make yourself comfortable, you will be my guest for quite a time!"
        char: charmingparrot
        mood: normal    
@@ -750,7 +750,7 @@ actions:
        mood: normal            
   - type: sceneText
     text: >
-      <p>Plötzlich knallte Kapitän Terry Charmingparrot die Tür auf.</p>
+      <p>Plötzlich knallte Kapitän Gregor Gurgelqualle die Tür auf.</p>
     #Suddenly Captain Terry Charmingparrot slammed the door open.</p>  
   - type: clearImage
     id: Leo4
@@ -811,7 +811,7 @@ actions:
      #"But how can we do it? Maybe we can fake a letter from some old pirate saying that the treasure has been all spent in debauchery and revelry once the buccaneers came to this island."
        char: leo
        mood: arguing
-     - text: Nein, das wird nicht funktionieren, Leo. Kapitän Charmingparrot kennt sich mit der Verschlüsselung von öffentlichen Schlüsseln aus, so hat er uns überhaupt erst hierher gebracht! Er hat eine sogenannte Man-in-the-Middle Attacke‚ benutzt, bei dem der Empfänger nicht in der Lage ist, die Identität des Absenders zu bestätigen und ihm vertraut, dass er der Echte ist.
+     - text: Nein, das wird nicht funktionieren, Leo. Kapitän Gurgelqualle kennt sich mit der Verschlüsselung von öffentlichen Schlüsseln aus, so hat er uns überhaupt erst hierher gebracht! Er hat eine sogenannte Man-in-the-Middle Attacke‚ benutzt, bei dem der Empfänger nicht in der Lage ist, die Identität des Absenders zu bestätigen und ihm vertraut, dass er der Echte ist.
      #"No, it won't work, Leo, Captain Charmingparrot knows about public-key cryptography, this was how he got us here in the first place! He used a so-called 'man in the middle attack' in which the receiver is not able to confirm the identity of the sender and trusts them to be the real one."
        char: mathina
        mood: arguing
@@ -840,7 +840,7 @@ actions:
        mood: happy
   - type: dialog
     entries:        
-     - text: Die Verschlüsselung mit öffentlichen Schlüsseln war zur Zeit der Seeräuber noch gar nicht erfunden. Also kann Kapitän Charmingparrot die Methode nicht benutzen, um die Indentität des Absenders zu überprüfen. Er muss der Nachricht vertrauen, so wie sie ist!
+     - text: Die Verschlüsselung mit öffentlichen Schlüsseln war zur Zeit der Seeräuber noch gar nicht erfunden. Also kann Kapitän Gurgelqualle die Methode nicht benutzen, um die Indentität des Absenders zu überprüfen. Er muss der Nachricht vertrauen, so wie sie ist!
      #"Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot should trust the message as he sees it!"
      #Public-key cryptography wasn't invented at the buccaneers time, so Captain Charmingparrot can't use it  to verify the sender identity and he should trust the message as he sees it!"
        char: mathina
@@ -921,7 +921,7 @@ actions:
     text: >    
         <p>“<i>Ahoi Kapitän!</br>
         </br>
-        schreckliche Zeiten liegen vor uns, der ganze Schatz ist verloren. Die Besatzung hat bei der Ankunft auf dieser Insel alles verprasst und verkommen lassen. Unser Ruf als Freibeuter ist ruiniert, wir müssen zurück zur See fahren und neue Schätze rauben. Ich habe eine kleine Gruppe von vertrauenswürdigen Menschen gefunden, die nicht an der Verschwendung des Schatzes beteiligt waren, und werde sie auf der Insel zurücklassen, um unsere Fehler wieder gut zu machen. Es sind ehrenhafte Menschen und sie werden der Nachwelt ein Leben der Ehrlichkeit und Rechtschaffenheit lehren. <br/>Alle anderen Mitglieder der Besatzung werden mit uns in See stechen.
+        schreckliche Zeiten liegen vor uns, der ganze Schatz ist verloren. Die Besatzung hat bei der Ankunft auf dieser Insel alles verprasst und verkommen lassen. Unser Ruf als Freibeuter ist ruiniert, wir müssen zurück zur See fahren und neue Schätze rauben. Ich habe eine kleine Gruppe von vertrauenswürdigen Menschen gefunden, die nicht an der Verschwendung des Schatzes beteiligt waren, und werde sie auf der Insel zurücklassen, um unsere Fehler wieder gut zu machen. Es sind ehrenhafte Menschen, und sie werden der Nachwelt ein Leben der Ehrlichkeit und Rechtschaffenheit lehren. <br/>Alle anderen Mitglieder der Besatzung werden mit uns in See stechen.
         </br>
         </br>
         Nur die Zukunft kennt unser Schicksal!“</i></p>
@@ -933,7 +933,7 @@ actions:
      #Only Fate shall know our destiny!“</i></p>
   - type: sceneText
     text: >    
-      <p>Als Kapitän Charmingparrot den Brief beendet hatte, waren seine Augen ganz feucht, seine Hände zitterten und dann fiel er schreiend zu Boden.</p>
+      <p>Als Kapitän Gurgelqualle den Brief beendet hatte, waren seine Augen ganz feucht, seine Hände zitterten und dann fiel er schreiend zu Boden.</p>
     #As soon as Captain Charmingparrot ended the letter, his eyes started to moist, his hands shaking as he fell to the ground shouting.</p> 
        
   - type: dialog
@@ -982,5 +982,5 @@ actions:
     id: captE 
   - type: sceneText
     text: >
-      <h1>Der Zwischenmann - das Ende</h1>
+      <h1>Der Schlüsselaustausch - das Ende</h1>
     #The man in the middle - The End        
