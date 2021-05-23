@@ -1,0 +1,194 @@
+actions:
+  - type: background
+    src: fire-bg1-layered.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat1
+    style: "width: 15%; top: 45%; left: 9%;"
+    #valign: bottom
+    #style: "height: 25vh"
+  - type: image
+    src: $COMMON/img/leo3.png
+    id: leo1
+    style: "width: 15%; top: 57%; left: 0%; "
+    #valign: bottom
+  - type: image
+    src: flamma2.png
+    id: fla1
+    style: "width: 20%; top: 30%; left: 50%;"
+
+  - type: sceneText
+    text: > 
+      Era mattina presto quando Mathina fu svegliata all'improvviso dalle urla di Leo che provenivano dal piano di sotto della casa.
+      
+
+  - type: dialog
+    avatarAlign:
+      - leo: left
+    entries:
+      - text: Mathina, Mathina! Svegliati e vieni! Flamma è qui!
+        char: leo
+        mood: happy
+
+  - type: sceneText
+    text: >
+      Mathina si vestì il più velocemente possibile e scese le scale. Flamma era davvero lì e Leo stava servendo a se stesso e a tutti una tazza di latte e la torta della colazione che la nonna aveva lasciato per loro.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+    entries:
+
+      - char: mathina
+        text: Cosa è successo? Perché siete già svegli così presto?
+
+      - char: leo
+        text: Camp..., camp...! Una gara! Camp....! Vincerai!
+        exposition: La bocca di Leo era piena di biscotti, quindi Mathina era in grado di capire solo le parole "gara" e "vincerai".
+
+      - char: flamma
+        text: >
+          Notizie entusiasmanti Mathina! C'è una gara di uccelli del fuoco al castello di Arisa. Hai fatto così bene l'ultima volta che ho pensato che ti sarebbe piaciuto partecipare. Tuttavia, questa volta è molto diverso ed è più difficile. Questa volta non sono gli unidraghi a partecipare, ma altri uccelli di fuoco che non hai ancora visto: le fenici. Ho parlato con tua nonna ed è felice che tu venga ad Arisa per incontrare ed addestrare una fenice. Ti andrebbe di provare?
+      - char: mathina
+        text: Certamente! Andiamo!
+        exposition: Disse Mathina, un attimo prima di riempire a sua volta la propria bocca di biscotti e di torta della nonna.
+
+  - type: sceneText
+    text: Fu così che i tre partirono per Arisa e il suo castello.
+    # change background to castle
+
+  - type: sceneText
+    text: Quando arrivarono, Flamma descrisse come funzionava la gara e gli animali che stavano per vedere per la prima volta.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: flamma
+        text: "Le fenici non sono come gli unidraghi, i quali possono volare all'indietro, in avanti o fermarsi nell'aria. Le fenici sono come le aquile: possono solo volare in avanti."
+        mood: happy
+
+      - char: flamma
+        text: Si orientano guardando il suolo, quindi volano sempre in avanti con la stessa velocità rispetto al suolo. In altre parole, se vedi la loro ombra proprio sotto la fenice, quell'ombra si muove in avanti a una velocità costante, indipendentemente dal fatto che la fenice voli salendo, scendendo o rimanga stabilmente alla stessa altezza.
+        mood: happy
+
+      - char: flamma
+        text: Come gli unidraghi, le fenici sono molto intelligenti e possono essere addestrate in modo che poter comunicare con loro e dire loro dove volare.
+        mood: happy
+
+      - char: mathina
+        text: Se si muovono sempre con la stessa velocità e in avanti, com'è possibile fare una gara? Arriveranno sempre contemporaneamente al traguardo!
+
+      - char: flamma
+        text: Hai ragione, si muovono sempre alla stessa velocità e in avanti, ma questa gara non riguarda la velocità. Si tratta di evitare gli ostacoli che i maghi metteranno nel cielo.
+
+      - char: mathina
+        text: Ostacoli?
+
+      - char: flamma
+        text: Sì. Lo vedrai una volta giunti al castello.
+
+  - type: sceneText
+    text: "Dopo varie curve, si aprì davanti a loro un vastissimo campo e Mathina vide il castello in lontananza. Era un antico ma solido edificio che sorgeva nel mezzo di un campo. Aveva torri, vetrate e muri. Sarebbe stata una fortezza fantastica se mai avesse avuto bisogno di essere protetta. 
+    Alle spalle del castello si innalzavano alte montagne, coperte di neve, e di fronte la valle offriva un'ampia radura, con ampio spazio per tutte le attività che si svolgevano. Alcuni unidraghi e alcuni uccelli del fuoco (che dovevano essere le fenici di cui Flamma aveva parlato) erano a terra, con alcuni addestratori che si prendevano cura di loro. A una certa distanza, alcuni maghi con la bacchetta in mano facevano levitare palle di fuoco e formavano nuvole di fumo."
+
+  - type: sceneText
+    text: I tre si fermarono a poche centinaia di metri dal castello, dove si trovavano gli altri allenatori. Flamma salutò un uomo accanto a una fantastica fenice. L'animale era come un'enorme aquila, con piume rosse e gialle brillanti. Tra le piume, si poteva vedere un bagliore come se l'uccello di fuoco stesso stesse bruciando. Una coda lunga terminava con piume viola e verdi che scintillavano silenziosamente, rilasciando un fumo multicolore.
+
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: flamma
+        text: Ok, Mathina puoi provare a far volare questa fenice. Si chiama Flick ed è molto docile, anche se non gli piace quando il suo allenatore lo inganna. Dovrai pensare attentamente a quello che vuoi dirgli.
+
+  - type: game
+    text: "App 3-1"
+    url:
+
+  - type: game
+    text: "App 3-2"
+    url:
+
+  - type: sceneText
+    text: Leo era in giro, pensando che avrebbe potuto anche provare a far volare la fenice. Era più giovane di Mathina, ma si sentiva pronto come chiunque altro. Stava ancora contemplando questo pensiero quando vide un'altra fenice che giaceva a terra. Aveva piume blu e verdi brillanti e il bagliore era più viola di quello di Flick. Ma ciò che Leo notò immediatamente fu che i suoi occhi erano vuoti.
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: leo
+        text: Che cosa è accaduto a questa fenice?
+
+      - char: flamma
+        text: Questa è Liz. È una fenice femmina che ha perso la vista quando ha cercato di volare verso il sole per molto tempo. È una storia triste perché senza vista non riesce a vedere il terreno per orientarsi e nessuno la può addestrare.
+
+      - char: leo
+        text: Ma lei può volare, giusto?
+
+      - char: flamma
+        text: Sì, ma come le diresti a quale altitudine deve volare?
+        exposition: Disse Flamma.
+
+      - char: leo
+        text: Beh... posso dirle che che dovrebbe andare su o giù. Questo può farlo.
+
+      - char: flamma
+        text: "Humm, nessuno ha provato, ma potresti avere ragione. Le fenici sono estremamente intelligenti, se la alleni a capire le tue istruzioni \"verso l'alto\" e \"verso il basso\", imparerà rapidamente. Ma dovrai dirle quanto salire o scendere, in qualsiasi momento mentre sta volando."
+
+      - char: leo
+        text: "Sarà facile! Funzionerà come con gli unidraghi: dici loro una direzione e loro la seguono."
+
+      - char: flamma
+        text: Perfetto! Allora Liz va a te. Vediamo se riesci ad addestrarla a fare una gara come fanno Flick e Mathina.
+
+  - type: game
+    text: "App 3-3"
+    url:
+
+  - type: sceneText
+    text: >
+      Leo ebbe un grande successo guidando Liz: Flamma ne rimase molto colpita. Anche Mathina era felice che Leo avesse trovato un nuovo modo di guidare la fenice, e le venne un'idea:
+
+  - type: dialog
+    avatarAlign:
+      - mathina: left
+      - leo: left
+      - flamma: left
+
+    entries:
+      - char: mathina
+        text: Leo, hai imparato un modo per dire alla fenice quando salire e scendere. Ho imparato un modo per dire alla fenice un'altezza a qualsiasi distanza volata. Perché non mescoliamo le due cose insieme?
+
+      - char: leo
+        text: Cosa hai in mente, Mathina?
+
+      - char: mathina
+        text: Voglio dire, possiamo insegnare a Liz a riconoscere quanto dovrebbe salire o scendere in anticipo. Indicheremo questa quantità di salita o discesa nello stesso modo in cui stavo dicendo a Flick l'altezza.
+        exposition: Leo era un po 'confuso adesso, ma Flamma intervenne.
+
+      - char: flamma
+        text: Questa è un'idea fantastica! Liz è una fenice intelligente, capirà le tue istruzioni, ma spetta a te avvolgere la testa attorno a quell'idea! Se riesci a farcela, vincerai sicuramente il premio per il modo più originale di comandare le fenici, una categoria molto più prestigiosa delle semplici corse, perché richiede una profonda comprensione e connessione del linguaggio degli uccelli di fuoco!
+
+  - type: game
+    text: "App 3-4"
+    url:
+
+  - type: sceneText
+    text: >
+      "Mathina e Leo trascorsero l'intera giornata ad allenarsi e giocare con le fenici. Riusciti ad addestrare Liz e tutti i maghi della giuria e gli addestratori esperti di uccelli del fuoco li stimarono molto per averlo fatto. Decisero quindi di assegnare loro il premio "Originalità" per i migliori addestratori. Terminarono la giornata cenando al banchetto organizzato nella sala più grande del castello."
+      

@@ -243,7 +243,7 @@ actions:
   - type: game
     tag: tg26
     text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e clicca su"
-    toolbarText: "Seleziona i poliedri convessi"
+    toolbarText: "Seleziona 4 poliedri convessi"
     cta: "Riconosci i poliedri convessi!"
     url: /apps/EscolhePoliConvexos/index.html?lang=it
     img:
@@ -422,7 +422,7 @@ actions:
   - type: game
     tag: tg27
     text: "Scegli gli sviluppi del cubo. Selezionane 3  e clicca"
-    toolbarText: "Seleziona gli sviluppi del cubo."
+    toolbarText: "Seleziona 3 sviluppi del cubo."
     cta: "Separa gli sviluppi da quelli che non lo sono!"
     url: /apps/EscolhePlanCubo/index.html?lang=it
     img:
@@ -572,7 +572,7 @@ actions:
   - type: game
     tag: tg28
     text: "Scegli gli sviluppi dell'ottaedro. Seleziona configurazioni e clicca"
-    toolbarText: "Scegli gli sviluppi dell'ottaedro."
+    toolbarText: "Scegli 3 sviluppi dell'ottaedro."
     cta: "Isola gli sviluppi dell'ottaedro!"
     url: /apps/EscolhePlanOcta/index.html?lang=it
     img:
@@ -768,7 +768,7 @@ actions:
   - type: game
     tag: tg13
     text: "Seleziona i poliedri non platonici che hanno tutte le facce uguali. Scegli due poliedri e clicca"
-    toolbarText: "Seleziona i poliedri non platonici che hanno tutte le facce uguali."
+    toolbarText: "Seleziona 2 poliedri non platonici che hanno tutte le facce regolari e uguali."
     cta: "Separa i seguenti poliedri che hanno tutte le facce uguali tra platonici e non platonici."
     url: /apps/EscolhePoliNPRegulares/index.html?lang=it
     img:
@@ -1092,7 +1092,7 @@ actions:
   - type: game
     tag: tg29
     text: "Scegli i poliedri uniformi. Scegli 4 poliedri e clicca"
-    toolbarText: "Seleziona i poliedri uniformi."
+    toolbarText: "Seleziona 4 poliedri uniformi"
     cta: "Seleziona i poliedri uniformi!"
     url: /apps/EscolhePoliUnif/index.html?lang=it
     img:
