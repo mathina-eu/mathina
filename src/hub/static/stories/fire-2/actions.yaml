@@ -887,10 +887,10 @@ actions:
       leo: left
     entries:
 
-      - text: I will pose a challenge to you then. I have these fireballs
+      - text: "I will pose a challenge to you then. I have these fireballs
           that unidragons love to eat. You have to tell the dragon the path
-          to reach all the fireballs but without touching any of the clouds
-          in the sky.
+          to reach the fireball(s) but without touching any of the clouds
+          or mountains, and reach the castle afterwards."
         char: flamma
         mood: normal
 
@@ -900,10 +900,10 @@ actions:
 
 # Game 2.3
   - type: game
-    text: Eat all the fireballs without touching the clouds and then reach the castle.
-    cta: Fly to eat the fireballs!
+    text: "Eat the fireball(s) without touching the obstacles, and then reach the castle."
+    cta: "Fly to eat the fireball(s)!"
     url: /apps/imaginary/app_2/2_3/en.html
-    toolbarText: Eat the fireballs and fly to the castle!
+    toolbarText: "Eat the fireball(s) and fly to the castle!"
 
   - type: dialog
     avatarAlign:
