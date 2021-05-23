@@ -24,7 +24,7 @@ actions:
     align: right      
   - type: sceneText
     text: >
-      <p>Vicino a lei c'era una bancarella che, dall'alto in basso, era piena di bellissimi dischi colorati! Alcuni erano decorati con dei fiori, altri con immagini degli eroi dei fumetti, altri con animali…. E c'erano tanti bambini che giocavano a uno strano gioco, usando quei dischi.</p>
+      <p>Vicino a lei c'era una bancarella che, dall'alto in basso, era piena di bellissimi dischi colorati! Alcuni erano decorati con dei fiori, altri con animali... E c'erano tanti bambini che giocavano a uno strano gioco, usando quei dischi.</p>
   - type: image
     id: feiticeiro
     src: Feiticeiro1.png
@@ -113,8 +113,9 @@ actions:
         mood: excited
   - type: game
     tag: tg3
-    text: "Come può vincere Mathina? In ogni turno, aiutala scegliendo i rosoni che hanno degli assi di simmetria."
-    cta: "Prova da solo!"
+    text: "Aiuta Mathina a scegliere i rosoni che hanno degli assi di simmetria."
+    toolbarText: "Scegli 4 rosoni con asse di simmetria."
+    cta: "Aiuta Mathina!"
     url: /apps/EscolheRosaceas/index.html?lang=it    
   - type: dialog
     entries:    
@@ -158,7 +159,7 @@ actions:
     style: "width: 100%; top: 50%"    
   - type: dialog
     entries:    
-      - text: "Eccoli qui."
+      - text: "Eccone alcuni."
         char: wizard       
       - text: "L'unica cosa che dobbiamo fare è riporli nelle borse corrette. Abbiamo ancora 6 borse numerate dalla 1 alla 6…"
         char: wizard
@@ -285,7 +286,7 @@ actions:
     entries:         
       - text: "Nota che questo non è un normale labirinto: è un labirinto di specchi."
         char: mathina
-        exposition: "Disse Mathina leggendo il testo sul cartello, vicino alla parola labirinto."           
+        exposition: "Disse Mathina leggendo il testo sul cartello vicino all'entrata."           
   - type: clearImage
     id: mathina-leo
   - type: image

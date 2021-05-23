@@ -880,8 +880,8 @@ actions:
 
       - text: Visto che siete così svegli vi proporrò una sfida. Ho queste palle di fuoco
            che gli unidraghi amano mangiare. Devi dire al drago il percorso
-           per raggiungere tutte le palle di fuoco ma senza toccare nessuna delle nuvole
-           nel cielo. Pensi di farcela?
+           per raggiungere tutte le palle di fuoco facendo in modo di non toccare le montagne e le nuvole 
+           in cielo. Pensi di farcela?
         char: flamma
         mood: normal
 
@@ -891,10 +891,11 @@ actions:
 
 # Game 2.3
   - type: game
-    text: Mangia tutte le palle di fuoco senza toccare le nuvole e poi raggiungi il castello.
-    cta: Mangia le palle di fuoco!
+    text: Mangia tutte le palle di fuoco senza toccare gli ostacoli e poi raggiungi il castello.
+    cta: Mangia tutte le palle di fuoco che compaiono!
     url: /apps/imaginary/app_2/2_3/it.html
-    toolbarText: Mangia le palle di fuoco e vola al castello!
+    toolbarText: Mangia le palle di fuoco che compaiono e vola al castello! Attento agli ostacoli!
+
 
   - type: dialog
     avatarAlign:
