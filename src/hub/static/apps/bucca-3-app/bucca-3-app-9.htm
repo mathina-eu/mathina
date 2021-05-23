@@ -813,7 +813,12 @@ Soluzioni=[
         function Check() {
             if (CheckFine==0 && CalcolaMod(document.getElementById("CanvasMathina").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][0] && CalcolaMod(document.getElementById("CanvasMathina2").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][1]) {
 			CheckFine=1;
-			setTimeout(function(){ Finisci(); }, 2000);
+			setTimeout(function(){ 
+			
+				if (CalcolaMod(document.getElementById("CanvasMathina").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][0] && CalcolaMod(document.getElementById("CanvasMathina2").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][1]) Finisci(); 
+			
+			
+			}, 2000);
 			}
 
 
