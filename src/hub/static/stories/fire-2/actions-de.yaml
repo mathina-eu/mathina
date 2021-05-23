@@ -956,8 +956,8 @@ actions:
       leo: left
     entries:
 
-      - text: Ich gebe Euch nun eine Aufgabe. Diese Feuerbälle finden Einhorndrachen total lecker.
-          Sagt dem Drachen, wie er fliegen muss, um alle zu bekommen. Er darf aber keine wolken berühren.
+      - text: "Ich gebe Euch nun eine Aufgabe. Diese Feuerbälle finden Einhorndrachen total lecker.
+          Sagt dem Drachen, wie er fliegen muss, um alle zu bekommen (am Anfang ist es nur einer). Er darf aber keine Hindernisse berühren, und ihr müsst danach beim Schloss ankommen."
         #I will pose a challenge to you then. I have these fireballs
         #that unidragons love to eat. You have to tell the dragon the path
         #to reach all the fireballs but without touching any of the clouds
@@ -972,10 +972,10 @@ actions:
 
 # Game 2.3
   - type: game
-    text: "Schnappt Euch alle Feuerbälle, ohne die Wolken zu berühren, und fliegt dann zum Schloss."
+    text: "Schnappt Euch alle Feuerbälle, ohne die Hindernisse zu berühren, und fliegt dann zum Schloss."
     #"Eat all the fireballs without touching the clouds and then reach the castle"
     url: /apps/imaginary/app_2/2_3/de.html
-    toolbarText: Nimm alle Feuerbälle mit und fliege zum Schloss!
+    toolbarText: Nimm die Feuerbälle mit und fliege zum Schloss!
     cta: Fliege den Einhorndrachen!
 
   - type: dialog
