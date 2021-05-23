@@ -114,7 +114,8 @@ actions:
       - text: Beeil dich, Mathina, lauf! Sonst verpasst du die Fähre zur Schatzinsel.
       #"Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
         char: mathina
-        mood: happy
+        mood: talking
+        exposition: sparch Mathina in Gedanken zu sich selbst.
 
   - type: image
     id: Boat
@@ -157,30 +158,29 @@ actions:
 
       
   - type: sceneText
-    text: Die Fähre legte langsam ab und Mathina holte erstmal tief Luft auf ihrem Sitz an einem der großen Fenster.
+    text: Die Fähre legte langsam ab, und Mathina holte erstmal tief Luft auf ihrem Sitz an einem der Fenster.
       #<p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
       
 
       
   - type: dialog
     entries:
-      - text: Diesmal wird mein Bruder mit seinen Freunden zu dem Jahrmarkt gehen, der bei uns in der Nähe aufgebaut ist. So habe ich alle Zeit der Welt, die Insel allein zu erkunden. Ich bin so neugierig.
+      - text: Diesmal wird mein Bruder mit seinen Freunden zum Symmel-Rummel gehen, der bei uns in der Nähe ist. So habe ich alle Zeit der Welt, die Insel allein zu erkunden. Ich bin so neugierig!
       #"This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
         char: mathina
         mood: excited
   - type: sceneText
-    text: Bist du zum ersten Mal auf der Schatzinsel?
-    exposition: fragte eine Frau, die zufällig neben Mathina saß. 
-      #<p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+    text: <p>"Bist du zum ersten Mal auf der Schatzinsel?" fragte eine Frau, die zufällig neben Mathina saß.</p>
+    #<p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
   - type: dialog
     entries:
-      - text: Nicht direkt zum ersten Mal! Ich war schon mit meinem Bruder dort, doch da hatte ich keine Gelegenheit einfach drauf los zu laufen. Und sie, kennen Sie sich aus?
+      - text: Nicht direkt zum ersten Mal! Ich war schon mit meinem Bruder dort, doch da hatte ich keine Gelegenheit, einfach drauf los zu laufen. Und sie, kennen Sie sich aus?
       #"Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
         char: mathina
         mood: happy
 
   - type: sceneText
-    text: Ich habe dort etwas zu erledigen, und na ja ... es macht immer Spaß auf die Schatzinsel zu fahren und nach Geheimnissen zu forschen. Du hast Glück, heute ist Markttag auf der Insel. Da lohnt sich auf jeden Fall ein Besuch.
+    text: <p>"Ich habe dort etwas zu erledigen, und na ja ... es macht immer Spaß auf die Schatzinsel zu fahren und Geheimnisse zu erforschen. Du hast Glück, heute ist Markttag auf der Insel. Da lohnt sich ein Besuch auf jeden Fall."</p>
       #<p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
 
 
@@ -203,9 +203,12 @@ actions:
       width: 12%
       
 
-  - type: sceneText
-    text: „Danke für den Tipp! Mein Name ist übrigens Mathina. Und wie heißt du?” fragte Mathina. Doch da legte die Fähre schon auf der Insel an und es wurde hektisch. Viele Leute begannen auszusteigen.
-    #<p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+  - type: dialog
+    entries:
+    - text: Danke für den Tipp! Mein Name ist übrigens Mathina. Und wie heißt du?
+      exposition: fragte Mathina. Doch da legte die Fähre schon auf der Insel an, und es wurde hektisch. Viele Leute begannen auszusteigen.
+      #<p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+      char: mathina
  
  
   - type: sceneText
@@ -291,7 +294,7 @@ actions:
 
 
   - type: sceneText
-    text: Die Erinnerung an die Dame war schnell verschwunden. Dafür wehte eine frische Brise vom Ozean und die hellen Glocken der Fischerboote waren zu hören. Was für eine wunderbare Begrüßung!
+    text: Die Erinnerung an die Dame war schnell verschwunden. Dafür wehte eine frische Brise vom Ozean, und die hellen Glocken der Fischerboote waren zu hören. Was für eine wunderbare Begrüßung!
       #<p>The memory of the lady quickly vanished, replaced by the fresh breeze of the ocean and the bright sounds of the bells of the fishers boats. What a wonderful welcome!</p>
 
   - type: image
@@ -300,17 +303,24 @@ actions:
     style: "height: 70%; top: 40%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
 
   - type: sceneText
-    text: Es gab eine unbefestigte Straße, die den kleinen Hafen der Insel mit der Inselhauptstadt verband. Heute war dieser Weg voll mit Ständen, denn es war Markttag. „Schatzkarte! Hier ist die Karte für den verborgenen Schatz der Schatzinsel“ - „Die besten Äpfel der Schatzinsel! Probiert sie!“ - „Wer ist der beste Sänger von Piratenliedern? Fordert mich heraus!“
+    text: >
+      <p>Es gab eine unbefestigte Straße, die den kleinen Hafen der Insel mit der Inselhauptstadt verband. Heute war dieser Weg voll mit Ständen, denn es war Markttag. </br> </br>
+        "Schatzkarte! Hier ist die Karte für den verborgenen Schatz der Schatzinsel" </br>
+        "Die besten Äpfel der Schatzinsel! Probiert sie!" </br>
+        "Wer ist der beste Sänger von Piratenliedern? Fordert mich heraus!"</br>
+      </p>
 
-      #<p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
+    #<p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
         #“Treasure map! Here is the map for the hidden treasure of Buccaneer’s Island” </br>
         #“The best apples of Buccaneer’s Island! Give it a taste!”  </br>
         #“Who is the best singer of pirate’s songs? Challenge me!” </br></p>
 
   - type: sceneText
-    text: So viele Stimmen und so viele seltsame und geheimnisvolle Gegenstände! Mathina wanderte sehr glücklich herum, probierte und kostete und sang, als sie plötzlich von einem lauten Kreischen abgelenkt wurde. Was war das? Wieder dieses Kreischen, diesmal noch lauter! 
-      #<p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
-      #</br> </br> What is it? Another screech, this time louder!</p>
+    text: >
+      <p>So viele Stimmen und so viele seltsame und geheimnisvolle Gegenstände! Mathina wanderte sehr glücklich herum, probierte und kostete und sang, als sie plötzlich von einem lauten Kreischen abgelenkt wurde. </br></br>
+      Was war das? Wieder dieses Kreischen, diesmal noch lauter!</p>
+    #<p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
+    #</br> </br> What is it? Another screech, this time louder!</p>
   - type: clearImage
     id: Mathina0
  
@@ -369,7 +379,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: Hallo!!! Mein Name ist Mathina. Darf ich dich streicheln?
+      - text: Hallo! Mein Name ist Mathina. Darf ich dich streicheln?
       #"Hi!! My name is Mathina, may I pet you?"
         char: mathina
         mood: happy
@@ -387,7 +397,7 @@ actions:
         char: mathina
         mood: surprised
   - type: sceneText
-    text: Mathina war verblüfft, sie verstand kein Wort von dem, was der Papagei sagte, aber er sprach eindeutig eine Art von Sprache.
+    text: Mathina war verblüfft, sie verstand kein Wort von dem, was der Papagei sagte, aber er sprach eindeutig eine Art Sprache.
       #<p>Mathina was baffled, she didn’t understand a word of what the parrot said, but he was clearly speaking some sort of language.</p>
       
   - type: image
@@ -423,7 +433,7 @@ actions:
         
   - type: dialog
     entries:
-      - text: Nicht so ganz... Der Papagei lebt jetzt bei mir. Seine Geschichte ist sehr interessant. Früher ist er auf einem Piratenschiff gefahren und hat bestimmt viele Abenteuer mitgemacht. Vor einigen Jahren wurde die Mannschaft des Schiffes aufgelöst und jeder ging seiner eigenen Wege. Ein paar von ihnen sind bestimmt immer noch auf der Insel.
+      - text: Nicht so ganz... Der Papagei lebt jetzt bei mir. Seine Geschichte ist sehr interessant. Früher ist er auf einem Piratenschiff gefahren und hat bestimmt viele Abenteuer mitgemacht. Vor einigen Jahren wurde das Schiffsteam aufgelöst und alle gingen eigene Wege. Ein paar von ihnen sind bestimmt immer noch auf der Insel.
       #"Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. Some years ago the crew retired, and so everybody went his own way. Some of them are probably still there on the island."
         char: angela
         mood: normal
@@ -445,13 +455,13 @@ actions:
         char: mathina
         mood: happy
   - type: sceneText
-    text: Der Papagei schien sehr glücklich und antwortete „K-B!!! K-B!!!“
+    text: Der Papagei schien sehr glücklich und antwortete „K-B!!! K-B!!!“ Das machte Mathina neugierig.
       #<p> The parrot seemed very happy and replied “Z-F-T! Z-F-T!”. Mathina seemed very curious... </p>
   - type: dialog
     entries:
       - text: Es scheint das gleiche Wort zu sein, das er vorher gesagt hat. Was ist, wenn er nur „Ja“ sagt?
       #"It seems the same word he said before. What if it is telling me just “yes”?"
-        exposition: Das machte Mathina neugierig.
+       # exposition: Das machte Mathina neugierig.
         char: mathina
         mood: surprised
         
@@ -549,19 +559,19 @@ actions:
         mood: normal
   - type: dialog
     entries:
-      - text: Vielleicht vertauscht er nur die Buchstaben! Denk mal an das Alphabet K, M, N, O, P, ...
+      - text: Vielleicht vertauscht er nur die Buchstaben! Denk mal an das Alphabet I, J, K, L, M, N, O ...
       #"Maybe he is just changing the letters! Think about the alphabet K, M, N, O, P,..."
         exposition: Angela hatte einen Vorschlag.
         char: angela
         mood: normal
   - type: dialog
     entries:
-      - text: Hey! Ich glaub ich hab's raus. Er tauscht jeden Buchstaben mit dem, der im Alphabet direkt dahinter kommt. Aus Nein wird also O-F-J-O, da O direkt nach N kommt, F nach E und J nach I und O wieder nach N.
+      - text: Hey! Ich glaub ich hab's raus. Er tauscht jeden Buchstaben mit dem, der im Alphabet direkt dahinter kommt. Aus Nein wird also O-F-J-O, da O direkt nach N kommt. F kommt nach E, J nach I und O wieder nach N.
       #"Hey! I got it. He is substituting the letter with the one immediately after it in the alphabet. So no becomes “no”, since O is immediately after N, and P is immediately after O."
         char: mathina
         mood: happy
   - type: sceneText
-    text: Angela freute sich und auch der Papagei stieß einen glücklichen Schrei aus.
+    text: Angela freute sich, und auch der Papagei stieß einen glücklichen Schrei aus.
       #<p> Angela seemed happy and the parrot also gave a screech of joy.</p>
   - type: dialog
     entries:
@@ -584,13 +594,13 @@ actions:
         mood: normal
   - type: dialog
     entries:
-      - text: "Man weiß nie, wer auf dieser Insel mal Pirat war und wer nicht. Aber ich kann dir etwas verraten: Ich gehörte zur gleichen Mannschaft wie John - der Papagei. Er ist sehr klug. Er kann eigentlich ziemlich normal sprechen. Aber manchmal findet er es lustig, einige Wörter in dem Code zu wiederholen, so wie vorhin Ja und Nein."
+      - text: "Man weiß nie, wer auf dieser Insel mal Pirat war und wer nicht. Aber ich kann dir etwas verraten: Ich gehörte zum gleichen Team wie John - der Papagei. Er ist sehr klug. Er kann eigentlich ziemlich normal sprechen. Aber manchmal findet er es lustig, einige Wörter in dem Code zu sagen, so wie vorhin 'Ja' und 'Nein'."
       #"You never know who on this island was a pirate or not but, keep this as a secret, I was part of the same crew as John - the parrot. He is very intelligent. Actually, he can speak quite fluently. But sometimes he finds it funny to repeat some words in code, like “yes” and “no”."
         char: angela
         mood: happy
   - type: dialog
     entries:
-      - text: Wir haben auch einen Trick um zu kommunizieren. Eine Halskette, mit der man Wörter und Sätze verschlüsseln und entschlüsseln kann.
+      - text: Wir haben auch einen Trick, um zu kommunizieren. Eine Halskette, mit der man Wörter und Sätze verschlüsseln und entschlüsseln kann.
       #"We have a trick to communicate: a necklace that can be used to encrypt and decrypt words and sentences."
         char: angela
         mood: normal
@@ -604,7 +614,7 @@ actions:
       #<p> Angela gave to Mathina a small necklace. </p>
        
   - type: sceneText
-    text: Sie war aus Messing gefertigt. Eine feine Kette mit einem sehr seltsamen Anhänger. Zwei Kreise, die genau ineinander passten und in die alle Buchstaben des Alphabets eingraviert waren.
+    text: Sie war aus Messing gefertigt. Eine feine Kette mit einem sehr seltsamen Anhänger. Zwei Kreise, die genau ineinander passten, und in die alle Buchstaben des Alphabets eingraviert waren.
         #<p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
   - type: dialog
     entries:
@@ -646,7 +656,7 @@ actions:
     #"Remember: to encode you have to start from the inner circle"
     toolbarText: Verschlüssle das Wort.
     #"Select the correct word"
-    cta: Probiere es aus!
+    cta: Verschlüssele ein Wort!
     #"Try it yourself!"
     tag: app1
     url: /apps/bucca-2-app/bucca-2-app-1.htm?l=4
@@ -822,7 +832,7 @@ actions:
       yoyo: true
 
   - type: sceneText
-    text: Wie war denn dein Tag auf der Schatzinsel?
+    text: <p>"Wie war denn dein Tag auf der Schatzinsel?"</p>
       #<p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
   - type: dialog
     entries:
@@ -850,7 +860,7 @@ actions:
         char: mathina
         mood: happy
   - type: sceneText
-    text: Irgendwo im Inneren eines Baums, aber ich will dir nicht zu viel verraten! Oder... - überlegte sie, während sie den neuen Anhänger von Mathina betrachtete - bist du bereit für ein letztes Rätsel, bevor die Fähre am Ziel ankommt?
+    text: <p>"Irgendwo im Inneren eines Baums, aber ich will dir nicht zu viel verraten! Oder..." überlegte sie, während sie den neuen Anhänger von Mathina betrachtete "bist du bereit für ein letztes Rätsel, bevor die Fähre am Ziel ankommt?"</p>
       #<p> "Somewhere in a tree, but I don’t want to spoil you too much! But well - she said while looking at the new pendant of Mathina - are you ready for one last riddle, before the ferry arrives at the dock?" </p>
   - type: dialog
     entries:
@@ -860,7 +870,7 @@ actions:
         char: mathina
         mood: excited
   - type: sceneText
-    text: “Oh, da gibt es nichts zu erzählen ... Aber es steht hier geschrieben” - sagte sie und reichte Mathina ein altes Stück Papier. “Auf diesem Papier ist ein Rätsel verschlüsselt und für mich sieht es so aus, als hättest du alles was du brauchst, um es zu entschlüsseln ... Viel Glück!”
+    text: “Oh, da gibt es nichts zu erzählen ... Aber es steht hier geschrieben” - sagte sie und reichte Mathina ein altes Stück Papier. “Auf diesem Papier ist ein Rätsel verschlüsselt, und für mich sieht es so aus, als hättest du alles was du brauchst, um es zu entschlüsseln ... Viel Glück!”
       #<p> "Oh, it is not something to tell… Here it is - she said as she handed Mathina an old piece of paper - There is a riddle encoded in this piece of paper, and to me, it looks like that you have all the tools you need for decoding that... Good luck!" </p>
   - type: sceneText
     text: Mathina schaute auf das Stück Papier. Da standen ein paar Worte - natürlich unverständlich. Die sahen der Sprache, die sie heute von Angela und John gelernt hatte, sehr ähnlich. Willst Du ihr helfen, die geheime Botschaft zu übersetzen?

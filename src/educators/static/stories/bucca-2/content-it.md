@@ -65,8 +65,8 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 Nella prima esperienza, la chiave del metodo è quella usata dal pappagallo John, cioè il salto di una lettera. In questa app l'utente deve provare a cifrare correttamente alcune parole usando il cifrario di Cesare con un salto.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1-it.pdf)
+@[youtube](rL_8zo54uOY?_align-center_)
+[Script](/stories/symm-1/transcripts/Script2-it.pdf)
 
 &nbsp;
 
@@ -75,7 +75,7 @@ Nella prima esperienza, la chiave del metodo è quella usata dal pappagallo John
 Nella seconda app l'utente deve invece cercare di decifrare un messaggio. L'unica cosa nota è che il testo cifrato è stato ottenuto con un cifrario di Cesare. Nell'app è presente una versione del gioiello della storia, del quale è possibile ruotare i dischi con l'alfabeto e questo movimento ha come effetto quello di cambiare la chiave.
 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](djsCaPaiRlc?_align-center_)
 [Script](/stories/symm-1/transcripts/Script2-it.pdf)
 
 &nbsp;

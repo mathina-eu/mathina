@@ -6,7 +6,6 @@
       <template #back1>
         <div class="map-background" />
         <div class="castle" />
-        <div class="wizard" />
         <div class="mathina-leo" />
         <div class="pub" />
         <div class="market" />
@@ -36,7 +35,7 @@
         </svg>
         <div
           v-for="story of mapStories"
-          :key="story.id"
+          :key="`${story.id}-${story.class}`"
           :class="`story-nav ${story.class} story-nav--age-${getStoryData(story.id).ageMeta.icon}`"
           @click="openStory(story.id)"
           @mouseover="onMouseOver(story.id)"
@@ -82,6 +81,7 @@ export default {
         { id: 'symm-1', class: 'toys' },
         { id: 'symm-2', class: 'stalls' },
         { id: 'symm-3', class: 'frieze' },
+        { id: 'symm-3', class: 'wizard' },
         { id: 'symm-4', class: 'carousel' },
         { id: 'bucca-1', class: 'tree' },
         { id: 'bucca-2', class: 'parrot' },
@@ -292,6 +292,10 @@ export default {
   bottom: -4%;
   background: url('~assets/images/map/frieze.png') no-repeat center;
   background-size: contain;
+
+  &::after {
+    display: none;
+  }
 }
 
 .pub {

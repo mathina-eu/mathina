@@ -1,0 +1,584 @@
+actions:
+  - type: background
+    src: logi-bg4.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+  - type: image
+    src: plasma2.gif
+    id: plasma2
+    style: "width: 38%; top: 6%; right: 62%;"
+  - type: image
+    src: leo-pointingl.png 
+    id: leo-pointl
+    style: "width: 24%; top: 40%; right: 20%;"
+    parallax: back2
+  - type: image
+    src: mathina-thinking-turned.png
+    id: mathina-think-t
+    style: "width: 22%; top: 35%; right: 12%; z-index: 1"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Was ist das?
+      #What’s that...? 
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Leo starrte sprachlos die Plasma-Kreise an. Mathina klopfte ihm sanft auf die Schulter, um ihn aus seiner Verwirrung zu holen.
+    #Leo remained speechless as he stared at the plasma circles. She pushed him gently on the back to wake him from his amazement. 
+  - type: animation
+    target: leo-pointl
+    vars:
+      duration: 3
+      xPercent: -180
+      yPercent: 15
+      ease: power3.out    
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Dann rannte Leo auf das Gebäude zu.
+    #Leo rushed to the entrance of the building.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Lo-gi-ci-ty Sta-di-on.
+      #Lo-gi-ci-ty Sta-di-um.
+        char: Leo
+        mood: surprised
+  - type: clearImage
+    id: leo-pointl
+  - type: image
+    src: leo-thinking.png 
+    id: leo-think
+    style: "width: 17%; top: 43%; right: 74%;"
+    parallax: back3
+  - type: animation
+    target: mathina-think-t
+    vars:
+      duration: 3
+      xPercent: -153
+      yPercent: -28
+      ease: power3.out    
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Auch Mathina schlich sich näher an das Gebäude heran. Sie sah niemanden, aber sie konnte hören, wie sich ein paar Leute im Inneren stritten. „Das kannst Du nicht machen, Trainer! Gib uns einfach unseren Preis, damit wir endlich nach Hause können.”
+    #Mathina crept closer to the building’s wall but saw noone, she was only able to hear people quarreling inside - "Sir, you can't do that to us. Simply give us our prize so that we can go home!"
+  - type: image
+    src: trainer.png
+    id: trainer
+    style: "width: 22%; top: 25%; right: 60%; z-index: 2"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Ein Mann in einem Trainigsanzug kam aus der Tür und stand nun neben Mathina. Er hatte ein seltsames Sportgerät in der Hand, einen Schläger in Form eines Möbiusbandes.
+=======
+    text: Ein Mann in einem Trainigsanzug kam aus dem Eingang und stand nun neben Mathina. Er hatte ein seltsames Sportgerät in der Hand, einen Schläger in Form eines Möbiusbandes.
+>>>>>>> develop
+    #A man in a training suit stepped through the wall and appeared close to Mathina. He was carrying a strange sports device, a Möbius strip-shaped racket in his hand.
+  - type: image
+    src: boys5.png 
+    id: boys5
+    style: "width: 60%; top: 45%; right: 6%; z-index: 3"
+    parallax: front1
+  - type: image
+    src: georget.png
+    id: georget
+    style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
+    parallax: front1
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Bald darauf kam das gesamte Team heraus. Sechs Personen, die auch alle einen Schläger mit einem Möbiusband in der Hand hielten.
+=======
+    text: Bald darauf kam das gesamte Team heraus. Sechs Personen, die auch alle einen Möbiusband-Schläger in der Hand hielten.
+>>>>>>> develop
+    #Soon, six young men arrived from the wall, too, also carrying Möbius-shaped rackets in their hands. 
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Du kannst jetzt nicht einfach gehen!
+      #You can't simply leave like this! 
+        char: boys
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Na gut, ich gebe euch noch eine letzte Chance. Überlegt noch einmal!
+      #Alright, I’ll give you another chance. Now you can guess!
+        char: trainer
+        mood: normal
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Die Team-Mitglieder schauten einander an, sie versuchten mit den Fingern zu zählen und murmelten ein paar Zahlen.
+=======
+    text: Die Team-Mitglieder schauten einander an. Sie versuchten, mit den Fingern zu zählen und murmelten ein paar Zahlen.
+>>>>>>> develop
+    #The guys looked at each other, tried to count on their fingers, uttered some numbers.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Wir können es nicht herausfinden!
+=======
+      - text: Wir können es einfach nicht herausfinden!
+>>>>>>> develop
+      #We can't figure this out! 
+        char: boys
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Was könnt ihr nicht herausfinden?
+      #What is it that you can't work out? 
+        char: Mathina
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Na schön, wenn dieses kleine Mädchen die Lösung für euch findet, bekommt ihr die Goldmedaillen.
+      #All right, if this little girl finds the solution for you, you'll get the gold medal! 
+        char: trainer
+        mood: normal
+=======
+      - text: Na schön, wenn diese beiden die Lösung für euch finden, bekommt ihr die Goldmedaillen.
+      #All right, if this little girl finds the solution for you, you'll get the gold medal! 
+        char: trainer
+        mood: normal
+        exposition: er deutete dabei auf Mathina und Leo. Dann erklärte er den beiden die Situation.
+>>>>>>> develop
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
+<<<<<<< HEAD
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Leo sah, wie Mathina ganz genervt davon war „dieses kleine Mädchen” genannt zu werden.
+=======
+ # - type: sceneText
+ #   style: "position: absolute; left: 600px; top: 5px;"  
+ #   text: Leo sah, wie Mathina ganz genervt davon war „dieses kleine Mädchen” genannt zu werden.
+>>>>>>> develop
+    #Leo saw how annoyed Mathina was for being called “this little girl”.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Wir sind das Sportteam von Logi-City und heute Abend haben wir die Landesmeisterschaft im Logi-Tennis gewonnen. Aber wenn wir die nationale Meisterschaft gewinnen wollen, müssen wir unseren Kopf immer weiter trainieren. Davon bin ich überzeugt.
+      #We are Logi-city’s local team and tonight we won the regional logi-soccer championship. But I’m convinced that if we want to perform well in the national competition, it makes sense to train our brains all the time. 
+        char: trainer
+        mood: normal
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Wir haben heute eine ganze Menge Goldmedaillen bekommen. Und ich habe dem Team erklärt, wie ich diese Medaillen verteilen werde. Wir machen das mit Hilfe einer Namensliste.
+      #We received a number of gold medals today. And I told them how I’ll distribute these medals. We proceed according to the name list.  
+        char: trainer
+        mood: normal
+<<<<<<< HEAD
+      - text: Die erste Person auf der Liste bekommt die Quersumme der Anzahl unserer erhaltenen Goldmedaillen. Wenn wir zum Beispiel 721 Medaillen bekommen haben, erhält die erste Person 7 + 2 + 1 Stück, das heißt 10. Danach haben wir noch 721-10 Medaillen zu vergeben, also 711.
+      #The first person on the list receives the sum of the digits of the number of gold medals received. For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. 
+        char: trainer
+        mood: normal
+      - text: Die nächste Person bekommt dann die Quersumme von dieser Zahl. Und so weiter. Ich habe dem Team erklärt, dass nach zwei Runden alle Goldmedaillen verteilt sind und nur George mehr Medaillen bekommt als die anderen. Sonst erhalten alle die gleiche Anzahl an Medaillen.
+      #The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
+        char: trainer
+        mood: normal
+      - text: Nun, wenn man das alles weiß, dann muss man eigentlich nur ganz kurz überlegen, um herauszufinden, wie viele Goldmedaillen wir haben und wer wie viele bekommt! Aber diese sechs hier überlegen schon seit Stunden und sind noch keinen Schritt weiter.
+=======
+      - text: Die erste Person auf der Liste bekommt die Quersumme der Anzahl unserer erhaltenen Goldmedaillen. Wenn wir zum Beispiel 721 Medaillen bekommen haben, erhält die erste Person 7 + 2 + 1 Stück, das sind 10. Danach haben wir noch 721 - 10 Medaillen zu vergeben, also noch 711.
+      #The first person on the list receives the sum of the digits of the number of gold medals received. For example, if we got 721 medals, then the first one gets 7 + 2 + 1, i.e. 10 medals. There remains 721 minus 10, or 711 medals. 
+        char: trainer
+        mood: normal
+      - text: Die nächste Person bekommt dann die Quersumme von dieser Zahl. Und so weiter. Ich habe dem Team erklärt, dass nach zwei Runden alle Goldmedaillen verteilt sind, und dass nur George mehr Medaillen bekommt als die anderen. Sonst erhalten alle die gleiche Anzahl an Medaillen.
+      #The next one gets the sum of the digits of the medals left this way. And so on. I told them that after two full rounds, we’ll run out of gold medals, and only George will get more than the others, all the others get identical amounts. 
+        char: trainer
+        mood: normal
+      - text: Nun, wenn man das alles weiß, dann muss man eigentlich nur ganz kurz überlegen, um herauszufinden, wie viele Goldmedaillen wir haben, und wer wie viele bekommt! Aber diese sechs hier überlegen schon seit Stunden und sind noch keinen Schritt weiter.
+>>>>>>> develop
+      #Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
+        char: trainer
+        mood: normal
+      - text: An welcher Stelle auf der Liste steht denn George?
+      #Where is George on the list?
+<<<<<<< HEAD
+        char: mathina
+        mood: talking
+      - text: Das werden wir Dir nicht verraten, kleine Dame. Versuche es selbst herauszufinden!
+=======
+        char: leo
+        mood: talking
+      - text: Das werden wir Euch nicht verraten. Versucht es selbst herauszufinden!
+>>>>>>> develop
+      #Little lady, we won't tell you that. Try to figure it out!
+        char: trainer
+        mood: normal
+  - type: clearImage
+    id: mathina-think-t
+  - type: image
+    src: mathina-standing.png
+    id: mathina-stand
+    style: "width: 19%; top: 21%; right: 47%;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Mathina holte ihren Stift und ihr Notizbuch aus ihrer Jackentasche.
+=======
+    text: Mathina holte den Stift und ihr Notizbuch aus der Jackentasche. Dann überlegte sie.
+>>>>>>> develop
+    #Mathina produced her pen and notebook from her pocket.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Die Medaillen werden durch Sieben geteilt, oder? Aufgeteilt zwischen den 6 Spielerinnen und Spielern und dem Trainer.
+      #So it has to be split between 7 people, right? Between the 6 team members and the trainer. 
+        char: Mathina
+        exposition: 
+=======
+      - text: Die Medaillen werden durch Sieben geteilt, oder? Aufgeteilt zwischen den 6 Leuten des Teams und dem Trainer.
+      #So it has to be split between 7 people, right? Between the 6 team members and the trainer. 
+        char: Mathina
+        exposition: Mathina begann auf eine Seite zu kritzeln und rief nach ein paar Minuten "Ah, genau!".
+>>>>>>> develop
+        #Mathina started scribbling and cried "Yeah!" after a few minutes.
+        mood: happy
+      - text: Na, wie viele haben wir bekommen? Sag es uns!
+      #So how many do we get? How many? 
+        char: boys
+        mood: talking
+  - type: game
+    text: Findest Du heraus, wie viele Goldmedaillen das Team erhalten hat?
+    #Generate a table by filling in the initial amount of gold medals received.
+    toolbarText: Wie viele Medaillen bekommt das Team?
+    cta: Erstelle eine Tabelle
+    #Can you find out how many gold medals they receive? 
+    url: /apps/logi-4-app/logi-4-app.htm?c=1
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Ich werde es euch nicht einfach so sagen.
+      #I'm not going to simply tell you that. 
+        char: Mathina
+        exposition: Mathina flüsterte dem Trainer etwas ins Ohr. Der Trainer nickte zufrieden.
+        #Mathina whispered something in the trainer’s ear. The trainer nodded contentedly.       
+        mood: happy
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Ich helfe euch lieber dabei, es selbst herauszufinden.
+      #I'd rather help you figure it out for yourselves.
+        char: Mathina
+        mood: talking
+      - text: Ich weiß es! Ich weiß, was die Lösung ist! Ich will es sagen! Bitte!
+      #But I know, I know how to solve this! Let me tell you! Please!
+        char: Leo
+        mood: arguing
+  - type: animation
+    target: leo-think
+    vars:
+      duration: 0.7
+      xPercent: 0
+      yPercent: -40
+      repeat: 1
+      yoyo: true
+      ease: power1.inOut
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Mathina und der Trainer sahen, dass Leo ganz aufgeregt war und sie ließen ihn ausreden.
+=======
+    text: Mathina und der Trainer sahen, dass Leo ganz aufgeregt war, und sie ließen ihn ausreden.
+>>>>>>> develop
+    #Seeing how excited he was, Mathina and the trainer gave him the go ahead.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Also ich glaube, wir könnten alle Möglichkeiten durchprobieren. Was, wenn alle außer George eine, zwei oder drei Medaillen bekommen und so weiter. Und dann werden wir so schon die richtige Zahl finden. Es wird ja bestimmt keine große Zahl sein, da bin ich sicher...
+      #Well, I think we could go through all the cases, like what if all get 1 or 2 or 3 medals, except for George, and so on! And we’ll come across the right number. It won’t be a high number, I am sure…
+        char: leo
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Leo fing an zu zählen und dachte laut nach.
+    #Leo began to count, thinking out loud.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Wenn alle außer George die gleiche Anzahl bekommen, dann bekommen zwei aufeinander folgende Personen die gleiche Anzahl. Es kann nicht die Eins sein, denn es gibt keine zwei benachbarten Zahlen, die die Quersumme von 1 haben.
+      #If all take always the same amount, except for George, then two consecutive ones will get the same amount. They cannot take 1, because there are no two neighbouring numbers with 1 as a sum of the digits. 
+        char: leo
+        mood: thinking
+<<<<<<< HEAD
+      - text: Wenn alle außer George zwei Medaillen bekämen, funktioniert es aucht nicht. In diesem Fall wäre die Quersumme der Zahlen ja 2 und dann hätte die Zahl, die 2 größer oder 2 kleiner ist nicht die Quersumme von 2.
+=======
+      - text: Wenn alle außer George zwei Medaillen bekämen, funktioniert es aucht nicht. Denn dann müsste die Quersumme der Zahlen ja 2 sein, aber die Zahl, die 2 größer oder 2 kleiner ist, hat nicht die Quersumme von 2.
+>>>>>>> develop
+        exposition: Leo sprach immer langsamer und wischte sich den Schweiß von der Stirn.
+      #If each of them takes 2, then it doesn’t work either, since in case the sum of the digits is 2, then the number less or more by two won’t have 2 as the sum of the digits - Leo slowed down and wiped the sweat off from his forehead.
+        char: leo
+        mood: arguing
+      - text: Was ist wenn wir die 3 nehmen? Die Quersumme der Zahlen 12, 21 und 30 ist jeweils Drei, aber bei den weiteren Spielern ist das nicht mehr der Fall. Und mit der Zahl 4 gibt es auch Probleme. Aber was ist denn dann die Lösung?
+      #What if we take 3? The sum of the digits is 3 with both 12, 21 and 30, but not with the following player. There is a problem with number 4, too. Is there a solution...?
+        char: leo
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Leo war ganz schwindlig und dabei hatte er gerade mal vier Fälle durchgerechnet. Mathina schaute ihn mit einem fragenden Blick an.
+=======
+    text: Leo war ganz schwindlig, dabei hatte er gerade mal vier Fälle durchgerechnet. Mathina schaute ihn etwas besorgt an.
+>>>>>>> develop
+    #Leo felt dizzy, although he only considered 4 cases. Mathina looked at him with a questioning look.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Wie wäre es, wenn wir meine Methode versuchen?
+=======
+      - text: Wie wäre es, wenn wir eine andere Methode versuchen?
+>>>>>>> develop
+      #What if we made a try with my method as well?
+        char: Mathina
+        mood: talking
+      - text: Gern!
+      #For sure!
+        char: boys
+        mood: talking
+<<<<<<< HEAD
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Mathina konnte sich ein triumphierendes Lächeln nicht verkneifen.
+=======
+  #- type: sceneText
+  #  style: "position: absolute; left: 600px; top: 5px;"  
+  #  text: Mathina konnte sich ein triumphierendes Lächeln nicht verkneifen.
+>>>>>>> develop
+    #Mathina couldn’t suppress a triumphant smile as she turned to them.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Wir können ja eine neue Tabelle erstellen. Versuchen wir es doch mit der Zahl 116.
+=======
+      - text: Wir können ja eine neue Tabelle erstellen. Versuchen wir es doch mal zum Beispiel mit der Zahl 116.
+>>>>>>> develop
+      #Draw this table and make a try with, say, 116 medals.
+        char: Mathina
+        mood: talking
+  - type: game
+    text: Bemerkst du etwas regelmäßiges bei der Zahl 116?
+    #Do you notice any regularity with 116?
+    toolbarText: Vervollständige die Tabelle.
+    cta: Probiere es aus!
+    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: 116 ist keine gute Zahl, denn uns gehen die Medaillen zu früh aus.
+      #116 isn’t good because we’ll run out of it soon.
+        char: george
+        mood: thinking
+      - text: Ja, das stimmt. Aber es war ja auch nur ein Experiment. Vielleicht können wir etwas daraus lernen.
+      #Yes, that's true. But that’s just an experiment for now. Maybe we can learn something from it.
+        char: Mathina
+        mood: talking
+      - text: Hmmm, vielleicht habe ich etwas falsch gemacht, aber die Quersumme war fast immer Neun.
+      #I may have done something wrong, but I almost always arrive at 9 medals.
+        char: george
+        mood: thinking
+      - text: Ja, das stimmt! Und es war auch eine 18 dabei.
+      #Yes, you are right! And we can also see an 18…
+        char: Mathina
+        mood: talking
+      - text: 18 ist ja auch durch 9 teilbar!
+      #But that's also divisible by 9!
+        char: george
+        mood: thinking
+      - text: Ja, Du könntest 18 durch 9 teilen. Und warum denkst du, dass das so ist?
+      #Yes! You can, if you want! And why do you think it is like this?
+        char: Mathina
+        mood: happy
+  - type: game
+    text: Warum erhalten wir immer eine Zahl, die durch 9 teilbar ist, wenn wir die Quersumme von einer Zahl abziehen?
+    #Why is it that if we subtract the sum of its digits from a number, we always get a number divisible by 9?
+    toolbarText: Probiere es aus!
+    cta: Probiere ein paar Zahlen aus!
+    #Experiment with a few numbers!
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: "Ich weiß es! Sagen wir, x ist die erste Ziffer, y die zweite und z die dritte. Dann können wir die Zahl so schreiben: 100x + 10y + z. Und die Quersumme dieser Zahl ist x + y + z."
+      #I know! Let x be the first digit, y the second and z the third. This means that we can put this number down like this - 100x + 10y + z. And the sum of its digits is x + y + z. 
+        char: george
+        mood: thinking
+<<<<<<< HEAD
+      - text: Was passiert, wenn wir die Quersumme von der Zahl abziehen? 100z + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). Auf diese Weise wird die Zahl durch 9 teilbar. Und das stimmt immer, egal wie viele Ziffern die Zahl hat, denn die letzte Ziffer fällt weg und der Rest wird zu den Multiplikatoren 9, 99, 999, .... 999999999, denn wir ziehen immer eins von einer Zehnerpotenz ab.
+=======
+      - text: "Was passiert, wenn wir die Quersumme von der Zahl abziehen? 100x + 10y + z - (x + y + z) = 99x + 9y = 9(11x + y). Auf diese Weise wird die Zahl durch 9 teilbar. Und das stimmt immer, egal wie viele Ziffern die Zahl hat, denn die letzte Ziffer fällt weg und der Rest wird zu den Faktoren 9, 99, 999, .... 999999999, denn wir ziehen immer eins von einer Zehnerpotenz ab."
+>>>>>>> develop
+      #What happens if we subtract one from the other? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). This way it’s divisible by 9. And this is true for any number of digits, because the last digit is always dropped, and the rest always gets 9, 99, 999,…. 99999999 as a multiplier, because we subtract one from a power of ten.  
+        char: george
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Der Trainer hob seinen Kopf und hörte sich Georges Ausführungen mit strahlenden Augen an. Er machte George oft schlecht, aber jetzt sah er, dass George ziemlich viel lösen konnte, wenn man ihn ein bisschen unterstützte.  
+    #The trainer raised his head and listened to the argument with bright eyes. He had always talked down to George, but now he saw that he could figure out quite a few good things with a little guidance.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Das ist ja alles schön und gut, aber wir wissen immer noch nicht, wie viele Goldmedaillen wir bekommen!
+      #Good, but we still don't know how much we'll get! 
+        char: boys
+        mood: talking
+<<<<<<< HEAD
+      - text: Nicht wirklich, aber wir machen Fortschritte.
+      #Not really, but we're making progress.
+        char: Mathina
+        mood: happy
+      - text: Also gut, im Beispiel haben wir gesehen, dass jeder 9 bekommt, mit Ausnahme der ersten Person auf der Liste. Also denke ich, dass die erste Person mehr bekommen wird und alle anderen bekommen zweimal 9 Medaillen.
+=======
+      - text: Ja, noch nicht, aber wir machen Fortschritte.
+      #Not really, but we're making progress.
+        char: Mathina
+        mood: happy
+      - text: Also gut, im Beispiel haben wir gesehen, dass jeder 9 bekommt, mit Ausnahme der ersten Person auf der Liste. Also denke ich, dass die erste Person mehr bekommen wird, und alle anderen bekommen zweimal 9 Medaillen.
+>>>>>>> develop
+      #Listen, we saw in the example that we would get only 9 except for the first one in the line. So I think the first one will get more and the others will all get 2 times 9!
+        char: george
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Mathina schaute George prüfend an und bat ihn, seine Rechnung noch einmal zu überprüfen.
+    #Mathina listened to George with eyes half-closed, and asked him to double check his calculation.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Gut. Sechs von uns bekommen zweimal neun Goldmedaillen. Die erste Person auf der Liste wird in der zweiten Runde auch neun Medaillen bekommen. Das macht also 9x13, also insgesamt 117.
+      #Good. Then six of us will get 9 gold medals twice, and the first in line, too will receive 9 golds in the second round, that’s 13 times 9, totaling to 117. 
+        char: george
+        mood: thinking
+      - text: Aber die erste Person bekommt ja mehr als neun Medaillen in der ersten Runde, also brauchen wir insgesamt eine Zahl, die größer als 117 ist und deren Quersumme größer als 9 ist. Zum Beispiel 127.
+      #However, the first in line will get more than 9 in the first round, so you need a number greater than 117, a number which has a larger sum of digits than 9. Let's say 127.
+        char: george
+        mood: thinking
+  - type: game
+    text: Glaubst du, dass George Recht hat? Ist die Zahl 127 korrekt?
+    #Do you think George is right, does it work with 127?
+    toolbarText: Versuche es mit der Zahl 127.
+    cta: Teste es!
+    #Experiment with the number 127!
+    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Das funktioniert nicht, George! Zum einen gehen uns die Goldmedaillen zu früh aus und zum anderen bekommt die erste und die fünfte Person einen anderen Betrag. Genauso wie die siebte Person, denn die geht ja bei der zweiten Runde leer aus.
+=======
+      - text: Das funktioniert nicht, George! Zum einen gehen uns die Goldmedaillen zu früh aus, und zum anderen bekommt die erste und die vierte Person einen anderen Betrag. Genauso wie die siebte Person, denn die geht ja bei der zweiten Runde leer aus.
+>>>>>>> develop
+      #George, that doesn't work! On the one hand, we’ll run out of gold medals sooner, and on the other hand, the first and the fourth get a different amount, and the seventh as well, because he gets zero in the last round! - the others told George.
+        char: boys
+        mood: talking
+      - text: Ich glaube, da ist ein Fehler bei der vierten Person.
+      #I think there is a mistake at the fourth.
+        char: Leo
+        mood: thinking
+<<<<<<< HEAD
+      - text: Pssst, du bist nicht dran, Leo!
+      #Shh, I didn't ask you.
+        char: Mathina
+        exposition: Mathina schüttelte ihren Kopf, aber dann lächelte sie doch ganz stolz zu Leo hinüber.
+=======
+      - text: Guter Tipp, Leo!
+      #Shh, I didn't ask you.
+        char: Mathina
+        exposition: Mathina lächelte und zwinkerte Leo zu.
+>>>>>>> develop
+        #Mathina shook her head, but then she smiled proudly at Leo.
+        mood: happy
+      - text: Der Junge hat Recht. Ich habe vergessen, dass die vierte Person 9 + 9 Medaillen bekommt. Das muss ich verändern - und die erste Person muss auch in beiden Runden 9 Medaillen erhalten!
+      #The boy is right. I forgot that player four gets 9+9. Then I’ll modify it like this - the first one must also get 9 in both rounds!
+        char: george
+        mood: thinking
+  - type: game
+    text: Findest Du heraus, wie viele Medaillen es insgesamt sein müssen?
+    #Can you figure out how many medals are actually needed?
+    toolbarText: 
+    cta: Probiere es aus!
+    #Experiment with numbers!
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Also ich denke, dass sechs Personen jeweils 9 Medaillen pro Runde erhalten und eine Person bekommt in der ersten 18 und in der zweiten ebenfalls 9 Medaillen. Das bedeutet also 7 x 18 + 9 = 135. Die Person an der fünften Stelle bekommt mehr als die anderen!
+      #So I thought 6 people would get 9 in both rounds, and one person would get 18 in the first, then 9 in the second round. This means, 7x18 + 9 = 135. And so the fifth person gets more than the others!
+        char: george
+        mood: thinking
+      - text: Ha, George, wir wussten, dass du die fünfte Person auf der Liste bist!
+      #But George, we knew you were the fifth on the list!
+        char: boys
+        mood: talking
+      - text: Ach ja? Aber gesagt habt ihr es mir nicht! Aber ist schon in Ordnung, denn ich habe es selbst herausgefunden und das fühlt sich sehr gut an!
+      #Oh really! But you didn't say so either! But it's okay, this way it feels even better to know the solution!
+        char: george
+        exposition: Alle lachten.
+        #They all laughed.
+        mood: thinking
+  - type: clearImage
+    id: gold
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 46%; right: 33%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold2
+    style: "width: 2%; top: 58%; right: 52%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold3
+    style: "width: 2%; top: 85%; right: 23%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold4
+    style: "width: 2%; top: 59%; right: 33%; z-index: 3;"
+    parallax: front3
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Der Trainer verteilte die Medaillen. Für Mathina gab es großen Applaus.
+=======
+    text: Der Trainer verteilte die Medaillen. Für Mathina und Leo gab es großen Applaus.
+>>>>>>> develop
+    #The trainer passed out the medals one after the other. He gave Mathina a round of applause.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+<<<<<<< HEAD
+      - text: Du bist fantastisch, Mathina! Du kannst jederzeit meine Assistentin für das Logi-Tennisteam werden! Wir würden uns freuen, so Menschen wie Dich bei uns zu haben! 
+=======
+      - text: Ihr zwei seid fantastisch, Mathina und Leo! Ihr könnt mir jederzeit beim Training des Logi-Tennisteam assistieren! Wir würden uns freuen, Menschen wie Euch bei uns zu haben! 
+>>>>>>> develop
+      #You’re amazing! You’re welcome to be an assistant trainer of my logi-soccer team, whenever you want! We’re happy to see people like you on the team!
+        char: trainer
+        mood: normal
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+<<<<<<< HEAD
+    text: Mathina dankte für dieses Angebot und zog dann mit Leo weiter, um die Stadt zu erkunden. Es gab noch viele neue Abenteuer zu entdecken.
+=======
+    text: Mathina und Leo bedankten sich für dieses Angebot und zogen dann weiter, um die Stadt zu erkunden. Es gab noch viele neue Abenteuer zu entdecken.
+>>>>>>> develop
+    #Mathina thanked him for the opportunity and continued her explorations with Leo. There were new adventures ahead of them.
+  - type: clearImage
+    id: leo-think
+  - type: clearImage
+    id: mathina-stand

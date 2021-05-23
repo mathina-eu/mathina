@@ -643,8 +643,8 @@ actions:
     align: center
   - type: game
     tag: tg7
-    text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
-    toolbarText: "Seleziona i fregi con simmetria di rotazione"
+    text: "Seleziona i 3 fregi con assi di simmetria e con simmetrie di rotazione e clicca"
+    toolbarText: "Seleziona i fregi con simmetria di rotazione e con assi di simmetria"
     cta: "Prova a separare i fregi per tipo!"
     url: /apps/EscolheFrisos_ref_rot/?lang=it
     img:
@@ -941,7 +941,7 @@ actions:
     align: center   
   - type: dialog
     entries:    
-      - text: "Nota che non hai fatto come me, Leo. Per esempio hai tagliato il cilindro dall'alto e io l'ho fatto dal basso."
+      - text: "Nota che non hai fatto come me, Leo!"
         char: mathina          
       - text: "Ma non scoraggiarti Leo! In realtà, il fregio che hai impresso è molto interessante e volevo averlo anche alla Fiera della Simmetria."
         char: wizard
@@ -1004,7 +1004,7 @@ actions:
   - type: game
     tag: tg12
     text: "Scegli i 3 fregi con glissoriflessioni e clicca"
-    toolbarText: "Scegli i fregi con glissoriflessioni"
+    toolbarText: "Scegli 3 fregi con glissoriflessioni"
     cta: "Prova a separare i fregi per tipo!"
     url: /apps/EscolheFrisos_refDesl/?lang=it
     img:

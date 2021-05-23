@@ -29,7 +29,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 In the first experience, the key is “it has five sides” and the message you want to convey is “Look at the third tree, north from the fountains”. The user must drag the message to be transmitted and the figure that is described by the key (a pentagon) to the center of the screen. In this experience the images available are abstract figures.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](v5bwEKkhqc0?_align-center_)
 [Script](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
@@ -39,8 +39,8 @@ In the first experience, the key is “it has five sides” and the message you 
 The second app proposes the same situation as the first, the one linked to the encoding of the message, but with a different key ("the sky is full of them"). Moreover, unlike with the first app, there are more images than messages and there are two possible images that meet the demands: a star and a cloud. The user must associate one of these two images with the correct message and combine the false messages with images different from these two.
 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script2.pdf)
+@[youtube](Kh3v55aMQfk?_align-center_)
+[Script](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -48,8 +48,8 @@ The second app proposes the same situation as the first, the one linked to the e
 
 In the third and last experience, the readers are instead involved in the process of decoding the message: they know the key (which is again “the sky is full of it”) and they must select the secret message among those proposed.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script3.pdf)
+@[youtube](p2ehDaFkRFk?_align-center_)
+[Script](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
