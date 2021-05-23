@@ -199,7 +199,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
-      - text: em, acho que podemos examinar todos os casos, como se todos ganhassem 1 ou 2 ou 3 medalhas, exceto o Jorge, e por aí adiante! E vamos encontrar o número certo. Não será um número alto, tenho a certeza...
+      - text: Bem, acho que podemos examinar todos os casos, como se todos ganhassem 1 ou 2 ou 3 medalhas, exceto o Jorge, e por aí adiante! E vamos encontrar o número certo. Não será um número alto, tenho a certeza...
         char: leo
         mood: thinking
   - type: sceneText
@@ -235,7 +235,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
-      - text: DPreencham esta tabela e façam uma tentativa com, por exemplo, 116 medalhas.
+      - text: Preencham esta tabela e façam uma tentativa com, por exemplo, 116 medalhas.
         char: Mathina
         mood: talking
   - type: game
@@ -340,7 +340,7 @@ actions:
       - text: Mas, Jorge, nós sabíamos que tu eras o quinto da lista!
         char: boys
         mood: talking
-      - text: A sério?  But you didn't say so either! Mas vocês não disseram nada! Mas tudo bem, assim sabe ainda melhor conhecer a solução!
+      - text: A sério? Mas vocês não disseram nada! Mas tudo bem, assim sabe ainda melhor conhecer a solução!
         char: george
         exposition: Todos eles riram!
         mood: thinking
