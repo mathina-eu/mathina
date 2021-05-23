@@ -1,3 +1,4 @@
+#Bucca-1 de-version
 actions:
   - type: background
     src: bg1.jpg
@@ -53,17 +54,17 @@ actions:
       #"Ok, so! I'll count to 10 and then come to find you all! Start hiding!"
         char: leo
         mood: happy
-      - text: Eins!
+      - text: Eins! ...
       # "One!"
         char: leo
         mood: happy
-      - text: Zwei!
+      - text: ... Zwei! ...
       # "Two!"
         char: leo
         mood: happy
   - type: sceneText
     style: "position: absolute; left: 5%;"
-    text: Mathina, ihr Bruder Leo und seine Freunde, Sean, Carla und Sergio, fuhren manchmal für den Nachmittag auf die Schatzinsel. Die Geschichten von Abenteuern, Seeräuberei, versteckten Schätzen und längst vergangener Geschichte faszinierten sie so sehr, dass sie sich in diesen magischen und mystischen Ort verliebten. Jeder Tag war ein guter Tag um auf die Schatzinsel zu kommen und zu spielen. Nicht allzu weit von den alten Häusern der Stadt entfernt, gab es einen Park. In dem können alle Kinder, die auf der Insel leben, frei spielen, ohne wilde Gefahren.
+    text: Mathina, ihr Bruder Leo und seine Freunde, Sean, Carla und Sergio, fuhren manchmal für den Nachmittag auf die Schatzinsel. Die Geschichten von Abenteuern, Seeräuberei, versteckten Schätzen und längst vergangener Geschichten faszinierten sie so sehr, dass sie sich in diesen magischen und mystischen Ort verliebten. Jeder Tag war ein guter Tag, um auf die Schatzinsel zu kommen und zu spielen. Nicht allzu weit von den alten Häusern der Stadt entfernt, gab es einen Park. In dem können alle Kinder, die auf der Insel leben, frei spielen, ohne wilde Gefahren.
     #<p>Mathina, her brother Leo and his friends, Sean, Carla and Sergio were spending the afternoon on Buccaneer's Island. The tales of adventures, pirates, hidden treasures and history long gone fascinated them to the point they fell in love with this magical and mystical place. Every day is a good day to come and play on Buccaneer's Island. Not too distant from the old town there was a park where all kids living on the island could freely play away from the dangers of the wilderness. </p>
   - type: sceneText
     style: "position: absolute; left: 5%;"
@@ -72,7 +73,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
-      - text: Sieben!
+      - text: ... Sieben! ...
       #"Seven!"
         char: leo
         mood: happy      
@@ -95,7 +96,7 @@ actions:
       - text: Ich weiß noch nicht, aber es sieht auf jeden Fall wie ein Versteck für einen alten Schatz aus.
       #"I don't know, but it sure looks like one of them!"
         char: leo
-        mood: happy
+        mood: surprised
   - type: clearImage
     id: albero1
   - type: clearImage
@@ -122,7 +123,7 @@ actions:
 
   - type: dialog
     entries:       
-      - text: "Ich frage mich wie es die Leute geschafft haben hier hereinzukommen: Es ist schon ziemlich eng!"
+      - text: "Ich frage mich, wie es die Leute geschafft haben, hier hereinzukommen: Es ist schon ziemlich eng!"
       # "I wonder how the buccaneers could enter this area: it's so small here!"
         char: carla
         mood: happy
@@ -135,7 +136,7 @@ actions:
         char: carla
         mood: happy
   - type: sceneText
-    text: Die Kinder besprachen, auf welche Art sie ihren neuen geheimen Ort verstecken könnten und wie sie Rasha und Lucy davon erzählen.
+    text: Die Kinder besprachen, auf welche Art sie ihren neuen, geheimen Ort verstecken könnten, und wie sie Rasha und Lucy davon erzählen.
       #<p>The kids discussed methods for keeping their new secret place hidden, and how to tell Rasha and Lucy about that.</p>
   - type: dialog
     entries:
@@ -227,7 +228,7 @@ actions:
       - text: Mathina sagt mir immer, dass wir uns nicht auf das Verstecken verlassen können, wenn wir im Geheimen kommunizieren wollen. Wenn wir die Nachricht verstecken, können wir nicht sicher sein, dass niemand sie findet!
       #"Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
         char: leo
-        mood: happy 
+        mood: talking 
         exposition: Leo hatte da einen wichtigen Einwand gefunden.
         # Leo made a good point.
       - text: Dann müssen wir sie eben sehr gut verstecken!
@@ -237,7 +238,7 @@ actions:
       - text: "Wenn die Nachricht aber zu gut versteckt ist, werden wir auch Probleme haben, sie zu finden! Glaubt mir: Wir sollten uns etwas anderes überegen ... Hm... Ich habe eine Idee! Mathina hat mal darüber gesprochen, wie man eine geheime Nachricht schreiben kann, ohne dass sie geheim ist!"
       #"If the message is hidden too well, we will also have problems finding it! Believe me: we should use another method… Uhm… I have an idea! Mathina once talked about how to communicate in secrecy without secrecy!"
         char: leo
-        mood: happy
+        mood: arguing
       - text: Wie ist das möglich?!
       #"How is this possible?!"
         char: sean
@@ -245,7 +246,7 @@ actions:
       - text: "Hört mal zu: Wir werden uns auf eine Sache einigen, die nur wir kennen werden. Mathina nennt es KEY, das ist auch sinnvoll, denn das bedeutet Schlüssel. Es ist der Schlüssel, damit alles funktioniert!"
       #"Listen: we agree on some piece of information that only we will know. Mathina calls it KEY, and it makes sense to call it so, as it is the key to make everything work!"
         char: leo
-        mood: happy
+        mood: arguing
   - type: clearImage
     id: cespuglio
   - type: clearImage
@@ -368,14 +369,14 @@ actions:
       repeat: -1
       yoyo: true 
   - type: sceneText
-    text: Die Kinder redeten weiter und nach einiger Zeit, als Mathina zurückkam, erzählten ihr die Kinder begeistert davon wie sie geheime Nachrichten schreiben wollten.
+    text: Die Kinder redeten weiter und nach einiger Zeit, als Mathina zurückkam, erzählten ihr die Kinder begeistert davon, wie sie geheime Nachrichten schreiben wollten.
       #<p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
   - type: dialog
     entries:
       - text: Denkst du wir sind in einer dieser geheimen Buchten der Piraten, von denen du mir erzählt hast?
       #"Do you think it is one of those secret pirates' coves you told me about?"
         char: leo
-        mood: happy      
+        mood: talking      
       - text: "Hmm, es sieht hier schon irgendwie so aus. Das könnte sein. Ich werde meine Freunde von der Insel fragen und dir dann Bescheid sagen! Warte, vorhin hast du gesagt, dass du meine Hilfe bei einigen Nachrichten brauchst: Was hast du damit gemeint?"
       #"Hmm, it looks strange enough to be one of those. I will check this with my friends on the island and I'll tell you! Wait, earlier you said that you needed my help with some messages: what did you mean?"
         char: mathina
@@ -387,7 +388,7 @@ actions:
       - text: Natürlich! Das ist genau was wir jetzt brauchen. Zuerst erfinden wir einen SCHLÜSSEL. Ein Zeichen oder etwas mit dem wir die richtige Nachricht markieren werden. Sean, denk mal an etwas, das mit einer Form zu tun hat, die du besonders magst. Das kann alles Mögliche sein.
       #"Of course! That is precisely what you need. First, we will need a KEY. A concept, or something with which we will mark the correct message. Sean, think about something related to a shape that you like. Anything will do the trick."
         char: mathina
-        mood: happy
+        mood: talking
       - text: Ähm... zum Beispiel mag ich Dreiecke, weil sie drei Ecken und drei Kanten haben. Das ist, weil ich am 3. September Geburtstag habe! Die drei ist meine Lieblingszahl. Meintest Du sowas?
       #"Uhm… for example, I like the number of edges in a triangle? It is because my birthday is on the third of September!"
         char: sean
@@ -403,7 +404,7 @@ actions:
       - text: Hab noch etwas Geduld, Carla! Wir werden vier Botschaften vorbereiten, aber nur eine wird die echte sein. Wir werden eine wahre Botschaft und drei falsche Botschaften haben! Wir werden sie alle zusammen hier in den Busch legen, aber zuerst werden wir auf jede von ihnen eine Figur zeichnen. Der Trick ist, dass wir auf die richtige Nachricht ein Dreieck zeichnen, damit wir verstehen können, welche der Botschaften richtig ist!
       #"Be patient, Carla! We will prepare four messages but only one will be the right one: we will have one true message and three fake messages! We will put them all together here in the bush but first, we will draw a figure on each of them. The trick is that on the correct message we will draw a triangle so we will be able to understand which is the correct one!"
         char: mathina
-        mood: happy
+        mood: talking
       - text: Jetzt habe ich es verstanden! Wenn unser Schlüssel “es riecht gut” wäre, dann können wir z.B. ein Dreieck, ein Auto, einen Kreis und eine Blume darauf malen.
       #"Now I get it! If our key would be 'it smells nice' then we can choose, for example, a triangle, a car, a circle and a flower."
         char: sean
@@ -412,13 +413,15 @@ actions:
       #"Exactly!"
         char: leo
         mood: happy
-      - text: Ich verstehe! Unsere Freunde sollen wissen, es ist der siebte Baum im Norden der Springbrunnen. Von uns bekommen sie für die Geheimhaltung aber nur den Schlüssel “er hat sechs Kanten”.
+      - text: "Ich verstehe! Angenommen, unsere Freunde sollen wissen, es ist der dritte Baum nördlich der Springbrunnen. Und angenommen, sie hätten von uns den Schlüssel bekommen “es hat fünf Kanten”. Dann könnten wir zum Beispiel diese Nachrichten schreiben..."
       #"I understand! If we want to tell our friends to look for the seventh tree north from the fountains, and if the key were 'it has 5 edges', then we could write the following messages"
         char: carla
         mood: happy
   - type: game
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
+    toolbarText: Ordne die Nachricht dem Bild zu, das den Schlüssel beschreibt.
+    #Associate to the correct message the image described by the key.
     cta: Probiere es aus!
     #"Let's try!"
     tag: app1
@@ -429,7 +432,7 @@ actions:
       #"But what if somebody discovers the messages and chooses to check all the four places anyway?"
         char: sean
         mood: normal
-      - text: Gutes Argument. Deshalb sind die Botschaften alle ziemlich ähnlich. Man weiß nicht genau, ob der Baum richtig ist. Vielleicht würde man anfangen, sich umzusehen... Wenn wir sicherer sein wollen, können wir mehr falsche Nachrichten dazulegen.
+      - text: Gutes Argument. Deshalb sind die Botschaften alle ziemlich ähnlich. Man weiß nicht genau, ob der Baum richtig ist. Vielleicht würde man anfangen, sich umzusehen... Wenn wir sicherer sein wollen, können wir noch mehr falsche Nachrichten dazulegen.
       #"Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages!"
         char: leo
         mood: thinking      
@@ -441,7 +444,7 @@ actions:
       #"It is decided then! Now let's choose the key for our messages."
         char: leo
         mood: talking      
-      - text: "Nehmen wir diesen:'Der Himmel ist voll von ihnen.'"
+      - text: "Nehmen wir diesen: 'Der Himmel ist voll von ihnen.'"
       #"Let's use this one: 'The sky is full of them'."
         char: sean
         mood: normal            
@@ -466,6 +469,8 @@ actions:
   - type: game
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
+    toolbarText: Ordne jeder Nachricht ein Bild zu. Verwende das durch den Schlüssel beschriebene Bild nur für die richtige Nachricht.
+    #Associate an image to each message. Use an image described by the key only for the correct message.
     cta: Probiere es aus!
     # "Let's try!"
     tag: app2
@@ -489,7 +494,7 @@ actions:
     src: bambino4.png
     style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"    
   - type: sceneText
-    text: Mathina und die Kinder steckten alle Botschaften in einen Umschlag. Den  legten sie in die Nähe eines Baumes, der in der Mitte ihres Treffpunkts stand. Nun packten sie ihre Sachen für den Heimweg zusammen.
+    text: Mathina und die Kinder steckten alle Botschaften in einen Umschlag. Den legten sie in die Nähe einiger Büsche, der in der Mitte ihres Treffpunkts standen. Nun packten sie ihre Sachen für den Heimweg zusammen.
       #<p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
   - type: clearImage
     id: bambino33
@@ -513,7 +518,7 @@ actions:
     style: "height: 30%; top: 17%; right: 15%;  z-index: 6;"
   - type: sceneText
     style: "position: absolute; left: 25%; top:50%;"
-    text: Sie waren kaum weg, da ging schon eine mysteriöse Gestalt, dunkel gekleidet und vermummt, zu den Büschen und begann nach den geheimen Botschaften zu suchen. 
+    text: Sie waren kaum weg, da ging schon eine mysteriöse Gestalt, dunkel gekleidet und vermummt, zu den Büschen und begann allem Anschein nach, nach den geheimen Botschaften zu suchen. 
       #<p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>  
   - type: sceneText
     style: "position: absolute; left: 25%; top:50%;"  
@@ -681,7 +686,7 @@ actions:
     text: "Am nächsten Wochenende besuchten Rasha und Lucy mit ihren Eltern die Schatzinsel und fanden die Botschaften. Sie wussten ja den Schlüssel: 'Der Himmel ist voll von ihnen', also wählten sie ohne Mühe die richtige Botschaft."
       #<p>On the following weekend, Rasha and Lucy visited Buccaneer's Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
   - type: sceneText
-    text: Als sie dann an dem ausgehöhlten Baum ankamen, erinnerte das ihre Mutter, eine Geschichtsprofessorin, sofort an ein Buch, das sie einmal gelesen hatte. In dem Buch wurde gesagt, dass die Piraten auf der Schatzinsel geheime Botschaften in seltsamen Öffnungen oder Höhlen versteckten, eingeritzt in Bäume oder in Felsen. Also begann sie sofort nach Zeichnungen zu suchen. In der Nähe eines ungewöhnlich aussehenden Felsens fand sie eine seltsame Reihe von Zeichen.
+    text: Als sie dann an dem ausgehöhlten Baum ankamen, erinnerte das ihre Mutter, eine Geschichtsprofessorin, sofort an ein Buch, das sie einmal gelesen hatte. In dem Buch wurde gesagt, dass die Piraten auf der Schatzinsel geheime Botschaften gern in seltsamen Öffnungen oder Höhlen versteckten, eingeritzt in Bäume oder in Felsen. Also begann sie sofort, nach Zeichnungen zu suchen...
       #<p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer's Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
   - type: clearImage
     id: albero10  
@@ -733,7 +738,8 @@ actions:
     src: sim7.png
     style: "height: 10%; top: 50%; right: 76%;  z-index: 0;" 
   - type: sceneText
-    text: Neben einem seltsam aussehenden Felsen fand sie einige noch seltsamer aussehende Symbole.
+    text: In der Nähe eines ungewöhnlich aussehenden Felsens fand sie eine seltsame Reihe von Zeichen.
+    #Neben einem seltsam aussehenden Felsen fand sie einige noch seltsamer aussehende Symbole.
       #<p>Near a strange-looking rock, she found a stranger series of symbols.</p>
   - type: dialog
     entries:
@@ -749,14 +755,14 @@ actions:
     text: Sie hinterließen also ihre vier neuen Nachrichten.
       #<p>They leave the answer as well as their four new messages.</p>
   - type: game
-    text: Hilfst Du Rasha dabei, die Nachrichten zu schreiben?
-    #"Want to help Rasha leave the messages?"
-    cta: Probiere es aus!
-    #"Let's try!"
+    text: Was ist die Nachricht, die Rasha und Lucy an Mathina und Leo geschrieben haben?
+    #"Which is the message that Rasha and Lucy wrote to Mathina and Leo?"
+    cta: Finde die geheime Botschaft heraus!
+    #"Find the secret message!"
     tag: app3
     url: /apps/bucca-1-app/bucca-1-app-3.htm?l=4
   - type: sceneText
-    text: Sie haben haben einen spannenden Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
+    text: Mathina und ihre Freunde haben haben einen super Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
       #<p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
   - type: sceneText
     text: Die geheimen Botschaften - Ende
