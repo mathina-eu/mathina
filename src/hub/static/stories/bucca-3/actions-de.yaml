@@ -1,0 +1,1530 @@
+actions:
+  - type: background
+    src: bg3_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: sceneText
+    text: >
+      <h1>Der verlorene Schatz</h1>
+    #The lost treasure
+      
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+          
+  - type: sceneText
+    text: >
+        <p>Diese Woche war schulfrei. Mathina überlegte schon, was sie in den Ferien machen sollte. Ihre Gedanken kreisten um schöne Abenteuer und neue Entdeckungen, als plötzlich ein Geräusch von draußen vor dem Fenster ertönte. Im Garten lag ein Umschlag, der an einem Stück Holz befestigt war. 
+        </br >
+        </br >
+        Mathina lief hinaus und öffnete den Umschlag vorsichtig. Darin befand sich ein Brief.</p>
+      
+    #<p>No school this week. Mathina was already thinking about what to do during the holiday. Her mind was wandering around some nice adventures and new discoveries when a sudden noise echoed from outside the windows. In the garden, an envelope attached to a piece of wood. 
+      #</br >
+      #</br >
+      #Mathina ran out and opened the envelope carefully. There was a letter inside.</p>
+                   
+  - type: image
+    id: Paper0
+    src: Pergamena.png
+    style: "height: 40%; bottom: 2%; left: 2%;  z-index: 2;"
+             
+
+      
+  - type: sceneText
+    text: >
+        <p>“<i>Liebe Mathina,</br>
+        ich hoffe du kennst mich noch. Wir haben uns vor einiger Zeit auf dem Markt der Schatzinsel getroffen, zusammen mit John, dem Papagei. Ich glaube dir haben die Abenteuer auf der Insel gut gefallen. Wenn du möchtest, könnte ich bei einem neuen Abenteuer etwas Hilfe gebrauchen. Es sieht so aus, als ob mir jemand nachspioniert. Deshalb habe ich eine verschlüsselte Nachricht für dich vorbereitet. Die Nachricht, die gleich auf diesen Brief folgt, wird dir sagen wo und wann wir uns treffen können. Den Schlüssel habe ich nicht angegeben, aber ich bin mir sicher, dass du mit ein paar Versuchen den richtigen finden wirst. Oh, ich habe auch eine kleine Wendung hinzugefügt, um Spionage zu verhindern. Wenn du einen Hinweis wünschst, findest du ein schönes Holzkunstwerk mit im Umschlag.
+        </br>
+        </br>
+        Beste Grüße</br>
+        Angela</i>“</p>
+    #<p>“<i>Dear Mathina,</br>
+        #I hope you remember me. We met some times ago at the market on Buccaneer’s island, with John the parrot. If I recall well, you liked the adventures on the island a lot. If you wish, I could have a little help on a new adventure. I fear that somebody is spying on me, so I prepared a coded message for you. The message behind this letter will tell you where and when to meet. I did not specify the key, but I am sure you will find the right one with just a few trials. Oh, I also added a little twist to avoid spies. If you want a hint, you will find a nice wooden art inside the envelope.
+        #</br>
+        #</br>
+        #Best,</br>
+        #Angela</i>“</p>
+  - type: sceneText
+    text: >
+      <p>Auf der Rückseite stand eine kurze Nachricht, die eindeutig in irgendeiner Weise verschlüsselt war:  
+      </br >
+      </br >
+      YIVGNDZCOIJFXJYZCOMVZIMVWZCOOVBIDIMJHRJMMJHJOZHOZZH</p>
+    #<p>A short message was written on the back, clearly encoded in some way:  
+       #</br >
+       #</br >
+       #YIVGNDZCOIJFXJYZCOMVZIMVWZCOOVBIDIMJHRJMMJHJOZHOZZH</p>
+  - type: image
+    id: CaesarJewel
+    src: disco_ba.png
+    style: "height: 50%; top: 45%;"
+    align: center
+  - type: sceneText
+    text: >
+      <p>Mathinas Gedanken kehrten sofort zu diesem Tag auf dem Markt zurück. Sie ging in ihr Zimmer und fand die Halskette, die Angela ihr damals geschenkt hatte. An der Kette war ein Anhänger aus Messing, in den die Buchstaben des Alphabets eingraviert waren. Sie wurden in zwei konzentrischen Kreisen dargestellt und ließen sich drehen.</p>
+    #Mathina's mind immediately returned to that day at the market. She went to her room and found the jewel that Angela had given her. It was a brass pendant engraved with the letters of the alphabet shown in two concentric circles that could be rotated.</p>
+
+  - type: clearImage
+    id: Paper0
+
+  - type: animation
+    target: CaesarJewel
+    vars:
+      duration: 3
+      xPercent: -150
+      yPercent: 0
+      ease: power3.out
+  - type: sceneText
+    text: >
+      <p>Dank dieser Halskette hatte Mathina eine der Techniken gelernt, die von den Piraten der Schatzinsel zum Verschlüsseln von Nachrichten verwendet wurde. Sie war eigentlich sehr einfach: Jeder Buchstabe der zu entschlüsselnden Nachricht muss im inneren Kreis gesucht und durch den entsprechenden Buchstaben im äußeren Kreis ersetzt werden.</p>
+    #Thanks to that jewel, Mathina had learned one of the methods that the pirates of Buccaneer’s Island used to encrypt messages. It was, after all, very simple: each letter of the message to be deciphered has to be searched for in the inner circle and replaced with the corresponding letter in the outer circle.</p>
+  - type: sceneText
+    text: >
+      <p>Da sich die beiden Kreise drehen konnten, war es wichtig, sie richtig zu positionieren. Der Buchstabe der Nachricht musste genau über dem Buchstaben sein, der die Nachricht entschlüsseln sollte. Auf dem Markt hatte sie sich mit Angela darauf geeinigt, dass das „A“ des inneren Kreises mit dem „B“ des äußeren Kreises übereinstimmte.</p>
+    #Since the two circles could rotate, it was important to position them in a way agreed with who was supposed to decipher the message: for example, at the market with Angela they had agreed so that the "A" of the inner circle corresponded with the "B" of the outer circle.
+  - type: dialog
+    entries:
+      - text: Mal sehen, ob ich noch weiß, wie man das macht...
+      #"Let's see if I still remember how to do it..."
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: "Erinnere Dich: Um zu entschlüsseln, musst du mit dem äußeren Kreis beginnen."
+    #"Remember: to decode you have to start from the outer circle"
+    toolbarText: Versuche, einige Wörter mit Hilfe des vorgeschlagenen Schlüssels zu entschlüsseln.
+    #"Try to decode some words using the suggested key"
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app1
+    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=1
+
+  - type: clearImage
+    id: CaesarJewel
+  - type: clearImage
+    id: Mathina0
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+  - type: image
+    id: Paper1
+    src: Pergamena.png
+    style: "height: 50%; bottom: 4%; left: 3%;  z-index: 2;"
+
+  - type: dialog
+    entries:
+      - text: Ich würde sagen, das klappt noch super. Ich erinnere mich gut, wie diese Methode funktioniert! Dann kann ich mir jetzt Angelas Nachricht vornehmen...
+      #"I would say that I remember very well how this method works! Now let's go back to Angela's message..."
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>Bevor sie begann, die Nachricht zu entschlüsseln, schaute sie sich das kleine Stück Holz genau an, das mit in dem dem Brief lag. Es war ein kleiner Zylinder, wahrscheinlich ein Schlüsselanhänger. Er hatte viele schöne Intarsien, die den Verzierungen des Kettenanhängers ähnelten. Vielleicht waren sie sogar vom selben Künstler gemacht worden.</p>
+    #Before starting to decode the message, she looked carefully at the piece of wood that came with the letter. It was a small cylinder, probably a key ring. It had many nice inlays, which resembled the decorations of the jewel, maybe they have been made by the same artist. 
+  - type: sceneText
+    text: >
+      <p>Zwei Worte waren klar zu erkennen: „VORWÄRTS STRÄWKCÜR“. Die Buchstaben des zweiten Wortes sahen... nun sie sahen komisch aus, da sie mit einem anderen Alphabet geschrieben wurden.</p>
+    #Two words were visible: “FORWARD DRAWKCAB”. The letters of the second word appear… funny, as they were written with a different alphabet.
+
+  - type: dialog
+    entries:
+      - text: Das ist seltsam. Was bedeutet das zweite Wort?
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>Während sie noch überlegte, fällt der Schlüsselbund auf das Bett und kippte um. In diesem Moment wurde Mathina klar, warum das Wort so seltsam erscheint. „Ich hab's!!! Da steht ... „RÜCKWÄRTS“, aber ... 
+        <i>rückwärts</i>! Ich frage mich, was das zu bedeuten hat... Soll das ein Hinweis sein? Nun... höchste Zeit das herauszufinden!
+      </p>
+    #<p>What does the second word mean? While she was thinking the keyring fell on the bed and flipped over. In a moment Mathina realizes why the word seems so strange. I got it!! It says… “BACKWARD” but… <i>backwards</i>! I wonder what does this mean… Is it supposed to be a hint? Well… time to discover that! 
+    #  </p>
+
+  - type: game
+    text: Wähle den Klartext aus. Erinnere dich an den Hinweis "RÜCKWÄRTS“...
+    #"Select the plaintext. Remember the hint “BACKWARD”..."
+    toolbarText: Wähle den Klartext aus.
+    #"Try to select the correct plaintext"
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app2
+    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=1
+
+  - type: dialog
+    entries:
+      - text: Nun... das war schwieriger als erwartet, aber jetzt bin ich sehr gespannt, was meine Freundin vom Markt mir zu sagen hat!
+      #"Well… that was harder than expected, but now I am very curious to see what the lady has to tell me!"
+        char: mathina
+        mood: normal
+ 
+  - type: clearImage
+    id: Paper1
+  - type: clearImage
+    id: Mathina1
+
+
+
+
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Fisherman1
+    src: barca1.png
+    style: "width: 8%; bottom: 12%; left: 30%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 8%; bottom: 15%; left: 40%;  z-index: 0;"
+
+  - type: image
+    id: Fisherman3
+    src: barca3.png
+    style: "width: 8%; bottom: 20%; left: 60%;  z-index: 0;"
+
+ 
+  - type: image
+    id: Gabbiano1
+    src: gabbiano1.png
+    style: "width: 8%; top: 10%; left: 10%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano2
+    src: gabbiano2.png
+    style: "width: 8%; top: 18%; left: 5%;  z-index: 0;"
+
+  - type: image
+    id: Gabbiano3
+    src: gabbiano3.png
+    style: "width: 8%; top: 35%; left: 20%;  z-index: 0;"
+ 
+ 
+ 
+ 
+  - type: sceneText
+    text: >
+      <p>Am nächsten Tag, nach einer schönen Überfahrt mit der Fähre, wanderte Mathina wieder über die Insel. Was für eine tolle Art den Urlaub zu verbringen! Sie betrat die Bar in der Nähe des Docks und fand Angela, die an einem Tisch saß und einige Dokumente studierte.</p>
+    #The next day, after a nice trip on the ferry, Mathina once again wandered around the island. What a nice way to spend the holiday! She entered the bar near the dock and located the lady, who was sitting at a table studying some documents. 
+     # </p>
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 8
+      xPercent: 30
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 6
+      xPercent: 25
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 10
+      xPercent: 40
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: -6
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano1
+    vars:
+      duration: 7
+      xPercent: 20
+      yPercent: 20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano2
+    vars:
+      duration: 5
+      xPercent: 20
+      yPercent: 30
+      ease: power1.inOut
+      repeat: -1
+      rotate: -10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano3
+    vars:
+      duration: 9
+      xPercent: 20
+      yPercent: -40
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
+
+
+ 
+  - type: dialog
+    entries:
+      - text: Hallo und Willkommen zurück auf der Schatzinsel!
+      #"Hi again, and welcome back to Buccaneer’s Island!" 
+        char: angela
+        mood: happy
+
+
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina5.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+
+  - type: dialog
+    entries:
+      - text: Hallo! Ich war sehr überrascht, als ich gestern deine Nachricht erhielt! Warum diese ganze Geheimniskrämerei? Warum treffen wir uns an diesem Ort. Es ist ziemlich voll hier. Hast du keine Angst, dass uns jemand belauschen könnte?
+      #"Hi! I was very surprised to get your message yesterday! Why all these secrecy? I’m wondering why we are in this place, it is quite crowded, don’t you fear somebody can overhear us?" 
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Der beste Ort, um heimlich zu reden, ist dort, wo jeder Dich hören kann.
+      #"The best place to talk in secret is where everybody can hear you - replied the old lady."
+        char: angela
+        mood: normal
+  - type: sceneText
+    text: >
+        <p>Ist das wieder ein Rätsel? fragte Mathina, etwas verwirrt.<P>
+    #<p>"Is this another riddle?" Mathina replied, a bit confused.</p>
+  - type: dialog
+    entries:
+      - text: Hahaha!! Nein, nein! Das wären zu viele Rätsel auf einmal! Aber sag mal, wie hast du meinen Hinweis auf unsere alten Verschlüsselung gefunden? Etwa in dem Brief, den ich dir geschickt habe?
+      #"Hahaha!! No, no! Too many riddles all together! But tell me, how did you find my twist to our old cypher, in the message I sent to you?"
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Das war sehr clever! Selbst wenn... also, es wird schon sehr kompliziert, wenn jedes Mal zuerst der Code herausgefunden werden muss. Selbst wenn es mir gelungen wäre, dann hätten andere die Bedeutung der Nachricht genauso herausfinden können.
+      #"That was very clever! Even if… it becomes very complicated if everybody has to figure out the code every time. Also, if I succeeded, others could have figured out the meaning of the message as well." 
+        char: mathina
+        mood: surprised
+  - type: dialog
+    entries:
+      - text: "Du hast recht! Weißt du, wir haben ein Sprichwort: Teile die Technik, die du benutzt, behalte den Code für das Team!"
+      #"You are correct! You know, we have a saying: “Share the method you use, keep the code for the crew”!"
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Was bedeutet das?
+      #"What does this mean?"
+        char: mathina
+        mood: surprised
+  - type: dialog
+    entries:
+      - text: Es bedeutet, dass, wenn man geheim kommunizieren will, immer die Regeln allen klar sein sollten, die beim Chiffrieren der Nachricht benutzt werden. Dann muss nur noch der Schlüssel geheim bleiben.
+      #"It means that if you want to communicate in secret, you shall always say the rules you are using when ciphering the message. Then you just have to keep the key secret."
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: Das ist lustig! Ich habe vor einiger Zeit mit meinem kleinen Bruder über ein ganz ähnliches Thema diskutiert.
+      #"That’s funny! I discussed with my little brother about a very similar topic, some time ago."
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: "Das ist unter Piraten allgemein bekannt! Weißt du, nur den Schlüssel geheim zu halten ist eine machbare Sache. Viele Informationen geheim zu halten ist viel komplizierter. Vor allem nach einer langen Nacht in der Bar. Ach, übrigens, hast du schon was bestellt? Ich bin sehr gespannt auf die neue Eissorte: Perlen und salzige Kokosnuss."
+      #"It is common knowledge between pirates! You know, keeping secret just the key is one thing, keeping secret a lot of information is way more complicated, in particular after a long night at the bar. Oh, by the way, you already ordered something? I’m very curious to try the new ice cream flavour: pearls and salty coconut."
+        char: angela
+        mood: happy
+
+  - type: dialog
+    entries:
+      - text: Das klingt sehr gut! Da nehme ich auch eine.
+      #"Seems good! Make it two."
+        char: mathina
+        mood: talking
+
+
+
+
+
+
+  - type: sceneText
+    text: >
+      <p>Das Eis war wirklich lecker, nicht nur vom Geschmack her, sondern auch für die Augen: Der Belag aus kleinen Zuckerperlen glänzte mit dem Licht im Raum. Auch die Halskette glänzte, als sie auf dem Tisch lag.<p>
+    #<p>The ice cream was tasty indeed, not only the flavour but also to the eyes: the topping made of small pearls of sugar shined along with the light in the room. The necklace shined as well while being there on the table.</p>
+
+  - type: dialog
+    entries:
+      - text: Diese Halskette ist wunderschön! Der Künstler hat es geschafft, das Alphabet in einem Kreis zu wickeln, um sie so besonders aussehen zu lassen. Ich frage mich ... Wie schaffst du es, ohne die Kette verschlüsselte Botschaften zu schreiben und zu lesen? Hast du noch eine andere Methode?
+      #"This necklace is beautiful: the artist was able to wrap the alphabet in a circle to obtain this effect. I’m wondering… How do you manage to write and read coded messages without it? Do you have another one?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: Tatsächlich ist die Halskette einzigartig. Doch nachdem ich sie lange Zeit benutzt habe, ist mir aufgefallen, dass es eine einfache Regel gibt, die sehr hilfreich ist, wenn man etwas verschlüsseln oder entschlüsseln möchte. Möchtest du sie wissen?
+      #"Actually, the necklace is unique, but after using it for quite a long time, I notice that there is a simple rule which helps a lot if you want to encode or decode something. Would you like to know it?"
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: Ja, unbedingt! Bitte!
+      #"Yes, please!"
+        char: mathina
+        mood: talking
+
+  - type: image
+    id: CaesarJewel2
+    src: CaesarJewelAD.png
+    style: "position:absolute; width: 25%; top: 45%; left: 22%"
+
+  - type: sceneText
+    text: >
+        <p>Angela schaute auf die Halskette auf dem Tisch. Sie war so positioniert, dass das A in der inneren Scheibe dem D in der äußeren entsprach.<p>  
+    #<p>Angela looked at the necklace on the table. It was positioned such that the A in the inner disk corresponded to the D in the outer one.</p>
+
+  - type: dialog
+    entries:
+      - text: "Schaue mal hier: A geht zu D, B geht zu E, und so weiter. Stimm doch? Nun beachte, der Abstand zwischen den Buchstaben ist immer derselbe: Drei."
+      #"Have a look: A goes to D, B goes to E, and so on. Right? Now notice that the space between the letters is always the same: three."
+        char: angela
+        mood: normal
+      - text: "Es ist also wie eine Drehung: Jeder Schritt ist ein Bruchteil einer ganzen Umdrehung und dann bewegt man jeden Buchstaben um drei Schritte vorwärts. Ist das richtig?"
+      #"So it is like a rotation: each step is a fraction of a whole turn, and then you move each letter forward of three steps. Right?"
+        char: mathina
+        mood: normal
+      - text: "Genau. Aber es gibt noch mehr: Du konzentrierst dich gerade darauf, die Halskette zu beschreiben. Aber du kannst diese... Funktion auf eine noch einfachere Weise beschreiben: Versuch mal, Zahlen statt Buchstaben zu verwenden."
+      #"Correct, but look: you are focused on describing the necklace but you can describe this… operation in an even simpler way: try to use numbers instead of letters."
+        char: angela
+        mood: normal
+
+  - type: image 
+    id: CaesarJewel3
+    src: CaesarJewelNumbers.png
+    style: "position:absolute; width: 25%; top: 45%; left: 55%"
+
+  - type: sceneText
+    text: >
+      <p>Angela nahm einen Stift und eine der Papierservietten von der Eistorte und zeichnete schnell eine Skizze der Halskette. Diesmal schrieb sie anstelle der Buchstaben Zahlen.<p>
+    #<p>Angela used a pen and one of the paper napkins of the ice cream and quickly drew a sketch of the jewel. This time instead of the letters she wrote numbers.</p>
+
+  - type: clearImage
+    id: Mathina1
+
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+  - type: dialog
+    entries:
+      - text: ...hier! Jetzt sieh es nochmal an und du merkst, die Anzahl der Schritte ist Drei.
+      #"...here! Now have another look and remember that the number of steps is three."
+        char: angela
+        mood: normal
+      - text: "Wow, jetzt wirkt es viel klarer: Du summierst einfach. Das A - na ja - das ist die 0, wird nach D geschickt, das ist die 3. Du summierst also einfach die Anzahl der Schritte. Das ist genial. Aber... was für einen Sinn macht das?"
+      #"Wow, well, it is so much easier now: you are summing. The A - well - the 0, is sent to D, which is 3. So you are just summing the number of steps. That is ingenious. But… How does this make any sense?"
+        char: mathina
+        mood: surprised
+      - text: Kann man wirklich... Buchstaben summieren? In der Schule habe ich oft Ausdrücke gelernt, in denen man auch mit Buchstaben addiert hat. Das ist dann aber eher so etwas wie x+x=2x.
+      #"Can you really… sum letters? At school, I used to learn expressions, in which you sum letters, but it is something more like x+x=2x."
+        char: mathina
+        mood: surprised
+      - text: Man kann Buchstaben addieren, aber hier ist es noch einfacher. Denk nur daran, Buchstaben als Platzhalter für Zahlen zu verwenden.
+      #"You can sum letters, but here is even simpler: think just about using letters as placeholders for numbers."
+        char: angela
+        mood: normal
+      - text: Aber es gibt noch Seltsameres. Sieh dir den Buchstaben Y an, ich meine, die Zahl 24. Wenn es eine Summe wäre, würde ich 24+3=27 erhalten. Aber stattdessen erhalte ich den Buchstaben B, ich meine, die Zahl 1. Willst du mir damit sagen, dass 24+3=1 ist?
+      #"But there is something even stranger here: look at the letter Y, I mean, the number 24. If it were a sum, I would get 24+3=27. But instead, I wrap around and get the letter B, I mean, the number 1. Are you telling me that 24+3=1?"
+        char: mathina
+        mood: surprised
+      - text: Das ist genau das, was ich dir sage!
+      #"That is exactly what I am telling you!"
+        char: angela
+        mood: normal
+      - text: Ergibt das überhaupt einen Sinn? Wenn 24+3=1 ist, bedeutet das ... warte ... es bedeutet, dass 24+2=0 ist. Aber 24+2 ist 26, wie kann 26 gleich 0 sein
+      #"Does this even make sense? If 24+3=1, it means… wait… it means that 24+2=0. But 24+2 is 26, how can 26 be equal to 0?"
+        char: mathina
+        mood: surprised
+      - text: Du wirst sehen, das ist gar nicht so seltsam. Wir haben uns darauf geeinigt, dass A der 0 entsprechen soll. Wenn wir das Alphabet in einen Kreis wickeln, dann ist A auch der Buchstabe neben Z, also entspricht A sowohl der 0 als auch der 26.
+      #"You can see that this is not so strange: we decided that A should correspond to 0, but when you wrap the alphabet in a circle, A is also the letter next to Z, so A corresponds both to 0 and to 26."
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: Ich lasse mich mal auf diese Idee ein, sie sind schließlich eine Piratin. Wie hilft mir das bei der Kodierung und Dekodierung von Nachrichten?
+      #"Let’s assume for a moment that I trust you - you are a pirate lady, after all. How does this help me in coding and decoding messages?"
+        char: mathina
+        mood: normal
+
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela2
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+
+  - type: dialog
+    entries:
+      - text: Nun, beim Verschlüsseln ist es ganz leicht. Du musst einfach eine Summe bilden. Aber das Interessante an Summen ist, dass sie invertiert werden können. Wenn beispielsweise A+3 gleich D ist, dann gibt es eine Umkehroperation, mit der man von D nach A übergehen kann.
+      #"Well, encoding is just fine: you simply have to perform a sum, but the interesting thing about sums is that they can be inverted: for instance, if A+3 is equal to D, then there is an inverse operation which can be made to pass from D to A. Would you guess what this is?"
+        char: angela
+        mood: normal
+      - text: Ganz logisch, das ist die Subtraktion! Wenn A+3=D ist, dann muss D-3 gleich A sein...
+      #"Easy: the subtraction! If A+3=D, then D-3 must be equal to A..."
+        char: mathina
+        mood: normal
+      - text: … und gleich 26…
+      #"...and to 26..."
+        char: angela
+        mood: normal
+      - text: Oh, ja stimmt, und gleich 26. Ich habe immer noch Schwierigkeiten, dieses Konzept zu verstehen.
+      #"I'm puzzled... I am still having trouble understanding this concept..."
+        char: mathina
+        mood: sad
+        
+        
+  - type: clearImage
+    id: CaesarJewel2
+  - type: clearImage
+    id: CaesarJewel3
+        
+  - type: dialog
+    entries:        
+      - text: "Mmh, vielleicht erklärt es das für dich gut: Stell dir mal eine Uhr vor."
+      #"Mmh, maybe this will make it easier: think about a clock."
+        char: angela
+        mood: normal
+      - text: ...eine Uhr?
+      #"...a clock?"
+        char: mathina
+        mood: normal
+
+
+  - type: image 
+    id: Clock1
+    src: Clock1.png
+    style: "position:absolute; width: 25%; bottom: 5%; left: 15%"
+
+  - type: clearImage
+    id: Angela2
+
+  - type: dialog
+    entries:
+      - text: Ja. Nehmen wir an, es ist 16 Uhr, und in drei Stunden wird es 19 Uhr sein. Wir haben gesagt, dass 4+3=7.
+      #"Yes: assume it is 4 pm and in three hours it will be 7 pm. We have said that 4+3=7."
+        char: angela
+        mood: normal
+      - text: ...richtig, ich sehe hier kein Problem. Ich habe einfach wie üblich die Summe gebildet.
+      #"...correct, I don’t see any problem here. I have just made the usual sum."
+        char: mathina
+        mood: normal
+      - text: Und was ist, wenn es 11 Uhr ist?
+      #"What if it’s 11 am?"
+        char: angela
+        mood: normal
+      - text: "..."
+        char: mathina
+        mood: normal
+      - text: ... Es wird dann nicht die übliche Summe!...
+      #"well... not really the usual sum!"
+        char: angela
+        mood: normal
+
+  - type: dialog
+    entries:
+      - text: Nun, drei Stunden nach 11 Uhr ist 14 Uhr, also 11+3... oh...
+      #"Well, three hours past 11 am is 2 pm, so 11+3... oh..."
+        char: mathina
+        mood: normal
+
+  - type: clearImage
+    id: Mathina2
+
+  - type: image 
+    id: Clock2
+    src: Clock2.png
+    style: "position:absolute; width: 25%; bottom: 5%; left: 60%"
+
+
+  - type: dialog
+    entries:
+      - text: Siehst du? Du hast 12 Stunden auf deiner Uhr, also 12=0, und nach 11 fängst du wieder von vorne an. Für den Anhänger ist es dasselbe, aber diesmal hat deine Uhr 26 Stunden.
+      #"See? You have 12 hours on your clock, so 12=0, and after 11 you start back from the beginning. For the jewel is the same, but this time your clock has 26 hours."
+        char: angela
+        mood: normal
+      - text: Möchtest du mehr mit dieser neuen Summe üben? Los, wir probieren einfach einige Additionen auf verschiedenen Uhren aus.
+      #"Care to practice more about this new sum? Let’s try to do some additions on different clocks."
+        char: angela
+        mood: normal
+
+  - type: clearImage
+    id: Clock1
+  - type: clearImage
+    id: Clock2
+ 
+
+  - type: game
+    text: Versuche, die Summe einiger Additionen auf den gegebenen Uhren zu berechnen.
+    #"Try to calculate the sum of some additions on the clocks"
+    toolbarText: Versuche die Summe zu berechnen.
+    #"Try to calculate the sum of some additions on the clocks"
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app3
+    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=1
+
+  - type: image
+    id: Angela3
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+  - type: image
+    id: Mathina3
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+
+
+  - type: dialog
+    entries:
+      - text: "Gut gemacht!!! Mmh, wo wir gerade von Uhren sprechen: Es scheint schon fast wieder Zeit zu gehen. Du musst los wenn du die Fähre noch erwischen willst! Aber ich lade dich gerne an einem der nächsten Tage zum Mittagessen ein."
+      #"Well done! Mmh, speaking of clocks, it appears that it is almost time to go if you want to catch the ferry! But I’ll gladly have you for lunch one of the next days."
+        char: angela
+        mood: happy
+      - text: Das wäre toll!!! Wie wäre es an diesem Freitag?
+      #"It would be great!! What about this Friday?"
+        char: mathina
+        mood: happy
+
+  - type: clearImage
+    id: Mathina3
+  - type: clearImage
+    id: Angela3
+    
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+  - type: clearImage
+    id: Gabbiano1
+  - type: clearImage
+    id: Gabbiano2
+  - type: clearImage
+    id: Gabbiano3
+
+
+  - type: background
+    src: bg3_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+        
+  - type: sceneText
+    text: >
+      <p>Mathina ging zurück zum Dock. Gerade noch rechtzeitig, um die Fähre zurück nach Hause zu nehmen. Was für ein intensiver Tag! Auf dem Rückweg dachte sie ein bisschen darüber nach, wie die neue Summe, die sie heute gelernt hatte, funktionierte. Angela erzählte ihr, dass die Anzahl der Stunden auf der Uhr auch Modulo genannt wurden. Von einem alten Wort, das von einem alten Piraten benutzt wurde, der Latein sprach! Das war unglaublich!<p>
+    #<p>Mathina went back to the dock just in time to take the ferry back home. What an intense day! On the way back she thought a bit about how the new sum she learned today worked. Angela told her that the number of hours on the clock is also called <i>modulo</i>, from an ancient word used by an old pirate who spoke Latin! That’s incredible! </p>
+
+ 
+  - type: sceneText
+    text: >
+      <p>Die Tage vergingen und Mathina dachte viel über die Summen auf der Uhr nach. Und darüber wie das mit den geheimen Nachrichten zusammenhing. Der Trick, Zahlen statt Buchstaben zu verwenden, half sehr und Mathina war nun recht geschickt im Entschlüsseln von Nachrichten. Natürlich nur, wenn sie den Schlüssel hatte.<p>
+    #<p>Days passed, and Mathina had a huge deal thinking about sums on the clock, and how this was related to secret messages. The trick about using numbers instead of letters helped a lot, and Mathina was quite skilled now in decoding messages, when having the key, of course.</p>
+
+
+  - type: background
+    src: bg3b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 27%; left: 2%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 34%; left: 6%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 20%; left: 5%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 23.5%; left: 11%;  z-index: 3;"
+          
+
+  - type: sceneText
+    text: >
+      <p>Als sie wieder auf der Schatzinsel ankam, sah sie Angela, die bereits am Dock auf sie wartete. Sie war nicht allein gekommen und schon von der Fähre aus konnte Mathina das schrille Gefieder eines schönen Papageis erkennen.<p>
+    #<p> When she arrived on the Buccaneer’s Island she found Angela waiting for her at the dock. She was not alone, and already from the ferry, Mathina was able to notice the garish feathers of a beautiful parrot.</p>
+
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 60%; bottom: -10%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+      
+      
+        
+  - type: dialog
+    entries:        
+      - text: Hallo John! Lange nicht gesehen!
+      #"Hi John! Long time no see!"
+        char: mathina
+        mood: normal
+
+  - type: sceneText
+    text: >
+      <p>Der Papagei war sehr glücklich von Mathina gestreichelt zu werden und noch glücklicher, als sie ihm einen Keks schenkte. Den hatte Angela ihr zuvor schnell zugesteckt.<p>
+    #<p> The parrot was very happy to be cuddled by Mathina and even happier when she gave him a cookie which Angela gave her.</p>
+
+  - type: dialog
+    entries:        
+      - text: John wollte unbedingt einen Spaziergang machen. Also haben wir beschlossen, beide herzukommen und am Hafen auf dich zu warten.
+      #"John was eager to have a walk around, so we decided to come both to wait for you at the deck. "
+        char: angela
+        mood: happy
+
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+  - type: clearImage
+    id: Mathina4 
+  - type: clearImage
+    id: Angela4  
+
+
+  - type: background
+    src: bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+  - type: image
+    id: Barca
+    src: barca.png
+    style: "height: 16%; top: 16%; right: 14%;  z-index: -3;"
+
+  - type: image
+    id: Gabbiano
+    src: gabbiano3.png
+    style: "height: 6%; top: 16%; right: 19%;  z-index: -3;"
+
+  - type: image
+    id: Finestra
+    src: finestra.png
+    style: "width: 21.09%; top: 10.35%; right: 12.4%;  z-index: -2;"
+
+
+  - type: image
+    id: Dipinto
+    src: dipinto.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
+
+
+  - type: sceneText
+    text: >
+      <p>Mathina folgte ihnen zu einem gemütlichen Haus, das nicht weit vom Marktplatz entfernt stand. Es befand sich in an einem schönen Platz in der Nähe des Waldes und mit einem großartigen Blick auf das Meer.<p>
+    #<p> Mathina followed them to a cozy house not so far from the marketplace. It was located in a good position near the wood but with a great view of the seashore. </p>
+
+  - type: animation
+    target: Barca
+    vars:
+      duration: 8
+      xPercent: -30
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+
+  - type: animation
+    target: Gabbiano
+    vars:
+      duration: 5
+      xPercent: -20
+      yPercent: -100
+      ease: power1.inOut
+      repeat: -1
+      rotate: -5
+      yoyo: true
+
+
+  - type: dialog
+    entries:        
+      - text: Weißt du, jeder Pirat hat seine eigenen speziellen Kochrezepte. Das ist fast schon ein eigenes Mittel, um sich mit dem Team gut zu verstehen. Für alle anderen sind die Rezepte selbstverständlich geheim.
+      #"You know, every pirate has his own recipes. It is sort of a way to bond with the crew, almost a secret to everyone else."
+        char: angela
+        mood: normal
+      - text: Wow! Und was ist dein Lieblingsrezept?
+      #"Wow! And what is your favourite recipe?"
+        char: mathina
+        mood: happy
+      - text: Ich sollte dich das eigentlich erraten lassen, mit ein paar Tipps würde dir das bestimmt schnell gelingen. Also ... ich koche gerne Auberginen! Und ich denke, du wirst mein Essen mögen! Selbst John kann nicht widerstehen einen Bissen davon zu naschen!
+      #"I should make you guess with a cypher, but I am pretty sure you are very good with that. So… I love cooking eggplants! And I think you’ll like my cuisine! Even John can’t resist having a mouthful of that!"
+        char: angela
+        mood: happy
+
+
+  - type: sceneText
+    text: >
+      <p>Das Mittagessen war wirklich großartig! Nicht nur waren die Auberginen köstlich, sondern Angela erzählte viele Geschichten über ihre Abenteuer. Und John hatte eine Menge Spaß dabei, sie zu korrigieren, wenn die Details der Geschichten zu übertrieben waren.<p>
+    #<p> The lunch was great! Not only the food was delicious, but Angela told many stories about her adventures, and John had a lot of fun correcting her when the details of the stories were too exaggerated. </p>
+
+
+  - type: image
+    id: Angela4
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"            
+
+  - type: dialog
+    entries:     
+      - text: ...und das waren so an die 20 Banditen...
+      #"...and so there were 20 bandits..."
+        char: angela
+        mood: normal
+      - text: ...es waren 3 Banditen...
+      #"...3 bandits..."
+        char: parrot
+        mood: normal
+      - text: ...ok, wie auch immer. Sie haben es geschafft, unsere Nachrichten zu entschlüsseln und haben auf uns gewartet!
+      #"...ok anyway, they managed to decode our messages and they were waiting for us!"
+        char: angela
+        mood: normal
+        
+  - type: image
+    id: Mathina4
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 40%; bottom: 0%; right: 0%;  z-index: 1;"
+        
+  - type: dialog
+    entries:     
+      - text: Oh, eine Sekunde! Das ist etwas, woran ich in den letzten Tagen immer wieder gedacht habe. Du hast gesagt, dass sie euren Code geknackt haben, richtig?
+      #"Oh, wait! That is something I have been thinking of during these days. You said that they have broken your code, right?"
+        char: mathina
+        mood: normal
+      - text: Ja.
+      #"Yes."
+        char: angela
+        mood: normal
+      - text: Im Grunde... Wenn sie wissen, wie der Code funktioniert - und du hast mir gesagt, dass das letztlich jeder Pirat tut - dann ist es nur eine Frage der Überprüfung aller Kombinationen. Und das sind eigentlich nicht so viele.
+      #"After all… if they know how the code works, and you told me basically every pirate does, it is just a matter of checking all the combinations, which are actually not so many."
+        char: mathina
+        mood: normal
+        
+  - type: sceneText
+    text: >
+      <p>Angela hörte sich diese Gedanken sehr aufmerksam an. Dabei warf sie einen Blick auf das Porträt einer jungen Dame, das an der Wand hing, und antwortete...<p>
+    #<p> Angela was very interested in these comments. She glanced at a portrait of a young lady hanged on the wall and replied. </p>
+
+
+  - type: dialog
+    entries:     
+      - text: Das ist in der Tat interessant. Allerdings ist es nicht so einfach, den Code schwieriger zu gestalten. Hast du schonmal darüber nachgedacht, wie man das machen kann?
+      #"That is interesting indeed. However, it is not so easy to make the code more difficult. Did you try to think about how to do that?"
+        char: angela
+        mood: happy
+      - text: Nun, ich habe da viele Ideen... Zum Beispiel... Warum können wir nicht ein anderes Alphabet verwenden, wie das griechische? Wir könnten "a" durch "𝛼" ersetzen und so weiter...
+      #"Well, I had plenty of ideas … For instance… Why can’t we use another alphabet, like greek? We could substitute “a” with “𝛼” and so on..."
+        char: mathina
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p>Mathina begann über sehr komplizierte Tricks nachzudenken, um das Lösen des Codes schwieriger zu machen.<p>
+    #<p> Mathina started discussing very complicated tricks to make the code more complicated. </p>
+
+
+  - type: clearImage
+    id: Angela4
+
+  - type: image
+    id: Angela5
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+    
+
+  - type: dialog
+    entries:     
+      - text: Warte einen Moment. Denk auch daran, dass es nicht nur darum geht, den Code komplizierter zu machen. Die Piraten müssen immer noch lernen, wie man ihn benutzt. Um die Technik zu lernen, dass „𝛼“ einfach „a“ bedeutet, braucht  man mehr Wissen. Die Anstrengung, einen Code zu knacken, ist aber immer noch die gleiche.
+      #"Wait a moment, remember that it is not just a matter of rendering the code more complex. Pirates still need to learn how to use it, so they will know that “𝛼” means just “a”, so even if you require more knowledge to learn the method, your effort to decipher a code is still the same."
+        char: angela
+        mood: normal
+      - text: Da hast du recht. Ich hätte immer noch alle 26 Buchstaben ausprobiert und würde schließlich meine Antwort finden. Aber hast du schon eine Idee in dieser Richtung gehabt? Vor allem nach der letzten Geschichte mit den Banditen.
+      #"You are right. I would still have tried all the 26 letters and would eventually find my answer. But have you had some ideas in this direction? In particular after that last story with the bandits."
+        char: mathina
+        mood: sad
+      - text: Oh, natürlich hatte ich das. Wir haben eine Zeit lang versucht, den Code ein wenig zu verändern. Nimm einfach die Halskette und benutze sie zweimal, um eine Nachricht zu verschlüsseln... doppelter Aufwand, doppeltes Ergebnis.
+      #"Oh, sure I did. For some time we tried to tweak the code a bit. Just take the jewel and use it twice to encode a message... twice the effort, twice the result."
+        char: angela
+        mood: normal
+        
+  - type: clearImage   
+    id: Mathina4
+    
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 1%;  z-index: 2; transform: ScaleX(-1);"
+
+
+        
+  - type: dialog
+    entries:             
+      - text: "Wow! Das scheint effektiv zu sein!"
+      #"Wow! This seems effective!"
+        char: mathina
+        mood: excited
+      - text: Leider gab es einen großen Fehler in unserer Überlegung. Willst du es selbst ausprobieren?
+      #"Unfortunately, there was a big fault in our reasoning. Do you want to try it yourself?"
+        char: angela
+        mood: normal
+
+  - type: game
+    text: Wähle das richtige Ergebnis, wenn Du den Code mit den vorgegeben Schlüsseln zweimal eingibst.
+    #"Select the correct result of the method applied two times with the given keys."
+    toolbarText: Wähle das richtige Ergebnis aus
+    #Select the correct result of the method applied two times with the given keys.
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app4
+    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=1
+
+  - type: sceneText
+    text: >
+      <p>Nachdem sie ein wenig mit der Halskette und den Worten gespielt hatte, schrieb Angela etwas auf ein Stück Papier und zeigte es Mathina.<p>
+    #<p> After a bit of playing with the jewel and the words, Angela wrote something on a piece of paper and showed it to Mathina. </p>
+
+
+  - type: image 
+    id: TwoMessages
+    src: TwoMessages.png
+    style: "position:absolute; height: 20%; top: 60%;"
+    align: center
+
+
+  - type: dialog
+    entries:     
+      - text: Sieh dir diese beiden Botschaften nur mal an. Die eine ist durch einmaliges Benutzen des Anhängers verschlüsselt, die andere ist durch zweimaliges Benutzen des Anhängers verschlüsselt worden. Jetzt versuche herauszufinden, welche von beiden die richtige ist.
+      #"Have a look at these two messages. One is coded by using the jewel just once, and the other has been coded using the jewel two times. Try to understand which one is which."
+        char: angela
+        mood: normal
+
+
+  - type: dialog
+    entries:     
+      - text: Nun... eigentlich scheinen die sich gar nicht so sehr zu unterscheiden.
+      #"Well… actually they do not seem so much different."
+        char: mathina
+        mood: normal
+      - text: Stimmt! Und du kannst auch versuchen es mit Hilfe unserer seltsamen Summe zu verstehen. Nehmen wir an, die Halskette wird mit der Addition +4 benutzt. Was passiert, wenn ich den Anhänger zweimal benutze?
+      #"Exactly. You can try to understand why it is like this by using our strange sum. Assume the jewel is set for the addition +4. What happens if I use the jewel twice?"
+        char: angela
+        mood: normal
+      - text: Wir beginnen mit einer Zahl, sagen wir 3, dann addieren wir zuerst 4 - so erhalten wir 7 und dann addieren Sie nochmal 4, so erhalten wir 11.
+      #"You start with a number, say 3, then first you add 4 so you get 7. Then you add 4 again, so you get 11."
+        char: mathina
+        mood: normal
+      - text: Ok. Aber du hast zweimal 4 addiert. Wenn du summierst, kannst du auch wählen, ob du zuerst die beiden Vieren addieren willst.  Was erhältst du dann?
+      #"Ok, but you added 4 twice and when you sum you can choose to add the two 4 together first, so what do you get?"
+        char: angela
+        mood: normal
+      - text: Oh ... richtig! Wenn ich zuerst zweimal 4 addiere, bekomme ich 8.
+      #"Oh… right! If you add 4 twice, you are adding 8."
+        char: mathina
+        mood: normal
+      - text: ...und so kann man am Ende, auch wenn man den Anhänger zweimal benutzt, das gleiche Ergebnis erhalten, als wenn man ihn nur einmal benutzt. Und das funktioniert auch, wenn du die Zahlen änderst. Wenn du zuerst 5 und dann 6 addierst, entsteht das gleiche Ergebnis, als wenn...
+      #"...and so in the end even if you are using the jewel twice, you can get the final result by using the jewel just once. And this works even if you change the numbers. If you first add 5 and then you add 6, you can get the same result by adding..."
+        char: angela
+        mood: normal
+      - text: ...11 nur einmal addiert wird. Es ist unglaublich... Jetzt wo du das gesagt hast, scheint es mir die einfachste Sache der Welt zu sein. Aber vorher war es hinter der Mechanik der Halskette versteckt und ich habe es nicht bemerkt.
+      #"... 11 just once. It’s incredible... Now that you said that to me it seems the easiest thing in the world, but before it was hidden behind the mechanics of the jewel and I didn’t notice."
+        char: mathina
+        mood: normal
+        
+  - type: clearImage
+    id: TwoMessages
+ 
+  - type: dialog
+    entries:            
+      - text: Wir hatten das gleiche Gefühl. Weißt du, es war John, der es zum ersten Mal bemerkte. Er hat die Kreise so eingestellt, dass sie bei zweimaliger Benutzung die ursprüngliche Botschaft ergaben. Kannst du erraten, welche Position das ist?
+      #"We had the same feeling. You know, it was John who noticed it for the first time. He positioned the jewel in such a way that using it twice resulted in the original message. Can you guess which position is that?"
+        char: angela
+        mood: normal
+
+  - type: game
+    text: Die große Scheibe muss so viele Wörter verschlüsseln, wie die beiden kleineren nacheinander verschlüsseln. Wählen Sie die richtige Position!
+    #"The big disc has to cypher words as the two smaller ones used consecutively. Select the correct position."
+    toolbarText: Wähle die richtige Position fr die große Scheibe.
+    #"Select the correct position for the big disc."
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app5
+    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=1
+    
+  - type: clearImage
+    id: Dipinto
+
+  - type: image
+    id: Dipinto1
+    src: dipinto_nohook.png
+    style: "height: 40%; top: 18%; left: 13%;  z-index: -1;  transform: rotate(5deg);"
+    
+  - type: sceneText
+    text: >
+      <p>Dieses Spiel hat Spaß gemacht. Nachdem sie zusammen mit John eine Weile damit experimentiert hatten, wiederholte Angela ihre Frage...<p>
+    #<p> That game was fun and after playing with that for a while with John, Angela repeated the question. </p>
+    
+
+  - type: dialog
+    entries:            
+      - text: Ok, gibt es irgendwelche anderen Ideen, um die Verschlüsselung sicherer zu machen?
+      #"So, any more ideas to make the cipher more secure?"
+        char: angela
+        mood: normal
+      - text: Mmh, warum fragst du? Hast du eine bestimmte Aufgabe im Sinn?
+      #"Mmh, why do you ask? Do you have some specific quest in mind for that?"
+        char: mathina
+        mood: surprised
+
+  - type: clearImage
+    id: Angela5
+
+  - type: image
+    id: Angela6
+    src: Angela_1.png
+    style: "height: 50%; bottom: 10%; left: 5%;  z-index: 1;"      
+
+
+  - type: animation
+    target: Dipinto1
+    vars:
+      duration: 4
+      x: 110
+      y: 120
+      rotate: -95
+    
+
+
+  - type: sceneText
+    text: >
+      <p>Angela schaute zuerst Mathina und dann zu dem Porträt an der Wand. Sie lächelte, mit einem Ausdruck, der dem der Frau auf dem Gemälde sehr ähnlich war. Angela nahm das Gemälde von der Wand, drehte sich wieder zu Mathina um und zeigte ihr die Rückseite des Porträts. Dort war eine Nachricht geschrieben worden, mit einer krakeligen und trotzdem präzisen Schrift.<p>
+    #<p> Angela looked at Mathina, then at the portrait on the wall. She smiled, with an expression quite similar to the one of the women on the painting. Then, she took the paint off the wall, turning toward Mathina and showing her the back of the portrait. A message had been written there, with a curly and precise writing. </p>
+      
+  - type: sceneText
+    text: >
+      <p> Der erste Teil war der einzige, der leicht zu verstehen war: 
+      </br> 
+      </br>
+      “<i>Liebe Angela, ich bin sicher, du wirst einen Weg finden... 
+      </br> 
+      </br> 
+      Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt.
+      </i>”</p>
+    #<p> The first part was the only one which was easy to understand: 
+     # </br> 
+      #</br>
+      #“<i>Dear Angela, I’m sure you will find a way... 
+      #</br> 
+      #</br> 
+      #Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt.
+      #</i>”</p>
+    
+
+  - type: sceneText
+    text: >
+      <p>Das Porträt - oder besser die Rückseite des Porträts - lag direkt vor ihnen und bewahrte trotzdem ein großes Geheimnis.<p>
+    #<p> The portrait - or better the back of the portrait was there, staring at everyone in mystery. </p>
+
+  - type: dialog
+    entries:            
+      - text: Das sieht doch unserer Chiffre sehr ähnlich oder etwa nicht? Ich gehe davon aus, dass du den Schlüssel schon kennst?
+      #"Surely it looks a lot like our cipher, does it not? I’m guessing that you don’t know the key, right?"
+        char: mathina
+        mood: normal
+      - text: Das tue ich. Es ist die Schrift einer alten Freundin von mir, auch eine Piratin natürlich. Eigentlich war sie diejenige, die mir die Kette geschenkt hat, vor einigen Jahren. Und sie war es auch, die angefangen hat, die Kette zu benutzen, um damit ihre Nachrichten zu verschlüsseln.
+      #"Exactly, that is the writing of an old friend of mine, a pirate as well, of course. Actually, she was the one giving me the necklace, some years ago, and she started using the necklace to cipher the messages."
+        char: angela
+        mood: normal
+      - text: Was ist dann passiert?
+      #"What happened?"
+        char: mathina
+        mood: surprised
+      - text: Wir sind uns nicht sicher, weißt du, zwischen unseren Abenteuern verbringen wir alle unsere Zeit auf unterschiedliche Weise. Jemand zieht in die Stadt oder jemand reist in andere Länder. Ich habe gehört, dass es viele seltsame und lustige Orte gibt, die man besuchen kann.
+      #"We are not sure, you know, between our adventures we all spend our time in different ways, somebody goes to the city, and other lands: I’ve heard that there are strange and funny places to visit."
+        char: angela
+        mood: normal
+      - text: Als sie einmal von einer Reise zurückkam, erzählte meine Freundin, dass sie einen ungewöhnlichen Jahrmarkt besucht hat, wo ihr jemand eine andere Halskette verkaufte. Ähnlich der, die wir benutzt haben, aber seltsam symmetrisch.
+      #"Once she came back from a trip, she told me she visited a strange fair, where somebody sold her some other necklaces, similar to the one we used, but strangely symmetric." 
+        char: angela
+        mood: normal
+      - text: Sie erzählte mir, dass in dieser Halskette eine neue Art der Kommunikation versteckt war, eine Art Revolution auf dem Gebiet der Verschlüsselung. Und das wollte sie geheim halten.
+      #"She kept telling me that in this necklace lied a new way of communicating in secrecy, sort of a revolution on the field. And she wanted to keep that a secret."
+        char: angela
+        mood: normal
+      - text: Wow! Ich frage mich, wie diese neuen Halsketten aussahen. Hattest du die Gelegenheit sie dir anzusehen?
+      #"Wow! I’m wondering how these new necklaces looked like. Did you have the chance to look at them?"
+        char: mathina
+        mood: excited
+      - text: Leider nicht. Sie verschwand für eine Woche und kam dann zurück, gab mir das Porträt und sagte, dass sie die Halsketten auf der Schatzinsel versteckt hat. Damit sie sicher aufbewahrt sind. Das Porträt würde alle Informationen enthalten, um sie zu finden.
+      #"Unfortunately not: she disappeared for one week and then came back, giving me the portrait and telling me that she hid the necklaces in the island, to keep them secure and that the portrait contains the information to find them."
+        char: angela
+        mood: normal
+      - text: Ich frage mich, wo sie jetzt ist.
+      #"I’m wondering where is she now."
+        char: mathina
+        mood: normal
+      - text: Ich glaube sie hatte es satt, Piratin zu sein. Also ging sie nach Norden, in die Berge. Ich habe gehört, dass sie einen Job angenommen hat, bei dem sie seltsame Vögel trainiert - aber erzähl John besser nichts davon, er wäre eifersüchtig!
+      #"Uh, she was quite tired of being a pirate, so she went north, to the mountains. I’ve heard she took a job training peculiar birds - but better not tell John about that: he would be jealous!"
+        char: angela
+        mood: normal
+      - text: Hihihi, richtig! Zurück zur geheimen Botschaft! Nun, ich bin mir sicher, dass du es bereits versucht hast, aber... da es wie unsere Verschlüsselung aussieht, frage ich mich, ob wir nicht einfach versuchen können, sie zu entschlüsseln. So wie immer, auch ohne den Schlüssel.
+      #"Hihihi, right! Well... back to the secret message! Well, I’m sure you already tried it, but... since it looks like our cipher, I’m wondering if we can just try and decode it, as usual, even without the key."
+        char: mathina
+        mood: normal
+      - text: Bitte sehr! Nur zu!
+      #"Be my guest!"
+        char: angela
+        mood: normal
+ 
+  - type: game
+    text: Vergewissere dich, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
+    #"Verify that the text has not been cyphered in the usual way."
+    toolbarText: Vergewissere dich, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
+    #"Verify that the text has not been cyphered in the usual way."
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app6
+    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=1
+
+  - type: clearImage
+    id: Angela6
+  - type: clearImage
+    id: Dipinto1
+
+  - type: image
+    id: Angela7
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: sceneText
+    text: >
+      <p>Nachdem Mathina einige Zeit damit verbracht hatte, den Code zu entziffern, schaute sie Angela ganz verdutzt an.<p>
+    #<p> After some time spent trying to decipher the code, Mathina looked at Angela quite baffled. </p>
+
+  - type: dialog
+    entries:            
+      - text: "Ich bin mir nicht sicher, was ich tun soll: Ich habe alle möglichen Kombinationen des Anhängers ausprobiert, aber die entzifferten Texte ergeben keinen Sinn."
+      #"I’m not sure what to do: I have tried all the possible combinations of the jewel, but the deciphered texts do not make sense."
+        char: mathina
+        mood: sad
+      - text: Genau. Ich bin sicher, dass die ursprüngliche Nachricht in einer Sprache geschrieben wurde, die wir verstehen können. Aber warte, ich kenne noch einen Hinweis. Mir wurde gesagt, dass man die Halskette zweimal benutzen muss, um die Lösung zu finden.
+      #"Exactly, and I’m sure that the original message was written in a language we can understand. But wait, I know another hint. I was told that one needs to use the necklace twice to find the solution."
+        char: angela
+        mood: normal
+      - text: Zweimal? Aber ich dachte, das wäre nutzlos, oder irre ich mich?
+      #"Twice? But I thought it was useless, am I wrong?"
+        char: mathina
+        mood: surprised
+      - text: Ja, aber vielleicht gibt es etwas, das wir übersehen haben. Wir haben bewiesen, dass es nicht mehr bringt, die Kette zweimal zu benutzen, als sie einmal zu benutzen.
+      #"Yes, but maybe there is something we are missing. We proved that using the necklace twice is nothing more than using it once."
+        char: angela
+        mood: normal
+      - text: Mmh, und wenn wir versuchen, die Lösung in der Nachricht zu suchen? Da gibt es Leerzeichen und die sind nicht mit der Halskette kodiert.
+      #"Mmh, what if we try to start from the message itself? The spaces are there, and they are not coded with the necklace."
+        char: mathina
+        mood: normal
+      - text: Das ist wahr. Aber bist du sicher, dass es kein Ablenkungsmanöver ist?
+      #"That’s true, but are you sure it is not a red herring?"
+        char: angela
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p> Angela schrieb etwas auf ein Stück Papier.
+      </br>
+      </br>
+      <i>WHA TIFTH ECO DEDM ES SAGE W ASWRIT TENLI KETH IS?</i></p>
+    #<p> Angela wrote something on a piece of paper:
+     # </br>
+      #</br>
+      #<i>WHA TIFTH ECO DEDM ES SAGE W ASWRIT TENLI KETH IS?</i></p>
+
+
+  - type: dialog
+    entries:            
+      - text: Mmh, du hast recht, aber vielleicht können wir einfach davon ausgehen, dass die Leerzeichen an der richtigen Stelle sind und dann sehen, ob wir etwas Interessantes finden.
+      #"Mmh, you are right, but maybe we can just assume that the spaces are in the correct position and then see if we can find something interesting."
+        char: mathina
+        mood: normal
+      - text: Ja, das klingt schlau. Was ist, wenn wir uns auf kurze Wörter konzentrieren?
+      #"Yeah, this sounds clever. What if we focus on short words?"
+        char: angela
+        mood: normal
+      - text: Ja. Fangen wir mit den Wörtern mit einem Buchstaben an. Da ist ein „U“, und dann ein „Z“, ähm, dann auch ein, warte, zwei „R“. 
+      #"Yes: let’s start with the words with one letter. There is one “U”, and then one “Z”, um, then also one, wait, two “R”."
+        char: mathina
+        mood: normal
+      - text: Wenn wir davon ausgehen, dass die Leerzeichen richtig sind, dann sind es vielleicht auch die Satzzeichen. Wie auch immer, vielleicht können wir versuchen, einige von ihnen als „I“ gelten zu lassen.
+      #"If we are assuming the spaces are correct, maybe also the punctuation is. Well, anyway, maybe we can try to make some of them look like “I”."
+        char: angela
+        mood: normal
+      - text: Das scheint gerechtfertigt zu sein. Versuchen wir zu überprüfen, welche Nachricht wir so finden.
+      #"It seems legit, let’s try and check which message we find."
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: Vergewissere Dich, wie vorher, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
+    #"Verify that, as before, the text has not been cyphered in the usual way."
+    toolbarText: Vergewissere Dich, wie vorher, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde
+    #"Verify that, as before, the text has not been cyphered in the usual way."
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app7
+    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=1
+ 
+  - type: clearImage
+    id: Angela7
+  - type: image
+    id: Angela8
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+
+ 
+  - type: dialog
+    entries:            
+      - text: Das sieht seltsam aus. Es scheint wirklich keine Möglichkeiten zu geben, einen lesbaren Text zu finden. Aber... warte, du hast doch gesagt, dass wir die Kette zweimal benutzen müssen, oder?
+      #"It looks strange, it really seems there are no possibilities to find a readable text. But… wait, you told me that we need to use the necklace twice, right?"
+        char: mathina
+        mood: sad
+      - text: Ja, hab ich. Aber ich bin mir nicht sicher wie.
+      #"Exactly, but I am not sure how."
+        char: angela
+        mood: normal
+      - text: Was ist, wenn wir zum Beispiel eine Einstellung für einen Teil des Textes verwenden müssen und eine andere Einstellung für einen anderen Teil?
+      #"What if for example, we have to use one setting for some part of the text, and some other settings for some other part?"
+        char: mathina
+        mood: normal
+      - text: "Da könntest du recht haben! Aber es ist kompliziert: Wie entscheiden wir, welcher Teil des Textes welcher ist?"
+      #"Yeah… you may be right! But it is complicated: how do we decide which part of the text is which?"
+        char: angela
+        mood: normal
+      - text: Wir könnten uns an die Wörter halten! Vielleicht haben die Wörter an einer ungeraden Stelle einen Schlüssel und die Wörter an einer geraden Stelle einen anderen Schlüssel. Probieren wir es aus!
+      #"We can use words! Maybe the words in an odd position have one key, and words in an even position have another key. Let’s try it!"
+        char: mathina
+        mood: excited
+
+  - type: game
+    text: "Mathina schlägt vor, den Anhänger zweimal zu verwenden: einmal zum Verschlüsseln von Wörtern mit einer geraden Anzahl von Buchstaben und einen zum Verschlüsseln von Wörtern mit einer ungeraden Anzahl von Buchstaben. Überzeuge dich davon, dass auch diese Methode nicht funktioniert."
+    #"Mathina suggest to use two jewels: one to cypher words at even position and one to cypher words at odd position. Convince yourself that also this method does not work."
+    toolbarText: Funktioniert diese Methode?
+    #"Convince yourself that also this method does not work."
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app8
+    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=1
+
+
+
+  - type: dialog
+    entries:            
+      - text: Nichts... Außer, dass wir zumindest auf diese Weise sowohl „U“ als auch „Z“ mit „I“ übersetzen können.
+      #"Nothing… Except that at least in this way we can translate both “U” and “Z” to “I”."
+        char: mathina
+        mood: sad
+      - text: Naja... zumindest ist das eine Möglichkeit die Kette zweimal zu verwenden. Allerdings bleiben lange Wörter einfach unlesbar. Vielleicht müssen wir die Art der Übersetzung ändern. Wie wäre es, wenn wir statt der Wörter nur Buchstaben verwenden? Wir können versuchen, eine Kombination für Buchstaben in ungerader Position und eine andere Kombination für Buchstaben in gerader Position zu verwenden.
+      #"Well… at least this is a way to use the necklace twice. However, long words just stay unreadable. Maybe we need to change how we translate it. What about using just letters instead of words? We can try to use one key for letters in odd position, and another key for letters in even position."
+        char: angela
+        mood: normal
+      - text: Natürlich! Und mir ist aufgefallen, dass U und Z an unterschiedlichen Positionen sind, also könnten wir es schaffen, beide als I zu übersetzen.
+      #"Of course! And I noticed that U and Z are in different positions, so we could manage to translate both as I."
+        char: mathina
+        mood: normal
+
+
+  - type: game
+    text: Jetzt gibt es zwei Codierungen mit der Halskette. Eine übersetzt  Buchstaben an gerader Position, die andere Buchstaben an ungerader Position.
+    #"Finally the cypher has been understood: the two jewels have to be used to cypher letters at odd and even position respectively. "
+    toolbarText: Versuche die Nachricht zu entschlüsseln.
+    #"Try to decode the message!"
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app9
+    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=1
+
+
+  - type: dialog
+    entries:            
+      - text: Das ist... unglaublich! Ich habe das schon so lange versucht und jetzt... hier ist die Lösung!
+      #"That is… unbelievable! I tried so much time, and now… here is the solution!"
+        char: angela
+        mood: normal
+      - text: "Und das war sehr, sehr schlau: Auf diese Weise ist es schwieriger alle möglichen Kombinationen auszuprobieren. Ich frage mich, wie viele es wohl sind."
+      #"And that was very very clever: in this way, it is more difficult to try all the possible combinations. I’m wondering about how many are there."
+        char: mathina
+        mood: talking
+      - text: Ja, aber ich frage mich eher, was in dem Baum versteckt ist! Sollen wir nachschauen gehen?
+      #"Yes, but I’m wondering more about what is hidden in the tree! Shall we go checking?"
+        char: angela
+        mood: normal
+
+  - type: clearImage
+    id: Barca
+  - type: clearImage
+    id: Finestra
+  - type: clearImage
+    id: Gabbiano
+  - type: clearImage
+    id: Angela8
+  - type: clearImage
+    id: Mathina5
+
+
+  - type: background
+    src: bg1_plain.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+  - type: image
+    id: Tree
+    src: albero_solo.png
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 1;"      
+  
+
+  - type: sceneText
+    text: >
+      <p>Angela, Mathina und John gingen auf die Schatzsuche. Na ja... Wenn man wußte, wo es versteckt ist, wurde es viel einfacher. Das Haus war nicht so weit von Angelas Wohnung entfernt und die Eiche war sehr deutlich zu erkennen.<p>
+    #<p> Angela, Mathina and John went for the treasure hunt. Well… Once you know where it is hidden is way easier. The house was not so far from Angela’s place, and the oak was very evident. </p>
+
+  - type: image
+    id: Angela9
+    src: Angela_2.png
+    style: "height: 70%; bottom: 10%; left: -1%;  z-index: 1; transform: ScaleX(-1);"      
+
+
+  - type: image
+    id: Cassa
+    src: cassa.png
+    style: "width: 30%; bottom: 5%; left: 25%;  z-index: 1;"      
+
+
+  - type: image
+    id: Mathina5
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 3%; left: 8%;  z-index: 2;"
+
+  - type: image
+    id: Stella1
+    src: stella1.png
+    style: "width: 10%; bottom: 40%; left: 20%;  z-index: 1;"      
+  - type: image
+    id: Stella2
+    src: stella2.png
+    style: "width: 10%; bottom: 48%; left: 30%;  z-index: 1;"      
+  - type: image
+    id: Stella3
+    src: stella3.png
+    style: "width: 10%; bottom: 50%; left: 40%;  z-index: 1;"      
+  - type: image
+    id: Stella4
+    src: stella4.png
+    style: "width: 10%; bottom: 48%; left: 50%;  z-index: 1;"      
+  - type: image
+    id: Stella5
+    src: stella5.png
+    style: "width: 10%; bottom: 40%; left: 60%;  z-index: 1;"      
+
+
+  - type: sceneText
+    text: >
+      <p>Die Kiste machte ein seltsames metallisches Geräusch, als sie aus dem Baum gezogen wurde.<p>
+    #<p> The box did produce a weird metal sound while being extracted from the tree.</p>
+
+  - type: animation
+    target: Stella1
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella5
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -30
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+  - type: animation
+    target: Stella2
+    vars:
+      duration: 4
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella4
+    vars:
+      duration: 5
+      xPercent: 0
+      yPercent: -25
+      ease: power1.inOut
+      repeat: -1
+      rotate: 10
+      yoyo: true
+  - type: animation
+    target: Stella3
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -20
+      ease: power1.inOut
+      repeat: -1
+      rotate: 15
+      yoyo: true
+
+
+
+  - type: dialog
+    entries:            
+      - text: Woow ... was ist das?
+      #"Woow… what are they?"
+        char: mathina
+        mood: excited
+
+  - type: sceneText
+    text: >
+      <p>In der Kiste befanden sich mehrere Halsketten. Die Form war ziemlich seltsam, denn es waren kleine Sterne mit einer unterschiedlichen Anzahl von Strahlen.<p>
+    #<p> Several necklaces were placed in the box. The shape was quite strange, as they were small stars with a different number of rays.</p>
+
+
+  - type: dialog
+    entries:            
+      - text: Sie sind wunderschön, wahrscheinlich ein Vorschlag für eine andere Art, Nachrichten zu verschlüsseln.
+      #"They are beautiful, probably a suggestion for another way to encode messages."
+        char: angela
+        mood: happy
+      - text: Ich glaube, das wird ein großes Abenteuer, genau wie das, auf das wir heute erlebt haben.
+      #"I think this will be a great adventure, just like the one we went on today."
+        char: mathina
+        mood: talking
+      - text: Ich hätte gerne einen Keks, bitte!
+      #"I’d like a cookie, please!"
+        char: parrot
+        mood: normal
+
+
+  - type: sceneText
+    text: >
+      <p>Mathina kam  mit vielen, vielen Dingen im Kopf zurück nach Hause. Sie hatte nicht nur herausgefunden, wie man die Halskette auf eine noch geheimere Art als zuvor benutzen konnte, sondern auch ein tolles Abenteuer mit ihrer Freundin erlebt. Wer weiß, welche Geheimnisse noch auf der Schatzinsel verborgen sind.<p>
+    #<p> Mathina went back to her home, with many, many things in her mind. She just discovered not only how to use the necklace in a way more secure than before, but also had a great adventure with her friend. Who knows which secrets are still hidden in Buccaneer’s island. </p>
+      
+      
+  - type: sceneText
+    text: >
+      <h1>Der verlorene Schatz - Ende<h1>
+    #<h1>The lost treasure - The End</h1>        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
