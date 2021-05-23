@@ -59,10 +59,7 @@ export default {
 	second_policeman: 'Zweiter Polizist',
 	boys: 'Team',
 	trainer: 'Trainer',
-<<<<<<< HEAD
-=======
 	parrot: 'John der Papagei',
 	charmingparrot: 'Kapitän Gurgelqualle',
->>>>>>> develop
   },
 };
