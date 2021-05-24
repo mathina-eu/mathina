@@ -275,7 +275,7 @@ actions:
       - text: "Mas como poderemos comunicar com segurança enquanto exploramos os arredores?"
         char: leo
         mood: thinking
-      - text: "Leo, lembras-te do truque que te expliquei da última vez quando estávamos a jogar? Começas com uma mensagem e com uma chave e, de seguida, pode cifrá-la. A mesma chave funciona para decifrar e recuperar a mensagem original."
+      - text: "Leo, lembras-te do truque que te expliquei da última vez quando estávamos a jogar? Começas com uma mensagem e com uma chave e, de seguida, podes cifrá-la. A mesma chave funciona para decifrar e recuperar a mensagem original."
         char: mathina
         mood: arguing
       - text: "Sim, lembro-me, a chave era um número que podemos usar para somar às letras do alfabeto, certo?"
@@ -377,10 +377,10 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: terr1
     src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:3;"  
   - type: image
     id: Mathina1
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -740,7 +740,7 @@ actions:
       <p>Leo acenou com a cabeça que não.</p>
   - type: dialog
     entries:        
-     - text: "Esses sistemas de assinaturas são baseados em operações matemáticas que são muito fáceis de executar num sentido, mas muito mais difíceis de executar no sentido inverso. Por exemplo, Leo, lembras-te de quando na escola estudaste a divisão por números dois algarismo e te queixaste de como era muito mais difícil do que a multiplicação? O princípio é o mesmo, apenas muito mais difícil num dos sentidos."
+     - text: "Esses sistemas de assinaturas são baseados em operações matemáticas que são muito fáceis de executar num sentido, mas muito mais difíceis de executar no sentido inverso. Por exemplo, Leo, lembras-te de quando na escola estudaste a divisão por números com dois algarismo e te queixaste de como era muito mais difícil do que a multiplicação? O princípio é o mesmo, apenas muito mais difícil num dos sentidos."
        char: angela
        mood: normal       
   - type: sceneText
@@ -748,7 +748,7 @@ actions:
       <p>"Mas, Angela!" a Mathina interrompeu com um sorriso inesperado</p>
   - type: dialog
     entries:        
-     - text: "A criptografia de chave pública não tinha sido inventada na época dos corsários, e portanto o capitão Papagaio Charmoso deve confiar na mensagem tal como a vê!"
+     - text: "Como a criptografia de chave pública não foi inventada na época dos corsários, o capitão Papagaio Charmoso não pode usá-la para verificar a identidade do remetente e deve confiar na mensagem quando a vê."
        char: mathina
        mood: happy      
      - text: "Excelente ponto, Mathina, vamos tentar isso, oh, espere, ele está aí. Finja que estamos ocupados!"

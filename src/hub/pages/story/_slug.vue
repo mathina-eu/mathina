@@ -216,11 +216,22 @@ export default {
     this.executeCurrentAction();
 
     // If there's an action link (eg url query has ?actionLink=tagName), execute up to action with tag: tagName
+    const key = `game_${this.story?.slug}`;
+    const memorizedAction = Number(localStorage.getItem(key)) || null;
+    localStorage.removeItem(key);
+
     const tag = this.$route.query['actionLink'];
-    if (tag) {
+
+    if (tag || memorizedAction) {
       const executor = () => {
         this.$nextTick(() => {
-          if (this.action.tag !== tag && this.currentActionId < this.actions.length - 1) {
+          if (
+            (
+              memorizedAction !== null && memorizedAction !== this.currentActionId ||
+              tag && this.action.tag !== tag
+            )
+            && this.currentActionId < this.actions.length - 1
+          ) {
             this.next();
             executor();
           }
@@ -231,6 +242,14 @@ export default {
   },
   destroyed() {
     document.removeEventListener('keydown', this.keydownListener);
+  },
+  beforeRouteLeave(to, from, next) {
+    // Check if we're changing language mid game.
+    const gameSlug = to?.params?.slug;
+    if (to?.params?.slug === from?.params?.slug && to?.name !== from?.name) {
+      localStorage.setItem(`game_${gameSlug}`, this.currentActionId);
+    }
+    next();
   },
   methods: {
     parallaxedBackgrounds(layer) {
@@ -303,6 +322,10 @@ export default {
         if (this.progressDialog()) {
           return;
         }
+      }
+
+      if (this.actions.length <= this.currentActionId) {
+        return false;
       }
 
       this.currentActionId++;

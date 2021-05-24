@@ -5,7 +5,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visite um território!',
-    'map': 'Mapa mundo',
+    'map': 'Mapa mundial',
   },
   cities: {
     'island': 'Ilha do Corsário',
@@ -57,7 +57,7 @@ export default {
     rasha: 'Rasha',
     carla: 'Carla',
     sean: 'Sean',
-    charmingparrot: 'Capitão Charmingparrot',
+    charmingparrot: 'Terry Papagaio Charmoso',
     parrot: 'John o papagaio',
     mysteriousfigure: 'Figura misteriosa',
     sean: 'Sean',
