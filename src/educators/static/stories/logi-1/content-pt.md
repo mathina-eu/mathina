@@ -52,8 +52,8 @@ Há 3 apps a acompanhar a história. A primeira permite jogar livremente com suc
 
 Todas as apps foram programadas em Javascript e estão optimizadas quer para PCs quer para tablets/smartphones. Ver abaixo a descrição curta de cada app. Também são fornecidas ligações para as apps e para vídeos contendo guias de utilização.
 
-## [Jogo 1 - Desafio do semáforo](https://hub.zabkar.net/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
+## [Jogo 1 - Desafio do semáforo](https://youtu.be/zdFCyi9WLkY)
 O utilizador vê um semáforo normal com três luzes possíveis. Neste jogo, o utilizador coloca as cores e pode também acrescentar lâmpadas adicionais de tráfego a serem coloridas (até um total máximo de 8).
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Guião](/stories/logi-1/transcripts/Script1-pt.pdf)
+@[youtube](zdFCyi9WLkY)
+[Script]()
