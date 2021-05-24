@@ -86,7 +86,7 @@ actions:
       - text: "Leo, e se este for um dos esconderijos dos piratas da história que a tua irmã Mathina nos contou há dias?"
         char: sean
         mood: happy      
-      - text: "Não sei, mas parece-se bem com um deles.I don't know, but it sure looks like one of them!"
+      - text: "Não sei, mas parece-se bem com um deles."
         char: leo
         mood: happy
   - type: clearImage
