@@ -157,7 +157,6 @@ actions:
         char: trainer
         mood: normal
       - text: Nun, wenn man das alles weiß, dann muss man eigentlich nur ganz kurz überlegen, um herauszufinden, wie viele Goldmedaillen wir haben, und wer wie viele bekommt! Aber diese sechs hier überlegen schon seit Stunden und sind noch keinen Schritt weiter.
-      #Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
         char: trainer
         mood: normal
       - text: An welcher Stelle auf der Liste steht denn George?

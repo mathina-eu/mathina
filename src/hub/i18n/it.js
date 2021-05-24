@@ -61,6 +61,8 @@ export default {
 	charmingparrot: 'Capitano Charmingparrot',
 	mysteriousfigure: 'Figura misteriosa',
 	rashamom: 'Prof.ssa Levasseur',
+	kangaroo: 'Canguro',
+	owl: 'Gufo',
 	first_policeman: 'Primo poliziotto',
     second_policeman: 'Secondo poliziotto',
     george: 'George',

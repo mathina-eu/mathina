@@ -62,8 +62,8 @@ Below, we present a small description of each app. Links both for the apps and f
 
 In the first experience, the key to the method is the one used by the parrot John, that is, the jump of one letter. In this app, the user must try to correctly encrypt some words using the Caesar cipher with one jump.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
+@[youtube](rL_8zo54uOY?_align-center_)
+[Script](/stories/symm-1/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -71,7 +71,7 @@ In the first experience, the key to the method is the one used by the parrot Joh
 
 In the second app, the user must instead try to decrypt a message. He/she only knows that the ciphertext was obtained with a Caesar cipher. In the app, there is a version of the jewel of the story in which it is possible to rotate the discs with the alphabet and this movement has the effect of changing the key.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](djsCaPaiRlc?_align-center_)
 [Script](/stories/symm-1/transcripts/Script2.pdf)
 
 &nbsp;

@@ -754,7 +754,7 @@ actions:
       <p>"Ma, Angela!", la interruppe Mathina con un sorriso insperato.</p>        
   - type: dialog
     entries:        
-     - text: "La crittografia a chiave pubblica non era ancora stata inventata all'epoca dei bucanieri, quindi Capitan Charmingparrot dovrebbe fidarsi del messaggio così come lo vedrà!"
+     - text: "La crittografia a chiave pubblica non era ancora stata inventata all'epoca dei bucanieri, quindi Capitan Charmingparrot non potrà usarla per verificare l'identità del mittente e dovrà fidarsi del messaggio così come lo vedrà!"
        char: mathina
        mood: happy      
      - text: "Hai ragione Mathina, facciamolo! Oh aspetta! Eccolo, facciamo finta di essere occupati!"

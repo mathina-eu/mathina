@@ -41,7 +41,7 @@ The development of thinking is comparable to circular construction. We go back a
 
 Per la fascia di età 4-6 possono essere proposti giochi di combinatorica che coinvolgano anche il movimento del corpo (giochi con palline colorate / 3-4 diversi tipi di oggetti / strumenti musicali). Incoraggiamo i bambini a classificare, confrontare e disporre gli oggetti e scoprire regolarità e differenze. Nei giochi combinatorici, le regolarità sia in natura sia nell'ambiente interno possono essere ben osservate e catalogate. 
 
-**Solitaire game**
+**Solitario**
 
 Create 3 carte rosse, 3 blu e 3 verdi, quindi inserite i numeri 1, 2 e 3 in ciascun colore. Il compito è posizionare le carte in una tabella 3 × 3 in modo che tutti e tre i colori e tutti e tre i numeri siano rappresentati in ogni riga e ogni colonna. Una versione più avanzata del gioco viene creata con una tabella 4x4. 
 
