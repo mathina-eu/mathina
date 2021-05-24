@@ -715,7 +715,7 @@ setTimeout(function(){ Finisci(); }, 100000);
                 document.getElementById(ChiStoMuovendo).CaesarShift = Math.round(Alphabet[Lingua].length * (Angolo2 - Angolo1) / (2 * Math.PI));
 
 
-                document.getElementById("TestFin").innerHTML = Traduci(TestoIniziale, document.getElementById("CanvasMathina").CaesarShift, document.getElementById("CanvasMathina2").CaesarShift);
+                document.getElementById("TestFin").innerHTML = Traduci(ParolaOriginale[Lingua], document.getElementById("CanvasMathina").CaesarShift, document.getElementById("CanvasMathina2").CaesarShift);
 
 
                 document.getElementById("Ch1-t").innerHTML = "A &rarr; " + Alphabet[Lingua][document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length)] + " (" + document.getElementById("CanvasMathina").CaesarShift.mod(Alphabet[Lingua].length) + ")";
@@ -795,9 +795,9 @@ setTimeout(function(){ Finisci(); }, 100000);
         function GenerateEx() {
             document.getElementById("Ch1-t").innerHTML = "A &rarr; " + Alphabet[Lingua][0] + " (" + 0 + ")";
             document.getElementById("Ch2-t").innerHTML = "A &rarr; " + Alphabet[Lingua][0] + " (" + 0 + ")";
-            TestoIniziale = "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax drù pjgbc.".toUpperCase();
-            document.getElementById("TestIni").innerHTML = TestoIniziale;
-            document.getElementById("TestFin").innerHTML = TestoIniziale;
+            //TestoIniziale = "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax drù pjgbc.".toUpperCase();
+            document.getElementById("TestIni").innerHTML = ParolaOriginale[Lingua];
+            document.getElementById("TestFin").innerHTML = ParolaOriginale[Lingua];
         }
 
         function Check() {
