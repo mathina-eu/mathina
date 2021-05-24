@@ -909,7 +909,7 @@ actions:
 #Game 2.2
   - type: game
     text: "Fliege den Einhorndrachen zum Schloss und weiche den Hindernissen aus.
-      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke oder einen Berg triffst, musst Du noch einmal von vorn anfangen."
+      Fliege nur vor dem blauen Himmel. Wenn Du eine Wolke oder einen Berg triffst, musst Du noch einmal von vorn anfangen. Wenn Du es geschafft hast, kannst Du es nocheinmal mit mehr Wolken versuchen."
     #"Fly the unidragon to the castle avoiding the obstacles. You can
     #only fly over the blue sky, if you hit a cloud or a mountain, you
     #will have to start again."
@@ -972,10 +972,10 @@ actions:
 
 # Game 2.3
   - type: game
-    text: "Schnappt Euch alle Feuerbälle, ohne die Hindernisse zu berühren, und fliegt dann zum Schloss."
+    text: "Schnapp dir alle Feuerbälle, ohne die Hindernisse zu berühren, und flieg dann zum Schloss. Wenn du es geschafft hast, kannst du es nocheinmal mit mehr Feuerbällen und mehr Wolken versuchen. Merke dir erst alle Anweisungen, du kannst den Drachen nur einmal los schicken."
     #"Eat all the fireballs without touching the clouds and then reach the castle"
     url: /apps/imaginary/app_2/2_3/de.html
-    toolbarText: Nimm die Feuerbälle mit und fliege zum Schloss!
+    toolbarText: Nimm die Feuerbälle mit und fliege in einem Rutsch zum Schloss!
     cta: Fliege den Einhorndrachen!
 
   - type: dialog

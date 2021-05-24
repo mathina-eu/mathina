@@ -849,7 +849,7 @@ actions:
   - type: game
     text: Fly the unidragon to the castle avoiding the obstacles. You can
       only fly over the blue sky, if you hit a cloud or a mountain, you
-      will have to start again.
+      will have to start again. After you have reached the castle, you can try again with more clouds.
     cta: Fly to the castle!
     toolbarText: Fly to the castle avoiding obstacles!
     url: /apps/imaginary/app_2/2_2/en.html
@@ -889,8 +889,8 @@ actions:
 
       - text: "I will pose a challenge to you then. I have these fireballs
           that unidragons love to eat. You have to tell the dragon the path
-          to reach the fireball(s) but without touching any of the clouds
-          or mountains, and reach the castle afterwards."
+          to reach the fireball but without touching any of the clouds
+          or mountains, and reach the castle afterwards, all in one go."
         char: flamma
         mood: normal
 
@@ -900,7 +900,7 @@ actions:
 
 # Game 2.3
   - type: game
-    text: "Eat the fireball(s) without touching the obstacles, and then reach the castle."
+    text: "Eat the fireball(s) without touching the obstacles, and then reach the castle, all in one go. Once you reached the castle, you can try again with more fireballs to catch and more clouds to avoid."
     cta: "Fly to eat the fireball(s)!"
     url: /apps/imaginary/app_2/2_3/en.html
     toolbarText: "Eat the fireball(s) and fly to the castle!"
