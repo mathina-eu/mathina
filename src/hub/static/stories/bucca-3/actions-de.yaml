@@ -392,7 +392,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: Diese Halskette ist wunderschön! Bei der Herstellung wurde das Alphabet in einem Kreis aufgewicklet, um sie so besonders aussehen zu lassen. Ich frage mich ... Wie schaffst du es, ohne die Kette verschlüsselte Botschaften zu schreiben und zu lesen? Hast du noch eine andere Methode?
+      - text: Diese Halskette ist wunderschön! Bei der Herstellung des Anhängers wurde das Alphabet in einem Kreis aufgewicklet, um sie so besonders aussehen zu lassen. Ich frage mich ... Wie schaffst du es, ohne die Kette verschlüsselte Botschaften zu schreiben und zu lesen? Hast du noch eine andere Methode?
       #"This necklace is beautiful: the artist was able to wrap the alphabet in a circle to obtain this effect. I’m wondering… How do you manage to write and read coded messages without it? Do you have another one?"
         char: mathina
         mood: normal
@@ -896,7 +896,7 @@ actions:
 
   - type: dialog
     entries:     
-      - text: Das ist in der Tat interessant. Allerdings ist es nicht so einfach, den Code schwieriger zu gestalten. Hast du schonmal darüber nachgedacht, wie man das machen kann?
+      - text: Das ist in der Tat interessant. Allerdings ist es nicht so einfach, den Code schwieriger zu gestalten. Hast du schon mal darüber nachgedacht, wie man das machen kann?
       #"That is interesting indeed. However, it is not so easy to make the code more difficult. Did you try to think about how to do that?"
         char: angela
         mood: happy
