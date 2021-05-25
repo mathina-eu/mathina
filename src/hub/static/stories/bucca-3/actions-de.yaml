@@ -422,7 +422,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: "Schaue mal hier: A geht zu D, B geht zu E, und so weiter. Stimm doch? Nun beachte, der Abstand zwischen den Buchstaben ist immer derselbe: Drei."
+      - text: "Schaue mal hier: A geht zu D, B geht zu E, und so weiter. Siehst du? Nun beachte, der Abstand zwischen den Buchstaben ist immer derselbe: Drei."
       #"Have a look: A goes to D, B goes to E, and so on. Right? Now notice that the space between the letters is always the same: three."
         char: angela
         mood: normal
