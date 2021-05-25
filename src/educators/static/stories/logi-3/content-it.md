@@ -1,5 +1,19 @@
 # Concetti matematici
+La storia **Cani e gatti** affronta il "problema della galleria d'arte", un cosiddetto problema di visibilità. La visibilità in geometria è un'astrazione matematica della nozione di visibilità nella vita reale.
 
+Data una serie di ostacoli nello spazio euclideo, si dice che due punti nello spazio siano visibili l'uno all'altro, se il segmento di linea che li unisce non interseca alcun ostacolo.
+
+Una famosa soluzione al problema dà un limite superiore al numero minimo di guardiani che servono per controllare tutte le opere d'arte. Afferma che n/3 guardie sono sempre sufficienti e, talvolta, anche necessarie per proteggere un semplice poligono con n vertici.
+
+Il calcolo della visibilità è uno dei problemi di base della geometria computazionale e ha applicazioni nella computer grafica, nella pianificazione del movimento e in altre aree.
+
+Molte delle nostre attività quotidiane si basano su schemi algoritmici. Viaggiamo in un'altra città e dobbiamo prendere l'autobus, programmiamo riunioni o cerchiamo un oggetto smarrito nella nostra casa, dobbiamo raggruppare i piatti nell'armadio in base a dimensione, forma e colore o classificarci in ordine di grandezza in in palestra, cerchiamo il miglior giocatore di scacchi ...
+
+I modelli algoritmici sono, spesso inosservati, parte integrante delle nostre vite. Spesso razionalizziamo le nostre attività quotidiane utilizzando un modello algoritmico al fine di aumentare la nostra efficienza e quindi risparmiare tempo ed energia. Ad esempio, quando pianifichiamo il nostro viaggio dal punto A al punto B, prendiamo in considerazione il tempo di viaggio, il numero di trasferimenti, la distanza percorribile a piedi e infine creiamo l'itinerario giusto.
+
+I modelli algoritmici portano a un pensiero disciplinato. Passando attraverso i passaggi, l'utente valuta la situazione, rifiuta o rafforza la propria idea. Ogni passo di successo e soprattutto una soluzione di successo rafforza l'autostima.
+
+Se i bambini non riescono a risolvere un problema, spesso cercano di indovinare. È positivo se capiscono di essere in grado di affrontare meglio le situazioni quotidiane, specialmente con compiti pratici (matematici), se stabiliscono un modello algoritmico per questo.
 The story Cats and Dogs deals with the “art gallery problem”, a so-called visibility problem. Visibility in geometry is a mathematical abstraction of the real-life notion of visibility. 
 
 Given a set of obstacles in the Euclidean space, two points in the space are said to be visible to each other, if the line segment that joins them does not intersect any obstacles. 
