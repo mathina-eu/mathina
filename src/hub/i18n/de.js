@@ -9,7 +9,7 @@ export default {
   },
   cities: {
     'island': 'Schatzinsel',
-    'logicity': 'Logicity',
+    'logicity': 'Logi-City',
     'birds-of-fire': 'Feuerland',
     'symmetry-fair': 'Symmel-Rummel',
   },
@@ -24,7 +24,7 @@ export default {
       'logi-4': 'Wo ist mein Gold?',
       'bucca-1': 'Mathina und die geheime Botschaft',
       'bucca-2': 'Mathina und der sprechende Papagei',
-      'bucca-3': 'Mathina and the lost treasure',
+      'bucca-3': 'Der verlorene Schatz',
       'bucca-4': 'Der Schlüsselaustausch',
       'fire-1': 'Die Feuervogeltrainerin',
       'fire-2': 'Wie spricht man mit einem Einhorndrachen?',
