@@ -52,8 +52,7 @@ All apps are programmed in Javascript and can be used on computers, tablets and 
 
 In this app, the user must try to correctly encrypt some words using the Caesar cipher with a key chosen by the computer. This experience is used to familiarize the user with Caesar's cipher and, if the user has read the story "The Talking Parrot", to provide a reference to the concepts seen previously.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -61,8 +60,7 @@ In this app, the user must try to correctly encrypt some words using the Caesar 
 
 The user has to decipher a message with Caesar's cipher but with an additional difficulty: the plaintext "Let's meet tomorrow morning at the bar near the pier on the island" is written backwards. This is a technical gimmick to make Caesar's cipher more complicated and is done for plot purposes.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -70,16 +68,14 @@ The user has to decipher a message with Caesar's cipher but with an additional d
 
 In this experience, the Caesar cipher presented earlier is analyzed mathematically. This time the interface is that of a clock with a single hand that aims to present addition in modular arithmetic. The initial question is like this: "Let's try to calculate 12 + 5 on a 14-hour clock". The user can move the hour hand on this watch to 14 hours to try to understand what the final answer will be (in this specific case 3 is the correct answer).
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 ## [Game 4 - Caesar cipher repeated I]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app4)
 
 In this experience, messages are encoded and decoded using Caesar's cipher twice in succession. The coding method is exactly the same as the experiences of the story "The Talking Parrot". The only difference is that this time the operation is repeated twice.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -87,8 +83,7 @@ In this experience, messages are encoded and decoded using Caesar's cipher twice
 
 This experience concludes the analysis of history to observe that the Caesar cipher repeated 2 times in a row has nothing different from the usual Caesar cipher. Just change the key. To do this, the user is presented with two Caesar disks combined as in the previous experience and is asked to place a third Caesar disk so that the result of the encoding operation is the same.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -96,8 +91,7 @@ This experience concludes the analysis of history to observe that the Caesar cip
 
 The experience is identical to the first, with the only difference that this time the message cannot be decoded, since it was not encrypted with Caesar's cipher. We emphasize that in the story this is said to the user first, so that the experience of this app is not frustrating. The idea is just check that in fact Caesar's disk does not decode the message presented in this case.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -105,8 +99,7 @@ The experience is identical to the first, with the only difference that this tim
 
 This experience is identical to the previous one, it is presented to the user only to focus on a particular letter of the text, making sure to translate it as an "E", thus experiencing exactly what Mathina and Angela are doing in the story.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -114,8 +107,7 @@ This experience is identical to the previous one, it is presented to the user on
 
 This experience is a first step towards the Vigenère cipher. The text is encoded using two Caesar discs, one for even words and one for odd words. As it will be discovered in the story, this is not yet the right approach to actually decode the message and this experience aims to check, in person, that it is not the correct method.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
 
@@ -123,7 +115,6 @@ This experience is a first step towards the Vigenère cipher. The text is encode
 
 The concluding experience of the story is the Vigenère cipher on two letters. Using two Caesar discs, the even and odd letters are changed respectively. In this way, following the suggestions of the story, you can easily decode the message. Then there is the possibility of repeating this experience with different messages and keys.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script3.pdf)
+
 
 &nbsp;
