@@ -18,7 +18,7 @@ actions:
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
     parallax: back3
   - type: sceneText
-    text: Mathina und ihr Bruder eilten dem Känguru in den Straßen von Logicity hinterher. Sie waren schon ganz erschöpft an diesem heißen und trockenen Sommertag und versuchten mit ihrem Stadtführer Schritt zu halten. Das Känguru hatte ihnen Eiscreme versprochen - aber erst mussten sie sich alle Sehenswürdigkeiten von Logicity ansehen! Mathina und Leo hatten bereits von dem berühmten Eis der Stadt gehört und konnten kaum erwarten, es auszuprobieren.
+    text: Mathina und ihr Bruder eilten dem Känguru in den Straßen von Logi-City hinterher. Sie waren schon ganz erschöpft an diesem heißen und trockenen Sommertag und versuchten mit ihrem Stadtführer Schritt zu halten. Das Känguru hatte ihnen Eiscreme versprochen - aber erst mussten sie sich alle Sehenswürdigkeiten von Logi-City ansehen! Mathina und Leo hatten bereits von dem berühmten Eis der Stadt gehört und konnten kaum erwarten, es auszuprobieren.
     # Mathina and her brother Leo hurried after the kangaroo on Logi-city's streets. They were quite exhausted on that hot and dry summer day as they tried to keep pace with their guide. The kangaroo promised ice cream if they joined him, but they had to see all the sights of Logi-city first! Mathina and Leo had heard of Logi-city's famous ice cream, and could hardly wait to try it.
   - type: clearImage
     id: kang-st
@@ -165,7 +165,7 @@ actions:
     toolbarText: Male die Farben in die Ampeln. Jede Farb-Reihenfolge darf nur einmal vorkommen.
     cta: Versuche alle zu finden!
     # Try to find them all!
-    url: \apps\logi-1-app\logi-1-app.htm?v=1
+    url: \apps\logi-1-app\logi-1-app.htm?v=1&l=4
   - type: animation
     target: leo-runs
     vars:
@@ -225,7 +225,7 @@ actions:
     toolbarText: Was glaubst Du? Welche Farb-Reihenfolge fehlt noch?
     # Which color order do you think is missing? It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     cta: Probiere es aus!
-    url: \apps\logi-1-app\logi-1-app.htm?v=3
+    url: \apps\logi-1-app\logi-1-app.htm?v=3&l=4
   - type: dialog
     entries:
       - text: Also, zwei Ampeln haben Lila ganz oben und zwei Rosa und nur eine hat beginnt mit Orange... Meint ihr, wir brauchen noch eine zweite, die Orange ganz oben hat?...

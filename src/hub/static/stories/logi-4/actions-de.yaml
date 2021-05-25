@@ -41,7 +41,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
-      - text: Lo-gi-ci-ty Sta-di-on.
+      - text: Lo-gi-Ci-ty Sta-di-on.
       #Lo-gi-ci-ty Sta-di-um.
         char: Leo
         mood: surprised
@@ -157,7 +157,6 @@ actions:
         char: trainer
         mood: normal
       - text: Nun, wenn man das alles weiß, dann muss man eigentlich nur ganz kurz überlegen, um herauszufinden, wie viele Goldmedaillen wir haben, und wer wie viele bekommt! Aber diese sechs hier überlegen schon seit Stunden und sind noch keinen Schritt weiter.
-      #Well, knowing this, it takes maybe a second to figure out how many medals we have and who gets how many, but these 6 have been thinking for hours already.
         char: trainer
         mood: normal
       - text: An welcher Stelle auf der Liste steht denn George?
@@ -198,7 +197,7 @@ actions:
     toolbarText: Wie viele Medaillen bekommt das Team?
     cta: Erstelle eine Tabelle
     #Can you find out how many gold medals they receive? 
-    url: /apps/logi-4-app/logi-4-app.htm?c=1
+    url: /apps/logi-4-app/logi-4-app.htm?c=1&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -290,7 +289,7 @@ actions:
     #Do you notice any regularity with 116?
     toolbarText: Vervollständige die Tabelle.
     cta: Probiere es aus!
-    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
+    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -324,7 +323,7 @@ actions:
     toolbarText: Probiere es aus!
     cta: Probiere ein paar Zahlen aus!
     #Experiment with a few numbers!
-    url:  /apps/logi-4-app/logi-4-app.htm?c=1
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -376,7 +375,7 @@ actions:
     toolbarText: Versuche es mit der Zahl 127.
     cta: Teste es!
     #Experiment with the number 127!
-    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
+    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -404,7 +403,7 @@ actions:
     toolbarText: 
     cta: Probiere es aus!
     #Experiment with numbers!
-    url:  /apps/logi-4-app/logi-4-app.htm?c=1
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
