@@ -46,19 +46,19 @@ Another exercise with the same set is to complete the series below:
 
 # About the apps
 
-Story: ["The tiled floor trap"]($HUB_URL/story/tiled-floor-trap/)
+Story: ["The tiled floor trap"]($HUB_URL/story/the-tiled-floor-trap/)
 
-[First game in the story]($HUB_URL/story/tiled-floor-trap/?actionLink=firstGame)
+[First game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=firstGame)
 
-[Second game in the story]($HUB_URL/story/tiled-floor-trap/?actionLink=secondGame)
+[Second game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=secondGame)
 
 The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video. 
 
 The story is accompanied by one app, which appears in the story twice. At the first occasion users have the chance to play with the app freely. At the second time the suggestion is to try and find the solution by thinking backwards.
 
-The rule for this game is that users can only step from red field to red field, from blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. 
+The rule of this game is that users can only step from red field to red field, from blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. 
 
 ## Guide to the app ## 
 
 @[youtube](ORR614pbLzk)
-[Script (PDF)](/stories/tiled-floor-trap/transcripts/Script2.pdf)
+[Script (PDF)](/stories/the-tiled-floor-trap/transcripts/Script2.pdf)
