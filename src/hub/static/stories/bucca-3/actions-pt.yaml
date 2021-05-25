@@ -15,7 +15,7 @@ actions:
           
   - type: sceneText
     text: >
-      <p>Não há escola esta semana. Mathina pensave já no que fazer durante as férias. A sua mente vagueava em torno de umas belas aventuras e novas descobertas quando um ruído repentino ecoou do lado de fora das janelas. No jardim, havia um envelope preso a um pedaço de madeira.
+      <p>Não há escola esta semana. Mathina pensava já no que fazer durante as férias. A sua mente vagueava em torno de umas belas aventuras e novas descobertas quando um ruído repentino ecoou do lado de fora das janelas. No jardim, havia um envelope preso a um pedaço de madeira.
       </br >
       </br >
       Mathina saiu correndo e abriu o envelope com cuidado. Havia uma carta dentro.</p>
@@ -762,7 +762,7 @@ actions:
         char: Angela
         mood: normal
       - text: "...3 bandidos..."
-        char: John
+        char: parrot
         mood: normal
       - text: "...ok, mesmo assim, eles conseguiram descodificar as nossas mensagens e estavam à nossa espera!"
         char: Angela
@@ -1289,11 +1289,11 @@ actions:
       - text: "São lindos! Provavelmente uma sugestão para uma outra forma de cifrar mensagens."
         char: Angela
         mood: happy
-      - text: "Acho que isto ser uma grande aventura, assim como a que fizemos hoje."
+      - text: "Acho que isto vai ser uma grande aventura, assim como a que fizemos hoje."
         char: mathina
         mood: happy
       - text: "Eu gostaria de um biscoito, por favor!"
-        char: John
+        char: parrot
         mood: normal
 
 
