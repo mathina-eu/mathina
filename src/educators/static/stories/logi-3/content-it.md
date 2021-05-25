@@ -41,15 +41,19 @@ La storia è accompagnata da una app in tre versioni leggermente diverse. Alla p
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App 1 - Cani e gatti I ($HUB_URL/story/cats-and-dogs/?actionLink=app1)
+##App 1 - Cani e gatti I ($HUB_URL/story/cats-and-dogs/?actionLink=firstGame)
 
-L'utente vede una mappa e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
+L'utente vede la mappa di Città della logica e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. Il gioco è libero e non è richiesta alcuna soluzione.
 
 @[youtube](T6k8ftH5jMc?_align-center_)
-[Script](/stories/logi-3/transcripts/Script1.pdf)
+[Script](/stories/logi-3/transcripts/Script3.pdf)
 
-##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=app2)
-
+##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=secondGame)
+L'utente vede la mappa di Città della logica e tre zollette di zucchero. L'obiettivo è scoprire se tre poliziotti sono in grado di sorvegliare tutte le strade della città e, se sì, come. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
 
 @[youtube](uwkk_lkBqTk?_align-center_)
-[Script](/stories/logi-3/transcripts/Script2.pdf)
+[Script](/stories/logi-3/transcripts/Script3.pdf)
+
+##App 3 - Cani e gatti III ($HUB_URL/story/cats-and-dogs/?actionLink=thirdGame)
+L'utente vede la mappa di Città della logica e tre cappelli della polizia. L'obiettivo è scoprire come tre poliziotti sono in grado di sorvegliare tutte le strade della città. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. Cliccando sul pulsante "Ricarica" sarà generata una nuova mappa.
+
