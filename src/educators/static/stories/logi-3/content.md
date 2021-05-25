@@ -46,14 +46,24 @@ The story is accompanied by one app in three slightly different versions. At the
 
 The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video.
 
+## Guide to the app ## 
+
 Story ["Cats and dogs"]($HUB_URL/story/cats-and-dogs/)
 
-The user sees a map and two police hats. The goal is to find out whether two policemen are able to oversee all roads of the city or more are needed. The user is able to move the icons on the map and the roads overseen will appear highlighted. Free play; no solutions are required this time. 
+[First game in the story]($HUB_URL/story/cats-and-dogs/?actionLink=firstGame)
 
-[First game in story]($HUB_URL/story/cats-and-dogs/?actionLink=firstGame)
-Explanatory film about app (1) @[youtube](T6k8ftH5jMc)
+You see Logi-city's street layout and two police hats. The goal is to find out whether two policemen are able to patrol all roads of the city or more are needed. You can move the icons on the map and the roads patrolled will appear highlighted. Free play; no solutions are required. 
 
-[Second game in story]($HUB_URL/story/cats-and-dogs/?actionLink=secondGame)
-Explanatory film about app (2) @[youtube](uwkk_lkBqTk)
+@[youtube](T6k8ftH5jMc)
+
+[Second game in the story]($HUB_URL/story/cats-and-dogs/?actionLink=secondGame)
+
+You see Logi-city's street layout and three sugar cubes. The goal is to find out whether three policemen are enough to patrol all roads of the city and if yes, how? You can move the icons on the map and the roads patrolled will appear highlighted. 
+
+@[youtube](uwkk_lkBqTk)
+
+[Third game in the story]($HUB_URL/story/cats-and-dogs/?actionLink=thirdGame)
+
+You see a street layout and three police hats. The goal is to find out how three policemen are able to patrol all roads of the city. You can move the icons on the map and the roads patrolled will appear highlighted. By clicking on the "refresh" button, a new map is generated.
 
 [Script](/stories/logi-3/transcripts/Script3.pdf)
