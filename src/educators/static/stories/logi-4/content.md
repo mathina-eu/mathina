@@ -69,7 +69,7 @@ Story ["My gold"]($HUB_URL/story/my-gold-please/)
 
 [First game in the story]($HUB_URL/story/my-gold-please/?actionLink=firstGame)
 
-The first person receives as many gold medals, which equal the sum of the digits of the total number of gold medals received by the team. For example, if the team won 721 gold medals, then the first team member gets 7 + 2 + 1, i.e. 10 gold medals. There remains 721 minus 10, or 711 gold medals. The next one gets the sum of the digits of the gold left this way. And so on.  
+Create a table by entering an initial number and then clicking “Accept” and “Generate table”. The first person receives as many gold medals, which equal the sum of the digits of the total number of gold medals received by the team. For example, if the team won 721 gold medals, then the first team member gets 7 + 2 + 1, i.e. 10 gold medals. There remains 721 minus 10, or 711 gold medals. The next one gets the sum of the digits of the gold left this way. Fill in the table.
 
 ## Guide to the app ##
 @[youtube](https://youtu.be/A1vXg_DSolc)
