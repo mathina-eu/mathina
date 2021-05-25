@@ -60,7 +60,7 @@ Todas as apps foram programadas em JavaScript e devem poder ser usadas quer em P
 
 &nbsp;
 
-## [Jogo 1 - A jóia I]($HUB_URL/pt/story/the-talking-parrot/?actionLink=app1)
+## [Jogo 1 - A jóia I]($HUB_URL/pt/story/mathina-and-the-talking-parrot/?actionLink=app1)
 
 Na primeira experiência, a chave para o método é a usada pelo papagaio João, ou seja, um salto de uma letra. Nesta app, o utilizador tem de tentar codificar corretamente algumas palavras com a cifra de César com um salto.
 
@@ -69,7 +69,7 @@ Na primeira experiência, a chave para o método é a usada pelo papagaio João,
 
 &nbsp;
 
-## [Jogo 2 - A jóia II]($HUB_URL/pt/story/the-talking-parrot/?actionLink=app2)
+## [Jogo 2 - A jóia II]($HUB_URL/pt/story/mathina-and-the-talking-parrot/?actionLink=app2)
 
 Na segunda app, o utilizador tem de, pelo contrário, tentar decifrar a mensagem. Só sabe que a mensagem cifrada foi obtida com uma cifra de César.
 Na app há uma versão da jóia da história na qual é possível rodar os discos com o alfabeto, e esse movimento tem como efeito uma mudança da chave.
