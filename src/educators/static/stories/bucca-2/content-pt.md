@@ -43,7 +43,9 @@ A cifra de César é um dos mais famosos métodos criptográficos da Antiguidade
 Na história de Mathina, a cifra de César é apenas apresentada a um nível geral, mas é possível fazer uma análise mais aprofundada dela e de algumas das suas caraterísticas com crianças de 7 a 10 anos sem recorrer a outros conhecimentos prévios. Seguem-se algumas ideias para atividades que podem ser propostas depois da leitura da história.
 
 `*` Quão segura é a cifra de César? Não muito, porque depois de um máximo de 25 tentativas de descodificação (isto é, o número de letras do alfabeto menos um) é possível descobrir a chave e a mensagem original.
+
 `*` Será que cifrando um texto duas vezes, uma de cada vez, mesmo com chaves diferentes, a mensagem escondida fica mais segura? Não, pelo contrário, isto é equivalente a aplicar a cifra de César usando a soma das duas chaves (saltos) como chave.
+
 `*` O educador poderá tomar como base a história de Mathina para uma primeira introdução à aritmética modular.
 
 Estes pontos são retomados na história 
@@ -64,7 +66,7 @@ Todas as apps foram programadas em JavaScript e devem poder ser usadas quer em P
 
 Na primeira experiência, a chave para o método é a usada pelo papagaio João, ou seja, um salto de uma letra. Nesta app, o utilizador tem de tentar codificar corretamente algumas palavras com a cifra de César com um salto.
 
-@[youtube](rL_8zo54uOY?_align-center_)
+@[youtube](OYrrdu4y_7E?_align-center_)
 [Guião](/stories/bucca-2/transcripts/Script2-pt.pdf)
 
 &nbsp;
@@ -74,7 +76,7 @@ Na primeira experiência, a chave para o método é a usada pelo papagaio João,
 Na segunda app, o utilizador tem de, pelo contrário, tentar decifrar a mensagem. Só sabe que a mensagem cifrada foi obtida com uma cifra de César.
 Na app há uma versão da jóia da história na qual é possível rodar os discos com o alfabeto, e esse movimento tem como efeito uma mudança da chave.
 
-@[youtube](djsCaPaiRlc?_align-center_)
+@[youtube](OYrrdu4y_7E?_align-center_)
 [Guião](/stories/bucca-2/transcripts/Script2-pt.pdf)
 
 &nbsp;

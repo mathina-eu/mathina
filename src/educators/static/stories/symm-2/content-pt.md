@@ -45,7 +45,7 @@ Relativamente à sua simetria, as rosáceas podem dividir-se em duas classes: **
 
 O
 [“Jogo das Rosáceas”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg3)
-apresentado na história é um jogo no qual o jogador tem de escolher as rosáceas com simetria de reflexão, ou seja, as rosetas diedrais.
+apresentado na história é um jogo no qual o jogador tem de escolher as rosáceas com simetria de reflexão, ou seja, as rosáceas diedrais.
 
 Como podemos distinguir as rosáceas diedrais umas das outras? Uma forma natural é contar os seus eixos de simetria… Esse é exatamente o objetivo do
 [“Jogo dos sacos I”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg4)

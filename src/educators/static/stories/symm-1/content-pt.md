@@ -21,7 +21,7 @@ Na app “Construindo brinquedos (I)”, são também exploradas noções relaci
 
 Com recurso a contos e jogos, o nosso objetivo principal é levar as crianças a descobrirem a Simetria de forma lúdica.
 
-Partindo de experiências concretas realizadas pelas personagens, experiências essas amplamente ilustradas pelas animações e imagens fornecidas, apresentamos de forma intuitiva o conceito de eixo de simetria. A compreensão de tal conceito é aprofundada ao longo da história, tendo as crianças a oportunidade de consolidar os seus conhecimentos, deforma lúdica, através da resolução dos diversos desafios propostos nas apps disponíveis.
+Partindo de experiências concretas realizadas pelas personagens, experiências essas amplamente ilustradas pelas animações e imagens fornecidas, apresentamos de forma intuitiva o conceito de eixo de simetria. A compreensão de tal conceito é aprofundada ao longo da história, tendo as crianças a oportunidade de consolidar os seus conhecimentos, de forma lúdica, através da resolução dos diversos desafios propostos nas apps disponíveis.
 
 A história é “auto-contida” e não deve exigir consulta de materiais adicionais. Para tal, tivemos em consideração dois fatores: 1) não exigir conhecimento prévio sobre o assunto; 2) adequação dos conteúdos à faixa etária dos 4/6 anos. A nossa abordagem difere, no entanto, do normalmente praticado na educação formal, recorrendo a histórias, exemplos interativos e visualmente atrativos e um grande número de jogos e desafios sob a forma de apps.
 
