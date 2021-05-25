@@ -34,6 +34,31 @@ iframe {
   }
 }
 
+.v-dialog {
+  font-family: var(--story-font-family);
+  box-shadow:
+    0 3px 4px -10px rgba(0, 0, 0, 0.5),
+    0 10px 32px -10px rgba(0, 0, 0, 0.2) !important;
+
+  .v-card {
+    background: url('~assets/images/dialog_bg.png') !important;
+
+    &__title .headline {
+      font-family: var(--story-font-family) !important;
+      font-size: 1.75em !important;
+      padding: 1rem 0 !important;
+      font-weight: 600;
+    }
+
+    &__text {
+      background: rgba(230, 234, 233, 0.5);
+      color: var(--text-color) !important;
+      font-size: 1.125em !important;
+      padding-top: 1.25rem !important;
+    }
+  }
+}
+
 .v-toolbar__title .v-btn {
   font-weight: 600;
 
