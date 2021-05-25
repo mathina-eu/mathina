@@ -774,7 +774,7 @@ actions:
     text: Tenta guiar o uni-dragão com pares de números.
     toolbarText: Guia o uni-dragão com pares de números!
     cta: Guia o uni-dragão!
-    url: /apps/imaginary/app_2/2_1/en.html
+    url: /apps/imaginary/app_2/2_1/pt.html
 
   - type: sceneText
     text: A Flama estava contente ao ver como Mathina usava aquela linguagem.
@@ -803,7 +803,7 @@ actions:
     text: Guia o uni-dragão até ao castelo evitando os obstáculos. Só podes fazê-lo voar no céu azul, e se bateres numa núvem ou na montanha, é preciso recomeçar do princípio. Depois de chegares ao castelo, podes tentar novamente com mais núvens.
     cta: Voa até ao castelo!
     toolbarText: Voa até ao castelo evitando obstáculos!
-    url: /apps/imaginary/app_2/2_2/en.html
+    url: /apps/imaginary/app_2/2_2/pt.html
 
   - type: dialog
     avatarAlign:
@@ -846,7 +846,7 @@ actions:
   - type: game
     text: Come as bolas de fogo sem tocares nos obstáculos, e depois vai até o castelo, de uma só vez. Depois de chegares ao castelo, podes tentar novamente, agora com mais bolas de fogo para apanhar e mais núvens para evitar.
     cta: Voa para comer as bolas de fogo!
-    url: /apps/imaginary/app_2/2_3/en.html
+    url: /apps/imaginary/app_2/2_3/pt.html
     toolbarText: Come as bolas de fogo e voa até o castelo!
 
   - type: dialog
