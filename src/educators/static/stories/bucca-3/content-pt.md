@@ -3,7 +3,7 @@ Do ponto de vista de conteúdo matemático, o objetivo desta história é dar a 
 
 Na história, Mathina já está familiarizada com a cifra de César pelo que é aconselhável que primeiro tenha sido lido a história 
 ["O Papagaio Que Fala"]($HUB_URL/pt/story/the-talking-parrot/)
-, a qual a descreve in which it is presented. Nesta história, Ângela conduz Mathina à descoberta de uma forma particular de calcular somas de números: aritmética modular.
+, a qual a descreve. Nesta história, Ângela conduz Mathina à descoberta de uma forma particular de calcular somas de números: aritmética modular.
 
 Por exemplo, com módulo 12, 10 + 5 é igual a 3, porque 10 + 5 = 15 (o resultado da soma habitual) e o resto ao dividir 15 por 12 é 3. Trabalhar com aritmética modular [módulo n] é semelhante a usar um relógio com n horas (esta analogia é também usada numa das aplicações desta história). A soma neste último exemplo feita num relógio não surpreende ninguém: se começarmos às 10 e somarmos 5 horas, o ponteiro irá parar nas 3!
 

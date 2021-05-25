@@ -30,7 +30,7 @@ região^[Note que a referida "região" no plano para este friso é ilimitada à 
 
 ## O que é uma simetria?
 
-Quando se fala em simetria, é natural introduzir o conceito de isometria. Uma isometria é uma função que preserva distâncias: se dois pontos *A* e *B* são transformados em *A’* and *B’*, então *dist(A,B)=dist(A’,B’)*.
+Quando se fala em simetria, é natural introduzir o conceito de isometria. Uma isometria é uma função que preserva distâncias: se dois pontos *A* e *B* são transformados em *A’* e *B’*, então *dist(A,B)=dist(A’,B’)*.
 
 ![Isometry](/stories/symm-3/img/_align-center_/iso.png =300x250)
 
@@ -42,7 +42,7 @@ As seguintes animações --
 [**anim 1**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg1)
 , 
 [**anim 2**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg2)
- and 
+ e 
 [**anim 3**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg3)
  --, disponíveis na história, ilustram, respetivamente, uma simetria de rotação, uma simetria de reflexão deslizante e uma simetria de translação em 3 frisos diferentes.
  
@@ -63,7 +63,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 [rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg1)
 . Consideremos agora 2 casos diferentes: 1) frisos sem simetria de reflexão (que, na história, estão fora dos sacos) e 2) frisos com simetria de reflexão:
 
-  * no primeiro caso, vamos selecionar os frisos que possuem simetria de rotação e considerar um 
+  * no primeiro caso, vamos selecionar os frisos que possuem simetria de rotação e considerar 
 [um novo saco (o 4º)]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg6)
 ;
 

@@ -6,7 +6,6 @@
       <template #back1>
         <div class="map-background" />
         <div class="castle" />
-        <div class="wizard" />
         <div class="mathina-leo" />
         <div class="pub" />
         <div class="market" />
@@ -36,7 +35,7 @@
         </svg>
         <div
           v-for="story of mapStories"
-          :key="story.id"
+          :key="`${story.id}-${story.class}`"
           :class="`story-nav ${story.class} story-nav--age-${getStoryData(story.id).ageMeta.icon}`"
           @click="openStory(story.id)"
           @mouseover="onMouseOver(story.id)"
@@ -82,6 +81,7 @@ export default {
         { id: 'symm-1', class: 'toys' },
         { id: 'symm-2', class: 'stalls' },
         { id: 'symm-3', class: 'frieze' },
+        { id: 'symm-3', class: 'wizard' },
         { id: 'symm-4', class: 'carousel' },
         { id: 'bucca-1', class: 'tree' },
         { id: 'bucca-2', class: 'parrot' },
@@ -108,7 +108,7 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: 'World Map' }]);
+    this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: this.$t('world.map') }]);
   },
   methods: {
     getStoryData(storyId) {
@@ -137,6 +137,8 @@ export default {
 </script>
 
 <style scoped>
+@import '~vars';
+
 .map-background {
   background: url('~assets/images/map/background.jpg');
   background-size: cover;
@@ -159,28 +161,31 @@ export default {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #ff00003b;
+    border: 1px solid rgba(52, 112, 184, 0.85);
     display: block;
-    background: #21b3f36b;
+    background: rgba(255, 255, 255, 0.7);
     left: 50%;
     top: 50%;
     position: absolute;
+    font-size: 11px;
+    line-height: 28px;
+    color: var(--text-color-primary);
   }
 
   &--age-1::after {
-    background: #00800091;
+    content: "4+";
   }
 
   &--age-2::after {
-    background: #21b3f36b;
+    content: "7+";
   }
 
   &--age-3::after {
-    background: #9c27b099;
+    content: "11+";
   }
 
   &--age-4::after {
-    background: #ff5722cc;
+    content: "15+";
   }
 }
 
@@ -292,6 +297,10 @@ export default {
   bottom: -4%;
   background: url('~assets/images/map/frieze.png') no-repeat center;
   background-size: contain;
+
+  &::after {
+    display: none;
+  }
 }
 
 .pub {
