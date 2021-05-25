@@ -4,7 +4,7 @@ actions:
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;" 
-    text: Das ist die Straßenkarte von Logicity.
+    text: Das ist die Straßenkarte von Logi-City.
     # This is the street map of Logi-city. 
   - type: background
     src: logi-bg3.jpg
