@@ -9,7 +9,7 @@ export default {
   },
   cities: {
     'island': 'Schatzinsel',
-    'logicity': 'Logicity',
+    'logicity': 'Logi-City',
     'birds-of-fire': 'Feuerland',
     'symmetry-fair': 'Symmel-Rummel',
   },
