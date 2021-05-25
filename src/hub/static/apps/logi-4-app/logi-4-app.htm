@@ -323,7 +323,9 @@
                 console.log(GiveOld);
                 cell1.innerHTML = Traduzioni[7][Lingua]+ PlayerNames[CurrentLine - 1];
                 cell2.innerHTML = GiveOld;
-                cell3.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
+				
+				if (GiveOld<0) cell3.innerHTML = "<img src='./sad.png' style='height:min(1.7vw,4vh)'>";
+                else cell3.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
 
                 if (CurrentLine % 2 == 0) {
 					cell1.classList.add("tg-ndxe");
@@ -355,7 +357,8 @@
 
                 cell3.innerHTML = "<span id='N" + CurrentLine + "'></span>";
                 cell1.innerHTML = GiveOld;
-                cell2.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
+				if (GiveOld<0) cell2.innerHTML = "<img src='./sad.png' style='height:min(1.7vw,4vh)'>";
+                else cell2.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
 				
 				if (CurrentLine % 2 == Amici % 2) {
 					cell1.classList.add("tg-ndxe");
