@@ -400,6 +400,15 @@ actions:
       - char: flamma
         text: Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
 
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
+    parallax: front2
+
   - type: game
     text: "App 3-1"
     url:
@@ -408,8 +417,55 @@ actions:
     text: "App 3-2"
     url:
 
+  # - type: clearImage
+    # id: leo
+  - type: clearImage
+    id: mat
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: phoe
+    
+  # - type: image
+    # src: $COMMON/img/characters/leo/leo2.png
+    # id: leo
+    # style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    # parallax: front2
+    
+  - type: image
+    src: phoenix2.png
+    id: phoe2
+    style: "width: 30%; top: 40%; left: 90%;"
+    noOverflow: true
+    parallax: front1
+    
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        #width: 25%
+        xPercent: -50
+       # yPercent: -240
+       
+  - type: animation
+    target: phoe2
+    vars:
+        duration: 1.5
+        #width: 25%
+        xPercent: -163
+        yPercent: -35
+
   - type: sceneText
-    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix lying in the ground. It had bright blue and green feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix, who had just landed on Flamma's hand. It had bright blue and red feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
 
   - type: dialog
     avatarAlign:
@@ -429,6 +485,24 @@ actions:
 
       - char: flamma
         text: Yes, but how would you tell her what altitude you want her to be at?
+        
+  - type: clearImage
+    id: leo
+    
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 22%; top: 40%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+    
+    
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
 
       - char: leo
         text: Well, I can tell her if she should go upwards or downwards, she can do that.
@@ -438,6 +512,7 @@ actions:
 
       - char: leo
         text: It will be easy, it is like the unidragons, you tell them a direction and they follow it.
+        mood: happy
 
       - char: flamma
         text: Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
@@ -445,6 +520,14 @@ actions:
   - type: game
     text: "App 3-3"
     url:
+  - type: clearImage
+    id: phoe2
+    
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 30%; left: 45%; transform: scaleX(-1)"
+    parallax: front2
 
   - type: sceneText
     text: >
@@ -452,27 +535,59 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: mathina
         text: Leo, you learned a way to tell the phoenix when to rise and descend. I learned a way to tell the phoenix a height at any flown distance. Why don’t we mix the two things together?
+        mood: talking
 
       - char: leo
         text: What do you mean, Mathina?
 
       - char: mathina
         text: I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
+        mood: arguing
         exposition: Leo was a bit confused now, but Flamma intervened.
 
       - char: flamma
-        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+        
+      - char: flamma
+        text: If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
   - type: game
     text: "App 3-4"
     url:
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 20%; top: 35%; left: 10%; transform: scaleX(-1)"
+    parallax: front2
+    
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 25%; top: 32%; left: 75%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: phoenix_mirrored.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: 100%;"
+    noOverflow: true
+    parallax: front3
+    
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -350
+       # yPercent: -240
 
   - type: sceneText
     text: >
