@@ -150,9 +150,9 @@ actions:
     #  </p>
 
   - type: game
-    text: Wähle den Klartext aus. Erinnere dich an den Hinweis "RÜCKWÄRTS“...
+    text: Wähle die richtige Nachricht aus. Erinnere dich an den Hinweis "RÜCKWÄRTS“...
     #"Select the plaintext. Remember the hint “BACKWARD”..."
-    toolbarText: Wähle den Klartext aus.
+    toolbarText: Wähle die richtige Nachricht.
     #"Try to select the correct plaintext"
     cta: Probiere es aus!
     #"Try it yourself!"
@@ -1187,7 +1187,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p>Nachdem Mathina einige Zeit versucht hatte, den Code zu entziffern, schaute sie Angela verblüfft an.<p>
+      <p>Nachdem Mathina einige Zeit versucht hatte, den Code zu entziffern, schaute sie Angela fragend an.<p>
     #<p> After some time spent trying to decipher the code, Mathina looked at Angela quite baffled. </p>
 
   - type: dialog
@@ -1313,7 +1313,7 @@ actions:
       #"Nothing… Except that at least in this way we can translate both “U” and “Z” to “I”."
         char: mathina
         mood: sad
-      - text: Naja... zumindest ist das eine Möglichkeit, die Kette zweimal zu verwenden. Allerdings bleiben lange Wörter einfach unlesbar. Vielleicht müssen wir die Art der Übersetzung ändern. Wie wäre es, wenn wir statt der Wörter nur Buchstaben nehmen? Wir können versuchen, eine Kombination für Buchstaben in ungerader Position und eine andere Kombination für Buchstaben in gerader Position zu benutzen.
+      - text: Naja... zumindest ist das eine Möglichkeit, die Kette zweimal zu verwenden. Allerdings bleiben die Wörter trotzdem einfach unlesbar. Vielleicht müssen wir die Art der Übersetzung ändern. Wie wäre es, wenn wir statt der Wörter nur Buchstaben nehmen? Wir können versuchen, eine Kombination für Buchstaben in ungerader Position und eine andere Kombination für Buchstaben in gerader Position zu benutzen.
       #"Well… at least this is a way to use the necklace twice. However, long words just stay unreadable. Maybe we need to change how we translate it. What about using just letters instead of words? We can try to use one key for letters in odd position, and another key for letters in even position."
         char: angela
         mood: normal
@@ -1340,7 +1340,7 @@ actions:
       #"That is… unbelievable! I tried so much time, and now… here is the solution!"
         char: angela
         mood: normal
-      - text: "Und das war sehr, sehr schlau: Auf diese Weise ist es schwieriger, alle möglichen Kombinationen auszuprobieren. Ich frage mich, wie viele es wohl sind."
+      - text: "Und das war super schlau: Auf diese Weise ist es schwieriger, alle möglichen Kombinationen auszuprobieren. Ich frage mich, wie viele es wohl sind."
       #"And that was very very clever: in this way, it is more difficult to try all the possible combinations. I’m wondering about how many are there."
         char: mathina
         mood: talking
