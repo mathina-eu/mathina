@@ -30,14 +30,14 @@ A ideia principal que pretendemos veicular sobre o assunto é que um **Sólido P
 `*` em cada vértice encontra-se o mesmo número de faces;
 
 `*` os [**ângulos diedrais**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg2)
-, ou seja, os ângulos entre faces contíguas, são iguaisu seja, os ângulos entre faces contíguas, são iguais;
+, ou seja, os ângulos entre faces contíguas, são iguais seja, os ângulos entre faces contíguas, são iguais;
 
 `*` os [**ângulos sólidos**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg3)
  em cada vértice são iguais.
 
 ### Construindo todos os Sólidos Platónicos
 
-Na história, a Mathina e o Leo lembram-se de um poliedro que satisfaz todas estas propriedades: o **cubo.**.
+Na história, a Mathina e o Leo lembram-se de um poliedro que satisfaz todas estas propriedades: o **cubo**.
 
 Ao tentar construir um cubo, o Leo descobre, experimentalmente, uma
 [**sua planificação**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg4)
@@ -188,7 +188,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 8 poliedros. São apresentados 3 conjuntos de poliedros. O jogo fica resolvido se forem selecionados todos os "bons" poliedros (i.e. convexos).
 
-@[youtube](PEeIzkvDG70?_align-center_)
+@[youtube](GDYOL7SnfY0?_align-center_)
 [Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
@@ -199,7 +199,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 6 propostas. São apresentados 3 conjuntos de propostas de planificações. O jogo fica resolvido se forem selecionadas todas as "boas" planificações.
 
-@[youtube](UOZvfqpXVD4?_align-center_)
+@[youtube](NspkoF8gH3k?_align-center_)
 [Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;

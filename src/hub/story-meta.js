@@ -7,7 +7,7 @@ export default [
     ageMeta: AGE_GROUPS['0'],
   },
   {
-    slug: 'ytic-igol',
+    slug: 'the-tiled-floor-trap',
     id: 'logi-2',
     ageMeta: AGE_GROUPS['1'],
   },

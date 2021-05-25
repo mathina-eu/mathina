@@ -30,7 +30,7 @@ região^[Note que a referida "região" no plano para este friso é ilimitada à 
 
 ## O que é uma simetria?
 
-Quando se fala em simetria, é natural introduzir o conceito de isometria. Uma isometria é uma função que preserva distâncias: se dois pontos *A* e *B* são transformados em *A’* and *B’*, então *dist(A,B)=dist(A’,B’)*.
+Quando se fala em simetria, é natural introduzir o conceito de isometria. Uma isometria é uma função que preserva distâncias: se dois pontos *A* e *B* são transformados em *A’* e *B’*, então *dist(A,B)=dist(A’,B’)*.
 
 ![Isometry](/stories/symm-3/img/_align-center_/iso.png =300x250)
 
@@ -42,7 +42,7 @@ As seguintes animações --
 [**anim 1**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg1)
 , 
 [**anim 2**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg2)
- and 
+ e 
 [**anim 3**]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg3)
  --, disponíveis na história, ilustram, respetivamente, uma simetria de rotação, uma simetria de reflexão deslizante e uma simetria de translação em 3 frisos diferentes.
  
@@ -63,7 +63,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 [rotação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg1)
 . Consideremos agora 2 casos diferentes: 1) frisos sem simetria de reflexão (que, na história, estão fora dos sacos) e 2) frisos com simetria de reflexão:
 
-  * no primeiro caso, vamos selecionar os frisos que possuem simetria de rotação e considerar um 
+  * no primeiro caso, vamos selecionar os frisos que possuem simetria de rotação e considerar 
 [um novo saco (o 4º)]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg6)
 ;
 
@@ -144,7 +144,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 ![Carimbar](/stories/symm-3/img/stamp.png =40x40)
 , o utilizador pode visualizar o cilindro a carimbar um friso que tem como motivo a imagem escolhida.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](xKiCkxAxdEs?_align-center_)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -155,7 +155,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 ![Confirmar](/stories/symm-3/img/confirm.png =40x40)
 ,  programa mostra um novo conjunto de 7 frisos. São apresentados 3 conjuntos de frisos. O jogo fica resolvido se forem selecionados todos os "bons" frisos (i.e. com eixos de simetria).
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](ZRi96tPJW7Y?_align-center_)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -164,7 +164,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 É exibido um conjunto de 12 frisos. O utilizador é convidado a arrastar cada friso para o saco correspondente, de acordo com as suas simetrias de reflexão: o **saco 1** contém os frisos que só têm eixos de simetria verticais; o **saco 2**, os que têm um eixo de simetria horizontal; e o **saco 3** os frisos com eixos de simetria verticais e horizontal.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](bIFqroBizaU?_align-center_)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -173,7 +173,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. De seguida, o utilizador pode visualizar uma “placa” a carimbar um friso, com eixos de simetria verticais e horizontal, que tem como motivo a imagem escolhida.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](moNr-MDIUs0?_align-center_)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -214,5 +214,5 @@ Nesta app, o utilizador pode ver os 7 sacos obtidos e observar os frisos no inte
  (translação)
  –,  aqueles que correspondem às simetrias existentes nos frisos do saco.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](gzhAUhgIVp0?_align-center_)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)

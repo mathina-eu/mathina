@@ -1,6 +1,6 @@
 # Mathematical concepts
 ​
-The story entitled The traffic light challenge aims to offer a small but challenging set of combinatorics-based problems. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
+The story entitled **The traffic light challenge** aims to offer a small but challenging set of combinatorics-based problems. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
 
 Combinatorial problems are connected to different mathematical areas and can be explored at diﬀerent levels. Therefore, combinatorics is available as an overarching theme, which can be introduced already in kindergarten and built upon throughout the entire school education for developing problem-solving abilities of diﬀerent age groups.  
 
@@ -47,11 +47,20 @@ There are 3 apps accompanying the story. The first app enables free play with co
 
 All apps were programmed in JavaScript and are optimized both for PCs and tablets/smartphones. Below see the short description of each app. Links are provided both for apps and user guide videos. 
 
-## [Game 1 - The traffic light challenge](https://hub.zabkar.net/story/mathina-wins-a-lot-of-new-toys/?actionLink=12)
-Test page: http://www.rimosco.it/ew/LC_S1_TrafficLight/index.htm
-The user sees a conventional traffic light with three possible lights. In this game, the user sets the colors and is also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
+Story: ["The traffic light challenge"]($HUB_URL/story/the-traffic-light-challenge/)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-1/transcripts/Script1.pdf)
+[First game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=firstGame)
 
-[Script](https://docs.google.com/document/d/1JoX-oWfSPqPheFBopjWfu1lsRNl8zBMHrx6ylGm3zDM/edit#)
+You see a conventional traffic light with three possible lights. In this game, you can set the colors and are also able to add additional traffic lamps (up to 8 pieces total) to be colored. Colors can be reset if necessary. 
+
+@[youtube](zdFCyi9WLkY)
+
+[Second game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
+
+Eight traffic lights are seen on the app screen in a row. You can merge identical traffic lights by dragging them from one place to another. Once identical lights are placed next to each other, superfluous items disappear. Once you’ve found the right solution, you’ll see this screen. By clicking on the green arrow, you go back to the initial app page.
+
+@[youtube](o7GglqqoNMs)
+
+## Guide to the app ## 
+
+[Script (PDF)](/stories/the-traffic-light-challenge/transcripts/Script1.pdf)

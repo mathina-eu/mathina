@@ -1,0 +1,909 @@
+# FIRE-2. Talking to the unidragon
+actions:
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: back3
+
+  - type: image
+    src: bg_castle.png
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: back2
+
+  - type: image
+    src: bg_fields.png
+    id: fields
+    style: "position: absolute; bottom: 0; left: 0; width: 150%; height: 150%; z-index: 1;"
+    noOverflow: true
+    parallax: mid1
+
+  # - type: image
+    # src: white.png
+    # id: white
+    # style: "position: absolute; bottom: -10%; left: 100%; width: 100%; height: 150%; z-index: 1;"
+    # parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 10%; top: -25%; left: 5%;"
+    parallax: mid2
+
+  # - type: animation
+    # target: uni
+    # vars:
+      # duration: 6
+      # xPercent: -800
+      # yPercent: 0
+      # ease: power1.inOut
+      # repeat: -1
+      # yoyo: true
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 35%; top: 30%; left: 1%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 35%; top: 20%; left: 100%;"
+    noOverflow: true
+    parallax: front1
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 0.01
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        #ease: power3.out
+
+  - type: sceneText
+    text: >
+      Mathina e Leo erano tornati al campo dove avevano incontrato per la prima volta Flamma, l'addestratrice di uccelli del fuoco. 
+      Si erano esercitati a far volare alcuni unidraghi per diversi giorni
+       ogni settimana, e ogni volta che vedevano un grande animale volante nel cielo, venivano
+       per vedere se Flamma era lì, ad addestrarlo. Volevano fare esperienza per poter partecipare al festival che si sarebbe tenuto di lì a poco. 
+       Quella mattina avevano visto volare un unidrago
+       in lontananza e pensarono che Flamma lo stesse allenando.
+
+
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 1.5
+      width: 100%
+      height: 100%
+      ease: power3.Out
+
+  # - type: animation
+    # target: bg
+    # vars:
+       # duration: 2
+       # width: 100%
+       # height: 100%
+      # # ease: power1.inOut
+
+  - type: animation
+    target: fields
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+
+  - type: animation
+    target: castle
+    vars:
+       duration: 1.5
+       width: 100%
+       height: 100%
+       ease: power3.Out
+
+  - type: animation
+    target: matleo
+    vars:
+        duration: 4
+        xPercent: 220
+        yPercent: 75
+        width: 20%
+        ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 3
+        #xPercent:
+        yPercent: 85
+        width: 20%
+        ease: power3.out
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 3
+        xPercent: -160
+        yPercent: 60
+        width: 22%
+        ease: power2.out
+
+  - type: sceneText
+    text: >
+      In effetti, Flamma era lì, si muoveva intensamente e urlava
+       parole incomprensibili, quasi come stesse cantando. Mathina e Leo corsero per tutto il campo per incontrarla. 
+       Si aspettavano di vedere Flamma guidare l' unidrago come un direttore d'orchestra dirige la musica, con il corno
+       dell'unidrago usato come un bacchetta. Tuttavia, Flamma non aveva nulla nelle sue mani.
+
+  - type: clearImage
+    id: matleo
+
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent:
+        yPercent: 10
+        width: 30%
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Ciao Flamma! Abbiamo visto l'unidrago... lo stai addestrando?
+        char: mathina
+        mood: happy
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        #xPercent:
+        yPercent: 20
+        width: 40%
+        ease: power3.out
+
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - text: Ehi! Questo è un altro drago! E tu non hai il suo corno! Perché non sta volando via?
+        char: leo
+        mood: talking
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 2
+        xPercent: -10
+        yPercent: 5
+        width: 50%
+        ease: power3.out
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  - type: sceneText
+    text: Flamma smise di gridare al cielo e a quel punto l'unidrago scese
+       dolcemente a terra per riposare.
+
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleY(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(180deg)
+        ease: power3.out
+
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 2
+        # #transform: scaleY(-1)
+        # #filter: FlipH
+        # #transform: scale(1,-1)
+        # transform: rotateY(180deg)
+        # ease: power3.out
+
+  - type: clearImage
+    id: uni
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: "Hai ragione, Leo, questo è un unidrago diverso da quelli che avete conosciuto. Questo povero unidrago è molto particolare:
+           ha avuto un triste incidente quando ha raggiunto l'età adulta. "
+        char: flamma
+        mood: normal
+      - text: "Il suo primo corno si staccò, come succede a ogni unidrago, ma la cosa accadde nel preciso momento in cui stava volando sopra un lago. Così il corno cadde nell'acqua e nessuno l'ha mai più trovato..."
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Normalmente quando ciò accade, gli unidraghi non si riescono ad addomesticare e
+           rimangono selvaggi. Essi continuano a sentire ancora il loro corno perduto quando si muove,
+           anche se dista chilometri o è nascosto molto lontano.  
+        char: flamma
+        mood: normal
+      - text: Se qualcuno lo trova e gioca con esso senza saperlo, l'unidrago può impazzire
+           se non impara a ignorare la sensazione. Questo unidrago però è molto docile e quindi ho deciso di provare ad addestrarlo come faccio con gli altri. Ovviamente, dal momento che non abbiamo il suo corno, dobbiamo usare qualcos'altro. 
+        char: flamma
+        mood: normal
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 2
+        #transform: scaleX(-1)
+        #filter: FlipH
+        #transform: scale(1,-1)
+        transform: rotateY(0deg)
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Gli unidraghi hanno un linguaggio diverso dagli umani.
+           Il loro linguaggio esprime ciò che possono sentire e, in questo caso,
+           anche la sensazione della direzione del corno. Noi umani non
+           abbiamo parole per questo, perché non abbiamo queste percezioni, ma
+           possiamo usare numeri magici per capire e comunicare con gli unidraghi, traducendo da ciò che intendiamo a ciò che loro possono
+           capire.
+        char: flamma
+        mood: normal
+
+
+
+      - text: Numeri magici! Come puoi parlargli con i numeri?
+        char: leo
+        mood: surprised
+
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Ho la sensazione che una struttura invisibile stia in qualche modo collegando tutto ...
+        char: mathina
+        mood: arguing
+
+      - text: Allora, come possiamo dirgli come si vola?
+        char: leo
+        mood: thinking
+
+      - text: Ebbene, come ho detto, non abbiamo parole che corrispondano al quelle del suo
+           linguaggio, ma possiamo usare un po' di magia per descrivere il percorso che vogliamo fargli
+           seguire. Puoi dirmi, usando in numeri, cosa vuoi fare e io tradurrò tutto nel linguaggio degli unidraghi.
+        char: flamma
+        mood: normal
+
+      - text: Cosa possiamo dire?
+        char: mathina
+        mood: talking
+
+      - text: Cominciamo con qualcosa di facile. Diciamogli di volare solo
+           sul terreno, orizzontalmente in linea retta.
+        char: flamma
+        mood: normal
+
+      - text: Ok, diciamogli di farlo.
+        char: leo
+        mood: talking
+
+      - text: No, non puoi usare le parole umane, sono troppo confuse
+           e imprecise per lui. Digli solo il numero magico uno.
+        char: flamma
+        mood: normal
+
+      - text: Il magico numero uno?
+        char: leo
+        mood: thinking
+
+      - text: Significa avanzare alla sua velocità normale.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 8%; top: 70%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 8%; top: 70%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+       # yPercent: 5
+        #width: 50%
+        #ease: power3.out
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 0.1
+        xPercent: 100
+        delay: 5
+        transform: rotateY(180deg)
+
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 1
+        delay: 5
+        xPercent: -10
+        #yPercent: 5
+        #width: 50%
+        ease: power3.out
+
+  - type: sceneText
+    text: Flamma tradusse il numero uno nel linguaggio degli unidraghi e l'animale
+       iniziò ad andare avanti, come se stesse correndo invece di volare.
+       A un grido di Flamma, il unidragon tornò dove si trovava prima di iniziare a volare.
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: E se gli dicessimo 2?
+        char: leo
+        mood: talking
+
+      - text: Si muoverà due volte più velocemente.
+        char: flamma
+        mood: normal
+
+      - text: Oh, comincio a capire, quindi il numero gli dice quanto deve andare in avanti. Ma come lo facciamo volare in su?
+        char: mathina
+        mood: arguing
+
+      - text: Beh, per questo devi dirgli due numeri. Il primo dice di quanto deve avanzare, il secondo di quanto deve salire.
+        char: flamma
+        mood: normal
+
+      - text: Quindi gli diciamo di avanzare e alzarsi in contemporanea!
+        char: mathina
+        mood: talking
+
+      - text: In linguaggio magico, lo scriveremmo come (1,1), e in linguaggio degli unidraghi si pronuncia ...
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 25%; left: 5%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -50
+        #width: 50%
+        #ease: power3.out
+
+  - type: animation
+    target: leo
+    vars:
+        duration: 1
+        #xPercent: 100
+        delay: 3
+        transform: rotateY(180deg)
+
+  - type: sceneText
+    text: Flamma emise un altro di quegli urli strani. L'unidragon iniziò a volare in linea retta, avanzando e sollevandosi.
+
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+      - text: Sta volando! Sta volando!
+        char: leo
+        mood: happy
+        exposition: Esclamò Leo.
+
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+
+      - text: Sì, lo fa! Ma lascia che lo faccia tornare prima che sia troppo lontano.
+        char: flamma
+        mood: happy
+        exposition: E Flamma fece tornare indietro l'animale.
+
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+       flamma: right
+       mathina: left
+       leo: left
+    entries:
+
+
+      - text: Vedi che stava salendo alla stessa velocità con cui avanzava.
+           Riesci a capire come dirgli di volare su un sentiero più ripido?
+        char: flamma
+        mood: normal
+
+      - text: Hmm… forse possiamo dirgli un 2 invece di un 1, come prima?
+        char: leo
+        mood: arguing
+
+      - text: Sì, ma come secondo numero, perché vogliamo che salga più velocemente.
+        char: mathina
+        mood: arguing
+
+      - text: Molto bene, glielo dirò (1,2) allora.
+        exposition: Disse Flamma mentre si preparava a pronunciare le parole magiche.
+        char: flamma
+        mood: normal
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: mat
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: image
+    src: leo5_mirrored.png
+    id: leo
+    style: "width: 10%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: flamma2.png
+    id: fla
+    style: "width: 22%; top: 50%; left: 70%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 40%; top: 45%; left: 0%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 7%; top: 55%; left: 55%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 5
+        xPercent: 100
+        yPercent: -100
+        width: 30%
+        #ease: power3.out
+
+  # - type: animation
+    # target: leo
+    # vars:
+        # duration: 1
+        # #xPercent: 100
+        # delay: 3
+        # transform: rotateY(180deg)
+
+
+
+  - type: sceneText
+    text: Flamma comunicò la coppia di numeri all'unidrago e che si mosse facendo un sentiero più ripido nell'aria.
+
+
+  - type: clearImage
+    id: uni
+
+  - type: clearImage
+    id: leo
+
+  - type: clearImage
+    id: fla
+
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 8%; top: 53%; left: 55%;"
+    parallax: mid2
+
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 13%; top: 60%; left: 45%;"
+    parallax: mid2
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni
+    style: "width: 25%; top: 30%; left: 17%;"
+    parallax: front1
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 20%; top: 45%; left: 65%; transform: scalex(-1)"
+    parallax: front1
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Posso insegnarti la traduzione, ho tutti i numeri tradotti nel loro linguaggio scritti nel mio taccuino. Provaci te!
+        char: flamma
+        mood: normal
+
+# Game 2.1
+  - type: game
+    text: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
+    toolbarText: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
+    cta: Fai volare l'unidrago!
+    url: /apps/imaginary/app_2/2_1/it.html
+
+  - type: sceneText
+    text: Flamma fu contenta di vedere come Mathina si cimentava con la nuova lingua.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+     - text: Ottimo! Puoi anche dire all'unidrago alcune paia di numeri, in modo che esegua dei voli in sequenza. Gli unidraghi hanno
+         buona memoria e ricorderanno le varie istruzioni e il loro ordine. 
+       char: flamma
+       mood: normal
+     - text: Questo è molto utile per gli addestratori di unidraghi perché permette di pianificare il percorso che seguiranno
+         in anticipo. Ad esempio se ci sono degli ostacoli da evitare durante il volo.
+       char: flamma
+       mood: normal
+
+     - text: Ma Flamma, se gli dici tante coppie di numeri,
+           come fai a sapere dove finirà l'unidragon?
+       char: leo
+       mood: thinking
+
+     - text: Lo lascierò scoprire a te. 
+       char: flamma
+       mood: normal
+
+#Game 2.2
+  - type: game
+    text: Fai volare l'unidrago al castello evitando gli ostacoli. Se colpisci una nuvola o una montagna, dovrà ricominciare.
+    cta: Vola al castello!
+    toolbarText: Vola al castello evitando gli ostacoli!
+    url: /apps/imaginary/app_2/2_2/it.html
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Hai notato qualcosa? Come si fa a indovinare dove sarà l'unidrago alla fine?
+        char: flamma
+        mood: normal
+
+      - text: "Non si tratta di indovinare: è facile! Devi solo sommare tutti i primi
+           numeri e tutti i secondi numeri delle coppie! La coppia che ottieni
+           è dove ti troverai dopo aver seguito l'elenco delle coppie."
+        char: mathina
+        mood: happy
+
+      - text: Esatto Mathina!
+        exposition: Disse Flamma con orgoglio.
+        char: flamma
+        mood: normal
+
+  - type: sceneText
+    text: Leo era sbalordito e controllava ciò che Mathina aveva appena detto.
+       Da quando avevano iniziato a far volare gli unidraghi, prendeva sempre nota di ciò che succedeva durante il volo.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Visto che siete così svegli vi proporrò una sfida. Ho queste palle di fuoco
+           che gli unidraghi amano mangiare. Devi dire al drago il percorso
+           per raggiungere tutte le palle di fuoco facendo in modo di non toccare le montagne e le nuvole 
+           in cielo. Pensi di farcela?
+        char: flamma
+        mood: normal
+
+      - text: Nessun problema, con il trucco che ha scoperto Mathina possiamo farcela!
+        char: leo
+        mood: happy
+
+# Game 2.3
+  - type: game
+    text: Mangia tutte le palle di fuoco senza toccare gli ostacoli e poi raggiungi il castello.
+    cta: Mangia tutte le palle di fuoco che compaiono!
+    url: /apps/imaginary/app_2/2_3/it.html
+    toolbarText: Mangia le palle di fuoco che compaiono e vola al castello! Attento agli ostacoli!
+
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+    entries:
+
+      - text: Fantastico, Mathina. Stai davvero diventando una degna addestratrice di uccelli del fuoco.
+           La prossima volta andremo al castello di Arisa, dove tutto gli addestratori si incontrano e si sfidano!
+        char: flamma
+        mood: normal

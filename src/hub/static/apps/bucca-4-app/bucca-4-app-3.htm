@@ -326,14 +326,14 @@ Traduzioni=[
 	[["Trad7","Trad7a"],"which is equal to","che vale","que &eacute; igual a","das ist gleich"],
 	[["Trad8","Trad8a"],"And now?","E adesso?","E agora?","Und nun?"],
 	[["Trad9"],"Phase 2 (Mathina): Mathina's secret","Fase 2 (Mathina): il segreto di Mathina","Fase 2 (Mathina): o segredo de Mathina","Phase 2 (Mathina): Mathinas Geheimnis"],
-	[["Trad10"],"Hi Leo! I secretly chose a number b, between 2 and","Ciao Leo! Ho scelto segretamente un numero b, tra 2 e","Ol&aacute; Leo! Eu escolhi secretamente um n&uacute;mero b, entre 2 e","Hallo Leo! Ich habe heimlich eine Zahl b gew&auml;hlt, und zwar zwischen 2 und"],
+	[["Trad10"],"Hi Angela! I secretly chose a number b, between 2 and","Ciao Angela! Ho scelto segretamente un numero b, tra 2 e","Ol&aacute; Angela! Eu escolhi secretamente um n&uacute;mero b, entre 2 e","Hallo Angela! Ich habe heimlich eine Zahl b gew&auml;hlt, und zwar zwischen 2 und"],
 	[["Trad11"],"How do we proceed?","Come procediamo?","Como procedemos?","Und wie geht es jetzt weiter?"],
 	[["Trad12"],"We need to find the key. We know that it is equal to","Dobbiamo trovare la chiave. Sappiamo che vale","Precisamos de encontrar a chave. N&oacute;s sabemos que &eacute; igual a","Wir m&uuml;ssen den Schl&uuml;ssel finden. Wir wissen, er ist gleich"],
 	[["Trad14"],"only not knowing a and b we are forced to try various combinations. <br><b>Be aware</b>: finding the answer is veery long!","solo che non conoscendo a e b siamo obbligati a provare varie combinazioni.<br><b>Stai attento</b>: trovare la risposta corretta &egrave; mooolto lungo!","s&oacute; que n&atilde;o conhecemos a e b, somos for&ccedil;ados a tentar v&aacute;rias combina&ccedil;&otilde;es.<br><b>Estar ciente</b>:encontrar a resposta &eacute; muiiito longo!","Aber weil wir a und b nicht kennen, m&uuml;ssen wir verschiedene Kombinationen ausprobieren.<br><b>Aber, sei dir bewusst</b>: es k&ouml;nnte seeeehr lange dauern, die Antwort zu finden!"],
 	[["Trad13"],"but also to","ma anche","mas tamb&eacute;m para","aber auch gleich"],
 	[["Trad15","Trad15a"],"Choose","Scegli","Escolher","W&auml;hle"],
 	[["Trad16","Trad16a"],"With this choice","Con questa scelta","Com esta escolha","Damit ist "],
-	[["Trad17","Trad17a"],"modulo","modulo","m&oacute;dulo","Modulo"],
+	[["Trad17","Trad17a","Trad17c","Trad17d"],"modulo","modulo","m&oacute;dulo","Modulo"],
 	[["Trad18"],"Phew! It is so long to find an answer. And now?","Caspita! Trovare la risposta &egrave; complicato! E adesso?","Ufa! &Eacute; muito longo encontrar uma resposta. E agora?","Puh! Es dauert so lange, eine Antwort zu finden. Und nun?"],
 	[["Trad19"],"Can we decode the message?","Riusciamo a decodificare il messaggio?","Podemos descodificar a mensagem?","Kannst Du die Nachricht entschl&uuml;sseln?"],
 	[["Trad20"],"Enter the key:","Inserisci la chiave:","Insire a chave:","Gib den Schlüssel ein:"],
@@ -408,6 +408,8 @@ Traduzioni=[
             ListaPrimi = [19, 23, 29, 31, 37, 41, 43];
             PrimoScelto = ListaPrimi[Math.floor(Math.random() * ListaPrimi.length)];
             document.getElementById("Primo1").innerHTML = PrimoScelto;
+            document.getElementById("Primo1a").innerHTML = PrimoScelto;
+            document.getElementById("Primo1b").innerHTML = PrimoScelto;
             BaseScelta = 2 + Math.floor(Math.random() * (PrimoScelto - 3));
             document.getElementById("Base1").innerHTML = BaseScelta;
             Giusta1 = Math.floor(Math.random() * 4) + 1;
@@ -601,13 +603,13 @@ Traduzioni=[
         </div>
         <div id="Text2">
             <p class="titolo" id="Trad4">Fase 2 (Leo): il segreto di Leo</p>
-            <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
+            <p><span id="Trad5">Ciao Mathina! Ho scelto segretamente un numero a, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6">Poi ho calcolato</span> <em class="SegG">g</em><sup>a</sup> <span id="Trad17c"></span> <span id="Primo1a"></span>, <span id="Trad7">che vale</span> <span id="chia"></span></p>
             <p style="text-align:center;"><button onclick="$('#Text3').show();" id="Trad8">E adesso?</button></p>
             </p>
         </div>
         <div id="Text3">
             <p class="titolo" id="Trad9">Fase 2 (Mathina): il segreto di Mathina</p>
-            <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
+            <p><span id="Trad10">Ciao, Leo! Ho scelto segretamente un numero b, tra 2 e</span> <em class="pmuno">p-2</em>. <span id="Trad6a">Poi ho calcolato</span> <em class="SegG">g</em><sup>b</sup> <span id="Trad17d"></span> <span id="Primo1b"></span>, <span id="Trad7a">che vale</span> <span id="chib"></span></p>
             <p style="text-align:center;"><button onclick="$('#Text4').show();" id="Trad8a">E adesso?</button></p>
         </div>
         <div id="Text4">

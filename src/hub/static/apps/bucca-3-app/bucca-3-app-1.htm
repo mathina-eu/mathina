@@ -634,9 +634,9 @@ background-repeat: no-repeat;
 ];
 
        Traduzioni=[
-[["Trad1"],"Try to cipher this word, knowing that the key is ",
-"Prova a cifrare questa parola, sapendo che la chiave &egrave; ","Tenta cifrar esta palavra, sabendo que a chave &eacute; ",
-"Versuche, dieses Wort zu verschl&uuml;sseln. Nutze die Regel"],
+[["Trad1"],"Try to decipher this word, knowing that the key is ",
+"Prova a decifrare questa parola, sapendo che la chiave &egrave; ","Tenta decifrar esta palavra, sabendo que a chave &eacute; ",
+"Versuche, dieses Wort zu entschl&uuml;sseln. Nutze die Regel"],
 [["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
 ];
@@ -670,7 +670,7 @@ background-repeat: no-repeat;
             NumeriTot.splice(NumeriTot.indexOf(NumeroParola), 1);
             NumeriTot = shuffle(NumeriTot);
             ChiaveV = Math.floor(1+Math.random() * (Alphabet[Lingua].length-1));
-            ParolaTradotta = Cesare(ParolaOriginale, Alphabet[Lingua], -ChiaveV);
+            ParolaTradotta = Cesare(ParolaOriginale, Alphabet[Lingua], ChiaveV);
             document.getElementById("paroladatradurre").innerHTML = ParolaTradotta;
             document.getElementById("ch").innerHTML = "A &rarr; " + Alphabet[Lingua][ChiaveV] + " (" + ChiaveV + ")";
             document.getElementById("Btn1").innerHTML = ElencoParole[Lingua][NumeriTot[0]];

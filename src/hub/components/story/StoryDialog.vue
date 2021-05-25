@@ -120,7 +120,7 @@ export default {
 
   &__content {
     color: var(--text-color);
-    font-family: var(--story-font-family);
+    font-family: Newsreader, serif;
     font-size: 1.125em;
   }
 
