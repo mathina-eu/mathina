@@ -42,6 +42,42 @@
         >
           {{ $t('index.start-exploring') }}
         </v-btn>
+        <v-dialog
+          v-model="dialog"
+          width="800px"
+        >
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              color="white"
+              large
+              link
+              v-bind="attrs"
+              v-on="on"
+            >
+              {{ $t('index.about') }}
+            </v-btn>
+          </template>
+          <v-card>
+            <v-card-title>
+              <span class="headline">
+                {{ $t('index.title') }}
+              </span>
+            </v-card-title>
+            <v-card-text
+              style="font-size: 16px;"
+              v-html="$t('index.aboutContent')"
+            />
+            <v-card-actions>
+              <v-spacer />
+              <v-btn
+                text
+                @click="dialog = false"
+              >
+                {{ $t('index.close') }}
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
       </div>
     </Parallax>
   </StoryView>
@@ -61,6 +97,7 @@ export default {
   data() {
     return {
       constants,
+      dialog: false,
     };
   },
   mounted() {
