@@ -308,7 +308,7 @@ actions:
 
 # Game 4.1 (Exemplos guiados)
   - type: game
-    text: scolhe uma equação. Podes espalhar os insetos de fogo onde quiseres clicando e arrastando. Eles próprios tomam posições de acordo com a equação que escolheste. Tenta também outras equações. No écran em baixo podes até dar tu mesmo uma equação.
+    text: Escolhe uma equação. Podes espalhar os insetos de fogo onde quiseres clicando e arrastando. Eles próprios tomam posições de acordo com a equação que escolheste. Tenta também outras equações. No écran em baixo podes até dar tu mesmo uma equação.
     toolbarText: Escolhe uma equação e deixa que os insetos de fogo dancem ao longo da curva correspondente.
     cta: Que os insetos de fogo dancem!
     url: /apps/imaginary/app_4/4_1/en.html
@@ -383,7 +383,7 @@ actions:
 
       - char: mathina
         text: Mm, esses quadrados... Acho que deve ser algo relacionado com Pitágoras...
-        exposition: adventured Mathina
+        exposition: aventurou a Mathina
 
         mood: thinking     
       - char: flamma
@@ -419,10 +419,10 @@ actions:
 
 # Game 4.2 (was 4.3) (Goal shape, try to guess the formula)
   - type: game
-    text: Coloca os insetos de fogo no ar clicando e arrastando.  Eles mostrarão uma curva. Tens três tentativas para descobrir a equação corret dessa curva.
+    text: Coloca os insetos de fogo no ar clicando e arrastando.  Eles mostrarão uma curva. Tens três tentativas para descobrir a equação correta dessa curva.
     toolbarText: Que curva estão os insetos de fogo a formar? Escolhe a equação correta.
     cta: Resolve as adivinhas dos insetos de fogo!
-    url: http://localhost:3000/apps/imaginary/app_4/4_2/en.html
+    url: /apps/imaginary/app_4/4_2/en.html
 
   - type: dialog
     avatarAlign:
@@ -439,7 +439,7 @@ actions:
         text: Temos estado a tratar de curvas no plano, mas se acrescentarmos um terceira variável, a altura, a função F(x,y,z)=0 define uma superfície no espaço.
 
       - char: flamma
-        text: Para os matemáticos, teria até sentido ter mais variáveis, mesmo que não as consigamos imaginar no nosso espaço a tridimensional.
+        text: Para os matemáticos, teria até sentido ter mais variáveis, mesmo que não as consigamos imaginar no nosso espaço tridimensional.
 
       - char: flamma
         text: Deixo-vos tratar de alguma superfícies no espaço.
