@@ -74,7 +74,7 @@ actions:
   - type: sceneText
     text: Eles viram uma coluna a aparecer e outra a desaparecer no chão.
   - type: sceneText
-    text: Estavam sempre a surgir diferentes colunas a aparecer e havia três luzes em cada uma delas.
+    text: Estavam sempre a surgir diferentes colunas e havia três luzes em cada uma delas.
   - type: sceneText
     text: ...violeta, laranja e rosa --, mas elas apareciam por ordem diferente em cada coluna.
   - type: dialog
@@ -179,6 +179,7 @@ actions:
   - type: game
     text: Qual delas achas que ele incluiu duas vezes?
     toolbarText: Arrasta as lâmpadas iguais para cima umas das outras e as que estão a mais desaparecem.
+    cta: Experimenta!    
     url: \apps\logi-1-app\logi-1-app.htm?v=2&l=3
   - type: image
     src: solution5lamps.png
@@ -186,7 +187,7 @@ actions:
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
   - type: dialog
     entries:
-      - text: YVês, agora são apenas cinco. E adivinha, há uma sexta também!
+      - text: Vês, agora são apenas cinco. E adivinha, há uma sexta também!
         char: mathina
         mood: talking
   - type: clearImage
@@ -194,6 +195,7 @@ actions:
   - type: game
     text: Qual a ordem de 3 cores que está em falta?
     toolbarText: Talvez ajude alinhar as luzes de acordo com a primeira cor, começando com o violeta, depois o rosa e depois o laranja.
+    cta: Experimenta!       
     url: \apps\logi-1-app\logi-1-app.htm?v=3&l=3
   - type: dialog
     entries:

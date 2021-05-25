@@ -1,0 +1,897 @@
+actions:
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+
+  - type: sceneText
+    text: <h1>Der sprechende Papagei<h1>
+      #<h1>The talking parrot</h1>        
+
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+      
+  - type: dialog
+    entries:
+      - text: Beeil dich, Mathina, lauf! Sonst verpasst du die Fähre zur Schatzinsel.
+      #"Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
+        char: mathina
+        mood: talking
+        exposition: sparch Mathina in Gedanken zu sich selbst.
+
+  - type: image
+    id: Boat
+    src: barca.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 1;"
+  - type: image
+    id: Wave4
+    src: onda4.png
+    style: "width: 35%; bottom: 2.5%; left: 3%;  z-index: 2;"
+
+
+  - type: sceneText
+    text: Noch zweihundert Meter… jetzt schnell die Fahrkarte vorzeigen... und auf dem nassen Steg nicht ausrutschen. Puh, gerade so noch geschafft!
+      #<p>Two hundred meters… Ticket checked… Pay attention to the slippery dock… Done!</p>
+      
+
+ 
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -11
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+ 
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: -2
+      repeat: -1
+      yoyo: true
+
+      
+  - type: sceneText
+    text: Die Fähre legte langsam ab, und Mathina holte erstmal tief Luft auf ihrem Sitz an einem der Fenster.
+      #<p>The ferry calmly departed while Mathina was catching breath on one of the chairs near the windows.</p>
+      
+
+      
+  - type: dialog
+    entries:
+      - text: Diesmal wird mein Bruder mit seinen Freunden zum Symmel-Rummel gehen, der bei uns in der Nähe ist. So habe ich alle Zeit der Welt, die Insel allein zu erkunden. Ich bin so neugierig!
+      #"This time my brother and his friends are visiting a peculiar fair near our home, so I have all the time to explore the island. I’m so curious..."
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: <p>"Bist du zum ersten Mal auf der Schatzinsel?" fragte eine Frau, die zufällig neben Mathina saß.</p>
+    #<p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+  - type: dialog
+    entries:
+      - text: Nicht direkt zum ersten Mal! Ich war schon mit meinem Bruder dort, doch da hatte ich keine Gelegenheit, einfach drauf los zu laufen. Und sie, kennen Sie sich aus?
+      #"Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
+        char: mathina
+        mood: happy
+
+  - type: sceneText
+    text: <p>"Ich habe dort etwas zu erledigen, und na ja ... es macht immer Spaß auf die Schatzinsel zu fahren und Geheimnisse zu erforschen. Du hast Glück, heute ist Markttag auf der Insel. Da lohnt sich ein Besuch auf jeden Fall."</p>
+      #<p>"I have some business there, and well… it’s always fun to go there and look for some mystery. You are lucky: today is market-day on the island. It certainly deserves a visit."</p>
+
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 3
+      x: 600
+      y: -100
+      ease: power1.inOut
+      width: 12%
+
+  - type: animation
+    target: Wave4
+    vars:
+      duration: 3
+      x: 620
+      y: -110
+      ease: power1.inOut
+      width: 12%
+      
+
+  - type: dialog
+    entries:
+    - text: Danke für den Tipp! Mein Name ist übrigens Mathina. Und wie heißt du?
+      exposition: fragte Mathina. Doch da legte die Fähre schon auf der Insel an, und es wurde hektisch. Viele Leute begannen auszusteigen.
+      #<p>“Thanks a lot! My name is Mathina, how about you?” asked Mathina, but at that moment the ferry was docking, and many people started to exit.” </p>
+      char: mathina
+ 
+ 
+  - type: sceneText
+    text: „Mein Name ist... oh, das ist nicht so wichtig! Ich bin sicher wir sehen uns wieder.” Mathina konnte kaum die Antwort verstehen, weil die Dame und sie in anderen Warteschlangen anstanden.
+      #<p>“Mathina just managed to hear some words before her and the lady were separated by the queue “My name is… oh, it is not important! I’m sure that we will meet again.”
+
+  - type: background
+    src: bg2_b.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+
+
+
+  - type: clearImage
+    id: Wave1
+  - type: clearImage
+    id: Wave2
+  - type: clearImage
+    id: Wave3
+  - type: clearImage
+    id: Wave4
+  - type: clearImage
+    id: Boat
+  - type: clearImage
+    id: Cloud1
+  - type: clearImage
+    id: Cloud2
+  - type: clearImage
+    id: Cloud3
+  - type: clearImage
+    id: Cloud4
+
+  - type: image
+    id: Fisherman1
+    src: barca3.png
+    style: "width: 13%; top: 12%; left: 0%;  z-index: 0;"
+  - type: image
+    id: Fisherman2
+    src: barca2.png
+    style: "width: 13%; top: 25%; left: 76%;  z-index: 1;"
+  - type: image
+    id: Fisherman3
+    src: barca4.png
+    style: "width: 13%; top: 14%; right: 0%;  z-index: 0;"
+
+
+  - type: dialog
+    entries:
+      - text: Endlich bin ich zurück auf der Schatzinsel!
+      #"Finally I’m back to Buccaneer’s Island!"
+        char: mathina
+        mood: happy
+
+  - type: animation
+    target: Fisherman1
+    vars:
+      duration: 6
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      rotate: -3
+      yoyo: true
+  - type: animation
+    target: Fisherman2
+    vars:
+      duration: 5
+      xPercent: 5
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: -2
+      yoyo: true
+  - type: animation
+    target: Fisherman3
+    vars:
+      duration: 7
+      xPercent: -10
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      rotate: 2
+      yoyo: true
+
+
+  - type: sceneText
+    text: Die Erinnerung an die Dame war schnell verschwunden. Dafür wehte eine frische Brise vom Ozean, und die hellen Glocken der Fischerboote waren zu hören. Was für eine wunderbare Begrüßung!
+      #<p>The memory of the lady quickly vanished, replaced by the fresh breeze of the ocean and the bright sounds of the bells of the fishers boats. What a wonderful welcome!</p>
+
+  - type: image
+    id: Mathina0
+    src: $COMMON/img/characters/mathina/mathina3.png
+    style: "height: 70%; top: 40%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+
+  - type: sceneText
+    text: >
+      <p>Es gab eine unbefestigte Straße, die den kleinen Hafen der Insel mit der Inselhauptstadt verband. Heute war dieser Weg voll mit Ständen, denn es war Markttag. </br> </br>
+        "Schatzkarte! Hier ist die Karte für den verborgenen Schatz der Schatzinsel" </br>
+        "Die besten Äpfel der Schatzinsel! Probiert sie!" </br>
+        "Wer ist der beste Sänger von Piratenliedern? Fordert mich heraus!"</br>
+      </p>
+
+    #<p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
+        #“Treasure map! Here is the map for the hidden treasure of Buccaneer’s Island” </br>
+        #“The best apples of Buccaneer’s Island! Give it a taste!”  </br>
+        #“Who is the best singer of pirate’s songs? Challenge me!” </br></p>
+
+  - type: sceneText
+    text: >
+      <p>So viele Stimmen und so viele seltsame und geheimnisvolle Gegenstände! Mathina wanderte sehr glücklich herum, probierte und kostete und sang, als sie plötzlich von einem lauten Kreischen abgelenkt wurde. </br></br>
+      Was war das? Wieder dieses Kreischen, diesmal noch lauter!</p>
+    #<p>So many voices and so many strange and mysterious objects! Mathina wandered around very happy trying, and tasting, and singing, while her attention was captured by a loud screech. 
+    #</br> </br> What is it? Another screech, this time louder!</p>
+  - type: clearImage
+    id: Mathina0
+ 
+  - type: image
+    id: Mathina00
+    src: $COMMON/img/characters/mathina/mathina1.png
+    style: "height: 40%; bottom: 5%; right: 5%;  z-index: 1; transform: ScaleX(-1);"
+ 
+  - type: image
+    id: John1
+    src: parrot_corpo.png
+    style: "height: 30%; top: 60%; left: 55%;  z-index: 3;"
+  - type: image
+    id: John1_Coda
+    src: parrot_coda.png
+    style: "height: 20%; top: 67%; left: 59%;  z-index: 2;"
+  - type: image
+    id: John1_Ala
+    src: parrot_ala.png
+    style: "height: 30%; top: 53%; left: 58%;  z-index: 3;"
+  - type: image
+    id: John1_Becco
+    src: parrot_becco.png
+    style: "height: 15%; top: 56.5%; left: 64%;  z-index: 3;"
+   
+ 
+
+  
+  - type: sceneText
+    text: Mathina suchte herum. Dann stand sie vor einer Marktbude mit einem echten Papagei. Der Papagei sah irgendwie klug aus. Er hatte sehr schöne rote, gelbe und blaue Federn und als er merkte, dass Mathina ihn beobachtete, wurde er ganz still und bewegte fasziniert den Kopf.
+      #<p>Mathina moved around until she found herself in front of a very clever-looking parrot. It had very nice red, yellow and blue feathers, and when he realised that Mathina was watching him, he just went silent, moving the head, intrigued.</p>
+ 
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 0.6
+      repeat: -1
+      rotate: 30
+      yoyo: true
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 0.3
+      repeat: -1
+      rotate: -8
+      yoyo: true 
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 1
+      ease: power2.out
+      repeat: -1
+      rotate: 10
+      yoyo: true      
+
+  - type: dialog
+    entries:
+      - text: Hallo! Mein Name ist Mathina. Darf ich dich streicheln?
+      #"Hi!! My name is Mathina, may I pet you?"
+        char: mathina
+        mood: happy
+  - type: dialog
+    entries:
+      - text: K-B!!
+        exposition: antwortete der Papagei.
+      #"Z-F-T!!"
+        char: parrot
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Warte ... was?
+      #"Wait.. what?" 
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    text: Mathina war verblüfft, sie verstand kein Wort von dem, was der Papagei sagte, aber er sprach eindeutig eine Art Sprache.
+      #<p>Mathina was baffled, she didn’t understand a word of what the parrot said, but he was clearly speaking some sort of language.</p>
+      
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+      
+      
+  - type: sceneText
+    text: Ein Mädchen kam in die Nähe des Standes und begrüßte Mathina.
+      #<p>A lady arrived near the stand and greeted Mathina.</p>
+      
+      
+  - type: dialog
+    entries:
+      - text: Hallo! Keine Sorge! Er ist immer so. Ich bin Angela. Schön, dich kennenzulernen.
+      #"Don’t worry: he is like that all the time. I’m Angela, nice to meet you."
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Hi! Ist das dein Papagei?
+      #"Hi! Is this your parrot?"
+        char: mathina
+        mood: happy
+  - type: clearImage
+    id: Mathina00
+ 
+  - type: image
+    id: Mathina1
+    src: $COMMON/img/characters/mathina/mathina2.png
+    style: "height: 45%; bottom: 5%; right: 5%;  z-index: 1;"
+        
+  - type: dialog
+    entries:
+      - text: Nicht so ganz... Der Papagei lebt jetzt bei mir. Seine Geschichte ist sehr interessant. Früher ist er auf einem Piratenschiff gefahren und hat bestimmt viele Abenteuer mitgemacht. Vor einigen Jahren wurde das Schiffsteam aufgelöst und alle gingen eigene Wege. Ein paar von ihnen sind bestimmt immer noch auf der Insel.
+      #"Not exactly… He lives with me, but his story is very interesting: he was once part of the crew of a pirate ship, and he took part in many many adventures. Some years ago the crew retired, and so everybody went his own way. Some of them are probably still there on the island."
+        char: angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: Toll! Sieht so aus als ob ihr Freunde geworden seid!
+      #"Wow! Looks like you became friends!"
+        char: angela
+        mood: happy
+  - type: sceneText
+    text: Der Papagei spielte mit Mathina und zerzauste ihr die Haare mit seinem Schnabel.
+      #<p>The parrot was playing with Mathina, ruffling her hairs with his beak.</p>
+
+
+  - type: dialog
+    entries:
+      - text: Willst du einen Keks? 
+      #"Do you want a cookie?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: Der Papagei schien sehr glücklich und antwortete „K-B!!! K-B!!!“ Das machte Mathina neugierig.
+      #<p> The parrot seemed very happy and replied “Z-F-T! Z-F-T!”. Mathina seemed very curious... </p>
+  - type: dialog
+    entries:
+      - text: Es scheint das gleiche Wort zu sein, das er vorher gesagt hat. Was ist, wenn er nur „Ja“ sagt?
+      #"It seems the same word he said before. What if it is telling me just “yes”?"
+       # exposition: Das machte Mathina neugierig.
+        char: mathina
+        mood: surprised
+        
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_3.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"      
+        
+        
+  - type: dialog
+    entries:
+      - text: Das könnte stimmen. Vorher wolltest du ihn streicheln, jetzt wollte er einen Keks. Sollen wir es mit etwas anderem versuchen? Frag ihn etwas, worauf „Nein“ die Antwort ist.
+      #"It sounds right: before you asked to pet him, now he wants a cookie. Shall we try with something different? Ask him something with “no” as an answer."
+        char: angela
+        mood: normal
+  - type: sceneText
+    text: Mathina dachte eine Weile darüber nach. Welche Frage könnte sie stellen, um fast sicher zu sein, dass der Papagei mit Nein antworten würde?
+      #<p>Mathina thought about this for a while. What question could she ask to be almost sure the parrot would reply no? </p>
+  - type: dialog
+    entries:
+      - text: Vielleicht werde ich diesen Keks behalten. Ist das in Ordnung?
+      #"Maybe I will keep this cookie. Is it ok?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: "Der Papagei schien ein wenig genervt und antwortete: „O-F-J-O! O-F-J-O!“"
+      #<p> The parrot seemed a bit annoyed, and replied “O-P! O-P!”. </br></br> Mathina smiled and gave the cookie to the parrot.</p>
+       
+  - type: clearImage
+    id: Angela1
+
+  - type: image
+    id: Angela1
+    src: Angela_2.png
+    style: "height: 80%; top: 30%; left: 5%;  z-index: 1; transform: ScaleX(-1);"             
+       
+       
+  - type: clearImage
+    id: Mathina1
+  
+  - type: image
+    id: Mathina2
+    src: $COMMON/img/characters/mathina/mathina4.png
+    style: "height: 70%; bottom: -10%; right: 5%;  z-index: 2; transform: ScaleX(-1);"
+       
+        
+  - type: animation
+    target: John1_Ala
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+
+  - type: animation
+    target: John1_Coda
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+      
+  - type: animation
+    target: John1_Becco
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+  - type: animation
+    target: John1
+    vars:
+      duration: 4
+      x: -645
+      y: -225
+       
+        
+  - type: dialog
+    entries:
+      - text: Jetzt wissen wir, K-B bedeutet Ja und O-F-J-O bedeutet Nein.
+      #"Now we know, Z-F-T means “yes”, and O-P means “no”."
+        exposition: Mathina lächelte und gab dem Papagei den Keks.
+        char: mathina
+        mood: happy
+               
+        
+  - type: sceneText
+    text: Was für eine seltsame Sprache. Mathina war fasziniert.
+      #<p> What a strange language... Mathina seemed baffled.</p>
+  - type: dialog
+    entries:
+      - text: Das ist verwirrend. O-F-J-O hat vier Buchstaben, genau wie Nein. Vielleicht ist das nur ein verrückter Code, von dem ich noch nicht weiß, wie er funktioniert. 
+      #"I am confused. O-P has two letters, the same as “no”, but I don’t have any idea about that. Maybe is just some crazy code."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: Vielleicht vertauscht er nur die Buchstaben! Denk mal an das Alphabet I, J, K, L, M, N, O ...
+      #"Maybe he is just changing the letters! Think about the alphabet K, M, N, O, P,..."
+        exposition: Angela hatte einen Vorschlag.
+        char: angela
+        mood: normal
+  - type: dialog
+    entries:
+      - text: Hey! Ich glaub ich hab's raus. Er tauscht jeden Buchstaben mit dem, der im Alphabet direkt dahinter kommt. Aus Nein wird also O-F-J-O, da O direkt nach N kommt. F kommt nach E, J nach I und O wieder nach N.
+      #"Hey! I got it. He is substituting the letter with the one immediately after it in the alphabet. So no becomes “no”, since O is immediately after N, and P is immediately after O."
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: Angela freute sich, und auch der Papagei stieß einen glücklichen Schrei aus.
+      #<p> Angela seemed happy and the parrot also gave a screech of joy.</p>
+  - type: dialog
+    entries:
+      - text: Super, Mathina! Das ist eine alte Technik der Piraten, um heimlich miteinander zu sprechen.
+      #"Very good Mathina! This is one of the standard ways pirates use to communicate in secret."
+        char: angela
+        mood: happy
+        
+        
+
+        
+  - type: sceneText
+    text: Für Mathina war das alles neu und aufregend. Doch es fühlte sich gut an, zumindest einen Teil dieses Codes zu verstehen.
+      #<p> Mathina was amazed, and also quite happy since she was able to understand at least a part of this code.</p>
+  - type: dialog
+    entries:
+      - text: Woher weißt du das alles, Angela? Und... wie schaffst du es, so schnell zu übersetzen?
+      #"How do you know this? And… how do you manage to translate so quickly?"
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: "Man weiß nie, wer auf dieser Insel mal Pirat war und wer nicht. Aber ich kann dir etwas verraten: Ich gehörte zum gleichen Team wie John - der Papagei. Er ist sehr klug. Er kann eigentlich ziemlich normal sprechen. Aber manchmal findet er es lustig, einige Wörter in dem Code zu sagen, so wie vorhin 'Ja' und 'Nein'."
+      #"You never know who on this island was a pirate or not but, keep this as a secret, I was part of the same crew as John - the parrot. He is very intelligent. Actually, he can speak quite fluently. But sometimes he finds it funny to repeat some words in code, like “yes” and “no”."
+        char: angela
+        mood: happy
+  - type: dialog
+    entries:
+      - text: Wir haben auch einen Trick, um zu kommunizieren. Eine Halskette, mit der man Wörter und Sätze verschlüsseln und entschlüsseln kann.
+      #"We have a trick to communicate: a necklace that can be used to encrypt and decrypt words and sentences."
+        char: angela
+        mood: normal
+  - type: image
+    id: CaesarJewel
+    src: disco_ba.png
+    style: "height: 50%; bottom: 5%;"
+    align: center
+  - type: sceneText
+    text: Angela gab Mathina eine kleine Halskette.
+      #<p> Angela gave to Mathina a small necklace. </p>
+       
+  - type: sceneText
+    text: Sie war aus Messing gefertigt. Eine feine Kette mit einem sehr seltsamen Anhänger. Zwei Kreise, die genau ineinander passten, und in die alle Buchstaben des Alphabets eingraviert waren.
+        #<p> It was made of brass. A fine chain with a very strange pendant: it has two circles, one inside the other, with the letters of the alphabet engraved on them. </p>
+  - type: dialog
+    entries:
+      - text: Sie ist wunderschön. Wie funktioniert dieser Anhänger? Ich sehe, dass die Buchstaben zweimal auftauchen, einmal im inneren Kreis und einmal im äußeren Kreis, aber sie sind verschoben. Warum?
+      #"It is beautiful - said Mathina - how does it work? I see that the letters appear twice: one in the inner circle and one in the outer circle, but they are shifted. Why?"
+        char: mathina
+        mood: excited
+      - text: Der innere Kreis ist dein Startpunkt. Wenn du den Buchstaben A verschlüsseln willst, suchst du einfach das A im inneren Kreis und findest dann den Buchstaben, der im äußeren Kreis dazu gehört. 
+      #"The inner circle - Angela began to explain - is your starting point. If you want to encrypt the letter A, you just find the A in the inner circle, and then look at the letter which corresponds to A in the outer circle."
+        char: angela
+        mood: normal
+      - text: In diesem Fall findest du B. Dann wird der Buchstabe A in den Buchstaben B übersetzt. Wenn du eine Botschaft entschlüsseln willst...
+      #"In this case, you find B, so the letter A is translated to the letter B. If you want to decrypt..."
+        char: angela
+        mood: normal        
+      - text: ... mache ich es einfach umgekehrt, stimmt’s? Ich suche den Buchstaben den ich übersetzen will im äußeren Kreis und finde dann den entsprechenden Buchstaben im Inneren. 
+      #"... I just do it backwards, right? I search for the letter I want to translate in the outer circle and then find the corresponding letter in the inner one."
+        char: mathina
+        mood: happy
+      - text: Ich sehe zum Beispiel, dass der Buchstabe K zum Buchstaben J passt. Wenn ich weiter suche, passt B zu A. Also... K-B ist JA!
+      #"Like I see that the letter Z goes to the letter Y, and if I go on searching, F goes to E, and T goes to S. So… ZFT is YES!"
+        char: mathina
+        mood: happy
+      - text: Genau! Also... willst du mal versuchen etwas anderes zu übersetzen?
+      #"Clever girl - said Angela. So… wanna try to translate something else?"
+        char: angela
+        mood: happy
+      - text: Ja klar, bitte! Probieren wir's aus!
+      #"Yes, please! Let’s try!"
+        char: mathina
+        mood: happy
+      - text: Denk daran, von innen nach außen zu gehen, um etwas zu verschlüsseln.
+      #Remember, move from the inside to the outside to encode.
+        char: angela
+        mood: normal
+
+  - type: game
+    text: "Um etwas zu verschlüsseln, musst du mit dem inneren Kreis beginnen."
+    #"Remember: to encode you have to start from the inner circle"
+    toolbarText: Verschlüssle das Wort.
+    #"Select the correct word"
+    cta: Verschlüssele ein Wort!
+    #"Try it yourself!"
+    tag: app1
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=4
+
+
+  - type: sceneText
+    text: Mathina spielte noch lange mit dem Papagei. „Nun ist es fast Zeit, mit der Fähre zurück nach Hause zu fahren...“, dachte Mathina, während sie Angela die Halskette zurückgab.
+      #<p> Mathina spent quite a lot of time playing with the parrot. "It is almost time to catch the ferry back home...", thought Mathina while giving back the necklace to Angela.</p>
+  - type: dialog
+    entries:
+      - text: Angela, es war ein wundervoller Tag! Ich hoffe ich kann dich und John bald wieder besuchen.
+      #"Angela, it was a wonderful day, I hope to come again visiting you and John."
+        char: mathina
+        mood: normal
+  - type: dialog
+    entries:
+      - text: Sicher, mach das einfach! Oh, du brauchst mir die Halskette nicht zurückzugeben. Behalte sie als Geschenk! Das wird dich an uns erinnern.
+      #"Sure you will! Oh, and don’t give me back the necklace. Keep it as a present! So you’ll remember us."
+        char: angela
+        mood: happy   
+        
+  - type: clearImage
+    id: CaesarJewel
+        
+  - type: sceneText
+    text: Mathina war sehr glücklich! Sie legte sich das Schmuckstück wieder um den Hals. Dann gab sie John noch einen Keks und ging zurück zum Hafen, um die Fähre zu nehmen.
+      #<p> Mathina was very happy! She put the jewel on her neck and, after giving John another cookie she headed back to the dock, to take the ferry. </p> 
+
+
+  - type: clearImage
+    id: Mathina2
+  - type: clearImage
+    id: Angela1
+  - type: clearImage
+    id: John1
+  - type: clearImage
+    id: John1_Ala
+  - type: clearImage
+    id: John1_Becco 
+  - type: clearImage
+    id: John1_Coda  
+
+
+  - type: clearImage
+    id: Fisherman1
+  - type: clearImage
+    id: Fisherman2
+  - type: clearImage
+    id: Fisherman3
+
+  - type: background
+    src: bg2.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: -1;"
+               
+  - type: image
+    id: Wave1
+    src: onda.png
+    style: "width: 8%; top: 40%; left: 20%;  z-index: 0;"
+ 
+  - type: image
+    id: Wave2
+    src: onda2.png
+    style: "width: 12%; top: 55%; left: 10%; z-index: 0;"
+ 
+  - type: image
+    id: Wave3
+    src: onda3.png
+    style: "width: 8%; top: 90%; left: 85%;  z-index: 0;"
+ 
+  - type: image
+    id: Boat
+    src: barca_flip.png
+    style: "width: 35%; bottom: 5%; left: 5%;  z-index: 0;"
+  
+  - type: image
+    id: Cloud1
+    src: nuvola1.png
+    style: "width: 13%; top: 5%; left: 7%;  z-index: 0;"
+  - type: image
+    id: Cloud2
+    src: nuvola2.png
+    style: "width: 8%; top: 3%; left: 30%;  z-index: 0;"
+  - type: image
+    id: Cloud3
+    src: nuvola3.png
+    style: "width: 8%; top: 4%; left: 50%;  z-index: 0;"
+  - type: image
+    id: Cloud4
+    src: nuvola4.png
+    style: "width: 10%; top: 5%; left: 75%;  z-index: 0;"
+ 
+  - type: sceneText
+    text: Sie war sehr aufgeregt und erkannte die Frau nicht gleich. Es war die gleiche Dame wie auf der ersten Fahrt, sie saß jetzt auf dem Platz direkt vor ihr.
+      #<p> She was very excited and she almost did not notice that the same lady of the ongoing trip was seated just in front of her.</p> 
+ 
+  - type: animation
+    target: Wave1
+    vars:
+      duration: 4
+      xPercent: 50
+      yPercent: 10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave2
+    vars:
+      duration: 5
+      xPercent: 35
+      yPercent: -10
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Wave3
+    vars:
+      duration: 6
+      xPercent: 65
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+
+  - type: animation
+    target: Cloud1
+    vars:
+      duration: 6
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud2
+    vars:
+      duration: 7
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud3
+    vars:
+      duration: 8
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: Cloud4
+    vars:
+      duration: 6.5
+      xPercent: 50
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: Boat
+    vars:
+      duration: 6
+      xPercent: 0
+      yPercent: -8
+      ease: power1.inOut
+      rotation: 2
+      repeat: -1
+      yoyo: true
+
+  - type: sceneText
+    text: <p>"Wie war denn dein Tag auf der Schatzinsel?"</p>
+      #<p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
+  - type: dialog
+    entries:
+      - text: Hallo!!! Oh, ich hätte dich fast nicht bemerkt. Es war ein toller Tag!
+      #"Hi!! Wow, I almost did not notice you. It was a great day!"
+        exposition: Mathina war kurz erschrocken in ihrem Sitz.
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: Mathina erzählte das Abenteuer mit dem Papagei und mit Angela. Dabei hörte ihr die Frau aufmerksam zu und schien doch auch noch über andere Sachen nachzudenken.
+      #<p> Mathina begins to explain the adventure with the parrot and with Angela, while the other lady was listening, herself lost into memories. </p>
+  - type: dialog
+    entries:
+      - text: ...Und schließlich habe ich versucht, ein paar Sätze zu übersetzen. Das war so spannend! Dabei hätte ich fast die letzte Fähre verpasst! Aber es hat alles noch geklappt… Und... wie war dein Tag.... äh... ich habe mir deinen Namen nicht gemerkt, tut mir leid.
+      #"... and finally I tried to translate some sentences, but almost missed the last ferry! But here I am… and… how was your day…. uh… don’t remember your name, sorry."
+        char: mathina
+        mood: normal
+  - type: sceneText
+    text: Die Dame lächelte. „Ich habe heute auch Abenteuer erlebt! Ich war auf der Insel und habe dort selbst einen Schatz versteckt. Wer weiß, wer den einmal finden wird!“
+      #<p> The lady smiled. "I also had my own adventures today! I was on the island hiding a treasure of my own! Who knows who’ll find it!" </p>
+  - type: dialog
+    entries:
+      - text: Jetzt bin ich aber neugierig! Wo hast du ihn versteckt?
+      #"Now I am curious, where did you hide it?"
+        char: mathina
+        mood: happy
+  - type: sceneText
+    text: <p>"Irgendwo im Inneren eines Baums, aber ich will dir nicht zu viel verraten! Oder..." überlegte sie, während sie den neuen Anhänger von Mathina betrachtete "bist du bereit für ein letztes Rätsel, bevor die Fähre am Ziel ankommt?"</p>
+      #<p> "Somewhere in a tree, but I don’t want to spoil you too much! But well - she said while looking at the new pendant of Mathina - are you ready for one last riddle, before the ferry arrives at the dock?" </p>
+  - type: dialog
+    entries:
+      - text: Natürlich bin ich bereit, erzähl es mir!
+      #"Of course, I am, tell me!"
+        exposition: antwortete Mathina aufgeregt.
+        char: mathina
+        mood: excited
+  - type: sceneText
+    text: “Oh, da gibt es nichts zu erzählen ... Aber es steht hier geschrieben” - sagte sie und reichte Mathina ein altes Stück Papier. “Auf diesem Papier ist ein Rätsel verschlüsselt, und für mich sieht es so aus, als hättest du alles was du brauchst, um es zu entschlüsseln ... Viel Glück!”
+      #<p> "Oh, it is not something to tell… Here it is - she said as she handed Mathina an old piece of paper - There is a riddle encoded in this piece of paper, and to me, it looks like that you have all the tools you need for decoding that... Good luck!" </p>
+  - type: sceneText
+    text: Mathina schaute auf das Stück Papier. Da standen ein paar Worte - natürlich unverständlich. Die sahen der Sprache, die sie heute von Angela und John gelernt hatte, sehr ähnlich. Willst Du ihr helfen, die geheime Botschaft zu übersetzen?
+    #<p> Mathina looked at the piece of paper: a few words - of course incomprehensible - which looked very similar to the one she learned from Angela and John today. Will you help her translate the secret message? </p>
+  - type: game
+    text: Versuche die Botschaft mit Hilfe des Anhängers zu entschlüsseln.
+    #"Try to decipher the secret message with the help of the jewel"
+    toolbarText: Entschlüssle die Botschaft.
+    #"Try to decipher the secret message with the help of the jewel"
+    cta: Probiere es aus!
+    #"Try it yourself!"
+    tag: app2
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=4
+    
+  - type: sceneText
+    text: <h1>Der sprechende Papagei - Ende<h1>
+      #<h1>The talking parrot - The End</h1>        
+
+    
+      
+      
+      
+      
+      

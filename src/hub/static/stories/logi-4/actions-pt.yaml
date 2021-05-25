@@ -1,0 +1,384 @@
+actions:
+  - type: background
+    src: logi-bg4.jpg
+    style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
+
+  - type: image
+    src: leo-pointingl.png 
+    id: leo-pointl
+    style: "width: 24%; top: 40%; right: 20%;"
+    parallax: back2
+  - type: image
+    src: mathina-thinking-turned.png
+    id: mathina-think-t
+    style: "width: 22%; top: 35%; right: 12%; z-index: 1"
+    parallax: back2
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: O que é isto...?
+        char: mathina
+        mood: surprised
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Leo manteve-se calado enquanto observava os plasmas circulares.
+  - type: animation
+    target: leo-pointl
+    vars:
+      duration: 3
+      xPercent: -180
+      yPercent: 15
+      ease: power3.out    
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Leo correu para a entrada do prédio.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Es-tá-di-o da Ci-da-de Lo-gi.
+        char: Leo
+        mood: surprised
+  - type: clearImage
+    id: leo-pointl
+  - type: image
+    src: leo-thinking.png 
+    id: leo-think
+    style: "width: 17%; top: 43%; right: 74%;"
+    parallax: back3
+  - type: animation
+    target: mathina-think-t
+    vars:
+      duration: 3
+      xPercent: -153
+      yPercent: -28
+      ease: power3.out    
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: A Mathina aproximou-se sorrateiramente da parede do prédio, mas não viu ninguém, apenas ouviu pessoas a discutirem lá dentro. - "O Senhor não pode fazer isso connosco, - o som vinha do corredor. - Basta dar-nos o nosso prémio que logo regressamos a casa!"
+  - type: image
+    src: trainer.png
+    id: trainer
+    style: "width: 22%; top: 25%; right: 60%; z-index: 2"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Um homem em fato de treino atravessou a parede e apareceu perto da Mathina.
+  - type: image
+    src: boys5.png 
+    id: boys5
+    style: "width: 60%; top: 45%; right: 6%; z-index: 3"
+    parallax: front1
+  - type: image
+    src: georget.png
+    id: georget
+    style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
+    parallax: front1
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: "De seguida, seis jovens apareceram também da parede, levando, nas mãos, uns instrumentos desportivos estranhos: umas raquetes em forma de tira de Möbius."
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Não pode ir-se embora assim sem mais nem menos!
+        char: boys
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Tudo bem, dou-vos outra oportunidade. Tentem adivinhar!
+        char: trainer
+        mood: normal
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Os jovens entreolharam-se, tentando contar pelos dedos e pronunciando alguns números.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Não conseguimos resolver isto!
+        char: boys
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: O que é que não conseguem resolver?
+        char: Mathina
+        mood: talking
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Tudo bem, se esta menina pequena encontrar a solução, vocês ganham as medalhas de ouro!
+        char: trainer
+        mood: normal
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: O Leo viu como a Mathina estava aborrecida por lhe terem chamado “menina pequena”.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Nós somos a equipa local da cidade Logi e esta noite vencemos o campeonato regional de logi-futebol. Mas estou convencido de que, se queremos ter um bom desempenho na competição nacional, devemos também treinar constantemente as nossas mentes. 
+        char: trainer
+        mood: normal
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Então, hoje, recebemos várias medalhas de ouro e eu expliquei-lhes como irei distribuir essas medalhas. Procedemos de acordo com uma lista de nomes.
+        char: trainer
+        mood: normal
+      - text: A primeira pessoa da lista recebe a soma dos dígitos da quantidade de medalhas recebidas. Por exemplo, se tivermos 721 medalhas, o primeiro receberá 7 + 2 + 1, ou seja, 10 medalhas. Restam 721 menos 10, quer dizer 711 medalhas.
+        char: trainer
+        mood: normal
+      - text: "O seguinte obtém a soma dos dígitos das medalhas obtidas desta forma. E por aí em diante. Eu disse-lhes que depois de duas rodadas completas, ficaremos sem medalhas e apenas o Jorge receberá mais do que os outros: os restantes receberão quantidades idênticas."
+        char: trainer
+        mood: normal
+      - text: E, sabendo isso, não precisam de mais do que um segundo para descobrir quantas medalhas temos e quem fica com quantas, mas estes 6 já estão a pensar há horas.
+        char: trainer
+        mood: normal
+      - text: Em que posição está o Jorge na lista?
+        char: mathina
+        mood: talking
+      - text: Oh, menina, não vou dizer isso. Tenta descobrir!
+        char: trainer
+        mood: normal
+  - type: clearImage
+    id: mathina-think-t
+  - type: image
+    src: mathina-standing.png
+    id: mathina-stand
+    style: "width: 19%; top: 21%; right: 47%;"
+    parallax: back2
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: A Mathina tirou a caneta e o caderno do bolso.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Então tem de ser dividido por 7 pessoas, certo? Entre os 6 membros da equipa e o treinador.
+        char: Mathina
+        exposition: "A Mathina começou a rabiscar e, depois de alguns minutos, exclamou: - Sim!"
+        mood: happy
+      - text: Quantas medalhas ganhamos? Quantas?
+        char: boys
+        mood: talking
+  - type: game
+    text: Constrói uma tabela preenchendo a quantidade inicial de medalhas de ouro recebidas.
+    toolbarText: 
+    cta: Consegues descobrir quantas medalhas de ouro é que eles recebem?
+    url: /apps/logi-4-app/logi-4-app.htm?c=1&l=3
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Não vou dizer-vos isso.
+        char: Mathina
+        exposition: A Mathina sussurrou algo ao ouvido do treinador, que acenou com a cabeça satisfeito.
+        mood: happy
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Prefiro ajudar-vos a descobrir.
+        char: Mathina
+        mood: talking
+      - text: Mas eu sei, eu sei como resolver! Deixa-me dizer-te!
+        char: Leo
+        mood: arguing
+  - type: animation
+    target: leo-think
+    vars:
+      duration: 0.7
+      xPercent: 0
+      yPercent: -40
+      repeat: 1
+      yoyo: true
+      ease: power1.inOut
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Vendo como ele estava excitado, a Mathina e o treinador deram-lhe a palavra.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Bem, acho que podemos examinar todos os casos, como se todos ganhassem 1 ou 2 ou 3 medalhas, exceto o Jorge, e por aí adiante! E vamos encontrar o número certo. Não será um número alto, tenho a certeza...
+        char: leo
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: O Leo começou a contar, pensando em voz alta.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Se todos receberem sempre o mesmo, exceto o Jorge, então duas pessoas seguidas por ordem na lista receberão a mesma quantidade. Eles não podem receber 1, porque não há dois números “vizinhos” cuja soma dos dígitos seja 1.
+        char: leo
+        mood: thinking
+      - text: Também não funciona se cada um receber 2, pois se o número (de cima) na lista tiver como soma dos seus dígitos 2 (20 ou 11), o número seguinte da lista -- subtraído de 2 (18 ou 9) -- já não terá tal soma.
+        char: leo
+        mood: arguing
+      - text: "E se considerarmos 3? Para a soma dos dígitos ser 3, os números podem ser: 12, 21 e 30, mas, novamente, esses números já não funcionam para o jogador seguinte. Também há um problema com o número 4. Há uma solução...?"
+        char: leo
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: O Leo começou a ficar tonto, embora ainda só tivesse considerado 4 casos. A Mathina olhou para ele com um olhar inquisidor.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: E se fizéssemos também uma tentativa com o meu método também?
+        char: Mathina
+        mood: talking
+      - text: Com certeza!
+        char: boys
+        mood: talking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: Ao virar-se para eles, a Mathina não conseguiu reprimir um sorriso triunfante.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Preencham esta tabela e façam uma tentativa com, por exemplo, 116 medalhas.
+        char: Mathina
+        mood: talking
+  - type: game
+    text: Apercebeu-se de alguma regularidade com o número 116?
+    toolbarText: 
+    cta: Experimenta!
+    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=3
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: 116 não é bom porque termina muito cedo.
+        char: george
+        mood: thinking
+      - text: Sim, tens razão. Mas, por agora, é apenas uma experiência. Talvez possamos aprender algo com isto.
+        char: Mathina
+        mood: talking
+      - text: Posso ter errado alguma coisa, mas chego quase sempre a 9 medalhas.
+        char: george
+        mood: thinking
+      - text: Sim, tens razão! E também podemos obter um 18...
+        char: Mathina
+        mood: talking
+      - text: Que também é divisível por 9!
+        char: george
+        mood: thinking
+      - text: "Sim! E por que achas que é assim?"
+        char: Mathina
+        mood: happy
+  - type: game
+    text: Por que motivo é que, se subtrairmos a um número a soma dos seus dígitos, obtemos sempre um número divisível por 9?
+    toolbarText: 
+    cta: Experimenta com alguns números!
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=3
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: "Já sei! Seja x o primeiro dígito, y o segundo e z o terceiro. Isso significa que podemos escrever esse número da seguinte forma: 100x + 10y + z. E a soma dos seus dígitos é x + y + z."
+        char: george
+        mood: thinking
+      - text: O que acontece se subtrairmos um do outro? 100x + 10y + z - (x + y + z) = 99x + 9y = 9 (11x + y). Dessa forma, é divisível por 9. E isso é verdade para qualquer número de algarismos, porque o último dígito é sempre descartado, e o resto fica sempre com 9, 99, 999,…, 99999999, ... como um dos fatores, uma vez que estamos a subtrair 1 a uma potência de dez.
+        char: george
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: O treinador ergueu a cabeça e ouviu a discussão com os olhos a brilhar. Sempre subestimara o Jorge, mas agora apercebia-se que ele,com um pouco de orientação, conseguia resolver algumas coisas interessantes.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Bem, mas ainda não sabemos quantas medalhas vamos receber!
+        char: boys
+        mood: talking
+      - text: Ainda não, mas estamos a fazer progressos.
+        char: Mathina
+        mood: happy
+      - text: Ouçam, vimos, no exemplo, que obtínhamos apenas 9, exceto para o primeiro da linha. Então, acho que o primeiro obterá mais do que os outros e os restantes terão todos 2 vezes 9!
+        char: george
+        mood: thinking
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: A Mathina escutou o Jorge com os olhos semicerrados, pedindo-lhe para verificar novamente os seus cálculos.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Bom. Então, se seis de nós obtivessem 2 vezes 9, e o primeiro 9, isto dava 13 vezes 9, totalizando 117.
+        char: george
+        mood: thinking
+      - text: Mas, como o primeiro na primeira rodada deve obter mais, então precisamos de um número maior que 117, um número cuja soma de dígitos seja maior do que 9. Digamos 127.
+        char: george
+        mood: thinking
+  - type: game
+    text: Achas que o Jorge tem razão? 127 funciona?
+    toolbarText: 
+    cta: Experimenta com o número 127!
+    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=3
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Jorge, isso não está bem! Por um lado, ficamos sem ouro mais cedo do que devíamos e, por outro, o primeiro e o quarto recebem uma quantidade diferente. O sétimo também recebe uma quantia diferente, porque obtém zero na última rodada! - disseram os outros ao Jorge.
+        char: boys
+        mood: talking
+      - text: Acho que há um erro no quarto.
+        char: Leo
+        mood: thinking
+      - text: Shh, não te perguntei a ti.
+        char: Mathina
+        exposition: A Mathina abanou a cabeça, mas depois sorriu orgulhosamente para o Leo.
+        mood: happy
+      - text: "O rapaz tem razão. Esqueci-me que tinha de dar 18 em 99. - Então vou fazer assim: o primeiro deve também receber 9 em ambas as rodadas!"
+        char: george
+        mood: thinking
+  - type: game
+    text: Consegues descobrir quantas medalhas de ouro são realmente necessárias?
+    toolbarText: 
+    cta: Experimenta com números!
+    url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=3
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: "Então, eu pensei que 6 pessoas receberiam 9 em ambas as rodadas, e uma pessoa receberia 18 na primeira, e depois 9 na segunda rodada. Isso significa: 7x18 + 9 = 135. E, assim, a quinta pessoa recebe mais do que as outras!"
+        char: george
+        mood: thinking
+      - text: Mas, Jorge, nós sabíamos que tu eras o quinto da lista!
+        char: boys
+        mood: talking
+      - text: A sério? Mas vocês não disseram nada! Mas tudo bem, assim sabe ainda melhor conhecer a solução!
+        char: george
+        exposition: Todos eles riram!
+        mood: thinking
+  - type: clearImage
+    id: gold
+  - type: image
+    src: gold-medal.png
+    id: gold
+    style: "width: 2%; top: 46%; right: 33%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold2
+    style: "width: 2%; top: 58%; right: 52%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold3
+    style: "width: 2%; top: 85%; right: 23%; z-index: 3;"
+    parallax: front3
+  - type: image
+    src: gold-medal.png
+    id: gold4
+    style: "width: 2%; top: 59%; right: 33%; z-index: 3;"
+    parallax: front3
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: O treinador distribuiu as medalhas de ouro. De seguida, bateu palmas à Mathina.
+  - type: dialog
+    style: "position: absolute; left: 600px; top: 5px;"  
+    entries:
+      - text: Tu és fantástica! Sempre que quiseres, serás bem-vinda como treinadora assistente da minha equipa de logi-futebol! Ficaremos felizes em ter pessoas como tu na equipa!
+        char: trainer
+        mood: normal
+  - type: sceneText
+    style: "position: absolute; left: 600px; top: 5px;"  
+    text: A Mathina agradeceu a oportunidade e continuou as suas explorações com o Leo. Havia novas aventuras à sua espera.
+  - type: clearImage
+    id: leo-think
+  - type: clearImage
+    id: mathina-stand

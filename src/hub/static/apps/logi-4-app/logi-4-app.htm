@@ -400,7 +400,7 @@
                     // example callback function
                     accepted: function(e, keyboard, el) {
                         if (Custom == 1) return;
-                        if (GiveOld <= 0) return;
+                        if (GiveOld < 0) return;
 
 
 setTimeout(function(){ $("#"+IdName).keyboard().getkeyboard().destroy(); AddLine(el.value);

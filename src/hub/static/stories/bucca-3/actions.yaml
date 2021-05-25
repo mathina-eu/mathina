@@ -30,7 +30,7 @@ actions:
   - type: sceneText
     text: >
       <p>“<i>Dear Mathina,</br>
-        I hope you remember me. We met some times ago at the market on Buccaneer’s island, with John the parrot. If I recall well, you liked the adventures on the island a lot. If you wish, I could have a little help on a new adventure. I fear that somebody is spying on me, so I prepared a coded message for you. The message behind this letter will tell you where and when to meet. I did not specify the key, but I am sure you will find the right one with just a few trials. Oh, I also added a little twist to avoid spies. If you want a hint, you will find a nice wooden art inside the envelope.
+        I hope you remember me. We met some times ago at the market on Buccaneer Island, with John the parrot. If I recall well, you liked the adventures on the island a lot. If you wish, I could have a little help on a new adventure. I fear that somebody is spying on me, so I prepared a coded message for you. The message behind this letter will tell you where and when to meet. I did not specify the key, but I am sure you will find the right one with just a few trials. Oh, I also added a little twist to avoid spies. If you want a hint, you will find a nice wooden art inside the envelope.
         </br>
         </br>
         Best,</br>
@@ -62,7 +62,7 @@ actions:
       ease: power3.out
   - type: sceneText
     text: >
-      <p>Thanks to that jewel, Mathina had learned one of the methods that the pirates of Buccaneer’s Island used to encrypt messages. It was, after all, very simple: each letter of the message to be deciphered has to be searched for in the inner circle and replaced with the corresponding letter in the outer circle.</p>
+      <p>Thanks to that jewel, Mathina had learned one of the methods that the pirates of Buccaneer Island used to encrypt messages. It was, after all, very simple: each letter of the message to be deciphered has to be searched for in the inner circle and replaced with the corresponding letter in the outer circle.</p>
   - type: sceneText
     text: >
       <p>Since the two circles could rotate, it was important to position them in a way agreed with who was supposed to decipher the message: for example, at the market with Angela they had agreed so that the "A" of the inner circle corresponded with the "B" of the outer circle.
@@ -264,7 +264,7 @@ actions:
  
   - type: dialog
     entries:
-      - text: "Hi again, and welcome back to Buccaneer’s Island!" 
+      - text: "Hi again, and welcome back to Buccaneer Island!" 
         char: angela
         mood: happy
 
@@ -618,7 +618,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p> When she arrived on the Buccaneer’s Island she found Angela waiting for her at the dock. She was not alone, and already from the ferry, Mathina was able to notice the garish feathers of a beautiful parrot.</p>
+      <p> When she arrived on the Buccaneer Island she found Angela waiting for her at the dock. She was not alone, and already from the ferry, Mathina was able to notice the garish feathers of a beautiful parrot.</p>
 
   - type: image
     id: Mathina4
@@ -1307,7 +1307,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p> Mathina went back to her home, with many, many things in her mind. She just discovered not only how to use the necklace in a way more secure than before, but also had a great adventure with her friend. Who knows which secrets are still hidden in Buccaneer’s island. </p>
+      <p> Mathina went back to her home, with many, many things in her mind. She just discovered not only how to use the necklace in a way more secure than before, but also had a great adventure with her friend. Who knows which secrets are still hidden in Buccaneer Island. </p>
       
       
   - type: sceneText

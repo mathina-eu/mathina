@@ -228,8 +228,9 @@ background-repeat: no-repeat;
         TestoIniziale = [
             [], //The 0-th element of the array is void. This is due to the fact that the translation index begin with 1
             "Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt".toUpperCase(),
-            "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
+            "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru pjgbc".toUpperCase(),
             "Gmimsqee gai pvozrimi m dqeersvy. Vztaefiqz gee tacmiqj qjfimetfe hgv brdvovy iqcmtufzrpfe tad zlyvdfe gdzyfe. Aoya hgv era r oymmq gmim lyr zfhr rfddm uq tuwdrd dqeersvzj evoiqkmj. Sv clujqi qeofzkdrxfe mm r yzzym rzkuxm tmjm. F ordmmctf pf vrduud qjofzuq lyr oruom caxa rozyr pf biudqzdf simepv srxya".toUpperCase(),
+            "XDRFLXZQIQ! UG YMJF UQE OFPV SVWEMTWK. UTT YMSQ VUEUXQ JQCFJMDQ BQKFVZ XQWGEPVZ, UUV QKIRE DUK BIUDLRTCQE LL FLZ YMSQE. UTT XXRGSQ, DME WRZE EZQ MQIIVZUQE, GD SVTVUDQ EMTTIUTTKQE MLR VUEQ EQLQ RDK LL WFPZQIQE. IVZE PL EZQ WUEPVZ NUCXJF, XQYQ QG DQZZVY RXKQE TRGJ. UE PVD VUTTV UD SRDKQE UJF VUEQ BUJFV HVDJFVOBF, VFNMJ ASQITRXS HFY VDJFVZ UUTWVZ REK.".toUpperCase(),
         ];
         Traduzioni=[
 [["Trad1"],"Odd letters:","Lettere dispari:","Letras &iacute;mpares:","Ungerade Buchstaben:"],
@@ -813,7 +814,15 @@ Soluzioni=[
         function Check() {
             if (CheckFine==0 && CalcolaMod(document.getElementById("CanvasMathina").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][0] && CalcolaMod(document.getElementById("CanvasMathina2").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][1]) {
 			CheckFine=1;
-			setTimeout(function(){ Finisci(); }, 2000);
+		
+			setTimeout(function(){ 
+			
+				if (CalcolaMod(document.getElementById("CanvasMathina").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][0] && CalcolaMod(document.getElementById("CanvasMathina2").CaesarShift, Alphabet[Lingua].length) == Soluzioni[Lingua][1]) Finisci(); 
+				else 
+				CheckFine=0;
+				
+			
+			}, 20000);
 			}
 
 

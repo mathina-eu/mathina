@@ -111,7 +111,7 @@ actions:
       
   - type: dialog
     entries:
-      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer’s Island!"
+      - text: "Run, Mathina, Run! Or you will miss the ferry to Buccaneer Island!"
         char: mathina
         mood: happy
 
@@ -168,7 +168,7 @@ actions:
         mood: excited
   - type: sceneText
     text: >
-      <p>"First time to Buccaneer’s Island?" asked a lady sitting next to Mathina.</p>
+      <p>"First time to Buccaneer Island?" asked a lady sitting next to Mathina.</p>
   - type: dialog
     entries:
       - text: "Almost! I already went there with my brother, but I haven't got the chance to explore it at will. How about you?"
@@ -250,7 +250,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: "Finally I’m back to Buccaneer’s Island!"
+      - text: "Finally I’m back to Buccaneer Island!"
         char: mathina
         mood: happy
 
@@ -299,8 +299,8 @@ actions:
   - type: sceneText
     text: >
       <p>There was a dirt road that links the little harbour of the island with the main city, and today it was full of stands for the market day. </br> </br>
-        “Treasure map! Here is the map for the hidden treasure of Buccaneer’s Island” </br>
-        “The best apples of Buccaneer’s Island! Give it a taste!”  </br>
+        “Treasure map! Here is the map for the hidden treasure of Buccaneer Island” </br>
+        “The best apples of Buccaneer Island! Give it a taste!”  </br>
         “Who is the best singer of pirate’s songs? Challenge me!” </br>
       </p>
 
@@ -791,7 +791,7 @@ actions:
 
   - type: sceneText
     text: >
-      <p> "How was your day on Buccaneer’s Island?" Mathina jumped on her seat.</p>
+      <p> "How was your day on Buccaneer Island?" Mathina jumped on her seat.</p>
   - type: dialog
     entries:
       - text: "Hi!! Wow, I almost did not notice you. It was a great day!"

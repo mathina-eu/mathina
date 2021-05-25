@@ -3,80 +3,54 @@
     background="/map_blur.jpg"
   >
     <Parallax class="overflow-hidden">
-      <div class="worldmap">
-        <v-menu
-          v-for="city in cities"
-          :key="city.id"
-          rounded="b x1"
-          offset-y
-        >
-          <template v-slot:activator="{ attrs, on }">
-            <v-btn
-              :class="`white--text worldmap__city--${city.id}`"
-              :color="city.colorScheme"
-              elevation="1"
-              class="worldmap__city"
-              v-bind="attrs"
-              v-on="on"
-            >
-              {{ $t(`cities.${city.id}`) }}
-            </v-btn>
-          </template>
-          <v-list
-            class="blue--background"
-            nav
-            dense
-          >
-            <v-subheader>Stories</v-subheader>
-            <v-list-item
-              v-for="story in city.stories"
-              :key="story.id"
-              :to="localePath({ name: 'story-slug', params: { slug: story.slug } })"
-              :ripple="true"
-              link
-              nuxt
-            >
-              <v-list-item-icon>
-                <v-icon small>
-                  {{ `mdi-numeric-${story.ageMeta.icon}-circle` }}
-                </v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title v-text="$t(`story.titles.${story.id}`)" />
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-      </div>
       <template #back1>
         <div class="map-background" />
-      </template>
-      <template #back2>
         <div class="castle" />
-        <div class="wizzard" />
+        <div class="mathina-leo" />
         <div class="pub" />
         <div class="market" />
-      </template>
-      <template #mid1>
-        <div class="mathina-leo" />
-        <div class="flamma" />
-        <div class="dragon" />
-        <div class="phoenix" />
-        <div class="forest" />
-        <div class="traffic" />
-        <div class="owl" />
-        <div class="thief" />
-        <div class="stadium" />
-        <div class="toys" />
-        <div class="stalls" />
-        <div class="frieze" />
-        <div class="carousel" />
-        <div class="tree" />
-        <div class="parrot" />
-        <div class="chest" />
-        <div class="mysterious-figure" />
+        <svg
+          v-for="city in cities"
+          :key="city.id"
+          :class="`ribbon ribbon--${city.id}`"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 157"
+        >
+          <defs>
+            <path
+              id="ribbon"
+              d="M 82 97 S 102 57 232 83 S 431.67 78.5 431.67 78.5"
+              fill="none"
+            />
+          </defs>
+          <text>
+            <textPath
+              href="#ribbon"
+              startOffset="50%"
+              text-anchor="middle"
+            >
+              {{ $t(`cities.${city.id}`) }}
+            </textPath>
+          </text>
+        </svg>
+        <div
+          v-for="story of mapStories"
+          :key="`${story.id}-${story.class}`"
+          :class="`story-nav ${story.class} story-nav--age-${getStoryData(story.id).ageMeta.icon}`"
+          @click="openStory(story.id)"
+          @mouseover="onMouseOver(story.id)"
+          @mouseout="onMouseOut(story.id)"
+        />
       </template>
     </Parallax>
+    <transition name="story-name">
+      <div
+        v-if="activeTitle"
+        class="story-name"
+      >
+        {{ activeTitle }}
+      </div>
+    </transition>
   </StoryView>
 </template>
 
@@ -90,6 +64,31 @@ export default {
   components: {
     StoryView,
     Parallax,
+  },
+  data() {
+    return {
+      activeTitle: '',
+      titleTimeout: null,
+      mapStories: [
+        { id: 'fire-1', class: 'flamma' },
+        { id: 'fire-2', class: 'dragon' },
+        { id: 'fire-3', class: 'phoenix' },
+        { id: 'fire-4', class: 'forest' },
+        { id: 'logi-1', class: 'traffic' },
+        { id: 'logi-2', class: 'owl' },
+        { id: 'logi-3', class: 'thief' },
+        { id: 'logi-4', class: 'stadium' },
+        { id: 'symm-1', class: 'toys' },
+        { id: 'symm-2', class: 'stalls' },
+        { id: 'symm-3', class: 'frieze' },
+        { id: 'symm-3', class: 'wizard' },
+        { id: 'symm-4', class: 'carousel' },
+        { id: 'bucca-1', class: 'tree' },
+        { id: 'bucca-2', class: 'parrot' },
+        { id: 'bucca-3', class: 'chest' },
+        { id: 'bucca-4', class: 'mysterious-figure' },
+      ]
+    };
   },
   computed: {
     cities() {
@@ -109,43 +108,36 @@ export default {
     },
   },
   mounted() {
-    this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: 'World Map' }]);
+    this.$store.dispatch('setBreadcrumbs', [{ path: '/world', text: this.$t('world.map') }]);
   },
   methods: {
     getStoryData(storyId) {
       return { ...constants.STORIES.find(({ id }) => storyId === id) };
-    }
+    },
+    onMouseOver(storyId) {
+      clearTimeout(this.titleTimeout);
+      this.titleTimeout = setTimeout(() => {
+        this.activeTitle = this.$t(`story.titles.${storyId}`);
+      }, 200);
+    },
+    onMouseOut() {
+      clearTimeout(this.titleTimeout);
+      this.titleTimeout = setTimeout(() => {
+        this.activeTitle = '';
+      }, 500);
+    },
+    openStory(storyId) {
+      let story = this.getStoryData(storyId);
+      this.$router.push({
+        path: this.localePath({ name: 'story-slug', params: { slug: story.slug } })
+      });
+    },
   },
 };
 </script>
 
 <style scoped>
-.worldmap {
-  &__city {
-    position: absolute;
-    z-index: 7;
-
-    &--island {
-      bottom: 3%;
-      right: 23%;
-    }
-
-    &--logicity {
-      top: 49%;
-      right: 29%;
-    }
-
-    &--birds-of-fire {
-      top: 3%;
-      left: 2%;
-    }
-
-    &--symmetry-fair {
-      left: 17%;
-      bottom: 35%;
-    }
-  }
-}
+@import '~vars';
 
 .map-background {
   background: url('~assets/images/map/background.jpg');
@@ -153,6 +145,48 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+}
+
+.story-nav {
+  transition: all 0.25s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.35s cubic-bezier(0.17, 0.67, 0.55, 1.94);
+  }
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(52, 112, 184, 0.85);
+    display: block;
+    background: rgba(255, 255, 255, 0.7);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    font-size: 11px;
+    line-height: 28px;
+    color: var(--text-color-primary);
+  }
+
+  &--age-1::after {
+    content: "4+";
+  }
+
+  &--age-2::after {
+    content: "7+";
+  }
+
+  &--age-3::after {
+    content: "11+";
+  }
+
+  &--age-4::after {
+    content: "15+";
+  }
 }
 
 .mathina-leo {
@@ -188,9 +222,9 @@ export default {
 .dragon {
   position: absolute;
   width: 10%;
-  height: 23%;
-  left: 32%;
-  top: 33%;
+  height: 21%;
+  left: 30%;
+  top: 31%;
   background: url('~assets/images/map/dragon.png') no-repeat center;
   background-size: contain;
 }
@@ -225,7 +259,7 @@ export default {
   background-size: contain;
 }
 
-.wizzard {
+.wizard {
   position: absolute;
   width: 9%;
   height: 29%;
@@ -263,6 +297,10 @@ export default {
   bottom: -4%;
   background: url('~assets/images/map/frieze.png') no-repeat center;
   background-size: contain;
+
+  &::after {
+    display: none;
+  }
 }
 
 .pub {
@@ -337,10 +375,10 @@ export default {
 
 .owl {
   position: absolute;
-  width: 14%;
-  height: 28%;
-  right: 27%;
-  bottom: 49%;
+  width: 12%;
+  height: 27%;
+  right: 28%;
+  bottom: 50%;
   background: url('~assets/images/map/owl.png') no-repeat center;
   background-size: contain;
 }
@@ -363,5 +401,61 @@ export default {
   bottom: 44%;
   background: url('~assets/images/map/thief.png') no-repeat center;
   background-size: contain;
+}
+
+.ribbon {
+  background: url('~assets/images/splash/ribbon.png') no-repeat center bottom;
+  background-size: contain;
+  width: 20%;
+  height: 10%;
+  position: absolute;
+  font-size: 2em;
+  font-family: Newsreader, serif;
+  font-weight: 600;
+
+  &--island {
+    bottom: 3%;
+    right: 15%;
+  }
+
+  &--logicity {
+    top: 44%;
+    right: 25%;
+  }
+
+  &--birds-of-fire {
+    top: 1%;
+    left: 1%;
+  }
+
+  &--symmetry-fair {
+    left: 15%;
+    bottom: 34%;
+  }
+}
+
+.story-name {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  padding: 0.5rem 1rem;
+  background: url('~assets/images/dialog_bg.png');
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875em;
+  transform: translateX(-50%);
+  box-shadow:
+    0 3px 4px -10px rgba(0, 0, 0, 0.5),
+    0 10px 32px -10px rgba(0, 0, 0, 0.2);
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity 0.25s ease;
+  }
+
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
 }
 </style>

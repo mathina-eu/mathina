@@ -243,7 +243,7 @@ actions:
   - type: game
     tag: tg26
     text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e clicca su"
-    toolbarText: "Seleziona i poliedri convessi"
+    toolbarText: "Seleziona 4 poliedri convessi"
     cta: "Riconosci i poliedri convessi!"
     url: /apps/EscolhePoliConvexos/index.html?lang=it
     img:
@@ -331,11 +331,12 @@ actions:
     id: cuboMolde
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg3
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboMolde.mp4
+    entries:
+      - src: CuboMolde.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde    
   - type: sceneText
@@ -346,11 +347,12 @@ actions:
     id: cuboMolde2
     align: center
     style: "top: 57%; width: 13%"       
-  - type: game
+  - type: video
     tag: tg2
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboMolde2.mp4
+    entries:
+      - src: CuboMolde2.mp4
+        type: 'video/mp4'
   - type: clearImage
     id: cuboMolde2    
   - type: dialog
@@ -420,7 +422,7 @@ actions:
   - type: game
     tag: tg27
     text: "Scegli gli sviluppi del cubo. Selezionane 3  e clicca"
-    toolbarText: "Seleziona gli sviluppi del cubo."
+    toolbarText: "Seleziona 3 sviluppi del cubo."
     cta: "Separa gli sviluppi da quelli che non lo sono!"
     url: /apps/EscolhePlanCubo/index.html?lang=it
     img:
@@ -570,7 +572,7 @@ actions:
   - type: game
     tag: tg28
     text: "Scegli gli sviluppi dell'ottaedro. Seleziona configurazioni e clicca"
-    toolbarText: "Scegli gli sviluppi dell'ottaedro."
+    toolbarText: "Scegli 3 sviluppi dell'ottaedro."
     cta: "Isola gli sviluppi dell'ottaedro!"
     url: /apps/EscolhePlanOcta/index.html?lang=it
     img:
@@ -766,7 +768,7 @@ actions:
   - type: game
     tag: tg13
     text: "Seleziona i poliedri non platonici che hanno tutte le facce uguali. Scegli due poliedri e clicca"
-    toolbarText: "Seleziona i poliedri non platonici che hanno tutte le facce uguali."
+    toolbarText: "Seleziona 2 poliedri non platonici che hanno tutte le facce regolari e uguali."
     cta: "Separa i seguenti poliedri che hanno tutte le facce uguali tra platonici e non platonici."
     url: /apps/EscolhePoliNPRegulares/index.html?lang=it
     img:
@@ -855,11 +857,12 @@ actions:
       - text: "Ebbene, come prima, tutte le facce sono poligoni regolari, ma non tutte hanno lo stesso numero di lati. Fammi solo controllare se gli angoli solidi su ciascun vertice sono uguali."
         char: mathina
         exposition: "Disse Mathina mentre controllava gli angoli con uno stampo."
-  - type: game
+  - type: video
     text: "Guarda il video!"
     tag: tg15
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboRombiOcta.mp4
+    entries:
+      - src: CuboRombiOcta.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg19
   - type: clearImage
@@ -881,20 +884,22 @@ actions:
       - text: "Possiamo ottenere questo secondo stampo guardando l'immagine riflessa quello originale in uno specchio."
         char: technician
         exposition: "Continuò il tecnico."
-  - type: game
+  - type: video
     tag: tg17
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-4/video/Viramolde.mp4
+    entries:
+      - src: Viramolde.mp4
+        type: 'video/mp4'
   - type: dialog
     entries:        
       - text: "Ogni vertice può essere modellato da uno di questi due stampi: l'originale e lo stampo “specchiato”. E poiché ciascuno dei 2 stampi è ottenuto per riflessione dall'altro, si considerano i vertici del poliedro come “dello stesso tipo”."
         char: technician
-  - type: game
+  - type: video
     text: "Guarda il video!"
     tag: tg18
-    cta: "Play!"
-    url: /stories/symm-4/video/CuboRombiOctaVM.mp4
+    entries:
+      - src: CuboRombiOctaVM.mp4
+        type: 'video/mp4'
   - type: clearBackground
     id: c1-bg17    
   - type: background
@@ -991,10 +996,11 @@ actions:
       - text: "Prendiamo ad esempio un cubo e consideriamo una rotazione di 90 gradi attorno a un asse che passa per i centri di due facce opposte. Se lo ruotiamo, il cubo viene mandato in se stesso. Questa rotazione è quindi una simmetria cubica."
         char: technician
         exposition: "Continuò il tecnico."
-  - type: game
+  - type: video
     text: "Guarda il video!"
-    cta: "Play!"
-    url: /stories/symm-4/video/AnimCubo.mp4
+    entries:
+      - src: AnimCubo.mp4
+        type: 'video/mp4'
   - type: image
     src: cubo-plano.png
     id: cubo-plano
@@ -1086,7 +1092,7 @@ actions:
   - type: game
     tag: tg29
     text: "Scegli i poliedri uniformi. Scegli 4 poliedri e clicca"
-    toolbarText: "Seleziona i poliedri uniformi."
+    toolbarText: "Seleziona 4 poliedri uniformi"
     cta: "Seleziona i poliedri uniformi!"
     url: /apps/EscolhePoliUnif/index.html?lang=it
     img:

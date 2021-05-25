@@ -28,7 +28,8 @@
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.15.1",
     "stylelint-config-standard": "^20.0.0",
-    "yaml-loader": "^0.6.0"
+    "yaml-loader": "^0.6.0",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

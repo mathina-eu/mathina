@@ -1,0 +1,489 @@
+# FIRE-4 - Italian version
+
+actions:
+  - type: background
+    src: fire-bg4.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+
+
+
+
+  - type: image
+    src: moon_full.png
+    id: moon
+    style: "position: absolute; left: 0; top: 10%; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+
+  - type: image
+    src: trees_mid.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+
+  - type: image
+    src: trees_owl_front.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front1
+  - type: image
+    src: owl.gif
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front1
+  - type: image
+    src: berries.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: image
+    src: hill.png
+    id: hill
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: front2
+  - type: image
+    src: fern.png
+    id: fern
+    style: "width: 35%; left: 350; top: 52%;"
+    noOverflow: true
+    parallax: front2
+  - type: image
+    src: mathinaleo.png
+    id: matleo
+    style: "width: 25%; top: 40%; left: -2%;"
+    parallax: mid3
+
+  - type: animation
+    target: fern
+    vars:
+      duration: 20
+      rotation: 20
+      #xPercent: -40
+      #yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: animation
+    target: fern
+    vars:
+        duration: 0.1
+        xPercent: 40
+        ease: power3.out
+  - type: animation
+    target: moon
+    vars:
+        duration: 600
+        xPercent: 10
+        yPercent: 60
+        width: 90%
+        height: 90%
+        ease: power3.out
+
+  - type: sceneText
+    text: Era tardo pomeriggio e Mathina e Leo stavano passeggiando alla ricerca di bacche e funghi nella foresta di Arisa. Sapevano che la foresta era sicura durante il giorno, ma avevano sentito storie di creature incantate che vagavano durante la notte. La sera non erano mai rimasti così a lungo nella foresta e il sole cominciava a svanire all'orizzonte.
+  - type: animation
+    target: matleo
+    vars:
+        duration: 3
+        xPercent: 98
+        yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: sceneText
+    text: Non era una buona idea lasciare il sentiero e addentrarsi nel bosco. Ma erano così felici di aver trovato un grande cespuglio di bacche in una radura nascosta. Leo si è appena accorto che il sole era dietro le montagne e iniziava a innervosirsi.
+  - type: clearImage
+    id: matleo
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 16%; top: 55%; left: 25%; "
+    parallax: mid2
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 14%; top: 49%; left: 36%;"
+    parallax: mid2
+  - type: animation
+    target: mat
+    vars:
+        duration: 2
+        xPercent: 50
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Mathina, è piuttosto tardi, perché non torniamo a casa?
+        char: leo
+
+
+        exposition: "Mathina stava raccogliendo le ultime bacche da portare a casa: avrebbero potuto fare un'ottima torta con tutti questi frutti di bosco."
+        mood: arguing
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: mathina5_mirrored.png
+    id: mat
+    style: "width: 9.5%; top: 45%; left: 45%;"
+    parallax: mid2
+  - type: image
+    src: sparkbugs_many.png
+    id: bug1
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+  - type: image
+    src: sparkbugs_many_rev.png
+    id: bug2
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid1
+  - type: animation
+    target: bug1
+    vars:
+      duration: 30
+      xPercent: -5
+      yPercent: 5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: bug2
+    vars:
+      duration: 21
+      xPercent: 5
+      yPercent: -5
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+  - type: animation
+    target: leo
+    vars:
+        duration: 7
+        xPercent: 35
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 5
+        xPercent: -15
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: sceneText
+    text: Improvvisamente, Leo sentì un sibilo vicino a loro. Il colore della luce iniziò a cambiare, con molti riflessi colorati che riempivano le ombre che cominciavano a dominare la radura della foresta. Era bello anche se un po' misterioso... A un certo punto, una specie di nebbia sottile iniziò a crearsi tra gli alberi.
+
+  - type: sceneText
+    text: Era come un tessuto di seta che appariva e scompariva, con un debole bagliore che andava dal giallo al viola e dal rosso e al verde. Il sibilo stava diventando più forte e l'intera scena stava diventando ipnotica. Mathina e Leo osservarono in silenzio...
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 26%; top: 29%; left: 60%;"
+    parallax: mid1
+  - type: animation
+    target: fla
+    vars:
+        duration: 5
+        xPercent: -70
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: leo
+    vars:
+        duration: 0.5
+        xPercent: -25
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: animation
+    target: mat
+    vars:
+        duration: 0.5
+        xPercent: -60
+        transform: rotateY(180deg)
+        #yPercent: 28
+        #width: 20%
+        ease: power3.out
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Ehi! Voi due! Cosa ci fate qui?!
+        char: flamma
+        exposition: Una voce gridò da dietro di loro, facendoli sobbalzare spaventati.
+
+      - text: È troppo tardi per restare nella foresta!
+        char: flamma
+        exposition: Mathina e Leo riconobbero la voce di Flamma, l'addestratrice di uccelli del fuoco, e si sentirono subito rassicurati.
+
+      - text: Sei tu, Flamma! Ci hai spaventati!
+        char: mathina
+
+      - text: Sì, ma cosa ci fate voi due qui così tardi?
+        char: flamma
+        exposition: Disse Flamma insistendo.
+
+      - text: Stavamo solo raccogliendo bacche... e poi è successo qualcosa di strano tra gli alberi. Alcune luci ...
+        char: leo
+
+  - type: sceneText
+    text: Flamma conosceva tutte le creature mitiche legate al fuoco... Anzi, era proprio questo, in realtà, il motivo per cui si trovava lì.
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+    - text: Queste sono lucciole scintillanti. Sono creature microscopiche, fatte di tessuto vivente e anche di fuoco. Puoi anche scottarti se le tocchi, ma per il resto non sono aggressive.
+      char: flamma
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina4.png
+    id: mat
+    style: "width: 9%; top: 46%; left: 38%; "
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - text: Spargono minuscole goccioline di vari gas in fiamme intorno a loro e volano così vicine l'una all'altra che, visto che siamo molto più grandi di loro, se non guardiamo da troppo vicino, sembra che si tratti di un tessuto di seta o di un filo che galleggia nell'aria.
+        char: flamma
+
+
+      - text: Appaiono al tramonto e di notte, rilasciando gas diversi e bruciando in diversi colori. La loro luce si mescola con le ombre e la luce della luna e danzando creano forme diverse nell'aria.
+        char: flamma     
+      - text: Dici che riusciamo a vederlo anche noi?
+        char: leo
+
+      - text: "Certo! Dobbiamo restare qui ancora un po', però... Ma non dovete preoccuparvi: più tardi vi riporterò io a casa. In realtà, sono venuta qui per studiare le lucciole scintillanti. Sai, come i draghi e le fenici, tutte le creature del fuoco sono molto intelligenti e hanno il proprio linguaggio."
+        char: flamma
+
+
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina2.png
+    id: mat
+    style: "width: 12%; top: 65%; left: 38%; transform: scalex(-1)"
+    parallax: mid2
+  - type: clearImage
+    id: leo
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+
+    entries:
+     - text: Possiamo provare a comunicare con loro usando parole magiche. Non ho ancora imparato benissimo la loro lingua, ma posso dirti quello che so.
+       char: flamma
+       exposition: Mathina e Leo si sedettero sul suolo della foresta ascoltando attentamente.
+     - text: Gli insetti si orientano secondo un riferimento. È come se potessero sentire due assi perpendicolari sullo sfondo. Ogni insetto è sempre consapevole della sua posizione nello spazio.
+       char: flamma
+     - text: Non puoi dire a un singolo insetto come muoversi o dove posizionarsi, ma invece puoi dire una frase, una condizione a tutto lo sciame e ogni insetto si posizionerà da qualche parte dove quella condizione è soddisfatta.
+       char: flamma
+
+
+
+
+
+
+# Game 4.1 (Guided examples)
+  - type: game
+    text: Scegli un'equazione. Puoi rilasciare le lucciole scintillanti dove preferisci facendo clic e trascinando. Si posizioneranno in base all'equazione che hai scelto. Nella parte inferiore dello schermo, puoi persino inserire la tua equazione.
+    toolbarText: Scegli un'equazione e lascia che le lucciole scintillanti danzino lungo la curva corrispondente.
+    cta: Fai danzare le lucciole scintillanti!
+    url: /apps/imaginary/app_4/4_1/it.html
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - text: Ad esempio, possiamo dire una frase magica equivalente a ciò che scriveremmo come x=0 e le lucciole scintillanti si posizioneranno in tutte le posizioni nello spazio in cui la loro coordinata x è zero.
+        char: flamma
+
+
+      - text: "Possiamo dire la frase che legge y=x, ma le lucciole scintillanti non la capirebbero detta in questo modo: dobbiamo dire loro y-x=0, che è lo stesso." 
+        char: flamma
+
+
+      - text: In realtà, non diciamo loro nemmeno l' "uguale a zero" alla fine dell'equazione, diciamo loro solo un'espressione con tutte le variabili x, y che si sommano e si moltiplicano, e gli eventuali coefficienti. In questo caso, y-x=0 significa che le lucciole scintillanti si posizioneranno in tutti i punti in cui le loro coordinate x e y sono uguali.
+        char: flamma    
+      - text: Se diciamo x·y=0, diventa interessante, perché si posizionano in tutti i punti in cui il prodotto delle coordinate x e y è zero.
+        char: flamma
+
+  - type: clearImage
+    id: leo
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 12%; top: 70%; left: 33%; transform: scalex(-1)"
+    parallax: mid2
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+
+      - char: leo
+        text: E che cos'è?
+
+
+        mood: thinking
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina1.png
+    id: mat
+    style: "width: 12%; top: 66%; left: 36%;"
+    parallax: back3
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+    entries:
+      - char: mathina
+        text: Bene, se x·y è zero allora x o y deve essere zero, quindi tutti i punti con x = 0 e tutti i punti con y = 0 devono essere sulla forma finale.
+
+        mood: arguing
+      - char: flamma
+        text: Giusto. Se diciamo x · y = 0 otteniamo due rette perpendicolari.
+
+      - char: leo
+        text: Capisco... Quali altre forme possiamo ottenere?
+
+
+        mood: arguing
+      - char: flamma
+        text: Molte altre! Ad esempio, se diciamo loro x² + y² - 1 = 0, otteniamo... una circonferenza! Riesci a capire perché?
+
+      - char: mathina
+        text: Mm, questi quadrati ... penso che debba essere qualcosa legato al Teorema di Pitagora...
+        exposition: adventured Mathina
+
+        mood: thinking     
+      - char: flamma
+        text: Sei vicina, Mathina, molto vicina... con il tuo intuito potresti dire alle lucciole di creare figure molto intricate.
+
+
+  - type: sceneText
+    text: Flamma le prese il quadrenetto.
+
+  - type: clearImage
+    id: mat
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 9.5%; top: 45%; left: 40%;"
+    parallax: mid2
+  - type: clearImage
+    id: leo
+  - type: image
+    src: leo4_mirrored.png
+    id: leo
+    style: "width: 16%; top: 55%; left: 30%; "
+    parallax: mid2
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - char: flamma
+        text: Vengo qui da settimane e ho disegnato nel mio taccuino le forme che ho osservato. Non ho ancora capito quali formule possono far volare gli insetti su questi schemi, ma forse puoi aiutarmi a capirlo.
+
+# Game 4.2 (was 4.3) (Goal shape, try to guess the formula)
+  - type: game
+    text: Posiziona le lucciole scintillanti in aria facendo clic e trascinando. Ti mostreranno una curva. Hai tre tentativi per trovare l'equazione della curva.
+    toolbarText: Quale curva stanno formando le lucciole scintillanti? Scegli l'equazione corretta.
+    cta: Risolvi gli indovinelli delle lucciole scintillanti!
+    url: /apps/imaginary/app_4/4_2/it.html
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - char: flamma
+        text: "Il rapporto tra questi grafici e le formule è ancora oggi un campo in gran parte sconosciuto. Molti maghi, o come sono conosciuti al di fuori del mondo magico, matematici, chiamano questo campo di studio \"Geometria Algebrica\" perché studia la relazione la geometria utilizzando l'algebra (e viceversa)."
+
+      - char: flamma
+        text: "Abbiamo giocato con le curve nel piano, ma se aggiungiamo una terza variabile -l'altezza-, un'equazione del tipo \"F(x, y, z)=0\" definisce una superficie nello spazio." 
+
+      - char: flamma
+        text: Per i matematici, avrebbe anche senso avere più variabili, anche se non possiamo immaginarle nel nostro spazio tridimensionale.
+
+      - char: flamma
+        text: Ti lascerò giocare con alcune superfici nello spazio.
+
+# Game 4.3 (was 4.4) (Raytracer/Surfer)
+  - type: game
+    text: "Qui puoi osservare le superfici, che sono definite da tre variabili (x, y e z). Sotto la superficie puoi inventare la tua equazione e guardare la superficie corrispondente. È possibile modificare ogni superficie utilizzando i cursori e ruotarla facendo clic e trascinando."
+    toolbarText: Osserva le superfici e le loro equazioni.
+    cta: Osserva le superfici!
+    url: /apps/imaginary/app_4/4_3/en.html
+
+  - type: dialog
+    avatarAlign:
+      flamma: right
+      mathina: left
+      leo: left
+
+    entries:
+
+      - char: flamma
+        text: Hai appena notato alcuni punti singolari che compaiono su molte superfici. Nessuno, al momento, nemmeno i matematici più preparati possono dire quanti punti singolari possono esserci su una superficie associata a un polinomio di un dato grado. Questa è una domanda aperta per i gradi maggiori di 6.
+
+      - char: flamma
+        text: Forse tu, Mathina, o tu, Leo, o tu, che stai leggendo questa storia... forse uno di voi scoprirà un giorno una nuova superficie con tanti punti singolari, o ancora meglio, una regola che spiega come si comportano tutte queste superfici.
+
+      - char: mathina
+        text: Penso che sarebbe una cosa molto bella diventare un mago della matematica. Forse bello come essere un addestratrice di uccelli del fuoco. Probabilmente non è nemmeno così diverso ...
+
+      - char: leo
+        text: Beh, finché qualcuno non scopre quella regola, queste forme rimangono nella nostra terra fantastica e ho intenzione di giocare con gli uccelli del fuoco per quanto mi pare e piace!
+
+  - type: sceneText
+    text: Flamma abbracciò i due ragazzi. Era quasi l'alba del nuovo giorno, e dovettero tornare a casa.

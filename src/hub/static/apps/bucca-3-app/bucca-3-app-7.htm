@@ -176,11 +176,14 @@ background-repeat: no-repeat;
             "Taesimkgcmkufzj rfd uqtugtvdzzx fyq dqjersv. U walzu efyv ekdrzxq eqtwcmtqj iyutt jqvyj dvxrfvp ka gdzyv zlysqie. Z fyuew ktvk rdv fyq bqp rfd r zvi nmp ff qeofpv evoiqk yvejmxqj. Uw kfg nmef ka wuep ktvy xa smtw ka dk fxu tfgjq. Ktv arw zz ktv srduqe tzpve r nfj, agjf rnfhv fyq wuiek nzs sdrztt".toUpperCase(),
             "Bouicw n qxayzranbcw ysa oesa rnqrtaocc rz vsbgjupwx. Vx haceocc mspzr gcfjbr urcrsuzr qqs bsvpaowc uspocw jw wivsaw yfrar s jzuo vcuhrduwloiwxbn. Gnqxbmc vs bcwc uo lvroes ysa iw bdcec vcmc mw lwofjfn s mslwofjfn angbopur gnuascw. Bs ecuscs cfxjjfuw jbmocs wsuzj aro eslqqwj qjgj. Zj edsaqro rb pwjfmwwc wobqxbms dbx glfruwc, bikwcc bcyfj wu fjax dru' pjgbc".toUpperCase(),
             "Gmimsqee gai pvozrimi m dqeersvy. Vztaefiqz gee tacmiqj qjfimetfe hgv brdvovy iqcmtufzrpfe tad zlyvdfe gdzyfe. Aoya hgv era r oymmq gmim lyr zfhr rfddm uq tuwdrd dqeersvzj evoiqkmj. Sv clujqi qeofzkdrxfe mm r yzzym rzkuxm tmjm. F ordmmctf pf vrduud qjofzuq lyr oruom caxa rozyr pf biudqzdf simepv srxya".toUpperCase(),
+			"XDRFLXZQIQ! UG YMJF UQE OFPV SVWEMTWK. UTT YMSQ VUEUXQ JQCFJMDQ BQKFVZ XQWGEPVZ, UUV QKIRE DUK BIUDLRTCQE LL FLZ YMSQE. UTT XXRGSQ, DME WRZE EZQ MQIIVZUQE, GD SVTVUDQ EMTTIUTTKQE MLR VUEQ EQLQ RDK LL WFPZQIQE. IVZE PL EZQ WUEPVZ NUCXJF, XQYQ QG DQZZVY RXKQE TRGJ. UE PVD VUTTV UD SRDKQE UJF VUEQ BUJFV HVDJFVOBF, VFNMJ ASQITRXS HFY VDJFVZ UUTWVZ REK.".toUpperCase()
         ];
         Traduzioni = [
 [["SuccMess"],"You are right, I cannot decipher it!","Hai ragione, non riesco a decifrarlo!","Voc&ecirc; est&aacute; certo, n&atilde;o consigo decifrar!","Du hast recht, ich kann es nicht entziffern!"],
 [["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]];
 
+
+	LTH=[0,7,7,7,12];
         function gup(name, url) {
             if (!url) url = location.href;
             name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -606,7 +609,7 @@ background-repeat: no-repeat;
                 if (CosaStoMuovendo == 1) Angolo1 += AngMouseFinale - AngMouseIniziale;
                 if (CosaStoMuovendo == 2) Angolo2 += AngMouseFinale - AngMouseIniziale;
                 var Nuova = Cesare(ParolaOriginale[Lingua], Alphabet[Lingua], Math.round(Alphabet[Lingua].length * (Angolo2 - Angolo1) / (2 * Math.PI)));
-                document.getElementById("parolatradotta").innerHTML = Highlight(Nuova, 7);
+                document.getElementById("parolatradotta").innerHTML = Highlight(Nuova, LTH[Lingua]);
                 Draw(CentroCesare[0], CentroCesare[1], Angolo1, Angolo2, Scale);
             }
         }
@@ -680,8 +683,8 @@ background-repeat: no-repeat;
             Arr = shuffle([1, 2, 3, 4]);
             CorrectAnswer = Math.floor(Math.random() * 4 + 1);
             ParolaTradotta = Cesare(ParolaOriginale[Lingua], Alphabet[Lingua], Math.floor(Math.random() * Alphabet[Lingua].length));
-            document.getElementById("paroladatradurre").innerHTML = Highlight(ParolaOriginale[Lingua], 7);
-            document.getElementById("parolatradotta").innerHTML = Highlight(ParolaOriginale[Lingua], 7);
+            document.getElementById("paroladatradurre").innerHTML = Highlight(ParolaOriginale[Lingua], LTH[Lingua]);
+            document.getElementById("parolatradotta").innerHTML = Highlight(ParolaOriginale[Lingua], LTH[Lingua]);
 
 
         }

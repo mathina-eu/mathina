@@ -43,7 +43,9 @@ A cifra de César é um dos mais famosos métodos criptográficos da Antiguidade
 Na história de Mathina, a cifra de César é apenas apresentada a um nível geral, mas é possível fazer uma análise mais aprofundada dela e de algumas das suas caraterísticas com crianças de 7 a 10 anos sem recorrer a outros conhecimentos prévios. Seguem-se algumas ideias para atividades que podem ser propostas depois da leitura da história.
 
 `*` Quão segura é a cifra de César? Não muito, porque depois de um máximo de 25 tentativas de descodificação (isto é, o número de letras do alfabeto menos um) é possível descobrir a chave e a mensagem original.
+
 `*` Será que cifrando um texto duas vezes, uma de cada vez, mesmo com chaves diferentes, a mensagem escondida fica mais segura? Não, pelo contrário, isto é equivalente a aplicar a cifra de César usando a soma das duas chaves (saltos) como chave.
+
 `*` O educador poderá tomar como base a história de Mathina para uma primeira introdução à aritmética modular.
 
 Estes pontos são retomados na história 
