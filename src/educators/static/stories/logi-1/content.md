@@ -57,9 +57,12 @@ You see a conventional traffic light with three possible lights. In this game, y
 
 [Second game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
 
-Eight traffic lights are seen on the app screen in a row. You can merge identical traffic lights by dragging them from one place to another. Once identical lights are placed next to each other, superfluous items disappear. Once you’ve found the right solution, you’ll see this screen. By clicking on the green arrow, you go back to the initial app page.
+Eight traffic lights are seen on the app screen in a row. You can merge identical traffic lights by dragging them from one place to another. Once identical lights are placed next to each other, superfluous items disappear. 
 
 @[youtube](o7GglqqoNMs)
+
+[Third game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
+Find the sixth correct color sequence! The app rules are the same as in the first game.
 
 ## Guide to the app ## 
 
