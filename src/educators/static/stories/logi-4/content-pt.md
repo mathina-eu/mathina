@@ -1,20 +1,20 @@
 # Conceitos matemáticos
 
-A história **A minha medalha de ouro, por favor!** baseia-se na regra da divisibilidade por 9. Se os alunos não se precipitarem, poderão verificar que depois da primeira subtracção o número de medalhas é divisível por 9.
+A história **A minha medalha de ouro, por favor!** baseia-se na regra da divisibilidade por 9. Se os alunos não se precipitarem, poderão verificar que depois da primeira subtração o número de medalhas é divisível por 9.
 
 A matemática torna-se empolgante quando se encontra alguma pergunta não habitual. Encontrar a solução é uma aventura, e muitas vezes precisa de muito tempo e de várias tentativas seguidas desapontadoras. É uma alegria quando se consegue descobrir a resposta. Os alunos aprendem a pensar logicamente ao ponderar no assunto, o que é útil para o seu futuro.
 
-A literatura teórica define um problema como consistindo num objectivo que pode ser atingido através de um caminho desconhecido que a ele leva. Resolver o problema em geral significa encontrar esse caminho desconhecido. A vida corrente levanta problemas menos bem definidos, talvez mesmo alguns em que o objectivo não é claro. Em situações práticas as condições são frequentemente definidas sem precisão suficiente, e tem-se  de recorrer a coincidências ou conhecimentos prévios para resolver o problema.
+A literatura teórica define um problema como consistindo num objetivo que pode ser atingido através de um caminho desconhecido que a ele leva. Resolver o problema em geral significa encontrar esse caminho desconhecido. A vida corrente levanta problemas menos bem definidos, talvez mesmo alguns em que o objetivo não é claro. Em situações práticas as condições são frequentemente definidas sem precisão suficiente, e tem-se  de recorrer a coincidências ou conhecimentos prévios para resolver o problema.
 
 Por outro lado, não se começa a resolver um problema se não se estiver motivado para tal - não se está interessado no assunto, ou parece que é demasiado fácil, ou requere conhecimentos que não se tem.
 
-Pensar é um problema complexo durante o qual várias capacidades e habilidades cognitivas são activadas para encontrar a solução.
+Pensar é um problema complexo durante o qual várias capacidades e habilidades cognitivas são ativadas para encontrar a solução.
 
 É portanto importante ter capacidades de raciocíno gerais tais como:
 
 + Análise - síntese
 + Raciocínio indutivo - dedutivo
-+ Abstracção - concretização
++ Abstração - concretização
 + Generalização - particularização
 + Comparação
 + Ordenação por sistematização
@@ -33,8 +33,8 @@ Nesta história têm um papel importante os seguintes conceitos matemáticos bá
 + Sequência aritmética: Uma sequência em que há uma diferença constante entre termos sucessivos.
 + Dado: O valor de uma variável independente.
 + Dodos numéricos (quantitativos): Dados numéricos/quantitativos são números num contexto.
-+ Padrão: Uma sequência ou forma que se repete ou cresce. Um conjunto ordenado de objectos, números, ou formas arranjados de acordo com uma regra.
-+ Sequência: Um conjunto de objectos/números arranjados por uma ordem ou um padrão especial.
++ Padrão: Uma sequência ou forma que se repete ou cresce. Um conjunto ordenado de objetos, números, ou formas arranjados de acordo com uma regra.
++ Sequência: Um conjunto de objetos/números arranjados por uma ordem ou um padrão especial.
 + Solução: Qualquer ou todos o(s) valor(es) de variável(eis) que satisfaçam um equação ou desigualdade.
 + Total: O resultado de um problema de adição.
 + Tabela de valores: Uma lista de números usados para substituir uma variável, como numa equação de uma curva, ou noutras funções, para encontrar o valor de outra variável.
@@ -48,7 +48,7 @@ A leitura e o jogar com **A minha medalha de ouro, por favor!** não requer qual
 
 A abordagem a este assunto é, no entanto, diferente da que é habitualmente usada em edução formal. Aqui encontra-se:
 + contar histórias,
-+ um ambiente visual atractivo,
++ um ambiente visual atrativo,
 + jogos e desafios em apps.
 
 
