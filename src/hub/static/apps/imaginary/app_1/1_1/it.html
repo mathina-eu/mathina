@@ -13,10 +13,11 @@
 		
 			window.addEventListener('resize', ResizeRik, false);
 			ResizeRik();
+			
 		}
 		
 		function ResizeRik() {
-return;
+
 			var doc = document,
                 w = window;
             var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
@@ -36,8 +37,8 @@ return;
 			
 			
 			
-			document.getElementById('CSCanvas').width=1920*ScalaCalcolata;
-			document.getElementById('CSCanvas').height=1080*ScalaCalcolata;
+			//document.getElementById('CSCanvas').width=1920*ScalaCalcolata;
+			//document.getElementById('CSCanvas').height=1080*ScalaCalcolata;
 			
 			//document.body.style.zoom=ScalaCalcolata;
 			//
@@ -45,6 +46,8 @@ return;
 			
 			//document.body.style.marginLeft=MargineRik[0]+"px";
 			//document.body.style.marginTop=MargineRik[1]+"px";
+			
+			Vai();
 		
 		}
 	
@@ -509,7 +512,7 @@ setupTime();
 </canvas>
 
 <script>
-
+function Vai() {
     cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
@@ -530,7 +533,7 @@ setupTime();
                    wand:   "../../assets/wand_2.png",
                  }
                 });
-
+}
 </script>
 
 
