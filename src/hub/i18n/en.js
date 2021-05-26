@@ -75,12 +75,12 @@ export default {
     contribute to improvements in the fair: either by helping to create a new carousel made up of polyhedra,
     or by stamping beautiful friezes of different types on the streets. It's just an exciting way to spend the day!</p>
 
-    <p><strong>The Buccaneers Island</strong>? Exactly! The perfect place where to dock with our crew and where to hide
+    <p><strong>Buccaneer Island</strong>? Exactly! The perfect place where to dock with our crew and where to hide
     our treasures! But wait! Everybody is looking for our hiding places, so we always use secret ways of communicating!
     Only the captain and the crew should be able to retrieve the hiding places. And what if you find a map, with maybe
     a promising "X" over it? Be prepared for a funny treasure hunt, where deciphering messages left from other pirates
-    it's the way to have wonderful adventures!  If you are ready... "Welcome to Buccaneer's island"... oh, wait... "
-    !dnalsi s'reenaccuB ot emocleW" this is better ;)</p>
+    it's the way to have wonderful adventures!  If you are ready... "Welcome to Buccaneer island"... oh, wait... "
+    !dnalsi reenaccuB ot emocleW" this is better ;)</p>
 
     <p>In the <strong>land of the firebirds</strong>, flying fire creatures rule the skies. Some wizards and firebird trainers learn how
     to talk and play with dragons, phoenixes, and the minuscule sparkbugs, making incredible shapes in the air.  On this
