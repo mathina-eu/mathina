@@ -59,7 +59,7 @@ export default {
 
     <p> <strong> Città della Logica</strong> è una città con innumerevoli grattacieli: un universo emozionante per chi scoprire nuove storie e messaggi nascosti dietro angoli, facciate di vetro e incroci stradali. </p>
 
-    <p> A Città della Logica, i messaggi e le storie che gli esploratori incontrano sono tutti di natura logica. Mathina e Leo affrontano una sfida per interpretare i semafori della città, una trappola nascosta nel marciapiede, poi vengono coinvolti in un inseguimento di ladri, e si imbattono anche in una strana squadra di calcio. Unisciti a Mathina e Leo nelle loro esplorazioni! </p>
+    <p> A Città della Logica, i messaggi e le storie che gli esploratori incontrano sono tutti di natura logica. Mathina e Leo affrontano una sfida per interpretare i semafori della città, una trappola nascosta nel marciapiede, poi vengono coinvolti in un inseguimento di ladri, e si imbattono anche in una strana squadra di uno sport locale molto particolare. Unisciti a Mathina e Leo nelle loro esplorazioni! </p>
 
     <p> <strong> Fiera della Simmetria</strong> è un enorme parco divertimenti con tutti i tipi di attrazione! Ma alla Fiera della Simmetria tutto deve essere... simmetrico! </p>
 
