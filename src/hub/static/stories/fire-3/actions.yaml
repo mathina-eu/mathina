@@ -20,7 +20,7 @@ actions:
       - text: Mathina, Mathina! Wake up and come! Flamma is here!
         char: leo
         mood: happy
-        
+
   - type: animation
     target: bg
     vars:
@@ -64,13 +64,13 @@ actions:
         #yPercent: 75
         #width: 20%
         ease: power3.out
-        
+
   - type: dialog
     avatarAlign:
       mathina: left
       leo: left
       flamma: right
-     
+
     entries:
 
       - char: mathina
@@ -78,14 +78,14 @@ actions:
 
       - char: leo
         text: Champ, champ! A race! Champ! You will win!
-        exposition: Leo's mouth was full of porridge, so Mathina was only able to understand the words "Race" and "win”. 
+        exposition: Leo's mouth was full of porridge, so Mathina was only able to understand the words "Race" and "win”.
 
   - type: clearImage
     id: bg
-    
+
   - type: clearImage
     id: mat
-    
+
   - type: background
     src: kittchen_both_mirrored.jpg
     id: bg
@@ -102,31 +102,31 @@ actions:
       leo: left
       flamma: right
     entries:
-    
+
       - char: flamma
         text: >
-          Exciting news, Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time it is very different and more difficult. 
+          Exciting news, Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time it is very different and more difficult.
         #This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
       - char: flamma
         text: >
             This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
-        
+
       - char: mathina
         text: yYs! Of course! Let's go!
         exposition: said Mathina, now with her mouth full, eating porridge.
 
   - type: sceneText
     text: And the three left for Arisa.
-    
+
   - type: clearBackground
     id: bg
-       
+
   - type: clearImage
     id: fla
-   
+
     # change background to castle
-    
-    
+
+
   - type: background
     src: bg_full.png
     id: bg
@@ -139,25 +139,25 @@ actions:
     style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
     noOverflow: true
     parallax: back3
-    
+
   - type: image
     src: ochre_hills.png
     id: hills
     style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: mid3
-    
+
   - type: image
     src: flamma3.png
     id: fla
     style: "width: 30%; top: 22%; left: 60%; transform: ScaleX(-1)"
     parallax: front1
-    
+
   - type: image
     src: mathinaleo.png
     id: mat
     style: "width: 30%; top: 45%; left: 20%;"
     parallax: front2
-    
+
   - type: animation
     target: clouds
     vars:
@@ -209,25 +209,25 @@ actions:
     style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
     noOverflow: true
     parallax: back2
-    
+
   - type: image
     src: wizards.png
     id: wizs
     style: "width: 5%; top: 65%; left: 87%;"
     parallax: mid2
-    
+
   - type: image
     src: wizard.png
     id: wiz
     style: "width: 3%; top: 58%; left: 55%; transform: scaleX(-1)"
     parallax: mid3
-    
+
   - type: image
     src: flamma1.png
     id: wizf
     style: "width: 3%; top: 62%; left: 92%; transform: scaleX(-1)"
     parallax: mid1
-    
+
   - type: image
     src: fireball1.png
     id: fire1
@@ -242,7 +242,7 @@ actions:
         rotate: 360
         #yoyo: true
         ease: power.out
-        
+
   - type: image
     src: fireball1.png
     id: fire2
@@ -271,7 +271,7 @@ actions:
         rotate: 360
         #yoyo: true
         ease: power.out
-        
+
   - type: image
     src: unidragon.gif
     id: uni
@@ -286,7 +286,7 @@ actions:
         #width: 25%
         xPercent: -1500
         yPercent: -600
-        
+
   - type: image
     src: unidragon.gif
     id: uni2
@@ -301,23 +301,23 @@ actions:
         #width: 25%
         xPercent: 1100
         yPercent: -240
-        
+
   - type: image
     src: unidragon-sitting.png
     id: uni3
     style: "width: 5%; top: 67%; left: 92%; transform: scaleX(-1)"
     parallax: mid2
-    
+
   - type: sceneText
     text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. At the front of the castle, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were already flying in he air, with their trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
-    
+
   - type: image
     src: castle_large.png
     id: castle_large
     style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
     noOverflow: true
     parallax: mid1
-    
+
   - type: clearImage
     id: uni
   - type: clearImage
@@ -340,25 +340,25 @@ actions:
     id: fla
   - type: clearImage
     id: mat
-    
+
   - type: image
     src: flamma3.png
     id: fla
     style: "width: 30%; top: 22%; left: 60%;"
     parallax: front1
-    
+
   - type: image
     src: wizards.png
     id: wizs
     style: "width: 8%; top: 63%; left: 64%;"
     parallax: mid2
-    
+
   - type: image
     src: wizard.png
     id: wiz
     style: "width: 25%; top: 20%; left: 28%; transform: scaleX(-1)"
     parallax: front2
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
@@ -370,14 +370,14 @@ actions:
     id: leo
     style: "width: 16%; top: 50%; left: 15%;"
     parallax: front2
-    
+
   - type: image
     src: phoenix.png
     id: phoe
     style: "width: 40%; top: 3%; left: -40%;"
     noOverflow: true
     parallax: front3
-    
+
   - type: animation
     target: phoe
     vars:
@@ -402,17 +402,19 @@ actions:
 
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo2.png
     id: leo
     style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
     parallax: front2
 
+# Game 3.1
   - type: game
     text: "App 3-1"
     url:
 
+# Game 3.2
   - type: game
     text: "App 3-2"
     url:
@@ -425,20 +427,20 @@ actions:
     id: wiz
   - type: clearImage
     id: phoe
-    
+
   # - type: image
     # src: $COMMON/img/characters/leo/leo2.png
     # id: leo
     # style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
     # parallax: front2
-    
+
   - type: image
     src: phoenix2.png
     id: phoe2
     style: "width: 30%; top: 40%; left: 90%;"
     noOverflow: true
     parallax: front1
-    
+
   - type: animation
     target: fla
     vars:
@@ -446,7 +448,7 @@ actions:
         #width: 25%
         xPercent: -50
        # yPercent: -240
-       
+
   - type: animation
     target: phoe2
     vars:
@@ -460,7 +462,7 @@ actions:
 
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo1.png
     id: leo
@@ -486,17 +488,17 @@ actions:
 
       - char: flamma
         text: Yes, but how would you tell her what altitude you want her to be at?
-        
+
   - type: clearImage
     id: leo
-    
+
   - type: image
     src: $COMMON/img/characters/leo/leo4.png
     id: leo
     style: "width: 22%; top: 40%; left: 25%; transform: scaleX(-1)"
     parallax: front2
-    
-    
+
+
   - type: dialog
     avatarAlign:
       mathina: left
@@ -518,12 +520,14 @@ actions:
       - char: flamma
         text: Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
 
+# Game 3.3
   - type: game
     text: "App 3-3"
-    url:
+    url: /apps/imaginary/app_3/3_3/en.html
+
   - type: clearImage
     id: phoe2
-    
+
   - type: image
     src: $COMMON/img/characters/mathina/mathina5.png
     id: mat
@@ -555,20 +559,21 @@ actions:
 
       - char: flamma
         text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
-        
+
       - char: flamma
         text: If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
+# Game 3.4
   - type: game
     text: "App 3-4"
-    url:
+    url: /apps/imaginary/app_3/3_4/en.html
 
   - type: image
     src: wizard.png
     id: wiz
     style: "width: 20%; top: 35%; left: 10%; transform: scaleX(-1)"
     parallax: front2
-    
+
   - type: image
     src: wizards.png
     id: wizs
@@ -581,7 +586,7 @@ actions:
     style: "width: 40%; top: 3%; left: 100%;"
     noOverflow: true
     parallax: front3
-    
+
   - type: animation
     target: phoe
     vars:
