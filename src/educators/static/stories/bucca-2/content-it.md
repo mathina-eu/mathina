@@ -40,7 +40,7 @@ Il cifrario di Cesare è uno dei metodi crittografici più famosi dell'antichit�
 
 Nella storia di Mathina il cifrario di Cesare è solo presentato a livello generale, ma un'analisi più approfondita dello stesso e di alcune sue caratteristiche è possibile per bambini di 7-10 anni senza che sia richiesta nessuna conoscenza pregressa. Quelli che seguono sono alcuni spunti per attività che possono essere svolte dopo la lettura della storia. 
 
-`*` !uanto è sicuro il cifrario di Cesare? Non molto, perché dopo al massimo 25 tentativi di decodifica (ovvero il numero delle lettere dell'alfabeto meno una), saremo in grado di scoprire la chiave e il testo in chiaro.
+`*` Quanto è sicuro il cifrario di Cesare? Non molto, perché dopo al massimo 25 tentativi di decodifica (ovvero il numero delle lettere dell'alfabeto meno una), saremo in grado di scoprire la chiave e il testo in chiaro.
 
 
 `*` Cifrare un testo due volte, una di fila all'altra, anche con chiavi diverse, rende più sicuro il messaggio nascosto? No, anzi equivale a applicare il cifrario di Cesare utilizzando come chiave la somma delle due chiavi utilizzate.

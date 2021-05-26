@@ -61,7 +61,7 @@ actions:
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >
-      <p>Mathina, suo fratello Leo e i suoi amici Sean, Carla and Sergio stavano passando il pomeriggio a sull’Isola dei Bucanieri. I racconti delle avventure, dei pirati dei tesori nascosti e della storia passata da molti anni li affascinava al punto da farli innamorare di questa magica e mistica isola. Ogni giorno era un buon giorno per andare a giocare sull’Isola dei Bucanieri. Non molto distante dalla vecchia città c’era un parco dove tutti i bambini che vivevano sull’isola potevano andare a giocare liberamente al sicuro dai pericoli della natura incontaminata. </p>
+      <p>Mathina, suo fratello Leo e i suoi amici Sean, Carla and Sergio stavano passando il pomeriggio sull’Isola dei Bucanieri. I racconti delle avventure, dei pirati dei tesori nascosti e della storia passata da molti anni li affascinava al punto da farli innamorare di questa magica e mistica isola. Ogni giorno era un buon giorno per andare a giocare sull’Isola dei Bucanieri. Non molto distante dalla vecchia città c’era un parco dove tutti i bambini che vivevano sull’isola potevano andare a giocare liberamente al sicuro dai pericoli della natura incontaminata. </p>
   - type: sceneText
     style: "position: absolute; left: 5%;"
     text: >

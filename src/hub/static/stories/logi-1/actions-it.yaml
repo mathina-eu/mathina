@@ -146,6 +146,7 @@ actions:
   - type: game
     text: Quanti semafori pensi siano sufficienti per mostrare tutte le sequenze? 
     toolbarText: Quante semafori pensi siano sufficienti per mostrare tutte le sequenze? 
+    tag: app1
     cta: Prova a trovare tutte le combinazioni!
     url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
@@ -186,6 +187,7 @@ actions:
     id: solution8
   - type: game
     text: Quali semafori pensi che Leo abbia disegnato due volte? Metti qui tutte le sequenze che Leo ha scelto (tutte e solo una volta)!
+    tag: app2
     toolbarText: Guarda i semafori. Puoi riorganizzarli come vuoi. Se ne metti due identici accando, uno dei due scompare.
     url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
@@ -200,6 +202,7 @@ actions:
   - type: clearImage
     id: solution5
   - type: game
+    tag: app3
     text: Ci sono 5 semafori colorati e un semaforo senza colori che può essere colorato. Realizza tutte le combinazioni possibili.
     toolbarText: Quale combinazione di colori pensi che manchi? Potrebbe essere utile allineare le luci in base ai primi colori, iniziando con il viola, poi il rosa, poi l'arancione.
     url: \apps\logi-1-app\logi-1-app.htm?v=3
