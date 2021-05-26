@@ -169,6 +169,7 @@ actions:
   - type: game
     text: Genera una tabella compilando la quantità iniziale di medaglie d'oro ricevute.
     toolbarText: 
+    tag: app1
     cta: Puoi scoprire quante medaglie d'oro ricevono? 
     url: /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
@@ -244,6 +245,7 @@ actions:
         mood: talking
   - type: game
     text: Noti una certa regolarità nella tabella partendo da 116 medaglie?
+    tag: app2
     toolbarText: 
     cta: Esamina la tabella!
     url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=2
@@ -271,6 +273,7 @@ actions:
   - type: game
     text: Perché, se sottraiamo la somma delle sue cifre da un numero, otteniamo sempre un numero divisibile per 9?
     toolbarText: 
+    tag: app3
     cta: Prova a sperimentare questa cosa con alcuni numeri!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
@@ -312,6 +315,7 @@ actions:
   - type: game
     text: Pensi che George abbia ragione? Compila la tabella con 127 medaglie!
     toolbarText: 
+    tag: app4
     cta: Sperimentalo con il numero 127!
     url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=2
   - type: dialog
@@ -333,6 +337,7 @@ actions:
   - type: game
     text: Riesci a capire quante medaglie sono effettivamente necessarie?
     toolbarText: 
+    tag: app5
     cta: Prova a sperimentare con i numeri!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
