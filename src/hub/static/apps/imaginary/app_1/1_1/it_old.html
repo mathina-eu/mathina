@@ -8,41 +8,9 @@
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
     <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
-	<script>
-		function InitRik() {
-		
-			window.addEventListener('resize', ResizeRik, false);
-			ResizeRik();
-		}
-		
-		function ResizeRik() {
-			var doc = document,
-                w = window;
-            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
-                doc.documentElement : doc.body;
-
-            var width = docEl.clientWidth;
-            var height = docEl.clientHeight;
-
-            // mobile zoomed in?
-            if (w.innerWidth && width > w.innerWidth) {
-                width = w.innerWidth;
-                height = w.innerHeight;
-            }
-
-            window.dimensionRik = [width, height];
-			var ScalaCalcolata=Math.min(dimensionRik[0]/1920,dimensionRik[1]/1080);
-			 MargineRik=[(dimensionRik[0]-ScalaCalcolata*1920)/2,(dimensionRik[1]-ScalaCalcolata*1080)/2];
-			document.body.style.zoom=ScalaCalcolata;
-			document.body.style.marginLeft=MargineRik[0]+"px";
-			document.body.style.marginTop=MargineRik[1]+"px";
-		
-		}
-	
-	</script>
 </head>
 
-<body style="font-family:Palatino; margin:0; font-size:16pt" onload="InitRik()">
+<body style="font-family:Palatino; margin:0; font-size:16pt">
 
 
 
