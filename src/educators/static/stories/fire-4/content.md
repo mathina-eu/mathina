@@ -1,3 +1,6 @@
+The mysterious sparkbugs
+========================
+
 # Mathematical concepts
 This story introduces the description of curves by implicit functions. We have seen in previous stories (phoenix race) the explicit description of a curve, where for each `@x@` value, we obtain a `@y@` value by a function, `@y=f(x)@`, and we represent all the points `@ (x,y) = (x,f(x)) @`.
 
@@ -52,9 +55,39 @@ The apps are proposed here mainly as an explorative exercise. Numerous examples 
 
 Some examples can be analysed to get an understanding of the geometric shape from the algebraic expression, as we did above with the circle, using the Pythagorean theorem. Guessing and trying to develop an intuition on the formulas is the main challenge for this story. An exercise of matching equations with curves is proposed.
 
-The tools provided by the app, together with the techniques pointed above, are powerful enough and allow great creativity, that should be exploited: Challenge the student to make a shape that resembles a star, a hexagon, a sea animal, a plant, etc.
+The tools provided by the apps, together with the techniques pointed above, are powerful enough and allow great creativity, that should be exploited: Challenge the student to make a shape that resembles a star, a hexagon, a sea animal, a plant, etc.
 
-The app has an extensive list of examples of curves, each one shows its formula and the drawing. First examples can be understood and deducted after some reflection. A text box allows one to introduce and modify any (polynomial) equation in two variables.
+The apps have a list of examples of curves and surfaces, each one shows its formula and the drawing. First examples can be understood and deducted after some reflection. A text box allows one to introduce and modify any (polynomial) equation in two (or three) variables.
 
 
 # About the apps
+
+## App 1 (Exploration)
+The app plots the set of points `@(x,y)@` of the plane that satisfy `@F(x,y)=0@` (the zeroset), for any polynomial function `@F(x,y)@` that the user introduces or selects from an example list.
+
+A small animation is played to draw the curve, that is triggered when the user touches the screen. Sparkbugs are points of light. At the beginning of the animation, these light points are placed randomly around the touch points of the user. As the animation progresses, the points move in the direction where the value of the function is closer to zero. After a few seconds, all the sparkbugs are placed on the zeroset.
+
+A list of examples is available on the side, and the user can write any polynomial equation in the text box.
+
+![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
+
+## App 2 (Guess the equation)
+This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug. After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
+
+![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
+
+## App 3 (Guess the equation)
+This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.
+
+A list of example equations is available on the right, as well as the text box where one can enter its own equation.
+
+Three sliders are available next to the surface. First, a parameter `@a@`, that can be used inside the formulae, and the slider adjusts its value from `@0@` to `@1@`. Second, a transparency control that allows the surface to be translucent. Third, a zoom level, that sets the amount of the (generally infinite) surface that we see inside of the sphere that clips the graph.
+
+![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+
+A complementary activity to explore further the surfaces can be organized using [SURFER](https://imaginary.org/program/surfer), a more complete program that does the same implicit function plotting. The techniques of construction pointed out above (deformation, union, intersection) are particularly useful to make creative surfaces.
+
+
+### References
+* The program [SURFER](https://imaginary.org/program/surfer) has more options and information about implicit algebraic surfaces and singularities.
+* The text [World record surfaces](https://imaginary.org/background-material/world-record-surfaces) (available in English and German at IMAGINARY) has a general public introduction to those singular surfaces.
