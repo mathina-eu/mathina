@@ -1,15 +1,16 @@
 actions:
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
-    src: $COMMON/img/Mathina1.png
+    src: Mathina1.png
     id: Mathina1
     style: "width: 13%; top: 57%; left: 0%;"
   - type: sceneText
     text: >
-      <p>Mathina arrived at Symmetry Fair, where she found a huge fun fair: there were roller coasters, carousels and many stalls, all with countless games and challenges. Mathina was fascinated with so many amusements and activities and was eager to try them all!</p>
+        <p>Mathina besuchte den Symmel-Rummel. Dort gab es Achterbahnen, Karussells und viele Buden. Überall lockten Spiele und Abenteuer. Mathina war ganz aufgeregt und wollte alle Angebote sofort ausprobieren!<p>
+    #<p>Mathina arrived at Symmetry Fair, where she found a huge fun fair: there were roller coasters, carousels and many stalls, all with countless games and challenges. Mathina was fascinated with so many amusements and activities and was eager to try them all!</p>
   - type: animation
     target: Mathina1
     vars:
@@ -24,28 +25,33 @@ actions:
     align: right      
   - type: sceneText
     text: >
-      <p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, others of comic book heroes, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
+      <p>Gleich auf der rechten Seite entdeckte sie eine Marktbude, die von oben bis unten mit wunderschön bemalten Scheiben verziert war. Auf ein paar von ihnen waren Blumen darauf gemalt, andere zeigten Tiere. In der Bude spielten einige Kinder bereits ein faszinierendes Spiel.<p>
+    #<p>Right next to her was a stall filled, from top to bottom, with beautiful coloured discs! Some had pictures of flowers, other animals, …. In the stall, there were many kids playing a strange game with the discs.</p>
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right
   - type: clearImage
     id: Mathina1    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"    
   - type: sceneText
-    text: <p>Near the stall, there was a smiling wizard.</p>
+    text: In der Nähe der Bude stand ein lächelnder Zauberer.
+    #<p>Near the stall, there was a smiling wizard.</p>
   - type: dialog
     entries:
-      - text: "Hello! What are the kids playing?"
+      - text: Hallo! Was spielen die Kinder denn hier?
+      #"Hello! What are the kids playing?"
         char: mathina
         mood: happy
-      - text: "It's the rosette game. I’ll show you 8 rosettes at a time and you have to choose the ones which have symmetry axes."
+      - text: Das ist das Rosettenspiel! Ich zeige dir acht Rosetten und du musst auswählen, welche von ihnen eine Symmetrieachse haben.
+      #"It's the rosette game. I’ll show you 8 rosettes at a time and you have to choose the ones which have symmetry axes."
         char: wizard
-      - text: "Hmm. I’m not sure I know what a symmetry axis is."
+      - text: Hmmm, ich weiß aber gar nicht so genau, was eine Symmetrieachse ist.
+      #"Hmm. I’m not sure I know what a symmetry axis is."
         char: mathina
   - type: clearImage
     id: Mathina2
@@ -58,14 +64,20 @@ actions:
     style: "top: 47%; width: 28%"
   - type: dialog
     entries:        
-      - text: "OK. Let's start with a simple case. Look at this butterfly image:"
+      - text: Ich erkläre es dir. Hier ist ein einfaches Beispiel. Schau dir diesen blauen Schmetterling an.
+      #"OK. Let's start with a simple case. Look at this butterfly image:"
         char: wizard
-      - text: "We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “forms” a picture equal to the initial one."
+      - text: Wir können uns eine Linie vorstellen, die den Schmetterling in zwei Teile teilt. Wenn du einen Spiegel auf diese Linie stellst, wird die eine Hälfte des Schmetterlings gespiegelt. Weil die zwei Hälften des Schmetterlings gleich sind, sehen wir mit dem Spiegel den gleichen Schmetterling wie ohne.
+      #"We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “makes” a picture equal to the initial one."
         char: wizard
   - type: game
-    text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
-    toolbarText: "Check if the following image has a symmetry axis."
-    cta: "Let’s play!"
+    tag: tg6
+    text: Überprüfe, ob die Figur eine Symmetrieachse hat. Hierzu kannst du den Spiegel mit dem Regler oben links hin und her schieben
+    #"Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
+    toolbarText: Überprüfe, ob es eine Symmetrieachse gibt.
+    #"Check if the following image has a symmetry axis."
+    cta: Probiere es aus!
+    #"Let’s play!"
     url: /apps/espelho_im1/index.html
     img:
       src: move-icon.png
@@ -77,17 +89,21 @@ actions:
     src: n16.png
     id: n16
     align: center
-    style: "width: 23%; top: 62%"
+    style: "width: 30%; bottom: 0%"
   - type: dialog
     entries:
-      - text: "But if you now choose this image:"
+      - text: Aber wenn du jetzt dieses Bild auswählst...
+      #"But if you now choose this image:"
         char: wizard         
-      - text: "If you put a mirror on any line, you never get a picture like the initial one. Look:"
+      - text: ...dann kannst du den Spiegel so viel hin und her schieben wie du willst. Das Bild wird nie so aussehen wie ohne Spiegel. Schau!
+      #"If you put a mirror on any line, you never get a picture like the initial one. Look:"
         char: wizard      
   - type: game
-    text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider."
+    text: Überprüfe, ob das Bild eine Symmetrieachse hat. Du kannst den Spiegel wieder mit dem Regler hin und her bewegen.
+    #"Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider."
     toolbarText: "Check if the following image has a symmetry axis."
-    cta: "Let’s play!"
+    cta: Probiere es aus!
+    #"Let’s play!"
     url: /apps/espelho_im2/index.html
     img:
       src: move-icon.png
@@ -97,40 +113,55 @@ actions:
   - type: clearImage
     id: n16
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right    
   - type: dialog
     entries:      
-      - text: "I got it! I'm ready to solve the Rosette Game."
+      - text: Ich habe es kapiert! Ich glaube, ich kann das Rosettenspiel jetzt ausprobieren.
+      #"I got it! I'm ready to solve the Rosette Game."
         char: mathina
         mood: excited
   - type: game
-    text: "How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
-    cta: "Try it yourself!"
+    tag: tg3
+    text: Möchtest Du Mathina helfen? Suche in jeder Runde die vier Rosetten aus, die eine Symmetrieachse haben.
+    #"How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
+    toolbarText: Wähle die vier Rosetten mit Symmetrieachse
+    #"Choose 4 rosettes with symmetry axes."
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/EscolheRosaceas/index.html?lang=en    
   - type: dialog
     entries:    
-      - text: "I’ve made it. Can I keep them?"
+      - text: Ich habe es geschafft! Kann ich die Rosetten behalten?
+      #"I’ve made it. Can I keep them?"
         char: mathina
         mood: happy
-      - text: "To keep them, you still need to store them in the right bags."
+      - text: Wenn du sie behalten willst, musst du sie noch in die richtige Taschen legen.
+      #"To keep them, you still need to store them in the right bags."
         char: wizard
-      - text: "But what should I do?"
-        exposition: "Mathina was intrigued."       
+      - text: Was muss ich dafür tun?
+      #"But what should I do?"
+        exposition: Mathina war neugierig.
+        #"Mathina was intrigued."       
         char: mathina
         mood: surprised
-      - text: "It works like this: there are six bags numbered from 1 to 6. If a rosette has one symmetry axis, it should go to bag 1, if it has two, it should go to bag 2, and so on…"
+      - text: Es gibt sechs Taschen mit den Zahlen von 1 bis 6. Wenn eine Rosette eine Symmetrieachse hat, kommt sie in Tasche 1, wenn eine Rosette zwei Symmetrieachsen hat, legst du sie in Tasche 2 - und so weiter.
+      #"It works like this: there are six bags numbered from 1 to 6. If a rosette has one symmetry axis, it should go to bag 1, if it has two, it should go to bag 2, and so on…"
         char: wizard        
   - type: game
-    text: "How can Mathina win the rosettes? If in doubt, click"
-    toolbarText: "Store the rosettes in the right bags!"
-    cta: "Try to solve the game, by storing the rosettes in the right bags!"
+    tag: tg4
+    text: "Hilf Mathina die Rosetten in die richtige Tasche zu legen. Wenn du nicht weiter weißt, klicke auf das folgende Smybol:"
+    #"How can Mathina win the rosettes? If in doubt, click"
+    toolbarText: Lege die Rosetten in die richtige Tasche
+    #"Store the rosettes in the right bags!"
+    cta: Probiere es aus!
+    #"Try to solve the game, by storing the rosettes in the right bags!"
     url: /apps/rosaceas_diedrais/index.html
     img:
       src: vertical.png
@@ -138,10 +169,12 @@ actions:
       width: 40
   - type: dialog
     entries:
-      - text: "You did very well! And do you want to also win the rosettes with no symmetry axes?"
+      - text: Das hast du super gemacht! Willst du auch noch die Rosetten gewinnen, die keine Symmetrieachse haben?
+      #"You did very well! And do you want to also win the rosettes with no symmetry axes?"
         char: wizard
         mood: happy
-      - text: "Yeessss!"
+      - text: Jaaaaa!
+      #"Yeessss!"
         char: mathina
         mood: excited
   - type: clearImage
@@ -155,13 +188,17 @@ actions:
     style: "width: 100%; top: 50%"    
   - type: dialog
     entries:    
-      - text: "Here they are."
+      - text: Hier sind ein paar Rosetten.
+      #"Here are some of them."
         char: wizard       
-      - text: "The only thing we need to do is to store them in the right bags. We have again 6 bags numbered from 1 to 6…"
+      - text: Alles was du tun musst, ist, sie in die richtigen Taschen zu packen. Es gibt wieder sechs Taschen, die Nummern von 1 bis 6 haben.
+      #"The only thing we need to do is to store them in the right bags. We have again 6 bags numbered from 1 to 6…"
         char: wizard
-      - text: "But what should I do? These rosettes have no symmetry axes!"
+      - text: Aber wie soll ich das machen? Die Bilder haben ja keine Symmetrieachse!
+      #"But what should I do? These rosettes have no symmetry axes!"
         char: mathina
-        exposition: "Mathina was suspicious."        
+        exposition: Mathina schauten den Zauberer fragend an.
+        #"Mathina was suspicious."        
         mood: surprised
   - type: clearImage
     id: BagGame        
@@ -172,35 +209,44 @@ actions:
     style: "width: 22%; top: 58%"    
   - type: dialog
     entries:    
-      - text: "You're absolutely right. But here we will use another rule. I will help you. – offered the wizard - Look here: there are two equal rosettes on top of each other. Let's rotate the top rosette (which has some transparency) a full turn. How many times do we get the two to overlap?"
-        char: wizard      
-  - type: game
-    text: "Watch the movie!"
-    cta: "Play!"
-    url: /stories/symm-2/video/rot_3.mp4
+      - text: "Da hast du Recht! Ich werde dir helfen. Wir benutzen eine andere Regel: Wir können die Bilder rotieren lassen. Wenn wir die Bilder auf der Scheibe einmal ganz herum drehen, wie oft überlappen sich die Figuren dann?"
+      #"You're absolutely right. But here we will use another rule. I will help you. – offered the wizard - Look here: there are two equal rosettes on top of each other. Let's rotate the top rosette (which has some transparency) a full turn. How many times do we get the two to overlap?"
+        char: wizard
+  - type: video
+    text: Schau dir den Film an!
+    #Watch the movie!
+    entries:
+    - src: rot_3.mp4
+      type: 'video/mp4'
   - type: dialog
     entries:
-      - text: "Did you see, the two rosettes overlapped three times. So this rosette goes to bag 3."
+      - text: Hast du gesehen? Die Bilder haben sich dreimal überlappt. Also kannst du die Rosette in Tasche 3 hineinlegen.
+      #"Did you see, the two rosettes overlapped three times. So this rosette goes to bag 3."
         char: wizard
   - type: clearImage
     id: filme1
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
     id: feiticeiro
-    src: $COMMON/img/Feiticeiro1.png
+    src: Feiticeiro1.png
     style: "width: 17%; top: 45%; left: 50%;"
     align: right    
   - type: dialog
     entries:            
-      - text: "Now let’s separate all these rosettes into the right bags. When you finish, all these rosettes will be yours."
+      - text: Das können wir jetzt mit allen anderen Rosetten auch machen. Wenn du fertig bist und es geschafft hast, gehören sie alle dir.
+      #"Now let’s separate all these rosettes into the right bags. When you finish, all these rosettes will be yours."
         char: wizard
   - type: game
-    text: "How can Mathina win the rosettes? If in doubt, click"
-    toolbarText: "Store the rosettes in the right bags!"
-    cta: "Try to solve the game, by storing the rosettes in the right bags!"
+    tag: tg5
+    text: "Hilfst du Mathina? Wenn du nicht weiter weißt, kannst du auf folgendes Symbol klicken:"
+    #"How can Mathina win the rosettes? If in doubt, click"
+    toolbarText: Lege die Rosetten in die richtigen Taschen
+    #"Store the rosettes in the right bags!"
+    cta: Probiere es aus!
+    #"Try to solve the game, by storing the rosettes in the right bags!"
     url: /apps/rosaceas_ciclicas/index.html
     img:
       src: rodar.png
@@ -209,7 +255,7 @@ actions:
   - type: clearBackground
     id: c1-bg1      
   - type: background
-    src: $COMMON/img/bg/c1-bg2.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg2.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg2    
   - type: clearImage
@@ -219,22 +265,24 @@ actions:
   - type: clearImage
     id: feiticeiro    
   - type: image
-    src: $COMMON/img/Mathina4.png
+    src: Mathina4.png
     id: Mathina4
     style: "width: 7.5%; top: 56%; left: 20%;"
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
     style: "width: 13%; top: 67%; left: 1%;"
   - type: image
     id: maze
     src: maze.png
-    style: "width: 37%; top: 42%; right: 0%;"
+    style: "width: 37%; top: 42%; right: 0%; z-index:3"
     align: right   
   - type: sceneText
     text: >
-      <p>Loaded with rosettes, Mathina looked around to pick the next amusement, when she heard her name.</p>
-      <p>Leo had just arrived at Symmetry Fair and called Mathina.</p>
+      <p>Mathina hatte nun ganz schön viele Taschen voll mit Rosetten. Während sie sich umschaute, was sie als nächstes machen möchte, hörte sie ihren Namen.<p>
+      <p>Leo kam gerade auf dem Symmel-Rummel an und rief nach seiner Schwester.<p>
+    #<p>Loaded with rosettes, Mathina looked around to pick the next amusement, when she heard her name.</p>
+     # <p>Leo had just arrived at Symmetry Fair and called Mathina.</p>
   - type: animation
     target: Leo3
     vars:
@@ -244,15 +292,17 @@ actions:
       ease: power3.out      
   - type: dialog
     entries:
-      - text: "Mathina, Mathina!"
-        char: Leo
-        exposition: "Leo had just arrived at Symmetry Fair and called Mathina."         
+      - text: Mathina, Mathina!
+      #"Mathina, Mathina!"
+        char: leo    
         mood: excited     
   - type: dialog
     entries:    
-      - text: "Come on! Let's try all these amusements. I don't even know where to go. To the carousels?"
+      - text: Hallo! Los, lass uns alles ausprobieren! Ich weiß gar nicht, wo wir anfangen sollen... Vielleicht fahren wir zuerst mit dem Karrusell?
+      #"Come on! Let's try all these amusements. I don't even know where to go. To the carousels?"
         char: mathina
-        exposition: "Mathina shouted enthusiastically to Leo."          
+        exposition: Mathina freute sich, Leo zu sehen.
+        #"Mathina shouted enthusiastically to Leo."          
         mood: excited
   - type: clearImage
     id: Leo3
@@ -264,8 +314,9 @@ actions:
     style: "width: 25%; top: 57%; left: 17%;"    
   - type: dialog
     entries:    
-      - text: "Look, there are mazes here. Let's choose one!"
-        char: Leo
+      - text: Schau, hier gibt es Labyrinthe! Lass uns das ausprobieren!
+      #"Look, there are mazes here. Let's choose one!"
+        char: leo
         mood: excited
   - type: animation
     target: mathina-leo
@@ -276,26 +327,30 @@ actions:
       ease: power3.out        
   - type: sceneText
     text: >
-      <p> Leo pushed Mathina to the entrance of a wooden pavilion with a large sign with the word maze.</p>
+      <p>Leo schob Mathina an den Eingang einer Bude aus Holz. Über dem Stand hing ein riesiges Schild mit dem Wort „Spiegellabyrinth“.<p>
+    #<p> Leo pushed Mathina to the entrance of a wooden pavilion with a large sign with the word maze.</p>
   - type: dialog
     entries:         
-      - text: "Notice that this is not a normal maze: it is a mirror maze."
+      - text: Beachte, dass es ein Spiegellabyrinth ist, kein normales Labyrinth.
+      #"Notice that this is not a normal maze: it is a mirror maze."
         char: mathina
-        exposition: "Mathina said while reading some small letters on the sign, near the word maze."           
+        exposition: Mathina las den Text auf dem Schild.
+        #"Mathina said reading the text on the sign, near the expression mirror maze."           
   - type: clearImage
     id: mathina-leo
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"  
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
-    style: "width: 13%; top: 58%; left: 48%;"    
+    style: "width: 13%; top: 58%; left: 48%;  z-index:2"    
   - type: dialog
     entries:    
-      - text: "I'll try it!"
-        char: Leo
+      - text: Ich werde es versuchen!
+      #"I'll try it!"
+        char: leo
         mood: excited
   - type: animation
     target: Leo3
@@ -303,21 +358,19 @@ actions:
       duration: 3
       xPercent: 130
       yPercent: -25
-      ease: power3.out
-  - type: image
-    id: maze
-    src: maze.png
-    style: "width: 37%; top: 42%; right: 0%;"
-    align: right      
+      ease: power3.out    
   - type: sceneText
     text: >
-      <p>Without further ado, Leo entered a maze, leaving Mathina alone.</p>
+      <p>Blitzschnell ging Leo in das Labyrinth hinein und ließ Mathina einfach stehen.<p>
+    #<p>Without further ado, Leo entered a maze, leaving Mathina alone.</p>
   - type: dialog
     entries:         
-      - text: "I also want to try, but first I want to understand what I am expected to do!"
+      - text: Ich möchte es auch ausprobieren! Aber zuerst will ich verstehen, was man hier überhaupt machen muss.
+      #"I also want to try, but first I want to understand what I am expected to do!"
         char: mathina
-        exposition: "Mathina shouted to Leo, who had meanwhile disappeared."         
-        mood: angry
+        exposition: Mathina rief Leo hinterher, aber der war schon im Labyrinth verschwunden.
+        #"Mathina shouted to Leo, who had meanwhile disappeared."         
+        mood: arguing
   - type: clearImage
     id: Mathina2       
   - type: image
@@ -326,14 +379,15 @@ actions:
     style: "width: 18%; top: 58%; left: 39%;"
   - type: dialog
     entries:    
-      - text: "First I’m going to read the instructions. Here they are."
+      - text: Ich lese erstmal die Hinweise. Das stehen sie ja.
+      #"First I’m going to read the instructions. Here they are."
         char: mathina
   - type: clearImage
     id: maze
   - type: image
     id: maze2
     src: maze2.jpg
-    style: "width: 30%; top: 62%;"
+    style: "width: 30%; top: 62%"
     align: center
   - type: clearImage
     id: mathina-instrucoes
@@ -341,23 +395,27 @@ actions:
     id: Leo3     
   - type: sceneText
     text: >
-      <p><strong>This is the mirror maze</strong></p>     
-      <p>The goal is to start at entrance and end up at the goal, but beware: the path will get more and more transparent, and, after a certain point, you won't be able to see it. To help you out, there’s a magic mirror on your right: in this mirror you will be able to see the reflected image of the path you must follow.</p>
-      <p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
+      <p><strong>Willkommen im Spiegellabyrinth</strong></p>
+      <p>Das Ziel ist es, vom Eingang bis zum Ausgang zukommen - aber pass auf: Bald schon wirst du den Weg nicht mehr sehen können! Um dir zu helfen, gibt es auf der rechten Seite einen magischen Spiegel. Dort siehst du das spiegelverkehrte Bild des Weges, den du gehen musst.<p>
+      <p>P.S.: Wir wollen nicht, dass du dich verläufst! Wenn du dich gar nicht mehr auskennst, kannst du die Taschenlampe benutzen.<p>
+    #<p><strong>This is the mirror maze</strong></p>     
+    # p>The goal is to start at entrance and end up at the goal, but beware: the path will get more and more transparent, and, after a certain point, you won't be able to see it. To help you out, there’s a magic mirror on your right: in this mirror you will be able to see the reflected image of the path you must follow.</p>
+     # <p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
   - type: clearImage
     id: maze2
   - type: image
     src: mathina-instrucoes-labirinto.png
     id: mathina-instrucoes
-    style: "width: 18%; top: 58%; left: 39%;"
+    style: "width: 18%; top: 58%; left: 39%; z-index:2"
   - type: image
     id: maze
     src: maze.png
-    style: "width: 40%; top: 42%; right: 0%;"
+    style: "width: 40%; top: 42%; right: 0%;  z-index:3"
     align: right    
   - type: dialog
     entries:         
-      - text: "Great, I think I've got it!"
+      - text: Super! Dann kann es ja jetzt losgehen!
+      #"Great, I think I've got it!"
         char: mathina
         mood: excited
   - type: animation
@@ -366,31 +424,30 @@ actions:
       duration: 3
       xPercent: 145
       yPercent: -20
-      ease: power3.out
-  - type: image
-    id: maze
-    src: maze.png
-    style: "width: 40%; top: 42%; right: 0%;"
-    align: right       
+      ease: power3.out      
   - type: dialog
     entries:         
-      - text: "Here I go."
+      - text: Und rein geht's!
+      #"Here I go."
         char: mathina
         mood: excited
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
-    text: "How can Mathina solve the mirror maze?"
-    cta: "Try it yourself!"
+    tag: tg1
+    text: Wie kann sich Mathina im Spiegellabyrinth orientieren?
+    #"How can Mathina solve the mirror maze?"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/labirinto-s/index.html?lang=en&sim=ref
   - type: clearBackground
     id: c1-bg2     
   - type: background
-    src: $COMMON/img/bg/c1-bg3.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg3    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: clearImage
@@ -398,11 +455,12 @@ actions:
   - type: image
     id: HalfTurnrMaze
     src: HalfTurnrMaze.png
-    style: "width: 40%; top: 39%; right: 0%;"
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
     align: right    
   - type: dialog
     entries:
-      - text: "I already solved the maze. I hardly even hit the wall!"
+      - text: Ich habe es durch das Labyrinth geschafft und dabei die Wände fast gar nicht berührt!
+      #"I already solved the maze. I hardly even hit the wall!"
         char: mathina
         mood: excited
   - type: clearImage
@@ -413,7 +471,8 @@ actions:
     style: "width: 19%; top: 56%; left: 39%;"
   - type: dialog
     entries:    
-      - text: "And there’s a new maze here, let me read the instructions."
+      - text: Ah, und es gibt noch ein anderes Labyrinth. Ich lese mal die Hinweise.
+      #"And there’s a new maze here, let me read the instructions."
         char: mathina
   - type: image
     id: maze3
@@ -427,23 +486,27 @@ actions:
     align: center        
   - type: sceneText
     text: >
-      <p><strong>This is the half-turn maze</strong></p>    
-      <p>The goal is to start at entrance  and end up at the goal , but beware: the path will get more and more transparent and, at a certain point, you won't be able to see it. To help you out, a magical image is shown on your right: in it, you will be able to watch a rotated (by a half turn) image of the path you must follow.</p>
-      <p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
+      <p><strong>Willkommen im gedrehten Labyrinth</strong></p>
+      <p>Schaffst du es vom Eingang bis zum Ausgang? Aber pass auf: Der Weg ist schon bald nicht mehr sichtbar. Um dir zu helfen, siehst du auf der rechten Seite eine magische Karte. Dort ist der Weg eingezeichnet, allerdings ist die Karte verkehrt herum, also um 180°Grad gedreht.<p>
+      <p>P.S.: Wir wollen nicht, dass du dich verläufst! Wenn du gar nicht mehr weiter weißt, kannst du die Taschenlampe benutzen.<p>
+    #<p><strong>This is the half-turn maze</strong></p>    
+     # <p>The goal is to start at entrance  and end up at the goal , but beware: the path will get more and more transparent and, at a certain point, you won't be able to see it. To help you out, a magical image is shown on your right: in it, you will be able to watch a rotated (by a half turn) image of the path you must follow.</p>
+      #<p>P.s. We don't want you to get lost! If you are distressed, press the flashlight button.</p>
   - type: clearImage
     id: maze3       
   - type: image
     src: mathina-instrucoes-labirinto2.png
     id: mathina-instrucoes2
-    style: "width: 19%; top: 56%; left: 39%;"
+    style: "width: 19%; top: 56%; left: 39%; z-index: 2"
   - type: image
     id: HalfTurnrMaze
     src: HalfTurnrMaze.png
-    style: "width: 40%; top: 39%; right: 0%;"
+    style: "width: 40%; top: 39%; right: 0%; z-index: 3"
     align: right    
   - type: dialog
     entries:         
-      - text: "Great, I think I've got it!"
+      - text: Super, das habe ich verstanden!
+      #"Great, I think I've got it!"
         char: mathina
         mood: excited
   - type: animation
@@ -455,59 +518,69 @@ actions:
       ease: power3.out
   - type: dialog
     entries:        
-      - text: "Here I go."
+      - text: Los geht's!
+      #"Here I go."
         char: mathina
         mood: excited
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
-    text: "How can Mathina solve the half-turn maze?"
-    cta: "Try it yourself!"
+    tag: tg2
+    text: Wie kann Mathina durch das gedrehte Labyrinth laufen?
+    #"How can Mathina solve the half-turn maze?"
+    cta: Probiere es aus!
+    #"Try it yourself!"
     url: /apps/labirinto-s/index.html?lang=en&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground
     id: c1-bg3    
   - type: background
-    src: $COMMON/img/bg/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
-    src: $COMMON/img/Mathina2.png
+    src: Mathina2.png
     id: Mathina2
     style: "width: 7.5%; top: 56%; left: 42%;"     
   - type: dialog
     entries:
-      - text: "I already solved the maze. I hardly even hit the wall!"
+      - text: Ich habe es geschafft und die Wände fast nie berührt!
+      #"I already solved the maze. I hardly even hit the wall!"
         char: mathina
-        exposition: "Mathina was feeling very proud."          
+        exposition: Mathina war sehr stolz auf sich.
+        #"Mathina was feeling very proud."          
         mood: excited    
-      - text: "I wonder if Leo has finished. I think he is stuck inside the mazes. This is what happens if you don't read the instructions..."
+      - text: Ich frage mich, wann Leo herauskommt. Ich glaube, er steckt in einem der Labyrinthe fest. Puh, das passiert, wenn man die Hinweise nicht liest...
+      #"I wonder if Leo has finished. I think he is stuck inside the mazes. This is what happens if you don't read the instructions..."
         char: mathina
-        exposition: "Mathina looked around without finding Leo."         
+        exposition: Mathina schaute sich nach Leo um.
+        #"Mathina looked around without finding Leo."         
         mood: surprised
   - type: clearImage
     id: Mathina2        
   - type: image
-    src: $COMMON/img/Mathina6.png
+    src: Mathina6.png
     id: Mathina6
     style: "width: 8.5%; top: 57%; left: 47%;"        
   - type: sceneText
     text: >
-      <p>Mathina sighed and, while waiting for Leo, sat down, admiring all the hustle and bustle of Symmetry Fair.</p>
+      <p>Mathina seufzte und setzte sich hin, um auf Leo zu warten. Sie schaute dem Treiben auf dem Symmel-Rummel zu.<p>
+    #<p>Mathina sighed and, while waiting for Leo, sat down, admiring all the hustle and bustle of Symmetry Fair.</p>
   - type: clearImage
     id: Mathina6
   - type: image
-    src: $COMMON/img/Mathina4.png
+    src: Mathina4.png
     id: Mathina4
     style: "width: 7.5%; top: 56%; left: 42%;"
   - type: image
-    src: $COMMON/img/Leo3.png
+    src: Leo3.png
     id: Leo3
     style: "width: 13%; top: 67%; left: 1%;"    
   - type: sceneText
     text: >
-      <p>Eventually, and much later, Leo got out of the maze, feeling embarrassed for taking so long.</p>
+      <p>Nach langer Zeit kam schließlich Leo aus dem Labyrinth. Es war ihm ganz arg, dass er so lange gebraucht hatte.<p>
+    #<p>Eventually, and much later, Leo got out of the maze, feeling embarrassed for taking so long.</p>
   - type: animation
     target: Leo3
     vars:
@@ -517,7 +590,8 @@ actions:
       ease: power3.out    
   - type: sceneText
     text: >      
-      <p>After Leo promised not to enter any of the amusements by himself, Mathina and Leo continued exploring Symmetry Fair.</p>      
+      <p>Leo versprach, keine der Attraktionen mehr einfach so alleine auszuprobieren. Dann zogen Mathina und Leo los, um die weiteren Stände und Buden zu entdecken.<p>
+    #<p>After Leo promised not to enter any of the amusements by himself, Mathina and Leo continued exploring Symmetry Fair.</p>      
   - type: clearImage
     id: Mathina4
   - type: clearImage
@@ -525,9 +599,10 @@ actions:
   - type: clearBackground
     id: c1-bg1     
   - type: background
-    src: $COMMON/img/bg/bucca-bg3b-with-leo-wizard.jpg
+    src: $COMMON/img/bg/SYMM/bucca-bg3b-with-leo-wizard.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;" 
     id: bucca-bg3b-with-leo-wizard    
   - type: sceneText
     text: >
-      <p>Before leaving, and after having acquired many new skills related to symmetry, Mathina and Leo said goodbye to the wizard, who invited them to tea. In the end, Mathina and Leo, left the Fair, commenting on how even the cakes that the wizard had offered them ... were symmetric!… They had spent an exciting day at Symmetry Fair!</p>          
+      <p>Sie lernten noch viele andere Sachen über Symmetrie. Bevor sie den Symmel-Rummel verließen, verabschiedeten sich Mathina und Leo vom Zauberer. Er hatte die beiden noch zum Tee eingeladen - hier gab es sogar symmetrische Kuchen und Muffins! Mathina und Leo hatten einen spannenden Tag auf dem Symmel-Rummel!<p>
+    #<p>Before leaving, and after having acquired many new skills related to symmetry, Mathina and Leo said goodbye to the wizard, who invited them to tea. In the end, Mathina and Leo, left the Fair, commenting on how even the cakes that the wizard had offered them ... were symmetric!… They had spent an exciting day at Symmetry Fair!</p>          
