@@ -105,14 +105,14 @@ actions:
     
       - char: flamma
         text: >
-          Exciting news Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time it is very different and more difficult. 
+          Exciting news, Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time it is very different and more difficult. 
         #This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
       - char: flamma
         text: >
             This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
         
       - char: mathina
-        text: yes! of course! let's go!
+        text: yYs! Of course! Let's go!
         exposition: said Mathina, now with her mouth full, eating cake.
 
   - type: sceneText
@@ -387,7 +387,7 @@ actions:
        # yPercent: -240
 
   - type: sceneText
-    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man with a fantastic phoenix. The animal was like an enormous eagle, with bright red and yellow feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in violet and green feathers that were sparking quietly, releasing a multi-colored smoke.
+    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man with a fantastic phoenix. The animal was like an enormous eagle, with bright red and turquoise feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in orange and green feathers that were sparking quietly, releasing a multi-colored smoke.
 
 
   - type: dialog
