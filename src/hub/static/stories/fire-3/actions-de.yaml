@@ -501,11 +501,13 @@ actions:
         #What happened to this phoenix?
 
       - char: flamma
-        text: Das ist Liz. Sie ist ein weiblicher Phönix und hat ihr Augenlicht verloren, als sie zu lange in Richtung Sonne geflogen ist. Es ist eine traurige Geschichte. Denn sie kann den Boden nicht sehen und sich deshalb nur schwer orientieren. Keiner kann sie trainieren. Mene Hand findet sie nur, weil wir uns schon lange kennen...
+        text: Das ist Liz. Sie ist ein weiblicher Phönix und hat ihr Augenlicht verloren, als sie zu lange in Richtung Sonne geflogen ist. Es ist eine traurige Geschichte. Denn sie kann den Boden nicht sehen und sich deshalb nur schwer orientieren. Keiner kann sie trainieren. Meine Hand findet sie nur, weil wir uns schon lange kennen...
         #This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
 
       - char: leo
-        text: But she can fly, right?
+        text: Hm, sie kann fliegen...
+        #But she can fly, right?
+        mood: thinking
 
       - char: flamma
         text: Yes, but how would you tell her what altitude you want her to be at?

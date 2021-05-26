@@ -481,7 +481,8 @@ actions:
         text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her. She only finds my hand, because we know each other for a long time now...
 
       - char: leo
-        text: But she can fly, right?
+        text: Mmh, she can fly...
+        mood: tinking
 
       - char: flamma
         text: Yes, but how would you tell her what altitude you want her to be at?
