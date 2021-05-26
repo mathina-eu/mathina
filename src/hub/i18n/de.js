@@ -41,29 +41,29 @@ export default {
     title: 'Willkommen bei Mathina',
     subtitle: 'Wähle eine Altersgruppe, um zu beginnen!',
     'start-exploring': 'Auf ins Abenteuer',
-    about: 'Info',
+    about: 'Reiseführer',
     close: 'Schließen',
-    aboutContent: `<p>Willkommen in diesem Land, in dem unglaubliche Dinge passieren. Ein Land voller seltsamer und magischer Kreaturen, in dem Piratinnen und Piraten gemeinsam mit Drachen und Zauberern leben. Hier kannst du spannende Rätsel einfach auf der Straße finden und Abenteuer überraschen dich an jeder Ecke. Doch dieses Land hat noch eine weitere Besonderheit: Überall herrscht Logik.</p>
+    aboutContent: `<p>Willkommen in diesem Land, in dem unglaubliche Dinge passieren. Ein Land voller seltsamer und magischer Kreaturen, in dem Piratinnen und Piraten gemeinsam mit Drachen und Zauberkundigen leben. Hier kannst du spannende Rätsel einfach auf der Straße finden, und Abenteuer überraschen dich an jeder Ecke. Doch dieses Land hat noch eine weitere Besonderheit: Überall herrscht Logik.</p>
 
-    <p>Hier gelten strenge Regeln, die alle befolgen: Menschen, Tiere und alles andere in der Natur! Da gibt es Vögel, die immer auf einer anderen Höhe fliegen wollen, je nachdem wie weit entfernt sie von ihrem Nest sind. Andere Tiere sprechen eine verschlüsselte Sprache. Auf dem Rummel ist nur Spielzeug erlaubt, das genau symmetrisch ist. Und in manchen Städten gibt es Verkehrsschilder, die zu Denk-Abenteuern einladen.</p>
+    <p>Hier gelten genaue Regeln, die alle automatisch befolgen: Menschen, Tiere und alles andere in der Natur! Da gibt es Vögel, die immer auf einer anderen Höhe fliegen wollen, je nachdem wie weit entfernt sie von ihrem Nest sind. Andere Tiere sprechen eine verschlüsselte Sprache. Auf dem Rummel ist nur Spielzeug erlaubt, das symmetrisch ist. Und in manchen Städten gibt es Verkehrsschilder, die zu Denk-Abenteuern einladen.</p>
 
-    <p>Dieses Land wird Platonia genannt. Ideen und Logik finden sich hier überall und werden von allen geschätzt. Die Bewohner Platonias sind nicht nur einverstanden mit diesen Regeln - im Gegenteil, sie sind ganz begeistert von ihnen. Sie haben viel Spaß an den Tricks und Rätseln, die ihnen immer wieder begegnen.</p>
+    <p>Dieses Land wird Platonia genannt. Ideen, Logik und Abenteuer finden sich hier überall und werden von allen geschätzt. Die Bewohner Platonias sind nicht nur einverstanden mit diesen Regeln - im Gegenteil, sie sind ganz begeistert von ihnen. Sie haben viel Spaß an den Tricks und Rätseln, die ihnen immer wieder begegnen.</p>
 
-    <p>Mathina ist ein junges Mädchen, das in Platonia lebt. Zusammen mit ihrem Bruder Leo löst sie die Rätsel, die ihnen begegnen. Denn hier kann sich alles in ein Abenteuer verwandeln!</p>
+    <p>Mathina ist ein Mädchen, das in Platonia lebt. Zusammen mit ihrem Bruder Leo löst sie die Rätsel, die ihnen begegnen. Denn hier kann sich alles in ein Abenteuer verwandeln!</p>
 
     <p>In Platonia gibt es vier verschiedene Regionen:</p>
 
-    <p><strong>Logi-City</strong> ist eine Stadt voller Wolkenkratzer. Es ist ein spannendes Universum für alle, die es lieben, Geschichten und Botschaften zu entschlüsseln. Die verbergen sich an jeder Ecke, hinter Glasfassaden und auf Straßenkreuzungen.</p>
+    <p><strong>Logi-City</strong> ist eine Stadt voller Wolkenkratzer. Es ist ein spannendes Universum für alle, die Geschichten und Rätsel lieben. Die verbergen sich an jeder Ecke, hinter Glasfassaden und an Straßenkreuzungen.</p>
 
-    <p>In Logi-City sind die Botschaften und Geschichten, die auf deine Entdeckung warten, alle logischer Natur. Mathina und Leo stehen plötzlich vor Ampeln, die ihre Farben wechseln. Oder sie müssen eine in der Straße versteckte Falle überwinden. Dann werden sie auch noch in eine Verfolgungsjagd verwickelt und stoßen auf ein sehr seltsames Tennisteam. Na, hast du Lust Mathina und Leo bei ihren Erkundungen zu begleiten?</p>
+    <p>In Logi-City sind die Botschaften und Geschichten, die auf deine Entdeckung warten, alle logischer Natur. Mathina und Leo stehen plötzlich vor Ampeln, die ihre Farben wechseln. Oder sie müssen eine in der Straße versteckte Falle überwinden. Dann werden sie auch noch in eine Verfolgungsjagd verwickelt und stoßen auf ein sehr seltsames Tennisteam. Na, hast du Lust, Mathina und Leo bei ihren Erkundungen zu begleiten?</p>
 
-    <p>Der <strong>Symmel-Rummel</strong> ist ein riesiger Vergnügungspark mit allen Arten von Attraktionen! Aber schau gut hin! Auf dem Symmel-Rummel gibt es alles - doch alles muss symmetrisch sein!</p>
+    <p>Der <strong>Symmel-Rummel</strong> ist ein riesiger Vergnügungspark mit jeder Menge Attraktionen! Aber schau gut hin! Auf dem Symmel-Rummel gibt es alles - doch alles muss symmetrisch sein!</p>
 
-    <p>Mathina und Leo finden dort viele spannende Orte, um Spaß zu haben: seltsame Labyrinthe mit Spiegeln, Buden, an denen sie viele Spiele spielen oder symmetrische Spielzeuge bauen können, ungewöhnliche Karussells und vieles mehr. Es gibt sogar die Möglichkeit selbst bei der Verschönerung des Jahrmarkts mitzumachen. Du kannst helfen ein neues Karussell aus Polyedern zu bauen oder zauberhafte Muster verschiedenster Art auf die Straßen zu stempeln. Es ist einfach aufregend, so den Tag zu verbringen!</p>
+    <p>Mathina und Leo finden an den Marktbuden dort viele, spannende Möglichkeiten, um Spaß zu haben: seltsame Labyrinthe mit Spiegeln, Buden, an denen sie viele Spiele spielen oder symmetrische Spielzeuge bauen können, ungewöhnliche Karussells und vieles mehr. Es gibt sogar die Möglichkeit, selbst bei der Verschönerung des Rummels mitzumachen. Du kannst helfen ein neues Karussell aus Polyedern zu bauen oder zauberhafte Muster verschiedenster Art auf die Straßen zu stempeln. Es ist einfach aufregend, so den Tag zu verbringen!</p>
 
     <p>Eine <strong>Schatzinsel</strong>? Ganz genau, die gibt es auch! Der perfekte Ort, um mit der ganzen Crew anzulegen und die Beute in Sicherheit zu bringen! Aber Halt! Dann sucht ja jeder nach unseren Verstecken... Deshalb benutzen wir immer geheime Kommunikationswege! Nur die eigene Crew soll wissen, wo die Verstecke sind. Und was passiert, wenn nun ausgerechnet du eine Karte findest, auf die ein vielversprechendes „X“ gemalt ist? Mach dich auf eine lustige Schatzsuche gefasst, bei der das Entschlüsseln von Nachrichten, die andere Piratinnen und Piraten hinterlassen haben, der Beginn von wunderbaren Abenteuern ist! Du bist bereit? Na dann, „Willkommen auf der Schatzinsel“! Oh, warte! Ich sollte lieber “!lesniztahcS red fua nemmoklliW“ sagen! Das ist besser!</p>
 
-    <p>In <strong>Feuerland</strong> beherrschen fliegende Kreaturen die Lüfte. Zauberer und Feuervogeltrainerinnen lernen, wie man mit Drachen, Phönixen und den winzigen Funkelflöhen spricht. Sie zeichnen dafür unglaubliche Formen in die Luft. In Feuerland treffen Mathina und Leo auch auf Flamma. Das ist eine alte Dame, die sie mitnimmt, um die Geheimnisse der Feuerwesen kennen zu lernen.</p>
+    <p>In <strong>Feuerland</strong> beherrschen fliegende Kreaturen die Lüfte. Zauberkundige und Abenteuerlustige lernen und trainieren, wie man Feuervögel fliegt, wie man mit Drachen, Phönixen und den winzigen Funkelflöhen spricht. Sie zeichnen dafür unglaubliche Formen in die Luft. In Feuerland treffen Mathina und Leo auch auf Flamma. Das ist eine starke Frau, die sie mitnimmt, um die Geheimnisse der Feuerwesen kennenzulernen.</p>
     `,
   },
   menu: {
