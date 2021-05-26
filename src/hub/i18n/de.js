@@ -41,50 +41,29 @@ export default {
     title: 'Willkommen bei Mathina',
     subtitle: 'Wähle eine Altersgruppe, um zu beginnen!',
     'start-exploring': 'Auf ins Abenteuer',
-    about: 'About',
-    close: 'Close',
-    aboutContent: `<p>This is a land where incredible things happen. A land full of strange and magical creatures,
-    where pirates and dragons coexist with wizards; people find riddles on the streets, and adventures surprise
-    the visitor on any corner. But this land has one more peculiar characteristic: logic rules everywhere. </p>
+    about: 'Info',
+    close: 'Schließen',
+    aboutContent: `<p>Willkommen in diesem Land, in dem unglaubliche Dinge passieren. Ein Land voller seltsamer und magischer Kreaturen, in dem Piratinnen und Piraten gemeinsam mit Drachen und Zauberern leben. Hier kannst du spannende Rätsel einfach auf der Straße finden und Abenteuer überraschen dich an jeder Ecke. Doch dieses Land hat noch eine weitere Besonderheit: Überall herrscht Logik.</p>
 
-    <p>Not only that each and every person is following rules, but so do animals and nature, too! There are birds that
-    fly at a height depending on the distance to their nests, while other animals speak a coded language. Toy fairs
-    only display their products if those have precise symmetric patterns, and some cities have challenging traffic signs.</p>
+    <p>Hier gelten strenge Regeln, die alle befolgen: Menschen, Tiere und alles andere in der Natur! Da gibt es Vögel, die immer auf einer anderen Höhe fliegen wollen, je nachdem wie weit entfernt sie von ihrem Nest sind. Andere Tiere sprechen eine verschlüsselte Sprache. Auf dem Rummel ist nur Spielzeug erlaubt, das genau symmetrisch ist. Und in manchen Städten gibt es Verkehrsschilder, die zu Denk-Abenteuern einladen.</p>
 
-    <p>This land is called Platonia, where ideas and logic are treasured by everyone and found everywhere in nature.
-    The inhabitants of Platonia not only accept these rules, on the contrary, they are  satisfied to have them, and
-    enjoy the tricks and riddles they come across.</p>
+    <p>Dieses Land wird Platonia genannt. Ideen und Logik finden sich hier überall und werden von allen geschätzt. Die Bewohner Platonias sind nicht nur einverstanden mit diesen Regeln - im Gegenteil, sie sind ganz begeistert von ihnen. Sie haben viel Spaß an den Tricks und Rätseln, die ihnen immer wieder begegnen.</p>
 
-    <p>Mathina is a young girl living in Platonia. Here, anything can turn into an adventure! Together with her brother
-    Leo, they solve the challenges they come across.</p>
+    <p>Mathina ist ein junges Mädchen, das in Platonia lebt. Zusammen mit ihrem Bruder Leo löst sie die Rätsel, die ihnen begegnen. Denn hier kann sich alles in ein Abenteuer verwandeln!</p>
 
-    <p>In Platonia there are four different regions:</p>
+    <p>In Platonia gibt es vier verschiedene Regionen:</p>
 
-    <p><strong>Logi-city</strong> is a city of skyscrapers, an exciting universe for those who love to decipher stories
-    and messages hidden behind corners, glass facades and street crossings.</p>
+    <p><strong>Logi-City</strong> ist eine Stadt voller Wolkenkratzer. Es ist ein spannendes Universum für alle, die es lieben, Geschichten und Botschaften zu entschlüsseln. Die verbergen sich an jeder Ecke, hinter Glasfassaden und auf Straßenkreuzungen.</p>
 
-    <p>In Logi-city, the messages and stories explorers encounter are all of a logical nature. Mathina and Leo are
-    challenged by transforming traffic lights, a trap hidden in the pavement, then they get involved in a thief chase,
-    and also bump into a strange soccer team. Now you can choose to join Mathina and Leo in their explorations!</p>
+    <p>In Logi-City sind die Botschaften und Geschichten, die auf deine Entdeckung warten, alle logischer Natur. Mathina und Leo stehen plötzlich vor Ampeln, die ihre Farben wechseln. Oder sie müssen eine in der Straße versteckte Falle überwinden. Dann werden sie auch noch in eine Verfolgungsjagd verwickelt und stoßen auf ein sehr seltsames Tennisteam. Na, hast du Lust Mathina und Leo bei ihren Erkundungen zu begleiten?</p>
 
-    <p><strong>Symmetry Fair</strong> is a huge fun park with all kinds of amusements! But notice that in Symmetry
-    fair everything should be ... symmetric!</p>
+    <p>Der <strong>Symmel-Rummel</strong> ist ein riesiger Vergnügungspark mit allen Arten von Attraktionen! Aber schau gut hin! Auf dem Symmel-Rummel gibt es alles - doch alles muss symmetrisch sein!</p>
 
-    <p>Mathina and Leo will find all kinds of entertainment there: strange mazes using mirrors, stalls where they can
-    play many games or build symmetric toys, unusual carousels and more. They will even have the opportunity to
-    contribute to improvements in the fair: either by helping to create a new carousel made up of polyhedra,
-    or by stamping beautiful friezes of different types on the streets. It's just an exciting way to spend the day!</p>
+    <p>Mathina und Leo finden dort viele spannende Orte, um Spaß zu haben: seltsame Labyrinthe mit Spiegeln, Buden, an denen sie viele Spiele spielen oder symmetrische Spielzeuge bauen können, ungewöhnliche Karussells und vieles mehr. Es gibt sogar die Möglichkeit selbst bei der Verschönerung des Jahrmarkts mitzumachen. Du kannst helfen ein neues Karussell aus Polyedern zu bauen oder zauberhafte Muster verschiedenster Art auf die Straßen zu stempeln. Es ist einfach aufregend, so den Tag zu verbringen!</p>
 
-    <p><strong>The Buccaneers Island</strong>? Exactly! The perfect place where to dock with our crew and where to hide
-    our treasures! But wait! Everybody is looking for our hiding places, so we always use secret ways of communicating!
-    Only the captain and the crew should be able to retrieve the hiding places. And what if you find a map, with maybe
-    a promising "X" over it? Be prepared for a funny treasure hunt, where deciphering messages left from other pirates
-    it's the way to have wonderful adventures!  If you are ready... "Welcome to Buccaneer's island"... oh, wait... "
-    !dnalsi s'reenaccuB ot emocleW" this is better ;)</p>
+    <p>Eine <strong>Schatzinsel</strong>? Ganz genau, die gibt es auch! Der perfekte Ort, um mit der ganzen Crew anzulegen und die Beute in Sicherheit zu bringen! Aber Halt! Dann sucht ja jeder nach unseren Verstecken... Deshalb benutzen wir immer geheime Kommunikationswege! Nur die eigene Crew soll wissen, wo die Verstecke sind. Und was passiert, wenn nun ausgerechnet du eine Karte findest, auf die ein vielversprechendes „X“ gemalt ist? Mach dich auf eine lustige Schatzsuche gefasst, bei der das Entschlüsseln von Nachrichten, die andere Piratinnen und Piraten hinterlassen haben, der Beginn von wunderbaren Abenteuern ist! Du bist bereit? Na dann, „Willkommen auf der Schatzinsel“! Oh, warte! Ich sollte lieber “!lesniztahcS red fua nemmoklliW“ sagen! Das ist besser!</p>
 
-    <p>In the <strong>land of the firebirds</strong>, flying fire creatures rule the skies. Some wizards and firebird trainers learn how
-    to talk and play with dragons, phoenixes, and the minuscule sparkbugs, making incredible shapes in the air.  On this
-    land Mathina and Leo will meet Flamma, an old lady that will guide them to discover the mysteries of these fire creatures.</p>
+    <p>In <strong>Feuerland</strong> beherrschen fliegende Kreaturen die Lüfte. Zauberer und Feuervogeltrainerinnen lernen, wie man mit Drachen, Phönixen und den winzigen Funkelflöhen spricht. Sie zeichnen dafür unglaubliche Formen in die Luft. In Feuerland treffen Mathina und Leo auch auf Flamma. Das ist eine alte Dame, die sie mitnimmt, um die Geheimnisse der Feuerwesen kennen zu lernen.</p>
     `,
   },
   menu: {
