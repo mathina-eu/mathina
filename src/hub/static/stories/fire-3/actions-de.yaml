@@ -551,8 +551,12 @@ actions:
         #Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
 
   - type: game
-    text: "App 3-3"
-    url:
+    text: Um diese Phönixdame zu fliegen, sag ihr mit der Hand auf der linken Seite, wie stark sie steigen oder sinken soll. Weiche den Hindernissen aus.
+    #To fly this phoenix, you tell how much it should ascend or descend. Fly it avoiding the obstacles.
+    toolbarText: Fliege um die Hindernisse bis auf die rechte Seite.
+    #Avoid the obstacles and reach the right side.
+    url: /apps/imaginary/app_3/3_3/de.html
+    cta: Fliege mit Liz!
   - type: clearImage
     id: phoe2
     
@@ -582,6 +586,7 @@ actions:
       - char: leo
         text: Was meinst Du, Mathina?
         #What do you mean, Mathina?
+        mood: surprised
 
       - char: mathina
         text: Ich meine, wir können Liz trainieren, dass sie schon vorher weiß, wie sehr sie aufwärts oder abwärts fliegen soll. Wir sagen es ihr so ähnlich, wie ich Flick die Höhe gesagt habe.
@@ -599,8 +604,12 @@ actions:
         #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
   - type: game
-    text: "App 3-4"
-    url:
+    text: Bewege die weißen Punkte. Sie ergeben den Verlauf, wie sehr die Phönixdame zu jedem Zeitpunkt steigt oder sinkt. Versuche, mit dieser Methode die Feuerbälle einzusammeln.
+    #Adjust the points to create a line. That line tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
+    toolbarText: Stelle den Verlauf für Steig- und Sinkflug so ein, dass der Phönix die Feuerbälle fängt.
+    #Adjust the line that tells the ascend or descend of the phoenix. Eat all the fireballs.
+    cta: Fliege mit Liz!
+    url: /apps/imaginary/app_3/3_4/de.html
 
 
   - type: image
