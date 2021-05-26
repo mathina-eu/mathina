@@ -189,12 +189,12 @@ actions:
 
     entries:
       - char: flamma
-        text: Die Phönixe sind anders als Einhorndrachen, die ja vorwärst und rückwärts fliegen könen und auch in der Luft anhalten. Phönixe sind eher wie Adler, die nur vorwärts fliegen können.
+        text: Die Phönixe sind anders als Einhorndrachen, die ja vorwärts und rückwärts fliegen können und auch in der Luft anhalten. Phönixe sind eher wie Adler, die nur vorwärts fliegen können.
         #The phoenixes are not like unidragons, that can fly backward, forwards, or stop in the air.  Phoenixes are like eagles, they can only fly forwards.
         mood: normal
 
       - char: flamma
-        text: Sie orientieren sich, indem sie auf den Boden schauen. Dadurch fliegen sie immer mit derselben Geschwindigkeit in Bezug auf den Boden. Anders gesagt, wenn Du den Schatten des Phönix beobachtest, bewegt der sich mit einer konstanten Geschwindigkeit, egal ob der Phönix gerade aufwärst, abwärts oder auf gleichbleibender Höhe fliegt.
+        text: Sie orientieren sich, indem sie auf den Boden schauen. Dadurch fliegen sie immer mit derselben Geschwindigkeit in Bezug auf den Boden. Anders gesagt, wenn Du den Schatten des Phönix beobachtest, bewegt der sich mit einer konstanten Geschwindigkeit, egal ob der Phönix gerade aufwärts, abwärts oder auf gleichbleibender Höhe fliegt.
         #They orient themselves by looking at the ground, so they always fly forwards with the same speed relative to the ground. In other words, if you see their shadow right below the phoenix, that shadow moves forward at a constant speed, regardless of whether the phoenix flies rising, descending, or steady at the same height.
         mood: normal
 
@@ -204,7 +204,7 @@ actions:
         mood: normal
 
       - char: mathina
-        text: Wenn sie immer mit derselben Geschwindigkeit vorwärts fliegen, wie kann es denn dann ein Wettrennen geben? Sie kommen dann ja immer zur selben Zeit am Zeil an.
+        text: Wenn sie immer mit derselben Geschwindigkeit vorwärts fliegen, wie kann es denn dann ein Wettrennen geben? Sie kommen dann ja immer zur selben Zeit am Ziel an.
         #If they always move with the same speed forwards, how is that a race? They will always arrive at the same time to the finish line.
 
         mood: arguing
@@ -419,7 +419,7 @@ actions:
 
     entries:
       - char: flamma
-        text: Gut, Mathina, Du kannst versuchen, diesen Phönix zu fliegen. Her heißt Flick und ist sehr zahm, aber er mag es gar nicht, wenn man ihn ärgert. Denke gut darüber nach, was Du ihm sagen möchtest.
+        text: Gut, Mathina, Du kannst versuchen, diesen Phönix zu fliegen. Er heißt Flick und ist sehr zahm, aber er mag es gar nicht, wenn man ihn ärgert. Denke gut darüber nach, was Du ihm sagen möchtest.
         #Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
 
   - type: clearImage
@@ -479,7 +479,7 @@ actions:
         yPercent: -35
 
   - type: sceneText
-    text: Leo war etwas abseits und dachte, dass er ja auch einen Phönix fliegen könnte. Ja, er war jünger als Mathina, aber er fühlte sich absolut bereit dazu. Er hing immernoch seinen Gedanken nach, als ein anderer Phönix angeflogen kam und auf Flammas Arm landete. Er hatte leuchtend blaue und rote Federn, und das Glühen war irgendwie mehr lila als das bei Flick. Was Leo aber auch sofort auffiel, waren die weißen, ausdruckslosen Augen des Phönix.
+    text: Leo war etwas abseits und dachte, dass er ja auch einen Phönix fliegen könnte. Ja, er war jünger als Mathina, aber er fühlte sich absolut bereit dazu. Er hing immer noch seinen Gedanken nach, als ein anderer Phönix angeflogen kam und auf Flammas Arm landete. Er hatte leuchtend blaue und rote Federn, und das Glühen war irgendwie mehr lila als das bei Flick. Was Leo aber auch sofort auffiel, waren die weißen, ausdruckslosen Augen des Phönix.
     #Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix, who had just landed on Flamma's hand. It had bright blue and red feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
 
   - type: clearImage
@@ -568,7 +568,7 @@ actions:
 
   - type: sceneText
     text: >
-       Leo hatte es geschaftt mit Liz zu fliegen, Flamma war beeindruckt. Mathina war auch froh, dass Leo auf diese neue Methode gekommen war, und sie hatte eine Idee:
+       Leo hatte es geschafft mit Liz zu fliegen, Flamma war beeindruckt. Mathina war auch froh, dass Leo auf diese neue Methode gekommen war, und sie hatte eine Idee:
     #Leo had a big success flying Liz, Flamma was impressed. Mathina was also happy that Leo had found a new way to lead the phoenix, and she had an idea:
 
   - type: dialog
@@ -600,7 +600,7 @@ actions:
         #That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
         
       - char: flamma
-        text: Wenn ihr das schafft, werdet ihr ganz sicher den Preis für das originellste Phönix-Kommando gewinnen. Diese Kategorie ist sehr begehrt und sogar angesehener als das Rennen selbst, denn man muss die Zusammenhänge richtg gut verstanden haben.
+        text: Wenn ihr das schafft, werdet ihr ganz sicher den Preis für das originellste Phönix-Kommando gewinnen. Diese Kategorie ist sehr begehrt und sogar angesehener als das Rennen selbst, denn man muss die Zusammenhänge richtig gut verstanden haben.
         #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
   - type: game
@@ -639,5 +639,5 @@ actions:
         xPercent: -350
        # yPercent: -240
   - type: sceneText
-    text: Mathina und Leo waren den ganzen restlichen Tag damit beschäftigt, mt den Phönixen zu spielen und sie zu trainieren. Sie hatten geschafft, Liz zu fliegen, und alle Zauberkundigen in der Jury und auch die Expertinnen und Experten des Feuervogeltrainings bewunderten sie dafür. Sie erhielten tatsächlich den Preis für das originellste Phönix-Kommando. Den Abend ließen sie mit einem großen Festmahl ausklingen, und sie feierten im größten Saal des Schlosses.
+    text: Mathina und Leo waren den ganzen restlichen Tag damit beschäftigt, mit den Phönixen zu spielen und sie zu trainieren. Sie hatten geschafft, Liz zu fliegen, und alle Zauberkundigen in der Jury und auch die Expertinnen und Experten des Feuervogeltrainings bewunderten sie dafür. Sie erhielten tatsächlich den Preis für das originellste Phönix-Kommando. Den Abend ließen sie mit einem großen Festmahl ausklingen, und sie feierten im größten Saal des Schlosses.
     #Mathina and Leo spent the whole day training and playing with the phoenixes. They succeeded to train Liz, and all the wizards in the jury and the expert firebird trainers admired them for doing so and awarded them the Originality prize for the best trainers. They finished the day having a great dinner in a feast organized in the biggest room in the castle.
