@@ -8,50 +8,9 @@
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
     <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
-	<script>
-		function InitRik() {
-		
-			window.addEventListener('resize', ResizeRik, false);
-			ResizeRik();
-		}
-		
-		function ResizeRik() {
-return;
-			var doc = document,
-                w = window;
-            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
-                doc.documentElement : doc.body;
-
-            var width = docEl.clientWidth;
-            var height = docEl.clientHeight;
-
-            // mobile zoomed in?
-            if (w.innerWidth && width > w.innerWidth) {
-                width = w.innerWidth;
-                height = w.innerHeight;
-            }
-
-            window.dimensionRik = [width, height];
-			ScalaCalcolata=Math.min(dimensionRik[0]/1920,dimensionRik[1]/1080);
-			
-			
-			
-			document.getElementById('CSCanvas').width=1920*ScalaCalcolata;
-			document.getElementById('CSCanvas').height=1080*ScalaCalcolata;
-			
-			//document.body.style.zoom=ScalaCalcolata;
-			//
-			//MargineRik=[(dimensionRik[0]-ScalaCalcolata*1920)/2,(dimensionRik[1]-ScalaCalcolata*1080)/2];
-			
-			//document.body.style.marginLeft=MargineRik[0]+"px";
-			//document.body.style.marginTop=MargineRik[1]+"px";
-		
-		}
-	
-	</script>
 </head>
 
-<body style="font-family:Palatino; margin:0; font-size:16pt" onload="InitRik()">
+<body style="font-family:Palatino; margin:0; font-size:16pt">
 
 
 
@@ -323,7 +282,7 @@ dragonAnimationTrack = setupAnimationTrack(0,0.6);
 dragonAnimationTrack.looping = true;
 
 wand = {
-  "pos": canvasCenter + (0,-12),
+  "pos": 0.2*canvasCorners_1+0.5*canvasCorners_3,
   "length": 3,
   "dir": [0,1],
   "value": 0,
