@@ -774,7 +774,7 @@ actions:
     text: Tenta guiar o uni-dragão com pares de números.
     toolbarText: Guia o uni-dragão com pares de números!
     cta: Guia o uni-dragão!
-    url: /apps/imaginary/app_2/2_1/en.html
+    url: /apps/imaginary/app_2/2_1/pt.html
 
   - type: sceneText
     text: A Flama estava contente ao ver como Mathina usava aquela linguagem.
@@ -800,10 +800,10 @@ actions:
 
 #Game 2.2
   - type: game
-    text: Guia o uni-dragão até ao castelo evitando os obstáculos. Só podes fazê-lo voar no céu azul, e se bater numa núvem ou na montanha, é preciso recomeçar do princípio.
+    text: Guia o uni-dragão até ao castelo evitando os obstáculos. Só podes fazê-lo voar no céu azul, e se bateres numa núvem ou na montanha, é preciso recomeçar do princípio. Depois de chegares ao castelo, podes tentar novamente com mais núvens.
     cta: Voa até ao castelo!
     toolbarText: Voa até ao castelo evitando obstáculos!
-    url: /apps/imaginary/app_2/2_2/en.html
+    url: /apps/imaginary/app_2/2_2/pt.html
 
   - type: dialog
     avatarAlign:
@@ -834,7 +834,7 @@ actions:
       leo: left
     entries:
 
-      - text: Vou propor-vos então um desafio. Tenho estas bolas de fogo que os uni-dragões gostam muito de comer. Têm de dizer ao dragão qual o caminho para apanhar todas bolas de fogo sem tocar em nenhuma das núvens no céu.
+      - text: Vou propor-vos então um desafio. Eu tenho estas bolas de fogo que os unidragões adoram comer. Vocês têm de indicar ao dragão o caminho até às bolas de fogo, mas sem tocar nas núvens ou montanhas, e chegarem depois ao castelo, tudo de uma só vez
         char: flamma
         mood: normal
 
@@ -844,10 +844,10 @@ actions:
 
 # Game 2.3
   - type: game
-    text: Apanha todas as bolas de fogo sem tocar nas núvens e depois vai até  ao castelo.
-    cta: Voa para apanhar as bolas de fogo!
-    url: /apps/imaginary/app_2/2_3/en.html
-    toolbarText: Apanha as bolas de fogo e voa para o castelo!
+    text: Come as bolas de fogo sem tocares nos obstáculos, e depois vai até o castelo, de uma só vez. Depois de chegares ao castelo, podes tentar novamente, agora com mais bolas de fogo para apanhar e mais núvens para evitar.
+    cta: Voa para comer as bolas de fogo!
+    url: /apps/imaginary/app_2/2_3/pt.html
+    toolbarText: Come as bolas de fogo e voa até o castelo!
 
   - type: dialog
     avatarAlign:
@@ -855,6 +855,6 @@ actions:
       mathina: left
     entries:
 
-      - text: Fantático, Mathina. Estás realmente a tornar-te numa treinadora de pássaros de fogo. Da próxima vez iremos ao castelo de Arisa, onde todos os treinadores de pássaros de fogo  se reunem e fazem competições.
+      - text: Fantático, Mathina. Estás realmente a tornar-te numa treinadora de pássaros de fogo. Da próxima vez, iremos ao castelo de Arisa, onde todos os treinadores de pássaros de fogo se reunem e fazem competições.
         char: flamma
         mood: normal

@@ -113,7 +113,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 An image is provided. The user is invited to check if the given image has a symmetry axis. For that, he/she can move the existing mirror, by dragging it back and forth.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](-8Y3VnBEBxc?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -124,7 +124,7 @@ A set of 8 rosettes is presented. The user is invited to choose the 4 rosettes w
 ![Confirm](/stories/symm-2/img/confirm.png =40x40),
 the program shows a new set of 8 rosettes. A total of 3 sets are shown. The game is solved when all "good" rosettes (i.e. with symmetry axes) are selected.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](EPxStqEZl9s?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -135,7 +135,7 @@ A set of 12 rosettes is presented. The user is invited to drag each rosette to t
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
 it is possible to get help for counting the number of symmetry axes.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](TgTgGYsX7Ik?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -143,9 +143,6 @@ it is possible to get help for counting the number of symmetry axes.
 ## [Game 4 - Bag Game II]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg5)
 
 This app is similar to Game 3. However, instead of counting symmetry axes, the user should count the number of rotation symmetries of each rosette.
-
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -159,7 +156,7 @@ However, the original maze will get more and more transparent, and, after a cert
 ![Lantern](/stories/symm-2/img/lanterna.png =40x40)
 button and see both mazes all the time. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](kDm8JZ0r6EM?_align-center_)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;

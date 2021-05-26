@@ -31,8 +31,6 @@ All apps are programmed in Javascript and can be used on computers, tablets and 
 
 In the first experience, the reader retraces the steps that, after Angela's explanation, Mathina and Leo must carry out in order to derive the shared secret. Initially they choose a prime number p and then a random number chosen between 2 and p-2, then, through a simplified version of the algorithm, they separately come to the knowledge of a shared number, obtained from publicly exchanged information. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-4/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -40,8 +38,6 @@ In the first experience, the reader retraces the steps that, after Angela's expl
 
 The second app, building on the first, offers a practical use of the key exchange method. The reader in this case plays the role of Leo, who receives the first message from Mathina and decrypts it using the shared secret generated in the first app. This app is used twice within the story, in correspondence with the messages received by Leo from Mathina. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-4/transcripts/Script2.pdf)
 
 &nbsp;
 
@@ -49,8 +45,6 @@ The second app, building on the first, offers a practical use of the key exchang
 
 In the third experience, in the role of Leo, the reader must try to break the cryptographic system, trying to derive the shared secret starting from the knowledge of the portion of the key in possession of one of the users. The app is used to highlight the difference in computational difficulty between the operations to be carried out to obtain the shared secret and those necessary to attempt to violate the system. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-4/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -58,7 +52,5 @@ In the third experience, in the role of Leo, the reader must try to break the cr
 
 The fourth app re-proposes the experience of the second, with a new message; the reader again plays the role of Leo, who receives a new message from Mathina and again generates the message in clear text from the one received.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-4/transcripts/Script2.pdf)
 
 &nbsp;

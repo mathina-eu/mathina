@@ -26,7 +26,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 &nbsp;
 
-## [App 1 - Messaggi e chiavi I]($HUB_URL/story/the-secret-messages/?actionLink=app1)
+## [App 1 - Messaggi e chiavi I]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app1)
 
 Nella prima esperienza, la chiave è "ha cinque lati" e il messaggio che si vuole trasmettere è "Guardate il terzo albero a nord delle fontane". L'utente deve trascinare al centro dello schermo il messaggio da trasmettere e la figura che è descritta dalla chiave (un pentagono). In questa esperienza le immagini disponibili sono figure astratte.
 
@@ -35,7 +35,7 @@ Nella prima esperienza, la chiave è "ha cinque lati" e il messaggio che si vuol
 
 &nbsp;
 
-## [App 2 - Messaggi e chiavi II]($HUB_URL/story/the-secret-messages/?actionLink=app2)
+## [App 2 - Messaggi e chiavi II]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app2)
 
 La seconda app ripropone la stessa situazione della prima, quella legata alla codifica del messaggio, ma con chiave diversa ("il cielo ne è pieno"). Diversamente dalla prima app ci sono più immagini che messaggi e ci sono due possibili immagini che soddisfano le richieste: una stella e una nuvola. L'utente deve associare una di queste due immagini al messaggio corretto e combinare i messaggi falsi con immagini diverse da queste due.
 
@@ -45,7 +45,7 @@ La seconda app ripropone la stessa situazione della prima, quella legata alla co
 
 &nbsp;
 
-## [App 3 - Messaggi e chiavi III]($HUB_URL/story/the-secret-messages/?actionLink=app3)
+## [App 3 - Messaggi e chiavi III]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app3)
 
 Nella terza ed ultima esperienza, i lettori sono invece coinvolti nel processo di decodifica del messaggio: conoscono la chiave (che è ancora "il cielo ne è pieno") e devono selezionare il messaggio segreto tra quelli proposti
 
