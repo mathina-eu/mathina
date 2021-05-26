@@ -309,7 +309,7 @@ actions:
     parallax: mid2
     
   - type: sceneText
-    text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. At the front of the castle, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were on the ground, with some trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
+    text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. At the front of the castle, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were already flying in he air, with their trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
     
   - type: image
     src: castle_large.png
@@ -478,7 +478,7 @@ actions:
         text: What happened to this phoenix?
 
       - char: flamma
-        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
+        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her. She only finds my hand, because we know each other for a long time now...
 
       - char: leo
         text: But she can fly, right?

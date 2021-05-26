@@ -328,7 +328,7 @@ actions:
     parallax: mid2
     
   - type: sceneText
-    text: Hinter der nächsten Biegung öffnete sich ein weites Feld, und Mathina konnte das Schloss in der Ferne erkennen. Es war ein altes aber festes Gebäude, das mitten auf dem Feld stand, mit Türmen, Fenstern und Mauern. Es würde sich gut als Festung eignen, falls es jemals nötig sein sollte, es zu verteidigen. Vor dem Schloss gab es eine große Freifläche, die genügend Platz für die Aktivitäten des Festivals bot. Einige Drachen und Phönixe flogen schon in der Luft, und man sah ihre Trainer und Trainerinnen am Boden dirigieren. Es gab auch Zauberkundige, die mit ihren Zauberstäben Feuerbälle in die Luft warfen.
+    text: Hinter der nächsten Biegung öffnete sich ein weites Feld, und Mathina konnte das Schloss in der Ferne erkennen. Es war ein altes aber festes Gebäude, das mitten auf dem Feld stand, mit Türmen, Fenstern und Mauern. Es würde sich gut als Festung eignen, falls es jemals nötig sein sollte, es zu verteidigen. Vor dem Schloss gab es eine große Freifläche, die genügend Platz für die Aktivitäten des Festivals bot. Einige Drachen und Phönixe flogen schon in der Luft, und man sah ihre Trainerinnen und Trainer am Boden dirigieren. Es gab auch Zauberkundige, die mit ihren Zauberstäben Feuerbälle in die Luft warfen.
     #After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. High mountains raised behind the castle, covered by snow, and at the front, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were on the ground, with some trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
 
   - type: image
@@ -407,7 +407,8 @@ actions:
        # yPercent: -240
 
   - type: sceneText
-    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man with a fantastic phoenix. The animal was like an enormous eagle, with bright red and turquoise feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in orange and green feathers that were sparking quietly, releasing a multi-colored smoke.
+    text: Die drei hielten ein paar Hundert Meter vor dem Schloss an, wo auch die anderen Trainerinnen und Trainer waren. Flamma begrüßte einen Zauberer mit einem phantastischen Phönix. Der Vogel war wie riesiger Adler, mit leuchtend roten und türkisen Federn. Zwischen den Federn konnte man ein Glühen erkennen, so als ob der Feuervogel selbst brennen würde. Sein langer Schwanz endete in orange-grünen Federn, die leise Funken sprühten, und es quoll bunter Rauch hervor.
+    #    The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man with a fantastic phoenix. The animal was like an enormous eagle, with bright red and turquoise feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in orange and green feathers that were sparking quietly, releasing a multi-colored smoke.
 
 
   - type: dialog
@@ -418,7 +419,8 @@ actions:
 
     entries:
       - char: flamma
-        text: Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
+        text: Gut, Mathina, Du kannst versuchen, diesen Phönix zu fliegen. Her heißt Flick und ist sehr zahm, aber er mag es gar nicht, wenn man ihn ärgert. Denke gut darüber nach, was Du ihm sagen möchtest.
+        #Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
 
   - type: clearImage
     id: leo
@@ -475,7 +477,8 @@ actions:
         yPercent: -35
 
   - type: sceneText
-    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix, who had just landed on Flamma's hand. It had bright blue and red feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+    text: Leo war etwas abseits und dachte, dass er ja auch einen Phönix fliegen könnte. Ja, er war jünger als Mathina, aber er fühlte sich absolut bereit dazu. Er hing immernoch seinen Gedanken nach, als ein anderer Phönix angeflogen kam und auf Flammas Arm landete. Er hatte leuchtend blaue und rote Federn, und das Glühen war irgendwie mehr lila als das bei Flick. Was Leo aber auch sofort auffiel, waren die weißen, ausdruckslosen Augen des Phönix.
+    #Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix, who had just landed on Flamma's hand. It had bright blue and red feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
 
   - type: clearImage
     id: leo
@@ -494,10 +497,12 @@ actions:
 
     entries:
       - char: leo
-        text: What happened to this phoenix?
+        text: Was ist mit diesem Phönix?
+        #What happened to this phoenix?
 
       - char: flamma
-        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
+        text: Das ist Liz. Sie ist ein weiblicher Phönix und hat ihr Augenlicht verloren, als sie zu lange in Richtung Sonne geflogen ist. Es ist eine traurige Geschichte. Denn sie kann den Boden nicht sehen und sich deshalb nur schwer orientieren. Keiner kann sie trainieren. Mene Hand findet sie nur, weil wir uns schon lange kennen...
+        #This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
 
       - char: leo
         text: But she can fly, right?
