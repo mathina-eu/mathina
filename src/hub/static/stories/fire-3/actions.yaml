@@ -411,13 +411,13 @@ actions:
 
 # Game 3.1
   - type: game
-    text: "App 3-1" (not ready yet)
+    text: "App 3-1 (not ready yet)"
     cta: soon available here
     url:
 
 # Game 3.2
   - type: game
-    text: "App 3-2" (not ready yet)
+    text: "App 3-2 (not ready yet)"
     cta: soon available here
     url:
 
