@@ -178,7 +178,7 @@ actions:
       yoyo: true
 
   - type: sceneText
-    text: Als sie in Arisa eintrafen, erzählte Flamma ihnen, wie das Rennen ablaufen würde, und welche Tiere daran teilnehmen würden.
+    text: Auf dem Weg nach Arisa, erzählte Flamma ihnen, wie das Rennen ablaufen würde, und welche Tiere daran teilnehmen würden.
     #When they arrived, Flamma described how the race worked and the animals they were going to find.
 
   - type: dialog
@@ -510,7 +510,8 @@ actions:
         mood: thinking
 
       - char: flamma
-        text: Yes, but how would you tell her what altitude you want her to be at?
+        text: Ja. Aber wir können ihr nicht sagen, in welcher Höhe sie fliegen soll.
+        #Yes, but how would you tell her what altitude you want her to be at?
         
   - type: clearImage
     id: leo
@@ -531,17 +532,21 @@ actions:
     entries:
 
       - char: leo
-        text: Well, I can tell her if she should go upwards or downwards, she can do that.
+        text: Also, ich kann ihr doch einfach nur sagen, wenn sie hoch oder runter fliegen soll. Das kann sie ja, dazu muss sie den Boden nicht sehen.
+        #Well, I can tell her if she should go upwards or downwards, she can do that.
 
       - char: flamma
-        text: Humm, nobody has tried, but you might be right. Phoenixes are extremely intelligent, if you train her to understand your “upwards and downwards” instructions, she will learn quickly. But you will need to tell her how much to ascend or descend, at any moment she is flying.
+        text: Hm, das hat noch niemand bisher versucht, aber du könntest Recht haben. Phönixe sind hoch intelligent, wenn Du ihr beibringst, wann sie aufwärts oder abwärts fliegen soll, könnte sie das schnell lernen. Aber du musst ihr dann auch immer sagen, wie weit nach oben oder unten sie fliegen soll.
+        #Humm, nobody has tried, but you might be right. Phoenixes are extremely intelligent, if you train her to understand your “upwards and downwards” instructions, she will learn quickly. But you will need to tell her how much to ascend or descend, at any moment she is flying.
 
       - char: leo
-        text: It will be easy, it is like the unidragons, you tell them a direction and they follow it.
+        text: Ja, das ist einfach, es ist ja wie bei den Einhorndrachen. Denen kann ich eine Richtung sagen, und sie fliegen da lang.
+        #It will be easy, it is like the unidragons, you tell them a direction and they follow it.
         mood: happy
 
       - char: flamma
-        text: Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
+        text: Nagut, dann kannst du Liz trainieren. ich bin gespannt, ob ihr sogar zusammen ein Rennen fliegen könnt, so wie Flick und Mathina.
+        #Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
 
   - type: game
     text: "App 3-3"
@@ -557,7 +562,8 @@ actions:
 
   - type: sceneText
     text: >
-      Leo had a big success flying Liz, Flamma was impressed. Mathina was also happy that Leo had found a new way to lead the phoenix, and she had an idea:
+       Leo hatte es geschaftt mit Liz zu fliegen, Flamma war beeindruckt. Mathina war auch froh, dass Leo auf diese neue Methode gekommen war, und sie hatte eine Idee:
+    #Leo had a big success flying Liz, Flamma was impressed. Mathina was also happy that Leo had found a new way to lead the phoenix, and she had an idea:
 
   - type: dialog
     avatarAlign:
@@ -567,22 +573,28 @@ actions:
 
     entries:
       - char: mathina
-        text: Leo, you learned a way to tell the phoenix when to rise and descend. I learned a way to tell the phoenix a height at any flown distance. Why don’t we mix the two things together?
+        text: Leo, du kannst jetzt Liz sagen, wann sie aufwärts und wann abwärts fliegen soll. Und ich habe gelernt, wie man einem Phönix die Höhe sagt, bei der er nach einer bestimmten Strecke sein wird. Warum kombinieren wir nicht einfach die beiden Strategien?
+        #Leo, you learned a way to tell the phoenix when to rise and descend. I learned a way to tell the phoenix a height at any flown distance. Why don’t we mix the two things together?
         mood: talking
 
       - char: leo
-        text: What do you mean, Mathina?
+        text: Was meinst Du, Mathina?
+        #What do you mean, Mathina?
 
       - char: mathina
-        text: I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
+        text: Ich meine, wir können Liz trainieren, dass sie schon vorher weiß, wie sehr sie aufwärts oder abwärts fliegen soll.Wir sagen es ihr so ähnlich, wie ich Flick die Höhe gesagt habe.
+        #I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
         mood: arguing
-        exposition: Leo was a bit confused now, but Flamma intervened.
+        exposition: Leo war etwas verwirrt, aber Flamma kam den beiden zu Hilfe.
+        #Leo was a bit confused now, but Flamma intervened.
 
       - char: flamma
-        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+        text: Das ist eine tolle Idee! Liz ist ein intelligenter Phönix, sie wird das verstehen, aber ihr müsst es ihr gut erklären.
+        #That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
         
       - char: flamma
-        text: If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+        text: Wenn ihr das schafft, werdet ihr ganz sicher den Preis für das originellste Phönix-Kommando gewinnen. Diese Kategorie ist sehr begehrt und sogar angesehener als das Rennen selbst, denn man muss die Zusammenhänge richtg gut verstanden haben.
+        #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
   - type: game
     text: "App 3-4"
@@ -616,5 +628,5 @@ actions:
         xPercent: -350
        # yPercent: -240
   - type: sceneText
-    text: >
-      Mathina and Leo spent the whole day training and playing with the phoenixes. They succeeded to train Liz, and all the wizards in the jury and the expert firebird trainers admired them for doing so and awarded them the Originality prize for the best trainers. They finished the day having a great dinner in a feast organized in the biggest room in the castle.
+    text: Mathina und Leo waren den ganzen restlichen Tag damit beschäftigt, mt den Phönixen zu spielen und sie zu trainieren. Sie hatten geschafft, Liz zu fliegen, und alle Zauberkundigen in der Jury und auch die Expertinnen und Experten des Feuervogeltrainings, bewunderten sie dafür. Sie erhielten tatsächlich den Preis für das originellste Phönix-Kommando. Den Abend ließen sie mit einem großen Festmahl ausklingen, und sie feierten im größten Saal des Schlosses.
+    #Mathina and Leo spent the whole day training and playing with the phoenixes. They succeeded to train Liz, and all the wizards in the jury and the expert firebird trainers admired them for doing so and awarded them the Originality prize for the best trainers. They finished the day having a great dinner in a feast organized in the biggest room in the castle.
