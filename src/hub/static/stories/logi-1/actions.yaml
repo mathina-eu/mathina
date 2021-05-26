@@ -144,6 +144,7 @@ actions:
         char: kangaroo
         mood: serious
   - type: game
+    tag: firstGame
     text: How many lights do you think would be enough to show all the variations? 
     toolbarText: 
     cta: Try to find them all!
