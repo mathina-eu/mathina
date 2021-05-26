@@ -16,6 +16,7 @@
 		}
 		
 		function ResizeRik() {
+
 			var doc = document,
                 w = window;
             var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
@@ -31,11 +32,13 @@
             }
 
             window.dimensionRik = [width, height];
-			var ScalaCalcolata=Math.min(dimensionRik[0]/1920,dimensionRik[1]/1080);
-			 MargineRik=[(dimensionRik[0]-ScalaCalcolata*1920)/2,(dimensionRik[1]-ScalaCalcolata*1080)/2];
-			document.body.style.zoom=ScalaCalcolata;
-			document.body.style.marginLeft=MargineRik[0]+"px";
-			document.body.style.marginTop=MargineRik[1]+"px";
+			document.getElementById('myCanvas').width=dimensionRik[0];
+			document.getElementById('myCanvas').height=dimensionRik[1];
+			//ScalaCalcolata=Math.min(dimensionRik[0]/1920,dimensionRik[1]/1080);
+			//MargineRik=[(dimensionRik[0]-ScalaCalcolata*1920)/2,(dimensionRik[1]-ScalaCalcolata*1080)/2];
+			//document.body.style.zoom=ScalaCalcolata;
+			//document.body.style.marginLeft=MargineRik[0]+"px";
+			//document.body.style.marginTop=MargineRik[1]+"px";
 		
 		}
 	
@@ -196,8 +199,8 @@ recallDragon() := (
 
 updateWand() := (
   regional(relMouse, dist);
-
   relMouse = mouse().xy - wand.pos;
+  //print(mouse().xy);
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
   if(wand.value < wand.deadzone, 
@@ -496,7 +499,7 @@ setupTime();
   wand.value = 0;
 </script>
 
-<canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
+<canvas id="CSCanvas" align="left" valign="top" style="width: 100%;height: 100%;position: absolute; ">
 </canvas>
 
 <script>
