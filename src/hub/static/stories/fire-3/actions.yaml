@@ -411,13 +411,17 @@ actions:
 
 # Game 3.1
   - type: game
-    text: "App 3-1 (not ready yet)"
+    text: A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
+    toolbarText: Adjust the function to get the target graph.
+    # "App 3-1 (not ready yet)"
     cta: soon available here
     url:
 
 # Game 3.2
   - type: game
-    text: "App 3-2 (not ready yet)"
+    text: One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
+    #  "App 3-2 (not ready yet)"
+    toolbarText: Place the points so that the graph does not touch the obstacles.
     cta: soon available here
     url:
 
@@ -524,7 +528,9 @@ actions:
 
 # Game 3.3
   - type: game
-    text: "App 3-3"
+    text: To fly this phoenix, you tell how much it should ascend or descend. Fly it avoiding the obstacles.
+    toolbarText: Avoid the obstacles and reach the right side.
+    cta: Fly the phoenix!
     url: /apps/imaginary/app_3/3_3/en.html
 
   - type: clearImage
@@ -567,7 +573,9 @@ actions:
 
 # Game 3.4
   - type: game
-    text: "App 3-4"
+    text: Adjust the points to create a line. That line tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
+    toolbarText: Adjust the line that tells the ascend or descend of the phoenix. Eat all the fireballs.
+    cta: Fly the phoenix!
     url: /apps/imaginary/app_3/3_4/en.html
 
   - type: image
