@@ -44,7 +44,7 @@ actions:
 
   - type: sceneText
     text: >
-      Mathina got dressed as fast as she could and went downstairs. Flamma was indeed there, and Leo was serving himself and everybody some cups of milk and cake from the breakfast that their grandmother had left prepared.
+      Mathina got dressed as fast as she could and went downstairs. Flamma was indeed there, and Leo was serving himself and everybody some cups of milk from the breakfast that their grandmother had left prepared.
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -78,7 +78,7 @@ actions:
 
       - char: leo
         text: Champ, champ! A race! Champ! You will win!
-        exposition: Leo's mouth was full of cookies, so Mathina was only able to understand the words "Race" and "win”. 
+        exposition: Leo's mouth was full of porridge, so Mathina was only able to understand the words "Race" and "win”. 
 
   - type: clearImage
     id: bg
@@ -113,7 +113,7 @@ actions:
         
       - char: mathina
         text: yYs! Of course! Let's go!
-        exposition: said Mathina, now with her mouth full, eating cake.
+        exposition: said Mathina, now with her mouth full, eating porridge.
 
   - type: sceneText
     text: And the three left for Arisa.
