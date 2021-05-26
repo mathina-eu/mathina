@@ -410,11 +410,13 @@ actions:
     parallax: front2
 
   - type: game
-    text: "App 3-1"
+    text: "App 3-1" (not ready yet)
+    cta: soon available here
     url:
 
   - type: game
-    text: "App 3-2"
+    text: "App 3-2" (not ready yet)
+    cta: soon available here
     url:
 
   # - type: clearImage

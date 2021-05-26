@@ -431,11 +431,13 @@ actions:
     style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
     parallax: front2
   - type: game
-    text: "App 3-1"
+    text: "App 3-1 (noch nicht fertig)"
+    cta: Hier kann man bald klicken.
     url:
 
   - type: game
-    text: "App 3-2"
+    text: "App 3-2 (noch nicht fertig)"
+    cta: Hier kann man bald klicken.
     url:
 
   # - type: clearImage
@@ -545,7 +547,7 @@ actions:
         mood: happy
 
       - char: flamma
-        text: Nagut, dann kannst du Liz trainieren. ich bin gespannt, ob ihr sogar zusammen ein Rennen fliegen könnt, so wie Flick und Mathina.
+        text: Nagut, dann kannst du Liz trainieren. Ich bin gespannt, ob ihr sogar zusammen ein Rennen fliegen könnt, so wie Flick und Mathina.
         #Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
 
   - type: game
@@ -582,7 +584,7 @@ actions:
         #What do you mean, Mathina?
 
       - char: mathina
-        text: Ich meine, wir können Liz trainieren, dass sie schon vorher weiß, wie sehr sie aufwärts oder abwärts fliegen soll.Wir sagen es ihr so ähnlich, wie ich Flick die Höhe gesagt habe.
+        text: Ich meine, wir können Liz trainieren, dass sie schon vorher weiß, wie sehr sie aufwärts oder abwärts fliegen soll. Wir sagen es ihr so ähnlich, wie ich Flick die Höhe gesagt habe.
         #I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
         mood: arguing
         exposition: Leo war etwas verwirrt, aber Flamma kam den beiden zu Hilfe.
@@ -628,5 +630,5 @@ actions:
         xPercent: -350
        # yPercent: -240
   - type: sceneText
-    text: Mathina und Leo waren den ganzen restlichen Tag damit beschäftigt, mt den Phönixen zu spielen und sie zu trainieren. Sie hatten geschafft, Liz zu fliegen, und alle Zauberkundigen in der Jury und auch die Expertinnen und Experten des Feuervogeltrainings, bewunderten sie dafür. Sie erhielten tatsächlich den Preis für das originellste Phönix-Kommando. Den Abend ließen sie mit einem großen Festmahl ausklingen, und sie feierten im größten Saal des Schlosses.
+    text: Mathina und Leo waren den ganzen restlichen Tag damit beschäftigt, mt den Phönixen zu spielen und sie zu trainieren. Sie hatten geschafft, Liz zu fliegen, und alle Zauberkundigen in der Jury und auch die Expertinnen und Experten des Feuervogeltrainings bewunderten sie dafür. Sie erhielten tatsächlich den Preis für das originellste Phönix-Kommando. Den Abend ließen sie mit einem großen Festmahl ausklingen, und sie feierten im größten Saal des Schlosses.
     #Mathina and Leo spent the whole day training and playing with the phoenixes. They succeeded to train Liz, and all the wizards in the jury and the expert firebird trainers admired them for doing so and awarded them the Originality prize for the best trainers. They finished the day having a great dinner in a feast organized in the biggest room in the castle.
