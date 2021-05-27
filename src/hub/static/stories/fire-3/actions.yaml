@@ -411,17 +411,21 @@ actions:
 
 # Game 3.1
   - type: game
-    text: A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
-    toolbarText: Adjust the function to get the target graph.
+    text: "The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick. Avoid all obstacles, so he does not hurt himself."
+    #A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
+    toolbarText: Adjust the flight path through the function below.
+    #Adjust the function to get the target graph.
     # "App 3-1 (not ready yet)"
     cta: Fly the phoenix!
     url: /apps/imaginary/app_3/3_1/en.html
 
 # Game 3.2
   - type: game
-    text: One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
+    text: Flick's flight path will again by described by a polynomial. This time, you cannot adjust the coefficients, but you can move the white points. The path will go through all of them. You will not see the path until you tell Flick to fly. Be advised, when all points are set, only one path is possible, and it might be different from what you envisioned...
+    #One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
     #  "App 3-2 (not ready yet)"
-    toolbarText: Place the points so that the graph does not touch the obstacles.
+    toolbarText: Move the points so Flick will not hit any obstacles during his flight.
+    #Place the points so that the graph does not touch the obstacles.
     cta: Fly the phoenix!
     url: /apps/imaginary/app_3/3_2/en.html
 
