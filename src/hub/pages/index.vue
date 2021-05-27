@@ -45,6 +45,7 @@
         <v-dialog
           v-model="dialog"
           width="800px"
+          scrollable
         >
           <template v-slot:activator="{ on, attrs }">
             <v-btn
@@ -63,10 +64,11 @@
                 {{ $t('index.title') }}
               </span>
             </v-card-title>
+            <v-divider />
             <v-card-text
-              style="font-size: 16px;"
               v-html="$t('index.aboutContent')"
             />
+            <v-divider />
             <v-card-actions>
               <v-spacer />
               <v-btn
