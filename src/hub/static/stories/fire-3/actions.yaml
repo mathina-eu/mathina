@@ -414,16 +414,16 @@ actions:
     text: A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
     toolbarText: Adjust the function to get the target graph.
     # "App 3-1 (not ready yet)"
-    cta: soon available here
-    url:
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_1/en.html
 
 # Game 3.2
   - type: game
     text: One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
     #  "App 3-2 (not ready yet)"
     toolbarText: Place the points so that the graph does not touch the obstacles.
-    cta: soon available here
-    url:
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_2/en.html
 
   # - type: clearImage
     # id: leo

@@ -433,12 +433,12 @@ actions:
   - type: game
     text: "App 3-1 (noch nicht fertig)"
     cta: Hier kann man bald klicken.
-    url:
+    url: /apps/imaginary/app_3/3_1/de.html
 
   - type: game
     text: "App 3-2 (noch nicht fertig)"
     cta: Hier kann man bald klicken.
-    url:
+    url: /apps/imaginary/app_3/3_2/de.html
 
   # - type: clearImage
     # id: leo
