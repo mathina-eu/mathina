@@ -110,7 +110,7 @@ drawClouds() := (
 
 collideWithPickUp() := (
   forall(pickUps_(1..level),
-    if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    if(#.drawn & dist(dragon.pos, #.pos) < dragon.rad + #.rad,
       pickUpsLeft = pickUpsLeft - 1;
       #.drawn = false;
     );
@@ -123,6 +123,8 @@ collideWithPickUp() := (
 collideWithObstacles() := (
   forall(obstacles_(1..3*level),
     if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    forall(pickUps_(1..level), #.drawn = true);
+    pickUpsLeft = level;
       recallTarget = dragonHome;
       dragonMoving = false;
       recallDragon();
@@ -495,6 +497,8 @@ drawPath() := (
 collideWithMountains() := (
   forall(mountainPolygons,
     if(pointInPolygon(dragon.pos, #),
+    forall(pickUps_(1..level), #.drawn = true);
+    pickUpsLeft = level;
       dragonMoving = false;
       recallDragon();
     );
@@ -505,14 +509,22 @@ collideWithMountains() := (
 
 
 
-
 collideWithCastle() := (
-  if(pickUpsLeft < 0 & pointInPolygon(dragon.pos, castlePolygon),
-    if(!flammaIn,
-      flammaOut = false;
-      flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
-      flammaIn = true;
-      flammaInStart = flamma.pos;
+  if(pointInPolygon(dragon.pos, castlePolygon),
+    if(pickUpsLeft <= 0,
+      if(!flammaIn,
+        flammaOut = false;
+        flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+        flammaIn = true;
+        flammaInStart = flamma.pos;
+      );
+    , // else //
+      scoreLabel.score = scoreLabel.score + 1;
+      scoreLabel.text = scoreLabel.score;
+      forall(pickUps_(1..level), #.drawn = true);
+      pickUpsLeft = level;
+      recallTarget = dragonHome;
+      recallDragon();
     );
   );
 );
