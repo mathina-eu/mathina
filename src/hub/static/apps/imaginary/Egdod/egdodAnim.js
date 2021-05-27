@@ -276,8 +276,9 @@
 	);
 
 
-		
-	strokeSampleRateEBOW = 128;
+	
+	//if(isundefined(strokeSampleRateEBOW), println("test"); strokeSampleRateEBOW = 64);
+	strokeSampleRateEBOW = 64;
 	// ************************************************************************************************
 	// Setting up a stroke object.
 	// ************************************************************************************************
