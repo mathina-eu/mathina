@@ -112,7 +112,7 @@ actions:
             This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
 
       - char: mathina
-        text: yYs! Of course! Let's go!
+        text: Yes! Of course! Let's go!
         exposition: said Mathina, now with her mouth full, eating porridge.
 
   - type: sceneText
