@@ -1,23 +1,12 @@
-actions:
-  - type: background
-    src: fire-bg1-layered.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+#FIRE-3 en-version
 
+actions:
   - type: image
-    src: $COMMON/img/characters/mathina/mathina3.png
-    id: mat1
-    style: "width: 15%; top: 45%; left: 9%;"
-    #valign: bottom
-    #style: "height: 25vh"
-  - type: image
-    src: $COMMON/img/leo3.png
-    id: leo1
-    style: "width: 15%; top: 57%; left: 0%; "
-    #valign: bottom
-  - type: image
-    src: flamma2.png
-    id: fla1
-    style: "width: 20%; top: 30%; left: 50%;"
+    src: kittchen_leo_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 170%; height: 170%; z-index: 1;"
+    noOverflow: true
+    parallax: back1
 
   - type: sceneText
     text: >
@@ -32,15 +21,56 @@ actions:
         char: leo
         mood: happy
 
+  - type: animation
+    target: bg
+    vars:
+       duration: 1
+       width: 100%
+       height: 100%
+       ease: power3.Out
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 80%;"
+    parallax: front1
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        xPercent: -90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
+
   - type: sceneText
     text: >
-      Mathina got dressed as fast as she could and went downstairs. Flamma was indeed there, and Leo was serving himself and everybody some cups of milk and cake from the breakfast that their grandmother had left prepared.
+      Mathina got dressed as fast as she could and went downstairs. Flamma was indeed there, and Leo was serving himself and everybody some cups of milk from the breakfast that their grandmother had left prepared.
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 15%; top: 45%; left: -10%;"
+    #valign: bottom
+    #style: "height: 25vh"
+    parallax: mid1
+
+
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        xPercent: 90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
+
     entries:
 
       - char: mathina
@@ -48,116 +78,473 @@ actions:
 
       - char: leo
         text: Champ, champ! A race! Champ! You will win!
-        exposition: Leo's mouth was full of cookies, so Mathina was only able to understand the words "Race" and "win”.
+        exposition: Leo's mouth was full of porridge, so Mathina was only able to understand the words "Race" and "win”.
 
-      - char: flamma
-        text: >
-          Exciting news Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time is very different and more difficult. This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
+  - type: clearImage
+    id: bg
 
-      - char: mathina
-        text: yes! of course! let's go!
-        exposition: said Mathina, now with her mouth full, eating cakes.
+  - type: clearImage
+    id: mat
+
+  - type: background
+    src: kittchen_both_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    #noOverflow: true
+    parallax: back1
 
   - type: sceneText
-    text: And the three left for Arisa.
-    # change background to castle
-
-  - type: sceneText
-    text: When they arrived, Flamma described how the race worked and the animals they were going to find.
+    text: Mathina was beaming when she saw Flamma. After giving her a hug she sat down at the breakfast table with Leo.
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
+    entries:
+
+      - char: flamma
+        text: >
+          Exciting news, Mathina! There is a firebird race in the castle of  Arisa. You did so well last time that I thought that you would like to participate. However, this time it is very different and more difficult.
+        #This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
+      - char: flamma
+        text: >
+            This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
+
+      - char: mathina
+        text: Yes! Of course! Let's go!
+        exposition: said Mathina, now with her mouth full, eating porridge.
+
+  - type: sceneText
+    text: And the three left for Arisa.
+
+  - type: clearBackground
+    id: bg
+
+  - type: clearImage
+    id: fla
+
+    # change background to castle
+
+
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back3
+
+  - type: image
+    src: ochre_hills.png
+    id: hills
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid3
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%; transform: ScaleX(-1)"
+    parallax: front1
+
+  - type: image
+    src: mathinaleo.png
+    id: mat
+    style: "width: 30%; top: 45%; left: 20%;"
+    parallax: front2
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: sceneText
+    text: On the way, Flamma described how the race worked and the animals they were going to find.
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: flamma
         text: The phoenixes are not like unidragons, that can fly backward, forwards, or stop in the air.  Phoenixes are like eagles, they can only fly forwards.
-        mood: happy
+        mood: normal
 
       - char: flamma
         text: They orient themselves by looking at the ground, so they always fly forwards with the same speed relative to the ground. In other words, if you see their shadow right below the phoenix, that shadow moves forward at a constant speed, regardless of whether the phoenix flies rising, descending, or steady at the same height.
-        mood: happy
+        mood: normal
 
       - char: flamma
         text: Like the unidragons, the phoenixes are very intelligent and can be trained so that we can communicate with them and tell them where to fly.
-        mood: happy
 
       - char: mathina
         text: If they always move with the same speed forwards, how is that a race? They will always arrive at the same time to the finish line.
+        mood: arguing
 
       - char: flamma
         text: You are right, they always move at the same speed forward, but this race is not about speed, it is about avoiding the obstacles that the wizards will put in the sky.
 
       - char: mathina
         text: Obstacles?
+        mood: surprised
 
       - char: flamma
         text: Yes, you will see, once we get to the castle.
 
-  - type: sceneText
-    text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. High mountains raised behind the castle, covered by snow, and at the front, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were on the ground, with some trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
+  - type: image
+    src: bg_castle.png
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 5%; top: 65%; left: 87%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 3%; top: 58%; left: 55%; transform: scaleX(-1)"
+    parallax: mid3
+
+  - type: image
+    src: flamma1.png
+    id: wizf
+    style: "width: 3%; top: 62%; left: 92%; transform: scaleX(-1)"
+    parallax: mid1
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 2%; top: 48%; left: 62%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: fireball1.png
+    id: fire2
+    style: "width: 2%; top: 52%; left: 82%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire2
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+  - type: image
+    src: fireball1.png
+    id: fire3
+    style: "width: 2%; top: 42%; left: 92%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire3
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 5%; top: 45%; left: 100%; transform: rotateY(180deg)"
+    noOverflow: true
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -1500
+        yPercent: -600
+
+  - type: image
+    src: unidragon.gif
+    id: uni2
+    style: "width: 5%; top: 55%; left: 65%;"
+    noOverflow: true
+    parallax: mid3
+
+  - type: animation
+    target: uni2
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 1100
+        yPercent: -240
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni3
+    style: "width: 5%; top: 67%; left: 92%; transform: scaleX(-1)"
+    parallax: mid2
 
   - type: sceneText
-    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man next to a fantastic phoenix. The animal was like an enormous eagle, with bright red and yellow feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in violet and green feathers that were sparking quietly, releasing a multi-colored smoke.
+    text: After the next bend, a vast field opened and Mathina saw the castle in the distance. It was an old but solid building in the middle of a field, with towers, windows, and walls. It would be a fantastic fortress if ever it had to be protected. At the front of the castle, the valley provided a large clearing, with ample space for all the activities that were happening. Some dragons and phoenixes were already flying in he air, with their trainers taking care of them. At some distance, some wizards wand in hand were levitating fireballs and making clouds of smoke.
+
+  - type: image
+    src: castle_large.png
+    id: castle_large
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: mid1
+
+  - type: clearImage
+    id: uni
+  - type: clearImage
+    id: uni3
+  - type: clearImage
+    id: fire1
+  - type: clearImage
+    id: fire2
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: wizs
+  - type: clearImage
+    id: wizf
+  - type: clearImage
+    id: uni2
+  - type: clearImage
+    id: fire3
+  - type: clearImage
+    id: fla
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%;"
+    parallax: front1
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 8%; top: 63%; left: 64%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 25%; top: 20%; left: 28%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 40%; left: 50%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 16%; top: 50%; left: 15%;"
+    parallax: front2
+
+  - type: image
+    src: phoenix.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: -40%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 350
+       # yPercent: -240
+
+  - type: sceneText
+    text: The three stopped a few hundred meters from the castle, where the other trainers were. Flamma greeted a man with a fantastic phoenix. The animal was like an enormous eagle, with bright red and turquoise feathers. Between the feathers, you could see a glow as if the firebird itself was burning. A long-tail ended in orange and green feathers that were sparking quietly, releasing a multi-colored smoke.
 
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: flamma
         text: Ok, Mathina you can try to fly this phoenix. He’s called Flick, and he’s very tame, although he doesn’t like it when his trainer tricks him. You will need to think carefully about what you want to tell him.
 
-  - type: game
-    text: "App 3-1"
-    url:
+  - type: clearImage
+    id: leo
 
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
+    parallax: front2
+
+# Game 3.1
   - type: game
-    text: "App 3-2"
-    url:
+    text: "The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick. Avoid all obstacles, so he does not hurt himself."
+    #A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
+    toolbarText: Adjust the flight path through the function below.
+    #Adjust the function to get the target graph.
+    # "App 3-1 (not ready yet)"
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_1/en.html
+
+# Game 3.2
+  - type: game
+    text: Flick's flight path will again by described by a polynomial. This time, you cannot adjust the coefficients, but you can move the white points. The path will go through all of them. You will not see the path until you tell Flick to fly. Be advised, when all points are set, only one path is possible, and it might be different from what you envisioned...
+    #One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
+    #  "App 3-2 (not ready yet)"
+    toolbarText: Move the points so Flick will not hit any obstacles during his flight.
+    #Place the points so that the graph does not touch the obstacles.
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_2/en.html
+
+  # - type: clearImage
+    # id: leo
+  - type: clearImage
+    id: mat
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: phoe
+
+  # - type: image
+    # src: $COMMON/img/characters/leo/leo2.png
+    # id: leo
+    # style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    # parallax: front2
+
+  - type: image
+    src: phoenix2.png
+    id: phoe2
+    style: "width: 30%; top: 40%; left: 90%;"
+    noOverflow: true
+    parallax: front1
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        #width: 25%
+        xPercent: -50
+       # yPercent: -240
+
+  - type: animation
+    target: phoe2
+    vars:
+        duration: 1.5
+        #width: 25%
+        xPercent: -163
+        yPercent: -35
 
   - type: sceneText
-    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix lying in the ground. It had bright blue and green feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+    text: Leo was around, thinking that he could also try to fly the phoenix. He was younger than Mathina, but he felt he was as ready as anyone. He was still contemplating this thought when he saw another phoenix, who had just landed on Flamma's hand. It had bright blue and red feathers, and the glow was more violet than Flick’s. But what Leo immediately noted was that its eyes were blank.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: leo
         text: What happened to this phoenix?
 
       - char: flamma
-        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her.
+        text: This is Liz. She’s a female phoenix that lost her sight when she tried to fly towards the Sun for a long time. It’s a sad story because without sight she cannot see the ground to orient herself, and nobody can train her. She only finds my hand, because we know each other for a long time now...
 
       - char: leo
-        text: But she can fly, right?
+        text: Mmh, she can fly...
+        mood: tinking
 
       - char: flamma
-        text: Yes, but how would you tell her what altitude you want her to be at? - challenged Flamma.
+        text: Yes, but how would you tell her what altitude you want her to be at?
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 22%; top: 40%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
 
       - char: leo
-        text: Well, I can tell her if she should go upwards or downwards, she can do that.
+        text: Well, I can tell her if she should go upwards or downwards, she can do that, without having to look at the ground.
 
       - char: flamma
         text: Humm, nobody has tried, but you might be right. Phoenixes are extremely intelligent, if you train her to understand your “upwards and downwards” instructions, she will learn quickly. But you will need to tell her how much to ascend or descend, at any moment she is flying.
 
       - char: leo
         text: It will be easy, it is like the unidragons, you tell them a direction and they follow it.
+        mood: happy
 
       - char: flamma
         text: Ah, then Liz is yours to train, let’s see if you can train her to do a race as Flick and Mathina do.
 
+# Game 3.3
   - type: game
-    text: "App 3-3"
-    url:
+    text: To fly this phoenix, you tell how much it should ascend or descend by moving the hand on the left up or down. Fly it avoiding the obstacles.
+    toolbarText: Avoid the obstacles and reach the right side.
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_3/en.html
+
+  - type: clearImage
+    id: phoe2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 30%; left: 45%; transform: scaleX(-1)"
+    parallax: front2
 
   - type: sceneText
     text: >
@@ -165,27 +552,63 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: mathina
         text: Leo, you learned a way to tell the phoenix when to rise and descend. I learned a way to tell the phoenix a height at any flown distance. Why don’t we mix the two things together?
+        mood: talking
 
       - char: leo
         text: What do you mean, Mathina?
+        mood: surprised
 
       - char: mathina
         text: I mean, we can train Liz to recognize how much she should ascend or descend in advance. We will tell this amount of ascend or descend the same way I was telling Flick the height.
+        mood: arguing
         exposition: Leo was a bit confused now, but Flamma intervened.
 
       - char: flamma
-        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+        text: That is a fantastic idea. Liz is an intelligent phoenix, she will understand your instructions, but it is up to you to wrap your heads around that idea! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
 
+      - char: flamma
+        text: If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+
+# Game 3.4
   - type: game
-    text: "App 3-4"
-    url:
+    text: Adjust the points to create a line. That line tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
+    toolbarText: Adjust the line that tells the ascend or descend of the phoenix. Eat all the fireballs.
+    cta: Fly the phoenix!
+    url: /apps/imaginary/app_3/3_4/en.html
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 20%; top: 35%; left: 10%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 25%; top: 32%; left: 75%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: phoenix_mirrored.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: 100%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -350
+       # yPercent: -240
 
   - type: sceneText
     text: >

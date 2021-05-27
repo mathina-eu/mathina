@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Exported from https://cindyjs.org/editor/</title>
+        <style type="text/css">
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            #App {
+                position: absolute;
+                width: 1920px; height: 1080px;
+                background-image: url('forest1.jpg');
+                background-size: 1920px 1080px;
+                background-repeat: no-repeat;
+                margin: auto;
+            }
+
+            #CSCanvas {
+              position: absolute;
+              left: 450px;
+              right: 450px;
+              top: 200px;
+              bottom: 200px;
+              text-align: center;
+            }
+
+            #Select-menu{
+              position: absolute;
+              right:120px;
+              top: 300px;
+
+            }
+
+            #Input-box{
+              position: absolute;
+              left:500px;
+              right: 500px;
+              bottom: 100px;
+              text-align: center;
+
+            }
+
+        </style>
+        <link rel="stylesheet" href="https://cindyjs.org/dist/latest/CindyJS.css">
+        <script type="text/javascript" src="https://cindyjs.org/dist/latest/Cindy.js"></script>
+        <script type="text/javascript" src="https://cindyjs.org/dist/latest/CindyGL.js"></script>
+
+
+        <script id="csinit" type="text/x-cindyscript">
+        f(x,y):=x^2+3*y^2-4;
+
+
+        drawCurve() := (
+          surround = apply(1..8, k, gauss(exp(i*k/6*2*pi)))/80;
+
+          colorplot(
+            values = apply(surround, p,f(x+p_1,y+p_2));
+            fp = f(x,y);
+            //fp = min(values);
+            forall(1..4,k,values_(2*k)=2*fp-values_(2*k) );
+
+            color=(0,0.2,0.3,0);
+            if((min(values)<0 & max(values)>0 ),
+               color=(.9,.8,0,1)
+             );
+            color;
+          );
+        print("DRAWN")
+        );
+        </script>
+
+        <script id="csdraw" type="text/x-cindyscript">
+        drawCurve();
+
+        //drawtext((0,-3),"$aa$");
+        //A=[0,0];
+        //draw(A);
+
+        </script>
+
+          <script type="text/javascript">
+            var cdy = CindyJS({
+              scripts: "cs*",
+              angleUnit: "°",
+              exclusive: false,
+              geometry: [
+
+              ],
+              ports: [
+                {id: "CSCanvas", transform: [{visibleRect: [-5, -5, 5, 5]}]}
+              ],
+              csconsole: false,
+              use: [
+                "CindyGL"
+              ],
+              autoplay: true,
+              behavior: [
+
+              ]
+            });
+          </script>
+    </head>
+
+
+    <body>
+        <div id="App" >
+          <div id="CSCanvas" ></div>
+          <div id="Select-menu">
+              <select id="sel" size="15" style="width:20em;">
+                <option data-a="1" value="(y^9-1.4*x^2*y^2+1.4*x^3)">J_13</option>
+                <option data-a="1" value="x^2"> x^2</option>
+                <option data-a="0" value="x^3-y^2">x^3-y^2</option>
+                <option data-a="1" data-zoom="-.1" value="(y-x^5)^2-y^10"> A_49 </option>
+                <option data-zoom=".2" value="x^2+y^2-1">Circle</option>
+                <option data-zoom=".2" value="k = 12; x^k+y^k-1">Square</option>
+                <option data-zoom=".2" value="x^2+3*y^2-4" selected >Ellipse</option>
+                <option data-zoom=".1" value="x^5*y^3">multiple axis</option>
+                <!-- <option data-zoom="0" value="x^3+x^2*z^2-y^2">Hummingbird</option>
+                <option data-zoom=".2" value="x^2-x^3+y^2+y^4+z^3-z^4">Vis a Vis</option>
+                <option data-zoom=".1" value="(x^2+9/4*y^2+z^2-1)^3-x^2*z^3-9/80*y^2*z^3">Sweet</option>
+                <option data-zoom=".2" data-a="1/4" value="k=a*2;(x+(k/2-1))*(x^2+y^2+z^2-k^2/4)+z^2">Parabolic Ring Cyclide</option>
+                <option data-a="0" data-zoom="-.15" value="cos(x)*sin(y) + cos(y)*sin(z) + cos(z)*sin(x) + a">Gyroid</option>
+                <option data-a="0" data-zoom="-.15" value="cos(x)+cos(y)+cos(z)+a">Schwarz P</option>
+                <option data-a=".5" data-zoom=".1"  value="r=a; R=1; (x^2+y^2+z^2+R^2-r^2)^2-4*R^2*(x^2+y^2)">Torus</option>
+                <option data-a=".4" data-zoom="-.1" value = "r=a/2; R=.9; ((sin(x)^2+y^2+z^2+R^2-r^2)^2-4*R^2*(sin(x)^2+y^2))*((cos(x)^2+y^2+z^2+R^2-r^2)^2-4*R^2*(cos(x)^2+z^2))">Interleaved Tori</option> -->
+              </select>
+        </div>
+
+        <div id=Input-box>
+              <input type="text" id="inp" value="x^2+3*y^2-4"  onkeypress="if((event.which ? event.which : event.keyCode)==13) { cdy.evokeCS('f(x,y) := (' + this.value + '); drawCurve();'); }" size="60">
+        </div>
+
+        </div>
+
+        <script type="text/javascript">
+        var select = document.getElementById("sel");
+        select.addEventListener('change', function(event) {
+          document.getElementById('inp').value = this.value;
+          cdy.evokeCS('f(x,y) := (' + this.value + '); drawCurve();');
+
+          // var a = this.options[this.selectedIndex].getAttribute("data-a") || .5;
+          // cdy.evokeCS('seta(' + a + ')');
+          //
+          // var zoom = this.options[this.selectedIndex].getAttribute("data-zoom");
+         //if(zoom) cdy.evokeCS('setzoom(' + zoom + ')');
+
+        }, false);
+        </script>
+
+    </body>
+    </html>
