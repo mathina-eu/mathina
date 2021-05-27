@@ -417,7 +417,7 @@ drawinputComfirmButton() := (
 );
 
 drawStartButton() := (
-  fillcircle(startButton.pos, startButton.rad, color->(0.7,0,1), alpha->0.5);
+  fillcircle(startButton.pos, startButton.rad, color->if(inputBuffer.record == [], (0.3, 0.3, 0.3), (0.7,0,1)), alpha->0.5);
   drawcircle(startButton.pos, startButton.rad, color->(1,1,1), size-> 5);
   drawtext(startButton.pos + (0,-0.4), startButton.label, color->(1,1,1), size->30, align->"mid");
 );
@@ -942,7 +942,7 @@ setupTime();
 
         dragonMoving = false;
         inputBuffer.record = [];
-        if(!pointInPolygon(dragon.pos, castlePolygon),
+        if(!pointInPolygon(dragon.pos, castlePolygon) % pickUpsLeft > 0,
           forall(pickUps_(1..level), #.drawn = true);
           pickUpsLeft = level;
           recallTarget = dragonHome;
@@ -1004,7 +1004,7 @@ setupTime();
       );
     );
   
-    if(dist(mouse().xy, startButton.pos) < startButton.rad,
+    if(inputBuffer.record != [] & dist(mouse().xy, startButton.pos) < startButton.rad,
       if(length(inputBuffer.record) >= 1,
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
         dragonMoving = true;
