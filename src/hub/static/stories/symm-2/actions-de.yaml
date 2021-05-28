@@ -591,7 +591,7 @@ actions:
       ease: power3.out    
   - type: sceneText
     text: >      
-      <p>Dann zogen Mathina und Leo los, um die weiteren Stände und Buden zu entdecken. Am Ende des Tages lud sie der Zauberer noch zum Tee ein. Dazur gab es sogar symmetrische Kuchen und Muffins!<p>
+      <p>Dann zogen Mathina und Leo los, um die weiteren Stände und Buden zu entdecken. Am Ende des Tages lud sie der Zauberer noch zum Tee ein. Dazu gab es sogar symmetrische Kuchen und Muffins!<p>
     #<p>After Leo promised not to enter any of the amusements by himself, Mathina and Leo continued exploring Symmetry Fair.</p>      
   - type: clearImage
     id: Mathina4
@@ -605,5 +605,5 @@ actions:
     id: bucca-bg3b-with-leo-wizard    
   - type: sceneText
     text: >
-      <p>Sie hörten noch viele Geschichten über Symmetrie. Bevor sie den Symmel-Rummel mit den vielen Taschen voller Rosetten verließen, verabschiedeten sich Mathina und Leo vom Zauberer. Mathina und Leo hatten einen spannenden Tag auf dem Symmel-Rummel!<p>
+      <p>Sie hörten noch viele Geschichten über Symmetrie. Bevor sie den Symmel-Rummel mit den vielen Taschen voller Rosetten verließen, verabschiedeten sich die beiden Geschwister vom Zauberer. Mathina und Leo hatten einen spannenden Tag auf dem Symmel-Rummel!<p>
     #<p>Before leaving, and after having acquired many new skills related to symmetry, Mathina and Leo said goodbye to the wizard, who invited them to tea. In the end, Mathina and Leo, left the Fair, commenting on how even the cakes that the wizard had offered them ... were symmetric!… They had spent an exciting day at Symmetry Fair!</p>          
