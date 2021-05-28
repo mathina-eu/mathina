@@ -3,7 +3,7 @@
  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>App 3-4</title>
+    <title>App 3-2</title>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
@@ -32,7 +32,7 @@ drawDragon() := (
   if(flying,
     //draw([dragon.pos, dragon.pos + (5, trueVertical)], color->(1,0.8,0), arrow->true, size->10, arrowsize->1);
     //draw([dragon.pos + (5,0), dragon.pos + (5, trueVertical)], color->(0.7,0,1), arrow->true, size->5, arrowsize->1);
-
+/*
     drawStrokeObject({
       "pos": dragon.pos,
       "stroke": [(0,0), (5, trueVertical)],
@@ -57,6 +57,8 @@ drawDragon() := (
       "arrow": true,
       "arrowSize": 0.5
     });
+
+  */
   );
 
   drawFlipBookObject(dragon);
@@ -99,7 +101,7 @@ drawObstacles() := (
 
 
 drawDragonTrail() := (
-  connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 3, alpha->0.5);
+  //connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 3, alpha->0.5);
   forall(1..length(dragon.trailA) - 1,
     //fillcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,1,0), alpha->lerp(0, 0.5, #, 0, length(dragon.trailA) - 1));
     //drawcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,0.5,0));
@@ -159,6 +161,8 @@ collideWithPickUp() := (
 collideWithObstacles() := (
   forall(obstacles,
     if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    scoreLabel.score = scoreLabel.score + 1;
+    scoreLabel.text = scoreLabel.score;
     recallTarget = dragonHome;
       recallDragon();
     );
@@ -173,7 +177,10 @@ collideWithObstacles() := (
 
 
 moveDragon(dt) := (
-  dragon.pos = dragon.pos + dragon.velocity * dt;
+  regional(xStep);
+
+  xStep = lerp(0, dt, drawBufferTrack.progress, bufferDelay, 1);
+  dragon.pos = dragon.pos + (xStep, interpolatePoints(dragon.pos.x + xStep) - interpolatePoints(dragon.pos.x));
 
   if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
     dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
@@ -189,12 +196,17 @@ moveDragon(dt) := (
 
 
 updateDragon() := (
-  regional(speed);
+  regional(speed, tangent);
 
-  dragon.velocity = wand.dir * lerp(0, dragon.maxSpeed, wand.value, 0, wand.maxValue);
-  speed = abs(dragon.velocity);
-  if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
-  dragon.rotation = 0.5*pi-arctan2(wand.dir);
+  //dragon.velocity = wand.dir * lerp(0, dragon.maxSpeed, wand.value, 0, wand.maxValue);
+
+
+  //speed = abs(dragon.velocity);
+  //if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
+
+  tangent = (0.01, interpolatePoints(dragon.pos.x + 0.01) - interpolatePoints(dragon.pos.x));
+  tangent = tangent / abs(tangent);
+  dragon.rotation = 0.5*pi-arctan2(tangent);
   if(wand.dir.x < -0.1,
     dragon.rotation = -dragon.rotation;
     dragon.flipx = true;
@@ -222,7 +234,7 @@ recallDragon() := (
 updateWand() := (
   regional(relMouse, dist);
 
-  relMouse = (5, interpolatePoints(dragon.pos.x) - origin.y);
+  relMouse = (1, interpolatePoints(dragon.pos.x + 1) - interpolatePoints(dragon.pos.x));
 
   dist = abs(relMouse);
   wand.value = wand.maxValue; //lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
@@ -314,11 +326,26 @@ newObstaclePoint(list, minDist, count) := (
 
 
 
+collideWithMountains() := (
+  forall(mountainPolygons :> floorPolygon,
+    if(pointInPolygon(dragon.pos, #),
+      scoreLabel.score = scoreLabel.score + 1;
+      scoreLabel.text = scoreLabel.score;
+      flying = false;
+      recallDragon();
+    );
+  );
+);
+
+
+
+
+
 processFlamma() := (
   if(flammaIn,
     updateAnimationTrack(flammaInTrack, delta);
     tween(flamma, "pos", flammaInStart, flamma.endPos, flammaInTrack, "easeInOutCubic");
-    showSpeechBubble = true; //(flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))) != "");
+    showSpeechBubble = true;//(flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))) != "");
     if(showSpeechBubble,
       if(flammaInTrack.timeLeft <= 0.3,
         speechBubble.alpha = lerp(0, 1, flammaInTrack.timeLeft, 0.3, 0);
@@ -340,42 +367,32 @@ processFlamma() := (
       recallDragon();
       flammaOut = false;
       showSpeechBubble = false;
-
       scoreLabel.score = 1;
       scoreLabel.text = scoreLabel.score;
-      scatterPickUps();
+      lagrange = [];
+      lagrangeBuffer.stroke = [];
+      lagrangeBuffer.percentDrawn = 0;
+      scatterClouds();
     );
   );
 );
+
+
 
 
 
 
 collideWithCastle() := (
   if(pointInPolygon(dragon.pos, castlePolygon),
-    if(pickUpsLeft < 0,
-      if(!flammaIn,
-        flying = false;
-        flammaOut = false;
-        flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
-        flammaIn = true;
-        flammaInStart = flamma.pos;
-      );
-    , // else //
-      scoreLabel.score = scoreLabel.score + 1;
-      scoreLabel.text = scoreLabel.score;
-      forall(pickUps_(1..level), #.drawn = true);
-      pickUpsLeft = level;
-      recallTarget = dragonHome;
-      recallDragon();
+    if(!flammaIn,
+      wandActive = false;
+      flammaOut = false;
+      flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+      flammaIn = true;
+      flammaInStart = flamma.pos;
     );
   );
 );
-
-
-
-
-
 
 
 
@@ -388,13 +405,15 @@ collideWithCastle() := (
 
 
 scatterClouds() := (
-  regional(spawns);
+  regional(spawns, gaps, newMountain);
 
   level = min(level + 1, 3);
 
+  gaps = randchoose(3..7, level);
 
   clouds = flatten(apply(1..level, i,
-    spawns = (0..2) ++ randchoose(3..7, 4) ++ (8..10);
+    spawns = (3..10) -- (3..gaps_i);
+
 
     apply(spawns, j,
     {
@@ -411,9 +430,27 @@ scatterClouds() := (
 
   obstacles = apply(clouds, {"pos": #.pos, "rad": 1});
 
+  mountainPolygons = [];
+  mountainSprites = [];
+
+    forall(1..level, i,
+      newMountain = mountainTemplate;
+      newMountain = apply(newMountain, # + (cloudSpawnXs_i, 0));
+      newMountain_1_2 = 4 * (gaps_i - 1) - 8;
+      mountainPolygons = mountainPolygons :> newMountain;
+
+      mountainSprites = mountainSprites :> ["mountain" + (randomint(2) + 1), gaps_i];
+    );
+
 
 );
 
+
+drawMountains() := (
+  forall(1..level,
+    drawimage([cloudSpawnXs_# - 1, 4 * (mountainSprites_#_2 - 1) - 25 - if(mountainSprites_#_1_(-1) == "1", 1, 0)], mountainSprites_#_1);
+  );
+);
 
 
 
@@ -442,19 +479,6 @@ scatterPickUps() := (
 
 
 
-
-collideWithMountains() := (
-  forall(mountainPolygons,
-    if(pointInPolygon(dragon.pos, #),
-      scoreLabel.score = scoreLabel.score + 1;
-      scoreLabel.text = scoreLabel.score;
-      forall(pickUps_(1..level), #.drawn = true);
-      pickUpsLeft = level;
-      flying = false;
-      recallDragon();
-    );
-  );
-);
 
 
 
@@ -491,11 +515,13 @@ drawStartButton() := (
 
 
 drawDerivative() := (
-  connect(lagrange, size->5, color-> (0.7, 0, 1), alpha->0.5);
+  //connect(lagrangeBuffer, size->8, color-> (1, 0.8, 0), alpha->0.5);
+  drawStrokeObject(lagrangeBuffer);
   forall(allpoints(),
-    fillcircle(#, 0.5, color->(1,1,1));
-    drawcircle(#, 0.5, color->(0.7, 0, 1), size->5, alpha->0.5);
+    fillcircle(#, 0.5, color->(1,0.8,0));
+    drawcircle(#, 0.5, color->(1, 0.6, 0), size->5, alpha->0.5);
   );
+  fillcircle(origin, 0.5, color->(1, 1, 1));
 );
 
 
@@ -587,6 +613,16 @@ magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
 
 
 
+mountainTemplate = [[0, 10], [-4, -10], [4, -10]];
+
+mountainPolygons = [];
+mountainSprites = [];
+
+
+
+
+
+
 cloudSpawnXs = [10, 29, 44];
 
 
@@ -665,6 +701,10 @@ showSpeechBubble = false;
 
 
 
+floorPolygon = [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCorners_3 + (20, 2), canvasCorners_3 + (20, 0)];
+
+
+
 
 
 
@@ -694,7 +734,7 @@ startButton := {
 
 
 forall(1..6,
-  createpoint("P" + #, origin + ((# - 1) * 0.94 * canvasWidth / 5, -2 + 4 * random()));
+  createpoint("P" + #, origin + (# * 0.94 * canvasWidth / 6, -2 + 4 * random()));
 );
 forall(allpoints(),
   #.labelled = false;
@@ -704,8 +744,10 @@ forall(allpoints(),
   #.alpha = 0;
 );
 
-interpolatePoints(x) := lagrange(allpoints(), x);
+interpolatePoints(x) := lagrange(origin <: allpoints(), x);
 
+lagrangeBuffer = createRootStrokeObject((0,0), (1, 0.8, 0), (1,1,1), 0);
+bufferDelay = 0.2;
 lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight);
 
 
@@ -716,7 +758,7 @@ castlePolygon = [canvasCorners_2 + (0, 100), canvasCorners_3 + (0, -100), canvas
 
 
 
-
+/*
 pickUpBlueprint() := {
   "pos": (0,0),
   "rad": 2,
@@ -732,14 +774,24 @@ pickUpBlueprint() := {
 
 pickUps = apply(1..5, pickUpBlueprint());
 pickUpsLeft = 1;
+*/
+
+
+
+
+
+
+
+
 
 level = 0;
-scatterPickUps();
+scatterClouds();
 
 
-
+/*
 fireballAnimationTrack = setupAnimationTrack(0,0.5);
 fireballAnimationTrack.looping = true;
+*/
 
 
 
@@ -749,10 +801,7 @@ fireballAnimationTrack.looping = true;
 
 
 
-
-mountainPolygons = [
-  [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCorners_3 + (20, 2), canvasCorners_3 + (20, 0)] // floor
-];
+  floorPolygon = [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCorners_3 + (20, 2), canvasCorners_3 + (20, 0)];
 
 
 
@@ -787,27 +836,26 @@ setupTime();
 
 <script id='csdraw' type='text/x-cindyscript'>
   drawimage(canvasCorners_4, canvasCorners_3, "back");
-  //drawimage(canvasCorners_4, canvasCorners_3, "floor");
+  drawimage(canvasCorners_4, canvasCorners_3, "floor");
   drawimage(canvasCenter + (40, -7), "castle", scale->0.75);
 
 
 
   drawAxes();
 
-  if(flying,
-    draw([(dragon.pos.x, origin.y), (dragon.pos.x, interpolatePoints(dragon.pos.x))], size->5, color->(0.7, 0, 1), alpha->0.5, arrow->true);
-  );
 
-  drawPickUps();
 
+  //drawPickUps();
+
+  drawMountains();
+  drawClouds();
   drawDerivative();
 
   drawDragonTrail();
   //drawPickUp();
-  drawDragon();
-  //drawClouds();
   //drawObstacles();
   //drawimage(canvasCorners_4, canvasCorners_3, "front");
+  drawDragon();
   drawFlamma();
   //drawWand();
 
@@ -819,6 +867,9 @@ setupTime();
   drawRecallButton();
   drawStartButton();
   drawScoreLabel();
+
+
+
 </script>
 
 
@@ -826,26 +877,33 @@ setupTime();
   delta = deltaTime();
 
   updateAnimationTrack(dragonAnimationTrack, delta * lerp(1, 2, wand.value, 0, wand.maxValue));
-  updateAnimationTrack(fireballAnimationTrack, delta);
+  //updateAnimationTrack(fireballAnimationTrack, delta);
   animateFlipbook(dragon, dragonAnimationTrack);
-  forall(pickUps_(1..level), animateFlipbook(#, fireballAnimationTrack));
+  //forall(pickUps_(1..level), animateFlipbook(#, fireballAnimationTrack));
 
   if(recallActive,
     updateAnimationTrack(recallTrack, delta);
     tween(dragon, "pos", recallStart, recallTarget, recallTrack, "easeInOutCubic");
     if(recallTrack.timeLeft <= 0,
       recallActive = false;
-      forall(allpoints(), #.pinned = false);
+      forall(origin <: allpoints(), #.pinned = false);
       dragon.trailA = [[dragon.pos, ceil(3 * random()), 2 * pi * random()]];
     );
   , // else //
     if(flying,
-      updateWand();
-      updateDragon();
-      moveDragon(delta);
-      collideWithPickUp();
+      updateAnimationTrack(drawBufferTrack, delta);
+
+      constructStrokeDraw(lagrangeBuffer, 8, 0, drawBufferTrack);
+
+      //updateWand();
+      if(drawBufferTrack.progress >= bufferDelay,
+        updateDragon();
+        moveDragon(10*delta);
+      );
+      //collideWithPickUp();
+      collideWithObstacles();
+      collideWithMountains();
       collideWithCastle();
-      //collideWithMountains();
     );
   );
 
@@ -854,15 +912,13 @@ setupTime();
   processFlamma();
 </script>
 
-
-
 <script id='csmousedown' type='text/x-cindyscript'>
 
   if(!recallActive & dist(mouse().xy, recallButton.pos) <= recallButton.rad,
-    forall(pickUps_(1..level), #.drawn = true);
+    //forall(pickUps_(1..level), #.drawn = true);
     scoreLabel.score = scoreLabel.score + 1;
     scoreLabel.text = scoreLabel.score;
-    pickUpsLeft = level;
+    //pickUpsLeft = level;
     recallTarget = dragonHome;
     recallDragon();
   );
@@ -870,21 +926,24 @@ setupTime();
   if(!recallActive & dist(mouse().xy, startButton.pos) <= startButton.rad,
     flying = true;
     forall(allpoints(), #.pinned = true);
+    lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight);
+    lagrangeBuffer.stroke = lagrange;
+    drawBufferTrack = setupAnimationTrack(now(), now() + 1);
   );
 
 
-  if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
+  //if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
 </script>
 
 <script id='csmousedrag' type='text/x-cindyscript'>
-if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
+  //if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
 </script>
 
 <script id='csmousemove' type='text/x-cindyscript'>
 </script>
 
 <script id='csmouseup' type='text/x-cindyscript'>
-  if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
+  //if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight));
 </script>
 
 <canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
@@ -919,6 +978,9 @@ if(!flying, lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canv
                    bubble:   "../../assets/speech_bubble.png",
                    castle:   "../../assets/castle.png",
                    floor:   "../../assets/floor_2.png",
+                   mountain1:  "../../assets/mountain_1.png",
+                   mountain2: "../../assets/mountain_2.png",
+
                  }
                 });
 
