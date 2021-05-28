@@ -99,7 +99,7 @@ drawObstacles() := (
 
 
 drawDragonTrail() := (
-  connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 3, alpha->0.5);
+  //connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 8);
   forall(1..length(dragon.trailA) - 1,
     //fillcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,1,0), alpha->lerp(0, 0.5, #, 0, length(dragon.trailA) - 1));
     //drawcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,0.5,0));
@@ -146,7 +146,7 @@ drawClouds() := (
 
 collideWithPickUp() := (
   forall(pickUps_(1..level),
-    if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    if(#.drawn & dist(dragon.pos, #.pos) < dragon.rad + #.rad,
       pickUpsLeft = pickUpsLeft - 1;
       #.drawn = false;
     );
@@ -185,6 +185,8 @@ moveDragon(dt) := (
       dragon.trailB = bite(dragon.trailB);
     );
   );
+
+  history = dragon.trailB ++ apply(dragon.trailA, #_1);
 );
 
 
@@ -343,6 +345,7 @@ processFlamma() := (
 
       scoreLabel.score = 1;
       scoreLabel.text = scoreLabel.score;
+      history = [];
       scatterPickUps();
     );
   );
@@ -353,7 +356,7 @@ processFlamma() := (
 
 collideWithCastle() := (
   if(pointInPolygon(dragon.pos, castlePolygon),
-    if(pickUpsLeft < 0,
+    if(pickUpsLeft <= 0,
       if(!flammaIn,
         flying = false;
         flammaOut = false;
@@ -362,6 +365,7 @@ collideWithCastle() := (
         flammaInStart = flamma.pos;
       );
     , // else //
+      flying = false;
       scoreLabel.score = scoreLabel.score + 1;
       scoreLabel.text = scoreLabel.score;
       forall(pickUps_(1..level), #.drawn = true);
@@ -430,7 +434,7 @@ scatterPickUps() := (
     pickUps_#.flipbook = randsort(pickUps_#.flipbook);
     pickUps_#.drawn = true;
   );
-
+  pickUpsLeft = level;
 );
 
 
@@ -496,6 +500,8 @@ drawDerivative() := (
     fillcircle(#, 0.5, color->(1,1,1));
     drawcircle(#, 0.5, color->(0.7, 0, 1), size->5, alpha->0.5);
   );
+
+  connect(history, color->(1,0.8,0), size-> 8);
 );
 
 
@@ -705,7 +711,7 @@ forall(allpoints(),
 );
 
 interpolatePoints(x) := lagrange(allpoints(), x);
-
+history = [];
 lagrange = sampleFunctionGraph("interpolatePoints", canvasLeft, canvasRight);
 
 
@@ -819,6 +825,8 @@ setupTime();
   drawRecallButton();
   drawStartButton();
   drawScoreLabel();
+
+  println(pickUpsLeft);
 </script>
 
 

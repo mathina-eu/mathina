@@ -110,7 +110,7 @@ drawClouds() := (
 
 collideWithPickUp() := (
   forall(pickUps_(1..level),
-    if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    if(#.drawn & dist(dragon.pos, #.pos) < dragon.rad + #.rad,
       pickUpsLeft = pickUpsLeft - 1;
       #.drawn = false;
     );
@@ -123,6 +123,8 @@ collideWithPickUp() := (
 collideWithObstacles() := (
   forall(obstacles_(1..3*level),
     if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+    forall(pickUps_(1..level), #.drawn = true);
+    pickUpsLeft = level;
       recallTarget = dragonHome;
       dragonMoving = false;
       recallDragon();
@@ -417,7 +419,7 @@ drawinputComfirmButton() := (
 );
 
 drawStartButton() := (
-  fillcircle(startButton.pos, startButton.rad, color->(0.7,0,1), alpha->0.5);
+  fillcircle(startButton.pos, startButton.rad, color->if(inputBuffer.record == [], (0.3, 0.3, 0.3), (0.7,0,1)), alpha->0.5);
   drawcircle(startButton.pos, startButton.rad, color->(1,1,1), size-> 5);
   drawtext(startButton.pos + (0,-0.4), startButton.label, color->(1,1,1), size->30, align->"mid");
 );
@@ -495,6 +497,8 @@ drawPath() := (
 collideWithMountains() := (
   forall(mountainPolygons,
     if(pointInPolygon(dragon.pos, #),
+    forall(pickUps_(1..level), #.drawn = true);
+    pickUpsLeft = level;
       dragonMoving = false;
       recallDragon();
     );
@@ -503,22 +507,25 @@ collideWithMountains() := (
 
 
 
-
-
-
 collideWithCastle() := (
-  if(pickUpsLeft < 0 & pointInPolygon(dragon.pos, castlePolygon),
-    if(!flammaIn,
-      flammaOut = false;
-      flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
-      flammaIn = true;
-      flammaInStart = flamma.pos;
+  if(pointInPolygon(dragon.pos, castlePolygon),
+    if(pickUpsLeft <= 0,
+      if(!flammaIn,
+        flammaOut = false;
+        flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+        flammaIn = true;
+        flammaInStart = flamma.pos;
+      );
+    , // else //
+      scoreLabel.score = scoreLabel.score + 1;
+      scoreLabel.text = scoreLabel.score;
+      forall(pickUps_(1..level), #.drawn = true);
+      pickUpsLeft = level;
+      recallTarget = dragonHome;
+      recallDragon();
     );
   );
 );
-
-
-
 
 
 
@@ -942,7 +949,7 @@ setupTime();
 
         dragonMoving = false;
         inputBuffer.record = [];
-        if(!pointInPolygon(dragon.pos, castlePolygon),
+        if(!pointInPolygon(dragon.pos, castlePolygon) % pickUpsLeft > 0,
           forall(pickUps_(1..level), #.drawn = true);
           pickUpsLeft = level;
           recallTarget = dragonHome;
@@ -1004,7 +1011,7 @@ setupTime();
       );
     );
   
-    if(dist(mouse().xy, startButton.pos) < startButton.rad,
+    if(inputBuffer.record != [] & dist(mouse().xy, startButton.pos) < startButton.rad,
       if(length(inputBuffer.record) >= 1,
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
         dragonMoving = true;
