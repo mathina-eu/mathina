@@ -381,7 +381,7 @@ scatterClouds() := (
   ));
 
 
-  obstacles = apply(clouds, {"pos": #.pos, "rad": 1});
+  obstacles = apply(clouds, {"pos": #.pos, "rad": 1}) ++ apply(clouds, {"pos": #.pos + (0, 2), "rad": 1});
 
   mountainPolygons = [];
   mountainSprites = [];
