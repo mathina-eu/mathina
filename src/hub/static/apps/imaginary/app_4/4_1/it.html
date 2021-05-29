@@ -261,7 +261,7 @@
         showHighlight = true;
         codeIndex = #;
         highlightPos = pos;
-
+        userInput = "";
         createF(codeIndex);
         
 
@@ -308,15 +308,15 @@
 
 
 
-    
-
-  drawCustomEquation() := (
-    drawtext(canvasCenter + (10.5, -17.5), "$=0$", color->sparkColor_(1..3), size->30);
 
 
-  );
-
-
+    drawCustomEquation() := (
+      drawtext(canvasCenter + (12, -17.5), "$=0$", color->sparkColor_(1..3), size->30, align->"right");
+  
+      drawtext(canvasCenter + (12, -15.5), userInput, color->sparkColor_(1..3), size->30, align->"right");
+    );
+  
+  
 
 
 
@@ -333,6 +333,10 @@
 
 
   
+  
+
+  userInput = "";
+
 
 
 
@@ -499,16 +503,43 @@
 <script id='csmouseup' type='text/x-cindyscript'>
 </script>
 
+<script>
+  let dict =  [
+    ["*", " "],
+    ["sin", "\\sin "],
+    ["cos", "\\cos "],
+    ["tan", "\\tan "],
+    ["abs", "\\mathrm{abs} "]
+  ];
 
+  function handleInput() {
+    let input = document.getElementById("inp").value;
+
+
+    cindy.evokeCS('f(x,y) := (' + input + ');');
+    cindy.evokeCS('outsideUpdate();');
+    
+    input = input.replace(/[0-9]+\.*[0-9]*/g, (match) => { return "{" + match + "}" });
+    for(entry of dict) {
+      //let searchRegExp = new RegExp(entry[0], 'g');
+      input = input.replaceAll(entry[0], entry[1]);
+    }
+    console.log(input);
+    cindy.evokeCS('userInput = "$' + input + ' = 0$";');
+
+    
+    
+    
+  }
+</script>
 
 <div id="App">
   <div id="CSCanvas" class="CindyJS-widget"><canvas style="position: absolute; border: medium none; top: 0px; left: 0px; padding: 0px; margin: 0px; height: 100%; width: 100%;" width="1920" height="1080"></canvas><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 100000px; height: 100000px"></div></div><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 200%; height: 200%"></div></div></div>
 
 
-<div id="Input-box" data-dashlane-rid="3796e6737f4c7b8b" data-form-type="other">
-      <input type="text" id="inp" value="x^2+3*y^2-4" onkeypress="if((event.which ? event.which : event.keyCode)==13) { cindy.evokeCS('f(x,y) := (' + this.value + '); outsideUpdate();'); }" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
-</div>
-
+  <div id="Input-box" data-dashlane-rid="3796e6737f4c7b8b" data-form-type="other">
+    <input type="text" id="inp" value="" onkeypress="if((event.which ? event.which : event.keyCode)==13) {handleInput()}" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
+    </div>
 </div>
   
 <script>
