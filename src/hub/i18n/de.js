@@ -85,6 +85,8 @@ export default {
     trainer: 'Trainer',
     parrot: 'John der Papagei',
     charmingparrot: 'Kapitän Gurgelqualle',
-	technician: 'Techniker'
+	technician: 'Techniker',
+	sean: 'Tom',
+	rashamom: 'Prof. Navid'
   },
 };
