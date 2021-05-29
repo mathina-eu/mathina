@@ -87,6 +87,6 @@ export default {
     charmingparrot: 'Kapitän Gurgelqualle',
 	technician: 'Techniker',
 	sean: 'Tom',
-	rashamom: 'Prof. Navid'
+	rashamom: 'Prof. O’Malley'
   },
 };
