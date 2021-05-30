@@ -23,8 +23,14 @@ export default {
 
     return {
       mdPath: `/stories/${story.id}/content${locale}.md`,
+      story,
     };
   },
+  mounted() {
+    this.$store.dispatch('setBreadcrumbs', [
+      { path: `/world/`, text: this.$t(`world.map`) },
+      { path: `/story/${this.story?.slug}/`, text: this.$t(`story.titles.${this.story.id}`) },
+    ]);
+  }
 };
-
 </script>
