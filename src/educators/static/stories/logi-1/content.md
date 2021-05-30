@@ -1,6 +1,6 @@
 # Mathematical concepts
 ​
-The story entitled **The traffic light challenge** aims to offer a small but challenging set of combinatorics-based problems. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
+The story entitled **The traffic light challenge** aims to offer a small but challenging set of **combinatorics-based problems**. Children may discover and solve these problems together with their teachers or parents. Combinatorics has a fundamental role in developing logical thinking. Developing the ability to organize a variety of elements in different ways helps children build up the concept of sorting and grouping, developing algorithmic thinking and systematic approaches. 
 
 Combinatorial problems are connected to different mathematical areas and can be explored at diﬀerent levels. Therefore, combinatorics is available as an overarching theme, which can be introduced already in kindergarten and built upon throughout the entire school education for developing problem-solving abilities of diﬀerent age groups.  
 
@@ -47,6 +47,8 @@ There are 3 apps accompanying the story. The first app enables free play with co
 
 All apps were programmed in JavaScript and are optimized both for PCs and tablets/smartphones. Below see the short description of each app. Links are provided both for apps and user guide videos. 
 
+## Guide to the app ## 
+
 Story: ["The traffic light challenge"]($HUB_URL/story/the-traffic-light-challenge/)
 
 [First game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=firstGame)
@@ -64,6 +66,4 @@ Eight traffic lights are seen on the app screen in a row. You can merge identica
 [Third game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Find the sixth correct color sequence! The app rules are the same as in the first game.
 
-## Guide to the app ## 
-
-[Script (PDF)](/stories/the-traffic-light-challenge/transcripts/Script1.pdf)
+[Script (PDF)](/stories/logi-1/transcripts/Script1.pdf)

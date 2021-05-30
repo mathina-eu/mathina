@@ -33,7 +33,7 @@ drawWand() := (
   //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
   //drawimage(wand.pos, "wand", rotation -> -0.5*pi+arctan2(wand.dir), scale->0.3, flipx->true);
   drawimage(wand.pos, "wand", rotation -> -0.5*pi, scale->0.3, flipx->true);
-  
+
   forall(1..ceil(lerp(0, magicLength, wand.value, 0, wand.maxValue)),
     drawimage((origin.x, lerp(origin.y, wand.pos.y, #, 0, magicLength)), "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
@@ -79,7 +79,7 @@ drawFlamma() := (
 );
 
 drawSpeechBubble() := (
-  if(showSpeechBubble, 
+  if(showSpeechBubble,
     drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha, flipx->true);
     drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
   );
@@ -153,7 +153,7 @@ moveDragon(dt) := (
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
       );
-    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+    if(length(dragon.trailB) > dragon.trailBMaxLength,
       dragon.trailB = bite(dragon.trailB);
     );
   );
@@ -198,7 +198,7 @@ updateWand() := (
 
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
-  if(wand.value < wand.deadzone, 
+  if(wand.value < wand.deadzone,
     wand.value = 0;
   );
   wand.dir = relMouse; //slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
@@ -361,12 +361,12 @@ scatterClouds() := (
   regional(spawns, gaps, newMountain);
 
   level = min(level + 1, 3);
-  
+
   gaps = randchoose(3..7, level);
 
   clouds = flatten(apply(1..level, i,
     spawns = (3..10) -- (3..gaps_i);
-    
+
 
     apply(spawns, j,
     {
@@ -381,12 +381,12 @@ scatterClouds() := (
   ));
 
 
-  obstacles = apply(clouds, {"pos": #.pos, "rad": 1});
+  obstacles = apply(clouds, {"pos": #.pos, "rad": 1}) ++ apply(clouds, {"pos": #.pos + (0, 2), "rad": 1});
 
   mountainPolygons = [];
   mountainSprites = [];
 
-    forall(1..level, i, 
+    forall(1..level, i,
       newMountain = mountainTemplate;
       newMountain = apply(newMountain, # + (cloudSpawnXs_i, 0));
       newMountain_1_2 = 4 * (gaps_i - 1) - 8;
@@ -430,7 +430,7 @@ lissajoue(a, b, d, t) := [sin(a * t + d), cos(b * t)];
 canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
 canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
 canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
-canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
 [canvasLeft, canvasTop] = canvasCorners_1;
 [canvasRight, canvasBottom] = canvasCorners_3;
 
@@ -504,8 +504,8 @@ scatterClouds();
 pickUpSpawnArea = [
     canvasCenter + [-35.47, 18.87],
     canvasCenter + [35.41, 19.11],
-    canvasCenter + [36.01, -14.01], 
-    canvasCenter + [-3.47, -14.09], 
+    canvasCenter + [36.01, -14.01],
+    canvasCenter + [-3.47, -14.09],
     canvasCenter + [-36.27, -4.49]
 ];
 
@@ -580,7 +580,7 @@ floorPolygon = [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCo
 recallButton := {
   "pos": wand.pos + (-12,-5),
   "rad": 3,
-  "label": "Zurück!"
+  "label": "Back!"
 };
 
 recallActive = false;
@@ -618,8 +618,8 @@ setupTime();
 
 
 <script id='csdraw' type='text/x-cindyscript'>
-  
-  
+
+
   drawimage(canvasCorners_4, canvasCorners_3, "back");
   drawimage(canvasCorners_4, canvasCorners_3, "floor");
   drawimage(canvasCenter + (40, -7), "castle", scale->0.75);
@@ -634,11 +634,11 @@ setupTime();
   //drawimage(canvasCorners_4, canvasCorners_3, "front");
   drawFlamma();
   drawWand();
-  
+
   //drawStrokeObject(followCurve);
-  
+
   drawSpeechBubble();
-  
+
 
   drawRecallButton();
   //drawScoreLabel();
@@ -663,7 +663,7 @@ setupTime();
       dragon.trailA = [[dragon.pos, ceil(3 * random()), 2 * pi * random()]];
     );
   , // else //
-    if(wandActive, 
+    if(wandActive,
       moveDragon(delta);
     );
     //collideWithPickUp();
@@ -694,8 +694,8 @@ setupTime();
     recallDragon();
   );
 
-  
-  
+
+
 </script>
 
 <script id='csmousedrag' type='text/x-cindyscript'>
@@ -734,24 +734,24 @@ setupTime();
                    dragon3: "../../assets/bird_3.png",
                    magic1: "../../assets/magic_1.png",
                    magic2: "../../assets/magic_2.png",
-                   magic3: "../../assets/magic_3.png",                   
+                   magic3: "../../assets/magic_3.png",
                    fireball1: "../../assets/fireball_1.png",
                    fireball2: "../../assets/fireball_2.png",
-                   fireball3: "../../assets/fireball_3.png", 
+                   fireball3: "../../assets/fireball_3.png",
                    cloud1: "../../assets/cloud_1.png",
                    cloud2: "../../assets/cloud_2.png",
-                   cloud3: "../../assets/cloud_3.png",                    
-                   cloud4: "../../assets/cloud_4.png",                    
-                   cloud5: "../../assets/cloud_5.png",                    
+                   cloud3: "../../assets/cloud_3.png",
+                   cloud4: "../../assets/cloud_4.png",
+                   cloud5: "../../assets/cloud_5.png",
                    back:   "../../assets/back_3.png",
                    front:  "../../assets/front_2.png",
                    wand:   "../../assets/hand_1.png",
                    flamma:   "../../assets/flamma_wave.png",
                    bubble:   "../../assets/speech_bubble.png",
                    castle:   "../../assets/castle.png",
-                   floor:   "../../assets/floor_2.png",       
+                   floor:   "../../assets/floor_2.png",
                    mountain1:  "../../assets/mountain_1.png",
-                   mountain2: "../../assets/mountain_2.png",                               
+                   mountain2: "../../assets/mountain_2.png",
                  }
                 });
 
