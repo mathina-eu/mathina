@@ -4,7 +4,7 @@ It is rather a conventional challenge if we have to move from one state or posit
 
 There is a saying which goes like this: “The wise always begin at the end.” 
 
-By taking a look at the exercise contained in The tiled floor trap, we can see that working in the opposite direction leads to a result. One of the most effective thinking processes we employ to solve problems is changing our perspective. We use our ability to define relationships, organize and rearrange data and to thereby discover new connections. A change of perspective is a thought operation independent of the mathematical content. The most common way of using it in the different chapters of mathematics, is the so-called “cancer method” or reverse thinking. During the procedure we start out from the end and move towards the beginning. 
+By taking a look at the exercise contained in **The tiled floor trap**, we can see that working in the opposite direction leads to a result. One of the most effective thinking processes we employ to solve problems is changing our perspective. We use our ability to define relationships, organize and rearrange data and to thereby discover new connections. A change of perspective is a thought operation independent of the mathematical content. The most common way of using it in the different chapters of mathematics, is the so-called **cancer method** or reverse thinking. During the procedure we start out from the end and move towards the beginning. 
 
 The tools of problem-solving are the following:
 + Understanding the problem / situation
@@ -46,19 +46,22 @@ Another exercise with the same set is to complete the series below:
 
 # About the apps
 
-Story: ["The tiled floor trap"]($HUB_URL/story/the-tiled-floor-trap/)
-
-[First game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=firstGame)
-
-[Second game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=secondGame)
-
 The app was programmed in JavaScript and is optimized both for PCs and tablets/smartphones. Below see the short description of the app. Links are provided both for the app and the user guide video. 
+
+
+## Guide to the app ## 
+
+Story: ["The tiled floor trap"]($HUB_URL/story/the-tiled-floor-trap/)
 
 The story is accompanied by one app, which appears in the story twice. At the first occasion users have the chance to play with the app freely. At the second time the suggestion is to try and find the solution by thinking backwards.
 
 The rule of this game is that users can only step from red field to red field, from blue to blue, green to green, yellow to yellow; or from circle to circle, square to square, triangle to triangle. 
 
-## Guide to the app ## 
+[First game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=firstGame)
+
+[Second game in the story]($HUB_URL/story/the-tiled-floor-trap/?actionLink=secondGame)
+
 
 @[youtube](ORR614pbLzk)
-[Script (PDF)](/stories/the-tiled-floor-trap/transcripts/Script2.pdf)
+
+[Script (PDF)](/stories/logi-2/transcripts/Script2.pdf)
