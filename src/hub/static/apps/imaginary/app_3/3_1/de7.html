@@ -170,11 +170,18 @@ moveDragon(dt) := (
   regional(xStep);
 
   xStep = dt;
+
+  /*
   if(dragon.pos.x < origin.x,
     dragon.pos = (dragon.pos.x + xStep, lerp(dragonHome.y, parseInput(dragon.pos.x), dragon.pos.x , dragonHome.x, origin.x));
   , // else //
     dragon.pos = (dragon.pos.x + xStep, parseInput(dragon.pos.x + xStep));
   );
+
+  */
+
+
+  dragon.pos = (dragon.pos.x + xStep, parseInput(dragon.pos.x + xStep));
 
   if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
     dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
@@ -191,20 +198,15 @@ moveDragon(dt) := (
 
 updateDragon() := (
   regional(speed, tangent);
-/*
-  if(dragon.pos.x < origin.x,
-    tangent = (0.01, (parseInput(origin.x) - dragonHome.y) / (origin.x - dragonHome.x) * 0.01);
-  , // else //
-    tangent = (0.01, parseInput(dragon.pos.x + 0.01) - parseInput(dragon.pos.x));
-  );
-*/
+  /*
   if(dragon.pos.x < origin.x,
     tangent = (0.01, lerp((parseInput(origin.x) - dragonHome.y) / (origin.x - dragonHome.x) * 0.01, parseInput(dragon.pos.x + 0.01) - parseInput(dragon.pos.x), dragon.pos.x, dragonHome.x, origin.x));
   , // else //
     tangent = (0.01, parseInput(dragon.pos.x + 0.01) - parseInput(dragon.pos.x));
   );
+  */
 
-
+  tangent = (0.01, parseInput(dragon.pos.x + 0.01) - parseInput(dragon.pos.x));
   tangent = tangent / abs(tangent);
   dragon.rotation = 0.5*pi-arctan2(tangent);
   if(wand.dir.x < -0.1,
@@ -273,13 +275,23 @@ processFlamma() := (
       speechBubble.alpha = lerp(1, 0, flammaOutTrack.timeLeft, 1, 0.7);
     );
     if(flammaOutTrack.timeLeft <= 0,
+      recallTarget = curveStart;
+      dragon.rotation = startRotation;
       recallDragon();
       flammaOut = false;
+      /*
       showSpeechBubble = false;
       scoreLabel.score = 1;
       scoreLabel.text = scoreLabel.score;
 
       placePickUp();
+      */
+
+      taskIndex = taskIndex + 1;
+      if(taskIndex > length(tasks), 
+        taskIndex = taskIndex - length(tasks);
+      );
+      generateTask();
 
     );
   );
@@ -434,11 +446,26 @@ catchInputButtons() := (
   );
 
   inputCurve = sampleFunctionGraph("parseInput", canvasLeft, canvasRight);
+
+  adjustDragonAtCurveStart();
+
+  updateDragon();
 );
 
 
 
+adjustDragonAtCurveStart() := (
+  dragon.pos_2 = parseInput(dragon.pos_1);
+  while((dragon.pos.y > canvasTop) % (dragon.pos.y < canvasBottom),
+    dragon.pos_1 = dragon.pos_1 + 0.01;
+    dragon.pos_2 = parseInput(dragon.pos_1);
+  );
 
+  while((dragon.pos.y < canvasTop) & (dragon.pos.y > canvasBottom) & (dragon.pos.x > canvasLeft),
+    dragon.pos_1 = dragon.pos_1 - 0.01;
+    dragon.pos_2 = parseInput(dragon.pos_1);
+  );
+);
 
 
 
@@ -480,6 +507,7 @@ placePickUp() := (
 
 generateTask() := (
   taskPolynomial.coefficients = tasks_taskIndex; 
+  inputPolynomial.currDegree = max(select(1..taskPolynomial.maxDegree + 1, taskPolynomial.coefficients_# != 0)) - 1;
   taskCurve = sampleFunctionGraph("parseTask", canvasLeft, canvasRight);
 );
 
@@ -510,8 +538,8 @@ strokeSampleRateEBOW = 2048;
 
 
 
-origin = canvasCenter + (-22, 0);
-axesScale = 2 * [1, 1];
+origin = canvasCenter + (-0, 0);
+axesScale = 2 * [5, 0.5];
 
 
 
@@ -716,7 +744,7 @@ floorPolygon = [canvasCorners_4 + (-20, 0), canvasCorners_4 + (-20, 2), canvasCo
 inputPolynomial = {
   "pos": recallButton.pos + (15,0),
   "width": 35,
-  "currDegree": 4,
+  "currDegree": 0,
   "maxDegree": 4,
   "coefficients": [],
   "textSize": 35
@@ -843,12 +871,22 @@ setupTime();
     if(flying, 
 
       updateDragon();
-      moveDragon(10 * delta);
+      moveDragon(30 * delta);
 
       //collideWithPickUp(10 * delta);
       //collideWithCastle();
       //collideWithObstacles();
       //collideWithMountains();
+
+      if(dragon.pos.x > canvasRight,
+        if(!flammaIn,
+          flying = false;
+          flammaOut = false;
+          flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+          flammaIn = true;
+          flammaInStart = flamma.pos;
+        );
+      );
     );
   );
 
@@ -883,14 +921,10 @@ setupTime();
   if(!recallActive & dist(mouse().xy, startButton.pos) <= startButton.rad,
     //flying = true;
 
-    taskIndex = taskIndex + 1;
-    if(taskIndex > length(tasks), 
-      taskIndex = taskIndex - length(tasks);
-    );
-    generateTask();
+    
   );
 
-  catchingInput = true;
+  if(!flying, catchingInput = true);
 
 </script>
 
@@ -902,6 +936,11 @@ setupTime();
 
 <script id='csmouseup' type='text/x-cindyscript'>
   catchingInput = false;
+  if(inputPolynomial.coefficients ~= taskPolynomial.coefficients,
+    curveStart = dragon.pos;
+    startRotation = dragon.rotation;
+    flying = true;
+  );
 </script>
 
 <canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
