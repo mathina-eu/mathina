@@ -411,13 +411,13 @@ actions:
       - text: "Abbi pazienza, Carla! Ne prepareremo quattro ma solo uno sarà quello giusto: avremo un messaggio vero e tre falsi! Li metteremo tutti assieme qui nel cespuglio ma prima disegneremo una figura su ciascuno di essi. Il trucco è che sul messaggio corretto disegneremo un triangolo in modo da sapere qual è quello corretto!"
         char: mathina
         mood: happy
-      - text: "Ora ho capito! Se la nostra chiave fosse 'ha un buon profumo', allora avremmo potuto scegliere, per esempio, un triangolo, una macchina, un cerchio e un fiore."
+      - text: "Ora ho capito! Se la nostra chiave fosse \"ha un buon profumo\", allora avremmo potuto scegliere, per esempio, un triangolo, una macchina, un cerchio e un fiore."
         char: sean
         mood: happy
       - text: "Esatto!"
         char: leo
         mood: happy
-      - text: "Ho capito!” Se vogliamo dire ai nostri amici di guardare il terzo albero a nord delle fontane e la chiave fosse 'ha cinque lati', allora dobbiamo preparare altri tre messaggi con informazioni sbagliate e scegliere quattro immagini. Di queste, solo una è descritta dalla chiave ed è quella che va disegnata sul messaggio corretto! Facciamo una prova..."
+      - text: "Ho capito! Se vogliamo dire ai nostri amici di guardare il terzo albero a nord delle fontane e la chiave fosse \"ha cinque lati\", allora dobbiamo preparare altri tre messaggi con informazioni sbagliate e scegliere quattro immagini. Di queste, solo una è descritta dalla chiave ed è quella che va disegnata sul messaggio corretto! Facciamo una prova..."
         char: carla
         mood: happy
   - type: game
@@ -440,7 +440,7 @@ actions:
       - text: "Abbiamo deciso allora! Ora scegliamo la chiave per i nostri messaggi."
         char: leo
         mood: talking      
-      - text: "Usiamo questa: 'il cielo ne è pieno'."
+      - text: "Usiamo questa: \"il cielo ne è pieno\"."
         char: sean
         mood: normal            
   - type: image

@@ -824,5 +824,5 @@ actions:
     text: Mathina und ihre Freunde haben haben einen super Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
       #<p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
   - type: sceneText
-    text: Die geheimen Botschaften - Ende
+    text: <h1>Die geheimen Botschaften - Ende</h1>
       # <h1>The secret messages - The End</h1>  
