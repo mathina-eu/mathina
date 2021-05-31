@@ -153,10 +153,7 @@
       <v-spacer class="hidden-md-and-up" />
     </v-app-bar>
     <v-main>
-      <v-container
-        class="fill-height align-start pa-0"
-        fluid
-      >
+      <v-container class="fill-height align-start pa-0">
         <v-row
           justify="center"
           style="height: 100%;"

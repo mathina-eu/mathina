@@ -41,7 +41,7 @@ export default {
     title: 'The adventures of Mathina',
     subtitle: 'Select an age group to start!',
     'start-exploring': 'Start exploring!',
-    about: 'About',
+    about: 'Introduction',
     close: 'Close',
     aboutContent: `<p>This is a land where incredible things happen. A land full of strange and magical creatures,
     where pirates and dragons coexist with wizards; people find riddles on the streets, and adventures surprise

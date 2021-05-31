@@ -119,6 +119,10 @@ export default {
   box-shadow: #0000000d 0 0 0 14px;
   position: relative;
   z-index: 1;
+
+  @media (max-width: 1200px) {
+    max-width: 900px;
+  }
 }
 
 .ratio-wrapper {
