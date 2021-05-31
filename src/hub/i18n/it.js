@@ -53,19 +53,19 @@ export default {
     <p> Questa terra si chiama Platonia, dove la matematica e la logica sono apprezzate da tutti e si trovano ovunque nella natura.
     Gli abitanti di Platonia non solo accettano queste regole, anzi, sono molto felici di averle, e si godono appieno i trucchi e gli indovinelli che incontrano. </p>
 
-    <p> Mathina è una ragazza che vive a Platonia, dove tutto può trasformarsi in un'avventura! Insieme a suo fratello Leo, si deivertono a risolvere le varie sfide che i luoghi di Platonia offrono loro. </p>
+    <p> Mathina è una ragazza in questa terra dove tutto può trasformarsi in un'avventura! Insieme a suo fratello Leo, si divertono a risolvere le varie sfide che i luoghi offrono loro. </p>
 
     <p> A Platonia ci sono quattro diverse regioni: </p>
 
-    <p> <strong> Città della Logica</strong> è una città con innumerevoli grattacieli: un universo emozionante per chi scoprire nuove storie e messaggi nascosti dietro angoli, facciate di vetro e incroci stradali. </p>
+    <p> La <strong> Città della Logica</strong>, una città con innumerevoli grattacieli. Un universo emozionante per chi scoprire nuove storie e messaggi nascosti dietro angoli, facciate di vetro e incroci stradali. </p>
 
-    <p> A Città della Logica, i messaggi e le storie che gli esploratori incontrano sono tutti di natura logica. Mathina e Leo affrontano una sfida per interpretare i semafori della città, una trappola nascosta nel marciapiede, poi vengono coinvolti in un inseguimento di ladri, e si imbattono anche in una strana squadra di uno sport locale molto particolare. Unisciti a Mathina e Leo nelle loro esplorazioni! </p>
+    <p> Nella Città della Logica, i messaggi e le storie che gli esploratori incontrano sono tutti di natura logica. Mathina e Leo affrontano una sfida per interpretare i semafori della città, una trappola nascosta nel marciapiede, poi vengono coinvolti in un inseguimento di ladri, e si imbattono anche in una strana squadra di uno sport locale molto particolare. Unisciti a Mathina e Leo nelle loro esplorazioni! </p>
 
-    <p> <strong> Fiera della Simmetria</strong> è un enorme parco divertimenti con tutti i tipi di attrazione! Ma alla Fiera della Simmetria tutto deve essere... simmetrico! </p>
+    <p> La <strong> Fiera della Simmetria</strong> è un enorme parco divertimenti con tutti i tipi di attrazione! Ma alla Fiera della Simmetria tutto deve essere... simmetrico! </p>
 
     <p> Mathina e Leo troveranno alla fiera ogni tipo di intrattenimento: strani labirinti che usano specchi, bancarelle dove possono provare molti giochi o costruire giocattoli simmetrici, giostre insolite e altro ancora. Avranno anche l'opportunità di contribuire a dei miglioramenti in fiera, aiutando a creare una nuova giostra composta da poliedri, oppure stampando per le strade bellissimi fregi di diverso tipo. È un modo davvero eccitante per trascorrere la giornata! </p>
 
-    <p> <strong> L'isola dei Bucanieri </strong>? Esattamente! Il posto perfetto dove attraccare con il nostro equipaggio e dove nascondere i nostri tesori! Ma aspetta! Tutti stanno cercando i nostri nascondigli, quindi usiamo sempre metodi di comunicazione cifrati!
+    <p> L'<strong>Isola dei Bucanieri </strong>? Esattamente! Il posto perfetto dove attraccare con il nostro equipaggio e dove nascondere i nostri tesori! Ma aspetta! Tutti stanno cercando i nostri nascondigli, quindi usiamo sempre metodi di comunicazione cifrati!
     Solo il capitano e l'equipaggio dovrebbero essere in grado di ritrovare i nascondigli dei tesori. E, se trovi una mappa, con forse una "X" promettente disegnata sopra? Preparati per una divertente caccia al tesoro, dove decifrare i messaggi lasciati da altri pirati è il modo per vivere avventure meravigliose! Se sei pronto ... "Benvenuto all'isola dei Bucanieri" ... oh, aspetta... "!ireinacuB ied alosi'lla otunevneB" Ecco! </p>
 
     <p> Nella <strong> Terra degli uccelli del fuoco </strong>, le creature volanti del fuoco dominano i cieli. Qui alcuni maghi e istruttori imparano come parlare e giocare con draghi, fenici e minuscole libellule scintillanti, creando forme incredibili nell'aria. Nella terra degli uccelli del fuoco Mathina e Leo incontreranno Flamma, un'anziana signora che li guiderà alla scoperta dei misteri di queste creature in cui brilla il fuoco magico della matematica. </p>`,
