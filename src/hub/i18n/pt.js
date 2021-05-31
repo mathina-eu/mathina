@@ -1,4 +1,7 @@
 export default {
+  edu: {
+    'mathina-educators-repository': 'Mathina Educator Repository',
+  },
   city: {
     'choose-story': 'Escolha a história!',
   },
