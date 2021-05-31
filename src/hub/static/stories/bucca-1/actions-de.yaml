@@ -4,14 +4,17 @@ actions:
     src: bg1.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
+    noOverflow: true
     id: branch
     src: ramo.png
     style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch2
     src: ramo.png
     style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch3
     src: ramo.png
     style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
@@ -40,6 +43,7 @@ actions:
       repeat: -1
       yoyo: true    
   - type: image
+    noOverflow: true
     id: albero1
     src: albero_bambini.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
@@ -109,14 +113,17 @@ actions:
     src: bg1b-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
   - type: image
+    noOverflow: true
     id: bambino0
     src: bambino3.png
     style: "height: 55%; top: 42%; right: 50%;  z-index: 2; transform: ScaleX(1)"
   - type: image
+    noOverflow: true
     id: bambino00
     src: bambino4.png
     style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
   - type: image
+    noOverflow: true
     id: leo0
     src: $COMMON/img/characters/leo/leo4.png
     style: "height: 55%; top: 42%; right: 77%;  z-index: 1;transform: ScaleX(-1)"
@@ -158,14 +165,17 @@ actions:
     src: bg1_nokids.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
+    noOverflow: true
     id: branch3
     src: ramo.png
     style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch4
     src: ramo.png
     style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch5
     src: ramo.png
     style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
@@ -194,30 +204,36 @@ actions:
       repeat: -1
       yoyo: true 
   - type: image
+    noOverflow: true
     id: albero2
     src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: cespuglio
     src: cespuglio.png
     style: "height: 55%; top: 35%; right: -5%;  z-index: 5; transform: scaleX(-1)"
     parallax: mid2
   - type: image
+    noOverflow: true
     id: cespuglio2
     src: cespuglio.png
     style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
     parallax: mid1
   - type: image
+    noOverflow: true
     id: cespuglio3
     src: cespuglio.png
     style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
     parallax: back3
   - type: image
+    noOverflow: true
     id: cespuglio4
     src: cespuglio.png
     style: "height: 55%; top: 50%; right: -5%;  z-index: 2; transform: scaleX(-1)"
     parallax: back2
   - type: image
+    noOverflow: true
     id: cespuglio5
     src: cespuglio.png
     style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
@@ -269,70 +285,87 @@ actions:
     src: bg1_plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"        
   - type: image
+    noOverflow: true
     id: bambino3
     src: bambino3.png
     style: "height: 55%; top: 42%; right: 35%;  z-index: 2; transform: ScaleX(-1)"
   - type: image
+    noOverflow: true
     id: bambino4
     src: bambino4.png
     style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
   - type: image
+    noOverflow: true
     id: leo1
     src: $COMMON/img/characters/leo/leo4.png
     style: "height: 55%; top: 42%; right: 47%;  z-index: 1;"    
   - type: image
+    noOverflow: true
     id: mathina1
     src: $COMMON/img/characters/mathina/mathina5.png
     style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"    
   - type: image
+    noOverflow: true
     id: alberoB
     src: albero_solo.png
     style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: cespuglioD
     src: cespuglio.png
     style: "height: 10%; top: 12.4%; right: -1%;  z-index: 0; transform: scaleX(-1)"    
   - type: image
+    noOverflow: true
     id: cespuglioB
     src: cespuglio.png
     style: "height: 9%; top: 7%; right: 0%;  z-index: 1;"
   - type: image
+    noOverflow: true
     id: cespuglioA1
     src: cespuglio.png
     style: "height: 18%; top: 24%; right: 7%;  z-index: 2;"
   - type: image
+    noOverflow: true
     id: cespuglioA2
     src: cespuglio.png
     style: "height: 18%; top: 24%; right: 17%;  z-index: 2;"
   - type: image
+    noOverflow: true
     id: cespuglioA3
     src: cespuglio.png
     style: "height: 18%; top: 23%; right: 12%;  z-index: 1;"
   - type: image
+    noOverflow: true
     id: cespuglioA4
     src: cespuglio.png
     style: "height: 18%; top: 22%; right: 9%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: cespuglioA5
     src: cespuglio.png
     style: "height: 18%; top: 22%; right: 15%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: cespuglioC1
     src: cespuglio.png
     style: "height: 10%; top: 12%; right: 79%;  z-index: 2;"
   - type: image
+    noOverflow: true
     id: cespuglioC2
     src: cespuglio.png
     style: "height: 10%; top: 12%; right: 85%;  z-index: 2;"
   - type: image
+    noOverflow: true
     id: cespuglioC3
     src: cespuglio.png
     style: "height: 10%; top: 11%; right: 82%;  z-index: 1;"
   - type: image
+    noOverflow: true
     id: cespuglioC4
     src: cespuglio.png
     style: "height: 10%; top: 10%; right: 80%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: cespuglioC5
     src: cespuglio.png
     style: "height: 10%; top: 10%; right: 83%;  z-index: 0;"
@@ -449,6 +482,7 @@ actions:
         char: sean
         mood: normal            
   - type: image
+    noOverflow: true
     id: myst0
     src: myst.png
     style: "height: 12%; top: 8%; right: 83%;  z-index: 0;"
@@ -482,14 +516,17 @@ actions:
   - type: clearImage
     id: bambino4
   - type: image
+    noOverflow: true
     id: leo11
     src: $COMMON/img/characters/leo/leo4.png
     style: "height: 15%; top: 20%; right: 15%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: bambino33
     src: bambino3.png
     style: "height: 20%; top: 23%; right: 26%;  z-index: 0; transform: ScaleX(1)"
   - type: image
+    noOverflow: true
     id: bambino44
     src: bambino4.png
     style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"    
@@ -507,12 +544,14 @@ actions:
   - type: clearImage
     id: alberoB
   - type: image
+    noOverflow: true
     id: albero_n
     src: albero_solo.png
     style: "height: 20%; top: 0%; right: 0%;  z-index: 0;"
   - type: clearImage
     id: myst0
   - type: image
+    noOverflow: true
     id: myst
     src: myst.png
     style: "height: 30%; top: 17%; right: 15%;  z-index: 6;"
@@ -556,20 +595,24 @@ actions:
     src: bg3_nopg.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: scaleX(-1)"
   - type: image
+    noOverflow: true
     id: leoC
     src: $COMMON/img/characters/leo/leo1.png
     style: "height: 35%; top: 57%; right: 11%;  z-index: 1;"  
   - type: image
+    noOverflow: true
     id: Barca
     src: barca.png
     style: "height: 16%; top: 13%; right: 72%;  z-index: -3;"
 
   - type: image
+    noOverflow: true
     id: Gabbiano
     src: gabbiano3.png
     style: "height: 6%; top: 15%; right: 75%;  z-index: -2;"
 
   - type: image
+    noOverflow: true
     id: Finestra
     src: finestra.png
     style: "width: 21.09%; top: 10.35%; right: 66.5%;  z-index: 0; transform: ScaleX(-1)"
@@ -618,39 +661,47 @@ actions:
     src: bg1_nokids.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
+    noOverflow: true
     id: cespuglio11
     src: cespuglio.png
     style: "height: 55%; top: 35%; right: -5%;  z-index: 5;"
     parallax: mid2
   - type: image
+    noOverflow: true
     id: cespuglio12
     src: cespuglio.png
     style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
     parallax: mid1
   - type: image
+    noOverflow: true
     id: cespuglio13
     src: cespuglio.png
     style: "height: 55%; top: 45%; right: -5%;  z-index: 3;"
     parallax: back3
   - type: image
+    noOverflow: true
     id: cespuglio14
     src: cespuglio.png
     style: "height: 55%; top: 50%; right: -5%;  z-index: 2;"
     parallax: back2
   - type: image
+    noOverflow: true
     id: cespuglio15
     src: cespuglio.png
     style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
     parallax: mid3
   - type: image
+    noOverflow: true
     id: branch10
     src: ramo.png
     style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch11
     src: ramo.png
     style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
   - type: image
+    noOverflow: true
     id: branch12
     src: ramo.png
     style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
@@ -679,6 +730,7 @@ actions:
       repeat: -1
       yoyo: true    
   - type: image
+    noOverflow: true
     id: albero10
     src: albero_solo.png
     style: "height: 100%; top: 0%; right: 0%;  z-index: 0;" 
@@ -710,30 +762,37 @@ actions:
     src: bg1b-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
   - type: image
+    noOverflow: true
     id: sym1
     src: sim1.png
     style: "height: 10%; top: 50%; right: 16%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym2
     src: sim2.png
     style: "height: 10%; top: 50%; right: 26%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym3
     src: sim3.png
     style: "height: 10%; top: 50%; right: 36%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym4
     src: sim4.png
     style: "height: 10%; top: 50%; right: 46%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym5
     src: sim5.png
     style: "height: 10%; top: 50%; right: 56%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym6
     src: sim6.png
     style: "height: 10%; top: 50%; right: 66%;  z-index: 0;" 
   - type: image
+    noOverflow: true
     id: sym7
     src: sim7.png
     style: "height: 10%; top: 50%; right: 76%;  z-index: 0;" 
