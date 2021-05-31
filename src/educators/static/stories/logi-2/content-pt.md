@@ -1,6 +1,6 @@
 # Conceitos matemáticos
 ​
-É um desafio convencional termos que passar de um estado ou posição para outro. Nessas situações, consideramos como começar e como terminar da melhor maneira possível. Fazemos o mesmo sempre que procuramos o caminho certo em um labirinto.
+É um desafio convencional termos que passar de um estado ou posição para outro. Nessas situações, consideramos como começar e como terminar da melhor maneira possível. Fazemos o mesmo sempre que procuramos o caminho certo num labirinto.
 
 Existe um ditado que diz assim: “O sábio começa sempre no fim”.
 
@@ -13,7 +13,7 @@ As ferramentas de resolução de problemas são as seguintes:
 + Execução
 + Inspeção
 
-Trabalhar em problemas que exigem raciocínio inovador pode ajudar as crianças a desenvolver capacidades metacognitivas e uma compreensão flexível de conceitos matemáticos. Também pode aumentar a confiança e o desejo deles de abordar situações desconhecidas e explorar várias estratégias de resolução.
+Trabalhar em problemas que exigem raciocínio inovador pode ajudar as crianças a desenvolver capacidades metacognitivas e uma compreensão flexível de conceitos matemáticos. Também pode aumentar a confiança e o desejo delas de abordar situações desconhecidas e explorar várias estratégias de resolução.
 
 Em **A armadilha do piso de mosaicos**, os seguintes conceitos matemáticos básicos desempenham um papel importante:
 
@@ -21,7 +21,7 @@ Em **A armadilha do piso de mosaicos**, os seguintes conceitos matemáticos bás
 + Polígono: um polígono é uma região limitada do plano, cuja fronteira consiste numa sucessão finita de segmentos de reta, unidos pelas suas extremidades. Isto, de forma que:
  1. para cada segmento de reta, a sua extremidade final seja a extremidade inicial de apenas outro segmento de reta, o seguinte. Estamos a considerar o primeiro segmento como sendo o "seguinte" ao último.
  2. em cada segmento de reta, nenhum ponto diferente das suas extremidades pertence a outro segmento.
-+ Sequência: um conjunto de objetos/números organizados em uma determinada ordem ou padrão.
++ Sequência: um conjunto de objetos/números organizados numa determinada ordem ou padrão.
 
 # Notas didáticas
 
