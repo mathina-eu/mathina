@@ -208,7 +208,6 @@ angsmarc=[];
     img.onload = function() {   
            a=this.height/this.width;
 		planeGeo2 = new THREE.PlaneBufferGeometry( 100, 100*a );
-		planeGeo3 = new THREE.PlaneBufferGeometry( 100, 100*a/2 );
 
 		
 	var loader = new THREE.TextureLoader();
@@ -521,7 +520,7 @@ function getCursorPosition(canvas, event) {
     console.log("x: " + x + " y: " + y);
 }
 
-var arrowHelper, planeBottom3, planeBottom4;
+var arrowHelper, planeBottom3;
 
 var checkertransang,checkertransang2, checkertranscent;
 
@@ -857,13 +856,10 @@ scene.add( arrowHelper );
 	
 				scene.remove(planeBottom3)		
 	
-scene.remove(planeBottom4)		
 	
-					var planeGeo3=new THREE.CircleGeometry(50, 50, 3.14-ang, 3.14)
-		var planeGeo4=new THREE.CircleGeometry(50, 50, -ang, 3.14)
-		
-				planeBottom3 = new THREE.Mesh( planeGeo3, materialc );
-				planeBottom4 = new THREE.Mesh( planeGeo4, materialc );
+			
+				
+				planeBottom3 = new THREE.Mesh( planeGeo2, materialc );
 
 	
 					planeBottom3.position.y=0.1;
@@ -875,20 +871,7 @@ scene.remove(planeBottom4)
 			
 			planeBottom3.rotateX( -Math.PI / 2 );
 					
-				//	scene.add( planeBottom3 )
-					
-					planeBottom4.position.y=0.1;
-				planeBottom4.applyMatrix( new THREE.Matrix4().makeTranslation( checkertranscent.position.x, 0.1, checkertranscent.position.z ) )
-			
-					
-					
-			planeBottom4.rotateOnAxis(dir.normalize(), -Math.PI )
-			
-			planeBottom4.rotateX( -Math.PI / 2 );
-					
-					scene.add( planeBottom4 )
-					
-					
+					scene.add( planeBottom3 )
 					
 		
 		
