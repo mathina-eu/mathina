@@ -53,7 +53,7 @@ export default {
     <p> Questa terra si chiama Platonia, dove la matematica e la logica sono apprezzate da tutti e si trovano ovunque nella natura.
     Gli abitanti di Platonia non solo accettano queste regole, anzi, sono molto felici di averle, e si godono appieno i trucchi e gli indovinelli che incontrano. </p>
 
-    <p> Mathina è una ragazza in questa terra dove tutto può trasformarsi in un'avventura! Insieme a suo fratello Leo, si divertono a risolvere le varie sfide che i luoghi offrono loro. </p>
+    <p> Mathina e suo fratello Leo si divertono a risolvere le varie sfide che i luoghi di questa terra offrono loro. </p>
 
     <p> A Platonia ci sono quattro diverse regioni: </p>
 
