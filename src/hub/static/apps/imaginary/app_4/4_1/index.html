@@ -56,7 +56,7 @@
     <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
 </head>
 
-<body style="font-family:Palatino; margin:0; font-size:16pt">
+<body style="font-family:Palatino; margin:0; font-size:16pt" onload="translate()">
 
 
 
@@ -68,15 +68,15 @@
   getNewton(pos) := imagergb(L, R, "newtonTexture", pos, interpolate->false, repeat->false);
   getTrueCurve(pos) := imagergb(L, R, "trueCurve", pos, interpolate->false, repeat->false);
 
-  
+
   iterate() := (
     colorplot(L, R, "computeTexture", newState(#));
     colorplot(L, R, "renderTarget", newColor(#));
     repaint();
     );
-    
+
   neighbours(pos) := apply(directproduct(-1..1, -1..1), pos + #);
-  
+
 
 
 
@@ -109,7 +109,7 @@
 
   newState(pos) := (
     regional(totalWeight, state, grad, dist, closeToTrue);
-    
+
 
     state = getState(pos);
     totalWeight = 0;
@@ -119,7 +119,7 @@
 
 
 
-    forall(-1..1, i, forall(-1..1, j, 
+    forall(-1..1, i, forall(-1..1, j,
       closeToTrue = closeToTrue % (getTrueCurve(pos + 0.01 * [i, j])_1) > 0);
     );
 
@@ -146,10 +146,10 @@
     );
 
 
-    
+
 
     (clamp(totalWeight, 0, 1), 0, 0, 1);
-  );  
+  );
 
 
 
@@ -157,9 +157,9 @@
 
   isOnTrueCurve(pos) := (
     regional(values);
-    
+
     values = apply(surround, f(pos.x + #.x, pos.y + #.y));
-    forall(1..4, 
+    forall(1..4,
       values_(2*#) = 2 * f(pos.x, pos.y) - values_(2*#);
     );
 
@@ -187,7 +187,7 @@
 
 
 
-  
+
 
 
 
@@ -212,7 +212,7 @@
 
   placeBugs(pos) := (
     if(rectContainsPoint(renderArea, pos) & !rectContainsPoint(paperRect, pos),
-      colorplot(L, R, "computeTexture", 
+      colorplot(L, R, "computeTexture",
         if(dist(#, cindyToTexture(pos)) < 0.5, 1, getState(#)_1);
       );
     );
@@ -246,7 +246,7 @@
     if(showHighlight, fillpoly(roundedrectangle(highlightRect.xy, highlightRect.w, highlightRect.h, 1), color->(0,0,0), alpha->0.2));
     forall(1..length(codes),
       drawtext(codePos + posOfLine(#) + (0, -lerp(1.2, 2.1, codeHeight, 2.3, 5)), renders_#, size-> 30);
-    ); 
+    );
   );
 
 
@@ -262,11 +262,10 @@
         codeIndex = #;
         highlightPos = pos;
 
-        createF(codeIndex);
-        
+        userInput = "";
 
-        
-        
+        createF(codeIndex);
+
       );
     );
   );
@@ -293,7 +292,7 @@
     clearimage("computeTexture");
     clearimage("renderTarget");
   );
-    
+
 
 
 
@@ -308,13 +307,18 @@
 
 
 
-    
+
+
+
+
 
   drawCustomEquation() := (
-    drawtext(canvasCenter + (10.5, -17.5), "$=0$", color->sparkColor_(1..3), size->30);
+    drawtext(canvasCenter + (12, -17.5), "$=0$", color->sparkColor_(1..3), size->30, align->"right");
 
-
+    drawtext(canvasCenter + (12, -15.5), userInput, color->sparkColor_(1..3), size->30, align->"right");
   );
+
+
 
 
 
@@ -327,14 +331,14 @@
   canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
   canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
   canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
-  canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+  canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
   [canvasLeft, canvasTop] = canvasCorners_1;
   [canvasRight, canvasBottom] = canvasCorners_3;
 
 
-  
 
 
+  userInput = "";
 
 
 
@@ -354,7 +358,7 @@
     "$x^3-y^2 = 0$",
     "$x^3 -2x + 0.5 -y^2 = 0$"
   ];
-  
+
   codePos = canvasCorners_3 + (-16.5, 17);
   codeHeight = 2.8;
   codeIndex = randomint(length(codes)) + 1;
@@ -371,37 +375,37 @@
 
 
 
-  
-  
+
+
   gradEpsilon = 0.001;
   newtonEpsilon = 0.02;
-  
+
   //f(x,y) := (x * y^2 - 3 * x^3 + x^2 - x + sin(y) * x + 5 - pi * y) * (y^9-1.4*x^2*y^2+1.4*x^3) * ((y-x^5)^2-y^10)  * (y^4 + 3 * x^4 - 7);
   //f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
-  
+
 
   showHighlight = true;
 
 
-  
+
 
 
   thickness = 0.0;
   sparkColor = [255,200,44] / 255 :> 1;
-  
-  
+
+
   surround = apply(1..8, k, gauss(exp(i*k/8*2*pi))) * 0.01;
-  
+
 
 
   computeResolution = 1024;
   renderResolution = 1024;
-  
-  
+
+
   axesMax = 10;
-  L = (-axesMax, -axesMax)-(0.5,0.5); 
+  L = (-axesMax, -axesMax)-(0.5,0.5);
   R = (axesMax, -axesMax)-(0.5,0.5);
-  
+
   createimage("computeTexture", computeResolution, computeResolution);
   createimage("trueCurve", computeResolution, computeResolution);
   //createimage("gradientTexture", computeResolution, computeResolution);
@@ -415,14 +419,14 @@
 
 
 /*
-  colorplot(L, R, "gradientTexture", 
+  colorplot(L, R, "gradientTexture",
     grad = computeGradient(#);
-    (grad.x, grad.y, 0, 1); 
+    (grad.x, grad.y, 0, 1);
   );
 
-  colorplot(L, R, "newtonTexture", 
+  colorplot(L, R, "newtonTexture",
     newt = computeNewton(#);
-    (newt.x, newt.y, 0, 1); 
+    (newt.x, newt.y, 0, 1);
   );
 */
 
@@ -436,13 +440,14 @@
 
 
   //colorplot("computeTexture", if(random()>0.999, 1, 0));
-  
 
 
 
-  
+
+
+
   createimage("codeTexture", 1920, 1080);
-  
+
 
   playanimation();
   setupTime();
@@ -486,7 +491,7 @@
 
 <script id='csmousedown' type='text/x-cindyscript'>
   placeBugs(mouse().xy);
-  catchCode();  
+  catchCode();
 </script>
 
 <script id='csmousedrag' type='text/x-cindyscript'>
@@ -501,16 +506,46 @@
 
 
 
+<script>
+  let dict =  [
+    ["*", " "],
+    ["sin", "\\sin "],
+    ["cos", "\\cos "],
+    ["tan", "\\tan "],
+    ["abs", "\\mathrm{abs} "]
+  ];
+
+  function handleInput() {
+    let input = document.getElementById("inp").value;
+
+
+    cindy.evokeCS('f(x,y) := (' + input + ');');
+    cindy.evokeCS('outsideUpdate();');
+
+    input = input.replace(/[0-9]+\.*[0-9]*/g, (match) => { return "{" + match + "}" });
+    for(entry of dict) {
+      //let searchRegExp = new RegExp(entry[0], 'g');
+      input = input.replaceAll(entry[0], entry[1]);
+    }
+    console.log(input);
+    cindy.evokeCS('userInput = "$' + input + ' = 0$";');
+
+
+
+
+  }
+</script>
+
 <div id="App">
   <div id="CSCanvas" class="CindyJS-widget"><canvas style="position: absolute; border: medium none; top: 0px; left: 0px; padding: 0px; margin: 0px; height: 100%; width: 100%;" width="1920" height="1080"></canvas><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 100000px; height: 100000px"></div></div><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 200%; height: 200%"></div></div></div>
 
 
 <div id="Input-box" data-dashlane-rid="3796e6737f4c7b8b" data-form-type="other">
-      <input type="text" id="inp" value="x^2+3*y^2-4" onkeypress="if((event.which ? event.which : event.keyCode)==13) { cindy.evokeCS('f(x,y) := (' + this.value + '); outsideUpdate();'); }" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
+<input type="text" id="inp" value="" onkeypress="if((event.which ? event.which : event.keyCode)==13) {handleInput()}" size="60" data-dashlane-rid="17eeb47f3e46c750" data-form-type="other">
 </div>
 
 </div>
-  
+
 <script>
 
 cindy = createCindy({canvasname:"CSCanvas",
@@ -541,8 +576,44 @@ cindy = createCindy({canvasname:"CSCanvas",
   function updateInputArea() {
     document.getElementById('inp').value = allCodes[code - 1];
   }
+
+
+
 </script>
- 
+
+
+
+
+
+
+
+
+
+<script src="../../translation.js"></script>
+<script>
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+
+
+  function translate() {
+    lang = getParameterByName("lang");
+
+
+    //cindy.evokeCS('recallButton.label = "' + translation[lang].recallButton + '";');
+
+
+  }
+
+</script>
+
+
 </body>
 
 
