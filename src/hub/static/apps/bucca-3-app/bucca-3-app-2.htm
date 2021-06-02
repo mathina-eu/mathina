@@ -69,6 +69,10 @@
             z-index: 2;
             visibility: visible;
         }
+		
+		#CorrectString {
+			top:55%;
+		}
 
         #successMessage {
         position: absolute;
@@ -181,7 +185,8 @@ background-repeat: no-repeat;
 Traduzioni=[
 [["Trad1"],"Try to decipher this sentence without knowing the key:","Prova a decifrare questa frase senza conoscere la chiave:","Tenta decifrar esta frase sem saber a chave:","Versuche, diesen Satz zu entschl&uuml;sseln, ohne die genaue Regel zu kennen:"],
 [["SuccMess"],"Good job!","Bravo!","Muito bem!","Sehr gut!"],
-[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"]
+[["FailMess"],"Try again!","Riprova!","Tente novamente!","Versuchen Sie es erneut!"],
+[["CorrectString"],"Meet me tomorrow morning at the pub near the dock on the island","Incontriamoci domani mattina al bar vicino al molo sull isola","Vem ter comigo ao bar junto ao cais da ilha de manha","Triff mich morgen um neun an der Bar bei den Docks auf der Insel"]
 ];
 
 
@@ -700,6 +705,8 @@ Traduzioni=[
             location.reload();
 
         }
+		
+
     </script>
 </head>
 
@@ -732,9 +739,10 @@ Traduzioni=[
 	<canvas id='myCanvas'></canvas>
         <div class="FinalImage"><img src="img/fmat1.png" height=100%></img></div>
         
-<span id="SuccMess" class="FinalMessage">GOOD JOB!</span>
+<span id="SuccMess" class="FinalMessage">GOOD JOB!</span><br>
+<span id="CorrectString" class="FinalMessage"></span>
         <img src="img/refresh.png" onclick="Link();" width=10% style=" position: absolute;
-  top: 60%;
+  top: 70%;
   right: 45%;"></img>
     </div>
 	

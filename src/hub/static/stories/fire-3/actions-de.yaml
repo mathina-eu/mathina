@@ -431,13 +431,19 @@ actions:
     style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
     parallax: front2
   - type: game
-    text: "App 3-1 (noch nicht fertig)"
-    cta: Hier kann man bald klicken.
+    text: "Die Flugbahn des Phönix kann durch ein Polynom beschrieben werden, das ist eine Funktion der Variablen x. Passe die magischen Zahlen (Koeffizienten) für jede Potenz von x an, und entwerfe so die Flugbahn für Flick. Pass auf, dass sie um die Hindernisse herum führt, damit er sich nicht weh tut."
+    #"The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick. Avoid all obstacles, so he does not hurt himself."
+    toolbarText: Passe die Flugbahn mit Hilfe der Funktion unten an.
+    #Adjust the flight path through the function below.
+    cta: "Fliege mit Flick! (noch nicht fertig)"
     url: /apps/imaginary/app_3/3_1/de.html
 
   - type: game
-    text: "App 3-2 (noch nicht fertig)"
-    cta: Hier kann man bald klicken.
+    text: "Flicks Flugbahn wird wieder durch ein Polynom beschrieben. Dieses Mal kannst nicht die Koeffizienten anpassen, sondern du kannst die weißen Punkte bewegen. Die Bahn wird genau durch diese Punkte führen. Du kannst die Bahn allerdings erst sehen, wenn du Flick losgeschickt hast. Tipp: Wenn du alle Punkte positioniert hast, gibt es nur eine einzige mögliche Bahn, sie könnte allerdings anders verlaufen, als du sie dir vorstellst..."
+    #Flick's flight path will again by described by a polynomial. This time, you cannot adjust the coefficients, but you can move the white points. The path will go through all of them. You will not see the path until you tell Flick to fly. Be advised, when all points are set, only one path is possible, and it might be different from what you envisioned...
+    cta:  "Fliege mit Flick!"
+    toolbarText: Bewege die Punkte, so dass Flick keines der Hindernisse auf seiner Bahn trifft.
+    #Move the points so Flick will not hit any obstacles during his flight.
     url: /apps/imaginary/app_3/3_2/de.html
 
   # - type: clearImage

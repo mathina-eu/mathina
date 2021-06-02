@@ -138,13 +138,16 @@
         }
 		
 			      Traduzioni=[
-		[["Testo1"],"Name of the <br>player","Nome del <br>giocatore","Nome do <br>jogador","Name des <br>Spielers"],
-		[["Testo2","Testo2b"],"Remaining amount <br>to give away","Somma rimanente <br>da distribuire","Quantidade restante <br>para dar","Restbetrag <br>zum Verschenken"],
+		//[["Testo1"],"Name of the <br>player","Nome del <br>giocatore","Nome do <br>jogador","Namen"],
+		[["Testo1"],"Number of the <br>player","Numero del <br>giocatore","N&uacute;mero do <br>jogador","Nummer"],
+		[["Testo2","Testo2b"],"Remaining amount <br>to give away","Somma rimanente <br>da distribuire","Quantidade restante <br>para dar","Restmenge <br>zum Verschenken"],
 		[["Testo3"],"Amount received <br>in first round","Somma ricevuta <br>nel primo round","Valor recebido <br>na primeira rodada","Menge in der <br>ersten Runde erhalten"],
 		[["Testo4"],"Amount received <br>in second round","Somma ricevuta <br>nel secondo round","Valor recebido <br>na segunda rodada","Menge in der <br>zweiten Runde erhalten"],
 		[["Testo5"],"Total amount <br>received","Totale <br>ricevuto","Valor total <br>recebido","Gesamtbetrag <br>erhalten"],
 		[["Trad1"],"Initial amount of gold medals:","Numero iniziale di medaglie d'oro:","Quantidade inicial de medalhas de ouro","Anfangsmenge an Goldmedaillen"],
-		[["Trad2"],"Generate table","Genera tabella","Gerar tabela","Tabelle generieren"]
+		[["Trad2"],"Generate table","Genera tabella","Gerar tabela","Tabelle generieren"],
+		[[],"Player ","Giocatore ", "Jogador ", "Spieler "]
+		
 ];
 
  function Traduci(Lang) {
@@ -193,6 +196,7 @@
 
 
         PlayerNames = ["Martin", "Emma", "Ava", "George", "Robert", "Charlotte", "Emily"];
+        PlayerNames = ["1", "2", "3", "4", "5", "6", "7"];
 
         function Generate() {
 
@@ -230,17 +234,17 @@
                 A = CurrentLine + 1;
                 if (i == N - 1) {
                     if (i < Amici) {
-                        AddLineAll(PlayerNames[A - 1], B, "<textarea id='K" + A + "'></textarea>");
+                        AddLineAll(Traduzioni[7][Lingua]+PlayerNames[A - 1], B, "<textarea id='K" + A + "'></textarea>");
                         AddKeyboard("K" + A);
                         GiveOld = B;
                     } else if (i < 2 * Amici) {
-                        AddLineAll(PlayerNames[A - 1], B, "<textarea id='K" + A + "'></textarea>");
+                        AddLineAll(Traduzioni[7][Lingua]+PlayerNames[A - 1], B, "<textarea id='K" + A + "'></textarea>");
                         AddKeyboard("K" + A);
                         GiveOld = B;
                     }
 
                 } else {
-                    AddLineAll(PlayerNames[A - 1], B, C);
+                    AddLineAll(Traduzioni[7][Lingua]+PlayerNames[A - 1], B, C);
                 }
 
                 B = B - C;
@@ -317,9 +321,11 @@
                 console.log(GiveOld, Receive);
                 GiveOld = GiveOld - Receive;
                 console.log(GiveOld);
-                cell1.innerHTML = PlayerNames[CurrentLine - 1];
+                cell1.innerHTML = Traduzioni[7][Lingua]+ PlayerNames[CurrentLine - 1];
                 cell2.innerHTML = GiveOld;
-                cell3.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
+				
+				if (GiveOld<0) cell3.innerHTML = "<img src='./sad.png' style='height:min(1.7vw,4vh)'>";
+                else cell3.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
 
                 if (CurrentLine % 2 == 0) {
 					cell1.classList.add("tg-ndxe");
@@ -351,7 +357,8 @@
 
                 cell3.innerHTML = "<span id='N" + CurrentLine + "'></span>";
                 cell1.innerHTML = GiveOld;
-                cell2.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
+				if (GiveOld<0) cell2.innerHTML = "<img src='./sad.png' style='height:min(1.7vw,4vh)'>";
+                else cell2.innerHTML = "<textarea id=\"K" + CurrentLine + "\"></textarea>";
 				
 				if (CurrentLine % 2 == Amici % 2) {
 					cell1.classList.add("tg-ndxe");
