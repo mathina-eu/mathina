@@ -32,7 +32,7 @@ drawDragon() := (
 drawWand() := (
   //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
   drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
-  
+
   forall(1..ceil(lerp(2, magicLength, wand.value, 0, wand.maxValue)),
     drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
@@ -78,7 +78,7 @@ drawFlamma() := (
 );
 
 drawSpeechBubble() := (
-  if(showSpeechBubble, 
+  if(showSpeechBubble,
     drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha, flipx->true);
     drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
   );
@@ -153,7 +153,7 @@ moveDragon(dt) := (
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
       );
-    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+    if(length(dragon.trailB) > dragon.trailBMaxLength,
       dragon.trailB = bite(dragon.trailB);
     );
   );
@@ -180,7 +180,7 @@ updateDragon() := (
   if(path.dragonIndex < length(path.points),
     currArrow = path.points_(path.dragonIndex + 1) - path.points_(path.dragonIndex);
     currArrow = currArrow / abs(currArrow);
-    
+
     dragon.rotation = 0.5*pi-arctan2(currArrow);
     if(currArrow.x < -0.1,
       dragon.rotation = -dragon.rotation;
@@ -229,7 +229,7 @@ updateWand() := (
   relMouse = mouse().xy - wand.pos;
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
-  if(wand.value < wand.deadzone, 
+  if(wand.value < wand.deadzone,
     wand.value = 0;
   );
   wand.dir = slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
@@ -446,8 +446,8 @@ drawPath() := (
 
     if(# < path.dragonIndex,
       drawStrokeObject({
-        "pos": (0,0), 
-        "stroke": stroke, 
+        "pos": (0,0),
+        "stroke": stroke,
         "drawPercent": 1,
         "lineColor": (1, 0.6, 0),
         "lineAlpha": 1,
@@ -456,12 +456,12 @@ drawPath() := (
         "fillAlpha": 0,
         "arrow": true,
         "arrowSize": 1
-      }); 
-    );   
+      });
+    );
     if(# == path.dragonIndex,
       drawStrokeObject({
-        "pos": (0,0), 
-        "stroke": stroke, 
+        "pos": (0,0),
+        "stroke": stroke,
         "drawPercent": easeInOutCubic(path.progress),
         "lineColor": lerp((1, 0.8, 0), (1, 0.6, 0), path.progress),
         "lineAlpha": lerp(0, 1, path.progress),
@@ -470,12 +470,12 @@ drawPath() := (
         "fillAlpha": 0,
         "arrow": true,
         "arrowSize": lerp(0.7, 1, path.progress)
-      });  
-    );  
+      });
+    );
     if(# > path.dragonIndex,
       drawStrokeObject({
-          "pos": (0,0), 
-          "stroke": stroke, 
+          "pos": (0,0),
+          "stroke": stroke,
           "drawPercent": 0,
           "lineColor": (1, 0.8, 0),
           "lineAlpha": 0,
@@ -577,7 +577,7 @@ scatterClouds() := (
 canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
 canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
 canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
-canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
 [canvasLeft, canvasTop] = canvasCorners_1;
 [canvasRight, canvasBottom] = canvasCorners_3;
 
@@ -611,7 +611,7 @@ inputDisplay = {
 inputButtons = {
   "rad": 1.5,
   "positions": [
-      {"low": (inputDisplay.pos + (- 2.5 * inputDisplay.size, - 2.5 * inputDisplay.size)), "high": (inputDisplay.pos + (- 2.5 * inputDisplay.size, 4 * inputDisplay.size))}, 
+      {"low": (inputDisplay.pos + (- 2.5 * inputDisplay.size, - 2.5 * inputDisplay.size)), "high": (inputDisplay.pos + (- 2.5 * inputDisplay.size, 4 * inputDisplay.size))},
       {"low": (inputDisplay.pos + (  2.5 * inputDisplay.size, - 2.5 * inputDisplay.size)), "high": (inputDisplay.pos + (  2.5 * inputDisplay.size, 4 * inputDisplay.size))}
   ]
 };
@@ -748,8 +748,8 @@ scatterClouds();
 pickUpSpawnArea = [
     canvasCenter + [-35.47, 18.87],
     canvasCenter + [35.41, 19.11],
-    canvasCenter + [36.01, -14.01], 
-    canvasCenter + [-3.47, -14.09], 
+    canvasCenter + [36.01, -14.01],
+    canvasCenter + [-3.47, -14.09],
     canvasCenter + [-36.27, -4.49]
 ];
 
@@ -864,8 +864,8 @@ setupTime();
 
 
 <script id='csdraw' type='text/x-cindyscript'>
-  
-  
+
+
   drawimage(canvasCorners_4, canvasCorners_3, "back");
   drawimage(canvasCorners_4, canvasCorners_3, "floor");
   drawimage(canvasCenter + (-16,-19), "mountain2");
@@ -884,15 +884,15 @@ setupTime();
 
   drawFlamma();
   //drawWand();
-  
+
   //drawStrokeObject(followCurve);
-  
+
   drawSpeechBubble();
-  
+
 
 
   drawInputDisplay();
-  drawInputButtons();  
+  drawInputButtons();
   drawInputBuffer();
   drawinputComfirmButton();
   drawStartButton();
@@ -930,7 +930,7 @@ setupTime();
       path.progress = 0;
     );
   );
-  
+
   //updateAnimationTrack(fireballAnimationTrack, delta);
   //animateFlipbook(pickUp, fireballAnimationTrack);
 
@@ -974,11 +974,11 @@ setupTime();
       if((length(inputBuffer.record) < inputBuffer.max) & (inputDisplay.texts != [0,0]),
         inputBuffer.record = inputBuffer.record :> inputDisplay.texts;
         inputDisplay.texts = [0,0];
-        
+
         path.points = path.points :> (path.points_(-1) + inputBuffer.record_(-1));
       );
     );
-  
+
     if(inputBuffer.record != [] & dist(mouse().xy, startButton.pos) < startButton.rad,
       if(length(inputBuffer.record) >= 1,
         dragonMoveTrack = setupAnimationTrack(now(), now() + 1);
@@ -1027,21 +1027,21 @@ setupTime();
                    mountain1:  "../../assets/mountain_1.png",
                    mountain2: "../../assets/mountain_2.png",
                    smoke1:  "../../assets/smoke_1.png",
-                   smoke2: "../../assets/smoke_2.png",                  
+                   smoke2: "../../assets/smoke_2.png",
                    smoke3: "../../assets/smoke_3.png",
                    dragon1: "../../assets/dragon_1.png",
                    dragon2: "../../assets/dragon_2.png",
                    dragon3: "../../assets/dragon_3.png",
                    magic1: "../../assets/magic_1.png",
                    magic2: "../../assets/magic_2.png",
-                   magic3: "../../assets/magic_3.png",                   
+                   magic3: "../../assets/magic_3.png",
                    fireball1: "../../assets/fireball_1.png",
                    fireball2: "../../assets/fireball_2.png",
-                   fireball3: "../../assets/fireball_3.png", 
+                   fireball3: "../../assets/fireball_3.png",
                    cloud1: "../../assets/cloud_1.png",
                    cloud2: "../../assets/cloud_2.png",
-                   cloud3: "../../assets/cloud_3.png",                    
-                   cloud4: "../../assets/cloud_4.png",                    
+                   cloud3: "../../assets/cloud_3.png",
+                   cloud4: "../../assets/cloud_4.png",
                    back:   "../../assets/back_3.png",
                    front:  "../../assets/front_2.png",
                    wand:   "../../assets/wand.png",
@@ -1054,7 +1054,7 @@ setupTime();
 
 </script>
 
-<script src="translation.js"></script>
+<script src="../../translation.js"></script>
 <script>
   function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -1069,14 +1069,14 @@ setupTime();
 
   function translate() {
     lang = getParameterByName("lang");
-  
-    
-    cindy.evokeCS('recallButton.label = "' + translation[lang].recallButton + '";');
-    cindy.evokeCS('startButton.label = "' + translation[lang].startButton + '";');
-    cindy.evokeCS('inputConfirmButton.label = "' + translation[lang].inputConfirmButton + '";');
+
+
+    cindy.evokeCS('recallButton.label = "' + translation[lang].Btn_Back + '";');
+    cindy.evokeCS('startButton.label = "' + translation[lang].Btn_Go + '";');
+    cindy.evokeCS('inputConfirmButton.label = "' + translation[lang].Btn_Add + '";');
 
     cindy.evokeCS('flamma.feedback = [];');
-    for(bark of translation[lang].flamma) {
+    for(bark of translation[lang].flamma2) {
       cindy.evokeCS('flamma.feedback = flamma.feedback :> "' + bark + '";');
     }
 

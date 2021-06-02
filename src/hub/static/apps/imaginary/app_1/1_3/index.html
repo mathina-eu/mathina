@@ -32,7 +32,7 @@ drawDragon() := (
 drawWand() := (
   //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
   drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
-  
+
   forall(1..ceil(lerp(0, magicLength, wand.value, 0, wand.maxValue)),
     drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
@@ -81,7 +81,7 @@ drawFlamma() := (
 
 
 drawSpeechBubble() := (
-  if(showSpeechBubble, 
+  if(showSpeechBubble,
     drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha);
     drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
   );
@@ -132,7 +132,7 @@ moveDragon(dt) := (
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
       );
-    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+    if(length(dragon.trailB) > dragon.trailBMaxLength,
       dragon.trailB = bite(dragon.trailB);
     );
   );
@@ -176,7 +176,7 @@ updateWand() := (
   relMouse = mouse().xy - wand.pos;
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
-  if(wand.value < wand.deadzone, 
+  if(wand.value < wand.deadzone,
     wand.value = 0;
   );
   wand.dir = slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
@@ -299,7 +299,7 @@ generateCurve() := (
 
 
 
-  if(firstRun, 
+  if(firstRun,
     angle = 0;
     squish = [1,1];
   , // else //
@@ -324,7 +324,7 @@ scoreCurve() := (
     scoreLabel.text = scoreLabel.score;
     followScore = [];
     //generateCurve();
-    
+
     curveDestroyTrack = setupAnimationTrack(now(), now() + 2);
     destroy = true;
 
@@ -397,7 +397,7 @@ processFlamma() := (
 canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
 canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
 canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
-canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
 [canvasLeft, canvasTop] = canvasCorners_1;
 [canvasRight, canvasBottom] = canvasCorners_3;
 
@@ -445,7 +445,7 @@ magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
 /*
 obstacles = [];
 
-repeat(5, 
+repeat(5,
   newPos = newObstaclePoint(obstacles :> dragon, 15, 30);
 
   if(newPos != [],
@@ -609,7 +609,7 @@ generateCurve();
 
 
 <script id='csdraw' type='text/x-cindyscript'>
-  
+
   drawimage(canvasCorners_4, canvasCorners_3, "back");
   drawStrokeObject(followCurve);
   drawDragonTrail();
@@ -621,8 +621,8 @@ generateCurve();
   drawSpeechBubble();
 
   drawWand();
-  
-  
+
+
 
   drawRecallButton();
   drawScoreLabel();
@@ -646,7 +646,7 @@ generateCurve();
       dragon.trailA = [[dragonHome, ceil(3 * random()), 2 * pi * random()]];
     );
   , // else //
-    if(wandActive, 
+    if(wandActive,
       moveDragon(delta);
     );
     //collideWithPickUp();
@@ -723,21 +723,21 @@ generateCurve();
                    dragon3: "../../assets/dragon_3.png",
                    magic1: "../../assets/magic_1.png",
                    magic2: "../../assets/magic_2.png",
-                   magic3: "../../assets/magic_3.png",                   
+                   magic3: "../../assets/magic_3.png",
                    fireball1: "../../assets/fireball_1.png",
                    fireball2: "../../assets/fireball_2.png",
-                   fireball3: "../../assets/fireball_3.png", 
+                   fireball3: "../../assets/fireball_3.png",
                    back:   "../../assets/back_2.png",
                    front:  "../../assets/front_2.png",
                    wand:   "../../assets/wand_2.png",
                    flamma:   "../../assets/flamma_wave.png",
-                   bubble:   "../../assets/speech_bubble.png",                   
+                   bubble:   "../../assets/speech_bubble.png",
                  }
                 });
 
 </script>
 
-<script src="translation.js"></script>
+<script src="../../translation.js"></script>
 <script>
   function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
@@ -752,9 +752,9 @@ generateCurve();
 
   function translate() {
     lang = getParameterByName("lang");
-  
-    
-    cindy.evokeCS('recallButton.label = "' + translation[lang].recallButton + '";');
+
+
+    cindy.evokeCS('recallButton.label = "' + translation[lang].Btn_Back + '";');
     cindy.evokeCS('flamma.feedback = [];');
     for(bark of translation[lang].flamma) {
       cindy.evokeCS('flamma.feedback = flamma.feedback :> "' + bark + '";');
