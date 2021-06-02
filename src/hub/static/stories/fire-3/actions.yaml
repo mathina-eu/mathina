@@ -411,7 +411,7 @@ actions:
 
 # Game 3.1
   - type: game
-    text: "The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick. Avoid all obstacles, so he does not hurt himself."
+    text: "The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick."
     #A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
     toolbarText: Adjust the flight path through the function below.
     #Adjust the function to get the target graph.

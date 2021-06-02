@@ -431,7 +431,7 @@ actions:
     style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
     parallax: front2
   - type: game
-    text: "Die Flugbahn des Phönix kann durch ein Polynom beschrieben werden, das ist eine Funktion der Variablen x. Passe die magischen Zahlen (Koeffizienten) für jede Potenz von x an, und entwerfe so die Flugbahn für Flick. Pass auf, dass sie um die Hindernisse herum führt, damit er sich nicht weh tut."
+    text: "Die Flugbahn des Phönix kann durch ein Polynom beschrieben werden, das ist eine Funktion der Variablen x. Passe die magischen Zahlen (Koeffizienten) für jede Potenz von x an, und entwerfe so die Flugbahn für Flick."
     #"The flight path of the phoenix can be described by a polynomial, which is a function of the variable x. Adjust the magical numbers (coefficients) for each power of x and create a path for Flick. Avoid all obstacles, so he does not hurt himself."
     toolbarText: Passe die Flugbahn mit Hilfe der Funktion unten an.
     #Adjust the flight path through the function below.
