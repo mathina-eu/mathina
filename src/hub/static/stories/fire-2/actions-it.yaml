@@ -83,10 +83,10 @@ actions:
 
   - type: sceneText
     text: >
-      Mathina e Leo erano tornati al campo dove avevano incontrato per la prima volta Flamma, l'addestratrice di uccelli del fuoco. 
+      Mathina e Leo erano tornati al campo dove avevano incontrato per la prima volta Flamma, l'addestratrice di uccelli del fuoco.
       Si erano esercitati a far volare alcuni unidraghi per diversi giorni
        ogni settimana, e ogni volta che vedevano un grande animale volante nel cielo, venivano
-       per vedere se Flamma era lì, ad addestrarlo. Volevano fare esperienza per poter partecipare al festival che si sarebbe tenuto di lì a poco. 
+       per vedere se Flamma era lì, ad addestrarlo. Volevano fare esperienza per poter partecipare al festival che si sarebbe tenuto di lì a poco.
        Quella mattina avevano visto volare un unidrago
        in lontananza e pensarono che Flamma lo stesse allenando.
 
@@ -154,7 +154,7 @@ actions:
   - type: sceneText
     text: >
       In effetti, Flamma era lì, si muoveva intensamente e urlava
-       parole incomprensibili, quasi come stesse cantando. Mathina e Leo corsero per tutto il campo per incontrarla. 
+       parole incomprensibili, quasi come stesse cantando. Mathina e Leo corsero per tutto il campo per incontrarla.
        Si aspettavano di vedere Flamma guidare l' unidrago come un direttore d'orchestra dirige la musica, con il corno
        dell'unidrago usato come un bacchetta. Tuttavia, Flamma non aveva nulla nelle sue mani.
 
@@ -320,11 +320,11 @@ actions:
 
       - text: Normalmente quando ciò accade, gli unidraghi non si riescono ad addomesticare e
            rimangono selvaggi. Essi continuano a sentire ancora il loro corno perduto quando si muove,
-           anche se dista chilometri o è nascosto molto lontano.  
+           anche se dista chilometri o è nascosto molto lontano.
         char: flamma
         mood: normal
       - text: Se qualcuno lo trova e gioca con esso senza saperlo, l'unidrago può impazzire
-           se non impara a ignorare la sensazione. Questo unidrago però è molto docile e quindi ho deciso di provare ad addestrarlo come faccio con gli altri. Ovviamente, dal momento che non abbiamo il suo corno, dobbiamo usare qualcos'altro. 
+           se non impara a ignorare la sensazione. Questo unidrago però è molto docile e quindi ho deciso di provare ad addestrarlo come faccio con gli altri. Ovviamente, dal momento che non abbiamo il suo corno, dobbiamo usare qualcos'altro.
         char: flamma
         mood: normal
 
@@ -809,7 +809,7 @@ actions:
     text: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     toolbarText: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     cta: Fai volare l'unidrago!
-    url: /apps/imaginary/app_2/2_1/it.html
+    url: /apps/imaginary/app_2/2_1/index.html?lang=it
 
   - type: sceneText
     text: Flamma fu contenta di vedere come Mathina si cimentava con la nuova lingua.
@@ -822,7 +822,7 @@ actions:
     entries:
 
      - text: Ottimo! Puoi anche dire all'unidrago alcune paia di numeri, in modo che esegua dei voli in sequenza. Gli unidraghi hanno
-         buona memoria e ricorderanno le varie istruzioni e il loro ordine. 
+         buona memoria e ricorderanno le varie istruzioni e il loro ordine.
        char: flamma
        mood: normal
      - text: Questo è molto utile per gli addestratori di unidraghi perché permette di pianificare il percorso che seguiranno
@@ -835,7 +835,7 @@ actions:
        char: leo
        mood: thinking
 
-     - text: Lo lascierò scoprire a te. 
+     - text: Lo lascierò scoprire a te.
        char: flamma
        mood: normal
 
@@ -844,7 +844,7 @@ actions:
     text: Fai volare l'unidrago al castello evitando gli ostacoli. Se colpisci una nuvola o una montagna, dovrà ricominciare.
     cta: Vola al castello!
     toolbarText: Vola al castello evitando gli ostacoli!
-    url: /apps/imaginary/app_2/2_2/it.html
+    url: /apps/imaginary/app_2/2_2/index.html?lang=it
 
   - type: dialog
     avatarAlign:
@@ -880,7 +880,7 @@ actions:
 
       - text: Visto che siete così svegli vi proporrò una sfida. Ho queste palle di fuoco
            che gli unidraghi amano mangiare. Devi dire al drago il percorso
-           per raggiungere tutte le palle di fuoco facendo in modo di non toccare le montagne e le nuvole 
+           per raggiungere tutte le palle di fuoco facendo in modo di non toccare le montagne e le nuvole
            in cielo. Pensi di farcela?
         char: flamma
         mood: normal
@@ -893,7 +893,7 @@ actions:
   - type: game
     text: Mangia tutte le palle di fuoco senza toccare gli ostacoli e poi raggiungi il castello.
     cta: Mangia tutte le palle di fuoco che compaiono!
-    url: /apps/imaginary/app_2/2_3/it.html
+    url: /apps/imaginary/app_2/2_3/index.html?lang=it
     toolbarText: Mangia le palle di fuoco che compaiono e vola al castello! Attento agli ostacoli!
 
 

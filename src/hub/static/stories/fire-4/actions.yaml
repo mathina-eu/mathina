@@ -80,7 +80,7 @@ actions:
         ease: power3.out
 
   - type: sceneText
-    text: It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon. 
+    text: It was late in the afternoon and Mathina and Leo had been walking around in the forest of Arisa, looking for berries and mushrooms. They knew that the forest was safe during the day, but they had heard stories about enchanted creatures wandering during the night. They had never stayed in the forest so long in the evening, and the sun started to fade in the horizon.
    #It was not a good idea to leave the path and go into the woods. Leo just realized that the sun was behind the mountains and he started to get nervous.
   - type: animation
     target: matleo
@@ -247,7 +247,7 @@ actions:
       mathina: left
       leo: left
     entries:
-    - text: These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive. 
+    - text: These are sparkbugs. They are microscopic creatures, made of living tissue and also of fire. You can get burned if you touch them, but otherwise they are not aggressive.
   #They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. The result is absolutely beautiful.
       char: flamma
 
@@ -266,18 +266,18 @@ actions:
       leo: left
     entries:
 
-      - text: They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air. 
+      - text: They spread tiny droplets of burning gas around them, and they fly so close to each other that from our size and distance it appears that it is a silk tissue or string floating in the air.
   #They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air.
         char: flamma
 
 
-      - text: They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air. 
-        char: flamma     
+      - text: They appear at the sunset and during the night, releasing different gases and burning in different colors. Their light mixes with the shadows and the moonlight, and they dance and make different shapes in the air.
+        char: flamma
       - text: Flamma, we want to see that, can we, please?
         char: leo
 
       - text: Yes, we can stay here a bit longer and later I will bring you home. Actually, I came here to study the sparkbugs. You know, as the dragons and phoenixes, all the fire creatures are very intelligent and have their own languages.
-    # and we can try to communicate with them using magical words. 
+    # and we can try to communicate with them using magical words.
     #I still haven’t learned all their language, but I can tell you what I know.
         char: flamma
 
@@ -309,7 +309,7 @@ actions:
      - text: We can try to communicate with them using magical words. I still haven’t learned all their language, but I can tell you what I know.
        char: flamma
        exposition: Mathina and Leo listened intently and sat on the forest floor.
-     - text: The bugs orient themselves according to a reference. It is as if they could feel two perpendicular axes in the background. Each bug is always aware of its position in the space. 
+     - text: The bugs orient themselves according to a reference. It is as if they could feel two perpendicular axes in the background. Each bug is always aware of its position in the space.
        char: flamma
      - text: You cannot tell one single bug how to move or where to place itself, but instead, you can say a sentence, a condition, to the whole swarm and, each bug will place itself somewhere where it satisfies that condition.
        char: flamma
@@ -324,7 +324,7 @@ actions:
     text: Choose an equation. You can release the sparkbugs whereever you like by clicking and dragging. They will position themselves according to the equation you chose. Try the other quations, too. In the lower pat of the screen, you can even enter your own equation.
     toolbarText: Choose an equation and let the sparkbugs dance along the corresponding curve.
     cta: Let the sparkbugs dance!
-    url: /apps/imaginary/app_4/4_1/en.html
+    url: /apps/imaginary/app_4/4_1/index.html?lang=en
 
   - type: dialog
     avatarAlign:
@@ -338,13 +338,13 @@ actions:
         char: flamma
 
 
-      - text: We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same. 
+      - text: We can tell the sentence that reads y=x, but the sparkbugs do not understand it this way, we have to tell them y-x=0, which is the same.
        #Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
         char: flamma
 
 
       - text:  Actually, we don’t even tell them the “equal zero”, we only tell them one expression with all the variables x,y adding and multiplying, with maybe some numbers. In this case, y-x=0 means that the bugs will place themselves in all the points where their x and y coordinates are equal.
-        char: flamma    
+        char: flamma
       - text: If we say x·y=0, it becomes interesting, because they position themselves in all the places where the product of the x and y coordinates is zero.
         char: flamma
 
@@ -402,7 +402,7 @@ actions:
         text: Mm, these squares… I think it has to be something related to Pythagoras…
         exposition: adventured Mathina
 
-        mood: thinking     
+        mood: thinking
       - char: flamma
         text: You are close, Mathina, very close… with your intuition you could tell the bugs to make very intricate figures.
 
@@ -441,7 +441,7 @@ actions:
     text: Place the sparkbugs in the air by clicking and dragging. They will show you a curve. You have three guesses, to find the right equation of that curve
     toolbarText: Which curve are the sparkbugs forming? Choose the right equation.
     cta: Solve the riddles of the sparkbugs!
-    url: /apps/imaginary/app_4/4_2/en.html
+    url: /apps/imaginary/app_4/4_2/index.html?lang=en
 
 
   - type: dialog
@@ -456,7 +456,7 @@ actions:
         text: The relationship between these graphics and the formulas is still today a largely unknown field. Many wizards, or as they are known outside the magical world, mathematicians, call this field of study Algebraic Geometry because it studies the relationship between Geometry and Algebra.
 
       - char: flamma
-        text: We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space. 
+        text: We have been playing with curves in the plane, but if we add a third variable -the height-, a function F(x,y,z)=0 defines a surface in space.
       #For mathematicians, it would even make sense to have more variables, even if we cannot imagine them in our three-dimensional space.
 
       - char: flamma

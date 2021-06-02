@@ -267,7 +267,7 @@ actions:
 
 
       - text: Eles aparecem ao pôr do sol e durante a noite, libertando diferentes gases e brilhando com diferentes cores. A sua luz mistura-se com as sombras e com o luar e eles dançam e criam diferentes formas no ar.
-        char: flamma     
+        char: flamma
       - text: Flama, gostávamos de ver isso! Podemos?
         char: leo
 
@@ -311,7 +311,7 @@ actions:
     text: Escolhe uma equação. Podes espalhar os insetos de fogo onde quiseres clicando e arrastando. Eles próprios tomam posições de acordo com a equação que escolheste. Tenta também outras equações. No écran em baixo podes até dar tu mesmo uma equação.
     toolbarText: Escolhe uma equação e deixa que os insetos de fogo dancem ao longo da curva correspondente.
     cta: Que os insetos de fogo dancem!
-    url: /apps/imaginary/app_4/4_1/en.html
+    url: /apps/imaginary/app_4/4_1/index.html?lang=pt
 
   - type: dialog
     avatarAlign:
@@ -330,8 +330,8 @@ actions:
 
 
       - text:  Na verdade, nem sequer lhes dizemos "igual a zero", apenas lhes damos uma expressão com todas as variáveis x, y a somar e/ou a multiplicar, e talvez com alguns números adicionais. Neste caso, y-x = 0 significa que os insetos se vão colocar em todos os pontos em que as suas coordenadas x e y são iguais.
-        char: flamma    
-      - text: Se dissermos x · y = 0, isso torna-se interessante, porque eles posicionam-se em todos os lugares onde o produto das coordenadas x por y é zero. 
+        char: flamma
+      - text: Se dissermos x · y = 0, isso torna-se interessante, porque eles posicionam-se em todos os lugares onde o produto das coordenadas x por y é zero.
         char: flamma
 
   - type: clearImage
@@ -385,7 +385,7 @@ actions:
         text: Mm, esses quadrados... Acho que deve ser algo relacionado com Pitágoras...
         exposition: aventurou a Mathina
 
-        mood: thinking     
+        mood: thinking
       - char: flamma
         text: Estás perto, Mathina, muito perto... com a vossa intuição podem dizer aos insetos para criarem figuras muito intrincadas.
 
@@ -422,7 +422,7 @@ actions:
     text: Coloca os insetos de fogo no ar clicando e arrastando.  Eles mostrarão uma curva. Tens três tentativas para descobrir a equação correta dessa curva.
     toolbarText: Que curva estão os insetos de fogo a formar? Escolhe a equação correta.
     cta: Resolve as adivinhas dos insetos de fogo!
-    url: /apps/imaginary/app_4/4_2/en.html
+    url: /apps/imaginary/app_4/4_2/index.html?lang=pt
 
   - type: dialog
     avatarAlign:
