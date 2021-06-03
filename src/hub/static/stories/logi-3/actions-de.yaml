@@ -347,6 +347,7 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
+    tag: firstGame
     text: Hilf Mathina und Leo dabei, die beiden Polizisten bestmöglich auf der Karte zu platzieren.
     #Help Mathina and Leo find a good plan by moving 2 policemen on the map.
     toolbarText: Wo sollen die Polizisten stehen?
@@ -449,6 +450,7 @@ actions:
     text: Mathina und Leo schnappten sich die übrig gelassenen Zuckerwürfel von den Kaffees der beiden Polizisten und experimentierten los.
     #Mathina and Leo snuck the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
+    tag: secondGame
     text: Hilf Mathina und Leo dabei, einen guten Platz für die Zuckerwürfel zu finden.
     #Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
     toolbarText: Wo sollten die Polizisten stehen?
@@ -637,6 +639,7 @@ actions:
     text: Die Polizisten riefen sofort die Polizei-Leitung an und berichteten von ihren Entdeckungen. Mathina und Leo verabschiedeten sich und setzten ihre Erkundungen auf den Straßen von Logi-City fort.
     #The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
   - type: game
+    tag: thirdGame
     text: Mochtest Du dieses Rätsel? Hier gibt es noch weitere.
     #Have you enjoyed using the app? Continue playing with different maps.
     toolbarText: 

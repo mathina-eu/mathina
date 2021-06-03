@@ -277,6 +277,7 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
+    tag: firstGame
     text: Ajuda a Mathina e o Leo a encontrarem um bom plano, movendo os 2 polícias no mapa.
     toolbarText: 
     cta: Experimenta!
@@ -351,6 +352,7 @@ actions:
   - type: sceneText
     text: A Mathina e o Leo retiraram os cubos de açúcar dos pires das chávenas de café dos polícias e iniciaram uma experiência. 
   - type: game
+    tag: secondGame
     text: Ajuda a Mathina e o Leo a encontrarem um bom plano, colocando cubos de açúcar no mapa. 
     toolbarText: O utilizador pode mover cubos de açúcar no mapa.
     cta: Experimenta!
@@ -515,6 +517,7 @@ actions:
   - type: sceneText
     text: Os polícias decidiram falar imediatamente com o Chefe da Polícia para o informar das suas descobertas. A Mathina e o Leo entretanto partiram para continuar a sua exploração da cidade Logi.
   - type: game
+    tag: thirdGame
     text: Gostaste da app? Continua a jogar com outros mapas..
     toolbarText: 
     cta: Clica aqui!

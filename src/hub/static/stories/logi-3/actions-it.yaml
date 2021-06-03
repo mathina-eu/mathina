@@ -308,6 +308,7 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
+    tag: firstGame
     text: Prova ad aiutare Mathina a disporre i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città?
     toolbarText: 
     cta: Aiuta Mathina!
@@ -390,6 +391,7 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina e Leo presero le zollette di zucchero dai piattini del caffè della polizia iniziarono a cercare un buon posizionamento.
   - type: game
+    tag: secondGame
     text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa. 
     toolbarText: 
     cta: Provaci!
@@ -565,6 +567,7 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: I poliziotti decisero di chiamare immediatamente il capo della polizia per condividere le loro scoperte. Mathina e Leo, nel frattempo, avevano ripreso a visitare la Città della Logica.
   - type: game
+    tag: thirdGame
     text: Vuoi provare a disporre i poliziotti per pattugliare le strade di altre città?
     toolbarText: 
     cta: Clicca qui!
