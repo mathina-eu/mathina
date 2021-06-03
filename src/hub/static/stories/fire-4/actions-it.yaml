@@ -271,7 +271,7 @@ actions:
 
 
       - text: Appaiono al tramonto e di notte, rilasciando gas diversi e bruciando in diversi colori. La loro luce si mescola con le ombre e la luce della luna e danzando creano forme diverse nell'aria.
-        char: flamma     
+        char: flamma
       - text: Dici che riusciamo a vederlo anche noi?
         char: leo
 
@@ -321,7 +321,7 @@ actions:
     text: Scegli un'equazione. Puoi rilasciare le lucciole scintillanti dove preferisci facendo clic e trascinando. Si posizioneranno in base all'equazione che hai scelto. Nella parte inferiore dello schermo, puoi persino inserire la tua equazione.
     toolbarText: Scegli un'equazione e lascia che le lucciole scintillanti danzino lungo la curva corrispondente.
     cta: Fai danzare le lucciole scintillanti!
-    url: /apps/imaginary/app_4/4_1/it.html
+    url: /apps/imaginary/app_4/4_1/index.html?lang=it
 
   - type: dialog
     avatarAlign:
@@ -335,12 +335,12 @@ actions:
         char: flamma
 
 
-      - text: "Possiamo dire la frase che legge y=x, ma le lucciole scintillanti non la capirebbero detta in questo modo: dobbiamo dire loro y-x=0, che è lo stesso." 
+      - text: "Possiamo dire la frase che legge y=x, ma le lucciole scintillanti non la capirebbero detta in questo modo: dobbiamo dire loro y-x=0, che è lo stesso."
         char: flamma
 
 
       - text: In realtà, non diciamo loro nemmeno l' "uguale a zero" alla fine dell'equazione, diciamo loro solo un'espressione con tutte le variabili x, y che si sommano e si moltiplicano, e gli eventuali coefficienti. In questo caso, y-x=0 significa che le lucciole scintillanti si posizioneranno in tutti i punti in cui le loro coordinate x e y sono uguali.
-        char: flamma    
+        char: flamma
       - text: Se diciamo x·y=0, diventa interessante, perché si posizionano in tutti i punti in cui il prodotto delle coordinate x e y è zero.
         char: flamma
 
@@ -398,7 +398,7 @@ actions:
         text: Mm, questi quadrati ... penso che debba essere qualcosa legato al Teorema di Pitagora...
         exposition: adventured Mathina
 
-        mood: thinking     
+        mood: thinking
       - char: flamma
         text: Sei vicina, Mathina, molto vicina... con il tuo intuito potresti dire alle lucciole di creare figure molto intricate.
 
@@ -436,7 +436,7 @@ actions:
     text: Posiziona le lucciole scintillanti in aria facendo clic e trascinando. Ti mostreranno una curva. Hai tre tentativi per trovare l'equazione della curva.
     toolbarText: Quale curva stanno formando le lucciole scintillanti? Scegli l'equazione corretta.
     cta: Risolvi gli indovinelli delle lucciole scintillanti!
-    url: /apps/imaginary/app_4/4_2/it.html
+    url: /apps/imaginary/app_4/4_2/index.html?lang=it
 
   - type: dialog
     avatarAlign:
@@ -450,7 +450,7 @@ actions:
         text: "Il rapporto tra questi grafici e le formule è ancora oggi un campo in gran parte sconosciuto. Molti maghi, o come sono conosciuti al di fuori del mondo magico, matematici, chiamano questo campo di studio \"Geometria Algebrica\" perché studia la relazione la geometria utilizzando l'algebra (e viceversa)."
 
       - char: flamma
-        text: "Abbiamo giocato con le curve nel piano, ma se aggiungiamo una terza variabile -l'altezza-, un'equazione del tipo \"F(x, y, z)=0\" definisce una superficie nello spazio." 
+        text: "Abbiamo giocato con le curve nel piano, ma se aggiungiamo una terza variabile -l'altezza-, un'equazione del tipo \"F(x, y, z)=0\" definisce una superficie nello spazio."
 
       - char: flamma
         text: Per i matematici, avrebbe anche senso avere più variabili, anche se non possiamo immaginarle nel nostro spazio tridimensionale.

@@ -390,7 +390,7 @@ actions:
     text: |
        Usa il corno per guidare l'unidrago. Prova a disegnare delle belle forme nell'aria.
     toolbarText: Fai volare l'unidrago!
-    url: /apps/imaginary/app_1/1_1/it.html
+    url: /apps/imaginary/app_1/1_1/index.html?lang=it
     cta: Fai volare l'unidrago!
 
 
@@ -464,7 +464,7 @@ actions:
   - type: game
     text: "Fai volare l'unidrago per mangiare tutte le palle di fuoco! Gli unidraghi sono infastiditi dalle nuvole: cerca di evitarle!"
     toolbarText: Prendi le palle di fuoco evitando le nuvole!
-    url: /apps/imaginary/app_1/1_2/it.html
+    url: /apps/imaginary/app_1/1_2/index.html?lang=it
     cta: Prendi tutte le palle di fuoco evitando le nuvole!
 
   - type: clearImage
@@ -485,7 +485,7 @@ actions:
   - type: game
     text: Prova a volare quanto più possibile vicino alla linea.
     toolbarText: Segui le linee!
-    url: /apps/imaginary/app_1/1_3/it.html
+    url: /apps/imaginary/app_1/1_3/index.html?lang=it
     cta: Segui le linee!
 
   - type: sceneText
@@ -521,4 +521,4 @@ actions:
   - type: game
     text: Esercitarti a guidare l'unidrago di Flamma. Quali forme riesci a creare?
     cta: "Fai pratica!"
-    url: /apps/imaginary/app_1/1_1/it.html
+    url: /apps/imaginary/app_1/1_1/index.html?lang=it

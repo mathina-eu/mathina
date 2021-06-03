@@ -3,14 +3,14 @@
  <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>App 1-3</title>
+    <title>App 1-1</title>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
     <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
 </head>
 
-<body style="font-family:Palatino; margin:0; font-size:16pt">
+<body style="font-family:Palatino; margin:0; font-size:16pt" onload="translate()">
 
 
 
@@ -32,7 +32,7 @@ drawDragon() := (
 drawWand() := (
   //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
   drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
-  
+
   forall(1..ceil(lerp(0, magicLength, wand.value, 0, wand.maxValue)),
     drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
   );
@@ -74,18 +74,11 @@ drawDragonTrail() := (
 );
 
 
-drawFlamma() := (
-  drawFlipBookObject(flamma);
-);
 
 
 
-drawSpeechBubble() := (
-  if(showSpeechBubble, 
-    drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha);
-    drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
-  );
-);
+
+
 
 
 
@@ -127,12 +120,11 @@ moveDragon(dt) := (
 
   if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
     dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
-    scoreCurve();
     if(length(dragon.trailA) > dragon.trailAMaxLength,
       dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
       dragon.trailA = bite(dragon.trailA);
       );
-    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+    if(length(dragon.trailB) > dragon.trailBMaxLength,
       dragon.trailB = bite(dragon.trailB);
     );
   );
@@ -176,7 +168,7 @@ updateWand() := (
   relMouse = mouse().xy - wand.pos;
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
-  if(wand.value < wand.deadzone, 
+  if(wand.value < wand.deadzone,
     wand.value = 0;
   );
   wand.dir = slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
@@ -252,143 +244,7 @@ newObstaclePoint(list, minDist, count) := (
 
 
 
-
-
-
-
-
-
-
-
-
-lissajoue(t) := lissajoue(1, 2, pi/3, 2 * pi * t);
-lissajoueHard(t) := lissajoue(2, 3, pi/3, 2 * pi * t);
-lemiscate(t) := [cos(2 * pi * t), sin(2 * pi * t) * cos(2 * pi * t)]; // Lemiscate of Gerono
-
-createCurveStroke(name) := (
-  result = sampleCircle(1, 2*pi);
-
-  if(name == "lissajoue", result = sampleCurve("lissajoue", 0, 1));
-  if(name == "lissajoueHard", result = sampleCurve("lissajoueHard", 0, 1));
-  if(name == "circle",    result = sampleCircle(1, 2*pi));
-  //if(name == "ellipse",    result = apply(sampleCircle(1, 2*pi), [1.2*#.x, 0.8 * #.y]));
-  if(name == "square",    result = samplePolygon([(-1,1), (1,1), (1,-1), (-1,-1)]));
-  if(name == "lemiscate", result = sampleCurve("lemiscate", 0, 1));
-  if(name == "triangle", result = samplePolygon([(0,1), 0.5 * (-sqrt(3), -1), 0.5 * (sqrt(3), -1)]));
-
-  result;
-);
-
-
-
-
-
-
-generateCurve() := (
-  regional(angle, squish);
-
-  if(length(activeRun) == 0,
-    firstRun = false;
-    activeRun = randsort(curveNames ++ ["lissajoueHard"]);
-    while(currCurve == activeRun_1, activeRun = randsort(curveNames));
-  );
-
-  currCurve = activeRun_1;
-  activeRun = bite(activeRun);
-
-
-
-
-  if(firstRun, 
-    angle = 0;
-    squish = [1,1];
-  , // else //
-    angle = 2*pi * random();
-    squish = [0.8 + 0.4 * random(), 0.8 + 0.4 * random()];
-  );
-  followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
-  followCurve.stroke = apply(createCurveStroke(currCurve), curveScales_currCurve * rotation(angle) * [squish.x * #.x, squish.y * #.y]);
-  followCurve.pos = randchoose(curvePositions);
-
-  followScore = [];
-
-  curveConstructTrack = setupAnimationTrack(now(), now() + 2);
-  draw = true;
-);
-
-
-scoreCurve() := (
-  followScore = if(length(followScore) >= scoreLength, bite(followScore), followScore) :> distPointSet((dragon.pos - followCurve.pos), followCurve.stroke);
-  if(and(length(followScore) >= scoreLength, sum(followScore) <= scoreGoal * scoreLength),
-    scoreLabel.score = scoreLabel.score + 1;
-    scoreLabel.text = scoreLabel.score;
-    followScore = [];
-    //generateCurve();
-    
-    curveDestroyTrack = setupAnimationTrack(now(), now() + 2);
-    destroy = true;
-
-
-    if(!flammaIn,
-    flammaOut = false;
-    flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
-    flammaIn = true;
-    flammaInStart = flamma.pos;
-
-
-  );
-  );
-);
-
-
-
-
-
-
-
-
-
-
-
-
-processFlamma() := (
-  if(flammaIn,
-    updateAnimationTrack(flammaInTrack, delta);
-    tween(flamma, "pos", flammaInStart, flamma.endPos, flammaInTrack, "easeInOutCubic");
-    showSpeechBubble = (flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))) != "");
-    if(showSpeechBubble,
-      if(flammaInTrack.timeLeft <= 0.3,
-        speechBubble.alpha = lerp(0, 1, flammaInTrack.timeLeft, 0.3, 0);
-      );
-    );
-    if(flammaInTrack.timeLeft <= 0,
-      flammaOutTrack = setupAnimationTrack(now() + 1, now() + 2);
-      flammaIn = false;
-      flammaOut = true;
-    );
-  );
-  if(flammaOut,
-    updateAnimationTrack(flammaOutTrack, delta);
-    tween(flamma, "pos", flamma.endPos, flamma.startPos, flammaOutTrack, "easeInCirc");
-    if(flammaOutTrack.timeLeft > 0.7,
-      speechBubble.alpha = lerp(1, 0, flammaOutTrack.timeLeft, 1, 0.7);
-    );
-    if(flammaOutTrack.timeLeft <= 0,
-      flammaOut = false;
-      showSpeechBubble = false;
-    );
-  );
-);
-
-
-
-
-
-
-
-
-
-
+lissajoue(a, b, d, t) := [sin(a * t + d), cos(b * t)];
 
 
 // **********************************************************************************************************
@@ -397,11 +253,10 @@ processFlamma() := (
 canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
 canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
 canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
-canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
 [canvasLeft, canvasTop] = canvasCorners_1;
 [canvasRight, canvasBottom] = canvasCorners_3;
 
-strokeSampleRateEBOW = 256;
 
 
 dragonHome = canvasCenter + (0, 5);
@@ -409,12 +264,12 @@ dragon = {
   "pos": dragonHome,
   "rad": 0.6,
   "velocity": [0,0],
-  "maxSpeed": 10,
+  "maxSpeed": 15,
   "trailA": [[dragonHome, ceil(3 * random()), 2 * pi * random()]],
   "trailAMaxSize": 1,
   "trailAMaxLength": 100,
   "trailB": [],
-  "trailBMaxLength": 0,
+  "trailBMaxLength": 100,
   "flipbook": ["dragon1", "dragon2", "dragon3", "dragon2"],
   "scale": 0.3,
   "rotation": 0,
@@ -443,10 +298,10 @@ magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
 
 
 
-/*
+
 obstacles = [];
 
-repeat(5, 
+repeat(5,
   newPos = newObstaclePoint(obstacles :> dragon, 15, 30);
 
   if(newPos != [],
@@ -473,7 +328,7 @@ pickUp = {
 
 fireballAnimationTrack = setupAnimationTrack(0,0.5);
 fireballAnimationTrack.looping = true;
-*/
+
 
 scoreLabel = {
   "pos": canvasCorners_1 + (2, -2),
@@ -487,63 +342,10 @@ wandActive := false;
 
 
 
-
-
-
-
-
-
-flamma = {
-  "startPos": canvasCenter + (-50, -2),
-  "pos": canvasCenter + (-50, -2),
-  "endPos": canvasCenter + (-35, -2),
-  "flipbook": ["flamma"],
-  "scale": 0.5,
-  "rotation": 0,
-  "flipx": false,
-  "flipy": false,
-	"index": 1,
-  "feedback": [
-      "", "", "Good!", "", "",
-      "Great!", "", "", "Wow!", "",
-      "", "Super!", "", "", "Amazing!",
-      ""
-  ]
-};
-flammaIn = false;
-flammaOut = false;
-
-
-speechBubble = {
-  "sprite": "bubble",
-  "text": "",
-  "pos": canvasCenter + (-32, 7),
-  "alpha": 0
-};
-showSpeechBubble = false;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-recallButton := {
+recallButton = {
   "pos": wand.pos + (-12,-5),
   "rad": 3,
-  "label": "Back!"
+  "label": "Zurück!"
 };
 
 recallActive = false;
@@ -556,48 +358,15 @@ recallStart = [];
 
 
 
-
-curveNames = ["circle", "square", "triangle", "lemiscate", "lissajoue"];
-curvePositions = apply(0..2, dragonHome + [lerp(0, 20, #, 0, 2), -2]);
-curveScales = {
-  "circle": 13,
-  "ellipse": 12,
-  "square": 11,
-  "lemiscate": 15,
-  "triangle": 15,
-  "lissajoue": 13,
-  "lissajoueHard": 13
-};
-
-activeRun = curveNames;
-firstRun = true;
-
-followCurve = createRootStrokeObject([0,0], (1,1,0), (1,1,1), 0);
-followCurve.lineSize = 5;
+followCurve = createRootStrokeObject(canvasCenter, (0,0,0), (1,1,1), 0);
+curve(t) := 10 * lissajoue(1, 2, pi/3, t);
+followCurve.stroke = samplecurve("curve", 0, 2*pi);
 followCurve.drawPercent = 1;
-
-scoreLength = 200;
-scoreGoal = 1.5;
-
-
-
-draw = false;
-destroy = false;
-targetStroke = [];
-followCurve.pos = curvePositions_(-1);
-
-
-
-
 
 
 
 playanimation();
 setupTime();
-
-
-generateCurve();
-
 </script>
 <script src="../../Egdod/egdodUI.js"></script>
 <script src="../../Egdod/egdodMath.js"></script>
@@ -610,24 +379,21 @@ generateCurve();
 
 
 <script id='csdraw' type='text/x-cindyscript'>
-  
+
+
   drawimage(canvasCorners_4, canvasCorners_3, "back");
-  drawStrokeObject(followCurve);
   drawDragonTrail();
   //drawPickUp();
   drawDragon();
   //drawObstacles();
   drawimage(canvasCorners_4, canvasCorners_3, "front");
-  drawFlamma();
-  drawSpeechBubble();
-
   drawWand();
-  
-  
+
+  //drawStrokeObject(followCurve);
+
 
   drawRecallButton();
-  drawScoreLabel();
-
+  //drawScoreLabel();
 </script>
 
 
@@ -635,9 +401,9 @@ generateCurve();
   delta = deltaTime();
 
   updateAnimationTrack(dragonAnimationTrack, delta * lerp(1, 2, wand.value, 0, wand.maxValue));
-  //updateAnimationTrack(fireballAnimationTrack, delta);
+  updateAnimationTrack(fireballAnimationTrack, delta);
   animateFlipbook(dragon, dragonAnimationTrack);
-  //animateFlipbook(pickUp, fireballAnimationTrack);
+  animateFlipbook(pickUp, fireballAnimationTrack);
 
   if(recallActive,
     updateAnimationTrack(recallTrack, delta);
@@ -647,29 +413,12 @@ generateCurve();
       dragon.trailA = [[dragonHome, ceil(3 * random()), 2 * pi * random()]];
     );
   , // else //
-    if(wandActive, 
+    if(wandActive,
       moveDragon(delta);
     );
     //collideWithPickUp();
     //collideWithObstacles();
   );
-
-  if(draw,
-    updateAnimationTrack(curveConstructTrack, delta);
-    constructStrokeDraw(followCurve, 10, 0, curveConstructTrack);
-    if(curveConstructTrack.timeLeft <= 0,
-      draw = false;
-    );
-  );
-  if(destroy,
-    updateAnimationTrack(curveDestroyTrack, delta);
-    destroyStrokeDraw(followCurve, 10, 0, curveDestroyTrack);
-    if(curveDestroyTrack.timeLeft <= 0,
-      destroy = false;
-      generateCurve();
-    );
-  );
-  processFlamma();
 </script>
 
 
@@ -692,7 +441,6 @@ generateCurve();
     updateWand();
     updateDragon();
   );
-
 </script>
 
 <script id='csmousemove' type='text/x-cindyscript'>
@@ -724,20 +472,39 @@ generateCurve();
                    dragon3: "../../assets/dragon_3.png",
                    magic1: "../../assets/magic_1.png",
                    magic2: "../../assets/magic_2.png",
-                   magic3: "../../assets/magic_3.png",                   
+                   magic3: "../../assets/magic_3.png",
                    fireball1: "../../assets/fireball_1.png",
                    fireball2: "../../assets/fireball_2.png",
-                   fireball3: "../../assets/fireball_3.png", 
+                   fireball3: "../../assets/fireball_3.png",
                    back:   "../../assets/back_2.png",
                    front:  "../../assets/front_2.png",
                    wand:   "../../assets/wand_2.png",
-                   flamma:   "../../assets/flamma_wave.png",
-                   bubble:   "../../assets/speech_bubble.png",                   
                  }
                 });
-
 </script>
 
+<script src="../../translation.js"></script>
+<script>
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+
+
+  function translate() {
+    lang = getParameterByName("lang");
+
+
+    cindy.evokeCS('recallButton.label = "' + translation[lang].Btn_Back + '";');
+
+  }
+
+</script>
 
 
 </body>

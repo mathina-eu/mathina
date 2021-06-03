@@ -114,7 +114,7 @@
             text
             nuxt
           >
-            Mathina Educator Repository
+            {{ $t('edu.mathina-educators-repository') }}
           </v-btn>
           <v-btn
             v-for="({ path, text }, iteration) in $store.state.breadcrumbs"
