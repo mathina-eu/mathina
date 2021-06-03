@@ -346,6 +346,7 @@ actions:
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
     parallax: back2
   - type: game
+    tag: firstGame
     text: Welchen Rat würdest Du Leo und Mathina geben? Du kannst nur von Rot nach Rot, Blau nach Blau, Grün nach Grün oder Gelb zu Gelb hüpfen. Oder du springst von Kreis zu Kreis, Quadrat zu Quadrat oder Dreieck zu Dreieck.
     # What advice would you give them? 
     toolbarText: Wie kommen Mathina und Leo auf die andere Seite?
@@ -377,6 +378,7 @@ actions:
     text: Was wäre also, wenn sie einmal rückwarts denken würde? Was wäre, wenn sie die Felder vom Türeingang zurück zu ihr verfolgen würde?
     # So what if she tried to think backwards? What if she tried to get through from the doorway to where she stood?
   - type: game
+    tag: secondGame
     text: Kannst Du den Weg vom Türeingang zurück zu Mathina finden?
     # Can you get from the doorway to Mathina, does this work?
     toolbarText: Kannst du den Weg vom blauen Dreieck mit dem gelben Punkt zu Leo finden?
