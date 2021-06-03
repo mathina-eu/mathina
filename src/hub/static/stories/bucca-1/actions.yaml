@@ -6,19 +6,16 @@ actions:
     noOverflow: true
     id: branch
     src: ramo.png
-    noOverflow: true
     style: "width: 100%; top: 10%; left: 50%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: branch2
     src: ramo.png
-    noOverflow: true
     style: "width: 50%; top: 9%; left: 50%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: branch3
     src: ramo.png
-    noOverflow: true
     style: "width: 25%; top: 4%; left: 85%;  z-index: 0;"
   - type: animation
     target: branch
