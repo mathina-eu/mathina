@@ -809,12 +809,7 @@ actions:
     text: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     toolbarText: Prova a far volare l'unidrago dicendogli delle coppie di numeri.
     cta: Fai volare l'unidrago!
-<<<<<<< HEAD
-    tag: app1
-    url: /apps/imaginary/app_2/2_1/it.html
-=======
     url: /apps/imaginary/app_2/2_1/index.html?lang=it
->>>>>>> develop
 
   - type: sceneText
     text: Flamma fu contenta di vedere come Mathina si cimentava con la nuova lingua.
@@ -885,13 +880,7 @@ actions:
     entries:
 
       - text: Visto che siete così svegli vi proporrò una sfida. Ho queste palle di fuoco
-           che gli unidraghi amano mangiare. Devi dire al drago il percorso
-<<<<<<< HEAD
-           per raggiungere il castello mangiando tutte le palle di fuoco e facendo in modo di non toccare le montagne e le nuvole 
-=======
-           per raggiungere tutte le palle di fuoco facendo in modo di non toccare le montagne e le nuvole
->>>>>>> develop
-           in cielo. Pensi di farcela?
+           che gli unidraghi amano mangiare. Devi dire al drago il percorso per raggiungere il castello mangiando tutte le palle di fuoco e facendo in modo di non toccare le montagne e le nuvole in cielo. Pensi di farcela?
         char: flamma
         mood: normal
 
@@ -903,12 +892,8 @@ actions:
   - type: game
     text: Raggiungi il castello dopo avere mangiato tutte le palle di fuoco e senza toccare gli ostacoli. Dopo che avrai raggiunto il castello puoi riprovare con più palle di fuoco e più nuvole.
     cta: Mangia tutte le palle di fuoco che compaiono!
-<<<<<<< HEAD
-    url: /apps/imaginary/app_2/2_3/it.html
     tag: app3
-=======
     url: /apps/imaginary/app_2/2_3/index.html?lang=it
->>>>>>> develop
     toolbarText: Mangia le palle di fuoco che compaiono e vola al castello! Attento agli ostacoli!
 
 
