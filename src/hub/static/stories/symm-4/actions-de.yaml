@@ -92,7 +92,7 @@ actions:
     style: "width: 16%; top: 45%; left: 1%;"         
   - type: game
     tag: tg1
-    text: "Schau dir den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -379,7 +379,7 @@ actions:
     style: "top: 57%; width: 13%"       
   - type: video
     tag: tg3
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: CuboMolde.mp4
@@ -397,7 +397,7 @@ actions:
     style: "top: 57%; width: 13%"       
   - type: video
     tag: tg2
-    text: Schau den Film an!
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: CuboMolde2.mp4
@@ -471,7 +471,7 @@ actions:
     #<p>Mathina then set up a cube using Leo's net. When gluing 3 faces on a common vertex, Mathina used a shoe box (which was in the office) as a mould to keep the three faces in position while the glue was drying.</p>
   - type: game
     tag: tg4
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -609,7 +609,7 @@ actions:
       <p>Mathina legte die halbfertige Struktur auf den Tisch, mit dem ursprünglichen Eckpunkt nach oben. Als sie das neue Modell auf dem Tisch festhielt, sahen sie beide, dass diese Position die Bedingungen erfüllte: Alle neuen Eckpunkte lagen auf der Ebene des Tisches. Jetzt waren die vier Winkel (zwischen jeweils zwei Dreiecken) gleich.</p>
     #p>Mathina then placed the structure on a table, with the initial vertex upwards, and, keeping it against the table, she noticed that the final position (all new vertices were on the plane of the table) corresponded precisely to what she wanted: now, the four angles between faces (dihedral angles) were equal.</p>
   - type: game
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspsielen"
     #"Play!"
@@ -626,7 +626,7 @@ actions:
     #<p>How should they continue in order to create a Platonic solid? After lifting the structure, they started by joining two triangles to the contiguous free edges, so that two of the new edges, one in each triangle, were together. Then they successively joined, in a similar way, the two missing triangles and verified that they had obtained a new polyhedron which seemed to be a Platonic solid.</p>
   - type: game
     tag: tg7
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -650,7 +650,7 @@ actions:
       <p>Neugierig faltete Leo das Polyeder auf, um sich das Netz anzusehen.</p>
     #<p>Always curious, Leo unfolded the polyhedron to obtain a net.</p>
   - type: game
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -692,7 +692,7 @@ actions:
     #<p>After having found this new Platonic solid with 4 triangles at each vertex, they moved on to look for 5 triangles, thus creating an open straight "pyramid". They decided to proceed as before: they placed the new vertices on the table in order to obtain identical dihedral angles. Then they added, to one of the free vertices, 3 triangles, so that the new solid angle would be equal to the one of the initial "opened" pyramid. Next, they joined, successively, 2 triangles in each free vertex of the "opened" pyramid, until they obtained a strip of 10 triangles. They noticed that the free edges of the strip formed a pentagon in a plane parallel to the previous one, but rotated by a tenth of a turn. They then continued the previous process: first they added 2 triangles and then, successively, they added one triangle (joined to the previous one). And their effort seemed to pay off: they obtained a new polyhedron which appeared to be a Platonic solid!</p>
   - type: game
     tag: tg8
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -718,7 +718,7 @@ actions:
       <p>Wie auch schon bei jedem Körper zuvor, faltete Leo das Polyeder wieder auf, um zu verstehen, wie das Netz aussehen könnte.</p>
     #<p>Just like before, Leo unfolded the polyhedron, trying to understand how a net could be.</p>
   - type: game
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -772,7 +772,7 @@ actions:
     #<p>Leo discovered that a new pentagon fitted securely to contiguous free edges from different pentagons. So he added three pentagons in this way. This created three new big gaps. Mathina tried to fill them with three new pentagons and they fitted precisely. At the end, they saw again three big gaps, once again with the same shape. They tried the same as before by putting three new pentagons: they fitted very well, and they even joined with each other creating a new vertex with the new added faces. As a precaution, they checked with the plasticine mould - it fitted to all vertices: they had discovered a new regular polyhedron!</p>
   - type: game
     tag: tg10
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -796,7 +796,7 @@ actions:
       <p>Und zum Schluss, wie er das bei jedem gemacht hatte, faltete Leo das Polyeder wieder auf.</p>
     #<p>In the end, as he had made with the previous polyhedra, Leo unfolded the polyhedron to see a net:</p>
   - type: game
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -1005,7 +1005,7 @@ actions:
         #"Asked Mathina, and checked the angles with a mould."
   - type: video
     tag: tg15
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: CuboRombiOcta.mp4
@@ -1037,7 +1037,7 @@ actions:
         #"Continued the technician."
   - type: video
     tag: tg17
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: Viramolde.mp4
@@ -1049,7 +1049,7 @@ actions:
         char: technician
   - type: video
     tag: tg18
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: CuboRombiOctaVM.mp4
@@ -1075,7 +1075,7 @@ actions:
         char: leo
   - type: game
     tag: tg19
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -1129,7 +1129,7 @@ actions:
     #<p>To fix his error, the technician cut the octagonal dome on the top of the Miller polyhedron and rotated it by 45º, so that the triangles of the dome became aligned to the bottom triangles.</p>
   - type: game
     tag: tg22
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
@@ -1173,7 +1173,7 @@ actions:
         #exposition: "machte der Techniker klar."
         #"The technician continued."
   - type: video
-    text: "Schau den Film an!"
+    text: "Schau's dir an!"
     #"Watch the movie!"
     entries:
       - src: AnimCubo.mp4
