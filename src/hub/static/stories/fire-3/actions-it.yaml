@@ -1,29 +1,17 @@
-actions:
-  - type: background
-    src: fire-bg1-layered.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+#FIRE-3 en-version
 
+actions:
   - type: image
-    src: $COMMON/img/characters/mathina/mathina3.png
-    id: mat1
-    style: "width: 15%; top: 45%; left: 9%;"
-    #valign: bottom
-    #style: "height: 25vh"
-  - type: image
-    src: $COMMON/img/leo3.png
-    id: leo1
-    style: "width: 15%; top: 57%; left: 0%; "
-    #valign: bottom
-  - type: image
-    src: flamma2.png
-    id: fla1
-    style: "width: 20%; top: 30%; left: 50%;"
+    src: kittchen_leo_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 170%; height: 170%; z-index: 1;"
+    noOverflow: true
+    parallax: back1
 
   - type: sceneText
     text: > 
       Era mattina presto quando Mathina fu svegliata all'improvviso dalle urla di Leo che provenivano dal piano di sotto della casa.
-      
-
+ 
   - type: dialog
     avatarAlign:
       - leo: left
@@ -32,17 +20,57 @@ actions:
         char: leo
         mood: happy
 
+  - type: animation
+    target: bg
+    vars:
+       duration: 1
+       width: 100%
+       height: 100%
+       ease: power3.Out
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 80%;"
+    parallax: front1
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        xPercent: -90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
+
   - type: sceneText
     text: >
       Mathina si vestì il più velocemente possibile e scese le scale. Flamma era davvero lì e Leo stava servendo a se stesso e a tutti una tazza di latte e la torta della colazione che la nonna aveva lasciato per loro.
 
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 15%; top: 45%; left: -10%;"
+    #valign: bottom
+    #style: "height: 25vh"
+    parallax: mid1
+
+
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        xPercent: 90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
+
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
-    entries:
+      mathina: left
+      leo: left
+      flamma: right
 
+    entries:
       - char: mathina
         text: Cosa è successo? Perché siete già svegli così presto?
 
@@ -50,25 +78,100 @@ actions:
         text: Camp..., camp...! Una gara! Camp....! Vincerai!
         exposition: La bocca di Leo era piena di biscotti, quindi Mathina era in grado di capire solo le parole "gara" e "vincerai".
 
+  - type: clearImage
+    id: bg
+
+  - type: clearImage
+    id: mat
+
+  - type: background
+    src: kittchen_both_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    #noOverflow: true
+    parallax: back1
+
+  - type: sceneText
+    text: Mathina era molto felice di vedere Flamma. Dopo un averle dato un grande abbraccio, si mise a fare colazione con Leo.
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+    entries:
+
       - char: flamma
         text: >
-          Notizie entusiasmanti Mathina! C'è una gara di uccelli del fuoco al castello di Arisa. Hai fatto così bene l'ultima volta che ho pensato che ti sarebbe piaciuto partecipare. Tuttavia, questa volta è molto diverso ed è più difficile. Questa volta non sono gli unidraghi a partecipare, ma altri uccelli di fuoco che non hai ancora visto: le fenici. Ho parlato con tua nonna ed è felice che tu venga ad Arisa per incontrare ed addestrare una fenice. Ti andrebbe di provare?
+          Notizie entusiasmanti Mathina! C'è una gara di uccelli del fuoco al castello di Arisa. Hai fatto così bene l'ultima volta che ho pensato che ti sarebbe piaciuto partecipare. Tuttavia, questa volta è molto diverso ed è più difficile. 
+      - char: flamma
+        text: >
+          Questa volta non sono gli unidraghi a partecipare, ma altri uccelli di fuoco che non hai ancora visto: le fenici. Ho parlato con tua nonna ed è felice che tu venga ad Arisa per incontrare ed addestrare una fenice. Ti andrebbe di provare?
       - char: mathina
         text: Certamente! Andiamo!
         exposition: Disse Mathina, un attimo prima di riempire a sua volta la propria bocca di biscotti e di torta della nonna.
 
   - type: sceneText
-    text: Fu così che i tre partirono per Arisa e il suo castello.
+    text: Fu così che i tre partirono alla volta di Arisa e del suo castello.
+
+  - type: clearBackground
+    id: bg
+
+  - type: clearImage
+    id: fla
+
     # change background to castle
 
+
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back3
+
+  - type: image
+    src: ochre_hills.png
+    id: hills
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid3
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%; transform: ScaleX(-1)"
+    parallax: front1
+
+  - type: image
+    src: mathinaleo.png
+    id: mat
+    style: "width: 30%; top: 45%; left: 20%;"
+    parallax: front2
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
   - type: sceneText
-    text: Quando arrivarono, Flamma descrisse come funzionava la gara e gli animali che stavano per vedere per la prima volta.
+    text: Mentre erano in viaggio, Flamma descrisse come funzionava la gara e gli animali che stavano per vedere per la prima volta.
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: flamma
@@ -93,42 +196,284 @@ actions:
         text: Ostacoli?
 
       - char: flamma
-        text: Sì. Lo vedrai una volta giunti al castello.
+        text: Sì. Capirai una volta che saremo giunti al castello.
+
+  - type: image
+    src: bg_castle.png
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 5%; top: 65%; left: 87%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 3%; top: 58%; left: 55%; transform: scaleX(-1)"
+    parallax: mid3
+
+  - type: image
+    src: flamma1.png
+    id: wizf
+    style: "width: 3%; top: 62%; left: 92%; transform: scaleX(-1)"
+    parallax: mid1
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 2%; top: 48%; left: 62%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: fireball1.png
+    id: fire2
+    style: "width: 2%; top: 52%; left: 82%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire2
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+  - type: image
+    src: fireball1.png
+    id: fire3
+    style: "width: 2%; top: 42%; left: 92%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire3
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 5%; top: 45%; left: 100%; transform: rotateY(180deg)"
+    noOverflow: true
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -1500
+        yPercent: -600
+
+  - type: image
+    src: unidragon.gif
+    id: uni2
+    style: "width: 5%; top: 55%; left: 65%;"
+    noOverflow: true
+    parallax: mid3
+
+  - type: animation
+    target: uni2
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 1100
+        yPercent: -240
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni3
+    style: "width: 5%; top: 67%; left: 92%; transform: scaleX(-1)"
+    parallax: mid2
 
   - type: sceneText
     text: "Dopo varie curve, si aprì davanti a loro un vastissimo campo e Mathina vide il castello in lontananza. Era un antico ma solido edificio che sorgeva nel mezzo di un campo. Aveva torri, vetrate e muri. Sarebbe stata una fortezza fantastica se mai avesse avuto bisogno di essere protetta. 
     Alle spalle del castello si innalzavano alte montagne, coperte di neve, e di fronte la valle offriva un'ampia radura, con ampio spazio per tutte le attività che si svolgevano. Alcuni unidraghi e alcuni uccelli del fuoco (che dovevano essere le fenici di cui Flamma aveva parlato) erano a terra, con alcuni addestratori che si prendevano cura di loro. A una certa distanza, alcuni maghi con la bacchetta in mano facevano levitare palle di fuoco e formavano nuvole di fumo."
 
+  - type: image
+    src: castle_large.png
+    id: castle_large
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: mid1
+
+  - type: clearImage
+    id: uni
+  - type: clearImage
+    id: uni3
+  - type: clearImage
+    id: fire1
+  - type: clearImage
+    id: fire2
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: wizs
+  - type: clearImage
+    id: wizf
+  - type: clearImage
+    id: uni2
+  - type: clearImage
+    id: fire3
+  - type: clearImage
+    id: fla
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%;"
+    parallax: front1
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 8%; top: 63%; left: 64%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 25%; top: 20%; left: 28%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 40%; left: 50%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 16%; top: 50%; left: 15%;"
+    parallax: front2
+
+  - type: image
+    src: phoenix.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: -40%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 350
+       # yPercent: -240
+
   - type: sceneText
     text: I tre si fermarono a poche centinaia di metri dal castello, dove si trovavano gli altri allenatori. Flamma salutò un uomo accanto a una fantastica fenice. L'animale era come un'enorme aquila, con piume rosse e gialle brillanti. Tra le piume, si poteva vedere un bagliore come se l'uccello di fuoco stesso stesse bruciando. Una coda lunga terminava con piume viola e verdi che scintillavano silenziosamente, rilasciando un fumo multicolore.
 
-
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: flamma
         text: Ok, Mathina puoi provare a far volare questa fenice. Si chiama Flick ed è molto docile, anche se non gli piace quando il suo allenatore lo inganna. Dovrai pensare attentamente a quello che vuoi dirgli.
 
-  - type: game
-    text: "App 3-1"
-    url:
+  - type: clearImage
+    id: leo
 
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
+    parallax: front2
+
+# Game 3.1
   - type: game
-    text: "App 3-2"
-    url:
+    text: "Il percorso che una fenice segue mentre vola è descritto da un polinomio, che è una funzione della variabile x. Scegli i coefficienti per ogni potenza di x e crea il percorso per Flick in modo da evitare tutti gli ostacoli e non si faccia male."
+    toolbarText: Modifica la traiettoria di volo scegliendo la funzione.
+    cta: Fai volare la fenice!
+    url: /apps/imaginary/app_3/3_1/en.html
+
+
+# Game 3.2
+  - type: game
+    text: "La traiettoria di Flick è ancora descritta da un polinomio. Questa volta non puoi modificare direttamente i coefficienti ma puoi muovere i punti: Flick passerà sempre sopra di essi. Il cammino non sarà visibile finché Flick non inizierà a volare. Ricorda: quando tutti i punti sono posizionati, un solo cammino è possibile (e potrebbe essere un po' diverso da come te lo immaginavi...)."
+    toolbarText: Modifica i punti in modo che Flick eviti tutti gli ostacoli.
+    cta: Fai volare la fenice!
+    url: /apps/imaginary/app_3/3_2/en.html
+
+  # - type: clearImage
+    # id: leo
+  - type: clearImage
+    id: mat
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: phoe
+
+  # - type: image
+    # src: $COMMON/img/characters/leo/leo2.png
+    # id: leo
+    # style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    # parallax: front2
+
+  - type: image
+    src: phoenix2.png
+    id: phoe2
+    style: "width: 30%; top: 40%; left: 90%;"
+    noOverflow: true
+    parallax: front1
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        #width: 25%
+        xPercent: -50
+       # yPercent: -240
+
+  - type: animation
+    target: phoe2
+    vars:
+        duration: 1.5
+        #width: 25%
+        xPercent: -163
+        yPercent: -35
 
   - type: sceneText
     text: Leo era in giro, pensando che avrebbe potuto anche provare a far volare la fenice. Era più giovane di Mathina, ma si sentiva pronto come chiunque altro. Stava ancora contemplando questo pensiero quando vide un'altra fenice che giaceva a terra. Aveva piume blu e verdi brillanti e il bagliore era più viola di quello di Flick. Ma ciò che Leo notò immediatamente fu che i suoi occhi erano vuoti.
 
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: leo
@@ -144,6 +489,23 @@ actions:
         text: Sì, ma come le diresti a quale altitudine deve volare?
         exposition: Disse Flamma.
 
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 22%; top: 40%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
       - char: leo
         text: Beh... posso dirle che che dovrebbe andare su o giù. Questo può farlo.
 
@@ -156,9 +518,22 @@ actions:
       - char: flamma
         text: Perfetto! Allora Liz va a te. Vediamo se riesci ad addestrarla a fare una gara come fanno Flick e Mathina.
 
+
+# Game 3.3
   - type: game
-    text: "App 3-3"
-    url:
+    text: Per far volare Liz, puoi dirle di quanto deve scendere o salire muovendo la mano in alto o in basso. Vola evitando gli ostacoli.
+    toolbarText: Evita gli ostacoli e raggiungi l'estremità dello schermo.
+    cta: Fai volare la fenice!
+    url: /apps/imaginary/app_3/3_3/en.html
+
+  - type: clearImage
+    id: phoe2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 30%; left: 45%; transform: scaleX(-1)"
+    parallax: front2
 
   - type: sceneText
     text: >
@@ -166,9 +541,9 @@ actions:
 
   - type: dialog
     avatarAlign:
-      - mathina: left
-      - leo: left
-      - flamma: left
+      mathina: left
+      leo: left
+      flamma: right
 
     entries:
       - char: mathina
@@ -182,13 +557,45 @@ actions:
         exposition: Leo era un po 'confuso adesso, ma Flamma intervenne.
 
       - char: flamma
-        text: Questa è un'idea fantastica! Liz è una fenice intelligente, capirà le tue istruzioni, ma spetta a te avvolgere la testa attorno a quell'idea! Se riesci a farcela, vincerai sicuramente il premio per il modo più originale di comandare le fenici, una categoria molto più prestigiosa delle semplici corse, perché richiede una profonda comprensione e connessione del linguaggio degli uccelli di fuoco!
+        text: Questa è un'idea fantastica! Liz è una fenice intelligente, capirà le tue istruzioni, ma spetta a te avvolgere la testa attorno a quell'idea!
 
+      - char: flamma
+        text:  Se riesci a farcela, vincerai sicuramente il premio per il modo più originale di comandare le fenici, una categoria molto più prestigiosa delle semplici corse, perché richiede una profonda comprensione e connessione del linguaggio degli uccelli di fuoco!
+
+# Game 3.4
   - type: game
-    text: "App 3-4"
-    url:
+    text: Sistema i puntini per creare una linea. Essa dirà alla fenice di quanto deve salire o scendere ogni volta. Con questa tecnica, prendi tutte le palle di fuoco sul tragitto.
+    toolbarText: Sistema la linea che dice alla fenice se scendere o salire. Prendi tutte le palle di fuoco.
+    cta: Fai volare la fenice!
+    url: /apps/imaginary/app_3/3_4/en.html
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 20%; top: 35%; left: 10%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 25%; top: 32%; left: 75%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: phoenix_mirrored.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: 100%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -350
+       # yPercent: -240
 
   - type: sceneText
     text: >
       "Mathina e Leo trascorsero l'intera giornata ad allenarsi e giocare con le fenici. Riusciti ad addestrare Liz e tutti i maghi della giuria e gli addestratori esperti di uccelli del fuoco li stimarono molto per averlo fatto. Decisero quindi di assegnare loro il premio "Originalità" per i migliori addestratori. Terminarono la giornata cenando al banchetto organizzato nella sala più grande del castello."
-      

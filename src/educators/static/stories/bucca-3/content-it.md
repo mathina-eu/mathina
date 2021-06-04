@@ -52,85 +52,84 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 &nbsp;
 
-## [App 1 - Il gioiello I]($HUB_URL/story/the-lost-treasure/?actionLink=app1)
+## [App 1 - Il gioiello I]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app1)
 
 In questa app l'utente deve provare a cifrare correttamente alcune parole usando il cifrario di Cesare con una chiave scelta dal computer. Questa esperienza serve per far prendere familiarità all'utente con il cifrario di Cesare e, nel caso l'utente abbia letto la storia "Il pappagallo parlante", per fornire un richiamo ai concetti visti precedentemente.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script1-it.pdf)
-
-&nbsp;
-
-## [App 2 - Il gioiello II]($HUB_URL/story/the-lost-treasure/?actionLink=app2)
-
-L'utente si trova davanti un messaggio da decifrare con il cifrario di Cesare ma con una difficoltà aggiuntiva: la frase in chiaro "Incontriamoci domani mattina al bar vicino al molo sull'isola" è scritta al contrario. Si tratta di un espediente tecnico per rendere il cifrario di Cesare più complicato ed è fatto ai fini della trama.
-
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script2-it.pdf)
-
-&nbsp;
-
-## [App 3 - Somme sull'orologio]($HUB_URL/story/the-lost-treasure/?actionLink=app3)
-
-In questa esperienza, il cifrario di Cesare presentato in precedenza viene analizzato dal punto di vista matematico. Questa volta l'interfaccia è quella di un orologio con una sola lancetta che mira a presentare l'addizione nell'aritmetica modulare. La domanda iniziale è di questo tipo: "Proviamo a calcolare 12 + 5 in un orologio con 14 ore". L'utente può spostare la lancetta delle ore su questo orologio a 14 ore per cercare di comprendere quale sarà la risposta finale (nel caso specifico 3 è la risposta corretta).
-
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](RPVvWsMXSiA?_align-center_)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
-## [App 4 Cesare ripetuto I]($HUB_URL/story/the-lost-treasure/?actionLink=app4)
+
+## [App 2 - Il gioiello II]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app2)
+
+L'utente si trova davanti un messaggio da decifrare con il cifrario di Cesare ma con una difficoltà aggiuntiva: la frase in chiaro "Incontriamoci domani mattina al bar vicino al molo sull'isola" è scritta al contrario. Si tratta di un espediente tecnico per rendere il cifrario di Cesare più complicato ed è fatto ai fini della trama.
+@[youtube](Kfp6PgOK8K8?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
+
+&nbsp;
+
+## [App 3 - Somme sull'orologio]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app3)
 
 In questa esperienza, il cifrario di Cesare presentato in precedenza viene analizzato dal punto di vista matematico. Questa volta l'interfaccia è quella di un orologio con una sola lancetta che mira a presentare l'addizione nell'aritmetica modulare. La domanda iniziale è di questo tipo: "Proviamo a calcolare 12 + 5 in un orologio con 14 ore". L'utente può spostare la lancetta delle ore su questo orologio a 14 ore per cercare di comprendere quale sarà la risposta finale (nel caso specifico 3 è la risposta corretta).
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script4-it.pdf)
+@[youtube](XsRGpkmIh0k?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
+
+&nbsp;
+## [App 4 Cesare ripetuto I]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app4)
+
+In questa esperienza, il cifrario di Cesare presentato in precedenza viene analizzato dal punto di vista matematico. Questa volta l'interfaccia è quella di un orologio con una sola lancetta che mira a presentare l'addizione nell'aritmetica modulare. La domanda iniziale è di questo tipo: "Proviamo a calcolare 12 + 5 in un orologio con 14 ore". L'utente può spostare la lancetta delle ore su questo orologio a 14 ore per cercare di comprendere quale sarà la risposta finale (nel caso specifico 3 è la risposta corretta).
+
+@[youtube](LTgWwiIRrm8?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
 
-## [App 5 Cesare ripetuto II]($HUB_URL/story/the-lost-treasure/?actionLink=app5)
+## [App 5 Cesare ripetuto II]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app5)
 
 Questa esperienza conclude l'analisi della storia per osservare che il cifrario di Cesare ripetuto 2 volte di seguito non ha nulla di diverso rispetto al cifrario di Cesare usuale. Semplicemente cambia la chiave. Per farlo all'utente vengono presentati due dischi di Cesare combinati come nell'esperienza precedente e gli si chiede di posizionare un terzo disco di Cesare in modo che il risultato dell'operazione di codifica sia lo stesso.
 
+@[youtube](agTiwTMl-do?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script5-it.pdf)
 
 &nbsp;
 
-## [App 6 - Il gioiello III]($HUB_URL/story/the-lost-treasure/?actionLink=app6)
+## [App 6 - Il gioiello III]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app6)
 
 L'esperienza è identica alla prima, con l'unica differenza che questa volta il messaggio non si riesce a decodificare, dato che non è stato cifrato con il cifrario di Cesare. Sottolineiamo che nella storia questo viene detto prima all'utente, in modo che l'esperienza di questa app non risulti frustrante. L'idea è solo un "verificare" che in effetti il disco di Cesare non decodifica il messaggio presentato in questo caso.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script6-it.pdf)
+@[youtube](yIqXC-y47GQ?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
 
-## [App 7 - Il gioiello IV]($HUB_URL/story/the-lost-treasure/?actionLink=app7)
+## [App 7 - Il gioiello IV]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app7)
 
 L'esperienza è identica all'esperienza precedente, viene presentata all'utente solo per concentrarsi su una lettera particolare del testo facendo in modo di tradurla come una "E", sperimentando quindi esattamente quello che Mathina e Angela stanno facendo nella storia.
 
+@[youtube](6NQM9xFIvlg?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script7-it.pdf)
 
 &nbsp;
 
-## [App 8 - Parola per parola]($HUB_URL/story/the-lost-treasure/?actionLink=app8)
+## [App 8 - Parola per parola]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app8)
 
 Questa esperienza è un primo passo verso il cifrario di Vigenère. Il testo viene codificato usando due dischi di Cesare, uno per le parole pari e uno per le parole dispari. Come si scoprirà nella storia, questo non è ancora l'approccio giusto per decodificare effettivamente il messaggio e questa esperienza ha lo scopo di far verificare personalmente che non è il metodo corretto.
 
+@[youtube](j3cMyFg5Lfc?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script8-it.pdf)
 
 &nbsp;
 
-## [App 9 - Un nuovo cifrario]($HUB_URL/story/the-lost-treasure/?actionLink=app9)
+## [App 9 - Un nuovo cifrario]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app9)
 
 L'esperienza conclusiva della storia è il cifrario di Vigenère su due lettere. Utilizzando due dischi di Cesare, si modificano rispettivamente le lettere pari e quelle dispari. In questo modo, seguendo i suggerimenti della storia, si riesce facilmente a decodificare il messaggio. C'è poi la possibilità di ripetere questa esperienza con messaggi e chiavi diversi.
+@[youtube](ZS5DU2PFlR8?_align-center_)
+[Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/bucca-3/transcripts/Script9-it.pdf)
 
 &nbsp;

@@ -17,11 +17,11 @@
         background-color: #C8F4F9;
         border: 5px solid #565A6E;
         color: #000;
-        width: 15%;
+        width: 18%;
         height: 10%;
         position: absolute;
-        left: 100px;
-        font-size:min(4vw,3vh);
+        left: 2%;
+        font-size:min(2vw,3vh);
         font-family: sans-serif;
         text-align: center;
     }
@@ -44,10 +44,10 @@
 
     #QuadratoCentrale1 {
         position: absolute;
-        left: 28vw;
+        left: 26vw;
         top: 15vh;
-        width: 20vw;
-        height: 15vw;
+        width: 22vw;
+        height: 18vw;
         border: solid 5px #2F7604;
         background-color: #F8FFCA;
     }
@@ -56,8 +56,8 @@
         position: absolute;
         left: 52vw;
         top: 15vh;
-        width: 20vw;
-        height: 15vw;
+        width: 22vw;
+        height: 18vw;
         border: solid 3px;
         border: solid 5px #2F7604;
         background-color: #F8FFCA;
@@ -65,10 +65,10 @@
 
     #QuadratoCentrale3 {
         position: absolute;
-        left: 28vw;
+        left: 26vw;
         top: 52vh;
-        width: 20vw;
-        height: 15vw;
+        width: 22vw;
+        height: 18vw;
         border: solid 3px;
         border: solid 5px #2F7604;
         background-color: #F8FFCA;
@@ -78,8 +78,8 @@
         position: absolute;
         left: 52vw;
         top: 52vh;
-        width: 20vw;
-        height: 15vw;
+        width: 22vw;
+        height: 18vw;
         border: solid 3px;
         border: solid 5px #2F7604;
         background-color: #F8FFCA;
@@ -94,7 +94,7 @@
         padding-bottom: 10px;
         background-color: #C8F4F9;
         text-align: center;
-        font-size:min(4vw,3vh);
+        font-size:min(2vw,3vh);
     }
 
     #chiave {
@@ -106,7 +106,7 @@
         padding-bottom: 10px;
         background-color: #FFF3EC;
         text-align: center;
-        font-size:min(4vw,3vh);
+        font-size:min(2vw,3vh);
     }
 
  #Head1 {
@@ -223,6 +223,7 @@ background-repeat: no-repeat;
 </style>
 
 <body onload="Init()">
+<style>#preloadcontainer{position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;background:#cbfffd;z-index:100}.spinner{margin:200px auto;width:70px;text-align:center}.spinner>div{width:18px;height:18px;background-color:#004786;border-radius:100%;display:inline-block;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}</style><div id="preloadcontainer"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
     <div id="messaggio">Messaggio: guardate il settimo albero a est dell'entrata.</div>
     <div id="chiave">Chiave: il cielo ne &egrave; pieno</div>
 
@@ -378,7 +379,7 @@ function Scramble() {
 
             function dragMouseDown(e) {
                 e = e || window.event;
-                e.preventDefault();
+                //e.preventDefault();
 				MyPos=getMousePos(window,e);
                 // get the mouse cursor position at startup:
                 pos3 = MyPos.x;
@@ -392,7 +393,7 @@ function Scramble() {
 
             function elementDrag(e) {
                 e = e || window.event;
-                e.preventDefault();
+                //e.preventDefault();
                 // calculate the new cursor position:
 				MyPos=getMousePos(window,e);
                 pos1 = pos3 - MyPos.x;
@@ -505,6 +506,7 @@ function Scramble() {
             if (Lingua == 0) Lingua = 1;
             Traduci(Lingua);
 			Resize();
+			document.getElementById("preloadcontainer").style.display = "none";
         }
 
 

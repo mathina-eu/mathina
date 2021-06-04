@@ -1,20 +1,18 @@
 # Concetti matematici
+La storia **Cani e gatti** affronta il "problema della galleria d'arte", un cosiddetto problema di visibilità. La visibilità in geometria è un'astrazione matematica della nozione di visibilità nella vita reale.
 
-The story Cats and Dogs deals with the “art gallery problem”, a so-called visibility problem. Visibility in geometry is a mathematical abstraction of the real-life notion of visibility. 
+Data una serie di ostacoli nello spazio euclideo, si dice che due punti nello spazio sono visibili l'uno all'altro, se il segmento che li unisce non interseca alcun ostacolo.
 
-Given a set of obstacles in the Euclidean space, two points in the space are said to be visible to each other, if the line segment that joins them does not intersect any obstacles. 
+Una famosa soluzione al problema dà un limite superiore al numero minimo di guardiani che servono per controllare tutte le opere d'arte. Essa afferma che n/3 guardie sono sempre sufficienti e, talvolta, anche necessarie per proteggere un semplice poligono con n vertici.
 
-A famous solution to the problem gives an upper bound on the minimal number of guards. It states that n/3 guards are always sufficient and sometimes necessary to guard a simple polygon with n vertices.
+Il calcolo della visibilità è uno dei problemi di base della geometria computazionale e ha applicazioni nella computer grafica, nella pianificazione del movimento e in svariate altre aree.
 
-Computation of visibility is among the basic problems in computational geometry and has applications in computer graphics, motion planning, and other areas.
+Molte delle nostre attività quotidiane si basano su schemi algoritmici. Viaggiamo in un'altra città e dobbiamo prendere l'autobus, programmiamo riunioni oppure cerchiamo un oggetto smarrito in casa nostra, dobbiamo raggruppare i piatti nella credenza in base a dimensione, tipo e colore oppure, a scuola, disporci in ordine di altezza in palestra, oppure ancora cerchiamo il miglior giocatore di scacchi in un torneo ecc...
 
-Many of our everyday activities are based on algorithmic patterns. We travel to another city and we have to catch the bus, we schedule meetings or look for a lost object in our home, we have to group the plates in the cupboard according to size, shape and color or have to rank in size order in the gym, we look for the best chess player…
+I modelli algoritmici sono, spesso inosservati, parte integrante delle nostre vite. Spesso razionalizziamo le nostre attività quotidiane utilizzando un modello algoritmico con il fine di aumentare la nostra efficienza e quindi risparmiare tempo ed energie. Per esempio, quando pianifichiamo il nostro viaggio dal punto A al punto B, prendiamo in considerazione il tempo di viaggio, il numero di cambi di mezzo di trasporto, la distanza percorribile a piedi e infine creiamo l'itinerario migliore.
 
-Algorithmic patterns are, often unnoticed, an integral part of our lives. We often rationalize our day-to-day activities using an algorithmic pattern in order to increase our efficiency and thereby save time and energy. For example, when planning our trip from point A to point B, we take into account the travel time, the number of transfers, the walking distance, and finally create the right itinerary.
+I modelli algoritmici conducono a un pensiero disciplinato. Attraverso passaggi successivi, l'utente valuta la situazione, rigettao conferma la propria idea iniziale. Ogni passo e, soprattutto, ogni soluzione corretta rafforzano l'autostima.
 
-Algorithmic patterns lead to disciplined thinking. Going through the steps, the user evaluates the situation, rejects or reinforces his or her own idea. Each successful step and especially a successful solution strengthens self-esteem.
-
-If children don’t get along with solving a problem, they often try guessing. It is good if they understand that they are able to cope with everyday situations better - especially with practical (mathematical) tasks - if they set up an algorithmic pattern for it.
 
 # Commenti didattici
 
@@ -43,15 +41,19 @@ La storia è accompagnata da una app in tre versioni leggermente diverse. Alla p
 
 La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/smartphone. Di seguito ne vedete una breve descrizione. Vengono forniti collegamenti sia per la app che per il video della guida utente. 
 
-##App 1 - Cani e gatti I ($HUB_URL/story/cats-and-dogs/?actionLink=app1)
+##App 1 - Cani e gatti I ($HUB_URL/story/cats-and-dogs/?actionLink=firstGame)
 
-L'utente vede una mappa e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
+L'utente vede la mappa di Città della logica e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. Il gioco è libero e non è richiesta alcuna soluzione.
 
 @[youtube](T6k8ftH5jMc?_align-center_)
-[Script](/stories/logi-3/transcripts/Script1.pdf)
+[Script](/stories/logi-3/transcripts/Script3.pdf)
 
-##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=app2)
-
+##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=secondGame)
+L'utente vede la mappa di Città della logica e tre zollette di zucchero. L'obiettivo è scoprire se tre poliziotti sono in grado di sorvegliare tutte le strade della città e, se sì, come. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
 
 @[youtube](uwkk_lkBqTk?_align-center_)
-[Script](/stories/logi-3/transcripts/Script2.pdf)
+[Script](/stories/logi-3/transcripts/Script3.pdf)
+
+##App 3 - Cani e gatti III ($HUB_URL/story/cats-and-dogs/?actionLink=thirdGame)
+L'utente vede la mappa di Città della logica e tre cappelli della polizia. L'obiettivo è scoprire come tre poliziotti sono in grado di sorvegliare tutte le strade della città. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. Cliccando sul pulsante "Ricarica" sarà generata una nuova mappa.
+

@@ -345,7 +345,8 @@ actions:
     tag: firstGame
     text: Che consiglio gli daresti?
     toolbarText: Puoi passare ad una piastrella adiacente solo se ha lo stesso colore oppure la stessa forma di quella in cui ti trovi.
-    cta: Dai una mano a Mathina e a Leo!
+    cta: Dai una mano a Mathina e a Leo! 
+    tag: app1
     url: \apps\logi-2-app\logi-2-app-1.htm
   - type: clearImage
     id: mathina-standing
@@ -371,6 +372,7 @@ actions:
     text: Aiuta Mathina a cercare un percorso che la porti indietro dal traguardo!
     toolbarText: 
     cta: Aiuta Mathina!
+    tag: app2
     url: \apps\logi-2-app\logi-2-app-2.htm
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"

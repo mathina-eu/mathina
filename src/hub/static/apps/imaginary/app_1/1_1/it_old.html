@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>App 1-1</title>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
+
+    <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
+</head>
+
+<body style="font-family:Palatino; margin:0; font-size:16pt">
+
+
+
+
+<script id='csinit' type='text/x-cindyscript'>
+
+
+// **********************************************************************************************************
+// Functions ************************************************************************************************
+// **********************************************************************************************************
+
+
+
+drawDragon() := (
+  drawFlipBookObject(dragon);
+  //fillcircle(dragon.pos, dragon.rad, color->(1,0.5,0));
+);
+
+drawWand() := (
+  //draw([wand.pos, wand.pos + wand.value * wand.dir], color->(0.5,0,1), size-> 35, alpha->0.2);
+  drawimage(wand.pos, "wand", rotation -> 0.5*pi-arctan2(wand.dir), scale->0.3);
+  
+  forall(1..ceil(lerp(0, magicLength, wand.value, 0, wand.maxValue)),
+    drawimage(wand.pos + lerp(-0.5, wand.maxValue, #, 0, magicLength) * wand.dir, "magic" + magicField_#_1, rotation -> magicField_#_2 + 0.5*pi-arctan2(wand.dir), scale->lerp(0.2, 0.06, #, 0, magicLength), alpha->1);
+  );
+
+  //draw([wand.pos, wand.pos + wand.length * wand.dir], color->(0,0,1), size-> 5, arrow->true, arrowsize->0.5);
+  //fillcircle(wand.pos, 0.3, color->(0,0,1));
+);
+
+drawRecallButton() := (
+  fillcircle(recallButton.pos, recallButton.rad, color->(0.7,0,1), alpha->0.5);
+  drawcircle(recallButton.pos, recallButton.rad, color->(1,1,1), size-> 5);
+  drawtext(recallButton.pos + (0,-0.4), recallButton.label, color->(1,1,1), size->30, align->"mid");
+);
+
+
+drawPickUp() := (
+  //fillcircle(pickUp.pos, pickUp.rad, color->(0,1,0));
+  drawFlipBookObject(pickUp);
+);
+
+drawScoreLabel() := (
+  drawtext(scoreLabel.pos, scoreLabel.text, size->30);
+);
+
+drawObstacles() := (
+  forall(obstacles,
+    fillcircle(#.pos, #.rad, color->(1,0,0));
+  );
+);
+
+
+drawDragonTrail() := (
+  connect(dragon.trailB ++ apply(dragon.trailA, #_1), color->(1,0.8,0), size-> 3, alpha->0.5);
+  forall(1..length(dragon.trailA) - 1,
+    //fillcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,1,0), alpha->lerp(0, 0.5, #, 0, length(dragon.trailA) - 1));
+    //drawcircle(dragon.trailA_#, lerp(0, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), color->(1,0.5,0));
+    drawimage(dragon.trailA_#_1, "smoke" + dragon.trailA_#_2, angle->dragon.trailA_#_3, scale->0.15 * lerp(0.5, dragon.trailAMaxSize, #, 0, length(dragon.trailA) - 1), alpha->lerp(0, 1, #, 0, length(dragon.trailA) - 1));
+  );
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+collideWithPickUp() := (
+  if(dist(dragon.pos, pickUp.pos) < dragon.rad + pickUp.rad,
+    scoreLabel.score = scoreLabel.score +1;
+    scoreLabel.text = scoreLabel.score;
+    pickUp.pos = newPickUpSpawnPoint(obstacles :> dragon, 10);
+  );
+);
+
+
+
+
+collideWithObstacles() := (
+  forall(obstacles,
+    if(dist(dragon.pos, #.pos) < dragon.rad + #.rad,
+      recallDragon();
+    );
+  );
+);
+
+
+
+
+
+
+
+
+moveDragon(dt) := (
+  dragon.pos = dragon.pos + dragon.velocity * dt;
+
+  if(dist(dragon.pos, (dragon.trailA)_(-1)_1) > 0.5,
+    dragon.trailA = dragon.trailA :> [dragon.pos, ceil(3 * random()), 2 * pi * random()];
+    if(length(dragon.trailA) > dragon.trailAMaxLength,
+      dragon.trailB = dragon.trailB :> dragon.trailA_1_1;
+      dragon.trailA = bite(dragon.trailA);
+      );
+    if(length(dragon.trailB) > dragon.trailBMaxLength,  
+      dragon.trailB = bite(dragon.trailB);
+    );
+  );
+);
+
+
+updateDragon() := (
+  regional(speed);
+
+  dragon.velocity = wand.dir * lerp(0, dragon.maxSpeed, wand.value, 0, wand.maxValue);
+  speed = abs(dragon.velocity);
+  if(speed > dragon.maxSpeed, dragon.velocity = dragon.velocity / speed * dragon.maxSpeed);
+  dragon.rotation = 0.5*pi-arctan2(wand.dir);
+  if(wand.dir.x < -0.1,
+    dragon.rotation = -dragon.rotation;
+    dragon.flipx = true;
+  );
+  if(wand.dir.x > 0.1,
+    dragon.flipx = false;
+  );
+);
+
+
+
+recallDragon() := (
+  wandActive = false;
+  recallStart = dragon.pos;
+  recallTrack = setupAnimationTrack(now(), now() + 1);
+  recallActive = true;
+  wand.value = 0;
+  dragon.velocity = [0,0];
+  dragon.trailA = [];
+  dragon.trailB = [];
+);
+
+
+
+updateWand() := (
+  regional(relMouse, dist);
+
+  relMouse = mouse().xy - wand.pos;
+  dist = abs(relMouse);
+  wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
+  if(wand.value < wand.deadzone, 
+    wand.value = 0;
+  );
+  wand.dir = slerp(wand.dir, relMouse / if(dist <= 0.01, 1, dist), wand.acceleration);
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+newPickUpSpawnPoint(list, minDist) := (
+  regional(candidateValid, candidate, counter);
+
+      candidateValid = true;
+
+      candidate = canvasCorners_4 + [random() * canvasWidth, random() * canvasHeight];
+      if(list == [],
+        candidate;
+      , // else //
+        forall(list,
+          if(dist(#.pos, candidate) < minDist,
+            candidateValid = false;
+          );
+        );
+        if(candidateValid,
+          candidate;
+        , // else //
+          newPickUpSpawnPoint(list, minDist);
+        );
+      );
+);
+
+
+newObstaclePoint(list, minDist, count) := (
+  regional(candidateValid, candidate, counter);
+
+  if(count == 0,
+    [];
+  , // else //
+    candidateValid = true;
+
+    candidate = canvasCorners_4 + [random() * canvasWidth, random() * canvasHeight];
+    if(list == [],
+      candidate;
+    , // else //
+      forall(list,
+        if(dist(#.pos, candidate) < minDist,
+          candidateValid = false;
+        );
+      );
+      if(candidateValid,
+        candidate;
+      , // else //
+        newObstaclePoint(list, minDist, count - 1);
+      );
+    );
+  );
+);
+
+
+
+
+
+lissajoue(a, b, d, t) := [sin(a * t + d), cos(b * t)];
+
+
+// **********************************************************************************************************
+// Start ****************************************************************************************************
+// **********************************************************************************************************
+canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
+canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
+canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
+canvasHeight  = dist(canvasCorners_1, canvasCorners_4); 
+[canvasLeft, canvasTop] = canvasCorners_1;
+[canvasRight, canvasBottom] = canvasCorners_3;
+
+
+
+dragonHome = canvasCenter + (0, 5);
+dragon = {
+  "pos": dragonHome,
+  "rad": 0.6,
+  "velocity": [0,0],
+  "maxSpeed": 15,
+  "trailA": [[dragonHome, ceil(3 * random()), 2 * pi * random()]],
+  "trailAMaxSize": 1,
+  "trailAMaxLength": 100,
+  "trailB": [],
+  "trailBMaxLength": 100,
+  "flipbook": ["dragon1", "dragon2", "dragon3", "dragon2"],
+  "scale": 0.3,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1
+};
+
+dragonAnimationTrack = setupAnimationTrack(0,0.6);
+dragonAnimationTrack.looping = true;
+
+wand = {
+  "pos": canvasCenter + (0,-12),
+  "length": 3,
+  "dir": [0,1],
+  "value": 0,
+  "catchRadius": 15,
+  "maxValue": 10,
+  "acceleration": 0.5,
+  "deadzone": 1
+};
+
+magicLength = 30;
+magicField = apply(1..magicLength, [randomint(3) + 1, random(2*pi)]);
+
+
+
+
+
+obstacles = [];
+
+repeat(5, 
+  newPos = newObstaclePoint(obstacles :> dragon, 15, 30);
+
+  if(newPos != [],
+    obstacles = obstacles :> {
+      "pos": newPos,
+      "rad": 5
+    }
+  );
+);
+
+
+
+
+pickUp = {
+  "pos": newPickUpSpawnPoint(obstacles :> dragon, 10),
+  "rad": 2,
+  "flipbook": ["fireball1", "fireball2", "fireball3"],
+  "scale": 0.6,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1
+};
+
+fireballAnimationTrack = setupAnimationTrack(0,0.5);
+fireballAnimationTrack.looping = true;
+
+
+scoreLabel = {
+  "pos": canvasCorners_1 + (2, -2),
+  "score": 0,
+  "text": "0"
+};
+
+wandActive := false;
+
+
+
+
+
+recallButton := {
+  "pos": wand.pos + (-12,-5),
+  "rad": 3,
+  "label": "Riprova!"
+};
+
+recallActive = false;
+recallStart = [];
+
+
+
+
+
+
+
+
+followCurve = createRootStrokeObject(canvasCenter, (0,0,0), (1,1,1), 0);
+curve(t) := 10 * lissajoue(1, 2, pi/3, t);
+followCurve.stroke = samplecurve("curve", 0, 2*pi);
+followCurve.drawPercent = 1;
+
+
+
+
+
+
+
+
+
+
+
+playanimation();
+setupTime();
+</script>
+<script src="../../Egdod/egdodUI.js"></script>
+<script src="../../Egdod/egdodMath.js"></script>
+<script src="../../Egdod/egdodArray.js"></script>
+<script src="../../Egdod/egdodColor.js"></script>
+<script src="../../Egdod/egdodMisc.js"></script>
+<script src="../../Egdod/egdodAnim.js"></script>
+
+
+
+
+<script id='csdraw' type='text/x-cindyscript'>
+  
+  
+  drawimage(canvasCorners_4, canvasCorners_3, "back");
+  drawDragonTrail();
+  //drawPickUp();
+  drawDragon();
+  //drawObstacles();
+  drawimage(canvasCorners_4, canvasCorners_3, "front");
+  drawWand();
+  
+  //drawStrokeObject(followCurve);
+  
+
+  drawRecallButton();
+  //drawScoreLabel();
+</script>
+
+
+<script id='cstick' type='text/x-cindyscript'>
+  delta = deltaTime();
+
+  updateAnimationTrack(dragonAnimationTrack, delta * lerp(1, 2, wand.value, 0, wand.maxValue));
+  updateAnimationTrack(fireballAnimationTrack, delta);
+  animateFlipbook(dragon, dragonAnimationTrack);
+  animateFlipbook(pickUp, fireballAnimationTrack);
+
+  if(recallActive,
+    updateAnimationTrack(recallTrack, delta);
+    tween(dragon, "pos", recallStart, dragonHome, recallTrack, "easeInOutCubic");
+    if(recallTrack.timeLeft <= 0,
+      recallActive = false;
+      dragon.trailA = [[dragonHome, ceil(3 * random()), 2 * pi * random()]];
+    );
+  , // else //
+    if(wandActive, 
+      moveDragon(delta);
+    );
+    //collideWithPickUp();
+    //collideWithObstacles();
+  );
+</script>
+
+
+
+<script id='csmousedown' type='text/x-cindyscript'>
+  if(!recallActive & dist(mouse().xy, wand.pos) <= wand.catchRadius,
+    wandActive = true;
+    updateWand();
+    updateDragon();
+    repaint();
+  );
+
+  if(!recallActive & dist(mouse().xy, recallButton.pos) <= recallButton.rad,
+    recallDragon();
+  );
+</script>
+
+<script id='csmousedrag' type='text/x-cindyscript'>
+  if(wandActive,
+    updateWand();
+    updateDragon();
+  );
+</script>
+
+<script id='csmousemove' type='text/x-cindyscript'>
+</script>
+
+<script id='csmouseup' type='text/x-cindyscript'>
+  if(wandActive,
+    updateWand();
+    updateDragon();
+  );
+
+  wandActive = false;
+  wand.value = 0;
+</script>
+
+<canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
+</canvas>
+
+<script>
+
+    cindy = createCindy({canvasname:"CSCanvas",
+                 scripts:"cs*",
+                 images:{
+                  smoke1:  "../../assets/smoke_1.png",
+                   smoke2: "../../assets/smoke_2.png",
+                   smoke3: "../../assets/smoke_3.png",
+                   dragon1: "../../assets/dragon_1.png",
+                   dragon2: "../../assets/dragon_2.png",
+                   dragon3: "../../assets/dragon_3.png",
+                   magic1: "../../assets/magic_1.png",
+                   magic2: "../../assets/magic_2.png",
+                   magic3: "../../assets/magic_3.png",                   
+                   fireball1: "../../assets/fireball_1.png",
+                   fireball2: "../../assets/fireball_2.png",
+                   fireball3: "../../assets/fireball_3.png", 
+                   back:   "../../assets/back_2.png",
+                   front:  "../../assets/front_2.png",
+                   wand:   "../../assets/wand_2.png",
+                 }
+                });
+
+</script>
+
+
+
+</body>
+
+</html>

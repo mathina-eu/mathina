@@ -148,6 +148,7 @@ actions:
     text: How many lights do you think would be enough to show all the variations? 
     toolbarText: 
     cta: Try to find them all!
+    tag: app1
     url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
     target: leo-runs
@@ -181,6 +182,7 @@ actions:
   - type: game
     tag: secondGame    
     text: What do you think Leo has included twice? 
+    tag: app2
     toolbarText: Drag identical lamps on top of each other, and the superfluous ones will disappear.
     url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
@@ -198,6 +200,7 @@ actions:
   - type: game
     tag: thirdGame    
     text: Which color order do you think is missing? 
+    tag: app3
     toolbarText: It might help to line up the lights according to the first colors, starting with violet, then pink, then orange.
     url: \apps\logi-1-app\logi-1-app.htm?v=3
   - type: dialog
