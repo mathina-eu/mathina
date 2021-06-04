@@ -24,7 +24,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true  
+      yoyo: true
   - type: animation
     target: branch2
     vars:
@@ -32,7 +32,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true        
+      yoyo: true
   - type: animation
     target: branch3
     vars:
@@ -40,16 +40,16 @@ actions:
       rotate: 6
       ease: power1.inOut
       repeat: -1
-      yoyo: true    
+      yoyo: true
   - type: image
     noOverflow: true
     id: albero1
     src: albero_bambini.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"    
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: sceneText
     text: >
       <h1>The secret messages</h1>
-        
+
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
@@ -75,7 +75,7 @@ actions:
     entries:
       - text: "Seven!"
         char: leo
-        mood: happy      
+        mood: happy
       - text: "Hey all, wait, come here, come here! Look what I've found!"
         char: sean
         mood: happy
@@ -89,21 +89,21 @@ actions:
     entries:
       - text: "Leo, what if this was one of the hiding spots of the buccaneers from the tale your sister Mathina told us the other day?"
         char: sean
-        mood: happy      
+        mood: happy
       - text: "I don't know, but it sure looks like one of them!"
         char: leo
         mood: happy
   - type: clearImage
     id: albero1
   - type: clearImage
-    id: branch    
+    id: branch
   - type: clearImage
-    id: branch2   
+    id: branch2
   - type: clearImage
     id: branch3
   - type: background
     src: bg1b-plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
     noOverflow: true
     id: bambino0
@@ -113,7 +113,7 @@ actions:
     noOverflow: true
     id: bambino00
     src: bambino4.png
-    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"
   - type: image
     noOverflow: true
     id: leo0
@@ -121,7 +121,7 @@ actions:
     style: "height: 55%; top: 42%; right: 77%;  z-index: 1;transform: ScaleX(-1)"
 
   - type: dialog
-    entries:       
+    entries:
       - text: "I wonder how the buccaneers could enter this area: it's so small here!"
         char: carla
         mood: happy
@@ -138,7 +138,7 @@ actions:
     entries:
       - text: "Let's cover the cave entrance with bushes and leaves, so that no one finds it. Then we leave a message that explains the location of the tree."
         char: carla
-        mood: happy      
+        mood: happy
       - text: "But how will it work? If we leave a message, anybody can read it! We should find a way to keep it secret. What if we hide the message very thoroughly?"
         char: sean
         mood: happy
@@ -173,7 +173,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true  
+      yoyo: true
   - type: animation
     target: branch4
     vars:
@@ -181,7 +181,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true        
+      yoyo: true
   - type: animation
     target: branch5
     vars:
@@ -189,7 +189,7 @@ actions:
       rotate: 6
       ease: power1.inOut
       repeat: -1
-      yoyo: true 
+      yoyo: true
   - type: image
     noOverflow: true
     id: albero2
@@ -205,7 +205,7 @@ actions:
     noOverflow: true
     id: cespuglio2
     src: cespuglio.png
-    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"
     parallax: mid1
   - type: image
     noOverflow: true
@@ -223,14 +223,14 @@ actions:
     noOverflow: true
     id: cespuglio5
     src: cespuglio.png
-    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"
     parallax: mid3
   - type: dialog
     style: "position: absolute; left: 5%;"
     entries:
       - text: "Mathina keeps telling me that if we want to communicate in secret, we cannot rely on hiding. If we hide the message, we can't be sure that no one finds it!"
         char: leo
-        mood: happy 
+        mood: happy
         exposition: Leo made a good point.
       - text: "Then we have to hide it very well!"
         char: sean
@@ -249,22 +249,22 @@ actions:
   - type: clearImage
     id: cespuglio2
   - type: clearImage
-    id: cespuglio3   
+    id: cespuglio3
   - type: clearImage
-    id: cespuglio4 
+    id: cespuglio4
   - type: clearImage
     id: cespuglio5
   - type: clearImage
-    id: albero2  
+    id: albero2
   - type: clearImage
-    id: branch3  
+    id: branch3
   - type: clearImage
     id: branch4
   - type: clearImage
-    id: branch5  
+    id: branch5
   - type: background
     src: bg1_plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"        
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1; transform: rotate(180deg);"
   - type: image
     noOverflow: true
     id: bambino3
@@ -274,17 +274,17 @@ actions:
     noOverflow: true
     id: bambino4
     src: bambino4.png
-    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"    
+    style: "height: 55%; top: 42%; right: 25%;  z-index: 3; transform: ScaleX(-1)"
   - type: image
     noOverflow: true
     id: leo1
     src: $COMMON/img/characters/leo/leo4.png
-    style: "height: 55%; top: 42%; right: 47%;  z-index: 1;"    
+    style: "height: 55%; top: 42%; right: 47%;  z-index: 1;"
   - type: image
     noOverflow: true
     id: mathina1
     src: $COMMON/img/characters/mathina/mathina5.png
-    style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"    
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 1;"
   - type: image
     noOverflow: true
     id: alberoB
@@ -294,7 +294,7 @@ actions:
     noOverflow: true
     id: cespuglioD
     src: cespuglio.png
-    style: "height: 10%; top: 12.4%; right: -1%;  z-index: 0; transform: scaleX(-1)"    
+    style: "height: 10%; top: 12.4%; right: -1%;  z-index: 0; transform: scaleX(-1)"
   - type: image
     noOverflow: true
     id: cespuglioB
@@ -357,7 +357,7 @@ actions:
       xPercent: 5
       ease: power1.inOut
       repeat: -1
-      yoyo: true    
+      yoyo: true
   - type: animation
     target: cespuglioC5
     vars:
@@ -365,7 +365,7 @@ actions:
       xPercent: 5
       ease: power1.inOut
       repeat: -1
-      yoyo: true 
+      yoyo: true
   - type: animation
     target: cespuglioA4
     vars:
@@ -373,7 +373,7 @@ actions:
       xPercent: 5
       ease: power1.inOut
       repeat: -1
-      yoyo: true    
+      yoyo: true
   - type: animation
     target: cespuglioA5
     vars:
@@ -381,7 +381,7 @@ actions:
       xPercent: 5
       ease: power1.inOut
       repeat: -1
-      yoyo: true 
+      yoyo: true
   - type: sceneText
     text: >
       <p>The kids continued discussing, and after some time, when Mathina returned, the kids enthusiastically told her about their new way of communicating.</p>
@@ -389,7 +389,7 @@ actions:
     entries:
       - text: "Do you think it is one of those secret pirates' coves you told me about?"
         char: leo
-        mood: happy      
+        mood: happy
       - text: "Hmm, it looks strange enough to be one of those. I will check this with my friends on the island and I'll tell you! Wait, earlier you said that you needed my help with some messages: what did you mean?"
         char: mathina
         mood: happy
@@ -433,16 +433,16 @@ actions:
         mood: normal
       - text: "Good point: this is why the messages are quite similar. No one can't be sure if the tree is correct. Maybe he will start looking around and lose interest. If we want to be safer, we can add more fake messages!"
         char: leo
-        mood: thinking      
+        mood: thinking
       - text: "Oh, I see, that's right!"
         char: sean
-        mood: normal      
+        mood: normal
       - text: "It is decided then! Now let's choose the key for our messages."
         char: leo
-        mood: talking      
+        mood: talking
       - text: "Let's use this one: 'The sky is full of them'."
         char: sean
-        mood: normal            
+        mood: normal
   - type: image
     noOverflow: true
     id: myst0
@@ -455,12 +455,12 @@ actions:
       rotate: 10
       ease: power1.inOut
       repeat: -1
-      yoyo: true    
+      yoyo: true
   - type: dialog
     entries:
       - text: "Nice idea! So we can leave here the information to retrieve our secret findings!"
         char: leo
-        mood: happy      
+        mood: happy
   - type: game
     text: "Want to help the kids?"
     toolbarText: "Associate an image to each message. Use an image described by the key only for the correct message."
@@ -477,7 +477,7 @@ actions:
     noOverflow: true
     id: leo11
     src: $COMMON/img/characters/leo/leo4.png
-    style: "height: 15%; top: 20%; right: 15%;  z-index: 0;" 
+    style: "height: 15%; top: 20%; right: 15%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: bambino33
@@ -487,7 +487,7 @@ actions:
     noOverflow: true
     id: bambino44
     src: bambino4.png
-    style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"    
+    style: "height: 55%; top: 42%; right: 45%;  z-index: 0; transform: ScaleX(1)"
   - type: sceneText
     text: >
       <p>Mathina and the kids left the messages in an envelope near some bushes in the middle of their meeting place and then packed up for returning home.</p>
@@ -516,17 +516,17 @@ actions:
   - type: sceneText
     style: "position: absolute; left: 25%; top:50%;"
     text: >
-      <p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>  
+      <p>As soon as they left, a mysterious figure, dressed in dark and shady clothes, went to the bushes and starts to search for the secret messages. </p>
   - type: sceneText
-    style: "position: absolute; left: 25%; top:50%;"  
+    style: "position: absolute; left: 25%; top:50%;"
     text: >
-      <p>He found the four messages and was puzzled as he did not understand which one was correct. He tried to locate the tree, but after a while, he left, feeling frustrated.</p>  
+      <p>He found the four messages and was puzzled as he did not understand which one was correct. He tried to locate the tree, but after a while, he left, feeling frustrated.</p>
   - type: clearImage
-    id: cespuglioB 
+    id: cespuglioB
   - type: clearImage
     id: cespuglioA1
   - type: clearImage
-    id: cespuglioA2 
+    id: cespuglioA2
   - type: clearImage
     id: cespuglioA3
   - type: clearImage
@@ -536,7 +536,7 @@ actions:
   - type: clearImage
     id: cespuglioC1
   - type: clearImage
-    id: cespuglioC2 
+    id: cespuglioC2
   - type: clearImage
     id: cespuglioC3
   - type: clearImage
@@ -556,7 +556,7 @@ actions:
     noOverflow: true
     id: leoC
     src: $COMMON/img/characters/leo/leo1.png
-    style: "height: 35%; top: 57%; right: 11%;  z-index: 1;"  
+    style: "height: 35%; top: 57%; right: 11%;  z-index: 1;"
   - type: image
     noOverflow: true
     id: Barca
@@ -627,7 +627,7 @@ actions:
     noOverflow: true
     id: cespuglio12
     src: cespuglio.png
-    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"    
+    style: "height: 55%; top: 40%; right: -5%;  z-index: 4;"
     parallax: mid1
   - type: image
     noOverflow: true
@@ -645,7 +645,7 @@ actions:
     noOverflow: true
     id: cespuglio15
     src: cespuglio.png
-    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"    
+    style: "height: 55%; top: 42%; right: -10%;  z-index: 6;"
     parallax: mid3
   - type: image
     noOverflow: true
@@ -669,7 +669,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true  
+      yoyo: true
   - type: animation
     target: branch11
     vars:
@@ -677,7 +677,7 @@ actions:
       rotate: 2
       ease: power1.inOut
       repeat: -1
-      yoyo: true        
+      yoyo: true
   - type: animation
     target: branch12
     vars:
@@ -685,12 +685,12 @@ actions:
       rotate: 6
       ease: power1.inOut
       repeat: -1
-      yoyo: true    
+      yoyo: true
   - type: image
     noOverflow: true
     id: albero10
     src: albero_solo.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;" 
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 0;"
   - type: sceneText
     text: >
       <p>On the following weekend, Rasha and Lucy visited Buccaneer Island with their parents, and found the messages. They recalled the key: 'The sky is full of them' so they chose, without effort, the correct message.</p>
@@ -698,13 +698,13 @@ actions:
     text: >
       <p>Once they arrived at the tree, their mom, an history Professor, immediately recalled a book she read a few years earlier. The book mentioned that the pirates of Buccaneer Island used to hide secret messages inside strange cavities carved into trees or underground rock formations, so she immediately started looking for carvings on cave walls.</p>
   - type: clearImage
-    id: albero10  
+    id: albero10
   - type: clearImage
-    id: branch10  
+    id: branch10
   - type: clearImage
     id: branch11
   - type: clearImage
-    id: branch12  
+    id: branch12
   - type: clearImage
     id: cespuglio11
   - type: clearImage
@@ -717,42 +717,42 @@ actions:
     id: cespuglio15
   - type: background
     src: bg1b-plain.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image
     noOverflow: true
     id: sym1
     src: sim1.png
-    style: "height: 10%; top: 50%; right: 16%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 16%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym2
     src: sim2.png
-    style: "height: 10%; top: 50%; right: 26%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 26%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym3
     src: sim3.png
-    style: "height: 10%; top: 50%; right: 36%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 36%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym4
     src: sim4.png
-    style: "height: 10%; top: 50%; right: 46%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 46%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym5
     src: sim5.png
-    style: "height: 10%; top: 50%; right: 56%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 56%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym6
     src: sim6.png
-    style: "height: 10%; top: 50%; right: 66%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 66%;  z-index: 0;"
   - type: image
     noOverflow: true
     id: sym7
     src: sim7.png
-    style: "height: 10%; top: 50%; right: 76%;  z-index: 0;" 
+    style: "height: 10%; top: 50%; right: 76%;  z-index: 0;"
   - type: sceneText
     text: >
       <p>Near a strange-looking rock, she found a stranger series of symbols.</p>
@@ -760,7 +760,7 @@ actions:
     entries:
       - text: "Great mom! You found the pirates' secret! We should let Mathina know!"
         char: rasha
-        mood: normal      
+        mood: normal
       - text: "Yes, let's leave another set of messages here, where we found Leo's and Mathina's instructions!"
         char: rashamom
         mood: normal
@@ -777,4 +777,4 @@ actions:
       <p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>
   - type: sceneText
     text: >
-      <h1>The secret messages - The End</h1>  
+      <h1>The secret messages - The End</h1>

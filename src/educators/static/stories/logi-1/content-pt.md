@@ -38,7 +38,7 @@ Aqui, encontrará:
 Para a faixa etária 4-6, sugere-se jogos combinados com movimento do corpo  (jogos com bolas coloridas / 3-4 tipos diferentes de objetos / instrumentos musicais). Encoragemos as crianças a  classificar, comparar e dispor objetos e descobrir padrões e mudanças. Nos jogos combinatórios, podem ser encontrados ou criados padrões na natureza ou no ambiente que nos rodeia.
 
 **Jogo Solitário**
-Crie 9 cartões, 3 vermelhos, 3 azuis e 3 verdes, e depois, para cada cor, escreva os números 1, 2, and 3 em cada cartão dessa cor. A tarefa consiste em colocar os cartões numa mesa 3 × 3 de modo que todas as três cores e todos os três números estejam representados em cada linha e em cada coluna. Pode ser criada uma versão mais avançada do jogo, utilizando uma mesa 4x4.
+Crie 9 cartões, 3 vermelhos, 3 azuis e 3 verdes, e depois, para cada cor, escreva os números 1, 2, e 3 em cada cartão dessa cor. A tarefa consiste em colocar os cartões numa mesa 3 × 3 de modo que todas as três cores e todos os três números estejam representados em cada linha e em cada coluna. Pode ser criada uma versão mais avançada do jogo, utilizando uma mesa 4x4.
 
 ![Jogo Solitário](/stories/logi-1/img/solitaire2.png)
 

@@ -1,6 +1,6 @@
 # Conceitos matemáticos
 
-A história **A minha medalha de ouro, por favor!** baseia-se na regra da divisibilidade por 9. Se os alunos não se precipitarem, poderão verificar que depois da primeira subtração o número de medalhas é divisível por 9.
+A história **O meu ouro, por favor!** baseia-se na regra da divisibilidade por 9. Se os alunos não se precipitarem, poderão verificar que depois da primeira subtração o número de medalhas é divisível por 9.
 
 A matemática torna-se empolgante quando se encontra alguma pergunta não habitual. Encontrar a solução é uma aventura, e muitas vezes precisa de muito tempo e de várias tentativas seguidas desapontadoras. É uma alegria quando se consegue descobrir a resposta. Os alunos aprendem a pensar logicamente ao ponderar no assunto, o que é útil para o seu futuro.
 
@@ -42,7 +42,7 @@ Nesta história têm um papel importante os seguintes conceitos matemáticos bá
 
 # Notas didáticas
 
-É importante que o educador ou familiar que acompanha a criança se mantenha no seu papel. Este inclui colocar problemas e perguntas, encorajar o raciocínio, a reflexão, a discussão de estratégias, a partilha de ideias e a colaboração na procura de soluções.
+É importante que o educador ou familiar que acompanha o jovem se mantenha no seu papel. Este inclui colocar problemas e perguntas, encorajar o raciocínio, a reflexão, a discussão de estratégias, a partilha de ideias e a colaboração na procura de soluções.
 
 A leitura e o jogar com **A minha medalha de ouro, por favor!** não requer qualquer material adicional, nem conhecimento prévio.
 
@@ -69,7 +69,7 @@ utilizadores têm a possibilidade de jogar livremente com a app.
 
 A app foi programada em JavaScript e está optimizada para PCs e tablets/smartphones. Ver abaixo uma pequena descrição dela. São fornecidas ligações para a app e para o vídeo com o guia de utilização.
 
-A primeira pessoa recebe um número de medalhas de ouro que é igual à soma dos algarismos do total de número de medalhas de ouro recebidas pela equipa. Por exemplo, se a equipa ganhou *721* medalhas, então o primeiro membro da equipa recebe *7 + 2 + 1+, ou seja 10 medalhas. Ficam *721* menos *10*, ou *711* medalhas. O membro seguinte recebe a soma dos digítos deste número. E assim sucessivamente.
+A primeira pessoa recebe um número de medalhas de ouro que é igual à soma dos algarismos do total de número de medalhas de ouro recebidas pela equipa. Por exemplo, se a equipa ganhou *721* medalhas, então o primeiro membro da equipa recebe *7 + 2 + 1, ou seja 10 medalhas. Ficam *721* menos *10*, ou *711* medalhas. O membro seguinte recebe a soma dos digítos deste número. E assim sucessivamente.
 
 @[youtube](A1vXg_DSolc)
 [Script]()
