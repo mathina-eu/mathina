@@ -861,7 +861,7 @@ actions:
 
   - type: image 
     id: TwoMessages
-    src: TwoMessages.png
+    src: TwoMessages_ita.jpg
     style: "position:absolute; height: 20%; top: 60%;"
     align: center
 
