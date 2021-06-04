@@ -25,7 +25,7 @@ Below, we present a small description of each app. Links both for the apps and f
 
 &nbsp;
 
-## [Game 1 - Keys and messages I]($HUB_URL/story/the-secret-messages/?actionLink=app1)
+## [Game 1 - Keys and messages I]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app1)
 
 In the first experience, the key is “it has five sides” and the message you want to convey is “Look at the third tree, north from the fountains”. The user must drag the message to be transmitted and the figure that is described by the key (a pentagon) to the center of the screen. In this experience the images available are abstract figures.
 
@@ -34,7 +34,7 @@ In the first experience, the key is “it has five sides” and the message you 
 
 &nbsp;
 
-## [Game 2 - Keys and messages II]($HUB_URL/story/the-secret-messages/?actionLink=app2)
+## [Game 2 - Keys and messages II]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app2)
 
 The second app proposes the same situation as the first, the one linked to the encoding of the message, but with a different key ("the sky is full of them"). Moreover, unlike with the first app, there are more images than messages and there are two possible images that meet the demands: a star and a cloud. The user must associate one of these two images with the correct message and combine the false messages with images different from these two.
 
@@ -44,7 +44,7 @@ The second app proposes the same situation as the first, the one linked to the e
 
 &nbsp;
 
-## [Game 3 - Keys and messages III]($HUB_URL/story/the-secret-messages/?actionLink=app3)
+## [Game 3 - Keys and messages III]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app3)
 
 In the third and last experience, the readers are instead involved in the process of decoding the message: they know the key (which is again “the sky is full of it”) and they must select the secret message among those proposed.
 

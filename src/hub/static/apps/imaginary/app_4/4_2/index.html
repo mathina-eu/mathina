@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>App 4-2</title>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/Cindy.js"></script>
+    <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
+
+
+
+    <style type="text/css">
+      body {
+          margin: 0px;
+          padding: 0px;
+      }
+
+      #App {
+          position: absolute;
+          width: 1920px; height: 1080px;
+          background-image: url('forest1.jpg');
+          background-size: 1920px 1080px;
+          background-repeat: no-repeat;
+          margin: auto;
+      }
+
+      #CSCanvas {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+      }
+
+      #Select-menu{
+        position: absolute;
+        right:120px;
+        top: 300px;
+
+      }
+
+      #Input-box{
+        position: absolute;
+        left:500px;
+        right: 500px;
+        bottom: 100px;
+        text-align: center;
+
+      }
+
+  </style>
+
+
+
+    <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
+</head>
+
+<body style="font-family:Palatino; margin:0; font-size:16pt" onload="translate()">
+
+
+
+<script id='csinit' type='text/x-cindyscript'>
+  getState(pos) := imagergb(L, R, "computeTexture", pos, interpolate->false, repeat->false);
+  getGradient(pos) := imagergb(L, R, "gradientTexture", pos, interpolate->false, repeat->false);
+  getNewton(pos) := imagergb(L, R, "newtonTexture", pos, interpolate->false, repeat->false);
+  getTrueCurve(pos) := imagergb(L, R, "trueCurve", pos, interpolate->false, repeat->false);
+
+
+  iterate() := (
+    colorplot(L, R, "computeTexture", newState(#));
+    colorplot(L, R, "renderTarget", newColor(#));
+    repaint();
+    );
+
+  neighbours(pos) := apply(directproduct(-1..1, -1..1), pos + #);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  newState(pos) := (
+    regional(totalWeight, state, grad, dist, closeToTrue);
+
+
+    state = getState(pos);
+    totalWeight = 0;
+
+    closeToTrue = false;
+
+
+
+
+    forall(-1..1, i, forall(-1..1, j,
+      closeToTrue = closeToTrue % (getTrueCurve(pos + 0.01 * [i, j])_1) > 0);
+    );
+
+
+
+
+    if(closeToTrue,
+      if(state.r > 0.9,
+        totalWeight = state.r * getTrueCurve(pos).r;
+      , // else //
+        forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
+          dist = 0.05;
+          state = getState(pos + dist * dir);
+          totalWeight = totalWeight + state.r * getTrueCurve(pos).r; // * (1 - getTrueCurve(pos + dist * dir).r);
+        );
+      );
+    , // else //
+      forall(apply(1..3, angle = 2*pi*random(); [sin(angle), cos(angle)]), dir,
+        dist = newtonEpsilon;
+        state = getState(pos + dist * dir);
+        grad = computeGradient(pos + dist * dir);
+        totalWeight = oplus(totalWeight, (dir.x * grad.x + dir.y * grad.y) * state.r);
+      );
+    );
+
+
+
+
+    (clamp(totalWeight, 0, 1), 0, 0, 1);
+  );
+
+
+
+
+
+  isOnTrueCurve(pos) := (
+    regional(values);
+
+    values = apply(surround, f(pos.x + #.x, pos.y + #.y));
+    forall(1..4,
+      values_(2*#) = 2 * f(pos.x, pos.y) - values_(2*#);
+    );
+
+    (min(values) < 0) & (max(values) > 0);
+  );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  newColor(pos) := (
+    regional(state);
+
+    state = getState(pos);
+    if(state.r == 0,
+      (0,0,0,0);
+    , // else //
+      sparkColor * clamp(state.r, 0, 1);
+    );
+  );
+
+
+
+  cindyToTexture(pos) := (pos - (renderPos + 0.5 * renderSize * (1,1))) / renderArea.w * 2 * axesMax - (0.5,0.5);
+
+
+
+
+
+  placeBugs(pos) := (
+    if(rectContainsPoint(renderArea, pos) & !rectContainsPoint(paperRect, pos),
+      colorplot(L, R, "computeTexture",
+        if(dist(#, cindyToTexture(pos)) < 0.5, 1, getState(#)_1);
+      );
+    );
+  );
+
+
+
+
+  computeGradient(pos) := (
+    [
+        (g(pos.x + gradEpsilon, pos.y) - g(pos.x, pos.y)) / gradEpsilon,
+        (g(pos.x, pos.y + gradEpsilon) - g(pos.x, pos.y)) / gradEpsilon;
+    ];
+  );
+
+
+  computeNewton(pos) := (
+    regional(grad);
+    grad = [
+        (f(pos.x + gradEpsilon, pos.y) - f(pos.x, pos.y)) / gradEpsilon,
+        (f(pos.x, pos.y + gradEpsilon) - f(pos.x, pos.y)) / gradEpsilon;
+    ];
+
+    pos - grad * f(pos.x, pos.y) / abs(grad);
+  );
+
+
+
+
+  drawCodes() := (
+    if(showHighlight, fillpoly(roundedrectangle(highlightRect.xy, highlightRect.w, highlightRect.h, 1), color->(0,0,0), alpha->0.2));
+    forall(1..length(task),
+      drawtext(codePos + posOfLine(#) + (0, -lerp(1.2, 2.1, codeHeight, 2.3, 5)), renders_(task_#), size-> 30);
+    );
+  );
+
+
+
+  catchCode() := (
+    regional(pos, rect);
+
+    forall(1..length(task),
+      pos = codePos + posOfLine(#) + (-1, 0);
+      rect = rect(pos.x, pos.y - 0.1 * highlightRect.h, 7, highlightRect.w, 0.8 * highlightRect.h);
+      if(rectContainsPoint(rect, mouse().xy),
+        showHighlight = true;
+        highlightPos = pos;
+        guess = task_#;
+      );
+    );
+    if(guess != 0,
+      if(guess == codeIndex,
+        scoreLabel.score = scoreLabel.score + 1;
+
+        if(!flammaIn,
+          flammaOut = false;
+          flammaInTrack = setupAnimationTrack(now(), now() + 0.5);
+          flammaIn = true;
+          flammaInStart = flamma.pos;
+        );
+        createTask();
+        createF(codeIndex);
+      , // else //
+        lifesLeft = lifesLeft - 1;
+        guess = 0;
+
+        if(lifesLeft <= 0,
+          failureMessage.pos = codePos + posOfLine(findin(task, codeIndex)) + (-25, 0.5 * failureMessage.size.y - 1);
+          highlightPos = codePos + posOfLine(15) + (-1, 0);
+          showFailure = true;
+        );
+      );
+    );
+  );
+
+
+
+
+  posOfLine(index) := (-(index - 1) * 0.45, -(index - 1) * codeHeight);
+
+
+
+
+
+
+
+
+  computeTrueCurve() := colorplot(L, R, "trueCurve", if(isOnTrueCurve(#), 1, 0));
+  createF(index) := (
+    parse("f(x,y):="  + codes_codeIndex);
+
+    clearimage("trueCurve");
+    computeTrueCurve();
+    clearimage("computeTexture");
+    clearimage("renderTarget");
+  );
+
+
+
+
+
+    outsideUpdate() := (
+      showHighlight = false;
+      clearimage("trueCurve");
+
+      computeTrueCurve();
+      clearimage("computeTexture");
+      clearimage("renderTarget");
+    );
+
+
+
+
+    createTask() := (
+      regional(oldIndex);
+
+      oldIndex = codeIndex;
+
+      lifesLeft = 3;
+      task = randchoose(1..length(codes), 5);
+      showHighlight = false;
+      codeIndex = randchoose(task);
+      while(oldIndex == codeIndex, codeIndex = randchoose(task));
+      guess = 0;
+      highlightPos = codePos + posOfLine(15) + (-1, 0);
+
+      clearimage("codeTexture");
+      codeRenderBuffer = 0;
+    );
+
+
+
+
+
+
+
+
+
+
+    processFlamma() := (
+      if(flammaIn,
+        updateAnimationTrack(flammaInTrack, delta);
+        tween(flamma, "pos", flammaInStart, flamma.endPos, flammaInTrack, "easeInOutCubic");
+        showSpeechBubble = (flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))) != "");
+        if(showSpeechBubble,
+          if(flammaInTrack.timeLeft <= 0.3,
+            speechBubble.alpha = lerp(0, 1, flammaInTrack.timeLeft, 0.3, 0);
+          );
+        );
+        if(flammaInTrack.timeLeft <= 0,
+          flammaOutTrack = setupAnimationTrack(now() + 1, now() + 2);
+          flammaIn = false;
+          flammaOut = true;
+        );
+      );
+      if(flammaOut,
+        updateAnimationTrack(flammaOutTrack, delta);
+        tween(flamma, "pos", flamma.endPos, flamma.startPos, flammaOutTrack, "easeInCirc");
+        if(flammaOutTrack.timeLeft > 0.7,
+          speechBubble.alpha = lerp(1, 0, flammaOutTrack.timeLeft, 1, 0.7);
+        );
+        if(flammaOutTrack.timeLeft <= 0,
+          flammaOut = false;
+          showSpeechBubble = false;
+        );
+      );
+    );
+
+
+
+
+    drawFlamma() := (
+      drawFlipBookObject(flamma);
+    );
+
+
+
+    drawSpeechBubble() := (
+      if(showSpeechBubble,
+        drawimage(speechBubble.pos, speechBubble.sprite, alpha->speechBubble.alpha);
+        drawtext(speechBubble.pos, flamma.feedback_(clamp(scoreLabel.score, 1, length(flamma.feedback))), size-> 30, align->"mid", alpha->speechBubble.alpha);
+      );
+    );
+
+
+
+
+
+    drawFailureMessage() := (
+      regional(rect);
+
+      rect = roundedrectangle(failureMessage.pos, failureMessage.size.x, failureMessage.size.y, 1);
+
+      draw([failureMessage.pos + (failureMessage.size.x, -0.5 * failureMessage.size.y), failureMessage.pos + (failureMessage.size.x, -0.5 * failureMessage.size.y) + (7, 0)], arrow->true, color->sparkColor_(1..3), size->5);
+      fillpoly(rect, alpha->0.5, color->(55,75,94) / 255);
+      drawpoly(rect, size->4, color->sparkColor_(1..3));
+      //drawtext(failureMessage.pos + (1,-2), failureMessage.message, size->30, color->sparkColor_(1..3));
+      drawWrappedText(failureMessage.pos + (1,-2), failureMessage.message, failureMessage.size.x + 5, 2, 30, "left", sparkColor_(1..3), "");
+
+    );
+
+
+
+
+
+
+
+
+
+
+  // **********************************************************************************************************
+  // Start ****************************************************************************************************
+  // **********************************************************************************************************
+  canvasCorners = apply(screenbounds(), #.xy); //LO, RO, RU, LU
+  canvasCenter  = 0.5 * canvasCorners_1 + 0.5 * canvasCorners_3;
+  canvasWidth   = dist(canvasCorners_1, canvasCorners_2);
+  canvasHeight  = dist(canvasCorners_1, canvasCorners_4);
+  [canvasLeft, canvasTop] = canvasCorners_1;
+  [canvasRight, canvasBottom] = canvasCorners_3;
+
+
+
+
+
+
+
+
+  codes = [
+    "x^2 + 3 * y^2 - 10",
+    "x^2 + y^2 - 5",
+    "(y - x^5)^2 - y^10",
+    "x^12 + y^12 - 30",
+    "x^3 - y^2",
+    "x^3 - 2 * x + 0.5 - y^2",
+    "x * y",
+    "x^2 - y^2 + 4",
+    "x^2 - y - 5",
+    "(x^2 + y^2 - 1) * (x^2 - y^2  -1)",
+    "x^4 - x^2 + y^2",
+    "sin(x + y) - cos(x * y) - 1",
+    "(x^2 + y^2)^2 - 4*(x^2 - y^2) - 1",
+    "y^2 * (3 * x^2 - y^2)^2 - (x^2 + y^2)^4",
+    "y^2 * (y^2 - 1) - x^2 * (x^2 - 0.64)"
+  ];
+  renders = [
+    "$x^2 + 3y^2 - 10 = 0$",
+    "$x^2 + y^2 - 5 = 0$",
+    "$(y - x^5)^2 - y^{10} = 0$",
+    "$x^{12} + y^{12} - 30 = 0$",
+    "$x^3-y^2 = 0$",
+    "$x^3 -2x + 0.5 -y^2 = 0$",
+    "$xy = 0$",
+    "$x^2 - y^2 + 4 = 0$",
+    "$x^2 - y - 5 = 0$",
+    "$(x^2 + y^2 - 1) \cdot (x^2 - y^2  -1) = 0$",
+    "$x^4 - x^2 + y^2 = 0$",
+    "$\sin(x + y) - \cos(xy) - 1 = 0$",
+    "$(x^2 + y^2)^2 - 4\cdot(x^2 - y^2) - 1 = 0$",
+    "$y^2\cdot(3x^2 - y^2)^2 - (x^2 + y^2)^4 = 0$",
+    "$y^2 \cdot (y^2 - 1) - x^2 \cdot (x^2 - 0.64) = 0$"
+
+  ];
+
+  codePos = canvasCorners_3 + (-18, 17);
+  codeHeight = 2.8;
+  codeIndex = 0;
+
+  guess = 0;
+
+  createTask();
+
+
+
+  highlightRect = rect(highlightPos.x, highlightPos.y, 1, 17, 0.7 * codeHeight);
+
+  highlightAccel = 0.2;
+
+
+  paperPos = canvasCorners_3 + (-10, 9);
+  paperRect = rect(paperPos.x -11.27, paperPos.y + 17.27, 7, canvasWidth, canvasHeight);
+
+
+
+
+
+
+
+  gradEpsilon = 0.001;
+  newtonEpsilon = 0.02;
+
+  //f(x,y) := (x * y^2 - 3 * x^3 + x^2 - x + sin(y) * x + 5 - pi * y) * (y^9-1.4*x^2*y^2+1.4*x^3) * ((y-x^5)^2-y^10)  * (y^4 + 3 * x^4 - 7);
+  //f(x,y) := (x^2 - 3 * y^2 - 1) * (x^2 + 3 * y^2 - 15) * x;
+
+
+
+
+
+
+
+
+
+  thickness = 0.0;
+  sparkColor = [255,200,44] / 255 :> 1;
+
+
+  surround = apply(1..8, k, gauss(exp(i*k/8*2*pi))) * 0.01;
+
+
+
+  computeResolution = 1024;
+  renderResolution = 1024;
+
+
+  axesMax = 10;
+  L = (-axesMax, -axesMax)-(0.5,0.5);
+  R = (axesMax, -axesMax)-(0.5,0.5);
+
+  createimage("computeTexture", computeResolution, computeResolution);
+  createimage("trueCurve", computeResolution, computeResolution);
+  //createimage("gradientTexture", computeResolution, computeResolution);
+  //createimage("newtonTexture", computeResolution, computeResolution);
+  createimage("renderTarget", renderResolution, renderResolution);
+
+
+  renderSize = canvasWidth;
+  renderPos = canvasCenter - 0.5 * renderSize * (1,1) + (-3, 0);
+  renderArea = rect(renderPos, renderSize, renderSize);
+
+
+/*
+  colorplot(L, R, "gradientTexture",
+    grad = computeGradient(#);
+    (grad.x, grad.y, 0, 1);
+  );
+
+  colorplot(L, R, "newtonTexture",
+    newt = computeNewton(#);
+    (newt.x, newt.y, 0, 1);
+  );
+*/
+
+
+  createF(codeIndex);
+  g(x,y) := abs(f(x,y));
+  computeTrueCurve();
+
+
+
+
+
+  //colorplot("computeTexture", if(random()>0.999, 1, 0));
+
+
+
+
+
+  lifeBugs = [
+  {
+    "pos": codePos + (2, 6),
+    "scale": 0.3,
+    "flipbook": ["bug"],
+    "index": 1,
+    "flipx": false,
+    "flipy": false,
+    "rotation": 0
+  },
+  {
+    "pos": codePos + (7, 6),
+    "scale": 0.3,
+    "flipbook": ["bug"],
+    "index": 1,
+    "flipx": false,
+    "flipy": false,
+    "rotation": 0
+  },
+  {
+    "pos": codePos + (12, 6),
+    "scale": 0.3,
+    "flipbook": ["bug"],
+    "index": 1,
+    "flipx": false,
+    "flipy": false,
+    "rotation": 0
+  }
+
+];
+
+
+
+
+
+
+
+
+
+
+flamma = {
+  "startPos": canvasCenter + (-50, -4),
+  "pos": canvasCenter + (-50, -4),
+  "endPos": canvasCenter + (-35, -4),
+  "flipbook": ["flamma"],
+  "scale": 0.7,
+  "rotation": 0,
+  "flipx": false,
+  "flipy": false,
+	"index": 1,
+  "feedback": [
+      "", "", "", "", "",
+      "", "", "", "", "",
+      "", "", "", "", "",
+      ""
+  ]
+};
+flammaIn = false;
+flammaOut = false;
+
+
+speechBubble = {
+  "sprite": "bubble",
+  "text": "",
+  "pos": canvasCenter + (-32, 7),
+  "alpha": 0
+};
+showSpeechBubble = false;
+
+scoreLabel = {
+  "pos": canvasCorners_1 + (2, -2),
+  "score": 0,
+  "text": "0"
+};
+
+
+
+
+
+
+
+failureMessage = {
+  "startPos": canvasCenter + (-6, -15),
+  "pos": canvasCenter + (-6, -15),
+  "endPos": canvasCenter + (-6, -15),
+  "message": "Schade! Es wäre die hier gewesen.",
+  "size": [15, 5]
+};
+showFailure = false;
+
+
+
+
+
+
+
+
+
+
+  createimage("codeTexture", 1920, 1080);
+
+
+
+
+  playanimation();
+  setupTime();
+
+
+</script>
+<script src="../../Egdod/egdodUI.js"></script>
+<script src="../../Egdod/egdodMath.js"></script>
+<script src="../../Egdod/egdodArray.js"></script>
+<script src="../../Egdod/egdodColor.js"></script>
+<script src="../../Egdod/egdodMisc.js"></script>
+<script src="../../Egdod/egdodAnim.js"></script>
+<script src="../../Egdod/egdodShader.js"></script>
+<script src="../../Egdod/egdodUI.js"></script>
+
+
+
+
+<script id='csdraw' type='text/x-cindyscript'>
+  //fillpoly(screenbounds(), color->0.2 * (1,1,1));
+  drawimage(canvasCorners_4, canvasCorners_3, "back");
+  //drawimage(renderPos, renderPos + (renderSize, 0), "trueCurve");
+  drawimage(renderPos, renderPos + (renderSize, 0), "renderTarget");
+  drawimage(canvasCorners_4, canvasCorners_3, "front");
+  iterate();
+
+  drawimage(paperPos, "paper", flipx->true, scale->1.5, rotation->5°);
+  drawCodes();
+
+  forall(1..lifesLeft, drawFlipbookObject(lifeBugs_#));
+  drawFlamma();
+  drawSpeechBubble();
+  if(showFailure, drawFailureMessage());
+</script>
+
+
+<script id='cstick' type='text/x-cindyscript'>
+  delta = deltaTime();
+
+  if(showHighlight,
+    updateRectPos(highlightRect, lerp(highlightRect.xy, highlightPos, highlightAccel));
+  );
+
+  processFlamma();
+</script>
+
+
+
+<script id='csmousedown' type='text/x-cindyscript'>
+  if(showFailure,
+    showFailure = false;
+    createTask();
+    createF(codeIndex);
+  , // else //
+    placeBugs(mouse().xy);
+    catchCode();
+  );
+</script>
+
+<script id='csmousedrag' type='text/x-cindyscript'>
+  if(!showFailure,
+    placeBugs(mouse().xy);
+  );
+</script>
+
+<script id='csmousemove' type='text/x-cindyscript'>
+</script>
+
+<script id='csmouseup' type='text/x-cindyscript'>
+</script>
+
+
+
+<div id="App">
+  <div id="CSCanvas" class="CindyJS-widget"><canvas style="position: absolute; border: medium none; top: 0px; left: 0px; padding: 0px; margin: 0px; height: 100%; width: 100%;" width="1920" height="1080"></canvas><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 100000px; height: 100000px"></div></div><div style="position: absolute; transition: 0s; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; transition: 0s; left: 0; top: 0; width: 200%; height: 200%"></div></div></div>
+
+
+
+
+</div>
+
+<script>
+
+cindy = createCindy({canvasname:"CSCanvas",
+                 scripts:"cs*",
+                 images:{
+                    back: "../../assets/back_4.png",
+                    front: "../../assets/front_3.png",
+                    paper: "../../assets/paper.png",
+                    flamma:   "../../assets/flamma_wave.png",
+                    bubble:   "../../assets/speech_bubble.png",
+                    bug: "../../assets/bug.png"
+                 },
+                 use:["katex"]
+                });
+
+</script>
+
+
+
+
+<script>
+
+</script>
+
+
+
+
+
+
+
+<script src="../../translation.js"></script>
+<script>
+  function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+
+
+  function translate() {
+    lang = getParameterByName("lang");
+
+
+    cindy.evokeCS('failureMessage.message = "' + translation[lang].wrongChoice + '";');
+    cindy.evokeCS('flamma.feedback = [];');
+    for(bark of translation[lang].flamma) {
+      cindy.evokeCS('flamma.feedback = flamma.feedback :> "' + bark + '";');
+    }
+
+
+  }
+
+</script>
+
+
+</body>
+
+
+
+</html>

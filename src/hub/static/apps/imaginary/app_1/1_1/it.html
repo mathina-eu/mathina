@@ -8,9 +8,53 @@
     <script type="text/javascript" src="https://cindyjs.org/dist/v0.8/CindyGL.js"></script>
 
     <!--<script type="text/javascript" src="Cindy_master.js"></script>-->
+	<script>
+		function InitRik() {
+		
+			window.addEventListener('resize', ResizeRik, false);
+			ResizeRik();
+			
+		}
+		
+		function ResizeRik() {
+
+			var doc = document,
+                w = window;
+            var docEl = (doc.compatMode && doc.compatMode === 'CSS1Compat') ?
+                doc.documentElement : doc.body;
+
+            var width = docEl.clientWidth;
+            var height = docEl.clientHeight;
+
+            // mobile zoomed in?
+            if (w.innerWidth && width > w.innerWidth) {
+                width = w.innerWidth;
+                height = w.innerHeight;
+            }
+
+            window.dimensionRik = [width, height];
+			ScalaCalcolata=Math.min(dimensionRik[0]/1920,dimensionRik[1]/1080);
+			
+			
+			
+			//document.getElementById('CSCanvas').width=1920*ScalaCalcolata;
+			//document.getElementById('CSCanvas').height=1080*ScalaCalcolata;
+			
+			//document.body.style.zoom=ScalaCalcolata;
+			//
+			//MargineRik=[(dimensionRik[0]-ScalaCalcolata*1920)/2,(dimensionRik[1]-ScalaCalcolata*1080)/2];
+			
+			//document.body.style.marginLeft=MargineRik[0]+"px";
+			//document.body.style.marginTop=MargineRik[1]+"px";
+			
+			Vai();
+		
+		}
+	
+	</script>
 </head>
 
-<body style="font-family:Palatino; margin:0; font-size:16pt">
+<body style="font-family:Palatino; margin:0; font-size:16pt" onload="InitRik()">
 
 
 
@@ -164,8 +208,8 @@ recallDragon() := (
 
 updateWand() := (
   regional(relMouse, dist);
-
   relMouse = mouse().xy - wand.pos;
+  //print(mouse().xy);
   dist = abs(relMouse);
   wand.value = lerp(wand.value, clamp(dist, 0, wand.maxValue), wand.acceleration);
   if(wand.value < wand.deadzone, 
@@ -464,11 +508,11 @@ setupTime();
   wand.value = 0;
 </script>
 
-<canvas id="CSCanvas" align="left" valign="top" width="1920" height="1080" style="border:1px solid #000000">
+<canvas id="CSCanvas" align="left" valign="top" style="width: 100%;height: 100%;position: absolute; ">
 </canvas>
 
 <script>
-
+function Vai() {
     cindy = createCindy({canvasname:"CSCanvas",
                  scripts:"cs*",
                  images:{
@@ -489,7 +533,7 @@ setupTime();
                    wand:   "../../assets/wand_2.png",
                  }
                 });
-
+}
 </script>
 
 

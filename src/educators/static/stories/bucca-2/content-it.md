@@ -40,7 +40,7 @@ Il cifrario di Cesare è uno dei metodi crittografici più famosi dell'antichit�
 
 Nella storia di Mathina il cifrario di Cesare è solo presentato a livello generale, ma un'analisi più approfondita dello stesso e di alcune sue caratteristiche è possibile per bambini di 7-10 anni senza che sia richiesta nessuna conoscenza pregressa. Quelli che seguono sono alcuni spunti per attività che possono essere svolte dopo la lettura della storia. 
 
-`*` !uanto è sicuro il cifrario di Cesare? Non molto, perché dopo al massimo 25 tentativi di decodifica (ovvero il numero delle lettere dell'alfabeto meno una), saremo in grado di scoprire la chiave e il testo in chiaro.
+`*` Quanto è sicuro il cifrario di Cesare? Non molto, perché dopo al massimo 25 tentativi di decodifica (ovvero il numero delle lettere dell'alfabeto meno una), saremo in grado di scoprire la chiave e il testo in chiaro.
 
 
 `*` Cifrare un testo due volte, una di fila all'altra, anche con chiavi diverse, rende più sicuro il messaggio nascosto? No, anzi equivale a applicare il cifrario di Cesare utilizzando come chiave la somma delle due chiavi utilizzate.
@@ -61,7 +61,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 &nbsp;
 
-## [App 1 - Il gioiello I]($HUB_URL/story/the-talking-parrot/?actionLink=app1)
+## [App 1 - Il gioiello I]($HUB_URL/story/mathina-and-the-talking-parrot/?actionLink=app1)
 
 Nella prima esperienza, la chiave del metodo è quella usata dal pappagallo John, cioè il salto di una lettera. In questa app l'utente deve provare a cifrare correttamente alcune parole usando il cifrario di Cesare con un salto.
 
@@ -70,7 +70,7 @@ Nella prima esperienza, la chiave del metodo è quella usata dal pappagallo John
 
 &nbsp;
 
-## [App 2 - Il gioiello II]($HUB_URL/story/the-talking-parrot/?actionLink=app2)
+## [App 2 - Il gioiello II]($HUB_URL/story/mathina-and-the-talking-parrot/?actionLink=app2)
 
 Nella seconda app l'utente deve invece cercare di decifrare un messaggio. L'unica cosa nota è che il testo cifrato è stato ottenuto con un cifrario di Cesare. Nell'app è presente una versione del gioiello della storia, del quale è possibile ruotare i dischi con l'alfabeto e questo movimento ha come effetto quello di cambiare la chiave.
 

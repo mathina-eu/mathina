@@ -308,8 +308,8 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
-    text: Prova ad aiutare Mathina a disporre i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città?
-    toolbarText: 
+    text: Disponi i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città? Quando vuoi, esci. 
+    tag: firstGame
     cta: Aiuta Mathina!
     url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
@@ -390,9 +390,11 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina e Leo presero le zollette di zucchero dai piattini del caffè della polizia iniziarono a cercare un buon posizionamento.
   - type: game
+    tag: secondGame
     text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa. 
     toolbarText: 
     cta: Provaci!
+    tag: app2
     url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
@@ -565,7 +567,9 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: I poliziotti decisero di chiamare immediatamente il capo della polizia per condividere le loro scoperte. Mathina e Leo, nel frattempo, avevano ripreso a visitare la Città della Logica.
   - type: game
+    tag: thirdGame
     text: Vuoi provare a disporre i poliziotti per pattugliare le strade di altre città?
+    tag: app3
     toolbarText: 
     cta: Clicca qui!
     url: /apps/logi-3-app/logi-3-app.htm?v=3

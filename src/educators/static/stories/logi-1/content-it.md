@@ -56,7 +56,21 @@ Ci sono 3 app che accompagnano la storia. La prima app consente di giocare liber
 
 Tutte le app sono state programmate in JavaScript e sono ottimizzate sia per PC che per tablet/smartphone. Di seguito vedete la breve descrizione di ciascuna app. Vengono forniti collegamenti sia per le app che per i video della guida utente. 
 
-## [App 1 - La sfida dei semafori]($HUB_URL/story/the-traffic-light-challenge/?actionLink=app1)
+
+## [App 1 - La sfida dei semafori I]($HUB_URL/story/the-traffic-light-challenge/?actionLink=firstGame
+
+SI vede un semaforo con tre luci. In questa app si possono impostare i colori e aggiungere ulteriori semafori (fino a 8) da colorare. In caso di necessità è possibile resettare.
 
 @[youtube](zdFCyi9WLkY?_align-center_)
 [Script](/stories/logi-1/transcripts/Script1.pdf)
+
+## [App 2 - La sfida dei semafori II]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
+
+Otto semafori sono mostrati in fila. Puoi unire tra loro i semafori identici trascinandoli uno sull'altro. Una volta che sono piazzati uno accanto all'altro i doppioni spariscono.
+
+@[youtube](o7GglqqoNMs?_align-center_)
+[Script](/stories/logi-1/transcripts/Script1.pdf)
+
+## [App 3 - La sfida dei semafori III]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
+Trova la sesta sequenza di colori! Le regole dell'app sono le stesse della App 1.
+
