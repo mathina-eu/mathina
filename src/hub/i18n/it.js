@@ -40,7 +40,7 @@ export default {
   index: {
     title: 'Benvenuto nel mondo di Mathina',
     subtitle: 'Seleziona una fascia di età!',
-    'start-exploring': 'Inizia a esplorare!',
+    'start-exploring': 'Esplora',
     about: 'Scopri di più',
     close: 'Chiudi',
     aboutContent: `<p>Questo è un mondo dove accadono cose incredibili. Una terra piena di strane e magiche creature,
@@ -51,9 +51,9 @@ export default {
     volano a un'altezza prestabilita a seconda della distanza dai loro nidi, animali che parlano un linguaggio codificato. Fiere del giocattolo espongono i propri prodotti solo se hanno schemi simmetrici precisi e alcune città hanno segnali stradali impegnativi da interpretare. </p>
 
     <p> Questa terra si chiama Platonia, dove la matematica e la logica sono apprezzate da tutti e si trovano ovunque nella natura.
-    Gli abitanti di Platonia non solo accettano queste regole, anzi, sono molto felici di averle, e si godono appieno i trucchi e gli indovinelli che incontrano. </p>
+    I suoi abitanti non solo accettano queste regole, anzi, sono molto felici di averle, e si godono appieno i trucchi e gli indovinelli che incontrano. </p>
 
-    <p> Mathina e suo fratello Leo si divertono a risolvere le varie sfide che i luoghi di questa terra offrono loro. </p>
+    <p> Mathina e suo fratello Leo sono due ragazzi che si divertono a risolvere le varie sfide che incontrano esplorando! </p>
 
     <p> A Platonia ci sono quattro diverse regioni: </p>
 
