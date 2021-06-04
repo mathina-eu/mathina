@@ -160,6 +160,7 @@ actions:
         char: kangaroo
         mood: serious
   - type: game
+    tag: firstGame
     text: Was denkst Du? Wie viele Ampeln muss es geben, damit alle Farben in den unterschiedlichen Reihenfolgen vorkommen?
     # How many lights do you think would be enough to show all the variations? 
     toolbarText: Male die Farben in die Ampeln. Jede Farb-Reihenfolge darf nur einmal vorkommen.
@@ -200,6 +201,7 @@ actions:
   - type: clearImage
     id: solution8
   - type: game
+    tag: secondGame
     text: Welche Ampeln hat Leo zweimal gemalt? Ziehe die beiden gleich aussehenden Ampeln übereinander und lass die überzählige verschwinden.
     # What do you think Leo has included twice? Pull identical lamps on top of each other, and the superfluous ones will disappear.
     toolbarText: Welche Ampeln hat Leo zweimal gemalt? Ziehe sie übereinander, damit eine von ihnen verschwindet.
@@ -220,6 +222,7 @@ actions:
   - type: clearImage
     id: solution5
   - type: game
+    tag: thirdGame
     text: Hier siehst Du die fünf richtigen Ampeln in einer Reihe. Eine Ampel hat noch keine Lichtsignale und Du kannst sie mit den Farben in der richtigen Reihenfolge bemalen. Außerdem kannst Du auch noch weitere Ampeln hinzufügen.
     # We see the 5 correct lamps lined up and a traffic light without colors which can be colored. Additional lamps can be added, too.
     toolbarText: Was glaubst Du? Welche Farb-Reihenfolge fehlt noch?
