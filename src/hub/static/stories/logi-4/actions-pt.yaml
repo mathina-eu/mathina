@@ -164,6 +164,7 @@ actions:
         char: boys
         mood: talking
   - type: game
+    tag: firstGame
     text: Constrói uma tabela preenchendo a quantidade inicial de medalhas de ouro recebidas.
     toolbarText: 
     cta: Consegues descobrir quantas medalhas de ouro é que eles recebem?

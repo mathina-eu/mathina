@@ -167,6 +167,7 @@ actions:
         char: boys
         mood: talking
   - type: game
+    tag: firstGame
     text: Generate a table by filling in the initial amount of gold medals received.
     toolbarText: 
     cta: Can you find out how many gold medals they receive? 
