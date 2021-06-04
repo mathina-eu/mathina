@@ -144,6 +144,7 @@ actions:
         char: kangaroo
         mood: serious
   - type: game
+    tag: firstGame
     text: Quantas luzes achas que seriam suficientes para obter todas as sequências?
     toolbarText: 
     cta: Tenta encontrá-las todas!
@@ -177,6 +178,7 @@ actions:
   - type: clearImage
     id: solution8
   - type: game
+    tag: secondGame    
     text: Qual delas achas que ele incluiu duas vezes?
     toolbarText: Arrasta as lâmpadas iguais para cima umas das outras e as que estão a mais desaparecem.
     cta: Experimenta!    
@@ -193,6 +195,7 @@ actions:
   - type: clearImage
     id: solution5
   - type: game
+    tag: thirdGame
     text: Qual a ordem de 3 cores que está em falta?
     toolbarText: Talvez ajude alinhar as luzes de acordo com a primeira cor, começando com o violeta, depois o rosa e depois o laranja.
     cta: Experimenta!       

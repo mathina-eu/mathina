@@ -34,9 +34,9 @@ export default {
       'fire-3': 'Das Phönix-Rennen in Arisa',
       'fire-4': 'Die geheimnisvollen Funkelflöhe',
       'symm-1': 'Mathina schützt den Symmel-Rummel',
-      'symm-2': 'Mathina, the rosette game and the magic mazes',
+      'symm-2': 'Das Rosettenspiel und die magischen Labyrinthe',
       'symm-3': 'Zauberhafte Muster',
-      'symm-4': 'The polyhedron carousel',
+      'symm-4': 'Das Polyeder-Karussell',
       'demo-story': 'Deutsch Demo Geschichte',
     },
   },
@@ -88,5 +88,8 @@ export default {
     trainer: 'Trainer',
     parrot: 'John der Papagei',
     charmingparrot: 'Kapitän Gurgelqualle',
+	technician: 'Techniker',
+	sean: 'Tom',
+	rashamom: 'Prof. O’Malley'
   },
 };

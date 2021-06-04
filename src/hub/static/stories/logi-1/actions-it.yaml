@@ -144,6 +144,7 @@ actions:
         char: kangaroo
         mood: serious
   - type: game
+    tag: firstGame
     text: Quanti semafori pensi siano sufficienti per mostrare tutte le sequenze? 
     toolbarText: Quante semafori pensi siano sufficienti per mostrare tutte le sequenze? 
     tag: app1
@@ -186,6 +187,7 @@ actions:
   - type: clearImage
     id: solution8
   - type: game
+    tag: secondGame
     text: Quali semafori pensi che Leo abbia disegnato due volte? Metti qui tutte le sequenze che Leo ha scelto (tutte e solo una volta)!
     tag: app2
     toolbarText: Guarda i semafori. Puoi riorganizzarli come vuoi. Se ne metti due identici accando, uno dei due scompare.
