@@ -298,32 +298,7 @@ background-repeat: no-repeat;
 	font-family: "Roboto", sans-serif;
 }
     </style>
-    <link href='./css/jquery-ui.min.css' rel="stylesheet" />
-    <link href='./css/keyboard.css' rel="stylesheet" />
-    <script src='./js/jquery-3.1.1.min.js' type="text/javascript"></script>
-    <script src='./js/jquery-latest.min.js' type="text/javascript"></script>
-    <script src='./js/jquery-ui.min.js' type="text/javascript"></script>
-    <script src='./js/jquery.keyboard.js' type="text/javascript"></script>
-    <script type="text/javascript">
-        jQuery(function($) {
-            $('#text').keyboard({
-                layout: 'num'
-            });
-            $('.version').html('(v' + $('#text').getkeyboard().version + ')');
-            $('#segretoalice').keyboard({
-                layout: 'num',
-                restrictInput: true,
-                preventPaste: true,
-                autoAccept: true
-            });
-            $('#chiavetrovata').keyboard({
-                layout: 'num',
-                restrictInput: true,
-                preventPaste: true,
-                autoAccept: true
-            });
-        });
-    </script>
+    
     <script type="text/javascript">
         Lingua = 1;
 
@@ -607,6 +582,33 @@ background-repeat: no-repeat;
 
 <body onload="Init()">
 <style>#preloadcontainer{position:absolute;left:0;right:0;top:0;bottom:0;text-align:center;background:#cbfffd;z-index:100}.spinner{margin:200px auto;width:70px;text-align:center}.spinner>div{width:18px;height:18px;background-color:#004786;border-radius:100%;display:inline-block;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}</style><div id="preloadcontainer"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>
+
+<link href='./css/jquery-ui.min.css' rel="stylesheet" />
+    <link href='./css/keyboard.css' rel="stylesheet" />
+    <script src='./js/jquery-3.1.1.min.js' type="text/javascript"></script>
+    <script src='./js/jquery-latest.min.js' type="text/javascript"></script>
+    <script src='./js/jquery-ui.min.js' type="text/javascript"></script>
+    <script src='./js/jquery.keyboard.js' type="text/javascript"></script>
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('#text').keyboard({
+                layout: 'num'
+            });
+            $('.version').html('(v' + $('#text').getkeyboard().version + ')');
+            $('#segretoalice').keyboard({
+                layout: 'num',
+                restrictInput: true,
+                preventPaste: true,
+                autoAccept: true
+            });
+            $('#chiavetrovata').keyboard({
+                layout: 'num',
+                restrictInput: true,
+                preventPaste: true,
+                autoAccept: true
+            });
+        });
+    </script>
 
     <div id="DivCanvas">
         <div id="Text1">
