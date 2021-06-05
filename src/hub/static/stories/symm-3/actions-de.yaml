@@ -121,7 +121,7 @@ actions:
       <p>Die Platte zeichnete ein deutliches Muster auf den Boden, mit sich regelmäßig wiederholenden Linien, richtig schön.</p> 
     #<p>The board left a trail on the ground, with a repetitive drawing.</p>
   - type: video
-    text: Schau dir den Film an!
+    text: Schau's dir an!
     #Watch the movie!
     entries:
     - src: Anim%20Placa%20p111.mp4
@@ -178,7 +178,7 @@ actions:
       <p>Zu dritt rollten sie die seltsame Platte zusammen und befestigten sie mit ein paar von Mathinas Haarspangen, die sie in ihrer Jackentasche fand.</p> 
     #<p>Together, the three of them rolled up the board and secured it using some of Mathina's hairpins.</p>        
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
     url: /apps/anims/anim_formcilindro.html
@@ -193,7 +193,7 @@ actions:
       <p>Dann sprach der Zauberer einige Zauberformeln, um seinen magischen Besen herbeizurufen. Die Kinder sahen ihm dabei die ganze Zeit gebannt zu. Deshalb bemerkten sie nicht, wie die Rolle, die noch auf dem Boden lag, sich langsam in Bewegung setzte. Denn die Straße ging an dieser Stelle bergab.</p> 
     #<p>Then, the wizard did some magic to summon his magic broom and, while the children were watching him, they did not realize that the roll, which was resting on the floor, had started to roll, since the street had a slope.</p>
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
     url: /apps/anims/anim_cilindro.html 
@@ -398,7 +398,7 @@ actions:
     text: "Wähle die vier Muster aus, die Symmetrieachsen haben, und klicke danach auf dieses Symbol:" #"Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Welche Muster haben Symmetrieachsen?" #"Choose 4 friezes with symmetry axes"
     cta: "Wähle aus!" #"Try separating the friezes!"
-    url: /apps/EscolheFrisos_ref/?lang=en
+    url: /apps/EscolheFrisos_ref/?lang=de
     img:
       src: confirm.png
       height: 40
@@ -519,7 +519,7 @@ actions:
         char: leo
         mood: excited
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindro2.html
   - type: clearBackground
@@ -537,7 +537,7 @@ actions:
       - text: "Das stimmt, Leo. Aber ich denke wir brauchen die Rolle nicht unbedingt. Wir können das Muster auch stempeln, wenn wir nur die Platte benutzen wo der Buchstabe P einmal draufsteht. Sieh mal." #"You're right, Leo. But I don't think we need to use a roll, I think we can manage to stamp the frieze using just a board with a P, look."
         char: mathina
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_friso_refV.html
   - type: dialog
@@ -595,7 +595,7 @@ actions:
     #<p>While Mathina waited, she looked at the drawings of the friezes which were left out of the bags. One of them was quite strange: if we spin it half way around it ends up looking the same as before.</p>
   - type: game
     tag: tg1
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen" #"Play!"
     url: /stories/symm-3/video/Anim%20Rotacao.mp4
   - type: dialog
@@ -767,7 +767,7 @@ actions:
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
-    text: Schau den Film an!
+    text: Schau's dir an!
     #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindro3.html
@@ -822,7 +822,7 @@ actions:
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindros_parte1.html
   #
@@ -886,7 +886,7 @@ actions:
   #
   # Animação a carimbar a parte 2 do friso
   - type: game
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindros_parte2.html
   #
@@ -912,7 +912,7 @@ actions:
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
     tag: tg8
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_refdeslizante_leo.html
   #
@@ -982,7 +982,7 @@ actions:
   # Filme sobre a reflexão deslizante        
   - type: game
     tag: tg2
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /stories/symm-3/video/Anim%20RefDesl.mp4
   #
@@ -1100,7 +1100,7 @@ actions:
   # Animação sobre o que é a translação
   - type: game
     tag: tg3
-    text: "Schau dir den Film an!" #"Watch the movie!"
+    text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /stories/symm-3/video/Anim%20Translacao.mp4
   #
@@ -1126,6 +1126,7 @@ actions:
   - type: game
     tag: tg9
     text: "Betrachte die Muster in den sieben Taschen. Suche für jede Tasche die entsprechenden Symbole, die für die Symmetrien der Muster stehen." #"Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
+    toolbarText: Suche für jede Tasche die passenden Symbole!
     cta: "Los!"
     url: /apps/RotularFrisos/?lang=de
   #
