@@ -101,7 +101,8 @@ actions:
   - type: game
     text: Überprüfe, ob das Bild eine Symmetrieachse hat. Du kannst den Spiegel wieder mit dem Regler hin und her bewegen.
     #"Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider."
-    toolbarText: "Check if the following image has a symmetry axis."
+    toolbarText: Überprüfe, ob das Bild eine Symmetrieachse hat.
+    #"Check if the following image has a symmetry axis."
     cta: Probiere es aus!
     #"Let’s play!"
     url: /apps/espelho_im2/index.html
@@ -135,7 +136,7 @@ actions:
     #"Choose 4 rosettes with symmetry axes."
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/EscolheRosaceas/index.html?lang=en    
+    url: /apps/EscolheRosaceas/index.html?lang=de    
   - type: dialog
     entries:    
       - text: Ich habe es geschafft! Darf ich eine der Rosetten meiner Oma mitbringen?
@@ -156,9 +157,9 @@ actions:
         char: wizard        
   - type: game
     tag: tg4
-    text: "Hilf Mathina die Rosetten in die richtige Tasche zu legen. Wenn du nicht weiter weißt, klicke auf das folgende Smybol:"
+    text: "Hilf Mathina, die Rosetten in die richtige Tasche zu legen. Wenn du nicht weiter weißt, klicke auf das folgende Smybol:"
     #"How can Mathina win the rosettes? If in doubt, click"
-    toolbarText: Lege die Rosetten in die richtige Tasche
+    toolbarText: Lege die Rosetten in die richtige Taschen.
     #"Store the rosettes in the right bags!"
     cta: Probiere es aus!
     #"Try to solve the game, by storing the rosettes in the right bags!"
@@ -213,7 +214,7 @@ actions:
       #"You're absolutely right. But here we will use another rule. I will help you. – offered the wizard - Look here: there are two equal rosettes on top of each other. Let's rotate the top rosette (which has some transparency) a full turn. How many times do we get the two to overlap?"
         char: wizard
   - type: video
-    text: Schau dir den Film an!
+    text: Schau's dir an!
     #Watch the movie!
     entries:
     - src: rot_3.mp4
@@ -439,7 +440,7 @@ actions:
     #"How can Mathina solve the mirror maze?"
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=ref
+    url: /apps/labirinto-s/index.html?lang=de
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -531,7 +532,7 @@ actions:
     #"How can Mathina solve the half-turn maze?"
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=rot
+    url: /apps/labirinto-s/index.html?lang=de&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground
