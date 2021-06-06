@@ -7,7 +7,7 @@ actions:
     id: plasma2
     style: "width: 38%; top: 6%; right: 62%;"
   - type: image
-    src: leo-pointingl.png 
+    src: leo-pointingl.png
     id: leo-pointl
     style: "width: 24%; top: 40%; right: 20%;"
     parallax: back2
@@ -17,13 +17,13 @@ actions:
     style: "width: 22%; top: 35%; right: 12%; z-index: 1"
     parallax: back2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Che cos'è...? 
+      - text: Che cos'è...?
         char: mathina
         mood: surprised
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo rimase senza parole mentre fissava i cerchi di plasma che si accendevano e si spegnevano. Mathina lo spinse delicatamente sulla schiena per svegliarlo dal suo stupore.
   - type: animation
     target: leo-pointl
@@ -31,12 +31,12 @@ actions:
       duration: 3
       xPercent: -180
       yPercent: 15
-      ease: power3.out    
+      ease: power3.out
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo si precipitò all'ingresso dell'edificio.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: "Lo-gi-ci-ty Sta-di-um. Lo stadio della Città della Logica!"
         char: Leo
@@ -44,7 +44,7 @@ actions:
   - type: clearImage
     id: leo-pointl
   - type: image
-    src: leo-thinking.png 
+    src: leo-thinking.png
     id: leo-think
     style: "width: 17%; top: 43%; right: 74%;"
     parallax: back3
@@ -54,9 +54,9 @@ actions:
       duration: 3
       xPercent: -153
       yPercent: -28
-      ease: power3.out    
+      ease: power3.out
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina si avvicinò furtivamente all'ingresso dell'edificio ma non vide nessuno, riuscì solo a sentire le persone che discutevano all'interno - "Signore, non puoi farci questo! Ci dia semplicemente il nostro premio così possiamo tornare a casa!"
   - type: image
     src: trainer.png
@@ -64,10 +64,10 @@ actions:
     style: "width: 22%; top: 25%; right: 60%; z-index: 2"
     parallax: back2
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: "Un uomo in tuta da allenamento varcò l'ingresso e apparve vicino a Mathina. Aveva in mano uno strano dispositivo sportivo, una racchetta a forma di nastro di Möbius."
   - type: image
-    src: boys5.png 
+    src: boys5.png
     id: boys5
     style: "width: 60%; top: 45%; right: 6%; z-index: 3"
     parallax: front1
@@ -77,39 +77,39 @@ actions:
     style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
     parallax: front1
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Ben presto arrivarono anche sei giovani dall'ingresso, con in mano altrettante racchette a forma di nastro di Möbius.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Non può semplicemente andarsene così!
         char: boys
         mood: talking
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Va bene, vi darò un'altra possibilità. Provate di nuovo a indovinare!
         char: trainer
         mood: normal
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: I ragazzi si guardarono l'un l'altro, cercando di contare con le dita e pronunciando una gran quantità di numeri.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: ...Non riusciamo a capire!
         char: boys
         mood: talking
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Cos'è che non riuscite a capire? 
+      - text: Cos'è che non riuscite a capire?
         char: Mathina
         mood: talking
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: D'accordo, se questa ragazzina trova la soluzione per voi, avrete la medaglia d'oro! 
+      - text: D'accordo, se questa ragazzina trova la soluzione per voi, avrete la medaglia d'oro!
         char: trainer
         mood: normal
   - type: image
@@ -117,18 +117,18 @@ actions:
     id: gold
     style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo sapeva quanto Mathina fosse infastidita per essere stata chiamata "ragazzina".
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Siamo la squadra locale della Città della Logica e stasera abbiamo vinto il campionato regionale di Tennis Logico. Ma sono convinto che se vogliamo fare bene nella competizione nazionale, ha senso allenare il nostro cervello costantemente.
         char: trainer
         mood: normal
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Oggi abbiamo ricevuto numerose medaglie d'oro e ho detto alla squadra come distribuirò queste medaglie e che procederò, in ordine, seguendo la lista dei nomi.  
+      - text: Oggi abbiamo ricevuto numerose medaglie d'oro e ho detto alla squadra come distribuirò queste medaglie e che procederò, in ordine, seguendo la lista dei nomi.
         char: trainer
         mood: normal
       - text: La prima persona della lista riceverà la somma delle cifre del numero di medaglie d'oro ricevute. Ad esempio, se avessimo preso 721 medaglie, il primo otterrebbe 7 + 2 + 1, cioè 10 medaglie. Rimarrebbero così 721 - 10 medaglie cioè 711.
@@ -154,34 +154,33 @@ actions:
     style: "width: 19%; top: 21%; right: 47%;"
     parallax: back2
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina estrasse dalla tasca la penna e il taccuino.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Quindi il totale deve essere diviso tra 7 persone, giusto? Tra i 6 membri della squadra più l'allenatore.
         char: Mathina
         exposition: Mathina iniziò a scarabocchiare qualcosa sul taccuino... dopo un po' gridò "Sì!".
         mood: happy
-      - text: Quindi quante ne otteniamo? L'hai capito? 
+      - text: Quindi quante ne otteniamo? L'hai capito?
         char: boys
         mood: talking
   - type: game
     tag: firstGame
     text: Genera una tabella compilando la quantità iniziale di medaglie d'oro ricevute.
-    toolbarText: 
-    tag: app1
-    cta: Puoi scoprire quante medaglie d'oro ricevono? 
+    toolbarText:
+    cta: Puoi scoprire quante medaglie d'oro ricevono?
     url: /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Non te lo dirò così semplicemente.
         char: Mathina
-        exposition: Mathina sussurrò qualcosa all'orecchio dell'allenatore. L'allenatore annuì soddisfatto.      
+        exposition: Mathina sussurrò qualcosa all'orecchio dell'allenatore. L'allenatore annuì soddisfatto.
         mood: happy
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Preferisco aiutarvi a ottenere il risultato da soli.
         char: Mathina
@@ -199,19 +198,19 @@ actions:
       yoyo: true
       ease: power1.inOut
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Vedendo quanto fosse eccitato, Mathina e l'allenatore gli diedero il via libera.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Beh, penso che potremmo esaminare tutti i casi, come se tutti ottenessero 1 o 2 o 3 medaglie, tranne George, e così via! E così facendo troveremo il numero giusto. Non sarà un numero alto, ne sono sicuro...
         char: leo
         mood: thinking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Leo iniziò a contare, pensando ad alta voce.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Se tutti prendono sempre lo stessa quantità di medaglie, tranne George, due membri consecutivi della squadra otterranno la stessa quantità. Non possono prenderne 1, perché non ci sono due numeri consecutivi con 1 come somma delle cifre.
         char: leo
@@ -224,10 +223,10 @@ actions:
         char: leo
         mood: thinking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: "Leo si sentì stordito. Non si aspettava una casistica così complessa.. malgrado fosse arrivato a considerare solo 4 casi! Mathina lo guardò con uno sguardo interrogativo."
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: E se provassimo anche con il mio metodo?
         char: Mathina
@@ -236,10 +235,10 @@ actions:
         char: boys
         mood: talking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina non riuscì a trattenere un sorriso trionfante mentre si voltava verso di loro.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Disegna questa tabella e prova con, diciamo, 116 medaglie.
         char: Mathina
@@ -247,11 +246,11 @@ actions:
   - type: game
     text: Noti una certa regolarità nella tabella partendo da 116 medaglie?
     tag: app2
-    toolbarText: 
+    toolbarText:
     cta: Esamina la tabella!
     url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Sfortunatamente 116 non va bene perché esauriremo troppo presto le medaglie.
         char: george
@@ -273,24 +272,24 @@ actions:
         mood: happy
   - type: game
     text: Perché, se sottraiamo la somma delle sue cifre da un numero, otteniamo sempre un numero divisibile per 9?
-    toolbarText: 
+    toolbarText:
     tag: app3
     cta: Prova a sperimentare questa cosa con alcuni numeri!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: "Lo so! Sia x la prima cifra, y la seconda e z la terza. Ciò significa che possiamo mettere questo numero in questo modo: 100x + 10y + z. E la somma delle sue cifre è x + y + z."
         char: george
         mood: thinking
-      - text: Cosa succede se sottraiamo uno dall'altro? Otteniamo 100x + 10y + z - (x + y + z) = 99x + 9y = 9(11x + y). In questo modo è divisibile per 9. E questo è vero per qualsiasi numero di cifre, perché l'ultima cifra viene sempre eliminata e il resto lo si ottiene sempre sommando 9, 99, 999,…. 99999999 con dei moltiplicatori. Questo è così perché sottraiamo uno da una potenza di dieci.  
+      - text: Cosa succede se sottraiamo uno dall'altro? Otteniamo 100x + 10y + z - (x + y + z) = 99x + 9y = 9(11x + y). In questo modo è divisibile per 9. E questo è vero per qualsiasi numero di cifre, perché l'ultima cifra viene sempre eliminata e il resto lo si ottiene sempre sommando 9, 99, 999,…. 99999999 con dei moltiplicatori. Questo è così perché sottraiamo uno da una potenza di dieci.
         char: george
         mood: thinking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: L'allenatore alzò la testa e ascoltò la discussione con occhi colmi di approvazione. Aveva sempre guardato George dall'alto al basso, ma ora vedeva che poteva ragionare molto bene con un po' di guida.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Bene, ma non sappiamo ancora quanto guadagneremo!
         char: boys
@@ -302,12 +301,12 @@ actions:
         char: george
         mood: thinking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina ascoltò George con gli occhi socchiusi e gli chiese di ricontrollare i suoi calcoli.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Bene, facciamolo. Sei di noi riceveranno 9 medaglie d'oro due volte, e anche il primo della lista riceverà 9 medaglie d'oro al secondo turno, cioè 13 volte 9, per un totale di 117 medaglie. 
+      - text: Bene, facciamolo. Sei di noi riceveranno 9 medaglie d'oro due volte, e anche il primo della lista riceverà 9 medaglie d'oro al secondo turno, cioè 13 volte 9, per un totale di 117 medaglie.
         char: george
         mood: thinking
       - text: Tuttavia, il primo della riga otterrà più di 9 nel primo round, quindi è necessario un numero maggiore di 117, un numero che ha una somma di cifre maggiore di 9. Diciamo 127.
@@ -315,12 +314,12 @@ actions:
         mood: thinking
   - type: game
     text: Pensi che George abbia ragione? Compila la tabella con 127 medaglie!
-    toolbarText: 
+    toolbarText:
     tag: app4
     cta: Sperimentalo con il numero 127!
     url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: George, non funziona! Da un lato, finiremo prima le medaglie d'oro, e dall'altro, il primo e il quarto ottengono un importo diverso, e anche il settimo, perché ottiene zero nell'ultimo round!
         char: boys
@@ -337,12 +336,12 @@ actions:
         mood: thinking
   - type: game
     text: Riesci a capire quante medaglie sono effettivamente necessarie?
-    toolbarText: 
+    toolbarText:
     tag: app5
     cta: Prova a sperimentare con i numeri!
     url:  /apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Quindi ho pensato che 6 persone avrebbero ottenuto 9 medaglie entrambe le volte e una persona avrebbe ottenuto 18 la prima volta e poi 9 la seconda. Ciò significa che in totale ci sono 7x18 + 9 = 135 medaglie. E così la quinta persona ottiene più delle altre!
         char: george
@@ -377,16 +376,16 @@ actions:
     style: "width: 2%; top: 59%; right: 33%; z-index: 3;"
     parallax: front3
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: L'allenatore distribuì le medaglie ai membri della squadra e poi fece un applauso a Mathina.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Sei incredibile! Sei la benvenuta come assistente allenatrice della mia squadra di Tennis Logico! Saremo felici di avere persone come te nella nostra squadra!
         char: trainer
         mood: normal
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: "Mathina lo ringraziò per l'opportunità e continuò le sue esplorazioni con Leo: c'erano nuove avventure in serbo loro."
   - type: clearImage
     id: leo-think

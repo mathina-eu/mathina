@@ -4,13 +4,13 @@ actions:
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 1;"
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Questa è la mappa che mostra come sono disposte le vie della Città della Logica. 
+    text: Questa è la mappa che mostra come sono disposte le vie della Città della Logica.
   - type: background
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 2;"
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Tutte le strade portano nomi di famosi matematici provenienti da tutto il mondo. 
+    text: Tutte le strade portano nomi di famosi matematici provenienti da tutto il mondo.
   - type: image
     src: mathina-runs.png
     id: mathina-runs
@@ -46,7 +46,7 @@ actions:
     style: "width: 7%; top: 57%; right: 83%;"
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: ...videro un poliziotto correre verso di loro. Era quasi senza fiato. 
+    text: ...videro un poliziotto correre verso di loro. Era quasi senza fiato.
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:
@@ -103,7 +103,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Un ladro! Un ladro ha rubato tutti i numeri pari di questa città! 
+      - text: Un ladro! Un ladro ha rubato tutti i numeri pari di questa città!
         char: second_policeman
         exposition: Disse il poliziotto annaspando.
         mood: serious
@@ -120,7 +120,7 @@ actions:
     id: policeman1-t
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Leo era già arrivato all'angolo e rapidamente scomparve in via Péter. 
+    text: Leo era già arrivato all'angolo e rapidamente scomparve in via Péter.
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina tolse un paio di borse dalla spalla del poliziotto per accelerare l'inseguimento.
@@ -141,7 +141,7 @@ actions:
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Quando raggiunsero l'angolo tra via Hilbert e via Péter, videro che Leo era a pochi metri dal ladro. 
+    text: Quando raggiunsero l'angolo tra via Hilbert e via Péter, videro che Leo era a pochi metri dal ladro.
   - type: animation
     target: leo-i2
     vars:
@@ -151,7 +151,7 @@ actions:
       ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
-    text: Il ragazzo si fece avanti, allungò una mano verso l'uomo e quasi riuscì ad afferrare il gambo del numero "4". 
+    text: Il ragazzo si fece avanti, allungò una mano verso l'uomo e quasi riuscì ad afferrare il gambo del numero "4".
   - type: animation
     target: thief-i
     vars:
@@ -278,7 +278,7 @@ actions:
       - text: La stessa cosa he abbiamo detto noi, ma non ci crede.
         char: first_policeman
         mood: normal
-      - text: Mostraci la mappa della città, per favore. Siamo alla Città della Logica, no? Forse il capo può essere persuaso dal potere della logica e del ragionamento. 
+      - text: Mostraci la mappa della città, per favore. Siamo alla Città della Logica, no? Forse il capo può essere persuaso dal potere della logica e del ragionamento.
         char: Mathina
         mood: talking
   - type: clearImage
@@ -299,21 +299,21 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina e Leo erano perplessi nel vedere la città su un mezzo così antiquato. I poliziotti spiegarono che questo mostrava quanto la polizia si fosse allontanata dalla realtà fisica e che ricevessero a malapena alcun supporto. L'attrezzatura che avevano a disposizione era obsoleta e era completamente inutile.
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"    
-    text: Mathina guardò con attenzione la mappa. 
+    style: "position: absolute; left: 600px; top: 5px;"
+    text: Mathina guardò con attenzione la mappa.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Quindi, la domanda, in realtà, è la seguente... È possibile collocare due poliziotti in città in modo tale che siano in grado di sorvegliare tutte le strade?
         char: Mathina
         mood: thinking
   - type: game
-    text: Disponi i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città? Quando vuoi, esci. 
+    text: Disponi i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città? Quando vuoi, esci.
     tag: firstGame
     cta: Aiuta Mathina!
     url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Ma certo, due poliziotti non bastano!
         char: Mathina
@@ -328,16 +328,16 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Leo rise e diede una pacca sulla spalla di Mathina, mentre uno dei poliziotti annuì quasi spaventato.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: "Guardate queste tre vie orizzontali: Euler, Hemachandra e Péter. Sono parallele e non hanno intersezioni. Ora, se voi due state su due delle vie orizzontale, nessuno di voi sarà in grado di sorvegliare la terza! Questo, perché non riesci a trovare nessun punto in città da cui puoi vedere due strade parallele!"
         char: Mathina
         mood: talking
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"    
+    style: "position: absolute; left: 600px; top: 5px;"
     text: I poliziotti erano affascinati dal ragionamento di Mathina. Per esperienza sapevano che due persone non erano abbastanza, eppure non erano riusciti a spiegarlo logicamente.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Ho un'altra spiegazione!
         char: Leo
@@ -350,7 +350,7 @@ actions:
       - text: Guardate, signori. Da quante strade è composta Logi-City? Uno di voi era in via Hilbert, mentre l'altro era in via Péter. Il ladro ha svoltato in via Gödel, mentre noi abbiamo voltato di qui, in via Hemachandra.
         char: Leo
         mood: arguing
-      - text: La via Barcan-Marcus è perpendicolare a quest'ultima, mentre via Constance-Jones li incrocia entrambi. La via Ladd-Franklin è perpendicolare alla via Constance-Jones e poi c'è ancora Corso Eulero al confine settentrionale della città. Abbiamo in totale otto strade.  
+      - text: La via Barcan-Marcus è perpendicolare a quest'ultima, mentre via Constance-Jones li incrocia entrambi. La via Ladd-Franklin è perpendicolare alla via Constance-Jones e poi c'è ancora Corso Eulero al confine settentrionale della città. Abbiamo in totale otto strade.
         char: Leo
         mood: arguing
       - text: Ora, controlliamo gli incroci. Non ci sono mai più di tre strade che hanno un incrocio in comune. Se potessimo trovare due incroci con tre strade diverse che si incrociano, anche allora potresti sorvegliarne solo un massimo di sei! Ma ci sono otto strade in città!
@@ -387,14 +387,13 @@ actions:
     style: "width: 9.5%; top: 9%; right: 82%;"
     parallax: back2
   - type: sceneText
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina e Leo presero le zollette di zucchero dai piattini del caffè della polizia iniziarono a cercare un buon posizionamento.
   - type: game
     tag: secondGame
-    text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa. 
-    toolbarText: 
+    text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa.
+    toolbarText:
     cta: Provaci!
-    tag: app2
     url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
@@ -442,7 +441,7 @@ actions:
       top: '-220px'
       ease: power3.out
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Vuoi usare il cervello!? Non ti ricordi? Dobbiamo iniziare dalle tre strade parallele.
         char: Mathina
@@ -493,16 +492,16 @@ actions:
       top: '-120px'
       ease: power3.out
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
-      - text: Ce l'ho fatta! 
+      - text: Ce l'ho fatta!
         char: Leo
         mood: happy
   - type: sceneText
     style: "position: absolute; left: 600px; top: 5px;"
     text: Leo mostrò la mappa con sopra le zollette ai poliziotti. Si guardarono l'uno con l'altro per un secondo o due e annuirono con apprezzamento.
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Questo è molto convincente! Grazie mille!
         char: first_policeman
@@ -552,13 +551,13 @@ actions:
   - type: clearImage
     id: thief
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"  
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: Non dovremmo essere seduti qui quando i ladri corrono per la nostra città!
         char: second_policeman
         mood: serious
   - type: dialog
-    style: "position: absolute; left: 600px; top: 5px;"    
+    style: "position: absolute; left: 600px; top: 5px;"
     entries:
       - text: A volte è meglio sedersi e pensare, credimi.
         char: Mathina
@@ -569,7 +568,6 @@ actions:
   - type: game
     tag: thirdGame
     text: Vuoi provare a disporre i poliziotti per pattugliare le strade di altre città?
-    tag: app3
-    toolbarText: 
+    toolbarText:
     cta: Clicca qui!
     url: /apps/logi-3-app/logi-3-app.htm?v=3

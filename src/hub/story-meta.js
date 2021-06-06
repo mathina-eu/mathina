@@ -89,5 +89,6 @@ export default [
     slug: 'demo-story-url-path',
     id: 'demo-story',
     ageMeta: AGE_GROUPS['1'],
+    hidden: true,
   },
 ];

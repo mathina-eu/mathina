@@ -53,7 +53,7 @@ actions:
     style: "width: 16%; top: 28%; right: 29%;"
   - type: dialog
     entries:
-      - text: Rallenta, giovanotto! Non puoi semplicemente attraversare queste strisce pedonali. Vedi quei semafori dalla parte opposta? 
+      - text: Rallenta, giovanotto! Non puoi semplicemente attraversare queste strisce pedonali. Vedi quei semafori dalla parte opposta?
         char: kangaroo
         mood: serious
   - type: clearImage
@@ -145,9 +145,8 @@ actions:
         mood: serious
   - type: game
     tag: firstGame
-    text: Quanti semafori pensi siano sufficienti per mostrare tutte le sequenze? 
-    toolbarText: Quante semafori pensi siano sufficienti per mostrare tutte le sequenze? 
-    tag: app1
+    text: Quanti semafori pensi siano sufficienti per mostrare tutte le sequenze?
+    toolbarText: Quante semafori pensi siano sufficienti per mostrare tutte le sequenze?
     cta: Prova a trovare tutte le combinazioni!
     url: \apps\logi-1-app\logi-1-app.htm?v=1
   - type: animation
@@ -163,7 +162,7 @@ actions:
     entries:
       - text: "Lo so, lo so, lo so! Otto è la soluzione, otto è la soluzione, canguro, ottoooo!"
         char: Leo
-        mood: happy  
+        mood: happy
         exposition: "Gridò Leo e continuando a saltare."
   - type: animation
     target: leo-runs
@@ -189,7 +188,6 @@ actions:
   - type: game
     tag: secondGame
     text: Quali semafori pensi che Leo abbia disegnato due volte? Metti qui tutte le sequenze che Leo ha scelto (tutte e solo una volta)!
-    tag: app2
     toolbarText: Guarda i semafori. Puoi riorganizzarli come vuoi. Se ne metti due identici accando, uno dei due scompare.
     url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
@@ -218,13 +216,13 @@ actions:
     id: solution6
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
   - type: dialog
-    entries:        
+    entries:
       - text: "Fatto! Ora, dopo l'arancione arriva ... non viola ma rosa, cioè arancio-rosa-viola."
         char: Leo
-        mood: happy  
+        mood: happy
       - text: "Bravo!"
         char: kangaroo
-        mood: happy  
+        mood: happy
         exposition: "Disse Mathina congratulandosi con Leo."
   - type: clearImage
     id: solution6

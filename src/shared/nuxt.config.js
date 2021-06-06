@@ -73,7 +73,7 @@ export default {
       'nuxt-i18n', {
         // vueI18nLoader: true
       }
-    ]
+    ],
   ],
   axios: {
     baseURL: process.env.BASE_URL,
