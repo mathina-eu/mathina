@@ -45,13 +45,13 @@ La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/
 
 L'utente vede la mappa di Città della logica e due cappelli della polizia. L'obiettivo è scoprire se i due poliziotti sono in grado di sorvegliare tutte le strade della città o se ne servono più. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. Il gioco è libero e non è richiesta alcuna soluzione.
 
-@[youtube](T6k8ftH5jMc?_align-center_)
+@[youtube](T6k8ftH5jMc?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/logi-3/transcripts/Script3.pdf)
 
 ##App 2 - Cani e gatti II ($HUB_URL/story/cats-and-dogs/?actionLink=secondGame)
 L'utente vede la mappa di Città della logica e tre zollette di zucchero. L'obiettivo è scoprire se tre poliziotti sono in grado di sorvegliare tutte le strade della città e, se sì, come. L'utente può spostare le icone sulla mappa e le strade presidiate appariranno come evidenziate. 
 
-@[youtube](uwkk_lkBqTk?_align-center_)
+@[youtube](uwkk_lkBqTk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/logi-3/transcripts/Script3.pdf)
 
 ##App 3 - Cani e gatti III ($HUB_URL/story/cats-and-dogs/?actionLink=thirdGame)

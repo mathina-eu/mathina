@@ -146,7 +146,7 @@ Viene presentato un insieme di otto poliedri. L'utente è invitato a scegliere i
 ![conferma](/stories/symm-4/img/confirm.png =40x40)
 , il programma mostra una nuova serie di otto poliedri. Vengono mostrati tre set di questo tipo in totale. Il gioco è risolto quando tutti i poliedri convessi sono selezionati.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](GDYOL7SnfY0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
@@ -157,7 +157,7 @@ Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invita
 ![conferma](/stories/symm-4/img/confirm.png =40x40)
 , il programma mostra un nuovo set di sei sviluppi. Vengono mostrati due set di questo tipo in totale. Il gioco è risolto quando gli sviluppi corretti sono selezionati.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](NspkoF8gH3k?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
@@ -166,17 +166,12 @@ Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invita
 
 Questa app è simile alla **App 2**. In questo caso, però, l'utente deve selezionare gli sviluppi dell'ottaedro. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
-
 &nbsp;
 
 ## [App 4 - Scegliere poliedri non platonici le cui facce sono tutte poligoni regolari e uguali]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg13)
 
 Questa app è simile alla **App 1**. Tuttavia, invece di scegliere poliedri convessi, l'utente dovrebbe scegliere i poliedri non platonici le cui facce sono tutte poligoni regolari e uguali. 
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
@@ -184,5 +179,3 @@ Questa app è simile alla **App 1**. Tuttavia, invece di scegliere poliedri conv
 
 Questa app è simile alla **App 1**. Tuttavia, invece di scegliere i poliedri convessi, l'utente dovrebbe scegliere i poliedri uniformi.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)

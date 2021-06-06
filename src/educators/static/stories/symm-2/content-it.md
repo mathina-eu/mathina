@@ -103,7 +103,7 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data ha un asse di simmetria. Per questo, l'utente può spostare uno specchio, trascinandolo avanti e indietro.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](-8Y3VnBEBxc?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -112,7 +112,7 @@ Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data 
 
 Viene presentato un set di otto rosoni. L'utente è invitato a scegliere i quattro rosoni con assi di simmetria. Dopo aver scelto i rosoni e aver fatto clic su ![Conferma](/stories/symm-2/img/confirm.png =40x40),
 il programma mostra un nuovo set di otto rosoni. Vengono mostrati un totale di 3 set di rosoni. Il gioco è risolto quando tutti i rosoni "corretti", (cioè con assi di simmetria) sono selezionati.
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](EPxStqEZl9s?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -123,7 +123,7 @@ Viene presentato un set di dodici rosoni. L'utente è invitato a trascinare cias
 ![Symmetry axis](/stories/symm-2/img/vertical.png =40x40),
 è possibile ottenere aiuto per il conteggio del numero di assi di simmetria.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](TgTgGYsX7Ik?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -131,8 +131,7 @@ Viene presentato un set di dodici rosoni. L'utente è invitato a trascinare cias
 ## [App 4 - Il gioco dei sacchetti II]($HUB_URL/it/story/mathina-the-rossete-game/?actionLink=tg5)
 
 Questa app è simile alla **App 3**. Tuttavia, invece di contare gli assi di simmetria, l'utente dovrebbe contare il numero di simmetrie di rotazione di ciascun rosone.
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-2/transcripts/Script2.pdf)
+
 
 &nbsp;
 
@@ -143,7 +142,7 @@ Vengono mostrati due labirinti affiancati: quello originale (a sinistra) e quell
 fino all'uscita ![Goal](/stories/symm-2/img/exit.png =60x30).
 Tuttavia, il labirinto originale diventerà sempre più trasparente e, dopo un certo punto, sarà impossibile da vedere. Quindi, per risolvere il labirinto, si dovrà guardare il labirinto riflesso. Solo per scopi di formazione, l'utente può fare clic su ![Lantern](/stories/symm-2/img/lanterna.png =40x40) per visualizzare entrambi i percorsi.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](kDm8JZ0r6EM?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-2/transcripts/Script2.pdf)
 
 &nbsp;
@@ -153,5 +152,4 @@ Tuttavia, il labirinto originale diventerà sempre più trasparente e, dopo un c
 
 Questa app è simile alla **App 5**. In questo caso, però, invece di essere riflesso, il labirinto è ruotato di 180 gradi.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-2/transcripts/Script2.pdf)
+
