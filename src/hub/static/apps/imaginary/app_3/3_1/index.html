@@ -799,7 +799,7 @@ flying = false;
 catchingInput = false;
 
 
-
+inputTimeBuffer = 0;
 
 playanimation();
 setupTime();
@@ -905,7 +905,7 @@ setupTime();
 
 
 
-  if(catchingInput,
+  if(catchingInput & (now() - inputTimeBuffer > 0.5),
     catchInputButtons();
   );
 </script>
@@ -919,7 +919,11 @@ setupTime();
 
   );
 
-  if(!flying, catchingInput = true);
+  if(!flying, 
+    catchInputButtons();
+    inputTimeBuffer = now();
+    catchingInput = true;
+  );
 
 </script>
 

@@ -270,7 +270,7 @@ actions:
         #"Challenged the technician."
   - type: game
     tag: tg26
-    text: "Finde die vier konvexen Polyeder und klicke danach auf dieses Symbol"
+    text: "Finde die vier konvexen Polyeder und klicke danach auf dieses Symbol:"
     #"Choose the ce the convex polyhedra. Each time, choose the 4 polyhedra and click"
     toolbarText: Wähle die vier konvexen Polyeder aus!
     #"Choose 4 convex polyhedra"
@@ -484,7 +484,7 @@ actions:
     id: plan-cubo-01
   - type: game
     tag: tg27
-    text: "Wähle die drei richtigen Netze für einen Würfel aus und klicke dann auf dieses Symbol"
+    text: "Wähle die drei richtigen Netze für einen Würfel aus und klicke dann auf dieses Symbol:"
     #"Choose the right nets for the cube. Each time, choose the 3 "good" nets and click"
     toolbarText: "Wähle die drei richtigen Netze für einen Würfel!"
     #"Choose the 3 right nets for the cube."
@@ -661,7 +661,7 @@ actions:
     #<p>Leo then decided to proceed as before (for the cube), creating alternative examples of nets for the polyhedron.</p>
   - type: game
     tag: tg28
-    text: "Wähle die richtigen Netze für das Oktaeder und klicke dann auf dieses Symbol"
+    text: "Wähle die richtigen Netze für das Oktaeder und klicke dann auf dieses Symbol:"
     #"Choose the right nets for the octahedron. Each time, choose the 3  „good“ nets and click"
     toolbarText: "Wähle die drei richtigen Netze für das Oktaeder"
     #"Choose the 3 right nets for the octahedron."
@@ -894,7 +894,7 @@ actions:
         #"Challenged the technician."        
   - type: game
     tag: tg13
-    text: "Wähle die nicht-platonischen Polyeder aus, deren Seiten trotzdem regelmäßige und gleiche Polygone sind. Klicke danach dieses Symbol"
+    text: "Wähle die nicht-platonischen Polyeder aus, deren Seiten trotzdem regelmäßige und gleiche Polygone sind. Klicke danach dieses Symbol:"
     #"Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
     toolbarText: "Wähle die zwei nicht-platonischen Polyeder aus, deren Seiten regelmäßige und gleiche Polygone sind."
     #"Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
@@ -1290,9 +1290,9 @@ actions:
         char: technician        
   - type: game
     tag: tg29
-    text: "Wähle die vier uniformen Polyeder aus und klicke dann auf dieses Symbol"
+    text: "Wähle die vier uniformen Polyeder aus und klicke dann auf dieses Symbol:"
     #"Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
-    toolbarText: "Wähle die vier uniformen Polyeder"
+    toolbarText: "Wähle die vier uniformen Polyeder!"
     #"Choose 4 uniform polyhedra"
     cta: "Probiere es aus!"
     #"Try separating the uniform polyhedra!"
