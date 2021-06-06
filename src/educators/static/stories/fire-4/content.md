@@ -2,11 +2,11 @@ The mysterious sparkbugs
 ========================
 
 # Mathematical concepts
-This story introduces the description of curves by implicit functions. We have seen in previous stories (phoenix race) the explicit description of a curve, where for each `@x@` value, we obtain a `@y@` value by a function, `@y=f(x)@`, and we represent all the points `@ (x,y) = (x,f(x)) @`.
+This story introduces the description of curves by implicit functions. We have seen in previous stories (The phoenix race) the explicit description of a curve, where for each `@x@` value, we obtain a `@y@` value by a function, `@y=f(x)@`, and we represent all the points `@ (x,y) = (x,f(x)) @`.
 
 With the implicit description, in contrast, we have a two-variable function `@F(x,y)@` that for any two input values of `@x@` and `@y@`, it returns a number. We represent our curve as all the points `@(x,y)@` that satisfy `@F(x,y)=0@`.
 
-With the explicit description we used in previous stories, we had a constructive method for obtaining all the points in the curve: we just feeded in values of x and we obtain points on the curve. On the other hand, with the implicit description, we have just a test method to decide whether a point belongs to the curve or not. This makes the implicit method more appropriate for describing relationships than to describe construction methods.
+With the explicit description we used in previous stories, we had a constructive method for obtaining all the points in the curve: we just fed in values of x and we obtain points on the curve. On the other hand, with the implicit description, we have just a test method to decide whether a point belongs to the curve or not. This makes the implicit method more appropriate for describing relationships than to describe construction methods.
 
 Take for instance the circle of radius `@r=2@` and centered at the origin `@(0,0)@`. The geometrical description states that a circle is the set of all points at distance `@2@` from the center.
 
@@ -43,7 +43,7 @@ Lines and circles are some easy examples to try with implicit functions. Additio
 
 Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
 
-* Union: We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` also are.
+* Union: We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` are as well.
 
 * Intersection: We can obtain these points by using the expression `@F(x,y)^2 + G(x,y)^2=0@`. Indeed, if the sum of two positive quantities is zero, then both must be zero at the same time, and hence only the points that make simultaneously `@F=0@` and `@G=0@` will belong to the new curve. In general, this construction will generate isolated points (by intersecting two curves), but we can re-obtain a curve by applying the deformation technique introduced earlier, that is, `@F(x,y)^2 + G(x,y)^2 -a =0@` for some value of `@a@` close to zero.
 
@@ -62,7 +62,7 @@ The apps have a list of examples of curves and surfaces, each one shows its form
 
 # About the apps
 
-## App 1 (Exploration)
+## App 1 - Exploration
 The app plots the set of points `@(x,y)@` of the plane that satisfy `@F(x,y)=0@` (the zeroset), for any polynomial function `@F(x,y)@` that the user introduces or selects from an example list.
 
 A small animation is played to draw the curve, that is triggered when the user touches the screen. Sparkbugs are points of light. At the beginning of the animation, these light points are placed randomly around the touch points of the user. As the animation progresses, the points move in the direction where the value of the function is closer to zero. After a few seconds, all the sparkbugs are placed on the zeroset.
@@ -71,12 +71,12 @@ A list of examples is available on the side, and the user can write any polynomi
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
 
-## App 2 (Guess the equation)
+## App 2 - Guess the equation
 This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug. After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
 
-## App 3 (Guess the equation)
+## App 3 - Surfaces
 This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.
 
 A list of example equations is available on the right, as well as the text box where one can enter its own equation.

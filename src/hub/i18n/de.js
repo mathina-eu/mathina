@@ -5,6 +5,10 @@ export default {
   city: {
     'choose-story': 'Wähle eine Geschichte!',
   },
+  appList: {
+    'title': 'Apps',
+    'description': 'Try out some of these apps',
+  },
   world: {
     'title': 'Mathina',
     'help': 'Besuche einen Ort!',
@@ -88,8 +92,8 @@ export default {
     trainer: 'Trainer',
     parrot: 'John der Papagei',
     charmingparrot: 'Kapitän Gurgelqualle',
-	technician: 'Techniker',
-	sean: 'Tom',
-	rashamom: 'Prof. O’Malley'
+    technician: 'Techniker',
+    sean: 'Tom',
+    rashamom: 'Prof. O’Malley'
   },
 };
