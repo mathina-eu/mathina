@@ -421,7 +421,7 @@ actions:
 
 # Game 3.2
   - type: game
-    text: Flick's flight path will again by described by a polynomial. This time, you cannot adjust the coefficients, but you can move the white points. The path will go through all of them. You will not see the path until you tell Flick to fly. Be advised, when all points are set, only one path is possible, and it might be different from what you envisioned...
+    text: Flick's flight path will again by described by a polynomial. This time, you cannot adjust the coefficients, but you can move the yellow points. The path will go through all of them. You will not see the path until you tell Flick to fly. Be advised, when all points are set, only one path is possible, and it might be different from what you envisioned...
     #One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
     #  "App 3-2 (not ready yet)"
     toolbarText: Move the points so Flick will not hit any obstacles during his flight.
@@ -578,8 +578,8 @@ actions:
 
 # Game 3.4
   - type: game
-    text: Adjust the points to create a line. That line tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
-    toolbarText: Adjust the line that tells the ascend or descend of the phoenix. Eat all the fireballs.
+    text: Adjust the points to create a curve. It tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
+    toolbarText: Adjust the curve that tells the ascend or descend of the phoenix. Eat all the fireballs.
     cta: Fly the phoenix!
     url: /apps/imaginary/app_3/3_4/index.html?lang=en
 
