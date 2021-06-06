@@ -144,7 +144,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 ![Carimbar](/stories/symm-3/img/stamp.png =40x40)
 , o utilizador pode visualizar o cilindro a carimbar um friso que tem como motivo a imagem escolhida.
 
-@[youtube](xKiCkxAxdEs?_align-center_)
+@[youtube](xKiCkxAxdEs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -155,7 +155,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 ![Confirmar](/stories/symm-3/img/confirm.png =40x40)
 ,  programa mostra um novo conjunto de 7 frisos. São apresentados 3 conjuntos de frisos. O jogo fica resolvido se forem selecionados todos os "bons" frisos (i.e. com eixos de simetria).
 
-@[youtube](ZRi96tPJW7Y?_align-center_)
+@[youtube](ZRi96tPJW7Y?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -164,7 +164,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 É exibido um conjunto de 12 frisos. O utilizador é convidado a arrastar cada friso para o saco correspondente, de acordo com as suas simetrias de reflexão: o **saco 1** contém os frisos que só têm eixos de simetria verticais; o **saco 2**, os que têm um eixo de simetria horizontal; e o **saco 3** os frisos com eixos de simetria verticais e horizontal.
 
-@[youtube](bIFqroBizaU?_align-center_)
+@[youtube](bIFqroBizaU?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -173,7 +173,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. De seguida, o utilizador pode visualizar uma “placa” a carimbar um friso, com eixos de simetria verticais e horizontal, que tem como motivo a imagem escolhida.
 
-@[youtube](moNr-MDIUs0?_align-center_)
+@[youtube](moNr-MDIUs0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
@@ -214,5 +214,5 @@ Nesta app, o utilizador pode ver os 7 sacos obtidos e observar os frisos no inte
  (translação)
  –,  aqueles que correspondem às simetrias existentes nos frisos do saco.
 
-@[youtube](gzhAUhgIVp0?_align-center_)
+@[youtube](gzhAUhgIVp0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
