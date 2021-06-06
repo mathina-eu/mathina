@@ -50,7 +50,7 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data ha un asse di simmetria. Per questo, dovrebbe piegare l'immagine a metà (orizzontalmente e verticalmente) e vedere se le due parti si sovrappongono.
 
-@[youtube](Dm1r2igNWPs?_align-center_)
+@[youtube](Dm1r2igNWPs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-1/transcripts/Script1-it.pdf)
 
 &nbsp;
@@ -59,7 +59,7 @@ Viene fornita un'immagine. L'utente è invitato a verificare se l'immagine data 
 
 Viene mostrata una serie di 16 disegni di animali. L'utente è invitato a scegliere tutte le immagini simmetriche e inserirle in un riquadro.
 
-@[youtube](Tbhnd5IwoBs?_align-center_)
+@[youtube](Tbhnd5IwoBs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-1/transcripts/Script1-it.pdf)
 
 &nbsp;
@@ -68,7 +68,7 @@ Viene mostrata una serie di 16 disegni di animali. L'utente è invitato a scegli
 
 Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa verticale, uno sfondo quadrato grigio e un'immagine non simmetrica costruita con forme colorate. L'utente è invitato a trascinare alcune forme colorate a sua disposizione e inserirle nei quadrati grigi in modo da creare un'immagine simmetrica rispetto alla linea rossa.
 
-@[youtube](1Og0JeyURHs?_align-center_)
+@[youtube](1Og0JeyURHs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-1/transcripts/Script1-it.pdf)
 
 &nbsp;
@@ -77,5 +77,5 @@ Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa vertical
 
 Sullo schermo vengono visualizzati i seguenti elementi: una linea rossa, un geopiano e un'immagine, composta da segmenti neri, disegnata in uno dei lati della linea rossa. L'utente è invitato a disegnare i segmenti mancanti in modo da creare un'immagine simmetrica rispetto alla linea rossa.
 
-@[youtube](0G862XD2Xzk?_align-center_)
+@[youtube](0G862XD2Xzk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-1/transcripts/Script1-it.pdf)
