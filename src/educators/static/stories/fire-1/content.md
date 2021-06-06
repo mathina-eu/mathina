@@ -29,11 +29,11 @@ The dragon may fly off the screen but will return if the user guides him back us
 
 ![Back](/stories/fire-1/img/_align-center_/back.png)
 
-## App1 - Fly the Unidragon
+## App 1 - Fly the Unidragon
 
 In this app, the user can get used to controlling the flight of the unidragon with the magic wand. There is no explicit goal to reach. Since the unidragon leaves a smoky trace along his flight path, the user may try to create some intentional patterns (i.e. first letter of a name, a special number, a symbol  like a heart or anything else the user can connect to). Start from large and bold patterns and go on to smaller and more intricate ones. Play around with controlling the wand, try sharp turns, spirals, zigzags...
 
-## App2 - Catch the Fireballs
+## App 2 - Catch the Fireballs
 
 In this second app, the user is asked to catch the appearing fireballs (unidragons' favourite snack). Once a fireball is catched, the next will appear at a different position. The number of successfully catched fireballs is displayed in the upper left corner. Unidragons don't like the clouds. They need to be avoided. If the unidragon flies into one of the clouds, he gets pushed back to the starting position in the middle of the screen.
 
