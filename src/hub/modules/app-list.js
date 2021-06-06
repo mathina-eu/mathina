@@ -14,14 +14,12 @@ export default function appList() {
   this.nuxt.hook('build:compile', async({ name, compiler }) => {
     // Called before the compiler (default: webpack) starts
     console.log('build:compile');
-    const apps = getAppList();
-    console.log(apps);
+    getAppList();
   });
 
   this.nuxt.hook('generate:before', async generator => {
     // This will be called before Nuxt generates your pages
     console.log('generate:before');
-
-    // TODO: Create config file
+    getAppList();
   });
 }

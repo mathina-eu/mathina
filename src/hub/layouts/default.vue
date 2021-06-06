@@ -120,7 +120,7 @@
         text
         nuxt
       >
-        {{ $t('appsList.title') }}
+        {{ $t('appList.title') }}
       </v-list-item>
     </v-navigation-drawer>
 
