@@ -477,8 +477,9 @@ Dialog entries support various moods which use images defined in `src/hub/static
 | --- | --- | --- |
 | **type** | `game` | action type |
 | **text** | Any `<string>` | Game description |
-| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
 | **url** | URL of game | This URL will be used to load the game in an iframe. |
+| toolbarText | Any `<string>` | This optional text will be displayed in the fullscreen toolbar instead of **text** if set |
+| listTitle | Any `<string>` | This optional text will be displayed on the /apps/ list page. Otherwise toolbarText or text are used. |
 | cta | A short `<string>` | Text displayed on the "Call to Action" button used to start the game. Defaults to `Try it yourself!`. |
 | img | `{src: img.png, width: 200, height: 200}` | An optional image can be added. The **src** param is required, while width and height are optional. Width and height should be numbers as this image is responsive and the values should be treated as a ratio. |
 | toolbarImg | `{src: img.png, width: 200, height: 200}` | An optional image similar to **img** but will be used in the fullscreen toolbar. |
