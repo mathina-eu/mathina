@@ -167,6 +167,7 @@ actions:
         char: boys
         mood: talking
   - type: game
+    tag: firstGame
     text: Genera una tabella compilando la quantità iniziale di medaglie d'oro ricevute.
     toolbarText: 
     tag: app1

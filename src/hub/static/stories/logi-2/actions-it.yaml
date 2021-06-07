@@ -342,6 +342,7 @@ actions:
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
     parallax: back2
   - type: game
+    tag: firstGame
     text: Che consiglio gli daresti?
     toolbarText: Puoi passare ad una piastrella adiacente solo se ha lo stesso colore oppure la stessa forma di quella in cui ti trovi.
     cta: Dai una mano a Mathina e a Leo! 
@@ -367,6 +368,7 @@ actions:
     style: "position: absolute; left: 50px; top: 5px;"
     text: "Mathina aveva giustamente notato che la scritta doveva essere letta al contrario. E se avesse provato a pensare al contrario? Partire dalla fine per tornare all'inizio per cercare il percorso corretto..."
   - type: game
+    tag: secondGame
     text: Aiuta Mathina a cercare un percorso che la porti indietro dal traguardo!
     toolbarText: 
     cta: Aiuta Mathina!

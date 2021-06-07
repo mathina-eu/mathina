@@ -111,7 +111,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 
 É apresentada uma imagem. O utilizador é convidado a verificar se a imagem dada tem um eixo de simetria. Para tal, poderá mover o espelho existente, arrastando-o para a frente e para trás.
 
-@[youtube](-8Y3VnBEBxc?_align-center_)
+@[youtube](-8Y3VnBEBxc?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-2/transcripts/Script2-pt.pdf)
 
 &nbsp;
@@ -122,7 +122,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ![Confirmar](/stories/symm-2/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 8 rosáceas. São apresentados 3 conjuntos de rosáceas. O jogo fica resolvido se forem selecionadas todas as "boas" rosáceas (i.e. com eixos de simetria).
 
-@[youtube](EPxStqEZl9s?_align-center_)
+@[youtube](EPxStqEZl9s?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-2/transcripts/Script2-pt.pdf)
 
 &nbsp;
@@ -133,7 +133,7 @@ São exibidas 12 rosáceas O utilizador é convidado a arrastar cada rosácea pa
 ![Eixo de simetria](/stories/symm-2/img/vertical.png =40x40)
 , é possível obter ajuda para contar o número de eixos de simetria.
 
-@[youtube](TgTgGYsX7Ik?_align-center_)
+@[youtube](TgTgGYsX7Ik?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-2/transcripts/Script2-pt.pdf)
 
 &nbsp;
@@ -154,7 +154,7 @@ até à meta
 ![Lanterna](/stories/symm-2/img/lanterna.png =40x40)
 e ver os dois labirintos durante todo o tempo.
 
-@[youtube](kDm8JZ0r6EM?_align-center_)
+@[youtube](kDm8JZ0r6EM?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-2/transcripts/Script2-pt.pdf)
 
 &nbsp;

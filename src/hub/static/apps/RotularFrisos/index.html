@@ -499,6 +499,30 @@
             simsLabels.push("Vertical reflections");
             simsLabels.push("Rotations");
             simsLabels.push("Glide reflections");
+        }else if(lang=="it"){
+            document.getElementById('titulo').textContent="Assegna le etichette ai sacchetti";
+            document.getElementById('sucessText').textContent="Congratulazioni!";
+            document.getElementById('errorText').textContent="Non hai abbinato correttamente tutte e le etichette.";
+            document.getElementById('errorText2').textContent="Ritenta!";
+            titLabelFinal = "Molto bene!";
+            simsLabels = new Array();
+            simsLabels.push("Traslazioni");
+            simsLabels.push("Asse di simmetria orizzontale");
+            simsLabels.push("Asse di simmetria verticale");
+            simsLabels.push("rotazione");
+            simsLabels.push("glissoriflessione");
+        }else if(lang=="de"){
+            document.getElementById('titulo').textContent="Bring die Etiketten an den Taschen an";
+            document.getElementById('sucessText').textContent="Gratulation!";
+            document.getElementById('errorText').textContent="Du hast noch nicht alle Etiketten richtig angebracht";
+            document.getElementById('errorText2').textContent="Versuch's noch mal!";
+            titLabelFinal = "Sehr gut";
+            simsLabels = new Array();
+            simsLabels.push("Übersetzungen");
+            simsLabels.push("Waagerechte Symmetrieachse");
+            simsLabels.push("Senkrechte Symmetrieachse");
+            simsLabels.push("Rotationssymmetrie");
+            simsLabels.push("Gleitspiegelung");
         }else{
             document.getElementById('titulo').textContent="Coloca os rótulos nos sacos";
             document.getElementById('sucessText').textContent="Parabéns!";

@@ -308,6 +308,7 @@ actions:
         char: Mathina
         mood: thinking
   - type: game
+    tag: firstGame
     text: Help Mathina and Leo find a good plan by moving 2 policemen on the map.
     toolbarText: 
     cta: Try it yourself!
@@ -390,6 +391,7 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"  
     text: Mathina and Leo snuck the sugar cubes from the cops' coffee plates and launched the experiment. 
   - type: game
+    tag: secondGame
     text: Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
     toolbarText: 
     cta: Try it yourself!
@@ -565,6 +567,7 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: The policemen decided to call the Chief of Police immediately to share their discoveries. Mathina and Leo set off in the meantime to continue their explorations in Logi-city.
   - type: game
+    tag: thirdGame
     text: Have you enjoyed using the app? Continue playing with different maps.
     toolbarText: 
     cta: Click here!

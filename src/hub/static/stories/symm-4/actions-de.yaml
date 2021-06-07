@@ -1,0 +1,1374 @@
+actions:
+  - type: background
+    src: symm-bg1-de.png
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg1
+  - type: image
+    src: mathina-leo.png
+    id: mathina-leo
+    style: "width: 25%; top: 57%; left: 1%;"       
+  - type: sceneText
+    text: >
+      <p>Mathina and Leo standen vor dem Eingang des Symmel-Rummels, dem spektakuären Vergnügungspark, mit Achterbahnen, Karussells und vielen Buden.</p>
+    #<p>Mathina and Leo had just arrived at the Symmetry Fair, where they found a huge amusement park, with roller coasters, carousels and many stalls.</p>
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 3
+      xPercent: 50
+      yPercent: 0
+      ease: power3.out  
+  - type: sceneText
+    text: >
+      <p>Beide waren schon immer große Fans dieser spannenden Welt und neugierig auf all den Spaß, der darin steckte.</p>
+    #<p>Initially, they were both fascinated by this new world and all the fun it presented.</p> 
+  - type: clearBackground
+    id: c1-bg1
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg3.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg3
+  - type: sceneText
+    text: >
+      <p>Jetzt schien es jedoch so, als ob der Park gar nicht geöffnet hätte. Trotzdem herrschte dort große Betriebsamkeit. Der Grund für die vielen Aktivitäten waren die Vorbereitungen für ein besonderes Ereignis: Den großen Tag der Polyeder und Symmetrien.</p>
+    #<p>As they approached the fair, they noticed, however, that the park seemed closed down and there was a huge bustle. And the reason for the bustle was the preparation for a big event: the Polyhedra and Symmetry Day.</p>
+  - type: clearBackground
+    id: c1-bg3
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg4
+  - type: sceneText
+    text: >
+      <p>Nachdem sie staunend eine Runde durch den Park gedreht hatten, konnte es Leo kaum noch erwarten. Mathina sollte unbedingt eine der Attraktionen mit ihm ausprobieren. Eines der Karussells war nicht abgeschlossen.</p>
+    #<p>After observing the park, Leo, who is always impatient, urged Mathina to try one of the amusements: a carousel which was apparently working.</p>
+  - type: animation
+    target: mathina-leo
+    vars:
+      duration: 3
+      xPercent: 100
+      yPercent: 0
+      ease: power3.out      
+  - type: sceneText
+    text: >
+      <p>Als sie näher kamen, konnten sie die Gondeln des Karusells erst richtig sehen. Es waren nicht die üblichen Gondelfahrzeuge, kein Flugzeug und kein Feuerwehrauto. Stattdessen gab es wirklich seltsame Gebilde...</p>
+    #<p>As they approached the carousel, they looked at the carousel vehicles: instead of the usual cars or planes, there were some strange shapes...</p>
+  - type: dialog
+    entries:
+      - text: "Polyeder. Die neuen Kabinen haben Formen so ähnlich wie Polyeder. Nur, dass es keine richtigen Polyeder sind. Denn sie sind nicht geschlossen..."
+      #"Polyhedra. The vehicles have a kind of polyhedral shape. But they are not polyhedra because they are not closed…"
+        char: mathina
+        exposition: "sagte Mathina zu sich selbst und  grübelte. "
+        #exposition: "Mathina said, thinking aloud to herself."
+  - type: clearImage
+    id: mathina-leo        
+  - type: clearBackground
+    id: c1-bg4
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg5.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg5        
+  - type: sceneText
+    text: >
+      <p>Auch wenn ihr ein bisschen unheimlich dabei war, kletterte Mathina mit Leo auf das Karussell. Dann stieg jeder in eine der Gondeln. Sie machten es sich  auf ihren Sitzen gemütlich und erkundeten ihre Kabinen. Dabei entdeckte Leo einen Schalter, auf dem in großen Buchstaben „SCHLIESSEN“ stand. Ohne eine Sekunde nachzudenken, hatte er den Schalter auch schon gedrückt.</p>
+    #<p>Although uneasy, Mathina decided to follow Leo as he entered the carousel. Then, when both of them had sat in different vehicles, it started to rain. This did not, however, prevent Leo from continuing to explore the carousel: inside the vehicle, he found a lever with the word "close", which he immediately triggered.</p>
+  - type: clearBackground
+    id: c1-bg5
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg6.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg6    
+  - type: dialog
+    entries:
+      - text: "Nein!"
+      #"NO!"
+        char: leo
+        exposition: "Mathina and Leo schrien gleichzeitig. Denn die Gebilde, in denen sie saßen, knickten und drehten sich nach innen. Eine der Wände traf Leo an der Stirn."
+        #"Mathina and Leo screamed simultaneously: when closing the vehicle, some of the vehicle components turned inward, hurting Leo on his forehead."
+        mood: surprised
+  - type: image
+    src: tecnico.png
+    id: tecnico
+    style: "width: 16%; top: 45%; left: 1%;"         
+  - type: game
+    tag: tg1
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/icosaedro_concavo.html
+  - type: animation
+    target: tecnico
+    vars:
+      duration: 3
+      xPercent: 90
+      yPercent: 0
+      ease: power3.out
+  - type: clearBackground
+    id: c1-bg6
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg4.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg4    
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 35%;"
+  - type: image
+    src: Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; right: 60%;"     
+  - type: sceneText
+    text: >
+      <p>Durch ihre Schreie war einer der Techniker in der Nähe alarmiert worden. Er rannte zu ihnen. </p>
+    #<p>Alerted by the screams, a construction technician, who was nearby, ran to them.</p>
+  - type: dialog
+    entries:
+      - text: "Was ist passiert? Geht es euch gut? Wer seid ihr eigentlich?"
+      #"What happened? Are you OK? Who are you?"
+        char: technician
+        mood: worried
+  - type: sceneText
+    text: >
+      <p>Nachdem sie ihm schnell erklärten, wie sie in diese Situation gekommen waren, hatte Mathina doch etwas Sorge. Wie würde der Techniker reagieren, wenn er merkte, dass sie ohne zu fragen auf das Karussell gestiegen sind? Aber nachdem sich der Techniker versichert hatte, das Leo nichts passiert war, schien er sich nur noch für das Gebilde zu interessieren, mit dem Leo hatte fahren wollen.</p>
+    #<p>After explaining the situation, Mathina was scared about how the technician would react when he realized that they both entered the carousel without permission. However, after confirming that Leo was fine, the technician only seemed interested in Leo's vehicle.</p>
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: tecnico 
+  - type: image
+    src: Mathina2.png
+    id: Mathina2
+    style: "width: 7.5%; top: 56%; left: 10%;"
+  - type: image
+    src: Leo5.png
+    id: Leo5
+    style: "width: 15.5%; top: 62%; right: 70%;"
+  - type: image
+    src: tecnico.png
+    id: tecnico
+    style: "width: 16%; top: 45%; left: 21%;"      
+  - type: dialog
+    entries:
+      - text: "Das hätte sich niemals nach innen schliessen dürfen! Das muss doch die Form eines konvexen Polyeders bekommen!"
+      #"This shouldn't have closed inward! It should have the shape of a convex polyhedron!"
+        char: technician
+        exposition: "murmelte der Techniker, als er mit einigen Handgriffen das Fahrzeug wieder in Ordnung brachte."
+        #"The technician kept saying, while fixing the vehicle manually."
+        mood: surprised        
+  - type: clearBackground
+    id: c1-bg4
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg7.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg7    
+  - type: dialog
+    entries:
+      - text: "Das hier ist die richtige Form!"
+      #"This is the right shape!"
+        char: technician
+        exposition: "Sagte der Techniker, als er mit der Reparatur fertig war."
+        #"Said the technician after fixing the vehicle."
+  - type: clearImage
+    id: tecnico
+  - type: image
+    src: tecnico2.png
+    id: tecnico2
+    style: "width: 16%; top: 45%; left: 25%;"     
+  - type: dialog
+    entries:
+      - text: "Was ist das überhaupt, ein  „konvexes Polyeder“?"
+      #"What do you mean by "convex polyhedron"?"
+        char: leo
+  - type: image
+    src: imagem1.png
+    id: imagem1
+    align: center
+    style: "width: 25%; top: 52%"             
+  - type: dialog
+    entries:        
+      - text: "Nun, schau dir einfach mal dieses Polyeder hier genauer an. Man kann zwei beliebige Punkte auf den Flächen des Polyeders mit einer Linie verbinden. Es gibt Punkte, da liegt die Linie außerhalb des Polyeders, hier zum Beispiel."
+      #"Look for instance at this polyhedron. It's possible to find two points on the polyhedron faces such that one point of the segment joining these points is outside the polyhedron, in this example e.g. the midpoint:"
+        char: technician
+      - text: "Damit ein Polyeder konvex ist, muss aber für alle Punkte, die wir aussuchen und die wir verbinden, die Linie immer im Inneren des Polyeders verlaufen."
+      #"In order for a polyhedron to be convex, for each couple of points on the faces, the whole segment joining the points must be contained in the polyhedron."
+        char: technician        
+  - type: clearImage
+    id: imagem1
+  - type: dialog
+    entries:        
+      - text: "Ich bin nicht ganz sicher, ob ich ich dich wirklich verstanden habe."
+      #"I'm not sure if I understood what you've just said."
+        char: leo        
+  - type: clearImage
+    id: Leo5
+  - type: clearImage
+    id: Mathina2
+  - type: image
+    src: Mathina4.png
+    id: Mathina4
+    style: "width: 7.5%; top: 56%; left: 20%;"
+  - type: image
+    src: Leo2.png
+    id: Leo2
+    style: "width: 15.5%; top: 62%; right: 75%;"     
+  - type: dialog
+    entries:        
+      - text: "Lasst uns hier erstmal verschwinden und in mein Büro gehen. Eine Baustelle ist nicht der richtige Ort, um alleine Erkundungen zu machen."
+      #"First let us leave this place and go to my office. You shouldn't be alone in a construction site! – suggested the technician."
+        char: technician
+        mood: worried        
+  - type: animation
+    target: Leo2
+    vars:
+      duration: 3
+      xPercent: -85
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: Mathina4
+    vars:
+      duration: 3
+      xPercent: -165
+      yPercent: 0
+      ease: power3.out
+  - type: animation
+    target: tecnico2
+    vars:
+      duration: 3
+      xPercent: -100
+      yPercent: 0
+      ease: power3.out       
+  - type: sceneText
+    text: >
+      <p>Zusammen mit dem Techniker gingen Mathina und Leo zu seinem Büro.</p>
+    #<p>Mathina and Leo followed the technician into his office.</p>
+  - type: clearImage
+    id: Mathina4
+  - type: clearImage
+    id: Leo2
+  - type: clearImage
+    id: tecnico2
+  - type: clearBackground
+    id: c1-bg7
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg8.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg8    
+  - type: sceneText
+    text: >
+      <p>Außer diesem Karussell, das sie gerade erkundet hatten, würden auch noch andere umgebaut, erklärte ihnen der Techniker.</p>
+    #<p>The technician then explained that, besides the carousel which they had explored, there were others in construction.</p>
+  - type: dialog
+    entries:        
+      - text: "Wollt ihr mal selbst herausfinden, welche dieser Polyeder konvex sind?"
+      #"Do you want to find out which of these polyhedra are convex?"
+        char: technician
+        exposition: "forderte sie der Techniker heraus."
+        #"Challenged the technician."
+  - type: game
+    tag: tg26
+    text: "Finde die vier konvexen Polyeder und klicke danach auf dieses Symbol:"
+    #"Choose the ce the convex polyhedra. Each time, choose the 4 polyhedra and click"
+    toolbarText: Wähle die vier konvexen Polyeder aus!
+    #"Choose 4 convex polyhedra"
+    cta: "Auswählen"
+    #"Try separating the convex polyhedra!"
+    url: /apps/EscolhePoliConvexos/index.html?lang=de
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: sceneText
+    text: >
+      <p>Nachdem sie alle konvexen Polyeder gefunden hatten, wollten Mathina und Leo wissen, woran der Techniker nun arbeitete. Ein ganz neues Karussell würde gebaut werden, erklärte der Techniker. Die Entwicklung eines Modells mit platonischen und uniformen Polyedern begann gerade. Leider musste der Techniker nun erstmal los. Aber Leo und Mathina konnten in seinem Büro auf ihn warten, wenn ihnen das gefiel. Sie sollten aber im Büro bleiben, denn draußen auf der Baustelle war es ohne Begleitung doch zu gefährlich.</p> 
+    #<p>After choosing the convex polyhedra, Mathina and Leo wanted to know what the technician was working on. The technician explained that he was starting to build a model for a new carousel: the carousel of Platonic and uniform polyhedra. However, he had to leave now. If they wanted, Leo and Mathina could stay there, but they could not leave his office: it was dangerous to walk alone in a construction site.</p>      
+  - type: dialog
+    entries:        
+      - text: "Wir bleiben gern noch hier und helfen dir bei dem neuen Karussell!"
+      #"We can stay and help you set up the carousel model!"
+        char: leo
+        exposition: "schlug Leo ganz begeistert vor."
+        #"Leo volunteered enthusiastically."
+  - type: clearBackground
+    id: c1-bg8
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: sceneText
+    text: >
+      <p>Sobald der Techniker hinausgegangen war, fragte Leo Mathina:</p>
+    #<p>And, as soon as the technician left, Leo asked Mathina:</p>
+  - type: dialog
+    entries:        
+      - text: "Hast du irgendeine Ahnung, was er meinte, als er von „Platonischen und uniformen Polyedern“ gesprochen hat?"
+      #"Do you have any idea what he was talking about when he mentioned "Platonic and uniform polyhedra"?"
+        char: leo
+      - text: "Nein, nicht so richtig. Lass uns mal überlegen, vielleicht können wir es uns irgendwie zusammenreimen... „Platonische Körper“ hab ich schon mal gehört, glaube ich."
+      #"Well, if you didn't know what it was, you shouldn't have offered to help!"
+        char: mathina
+        exposition: "antwortete Mathina und kratzte sich am Kinn."
+        #"Answered Mathina annoyed"
+        mood: thinking
+  - type: image
+    src: rombus.png
+    id: rombus
+    align: center
+    style: "top: 44%; width: 18%"
+  - type: dialog
+    entries:     
+      - text: "Ich habe eine Idee was Platonische Körper sind: Ich denke, die sind „so regelmäßig wie nur möglich“. Wenn wir zum Beispiel die Ebene betrachten - was sind dort regelmäßige Polygone? Es reicht jedenfalls nicht, gleiche Seiten zu haben. Eine Raute hat gleiche Seiten, aber sie ist noch kein regelmäßiges Polygon."
+      #"I don't know what uniform polyhedra are, but I have an idea about Platonic solids: I think they are "as regular as possible" polyhedra. For instance, if we consider the plane, what are regular polygons? We can't say that they are those which have equal sides, as a rhombus has that property but it is not regular."
+        char: leo
+  - type: clearImage
+    id: rombus
+  - type: image
+    src: rectangle.png
+    id: rectangle
+    align: center
+    style: "top: 61%; width: 25%"    
+  - type: dialog
+    entries:      
+      - text: "Wir können auch nicht behaupten, dass alle Vielecke mit gleichen Winkeln regelmäßig genannt werden können. Denn ein Rechteck hat überall gleiche Winkel, ist aber auch kein regelmäßiges Polygon."
+      #"We also can't say that they are those which have equal angles, as a rectangle has that property but it is not regular."
+        char: mathina
+  - type: clearImage
+    id: rectangle
+  - type: dialog
+    entries:
+      - text: "In der Ebene sind „möglichst regelmäßige“ Polygone solche, die sowohl gleiche Seiten als auch gleiche Winkel haben. So wie das gleichseitige Dreieck, das Quadrat und so weiter..."
+      #"In the plane, polygons "as regular as possible" are those both with equal sides and equal angles (like the equilateral triangle, square, and so on …)."
+        char: mathina
+  - type: dialog
+    entries:        
+      - text: "Ganz ähnlich dazu, können wir manche Polyeder als Platonische Körper bezeichnen. Solche, die „möglichst regelmäßig“ sind. Diese Polyeder müssen dann diese Bedingungen erfüllen: die Seitenflächen sind alle regelmäßige Vielecke, und alle gleich, an jedem Eckpunkt treffen sich immer die gleiche Anzahl von Seitenflächen, die Winkel zwischen benachbarten Seitenflächen sind gleich, und dann sind auch noch die Raumwinkel an jedem Eckpunkt gleich."
+      #"Likewise, we call Platonic solids the polyhedra which are "as regular as possible". These polyhedra must satisfy, in particular, the following conditions: "the faces are all regular polygons and equal to each other"; "at each vertex the same number of faces meet"; "the angles between contiguous faces are equal"; "the solid angles at each vertex are equal"."
+        char: mathina
+      - text: "Was meinst du damit, „die Raumwinkel sind an jedem Eckpunkt gleich“? Und was bedeutet, „die Winkel zwischen benachbarten Flächen müssen gleich sein?“"
+      #"What do you mean by "the solid angles at each vertex are equal"? And by "the angles between contiguous faces must be the same"?"
+        char: leo
+        mood: surprised
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-cubo.png
+    id: Mathina1-cubo
+    style: "width: 23%; bottom: 0%; left: 0%;"        
+  - type: dialog
+    entries:        
+      - text: "Ok. Dann fangen wir mal mit diesem Würfel an."
+      #"Ok. Let's start with this cube."
+        char: mathina
+        exposition: "Mathina schnappte sich eines der Modelle vom Schreibtisch."
+        #"Answered Mathina, grabbing a module from the technician office."
+  - type: sceneText
+    text: >
+      <p>Mathina nahm ein bisschen Knetmasse und drückte eine der Ecken des Würfels hinein. Sie erklärte, dass diese Form dem „Raumwinkel um den Eckpunkt“ entspricht. Dann hielt sie die Knetform an jede Ecke des Würfels. Überall passte sie genau. Also waren die Raumwinkel an jeder Würfelecke gleichgroß.</p>
+    #<p>Using a piece of plasticine, Mathina made a mould around a cube vertex and explained that this corresponded to "a solid angle around the vertex". Then, she showed that such mould fitted perfectly around each cube vertex: in a cube, the solid angles at each vertex are equal.</p>
+  - type: image
+    src: cuboMolde.png
+    id: cuboMolde
+    align: center
+    style: "top: 57%; width: 13%"       
+  - type: video
+    tag: tg3
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: CuboMolde.mp4
+        type: 'video/mp4'
+  - type: clearImage
+    id: cuboMolde    
+  - type: sceneText
+    text: >
+      <p>Mit einem zweiten Stück Knetmasse formte Mathina eine der Kanten des Würfels ab und erklärte, dass dies „der Winkel zwischen zwei benachbarten Seitenflächen“ ist. Dann hielt sie die Knetform an alle anderen Kanten des Würfels, und überall passte sie wie angegossen. Also waren auch alle Winkel zwischen benachbarten Flächen gleich.</p>
+    #<p>Using another piece of plasticine, Mathina then made a mould around a cube edge and explained that this corresponded to "an angle between contiguous faces". Then, she showed that such mould fitted perfectly around each cube edge: in a cube, the angle between contiguous faces are all equal.</p>
+  - type: image
+    src: cuboMolde2.png
+    id: cuboMolde2
+    align: center
+    style: "top: 57%; width: 13%"       
+  - type: video
+    tag: tg2
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: CuboMolde2.mp4
+        type: 'video/mp4'
+  - type: clearImage
+    id: cuboMolde2    
+  - type: dialog
+    entries:        
+      - text: "Dann ist ein Würfel also ein Platonischer Körper?"
+      #"So, is the cube a Platonic solid?"
+        char: leo
+      - text: "Ja, genau. Aber an andere Platonische Körper erinnere ich mich leider nicht."
+      #"Yes, it is. But I don't remember other Platonic solids."
+        char: mathina
+  - type: clearBackground
+    id: c1-bg10
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: clearImage
+    id: Mathina1-cubo
+  - type: sceneText
+    text: >
+      <p>Mathina and Leo versuchten deswegen, ohne irgendeine Vorlage, Modelle von anderen Platonischen Körpern zu bauen. Als Baumaterial verwendeten sie alles, was im Büro zu finden war: Pappe, Leim, Schere, Knete und einige kleine Magnete. Die Magnete hatten die Form von gleichseitigen Dreiecken, und sie hielten auch ohne Leim fest zusammen.</p>
+    #<p>Mathina and Leo then decided to build, from scratch, models for all the Platonic solids using the materials at their disposal in the office: cardboards, glue, scissors, plasticine and some magnetic pieces in the shape of equilateral triangles which could be joined without using glue.</p>
+  - type: sceneText
+    text: >
+      <p>Sie fingen mit dem Polyeder an, das sie am besten kannten, dem Würfel. Leo schnitt zuerst die Quadrate für die Seiten. Erst ein Quadrat, dann das zweite. Danach klebte er sie zusammen. Nachdem er auf diese Weise vorgegangen war, stellte er fest, dass es einfacher wäre, einen Streifen mit zwei Quadraten hintereinander zu schneiden. Auf diese Weise konnte er den Streifen in der Hälfte falten und musste nicht in der Mitte schneiden, um die beiden Teile anschließend wieder zusammenzukleben.</p>
+    #<p>They began with the polyhedron which they were more familiar with: the cube, and Leo started cutting squares. He cut a square, and then another one and glued them together. After proceeding this way, he realized it would be easier to cut a strip of 2 squares in a row, as he could fold the strip in half, avoiding cutting in half to glue the two pieces together again.</p>
+  - type: image
+    src: cubo-tentativa.png
+    id: cubo-tentativa
+    align: center
+    style: "top: 56%; width: 32%"      
+  - type: dialog
+    entries:        
+      - text: "Ein Würfel hat sechs Seiten. Da kann ich doch auch gleich einfach einen Streifen von sechs Quadraten in einer Reihe schneiden und dann den Würfel daraus bauen."
+      #"A cube has 6 faces. I'll just cut 6 squares in a row and set up the cube"
+        char: leo
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/6quadrados.html
+  - type: dialog
+    entries:        
+      - text: "Das wird nicht klappen! Der Streifen kann nur vier Quadrate hintereinander haben."
+      #"That's not possible! The strip can only have a maximum of 4 squares aligned in a row."
+        char: mathina
+  - type: clearImage
+    id: cubo-tentativa
+  - type: image
+    src: plan-cubo-01.png
+    id: plan-cubo-01
+    align: center
+    style: "top: 56%; width: 32%"     
+  - type: sceneText
+    text: >
+      <p>Also zeichnete Leo vier Quadrate in einer Reihe. Um den Würfel zu bauen, brauchte er noch zwei mehr. Deshalb entschied er sich, noch einen extra an jede Seite des Streifens zu machen.</p>
+    #<p>Leo then drew 4 squares in a row. In order to build a cube, 2 other squares were needed, so he decided to add a square on each side of the strip:</p>
+  - type: dialog
+    entries:        
+      - text: "Super, Leo! Damit hast du ein Würfelnetz erstellt."
+      #"Great Leo! You have just built a cube net."
+        char: mathina
+  - type: sceneText
+    text: >
+      <p>Mathina baute dann aus Leos Netz einen Würfel. Beim Kleben von drei Flächen auf einen Eckpunkt benutzte Mathina einen Schuhkarton, der im Büro herumstand. Damit konnte sie die drei Flächen in Position halten, während der Kleber trocknete.</p>
+    #<p>Mathina then set up a cube using Leo's net. When gluing 3 faces on a common vertex, Mathina used a shoe box (which was in the office) as a mould to keep the three faces in position while the glue was drying.</p>
+  - type: game
+    tag: tg4
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=p2pol_24
+  - type: sceneText
+    text: >
+      <p>Weil das soviel Spaß gemacht hatte, versuchte Leo noch andere mögliche Würfelnetze zu finden.</p>
+    #<p>Meanwhile, amused by his discovery of a cube net, Leo created other proposals for cube nets.</p>
+  - type: clearImage
+    id: plan-cubo-01
+  - type: game
+    tag: tg27
+    text: "Wähle die drei richtigen Netze für einen Würfel aus und klicke dann auf dieses Symbol:"
+    #"Choose the right nets for the cube. Each time, choose the 3 "good" nets and click"
+    toolbarText: "Wähle die drei richtigen Netze für einen Würfel!"
+    #"Choose the 3 right nets for the cube."
+    cta: "Probiere es aus!"
+    #"Try separating the right nets for the cube!"
+    url: /apps/EscolhePlanCubo/index.html?lang=de
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: sceneText
+    tag: tg5
+    text: >
+      <p>Mathina schlug vor, eine systematische Methode zur Suche nach allen Platonischen Körper zu benutzen. In einem Platonischen Körper muss die Anzahl der Seitenflächen, die an jedem Eckpunkt azusammenkommen, gleich sein. Deshalb beschlossen sie, diese Anzahl mit in die Methode aufzunehmen. Bei einem Würfel ist die Zahl Drei.</p>
+    #<p>Mathina suggested systematizing a way of searching all Platonic solids. As in a Platonic solid, the number of faces arriving at each vertex is the same, they decided to take into account that number. In a cube, the number is 3.</p>
+  - type: image
+    src: mesmovertice1.png
+    id: mesmovertice1
+    align: center
+    style: "top: 56%; width: 18%"        
+  - type: sceneText
+    text: >
+        <p>Und wenn es nur zwei Flächen wären? Da in einem Polyeder jede Kante die Grenze von zwei - und nur zwei - Flächen ist, kamen sie zu dem Schluss, dass die Kanten jeder der quadratischen Flächen mit denen der anderen zusammenfallen müssten. Also wäre dieser „Polyeder“ flach.</p>
+    #<p>What if it were 2? As, in a polyhedron, each edge is the border of two (and only two) faces, they concluded that each of the square faces needed to have the edges coinciding with those of the other, that is, the "polyhedron" would be flat.</p>
+  - type: clearImage
+    id: mesmovertice1
+  - type: image
+    src: mesmovertice2.png
+    id: mesmovertice2
+    align: center
+    style: "top: 56%; width: 18%"
+  - type: sceneText
+    text: >
+      <p>Was wäre, wenn es nun vier Quadrate wären? Das war nicht möglich. Da in einem Platonischen Körper die Winkel zwischen benachbarten Seitenflächen immer gleich sind, müssten die Quadrate in der Ebene liegen, was etwas Flaches ergeben würde. Und mehr als vier Quadrate wären offensichtlich auch unmöglich.</p>
+    #<p>What if it were 4? That was not possible: as, in a Platonic solid, the angles between consecutive faces are all the same, the squares would have to be on the plane, which would make something flat. And more than 4 squares would also be obviously impossible.</p>
+  - type: clearImage
+    id: mesmovertice2      
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-tetra.png
+    id: Mathina1-tetra
+    style: "width: 23%; bottom: 0%; left: 1%;"        
+  - type: sceneText
+    text: >
+      <p>Da es mit Quadraten keine Möglichkeiten mehr gab, beschlossen sie, zu gleichseitigen Dreiecken überzugehen. Mit den kleinen Magneten, die sie im Büro gefunden hatten, verbanden sie drei Dreiecke um einen Eckpunkt, wodurch eine Art offene Dreieckspyramide entstand. Dann nahmen sie noch etwas von der Knete, nahmen einen Abdruck des Eckpunktes und versuchten mit dieser Form ein weiteres Dreieck an einer der freien Kanten hinzuzufügen und plötzlich war die Pyramide mit einem neuen Dreieck geschlossen!</p>
+    #<p>As there were no more possibilities with squares, they decided to move on to equilateral triangles. Using the magnetic equilateral triangles which were at their disposal in the office, they joined 3 triangles around a vertex, creating a kind of open triangular pyramid. Then they got a bit of plasticine, they took a mould of the vertex and tried to add another triangle to one of the free edges by using that mould and suddenly … they got the pyramid closed with the new triangle!...</p>
+  - type: game
+    tag: tg6
+    text: "Schau's Dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/tetraedro_form.html
+  - type: dialog
+    entries:        
+      - text: "Ich kenne dieses Polyeder. Es ist ein Platonischer Körper, und sein Name ist Tetraeder."
+      #"I know this polyhedron. It's a Platonic solid and it's called tetrahedron."
+        char: mathina
+  - type: clearImage
+    id: Mathina1-tetra
+  - type: clearBackground
+    id: c1-bg10
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-tetra.png
+    id: Leo2-2-tetra
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>Leo war nun neugierig, wie ein Netz eines Tetraeders aussehen könnte. Also öffnete er das Tetraeder an einigen Kanten und entfaltete so das Polyeder.</p>
+    #<p>Leo was curious to know how a net of a tetrahedron could be. So, he split some of the tetrahedron triangles by their edges, unfolding the polyhedron.</p>
+  - type: game
+    text: "Schau den Film an, um zu sehen, wie das Netz des Tetraeders entsteht!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol2p_169
+  - type: sceneText
+    text: >
+      <p>Nun setzten Mathina und Leo ihre Suche nach weiteren Platonischen Körpern fort, indem sie vier Dreiecken an jedem Eckpunkt zusammenbrachten.</p>
+    #<p>They both continued their quest to find new Platonic solids, moving on to 4 triangles at each vertex.</p>
+  - type: clearImage
+    id: Leo2-2-tetra
+  - type: image
+    src: Leo2-2-tetra2.png
+    id: Leo2-2-tetra2
+    style: "width: 22%; bottom: 0%; right: 58%;"    
+  - type: sceneText
+    text: >
+      <p>Während Leo eine Struktur aus vier Dreiecken an einem der Eckpunkte erstellte, bemerkte Mathina, dass die Struktur nicht starr war. Um einen Platonischen Körper zu erzeugen, mussten sie aber garantieren, dass die Winkel zwischen benachbarten Flächen alle exakt gleich waren.</p>
+    #<p>While Leo was creating a structure made up with 4 triangles on one of the vertices, Mathina noticed that the structure was not rigid. And, in order to create a Platonic solid, they should guarantee that the angles between contiguous faces were all equal.</p>
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/octaedro_form_1.html      
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Leo2-2-tetra2
+  - type: clearImage
+    id: Mathina2-2
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg12.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg12    
+  - type: sceneText
+    text: >
+      <p>Mathina legte die halbfertige Struktur auf den Tisch, mit dem ursprünglichen Eckpunkt nach oben. Als sie das neue Modell auf dem Tisch festhielt, sahen sie beide, dass diese Position die Bedingungen erfüllte: Alle neuen Eckpunkte lagen auf der Ebene des Tisches. Jetzt waren die vier Winkel (zwischen jeweils zwei Dreiecken) gleich.</p>
+    #p>Mathina then placed the structure on a table, with the initial vertex upwards, and, keeping it against the table, she noticed that the final position (all new vertices were on the plane of the table) corresponded precisely to what she wanted: now, the four angles between faces (dihedral angles) were equal.</p>
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspsielen"
+    #"Play!"
+    url: /apps/anims/octaedro_form_2.html
+  - type: clearBackground
+    id: c1-bg12
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg30.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg30        
+  - type: sceneText
+    text: >
+      <p>Wie sollten sie weitermachen, um noch mehr Platonische Körper zu bauen? Nachdem sie die Struktur angehoben hatten, begannen sie damit, Dreiecke an den noch freien Kanten anzubauen. Als sie zwei Dreiecke befestigt hatten, die sie vorher schon an einer Kante zusammengeklebt hatten, ergab sich schon, wie die restliche Form aussehen musste. Also klebten sie zwei weitere Dreiecke aneinander und befestigten auch diese an der Struktur. Das neue Polyeder schien ein Platonischer Körper zu sein. Das musste aber noch überprüft werden.</p>
+    #<p>How should they continue in order to create a Platonic solid? After lifting the structure, they started by joining two triangles to the contiguous free edges, so that two of the new edges, one in each triangle, were together. Then they successively joined, in a similar way, the two missing triangles and verified that they had obtained a new polyhedron which seemed to be a Platonic solid.</p>
+  - type: game
+    tag: tg7
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/octaedro_form_3.html
+  - type: clearBackground
+    id: c1-bg30    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 4%;"
+  - type: image
+    src: Leo2-2-octa.png
+    id: Leo2-2-octa
+    style: "width: 27%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>Neugierig faltete Leo das Polyeder auf, um sich das Netz anzusehen.</p>
+    #<p>Always curious, Leo unfolded the polyhedron to obtain a net.</p>
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
+  - type: sceneText
+    text: >
+      <p>Wie schon vorher beim Würfel, versuchte Leo noch andere Netze des Polyeders zu finden, die auch funktionierten.</p>
+    #<p>Leo then decided to proceed as before (for the cube), creating alternative examples of nets for the polyhedron.</p>
+  - type: game
+    tag: tg28
+    text: "Wähle die richtigen Netze für das Oktaeder und klicke dann auf dieses Symbol:"
+    #"Choose the right nets for the octahedron. Each time, choose the 3  „good“ nets and click"
+    toolbarText: "Wähle die drei richtigen Netze für das Oktaeder"
+    #"Choose the 3 right nets for the octahedron."
+    cta: "Probiere es aus!"
+    #"Try separating the right nets for the octahedron!"
+    url: /apps/EscolhePlanOcta/index.html?lang=de
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Mathina2-2
+  - type: clearImage
+    id: Leo2-2-octa       
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg10.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg10    
+  - type: image
+    src: Mathina1-icosaedro.png
+    id: Mathina1-icosaedro
+    style: "width: 23%; bottom: 0%; left: 0%;"
+  - type: sceneText
+    text: >
+      <p>Nachdem sie diesen neuen Platonischen Körper mit vier Dreiecken an jeder Ecke gefunden hatten, machten sie sich auf die Suche nach einem Körper, bei dem sich immer fünf Dreiecke treffen. Dadurch entstand wieder eine offene „Pyramide“. Sie beschlossen, wie zuvor vorzugehen: Sie stellten die neuen Eckpunkte auf dem Tisch ab, um identische Flächenwinkel zu erhalten. Dann hoben sie das Gebilde an und fügten zu einer freien Ecke drei Dreiecke hinzu, so dass sich auch hier wieder fünf Dreiecke trafen, wie an der Spitze der offenen Pyramide. Als nächstes fügten sie nacheinander an jeder Ecke so viele Dreiecke hinzu, dass sich immer fünf trafen. Als sie an die ursprüngliche offene Pyramide 10 weitere Dreiecke angeheftet hatten, entstand eine fünfeckige Öffnung. Die sah so ähnlich aus wie bei der anfänglichen Pyramide aus fünf Dreiecken. Diese neue fünfeckige Öffnung lag parallel zu der Öffnung der ersten Pyramide, aber etwas verdreht. Dann machten sie genau wie vorher weiter, und ihre Mühe schien sich zu lohnen. Sie erhielten ein neues Polyeder, das ein Platonischer Körper zu sein schien!</p>
+    #<p>After having found this new Platonic solid with 4 triangles at each vertex, they moved on to look for 5 triangles, thus creating an open straight "pyramid". They decided to proceed as before: they placed the new vertices on the table in order to obtain identical dihedral angles. Then they added, to one of the free vertices, 3 triangles, so that the new solid angle would be equal to the one of the initial "opened" pyramid. Next, they joined, successively, 2 triangles in each free vertex of the "opened" pyramid, until they obtained a strip of 10 triangles. They noticed that the free edges of the strip formed a pentagon in a plane parallel to the previous one, but rotated by a tenth of a turn. They then continued the previous process: first they added 2 triangles and then, successively, they added one triangle (joined to the previous one). And their effort seemed to pay off: they obtained a new polyhedron which appeared to be a Platonic solid!</p>
+  - type: game
+    tag: tg8
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/icosaedro_form.html
+  - type: clearBackground
+    id: c1-bg10
+  - type: clearImage
+    id: Mathina1-icosaedro
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-icosa.png
+    id: Leo2-2-icosa
+    style: "width: 32%; bottom: 0%; right: 50%;"
+  - type: sceneText
+    text: >
+      <p>Wie auch schon bei jedem Körper zuvor, faltete Leo das Polyeder wieder auf, um zu verstehen, wie das Netz aussehen könnte.</p>
+    #<p>Just like before, Leo unfolded the polyhedron, trying to understand how a net could be.</p>
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol2p_98
+  - type: clearBackground
+    id: c1-bg11
+  - type: clearImage
+    id: Leo2-2-icosa
+  - type: clearImage
+    id: Mathina2-2
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg9    
+  - type: image
+    src: mesmovertice3.png
+    id: mesmovertice3
+    align: center
+    style: "top: 56%; width: 18%"    
+  - type: sceneText
+    text: >
+      <p>Nachdem sie nun ein Polyeder mit fünf gleichseitigen Dreiecken an jeder Ecke gefunden hatten, überlegten sie als nächstes, zu sechs Dreiecken überzugehen. Doch Leo und Mathina kamen schnell zu dem Schluss, dass dies gar nicht möglich war.</p> 
+    #<p>After finding a polyhedron with 5 equilateral triangles at each vertex, the natural step would be to move to 6 triangles, however, Leo and Mathina quickly concluded that this was not possible:</p>    
+  - type: dialog
+    entries:        
+      - text: "Ah! Es ist die gleiche Sache wie mit vier Quadraten an einem Eckpunkt..."
+      #"Ah! It's like in the case of the 4 squares in the same vertex…"
+        char: leo
+  - type: clearImage
+    id: mesmovertice3
+  - type: clearBackground
+    id: c1-bg9    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg13.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg13    
+  - type: sceneText
+    tag: tg9
+    text: >
+      <p>Als Mathina und Leo feststellten, dass es keine Möglichkeiten mehr gab, Dreiecke und Vierecke zu verwenden, gingen sie zu regelmäßigen Fünfecken über. Sie klebten drei regelmäßige Fünfecke an einem gemeinsamen Eckpunkt zusammen. Diese Konstruktion war diesmal sogar ohne den Tisch schon stabil.</p>
+    #<p>When they discovered that there were no more possibilities of using triangles and squares, Mathina and Leo moved on to regular pentagons. They set up a frame with 3 regular pentagons with a common vertex.</p>
+  - type: clearBackground
+    id: c1-bg13    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg14.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg14    
+  - type: sceneText
+    text: >
+      <p>Leo fand heraus, dass jeweils ein weiteres Fünfeck genau an die freien Kanten der anderen Fünfecke passte. Also fügte er auf diese Weise drei Fünfecke hinzu. Dadurch entstanden nun drei große, neue Lücken, in die Mathina nun weitere drei Fünfecke einbaute. Und auch diese passten genau. Dann ging alles ganz schnell, und es war total klar, wo noch weitere Fünfecke hinpassten. Sie fügten sich sehr gut ein und verbanden sich sogar miteinander. So entstanden auch immer neue Ecken. Vorsichtshalber überprüften sie nochmal, ob auch alle Ecken gleich waren, indem sie wieder Knetmasse andrückten und den Abdruck verglichen. Er passte überall. Sie hatten ein neues regelmäßiges Polyeder gebaut!</p>
+    #<p>Leo discovered that a new pentagon fitted securely to contiguous free edges from different pentagons. So he added three pentagons in this way. This created three new big gaps. Mathina tried to fill them with three new pentagons and they fitted precisely. At the end, they saw again three big gaps, once again with the same shape. They tried the same as before by putting three new pentagons: they fitted very well, and they even joined with each other creating a new vertex with the new added faces. As a precaution, they checked with the plasticine mould - it fitted to all vertices: they had discovered a new regular polyhedron!</p>
+  - type: game
+    tag: tg10
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/dodecaedro_form.html
+  - type: clearBackground
+    id: c1-bg14
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg11.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg11    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-dodeca.png
+    id: Leo2-2-dodeca
+    style: "width: 33%; bottom: 0%; right: 49%;"
+  - type: sceneText
+    text: >
+      <p>Und zum Schluss, wie er das bei jedem gemacht hatte, faltete Leo das Polyeder wieder auf.</p>
+    #<p>In the end, as he had made with the previous polyhedra, Leo unfolded the polyhedron to see a net:</p>
+  - type: game
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
+  - type: clearImage
+    id: Leo2-2-dodeca
+  - type: image
+    src: Leo2-2-pentagonos.png
+    id: Leo2-2-pentagonos
+    style: "width: 27%; bottom: 0%; right: 50%;"
+  - type: sceneText
+    text: >
+      <p>Mathina und Leo setzten ihre Suche nach weiteren Platonischen Körpern fort. Bald erkannten sie aber, dass es nicht möglich war, dass sich mehr als drei Fünfecke in einem gemeinsamen Eckpunkt treffen. Sonst wäre der Raumwinkel nicht mehr wie in einer regelmäßigen Pyramide.</p>
+    #<p>Mathina and Leo continued their quest to find new Platonic solids. Soon, they realized that it was not possible to use more than three pentagons on a common vertex with a solid angle equal to the one of a straight regular pyramid.</p>
+  - type: game
+    tag: tg11
+    text: "Schau die Animation an! Du kannst einstellen, wieviele Ecken das regelmäßige Vieleck haben soll."
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/4poligonos_5.html
+  - type: clearImage
+    id: Leo2-2-pentagonos
+  - type: clearBackground
+    id: c1-bg11
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg9.jpg
+    id: c1-bg9    
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+  - type: clearImage
+    id: Mathina2-2
+  - type: sceneText
+    text: >
+      <p>Es klappte auch nicht, Platonische Körper aus regelmäßigen Vielecken mit mehr als 5 Ecken zu bauen. Mathina und Leo waren einfach die Möglichkeiten ausgegangen!</p>
+    #<p>And also it was impossible to build Platonic solids using regular polygons with more than 5 sides. Mathina and Leo had just run out of possibilities!</p>
+  - type: clearBackground
+    id: c1-bg9
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg8.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg8    
+  - type: sceneText
+    text: >
+      <p>Mathina und Leo diskutierten ihre Entdeckungen so vertieft, dass sie ganz überrascht waren, als der Techniker zurück in sein Büro kam.</p>
+    #<p>Mathina and Leo were so absorbed discussing all their discoveries, that they did not even hear the technician arriving.</p>
+  - type: dialog
+    entries:        
+      - text: "Hallo! Bin wieder da! Und ihr, was habt ihr gemacht?"
+      #"Hi again! So, what have we been doing?"
+        char: technician
+  - type: sceneText
+    text: >
+      <p>Leo and Mathina zeigten dem Techniker, was sie herausgefunden hatten.</p>
+    #<p>Leo and Mathina shared with the technician all their discoveries.</p>
+  - type: dialog
+    entries:        
+      - text: "Großartig! Da habt ihr alle regelmäßigen Polyeder entdeckt. Oder alle Platonischen Körper, so werden sie auch genannt."
+      #"Great, you have discovered all regular polyhedra, or Platonic solids as they are often called."
+        char: technician
+        mood: impressed        
+      - text: "Alle Winkel zwischen benachbarten Seitenflächen sind in einem Platonischen Körper gleich. Dasselbe gilt für die Raumwinkel an jedem Eckpunkt."
+      #"It's true that, in a Platonic solid, all the angles between contiguous faces are equal and the same happens with the solid angles at each vertex."
+        char: technician
+      - text: "Wenn jedoch bei konvexen Polyedern die Seitenflächen alle die gleichen, regelmäßige Vielecke sind, und sich an jedem Eckpunkt die gleiche Anzahl von Seitenflächen treffen, dann können wir sicher sein, dass diese Winkel, von denen ich gerade sprach, auch gleich sind!"
+      #"However, for convex polyhedra, if the faces are all regular polygons equal to each other, and at each vertex arrive the same number of faces, then we can be sure all the mentioned angles are equal!"
+        char: technician        
+      - text: "Damit ist es auch viel einfacher zu überprüfen, ob ein Polyeder tatsächlich ein Platonischer Körper ist!"
+      #"So, now it's much easier to confirm if a polyhedron is indeed a Platonic solid!"
+        char: mathina
+      - text: "Genau! Wir brauchen dafür nicht einmal Knete!"
+      #"Yes, we don't even need plasticine!"
+        char: leo
+  - type: game
+    tag: tg12
+    text: "Schau die Platonischen Körper an! Durch Klicken und Ziehen kannst Du sie auch drehen und von allen Seiten ansehen."
+    #"Watch the Platonic solids!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/5platonicosi.html
+  - type: dialog
+    entries:        
+      - text: "Ihr habt alle fünf Platonischen Körper gefunden: Würfel, Tetraeder, Oktaeder, Ikosaeder und Dodekaeder."
+      #"You've found all Platonic solids: cube, tetrahedron, octahedron, icosahedron and dodecahedron."
+        char: technician
+        mood: impressed        
+      - text: "Aber können wir nicht einfach sagen, dass Platonische Körper Polyeder sind, deren Seitenflächen alles die gleichen, regelmäßigen Polygone sind?"
+      #"But can't we just say that Platonic solids are polyhedra whose faces are all regular and equal polygons?"
+        char: leo
+        exposition: "Leo war sich da nicht ganz sicher."
+        #"Leo still had a doubt."
+      - text: "Nein, das können wir nicht. Auch nicht, wenn wir annehmen, dass sie konvex sind. Durchsucht doch mal meine Polyedermodelle. Vielleicht findet ihr Beispiele von Polyedern, die keine Platonischen Körper sind - und das obwohl ihre Seitenflächen alle regelmäßige und gleiche Vielecke sind."
+      #"No, we can't, even if we assume them convex. Why don't you try to find, among my polyhedra models, examples of polyhedra which are not Platonic solids, but whose faces are all regular and equal polygons?"    
+        char: technician
+        exposition: "Der Techniker schaute die beiden aufmunternd an."
+        #"Challenged the technician."        
+  - type: game
+    tag: tg13
+    text: "Wähle die nicht-platonischen Polyeder aus, deren Seiten trotzdem regelmäßige und gleiche Polygone sind. Klicke danach dieses Symbol:"
+    #"Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
+    toolbarText: "Wähle die zwei nicht-platonischen Polyeder aus, deren Seiten regelmäßige und gleiche Polygone sind."
+    #"Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
+    cta: "Probiere es aus!"
+    #"Try separating the non-platonic polyhedra whose faces are all regular and equal polygons!"
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=de
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: clearBackground
+    id: c1-bg8
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg15.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg15      
+  - type: dialog
+    entries:        
+      - text: "Nun, es war wirklich eine große Freude, mich mit euch zu unterhalten. Jetzt muss ich aber zurück an meine Arbeit. Da geht es um den Bau eines Modells für das Karussell der platonischen und regelmäßigen Polyeder,"
+      #"Well, I loved talking to you, but I have to go back to my work: the construction of a model for the carousel of Platonic and uniform polyhedra."
+        char: technician
+        exposition: "erklärte der Techniker und stellte das Modell auf den Tisch."
+        #"The technician explained, while placing his model on the table."
+  - type: clearBackground
+    id: c1-bg15
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg18.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg18
+  - type: image
+    src: technician-cubocta.png
+    id: technician-cubocta
+    style: "width: 22%; bottom: 0%; left: 28%;"
+  - type: sceneText
+    text: >
+      <p>Aus seiner Sammlung von Polyedern wählte der Techniker ein uniformes Polyeder aus, das er Kuboktaeder nannte.</p>
+    #<p>From his collection of polyhedra, the technician picked a uniform polyhedron, which he called cuboctahedron.</p>
+  - type: game
+    tag: tg14
+    text: "Schau den Film an! Du kannst das Polyeder auch durch Klicken und Ziehen drehen."
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol_35
+  - type: clearImage
+    id: technician-cubocta 
+  - type: clearBackground
+    id: c1-bg18
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg16.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg16    
+  - type: sceneText
+    text: >
+      <p>Dann klebte er es in das Karussellmodell. Und gerade, als der Techniker mit dem Kleben fertig war, klingelte sein Telefon.</p>
+    #<p>He then glued it into the carousel model. And, just when the technician finished gluing, his phone rang.</p>
+  - type: clearBackground
+    id: c1-bg16
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg20.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg20    
+  - type: dialog
+    entries:        
+      - text: "Du, was ist ein uniformes Polyeder?"
+      #"What is a uniform polyhedron?"
+        char: leo
+        exposition: "fragte Leo Mathina."
+        #"Leo asked Mathina."
+      - text: "Naja, wenn man sich das Kuboktaeder ansieht, scheint es ein Polyeder zu sein, dessen Seitenflächen alle regelmäßige Polygone sind. Aber nicht alle Flächen haben die gleiche Anzahl von Ecken. Aber die Raumwinkel an jedem Eckpunkt scheinen gleich zu sein."
+      #"Well, looking at the cuboctahedron, it seems to be a polyhedron whose faces are all regular polygons, but not all with the same number of sides. Also the solid angles at each vertex seem equal."
+        char: mathina
+        exposition: "Das konnte Mathina sicher sagen, weil sie mit einer Knetform überprüft hatte, ob das Kuboktaeder an allen Eckpunkten die gleichen Raumwinkel hatte. Sie war also experimentell zu dem Schluss gekommen, dass dies der Fall war."
+        #"Mathina said, after checking, with a plasticine mould, if the cuboctahedron had the same solid angles and concluding experimentally that they did."
+  - type: clearBackground
+    id: c1-bg20
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg19.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg19    
+  - type: image
+    src: Mathina2-2.png
+    id: Mathina2-2
+    style: "width: 11%; bottom: 0%; left: 10%;"
+  - type: image
+    src: Leo2-2-4-6-8.png
+    id: Leo2-2-4-6-8
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: dialog
+    entries:        
+      - text: "Und glaubst du dieses Polyeder hier ist uniform?"
+      #"And do you think this polyhedron is uniform?"
+        char: leo
+        exposition: "fragte Leo und schnappte sich dabei eines der Modelle, die herumstanden."
+        #"Asked Leo, grabbing a model nearby."
+  - type: game
+    text: "Schau den Film an! Du kannst das Polyeder wieder durch Klicken und Ziehen selbst drehen."
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol_80        
+  - type: dialog
+    entries:        
+      - text: "Na, das ist fast wie das davor. Alle Seitenflächen sind regelmäßige Polygone, aber nicht alle haben die gleiche Anzahl von Ecken. Lass mich mal überprüfen, ob die Raumwinkel an jedem Eckpunkt gleich sind."
+      #"Well, as before, all faces are regular polygons, but not all have the same number of sides. Let me just check if the solid angles at each vertex are equal."
+        char: mathina
+        exposition: "Mathina überprüfte die Winkel mit der Knetform."
+        #"Asked Mathina, and checked the angles with a mould."
+  - type: video
+    tag: tg15
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: CuboRombiOcta.mp4
+        type: 'video/mp4'
+  - type: clearBackground
+    id: c1-bg19
+  - type: clearImage
+    id: Leo2-2-4-6-8
+  - type: clearImage
+    id: Mathina2-2        
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg17.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg17    
+  - type: sceneText
+    text: >
+      <p>Als der Techniker von seinem Telefonat zurückkam, fragten Leo und Mathina ihn sofort, ob dieses letzte Polyeder auch uniform war. Für Leo war es das, es sah fast so aus wie das Kuboktaeder. Aber Mathina war nicht einverstanden. Sie hatte die Raumwinkel wieder mit einer Form getestet, und die Form passte nur bei der Hälfte der Ecken.</p>
+    #<p>When the technician returned from his phone call, Leo and Mathina immediately asked him if this last polyhedron was uniform: for Leo it was – it looked similar to the cuboctahedron –, but Mathina did not agree, she tested the solid angles with a mould, and the mould just fit half of them.</p>
+  - type: dialog
+    tag: tg16
+    entries:        
+      - text: "Du hast recht mit der Knetform, Mathina. Wir brauchen zwei verschiedene Formen: Deine Form und ihre gespiegelte Kopie."
+      #"We are right about the mould, Mathina. Here, two different moulds are needed: a mould and its reflected image."
+        char: technician
+      - text: "Wir können diese zweite Form erhalten, indem wir die ursprüngliche Form von innen nach außen drücken. Man kann es auch „auf links drehen“ nennen."
+      #"We can get this second mold by turning the original one "inside out"."
+        char: technician
+        exposition: "fuhr der Techniker fort."
+        #"Continued the technician."
+  - type: video
+    tag: tg17
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: Viramolde.mp4
+        type: 'video/mp4'
+  - type: dialog
+    entries:        
+      - text: "Jeder Eckpunkt passt genau in eine dieser beiden Formen. Einmal in die Originalform oder in die „auf links gedrehte“ Form. Weil aber die eine Form durch Spiegelung in die andere überführt werden kann, und umgekehrt natürlich auch, sagen wir, die Eckpunkte dieses Polyeders sind „vom gleichen Typ“."
+      #"Each vertex can be moulded by one of these two moulds – the original and the mold "in reverse". And, since each of the 2 moulds is obtained by reflection from the other, we consider the vertices of the polyhedron as being of "the same type"."
+        char: technician
+  - type: video
+    tag: tg18
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: CuboRombiOctaVM.mp4
+        type: 'video/mp4'
+  - type: clearBackground
+    id: c1-bg17    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg21.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg21
+  - type: image
+    src: Leo2-Miller.png
+    id: Leo2-Miller
+    style: "width: 22%; bottom: 0%; right: 58%;"    
+  - type: sceneText
+    text: >
+      <p>Der Techniker nahm dann das von Leo ausgewählte Polyeder, da es ebenfalls ein uniformes Polyeder war. Während der Techniker sich sehr konzentrierte und es auf das Karussellmodell klebte, wählte Leo noch ein anderes Polyeder aus.</p>
+    #<p>The technician then picked the polyhedron chosen by Leo, since it was also a uniform polyhedron. While the technician was concentrated gluing it to the carousel model, Leo picked another polyhedron.</p>
+  - type: dialog
+    entries:        
+      - text: "Und was ist mit diesem hier? Ist es uniform?"
+      #"What about this one? Is it uniform?"
+        char: leo
+  - type: game
+    tag: tg19
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/poliedros.html?pre=pol_68
+  - type: sceneText
+    text: >
+      <p>Mathina schaute sich das Polyeder genau an. Sie konnte sehen, dass alle Flächen regelmäßige Polygone waren. Dann schlussfolgerte sie anhand der Formen auch, dass die Eckpunkte alle vom gleichen Typ waren. Für sie schien es ein guter Kandidat zu sein...</p>
+    #<p>Mathina examined the polyhedron. She noticed that all faces were regular polygons. Then, by using moulds, she also concluded that the vertices were of the same type. For her, it seemed a good candidate…</p>
+  - type: clearImage
+    id: Leo2-Miller             
+  - type: image
+    src: Leo2-Miller2.png
+    id: Leo2-Miller2
+    style: "width: 22%; bottom: 0%; right: 58%;"
+  - type: sceneText
+    text: >
+      <p>Leo fragte den Techniker, ob Mathinas Eindruck stimmte.</p>
+    #<p>Leo addressed the technician directly, asking him to confirm Mathina's opinion:</p>
+  - type: clearBackground
+    id: c1-bg21    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg22.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg22
+  - type: dialog
+    entries:        
+      - text: "Hier, willst du das auch mit in das Karussell einbauen? Mathina glaubt, es ist uniform. Stimmt das?"
+      #"Do you want to add this polyhedron to the carousel model? Is it uniform?"
+        char: leo
+  - type: sceneText
+    text: >
+      <p>Zu Leos Überraschung schien der Techniker durch seine Frage völlig verblüfft zu sein.</p>
+    #<p>To Leo's surprise, the technician appeared completely startled by his question.</p>
+  - type: dialog
+    entries:        
+      - text: "Oh, nein! Da habe ich aus Versehen ein nicht uniformes Polyeder gebaut, das ist das Miller-Polyeder."
+      #"Oh, no! I've built a non-uniform polyhedron by mistake: the Miller polyhedron."
+        char: technician
+        mood: surprised        
+  - type: clearBackground
+    id: c1-bg22    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg23.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg23        
+  - type: clearImage
+    id: Leo2-Miller2
+  - type: sceneText
+    text: >
+      <p>Um seinen Fehler wieder auszubügeln, schnitt der Techniker die achteckige Kuppel an der Oberseite des Miller-Polyeders ab und drehte sie um 45º, so dass die Dreiecke der Kuppel an den unteren Dreiecken ausgerichtet wurden.</p>
+    #<p>To fix his error, the technician cut the octagonal dome on the top of the Miller polyhedron and rotated it by 45º, so that the triangles of the dome became aligned to the bottom triangles.</p>
+  - type: game
+    tag: tg22
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/transfMiller.html
+  - type: dialog
+    entries:        
+      - text: "So wollte ich das schon von Anfang an machen. Auf diese Weise bekommen wir ein uniformes Polyeder,"
+      #"This is what I wanted to do! This way we now get a uniform polyhedron."
+        char: technician
+        exposition: "erklärte ihnen der Techniker."
+        #"Explained the technician."
+      - text: "Das verstehe ich jetzt nicht! Warum ist das Miller-Polyeder nicht uniform? Es besteht aus genau den gleichen Seitenflächen wie das letzte Polyeder, und außerdem waren seine Eckpunkte alle vom gleichen Typ. Das habe ich überprüft."
+      #"I don't understand! Why isn't the Miller polyhedron uniform? It has exactly the same faces as this last polyhedron and, besides, its vertices were all of the same type (I've checked that)."
+        char: mathina
+      - text: "Du hast wieder einmal recht, Mathina. Allerdings ist ein regelmäßiges Polyeder mehr als ein Polyeder, dessen Eckpunkte alle vom „gleichen Typ“ sind. Auch dass alle Flächen regelmäßige Vielecke sind, reicht noch nicht. Egal ob sie die gleiche Anzahl von Ecken haben."
+      #"You are right once again, Mathina. However, a uniform polyhedron is more than a polyhedron whose vertices are all of the "same type", and with all faces being regular polygons, but not all with the same number of edges."
+        char: technician
+      - text: "Ein regelmäßiges Polyeder sollte außerdem die folgende Bedingung erfüllen: „Für jedes Paar von Eckpunkten gibt es mindestens eine Symmetrie des Polyeders, die einen Eckpunkt in den anderen überführt“,"
+      #"A uniform polyhedron should also verify the following condition: "for each pair of vertices, there is at least one symmetry of the polyhedron that takes one vertex onto the other"."
+        char: technician
+        exposition: "sagte der Techniker."
+        #"Explained the technician."
+  - type: clearBackground
+    id: c1-bg23    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg24.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg24
+  - type: dialog
+    tag: tg20
+    entries:        
+      - text: "Das verstehe ich nicht! Was ist die Symmetrie eines Polyeders?"
+      #"I don't understand! What is a symmetry of a polyhedron?"
+        char: leo
+      - text: "Ok! Nochmal einen Schritt zurück: Die Symmetrie eines Polyeders ist eine sogenannte Isometrie. Das ist eine Abbildung, die Abstände nicht verändert, und mit der das Polyeder auf sich selbst abgebildet werden kann. Das Polyeder sollte also vor und nach Anwendung der Isometrie genau gleich aussehen."
+      #"Ok! Let's start by the beginning: a symmetry of a polyhedron is an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself: the polyhedron should look exactly the same before and after applying the isometry."
+        char: technician
+      - text: "Nehmen wir zum Beispiel einen Würfel. Stellt euch mal eine Drehung um 90º vor, und zwar um eine Achse, die senkrecht durch den Mittelpunkt einer Seitenfläche geht. Bei dieser Drehung wird der Würfel wieder auf sich selbst gedreht. Diese Drehung ist also eine Würfelsymmetrie."
+      #"Take for instance a cube and consider a rotation of 90º around an axis that passes through the centers of two opposite faces. If we rotate, the cube is taken onto itself. This rotation is therefore a cube symmetry."
+        char: technician
+        #exposition: "machte der Techniker klar."
+        #"The technician continued."
+  - type: video
+    text: "Schau's dir an!"
+    #"Watch the movie!"
+    entries:
+      - src: AnimCubo.mp4
+        type: 'video/mp4'
+  - type: image
+    src: cubo-plano.png
+    id: cubo-plano
+    style: "width: 37%; bottom: 0%; left: 42%;"   
+  - type: dialog
+    entries:        
+      - text: "Betrachten wir nun die Ebene, die durch zwei diagonal gegenüberliegende Kanten geht. Die Spiegelung an dieser Ebene ist ebenfalls Symmetrie des Würfels."
+      #"Now, let's consider the plane passing through two diametrically opposite edges. The reflection on this plane is also symmetry of the cube."
+        char: technician
+      - text: "Und wenn du zwei beliebige Eckpunkte des Würfels betrachtest, dann gibt es immer mindestens eine Symmetrie, die einen der Eckpunkte auf den anderen abbildet. Diese Eigenschaft gilt nicht nur für den Würfel, sondern auch für alle Platonischen Körper und alle uniformen Polyeder."
+      #"And if you consider any two vertices of the cube, there is always at least one symmetry that takes one of the vertices onto the other. This property is valid not only for the cube, but also for all Platonic solids and all uniform polyhedra."
+        char: technician        
+  - type: clearImage
+    id: cubo-plano
+  - type: dialog
+    entries:        
+      - text: "Ok, jetzt hab ich es kapiert! Aber warum ist das Miller-Polyeder nicht auch uniform?"
+      #"Ok, I got it! But why is the Miller polyhedron non-uniform?"
+        char: mathina
+      - text: "Warum probierst du es nicht einfach mal aus?"
+      #"Why don't you try to find out?"
+        char: technician
+        exposition: "ermutigte der Techniker Mathina und Leo."
+        #"Challenged the technician."
+  - type: clearBackground
+    id: c1-bg24    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg25.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg25
+  - type: sceneText
+    text: >
+      <p>Mathina und Leo untersuchten den Polyeder sorgfältig und drehten ihn mehrmals hin und her.</p>
+    #<p>Mathina and Leo carefully examined the polyhedron, rotating it several times.</p>
+  - type: dialog
+    entries:        
+      - text: "Er ist doch uniform. Wenn wir zum Beispiel diese zwei Eckpunkte, die da in rot und blau, betrachten. Denn es gibt eine Rotation, die den einen Punkt auf den anderen abbildet! Schau mal!"
+      #"It's uniform: if we consider, for instance, these 2 vertices (in red and blue), there's a rotation taking one onto the other! Look!"
+        char: leo
+        exposition: "behauptete Leo."
+        #"Leo exclaimed."        
+  - type: game
+    text: "Schau das Polyeder von allen Seiten an!"
+    #"Watch the polyhedron!"
+    cta: "Schau es an und drehe es."
+    #"Play!"
+    url: /apps/anims/MillerRot.html
+  - type: dialog
+    entries:        
+      - text: "Darum geht es aber nicht, Leo! Um zu zeigen, dass es uniform ist, müssen wir alle verschiedenen Paare von Eckpunkten des Polyeders betrachten! Ein einzelnes Paar ist nicht genug!"
+      #"That's not the point, Leo: to show it's uniform, we have to consider all different pairs of vertices of the polyhedron! One pair is not enough!"
+        char: mathina
+      - text: "Um jedoch zu zeigen, dass ein Polyeder nicht uniform ist, müssen wir nur zeigen, dass es ein Paar von Eckpunkten gibt, sagen wir mal A und B, für das die Bedingung nicht erfüllt ist. Also wenn es keine Symmetrie des Polyeders gibt, die A auf B abbildet."
+      #"However, to show that the polyhedron is not uniform, we just need to prove that there is one pair of vertices (A,B) for which the condition mentioned by the technician fails, i.e., there's no symmetry of the polyhedron taking A onto B."
+        char: mathina
+        exposition: "wandte Mathina ein."
+        #"Mathina continued."
+  - type: sceneText
+    text: >
+      <p>Nachdem sie das Polyeder noch einmal genau unter die Lupe genommen hatte, machte Mathina eine Entdeckung.</p>
+    #<p>After examining carefully the polyhedron once again, Mathina made a discovery.</p>
+  - type: clearBackground
+    id: c1-bg25    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg26.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg26
+  - type: dialog
+    tag: tg21
+    entries:        
+      - text: "Schau, Leo! Wenn du dir den „Äquator“ dieses Polyeders genau ansiehst, entdeckst du einen Ring aus Quadraten. Und dies ist der einzige Ring aus Quadraten, den es auf dem Polyeder gibt!"
+      #"Look, Leo! If you look carefully at the "equator" of this polyhedron, you will see a ring of squares. And this is the only ring of squares you will find on the polyhedron!"
+        char: mathina
+  - type: clearBackground
+    id: c1-bg26    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg27.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg27
+  - type: dialog
+    entries:        
+      - text: "Wenn wir also einen Eckpunkt auf dem Ring, nennen wir ihn A und einen außerhalb des Rings, nennen wir ihn B, betrachten, gibt es keine Symmetrie des Polyeders, die A auf B abbildet."
+      #"So, if we consider a vertex on the ring, let's call it A, and one outside the ring, let's call it B, there is no symmetry of the polyhedron taking A onto B."
+        char: mathina
+      - text: "Das verstehe ich nicht!"
+      #"I don't understand!"
+        char: leo
+      - text: "Leo, jede Isometrie, die A auf B abbildet, entfernt den Ring der Quadrate vom Äquator. Doch damit verändert sich auch das Aussehen des ganzen Polyeders."
+      #"Leo, any isometry taking A into B will remove the ring of squares from the equator, thus changing the final aspect of the polyhedron."
+        char: mathina
+      - text: "Oh! Jetzt ist es klar!"
+      #"Oh! I get it!"
+        char: leo
+  - type: clearBackground
+    id: c1-bg27    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg24.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg24
+  - type: dialog
+    entries:    
+      - text: "Sehr schön! Ich sehe, ihr habt bereits verstanden warum das Miller-Polyeder nicht uniform ist. Habt ihr Lust, die uniformen Polyeder aus allen Polyedern herauszusuchen, die ich da noch in meiner Schublade aufbewahrt habe?"
+      #"Well, I see you have already understood why the Miller polyhedron is not uniform. Why don't you now help me selecting the uniform polyhedra among the polyhedra which I have kept in my drawer?"
+        char: technician
+        mood: impressed        
+        exposition: "bot der Techniker ihnen an."
+        #"Challenged the technician."
+      - text: "Damit würdet ihr mir helfen, das Karussell-Modell schneller fertigzustellen..."
+      #"This way, you could help me setting up the carousel model…"
+        char: technician        
+  - type: game
+    tag: tg29
+    text: "Wähle die vier uniformen Polyeder aus und klicke dann auf dieses Symbol:"
+    #"Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
+    toolbarText: "Wähle die vier uniformen Polyeder!"
+    #"Choose 4 uniform polyhedra"
+    cta: "Probiere es aus!"
+    #"Try separating the uniform polyhedra!"
+    url: /apps/EscolhePoliUnif/index.html?lang=de
+    img:
+      src: confirm.png
+      height: 40
+      width: 40
+  - type: dialog
+    entries:    
+      - text: "Ich glaube, wir haben alle uniformen Polyeder gefunden. Wir haben sie in diesen Beutel gesteckt. Es sind 13 Stück."
+      #"We've found all the uniform polyhedra: we've put them in this bag. There are 13 of them."
+        char: leo
+        exposition: "Leo freute sich."
+        #"Concluded Leo."
+      - text: "Jetzt bin ich aber neugierig. Gibt es noch andere uniforme Polyeder, die sich von denen unterscheiden, die wir gefunden haben?"
+      #"I am curious. Do other uniform polyhedra exist, different from those we found in the bag?"
+        char: leo        
+      - text: "Es gibt tatsächlich unendlich viele uniforme Polyeder."
+      #"In reality, there is an infinite number of uniform polyhedra."
+        char: technician
+      - text: "Was??"
+      #"What?"
+        char: leo
+        exposition: "riefen Leo and Mathina gleichzeitig."
+        #"Asked Leo and Mathina simultaneously."
+  - type: dialog
+    tag: tg23
+    entries:
+      - text: "Das kann man sich so vorstellen: Denkt mal an gerade Prismen, deren Grundflächen regelmäßige Polygone und deren Seitenflächen Quadrate sind. Diese Art von Prismen sind auch uniforme Polyeder."
+      #"It's very easy! Just think of straight prisms whose bases are regular polygons and whose side faces are squares. These kinds of prisms are also uniform polyhedra."
+        char: technician
+  - type: dialog
+    tag: tg24
+    entries:
+      - text: "Und wir können sogar noch andere regelmäßige Polyeder erzeugen, indem wir die Prismen in Antiprismen mit gleichseitigen Dreiecken als Seitenflächen verwandeln. Aber mal abgesehen von den Prismen und Antiprismen, sind die da in unserem Beutel die einzigen."
+      #"And we can even create other uniform polyhedra by transforming the prisms into anti-prisms with equilateral triangles as side faces; but except for the prisms and anti-prisms, those in the bag are the only ones. "
+        char: technician
+        exposition: "fügte der Techniker hinzu."
+        #"Added the technician."
+  - type: clearBackground
+    id: c1-bg24    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg28.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg28
+  - type: dialog
+    entries:    
+      - text: "Hier, kommt her und seht euch diese Modelle in meiner Schublade an! Ich habe sie nicht ausgestellt, weil ich entschieden habe, sie nicht zu benutzen. Ich dachte, sie wären viel zu gewöhnlich..."
+      #"Here, come and see these models in my drawer! I didn't showcase them, because I decided not to use them: I thought they were very commonplace…"
+        char: technician
+  - type: game
+    text: "Schau die Polyeder an!"
+    #"Watch the polyhedra!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/prismas_antiprismas.html
+  - type: dialog
+    entries:    
+      - text: "Wollt ihr mir helfen, das Karussellmodell fertigzustellen? Wir müssen nur noch alle uniformen Polyedermodelle festkleben, die ihr ausgewählt habt. Zusätzlich zu den Platonischen Körpern, die ihr ja vorhin schon gebaut habt."
+      #"Do you want to help me finish the carousel model? We just need to glue all the uniform polyhedra models you have selected in addition to the Platonic solids you've built."
+        char: technician
+  - type: clearBackground
+    id: c1-bg28    
+  - type: background
+    src: $COMMON/img/bg/SYMM/c1-bg29.jpg
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    id: c1-bg29        
+  - type: sceneText
+    text: >
+      <p>Die drei vollendeten den Aufbau des Modells des „Karussells der Platonischen und uniformen Polyeder“ und begutachteten ihre Arbeit. Es war ein wirklich schönes Werk. Einmal natürlich wegen der Vielfalt an Farben. Vor allem aber durch die vorhandenen Symmetrien an den ausgewählten Polyedern. Sie sahen dadurch sehr harmonisch aus.</p>
+    #<p>The three finished setting up the model of the "carousel of Platonic and uniform polyhedra" and contemplated the result: it was a beautiful piece of work, not only because of the diversity of colors, but also, and mainly, by the existing symmetry on the chosen polyhedra, which make them visually very appealing.</p>
+  - type: game
+    tag: tg25
+    text: "Schau die Polyeder an!"
+    #"Watch the polyhedra!"
+    cta: "Abspielen"
+    #"Play!"
+    url: /apps/anims/carrossel.html      

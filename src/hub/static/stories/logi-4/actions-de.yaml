@@ -193,6 +193,7 @@ actions:
         char: boys
         mood: talking
   - type: game
+    tag: firstGame
     text: Findest Du heraus, wie viele Goldmedaillen das Team erhalten hat?
     #Generate a table by filling in the initial amount of gold medals received.
     toolbarText: Wie viele Medaillen bekommt das Team?

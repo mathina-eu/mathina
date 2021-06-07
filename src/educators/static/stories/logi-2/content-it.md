@@ -56,6 +56,6 @@ La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/
 ## [App 2 - La sfida del pavimento colorato II]($HUB_URL/story/the-tiled-floor-trap/?actionLink=secondGame)
 In entrambe le app la regola del gioco è che gli utenti possono solo passare da un campo rosso a un campo rosso, da uno blu a uno blu, da uno verde a uno verde, da uno giallo a uno giallo oppure da cerchio a cerchio, da quadrato a quadrato, da triangolo a triangolo.
 
-@[youtube](ORR614pbLzk?_align-center_)
+@[youtube](ORR614pbLzk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/logi-2/transcripts/Script2.pdf)
 
