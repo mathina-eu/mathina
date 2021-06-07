@@ -9,13 +9,13 @@ The result of following a vector (a,b) and next a vector (c,d) will leave us in 
 
 The user has already made the connection between the intuitive idea of movement and those of the arrow (movement vector), which makes a sort of encoding. Now the user faces a new encoding, that of representing an arrow by a pair of numbers, its coordinates. This jump adds to the graphical and visual domain the new symbolic representation.
 
-When children start to reading they also recognize written numbers that represent quantities. On this early exposure to vector quantities, children will realize that there are quantities that can be measured, but that they need more than one number to be represented.
+When children start to read they also recognize written numbers that represent quantities. On this early exposure to vector quantities, children will realize that there are quantities that can be measured, but that they need more than one number to be represented.
 
 Together with reading, children will learn basic addition. This story takes advantage of that learning to show that one can add those multi-number quantities (pairs). The story and its apps also provide an intuitive introduction to negative numbers. Even users not familiar with this concept yet will be capable of grasping the connection through stepping forwards and backwards (similarly upwards and downwards).
 
 
 # About the Apps
-The layout of all three apps is similar. The lower edge represents the ground. It might have one or more mountains, which are to be avoided during the flight. The light blue background represents the sky (there might be clouds, which are also obstacles). There is a grid pattern made of white dots, representing the points on the plane with natural numbers as coordinates. When the app is started, the unidragon will sit on the lower left. It will return there, once the 'Back' button is clicked. You can create a flight path for the dragon by entering vectors through the control panel on the lower edge. Once you click the 'Go' button, the dragon will follw the created path.
+The layout of all three apps is similar. The bottom edge represents the ground. It might have one or more mountains, which are to be avoided during the flight. The light blue background represents the sky (there might be clouds, which are also obstacles). There is a grid pattern made of white dots, representing the points on the plane with integers as coordinates. When the app is started, the unidragon will sit on the lower left. It will return there, once the 'Back' button is clicked. You can create a flight path for the dragon by entering vectors through the control panel on the bottom edge. Once you click the 'Go' button, the dragon will follw the created path.
 
 ![flight](/stories/fire-2/img/_align-center_/flight.png)
 
@@ -26,7 +26,7 @@ In this app, the user can get used to using the control panel and creating a pat
 
 ## App 2 - Fly to the Castle
 
-In this app, the goal is to reach the castle on the lower right side of the screen. The unidragon can be told several vectors in advance to his flight. The button 'Add' was added to the control panel. It will give the vector command to the dragon, but the flight will not be started, yet. The user can add several commands to the unidragon's memory (displayed in the upper left) before pressing the 'Go' button. After a flight, the user can add more vector commands and continue the flight. When the castle is reached, the unidragon will return to his starting position, the clouds and mountains are rearranged and the user can fly to the castle again, this time using a different path. The number of clouds increases (up to four) in order to make creating the flight more challenging in each round.
+In this app, the goal is to reach the castle on the lower right side of the screen. The unidragon can be told several vectors in advance to his flight. The button 'Add' was added to the control panel. It will give the vector command to the dragon, but the flight will not be started, yet. The user can add several commands to the unidragon's memory (displayed in the upper left) before pressing the 'Go' button. After a flight, the user can add more vector commands and continue the flight. When the castle is reached, the unidragon will return to his starting position, the clouds are rearranged and the user can fly to the castle again, this time using a different path. The number of clouds increases (up to four) in order to make creating the flight more challenging in each round.
 
 ## App 3 - Fly to the Castle in one Go
 

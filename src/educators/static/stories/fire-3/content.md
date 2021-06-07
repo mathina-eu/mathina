@@ -1,16 +1,16 @@
 # Mathematical concepts
-Functions are transformations that take an input number x and give out an output value y=f(x). We can make a graph of the function, by plotting the points (x, f(x)) in cartesian coordinates, yielding a curve in the plane. Some important examples of such curves are straight lines (first degree), parabolas (second degree) or polynomial curves.
+Functions are transformations that take an input number `@x@` and give out an output value `@y=f(x)@`. We can make a graph of the function, by plotting the points `@(x, f(x))@` in cartesian coordinates, yielding a curve in the plane. Some important examples of such curves are polynomial curves, which include straight lines (first degree) and parabolas (second degree).
 
-Those polynomials can be defined by their coefficients. An interesting technique is to find the (only) polynomial of degree n that passes through (n+1) selected points. This is called the Lagrange polynomial interpolation, and it is an algebraic manipulation exercise.
+Those polynomials can be defined by their coefficients. An interesting quest is to find the (only) polynomial of degree n that passes through (n+1) selected points. One of the methods to find the requested polynomial is called the Lagrange polynomial interpolation, and it is an algebraic manipulation exercise.
 
-The polynomial curves can also be traced with their speed vector. This vector is calculated from the derivative of the function that defines the curve. The derivative of a function describes the rate of change of the function, and thus, whether the function is increasing or decreasing when advancing in the variable.
+The polynomial curves can also be traced with their velocity vector. This vector is calculated from the derivative of the function that defines the curve. The derivative of a function describes the rate of change of the function, and thus, whether the function is increasing or decreasing when advancing in the variable.
 
-If we prescribe the derivative of the function (indicating the moments when the function should increase or decrease and how much), and we fix the value of the function at one starting point, we can reconstruct the original function.
+If we prescribe the derivative of the function (indicating the moments when the function should increase or decrease and how much), and we fix the value of the function at one starting point (for example the origin), we can reconstruct the original function.
 
 
 
 # Didactical remarks
-Children at this age are able to use symbolic expressions (functions and equations). This story exploits that to describe curves, and get exposed to the ideas of growth rate and derivative. App 3 can be especially recommended to introduce the derivative for the first time, providing an intuitive understanding of the matter. Stories and apps are more open-ended, giving more options to explore.
+Students at this age are able to use symbolic expressions (functions and equations). This story exploits that to describe curves, and get exposed to the ideas of growth rate and derivative. App 3 can be especially recommended to introduce the derivative for the first time, providing an intuitive understanding of the matter. However, we also recommend to use the story and its apps with older pupils who are already familiar with derivatives, to consolidate the acquired knowledge (especially App 4). Stories and apps are more open-ended, giving more options to explore.
 
 # About the Apps
 
@@ -56,7 +56,7 @@ The phoenix may fly outside the screen, but will always arrive at the right side
 ![App4](/stories/fire-3/img/_align-center_/4_3.png)
 
 Hints:
-* You may also move the very first white dot, which is originally positioned at the origin.
+* You may also move the very first white dot, which is initially positioned at the origin.
 * If you want the flight path to have a maximum or minimum where a fireball is reached, put a white dot to the x-axis.
 * If a fireball is positioned at the x-axis, the area between the purple curve and the x-axis above and below the axis must be equal (from the origin to the fireball). 
 * If the areas above and below the x-axis are very different, the phonenix will end up far away from the x-axis.

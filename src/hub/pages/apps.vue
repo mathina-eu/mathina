@@ -25,7 +25,7 @@
             light
             color="grey lighten-5"
           >
-            <v-toolbar-title>{{ game.toolbarText || game.text }}</v-toolbar-title>
+            <v-toolbar-title>{{ game.listTitle || game.toolbarText || game.text }}</v-toolbar-title>
             <v-spacer />
             <v-toolbar-items>
               <v-btn
@@ -106,7 +106,7 @@ export default {
           name: this.$t(`story.titles.${story.id}`),
           children: story.apps.map((app, index) => ({
             id: app.url,
-            name: app.text,
+            name: app.listTitle || app.toolbarText || app.text,
           })),
         });
       }
