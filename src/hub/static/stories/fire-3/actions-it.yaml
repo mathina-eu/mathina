@@ -484,6 +484,7 @@ actions:
 
       - char: leo
         text: Ma lei può volare, giusto?
+        mood: thinking
 
       - char: flamma
         text: Sì, ma come le diresti a quale altitudine deve volare?
