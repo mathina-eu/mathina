@@ -90,4 +90,4 @@ sw.*
 *.swp
 
 # Auto generated acitons files
-src/hub/static/apps-list
+src/hub/static/apps-list/*.json
