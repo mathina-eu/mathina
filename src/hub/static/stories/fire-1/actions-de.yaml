@@ -598,9 +598,9 @@ actions:
 
 #Game 1.3
   - type: game
-    text: "Fliege so dicht wie möglich entlang der Lininen am Himmel."
+    text: "Fliege so dicht wie möglich entlang der Kurven am Himmel."
     url: /apps/imaginary/app_1/1_3/index.html?lang=de
-    toolbarText: "Einhorndrachen-Flugschule: Fliege entlang der Linien!"
+    toolbarText: "Einhorndrachen-Flugschule: Fliege entlang der Kurven!"
     cta: "Einhorndrachen-Flugschule!"
 
   - type: sceneText
@@ -636,7 +636,7 @@ actions:
         exposition: Fragte Leo, der natürlich auch mit zum Festival wollte.
         mood: happy
       - text: Also, so ein Einhorndrache ist ein treuer Begleiter, er muss Euch natürlich erst akzeptieren.
-          Es ist ein große Verantwortung.
+          Es ist eine große Verantwortung.
           Wenn Ihr bei den Wettkämpfen auf dem Festival gut abschneidet,
           ja, dann könntet Ihr tatsächlich einen eigenen Einhorndrachen bekommen und ihn trainieren.
         #Well, a unidragon is a big pet to have, it is a great

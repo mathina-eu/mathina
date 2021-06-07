@@ -427,7 +427,7 @@ actions:
         mood: talking
 
       - text: Lasst uns mit etwas Einfachem anfangen. Wir sagen ihm, er
-          soll geradeaus kurz über dem Boden fliegen, wagerecht in einer geraden Linie.
+          soll geradeaus kurz über dem Boden fliegen, waagerecht in einer geraden Linie.
         #Let us start with something easy. Let us tell him to fly just
         #over the land, horizontally in a straight line.
         char: flamma
