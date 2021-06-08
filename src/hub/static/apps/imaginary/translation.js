@@ -24,11 +24,11 @@ translation = {
       "wrongChoice": "Oh no! Doveva essere questa.",
     },
     "pt": {
-      "Btn_Back": "Back!",
-      "Btn_Go": "Go!",
-      "Btn_Add": "Add!",
-      "Btn_Delete": "Delete!",
-      "flamma": ["Well done!", "", "Good!", "", "", "Great!", "", "", "Wow!", "", "", "Super!", "", "", "Amazing!", ""],
-      "wrongChoice": "Oh no! It would have been this one.",
+      "Btn_Back": "Voltar!",
+      "Btn_Go": "Vai!",
+      "Btn_Add": "Adicionar!",
+      "Btn_Delete": "Apagar!",
+      "flamma": ["Muito bem!", "", "Bem!", "", "", "Ótimo!", "", "", "Uau!", "", "", "Espetacular!", "", "", "Fantástico!", ""],
+      "wrongChoice": "Oh não! Devia ser este.",
     }
 };
