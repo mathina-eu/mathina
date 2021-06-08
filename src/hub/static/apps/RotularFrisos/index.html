@@ -8,9 +8,9 @@
 
 <body>
     <div class="wideBox">
-      <h1 id="titulo">Coloca os rótulos nos sacos</h1>
+      <h1 id="titulo"></h1>
     </div>
-    <div class="line"></div>
+    <!--div class="line"></div-->
     <div style="position: relative;">
         <!--img src="../atractor-apps-all/imgs/labirinto1.png" id="lab1"-->
         <canvas id="sacosFrisos" width=800 height="500" style="position: absolute; z-index: 0"></canvas>
@@ -488,7 +488,7 @@
         //console.log(lang);
         if(lang=="en"){
             //console.log(lang);
-            document.getElementById('titulo').textContent="Put the labels on the bags";
+            //document.getElementById('titulo').textContent="Put the labels on the bags";
             document.getElementById('sucessText').textContent="Congratulations!";
             document.getElementById('errorText').textContent="You have not yet placed all labels correctly.";
             document.getElementById('errorText2').textContent="Try again...";
@@ -500,7 +500,7 @@
             simsLabels.push("Rotations");
             simsLabels.push("Glide reflections");
         }else if(lang=="it"){
-            document.getElementById('titulo').textContent="Assegna le etichette ai sacchetti";
+            //document.getElementById('titulo').textContent="Assegna le etichette ai sacchetti";
             document.getElementById('sucessText').textContent="Congratulazioni!";
             document.getElementById('errorText').textContent="Non hai abbinato correttamente tutte e le etichette.";
             document.getElementById('errorText2').textContent="Ritenta!";
@@ -512,7 +512,7 @@
             simsLabels.push("rotazione");
             simsLabels.push("glissoriflessione");
         }else if(lang=="de"){
-            document.getElementById('titulo').textContent="Bring die Etiketten an den Taschen an";
+            //document.getElementById('titulo').textContent="Bring die Etiketten an den Taschen an";
             document.getElementById('sucessText').textContent="Gratulation!";
             document.getElementById('errorText').textContent="Du hast noch nicht alle Etiketten richtig angebracht";
             document.getElementById('errorText2').textContent="Versuch's noch mal!";
@@ -524,7 +524,7 @@
             simsLabels.push("Rotationssymmetrie");
             simsLabels.push("Gleitspiegelung");
         }else{
-            document.getElementById('titulo').textContent="Coloca os rótulos nos sacos";
+            //document.getElementById('titulo').textContent="Coloca os rótulos nos sacos";
             document.getElementById('sucessText').textContent="Parabéns!";
             document.getElementById('errorText').textContent="Ainda não colocaste todos os rótulos de forma correta.";
             document.getElementById('errorText2').textContent="Tenta outra vez...";
