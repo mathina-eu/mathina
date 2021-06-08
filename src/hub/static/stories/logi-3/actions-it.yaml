@@ -12,11 +12,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Tutte le strade portano nomi di famosi matematici provenienti da tutto il mondo.
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 13%; top: 55%; right: 87%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 12%; top: 54%; right: 36%;"
@@ -25,10 +27,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina e Leo stavano camminando per le strade della Città della Logica. Mathina teneva la sua matita a portata di mano e Leo indossava il suo berretto verde.
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 45%; right: 83%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
@@ -36,11 +40,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Percorsero via Hilbert verso l'angolo con via Péter quando...
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
@@ -77,11 +83,13 @@ actions:
         char: mathina
         mood: surprised
   - type: image
+    noOverflow: true
     src: policeman-nr2.png
     id: policeman2
     style: "width: 18%; top: 27%; right: 24%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
@@ -92,10 +100,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Il poliziotto portava un notevole assortimento di vecchi strumenti, tra cui un travestimento, un voltmetro a tubo e una livella. Questi, oltre a dare l'impressione di pesare parecchio, erano anche ingombranti e continuavano a scivolare dalle spalle dell'uomo.
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 75%; right: 55%;"
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
@@ -163,10 +173,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Ma il ladro improvvisamente svoltò a sinistra in via Gödel.
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 77%; right: 58%;"
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
@@ -372,16 +384,19 @@ actions:
         char: Mathina
         mood: talking
   - type: image
+    noOverflow: true
     src: sugarcube1.png
     id: sugar1
     style: "width: 8%; top: 14%; right: 90%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube2.png
     id: sugar2
     style: "width: 8%; top: 4%; right: 89%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube3.png
     id: sugar3
     style: "width: 9.5%; top: 9%; right: 82%;"
@@ -516,18 +531,22 @@ actions:
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 40%; right: 77%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 35%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 37%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 42%; right: 74%;"
@@ -535,11 +554,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina, Leo e i due poliziotti stavano per finire i loro caffè e le loro torte, quando improvvisamente ...
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 19%; right: 75%;"
