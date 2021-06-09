@@ -69,21 +69,25 @@ export default [
     slug: 'mathina-wins-a-lot-of-new-toys',
     id: 'symm-1',
     ageMeta: AGE_GROUPS['0'],
+	fullWidth: true,
   },
   {
     slug: 'mathina-the-rossete-game',
     id: 'symm-2',
     ageMeta: AGE_GROUPS['1'],
+	fullWidth: true,
   },
   {
     slug: 'stamping-friezes',
     id: 'symm-3',
     ageMeta: AGE_GROUPS['2'],
+	fullWidth: true,
   },
   {
     slug: 'the-polyhedron-carousel',
     id: 'symm-4',
     ageMeta: AGE_GROUPS['3'],
+    fullWidth: true,
   },
   {
     slug: 'demo-story-url-path',
