@@ -2,7 +2,7 @@
 
 Die Geschichte **Wo ist mein Gold?** basiert auf der Teilbarkeitsregel für 9. Wenn die Schülerinnen und Schüler sich langsam vorarbeiten, bemerken sie vielleicht, dass nach der ersten Subtraktion die Anzahl der Goldmedaillen durch 9 geteilt werden kann.
 
-Mathe wird immer dann spannend, wenn wir auf eine ungewöhnliche Fragestellung stoßen. Eine Lösung zu finden, erfordert Abenteuerlust, viel Zeit und oft mehrere Versuche, gefolgt von Enttäuschungen. Es ist aber ein Glücksgefühl, wenn man es schafft, die Antwort herauszufinden. Durch das Knobeln lernt man, logisch zu denken, was ein Leben lang nützlich ist.
+Mathe wird immer dann spannend, wenn wir auf eine ungewöhnliche Fragestellung stoßen. Eine Lösung zu finden, erfordert Abenteuerlust, viel Zeit und oft mehrere Versuche, eventuell gefolgt von Enttäuschungen. Es ist aber ein Glücksgefühl, wenn man es schafft, die Antwort herauszufinden. Durch das Knobeln lernt man, logisch zu denken, was ein Leben lang nützlich ist und Freude bereiten kann.
 
 In der theoretischen Literatur wird ein Problem im Allgemeinen als ein erreichbares Ziel definiert, zu dem ein unbekannter Weg hinführt. Das Lösen des Problems bedeutet, diesen unbekannten Weg zu finden. Das alltägliche Leben wirft weniger klar definierte Probleme auf, vielleicht sogar solche, bei denen das erreichbare Ziel nicht einmal klar ist. In praktischen Situationen sind die Bedingungen oft nicht genau genug definiert, wir müssen uns vielleicht auf Zufall oder Vorwissen verlassen, um das Problem zu lösen.
 
@@ -27,7 +27,7 @@ Denken ist ein komplexer Prozess, bei dem verschiedene kognitive Fähigkeiten un
 In dieser Geschichte spielen die folgenden grundlegenden mathematischen Konzepte eine wichtige Rolle:
 
 + Addieren: Kombinieren, Zusammenfügen von zwei oder mehr Mengen.
-+ Addend: Eine beliebige Zahl, die zu etwas hinzugefügt wird. 
++ Summand: Eine beliebige Zahl, die zu etwas hinzugefügt wird. 
 + Arithmetische Folge: Eine solche Folge, die eine konstante Differenz zwischen den Termen hat.
 + Eingabe: Ein Wert der unabhängigen Variablen. 
 + Numerische (quantitative) Daten: Numerische/quantitative Daten sind Zahlen im Kontext. 
@@ -39,23 +39,23 @@ In dieser Geschichte spielen die folgenden grundlegenden mathematischen Konzepte
 + Term: Ein mathematischer Ausdruck, der einen trennbaren Teil einer Gleichung, einer Reihe oder eines anderen Ausdrucks bilden kann.
 
 # Didaktische Hinweise
-Es ist wichtig, dass die Lehrkräfte oder die Eltern, die das Kind begleiten, eine unterstützende Rolle einnehmen. Zu dieser Rolle gehört es, Probleme und Fragen zu stellen, zum Nachdenken anzuregen, Strategien zu besprechen, Ideen auszutauschen und gemeinsam an Lösungen zu arbeiten.
+Es ist wichtig, dass die Lehrkräfte oder die Eltern, die das Kind begleiten, eine unterstützende Rolle einnehmen. Zu dieser Rolle gehört es, Fragen zu stellen, zum Nachdenken anzuregen, Strategien zu besprechen, Ideen auszutauschen und gemeinsam an Lösungen zu arbeiten.
 
 Das Lesen und Spielen von **Wo ist mein Gold?** erfordert keine zusätzlichen Materialien oder Vorkenntnisse. 
-Die Herangehensweise an Mathematik unterscheidet sich jedoch von dem, was üblicherweise im formalen Unterricht verwendet wird. Hier treffen die Schülerinnen und Schüler auf:
+Die Herangehensweise an Mathematik unterscheidet sich jedoch von der formalen Lehrmethode wird. Hier treffen die Schülerinnen und Schüler auf:
 + Storytelling,
 + Eine attraktive und interaktive Visualisierung,
 + Spiele und Herausforderungen in Apps.
 
 ## Vorschläge für zusätzliche Übungen ##
-Ein Spiel für Zwei: Denken Sie an eine vierstellige Zahl, berechnen Sie die Summe ihrer Ziffern und subtrahieren Sie diese von der Zahl, an die Sie denken. Löschen Sie die erste Ziffer der erhaltenen Zahl und nennen Sie die verbleibende Zahl Ihrem Mitspieler. Ich werde Ihnen sagen, welche Ziffer Sie gelöscht haben.
+Ein Spiel für Zwei: Denken Sie an eine vierstellige Zahl, subtrahieren Sie die Quersumme von der ursprünglichen Zahl. Streichen Sie die erste Ziffer der erhaltenen Zahl und nennen Sie die verbleibende Zahl Ihrem Mitspieler. Ich werde Ihnen sagen, welche Ziffer Sie gestrichen haben.
 
 
 Wie kann ich das wissen?
 
-Ein Beispiel. Nehmen wir an, die Zahl sei 5271. Die Summe der Ziffern ist x.
-Die Differenz ist y. Wenn die erste Ziffer gelöscht wird, bleibt 256 übrig.
-Eine Person sieht die Zahl 256 und ist in der Lage, die gelöschte Ziffer, 5, zu erkennen. Wie?
+Ein Beispiel. Nehmen wir an, die Zahl sei 5271. Die Quersumme ist x.
+Die Differenz ist y. Wenn die erste Ziffer gestrichen wird, bleibt 256 übrig.
+Eine Person sieht die Zahl 256 und ist in der Lage, die gestrichene Ziffer, 5, zu erraten. Wie das geht?
 Viel Spaß beim Brainstorming und Nachdenken!
 
 # Über die App #
@@ -65,15 +65,15 @@ Die App wurde in JavaScript programmiert und ist sowohl für PCs als auch für T
 
 ## Anleitung zur App ##
 
-Geschichte ["Wo ist mein Gold?"]($HUB_URL/story/my-gold-please/)
+Geschichte ["Wo ist mein Gold?"]($HUB_URL/de/story/my-gold-please/)
 
-[Zur App]($HUB_URL/story/my-gold-please/?actionLink=firstGame)
+[Zur App]($HUB_URL/de/story/my-gold-please/?actionLink=firstGame)
 
-Erstellen Sie eine Tabelle, indem Sie eine Anfangszahl eingeben und dann auf "Übernehmen" und "Tabelle generieren" klicken. Die erste Person erhält so viele Goldmedaillen, die der Summe der Ziffern der Gesamtzahl der Goldmedaillen des Teams entsprechen. Wenn das Team z. B. 721 Goldmedaillen gewonnen hat, dann erhält das erste Teammitglied 7 + 2 + 1, also 10 Goldmedaillen. Es verbleiben 721 minus 10, also 711 Goldmedaillen. Der nächste bekommt die Summe der Ziffern des auf diese Weise übrig gebliebenen Goldes. Füllen Sie die Tabelle aus. Dasselbe Spiel kommt im Verlauf der Geschichte fünfmal vor.
+Erstellen Sie eine Tabelle, indem Sie eine Anfangszahl eingeben und dann auf "Übernehmen" und "Tabelle generieren" klicken. Die erste Person erhält so viele Goldmedaillen, die Quersumme der Gesamtzahl der Goldmedaillen des Teams. Wenn das Team z. B. 721 Goldmedaillen gewonnen hat, dann erhält das erste Teammitglied 7 + 2 + 1, also 10 Goldmedaillen. Es verbleiben 721 minus 10, also 711 Goldmedaillen. Die nächste Person bekommt die Quersumme des auf diese Weise übrig gebliebenen Goldes. Füllen Sie die Tabelle aus. Dasselbe Spiel kommt im Verlauf der Geschichte fünfmal vor.
 
 @[youtube](https://youtu.be/A1vXg_DSolc)
 
-[Script (PDF)](/stories/logi-4/transcripts/Script4.pdf)
+[Script (PDF, englisch)](/stories/logi-4/transcripts/Script4.pdf)
 
 
 
