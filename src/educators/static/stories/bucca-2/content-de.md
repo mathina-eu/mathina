@@ -12,7 +12,7 @@ Die Art und Weise, wie die Buchstaben bei einer Substitutions-Verschlüsselung e
 | M | B | U | U | C | D | B |
 
 
-In ihrer ursprünglichen Form ist die Caesar-Verschlüsselung ein sehr einfache Substitutions-Verschlüsselung. Der Schlüssel besteht darin, jedem Buchstaben den dritten Buchstaben nach ihm im Alphabet zuzuordnen. Der Buchstabe "A" wird mit dem Buchstaben "D" assoziiert, "B" mit "E" und so weiter. Dies kann verallgemeinert werden, indem man statt der 3 wie im Original eine andere Zahl verwendet wird. Um den Schlüssel zu kennen, müssen wir nur die Anzahl der "Sprünge" kennen, die wir machen müssen. Wenn wir den Buchstaben suchen, den wir dem Buchstaben "Z" zuordnen, müssen wir wieder zum Anfang des Alphabets. Zum Beispiel ist der Buchstabe "Z" bei der Standard-Caesar-Verschlüsselung mit dem Buchstaben "C" verknüpft.
+In ihrer ursprünglichen Form ist die Caesar-Verschlüsselung eine sehr einfache Substitutions-Verschlüsselung. Der Schlüssel besteht darin, jedem Buchstaben den dritten Buchstaben nach ihm im Alphabet zuzuordnen. Der Buchstabe "A" wird mit dem Buchstaben "D" assoziiert, "B" mit "E" und so weiter. Dies kann verallgemeinert werden, indem man statt der 3 wie im Original eine andere Zahl verwendet. Um den Schlüssel zu kennen, müssen wir nur die Anzahl der "Sprünge" kennen, die wir machen müssen. Wenn wir den Buchstaben suchen, den wir dem Buchstaben "Z" zuordnen, müssen wir wieder zum Anfang des Alphabets. Zum Beispiel ist der Buchstabe "Z" bei der Standard-Caesar-Verschlüsselung mit dem Buchstaben "C" verknüpft.
 
 ![The original Caesar circle](/stories/bucca-2/img/_align-center_/caesarkey.png =620x295)
 
@@ -26,7 +26,7 @@ Oft spricht man in der Literatur auch dann von der Caesar-Verschlüsselung, wenn
  
 ![The Caesar jewel used in the story](/stories/bucca-2/img/_align-center_/caesarjewel.png =300x300)
 
-In den beiden interaktiven Apps der Geschichte werden die Spielenden jeweils in den Verschlüsselungsprozess, [mit Kenntnis des Schlüssels]($HUB_URL/story/the-talking-parrot/?actionLink=app1) und den Entschlüsselungsprozess [ohne Kenntnis des Schlüssels]($HUB_URL/story/the-talking-parrot/?actionLink=app2) einbezogen.
+In den beiden interaktiven Apps der Geschichte werden die Spielenden jeweils in den Verschlüsselungsprozess, [mit Kenntnis des Schlüssels]($HUB_URL/de/story/the-talking-parrot/?actionLink=app1) und den Entschlüsselungsprozess [ohne Kenntnis des Schlüssels]($HUB_URL/de/story/the-talking-parrot/?actionLink=app2) einbezogen.
 
 # Didaktische Hinweise
 
@@ -53,21 +53,21 @@ Alle Apps wurden in JavaScript programmiert und sind sowohl für PCs als auch f�
 
 &nbsp;
 
-## [App 1 - Der Anhänger I]($HUB_URL/story/mathina-and-the-talking-parrot/?actionLink=app1)
+## [App 1 - Der Anhänger I]($HUB_URL/de/story/mathina-and-the-talking-parrot/?actionLink=app1)
 
-In der ersten App ist der Schlüssel zur Methode derjenige, den der Papagei John verwendet, nämlich der Sprung von einem Buchstaben. In dieser App muss der Spielende versuchen, einige Wörter mit der Caesar-Verschlüsselung mit einem Sprung richtig zu verschlüsseln.
+In der ersten App ist der Schlüssel zur Methode derjenige, den der Papagei John verwendet, nämlich der Sprung von einem Buchstaben. In dieser App muss man versuchen, einige Wörter mit der Caesar-Verschlüsselung mit einem Sprung richtig zu verschlüsseln.
 
 @[youtube](rL_8zo54uOY?_align-center_)
-[Script](/stories/symm-1/transcripts/Script2.pdf)
+[Script (PDF, engisch)](/stories/symm-1/transcripts/Script2.pdf)
 
 &nbsp;
 
-## [App 2 - Der Anhänger II]($HUB_URL/story/mathina-and-the-talking-parrot/?actionLink=app2)
+## [App 2 - Der Anhänger II]($HUB_URL/de/story/mathina-and-the-talking-parrot/?actionLink=app2)
 
-In der zweiten App muss die Spielerin oder der Spieler versuchen, eine Nachricht zu entschlüsseln. Es ist lediglich bekannt, dass der chiffrierte Text mit einer Caesar-Verschlüsselung versehen wurde. In der App gibt es eine Version des Anhängers der Geschichte, mit der es möglich ist, die beiden Kreise mit den Alphabeten zu drehen. Mit dieser Bewegung hat lässt sich der Schlüssel ändern.
+In der zweiten App muss die Spielerin oder der Spieler versuchen, eine Nachricht zu entschlüsseln. Es ist lediglich bekannt, dass der chiffrierte Text mit einer Caesar-Verschlüsselung versehen wurde. In der App gibt es eine Version des Anhängers der Geschichte, mit der es möglich ist, die beiden Kreise mit den Alphabeten zu drehen. Mit dieser Bewegung lässt sich der Schlüssel ändern.
 
 @[youtube](djsCaPaiRlc?_align-center_)
-[Script](/stories/symm-1/transcripts/Script2.pdf)
+[Script (PDF, engisch)](/stories/symm-1/transcripts/Script2.pdf)
 
 &nbsp;
 
