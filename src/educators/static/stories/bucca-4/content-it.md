@@ -27,7 +27,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 &nbsp;
 
-## [App 1 - Chiavi e messaggi I]($HUB_URL/story/the-man-in-the-middle/?actionLink=app1)
+## [App 1 - Scambio di chiavi I]($HUB_URL/story/the-man-in-the-middle/?actionLink=app1)
 
 Nella prima esperienza, il lettore ripercorre i passaggi che, dopo la spiegazione di Angela, Mathina e Leo devono effettuare per ricavare il segreto condiviso. Inizialmente scelgono un numero primo p e poi un numero casuale scelto tra 2 e p-2, poi, attraverso una versione semplificata dell'algoritmo giungono separatamente alla conoscenza di un numero condiviso, ricavato a partire dalle informazioni pubblicamente scambiate.
 
@@ -36,7 +36,7 @@ Nella prima esperienza, il lettore ripercorre i passaggi che, dopo la spiegazion
 
 &nbsp;
 
-## [App 2 - Chiavi e messaggi II]($HUB_URL/story/the-man-in-the-middle/?actionLink=app2)
+## [App 2 - Scambio di chiavi II]($HUB_URL/story/the-man-in-the-middle/?actionLink=app2)
 
 La seconda app, evoluzione della prima, propone un utilizzo pratico del metodo di scambio delle chiavi. Il lettore in questo caso svolge il ruolo di Leo, che riceve il primo messaggio da Mathina e lo decifra utilizzando il segreto condiviso generato nella prima app. Questa app viene utilizzata due volte all'interno della storia, in corrispondenza dei messaggi ricevuti da Leo da parte di Mathina.
 
@@ -45,7 +45,7 @@ La seconda app, evoluzione della prima, propone un utilizzo pratico del metodo d
 
 &nbsp;
 
-## [App 3 - Chiavi e messaggi III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
+## [App 3 - Scambio di chiavi III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
 
 Nella terza ed ultima esperienza, nel ruolo di Leo, il lettore deve cercare di violare il sistema crittografico, cercando di ricavare il segreto condiviso a partire dalla conoscenza della porzione di chiave in possesso di uno degli utenti. La app è utilizzata per evidenziare la differenza di difficoltà computazionale tra le operazioni da svolgere per ricavare il segreto condiviso e quelle invece necessarie per tentare di violare il sistema.
 
@@ -54,7 +54,7 @@ Nella terza ed ultima esperienza, nel ruolo di Leo, il lettore deve cercare di v
 
 &nbsp;
 
-## [App 4 - Chiavi e messaggi IV]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
+## [App 4 - Rubando la chiave]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
 
 La quarta app ripropone l'esperienza della seconda, con un nuovo messaggio; il lettore nuovamente ricopre il ruolo di Leo, che riceve un nuovo messaggio da Mathina e nuovamente genera il messaggio in chiaro a partire da quello ricevuto. 
 
