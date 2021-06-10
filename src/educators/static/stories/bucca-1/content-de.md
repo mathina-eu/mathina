@@ -8,7 +8,7 @@ In dieser Geschichte wird eine einfache kryptografische Methode vorgestellt, die
 ![Pentagon](/stories/bucca-1/img/pentagon.png =250x150)
 ![Viereck](/stories/bucca-1/img/square.png =250x150)
 
-Die Methode zum Verschlüsseln der Nachricht besteht darin, weitere falsche Nachrichten zu schreiben, die der echten Nachricht, die man verstecken möchte, ähnlich sind, und auf jede Nachricht ein anderes Bild zu malen. An diesem Punkt können alle Nachrichten, die sich in ihrer Gesamtheit widersprechen, so platziert werden, dass jeder sie lesen kann. Nur wer den Schlüssel hat ("es hat fünf Seiten"), wird beim Anblick des aufgemalten Fünfecks sofort verstehen, was die richtige Botschaft ist. In den drei interaktiven Apps kennen die Spielenden den Schlüssel und sind bei den ersten beiden interaktiven Erlebnissen in den Kodierungsprozess eingebunden: [(erste App)]($HUB_URL/story/the-secret-messages/?actionLink=app1) und [(zweite App)]($HUB_URL/story/the-secret-messages/?actionLink=app2). In der dritten App geht es schließlich um den Dekodierungsprozess der Nachricht: [dritte App]($HUB_URL/story/the-secret-messages/?actionLink=app3).
+Die Methode zum Verschlüsseln der Nachricht besteht darin, weitere falsche Nachrichten zu schreiben, die der echten Nachricht, die man verstecken möchte, ähnlich sind, und auf jede Nachricht ein anderes Bild zu malen. An diesem Punkt können alle Nachrichten, die sich in ihrer Gesamtheit widersprechen, so platziert werden, dass jeder sie lesen kann. Nur wer den Schlüssel hat ("es hat fünf Seiten"), wird beim Anblick des aufgemalten Fünfecks sofort verstehen, was die richtige Botschaft ist. In den drei interaktiven Apps kennen die Spielenden den Schlüssel und sind bei den ersten beiden interaktiven Erlebnissen in den Kodierungsprozess eingebunden: [(erste App)]($HUB_URL/de/story/the-secret-messages/?actionLink=app1) und [(zweite App)]($HUB_URL/de/story/the-secret-messages/?actionLink=app2). In der dritten App geht es schließlich um den Dekodierungsprozess der Nachricht: [dritte App]($HUB_URL/de/story/the-secret-messages/?actionLink=app3).
 
 
 # Didaktische Hinweise
@@ -27,30 +27,30 @@ Alle Apps wurden in JavaScript programmiert und sind sowohl für PCs als auch f�
 
 &nbsp;
 
-## [App 1 - Schlüssel und Nachrichten I]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app1)
+## [App 1 - Schlüssel und Nachrichten I]($HUB_URL/de/story/mathina-and-the-secret-messages/?actionLink=app1)
 
-In der ersten App lautet der Schlüssel "er hat fünf Seiten" und die zu vermittelnde Botschaft lautet "Schau auf den dritten Baum, nördlich von den Brunnen". Die Spielenden müssen die zu übermittelnde Nachricht und die Figur, die durch den Schlüssel beschrieben wird (ein Fünfeck), in die Mitte des Bildschirms ziehen. In dieser App sind die verfügbaren Bilder abstrakte Figuren.
+In der ersten App lautet der Schlüssel "es hat fünf Seiten", und die zu vermittelnde Botschaft lautet "Schau auf den dritten Baum, nördlich von den Brunnen". Die Spielenden müssen die zu übermittelnde Nachricht und die Figur, die durch den Schlüssel beschrieben wird (ein Fünfeck), in die Mitte des Bildschirms ziehen. In dieser App sind die verfügbaren Bilder abstrakte Figuren.
 
 @[youtube](v5bwEKkhqc0?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
-## [App 2 - Schlüssel und Nachrichten II]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app2)
+## [App 2 - Schlüssel und Nachrichten II]($HUB_URL/de/story/mathina-and-the-secret-messages/?actionLink=app2)
 
 Was die Kodierung der Nachricht betrifft, hat die zweite App  die gleiche Ausgangssituation wie die erste. Nun ist der Schlüssel allerdings ein anderer ("der Himmel ist voll davon"). Außerdem gibt es, anders als bei der ersten App, mehr Bilder als Nachrichten und es gibt zwei mögliche Bilder, die die Anforderungen erfüllen: eine Abbildung mit Sternen und eine mit einer Wolke. Die Spielenden müssen eines dieser beiden Bilder mit der richtigen Nachricht assoziieren und die falschen Nachrichten mit anderen Bildern als diesen beiden kombinieren.
 
 @[youtube](Kh3v55aMQfk?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
-## [App 3 - Schlüssel und Nachrichten III]($HUB_URL/story/mathina-and-the-secret-messages/?actionLink=app3)
+## [App 3 - Schlüssel und Nachrichten III]($HUB_URL/de/story/mathina-and-the-secret-messages/?actionLink=app3)
 
 In der dritten und letzten App sind die Spielenden in den Prozess der Entschlüsselung der Nachricht involviert: Sie kennen den Schlüssel ("der Himmel ist voll davon") und müssen die geheime Nachricht unter den vorgeschlagenen auswählen.
 
 @[youtube](p2ehDaFkRFk?_align-center_)
-[Script](/stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
