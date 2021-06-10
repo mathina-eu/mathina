@@ -1,17 +1,17 @@
 export default {
   edu: {
-    'mathina-educators-repository': 'Mathina Educator Repository',
+    'mathina-educators-repository': 'Commenti per gli educatori',
   },
   city: {
     'choose-story': 'Scegli una storia!',
   },
   appList: {
     'title': 'Apps',
-    'description': 'Try out some of these apps',
+    'description': 'Utilizza le app che trovi anche nelle storie',
   },
   world: {
     'title': 'Mathina',
-    'help': 'Visita un luogo!',
+    'help': 'Visita un luogo',
     'map': 'Mappa principale',
   },
   cities: {
