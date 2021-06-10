@@ -5,21 +5,25 @@ export default [
     slug: 'the-traffic-light-challenge',
     id: 'logi-1',
     ageMeta: AGE_GROUPS['0'],
+    fullWidth: true,
   },
   {
     slug: 'the-tiled-floor-trap',
     id: 'logi-2',
     ageMeta: AGE_GROUPS['1'],
+	fullWidth: true,
   },
   {
     slug: 'cats-and-dogs',
     id: 'logi-3',
     ageMeta: AGE_GROUPS['2'],
+	fullWidth: true,
   },
   {
     slug: 'my-gold-please',
     id: 'logi-4',
     ageMeta: AGE_GROUPS['3'],
+	fullWidth: true,
   },
   {
     slug: 'mathina-and-the-secret-messages',
@@ -69,25 +73,30 @@ export default [
     slug: 'mathina-wins-a-lot-of-new-toys',
     id: 'symm-1',
     ageMeta: AGE_GROUPS['0'],
+	fullWidth: true,
   },
   {
     slug: 'mathina-the-rossete-game',
     id: 'symm-2',
     ageMeta: AGE_GROUPS['1'],
+	fullWidth: true,
   },
   {
     slug: 'stamping-friezes',
     id: 'symm-3',
     ageMeta: AGE_GROUPS['2'],
+	fullWidth: true,
   },
   {
     slug: 'the-polyhedron-carousel',
     id: 'symm-4',
     ageMeta: AGE_GROUPS['3'],
+	fullWidth: true,
   },
   {
     slug: 'demo-story-url-path',
     id: 'demo-story',
     ageMeta: AGE_GROUPS['1'],
+    hidden: true,
   },
 ];

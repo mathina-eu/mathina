@@ -5,6 +5,10 @@ export default {
   city: {
     'choose-story': 'Escolha a história!',
   },
+  appList: {
+    'title': 'Apps',
+    'description': 'Try out some of these apps',
+  },
   world: {
     'title': 'Mathina',
     'help': 'Visite um território!',

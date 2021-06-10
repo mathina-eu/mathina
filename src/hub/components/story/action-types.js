@@ -240,6 +240,7 @@ export class GameAction extends Action {
     url,
     img,
     toolbarImg,
+    listTitle,
     ...rest
   }) {
     super(rest);
@@ -249,6 +250,7 @@ export class GameAction extends Action {
     this.cta = cta;
     this.url = url;
     this.img = img;
+    this.listTitle = listTitle || '';
     this.toolbarImg = toolbarImg;
   }
 

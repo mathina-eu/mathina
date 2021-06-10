@@ -36,6 +36,10 @@ export default {
     routes: generateRoutes(),
   },
   globalName: 'hub',
+  modules: [
+    ...sharedConfig.modules,
+    'modules/app-list',
+  ],
   build: {
     ...sharedConfig.build,
   }
