@@ -81,6 +81,7 @@ actions:
     id: tecnico
     style: "width: 16%; top: 45%; left: 1%;"         
   - type: game
+    doNotList: true
     tag: tg1
     text: "Observa o filme!"
     cta: "Ver"
@@ -241,6 +242,7 @@ actions:
         char: technician
         exposition: "Desafiou o técnico."
   - type: game
+    listTitle: "Separando poliedros convexos"
     tag: tg26
     text: "Escolhe os poliedros convexos. De cada vez, escolhe os 4 poliedros e clica em"
     toolbarText: "Escolhe os 4 poliedros convexos."
@@ -385,6 +387,7 @@ actions:
       - text: "Um cubo tem 6 faces. Vou cortar 6 quadrados alinhados e depois montar o cubo."
         char: leo
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/6quadrados.html
@@ -410,6 +413,7 @@ actions:
     text: >
       <p>A Mathina construiu então um cubo, usando a planificação do Leo. Ao colar 3 faces num vértice comum, a Mathina usou uma caixa de sapatos (que estava no gabinete) como molde para manter as três faces em boa posição enquanto a cola secava.</p>
   - type: game
+    doNotList: true
     tag: tg4
     text: "Observa o filme!"
     cta: "Ver"
@@ -420,6 +424,7 @@ actions:
   - type: clearImage
     id: plan-cubo-01
   - type: game
+    listTitle: "Escolhendo as planificações do cubo"
     tag: tg27
     text: "Escolhe as planificações do cubo. De cada vez, escolhe as 3 propostas “certas” e clica em"
     toolbarText: "Escolhe as 3 planificações corretas do cubo."
@@ -467,6 +472,7 @@ actions:
     text: >
       <p>Não havendo mais possibilidades com quadrados, a Mathina e o Leo decidiram passar para os triângulos equiláteros. Usando os triângulos equiláteros magnéticos à sua disposição no gabinete, uniram 3 triângulos em torno de um vértice, criando uma espécie de pirâmide triangular aberta. Depois, pegaram num pouco de plasticina, criaram um molde do vértice e tentaram acrescentar outro triângulo a uma das arestas livres usando o molde e, de repente,… fecharam a pirâmide com o novo triângulo! ...</p>
   - type: game
+    doNotList: true
     tag: tg6
     text: "Observa o filme!"
     cta: "Ver"
@@ -495,6 +501,7 @@ actions:
     text: >
       <p>O Leo estava curioso por obter uma planificação do tetraedro. Então, separou alguns dos triângulos do tetraedro pelas arestas, planificando o poliedro.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/poliedros.html?pre=pol2p_169
@@ -511,6 +518,7 @@ actions:
     text: >
       <p>Enquanto o Leo criava uma estrutura composta por 4 triângulos num dos vértices, a Mathina apercebeu-se de que tal estrutura não era rígida. E, para criar um sólido platónico, eles deviam garantir que os ângulos entre as faces contíguas eram todos iguais.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/octaedro_form_1.html      
@@ -528,6 +536,7 @@ actions:
     text: >
       <p>A Mathina colocou então a estrutura sobre uma mesa, com o vértice inicial para cima, e, pressionando-o contra a mesa, apercebeu-se de que a posição final (todos os novos vértices estavam agora no plano da mesa) correspondia exatamente ao que ela queria: agora, os quatro ângulos entre as faces (ângulos diedrais) eram iguais.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/octaedro_form_2.html
@@ -541,6 +550,7 @@ actions:
     text: >
       <p>Como continuar por forma a criar um sólido platónico? Após levantarem a estrutura, uniram dois triângulos a arestas livres e contíguas, por forma a que duas das novas arestas, uma em cada triângulo, ficassem juntas. De seguida, juntaram, sucessivamente e de forma similar, os dois triângulos em falta e verificaram que tinham obtido um novo poliedro que aparentava ser sólido platónico.</p>
   - type: game
+    doNotList: true
     tag: tg7
     text: "Observa o filme!"
     cta: "Ver"
@@ -563,6 +573,7 @@ actions:
     text: >
       <p>Sempre curioso, o Leo abriu o poliedro para obter uma planificação.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
@@ -570,6 +581,7 @@ actions:
     text: >
       <p>O Leo decidiu então proceder como anteriormente (para o cubo), criando exemplos alternativos de planificações do poliedro.</p>
   - type: game
+    listTitle: "Escolhendo as planificações do octaedro"
     tag: tg28
     text: "Escolhe as planificações do octaedro. De cada vez, escolhe as 3 propostas “certas” e clica em"
     toolbarText: "Escolhe as 3 planificações corretas do octaedro."
@@ -597,6 +609,7 @@ actions:
     text: >
       <p>Depois de terem encontrado este novo sólido platónico com 4 triângulos em cada vértice, a Mathina e o Leo passaram para 5 triângulos, criando assim uma "pirâmide" reta aberta. Decidiram proceder como anteriormente: colocaram os novos vértices sobre uma mesa para obter ângulos diedrais idênticos. De seguida, acrescentaram, a um dos vértices livres, 3 triângulos, por forma a que o novo ângulo sólido fosse igual ao da pirâmide inicial “aberta”. Depois, juntaram, sucessivamente, 2 triângulos em cada vértice livre da pirâmide “aberta”, até obterem uma faixa de 10 triângulos. A Mathina e o Leo notaram então que as arestas livres da faixa formavam um pentágono num plano paralelo ao anterior, mas rodado de um décimo de volta. De seguida, continuaram o processo anterior: primeiro acrescentaram 2 triângulos e depois, sucessivamente, um triângulo (unido ao anterior). E o seu esforço compensou: obtiveram um novo poliedro que aparentava ser um sólido platónico!</p>
   - type: game
+    doNotList: true
     tag: tg8
     text: "Observa o filme!"
     cta: "Ver"
@@ -621,6 +634,7 @@ actions:
     text: >
       <p>Tal como antes, o Leo abriu o poliedro, tentando perceber como poderia ser uma sua planificação.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/poliedros.html?pre=pol2p_98
@@ -668,6 +682,7 @@ actions:
     text: >
       <p>O Leo descobriu que um novo pentágono se encaixava com segurança em arestas contíguas de pentágonos diferentes. Então, acrescentou três pentágonos dessa forma, o que levou à criação de três novas e grandes aberturas. A Mathina tentou preenchê-las com três novos pentágonos, que se encaixaram perfeitamente. No final, a Mathina e o Leo encontraram novamente três grandes aberturas, mais uma vez com o mesmo formato. Eles tentaram proceder da mesma forma, colocando três novos pentágonos: e esses pentágonos não só se encaixaram muito bem como até se uniram, criando um novo vértice. Por precaução, os dois testaram o poliedro com um molde de plasticina: o molde encaixava-se perfeitamente em todos os vértices - tinham, pois, acabado de descobrir um novo poliedro regular!</p>
   - type: game
+    doNotList: true
     tag: tg10
     text: "Observa o filme!"
     cta: "Ver"
@@ -690,6 +705,7 @@ actions:
     text: >
       <p>No final e, como havia sucedido com os poliedro anteriores, o Leo abriu-o para ver uma planificação:</p>
   - type: game
+    doNotList: true
     text: "Ver filme aqui!"
     cta: "Ver"
     url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
@@ -703,6 +719,7 @@ actions:
     text: >
       <p>A Mathina e o Leo continuaram a sua busca por novos sólidos platónicos. E, rapidamente, se aperceberam de que não era possível usar mais do que três pentágonos num vértice comum e obter um ângulo sólido igual ao de uma pirâmide reta regular.</p>
   - type: game
+    doNotList: true
     tag: tg11
     text: "Observa o filme!"
     cta: "Ver"
@@ -750,6 +767,7 @@ actions:
       - text: "Sim, nem precisamos de plasticina!"
         char: leo
   - type: game
+    doNotList: true
     tag: tg12
     text: "Ver sólidos platónicos!"
     cta: "Ver"
@@ -766,6 +784,7 @@ actions:
         char: technician
         exposition: "Desafiou o técnico."        
   - type: game
+    listTitle: "Escolhendo poliedros não-platónicos cujas faces são todas polígonos regulares e iguais"
     tag: tg13
     text: "Escolhe os poliedros não-platónicos cujas faces são todas polígonos regulares e iguais. De cada vez, escolhe os 2 poliedros e clica em"
     toolbarText: "Escolhe os 2 poliedros não-platónicos cujas faces são todas polígonos regulares e iguais"
@@ -800,6 +819,7 @@ actions:
     text: >
       <p>Da sua coleção de poliedros, o técnico selecionou um poliedro uniforme, ao qual chamou cuboctaedro.</p>
   - type: game
+    doNotList: true
     tag: tg14
     text: "Observa o filme!"
     cta: "Ver"
@@ -849,6 +869,7 @@ actions:
         char: leo
         exposition: "Perguntou o Leo, agarrando num modelo próximo."
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/poliedros.html?pre=pol_80        
@@ -918,6 +939,7 @@ actions:
       - text: "E que tal este? É uniforme?"
         char: leo
   - type: game
+    doNotList: true
     tag: tg19
     text: "Observa o filme!"
     cta: "Ver"
@@ -964,6 +986,7 @@ actions:
     text: >
       <p>Para corrigir o erro, o técnico cortou a cúpula octogonal no topo do poliedro de Miller e rodou-a de 45º, por forma a que os triângulos da cúpula ficassem alinhados com os triângulos de baixo.</p>
   - type: game
+    doNotList: true
     tag: tg22
     text: "Observa o filme!"
     cta: "Ver"
@@ -1035,6 +1058,7 @@ actions:
         char: leo
         exposition: "Exclamou o Leo."        
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/MillerRot.html
@@ -1090,6 +1114,7 @@ actions:
       - text: "Desta forma, podem-me ajudar com a montagem da maquete do carrossel…"
         char: technician        
   - type: game
+    listTitle: "Separando poliedros uniformes"
     tag: tg29
     text: "Escolhe os poliedros uniformes. De cada vez, escolhe os 4 poliedros e clica em"
     toolbarText: "Escolhe os 4 poliedros uniformes"
@@ -1134,6 +1159,7 @@ actions:
         char: technician
         exposition: "Explicou o técnico."
   - type: game
+    doNotList: true
     text: "Vê os poliedros!"
     cta: "Ver"
     url: /apps/anims/prismas_antiprismas.html
@@ -1151,6 +1177,7 @@ actions:
     text: >
       <p>Os três finalizaram a montagem da maquete do “carrossel dos poliedros platónicos e uniformes” e contemplaram o resultado: era um bela obra, não só pela diversidade de cores, mas também e, principalmente, pela simetria existente nos poliedros escolhidos, que os tornava visualmente muito apelativos.</p>
   - type: game
+    doNotList: true
     tag: tg25
     text: "Vê os poliedros!"
     cta: "Ver"
