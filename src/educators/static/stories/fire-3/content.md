@@ -22,6 +22,8 @@ Upon opening the app, you will see a coordinate system, a yellow graph and a pur
 
 The degree of the polynomial - the highest value of the exponents of x - will increase as you progress (the maximum is `@x^3@`). Each coefficient can be changed with the + and - buttons, where each click will change it by +/- 0.1. You can also hold down to create a constant increase of the value. Once the correct flight path is entered, the phoenix will automatically fly along it. Afterwards, a new flight path challenge is offered for the user. You may use the previous function, which will still be displayed, or use the 'Delete' button, to set all coefficients to zero, and start fresh.
 
+@[youtube](Vgkz6XrMVIM?_align-center_)
+
 ## App 2 - Adjust the points and fly the Phoenix
 
 The goal of this app is also to create a flight path for the phoenix, which is again described by a polynomial. You need to find a path for the phoenix to arrive at the right side without hitting any obstacles (mountains and clouds). This time, however, you cannot adjust the coefficients directly, but you can move six (yellow) points on the coordinate plane. Together with the origin, which is the starting position of the phoenix, these seven points describe a unique polynomial of degree 6 (highest power of x). This polynomial - the created flight path - will go through all of the yellow points. The curve will only be visible after you tell the phoenix to fly.
@@ -33,6 +35,8 @@ If the phoenix did not succeed, he will jump back to the origin, leaving the fli
 
 ![App2_3](/stories/fire-3/img/_align-center_/2_3.png)
 
+@[youtube](4tz4YHZZWYY?_align-center_)
+
 ## App 3 - Guide the Phoenix through the Derivative
 
 To fly this phoenix, you tell how much it should ascend or descend by moving the hand on the left up or down. The goal is to arrive at the right side avoiding all obstacles (mountains and clouds). The flight path will be horizontal if the hand is positioned at zero, the phoenix will rise/descend if the hand is above/below zero. The phoenix will only move while the hand is actively dragged, otherwise it will stop in midair (similar to the apps of the story 'The Firebird Trainer').
@@ -40,6 +44,8 @@ To fly this phoenix, you tell how much it should ascend or descend by moving the
 ![App3](/stories/fire-3/img/_align-center_/3.png)
 
 After the phoenix arrives at the right side, it returns to your hand and new obstacles appear (a maximum number of three mountains and three cloud clusters).
+
+@[youtube](xu9rp0zH3vQ?_align-center_)
 
 ## App 4 - Adjust the points of the derivative and fly the Phoenix
 
@@ -61,5 +67,6 @@ Hints:
 * If a fireball is positioned at the x-axis, the area between the purple curve and the x-axis above and below the axis must be equal (from the origin to the fireball). 
 * If the areas above and below the x-axis are very different, the phonenix will end up far away from the x-axis.
 
+@[youtube](-z5_LG3fgTY?_align-center_)
 
 
