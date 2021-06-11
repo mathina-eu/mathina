@@ -309,7 +309,7 @@ actions:
     parallax: mid2
 
   - type: sceneText
-    text: Depois de uma curva no caminho, surgiu um extenso campo e a Mathina avistou o castelo à distância. Era um edifício velho mas sólido no meio de um campo, com torres, janelas e muralhas. Seria uma fortaleza fantástica, se alguma vez tivesse de ser protegido. À frente do castelo, o vale formava uma larga clareira com amplo espaço para as actividades que lá decorriam. Alguns dragões e fénixes estavam no chão, a serem cuidados pelos seus treinadores. A uma certa distância, via-se alguns feiticeiros, de varinha mágica na mão, faziam levitar bolas de fogo e criavam nuvens de fumo.
+    text: Depois de uma curva no caminho, surgiu um extenso campo e a Mathina avistou o castelo à distância. Era um edifício velho mas sólido no meio de um campo, com torres, janelas e muralhas. Seria uma fortaleza fantástica, se alguma vez tivesse de ser protegido. À frente do castelo, o vale formava uma larga clareira com amplo espaço para as atividades que lá decorriam. Alguns dragões e fénixes estavam no chão, a serem cuidados pelos seus treinadores. A uma certa distância, via-se alguns feiticeiros, de varinha mágica na mão, faziam levitar bolas de fogo e criavam nuvens de fumo.
 
   - type: image
     src: castle_large.png
