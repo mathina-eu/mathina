@@ -4,12 +4,12 @@ Das Hauptziel dieser Geschichte ist es, auf amüsante Weise mehrere Konzepte im 
 
 Wir konzentrieren uns auf zwei spezielle Klassen von Polyedern, die eine große Anzahl von Symmetrien aufweisen (informeller ausgedrückt, die sehr symmetrisch sind): **Platonische Körper** und **uniforme Polyeder**.
 
-Bevor wir in der Geschichte diese Polyeder vorstellen, gehen wir auf ein wichtiges geometrisches Konzept ein: **Konvexität**. Mehrere der vorgestellten Ergebnisse hängen stark von der Tatsache ab, dass sowohl Platonische Körper als auch uniforme Polyeder konvex sind.
+Bevor wir in der Geschichte diese Polyeder vorstellen, gehen wir auf ein wichtiges geometrisches Konzept ein: **Konvexität**. Mehrere der vorgestellten Ergebnisse hängen stark von der Tatsache ab, dass sowohl Platonische Körper wie auch alle anderen uniformen Polyeder konvex sind.
 
 
 ## Konvexe Polyeder
 
-In der Geschichte wird zufällig ein Beispiel für ein nicht konvexes Polyeder gefunden, als Leo versucht, eine Kabine des Polyeder-Karussells zu schließen und [einige Kabinenteile sich nach innen drücken]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg1).
+In der Geschichte wird zufällig ein Beispiel für ein nicht konvexes Polyeder gefunden, als Leo versucht, eine Kabine des Polyeder-Karussells zu schließen und [einige Kabinenteile sich nach innen drücken]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg1).
 
 
 | ![Ikosaeder](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Nicht-konvexes Polyeder](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
@@ -32,9 +32,9 @@ Die Hauptidee, die wir zu diesem Thema vermitteln wollen, ist, dass ein **Platon
 
 `*` an jedem Scheitelpunkt treffen sich die gleiche Anzahl von Flächen;
 
-`*` die [**Dieder-Winkel**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg2), d.h. die Winkel zwischen zusammenhängenden Flächen, sind gleich;
+`*` die [**Dieder-Winkel**]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg2), d.h. die Winkel zwischen benachbarten Flächen, sind gleich;
 
-`*` die [**Raumwinkel**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg3) sind an jedem Scheitelpunkt gleich.
+`*` die [**Raumwinkel**]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg3) sind an jedem Scheitelpunkt gleich.
 
 ### Aufbau der platonischen Körper
 
@@ -43,15 +43,15 @@ In der Geschichte erinnern sich Mathina und Leo an ein Polyeder, der all diese E
 Beim Versuch, einen Würfel zu bauen, entdeckt Leo experimentell ein [**Würfelnetz**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg4). Später stellt er fest, dass das Netz nicht eindeutig ist (es gibt mehrere andere Möglichkeiten). Im Laufe der Geschichte werden die Verbindungen zwischen einem Polyeder und seinen Netzen auch in den übrigen platonischen Körpern erforscht.
 
 Mathina und Leo beschließen daraufhin, sich der Herausforderung zu stellen, **auf systematische Weise alle verbleibenden platonischen Körper zu finden**. Sie stellen fest, dass in einem Würfel die Anzahl der Quadrate, die an jedem Scheitelpunkt ankommen - **drei** - immer gleich ist (wie bereits oben erwähnt). Was wäre, wenn die Anzahl der Quadrate anders als drei wäre?
-[Sie kommen schnell zu dem Schluss, dass dies nicht möglich ist.]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg5)
+[Sie kommen schnell zu dem Schluss, dass dies nicht möglich ist.]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg5)
 
 Also beschließen sie, zu Dreiecken überzugehen, die gleichseitig sein müssen (gemäß den oben genannten Eigenschaften). Dem gleichen Ansatz folgend wie zuvor, betrachten die beiden den Fall von drei Dreiecken, die sich in jedem Scheitelpunkt treffen. Auf diese Weise entdecken sie einen zweiten platonischen Körper: das [**Tetraeder**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg6).
 
 Durch die Wahl von vier Dreiecken in jedem Scheitelpunkt, bauen die Figuren einen weiteren platonischen Körper: das [**Oktaeder**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg7). Schließlich finden sie durch die Wahl von fünf Dreiecken in jedem Eckpunkt das [**Ikosaeder**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg8).
 
-Nachdem sie festgestellt haben, dass es nicht möglich ist, platonische Körper mit mehr als fünf Dreiecken in jedem Scheitelpunkt zu bauen, gehen sie zu [**regulären Fünfecken**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg9) über. Wiederum durch das Verbinden von drei Polygonen in jedem Scheitelpunkt, finden Leo und Mathina einen weiteren platonischen Körper: das [**Dodekaeder**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg10).
+Nachdem sie festgestellt haben, dass es nicht möglich ist, platonische Körper mit mehr als fünf Dreiecken in jedem Scheitelpunkt zu bauen, gehen sie zu [**regelmäßigen Fünfecken**]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg9) über. Wiederum durch das Verbinden von drei Polygonen in jedem Scheitelpunkt, finden Leo und Mathina einen weiteren platonischen Körper: das [**Dodekaeder**]($HUB_URL/story/de/the-polyhedron-carousel/?actionLink=tg10).
 
-Leo und Mathina stellen bald fest, dass es nicht nur unmöglich ist, platonische Körper mit mehr als drei Fünfecken an jedem Scheitelpunkt zu bauen, sondern dass es auch unmöglich ist, platonische Körper durch die [**Verwendung von Polygonen mit mehr als fünf Seiten**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg11) zu bauen. Auf diese Weise entdecken sie alle [**Platonischen Körper**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg12).
+Leo und Mathina stellen bald fest, dass es nicht nur unmöglich ist, platonische Körper mit mehr als drei Fünfecken an jedem Scheitelpunkt zu bauen, sondern dass es auch unmöglich ist, platonische Körper durch die [**Verwendung von Polygonen mit mehr als fünf Seiten**]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg11) zu bauen. Auf diese Weise entdecken sie alle [**Platonischen Körper**]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg12).
 
 
 | Würfel | Tetraeder | Oktaeder | Ikosaeder | Dodekaeder |
@@ -71,20 +71,20 @@ Tatsächlich ist es möglich zu beweisen, dass ein Polyeder, das diese Bedingung
 **Anmerkung 1**: Beachten Sie, dass es dank dieser Definition nicht notwendig ist, die Dieder-Winkel oder die Raumwinkel an jedem Scheitelpunkt des Polyeders zu messen, um zu prüfen, ob es sich um einen platonischen Körper handelt. In der Geschichte überprüfen Mathina und Leo diese Winkel, weil sie sich dessen nicht bewusst sind.
 
 
-**Anmerkung 2**: Wenn wir die Bedingung "an jedem Scheitelpunkt kommt die gleiche Anzahl von Flächen an" entfernen, können wir auch nicht platonische Körper erhalten, wie in [App 4]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg13) gezeigt.
+**Anmerkung 2**: Wenn wir die Bedingung "an jedem Scheitelpunkt treffen sich die gleiche Anzahl von Flächen" entfernen, können wir auch nicht platonische Körper erhalten, wie in [App 4]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg13) gezeigt.
 
 
 ## Uniforme Polyeder
 
-Was ist ein uniformes Polyeder? Bei der Untersuchung eines bestimmten uniformen Polyeders, dem Kuboktaeder, vermutet Mathina, dass es sich um ein Polyeder handelt, dessen Flächen alle regelmäßige Vielecke sind - von denen aber nicht alle die gleiche Anzahl an Seiten haben - und für den [die Raumwinkel an jedem Scheitelpunkt gleich sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg14).
+Was ist ein uniformes Polyeder? Bei der Untersuchung eines bestimmten uniformen Polyeders, dem Kuboktaeder, vermutet Mathina, dass es sich um ein Polyeder handelt, dessen Flächen alle regelmäßige Vielecke sind - von denen aber nicht alle die gleiche Anzahl an Seiten haben - und für den [die Raumwinkel an jedem Scheitelpunkt gleich sind]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg14).
 
 | Kuboktaeder (uniformes Polyeder) | Großes Rhombikuboktaeder (uniformes Polyeder) | Miller-Polyeder (nicht uniformes Polyeder) | Kleines Rhombikuboktaeder (uniformes Polyeder) |
 | ------ | ------ | ------ | ------ |
 |![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
-Nach "Mathinas Definition" kann jedoch ein Problem auftreten: Wenn wir eine Gussform um einen Raumwinkel des großen Rhombikuboktaeders bauen, [passt die Form nicht zu allen Raumwinkeln]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg15). In diesem Fall werden [zwei Formen benötigt]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg16).
+Nach "Mathinas Definition" kann jedoch ein Problem auftreten: Wenn wir einen Abdruck von einem Raumwinkel des großen Rhombikuboktaeders nehmen, [passt die Form nicht zu allen Raumwinkeln]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg15). In diesem Fall werden [zwei verschiedene Abdrücke benötigt]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg16).
 
-Wenn wir jedoch beide Gussformen betrachten, können wir feststellen, dass [sie das Spiegelbild des jeweils anderen sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg17).
+Wenn wir jedoch beide Abdrücke betrachten, können wir feststellen, dass [sie das Spiegelbild des jeweils anderen sind]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg17).
 
 In diesem Fall können wir alle Eckpunkte des Polyeders als "vom gleichen Typ" bezeichnen.
 
@@ -96,16 +96,16 @@ Diese Meinungsverschiedenheit hängt mit der Definition der uniformen Polyeder z
 
 `*` für jedes Paar von Scheitelpunkten gibt es mindestens eine Symmetrie des Polyeders, die den einen Scheitelpunkt auf den anderen überträgt.
 
-In der Geschichte ist eine **Polyedersymmetrie** definiert als eine Isometrie (d.h. eine Funktion, die Abstände bewahrt), die das Polyeder auf sich selbst nimmt. Weitere Informationen zu diesem Thema finden Sie 1) [in den angegebenen Beispielen]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg20), und 2) im Kapitel "Was ist Symmetrie?" im Text zur Geschichte ["Zauberhafte Muster"](https://mathina-edu.netlify.app/story/stamping-friezes).
+In der Geschichte ist eine **Polyedersymmetrie** definiert als eine Isometrie (d.h. eine Funktion, die Abstände bewahrt), die das Polyeder auf sich selbst abbildet. Weitere Informationen zu diesem Thema finden Sie 1) [in den angegebenen Beispielen]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg20), und 2) im Kapitel "Was ist Symmetrie?" im Text zur Geschichte ["Zauberhafte Muster"](https://mathina-edu.netlify.app/de/story/stamping-friezes).
 
-Warum ist das Miller-Polyeder nicht uniform? Wenn wir die Eckpunkte *A* und *B* betrachten, wird jede Isometrie, die *A* in *B* nimmt, den Ring der Quadrate vom Äquator entfernen und damit [das endgültige Aussehen des Polyeders verändern]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
+Warum ist das Miller-Polyeder nicht uniform? Wenn wir die Eckpunkte *A* und *B* betrachten, wird jede Isometrie, die *A* auf *B* abbildet, den Ring der Quadrate vom Äquator entfernen und damit [das endgültige Aussehen des Polyeders verändern]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 
 ![Miller polyhedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Drehe das Miller-Polyeder hier]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
 Wenn wir jedoch [die achteckige Kuppel an der Spitze des Miller-Polyeders um 45º drehen]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg22), erhalten wir ein neues uniformes Polyeder: das kleine Rhombikuboktaeder.
 
-Im Laufe der Geschichte lernen Mathina und Leo **alle uniformen Polyeder** kennen: 1) die unendliche Familie der Prismen, [deren Basen regelmäßige Vielecke und deren Seitenflächen Quadrate sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23); 2) die unendliche Familie der Antiprismen, [deren Basen regelmäßige Vielecke sind und deren Seitenflächen gleichseitige Dreiecke sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 3) 13 weitere Polyeder, die sogenannten archimedischen Körper:
+Im Laufe der Geschichte lernen Mathina und Leo **alle uniformen Polyeder** kennen: 1) die unendliche Familie der Prismen, [deren Grundflächen regelmäßige Vielecke und deren Seitenflächen Quadrate sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23); 2) die unendliche Familie der Antiprismen, [deren Grundflächen regelmäßige Vielecke sind und deren Seitenflächen gleichseitige Dreiecke sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 3) 13 weitere Polyeder, die sogenannten archimedischen Körper:
 
 ![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
@@ -117,9 +117,9 @@ Am Ende bauen Mathina und Leo zusammen mit dem Techniker ein Modell für das ["P
 
 Durch den Einsatz von Storytelling und Spielen ist es unser Hauptziel, junge Lernende dazu zu bringen, Polyeder (und ihre Symmetrie) auf spielerische Weise zu entdecken.
 
-Die Geschichte beginnt mit einigen konkreten Aktivitäten, die von den Mathina und Leo ausprobiert und mit Hilfe von Animationen und Zeichnungen veranschaulicht werden. Auf diese spielerische Weise werden verschiedene mathematische Konzepte vorgestellt: konvexe/nicht konvexe Polyeder, platonische Körper und uniforme Polyeder. Das Verständnis dieser Konzepte wird im Laufe der Geschichte vertieft, und die jungen Lernenden haben die Möglichkeit, ihr Wissen auf spielerische Weise zu festigen, indem sie die Geschichte lesen, die visuell ansprechenden Videos und Bilder ansehen und die verschiedenen Spiele und Herausforderungen in den Apps lösen.
+Die Geschichte beginnt mit einigen konkreten Aktivitäten, die von Mathina und Leo ausprobiert und mit Hilfe von Animationen und Zeichnungen veranschaulicht werden. Auf diese spielerische Weise werden verschiedene mathematische Konzepte vorgestellt: konvexe/nicht konvexe Polyeder, platonische Körper und uniforme Polyeder. Das Verständnis dieser Konzepte wird im Laufe der Geschichte vertieft, und die jungen Lernenden haben die Möglichkeit, ihr Wissen auf spielerische Weise zu festigen, indem sie die Geschichte lesen, die visuell ansprechenden Videos und Bilder ansehen und die verschiedenen Spiele und Herausforderungen in den Apps lösen.
 
-Die Geschichte ist in sich abgeschlossen und sollte kein Nachschlagen zusätzlicher Materialien erfordern. Vorkenntnisse zu Platonischen Körpern sind nur minimal erfoderlich. Die Geschichte richtet sich an die Altersgruppe der 15-19-jährigen.
+Die Geschichte ist in sich abgeschlossen und sollte kein Nachschlagen zusätzlicher Materialien erfordern. Vorkenntnisse zu Platonischen Körpern sind nicht zwingend erfoderlich, aber dennoch hilfreich. Die Geschichte richtet sich an die Altersgruppe der 15-19-jährigen.
 
 Neben dem Thema "Platonische Körper" gibt es noch ein weiteres, das nicht im Lehrplan enthalten ist: Uniforme Polyeder. Durch die Einführung dieses Themas wollen wir eine breitere geometrische Vorstellung von Polyedern vermitteln und die hochsymmetrischen Eigenschaften hervorheben, die sowohl den platonischen Körpern als auch den uniformen Polyedern gemeinsam sind: 
 1) sie werden von regelmäßigen Polygonen gebildet; 
@@ -129,7 +129,7 @@ Zusätzliche Aktivitäten, die denen in der Geschichte vorgestellten ähnlich si
 
 
 `*` Platonische Körper: 
-  * die App "Bau der fünf platonischen Körper" kann mit den Schülern "offline" entwickelt werden, indem Karton oder andere für diesen Zweck verfügbare Materialien verwendet werden;
+  * anaog zur App "Bau der fünf platonischen Körper" kann mit den Schülern "offline" gearbeitet werden, indem Karton oder andere für diesen Zweck verfügbare Materialien verwendet werden;
   * die Konstruktion verschiedener Netze für den Würfel oder für andere platonische Körper kann ebenfalls mit den Schülerinnen und Schülern hergestellt werden, z. B. durch die Verwendung von Pappe;
   * die Überprüfung, dass platonische Körper "gleiche Flächenwinkel" sowie "gleiche Raumwinkel an jedem Scheitelpunkt" haben, kann mit den Schülern simuliert werden, indem physische Modelle der platonischen Körper und Formen gebaut werden, z.B. mit Knete.
 
@@ -144,44 +144,44 @@ Es gibt fünf Apps, die die Geschichte begleiten: Drei sind der Suche nach besti
 
 Alle Apps wurden in JavaScript programmiert und sind sowohl für PCs als auch für Tablets/Smartphones optimiert. 
 
-Unten sehen Sie die Kurzbeschreibung der einzelnen Apps. Im Folgenden finden Sie eine kurze Beschreibung der Apps mit Links zu den Anleitungsvideos auf Mathinas YouTube-Kanal.
+Im Folgenden finden Sie eine kurze Beschreibung der Apps mit Links zu den Anleitungsvideos auf Mathinas YouTube-Kanal.
 
 &nbsp;
 
-## [App 1 - Konvexe Polyeder aufteilen]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg26)
+## [App 1 - Konvexe Polyeder aufteilen]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg26)
 
-Hier sind acht Polyeder zu sehen. Die Spielerin/der Spieler wird aufgefordert, die vier konvexen auszuwählen. Nach Auswahl der richtigen Polyeder und Klicken auf 
+Hier sind acht Polyeder zu sehen. Die Spielerin/der Spieler wird aufgefordert, die vier konvexen auszuwählen. Nach Auswahl der Polyeder und Klicken auf 
 ![Bestätigen](/stories/symm-4/img/confirm.png =40x40)
-zeigt das Programm acht weitere Polyeder an. Es werden insgesamt 3 mal 8 Polyeder angezeigt. Das Spiel ist beendet, wenn alle "richtigen" Polyeder (d.h. die konvexen) ausgewählt sind.
+zeigt das Programm acht weitere Polyeder an. Es werden insgesamt 3 mal 8 Polyeder angezeigt. Das Spiel ist beendet, wenn alle konvexen Polyeder ausgewählt sind.
 
 @[youtube](GDYOL7SnfY0?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
+[Script  (PDF, englisch)](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
-## [App 2 - Das richtige Würfelnetz]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg27)
+## [App 2 - Die richtigen Würfelnetze]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg27)
 
-Die App zeigt sechs unterschiedliche Würfelnetze. Die Spielerin/der Spieler wird aufgefordert, die drei "richtigen" auszuwählen. Nach Auswahl der richtigen Netze und dem Klicken auf 
+Die App zeigt sechs unterschiedliche Netze. Die Spielerin/der Spieler wird aufgefordert, die drei auszuwählen, aus denen ein Würfel gebaut werden könnte. Nach Auswahl der richtigen Netze und dem Klicken auf 
 ![Bestätigen](/stories/symm-4/img/confirm.png =40x40)
-zeigt das Programm sechs neue Netze an. Es werden insgesamt 2 mal 6 Würfelnetze angezeigt. Das Spiel ist beendet, wenn alle "guten" Würfelnetze ausgewählt sind.
+zeigt das Programm sechs neue Netze an. Es werden insgesamt 2 mal 6 Würfelnetze angezeigt. Das Spiel ist beendet, wenn alle Würfelnetze ausgewählt sind.
 
 @[youtube](NspkoF8gH3k?_align-center_)
-[Script](/stories/symm-4/transcripts/Script4.pdf)
+[Script  (PDF, englisch)](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
-## [App 3 - Das richtige Netz für einen Oktaeder]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg28)
+## [App 3 - Die richtigen Netze für einen Oktaeder]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg28)
 
 Diese App ist ähnlich wie **App 2**. Allerdings ist das Polyeder dieses Mal ein Oktaeder.
 
 &nbsp;
 
-## [App 4 - Auswahl von nicht-platonischen Polyedern, deren Flächen alle regelmäßige und gleiche Polygone sind ]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg13)
+## [App 4 - Auswahl von nicht-platonischen Polyedern]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg13)
 
 Diese App ist ähnlich wie **App 1**. Anstatt jedoch konvexe Polyeder zu wählen, soll die Spielerin/der Spieler die nicht platonischen Polyeder auswählen, deren Flächen alle regelmäßige und gleiche Polygone sind.
 
 &nbsp;
 
-## [App 5 - Trennen von uniformen Polyedern]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg29)
+## [App 5 - Auswahl von uniformen Polyedern]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg29)
 
 Diese App ist ähnlich wie **App 1**. Anstatt jedoch konvexe Polyeder zu wählen, soll die Spielerin/der Spieler die gleichförmigen Polyeder wählen. 
