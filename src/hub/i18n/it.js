@@ -36,7 +36,7 @@ export default {
       'fire-1': 'L\'addestratrice degli uccelli del fuoco',
       'fire-2': 'Parlare a un unidrago',
       'fire-3': 'La corsa delle fenici',
-      'fire-4': 'Le misteriose libellule scintillanti',
+      'fire-4': 'Le misteriose lucciole scintillanti',
       'symm-1': 'Mathina vince tanti nuovi giocattoli!',
       'symm-2': 'Il gioco dei rosoni e il labirinto magico',
       'symm-3': 'Mathina e i fregi',
