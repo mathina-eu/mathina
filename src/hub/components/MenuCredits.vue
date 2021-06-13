@@ -1,12 +1,10 @@
 <template>
   <div class="menu-credits">
     <div class="menu-credits__title">
-      Credits
+      {{ $t('menu.credits') }}
     </div>
     <div class="menu-credits__disclaimer">
-      This project has been funded with support from the European Commission. This publication reflects the views
-      only of the author, and the Commission cannot be held responsible for any use which may be made of the
-      information contained therein.
+      {{ $t('menu.credits-disclaimer') }}
     </div>
     <div class="menu-credits__logo" />
   </div>
