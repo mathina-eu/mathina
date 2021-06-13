@@ -81,6 +81,7 @@ actions:
       - text: "Se dobrarmos a figura de uma certa maneira, as duas partes sobrepõem-se!"
         char: wizard
   - type: game
+    listTitle: "Dobrando Imagens I"
     tag: tg1
     text: "A imagem seguinte é boa (simétrica)?"
     cta: "Experimenta!"
@@ -115,6 +116,7 @@ actions:
       - text: "Vou mostrar-te outro exemplo! Olha agora para esta imagem de uma abelha"
         char: wizard        
   - type: game
+    listTitle: "Dobrando Imagens II"
     text: "A imagem seguinte é boa (simétrica)?"
     cta: "Experimenta!"
     url: /apps/dobrar_2/index.html
@@ -135,6 +137,7 @@ actions:
         char: wizard
     position: center
   - type: game
+    listTitle: "Dobrando Imagens III"
     text: "A imagem seguinte é boa (simétrica)?"
     cta: "Experimenta!"
     url: /apps/dobrar_3/index.html
@@ -188,6 +191,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    listTitle: "Procurando os bons peluches"
     tag: tg4
     text: "Arrasta os brinquedos \"bons\" para a caixa"
     url: /apps/arrumar_figuras/index.html
@@ -341,6 +345,7 @@ actions:
     - src: geoplano-anim2.mp4
       type: 'video/mp4'    
   - type: game
+    listTitle: "Construindo brinquedos I"
     tag: tg2
     text: "Como pode a Mathina terminar os brinquedos? Só precisas de arrastar algumas das figuras coloridas e colocá-las nos quadrados cinzentos adequados."
     cta: "Experimenta!"
@@ -434,6 +439,7 @@ actions:
         char: mathina
         exposition: "Disse a Mathina, repetindo as palavras do feiticeiro."
   - type: game
+    listTitle: "Construindo brinquedos II"
     tag: tg3
     text: "Como podem a Mathina e o Leo terminar os brinquedos? Só precisas de desenhar as linhas em falta."
     cta: "Experimenta!"

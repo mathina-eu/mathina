@@ -478,7 +478,7 @@ actions:
     text: "Hier kannst Du Flächen anschauen, die durch Gleichungen mit drei Variablen (x, y und z) bestimmt werden. Unten kannst Du auch eine eigene Gleichung erfinden und Dir dann die Fläche dazu anschauen. Du kannst die Fläche mit den Schiebereglern verändern und mit klicken und ziehen auch drehen."
     toolbarText: Schaue Dir die Flächen und ihre Gleichungen an.
     cta: Zu den Flächen im Raum.
-    url: /apps/imaginary/app_4/4_3/de.html
+    url: /apps/imaginary/app_4/4_3/index.html?lang=de
 
   - type: dialog
     avatarAlign:

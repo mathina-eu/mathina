@@ -284,6 +284,15 @@ actions:
       - text: "Sim, exatamente!"
         char: mathina
         mood: normal
+      - text: "Mas esperem, essa pessoa pode intercetar as nossas mensagens ... Mesmo que escolhamos uma chave agora ... ela pode estar a ouvir! Também me lembro que este método não era assim tão seguro ... Depois de algum tempo, digamos uns minutos, podemos tentar várias combinações e obter a chave"
+        char: leo
+        mood: thinking
+      - text: "Tenho uma ideia! Cada vez que comunicarmos, vamos mudar a chave! Portanto, não importa se essa pessoa misteriosa consegue obter a chave: nós teremos outra!"
+        char: angela
+        mood: normal
+      - text: "Isso é mesmo inteligente! Mas como podemos fazer? Se tivermos que vir sempre aqui perderemos muito tempo, mas também não podemos simplesmente acordar outra chave numa mensagem: se essa pessoa conseguir decifrar a comunicação também decifrará a nova chave!"
+        char: mathina
+        mood: arguing
       - text: "E se eu vos disser que existe uma maneira de combinar uma chave secreta em público, sem que ninguém descubra o nosso segredo, mesmo que gritemos todas as informações no meio do parque?"
         char: angela
         mood: normal
@@ -393,11 +402,11 @@ actions:
   - type: image
     id: Leo1
     src: $COMMON/img/characters/leo/leo4.png 
-    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 5; transform: ScaleX(1);"
   - type: image
     id: Angela2
     src: angela_3.png 
-    style: "height: 70%; top: 30%; right: 70%;  z-index: 1; transform: ScaleX(-1);"
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"
 
   - type: sceneText
     text: >
@@ -416,12 +425,7 @@ actions:
       - text: "Não, não sei. Mas Mathina deve certamente estar no caminho certo. Olha, vamos tentar seguir o caminho dela, mas daqui do litoral. Consegues vê-lo? A floresta onde vivem os papagaios está mesmo ali, entre nós e o caminho de Mathina. Se tentarmos nos posicionar por forma a que possamos ver tanto a floresta como o trilho, talvez possamos direcionar a Mathina ao longo do seu caminho."
         char: angela
         mood: sad
-  - type: background
-    src: bg4.jpg
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
-    src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
+
   - type: dialog
     entries:      
     - text: "Mmm, muito estranho. Combinamos que deveríamos confirmar as nossas mensagens e combinar uma nova chave artilhada, mas a Mathina não está a responder. Devemos nos preocupar com isso?"
@@ -434,26 +438,24 @@ actions:
     id: Leo1  
   - type: clearImage
     id: Angela2  
-  - type: background
+  - type: image
+    id: alb1111              
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
+  - type: image
+    id: alb2222               
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"   
     
   - type: image
     id: Leo2
     src: $COMMON/img/characters/leo/leo5.png 
-    style: "height: 10%; top: 50%; right: 45%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 10%; top: 50%; right: 45%;  z-index: 2; transform: ScaleX(1);"
   - type: image
     id: Angela3
     src: angela_1.png 
-    style: "height: 20%; top: 70%; right: 50%;  z-index: 0; transform: ScaleX(1);"  
-  - type: image
-    id: terreno
-    src: terreno.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);" 
-  
+    style: "height: 20%; top: 70%; right: 50%;  z-index: 2; transform: ScaleX(1);"  
+
   - type: sceneText
     text: >
       <p>Os dois continuaram então a explorar o caminho até a floresta dos papagaios, na esperança de que os pássaros fossem a chave para o sucesso de sua busca!</p>
@@ -477,19 +479,23 @@ actions:
     id: Angela3 
   - type: clearImage
     id: terreno         
-  - type: background
+  - type: image
+    id: alb4444               
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
-    src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"       
-
-
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:2;"  
   - type: dialog
     entries:      
      - text: "Vês? Demora muito tempo para fazer isso, podemos estar seguros!"
        char: angela
        mood: normal
+  - type: clearImage
+    id: alb1111
+  - type: clearImage
+    id: alb2222
+  - type: clearImage
+    id: alb4444
+  - type: clearImage
+    id: terr1                   
   - type: background
     src: bg-grey-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
@@ -565,25 +571,30 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: alb111              
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
 
-  - type: background
+  - type: image
+    id: alb222              
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"
 
-  - type: background
+  - type: image
+    id: alb444              
     src: alberi4.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:1;"
   
-  - type: background
+  - type: image
+    id: alb333              
     src: alberi3.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:2;"
 
-  - type: background
+  - type: image
+    id: terr2             
     src: terreno.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"           
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:3;"           
   - type: sceneText
     text: >
       <p>Então, na Floresta dos Papagaios...</p>
@@ -609,6 +620,16 @@ actions:
     text: >
       <p>Os dois começaram então a subir a montanha seguindo o trilho dos papagaios descoberto por Mathina.</p>
 
+  - type: clearImage
+    id: terr2
+  - type: clearImage
+    id: alb111
+  - type: clearImage
+    id: alb222
+  - type: clearImage
+    id: alb333    
+  - type: clearImage
+    id: alb444                        
   - type: background
     src: bg-grey-plain.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;" 
@@ -691,29 +712,31 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+  - type: image
+    id: alb11             
     src: alberi1.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"  
-  - type: background
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"  
+  - type: image
+    id: alb22             
     src: alberi2.png
-    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:0;"
     
   - type: image
     id: Leo5
     src: $COMMON/img/characters/leo/leo4.png 
-    style: "height: 55%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(1);"
+    style: "height: 55%; top: 40%; right: 40%;  z-index: 2; transform: ScaleX(1);"
   - type: image
     id: Mathina5
     src: $COMMON/img/characters/mathina/mathina5.png 
-    style: "height: 60%; top: 40%; right: 40%;  z-index: 1; transform: ScaleX(-1);"
+    style: "height: 60%; top: 40%; right: 40%;  z-index: 3; transform: ScaleX(-1);"
   - type: image
     id: terreno2
     src: terreno.png
-    style: "height: 100%; top: 0%; right: 0%;  z-index: 2; transform: ScaleX(1);"   
+    style: "height: 100%; top: 0%; right: 0%;  z-index: 4; transform: ScaleX(1);"   
   - type: image
     id: Angela5
     src: angela_3.png 
-    style: "height: 70%; top: 30%; right: 70%;  z-index: 2; transform: ScaleX(-1);"  
+    style: "height: 70%; top: 30%; right: 70%;  z-index: 5; transform: ScaleX(-1);"  
   - type: sceneText
     text: >
       <p>Os dias seguintes foram terríveis para o grupo. Foram amarrados com correntes de plástico uns aos outros e forçados a vasculhar a floresta e a costa em busca de um tesouro escondido.</p>
@@ -758,6 +781,10 @@ actions:
        char: charmingparrot
        mood: sad
   - type: clearImage
+    id: alb11
+  - type: clearImage
+    id: alb22
+  - type: clearImage 
     id: Leo5
   - type: clearImage
     id: Mathina5
@@ -844,7 +871,8 @@ actions:
   - type: background
     src: bg4.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"     
-  - type: background
+  - type: image
+    id: terrE             
     src: terreno.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index:-1;"
   - type: image

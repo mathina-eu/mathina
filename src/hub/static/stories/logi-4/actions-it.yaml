@@ -3,15 +3,18 @@ actions:
     src: logi-bg4.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
+    noOverflow: true
     src: plasma2.gif
     id: plasma2
     style: "width: 38%; top: 6%; right: 62%;"
   - type: image
+    noOverflow: true
     src: leo-pointingl.png
     id: leo-pointl
     style: "width: 24%; top: 40%; right: 20%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: mathina-thinking-turned.png
     id: mathina-think-t
     style: "width: 22%; top: 35%; right: 12%; z-index: 1"
@@ -44,6 +47,7 @@ actions:
   - type: clearImage
     id: leo-pointl
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-think
     style: "width: 17%; top: 43%; right: 74%;"
@@ -59,6 +63,7 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina si avvicinò furtivamente all'ingresso dell'edificio ma non vide nessuno, riuscì solo a sentire le persone che discutevano all'interno - "Signore, non puoi farci questo! Ci dia semplicemente il nostro premio così possiamo tornare a casa!"
   - type: image
+    noOverflow: true
     src: trainer.png
     id: trainer
     style: "width: 22%; top: 25%; right: 60%; z-index: 2"
@@ -67,11 +72,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: "Un uomo in tuta da allenamento varcò l'ingresso e apparve vicino a Mathina. Aveva in mano uno strano dispositivo sportivo, una racchetta a forma di nastro di Möbius."
   - type: image
+    noOverflow: true
     src: boys5.png
     id: boys5
     style: "width: 60%; top: 45%; right: 6%; z-index: 3"
     parallax: front1
   - type: image
+    noOverflow: true
     src: georget.png
     id: georget
     style: "width: 10%; top: 36%; right: 30%; z-index: 2;"
@@ -113,6 +120,7 @@ actions:
         char: trainer
         mood: normal
   - type: image
+    noOverflow: true
     src: gold-medal.png
     id: gold
     style: "width: 2%; top: 28%; right: 60%; z-index: 3;"
@@ -149,6 +157,7 @@ actions:
   - type: clearImage
     id: mathina-think-t
   - type: image
+    noOverflow: true
     src: mathina-standing.png
     id: mathina-stand
     style: "width: 19%; top: 21%; right: 47%;"
@@ -356,21 +365,25 @@ actions:
   - type: clearImage
     id: gold
   - type: image
+    noOverflow: true
     src: gold-medal.png
     id: gold
     style: "width: 2%; top: 46%; right: 33%; z-index: 3;"
     parallax: front3
   - type: image
+    noOverflow: true
     src: gold-medal.png
     id: gold2
     style: "width: 2%; top: 58%; right: 52%; z-index: 3;"
     parallax: front3
   - type: image
+    noOverflow: true
     src: gold-medal.png
     id: gold3
     style: "width: 2%; top: 85%; right: 23%; z-index: 3;"
     parallax: front3
   - type: image
+    noOverflow: true
     src: gold-medal.png
     id: gold4
     style: "width: 2%; top: 59%; right: 33%; z-index: 3;"

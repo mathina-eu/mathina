@@ -63,6 +63,7 @@ actions:
       - text: "Podemos imaginar uma reta que divide a imagem em duas metades de tal forma que, quando colocas um espelho sobre essa reta, a metade que fica frente ao espelho, juntamente com o seu reflexo, “formam” uma imagem igual à inicial."
         char: wizard
   - type: game
+    listTitle: "Usando espelhos I"
     tag: tg6
     text: "Move o espelho, arrastando-o para a frente e para trás através do botão"
     toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
@@ -86,6 +87,7 @@ actions:
       - text: "E se colocares um espelho sobre qualquer reta, nunca obterás uma imagem como a inicial. Ora vê:"
         char: wizard      
   - type: game
+    listTitle: "Usando espelhos II"
     text: "Move o espelho, arrastando-o para a frente e para trás através do botão."
     toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
     cta: "Vamos jogar!"
@@ -112,6 +114,7 @@ actions:
         char: mathina
         mood: excited
   - type: game
+    listTitle: "Jogo das Rosáceas"
     tag: tg3
     text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
     toolbarText: "Escolhe as quatro rosáceas com eixos de simetria."
@@ -131,6 +134,7 @@ actions:
       - text: "Funciona assim: existem seis sacos numerados de 1 a 6. Se uma rosácea tem um eixo de simetria, deve ir para o saco 1, se tiver dois, deve ir para o saco 2, e assim por diante…"
         char: wizard
   - type: game
+    listTitle: "Jogo dos Sacos I"
     tag: tg4
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
@@ -204,6 +208,7 @@ actions:
       - text: "Agora vamos distribuir todas estas rosáceas pelos sacos certos. Quando acabares, todas as rosáceas serão tuas."
         char: wizard
   - type: game
+    listTitle: "Jogo dos Sacos II"
     tag: tg5
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
@@ -376,6 +381,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
+    listTitle: "Labirinto de espelhos"
     tag: tg1
     text: "Como pode a Mathina resolver o labirinto de espelhos?"
     cta: "Experimenta!"
@@ -458,6 +464,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
+    listTitle: "Labirinto de meia-volta"
     tag: tg2
     text: "Como pode a Mathina resolver o labirinto de meia-volta?"
     cta: "Experimenta!"
