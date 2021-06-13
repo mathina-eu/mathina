@@ -396,7 +396,7 @@ actions:
 
       - char: mathina
         text: Mm, questi quadrati ... penso che debba essere qualcosa legato al Teorema di Pitagora...
-        exposition: adventured Mathina
+        exposition: Disse Mathina.
 
         mood: thinking
       - char: flamma
@@ -463,7 +463,7 @@ actions:
     text: "Qui puoi osservare le superfici, che sono definite da tre variabili (x, y e z). Sotto la superficie puoi inventare la tua equazione e guardare la superficie corrispondente. È possibile modificare ogni superficie utilizzando i cursori e ruotarla facendo clic e trascinando."
     toolbarText: Osserva le superfici e le loro equazioni.
     cta: Osserva le superfici!
-    url: /apps/imaginary/app_4/4_3/en.html
+    url: /apps/imaginary/app_4/4_3/index.html?lang=it
 
   - type: dialog
     avatarAlign:

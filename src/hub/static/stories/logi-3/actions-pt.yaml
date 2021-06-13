@@ -10,11 +10,13 @@ actions:
   - type: sceneText
     text: Todas as ruas têm nomes de matemáticos famoso de todo o mundo. 
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 13%; top: 55%; right: 87%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 12%; top: 54%; right: 36%;"
@@ -22,21 +24,25 @@ actions:
   - type: sceneText
     text: Mathina e Leo seguiam pelas ruas da cidade Logi. A Mathina tinha o lápis à mão e o Leo estava com o seu boné verde.
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 45%; right: 83%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
   - type: sceneText
     text: Foram até a Rua Hilbert em direção à esquina da Rua Péter. 
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
@@ -69,11 +75,13 @@ actions:
         char: mathina
         mood: surprised
   - type: image
+    noOverflow: true
     src: policeman-nr2.png
     id: policeman2
     style: "width: 18%; top: 20%; right: 30%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
@@ -82,10 +90,12 @@ actions:
   - type: sceneText
     text: "O polícia transportava uma grande variedade de ferramentas lógicas antigas: uma camuflagem, um voltímetro de tubo e um nível, entre outras. Eram mais um fardo do que outra coisa, já que estavam sempre a escorregar-lhe dos ombros e, claro, também porque eram pesadas."
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 75%; right: 55%;"
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
@@ -146,10 +156,12 @@ actions:
   - type: sceneText
     text: Mas o ladrão, de repente, virou à esquerda na Rua Gödel.
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 77%; right: 58%;"
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
@@ -335,16 +347,19 @@ actions:
         char: Mathina
         mood: talking
   - type: image
+    noOverflow: true
     src: sugarcube1.png
     id: sugar1
     style: "width: 8%; top: 14%; right: 90%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube2.png
     id: sugar2
     style: "width: 8%; top: 4%; right: 89%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube3.png
     id: sugar3
     style: "width: 9.5%; top: 9%; right: 82%;"
@@ -472,29 +487,35 @@ actions:
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 40%; right: 77%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 35%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 37%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 42%; right: 74%;"
   - type: sceneText
     text: A Mathina, o Leo e os dois polícias estavam quase a acabar os cafés e bolos quando, de repente...
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 19%; right: 75%;"

@@ -81,6 +81,7 @@ actions:
     id: tecnico
     style: "width: 16%; top: 45%; left: 1%;"         
   - type: game
+    doNotList: true
     tag: tg1
     text: "Watch the movie!"
     cta: "Play!"
@@ -241,6 +242,7 @@ actions:
         char: technician
         exposition: "Challenged the technician."
   - type: game
+    listTitle: "Separating convex polyhedra"
     tag: tg26
     text: "Choose the convex polyhedra. Each time, choose the 4 polyhedra and click"
     toolbarText: "Choose 4 convex polyhedra"
@@ -385,6 +387,7 @@ actions:
       - text: "A cube has 6 faces. I’ll just cut 6 squares in a row and set up the cube"
         char: leo
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/6quadrados.html
@@ -410,6 +413,7 @@ actions:
     text: >
       <p>Mathina then set up a cube using Leo's net. When gluing 3 faces on a common vertex, Mathina used a shoe box (which was in the office) as a mould to keep the three faces in position while the glue was drying.</p>
   - type: game
+    doNotList: true
     tag: tg4
     text: "Watch the movie!"
     cta: "Play!"
@@ -420,6 +424,7 @@ actions:
   - type: clearImage
     id: plan-cubo-01
   - type: game
+    listTitle: "Choosing the right nets for the cube"
     tag: tg27
     text: "Choose the right nets for the cube. Each time, choose the 3 “good” nets and click"
     toolbarText: "Choose the 3 right nets for the cube."
@@ -467,6 +472,7 @@ actions:
     text: >
       <p>As there were no more possibilities with squares, they decided to move on to equilateral triangles. Using the magnetic equilateral triangles which were at their disposal in the office, they joined 3 triangles around a vertex, creating a kind of open triangular pyramid. Then they got a bit of plasticine, they took a mould of the vertex and tried to add another triangle to one of the free edges by using that mould and suddenly … they got the pyramid closed with the new triangle!...</p>
   - type: game
+    doNotList: true
     tag: tg6
     text: "Watch the movie!"
     cta: "Play!"
@@ -495,6 +501,7 @@ actions:
     text: >
       <p>Leo was curious to know how a net of a tetrahedron could be. So, he split some of the tetrahedron triangles by their edges, unfolding the polyhedron.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol2p_169
@@ -511,6 +518,7 @@ actions:
     text: >
       <p>While Leo was creating a structure made up with 4 triangles on one of the vertices, Mathina noticed that the structure was not rigid. And, in order to create a Platonic solid, they should guarantee that the angles between contiguous faces were all equal.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/octaedro_form_1.html      
@@ -528,6 +536,7 @@ actions:
     text: >
       <p>Mathina then placed the structure on a table, with the initial vertex upwards, and, keeping it against the table, she noticed that the final position (all new vertices were on the plane of the table) corresponded precisely to what she wanted: now, the four angles between faces (dihedral angles) were equal.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/octaedro_form_2.html
@@ -541,6 +550,7 @@ actions:
     text: >
       <p>How should they continue in order to create a Platonic solid? After lifting the structure, they started by joining two triangles to the contiguous free edges, so that two of the new edges, one in each triangle, were together. Then they successively joined, in a similar way, the two missing triangles and verified that they had obtained a new polyhedron which seemed to be a Platonic solid.</p>
   - type: game
+    doNotList: true
     tag: tg7
     text: "Watch the movie!"
     cta: "Play!"
@@ -563,6 +573,7 @@ actions:
     text: >
       <p>Always curious, Leo unfolded the polyhedron to obtain a net.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
@@ -570,6 +581,7 @@ actions:
     text: >
       <p>Leo then decided to proceed as before (for the cube), creating alternative examples of nets for the polyhedron.</p>
   - type: game
+    listTitle: "Choosing the right nets for the octahedron"
     tag: tg28
     text: "Choose the right nets for the octahedron. Each time, choose the 3 “good” nets and click"
     toolbarText: "Choose the 3 right nets for the octahedron."
@@ -597,6 +609,7 @@ actions:
     text: >
       <p>After having found this new Platonic solid with 4 triangles at each vertex, they moved on to look for 5 triangles, thus creating an open straight "pyramid". They decided to proceed as before: they placed the new vertices on the table in order to obtain identical dihedral angles. Then they added, to one of the free vertices, 3 triangles, so that the new solid angle would be equal to the one of the initial “opened” pyramid. Next, they joined, successively, 2 triangles in each free vertex of the “opened” pyramid, until they obtained a strip of 10 triangles. They noticed that the free edges of the strip formed a pentagon in a plane parallel to the previous one, but rotated by a tenth of a turn. They then continued the previous process: first they added 2 triangles and then, successively, they added one triangle (joined to the previous one). And their effort seemed to pay off: they obtained a new polyhedron which appeared to be a Platonic solid!</p>
   - type: game
+    doNotList: true
     tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
@@ -621,6 +634,7 @@ actions:
     text: >
       <p>Just like before, Leo unfolded the polyhedron, trying to understand how a net could be.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol2p_98
@@ -668,6 +682,7 @@ actions:
     text: >
       <p>Leo discovered that a new pentagon fitted securely to contiguous free edges from different pentagons. So he added three pentagons in this way. This created three new big gaps. Mathina tried to fill them with three new pentagons and they fitted precisely. At the end, they saw again three big gaps, once again with the same shape. They tried the same as before by putting three new pentagons: they fitted very well, and they even joined with each other creating a new vertex with the new added faces. As a precaution, they checked with the plasticine mould - it fitted to all vertices: they had discovered a new regular polyhedron!</p>
   - type: game
+    doNotList: true
     tag: tg10
     text: "Watch the movie!"
     cta: "Play!"
@@ -690,6 +705,7 @@ actions:
     text: >
       <p>In the end, as he had made with the previous polyhedra, Leo unfolded the polyhedron to see a net:</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
@@ -703,6 +719,7 @@ actions:
     text: >
       <p>Mathina and Leo continued their quest to find new Platonic solids. Soon, they realized that it was not possible to use more than three pentagons on a common vertex with a solid angle equal to the one of a straight regular pyramid.</p>
   - type: game
+    doNotList: true
     tag: tg11
     text: "Watch the movie!"
     cta: "Play!"
@@ -750,6 +767,7 @@ actions:
       - text: "Yes, we don’t even need plasticine!"
         char: leo
   - type: game
+    doNotList: true
     tag: tg12
     text: "Watch the Platonic solids!"
     cta: "Play!"
@@ -766,6 +784,7 @@ actions:
         char: technician
         exposition: "Challenged the technician."        
   - type: game
+    listTitle: "Choosing non Platonic polyhedra whose faces are all regular and equal polygons"
     tag: tg13
     text: "Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
     toolbarText: "Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
@@ -800,6 +819,7 @@ actions:
     text: >
       <p>From his collection of polyhedra, the technician picked a uniform polyhedron, which he called cuboctahedron.</p>
   - type: game
+    doNotList: true
     tag: tg14
     text: "Watch the movie!"
     cta: "Play!"
@@ -849,6 +869,7 @@ actions:
         char: leo
         exposition: "Asked Leo, grabbing a model nearby."
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/poliedros.html?pre=pol_80        
@@ -918,6 +939,7 @@ actions:
       - text: "What about this one? Is it uniform?"
         char: leo
   - type: game
+    doNotList: true
     tag: tg19
     text: "Watch the movie!"
     cta: "Play!"
@@ -964,6 +986,7 @@ actions:
     text: >
       <p>To fix his error, the technician cut the octagonal dome on the top of the Miller polyhedron and rotated it by 45º, so that the triangles of the dome became aligned to the bottom triangles.</p>
   - type: game
+    doNotList: true
     tag: tg22
     text: "Watch the movie!"
     cta: "Play!"
@@ -1035,6 +1058,7 @@ actions:
         char: leo
         exposition: "Leo exclaimed."        
   - type: game
+    doNotList: true
     text: "Watch the polyhedron!"
     cta: "Play!"
     url: /apps/anims/MillerRot.html
@@ -1090,6 +1114,7 @@ actions:
       - text: "This way, you could help me setting up the carousel model…"
         char: technician        
   - type: game
+    listTitle: "Separating uniform polyhedra"
     tag: tg29
     text: "Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
     toolbarText: "Choose 4 uniform polyhedra"
@@ -1134,6 +1159,7 @@ actions:
         char: technician
         exposition: "Explained the technician."
   - type: game
+    doNotList: true
     text: "Watch the polyhedra!"
     cta: "Play!"
     url: /apps/anims/prismas_antiprismas.html
@@ -1151,6 +1177,7 @@ actions:
     text: >
       <p>The three finished setting up the model of the “carousel of Platonic and uniform polyhedra” and contemplated the result: it was a beautiful piece of work, not only because of the diversity of colors, but also, and mainly, by the existing symmetry on the chosen polyhedra, which make them visually very appealing.</p>
   - type: game
+    doNotList: true
     tag: tg25
     text: "Watch the polyhedra!"
     cta: "Play!"

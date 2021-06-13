@@ -3,16 +3,19 @@ actions:
     src: logi-bg1-bg.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: image
+    noOverflow: true
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 27%; right: 68%; z-index: 1;"
     parallax: back3
   - type: image
+    noOverflow: true
     src: leo-runs.png
     id: leo-runs
     style: "width: 14%; top: 50%; right: 72%; z-index: 2;"
     parallax: back3
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 79%; z-index: 3;"
@@ -22,6 +25,7 @@ actions:
   - type: clearImage
     id: kang-st
   - type: image
+    noOverflow: true
     src: kangaroo-pointing.png
     id: kang-po
     style: "width: 28%; top: 29.5%; right: 65%;"
@@ -48,6 +52,7 @@ actions:
       yPercent: 0
       ease: power3.out
   - type: image
+    noOverflow: true
     src: lamps-3.png
     id: lamps
     style: "width: 16%; top: 28%; right: 29%;"
@@ -59,12 +64,14 @@ actions:
   - type: clearImage
     id: lamps
   - type: image
+    noOverflow: true
     src: lampsgif2304.gif
     id: lampsgif
     style: "width: 11.5%; top: 31%; right: 31.7%;"
   - type: clearImage
     id: kang-po
   - type: image
+    noOverflow: true
     src: kangaroo-standing.png
     id: kang-st
     style: "width: 25%; top: 27%; right: 68%; z-index:1;"
@@ -84,6 +91,7 @@ actions:
   - type: clearImage
     id: lampsgif
   - type: image
+    noOverflow: true
     src: lamps-3.png
     id: lamps
     style: "width: 16%; top: 28%; right: 29%;"
@@ -100,6 +108,7 @@ actions:
       yPercent: 0
       ease: power3.out
   - type: image
+    noOverflow: true
     src: lamps-3.png
     id: lamps
     style: "width: 16%; top: 28%; right: 29%;"
@@ -174,6 +183,7 @@ actions:
   - type: sceneText
     text: Mathina inarcò le sopracciglia, sospettando che Leo avesse fatto qualche casino.
   - type: image
+    noOverflow: true
     src: solution8lamps.png
     id: solution8
     style: "width: 65%; top: 50%; right: 20%; z-index: 3;"
@@ -191,6 +201,7 @@ actions:
     toolbarText: Guarda i semafori. Puoi riorganizzarli come vuoi. Se ne metti due identici accando, uno dei due scompare.
     url: \apps\logi-1-app\logi-1-app.htm?v=2
   - type: image
+    noOverflow: true
     src: solution5lamps.png
     id: solution5
     style: "width: 42%; top: 50%; right: 30%; z-index: 3;"
@@ -212,6 +223,7 @@ actions:
         char: Leo
         mood: happy
   - type: image
+    noOverflow: true
     src: solution6lampss.png
     id: solution6
     style: "width: 46%; top: 50%; right: 30%; z-index: 3;"
@@ -229,6 +241,7 @@ actions:
   - type: clearImage
     id: lamps
   - type: image
+    noOverflow: true
     src: lamps6.png
     id: lamps6
     style: "width: 23%; top: 30%; right: 27%;"

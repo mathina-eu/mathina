@@ -68,10 +68,14 @@ A list of examples is available on the side, and the user can write any polynomi
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
 
+@[youtube](XoGBCCIlgnc?_align-center_)
+
 ## App 2 - Guess the equation
 This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug (sitting on the top of the parchment). After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
+
+@[youtube](RI82ffVucEA?_align-center_)
 
 ## App 3 - Surfaces
 This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.

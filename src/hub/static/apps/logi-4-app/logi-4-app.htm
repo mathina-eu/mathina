@@ -139,7 +139,8 @@
 		[["Testo5"],"Total amount <br>received","Totale <br>ricevuto","Valor total <br>recebido","Gesamtbetrag <br>erhalten"],
 		[["Trad1"],"Initial amount of gold medals:","Numero iniziale di medaglie d'oro:","Quantidade inicial de medalhas de ouro","Anfangsmenge an Goldmedaillen"],
 		[["Trad2"],"Generate table","Genera tabella","Gerar tabela","Tabelle generieren"],
-		[[],"Player ","Giocatore ", "Jogador ", "Spieler "]
+		[[],"Player ","Giocatore ", "Jogador ", "Spieler "],
+		[[],"Accept","Inserisci","Aceitar","Akzeptieren"]
 		
 ];
 
@@ -393,6 +394,10 @@ document.getElementById("preloadcontainer").style.display = "none";
                             '0 {accept} {b}'
                         ]
                     },
+					
+					display: {
+					'accept': Traduzioni[8][Lingua]+':Accept (Shift-Enter)'
+					},
                     // example callback function
                     accepted: function(e, keyboard, el) {
                         if (Custom == 1) return;

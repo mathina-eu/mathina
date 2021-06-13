@@ -470,7 +470,7 @@ actions:
     text: "Here you can observe surfaces, which are defined by three variables (x, y, and z). Below the surface you can invent your own equation and look at the corresponding surface. You may alter each surface by using the sliders and rote it by clicking and dragging."
     toolbarText: Observe the surfaces and their equations.
     cta: Go to the surface in space!
-    url: /apps/imaginary/app_4/4_3/en.html
+    url: /apps/imaginary/app_4/4_3/index.html?lang=en
 
   - type: dialog
     avatarAlign:
