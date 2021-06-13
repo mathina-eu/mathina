@@ -3,16 +3,19 @@ actions:
     src: logi-bg2.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: image
+    noOverflow: true
     src: leo-pointing.png
     id: leo-pointing
     style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: bag.png
     id: bag
     style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
@@ -28,6 +31,7 @@ actions:
   - type: clearImage
     id: leo-pointing
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
@@ -60,6 +64,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-thinking-turned.png
     id: mathina-thinking-t
     style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
@@ -71,6 +76,7 @@ actions:
   - type: clearImage
     id: mathina-thinking-t
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
@@ -82,6 +88,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
@@ -104,6 +111,7 @@ actions:
   - type: clearImage
     id: mathina-runs
   - type: image
+    noOverflow: true
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
@@ -111,6 +119,7 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
@@ -134,6 +143,7 @@ actions:
       yPercent: 0
       ease: power3.out      
   - type: image
+    noOverflow: true
     src: owl-wing-up.png
     id: owl-w-up
     style: "width: 17%; top: 35%; right: 30%;"  
@@ -146,11 +156,13 @@ actions:
   - type: clearImage
     id: mathina-runs-t
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
@@ -175,6 +187,7 @@ actions:
   - type: clearImage
     id: owl-w-up
   - type: image
+    noOverflow: true
     src: owl-wing-front.png
     id: owl-w-f
     style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
@@ -208,6 +221,7 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: tiled floor.jpg
     id: tiled floor
     style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
@@ -219,6 +233,7 @@ actions:
   - type: clearImage
     id: tiled floor
   - type: image
+    noOverflow: true
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
@@ -282,6 +297,7 @@ actions:
   - type: clearImage
     id: leo-runs
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
@@ -297,6 +313,7 @@ actions:
   - type: clearImage
     id: owl-w-f
   - type: image
+    noOverflow: true
     src: owl-wing-up.png
     id: owl-w-up
     style: "width: 17%; top: 35%; right: 30%;"  
@@ -315,6 +332,7 @@ actions:
   - type: clearImage
     id: owl-w-up
   - type: image
+    noOverflow: true
     src: owl-wing-down.png
     id: owl-w-d
     style: "width: 20%; top: 41%; right: 29%;"  
@@ -326,6 +344,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-standing.png
     id: mathina-standing
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
@@ -341,6 +360,7 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: leo-sitting.png
     id: leo-sitting
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
@@ -357,6 +377,7 @@ actions:
   - type: clearImage
     id: mathina-standing
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
@@ -400,6 +421,7 @@ actions:
   - type: clearImage
     id: leo-sitting
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
@@ -426,6 +448,7 @@ actions:
   - type: clearImage
     id: leo-runs-t
   - type: image
+    noOverflow: true
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
@@ -433,6 +456,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
@@ -478,11 +502,13 @@ actions:
   - type: clearImage
     id: mathina-runs
   - type: image
+    noOverflow: true
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 19%; top: 44%; right: 15%; z-index:2"
