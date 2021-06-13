@@ -91,7 +91,7 @@ export default [
     slug: 'the-polyhedron-carousel',
     id: 'symm-4',
     ageMeta: AGE_GROUPS['3'],
-	fullWidth: true,
+    fullWidth: true,
   },
   {
     slug: 'demo-story-url-path',

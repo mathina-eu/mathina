@@ -449,7 +449,7 @@ actions:
     text: "Aqui podes observar superfícies que são definidas por três variáveis (x, y e z).  Abaixo da superfície podes inventar a tua própria equação e ver a superfície correspondente. Podes alterar cada superfície usando  os controlos deslizantes, e rodá-la clicando e arrastando."
     toolbarText: Observa as superfícies e as suas equações.
     cta: Segue para a superfície no espaço!
-    url: /apps/imaginary/app_4/4_3/en.html
+    url: /apps/imaginary/app_4/4_3/index.html?lang=pt
 
   - type: dialog
     avatarAlign:
