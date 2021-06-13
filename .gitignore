@@ -88,3 +88,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Auto generated acitons files
+src/hub/static/apps-list/*.json

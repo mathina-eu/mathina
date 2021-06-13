@@ -5,8 +5,8 @@ The method is based on the so-called "One-way function", i.e. invertible functio
 In the story, reference is made, as an example, to the difference in difficulty perceived by Leo in primary school between multiplications and divisions, which although mathematically are one the inverse of the other, have different perceived difficulties by the students.
 The Diffie-Hellman method actually uses the discrete logarithm, i.e. the calculation of the logarithm in modular arithmetic (for a hint of what modular arithmetic is, see [here]($HUB_URL/story/the-lost-treasure/), an operation that is extremely more complex from the point of view of computational difficulty than exponentiation.
 
-Public key cryptography, on the other hand, involves an asymmetry in the use of keys. The first, the private one, will be kept secret by the user after generation; it will only serve to decrypt received messages. The other, the public one, can be made publicly available to anyone who wants to communicate with the user and is used only to encrypt the message (this implies that whoever encrypts a message giving as recipients only other people will not be able to decrypt their own message)
-This eliminates the need for the user to communicate a different secret key to each person who wants to communicate with him: this is particularly useful in the case of "one-to-many" communications, such as in the case of banking institutions or government agencies.
+Public key cryptography, on the other hand, involves an asymmetry in the use of keys. The first, the private one, will be kept secret by the user after generation; it will only serve to decrypt received messages. The other, the public one, can be made publicly available to anyone who wants to communicate with the user and is used only to encrypt the message (this implies, that if you encode a message with a public key of someone else, you will not be able to read it anymore, actually nobody will, except for the intended recipient)
+This eliminates the need for the user to communicate a different secret key to each person who wants to communicate with him: this is particularly useful in the case of "many-to-one" communications, such as in the case of banking institutions or government agencies.
 
 Public key cryptography can also be used "backward" to verify a user's identity. In this case, in the message encrypted with the recipient's public key, the sender adds a signature, which will then be sent in an encrypted copy with his own private key. The recipient can then use the sender's public key to verify that the signature coincides with that contained in the message intended for him, thus confirming the sender's identity.
 
@@ -27,7 +27,7 @@ All apps are programmed in Javascript and can be used on computers, tablets and 
 
 &nbsp;
 
-## [Game 1 - Messages and keys I]($HUB_URL/story/the-man-in-the-middle/?actionLink=app1)
+## [Game 1 - Key exchange I]($HUB_URL/story/the-man-in-the-middle/?actionLink=app1)
 
 In the first experience, the reader retraces the steps that, after Angela's explanation, Mathina and Leo must carry out in order to derive the shared secret. Initially they choose a prime number p and then a random number chosen between 2 and p-2, then, through a simplified version of the algorithm, they separately come to the knowledge of a shared number, obtained from publicly exchanged information. 
 @[youtube](LCwYk0WbgT8?_align-center_)
@@ -35,7 +35,7 @@ In the first experience, the reader retraces the steps that, after Angela's expl
 
 &nbsp;
 
-## [Game 2 - Messages and keys II]($HUB_URL/story/the-man-in-the-middle/?actionLink=app2)
+## [Game 2 - Key exchange II]($HUB_URL/story/the-man-in-the-middle/?actionLink=app2)
 
 The second app, building on the first, offers a practical use of the key exchange method. The reader in this case plays the role of Leo, who receives the first message from Mathina and decrypts it using the shared secret generated in the first app. This app is used twice within the story, in correspondence with the messages received by Leo from Mathina. 
 
@@ -43,7 +43,7 @@ The second app, building on the first, offers a practical use of the key exchang
 [Script](/stories/bucca-4/transcripts/Script4.pdf)
 &nbsp;
 
-## [Game 3 - Messages and keys III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
+## [Game 3 - Key exchange III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
 
 In the third experience, in the role of Leo, the reader must try to break the cryptographic system, trying to derive the shared secret starting from the knowledge of the portion of the key in possession of one of the users. The app is used to highlight the difference in computational difficulty between the operations to be carried out to obtain the shared secret and those necessary to attempt to violate the system. 
 @[youtube](ylf8uX4wdpo?_align-center_)
@@ -51,7 +51,7 @@ In the third experience, in the role of Leo, the reader must try to break the cr
 
 &nbsp;
 
-## [Game 4 - Messages and keys IV]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
+## [Game 4 - Stealing the key]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
 
 The fourth app re-proposes the experience of the second, with a new message; the reader again plays the role of Leo, who receives a new message from Mathina and again generates the message in clear text from the one received.
 @[youtube](OUW1rex3DJA?_align-center_)

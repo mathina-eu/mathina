@@ -169,6 +169,7 @@ actions:
     text: >
       <p>Together, the three of them rolled up the board and secured it using some of Mathina's hairpins.</p>        
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_formcilindro.html
@@ -182,6 +183,7 @@ actions:
     text: >
       <p>Then, the wizard did some magic to summon his magic broom and, while the children were watching him, they did not realize that the roll, which was resting on the floor, had started to roll, since the street had a slope.</p>
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro.html 
@@ -231,6 +233,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    listTitle: "Stamping friezes with a “roll”"
     tag: tg10
     text: "Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
     toolbarText: "Choose an image and watch the creation of the cylinder (“roll”)"
@@ -375,6 +378,7 @@ actions:
       - text: "Let's separate them."
         char: mathina
   - type: game
+    listTitle: "Separating friezes with symmetry axes"
     tag: tg4
     text: "Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Choose 4 friezes with symmetry axes"
@@ -402,6 +406,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
+    listTitle: "Separating the friezes with symmetry axes into 3 bags"
     tag: tg5
     text: "Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Try it!"
@@ -499,6 +504,7 @@ actions:
         char: leo
         mood: excited
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro2.html
@@ -517,6 +523,7 @@ actions:
       - text: "You're right, Leo. But I don't think we need to use a roll, I think we can manage to stamp the frieze using just a board with a P, look."
         char: mathina
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_friso_refV.html
@@ -527,6 +534,7 @@ actions:
       - text: "And, using a similar process, we can even create a frieze which also has a horizontal axis of symmetry. Let’s see."
         char: wizard
   - type: game
+    listTitle: "Stamping friezes with a “board”"
     tag: tg11
     text: "Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
     cta: "Play!"
@@ -597,6 +605,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    listTitle: "Separating the friezes with rotation symmetry"
     tag: tg6
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Choose 3 friezes with rotation symmetry"
@@ -641,6 +650,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    listTitle: "Separating the friezes with reflection and rotation symmetry"
     tag: tg7
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Choose 3 friezes with reflection and rotation symmetry"
@@ -742,6 +752,7 @@ actions:
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro3.html
@@ -796,6 +807,7 @@ actions:
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_cilindros_parte1.html
@@ -860,6 +872,7 @@ actions:
   #
   # Animação a carimbar a parte 2 do friso
   - type: game
+    doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
     url: /apps/anims/anim_cilindros_parte2.html
@@ -884,6 +897,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    doNotList: true
     tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
@@ -1001,6 +1015,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    listTitle: "Separating the friezes with glide reflection symmetry"
     tag: tg12
     text: "Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Choose 3 friezes with glide reflection symmetry"
@@ -1098,6 +1113,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
+    listTitle: "Labeling the bags"
     tag: tg9
     text: "Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     cta: "Play!"

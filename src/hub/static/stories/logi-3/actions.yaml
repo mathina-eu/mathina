@@ -12,11 +12,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: All streets bear names of famous mathematicians from all around the world. 
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 13%; top: 55%; right: 87%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 12%; top: 54%; right: 36%;"
@@ -25,10 +27,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina and Leo walked the streets of Logi-city. Mathina kept her pencil at hand and Leo was wearing his green cap.
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 45%; right: 83%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 29%; right: 87%;"
@@ -36,11 +40,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: They walked on Hilbert Road towards the corner of Péter Street. 
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 57%; right: 83%;"
@@ -77,11 +83,13 @@ actions:
         char: mathina
         mood: surprised
   - type: image
+    noOverflow: true
     src: policeman-nr2.png
     id: policeman2
     style: "width: 18%; top: 27%; right: 24%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 30%; right: 83%;"
@@ -92,10 +100,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: The cop carried a remarkable assortment of old logical tools, among others a disguise, a tube voltmeter, and a level. These were more of a burden since they kept slipping off the man's shoulders and of course they were heavy as well.
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 75%; right: 55%;"
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
@@ -163,10 +173,12 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: But the thief suddenly turned left onto Gödel Street.
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 77%; right: 58%;"
   - type: image
+    noOverflow: true
     src: policeman-nr1-turn.png
     id: policeman1-t
     style: "width: 20%; top: 40%; right: 3%;"
@@ -373,16 +385,19 @@ actions:
         char: Mathina
         mood: talking
   - type: image
+    noOverflow: true
     src: sugarcube1.png
     id: sugar1
     style: "width: 8%; top: 14%; right: 90%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube2.png
     id: sugar2
     style: "width: 8%; top: 4%; right: 89%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: sugarcube3.png
     id: sugar3
     style: "width: 9.5%; top: 9%; right: 82%;"
@@ -517,18 +532,22 @@ actions:
     src: logi-bg3.jpg
     style: "position: absolute; right: 0; bottom: 0; width: 100%; z-index: 3;"
   - type: image
+    noOverflow: true
     src: leo-icon2.png
     id: leo-i2
     style: "width: 7%; top: 40%; right: 77%;"
   - type: image
+    noOverflow: true
     src: mathina-icon2.png
     id: mathina-i2
     style: "width: 4%; top: 35%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-1.png
     id: pm1
     style: "width: 7%; top: 37%; right: 75%;"
   - type: image
+    noOverflow: true
     src: pm-icon-2.png
     id: pm2
     style: "width: 7%; top: 42%; right: 74%;"
@@ -536,11 +555,13 @@ actions:
     style: "position: absolute; left: 600px; top: 5px;"
     text: Mathina, Leo and the two policemen were just about to finish their coffees and cakes, when suddenly...
   - type: image
+    noOverflow: true
     src: thief.png
     id: thief
     style: "width: 14%; top: 45%; right: 57%;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: thief-icon.png
     id: thief-i
     style: "width: 7%; top: 19%; right: 75%;"

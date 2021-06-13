@@ -3,24 +3,27 @@ actions:
     src: logi-bg2.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
   - type: image
+    noOverflow: true
     src: leo-pointing.png
     id: leo-pointing
     style: "width: 22%; top: 30%; right: 63%; z-index: 2;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: bag.png
     id: bag
     style: "width: 13%; top: 55%; right: 71%; z-index: 2;"
-    parallax: back1  
+    parallax: back1
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: Eccolo! 
+      - text: Eccolo!
         char: leo
         mood: talking
   - type: sceneText
@@ -29,14 +32,15 @@ actions:
   - type: clearImage
     id: leo-pointing
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
-    style: "width: 17%; top: 32%; right: 73%; z-index: 1;"  
+    style: "width: 17%; top: 32%; right: 73%; z-index: 1;"
     parallax: back2
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
-    entries: 
-      - text: Non è strano che dica "YTIC-IGOL"? 
+    entries:
+      - text: Non è strano che dica "YTIC-IGOL"?
         char: mathina
         mood: thinking
   - type: dialog
@@ -60,6 +64,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-thinking-turned.png
     id: mathina-thinking-t
     style: "width: 26%; top: 44%; right: 79%; z-index: 3;"
@@ -70,6 +75,7 @@ actions:
   - type: clearImage
     id: mathina-thinking-t
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 44%; right: 79%; z-index: 3;"
@@ -80,6 +86,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
@@ -87,7 +94,7 @@ actions:
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: C'è scritto "Logi-city", che è il nome in inglese della Città della Logica, solo che al contrario! 
+      - text: C'è scritto "Logi-city", che è il nome in inglese della Città della Logica, solo che al contrario!
         char: mathina
         mood: talking
   - type: dialog
@@ -102,6 +109,7 @@ actions:
   - type: clearImage
     id: mathina-runs
   - type: image
+    noOverflow: true
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 18%; top: 44%; right: 79%; z-index: 3;"
@@ -109,6 +117,7 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 17%; top: 35%; right: 74%; z-index: 1;"
@@ -122,7 +131,7 @@ actions:
       duration: 4
       xPercent: 50
       yPercent: 0
-      ease: power3.out      
+      ease: power3.out
       parallax: back2
   - type: animation
     target: mathina-runs-t
@@ -130,11 +139,12 @@ actions:
       duration: 4
       xPercent: 50
       yPercent: 0
-      ease: power3.out      
+      ease: power3.out
   - type: image
+    noOverflow: true
     src: owl-wing-up.png
     id: owl-w-up
-    style: "width: 17%; top: 35%; right: 30%;"  
+    style: "width: 17%; top: 35%; right: 30%;"
     parallax: back2
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -144,11 +154,13 @@ actions:
   - type: clearImage
     id: mathina-runs-t
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 33%; right: 63%; z-index: 1;"
@@ -174,9 +186,10 @@ actions:
   - type: clearImage
     id: owl-w-up
   - type: image
+    noOverflow: true
     src: owl-wing-front.png
     id: owl-w-f
-    style: "width: 19%; top: 35%; right: 30%; z-index: 3"  
+    style: "width: 19%; top: 35%; right: 30%; z-index: 3"
     parallax: back2
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
@@ -204,9 +217,10 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: tiled floor.jpg
     id: tiled floor
-    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"  
+    style: "width: 85%; top: 32%; right: 7%; z-index: 2;"
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
@@ -226,14 +240,15 @@ actions:
   - type: clearImage
     id: tiled floor
   - type: image
+    noOverflow: true
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 33%; right: 63%; z-index: 2;"
     parallax: back2
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
-    entries:      
-      - text: Ma allora è semplice! 
+    entries:
+      - text: Ma allora è semplice!
         char: leo
         mood: talking
   - type: animation
@@ -252,7 +267,7 @@ actions:
       duration: 1
       left: '270px'
       top: '160px'
-      ease: power3.out  
+      ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
     text: Leo saltò da un cerchio rosso a un quadrato rosso.
@@ -262,7 +277,7 @@ actions:
       duration: 1
       left: '310px'
       top: '200px'
-      ease: power3.out  
+      ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
     text: E poi a un quadrato arancione....
@@ -272,13 +287,14 @@ actions:
       duration: 1
       left: '380px'
       top: '170px'
-      ease: power3.out  
+      ease: power3.out
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
     text: ...e da lì a un triangolo arancione... Ma lì si fermò di colpo, prima di saltare inavvertitamente sulla piastrella sbagliata.
   - type: clearImage
     id: leo-runs
   - type: image
+    noOverflow: true
     src: leo-thinking.png
     id: leo-thinking
     style: "width: 16%; top: 27%; right: 47%; z-index: 2;"
@@ -291,18 +307,19 @@ actions:
         mood: serious
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
-    text: Leo era così terrorizzato che rimase fermo sul triangolo arancione. 
+    text: Leo era così terrorizzato che rimase fermo sul triangolo arancione.
   - type: clearImage
     id: owl-w-f
   - type: image
+    noOverflow: true
     src: owl-wing-up.png
     id: owl-w-up
-    style: "width: 17%; top: 35%; right: 30%;"  
+    style: "width: 17%; top: 35%; right: 30%;"
     parallax: back2
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: Non avevo ancora finito. Se sbagli un solo salto, la piastrella si capovolgerà e ti ritroverai nella rete fognaria della città! 
+      - text: Non avevo ancora finito. Se sbagli un solo salto, la piastrella si capovolgerà e ti ritroverai nella rete fognaria della città!
         char: owl
         mood: serious
       - text: Ma questa volta farò un'eccezione perchè avete un incarico importante da portare a termine. Torna al punto di partenza e riprova... questo è assolutamente il mio ultimo favore!
@@ -311,9 +328,10 @@ actions:
   - type: clearImage
     id: owl-w-up
   - type: image
+    noOverflow: true
     src: owl-wing-down.png
     id: owl-w-d
-    style: "width: 20%; top: 41%; right: 29%;"  
+    style: "width: 20%; top: 41%; right: 29%;"
     parallax: back2
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -321,6 +339,7 @@ actions:
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-standing.png
     id: mathina-standing
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
@@ -337,6 +356,7 @@ actions:
   - type: clearImage
     id: leo-thinking
   - type: image
+    noOverflow: true
     src: leo-sitting.png
     id: leo-sitting
     style: "width: 12%; top: 40%; right: 50%; z-index: 2;"
@@ -345,12 +365,12 @@ actions:
     tag: firstGame
     text: Che consiglio gli daresti?
     toolbarText: Puoi passare ad una piastrella adiacente solo se ha lo stesso colore oppure la stessa forma di quella in cui ti trovi.
-    cta: Dai una mano a Mathina e a Leo! 
-    tag: app1
+    cta: Dai una mano a Mathina e a Leo!
     url: \apps\logi-2-app\logi-2-app-1.htm
   - type: clearImage
     id: mathina-standing
   - type: image
+    noOverflow: true
     src: mathina-thinking.png
     id: mathina-thinking
     style: "width: 23%; top: 40%; right: 70%; z-index: 3;"
@@ -370,9 +390,8 @@ actions:
   - type: game
     tag: secondGame
     text: Aiuta Mathina a cercare un percorso che la porti indietro dal traguardo!
-    toolbarText: 
+    toolbarText:
     cta: Aiuta Mathina!
-    tag: app2
     url: \apps\logi-2-app\logi-2-app-2.htm
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -380,12 +399,13 @@ actions:
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: Cerchio rosso, triangolo rosso, triangolo blu... 
+      - text: Cerchio rosso, triangolo rosso, triangolo blu...
         char: mathina
         mood: thinking
   - type: clearImage
     id: leo-sitting
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 16%; top: 31%; right: 48%; z-index: 2;"
@@ -402,7 +422,7 @@ actions:
       duration: 2
       xPercent: -110
       yPercent: 10
-      ease: power3.out  
+      ease: power3.out
       parallax: back2
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"
@@ -410,13 +430,15 @@ actions:
   - type: clearImage
     id: leo-runs-t
   - type: image
+    noOverflow: true
     src: leo-runs.png
     id: leo-runs
     style: "width: 16%; top: 31%; right: 70%; z-index: 2;"
-    parallax: back2  
+    parallax: back2
   - type: clearImage
     id: mathina-thinking
   - type: image
+    noOverflow: true
     src: mathina-runs.png
     id: mathina-runs
     style: "width: 17%; top: 44%; right: 70%; z-index: 3;"
@@ -430,7 +452,7 @@ actions:
       duration: 4
       xPercent: 350
       yPercent: -2
-      ease: power3.out  
+      ease: power3.out
       parallax: back2
   - type: animation
     target: mathina-runs
@@ -438,20 +460,20 @@ actions:
       duration: 5
       xPercent: 350
       yPercent: -5
-      ease: power3.out  
-      parallax: back2  
+      ease: power3.out
+      parallax: back2
   - type: animation
     target: bag
     vars:
       duration: 4
       xPercent: 410
       yPercent: 0
-      ease: power3.out  
+      ease: power3.out
     parallax: back2
   - type: dialog
     style: "position: absolute; left: 50px; top: 5px;"
     entries:
-      - text: Congratulazioni, signorina, congratulazioni! 
+      - text: Congratulazioni, signorina, congratulazioni!
         char: owl
         mood: serious
   - type: clearImage
@@ -459,11 +481,13 @@ actions:
   - type: clearImage
     id: mathina-runs
   - type: image
+    noOverflow: true
     src: mathina-runs-turned.png
     id: mathina-runs-t
     style: "width: 19%; top: 42%; right: 9%; z-index: 3;"
     parallax: back2
   - type: image
+    noOverflow: true
     src: leo-runs-turned.png
     id: leo-runs-t
     style: "width: 19%; top: 44%; right: 15%; z-index:2"
@@ -477,7 +501,7 @@ actions:
       duration: 3
       xPercent: -350
       yPercent: 0
-      ease: power3.out  
+      ease: power3.out
       parallax: back2
   - type: animation
     target: mathina-runs-t
@@ -485,7 +509,7 @@ actions:
       duration: 4
       xPercent: -350
       yPercent: 0
-      ease: power3.out  
+      ease: power3.out
       parallax: back2
   - type: sceneText
     style: "position: absolute; left: 50px; top: 5px;"

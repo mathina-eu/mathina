@@ -188,7 +188,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 8 poliedros. São apresentados 3 conjuntos de poliedros. O jogo fica resolvido se forem selecionados todos os "bons" poliedros (i.e. convexos).
 
-@[youtube](GDYOL7SnfY0?_align-center_)
+@[youtube](GDYOL7SnfY0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
@@ -199,7 +199,7 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ![Confirmar](/stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 6 propostas. São apresentados 3 conjuntos de propostas de planificações. O jogo fica resolvido se forem selecionadas todas as "boas" planificações.
 
-@[youtube](NspkoF8gH3k?_align-center_)
+@[youtube](NspkoF8gH3k?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;

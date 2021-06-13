@@ -396,7 +396,7 @@ actions:
 
       - char: mathina
         text: Mm, questi quadrati ... penso che debba essere qualcosa legato al Teorema di Pitagora...
-        exposition: adventured Mathina
+        exposition: Disse Mathina.
 
         mood: thinking
       - char: flamma
