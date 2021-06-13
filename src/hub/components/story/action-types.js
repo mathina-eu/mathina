@@ -241,6 +241,7 @@ export class GameAction extends Action {
     img,
     toolbarImg,
     listTitle,
+    doNotList,
     ...rest
   }) {
     super(rest);
@@ -252,6 +253,7 @@ export class GameAction extends Action {
     this.img = img;
     this.listTitle = listTitle || '';
     this.toolbarImg = toolbarImg;
+    this.doNotList = doNotList || false;
   }
 
   execute(context) {

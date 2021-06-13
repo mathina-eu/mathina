@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import constants from '~/constants';
 import {
   ActionFactory,
 } from '~/components/story/action-types';
@@ -103,9 +104,9 @@ export default {
       for (let story of this.stories) {
         items.push({
           id: story.id,
-          name: this.$t(`story.titles.${story.id}`),
-          children: story.apps.map((app, index) => ({
-            id: app.url,
+          name: `${this.$t(`cities.${constants.STORY_TO_CITY[story.id]}`)}: ${this.$t(`story.titles.${story.id}`)}`,
+          children: story.apps.filter(app => !app.doNotList).map((app, index) => ({
+            id: `${app.url}-_-_-${index}`,
             name: app.listTitle || app.toolbarText || app.text,
           })),
         });
@@ -114,7 +115,8 @@ export default {
     }
   },
   methods: {
-    updateActive(appUrl) {
+    updateActive(key) {
+      let appUrl = key[0].split('-_-_-')[0];
       let selectedApp = this.appMap[appUrl];
       if (selectedApp) {
         this.game = selectedApp;
