@@ -451,6 +451,7 @@ actions:
         char: carla
         mood: happy
   - type: game
+    listTitle: "Schlüssel und Nachrichten I: Ordne die Nachricht dem Bild zu, das den Schlüssel beschreibt."
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
     toolbarText: Ordne die Nachricht dem Bild zu, das den Schlüssel beschreibt.
@@ -501,6 +502,7 @@ actions:
         char: leo
         mood: happy      
   - type: game
+    listTitle: "Schlüssel und Nachrichten II: Ordne jeder Nachricht ein Bild zu. Verwende das durch den Schlüssel beschriebene Bild nur für die richtige Nachricht."
     text: Willst Du den Kindern helfen?
     #"Want to help the kids?"
     toolbarText: Ordne jeder Nachricht ein Bild zu. Verwende das durch den Schlüssel beschriebene Bild nur für die richtige Nachricht.
@@ -814,6 +816,7 @@ actions:
     text: Sie hinterließen also ihre vier neuen Nachrichten.
       #<p>They leave the answer as well as their four new messages.</p>
   - type: game
+    listTitle: "Schlüssel und Nachrichten III: Finde die geheime Botschaft heraus!"
     text: Was ist die Nachricht, die Rasha und Lucy an Mathina und Leo geschrieben haben?
     #"Which is the message that Rasha and Lucy wrote to Mathina and Leo?"
     cta: Finde die geheime Botschaft heraus!

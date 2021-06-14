@@ -343,6 +343,7 @@ actions:
         char: angela
         mood: normal
   - type: game
+    listTitle: "Key exchange I: Follow the steps and try to create the shared secret."
     text: "Let's help Mathina and Leo understand the method"
     toolbarText: "Follow the steps and try to create the shared secret"
     cta: "Try it yourself!"
@@ -405,6 +406,7 @@ actions:
     text: >
       <p> An hour later Leo and Angela were still exploring the coast, when they received an SMS from Mathina.</p>
   - type: game
+    listTitle: "Key exchange II: Follow the steps to decode Mathina's message."
     text: "Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
@@ -458,6 +460,7 @@ actions:
        char: angela
        mood: normal
   - type: game
+    listTitle: "Stealing the key: Follow the steps to help Leo understand how secure the system is."
     text: "Try help Leo to hack the system"
     toolbarText: "Follow the steps to help Leo understand how secure the system is"
     cta: "Try it yourself!"
@@ -587,6 +590,7 @@ actions:
        char: leo
        mood: talking
   - type: game
+    listTitle: "Key exchange I: Follow the steps to decode Mathina's message."
     text: "Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
