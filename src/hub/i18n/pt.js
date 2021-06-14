@@ -7,7 +7,7 @@ export default {
   },
   appList: {
     'title': 'Apps',
-    'description': 'Try out some of these apps',
+    'description': 'Experimenta algumas destas apps',
   },
   world: {
     'title': 'Mathina',
@@ -79,9 +79,9 @@ export default {
     'select-age': 'Selecione a idade',
     'assist-mode': 'Modo de assistente',
     credits: 'Créditos',
-    'credits-disclaimer': 'This project has been funded with support from the European Commission. This publication ' +
-      'reflects the views only of the author, and the Commission cannot be held responsible for any use which may be ' +
-      'made of the information contained therein.'
+    'credits-disclaimer': 'Este projeto foi financiado com o apoio da Comissão Europeia. Os conteúdos aqui presentes ' +
+      'são da responsabilidade dos autores, e a Comissão não pode ser responsabilizada por qualquer uso indevido que possa ser ' +
+      'feito das informações nele contidas.'
   },
   chars: {
     mathina: 'Mathina',

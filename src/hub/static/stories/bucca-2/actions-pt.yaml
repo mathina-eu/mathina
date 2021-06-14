@@ -436,7 +436,7 @@ actions:
 
   - type: dialog
     entries:
-      - text: "Queres uma bolacha"
+      - text: "Queres uma bolacha?"
         char: mathina
         mood: happy
   - type: sceneText
@@ -446,7 +446,7 @@ actions:
     entries:
       - text: "Parece a mesma palavra que ele disse antes. E se estiver dizendo apenas “sim”?"
         char: mathina
-        mood: distracted
+        mood: thinking
         
   - type: clearImage
     id: Angela1
