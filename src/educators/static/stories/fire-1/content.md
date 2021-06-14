@@ -35,13 +35,11 @@ In this app, the user can get used to controlling the flight of the unidragon wi
 
 @[youtube](QQP_EywUcL4?_align-center_)
 
-
 ## App 2 - Catch the Fireballs
 
 In this second app, the user is asked to catch the appearing fireballs (unidragons' favourite snack). Once a fireball is catched, the next will appear at a different position. The number of successfully catched fireballs is displayed in the upper left corner. Unidragons don't like the clouds. They need to be avoided. If the unidragon flies into one of the clouds, he gets pushed back to the last place a fireball was picked up.
 
 @[youtube](9gRPkL7sQH8?_align-center_)
-
 
 ## App 3 - Follow the Curve
 
