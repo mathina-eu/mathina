@@ -77,7 +77,11 @@ export default {
   menu: {
     language: 'Língua',
     'select-age': 'Selecione a idade',
-    'assist-mode': 'Modo de assistente'
+    'assist-mode': 'Modo de assistente',
+    credits: 'Créditos',
+    'credits-disclaimer': 'This project has been funded with support from the European Commission. This publication ' +
+      'reflects the views only of the author, and the Commission cannot be held responsible for any use which may be ' +
+      'made of the information contained therein.'
   },
   chars: {
     mathina: 'Mathina',

@@ -95,6 +95,10 @@
           </v-list-group>
         </template>
       </v-list>
+      <template v-slot:append>
+        <v-divider />
+        <menu-credits />
+      </template>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -145,7 +149,9 @@
 </template>
 
 <script>
+import MenuCredits from '~~/src/hub/components/MenuCredits';
 export default {
+  components: { MenuCredits },
   data() {
     return {
       dialog: false,
