@@ -494,7 +494,7 @@ actions:
 
       - char: leo
         text: Mmh, she can fly...
-        mood: tinking
+        mood: thinking
 
       - char: flamma
         text: Yes, but how would you tell her what altitude you want her to be at?

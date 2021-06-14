@@ -1,0 +1,614 @@
+#FIRE-3 en-version
+
+actions:
+  - type: image
+    src: kittchen_leo_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 170%; height: 170%; z-index: 1;"
+    noOverflow: true
+    parallax: back1
+
+  - type: sceneText
+    text: >
+      Era manhã cedo, quando a Mathina foi acordada, de repente, pelos gritos do Leo, que estava do lado de fora da casa, a chamar por ela.
+
+  - type: dialog
+    avatarAlign:
+      - leo: left
+    entries:
+
+      - text: Mathina, Mathina! Acorda e vem cá! A Flama está aqui!
+        char: leo
+        mood: happy
+
+  - type: animation
+    target: bg
+    vars:
+       duration: 1
+       width: 100%
+       height: 100%
+       ease: power3.Out
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 80%;"
+    parallax: front1
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        xPercent: -90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
+
+  - type: sceneText
+    text: >
+      A Mathina vestiu-se o mais rápido que conseguiu e desceu. A Flama estava de facto lá, enquanto o Leo comia alguns bolos e biscoitos se servia e servia os outros dos copos de leite do pequeno almoço que a avó tinha deixado preparado.
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina3.png
+    id: mat
+    style: "width: 15%; top: 45%; left: -10%;"
+    #valign: bottom
+    #style: "height: 25vh"
+    parallax: mid1
+
+
+
+  - type: animation
+    target: mat
+    vars:
+        duration: 1
+        xPercent: 90
+        #yPercent: 75
+        #width: 20%
+        ease: power3.out
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+
+      - char: mathina
+        text: O que aconteceu? Por que está aqui tão cedo?
+
+      - char: leo
+        text: Campeões, campeões! Uma corrida! Campeões! Vamos ganhar!
+        exposition: O Leo tinha a boca tão cheia de flocos de aveia que a Mathina só conseguiu entender as palavras "Corrida" e "ganhar".
+
+  - type: clearImage
+    id: bg
+
+  - type: clearImage
+    id: mat
+
+  - type: background
+    src: kittchen_both_mirrored.jpg
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    #noOverflow: true
+    parallax: back1
+
+  - type: sceneText
+    text: A Mathina estava entusiasmada quando viu a Flama. Depois abraçou-a e sentou-se à mesa do pequeno almoço com o Leo.
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+    entries:
+
+      - char: flamma
+        text: >
+          Grandes notícias, Mathina! Há uma corrida de pássaros de fogo no castelo azul de Arisa. Saíste-te tão bem da última vez que pensei que gostarias de participar novamente. Mas, desta vez é muito diferente e mais difícil.
+        #This time it is not dragons who participate, but other firebirds that you haven’t seen yet: the phoenixes. I have talked to your grandmother and she is happy for you to come to Arisa to meet and train one phoenix. Do you want to come and try?
+      - char: flamma
+        text: >
+            Agora, não são dragões que participam, mas outros pássaros de fogo que ainda não viste: as fénixes. Conversei com a tua avó e ela concorda que venhas a Arisa para conhecer e treinar uma fénix. Queres vir experimentar?
+
+      - char: mathina
+        text: Sim, claro, vamos lá!
+        exposition: disse a Mathina, com a boca cheia, enquanto comia flocos de aveia.
+
+  - type: sceneText
+    text: E os três partiram para Arisa.
+
+  - type: clearBackground
+    id: bg
+
+  - type: clearImage
+    id: fla
+
+    # change background to castle
+
+
+  - type: background
+    src: bg_full.png
+    id: bg
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back1
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back3
+
+  - type: image
+    src: ochre_hills.png
+    id: hills
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: mid3
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%; transform: ScaleX(-1)"
+    parallax: front1
+
+  - type: image
+    src: mathinaleo.png
+    id: mat
+    style: "width: 30%; top: 45%; left: 20%;"
+    parallax: front2
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
+  - type: sceneText
+    text: Durante a viagem, a Flama descreveu como eram a corrida e os animais que iriam encontrar.
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+      - char: flamma
+        text: "As fénixes não são como uni-dragões, que podem voar para trás, para a frente ou parar no ar. As fénixes são como as águias: só voam para a frente."
+        mood: normal
+
+      - char: flamma
+        text: Orientam-se olhando para o solo e por isso voam sempre para a frente com a mesma velocidade relativamente ao solo. Por outras palavras, se vires a sombra por baixo da fénix, essa sombra move-se para a frente a velocidade constante, independentemente se a fénix sobe, desce ou se se mantém na mesma altura.
+        mood: normal
+
+      - char: flamma
+        text: Tal como os uni-dragões, as fénixes são muito inteligentes e podem ser treinadas de forma a podermos comunicar com elas e dizer-lhes para onde voar.
+
+      - char: mathina
+        text: Se elas se movem sempre com a mesma velocidade para a frente, como é que isso é uma corrida? Então, vão chegar sempre ao mesmo tempo à meta.
+        mood: arguing
+
+      - char: flamma
+        text: Tens razão, elas movem-se sempre à mesma velocidade para a frente, mas esta corrida não tem a ver com velocidade, consiste em evitar os obstáculos que os feiticeiros vão colocando no céu.
+
+      - char: mathina
+        text: Obstáculos?
+        mood: surprised
+
+      - char: flamma
+        text: Sim, vais ver, estamos a chegar ao castelo.
+
+  - type: image
+    src: bg_castle.png
+    id: castle
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: back2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 5%; top: 65%; left: 87%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 3%; top: 58%; left: 55%; transform: scaleX(-1)"
+    parallax: mid3
+
+  - type: image
+    src: flamma1.png
+    id: wizf
+    style: "width: 3%; top: 62%; left: 92%; transform: scaleX(-1)"
+    parallax: mid1
+
+  - type: image
+    src: fireball1.png
+    id: fire1
+    style: "width: 2%; top: 48%; left: 62%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire1
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: fireball1.png
+    id: fire2
+    style: "width: 2%; top: 52%; left: 82%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire2
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+  - type: image
+    src: fireball1.png
+    id: fire3
+    style: "width: 2%; top: 42%; left: 92%;"
+    parallax: mid1
+
+  - type: animation
+    target: fire3
+    vars:
+        duration: 0.3
+        repeat: 1000
+        rotate: 360
+        #yoyo: true
+        ease: power.out
+
+  - type: image
+    src: unidragon.gif
+    id: uni
+    style: "width: 5%; top: 45%; left: 100%; transform: rotateY(180deg)"
+    noOverflow: true
+    parallax: mid2
+
+  - type: animation
+    target: uni
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -1500
+        yPercent: -600
+
+  - type: image
+    src: unidragon.gif
+    id: uni2
+    style: "width: 5%; top: 55%; left: 65%;"
+    noOverflow: true
+    parallax: mid3
+
+  - type: animation
+    target: uni2
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 1100
+        yPercent: -240
+
+  - type: image
+    src: unidragon-sitting.png
+    id: uni3
+    style: "width: 5%; top: 67%; left: 92%; transform: scaleX(-1)"
+    parallax: mid2
+
+  - type: sceneText
+    text: Depois de uma curva no caminho, surgiu um extenso campo e a Mathina avistou o castelo à distância. Era um edifício velho mas sólido no meio de um campo, com torres, janelas e muralhas. Seria uma fortaleza fantástica, se alguma vez tivesse de ser protegido. À frente do castelo, o vale formava uma larga clareira com amplo espaço para as atividades que lá decorriam. Alguns dragões e fénixes estavam no chão, a serem cuidados pelos seus treinadores. A uma certa distância, via-se alguns feiticeiros, de varinha mágica na mão, faziam levitar bolas de fogo e criavam nuvens de fumo.
+
+  - type: image
+    src: castle_large.png
+    id: castle_large
+    style: "position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;"
+    noOverflow: true
+    parallax: mid1
+
+  - type: clearImage
+    id: uni
+  - type: clearImage
+    id: uni3
+  - type: clearImage
+    id: fire1
+  - type: clearImage
+    id: fire2
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: wizs
+  - type: clearImage
+    id: wizf
+  - type: clearImage
+    id: uni2
+  - type: clearImage
+    id: fire3
+  - type: clearImage
+    id: fla
+  - type: clearImage
+    id: mat
+
+  - type: image
+    src: flamma3.png
+    id: fla
+    style: "width: 30%; top: 22%; left: 60%;"
+    parallax: front1
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 8%; top: 63%; left: 64%;"
+    parallax: mid2
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 25%; top: 20%; left: 28%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 40%; left: 50%;"
+    parallax: front2
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo5.png
+    id: leo
+    style: "width: 16%; top: 50%; left: 15%;"
+    parallax: front2
+
+  - type: image
+    src: phoenix.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: -40%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: 350
+       # yPercent: -240
+
+  - type: sceneText
+    text: Os três pararam a algumas centenas de metros do castelo, onde estavam os outros treinadores. A Flama cumprimentou um homem com uma fénix fantástica. O animal parecia uma enorme águia, com penas vermelhas e amarelas brilhantes. Entre as penas, podia ver-se um brilho como se a própria fénix estivesse a arder. Uma longa cauda terminava em penas violetas e verdes que faiscavam silenciosamente, libertando um fumo colorido. 
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+      - char: flamma
+        text: Ok, Mathina. Podes tentar pilotar essa fénix. Ela chama-se Flick e é muito mansa, embora não goste quando o treinador a engana. Precisas de pensar cuidadosamente naquilo que lhe queres dizer.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo2.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 20%; transform: scaleX(-1)"
+    parallax: front2
+
+# Jogo 3.1
+  - type: game
+    text: "O percurso de voo da fénix pode ser descrito por um polinómio, que é uma função da variável x. Ajusta os números mágicos (coeficientes) para cada potência de x e cria um percurso para a Flick."
+    #A polynomial is a function built adding powers of the variable x. Adjust the amounts (coefficients) of each power to obtain the target graph of the function.
+    toolbarText: Ajusta o percurso de voo alterando a função abaixo.
+    #Adjust the function to get the target graph.
+    # "App 3-1 (not ready yet)"
+    cta: Faz voar a fénix!
+    url: /apps/imaginary/app_3/3_1/index.html?lang=pt
+
+# Jogo 3.2
+  - type: game
+    text: O percurso de voo da Flick será novamente descrito por um polinómio. Desta vez, não podes ajustar os coeficientes, mas podes mover os pontos brancos. O percurso passará por todos eles. Não consegues ver o caminho antes de dizeres à Flick para voar. Tem cautela porque depois de teres escolhido os pontos haverá apenas um caminho e poderá ser diferente daquele que imaginaste...
+    #One can build a polynomial that passes through a list of points. Can you guess how? Adjust the points so that the graph does not touch the obstacles (clouds).
+    #  "App 3-2 (not ready yet)"
+    toolbarText: Move os pontos de forma a que a Flick não vá contra nenhum dos obstáculos durante o seu voo.
+    #Place the points so that the graph does not touch the obstacles.
+    cta: Faz voar a fénix!
+    url: /apps/imaginary/app_3/3_2/index.html?lang=pt
+
+  # - type: clearImage
+    # id: leo
+  - type: clearImage
+    id: mat
+  - type: clearImage
+    id: wiz
+  - type: clearImage
+    id: phoe
+
+  # - type: image
+    # src: $COMMON/img/characters/leo/leo2.png
+    # id: leo
+    # style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    # parallax: front2
+
+  - type: image
+    src: phoenix2.png
+    id: phoe2
+    style: "width: 30%; top: 40%; left: 90%;"
+    noOverflow: true
+    parallax: front1
+
+  - type: animation
+    target: fla
+    vars:
+        duration: 1
+        #width: 25%
+        xPercent: -50
+       # yPercent: -240
+
+  - type: animation
+    target: phoe2
+    vars:
+        duration: 1.5
+        #width: 25%
+        xPercent: -163
+        yPercent: -35
+
+  - type: sceneText
+    text: O Leo estava por perto, pensando que também podia tentar pilotar a fénix. Ele era mais novo que a Mathina, mas sentia-se tão preparado como outro qualquer. Estava a pensar nisso quando viu uma outra fénix que tinha acabado de aterrar na mão da Flama. Tinha penas azuis e verdes brilhantes, e a sua incandescência era mais violeta do que a da Flick. Mas o que o Leo notou imediatamente foi que os seus olhos estavam brancos.
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo1.png
+    id: leo
+    style: "width: 16%; top: 60%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+      - char: leo
+        text: O que aconteceu a esta fénix?
+
+      - char: flamma
+        text: Esta é a Liz. É uma fénix fêmea que perdeu a visão quando tentou voar em direção ao Sol durante muito tempo. É uma história triste, porque sem visão ela não consegue ver o terreno para se orientar e ninguém a consegue treinar. Ela só encontra a minha mão porque nos conhecemos há já muito tempo...
+
+      - char: leo
+        text: Mas ela pode voar...
+        mood: thinking
+
+      - char: flamma
+        text: Sim, mas como lhe poderias indicar a altitude a que queres que ela esteja?
+
+  - type: clearImage
+    id: leo
+
+  - type: image
+    src: $COMMON/img/characters/leo/leo4.png
+    id: leo
+    style: "width: 22%; top: 40%; left: 25%; transform: scaleX(-1)"
+    parallax: front2
+
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+
+      - char: leo
+        text: Bem, eu posso dizer-lhe se ela deve subir ou descer. Isso ela pode fazer sem ter que olhar para o chão.
+
+      - char: flamma
+        text: "Humm, ninguém tentou, mas pode ser que tenhas razão. As fénixes são extremamente inteligentes: se a treinares para entender as tuas instruções “para cima e para baixo”, ela aprenderá rapidamente. Mas precisas de lhe dizer quanto subir ou descer em qualquer momento, enquanto ela estiver a voar."
+
+      - char: leo
+        text: "Vai ser fácil, é como com os uni-dragões: temos de lhes indicar uma direção e eles seguem-na."
+        mood: happy
+
+      - char: flamma
+        text: Ah, então a Liz é tua para a treinares. Vamos ver se consegues treiná-la por forma a fazer uma corrida como o com a Flick e a Mathina.
+
+# Jogo 3.3
+  - type: game
+    text: Para fazer voar esta fénix tends de lhe dizer quanto deve subir ou descer movendo a mão à esquerda para cima ou para baixo. Fá-la voar evitando os obstáculos.
+    toolbarText: Evita os obstáculos e chega ao lado direito.
+    cta: Faz voar a fénix!
+    url: /apps/imaginary/app_3/3_3/index.html?lang=pt
+
+  - type: clearImage
+    id: phoe2
+
+  - type: image
+    src: $COMMON/img/characters/mathina/mathina5.png
+    id: mat
+    style: "width: 12%; top: 30%; left: 45%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: sceneText
+    text: >
+      O Leo teve um grande sucesso ao fazer voar a Liz, e a Flama estava impressionada. A Mathina estava também feliz por o Leo ter descoberto uma nova forma de guiar a fénix, e teve uma ideia:
+
+  - type: dialog
+    avatarAlign:
+      mathina: left
+      leo: left
+      flamma: right
+
+    entries:
+      - char: mathina
+        text: Leo, tu encontraste uma forma de dizer à fénix quando subir e descer, e eu descobri um maneira de dizer à fénix a altura depois de voar uma certa distância. Porque é que não misturamos as duas coisas juntos?
+        mood: talking
+
+      - char: leo
+        text: Que queres dizer, Mathina?
+        mood: surprised
+
+      - char: mathina
+        text: Quero dizer que podemos treinar a Liz para percerber antes de voar quanto deve subir ou descer. Diremos esse valor de subida ou descida da mesma maneira que eu estive a dizer a altura à Filck.
+        mood: arguing
+        exposition: O Leo estava agora um pouco confuso, mas a Flama interveio.
+
+      - char: flamma
+        text: Essa ideia é fantástica. A Liz é uma fénix inteligente e seguirá as vossas instruções, mas vocês terão de puxar pelas vossas cabeças para aplicarem essa ideia! #If you can make that, you will surely win the prize for the most original way to command phoenixes, a category much more prestigious than just racing, because it needs a deep understanding and connection of the firebirds’ language!
+
+      - char: flamma
+        text: Se conseguirem fazer isso, irão ter de certeza o prémio para a forma mais original de comandar fénixes, uma categoria com muito mais prestígio que a das corridas, dado que para isso é preciso compreender a fundo e ter uma grande ligação com a linguagem dos pássaros de fogo!
+
+# Game 3.4
+  - type: game
+    text: Ajusta os pontos para criar e linha. A linha dá o quanto deve a fénix subir ou descer a cada momento. Usando essa técnica, apanha todas as bolas de fogo ao longo do teu caminho.
+    toolbarText: Ajusta a linha que dá as subidas e descidas da fénix. Apanha todas as bolas de fogo.
+    cta: Faz voar a fénix!
+    url: /apps/imaginary/app_3/3_4/index.html?lang=pt
+
+  - type: image
+    src: wizard.png
+    id: wiz
+    style: "width: 20%; top: 35%; left: 10%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: wizards.png
+    id: wizs
+    style: "width: 25%; top: 32%; left: 75%; transform: scaleX(-1)"
+    parallax: front2
+
+  - type: image
+    src: phoenix_mirrored.png
+    id: phoe
+    style: "width: 40%; top: 3%; left: 100%;"
+    noOverflow: true
+    parallax: front3
+
+  - type: animation
+    target: phoe
+    vars:
+        duration: 30
+        #width: 25%
+        xPercent: -350
+       # yPercent: -240
+
+  - type: sceneText
+    text: >
+      A Mathina e o Leo passaram todo o dia a treinar e a brincar com as fénixes. O Leo conseguiu Conseguiram treinar a Liz, e todos os feiticeiros do júri e os exímios os treinadores de fénixes o os admiraram por isso e atribuíram-lhes o prémio de Originalidade para os melhores treinadores. Terminaram o dia com um grande banquete numa festa organizada na maior sala do castelo

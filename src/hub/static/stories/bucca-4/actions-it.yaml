@@ -284,9 +284,6 @@ actions:
       - text: "Sì, esattamente!"
         char: mathina
         mood: normal
-      - text: "What if I tell you there is a way to agree on a secret key in public, without anyone knowing our secret even if we shout all the information in the middle of the park?"
-        char: angela
-        mood: normal
       - text: "Ma aspetta, questa persona potrebbe intercettare i nostri messaggi... Anche se decidessimo una chiave ora ... potrebbe essere in ascolto! Ricordo anche che il metodo non era così sicuro... Dopo un po', diciamo alcuni minuti, si possono provare varie combinazioni e ottenere la chiave"
         char: leo
         mood: thinking

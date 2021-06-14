@@ -71,5 +71,5 @@ La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/
 
 La prima persona riceve una certa quantità di medaglie d'oro, pari alla somma delle cifre del numero totale di medaglie d'oro ricevute dalla squadra. Per esempio, se la squadra ha ricevuto 721 medaglie d'oro, il primo membro della squadra ottiene 7 + 2 + 1, cioè 10 medaglie d'oro. Rimangono 721-10=711 medaglie d'oro. Il giocatore successivo ottiene un numero di medaglie d'oro pari alla somma delle cifre delle medaglie d'oro rimaste e così via.
 L'educatore ha la possibilità di creare variazioni nell'esperienza d'uso attraverso l'ultima app nella storia.
-@[youtube](A1vXg_DSolc?_align-center_)
+@[youtube](A1vXg_DSolc?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/logi-3/transcripts/Script1.pdf)

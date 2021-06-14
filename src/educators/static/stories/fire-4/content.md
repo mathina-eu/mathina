@@ -1,6 +1,3 @@
-The mysterious sparkbugs
-========================
-
 # Mathematical concepts
 This story introduces the description of curves by implicit functions. We have seen in previous stories (The phoenix race) the explicit description of a curve, where for each `@x@` value, we obtain a `@y@` value by a function, `@y=f(x)@`, and we represent all the points `@ (x,y) = (x,f(x)) @`.
 
@@ -39,13 +36,13 @@ For each value of `@theta@`, we obtain a point `@(x,y)@` in the plane.
 
 Lines and circles are some easy examples to try with implicit functions. Additionally, some tricks and techniques can be used to generate more shapes:
 
-* Deformation: Given a curve defined by `@F(x,y)=0@`, we can obtain a small deformation by changing the equation to `@F(x,y)=a@`, or equivalently `@F(x,y)-a=0@`, if the value of a is small (close to zero). Since the function `@F@` is continuous, the points that make `@F(x,y)=a@` will be close to the points that make `@F(x,y)=0@`. We obtain thus a deformation of the curve.
+* **Deformation:** Given a curve defined by `@F(x,y)=0@`, we can obtain a small deformation by changing the equation to `@F(x,y)=a@`, or equivalently `@F(x,y)-a=0@`, if the value of a is small (close to zero). Since the function `@F@` is continuous, the points that make `@F(x,y)=a@` will be close to the points that make `@F(x,y)=0@`. We obtain thus a deformation of the curve.
 
-Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
+	Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
 
-* Union: We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` are as well.
+* **Union:** We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` are as well.
 
-* Intersection: We can obtain these points by using the expression `@F(x,y)^2 + G(x,y)^2=0@`. Indeed, if the sum of two positive quantities is zero, then both must be zero at the same time, and hence only the points that make simultaneously `@F=0@` and `@G=0@` will belong to the new curve. In general, this construction will generate isolated points (by intersecting two curves), but we can re-obtain a curve by applying the deformation technique introduced earlier, that is, `@F(x,y)^2 + G(x,y)^2 -a =0@` for some value of `@a@` close to zero.
+* **Intersection:** We can obtain these points by using the expression `@F(x,y)^2 + G(x,y)^2=0@`. Indeed, if the sum of two positive quantities is zero, then both must be zero at the same time, and hence only the points that make simultaneously `@F=0@` and `@G=0@` will belong to the new curve. In general, this construction will generate isolated points (by intersecting two curves), but we can re-obtain a curve by applying the deformation technique introduced earlier, that is, `@F(x,y)^2 + G(x,y)^2 -a =0@` for some value of `@a@` close to zero.
 
 On the last activity, we explore implicit surfaces in three-dimensional space. These are given by the zeroset of a three-valued function `@F(x,y,z)=0@`.
 
@@ -53,11 +50,11 @@ On the last activity, we explore implicit surfaces in three-dimensional space. T
 # Didactical remarks
 The apps are proposed here mainly as an explorative exercise. Numerous examples are provided as both a display of the complexity that can be achieved, as well as simple examples that can be familiar (like lines, circles, ellipses, hyperbolas, etc).
 
-Some examples can be analysed to get an understanding of the geometric shape from the algebraic expression, as we did above with the circle, using the Pythagorean theorem. Guessing and trying to develop an intuition on the formulas is the main challenge for this story. An exercise of matching equations with curves is proposed.
+Some examples can be analysed to get an understanding of the geometric shape from the algebraic expression, as we did above with the circle, using the Pythagorean theorem. Guessing and trying to develop an intuition for the formulas is the main challenge of this story. An exercise of matching equations with curves is proposed (App 2).
 
-The tools provided by the apps, together with the techniques pointed above, are powerful enough and allow great creativity, that should be exploited: Challenge the student to make a shape that resembles a star, a hexagon, a sea animal, a plant, etc.
+The tools provided by the apps, together with the techniques pointed above, are powerful enough and allow great creativity, that should be exploited: Challenge the students to make a shape that resembles a star, a hexagon, a sea animal, a plant, etc.
 
-The apps have a list of examples of curves and surfaces, each one shows its formula and the drawing. First examples can be understood and deducted after some reflection. A text box allows one to introduce and modify any (polynomial) equation in two (or three) variables.
+The apps have a list of examples of curves and surfaces, each one shows its formula and the drawing. First examples can be understood and deducted after some reflection. A text box allows the user to introduce and modify any (polynomial) equation in two (or three) variables.
 
 
 # About the apps
@@ -71,17 +68,21 @@ A list of examples is available on the side, and the user can write any polynomi
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
 
+@[youtube](XoGBCCIlgnc?_align-center_)
+
 ## App 2 - Guess the equation
-This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug. After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
+This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug (sitting on the top of the parchment). After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
+
+@[youtube](RI82ffVucEA?_align-center_)
 
 ## App 3 - Surfaces
 This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.
 
-A list of example equations is available on the right, as well as the text box where one can enter its own equation.
+A list of example equations is available on the right, as well as the text box where the user can enter her or his own equation. (For a start, you can adapt the equations of the listed surfaces and observe the changes.)
 
-Three sliders are available next to the surface. First, a parameter `@a@`, that can be used inside the formulae, and the slider adjusts its value from `@0@` to `@1@`. Second, a transparency control that allows the surface to be translucent. Third, a zoom level, that sets the amount of the (generally infinite) surface that we see inside of the sphere that clips the graph.
+Three sliders are available next to the surface. First, a parameter `@a@`, that can be used inside the formula, and the slider adjusts its value from `@0@` to `@1@`. Second, a transparency control that allows the surface to be translucent. Third, a zoom level, that sets the amount of the (generally infinite) surface that we see inside of the sphere that clips the graph.
 
 ![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
 

@@ -11,7 +11,7 @@ Il collegamento con il cifrario di Cesare è che se associamo i numeri da 0 a 25
 
 Questo punto di vista serve anche ad Angela per far capire a Mathina che applicare due volte il cifrario di Cesare non rende il messaggio più sicuro: si fa uno sforzo doppio per non ottenere nulla di nuovo. Infatti utilizzando due volte di fila il cifrario, con chiave k e h rispettivamente, è come usarlo una sola volta con chiave k+h. 
 
-Nella storia viene anche presentata una variante del cifrario di Cesare, il cifrario di Vigenère. Esso è un cifrario sempre a sostituzione, come il cifrario di Cesare ma funziona partizionando le lettere in più insiemi, ciascuno dei quali è cifrato utilizzando il cifrario di Cesare con una chiave diversa. La chiave è quindi un elenco di s numeri: il primo ci dirà come cifrare la prima lettera e le lettere alla posizione s+1, 2s+1,... il secondo numero la seconda lettera e le lettere alla posizione s+2, 2s+2,... e così via. Nella storia, la chiave usata è composta da due numeri: nella pratica, il testo cifrato è stato ottenuto utilizzando il cifrario di Cesare sulle lettere dispari con chiave uguale al primo dei due numeri e sulle lettere alla posizione pari con chiave data dal secondo dei due numeri. Ad esempio, se la chiave fosse la coppia di numeri (1,3), la parola "MATHINA" viene cifrata "sommando" 1 alle lettere di posizione dispari e "sommando" 3 alle lettere di posizione pari. Otteniamo quindi la parola "NDUKJOB".
+Nella storia viene anche presentata una variante del cifrario di Cesare, il cifrario di Vigenère. Esso è un cifrario sempre a sostituzione, come il cifrario di Cesare ma funziona partizionando le lettere in più insiemi, ciascuno dei quali è cifrato utilizzando il cifrario di Cesare con una chiave diversa. La chiave è quindi un elenco di s numeri: il primo ci dirà come cifrare la prima lettera e le lettere alla posizione s+1, 2s+1,... il secondo numero la seconda lettera e le lettere alla posizione s+2, 2s+2,... e così via. Nella storia, la chiave usata è composta da due numeri: nella pratica, il testo cifrato è stato ottenuto utilizzando il cifrario di Cesare sulle lettere dispari con chiave uguale al primo dei due numeri e sulle lettere alla posizione pari con chiave data dal secondo dei due numeri. Ad esempio, se la chiave fosse la coppia di numeri (1,3), la parola "MATHINA" viene cifrata "sommando" 1 alle lettere di posizione dispari e "sommando" 3 alle lettere di posizione pari. Otteniamo quindi la parola "NDUKJQB".
 
 
 
@@ -56,7 +56,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 
 In questa app l'utente deve provare a cifrare correttamente alcune parole usando il cifrario di Cesare con una chiave scelta dal computer. Questa esperienza serve per far prendere familiarità all'utente con il cifrario di Cesare e, nel caso l'utente abbia letto la storia "Il pappagallo parlante", per fornire un richiamo ai concetti visti precedentemente.
 
-@[youtube](RPVvWsMXSiA?_align-center_)
+@[youtube](RPVvWsMXSiA?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
@@ -64,7 +64,7 @@ In questa app l'utente deve provare a cifrare correttamente alcune parole usando
 ## [App 2 - Il gioiello II]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app2)
 
 L'utente si trova davanti un messaggio da decifrare con il cifrario di Cesare ma con una difficoltà aggiuntiva: la frase in chiaro "Incontriamoci domani mattina al bar vicino al molo sull'isola" è scritta al contrario. Si tratta di un espediente tecnico per rendere il cifrario di Cesare più complicato ed è fatto ai fini della trama.
-@[youtube](Kfp6PgOK8K8?_align-center_)
+@[youtube](Kfp6PgOK8K8?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
@@ -73,7 +73,7 @@ L'utente si trova davanti un messaggio da decifrare con il cifrario di Cesare ma
 
 In questa esperienza, il cifrario di Cesare presentato in precedenza viene analizzato dal punto di vista matematico. Questa volta l'interfaccia è quella di un orologio con una sola lancetta che mira a presentare l'addizione nell'aritmetica modulare. La domanda iniziale è di questo tipo: "Proviamo a calcolare 12 + 5 in un orologio con 14 ore". L'utente può spostare la lancetta delle ore su questo orologio a 14 ore per cercare di comprendere quale sarà la risposta finale (nel caso specifico 3 è la risposta corretta).
 
-@[youtube](XsRGpkmIh0k?_align-center_)
+@[youtube](XsRGpkmIh0k?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
@@ -81,7 +81,7 @@ In questa esperienza, il cifrario di Cesare presentato in precedenza viene anali
 
 In questa esperienza, il cifrario di Cesare presentato in precedenza viene analizzato dal punto di vista matematico. Questa volta l'interfaccia è quella di un orologio con una sola lancetta che mira a presentare l'addizione nell'aritmetica modulare. La domanda iniziale è di questo tipo: "Proviamo a calcolare 12 + 5 in un orologio con 14 ore". L'utente può spostare la lancetta delle ore su questo orologio a 14 ore per cercare di comprendere quale sarà la risposta finale (nel caso specifico 3 è la risposta corretta).
 
-@[youtube](LTgWwiIRrm8?_align-center_)
+@[youtube](LTgWwiIRrm8?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
@@ -90,7 +90,7 @@ In questa esperienza, il cifrario di Cesare presentato in precedenza viene anali
 
 Questa esperienza conclude l'analisi della storia per osservare che il cifrario di Cesare ripetuto 2 volte di seguito non ha nulla di diverso rispetto al cifrario di Cesare usuale. Semplicemente cambia la chiave. Per farlo all'utente vengono presentati due dischi di Cesare combinati come nell'esperienza precedente e gli si chiede di posizionare un terzo disco di Cesare in modo che il risultato dell'operazione di codifica sia lo stesso.
 
-@[youtube](agTiwTMl-do?_align-center_)
+@[youtube](agTiwTMl-do?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 
@@ -100,7 +100,7 @@ Questa esperienza conclude l'analisi della storia per osservare che il cifrario 
 
 L'esperienza è identica alla prima, con l'unica differenza che questa volta il messaggio non si riesce a decodificare, dato che non è stato cifrato con il cifrario di Cesare. Sottolineiamo che nella storia questo viene detto prima all'utente, in modo che l'esperienza di questa app non risulti frustrante. L'idea è solo un "verificare" che in effetti il disco di Cesare non decodifica il messaggio presentato in questo caso.
 
-@[youtube](yIqXC-y47GQ?_align-center_)
+@[youtube](yIqXC-y47GQ?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 &nbsp;
@@ -109,7 +109,7 @@ L'esperienza è identica alla prima, con l'unica differenza che questa volta il 
 
 L'esperienza è identica all'esperienza precedente, viene presentata all'utente solo per concentrarsi su una lettera particolare del testo facendo in modo di tradurla come una "E", sperimentando quindi esattamente quello che Mathina e Angela stanno facendo nella storia.
 
-@[youtube](6NQM9xFIvlg?_align-center_)
+@[youtube](6NQM9xFIvlg?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 
@@ -119,7 +119,7 @@ L'esperienza è identica all'esperienza precedente, viene presentata all'utente 
 
 Questa esperienza è un primo passo verso il cifrario di Vigenère. Il testo viene codificato usando due dischi di Cesare, uno per le parole pari e uno per le parole dispari. Come si scoprirà nella storia, questo non è ancora l'approccio giusto per decodificare effettivamente il messaggio e questa esperienza ha lo scopo di far verificare personalmente che non è il metodo corretto.
 
-@[youtube](j3cMyFg5Lfc?_align-center_)
+@[youtube](j3cMyFg5Lfc?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 
@@ -128,7 +128,7 @@ Questa esperienza è un primo passo verso il cifrario di Vigenère. Il testo vie
 ## [App 9 - Un nuovo cifrario]($HUB_URL/story/mathina-and-the-lost-treasure/?actionLink=app9)
 
 L'esperienza conclusiva della storia è il cifrario di Vigenère su due lettere. Utilizzando due dischi di Cesare, si modificano rispettivamente le lettere pari e quelle dispari. In questo modo, seguendo i suggerimenti della storia, si riesce facilmente a decodificare il messaggio. C'è poi la possibilità di ripetere questa esperienza con messaggi e chiavi diversi.
-@[youtube](ZS5DU2PFlR8?_align-center_)
+@[youtube](ZS5DU2PFlR8?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/bucca-3/transcripts/Script3-it.pdf)
 
 

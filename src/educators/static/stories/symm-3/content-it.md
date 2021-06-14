@@ -119,7 +119,7 @@ Oltre agli argomenti matematici già citati, viene anche citato l'argomento sull
 Esperienze aggiuntive simili a quelli presentate nella storia possono essere sviluppate dagli educatori. Di seguito, proponiamo due spunti:
 
 `*` Stampa dei fregi:
-  * l'esperimento di "timbrare fregi con un cilindro" può essere simulato fisicamente con gli studenti: utilizzando un rotolo su cui è stato incollato un timbro, è possibile riprodurre l'esperimento (virtuale) di imprimere fregi sul piano.
+  * l'esperimento di "timbrare fregi con un cilindro" può essere simulato fisicamente con gli studenti: utilizzando un rullo su cui è stato incollato un timbro, è possibile riprodurre l'esperimento (virtuale) di imprimere fregi sul piano.
   
 `*` Classificazione fregi:
   * un esperimento complementare a quelli presentati nella storia è chiedere agli studenti di disegnare esempi dei sette diversi tipi di fregi. E, alla fine, gli studenti possono confermare le loro risposte in modo simile a quello utilizzato nell'app "Etichettatura delle borse". 
@@ -136,13 +136,13 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 
 &nbsp;
 
-## [App 1 - Stampando fregi con un rotolo]($HUB_URL/it/story/stamping-friezes/?actionLink=tg10)
+## [App 1 - Stampando fregi con un rullo]($HUB_URL/it/story/stamping-friezes/?actionLink=tg10)
 
 In questa app, l'utente è invitato a scegliere un'immagine tra le venti proposte. Quindi, viene presentata la creazione di un cilindro, con l'immagine selezionata. Facendo clic
 ![Stampa](/stories/symm-3/img/stamp.png =40x40)
 , l'utente può osservare il cilindro che timbra un fregio che ha come motivo l'immagine scelta.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](xKiCkxAxdEs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -153,7 +153,7 @@ Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i q
 ![Conferma](/stories/symm-3/img/confirm.png =40x40)
 , il programma mostra una nuova serie di sette fregi. Vengono mostrati un totale di 3 set. Il gioco è risolto quando tutti i fregi corretti (cioè con assi di simmetria) sono selezionati.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](ZRi96tPJW7Y?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -162,7 +162,7 @@ Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i q
 
 Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni fregio nel sacchetto corrispondente, secondo la sua simmetria di riflessione. Il **sacchetto 1** contiene i fregi che hanno solo assi di simmetria verticali, il **sacchetto 2** quelli solo con asse di simmetria orizzontale. Infine, il **sacchetto 3** contiene i fregi con entrambi i tipi di assi di simmetria.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](bIFqroBizaU?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -171,7 +171,7 @@ Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni 
 
 In questa app, l'utente è invitato a scegliere un'immagine scelta tra venti. L'utente può guardare una tavola che timbra un fregio, con assi di simmetria sia verticale che orizzontale, che ha l'immagine scelta come modulo che si ripete.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](moNr-MDIUs0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
@@ -180,8 +180,6 @@ In questa app, l'utente è invitato a scegliere un'immagine scelta tra venti. L'
 
 Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con assi di simmetria, l'utente dovrebbe scegliere quelli che possiedono rotazioni non banali come simmetrie.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -190,8 +188,6 @@ Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con ass
 
 Questa app è simile alla **App 5**. L'unica differenza riguarda i fregi scelti: qui i fregi presentati sono quelli originariamente appartenuti al **sacchetto 1**.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -200,8 +196,6 @@ Questa app è simile alla **App 5**. L'unica differenza riguarda i fregi scelti:
 
 Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con assi di simmetria, l'utente dovrebbe scegliere quelli con glissoriflessioni.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
-[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -221,5 +215,5 @@ In questa app l'utente può osservare i sette sacchetti ottenuti e vedere i freg
  (traslazione)
  quelli che corrispondono alle simmetrie esistenti sui fregi della borsa.
 
-@[youtube](OYrrdu4y_7E?_align-center_)
+@[youtube](gzhAUhgIVp0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
 [Script](/stories/symm-3/transcripts/Script3.pdf)

@@ -114,6 +114,18 @@
           <v-list-item-title>{{ $t('world.map') }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
+      <v-list-item
+        color="grey"
+        :to="localePath('/apps/')"
+        text
+        nuxt
+      >
+        {{ $t('appList.title') }}
+      </v-list-item>
+      <template v-slot:append>
+        <v-divider />
+        <menu-credits />
+      </template>
     </v-navigation-drawer>
 
     <v-app-bar
@@ -227,8 +239,9 @@
 
 <script>
 import Logo from '~/components/Logo';
+import MenuCredits from '~/components/MenuCredits';
 export default {
-  components: { Logo },
+  components: { MenuCredits, Logo },
   data() {
     return {
       dialog: false,

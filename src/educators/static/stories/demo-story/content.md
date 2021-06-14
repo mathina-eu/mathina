@@ -13,6 +13,12 @@ Hub's url in production.
 
 For how to add a tag see README.md or https://github.com/mathina-eu/mathina#using-tags-to-link-directly-to-an-action
 
+You can also link to the apps list either using a tag and the story id:
+[Story in Apps List using tag]($HUB_URL/apps/?tag=app1&story=bucca-1)
+
+... or using the sequential number of the app in the story (staring with 0)
+[Story in Apps List using number]($HUB_URL/apps/?appNumber=0&story=bucca-1)
+
 ## How to include a video
 
 ![Some text](/stories/demo-story/video/video.mp4)

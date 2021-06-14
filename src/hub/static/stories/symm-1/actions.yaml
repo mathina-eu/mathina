@@ -82,6 +82,7 @@ actions:
       - text: "If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
+    listTitle: "Folding Images I"
     tag: tg1
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
@@ -116,6 +117,7 @@ actions:
       - text: "I'll show you another example! Now look at this bee image!"
         char: wizard        
   - type: game
+    listTitle: "Folding Images II"
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
     url: /apps/dobrar_2/index.html
@@ -136,6 +138,7 @@ actions:
         char: wizard
     position: center
   - type: game
+    listTitle: "Folding Images III"
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
     url: /apps/dobrar_3/index.html
@@ -193,6 +196,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    listTitle: "Finding the Good Toys"
     tag: tg4
     text: "Put the \"good\" toys in the box"
     url: /apps/arrumar_figuras/index.html
@@ -346,6 +350,7 @@ actions:
     - src: geoplano-anim2.mp4
       type: 'video/mp4'
   - type: game
+    listTitle: "Building Toys I"
     tag: tg2
     text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
     cta: "Try it yourself!"
@@ -439,6 +444,7 @@ actions:
         char: mathina
         exposition: "Mathina said, repeating the wizard’s words."        
   - type: game
+    listTitle: "Building Toys II"
     tag: tg3
     text: "How can Mathina finish the toys? You just need to draw the missing lines."
     cta: "Try it yourself!"

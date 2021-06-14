@@ -169,6 +169,7 @@ actions:
     text: >
       <p>Os três, juntos, enrolaram a placa e prenderam-na, usando alguns travessões da Mathina.</p>        
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_formcilindro.html
@@ -182,6 +183,7 @@ actions:
     text: >
       <p>De seguida, enquanto o feiticeiro executava uma magia para chamar a varinha mágica, as crianças observaram-no, sem se aperceberem que o rolo, que estava pousado no chão, começara a rolar, dado que a rua tinha um certo declive.</p>
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_cilindro.html 
@@ -231,6 +233,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    listTitle: "Carimbando frisos com um “rolo”"
     tag: tg10
     text: "Escolhe uma imagem, observa a formação do cilindro (“rolo”) e, depois, clica em"
     toolbarText: "Escolhe uma imagem e observa a formação do cilindro (“rolo”)"
@@ -375,6 +378,7 @@ actions:
       - text: "Vamos separá-los!"
         char: mathina
   - type: game
+    listTitle: "Separando os frisos com eixos de simetria"
     tag: tg4
     text: "De cada vez, escolhe os 4 frisos com eixos de simetria e clica em"
     toolbarText: "Escolhe os 4 frisos com eixos de simetria"
@@ -402,6 +406,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
+    listTitle: "Separando os frisos com eixos de simetria em 3 sacos"
     tag: tg5
     text: "Separa os frisos, arrastando cada friso para o saco correspondente."
     cta: "Experimenta!"
@@ -499,6 +504,7 @@ actions:
         char: leo
         mood: excited
   - type: game
+    doNotList: true
     text: "Ver filme aqui!"
     cta: "Ver"
     url: /apps/anims/anim_cilindro2.html
@@ -517,6 +523,7 @@ actions:
       - text: "Tens razão, Leo! Mas nem me parece que seja necessário usar um rolo! Acho que conseguimos carimbar o friso usando apenas uma placa com um “P”. Ora vê!"
         char: mathina
   - type: game
+    doNotList: true
     text: "Ver filme aqui!"
     cta: "Ver"
     url: /apps/anims/anim_friso_refV.html
@@ -527,6 +534,7 @@ actions:
       - text: "E, usando um processo parecido, podemos até criar um friso que tenha também simetria de reflexão horizontal. Ora vamos lá ver!"
         char: wizard
   - type: game
+    listTitle: "Carimbando frisos com uma “placa”"
     tag: tg11
     text: "Experimenta carimbar frisos com simetria de reflexão horizontal e vertical usando uma “placa”. Escolhe uma imagem e observa a animação exibida na app."
     cta: "Ver"
@@ -597,6 +605,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    listTitle: "Separando os frisos com simetria de rotação"
     tag: tg6
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de rotação"
@@ -641,6 +650,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    listTitle: "Separando os frisos com simetria de reflexão e de rotação"
     tag: tg7
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de reflexão e de rotação"
@@ -742,6 +752,7 @@ actions:
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_cilindro3.html
@@ -796,6 +807,7 @@ actions:
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_cilindros_parte1.html
@@ -860,6 +872,7 @@ actions:
   #
   # Animação a carimbar a parte 2 do friso
   - type: game
+    doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
     url: /apps/anims/anim_cilindros_parte2.html
@@ -884,6 +897,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    doNotList: true
     tag: tg8
     text: "Observa o filme!"
     cta: "Ver"
@@ -1001,6 +1015,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    listTitle: "Separando os frisos com simetria de reflexão deslizante"
     tag: tg12
     text: "Escolhe os 3 frisos com simetria de reflexão deslizante e clica em"
     toolbarText: "Escolhe os 3 frisos com simetria de reflexão deslizante"
@@ -1098,6 +1113,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
+    listTitle: "Rotulando os sacos"
     tag: tg9
     text: "Observa os frisos patentes em cada um dos 7 sacos obtidos. Para cada saco, arrasta os símbolos que correspondem às simetrias existentes nos frisos aí patentes."
     cta: "Jogar!"
