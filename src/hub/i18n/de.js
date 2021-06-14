@@ -76,7 +76,11 @@ export default {
   menu: {
     language: 'Sprache',
     'select-age': 'Altersgruppe',
-    'assist-mode': 'Assist-Modus'
+    'assist-mode': 'Assist-Modus',
+    credits: 'Credits',
+    'credits-disclaimer': 'This project has been funded with support from the European Commission. This publication ' +
+      'reflects the views only of the author, and the Commission cannot be held responsible for any use which may be ' +
+      'made of the information contained therein.'
   },
   chars: {
     mathina: 'Mathina',
