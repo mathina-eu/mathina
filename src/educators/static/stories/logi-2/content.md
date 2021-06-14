@@ -4,7 +4,7 @@ It is rather a conventional challenge if we have to move from one state or posit
 
 There is a saying which goes like this: “The wise always begin at the end.” 
 
-By taking a look at the exercise contained in **The tiled floor trap**, we can see that working in the opposite direction leads to a result. One of the most effective thinking processes we employ to solve problems is changing our perspective. We use our ability to define relationships, organize and rearrange data and to thereby discover new connections. A change of perspective is a thought operation independent of the mathematical content. The most common way of using it in the different chapters of mathematics, is the so-called **cancer method** or reverse thinking. During the procedure we start out from the end and move towards the beginning. 
+By taking a look at the exercise contained in **The tiled floor trap**, we can see that working in the opposite direction leads to a result. One of the most effective thinking processes we employ to solve problems is changing our perspective. We use our ability to define relationships, organize and rearrange data and to thereby discover new connections. A change of perspective is a thought operation independent of the mathematical content. The most common way of using it in the different chapters of mathematics, is **reverse thinking**. During the procedure we start out from the end and move towards the beginning. 
 
 The tools of problem-solving are the following:
 + Understanding the problem / situation
