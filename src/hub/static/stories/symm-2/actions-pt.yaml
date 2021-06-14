@@ -1,6 +1,6 @@
 actions:
   - type: background
-    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1-pt.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
@@ -474,7 +474,7 @@ actions:
   - type: clearBackground
     id: c1-bg3    
   - type: background
-    src: $COMMON/img/bg/SYMM/c1-bg1.jpg
+    src: $COMMON/img/bg/SYMM/c1-bg1-pt.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: c1-bg1    
   - type: image
