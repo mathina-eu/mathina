@@ -29,19 +29,19 @@ The dragon may fly off the screen but will return if the user guides him back us
 
 ![Back](/stories/fire-1/img/_align-center_/back.png)
 
-## [App 1 - Fly the Unidragon]($HUB_URL/story/the-firebird-trainer/?actionLink=app1)
+## App 1 - Fly the Unidragon
 
 In this app, the user can get used to controlling the flight of the unidragon with the magic wand. There is no explicit goal to reach. Since the unidragon leaves a smoky trace along his flight path, the user may try to create some intentional patterns (i.e. first letter of a name, a special number, a symbol  like a heart or anything else the user can connect to). Start from large and bold patterns and go on to smaller and more intricate ones. Play around with controlling the wand, try sharp turns, spirals, zigzags...
 
 @[youtube](QQP_EywUcL4?_align-center_)
 
-## [App 2 - Catch the Fireballs]($HUB_URL/story/the-firebird-trainer/?actionLink=app2)
+## App 2 - Catch the Fireballs
 
 In this second app, the user is asked to catch the appearing fireballs (unidragons' favourite snack). Once a fireball is catched, the next will appear at a different position. The number of successfully catched fireballs is displayed in the upper left corner. Unidragons don't like the clouds. They need to be avoided. If the unidragon flies into one of the clouds, he gets pushed back to the last place a fireball was picked up.
 
 @[youtube](9gRPkL7sQH8?_align-center_)
 
-## [App 3 - Follow the Curve]($HUB_URL/story/the-firebird-trainer/?actionLink=app3)
+## App 3 - Follow the Curve
 
 When the app is started, the user is presented a yellow curve in the air, which the unidragon needs to follow. There is no specific starting point, just fly to the nearest point on the curve (or any other point on the curve) and try to follow the curve. It does not matter if the dragon flies clockwise or counterclockwise. Try to stay as close to the given curve as possible and move along the whole curve. You have successfully followed the curve when it disappears. A new curve will be displayed which you can now follow in order to increase your score, again displayed in the upper left corner.
 
