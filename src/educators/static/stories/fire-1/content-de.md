@@ -28,19 +28,19 @@ Der Drache kann aus dem Bildschirm "herausfliegen", kehrt aber zurück, wenn die
 
 ![Back](/stories/fire-1/img/_align-center_/back_de.png)
 
-## App 1 - Den Einhorndrachen fliegen lassen
+## [App 1 - Den Einhorndrachen fliegen lassen]($HUB_URL/de/apps/?appNumber=0&story=fire-1)
 
 In dieser App kann sich die Benutzerin/der Benutzer daran gewöhnen, den Flug des Einhorndrachen mit dem Zauberstab zu steuern. Es gibt kein explizites Ziel zu erreichen. Da der Einhorndrache eine Spur entlang seiner Flugbahn hinterlässt, kann die Spielerin/der Spieler versuchen, Muster zu erstellen (z. B. den ersten Buchstaben eines Namens, eine Zahl, ein Symbol wie ein Herz oder etwas anderes, was die Spielerin/der Spieler möchte). Beginnen Sie mit großen und einfachen Mustern und gehen Sie dann zu kleineren und komplizierteren über. Spielen Sie mit der Steuerung des Zauberstabs, probieren Sie scharfe Kurven, Spiralen, Zickzacklinien usw. aus.
 
 @[youtube](QQP_EywUcL4?_align-center_)
 
-## App 2 - Feuerbälle fangen
+## [App 2 - Feuerbälle fangen]($HUB_URL/apps/?appNumber=1&story=fire-1)
 
 Hier wird die Spielerin/der Spieler aufgefordert, die erscheinenden Feuerbälle (der Lieblingssnack der Einhorndrachen) zu fangen. Sobald ein Feuerball geschnappt wurde, erscheint der nächste an einer anderen Position. Die Anzahl der erfolgreich gefangenen Feuerbälle wird oben in der linken Ecke angezeigt. Allerdings mögen Einhorndrachen keine Wolken, sie müssen gemieden werden. Wenn der Einhorndrache in eine der Wolken fliegt, wird er zur letzten Position katapultiert, wo er einen Feuerball gefressen hat.
 
 @[youtube](9gRPkL7sQH8?_align-center_)
 
-## App 3 - Der Kurve folgen
+## [App 3 - Der Kurve folgen]($HUB_URL/apps/?appNumber=2&story=fire-1)
 
 Der Benutzerin/dem Benutzer wird eine gelbe Kurve in der Luft gezeigt, dieser muss der Einhorndrache folgen. Es gibt keinen bestimmten Startpunkt. Fliegen Sie einfach zum nächstgelegenen Punkt auf der Kurve (oder einem beliebigen anderen Punkt auf der Kurve) und versuchen Sie, der Kurve zu folgen. Dabei ist es egal, ob der Drache im oder gegen den Uhrzeigersinn fliegt. Versuchen Sie, so nah wie möglich an der vorgegebenen Kurve zu bleiben und sich entlang der gesamten Kurve zu bewegen. Sie haben die Kurve erfolgreich verfolgt, wenn sie verschwindet. Es wird eine neue Kurve angezeigt, der Sie nun folgen können. So können Sie Ihre Punktzahl erhöhen, die wie in App 2 in der oberen linken Ecke angezeigt wird.
 
