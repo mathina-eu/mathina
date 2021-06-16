@@ -91,6 +91,7 @@ actions:
     id: tecnico
     style: "width: 16%; top: 45%; left: 1%;"         
   - type: game
+    doNotList: true
     tag: tg1
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -269,6 +270,7 @@ actions:
         exposition: "forderte sie der Techniker heraus."
         #"Challenged the technician."
   - type: game
+    listTitle: "Konvexe Polyeder aufteilen"
     tag: tg26
     text: "Finde die vier konvexen Polyeder und klicke danach auf dieses Symbol:"
     #"Choose the ce the convex polyhedra. Each time, choose the 4 polyhedra and click"
@@ -439,6 +441,7 @@ actions:
       #"A cube has 6 faces. I'll just cut 6 squares in a row and set up the cube"
         char: leo
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -470,6 +473,7 @@ actions:
       <p>Mathina baute dann aus Leos Netz einen Würfel. Beim Kleben von drei Flächen auf einen Eckpunkt benutzte Mathina einen Schuhkarton, der im Büro herumstand. Damit konnte sie die drei Flächen in Position halten, während der Kleber trocknete.</p>
     #<p>Mathina then set up a cube using Leo's net. When gluing 3 faces on a common vertex, Mathina used a shoe box (which was in the office) as a mould to keep the three faces in position while the glue was drying.</p>
   - type: game
+    doNotList: true
     tag: tg4
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -483,6 +487,7 @@ actions:
   - type: clearImage
     id: plan-cubo-01
   - type: game
+    listTitle: "Die richtigen Würfelnetze"
     tag: tg27
     text: "Wähle die drei richtigen Netze für einen Würfel aus und klicke dann auf dieses Symbol:"
     #"Choose the right nets for the cube. Each time, choose the 3 "good" nets and click"
@@ -537,6 +542,7 @@ actions:
       <p>Da es mit Quadraten keine Möglichkeiten mehr gab, beschlossen sie, zu gleichseitigen Dreiecken überzugehen. Mit den kleinen Magneten, die sie im Büro gefunden hatten, verbanden sie drei Dreiecke um einen Eckpunkt, wodurch eine Art offene Dreieckspyramide entstand. Dann nahmen sie noch etwas von der Knete, nahmen einen Abdruck des Eckpunktes und versuchten mit dieser Form ein weiteres Dreieck an einer der freien Kanten hinzuzufügen und plötzlich war die Pyramide mit einem neuen Dreieck geschlossen!</p>
     #<p>As there were no more possibilities with squares, they decided to move on to equilateral triangles. Using the magnetic equilateral triangles which were at their disposal in the office, they joined 3 triangles around a vertex, creating a kind of open triangular pyramid. Then they got a bit of plasticine, they took a mould of the vertex and tried to add another triangle to one of the free edges by using that mould and suddenly … they got the pyramid closed with the new triangle!...</p>
   - type: game
+    doNotList: true
     tag: tg6
     text: "Schau's Dir an!"
     #"Watch the movie!"
@@ -569,6 +575,7 @@ actions:
       <p>Leo war nun neugierig, wie ein Netz eines Tetraeders aussehen könnte. Also öffnete er das Tetraeder an einigen Kanten und entfaltete so das Polyeder.</p>
     #<p>Leo was curious to know how a net of a tetrahedron could be. So, he split some of the tetrahedron triangles by their edges, unfolding the polyhedron.</p>
   - type: game
+    doNotList: true
     text: "Schau den Film an, um zu sehen, wie das Netz des Tetraeders entsteht!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -589,6 +596,7 @@ actions:
       <p>Während Leo eine Struktur aus vier Dreiecken an einem der Eckpunkte erstellte, bemerkte Mathina, dass die Struktur nicht starr war. Um einen Platonischen Körper zu erzeugen, mussten sie aber garantieren, dass die Winkel zwischen benachbarten Flächen alle exakt gleich waren.</p>
     #<p>While Leo was creating a structure made up with 4 triangles on one of the vertices, Mathina noticed that the structure was not rigid. And, in order to create a Platonic solid, they should guarantee that the angles between contiguous faces were all equal.</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -609,6 +617,7 @@ actions:
       <p>Mathina legte die halbfertige Struktur auf den Tisch, mit dem ursprünglichen Eckpunkt nach oben. Als sie das neue Modell auf dem Tisch festhielt, sahen sie beide, dass diese Position die Bedingungen erfüllte: Alle neuen Eckpunkte lagen auf der Ebene des Tisches. Jetzt waren die vier Winkel (zwischen jeweils zwei Dreiecken) gleich.</p>
     #p>Mathina then placed the structure on a table, with the initial vertex upwards, and, keeping it against the table, she noticed that the final position (all new vertices were on the plane of the table) corresponded precisely to what she wanted: now, the four angles between faces (dihedral angles) were equal.</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspsielen"
@@ -625,6 +634,7 @@ actions:
       <p>Wie sollten sie weitermachen, um noch mehr Platonische Körper zu bauen? Nachdem sie die Struktur angehoben hatten, begannen sie damit, Dreiecke an den noch freien Kanten anzubauen. Als sie zwei Dreiecke befestigt hatten, die sie vorher schon an einer Kante zusammengeklebt hatten, ergab sich schon, wie die restliche Form aussehen musste. Also klebten sie zwei weitere Dreiecke aneinander und befestigten auch diese an der Struktur. Das neue Polyeder schien ein Platonischer Körper zu sein. Das musste aber noch überprüft werden.</p>
     #<p>How should they continue in order to create a Platonic solid? After lifting the structure, they started by joining two triangles to the contiguous free edges, so that two of the new edges, one in each triangle, were together. Then they successively joined, in a similar way, the two missing triangles and verified that they had obtained a new polyhedron which seemed to be a Platonic solid.</p>
   - type: game
+    doNotList: true
     tag: tg7
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -650,6 +660,7 @@ actions:
       <p>Neugierig faltete Leo das Polyeder auf, um sich das Netz anzusehen.</p>
     #<p>Always curious, Leo unfolded the polyhedron to obtain a net.</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -660,6 +671,7 @@ actions:
       <p>Wie schon vorher beim Würfel, versuchte Leo noch andere Netze des Polyeders zu finden, die auch funktionierten.</p>
     #<p>Leo then decided to proceed as before (for the cube), creating alternative examples of nets for the polyhedron.</p>
   - type: game
+    listTitle: "Die richtigen Netze für einen Oktaeder"
     tag: tg28
     text: "Wähle die richtigen Netze für das Oktaeder und klicke dann auf dieses Symbol:"
     #"Choose the right nets for the octahedron. Each time, choose the 3  „good“ nets and click"
@@ -691,6 +703,7 @@ actions:
       <p>Nachdem sie diesen neuen Platonischen Körper mit vier Dreiecken an jeder Ecke gefunden hatten, machten sie sich auf die Suche nach einem Körper, bei dem sich immer fünf Dreiecke treffen. Dadurch entstand wieder eine offene „Pyramide“. Sie beschlossen, wie zuvor vorzugehen: Sie stellten die neuen Eckpunkte auf dem Tisch ab, um identische Flächenwinkel zu erhalten. Dann hoben sie das Gebilde an und fügten zu einer freien Ecke drei Dreiecke hinzu, so dass sich auch hier wieder fünf Dreiecke trafen, wie an der Spitze der offenen Pyramide. Als nächstes fügten sie nacheinander an jeder Ecke so viele Dreiecke hinzu, dass sich immer fünf trafen. Als sie an die ursprüngliche offene Pyramide 10 weitere Dreiecke angeheftet hatten, entstand eine fünfeckige Öffnung. Die sah so ähnlich aus wie bei der anfänglichen Pyramide aus fünf Dreiecken. Diese neue fünfeckige Öffnung lag parallel zu der Öffnung der ersten Pyramide, aber etwas verdreht. Dann machten sie genau wie vorher weiter, und ihre Mühe schien sich zu lohnen. Sie erhielten ein neues Polyeder, das ein Platonischer Körper zu sein schien!</p>
     #<p>After having found this new Platonic solid with 4 triangles at each vertex, they moved on to look for 5 triangles, thus creating an open straight "pyramid". They decided to proceed as before: they placed the new vertices on the table in order to obtain identical dihedral angles. Then they added, to one of the free vertices, 3 triangles, so that the new solid angle would be equal to the one of the initial "opened" pyramid. Next, they joined, successively, 2 triangles in each free vertex of the "opened" pyramid, until they obtained a strip of 10 triangles. They noticed that the free edges of the strip formed a pentagon in a plane parallel to the previous one, but rotated by a tenth of a turn. They then continued the previous process: first they added 2 triangles and then, successively, they added one triangle (joined to the previous one). And their effort seemed to pay off: they obtained a new polyhedron which appeared to be a Platonic solid!</p>
   - type: game
+    doNotList: true
     tag: tg8
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -718,6 +731,7 @@ actions:
       <p>Wie auch schon bei jedem Körper zuvor, faltete Leo das Polyeder wieder auf, um zu verstehen, wie das Netz aussehen könnte.</p>
     #<p>Just like before, Leo unfolded the polyhedron, trying to understand how a net could be.</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -771,6 +785,7 @@ actions:
       <p>Leo fand heraus, dass jeweils ein weiteres Fünfeck genau an die freien Kanten der anderen Fünfecke passte. Also fügte er auf diese Weise drei Fünfecke hinzu. Dadurch entstanden nun drei große, neue Lücken, in die Mathina nun weitere drei Fünfecke einbaute. Und auch diese passten genau. Dann ging alles ganz schnell, und es war total klar, wo noch weitere Fünfecke hinpassten. Sie fügten sich sehr gut ein und verbanden sich sogar miteinander. So entstanden auch immer neue Ecken. Vorsichtshalber überprüften sie nochmal, ob auch alle Ecken gleich waren, indem sie wieder Knetmasse andrückten und den Abdruck verglichen. Er passte überall. Sie hatten ein neues regelmäßiges Polyeder gebaut!</p>
     #<p>Leo discovered that a new pentagon fitted securely to contiguous free edges from different pentagons. So he added three pentagons in this way. This created three new big gaps. Mathina tried to fill them with three new pentagons and they fitted precisely. At the end, they saw again three big gaps, once again with the same shape. They tried the same as before by putting three new pentagons: they fitted very well, and they even joined with each other creating a new vertex with the new added faces. As a precaution, they checked with the plasticine mould - it fitted to all vertices: they had discovered a new regular polyhedron!</p>
   - type: game
+    doNotList: true
     tag: tg10
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -796,6 +811,7 @@ actions:
       <p>Und zum Schluss, wie er das bei jedem gemacht hatte, faltete Leo das Polyeder wieder auf.</p>
     #<p>In the end, as he had made with the previous polyhedra, Leo unfolded the polyhedron to see a net:</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!"
     #"Watch the movie!"
     cta: "Abspielen"
@@ -812,6 +828,7 @@ actions:
       <p>Mathina und Leo setzten ihre Suche nach weiteren Platonischen Körpern fort. Bald erkannten sie aber, dass es nicht möglich war, dass sich mehr als drei Fünfecke in einem gemeinsamen Eckpunkt treffen. Sonst wäre der Raumwinkel nicht mehr wie in einer regelmäßigen Pyramide.</p>
     #<p>Mathina and Leo continued their quest to find new Platonic solids. Soon, they realized that it was not possible to use more than three pentagons on a common vertex with a solid angle equal to the one of a straight regular pyramid.</p>
   - type: game
+    doNotList: true
     tag: tg11
     text: "Schau die Animation an! Du kannst einstellen, wieviele Ecken das regelmäßige Vieleck haben soll."
     #"Watch the movie!"
@@ -870,6 +887,7 @@ actions:
       #"Yes, we don't even need plasticine!"
         char: leo
   - type: game
+    doNotList: true
     tag: tg12
     text: "Schau die Platonischen Körper an! Durch Klicken und Ziehen kannst Du sie auch drehen und von allen Seiten ansehen."
     #"Watch the Platonic solids!"
@@ -893,6 +911,7 @@ actions:
         exposition: "Der Techniker schaute die beiden aufmunternd an."
         #"Challenged the technician."        
   - type: game
+    listTitle: "Auswahl von nicht-platonischen Polyedern"
     tag: tg13
     text: "Wähle die nicht-platonischen Polyeder aus, deren Seiten trotzdem regelmäßige und gleiche Polygone sind. Klicke danach dieses Symbol:"
     #"Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
@@ -933,6 +952,7 @@ actions:
       <p>Aus seiner Sammlung von Polyedern wählte der Techniker ein uniformes Polyeder aus, das er Kuboktaeder nannte.</p>
     #<p>From his collection of polyhedra, the technician picked a uniform polyhedron, which he called cuboctahedron.</p>
   - type: game
+    doNotList: true
     tag: tg14
     text: "Schau den Film an! Du kannst das Polyeder auch durch Klicken und Ziehen drehen."
     #"Watch the movie!"
@@ -991,6 +1011,7 @@ actions:
         exposition: "fragte Leo und schnappte sich dabei eines der Modelle, die herumstanden."
         #"Asked Leo, grabbing a model nearby."
   - type: game
+    doNotList: true
     text: "Schau den Film an! Du kannst das Polyeder wieder durch Klicken und Ziehen selbst drehen."
     #"Watch the movie!"
     cta: "Abspielen"
@@ -1074,6 +1095,7 @@ actions:
       #"What about this one? Is it uniform?"
         char: leo
   - type: game
+    doNotList: true
     tag: tg19
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -1128,6 +1150,7 @@ actions:
       <p>Um seinen Fehler wieder auszubügeln, schnitt der Techniker die achteckige Kuppel an der Oberseite des Miller-Polyeders ab und drehte sie um 45º, so dass die Dreiecke der Kuppel an den unteren Dreiecken ausgerichtet wurden.</p>
     #<p>To fix his error, the technician cut the octagonal dome on the top of the Miller polyhedron and rotated it by 45º, so that the triangles of the dome became aligned to the bottom triangles.</p>
   - type: game
+    doNotList: true
     tag: tg22
     text: "Schau's dir an!"
     #"Watch the movie!"
@@ -1220,6 +1243,7 @@ actions:
         exposition: "behauptete Leo."
         #"Leo exclaimed."        
   - type: game
+    doNotList: true
     text: "Schau das Polyeder von allen Seiten an!"
     #"Watch the polyhedron!"
     cta: "Schau es an und drehe es."
@@ -1289,6 +1313,7 @@ actions:
       #"This way, you could help me setting up the carousel model…"
         char: technician        
   - type: game
+    listTitle: "Auswahl von uniformen Polyedern"
     tag: tg29
     text: "Wähle die vier uniformen Polyeder aus und klicke dann auf dieses Symbol:"
     #"Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
@@ -1345,6 +1370,7 @@ actions:
       #"Here, come and see these models in my drawer! I didn't showcase them, because I decided not to use them: I thought they were very commonplace…"
         char: technician
   - type: game
+    doNotList: true
     text: "Schau die Polyeder an!"
     #"Watch the polyhedra!"
     cta: "Abspielen"
@@ -1366,6 +1392,7 @@ actions:
       <p>Die drei vollendeten den Aufbau des Modells des „Karussells der Platonischen und uniformen Polyeder“ und begutachteten ihre Arbeit. Es war ein wirklich schönes Werk. Einmal natürlich wegen der Vielfalt an Farben. Vor allem aber durch die vorhandenen Symmetrien an den ausgewählten Polyedern. Sie sahen dadurch sehr harmonisch aus.</p>
     #<p>The three finished setting up the model of the "carousel of Platonic and uniform polyhedra" and contemplated the result: it was a beautiful piece of work, not only because of the diversity of colors, but also, and mainly, by the existing symmetry on the chosen polyhedra, which make them visually very appealing.</p>
   - type: game
+    doNotList: true
     tag: tg25
     text: "Schau die Polyeder an!"
     #"Watch the polyhedra!"
