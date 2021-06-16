@@ -20,7 +20,7 @@ Upon opening the app, you will see a coordinate system, a yellow graph and a pur
 
 ![App1](/stories/fire-3/img/_align-center_/app1.png)
 
-The degree of the polynomial - the highest value of the exponents of x - will increase as you progress (the maximum is `@x^3@`). Each coefficient can be changed with the + and - buttons, where each click will change it by +/- 0.1. You can also hold down to create a constant increase of the value. Once the correct flight path is entered, the phoenix will automatically fly along it. Afterwards, a new flight path challenge is offered for the user. You may use the previous function, which will still be displayed, or use the 'Delete' button, to set all coefficients to zero, and start fresh.
+The degree of the polynomial - the highest value of the exponents of x - will increase as you progress (the maximum is `@x^3@`). Each coefficient can be changed with the + and - buttons, where each click will change it by +/- 0.1. You can also hold down to create a constant increase/decrease of the value. Once the correct flight path is entered, the phoenix will automatically fly along it. Afterwards, a new flight path challenge is offered for the user. You may use the previous function, which will still be displayed, or use the 'Delete' button, to set all coefficients to zero, and start fresh.
 
 @[youtube](Vgkz6XrMVIM?_align-center_)
 
