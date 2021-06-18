@@ -55,12 +55,12 @@ Todas as apps foram programadas em Javascript e estão optimizadas quer para PCs
 ## [Jogo 1]($HUB_URL/pt/story/the-traffic-light-challenge/?actionLink=firstGame)
 O utilizador vê um semáforo normal com três luzes possíveis. Neste jogo, o utilizador coloca as cores e pode também acrescentar lâmpadas adicionais de tráfego a serem coloridas (até um total máximo de 8).
 
-@[youtube](zdFCyi9WLkY)
+@[youtube](zdFCyi9WLkY?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 
 ## [Jogo 2]($HUB_URL/pt/story/the-traffic-light-challenge/?actionLink=secondGame)
 São exibidos oito semáforos, em fila, no ecrã. O utilizador deve sobrepor os semáforos idênticos, arrastando-os de um sítio para outro. No momento em que semáforos idênticos são colocados uns por dos cima dos outros, os semáforos supérfluos despararecem.  
 
-@[youtube](o7GglqqoNMs)
+@[youtube](o7GglqqoNMs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 
 ## [Jogo 3]($HUB_URL/pt/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Encontre a sequência correta para a sexta sequência! As regras da app são as mesmas que no primeiros jogo.

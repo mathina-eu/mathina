@@ -16,7 +16,7 @@ Crianças desta idade são capazes de usar expressões simbólicas (funções e 
 
 Ao abrir a app, verá um sistema de coordenadas, um gráfico amarelo e um outro púrpura. O amarelo é o caminho de voo que a fénix deve seguir, ou seja o objetivo a atingir. A curva púrpura é o gráfico da função polinomial da variável `@x@`. Pode ser ajustada no painel de controlo. Para cada potência de `@x@`, pode alterar o coeficiente correspondente no polinómio.
 
-![App1](/stories/fire-3/img/_align-center_/app1.png)
+![App1](/stories/fire-3/img/_align-center_/app1-pt.png)
 
 O grau do polinómio - o valor máximo dos expoentes de `@x@` - aumenta à medida que progride (o máximo é 3). Cada coeficiente pode ser mudado usando os botões `@+@` e `@-@`, de cada vez variando de +/- 0.1. Premindo continuamente dá-se uma variação contínua do valor. Quando o caminho correto é dado, a fénix automaticamente segue-o, voando. Depois um novo desafio de caminho de voo é apresentado ao utilizador. Pode usar a última função, que está ainda a ser apresentada, ou pode usar o botão "Apagar" para colocar todos os coeficientes em zero e recomeçar do princípio.
 
@@ -47,7 +47,7 @@ Esta app combina os métodos usados nas duas apps anteriores. Como na app 2, man
 
 Quando tiver ajustado os pontos brancos, pode carregar no botão "Vai" para que a fénix voe. Durante o voo, uma seta amarela indica a direção e a velocidade da fénix na posição em que está (como a varinha mágica que controla o uni-dragão nas apps da história do "Treinador do Pássaro de Fogo"). As setas púrpura indicam o valor da derivada na posição corrente. Há uma seta púrpura que aparece junto da fénix, e outra (idêntica) junto da curva.
 
-![App4](/stories/fire-3/img/_align-center_/4_2.png)
+![App4](/stories/fire-3/img/_align-center_/4_2-pt.png)
 
 A fénix pode voar para fora do écran, mas acabará eventualmente por chegar ao lado direito. Se demorar muito, pode carregar no botão "Voltar" (o que corresponde a desistir do voo). Depois de um voo em que a fénix não apanhou todas as bolas de fogo, o caminho de voo mantém-se visível para o ajudar a fazer correções. Verifique a correspondência entre as curvas amarela (caminho de voo) e púrpura (derivada do caminho de voo).
 
@@ -55,9 +55,9 @@ A fénix pode voar para fora do écran, mas acabará eventualmente por chegar ao
 
 Sugestões:
 * Pode também mover o primeiro ponto branco, inicialmente na origem.
-* Se quiser que o caminho de voo tenha um máximo ou um mínimo onde está uma bola de fogo, coloque um ponto branco no eixo dos `@xx@`.
-* Se um bola de fogo está  no eixo dos `@xx@`, as áreas entre a curva púrpura e o eixo dos `@xx@` acima e abaixo do eixo têm de ser iguais (a partir da origem até à bola de fogo).
-* Se essas áreas acima e abaixo do eixo dos `@xx@` forem muito diferentes, a fénix acabará por ficar muito longe desse eixo.
+* Se quiser que o caminho de voo tenha um máximo ou um mínimo onde está uma bola de fogo, coloque um ponto branco no eixo dos xx.
+* Se um bola de fogo está  no eixo dos xx, as áreas entre a curva púrpura e o eixo dos `@xx@` acima e abaixo do eixo têm de ser iguais (a partir da origem até à bola de fogo).
+* Se essas áreas acima e abaixo do eixo dos xx forem muito diferentes, a fénix acabará por ficar muito longe desse eixo.
 
 
 

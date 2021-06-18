@@ -11,7 +11,7 @@ O utilizador fez já a ligação entre a ideia intuitiva de movimento e a de set
 
 Quando as crianças começam a ler também reconhecem  números escritos que representam quantidades. Nesta exposição precoce à ideia de quantidades vetoriais, as crianças concluirão que há quantidades que podem ser medidas, mas que têm de ser representadas por mais de um número.
 
-Ao aprenderem a ler, as crianças aprendem a soma básica na escola. Esta história tira partido disso para mostrar que se pode adicionar quantidades com vários números (pares). A A história e as suas apps proporcionam também uma introdução intuitiva aos números negativos. Até utilizadores ainda não familiarizados com este conceito serão capazes de perceber a ligação entre dar passos para a frente e para trás (do mesmo modo que para cima e para baixo).
+Ao aprenderem a ler, as crianças aprendem a soma básica na escola. Esta história tira partido disso para mostrar que se pode adicionar quantidades com vários números (pares). A história e as suas apps proporcionam também uma introdução intuitiva aos números negativos. Até utilizadores ainda não familiarizados com este conceito serão capazes de perceber a ligação entre dar passos para a frente e para trás (do mesmo modo que para cima e para baixo).
 
 # Sobre as apps
 As três apps têm o mesmo cenário. O lado de baixo representa o chão. Pode ter uma ou mais montanhas, que se tem de evitar durante o voo. O fundo em azul claro representa o céu (pode ter nuvens, que são também obstáculos). Há um padrão em grelha com pontos brancos, representando os pontos do plano com coordenadas inteiras. Quando a app começa, o uni-dragão estará à esquerda em baixo. Regressa para lá sempre que se carregue no botão "Voltar". Podes criar um caminho de voo para o dragão dando vetores no painel de controlo no lado de baixo. Quando carregares no botão "Vai" o dragão segue o caminho que criaste.
@@ -21,7 +21,7 @@ As três apps têm o mesmo cenário. O lado de baixo representa o chão. Pode te
 
 ## App 1 - Guia o uni-dragão através de um par de números
 
-Nesta app, o utilizador pode habituar-se a usar o painel de controlo e a criar um caminho para o dragão. Não nenhum outro objetivo explícito a atingir. O uni-dragão voa correspondente a um vetor de cada vez, pelo que o utilizador deve adoptar a seguinte sequência: pensar para onde quer que o dragão voe, dar um vetor, carregar em "Vai", e assim sucessivamente.
+Nesta app, o utilizador pode habituar-se a usar o painel de controlo e a criar um caminho para o dragão. Não há nenhum outro objetivo explícito a atingir. O uni-dragão voa correspondente a um vetor de cada vez, pelo que o utilizador deve adoptar a seguinte sequência: pensar para onde quer que o dragão voe, dar um vetor, carregar em "Vai", e assim sucessivamente.
 
 ## App 2 - Voa para o castelo
 
