@@ -30,14 +30,22 @@ O dragão pode voar para fora do écran mas retornará se o utilizador o guiar p
 
 ![Voltar](/stories/fire-1/img/_align-center_/voltar.jpg)
 
-## App 1 - Guiando o uni-dragão
+## [App 1 - Guiando o uni-dragão]($HUB_URL/pt/apps/?appNumber=0&story=fire-1)
 
 Nesta app, o utilizador pode habituar-se a controlar o voo do uni-dragão com a varinha mágica. Não há nenhum objetivo explícito a atingir. Como o uni-dragão deixa um rasto de fumo ao longo do caminho de voo, o utilizador pode tentar criar alguns padrões (por exemplo, a primeira letra do seu nome, um número especial, um símbolo como um coração, ou qualquer outra coisa que ache interessante). Deve-se começar por padrões grandes e com linhas espessas, e continuar com outros mais pequenos e mais complicados. Brinca controlando a varinha mágica, e tenta fazer curvas apertadas, espirais e zig-zags...
 
-## App 2 - Apanha as bolas de fogo
-Nesta segunda app, pede-se ao utilizador que apanhe as bolas de fogo que apareçam (a gulodice favorita dos uni-dragões). Quando uma bola de fogo é apanhada, a seguinte aparecerá num sítio diferente. O número de bolas de fogo que foram apanhadas é apresentado no canto superior esquerdo. Os uni-dragões não gostam de núvens. Se o uni-dragão vai contra uma das núvens é forçado a ir para a sua posição inicial no centro do écran.
 
-## App 3 - Segue a curva
+@[youtube](QQP_EywUcL4?_align-center_)
+
+## [App 2 - Apanha as bolas de fogo]($HUB_URL/pt/apps/?appNumber=0&story=fire-1)
+
+Nesta segunda app, pede-se ao utilizador que apanhe as bolas de fogo que apareçam (a gulodice favorita dos uni-dragões). Quando um bola de fogo é apanhada, a seguinte aparecerá num sítio diferente. O número de bolas de fogo que foram apanhadas é apresentado no canto superior esquerdo. Os uni-dragões não gostam de núvens. Se o uni-dragão vai contra uma das núvens é forçado a ir para a sua posição inicial no centro do écran.
+
+@[youtube](9gRPkL7sQH8?_align-center_)
+
+## [App 3 - Segue a curva]($HUB_URL/apps/?appNumber=2&story=fire-1)
 
 Quando a app começa, o utilizador vê uma curva amarela no ar, que o uni-dragão precisará de seguir. Não há um ponto de partida pré-fixado, basta ir para o ponto mais próximo da curva (ou qualquer outro ponto da curva) e tentar seguir a curva. Não interessa se o dragão voa na direção dos ponteiros do relógio, ou na direção contrária. Tenta manter-te tão perto da curva quanto possível e mover-te ao longo de toda a curva. Conseguiste seguir a curva com sucesso se ela desaparecer. Uma nova curva será mostrada que poderás seguir para aumentar o teu número de pontos, o qual é também apresentado no canto superior esquerdo.
+
+@[youtube](9dz9j2j9c2I?_align-center_)
 
