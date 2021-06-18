@@ -178,6 +178,7 @@ actions:
       <p>Zu dritt rollten sie die seltsame Platte zusammen und befestigten sie mit ein paar von Mathinas Haarspangen, die sie in ihrer Jackentasche fand.</p> 
     #<p>Together, the three of them rolled up the board and secured it using some of Mathina's hairpins.</p>        
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
@@ -193,6 +194,7 @@ actions:
       <p>Dann sprach der Zauberer einige Zauberformeln, um seinen magischen Besen herbeizurufen. Die Kinder sahen ihm dabei die ganze Zeit gebannt zu. Deshalb bemerkten sie nicht, wie die Rolle, die noch auf dem Boden lag, sich langsam in Bewegung setzte. Denn die Straße ging an dieser Stelle bergab.</p> 
     #<p>Then, the wizard did some magic to summon his magic broom and, while the children were watching him, they did not realize that the roll, which was resting on the floor, had started to roll, since the street had a slope.</p>
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
@@ -246,6 +248,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    listTitle: "Friese mit einer “Rolle” stempeln"
     tag: tg10
     text: "Wähle ein Bild aus und schaue bei der Entstehung der „Rolle“ (Zylinder) zu. Klicke danach auf das Stempel-Symbol." 
     #"Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
@@ -394,6 +397,7 @@ actions:
       - text: "Lass uns die mal auseinander sortieren." #"Let's separate them."
         char: mathina
   - type: game
+    listTitle: "Friese mit Symmetrieachsen auswählen"
     tag: tg4
     text: "Wähle die vier Muster aus, die Symmetrieachsen haben, und klicke danach auf dieses Symbol:" #"Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Welche Muster haben Symmetrieachsen?" #"Choose 4 friezes with symmetry axes"
@@ -421,6 +425,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
+    listTitle: "Friese mit Symmetrieachsen auf drei Taschen aufteilen"
     tag: tg5
     text: "Sortiere die Muster, indem du sie in verschiedene Taschen legst." #"Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Probiere es aus!" #"Try it!"
@@ -519,6 +524,7 @@ actions:
         char: leo
         mood: excited
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindro2.html
@@ -537,6 +543,7 @@ actions:
       - text: "Das stimmt, Leo. Aber ich denke wir brauchen die Rolle nicht unbedingt. Wir können das Muster auch stempeln, wenn wir nur die Platte benutzen wo der Buchstabe P einmal draufsteht. Sieh mal." #"You're right, Leo. But I don't think we need to use a roll, I think we can manage to stamp the frieze using just a board with a P, look."
         char: mathina
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_friso_refV.html
@@ -547,6 +554,7 @@ actions:
       - text: "Ja. Auf ganz ähnliche Weise können wir sicher auch ein Muster mit einer waagerechten Symmetrieachse herstellen. Wir versuchen das mal." #"And, using a similar process, we can even create a frieze which also has a horizontal axis of symmetry. Let’s see."
         char: mathina
   - type: game
+    listTitle: "Friese mit einem “Brett” stempeln"
     tag: tg11
     text: Versuche mit einer Platte Muster mit horizontaler und vertikaler Spiegelsymmetrie zu drucken. Suche dir dafür ein Bild aus und schaue dir die Animation an.
     #"Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
@@ -593,11 +601,12 @@ actions:
     text: >
       <p>Während Mathina warten musste, sah sie sich die Zeichnungen nochmal in Ruhe an, die bis jetzt noch in keiner der Taschen gelandet waren. Eine davon wirkte ziemlich seltsam. Wenn die Zeichnung halb gedreht wurde, sah sie genauso aus wie davor.</p> 
     #<p>While Mathina waited, she looked at the drawings of the friezes which were left out of the bags. One of them was quite strange: if we spin it half way around it ends up looking the same as before.</p>
-  - type: game
+  - type: video
     tag: tg1
     text: "Schau's dir an!" #"Watch the movie!"
-    cta: "Abspielen" #"Play!"
-    url: /stories/symm-3/video/Anim%20Rotacao.mp4
+    entries:
+      - src: Anim%20Rotacao.mp4
+        type: 'video/mp4'
   - type: dialog
     entries:    
       - text: "Leo, sieh mal hier. Wenn ich dieses Muster drehe, verändert es sich überhaupt nicht!" #"Leo, look at this, if we rotate this frieze, it stays exactly the same!"
@@ -620,6 +629,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    listTitle: "Friese mit Rotationssymmetrie aufteilen"
     tag: tg6
     text: "Finde die drei Muster mit Rotationssymmetrie, wähle sie aus und klicke dann dieses Symbol an:" #"Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Wähle drei Muster mit Rotationssymmetrie!" #"Choose 3 friezes with rotation symmetry"
@@ -665,6 +675,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    listTitle: "Weitere Friese mit Rotationssymmetrie"
     tag: tg7
     text: "Wähle die drei Muster mit Rotationssymmetrie aus und klicke dann dieses Symbol an:" #"Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Wähle die drei Muster mit Rotationssymmetrie!" #"Choose 3 friezes with reflection and rotation symmetry"
@@ -767,6 +778,7 @@ actions:
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
+    doNotList: true
     text: Schau's dir an!
     #"Watch the movie!"
     cta: "Abspielen"
@@ -822,6 +834,7 @@ actions:
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindros_parte1.html
@@ -886,6 +899,7 @@ actions:
   #
   # Animação a carimbar a parte 2 do friso
   - type: game
+    doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
     url: /apps/anims/anim_cilindros_parte2.html
@@ -911,6 +925,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    doNotList: true
     tag: tg8
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
@@ -980,11 +995,12 @@ actions:
         char: wizard
   #
   # Filme sobre a reflexão deslizante        
-  - type: game
+  - type: video
     tag: tg2
     text: "Schau's dir an!" #"Watch the movie!"
-    cta: "Abspielen"
-    url: /stories/symm-3/video/Anim%20RefDesl.mp4
+    entries:
+      - src: Anim%20RefDesl.mp4
+        type: 'video/mp4'
   #
   # A Mathina reconhece os frisos com reflexão deslizante e quer separá-los
   - type: clearBackground
@@ -1027,6 +1043,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    listTitle: "Friese mit Gleitspiegelung aufteilen"
     tag: tg12
     text: "Wähle die drei Muster mit Gleitspiegelung aus und klicke dann auf dieses Symbol:" #"Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Wähle die Muster mit Gleitspiegelung" #"Choose 3 friezes with glide reflection symmetry"
@@ -1099,6 +1116,7 @@ actions:
   #
   # Animação sobre o que é a translação
   - type: game
+    doNotList: true
     tag: tg3
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
@@ -1124,6 +1142,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
+    listTitle: "Beschriftung der Taschen"
     tag: tg9
     text: "Betrachte die Muster in den sieben Taschen. Suche für jede Tasche die entsprechenden Symbole, die für die Symmetrien der Muster stehen." #"Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     toolbarText: Suche für jede Tasche die passenden Symbole!

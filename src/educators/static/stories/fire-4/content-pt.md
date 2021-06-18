@@ -85,7 +85,7 @@ Três controlos deslizantes estão disponíveis junto da superfície. Primeiro, 
 
 Uma atividade complementar para explorar mais superfícies pode ser organizada usando 
 [SURFER](https://imaginary.org/program/surfer)
-, um programa mais completo que faz também gráficos de funções implícitas. As técnicas de construção descritas acima (deformação, união e interseção) são particularmente úteis para se obter superfícies creativas.
+, um programa mais completo que faz também gráficos de funções implícitas. As técnicas de construção descritas acima (deformação, união e interseção) são particularmente úteis para se obter superfícies criativas.
 
 ### Referências
 *  O programa 

@@ -2,7 +2,7 @@
 
 A história **Gatos e Cães** trata do “problema da galeria de arte”, o chamado problema de visibilidade. Visibilidade em geometria é uma abstração matemática da noção de visibilidade da vida real.
 
-Dado um conjunto de obstáculos no espaço euclidiano, dois pontos no espaço são considerados visíveis um ao outro, se o segmento de reta que os une não intersectar nenhum obstáculo. 
+Dado um conjunto de obstáculos no espaço euclidiano, dois pontos no espaço são considerados visíveis um ao outro, se o segmento de reta que os une não intersetar nenhum obstáculo. 
 
 Uma solução famosa para o problema fornece um limite superior para o número mínimo de guardas. Ela afirma que n/3 guardas são sempre suficientes e às vezes necessários para proteger um polígono simples com n vértices.
 
@@ -30,7 +30,7 @@ Aqui encontra:
 
 ## Sugestões de exercícios adicionais:
 
-Selecione o maior número possível dos 36 pontos, sem escolher dois na mesma linha recta.
+Selecione o maior número possível dos 36 pontos, sem escolher dois na mesma linha reta.
 
 ![36 pontos](/stories/logi-3/img/logi3.png)
 
@@ -57,16 +57,16 @@ História
 
 O utilizador vê um mapa e dois chapéus de polícia. O objetivo é descobrir se dois policias são capazes de fiscalizar todas as ruas da cidade ou se são necessários mais. O utilizador pode mover as imagens no mapa e as ruas supervisionadas aparecerão em destaque. Jogo livre; nenhuma solução é pedida desta vez.
 
-@[youtube](T6k8ftH5jMc)
+@[youtube](T6k8ftH5jMc?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 
 [Segundo jogo na história]($HUB_URL/pt/story/cats-and-dogs/?actionLink=secondGame)
 
-O utilizador vê o mapa das ruas da cidade Logi e três cubos de açúcar. O objectivo é saber se três polícias chegam para patrulhar todas as ruas da cidade e em caso afirmativo, como? O utilizador pode mover os ícones no mapa e as ruas supervisionadas aparecerão em destaque.
+O utilizador vê o mapa das ruas da cidade Logi e três cubos de açúcar. O objetivo é saber se três polícias chegam para patrulhar todas as ruas da cidade e em caso afirmativo, como? O utilizador pode mover os ícones no mapa e as ruas supervisionadas aparecerão em destaque.
 
-@[youtube](uwkk_lkBqTk)
+@[youtube](uwkk_lkBqTk?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 
 [Terceiro jogo na história]($HUB_URL/pt/story/cats-and-dogs/?actionLink=thirdGame)
 
-O utilizador vê um mapa gerado aleatoriamente e três chapéus de polícia. O objetivo é saber como três policiais conseguem fiscalizar todas as ruas da cidade. O utilizador pode mover os ícones no mapa e as ruas supervisionadas aparecerão em destaque. O botão de "Refresh" faz com que seja gerado um novo mapa.
+O utilizador vê um mapa gerado aleatoriamente e três chapéus de polícia. O objetivo é saber como três polícias conseguem fiscalizar todas as ruas da cidade. O utilizador pode mover os ícones no mapa e as ruas supervisionadas aparecerão em destaque. O botão de "Refresh" faz com que seja gerado um novo mapa.
 
-[Guião](/stories/logi-3/transcripts/Script3-pt.pdf)
+[Guião]()

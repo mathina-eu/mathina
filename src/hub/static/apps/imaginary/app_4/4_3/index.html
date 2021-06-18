@@ -11,7 +11,7 @@
       }
 
       #App {
-          position: absolute;
+          position: relative;
           width: 1920px; height: 1080px;
           background-image: url('../../assets/forest2.jpg');
           background-size: 1920px 1080px;
@@ -464,8 +464,8 @@
 
 
     <body onload="translate()">
-        <div id="App" >
-          <div id="CSCanvas" ></div>
+      <div id="App" align="center">
+                  <canvas id="CSCanvas" ></canvas>
           <div id="Select-menu">
             <select id="sel" size="16">
               <option data-a="1" value="(x^2+y^2+z^2-(0.5+a)^2)^2-(3*((0.5+a)^2)-1)/(3-((0.5+a)^2))*(1-z-sqrt(2)*x)*(1-z+sqrt(2)*x)*(1+z+sqrt(2)*y)*(1+z-sqrt(2)*y)">Kummer Quartik</option>

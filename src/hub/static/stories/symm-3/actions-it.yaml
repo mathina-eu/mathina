@@ -169,6 +169,7 @@ actions:
     text: >
       <p>Insieme, i tre arrotolarono la tavola e la fissatarono usando alcune delle forcine di Mathina.</p>        
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_formcilindro.html
@@ -182,6 +183,7 @@ actions:
     text: >
       <p>Allora il mago fece una magia per evocare la sua scopa magica. Mentre i Mathina e Leo lo guardavano però nessuno si accorse che il rotolo, che era appoggiato sul pavimento, aveva iniziato a rotolare, poiché la strada aveva una pendenza!</p>
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro.html 
@@ -231,6 +233,7 @@ actions:
         char: wizard
         mood: excited
   - type: game
+    listTitle: "Stampando fregi con un rullo"
     tag: tg10
     text: "Scegli un'immagine, guarda la creazione del cilindro e, quindi, fai clic"
     toolbarText: "Scegli un'immagine e guarda la creazione del cilindro"
@@ -375,6 +378,7 @@ actions:
       - text: "Proviamo a separarli dagli altri."
         char: mathina
   - type: game
+    listTitle: "Isolare i fregi con assi di simmetria"
     tag: tg4
     text: "Scegli i 4 fregi con assi di simmetria e clicca"
     toolbarText: "Scegli i 4 fregi con assi di simmetria"
@@ -402,6 +406,7 @@ actions:
     id: 'wizard'
     style: "width: 30%; top: 30%; left:-60%; z-index: 2;"
   - type: game
+    listTitle: "Isolare i fregi in base alle tipologie di assi di simmetria"
     tag: tg5
     text: "Separare i fregi trascinando ogni fregio nella borsa corrispondente."
     cta: "Provaci tu!"
@@ -499,6 +504,7 @@ actions:
         char: leo
         mood: excited
   - type: game
+    doNotList: true
     text: "Guarda il film!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro2.html
@@ -517,6 +523,7 @@ actions:
       - text: "Hai ragione, Leo. Ma non penso che sia necessario usare un rotolo, penso che possiamo riuscire a stampare il fregio usando solo una tavola con una “P”, guarda."
         char: mathina
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_friso_refV.html
@@ -527,6 +534,7 @@ actions:
       - text: "E, usando un processo simile, possiamo persino creare un fregio che ha anche un asse di simmetria orizzontale. Vediamo."
         char: wizard
   - type: game
+    listTitle: "Stampare i fregi con una “tavola”"
     tag: tg11
     text: "Prova a stampare fregi con simmetria di riflessione orizzontale e verticale usando una “tavola”. Scegli un'immagine e guarda l'animazione presentata nell'app."
     cta: "Play!"
@@ -598,6 +606,7 @@ actions:
     id: saco4
     style: "width: 15%; top: 35%; left: 70%"
   - type: game
+    listTitle: "Isolare i fregi che hanno rotazioni"
     tag: tg6
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
@@ -642,6 +651,7 @@ actions:
     style: "width: 40%; top: 40%"
     align: center
   - type: game
+    listTitle: "Ancora sui fregi che hanno rotazioni..."
     tag: tg7
     text: "Seleziona i 3 fregi con assi di simmetria e con simmetrie di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione e con assi di simmetria"
@@ -743,6 +753,7 @@ actions:
   #
   # Animação a carimbar o friso3 com o cilindro
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_cilindro3.html
@@ -797,6 +808,7 @@ actions:
   #
   # Animação a carimbar a parte 1 do friso
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_cilindros_parte1.html
@@ -861,6 +873,7 @@ actions:
   #
   # Animação a carimbar a parte 2 do friso
   - type: game
+    doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
     url: /apps/anims/anim_cilindros_parte2.html
@@ -885,6 +898,7 @@ actions:
   #
   # Animação do Leo a carimbar um friso com reflexão deslizante
   - type: game
+    doNotList: true
     tag: tg8
     text: "Guarda il video!"
     cta: "Play!"
@@ -1002,6 +1016,7 @@ actions:
   #
   # Jogo para separar os frisos com reflexão deslizante
   - type: game
+    listTitle: "Isolare i fregi con glissoriflessione"
     tag: tg12
     text: "Scegli i 3 fregi con glissoriflessioni e clicca"
     toolbarText: "Scegli 3 fregi con glissoriflessioni"
@@ -1099,6 +1114,7 @@ actions:
   #
   # Jogo de rotular os sacos dos frisos
   - type: game
+    listTitle: "Etichettatura delle borse"
     tag: tg9
     text: "Guarda i fregi in ciascuna delle 7 borse che sono state ottenute. Per ogni borsa trascinare i simboli che corrispondono alle simmetrie sui fregi presentati."
     cta: "Play!"
