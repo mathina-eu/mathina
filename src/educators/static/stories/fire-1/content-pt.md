@@ -26,7 +26,7 @@ A velocidade do voo do uni-dragão pode ser controlada tocando com a varinha má
 ![Chifre3](/stories/fire-1/img/horn3.png)
 ![Chifre4](/stories/fire-1/img/horn4.png)
 
-O dragão pode voar para fora do écran mas retornará se o utilizador o guiar para trás usando a varinha mágica. O utilizador pode também usar o botão ‘Back’ para telportar o dragão para a sua posição inicial no centro do écran.
+O dragão pode voar para fora do écran mas retornará se o utilizador o guiar para trás usando a varinha mágica. O utilizador pode também usar o botão ‘Voltar’ para teleportar o dragão para a sua posição inicial no centro do écran.
 
 ![Voltar](/stories/fire-1/img/_align-center_/voltar.jpg)
 
@@ -35,7 +35,7 @@ O dragão pode voar para fora do écran mas retornará se o utilizador o guiar p
 Nesta app, o utilizador pode habituar-se a controlar o voo do uni-dragão com a varinha mágica. Não há nenhum objetivo explícito a atingir. Como o uni-dragão deixa um rasto de fumo ao longo do caminho de voo, o utilizador pode tentar criar alguns padrões (por exemplo, a primeira letra do seu nome, um número especial, um símbolo como um coração, ou qualquer outra coisa que ache interessante). Deve-se começar por padrões grandes e com linhas espessas, e continuar com outros mais pequenos e mais complicados. Brinca controlando a varinha mágica, e tenta fazer curvas apertadas, espirais e zig-zags...
 
 ## App 2 - Apanha as bolas de fogo
-Nesta segunda app, pede-se ao utilizador que apanhe as bolas de fogo que apareçam (a gulodice favorita dos uni-dragões). Quando um bola de fogo é apanhada, a seguinte aparecerá num sítio diferente. O número de bolas de fogo que foram apanhadas é apresentado no canto superior esquerdo. Os uni-dragões não gostam de núvens. Se o uni-dragão vai contra uma das núvens é forçado a ir para a sua posição inicial no centro do écran.
+Nesta segunda app, pede-se ao utilizador que apanhe as bolas de fogo que apareçam (a gulodice favorita dos uni-dragões). Quando uma bola de fogo é apanhada, a seguinte aparecerá num sítio diferente. O número de bolas de fogo que foram apanhadas é apresentado no canto superior esquerdo. Os uni-dragões não gostam de núvens. Se o uni-dragão vai contra uma das núvens é forçado a ir para a sua posição inicial no centro do écran.
 
 ## App 3 - Segue a curva
 

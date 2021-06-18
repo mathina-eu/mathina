@@ -56,4 +56,4 @@ A app foi programada em JavaScript e está optimizada para PCs e tablets/smartph
 A regra para este jogo é que o utilizador apenas se pode deslocar de um mosaico vermelho para um vermelho, de um azul para um azul, de verde para verde, amarelo para amarelo; ou de círculo para círculo, quadrado para quadrado, triângulo para triângulo. 
 
 
-@[youtube](ORR614pbLzk)
+@[youtube](ORR614pbLzk?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
