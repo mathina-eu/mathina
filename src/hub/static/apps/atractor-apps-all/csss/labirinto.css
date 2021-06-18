@@ -10,7 +10,7 @@ html, body {
     display: block;  /* No floating content on sides */
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 26;
-    background: #f3f1cd;
+    background: #ffed89;
 }
 
 .largerCheckbox {

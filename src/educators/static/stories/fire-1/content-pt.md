@@ -26,13 +26,14 @@ A velocidade do voo do uni-dragão pode ser controlada tocando com a varinha má
 ![Chifre3](/stories/fire-1/img/horn3.png)
 ![Chifre4](/stories/fire-1/img/horn4.png)
 
-O dragão pode voar para fora do écran mas retornará se o utilizador o guiar para trás usando a varinha mágica. O utilizador pode também usar o botão ‘Back’ para telportar o dragão para a sua posição inicial no centro do écran.
+O dragão pode voar para fora do écran mas retornará se o utilizador o guiar para trás usando a varinha mágica. O utilizador pode também usar o botão ‘Voltar’ para teleportar o dragão para a sua posição inicial no centro do écran.
 
 ![Voltar](/stories/fire-1/img/_align-center_/voltar.jpg)
 
 ## [App 1 - Guiando o uni-dragão]($HUB_URL/pt/apps/?appNumber=0&story=fire-1)
 
 Nesta app, o utilizador pode habituar-se a controlar o voo do uni-dragão com a varinha mágica. Não há nenhum objetivo explícito a atingir. Como o uni-dragão deixa um rasto de fumo ao longo do caminho de voo, o utilizador pode tentar criar alguns padrões (por exemplo, a primeira letra do seu nome, um número especial, um símbolo como um coração, ou qualquer outra coisa que ache interessante). Deve-se começar por padrões grandes e com linhas espessas, e continuar com outros mais pequenos e mais complicados. Brinca controlando a varinha mágica, e tenta fazer curvas apertadas, espirais e zig-zags...
+
 
 @[youtube](QQP_EywUcL4?_align-center_)
 
