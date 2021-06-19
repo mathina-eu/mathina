@@ -9,14 +9,17 @@ const DevPath = 'http://localhost:3000';
 const IS_EDU = process.env.npm_lifecycle_event.includes('edu');
 const HubUrlPath = 'http://localhost:8080';
 const EduUrlPath = 'http://localhost:8080';
-const HubBase = '/hub';
-const EduBase = '/edu';
+//const HubBase = '/hub';
+//const EduBase = '/edu';
+
+const HubBase = '';
+const EduBase = '';
 
 
 const EduUrlCom = IS_DEV ? DevPath : EduUrlPath + EduBase;
 const HubUrlCom = IS_DEV ? DevPath : HubUrlPath + HubBase;
-const EduBaseCom =  IS_DEV ? "/" : EduBase + '/';
-const HubBaseCom =  IS_DEV ? "/" : HubBase + '/';
+const EduBaseCom =  IS_DEV ? '' : EduBase + '/';
+const HubBaseCom =  IS_DEV ? '' : HubBase + '/';
 
 
 export default {
