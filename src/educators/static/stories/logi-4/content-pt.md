@@ -71,5 +71,5 @@ A app foi programada em JavaScript e está optimizada para PCs e tablets/smartph
 
 A primeira pessoa recebe um número de medalhas de ouro que é igual à soma dos algarismos do total de número de medalhas de ouro recebidas pela equipa. Por exemplo, se a equipa ganhou *721* medalhas, então o primeiro membro da equipa recebe *7 + 2 + 1, ou seja 10 medalhas. Ficam *721* menos *10*, ou *711* medalhas. O membro seguinte recebe a soma dos digítos deste número. E assim sucessivamente.
 
-@[youtube](A1vXg_DSolc)
+@[youtube](A1vXg_DSolc?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 [Script]()

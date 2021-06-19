@@ -62,6 +62,8 @@
           :img="action.img"
           :toolbar-img="action.toolbarImg"
           :img-root="imgRoot"
+          :full-width="fullWidth"
+          :requires-scaling-fix="requiresScalingFix"
           @lastGameFinished="isLastGameFinished=true"
         />
         <VideoView
@@ -163,6 +165,9 @@ export default {
         }
       }
       return 0;
+    },
+    requiresScalingFix() {
+      return this.story?.requiresScalingFix;
     },
     action() {
       return this.actions[this.currentActionId];

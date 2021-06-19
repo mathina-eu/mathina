@@ -82,6 +82,7 @@ actions:
       - text: "Se ripieghiamo l'immagine in un modo preciso, le due parti si sovrappongono!"
         char: wizard
   - type: game
+    listTitle: "Piegando le immagini I"
     tag: tg1
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
@@ -116,6 +117,7 @@ actions:
       - text: "Ora ti propongo un altro esempio! Guarda questa immagine di un'ape!"
         char: wizard        
   - type: game
+    listTitle: "Piegando le immagini II"
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
     url: /apps/dobrar_2/index.html
@@ -136,6 +138,7 @@ actions:
         char: wizard
     position: center
   - type: game
+    listTitle: "Piegando le immagini III"
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
     url: /apps/dobrar_3/index.html
@@ -189,6 +192,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    listTitle: "Cerca i giocattoli simmetrici"
     text: "Metti i giocattoli fatti bene nella scatola."
     toolbarText: "Metti i giocattoli fatti bene (cioè simmetrici) nella scatola"
     tag: tg4
@@ -347,7 +351,8 @@ actions:
       - text: "Ok, ho capito! Finirò i giocattoli."
         char: mathina
         mood: excited            
-  - type: game 
+  - type: game
+    listTitle: "Costruisci i giocattoli I"
     tag: tg2
     text: "Aiuta Mathina a costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
     cta: "Provaci!"
@@ -438,6 +443,7 @@ actions:
         char: mathina
         exposition: "Gli disse Mathina, ripetendo le parole del mago."        
   - type: game
+    listTitle: "Costruisci i giocattoli II"
     tag: tg3
     text: "Aiuta Leo a concludere i giocattoli, disegna le linee mancanti."
     cta: "Provaci!"

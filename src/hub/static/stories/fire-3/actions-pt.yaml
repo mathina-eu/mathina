@@ -10,7 +10,7 @@ actions:
 
   - type: sceneText
     text: >
-      Era manhã cedo, quando a Mathina foi acordada, de repente, pelos gritos do Leo, que estava do lado de fora da casa, a chamar por ela.
+      Era manhã cedo, quando a Mathina foi acordada, de repente, pelos gritos do Leo, que estava na parte de baixo da casa, a chamar por ela. 
 
   - type: dialog
     avatarAlign:
@@ -44,7 +44,7 @@ actions:
 
   - type: sceneText
     text: >
-      A Mathina vestiu-se o mais rápido que conseguiu e desceu. A Flama estava de facto lá, enquanto o Leo comia alguns bolos e biscoitos se servia e servia os outros dos copos de leite do pequeno almoço que a avó tinha deixado preparado.
+      A Mathina vestiu-se o mais rápido que conseguiu e desceu. A Flama estava de facto lá, e o Leo estava a servir copos de leite do pequeno almoço que a avó tinha deixado preparado.
 
   - type: image
     src: $COMMON/img/characters/mathina/mathina3.png
@@ -527,11 +527,11 @@ actions:
         mood: happy
 
       - char: flamma
-        text: Ah, então a Liz é tua para a treinares. Vamos ver se consegues treiná-la por forma a fazer uma corrida como o com a Flick e a Mathina.
+        text: Ah, então a Liz é tua para a treinares. Vamos ver se consegues treiná-la por forma a fazer uma corrida com a Flick e a Mathina.
 
 # Jogo 3.3
   - type: game
-    text: Para fazer voar esta fénix tends de lhe dizer quanto deve subir ou descer movendo a mão à esquerda para cima ou para baixo. Fá-la voar evitando os obstáculos.
+    text: Para fazer voar esta fénix tens de lhe dizer quanto deve subir ou descer movendo a mão à esquerda para cima ou para baixo. Fá-la voar evitando os obstáculos.
     toolbarText: Evita os obstáculos e chega ao lado direito.
     cta: Faz voar a fénix!
     url: /apps/imaginary/app_3/3_3/index.html?lang=pt
@@ -611,4 +611,4 @@ actions:
 
   - type: sceneText
     text: >
-      A Mathina e o Leo passaram todo o dia a treinar e a brincar com as fénixes. O Leo conseguiu Conseguiram treinar a Liz, e todos os feiticeiros do júri e os exímios os treinadores de fénixes o os admiraram por isso e atribuíram-lhes o prémio de Originalidade para os melhores treinadores. Terminaram o dia com um grande banquete numa festa organizada na maior sala do castelo
+      A Mathina e o Leo passaram todo o dia a treinar e a brincar com as fénixes. Eles conseguiram treinar a Liz, e todos os feiticeiros do júri e os exímios treinadores de fénixes os admiraram por isso e atribuíram-lhes o prémio de Originalidade para os melhores treinadores. Terminaram o dia com um grande banquete numa festa organizada na maior sala do castelo.

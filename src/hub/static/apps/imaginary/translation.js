@@ -33,6 +33,6 @@ translation = {
       "Btn_Delete": "Apagar!",
       "flamma": ["Muito bem!", "", "Bem!", "", "", "Ótimo!", "", "", "Uau!", "", "", "Espetacular!", "", "", "Fantástico!", ""],
       "wrongChoice": "Oh não! Devia ser este.",
-      "surfaces": ["Kummer Quartic", "Barth Sextic", "Chmutov Octic", "Endrass Octic", "Ball", "Cube", "Citric", "Ding Dong", "Hummingbird", "Vis a Vis", "Sweet", "Parabolic Ring Cyclide", "Gyroid", "Schwarz P", "Torus", "Interleaved Tori"],
+      "surfaces": ["Quártica de Kummer", "Sextica de Barth", "Octica de Chmutov", "Octica de Endrab", "Esfera", "Cubo", "Citrino", "Ding Dong", "Colibri", "Vis a Vis", "Doce", "Cíclida de Anel Parabólico ", "Giróide", "Schwarz P", "Toro", "Toros entrelaçados"],
     }
 };

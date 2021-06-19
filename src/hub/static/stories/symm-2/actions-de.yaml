@@ -71,6 +71,7 @@ actions:
       #"We can imagine a line which splits the image into two parts such that when you put a mirror on that line, the part that is in front of the mirror along with its reflection “makes” a picture equal to the initial one."
         char: wizard
   - type: game
+    listTitle: "Spiegel I"
     tag: tg6
     text: Überprüfe, ob die Figur eine Symmetrieachse hat. Hierzu kannst du den Spiegel mit dem Regler oben links hin und her schieben
     #"Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
@@ -99,6 +100,7 @@ actions:
       #"If you put a mirror on any line, you never get a picture like the initial one. Look:"
         char: wizard      
   - type: game
+    listTitle: "Spiegel II"
     text: Überprüfe, ob das Bild eine Symmetrieachse hat. Du kannst den Spiegel wieder mit dem Regler hin und her bewegen.
     #"Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider."
     toolbarText: Überprüfe, ob das Bild eine Symmetrieachse hat.
@@ -129,6 +131,7 @@ actions:
         char: mathina
         mood: excited
   - type: game
+    listTitle: "Das Rosettenspiel"
     tag: tg3
     text: Möchtest Du Mathina helfen? Suche in jeder Runde die vier Rosetten aus, die eine Symmetrieachse haben. Klicke dann auf den grünen Pfeil, um zu sehen, ob Du alle gefunden hast.
     #"How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
@@ -156,6 +159,7 @@ actions:
       #"It works like this: there are six bags numbered from 1 to 6. If a rosette has one symmetry axis, it should go to bag 1, if it has two, it should go to bag 2, and so on…"
         char: wizard        
   - type: game
+    listTitle: "Taschen-Spiel I"
     tag: tg4
     text: "Hilf Mathina, die Rosetten in die richtige Tasche zu legen. Wenn du nicht weiter weißt, klicke auf das folgende Smybol:"
     #"How can Mathina win the rosettes? If in doubt, click"
@@ -241,6 +245,7 @@ actions:
       #"Now let’s separate all these rosettes into the right bags. When you finish, all these rosettes will be yours."
         char: wizard
   - type: game
+    listTitle: "Taschen-Spiel II"
     tag: tg5
     text: "Hilfst du Mathina? Wenn du nicht weiter weißt, kannst du auf folgendes Symbol klicken:"
     #"How can Mathina win the rosettes? If in doubt, click"
@@ -435,6 +440,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes          
   - type: game
+    listTitle: "Spiegellabyrinth"
     tag: tg1
     text: Wie kann sich Mathina im Spiegellabyrinth orientieren?
     #"How can Mathina solve the mirror maze?"
@@ -527,6 +533,7 @@ actions:
   - type: clearImage
     id: mathina-instrucoes2          
   - type: game
+    listTitle: "Gedrehtes Labyrinth"
     tag: tg2
     text: Wie kann Mathina durch das gedrehte Labyrinth laufen?
     #"How can Mathina solve the half-turn maze?"
