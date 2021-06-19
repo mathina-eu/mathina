@@ -86,7 +86,7 @@ export default {
   computed: {
     avatar() {
       const mood = this.mood ? this.mood : 'normal';
-      return `/portraits/${this.char}/${mood}00.data.png`;
+      return `portraits/${this.char}/${mood}00.data.png`;
     },
     displayName() {
       if (this.charName) {

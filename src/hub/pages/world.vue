@@ -1,6 +1,6 @@
 <template>
   <StoryView
-    background="/map_blur.jpg"
+    background="map_blur.jpg"
   >
     <Parallax class="overflow-hidden">
       <template #back1>

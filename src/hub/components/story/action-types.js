@@ -72,7 +72,7 @@ export class BackgroundAction extends Action {
   getAssetPath(imgRoot) {
     let path;
     if (this.src.startsWith('$COMMON')) {
-      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+      path = `stories/common/${this.src.replace('$COMMON/', '')}`;
     } else {
       path = `${imgRoot}/bg/${this.src}`;
     }
@@ -177,7 +177,7 @@ export class ImageAction extends Action {
   getAssetPath(imgRoot) {
     let path;
     if (this.src.startsWith('$COMMON')) {
-      path = `/stories/common/${this.src.replace('$COMMON/', '')}`;
+      path = `stories/common/${this.src.replace('$COMMON/', '')}`;
     } else {
       path = `${imgRoot}/${this.src}`;
     }

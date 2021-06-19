@@ -7,7 +7,7 @@ import constants from '../hub/constants';
 // TODO: fix no .env file found error
 // const BASE_PATH = '/';
 // const PUBLIC_PATH = '/';
-const distFolder = 'educators';
+const distFolder = 'edu';
 
 // const IS_DEV = process.env.NODE_ENV !== 'production';
 const generateRoutes = () => {
@@ -38,12 +38,12 @@ export default {
   },
   css: ['../shared/assets/styles/main.pcss'],
   srcDir: __dirname,
-  buildDir: '.nuxt/educators',
+  buildDir: '.nuxt/edu',
   generate: {
     dir: `dist/${distFolder}`,
     routes: generateRoutes(),
   },
-  globalName: 'educators',
+  globalName: 'edu',
   build: {
     ...sharedConfig.build,
   }

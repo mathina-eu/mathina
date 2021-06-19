@@ -1,6 +1,6 @@
 <template>
   <StoryView
-    background="/splash_blur.jpg"
+    background="splash_blur.jpg"
   >
     <Parallax class="overflow-hidden">
       <div class="layer background" />
