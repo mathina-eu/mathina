@@ -9,11 +9,8 @@ const DevPath = 'http://localhost:3000';
 const IS_EDU = process.env.npm_lifecycle_event.includes('edu');
 const HubUrlPath = 'http://localhost:8080';
 const EduUrlPath = 'http://localhost:8080';
-//const HubBase = '/hub';
-//const EduBase = '/edu';
-
-const HubBase = '';
-const EduBase = '';
+const HubBase = '/hub';
+const EduBase = '/edu';
 
 
 const EduUrlCom = IS_DEV ? DevPath : EduUrlPath + EduBase;
