@@ -14,7 +14,7 @@ Schülerinnen und Schüler in diesem Alter sind in der Lage, symbolische Ausdrü
 
 # Über die Apps
 
-## App 1 - Stelle die Parameter ein und fliege den Phönix
+## [App 1 - Stelle die Parameter ein und fliege den Phönix]($HUB_URL/de/apps/?appNumber=0&story=fire-3)
 Nach dem Öffnen der App sehen Sie ein Koordinatensystem, einen gelben und einen lila Graphen. Die gelbe Kurve ist die gewünschte Flugbahn des Phönix, das zu erreichende Ziel. Die lila Kurve ist eine Polynomfunktion der Variablen x. Sie kann mit dem Bedienfeld angepasst werden. Für jede Potenz von x können Sie den entsprechenden Koeffizienten des Polynoms ändern.
 
 ![App1](/stories/fire-3/img/_align-center_/app1.png)
@@ -23,7 +23,7 @@ Der Grad des Polynoms - der höchste Wert der Exponenten von x - nimmt zu, je me
 
 @[youtube](Vgkz6XrMVIM?_align-center_)
 
-## App 2 - Passe die Punkte an und fliege den Phönix
+## [App 2 - Passe die Punkte an und fliege den Phönix]($HUB_URL/de/apps/?appNumber=1&story=fire-3)
 
 Das Ziel dieser App ist es ebenfalls, eine Flugbahn für den Phönix zu erstellen, die wiederum durch ein Polynom beschrieben wird. Sie müssen einen Weg finden, auf dem der Phönix auf der rechten Seite ankommt, ohne auf Hindernisse (Berge und Wolken) zu treffen. Diesmal können Sie die Koeffizienten jedoch nicht direkt einstellen, sondern Sie können sechs (gelbe) Punkte auf der Koordinatenebene verschieben. Zusammen mit dem Ursprung, der die Startposition des Phönix ist, beschreiben diese sieben Punkte ein eindeutiges Polynom 6. Grades (höchste Potenz von x). Dieses Polynom - die erstellte Flugbahn - wird durch alle gelben Punkte gehen. Die Kurve wird erst sichtbar, wenn Sie dem Phönix sagen, dass er fliegen soll.
 
@@ -36,7 +36,7 @@ Wenn der Phönix nicht erfolgreich war, springt er zum Ursprung zurück, wobei d
 
 @[youtube](4tz4YHZZWYY?_align-center_)
 
-## App 3 - Führe den Phoenix durch die Ableitung
+## [App 3 - Führe den Phoenix durch die Ableitung]($HUB_URL/de/apps/?appNumber=2&story=fire-3)
 
 Um diesen Phönix zu fliegen, geben Sie an, wie stark er auf- oder absteigen soll, indem Sie die Hand auf der linken Seite nach oben oder unten bewegen. Das Ziel ist es, unter Umgehung aller Hindernisse (Berge und Wolken) auf der rechten Seite anzukommen. Die Flugbahn ist horizontal, wenn die Hand auf Null steht, der Phönix steigt/sinkt, wenn die Hand über/unter Null steht. Der Phönix bewegt sich nur, wenn die Hand aktiv gedrückt wird, ansonsten bleibt er in der Luft stehen (ähnlich wie in den Apps der Geschichte **Die Feuervogeltrainerin**).
 
@@ -46,7 +46,7 @@ Nachdem der Phönix auf der rechten Seite angekommen ist, kehrt er auf die Hand 
 
 @[youtube](xu9rp0zH3vQ?_align-center_)
 
-## App 4 - Passe die Punkte der Ableitung an und fliege den Phönix
+## [App 4 - Passe die Punkte der Ableitung an und fliege den Phönix]($HUB_URL/de/apps/?appNumber=3&story=fire-3)
 
 Diese App kombiniert die Methoden, die in den beiden vorherigen Apps eingeführt wurden. Wie in App 2 verschieben Sie Punkte, um eine durch sie verlaufende Kurve einzustellen. Diesmal wird jedoch angegeben, wie stark der Phönix jeweils auf- oder absteigt - es ist die Ableitung der Flugbahn (eingeführt in App 3). Versuchen Sie, alle Feuerbälle auf Ihrem Weg zu sammeln.
 
