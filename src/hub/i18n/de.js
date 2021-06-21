@@ -100,4 +100,37 @@ export default {
     sean: 'Tom',
     rashamom: 'Prof. O’Malley'
   },
+  contributors: {
+    title: 'Contributors',
+    partners: 'Partners',
+    partnerInfo: {
+      imaginary: 'IMAGINARY gGmbH (Germany) (project leader)',
+      atractor: 'Atractor (Portugal)',
+      curvilinea: 'Curvilinea Società Cooperativa (Italy)',
+      experienceWorkshop: 'Experience Workshop (Finland)',
+      bragi: 'Bragi Vizualne Komunikacije (Slovenia)',
+    },
+    management: 'Management',
+    cordinationManagement: 'Coordination & Management',
+    cordinationManagementDesign: 'Coordination, management & design',
+    projectManagement: 'Project management',
+    projectManagementConsultant: 'Project management consultant',
+    stories: 'Stories',
+    eduOnlineGuide: 'Educator’s online guide',
+    appDevelopment: 'App development',
+    programBooklet: 'Mathina Program Booklet',
+    eduHandbook: 'Handbook for educators',
+    focusGroups: 'Focus Groups testing',
+    imagesAndVideo: 'Images and videos production',
+    mathProblemCollection: 'Mathematical problem collection for the stories',
+    platformDevelopment: 'Platform development',
+    translatorsDe: 'Translators for German',
+    translatorsPt: 'Translators for Portuguese',
+    translatorsIt: 'Translators for Italian',
+    art: 'Art & illustrations',
+    erasmus: {
+      project: 'Mathina is an Erasmus+ project, funded by the European Commission',
+      reference: 'Erasmus+ Mathina project reference',
+    }
+  },
 };

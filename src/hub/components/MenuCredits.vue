@@ -1,8 +1,14 @@
 <template>
   <div class="menu-credits">
-    <div class="menu-credits__title">
+    <v-list-item
+      color="grey"
+      class="menu-credits__title"
+      :to="localePath('/contributors')"
+      text
+      nuxt
+    >
       {{ $t('menu.credits') }}
-    </div>
+    </v-list-item>
     <div class="menu-credits__disclaimer">
       {{ $t('menu.credits-disclaimer') }}
     </div>
@@ -16,11 +22,11 @@ export default {
 </script>
 <style scoped>
 .menu-credits {
-  padding: 1rem;
+  padding: 0 1rem 1rem;
 
   &__title {
     font-size: 1rem;
-    margin-bottom: 0.75rem;
+    margin: 0 -1rem 1rem;
   }
 
   &__disclaimer {

@@ -12,7 +12,7 @@ Crianças desta idade são capazes de usar expressões simbólicas (funções e 
 
 # Sobre as apps
 
-## App 1 - Ajusta os parâmetros e faz a fénix voar
+## [App 1 - Ajusta os parâmetros e faz a fénix voar]($HUB_URL/pt/apps/?appNumber=0&story=fire-3)
 
 Ao abrir a app, verá um sistema de coordenadas, um gráfico amarelo e um outro púrpura. O amarelo é o caminho de voo que a fénix deve seguir, ou seja o objetivo a atingir. A curva púrpura é o gráfico da função polinomial da variável `@x@`. Pode ser ajustada no painel de controlo. Para cada potência de `@x@`, pode alterar o coeficiente correspondente no polinómio.
 
@@ -20,7 +20,9 @@ Ao abrir a app, verá um sistema de coordenadas, um gráfico amarelo e um outro 
 
 O grau do polinómio - o valor máximo dos expoentes de `@x@` - aumenta à medida que progride (o máximo é 3). Cada coeficiente pode ser mudado usando os botões `@+@` e `@-@`, de cada vez variando de +/- 0.1. Premindo continuamente dá-se uma variação contínua do valor. Quando o caminho correto é dado, a fénix automaticamente segue-o, voando. Depois um novo desafio de caminho de voo é apresentado ao utilizador. Pode usar a última função, que está ainda a ser apresentada, ou pode usar o botão "Apagar" para colocar todos os coeficientes em zero e recomeçar do princípio.
 
-## App 2 - Ajusta os pontos e faz voar a fénix
+@[youtube](Vgkz6XrMVIM?_align-center_)
+
+## [App 2 - Ajusta os pontos e faz voar a fénix]($HUB_URL/pt/apps/?appNumber=1&story=fire-3)
 
 O objetivo desta app é também criar um caminho de voo para a fénix, o qual é ainda descrito por um polinómio. Precisa de encontrar um caminho para a fénix chegar ao lado direito sem tocar nos obstáculos (montanhas e nuvens). No entanto desta vez não pode ajustar diretamente os coeficientes, mas pode mover seis pontos (amarelos) no plano coordenado. Juntamente com a origem, que é o ponto de partida da fénix, estes sete pontos descrevem um polinómio único de grau 6 (potência máxima de `@x@`). Este polinómio - o caminho de voo criado - passará por todos esses pontos. A curva só ficará visível quando disser à fénix para voar.
 
@@ -31,7 +33,9 @@ Se a fénix falhar, voltará para a origem, deixando visível o caminho de voo d
 
 ![App2_3](/stories/fire-3/img/_align-center_/2_3.png)
 
-## App 3 - Guia a fénix usando a derivada
+@[youtube](4tz4YHZZWYY?_align-center_)
+
+## [App 3 - Guia a fénix usando a derivada]($HUB_URL/pt/apps/?appNumber=2&story=fire-3)
 
 Para esta fénix voar, tem de lhe dizer quanto é que deve subir ou descer movendo para cima e para baixo a mão que está à esquerda. O objetivo é chegar ao lado direito evitando os obstáculos (montanhas e nuvens). O caminho de voo é horizontal se a mão estiver no zero, e a fénix sobe/desce se a mão estiver acima/abaixo de zero. A fénix só se move enquanto a mão estiver a ser arrastada, caso contrário pára no meio do ar (como acontece nas apps da história "O Treinador do Pássaro de Fogo").
 
@@ -39,7 +43,9 @@ Para esta fénix voar, tem de lhe dizer quanto é que deve subir ou descer moven
 
 Quando a fénix chega ao lado direito, regressa à tua mão, aparecendo novos obstáculos (até o máximo de 3 montanhas e 3 grupos de nuvens).
 
-## App 4 - Ajusta os pontos da derivada e faz voar a fénix
+@[youtube](xu9rp0zH3vQ?_align-center_)
+
+## [App 4 - Ajusta os pontos da derivada e faz voar a fénix]($HUB_URL/pt/apps/?appNumber=3&story=fire-3)
 
 Esta app combina os métodos usados nas duas apps anteriores. Como na app 2, manipula os pontos para ajustar uma curva que passa por eles. Só que neste caso essa curva dá os valores de subida ou descida da fénix a cada momento - é a derivada do caminho de voo (usada na app 3). Tente apanhar todas as bolas de fogo durante o voo.
 
@@ -59,6 +65,6 @@ Sugestões:
 * Se um bola de fogo está  no eixo dos xx, as áreas entre a curva púrpura e o eixo dos `@xx@` acima e abaixo do eixo têm de ser iguais (a partir da origem até à bola de fogo).
 * Se essas áreas acima e abaixo do eixo dos xx forem muito diferentes, a fénix acabará por ficar muito longe desse eixo.
 
-
+@[youtube](-z5_LG3fgTY?_align-center_)
 
 

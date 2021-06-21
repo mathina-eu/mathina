@@ -180,7 +180,7 @@ export default {
 
       if (bodyWidth > elementWidth && bodyHeight > elementHeight) {
         this.isGameLoading = false;
-        this.iframeStyle = '';
+        this.iframeStyle = `left: ${(bodyWidth - elementWidth) / 2}px`;
         return false;
       }
 
@@ -188,13 +188,15 @@ export default {
       let newHeight = ratio * elementHeight;
       let rect = el.getBoundingClientRect();
       let horizontalOrigin = 'left';
+      let offset = 0;
       if (newHeight > (bodyHeight - rect.y)) {
         ratio = (bodyHeight - rect.y) / elementHeight;
-        horizontalOrigin = 'center';
+        offset = 0.5 * (bodyWidth - elementWidth * ratio);
       }
       let newElementWidth = Math.floor(elementWidth / ratio);
       let newElementHeight = Math.floor(elementHeight / ratio);
-      this.iframeStyle = `width: ${newElementWidth}px; height: ${newElementHeight}px; transform: scale(${ratio}); transform-origin: ${horizontalOrigin} top;`;
+
+      this.iframeStyle = `left: ${offset}px; width: ${newElementWidth}px; height: ${newElementHeight}px; transform: scale(${ratio}); transform-origin: ${horizontalOrigin} top;`;
       this.$nextTick(() => {
         this.isGameLoading = false;
       });
