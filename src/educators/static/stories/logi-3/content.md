@@ -31,11 +31,11 @@ Here you encounter:
 ## Suggestions for additional exercises: 
 Select as many of the 36 dots as possible, without choosing two dots on the same straight line. 
 
-![36 dots](/stories/logi-3/img/logi3.png)
+![36 dots](stories/logi-3/img/logi3.png)
 
 Place as many queens on the chessboard as possible without hitting one another.
 
-![chess](/stories/logi-3/img/sakk.png)
+![chess](stories/logi-3/img/sakk.png)
 
 One possible solution to the [so-called Eight Queens problem](https://en.wikibooks.org/wiki/Puzzles/Chess_puzzles/Eight_Queens). 
 [Image credits: Encik Tekateki](https://commons.wikimedia.org/wiki/File:Solution_K_for_8_Queen_Puzzles.png)
@@ -66,4 +66,4 @@ You see Logi-city's street layout and three sugar cubes. The goal is to find out
 
 You see a street layout and three police hats. The goal is to find out how three policemen are able to patrol all roads of the city. You can move the icons on the map and the roads patrolled will appear highlighted. By clicking on the "refresh" button, a new map is generated.
 
-[Script](/stories/logi-3/transcripts/Script3.pdf)
+[Script](stories/logi-3/transcripts/Script3.pdf)

@@ -36,11 +36,11 @@ Der weit verbreitete Mathematik-Lernbaukasten **Dienes Logische Blöcke** kann f
 
 Mit den Plättchen kann man ein Spiel für zwei oder mehr Personen spielen. Alle erhalten die gleiche Anzahl an Spielsteinen (z.B. 10). Die Regel lautet, dass sich benachbarte Spielsteine nur in einem einzigen Merkmal voneinander unterscheiden dürfen. Die Spielerinnen und Spieler legen nacheinander ein Plättchen auf dem Tisch ab. Die Person, die das Spiel nicht fortsetzen kann, hat verloren. 
 
-![Zwei-Spieler-Spiel](/stories/logi-2/img/dienes1.png)
+![Zwei-Spieler-Spiel](stories/logi-2/img/dienes1.png)
 
 Eine weitere Übung mit dem gleichen Set ist das Vervollständigen der folgenden Serie:
 
-![Vervollständige die Serie](/stories/logi-2/img/dienes2.png)
+![Vervollständige die Serie](stories/logi-2/img/dienes2.png)
 
 # Über die Apps
 
@@ -61,4 +61,4 @@ Die Regel des Spiels lautet, dass die Benutzerinnen und Benutzer nur von rotem F
 
 @[youtube](ORR614pbLzk)
 
-[Script (PDF, englisch)](/stories/logi-2/transcripts/Script2.pdf)
+[Script (PDF, englisch)](stories/logi-2/transcripts/Script2.pdf)

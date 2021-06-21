@@ -41,11 +41,11 @@ Os blocos lógicos da ferramenta educacional **Dienes**, largamente usados na ed
 
 Podemos jogar um jogo de dois jogadores com as peças. Cada um dos dois jogadores recebe 10 peças. A regra é que peças vizinhas só devem diferir por um atributo. Os jogadores colocam alternadamente uma peça e perde o jogador que não possa continuar o jogo.
 
-![Um jogo para 2 jogadores](/stories/logi-2/img/dienes1.png)
+![Um jogo para 2 jogadores](stories/logi-2/img/dienes1.png)
 
 Outro exercício com o mesmo conjunto de peças consiste em completar a série abaixo.
 
-![Completa a série](/stories/logi-2/img/dienes2.png)
+![Completa a série](stories/logi-2/img/dienes2.png)
 
 # Sobre as apps
 

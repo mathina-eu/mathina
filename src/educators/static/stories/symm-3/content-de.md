@@ -15,15 +15,15 @@ Wenn wir dieses Konzept formalisieren wollen, können wir einen Fries wie folgt 
 
 `*` Eine streifenförmige Region^[Beachten Sie, dass die erwähnte "Region" in der Ebene für diesen Fries links und rechts unbegrenzt ist. Das Bild zeigt nur einen begrenzten Teil dieser Region] in der Ebene, die bei bestimmten Verschiebungen das Aussehen nicht verändern. Der Fries sieht vor und nach der Verschiebung gleich aus:
 
-![Film ansehen](/stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
+![Film ansehen](stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
 
 `*` Es gibt eine Verschiebung, von der aus jede weitere ein ganzzahliges Vielfaches ist:
 
-![Film ansehen](/stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
+![Film ansehen](stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
 
 **Anmerkung 1:** Diese letzte Eigenschaft schließt eine Gerade als Beispiel für ein Fries aus. Für einen beliebigen Vektor *v*, der parallel zur Geraden ist, bildet eine Verschiebung um *v* die Gerade auf sich selbst ab. Allerdings bildet die Verschiebung um *0.5 v* (also kein ganzzahliges Vielfaches von *v*), die Gerade ebenfalls auf sich selbst ab.
 
-![Translation associated to 0.5*v](/stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
+![Translation associated to 0.5*v](stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
 
 **Anmerkung 2:** Aus der gegebenen Definition folgt, dass ein Fries nicht begrenzt ist.
 
@@ -31,7 +31,7 @@ Wenn wir dieses Konzept formalisieren wollen, können wir einen Fries wie folgt 
 
 Es ist nicht möglich über Symmetrien zu sprechen, ohne den Begriff der Isometrie einzuführen. Eine **Isometrie** ist eine Funktion, die Abstände bewahrt: Wenn zwei Punkte *A* und *B* in *A'* und *B'* transformiert werden, dann ist *dist(A,B)=dist(A',B')*.
 
-![Isometrie](/stories/symm-3/img/_align-center_/iso.png =300x250)
+![Isometrie](stories/symm-3/img/_align-center_/iso.png =300x250)
 
 In der Geschichte werden vier verschiedene Isometrien vorgestellt (hier in der Reihenfolge, wie sie in der Geschichte **Zauberhafte Muster** erwähnt werden): Spiegelung, Drehung, Gleitspiegelung und Verschiebung. Dies ist auch eine vollständige Liste der Isometrien in der Ebene. Man kann beweisen, dass es keine weiteren gibt.
 
@@ -67,7 +67,7 @@ Betrachten wir zwei verschiedene Fälle: 1) Friese ohne Achsensymmetrie (die in 
 
 | Tasche 1| Tasche 2 | Tasche 3 | Tasche 4 | Tasche 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Tasche 1](stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Tasche 2](stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Tasche 3](stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Tasche 4](stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Tasche 5](stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
 | vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie |
 | Keine horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie |
 | Keine Rotationssymmetrie |  |  | Rotationssymmetrie | Rotationssymmetrie |
@@ -86,7 +86,7 @@ Betrachten wir zwei verschiedene Fälle: 1) Friese ohne Achsensymmetrie (die in 
 
 | Tasche 1| Tasche 2 | Tasche 3 | Tasche 4 | Tasche 5 | Tasche 6 | Tasche 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Tasche 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Tasche 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Tasche 1](stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Tasche 2](stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Tasche 3](stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Tasche 4](stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Tasche 5](stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Tasche 6](stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Tasche 7](stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
 | vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | keine vertikale Achsensymmetrie 
 | Keine horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie
 |Keine Rotationssymmetrie|  |  | Rotationssymmetrie | Rotationssymmetrie | Keine Rotationssymmetrie | Keine Rotationssymmetrie
@@ -142,22 +142,22 @@ Unten sehen Sie die Kurzbeschreibung der einzelnen Apps. Im Folgenden finden Sie
 ## [App 1 - Friese mit einer "Rolle" stempeln]($HUB_URL/de/story/stamping-friezes/?actionLink=tg10)
 
 In dieser App wird man aufgefordert, ein Bild aus insgesamt 20 Figuren auszuwählen. Dann wird die Erstellung einer "Rolle" mit dem ausgewählten Bild präsentiert. Mit dem Klicken auf dieses Symbol 
-![Stempel](/stories/symm-3/img/stamp.png =40x40)
+![Stempel](stories/symm-3/img/stamp.png =40x40)
 kann man zusehen, wie die "Rolle" einen Fries stempelt, der das gewählte Bild als Motiv hat.
 
 @[youtube](xKiCkxAxdEs?_align-center_)
-[Script (PDF, englisch)](/stories/symm-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
 ## [App 2 - Friese mit Symmetrieachsen auswählen]($HUB_URL/de/story/stamping-friezes/?actionLink=tg4)
 
 Es sind sieben Friese zu sehen. Die Spielerin/der Spieler wird aufgefordert, die vier Friese mit Symmetrieachsen auszuwählen. Nach Auswahl der richtigen Friese und Klicken auf das Symbol
-![Bestätigen](/stories/symm-3/img/confirm.png =40x40)
+![Bestätigen](stories/symm-3/img/confirm.png =40x40)
 zeigt das Programm sieben weitere Friese an. Es werden insgesamt 3 mal 7 Friese angezeigt. Das Spiel ist gelöst, wenn alle "richtigen" Friese (d.h. jene mit Symmetrieachsen) ausgewählt worden sind.
 
 @[youtube](ZRi96tPJW7Y?_align-center_)
-[Script (PDF, englisch)](/stories/symm-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -166,7 +166,7 @@ zeigt das Programm sieben weitere Friese an. Es werden insgesamt 3 mal 7 Friese 
 Die Spielerin/der Spieler sieht zwölf Friese und wird aufgefordert, jeden Fries in eine Tasche, entsprechend seiner Achsensymmetrie, zu legen: **Tasche 1** enthält die Friese, die nur vertikale Symmetrieachsen haben; **Tasche 2**, die mit horizontalen Symmetrieachsen; und **Tasche 3**, die mit vertikalen und horizontalen Achsen.
 
 @[youtube](bIFqroBizaU?_align-center_)
-[Script (PDF, englisch)](/stories/symm-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -175,7 +175,7 @@ Die Spielerin/der Spieler sieht zwölf Friese und wird aufgefordert, jeden Fries
 In dieser App wird die Spielerin/der Spieler eingeladen, ein Bild aus insgesamt 20 Figuren auszuwählen. Mit diesem Bild wird mit einem "Brett" ein Fries gestempelt, das sowohl vertikale als auch horizontale Symmetrieachsen hat.
 
 @[youtube](moNr-MDIUs0?_align-center_)
-[Script (PDF, englisch)](/stories/symm-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -204,16 +204,16 @@ Diese App ist ähnlich wie **App 3**. Anstatt jedoch Friese mit Symmetrieachsen 
 
 In dieser App kann die Spielerin/der Spieler die sieben vorhandenen Taschen betrachten und die Friese im Inneren sehen. Die Spielerin/der Spieler soll aus einer Liste jene Symbole auswählen, die den Symmetrien der Friese in den Taschen entsprechen:
  
-![horizontal reflection](/stories/symm-3/img/Icon-refH.png =40x40)
+![horizontal reflection](stories/symm-3/img/Icon-refH.png =40x40)
  (horizontale Spiegelung),
-![vertical reflection](/stories/symm-3/img/Icon-refV.png =40x40)
+![vertical reflection](stories/symm-3/img/Icon-refV.png =40x40)
  (vertikale Spiegelung),
-![rotation](/stories/symm-3/img/Icon-rot.png =40x40)
+![rotation](stories/symm-3/img/Icon-rot.png =40x40)
  (Rotation),
-![glide reflection](/stories/symm-3/img/Icon-refDesl.png =40x40)
+![glide reflection](stories/symm-3/img/Icon-refDesl.png =40x40)
  (Gleitspiegelung),
-![translation](/stories/symm-3/img/Icon-trans.png =40x40)
+![translation](stories/symm-3/img/Icon-trans.png =40x40)
  (Verschiebung)
 
 @[youtube](gzhAUhgIVp0?_align-center_)
-[Script (PDF, englisch)](/stories/symm-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/symm-3/transcripts/Script3.pdf)

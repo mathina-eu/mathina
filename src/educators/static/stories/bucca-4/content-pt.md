@@ -35,7 +35,7 @@ Todas as apps foram programadas em JavaScript e devem poder ser usadas quer em P
 Na primeira experiência, o leitor relembra os passos que, depois da explicação da Ângela, Mathina e Leo têm que seguir para obter o segredo partilhado. No início escolhem um número primo p, e a seguir um número aleatório entre 2 e p-2, depois, através de uma versão simplificada do algoritmo, ficam a conhecer, em separado, um número partilhado, obtido a partir de informação que foi trocada de forma pública.
 
 @[youtube](LCwYk0WbgT8?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/bucca-4/transcripts/Script4-pt.pdf)
+[Guião](stories/bucca-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
 
@@ -44,7 +44,7 @@ Na primeira experiência, o leitor relembra os passos que, depois da explicaçã
 A segunda app, partindo da primeira, permite o uso na prática do método de troca de chaves. O leitor neste caso fica no papel de Leo, que recebe a primeira mensagem de Mathina e decifra-a usando o segredo partilhado na primeira app. Esta app é usada duas vezes na história, correspondendo às mensagens de Mathina recebidas por Leo.
 
 @[youtube](OUW1rex3DJA?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/bucca-4/transcripts/Script4-pt.pdf)
+[Guião](stories/bucca-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
 
@@ -53,7 +53,7 @@ A segunda app, partindo da primeira, permite o uso na prática do método de tro
 Na terceira experiência, no papel de Leo, o leitor tem de tentar quebrar o sistema criptográfico, derivando o segredo partilhado a partir do conhecimento da parte da chave na posse de um dos utilizadores. A app é usada para tornar clara a diferença em dificuldade computacional entre as operações a efetuar para obter o segredo partilhado e as necessárias para tentar violar o sistema.
 
 @[youtube](ylf8uX4wdpo?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/bucca-4/transcripts/Script4-pt.pdf)
+[Guião](stories/bucca-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
 
@@ -62,6 +62,6 @@ Na terceira experiência, no papel de Leo, o leitor tem de tentar quebrar o sist
 A quarta app, volta a propor a experiência da segunda, com uma nova mensagem; o leitor continua no papel de Leo, o qual recebe uma nova mensagem de Mathina e volta a gerar a mensagem original a partir da que recebeu.
 
 @[youtube](OUW1rex3DJA?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/bucca-4/transcripts/Script4-pt.pdf)
+[Guião](stories/bucca-4/transcripts/Script4-pt.pdf)
 
 &nbsp;

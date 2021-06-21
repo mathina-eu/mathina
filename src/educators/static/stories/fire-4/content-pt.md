@@ -10,7 +10,7 @@ Com a descrição explícita que usamos nas histórias anteriores, tinha-se um m
 
 Considere-se, por exemplo, a circunferência de raio `@r=2@` e centrado na origem `@(0,0)@`. Uma descrição geométrica afirma que uma circunferência é o conjunto de todos os pontos à distância `@2@` do centro.
 
-![Ponto (x,y) numa circunferência de raio r](/stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Ponto (x,y) numa circunferência de raio r](stories/fire-4/img/_align-center_circtrig.png =300x300)
 
 Usando o teorema de Pitágoras, isto corresponde a que as coordenadas desses pontos seguem a equação
 
@@ -67,12 +67,12 @@ Uma pequena animação é apresentada enquanto a curva é desenhada, e começa q
 
 Uma lista de exemplos está disponível ao lado, e o utilizador pode dar uma equação polinomial na caixa de texto.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
+![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
 
 ## App 2 (Descobre a equação)
 Esta app usa o mesmo programa da app anterior para desenhar gráficos de funções. Neste caso, o desafio é descobrir qual das equações que são apresentadas corresponde ao gráfico no écran. Cada tentativa errada retira uma "vida" representada por um inseto de fogo. Depois de três tentativas erradas a app mostra a solução. O jogo continua com uma nova curva.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
+![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
 
 ## App 3 (Descobre a equação)
 Esta app é outra vez para exploração livre, neste caso para superfícies 3D dadas pelo conjunto de zeros de uma função `@F(x,y,z)=0@`.
@@ -81,7 +81,7 @@ Uma lista de exemplos de equações está disponível à direita, tal como uma c
 
 Três controlos deslizantes estão disponíveis junto da superfície. Primeiro, para ajustar um parâmetro `@a@`, que pode ser usada nas fórmulas, com valores entre `@0@` e `@1@`. Segundo, para controlar a transparência da superfície podendo-a tornar translúcida. Terceiro, um nível de "zoom", que fixa a quantidade da superfície (em geral, infinita) que fica visível na esfera que delimita o gráfico.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
 
 Uma atividade complementar para explorar mais superfícies pode ser organizada usando 
 [SURFER](https://imaginary.org/program/surfer)

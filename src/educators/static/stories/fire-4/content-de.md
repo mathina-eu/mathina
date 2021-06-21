@@ -7,7 +7,7 @@ Mit der expliziten Beschreibung, die wir in den vorherigen Geschichten verwendet
 
 Nehmen wir zum Beispiel den Kreis mit dem Radius `@r=2@` und dem Mittelpunkt im Ursprung `@(0,0)@`. Die geometrische Beschreibung besagt, dass dieser Kreis die Menge aller Punkte im Abstand `@2@` vom Mittelpunkt ist.
 
-![Some alt text](/stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Some alt text](stories/fire-4/img/_align-center_circtrig.png =300x300)
 
 Mit Hilfe des Satzes von Pythagoras lässt sich dies in Koordinaten als Gleichung übersetzen
 
@@ -80,7 +80,7 @@ Auf der rechten Seite ist eine Liste mit Beispielgleichungen verfügbar, und unt
 
 Neben der Fläche stehen drei Schieberegler zur Verfügung. Der erste, Parameter `@a@`, kann innerhalb der Formel verwendet werden. Dessen Wert kann mit dem Schieberegler von `@0@` bis `@1@` eingestellt werden. Der zweite ist ein Transparenzregler, der die Oberfläche durchscheinend macht. Der dritte Regler ändert die Vergrößerung (Zoom-Stufe), er legt also fest, aus welcher Entfernung die Fläche betrachtet wird. Im Allgemeinen kann die Fläche auch bis ins Unendliche reichen, wir sehen aber nur den Ausschnitt, der sich innerhalb einer Kugel befindet (der Rest der Fläche wird von der App einfach abgeschnitten). In gewisser Weise regelt der dritte Schieberegler die Größe dieser Betrachtungskugel (im Verhältnis zur Fläche).
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
 
 Zur ergänzenden Erforschung der Flächen kann mit dem Programm [SURFER](https://imaginary.org/program/surfer) experimentiert werden, einem vollständigeren Programm, das die gleiche implizite Funktionsdarstellung verwendet. Die oben genannten Konstruktionstechniken (Verformung, Vereinigung, Schnitt) sind besonders nützlich, um kreative Oberflächen zu erstellen.
 

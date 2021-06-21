@@ -17,7 +17,7 @@ Together with reading, children will learn basic addition. This story takes adva
 # About the Apps
 The layout of all three apps is similar. The bottom edge represents the ground. It might have one or more mountains, which are to be avoided during the flight. The light blue background represents the sky (there might be clouds, which are also obstacles). There is a grid pattern made of white dots, representing the points on the plane with integers as coordinates. When the app is started, the unidragon will sit on the lower left. It will return there, once the 'Back' button is clicked. You can create a flight path for the dragon by entering vectors through the control panel on the bottom edge. Once you click the 'Go' button, the dragon will follw the created path.
 
-![flight](/stories/fire-2/img/_align-center_/flight.png)
+![flight](stories/fire-2/img/_align-center_/flight.png)
 
 
 ## App 1 - Fly the Unidragon with pairs of numbers

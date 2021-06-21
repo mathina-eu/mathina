@@ -32,11 +32,11 @@ Aqui encontra:
 
 Selecione o maior número possível dos 36 pontos, sem escolher dois na mesma linha reta.
 
-![36 pontos](/stories/logi-3/img/logi3.png)
+![36 pontos](stories/logi-3/img/logi3.png)
 
 Coloque o máximo possível de rainhas no tabuleiro de xadrez sem estarem alinhadas (segundo movimentos permitidos).
 
-![xadrês](/stories/logi-3/img/sakk.png)
+![xadrês](stories/logi-3/img/sakk.png)
 
 Uma possível solução para o 
 [problema das Oito Raínhas](https://en.wikibooks.org/wiki/Puzzles/Chess_puzzles/Eight_Queens).

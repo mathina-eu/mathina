@@ -75,7 +75,7 @@ Create a table by entering an initial number and then clicking “Accept” and 
 
 @[youtube](https://youtu.be/A1vXg_DSolc)
 
-[Script (PDF)](/stories/logi-4/transcripts/Script4.pdf)
+[Script (PDF)](stories/logi-4/transcripts/Script4.pdf)
 
 
 

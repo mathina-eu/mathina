@@ -36,11 +36,11 @@ For the age group 4-6, sorting games combined with body movement can be suggeste
 **Solitaire game**
 Create 3 red, 3 blue, and 3 green cards, and then put the numbers 1, 2, and 3 in each color. The task is to place the cards in a 3 × 3 table so that all three colors and all three numbers are represented in each row and each column. A more advanced version of the game is created with a 4x4 table.
 
-![Solitaire game](/stories/logi-1/img/solitaire2.png)
+![Solitaire game](stories/logi-1/img/solitaire2.png)
 
 **Sudoku** refines thinking skills. Here is an example: 1. Enter the numbers 1, 2, 3, 4 in the blank fields so that all four numbers are present in each row, each column, and each framed square.
 
-![Sudoku game](/stories/logi-1/img//sudoku.png)
+![Sudoku game](stories/logi-1/img//sudoku.png)
 
 # About the apps
 There are 3 apps accompanying the story. The first app enables free play with color sequences, the second one aims at differentiating between identical and diverse sequences. The third game lets the user find the last missing piece in the sequence.
@@ -66,4 +66,4 @@ Eight traffic lights are seen on the app screen in a row. You can merge identica
 [Third game in the story]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Find the sixth correct color sequence! The app rules are the same as in the first game.
 
-[Script (PDF)](/stories/logi-1/transcripts/Script1.pdf)
+[Script (PDF)](stories/logi-1/transcripts/Script1.pdf)

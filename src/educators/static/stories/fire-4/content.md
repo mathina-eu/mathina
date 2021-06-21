@@ -7,7 +7,7 @@ With the explicit description we used in previous stories, we had a constructive
 
 Take for instance the circle of radius `@r=2@` and centered at the origin `@(0,0)@`. The geometrical description states that this circle is the set of all points at distance `@2@` from the center.
 
-![Some alt text](/stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Some alt text](stories/fire-4/img/_align-center_circtrig.png =300x300)
 
 Using the Pythagorean theorem, this translates into coordinates as the equation
 
@@ -80,7 +80,7 @@ A list of example equations is available on the right, as well as the text box w
 
 Three sliders are available next to the surface. First, a parameter `@a@`, that can be used inside the formula, and the slider adjusts its value from `@0@` to `@1@`. Second, a transparency control that allows the surface to be translucent. Third, a zoom level, that sets the amount of the (generally infinite) surface that we see inside of the sphere that clips the graph.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
 
 A complementary activity to explore further the surfaces can be organized using [SURFER](https://imaginary.org/program/surfer), a more complete program that does the same implicit function plotting. The techniques of construction pointed out above (deformation, union, intersection) are particularly useful to make creative surfaces.
 

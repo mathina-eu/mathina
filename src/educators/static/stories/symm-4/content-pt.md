@@ -11,7 +11,7 @@ Na história, antes de apresentarmos tais poliedros, abordamos um outro conceito
 Na história, é encontrado, por acaso, um exemplo de um poliedro não convexo, quando o Leo tenta fechar um veículo do Carrossel de Poliedros e 
 [algumas das componentes do veículo se viram para dentro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg1).
 
-| ![Icosaedro](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Poliedro não convexo](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
+| ![Icosaedro](stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Poliedro não convexo](stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
 | Icosaedro | Poliedro não convexo, criado depois de se colocar um vértice do icosaedro no seu interior e de se considerar o poliedro assim obtido ([Manipule o poliedro aqui]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)) |
 
@@ -19,7 +19,7 @@ Desta forma, em vez de um icosaedro, obtém-se um poliedro não convexo.
 
 A definição adotada na história é a seguinte: **um poliedro é convexo** se, para cada par de pontos nas faces, todo o segmento que une esses pontos estiver contido no poliedro.
 
-![Poliedro não convexo](/stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
+![Poliedro não convexo](stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
 
 ## Sólidos Platónicos
 
@@ -68,7 +68,7 @@ As personagens concluem então que não só é impossível construir Sólidos Pl
 
 | Cubo | Tetraedro | Octaedro | Icosaedro | Dodecaedro |
 | ------ | ------ | ------ | ------ | ------ |
-|![Cubo](/stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetraedro](/stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octaedro](/stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosaedro](/stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecaedro](/stories/symm-4/img/_align-center_/dodeca.png =146x150)|
+|![Cubo](stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetraedro](stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octaedro](stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosaedro](stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecaedro](stories/symm-4/img/_align-center_/dodeca.png =146x150)|
 
 ### Sólidos Platónicos - definição
 
@@ -92,7 +92,7 @@ O que é um poliedro uniforme? Ao analisar um poliedro uniforme, o cuboctaedro, 
 
 | Cuboctaedro (poliedro uniforme) | Cuboctaedro rombitruncado (poliedro uniforme) |Poliedro de Miller (não é poliedro uniforme) | Rombicuboctaedro (poliedro uniforme) |
 | ------ | ------ | ------ | ------ |
-|![Cuboctaedro](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Poliedro de Miller](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
+|![Cuboctaedro](stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Poliedro de Miller](stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
 No entanto, seguindo a “definição da Mathina”, pode surgir um problema: se construirmos um molde em torno de um ângulo sólido do cuboctaedro rombitruncado, 
 [esse molde não encaixa em todos os ângulos sólidos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg15)
@@ -127,7 +127,7 @@ Por que motivo o poliedro Miller não é uniforme? Se considerarmos os vértices
 [mudando assim o aspecto final do poliedro]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg21)
 .
 
-![Poliedro de Miller](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
+![Poliedro de Miller](stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Manipule o poliedro aqui]($HUB_URL/apps/anims/poliedros.html?pre=pol_68)
 .
 
@@ -141,7 +141,7 @@ Ao longo da história, as personagens têm a oportunidade de conhecer **todos os
 [cujas bases são polígonos regulares e cujas faces laterais são triângulos equiláteros]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg24)
 ; 3) outros 13 poliedros:
 
-![Poliedros Uniformes](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
+![Poliedros Uniformes](stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 No final, as personagens constroem um modelo para o carrossel dos 
 [“poliedros platónicos e uniformes”]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg25)
@@ -185,22 +185,22 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ## [Jogo 1 - Separando poliedros convexos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg26)
 
 É exibido um conjunto de 8 poliedros. O utilizador é convidado a escolher os 4 poliedros convexos. Depois de escolher os poliedros corretos e clicar 
-![Confirmar](/stories/symm-4/img/confirm.png =40x40)
+![Confirmar](stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 8 poliedros. São apresentados 3 conjuntos de poliedros. O jogo fica resolvido se forem selecionados todos os "bons" poliedros (i.e. convexos).
 
 @[youtube](GDYOL7SnfY0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
+[Guião](stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
 
 ## [Jogo 2 - Escolhendo as planificações do cubo]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg27)
 
 É exibido um conjunto de 6 propostas para planificações do cubo. O utilizador é convidado a escolher as 3 “certas”. Depois de escolher as planificações corretas e clicar 
-![Confirmar](/stories/symm-4/img/confirm.png =40x40)
+![Confirmar](stories/symm-4/img/confirm.png =40x40)
 , o programa mostra um novo conjunto de 6 propostas. São apresentados 3 conjuntos de propostas de planificações. O jogo fica resolvido se forem selecionadas todas as "boas" planificações.
 
 @[youtube](NspkoF8gH3k?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-4/transcripts/Script4-pt.pdf)
+[Guião](stories/symm-4/transcripts/Script4-pt.pdf)
 
 &nbsp;
 

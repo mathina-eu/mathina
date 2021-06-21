@@ -3,10 +3,10 @@ Da un punto di vista dei contenuti matematici, lo scopo di questa storia è quel
 
 Viene così presentato un semplice metodo crittografico che però ha tutte le caratteristiche di un metodo crittografico moderno ed efficace. C'è un procedimento, il metodo vero e proprio, che permette di nascondere il messaggio da trasmettere e c'è la chiave (cioè un codice, un numero o un concetto) che permette di far comprendere il messaggio nascosto a chiunque la conosca. Il metodo crittografico usato da Leo e dai suoi amici prevede di scegliere una chiave e scelgono per questo scopo una frase che permette di identificare una figura precisa: per esempio, "ha cinque lati" ci permetterà di identificare un esagono se proposto tra le seguenti figure:
 
-![circle](/stories/bucca-1/img/circle.png =250x150)
-![triangle](/stories/bucca-1/img/triangle.png =250x150)
-![pentagon](/stories/bucca-1/img/pentagon.png =250x150)
-![square](/stories/bucca-1/img/square.png =250x150)
+![circle](stories/bucca-1/img/circle.png =250x150)
+![triangle](stories/bucca-1/img/triangle.png =250x150)
+![pentagon](stories/bucca-1/img/pentagon.png =250x150)
+![square](stories/bucca-1/img/square.png =250x150)
 
 Il metodo per cifrare il messaggio consiste semplicemente nello scrivere altri messaggi falsi e simili al messaggio vero che si vuole nascondere e di disegnare su ciascun messaggio una figura diversa. A questo punto tutti i messaggi, contraddittori nel loro insieme, possono essere messi in bella vista in modo che chiunque possa leggerli. Solo chi ha la chiave (nella storia quella scelta è "ha sei lati") capirà subito qual è il messaggio corretto vedendo l'esagono disegnato su di esso.
 Nelle tre esperienze interattive i lettori conoscono la chiave e sono coinvolti, per le prime due esperienze interattive nel processo di codifica [(qui)]($HUB_URL/story/the-secret-messages/?actionLink=app1) e [(qui)]($HUB_URL/story/the-secret-messages/?actionLink=app2) e nella [terza app]($HUB_URL/story/the-secret-messages/?actionLink=app3), nel processo di decodifica.
@@ -31,7 +31,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 Nella prima esperienza, la chiave è "ha cinque lati" e il messaggio che si vuole trasmettere è "Guardate il terzo albero a nord delle fontane". L'utente deve trascinare al centro dello schermo il messaggio da trasmettere e la figura che è descritta dalla chiave (un pentagono). In questa esperienza le immagini disponibili sono figure astratte.
 
 @[youtube](v5bwEKkhqc0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](/stories/bucca-1/transcripts/Script1-it.pdf)
+[Script](stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;
 
@@ -41,7 +41,7 @@ La seconda app ripropone la stessa situazione della prima, quella legata alla co
 
 
 @[youtube](Kh3v55aMQfk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](/stories/bucca-1/transcripts/Script1-it.pdf)
+[Script](stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;
 
@@ -50,6 +50,6 @@ La seconda app ripropone la stessa situazione della prima, quella legata alla co
 Nella terza ed ultima esperienza, i lettori sono invece coinvolti nel processo di decodifica del messaggio: conoscono la chiave (che è ancora "il cielo ne è pieno") e devono selezionare il messaggio segreto tra quelli proposti
 
 @[youtube](p2ehDaFkRFk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](/stories/bucca-1/transcripts/Script1-it.pdf)
+[Script](stories/bucca-1/transcripts/Script1-it.pdf)
 
 &nbsp;

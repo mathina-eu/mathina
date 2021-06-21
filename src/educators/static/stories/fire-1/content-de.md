@@ -15,18 +15,18 @@ Die Übungen zum Folgen einer Kurve stellen eine besondere Herausforderung an di
 # Über die Apps
 Alle drei Apps in dieser Geschichte verwenden das gleiche Steuerelement - den von einer Hand gehaltenen Zauberstab, der an der Position in der Mitte des unteren Bildschirmrands fixiert ist. Der Einhorndrache wird immer in die Richtung fliegen, in die der Zauberstab zeigt. Das Horn des Drachens und der Zauberstab (der, wie in der Geschichte ausgeführt, in Wirklichkeit das Milchhorn des Einhorndrachens ist) werden also immer parallel sein. Die Flugrichtung des Einhorndrachens kann durch Drehen des Zauberstabs geändert werden.
 
-![Horn](/stories/fire-1/img/_align-center_/horn.png)
+![Horn](stories/fire-1/img/_align-center_/horn.png)
 
 Die Fluggeschwindigkeit des Einhorndrachens kann durch Berühren des Zauberstabs in verschiedenen Abständen von der Hand, die den Stab hält, gesteuert werden. Die Geschwindigkeit ist Null, wenn man den Stab (mit dem Mauszeiger oder dem eigenen Finger bei Touch-Geräten) in der Nähe der Hand berührt, die den Stab hält. Die Geschwindigkeit nimmt zu, wenn der Zauberstab weiter von der Hand entfernt berührt wird (die Hand ist auch der Drehpunkt für den Zauberstab). In den Bildern unten (von links nach rechts) sehen Sie, wie die Aura des Zauberstabs, die die Geschwindigkeit repräsentiert, zunimmt. Je größer die Aura ist, desto höher ist die Geschwindigkeit des Einhorndrachen. Wenn man loslässt (d.h. aufhört, mit der Maus zu klicken oder den Bildschirm nicht mehr berührt), bleibt der Einhorndrache ebenfalls in der Luft stehen. Dieses Verhalten wurde in die App eingebaut, um die Steuerung des Fluges zu erleichtern und die Anspannung bei der Benutzerin/dem Benutzer während des Spielens zu reduzieren.
 
-![Horn1](/stories/fire-1/img/horn1.png)
-![Horn2](/stories/fire-1/img/horn2.png)
-![Horn3](/stories/fire-1/img/horn3.png)
-![Horn4](/stories/fire-1/img/horn4.png)
+![Horn1](stories/fire-1/img/horn1.png)
+![Horn2](stories/fire-1/img/horn2.png)
+![Horn3](stories/fire-1/img/horn3.png)
+![Horn4](stories/fire-1/img/horn4.png)
 
 Der Drache kann aus dem Bildschirm "herausfliegen", kehrt aber zurück, wenn die Benutzerin/der Benutzer ihn mit dem Zauberstab zurückführt. Darüber hinaus ist es möglich, die Schaltfläche "Zurück" zu verwenden, um den Drachen an seine ursprüngliche Position in der Mitte des Bildschirms zu bringen.
 
-![Back](/stories/fire-1/img/_align-center_/back_de.png)
+![Back](stories/fire-1/img/_align-center_/back_de.png)
 
 ## [App 1 - Den Einhorndrachen fliegen lassen]($HUB_URL/de/apps/?appNumber=0&story=fire-1)
 

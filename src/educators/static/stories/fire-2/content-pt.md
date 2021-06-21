@@ -16,7 +16,7 @@ Ao aprenderem a ler, as crianças aprendem a soma básica na escola. Esta histó
 # Sobre as apps
 As três apps têm o mesmo cenário. O lado de baixo representa o chão. Pode ter uma ou mais montanhas, que se tem de evitar durante o voo. O fundo em azul claro representa o céu (pode ter nuvens, que são também obstáculos). Há um padrão em grelha com pontos brancos, representando os pontos do plano com coordenadas inteiras. Quando a app começa, o uni-dragão estará à esquerda em baixo. Regressa para lá sempre que se carregue no botão "Voltar". Podes criar um caminho de voo para o dragão dando vetores no painel de controlo no lado de baixo. Quando carregares no botão "Vai" o dragão segue o caminho que criaste.
 
-![voo](/stories/fire-2/img/_align-center_/voo.png)
+![voo](stories/fire-2/img/_align-center_/voo.png)
 
 
 ## App 1 - Guia o uni-dragão através de um par de números

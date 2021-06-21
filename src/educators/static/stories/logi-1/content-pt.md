@@ -40,11 +40,11 @@ Para a faixa etária 4-6, sugere-se jogos combinados com movimento do corpo  (jo
 **Jogo Solitário**
 Crie 9 cartões, 3 vermelhos, 3 azuis e 3 verdes, e depois, para cada cor, escreva os números 1, 2, e 3 em cada cartão dessa cor. A tarefa consiste em colocar os cartões numa mesa 3 × 3 de modo que todas as três cores e todos os três números estejam representados em cada linha e em cada coluna. Pode ser criada uma versão mais avançada do jogo, utilizando uma mesa 4x4.
 
-![Jogo Solitário](/stories/logi-1/img/solitaire2.png)
+![Jogo Solitário](stories/logi-1/img/solitaire2.png)
 
 **Sudoku** desenvolve as capacidades de pensar. Eis um exemplo: 1. Entre os números 1, 2, 3, 4 nos quadrados brancos de modo que os quatro números estejam presentes em cada linha, em cada coluna, e em cada quadrado marcado a grosso.
 
-![Jogo Sudoku](/stories/logi-1/img//sudoku.png)
+![Jogo Sudoku](stories/logi-1/img//sudoku.png)
 
 # Sobre as apps
 
@@ -65,4 +65,4 @@ São exibidos oito semáforos, em fila, no ecrã. O utilizador deve sobrepor os 
 ## [Jogo 3]($HUB_URL/pt/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Encontre a sequência correta para a sexta sequência! As regras da app são as mesmas que no primeiros jogo.
 
-[Script (PDF)](/stories/logi-1/transcripts/Script1-pt.pdf)
+[Script (PDF)](stories/logi-1/transcripts/Script1-pt.pdf)

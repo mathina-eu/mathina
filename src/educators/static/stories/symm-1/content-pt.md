@@ -13,7 +13,7 @@ Posteriormente, as crianças podem aprender a construir, por si mesmas, imagens 
 Na app “Construindo brinquedos (I)”, são também exploradas noções relacionadas com o reconhecimento de algumas figuras geométricas - 
 [triângulos, quadrados e círculos]($HUB_URL/pt/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2), nomeadamente a distinção entre triângulos congruentes, mas com diferentes orientações:
 
-![Triângulos Congruentes](/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
+![Triângulos Congruentes](stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110)
 
 &nbsp;
 
@@ -49,7 +49,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 
 
 @[youtube](Dm1r2igNWPs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-1/transcripts/Script1-pt.pdf)
+[Guião](stories/symm-1/transcripts/Script1-pt.pdf)
 
 &nbsp;
 
@@ -58,7 +58,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 É exibido um conjunto de 16 desenhos de animais. O utilizador é convidado a escolher todas as imagens simétricas e a colocá-las dentro de uma caixa.
 
 @[youtube](Tbhnd5IwoBs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-1/transcripts/Script1-pt.pdf)
+[Guião](stories/symm-1/transcripts/Script1-pt.pdf)
 
 &nbsp;
 
@@ -67,7 +67,7 @@ Todas as apps foram programadas em JavaScript e devem funcionar tanto em PCs com
 São exibidos no ecrã os seguintes itens: uma linha vermelha vertical, uma malha quadriculada cinzenta e uma imagem não simétrica construída com formas coloridas. O utilizador é convidado a arrastar algumas das formas coloridas à sua disposição e colocá-las nos quadrados cinzentos de modo a criar uma imagem simétrica em relação à linha vermelha.
 
 @[youtube](1Og0JeyURHs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-1/transcripts/Script1-pt.pdf)
+[Guião](stories/symm-1/transcripts/Script1-pt.pdf)
 
 &nbsp;
 
@@ -76,4 +76,4 @@ São exibidos no ecrã os seguintes itens: uma linha vermelha vertical, uma malh
 São exibidos os seguintes itens no ecrã: uma linha vermelha vertical, um geoplano e uma imagem feita de segmentos pretos, desenhados de um dos lados da linha vermelha. O utilizador é convidado a desenhar os segmentos em falta, de modo a criar uma imagem simétrica em relação à linha vermelha.
 
 @[youtube](0G862XD2Xzk?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](/stories/symm-1/transcripts/Script1-pt.pdf)
+[Guião](stories/symm-1/transcripts/Script1-pt.pdf)

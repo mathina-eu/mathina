@@ -12,7 +12,7 @@ Dieser Gesichtspunkt dient Angela auch dazu, Mathina verständlich zu machen, da
 
 Eine Variante der Cäsar-Verschlüsselung, die Vigenère-Verschlüsselung, wird in der **Der verlorene Schatz** ebenfalls vorgestellt. Sie ist immer noch eine Substitutions-Chiffre, wie die Cäsar-Verschlüsselung, zeichnet sich aber durch die Aufteilung der Buchstaben in mehrere Einheiten aus. Jede dieser Einheiten wird mit der Cäsar-Verschlüsselung mit einem jeweils anderen Schlüssel verschlüsselt. Der Schlüssel der Vigenère-Verschlüsselung ist also eine Liste von s Zahlen: die erste sagt uns, wie der erste Buchstabe und die Buchstaben an Position s + 1, 2s + 1, ... zu verschlüsseln sind. Die zweite Zahl bezieht sich auf den zweiten Buchstaben und die Buchstaben an Position s + 2, 2s + 2,... und so weiter. In der Geschichte besteht der verwendete Schlüssel aus zwei Zahlen. So erhält man den chiffrierten Text, indem man die Cäsar-Verschlüsselung auf die ungeraden Buchstaben anwendet und dabei als Schlüssel die erste der beiden Zahlen anwendet. Bei den Buchstaben an gerader Position wird die zweite Zahl verwendet. Wäre der Schlüssel z. B. das Zahlenpaar (1,3), so wird das Wort "MATHINA" verschlüsselt, indem man zu den Buchstaben an ungerader Position eine 1 "addiert" und zu den Buchstaben an gerader Position eine 3 "addiert". Wir erhalten dann das Wort "NDUKJQB".
 
-![Vigenere cipher](/stories/bucca-3/img/_align-center_/ndukjob.png)
+![Vigenere cipher](stories/bucca-3/img/_align-center_/ndukjob.png)
 
 
 
@@ -50,7 +50,7 @@ Alle Apps sind in Javascript programmiert und können auf Computern, Tablets und
 In dieser App muss die Benutzerin oder der Benutzer versuchen, einige Wörter mithilfe der Cäsar-Verschlüsselung mit einem vom Computer gewählten Schlüssel richtig zu verschlüsseln. Dies dient dazu, sich mit der Caesar-Verschlüsselung vertraut zu machen und, falls die Geschichte **Mathina und der sprechende Papagei** gelesen wurde, einen Bezug zu den bereits bekannten Konzepten herzustellen.
 
 @[youtube](RPVvWsMXSiA?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -59,7 +59,7 @@ In dieser App muss die Benutzerin oder der Benutzer versuchen, einige Wörter mi
 Die Benutzerin oder der Benutzer muss eine Nachricht mit der Cäsar-Verschlüsselung entschlüsseln, aber mit einer zusätzlichen Schwierigkeit: Der Klartext "Triff mich morgen um neun an der Bar bei den Docks auf der Insel" ist rückwärts geschrieben. Dies ist ein technischer Kniff, um die Cäsar-Verschlüsselung komplizierter zu machen, und ist direkt mit der Handlung verknüpft.
 
 @[youtube](Kfp6PgOK8K8?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -68,7 +68,7 @@ Die Benutzerin oder der Benutzer muss eine Nachricht mit der Cäsar-Verschlüsse
 In dieser App wird die zuvor vorgestellte Cäsar-Verschlüsselung mathematisch analysiert. Zu sehen ist eine Uhr mit einem einzigen Zeiger, die die Addition in modularer Arithmetik darstellen soll. Die Ausgangsfrage lautet wie folgt: "Versuchen wir, 12 + 5 auf einer 14-Stunden-Uhr zu berechnen". Man kann den Stundenzeiger dieser Uhr auf 14 Stunden stellen, und auf diese Weise nachvollziehen, was die endgültige Antwort sein wird (in diesem speziellen Fall ist 3 die richtige Antwort).
 
 @[youtube](XsRGpkmIh0k?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 ## [App 4 - Noch einmal die Cäsar-Verschlüsselung I]($HUB_URL/de/story/mathina-and-the-lost-treasure/?actionLink=app4)
@@ -76,7 +76,7 @@ In dieser App wird die zuvor vorgestellte Cäsar-Verschlüsselung mathematisch a
 Hier werden Nachrichten zweimal hintereinander mit der Cäsar-Verschlüsselung ver- und entschlüsselt. Die Verschlüsselungsmethode ist genau die gleiche wie bei den Erlebnissen der Geschichte **Mathina und der sprechende Papagei**. Der einzige Unterschied ist, dass der Vorgang dieses Mal zweimal wiederholt wird.
 
 @[youtube](LTgWwiIRrm8?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -85,7 +85,7 @@ Hier werden Nachrichten zweimal hintereinander mit der Cäsar-Verschlüsselung v
 Diese App soll noch einmal verdeutlichen, dass die zweimalige Wiederholung der Cäsar-Verschlüsselung nichts anderes ist als die einfache Verschlüsselung mit diesem Verfahren. Man muss nur die beiden Schlüssel addieren. Hierzu werden wie in der vorherigen App zwei kombinierte Chiffierscheiben vorgelegt. Die Aufgabe besteht darin, die Scheiben eines dritten Anhängers so zu platzieren, dass das Ergebnis der Verschlüsselungsoperation dasselbe ist wie bei den kombinierten Anhängern.
 
 @[youtube](agTiwTMl-do?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -94,7 +94,7 @@ Diese App soll noch einmal verdeutlichen, dass die zweimalige Wiederholung der C
 Diese App ist identisch mit der ersten, mit dem einzigen Unterschied, dass dieses Mal die Nachricht nicht entschlüsselt werden kann, da sie nicht mit der Cäsar-Verschlüsselung verschlüsselt wurde. Wir betonen, dass dies in der Geschichte den Kindern von Beginn an gesagt wird, damit die Erfahrung mit dieser App nicht frustrierend ist. Die Idee der App ist zu überprüfen, dass die Chiffierscheibe die hier präsentierte Nachricht tatsächlich nicht entschlüsseln kann.
 
 @[youtube](yIqXC-y47GQ?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -103,7 +103,7 @@ Diese App ist identisch mit der ersten, mit dem einzigen Unterschied, dass diese
 Diese App ist identisch mit der vorherigen, jedoch soll man sich nur auf einen bestimmten Buchstaben des Textes konzentrieren und darauf achten, ob das "U" vielleicht als "D" übersetzt werden kann, um genau das zu nachzuvollziehen, was Mathina und Angela in der Geschichte besprechen.
 
 @[youtube](6NQM9xFIvlg?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 &nbsp;
 
 ## [App 8 - Wort für Wort]($HUB_URL/de/story/mathina-and-the-lost-treasure/?actionLink=app8)
@@ -111,7 +111,7 @@ Diese App ist identisch mit der vorherigen, jedoch soll man sich nur auf einen b
 Diese App ist ein erster Schritt in Richtung der Vigenère-Verschlüsselung. Der Text wird mit zwei Chiffrierscheiben verschlüsselt, eine für gerade und eine für ungerade Wörter. Wie sich in der Geschichte herausstellen wird, ist dies noch nicht der richtige Ansatz, um die Nachricht tatsächlich zu entschlüsseln. Die App zielt darauf ab, persönlich zu überprüfen, dass dies nicht die richtige Methode ist.
 
 @[youtube](j3cMyFg5Lfc?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -120,7 +120,7 @@ Diese App ist ein erster Schritt in Richtung der Vigenère-Verschlüsselung. Der
 Die letzte App der Geschichte zeigt das Verfahren der Vigenère-Verschlüsselung mit zwei Buchstaben. Mit zwei Chiffrierscheiben werden jeweils die geraden und ungeraden Buchstaben verändert. Auf diese Weise kann man, den Vorschlägen der Geschichte folgend, die Nachricht leicht entschlüsseln. Anschließend besteht die Möglichkeit, dieses Verfahren mit anderen Nachrichten und Schlüsseln zu wiederholen.
 
 @[youtube](ZS5DU2PFlR8?_align-center_)
-[Script (PDF, englisch)](/stories/bucca-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](stories/bucca-3/transcripts/Script3.pdf)
 
 
 &nbsp;

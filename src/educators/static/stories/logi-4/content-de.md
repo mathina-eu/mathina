@@ -73,7 +73,7 @@ Erstellen Sie eine Tabelle, indem Sie eine Anfangszahl eingeben und dann auf "Ü
 
 @[youtube](https://youtu.be/A1vXg_DSolc)
 
-[Script (PDF, englisch)](/stories/logi-4/transcripts/Script4.pdf)
+[Script (PDF, englisch)](stories/logi-4/transcripts/Script4.pdf)
 
 
 
