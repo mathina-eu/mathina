@@ -60,21 +60,21 @@ As apps têm uma longa lista de exemplos de curvas, cada uma mostrando a sua fó
 
 # Sobre as apps
 
-## App 1 (Exploração)
+## [App 1 (Exploração)]($HUB_URL/pt/apps/?appNumber=0&story=fire-4)
 A app desenha o conjunto de pontos `@(x,y)@` do plano que satisfaz `@F(x,y)=0@` (o conjunto de zeros), para qualquer função polinomial `@F(x,y)@` que o utilizador defina ou selecione na lista de exemplos.
 
 Uma pequena animação é apresentada enquanto a curva é desenhada, e começa quando o utilizador toca no écran. Insetos de fogo são pontos de luz. No início da animação, estes pontos estão colocados aleatoriamente perto dos pontos escolhidos pelo utilizador. À medida que a animação progride, os pontos movem-se na direção em que o valor da função é próximo de zero. Ao fim de alguns segundos, todos os insetos de fogo estarão sobre os zeros da função.
 
 Uma lista de exemplos está disponível ao lado, e o utilizador pode dar uma equação polinomial na caixa de texto.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
+@[youtube](XoGBCCIlgnc?_align-center_)
 
-## App 2 (Descobre a equação)
+## [App 2 (Descobre a equação)]($HUB_URL/pt/apps/?appNumber=1&story=fire-4)
 Esta app usa o mesmo programa da app anterior para desenhar gráficos de funções. Neste caso, o desafio é descobrir qual das equações que são apresentadas corresponde ao gráfico no écran. Cada tentativa errada retira uma "vida" representada por um inseto de fogo. Depois de três tentativas erradas a app mostra a solução. O jogo continua com uma nova curva.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
+@[youtube](RI82ffVucEA?_align-center_)
 
-## App 3 (Descobre a equação)
+## [App 3 (Descobre a equação)]($HUB_URL/pt/apps/?appNumber=2&story=fire-4)
 Esta app é outra vez para exploração livre, neste caso para superfícies 3D dadas pelo conjunto de zeros de uma função `@F(x,y,z)=0@`.
 
 Uma lista de exemplos de equações está disponível à direita, tal como uma caixa de texto onde se pode dar uma equação.

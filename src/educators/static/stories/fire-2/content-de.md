@@ -18,19 +18,19 @@ Das Layout aller drei Apps ist ähnlich. Am unteren Rand ist der Boden. Darauf s
 ![flight](/stories/fire-2/img/_align-center_/flight_de.png)
 
 
-## App 1 - Fliege den Einhorndrachen mit Zahlenpaaren
+## [App 1 - Fliege den Einhorndrachen mit Zahlenpaaren]($HUB_URL/de/apps/?appNumber=0&story=fire-2)
 
 In dieser App kann sich die Spielerin/der Spieler daran gewöhnen, das Bedienfeld zu verwenden und einen Pfad für den Einhorndrachen zu erstellen. Es gibt kein weiteres explizites Ziel zu erreichen. Der Einhorndrache fliegt einen Vektor nach dem anderen, daher sollten Sie diese Reihenfolge einhalten: Überlegen Sie, wohin der Drache fliegen soll, geben Sie einen Vektor ein, klicken Sie auf "Los". Danach können Sie überlegen, wohin sich der Einhorndrache als nächstes bewegen soll, und so weiter.
 
 @[youtube](bI3p7GuIWUw?_align-center_)
 
-## App 2 - Fliege zur Burg
+## [App 2 - Fliege zur Burg]($HUB_URL/de/apps/?appNumber=1&story=fire-2)
 
 In dieser App ist das Ziel, die Burg auf der unteren rechten Seite des Bildschirms zu erreichen. Dem Einhorndrachen können im Vorfeld mehrere Vektoren zu seinem Flug mitgeteilt werden. Die Schaltfläche "Merken!" wurde dem Bedienfeld hinzugefügt. Sie übergibt den Vektorbefehl an den Einhorndrachen, aber der Flug wird noch nicht gestartet. Die Spielerin/der Spieler kann mehrere Befehle nacheinander zum Speicher des Einhorndrachens hinzufügen (oben links angezeigt), bevor er die Schaltfläche 'Los' drückt. Nach einem Flug kann die Spielerin/der Spieler weitere Vektorbefehle hinzufügen und den Flug fortsetzen. Wenn die Burg erreicht ist, kehrt der Einhorndrachen zu seiner Startposition zurück, die Wolken werden neu angeordnet und die Spielerin/der Spieler kann erneut zur Burg fliegen, diesmal auf einem anderen Weg. Die Anzahl der Wolken erhöht sich (bis zu vier), um das Erstellen des Fluges in jeder Runde anspruchsvoller zu machen.
 
 @[youtube](lF0J5v_--9E?_align-center_)
 
-## App 3 - Fliege zur Burg in einem Zug	
+## [App 3 - Fliege zur Burg in einem Zug]($HUB_URL/de/apps/?appNumber=2&story=fire-2)	
 
 Diese App ist im Wesentlichen identisch mit App 2. Diesmal muss der Einhorndrache jedoch Feuerbälle fressen und die Burg in einem Zug erreichen. Die Spielerin/der Spieler muss dem Einhorndrachen im Voraus alle notwendigen Vektorbefehle geben. Feuerbälle können im Flug gefressen werden, d.h. der Einhorndrache muss nicht an der Position eines Feuerballs anhalten, sondern kann einfach durch ihn hindurchfliegen. Wenn der Flug gestartet wird und der Einhorndrache das Ziel nicht erreicht, kehrt er zu seiner Startposition zurück, während die Positionen der Hindernisse und der Feuerbälle gleich bleiben. Sobald das Ziel erreicht ist, erhöht sich die Anzahl der Hindernisse und Feuerbälle (bis zu einem Maximum von 3). Außerdem ändern sich ihre Positionen, um die Herausforderung zu erhöhen.
 

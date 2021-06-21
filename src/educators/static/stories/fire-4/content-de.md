@@ -59,7 +59,7 @@ Die Apps haben eine Liste von Beispielen für Kurven und Flächen, jede zeigt ih
 
 # Über die Apps
 
-## App 1 - Erforschen
+## [App 1 - Erforschen]($HUB_URL/de/apps/?appNumber=0&story=fire-4)
 Die App zeichnet die Menge der Punkte `@(x,y)@` der Ebene, die die Bedingung `@F(x,y)=0@` (die Nullstellenmenge) erfüllen, für eine beliebige Polynomfunktion `@F(x,y)@`. Das geschieht für Polynome, die die Benutzerin/der Benutzer aus einer Beispielliste auswählt, oder auch selbst im Eingabefeld eingibt.
 
 Während die Kurve gezeichnet wird, ist eine kleine Animation zu sehen, die ausgelöst wird, wenn die Benutzerin/der Benutzer den Bildschirm berührt bzw. mit der Maus auf die freie Fläche klickt. Funkelflöhe sind Lichtpunkte. Zu Beginn der Animation werden diese Lichtpunkte zufällig um die Berührungspunkte des Benutzers platziert. Im weiteren Verlauf der Animation bewegen sich die Punkte in die Richtung, in der der Wert der gewählten Funktion näher an Null liegt. Nach ein paar Sekunden sind alle Lichtpunkte auf Punkten der Kurve platziert.
@@ -68,12 +68,12 @@ Eine Liste mit Beispielen ist an der Seite verfügbar, und die Benutzerin/der Be
 
 @[youtube](XoGBCCIlgnc?_align-center_)
 
-## App 2 - Rate die Gleichung
+## [App 2 - Rate die Gleichung]($HUB_URL/de/apps/?appNumber=1&story=fire-4)
 Diese App zeigt den gleichen Funktionsplotter wie die vorherige App. In diesem Fall besteht die Herausforderung darin, zu erraten, welche der vorgegebenen Gleichungen zum angezeigten Bild gehört. Bei jeder falschen Vermutung wird ein "Lebenspunkt", dargestellt durch einen Funkelfloh (der oben auf der Pergamentrolle sitzt), entfernt. Nach drei falschen Vermutungen wird die Lösung aufgedeckt. Das Spiel wird mit einer neuen Gleichung fortgesetzt, die erraten werden soll.
 
 @[youtube](RI82ffVucEA?_align-center_)
 
-## App 3 - Flächen
+## [App 3 - Flächen]($HUB_URL/de/apps/?appNumber=2&story=fire-4)
 Diese App ist wieder dem freien Erforschen gewidmet, in diesem Fall für 3D-Flächen, die als Nullstellen einer Funktion `@F(x,y,z)=0@` gegeben sind.
 
 Auf der rechten Seite ist eine Liste mit Beispielgleichungen verfügbar, und unten ist ein Textfeld, in das die Benutzerin/der Benutzer seine eigene Gleichung eingeben kann. Als ersten Schritt können Sie z.B. die Gleichungen der aufgeführten Flächen anpassen und die Änderungen beobachten.
