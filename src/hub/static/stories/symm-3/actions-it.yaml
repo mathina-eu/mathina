@@ -172,7 +172,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_formcilindro.html
+    url: apps/anims/anim_formcilindro.html
   - type: clearBackground
     id: 'fundo'
   - type: background
@@ -186,7 +186,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_cilindro.html 
+    url: apps/anims/anim_cilindro.html 
   - type: dialog
     entries:    
       - text: "Oh, no! Dobbiamo fermarlo!"
@@ -238,7 +238,7 @@ actions:
     text: "Scegli un'immagine, guarda la creazione del cilindro e, quindi, fai clic"
     toolbarText: "Scegli un'immagine e guarda la creazione del cilindro"
     cta: "Prova a stampare dei fregi con il tibro cilindrico!"
-    url: /apps/Scilindro/index.html
+    url: apps/Scilindro/index.html
     img:
       src: stamp.png
       height: 40
@@ -383,7 +383,7 @@ actions:
     text: "Scegli i 4 fregi con assi di simmetria e clicca"
     toolbarText: "Scegli i 4 fregi con assi di simmetria"
     cta: "Dividi i fregi che hanno assi di simmetria dagli altri!"
-    url: /apps/EscolheFrisos_ref/?lang=it
+    url: apps/EscolheFrisos_ref/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -410,7 +410,7 @@ actions:
     tag: tg5
     text: "Separare i fregi trascinando ogni fregio nella borsa corrispondente."
     cta: "Provaci tu!"
-    url: /apps/frisos_simref-_it/
+    url: apps/frisos_simref-_it/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -507,7 +507,7 @@ actions:
     doNotList: true
     text: "Guarda il film!"
     cta: "Play!"
-    url: /apps/anims/anim_cilindro2.html
+    url: apps/anims/anim_cilindro2.html
   - type: clearBackground
     id: fundo
   - type: background
@@ -526,7 +526,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_friso_refV.html
+    url: apps/anims/anim_friso_refV.html
   - type: dialog
     entries:    
       - text: "Sì, Mathina, così è molto più facile. Questo funziona perché questo fregio ha una simmetria di riflessione verticale (o asse di simmetria verticale)."
@@ -538,7 +538,7 @@ actions:
     tag: tg11
     text: "Prova a stampare fregi con simmetria di riflessione orizzontale e verticale usando una “tavola”. Scegli un'immagine e guarda l'animazione presentata nell'app."
     cta: "Play!"
-    url: /apps/Sfriso_refVH/
+    url: apps/Sfriso_refVH/
   - type: clearBackground
     id: fundo
   - type: background
@@ -611,7 +611,7 @@ actions:
     text: "Seleziona i 3 fregi con simmetria di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione"
     cta: "Try separating the friezes!"
-    url: /apps/EscolheFrisos_rot/?lang=it
+    url: apps/EscolheFrisos_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -656,7 +656,7 @@ actions:
     text: "Seleziona i 3 fregi con assi di simmetria e con simmetrie di rotazione e clicca"
     toolbarText: "Seleziona i fregi con simmetria di rotazione e con assi di simmetria"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_ref_rot/?lang=it
+    url: apps/EscolheFrisos_ref_rot/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -756,7 +756,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_cilindro3.html
+    url: apps/anims/anim_cilindro3.html
   #
   # Mathina pensa em carimbar o friso3 usando metade do carimbo
   - type: dialog
@@ -811,7 +811,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_cilindros_parte1.html
+    url: apps/anims/anim_cilindros_parte1.html
   #
   # Leo questiona Mathina sobre como carimbar a parte 2 do friso
   - type: dialog
@@ -876,7 +876,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_cilindros_parte2.html
+    url: apps/anims/anim_cilindros_parte2.html
   #
   # Leo também quer carimbar
   - type: clearImage
@@ -902,7 +902,7 @@ actions:
     tag: tg8
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/anim_refdeslizante_leo.html
+    url: apps/anims/anim_refdeslizante_leo.html
   #
   # Leo terminou!
   - type: clearImage
@@ -1021,7 +1021,7 @@ actions:
     text: "Scegli i 3 fregi con glissoriflessioni e clicca"
     toolbarText: "Scegli 3 fregi con glissoriflessioni"
     cta: "Prova a separare i fregi per tipo!"
-    url: /apps/EscolheFrisos_refDesl/?lang=it
+    url: apps/EscolheFrisos_refDesl/?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1118,7 +1118,7 @@ actions:
     tag: tg9
     text: "Guarda i fregi in ciascuna delle 7 borse che sono state ottenute. Per ogni borsa trascinare i simboli che corrispondono alle simmetrie sui fregi presentati."
     cta: "Play!"
-    url: /apps/RotularFrisos/?lang=it
+    url: apps/RotularFrisos/?lang=it
   #
   # Parte final da história
   - type: clearBackground

@@ -85,7 +85,7 @@ actions:
     tag: tg1
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/icosaedro_concavo.html
+    url: apps/anims/icosaedro_concavo.html
   - type: animation
     target: tecnico
     vars:
@@ -247,7 +247,7 @@ actions:
     text: "Seleziona i poliedri convessi. Scegli i 4 poliedri e clicca su"
     toolbarText: "Seleziona 4 poliedri convessi"
     cta: "Riconosci i poliedri convessi!"
-    url: /apps/EscolhePoliConvexos/index.html?lang=it
+    url: apps/EscolhePoliConvexos/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -390,7 +390,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/6quadrados.html
+    url: apps/anims/6quadrados.html
   - type: dialog
     entries:        
       - text: "Guarda che stai sbagliando! La striscia può avere solo un massimo di 4 quadrati allineati."
@@ -417,7 +417,7 @@ actions:
     tag: tg4
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=p2pol_24
+    url: apps/anims/poliedros.html?pre=p2pol_24
   - type: sceneText
     text: >
       <p>Nel frattempo, divertito dalla sua scoperta di uno sviluppo del cubo, Leo creò altre proposte di sviluppi.</p>
@@ -429,7 +429,7 @@ actions:
     text: "Scegli gli sviluppi del cubo. Selezionane 3  e clicca"
     toolbarText: "Seleziona 3 sviluppi del cubo."
     cta: "Separa gli sviluppi da quelli che non lo sono!"
-    url: /apps/EscolhePlanCubo/index.html?lang=it
+    url: apps/EscolhePlanCubo/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -476,7 +476,7 @@ actions:
     tag: tg6
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/tetraedro_form.html
+    url: apps/anims/tetraedro_form.html
   - type: dialog
     entries:        
       - text: "Conosco questo poliedro. È un solido platonico e si chiama tetraedro."
@@ -504,7 +504,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol2p_169
+    url: apps/anims/poliedros.html?pre=pol2p_169
   - type: sceneText
     text: >
       <p>Entrambi continuarono la loro ricerca per trovare nuovi solidi platonici, passando a 4 triangoli per ogni vertice.</p>
@@ -521,7 +521,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/octaedro_form_1.html      
+    url: apps/anims/octaedro_form_1.html      
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -539,7 +539,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/octaedro_form_2.html
+    url: apps/anims/octaedro_form_2.html
   - type: clearBackground
     id: c1-bg12
   - type: background
@@ -554,7 +554,7 @@ actions:
     tag: tg7
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/octaedro_form_3.html
+    url: apps/anims/octaedro_form_3.html
   - type: clearBackground
     id: c1-bg30    
   - type: background
@@ -576,7 +576,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
+    url: apps/anims/poliedros.html?pre=pol2p_113&md=mo
   - type: sceneText
     text: >
       <p>Leo decise quindi di procedere come prima (per il cubo), creando esempi alternativi di sviluppi per il poliedro.</p>
@@ -586,7 +586,7 @@ actions:
     text: "Scegli gli sviluppi dell'ottaedro. Seleziona configurazioni e clicca"
     toolbarText: "Scegli 3 sviluppi dell'ottaedro."
     cta: "Isola gli sviluppi dell'ottaedro!"
-    url: /apps/EscolhePlanOcta/index.html?lang=it
+    url: apps/EscolhePlanOcta/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -613,7 +613,7 @@ actions:
     tag: tg8
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/icosaedro_form.html
+    url: apps/anims/icosaedro_form.html
   - type: clearBackground
     id: c1-bg10
   - type: clearImage
@@ -637,7 +637,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol2p_98
+    url: apps/anims/poliedros.html?pre=pol2p_98
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -686,7 +686,7 @@ actions:
     text: "Guarda il video!"
     tag: tg10
     cta: "Play!"
-    url: /apps/anims/dodecaedro_form.html
+    url: apps/anims/dodecaedro_form.html
   - type: clearBackground
     id: c1-bg14
   - type: background
@@ -708,7 +708,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
+    url: apps/anims/poliedros.html?pre=pol2p_47&md=mo
   - type: clearImage
     id: Leo2-2-dodeca
   - type: image
@@ -723,7 +723,7 @@ actions:
     tag: tg11
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/4poligonos_5.html
+    url: apps/anims/4poligonos_5.html
   - type: clearImage
     id: Leo2-2-pentagonos
   - type: clearBackground
@@ -771,7 +771,7 @@ actions:
     text: "Guarda il video!"
     tag: tg12
     cta: "Play!"
-    url: /apps/anims/5platonicosi.html
+    url: apps/anims/5platonicosi.html
   - type: dialog
     entries:        
       - text: "Hai trovato tutti i solidi platonici: cubo, tetraedro, ottaedro, icosaedro e dodecaedro."
@@ -789,7 +789,7 @@ actions:
     text: "Seleziona i poliedri non platonici che hanno tutte le facce uguali. Scegli due poliedri e clicca"
     toolbarText: "Seleziona 2 poliedri non platonici che hanno tutte le facce regolari e uguali."
     cta: "Separa i seguenti poliedri che hanno tutte le facce uguali tra platonici e non platonici."
-    url: /apps/EscolhePoliNPRegulares/index.html?lang=it
+    url: apps/EscolhePoliNPRegulares/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -823,7 +823,7 @@ actions:
     tag: tg14
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol_35
+    url: apps/anims/poliedros.html?pre=pol_35
   - type: clearImage
     id: technician-cubocta 
   - type: clearBackground
@@ -872,7 +872,7 @@ actions:
     doNotList: true
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol_80        
+    url: apps/anims/poliedros.html?pre=pol_80        
   - type: dialog
     entries:        
       - text: "Ebbene, come prima, tutte le facce sono poligoni regolari, ma non tutte hanno lo stesso numero di lati. Fammi solo controllare se gli angoli solidi su ciascun vertice sono uguali."
@@ -943,7 +943,7 @@ actions:
     text: "Guarda il video!"
     tag: tg19
     cta: "Play!"
-    url: /apps/anims/poliedros.html?pre=pol_68
+    url: apps/anims/poliedros.html?pre=pol_68
   - type: sceneText
     text: >
       <p>Mathina esaminò il poliedro. Notò che tutte le facce erano poligoni regolari. Quindi, utilizzando stampi, ha anche concluso che i vertici erano dello stesso tipo. Per lei sembrava un buon candidato ...</p>
@@ -990,7 +990,7 @@ actions:
     tag: tg22
     text: "Guarda il video!"
     cta: "Play!"
-    url: /apps/anims/transfMiller.html
+    url: apps/anims/transfMiller.html
   - type: dialog
     entries:        
       - text: "Questo è quello che volevo fare! In questo modo ora è un poliedro uniforme."
@@ -1061,7 +1061,7 @@ actions:
     doNotList: true
     text: "Guarda il poliedro!"
     cta: "Play!"
-    url: /apps/anims/MillerRot.html
+    url: apps/anims/MillerRot.html
   - type: dialog
     entries:        
       - text: "Non è questo il punto, Leo: per mostrare che è uniforme, dobbiamo considerare tutte le diverse coppie di vertici del poliedro! Una coppia non è sufficiente!"
@@ -1119,7 +1119,7 @@ actions:
     text: "Scegli i poliedri uniformi. Scegli 4 poliedri e clicca"
     toolbarText: "Seleziona 4 poliedri uniformi"
     cta: "Seleziona i poliedri uniformi!"
-    url: /apps/EscolhePoliUnif/index.html?lang=it
+    url: apps/EscolhePoliUnif/index.html?lang=it
     img:
       src: confirm.png
       height: 40
@@ -1158,7 +1158,7 @@ actions:
     tag: tg24
     text: "Guarda i poliedri!"
     cta: "Play!"
-    url: /apps/anims/prismas_antiprismas.html
+    url: apps/anims/prismas_antiprismas.html
   - type: dialog
     entries:    
       - text: "Vuoi aiutarmi a finire il modello della giostra? Dobbiamo solo incollare tutti i modelli di poliedri uniformi che hai selezionato oltre ai solidi platonici che hai costruito."
@@ -1177,4 +1177,4 @@ actions:
     tag: tg25
     text: "Guarda i poliedri!"
     cta: "Play!"
-    url: /apps/anims/carrossel.html      
+    url: apps/anims/carrossel.html      

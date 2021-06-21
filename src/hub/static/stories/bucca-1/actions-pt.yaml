@@ -426,7 +426,7 @@ actions:
     toolbartext: "Associa a mensagem correta à imagem descrita na chave."    
     cta: "Vamos tentar!"
     tag: app1
-    url: /apps/bucca-1-app/bucca-1-app-1.htm?l=3
+    url: apps/bucca-1-app/bucca-1-app-1.htm?l=3
   - type: dialog
     entries:
       - text: "E se alguém descobrir as mensagens e decidir, de qualquer maneira, verificar todos os quatro sítios?"
@@ -468,7 +468,7 @@ actions:
     toolbartext: "Associa uma imagem a cada mensagem. Usa a imagem indicada pela chave apenas para a mensagem correta."    
     cta: "Vamos tentar!"
     tag: app2
-    url: /apps/bucca-1-app/bucca-1-app-2.htm?l=3
+    url: apps/bucca-1-app/bucca-1-app-2.htm?l=3
   - type: clearImage
     id: leo1
   - type: clearImage
@@ -774,7 +774,7 @@ actions:
     text: "Qual foi a mensagem que a Rasha e a Lucy escreverem à Mathina e ao Leo?"
     cta: "Encontra a mensagem secreta!"
     tag: app3
-    url: /apps/bucca-1-app/bucca-1-app-3.htm?l=3
+    url: apps/bucca-1-app/bucca-1-app-3.htm?l=3
   - type: sceneText
     text: >
       <p>Eles tinham encontrado, certamente, uma maneira interessante de comunicar, mas os símbolos misteriosos que a mãe de Rasha encontrou dentro da árvore eram também muito interessantes. Certamente que trarão novas e emocionantes aventuras à Mathina e aos seus amigos!</p>

@@ -321,7 +321,7 @@ actions:
     text: Scegli un'equazione. Puoi rilasciare le lucciole scintillanti dove preferisci facendo clic e trascinando. Si posizioneranno in base all'equazione che hai scelto. Nella parte inferiore dello schermo, puoi persino inserire la tua equazione.
     toolbarText: Scegli un'equazione e lascia che le lucciole scintillanti danzino lungo la curva corrispondente.
     cta: Fai danzare le lucciole scintillanti!
-    url: /apps/imaginary/app_4/4_1/index.html?lang=it
+    url: apps/imaginary/app_4/4_1/index.html?lang=it
 
   - type: dialog
     avatarAlign:
@@ -436,7 +436,7 @@ actions:
     text: Posiziona le lucciole scintillanti in aria facendo clic e trascinando. Ti mostreranno una curva. Hai tre tentativi per trovare l'equazione della curva.
     toolbarText: Quale curva stanno formando le lucciole scintillanti? Scegli l'equazione corretta.
     cta: Risolvi gli indovinelli delle lucciole scintillanti!
-    url: /apps/imaginary/app_4/4_2/index.html?lang=it
+    url: apps/imaginary/app_4/4_2/index.html?lang=it
 
   - type: dialog
     avatarAlign:
@@ -463,7 +463,7 @@ actions:
     text: "Qui puoi osservare le superfici, che sono definite da tre variabili (x, y e z). Sotto la superficie puoi inventare la tua equazione e guardare la superficie corrispondente. È possibile modificare ogni superficie utilizzando i cursori e ruotarla facendo clic e trascinando."
     toolbarText: Osserva le superfici e le loro equazioni.
     cta: Osserva le superfici!
-    url: /apps/imaginary/app_4/4_3/index.html?lang=it
+    url: apps/imaginary/app_4/4_3/index.html?lang=it
 
   - type: dialog
     avatarAlign:

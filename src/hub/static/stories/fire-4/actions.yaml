@@ -324,7 +324,7 @@ actions:
     text: Choose an equation. You can release the sparkbugs whereever you like by clicking and dragging. They will position themselves according to the equation you chose. Try the other equations, too. In the lower part of the screen, you can even enter your own equation.
     toolbarText: Choose an equation and let the sparkbugs dance along the corresponding curve.
     cta: Let the sparkbugs dance!
-    url: /apps/imaginary/app_4/4_1/index.html?lang=en
+    url: apps/imaginary/app_4/4_1/index.html?lang=en
 
   - type: dialog
     avatarAlign:
@@ -441,7 +441,7 @@ actions:
     text: Place the sparkbugs in the air by clicking and dragging. They will show you a curve. You have three guesses, to find the right equation of that curve
     toolbarText: Which curve are the sparkbugs forming? Choose the right equation.
     cta: Solve the riddles of the sparkbugs!
-    url: /apps/imaginary/app_4/4_2/index.html?lang=en
+    url: apps/imaginary/app_4/4_2/index.html?lang=en
 
 
   - type: dialog
@@ -470,7 +470,7 @@ actions:
     text: "Here you can observe surfaces, which are defined by three variables (x, y, and z). Below the surface you can invent your own equation and look at the corresponding surface. You may alter each surface by using the sliders and rote it by clicking and dragging."
     toolbarText: Observe the surfaces and their equations.
     cta: Go to the surface in space!
-    url: /apps/imaginary/app_4/4_3/index.html?lang=en
+    url: apps/imaginary/app_4/4_3/index.html?lang=en
 
   - type: dialog
     avatarAlign:

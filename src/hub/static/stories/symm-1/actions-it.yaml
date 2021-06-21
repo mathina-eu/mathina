@@ -86,7 +86,7 @@ actions:
     tag: tg1
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
-    url: /apps/dobrar_1/index.html
+    url: apps/dobrar_1/index.html
   - type: clearImage
     id: c1-3
   - type: image
@@ -120,7 +120,7 @@ actions:
     listTitle: "Piegando le immagini II"
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
-    url: /apps/dobrar_2/index.html
+    url: apps/dobrar_2/index.html
   - type: dialog
     entries:        
       - text: "Anche l'immagine di questa ape ha un asse di simmetria."
@@ -141,7 +141,7 @@ actions:
     listTitle: "Piegando le immagini III"
     text: "Quest'immagine è simmetrica?"
     cta: "Prova a piegarla a metà!"
-    url: /apps/dobrar_3/index.html
+    url: apps/dobrar_3/index.html
   - type: clearImage
     id: c1-5
   - type: image
@@ -197,7 +197,7 @@ actions:
     toolbarText: "Metti i giocattoli fatti bene (cioè simmetrici) nella scatola"
     tag: tg4
     cta: "Provaci!"
-    url: /apps/arrumar_figuras/index.html
+    url: apps/arrumar_figuras/index.html
   - type: clearImage
     id: c1-1
   - type: image
@@ -356,7 +356,7 @@ actions:
     tag: tg2
     text: "Aiuta Mathina a costruire i giocattoli? Per aiutarla, trascina le figure colorate sul quadrato grigio corrispondente."
     cta: "Provaci!"
-    url: /apps/geoplano_polys0/index.html     
+    url: apps/geoplano_polys0/index.html     
   - type: clearImage
     id: Mathina4
   - type: clearImage
@@ -447,7 +447,7 @@ actions:
     tag: tg3
     text: "Aiuta Leo a concludere i giocattoli, disegna le linee mancanti."
     cta: "Provaci!"
-    url: /apps/geoplano_lin1/index.html 
+    url: apps/geoplano_lin1/index.html 
   - type: clearImage
     id: Leo4
   - type: image

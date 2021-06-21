@@ -80,7 +80,7 @@ actions:
     toolbarText: "Try to decode some words using the suggested key"
     cta: "Try it yourself!"
     tag: app1
-    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-1.htm?l=1
 
   - type: clearImage
     id: CaesarJewel
@@ -128,7 +128,7 @@ actions:
     toolbarText: "Try to select the correct plaintext"
     cta: "Try it yourself!"
     tag: app2
-    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-2.htm?l=1
 
   - type: dialog
     entries:
@@ -535,7 +535,7 @@ actions:
     toolbarText: "Try to calculate the sum of some additions on the clocks"
     cta: "Try it yourself!"
     tag: app3
-    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-3.htm?l=1
 
   - type: image
     id: Angela3
@@ -856,7 +856,7 @@ actions:
     toolbarText: "Select the correct result of the method applied two times with the given keys."
     cta: "Try it yourself!"
     tag: app4
-    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-4.htm?l=1
 
   - type: sceneText
     text: >
@@ -916,7 +916,7 @@ actions:
     toolbarText: "Select the correct position for the big disc."
     cta: "Try it yourself!"
     tag: app5
-    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-5.htm?l=1
     
   - type: clearImage
     id: Dipinto
@@ -1024,7 +1024,7 @@ actions:
     toolbarText: "Verify that the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
     tag: app6
-    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-6.htm?l=1
 
   - type: clearImage
     id: Angela6
@@ -1096,7 +1096,7 @@ actions:
     toolbarText: "Verify that, as before, the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
     tag: app7
-    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-7.htm?l=1
  
   - type: clearImage
     id: Angela7
@@ -1130,7 +1130,7 @@ actions:
     toolbarText: "Convince yourself that also this method does not work."
     cta: "Try it yourself!"
     tag: app8
-    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-8.htm?l=1
 
 
 
@@ -1153,7 +1153,7 @@ actions:
     toolbarText: "Try to decode the message!"
     cta: "Try it yourself!"
     tag: app9
-    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=1
+    url: apps/bucca-3-app/bucca-3-app-9.htm?l=1
 
 
   - type: dialog

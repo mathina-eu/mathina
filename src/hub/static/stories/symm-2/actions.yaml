@@ -68,7 +68,7 @@ actions:
     text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider"
     toolbarText: "Check if the following image has a symmetry axis."
     cta: "Let’s play!"
-    url: /apps/espelho_im1/index.html
+    url: apps/espelho_im1/index.html
     img:
       src: move-icon.png
       height: 40
@@ -91,7 +91,7 @@ actions:
     text: "Check if the following image has a symmetry axis. To do so, move the existing mirror, by dragging it back and forth using the slider."
     toolbarText: "Check if the following image has a symmetry axis."
     cta: "Let’s play!"
-    url: /apps/espelho_im2/index.html
+    url: apps/espelho_im2/index.html
     img:
       src: move-icon.png
       height: 40
@@ -119,7 +119,7 @@ actions:
     text: "How can Mathina solve the game?  In each round, choose all of the rosettes with symmetry axes."
     toolbarText: "Choose 4 rosettes with symmetry axes."
     cta: "Try it yourself!"
-    url: /apps/EscolheRosaceas/index.html?lang=en    
+    url: apps/EscolheRosaceas/index.html?lang=en    
   - type: dialog
     entries:    
       - text: "I’ve made it. Can I keep them?"
@@ -139,7 +139,7 @@ actions:
     text: "How can Mathina win the rosettes? If in doubt, click"
     toolbarText: "Store the rosettes in the right bags!"
     cta: "Try to solve the game, by storing the rosettes in the right bags!"
-    url: /apps/rosaceas_diedrais/index.html
+    url: apps/rosaceas_diedrais/index.html
     img:
       src: vertical.png
       height: 40
@@ -212,7 +212,7 @@ actions:
     text: "How can Mathina win the rosettes? If in doubt, click"
     toolbarText: "Store the rosettes in the right bags!"
     cta: "Try to solve the game, by storing the rosettes in the right bags!"
-    url: /apps/rosaceas_ciclicas/index.html
+    url: apps/rosaceas_ciclicas/index.html
     img:
       src: rodar.png
       height: 40
@@ -384,7 +384,7 @@ actions:
     tag: tg1
     text: "How can Mathina solve the mirror maze?"
     cta: "Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=ref
+    url: apps/labirinto-s/index.html?lang=en&sim=ref
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -467,7 +467,7 @@ actions:
     tag: tg2
     text: "How can Mathina solve the half-turn maze?"
     cta: "Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=en&sim=rot
+    url: apps/labirinto-s/index.html?lang=en&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground

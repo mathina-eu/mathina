@@ -68,7 +68,7 @@ actions:
     text: "Move o espelho, arrastando-o para a frente e para trás através do botão"
     toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
     cta: "Vamos jogar!"
-    url: /apps/espelho_im1/index.html
+    url: apps/espelho_im1/index.html
     img:
       src: move-icon.png
       height: 40
@@ -91,7 +91,7 @@ actions:
     text: "Move o espelho, arrastando-o para a frente e para trás através do botão."
     toolbarText: "Descobre se a imagem seguinte tem algum eixo de simetria."
     cta: "Vamos jogar!"
-    url: /apps/espelho_im2/index.html
+    url: apps/espelho_im2/index.html
     img:
       src: move-icon.png
       height: 40
@@ -119,7 +119,7 @@ actions:
     text: "Como pode a Mathina resolver o jogo? De cada vez, escolhe as quatro rosáceas com eixos de simetria."
     toolbarText: "Escolhe as quatro rosáceas com eixos de simetria."
     cta: "Experimenta!"
-    url: /apps/EscolheRosaceas/index.html?lang=pt    
+    url: apps/EscolheRosaceas/index.html?lang=pt    
   - type: dialog
     entries:    
       - text: "Já consegui. Posso ficar com as rosáceas?"
@@ -139,7 +139,7 @@ actions:
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
     cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
-    url: /apps/rosaceas_diedrais/index.html
+    url: apps/rosaceas_diedrais/index.html
     img:
       src: vertical.png
       height: 40
@@ -213,7 +213,7 @@ actions:
     text: "Como pode a Mathina ganhar as rosáceas? Se tiveres dúvidas, clica em"
     toolbarText: "Guarda as rosáceas nos sacos certos!"
     cta: "Experimenta resolver o jogo, arrastando as rosáceas para os sacos certos!"
-    url: /apps/rosaceas_ciclicas/index.html
+    url: apps/rosaceas_ciclicas/index.html
     img:
       src: rodar.png
       height: 40
@@ -385,7 +385,7 @@ actions:
     tag: tg1
     text: "Como pode a Mathina resolver o labirinto de espelhos?"
     cta: "Experimenta!"
-    url: /apps/labirinto-s/index.html?lang=pt&sim=ref
+    url: apps/labirinto-s/index.html?lang=pt&sim=ref
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -468,7 +468,7 @@ actions:
     tag: tg2
     text: "Como pode a Mathina resolver o labirinto de meia-volta?"
     cta: "Experimenta!"
-    url: /apps/labirinto-s/index.html?lang=pt&sim=rot
+    url: apps/labirinto-s/index.html?lang=pt&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground

@@ -86,7 +86,7 @@ actions:
     tag: tg1
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
-    url: /apps/dobrar_1/index.html
+    url: apps/dobrar_1/index.html
   - type: clearImage
     id: c1-3
   - type: image
@@ -120,7 +120,7 @@ actions:
     listTitle: "Folding Images II"
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
-    url: /apps/dobrar_2/index.html
+    url: apps/dobrar_2/index.html
   - type: dialog
     entries:        
       - text: "The image of this bee also has a symmetry axis."
@@ -141,7 +141,7 @@ actions:
     listTitle: "Folding Images III"
     text: "Is the following image good (i.e. symmetric)?"
     cta: "Try it yourself!"
-    url: /apps/dobrar_3/index.html
+    url: apps/dobrar_3/index.html
   - type: dialog
     entries:        
       - text: "If we fold it, we will never find two parts that overlap!"
@@ -199,7 +199,7 @@ actions:
     listTitle: "Finding the Good Toys"
     tag: tg4
     text: "Put the \"good\" toys in the box"
-    url: /apps/arrumar_figuras/index.html
+    url: apps/arrumar_figuras/index.html
     cta: "Try it!"      
   - type: clearImage
     id: c1-1
@@ -354,7 +354,7 @@ actions:
     tag: tg2
     text: "How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
     cta: "Try it yourself!"
-    url: /apps/geoplano_polys0/index.html     
+    url: apps/geoplano_polys0/index.html     
   - type: clearImage
     id: Mathina4
   - type: clearImage
@@ -448,7 +448,7 @@ actions:
     tag: tg3
     text: "How can Mathina finish the toys? You just need to draw the missing lines."
     cta: "Try it yourself!"
-    url: /apps/geoplano_lin1/index.html 
+    url: apps/geoplano_lin1/index.html 
   - type: clearImage
     id: Leo4
   - type: image

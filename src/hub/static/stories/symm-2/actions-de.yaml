@@ -79,7 +79,7 @@ actions:
     #"Check if the following image has a symmetry axis."
     cta: Probiere es aus!
     #"Let’s play!"
-    url: /apps/espelho_im1/index.html
+    url: apps/espelho_im1/index.html
     img:
       src: move-icon.png
       height: 40
@@ -107,7 +107,7 @@ actions:
     #"Check if the following image has a symmetry axis."
     cta: Probiere es aus!
     #"Let’s play!"
-    url: /apps/espelho_im2/index.html
+    url: apps/espelho_im2/index.html
     img:
       src: move-icon.png
       height: 40
@@ -139,7 +139,7 @@ actions:
     #"Choose 4 rosettes with symmetry axes."
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/EscolheRosaceas/index.html?lang=de    
+    url: apps/EscolheRosaceas/index.html?lang=de    
   - type: dialog
     entries:    
       - text: Ich habe es geschafft! Darf ich eine der Rosetten meiner Oma mitbringen?
@@ -167,7 +167,7 @@ actions:
     #"Store the rosettes in the right bags!"
     cta: Probiere es aus!
     #"Try to solve the game, by storing the rosettes in the right bags!"
-    url: /apps/rosaceas_diedrais/index.html
+    url: apps/rosaceas_diedrais/index.html
     img:
       src: vertical.png
       height: 40
@@ -253,7 +253,7 @@ actions:
     #"Store the rosettes in the right bags!"
     cta: Probiere es aus!
     #"Try to solve the game, by storing the rosettes in the right bags!"
-    url: /apps/rosaceas_ciclicas/index.html
+    url: apps/rosaceas_ciclicas/index.html
     img:
       src: rodar.png
       height: 40
@@ -446,7 +446,7 @@ actions:
     #"How can Mathina solve the mirror maze?"
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=de
+    url: apps/labirinto-s/index.html?lang=de
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -539,7 +539,7 @@ actions:
     #"How can Mathina solve the half-turn maze?"
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/labirinto-s/index.html?lang=de&sim=rot
+    url: apps/labirinto-s/index.html?lang=de&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground

@@ -348,7 +348,7 @@ actions:
     toolbarText: "Segui i passi e costruisci il segreto condiviso"
     cta: "Provaci tu!"
     tag: app1
-    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=2
+    url: apps/bucca-4-app/bucca-4-app-1.htm?l=2
   - type: dialog
     entries:     
       - text: "Vedi, ora abbiamo il segreto comune che possiamo usare come chiave per tutti i codici che hai già incontrato prima."
@@ -411,7 +411,7 @@ actions:
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina"
     cta: "Provaci tu!"
     tag: app2
-    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=2
+    url: apps/bucca-4-app/bucca-4-app-2.htm?l=2
   - type: dialog
     entries:     
       - text: "Wow! Ne sai qualcosa, Angela?"
@@ -465,7 +465,7 @@ actions:
     toolbarText: "Segui i passaggi e aiuta Leo a capire quanto è sicuro il sistema"
     cta: "Provaci tu!"
     tag: app3
-    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=2
+    url: apps/bucca-4-app/bucca-4-app-3.htm?l=2
   - type: clearImage
     id: Leo2  
   - type: clearImage
@@ -595,7 +595,7 @@ actions:
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina."
     cta: "Provaci tu!"
     tag: app4
-    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=2
+    url: apps/bucca-4-app/bucca-4-app-4.htm?l=2
      
   - type: dialog
     entries:      

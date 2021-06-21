@@ -111,7 +111,7 @@ actions:
     toolbarText: Falte den Teddy mit den Schiebereglern.
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/dobrar_1/index.html
+    url: apps/dobrar_1/index.html
   - type: clearImage
     id: c1-3
   - type: image
@@ -151,7 +151,7 @@ actions:
     toolbarText: Falte die Biene.
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/dobrar_2/index.html
+    url: apps/dobrar_2/index.html
   - type: dialog
     entries:        
       - text: Ja, die Biene hat eine Symmetrieachse und kann also hier bleiben.
@@ -177,7 +177,7 @@ actions:
     toolbarText: Falte die Katze.
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/dobrar_3/index.html
+    url: apps/dobrar_3/index.html
   - type: dialog
     entries:        
       - text: Wenn wir das Bild der Katze falten, gibt es keine zwei gleichen Seiten, die übereinander liegen, egal, wie wir es falten.
@@ -243,7 +243,7 @@ actions:
     tag: tg4
     text: Schiebe die symmetrischen Kuscheltiere in die Kiste.
     #"Put the \"good\" toys in the box"
-    url: /apps/arrumar_figuras/index.html
+    url: apps/arrumar_figuras/index.html
     cta: Probiere es aus!
     #"Try it yourself!"
   - type: clearImage
@@ -424,7 +424,7 @@ actions:
     #"How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/geoplano_polys0/index.html     
+    url: apps/geoplano_polys0/index.html     
   - type: clearImage
     id: Mathina4
   - type: clearImage
@@ -529,7 +529,7 @@ actions:
     #"How can Mathina finish the toys? You just need to draw the missing lines."
     cta: Probiere es aus!
     #"Try it yourself!"
-    url: /apps/geoplano_lin1/index.html 
+    url: apps/geoplano_lin1/index.html 
   - type: clearImage
     id: Leo4
   - type: image

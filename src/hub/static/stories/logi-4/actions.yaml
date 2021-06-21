@@ -180,7 +180,7 @@ actions:
     text: Generate a table by filling in the initial amount of gold medals received.
     toolbarText: 
     cta: Can you find out how many gold medals they receive? 
-    url: /apps/logi-4-app/logi-4-app.htm?c=1
+    url: apps/logi-4-app/logi-4-app.htm?c=1
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -255,7 +255,7 @@ actions:
     text: Do you notice any regularity with 116?
     toolbarText: 
     cta: Try it yourself!
-    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
+    url: apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -322,7 +322,7 @@ actions:
     text: Do you think George is right, does it work with 127?
     toolbarText: 
     cta: Experiment with the number 127!
-    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
+    url: apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:

@@ -416,7 +416,7 @@ actions:
     #Adjust the function to get the target graph.
     # "App 3-1 (not ready yet)"
     cta: Faz voar a fénix!
-    url: /apps/imaginary/app_3/3_1/index.html?lang=pt
+    url: apps/imaginary/app_3/3_1/index.html?lang=pt
 
 # Jogo 3.2
   - type: game
@@ -426,7 +426,7 @@ actions:
     toolbarText: Move os pontos de forma a que a Flick não vá contra nenhum dos obstáculos durante o seu voo.
     #Place the points so that the graph does not touch the obstacles.
     cta: Faz voar a fénix!
-    url: /apps/imaginary/app_3/3_2/index.html?lang=pt
+    url: apps/imaginary/app_3/3_2/index.html?lang=pt
 
   # - type: clearImage
     # id: leo
@@ -534,7 +534,7 @@ actions:
     text: Para fazer voar esta fénix tens de lhe dizer quanto deve subir ou descer movendo a mão à esquerda para cima ou para baixo. Fá-la voar evitando os obstáculos.
     toolbarText: Evita os obstáculos e chega ao lado direito.
     cta: Faz voar a fénix!
-    url: /apps/imaginary/app_3/3_3/index.html?lang=pt
+    url: apps/imaginary/app_3/3_3/index.html?lang=pt
 
   - type: clearImage
     id: phoe2
@@ -580,7 +580,7 @@ actions:
     text: Ajusta os pontos para criar e linha. A linha dá o quanto deve a fénix subir ou descer a cada momento. Usando essa técnica, apanha todas as bolas de fogo ao longo do teu caminho.
     toolbarText: Ajusta a linha que dá as subidas e descidas da fénix. Apanha todas as bolas de fogo.
     cta: Faz voar a fénix!
-    url: /apps/imaginary/app_3/3_4/index.html?lang=pt
+    url: apps/imaginary/app_3/3_4/index.html?lang=pt
 
   - type: image
     src: wizard.png

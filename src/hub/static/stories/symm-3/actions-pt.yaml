@@ -172,7 +172,7 @@ actions:
     doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_formcilindro.html
+    url: apps/anims/anim_formcilindro.html
   - type: clearBackground
     id: 'fundo'
   - type: background
@@ -186,7 +186,7 @@ actions:
     doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_cilindro.html 
+    url: apps/anims/anim_cilindro.html 
   - type: dialog
     entries:    
       - text: "Oh, não! Temos de apanhar o rolo!"
@@ -238,7 +238,7 @@ actions:
     text: "Escolhe uma imagem, observa a formação do cilindro (“rolo”) e, depois, clica em"
     toolbarText: "Escolhe uma imagem e observa a formação do cilindro (“rolo”)"
     cta: "Experimenta carimbar outros frisos usando um “rolo”!"
-    url: /apps/Scilindro/index.html
+    url: apps/Scilindro/index.html
     img:
       src: stamp.png
       height: 40
@@ -383,7 +383,7 @@ actions:
     text: "De cada vez, escolhe os 4 frisos com eixos de simetria e clica em"
     toolbarText: "Escolhe os 4 frisos com eixos de simetria"
     cta: "Experimenta separar os frisos!"
-    url: /apps/EscolheFrisos_ref/?lang=pt
+    url: apps/EscolheFrisos_ref/?lang=pt
     img:
       src: confirm.png
       height: 40
@@ -410,7 +410,7 @@ actions:
     tag: tg5
     text: "Separa os frisos, arrastando cada friso para o saco correspondente."
     cta: "Experimenta!"
-    url: /apps/frisos_simref/
+    url: apps/frisos_simref/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -507,7 +507,7 @@ actions:
     doNotList: true
     text: "Ver filme aqui!"
     cta: "Ver"
-    url: /apps/anims/anim_cilindro2.html
+    url: apps/anims/anim_cilindro2.html
   - type: clearBackground
     id: fundo
   - type: background
@@ -526,7 +526,7 @@ actions:
     doNotList: true
     text: "Ver filme aqui!"
     cta: "Ver"
-    url: /apps/anims/anim_friso_refV.html
+    url: apps/anims/anim_friso_refV.html
   - type: dialog
     entries:    
       - text: "Sim, Mathina, dessa forma é mais fácil! Isso resulta porque este friso tem simetria de reflexão vertical (ou eixo de simetria vertical)"
@@ -538,7 +538,7 @@ actions:
     tag: tg11
     text: "Experimenta carimbar frisos com simetria de reflexão horizontal e vertical usando uma “placa”. Escolhe uma imagem e observa a animação exibida na app."
     cta: "Ver"
-    url: /apps/Sfriso_refVH/
+    url: apps/Sfriso_refVH/
   - type: clearBackground
     id: fundo
   - type: background
@@ -610,7 +610,7 @@ actions:
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de rotação"
     cta: "Experimenta separar os frisos!"
-    url: /apps/EscolheFrisos_rot/?lang=pt
+    url: apps/EscolheFrisos_rot/?lang=pt
     img:
       src: confirm.png
       height: 40
@@ -655,7 +655,7 @@ actions:
     text: "Seleciona os 3 frisos com simetria de rotação e clica em"
     toolbarText: "Seleciona os 3 frisos com simetria de reflexão e de rotação"
     cta: "Experimenta!"
-    url: /apps/EscolheFrisos_ref_rot/?lang=pt
+    url: apps/EscolheFrisos_ref_rot/?lang=pt
     img:
       src: confirm.png
       height: 40
@@ -755,7 +755,7 @@ actions:
     doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_cilindro3.html
+    url: apps/anims/anim_cilindro3.html
   #
   # Mathina pensa em carimbar o friso3 usando metade do carimbo
   - type: dialog
@@ -810,7 +810,7 @@ actions:
     doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_cilindros_parte1.html
+    url: apps/anims/anim_cilindros_parte1.html
   #
   # Leo questiona Mathina sobre como carimbar a parte 2 do friso
   - type: dialog
@@ -875,7 +875,7 @@ actions:
     doNotList: true
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_cilindros_parte2.html
+    url: apps/anims/anim_cilindros_parte2.html
   #
   # Leo também quer carimbar
   - type: clearImage
@@ -901,7 +901,7 @@ actions:
     tag: tg8
     text: "Observa o filme!"
     cta: "Ver"
-    url: /apps/anims/anim_refdeslizante_leo.html
+    url: apps/anims/anim_refdeslizante_leo.html
   #
   # Leo terminou!
   - type: clearImage
@@ -1020,7 +1020,7 @@ actions:
     text: "Escolhe os 3 frisos com simetria de reflexão deslizante e clica em"
     toolbarText: "Escolhe os 3 frisos com simetria de reflexão deslizante"
     cta: "Experimenta separar os frisos aqui!"
-    url: /apps/EscolheFrisos_refDesl/?lang=pt
+    url: apps/EscolheFrisos_refDesl/?lang=pt
     img:
       src: confirm.png
       height: 40
@@ -1117,7 +1117,7 @@ actions:
     tag: tg9
     text: "Observa os frisos patentes em cada um dos 7 sacos obtidos. Para cada saco, arrasta os símbolos que correspondem às simetrias existentes nos frisos aí patentes."
     cta: "Jogar!"
-    url: /apps/RotularFrisos/?lang=pt
+    url: apps/RotularFrisos/?lang=pt
   #
   # Parte final da história
   - type: clearBackground

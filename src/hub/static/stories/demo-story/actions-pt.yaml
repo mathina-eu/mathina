@@ -71,4 +71,4 @@ actions:
   - type: game
     text: "Want to hop around?"
     cta: "Try it yourself!"
-    url: /apps/example-app/
+    url: apps/example-app/

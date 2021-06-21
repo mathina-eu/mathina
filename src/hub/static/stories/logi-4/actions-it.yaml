@@ -180,7 +180,7 @@ actions:
     text: Genera una tabella compilando la quantità iniziale di medaglie d'oro ricevute.
     toolbarText:
     cta: Puoi scoprire quante medaglie d'oro ricevono?
-    url: /apps/logi-4-app/logi-4-app.htm?c=1&l=2
+    url: apps/logi-4-app/logi-4-app.htm?c=1&l=2
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:
@@ -257,7 +257,7 @@ actions:
     tag: app2
     toolbarText:
     cta: Esamina la tabella!
-    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=2
+    url: apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=2
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:
@@ -326,7 +326,7 @@ actions:
     toolbarText:
     tag: app4
     cta: Sperimentalo con il numero 127!
-    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=2
+    url: apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=2
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:

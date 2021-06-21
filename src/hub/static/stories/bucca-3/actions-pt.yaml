@@ -80,7 +80,7 @@ actions:
     text: "Recorda: para descodificar há que partir do disco externo"
     toolbarText: "Tenta descodificar algumas palavras usando a chave sugerida"
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-1.htm?l=3
 
   - type: clearImage
     id: CaesarJewel
@@ -127,7 +127,7 @@ actions:
     text: "Seleciona o texto. Lembra-te da dica “INVERTIDA”..."
     toolbarText: "Tenta selecionar o texto correto"
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-2.htm?l=3
 
   - type: dialog
     entries:
@@ -533,7 +533,7 @@ actions:
     text: "Tenta calcular a soma de algumas adições nos relógios"
     toolbarText: "Tente calcular a soma de algumas adições nos relógios"
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-3.htm?l=3
 
   - type: image
     id: Angela3
@@ -853,7 +853,7 @@ actions:
     text: "Seleciona o resultado correto do método aplicado duas vezes com as chaves dadas."
     toolbarText: "Selecione o resultado correto do método aplicado duas vezes com as chaves dadas."
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-4.htm?l=3
 
   - type: sceneText
     text: >
@@ -912,7 +912,7 @@ actions:
     text: "O disco maior tem que cifrar palavras da mesma forma que os dois menores quando usados duas vezes, consecutivamente. Selecione a posição correta."
     toolbarText: "Selecione a posição correta para o disco grande."
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-5.htm?l=3
     
   - type: clearImage
     id: Dipinto
@@ -1019,7 +1019,7 @@ actions:
     text: "Verifica que o texto não foi cifrado da maneira usual."
     toolbarText: "Verifica que o texto não foi cifrado da maneira usual."
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-6.htm?l=3
 
   - type: clearImage
     id: Angela6
@@ -1090,7 +1090,7 @@ actions:
     text: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
     toolbarText: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-7.htm?l=3
  
   - type: clearImage
     id: Angela7
@@ -1123,7 +1123,7 @@ actions:
     text: "Mathina sugere o uso de duas posições da jóia: uma para cifrar palavras em posições pares e outra para cifrar palavras em posições ímpares. Convença-se de que este método também não funciona."
     toolbarText: "Convença-se de que este método também não funciona."
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-8.htm?l=3
 
 
 
@@ -1145,7 +1145,7 @@ actions:
     text: "Finalmente a cifra foi compreendida: as duas jóias devem ser usadas para codificar as letras nas posições ímpares e pares, respectivamente."
     toolbarText: "Tente descodificar a mensagem!"
     cta: "Tenta tu!"
-    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=3
+    url: apps/bucca-3-app/bucca-3-app-9.htm?l=3
 
 
   - type: dialog

@@ -208,7 +208,7 @@ actions:
     toolbarText: Wie viele Medaillen bekommt das Team?
     cta: Erstelle eine Tabelle
     #Can you find out how many gold medals they receive? 
-    url: /apps/logi-4-app/logi-4-app.htm?c=1&l=4
+    url: apps/logi-4-app/logi-4-app.htm?c=1&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -300,7 +300,7 @@ actions:
     #Do you notice any regularity with 116?
     toolbarText: Vervollständige die Tabelle.
     cta: Probiere es aus!
-    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=4
+    url: apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -386,7 +386,7 @@ actions:
     toolbarText: Versuche es mit der Zahl 127.
     cta: Teste es!
     #Experiment with the number 127!
-    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=4
+    url: apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=4
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:

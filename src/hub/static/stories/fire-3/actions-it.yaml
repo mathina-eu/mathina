@@ -409,7 +409,7 @@ actions:
     text: "Il percorso che una fenice segue mentre vola è descritto da un polinomio, che è una funzione della variabile x. Scegli i coefficienti per ogni potenza di x e crea il percorso per Flick in modo da evitare tutti gli ostacoli e non si faccia male."
     toolbarText: Modifica la traiettoria di volo scegliendo la funzione.
     cta: Fai volare la fenice!
-    url: /apps/imaginary/app_3/3_1/en.html
+    url: apps/imaginary/app_3/3_1/en.html
 
 
 # Game 3.2
@@ -417,7 +417,7 @@ actions:
     text: "La traiettoria di Flick è ancora descritta da un polinomio. Questa volta non puoi modificare direttamente i coefficienti ma puoi muovere i punti: Flick passerà sempre sopra di essi. Il cammino non sarà visibile finché Flick non inizierà a volare. Ricorda: quando tutti i punti sono posizionati, un solo cammino è possibile (e potrebbe essere un po' diverso da come te lo immaginavi...)."
     toolbarText: Modifica i punti in modo che Flick eviti tutti gli ostacoli.
     cta: Fai volare la fenice!
-    url: /apps/imaginary/app_3/3_2/en.html
+    url: apps/imaginary/app_3/3_2/en.html
 
   # - type: clearImage
     # id: leo
@@ -525,7 +525,7 @@ actions:
     text: Per far volare Liz, puoi dirle di quanto deve scendere o salire muovendo la mano in alto o in basso. Vola evitando gli ostacoli.
     toolbarText: Evita gli ostacoli e raggiungi l'estremità dello schermo.
     cta: Fai volare la fenice!
-    url: /apps/imaginary/app_3/3_3/en.html
+    url: apps/imaginary/app_3/3_3/en.html
 
   - type: clearImage
     id: phoe2
@@ -568,7 +568,7 @@ actions:
     text: Sistema i puntini per creare una linea. Essa dirà alla fenice di quanto deve salire o scendere ogni volta. Con questa tecnica, prendi tutte le palle di fuoco sul tragitto.
     toolbarText: Sistema la linea che dice alla fenice se scendere o salire. Prendi tutte le palle di fuoco.
     cta: Fai volare la fenice!
-    url: /apps/imaginary/app_3/3_4/en.html
+    url: apps/imaginary/app_3/3_4/en.html
 
   - type: image
     src: wizard.png
