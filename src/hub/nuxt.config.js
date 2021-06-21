@@ -16,10 +16,10 @@ const generateRoutes = () => {
   let stories = [];
   for (let locale of locales) {
     let localCities = Object.values(constants.CITIES).map(
-      ({ slug }) => `/${locale}city/${slug}/`
+      ({ slug }) => `${locale}city/${slug}/`
     );
     let localStories = constants.STORIES.map(
-      ({ slug }) => `/${locale}story/${slug}`
+      ({ slug }) => `${locale}story/${slug}`
     );
     cities = [...cities, ...localCities];
     stories = [...stories, ...localStories];

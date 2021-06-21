@@ -7,10 +7,12 @@ const rootDir = __dirname;
 /*Additions to handle multiple repositories*/
 const DevPath = 'http://localhost:3000';
 const IS_EDU = process.env.npm_lifecycle_event.includes('edu');
-const HubUrlPath = 'http://localhost:8080';
-const EduUrlPath = 'http://localhost:8080';
-const HubBase = '/hub';
-const EduBase = '/edu';
+const HubUrlPath = 'https://mathina-hub.netlify.app';
+const EduUrlPath = 'https://mathina-edu.netlify.app';
+//const HubUrlPath = 'http://localhost:8080';
+//const EduUrlPath = 'http://localhost:8080';
+const HubBase = '';
+const EduBase = '';
 
 
 const EduUrlCom = IS_DEV ? DevPath : EduUrlPath + EduBase;
