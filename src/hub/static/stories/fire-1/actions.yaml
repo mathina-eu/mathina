@@ -31,13 +31,6 @@ actions:
       repeat: -1
       yoyo: true
 
-  - type: game
-    text: |
-      Use the horn to guide the unidragon.
-      Try to draw some nice shapes in the air.
-    toolbarText: Fly the unidragon
-    url: /apps/imaginary/app_1/1_1/index.html?lang=en
-    cta: Fly the unidragon!
   - type: image
     src: mathinaleo.png
     id: matleo
