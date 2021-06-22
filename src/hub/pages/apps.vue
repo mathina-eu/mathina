@@ -70,9 +70,11 @@ export default {
 
     let activeApp = {};
     let showGameDialog = false;
+    let requiresScalingFix = false;
+    let fullWidth = false;
 
     for (let storyData of data) {
-      const story = { id: storyData.story, apps: [], ...data };
+      const story = { id: storyData.story, apps: [] };
 
       let i = 0;
       for (let appData of storyData.apps) {
@@ -84,6 +86,9 @@ export default {
           if (targetTag && app.tag === targetTag || targetAppNumber && `${i}` === targetAppNumber) {
             activeApp = app;
             showGameDialog = true;
+            let storyMeta = STORIES.find(({ id }) => id === story.id);
+            requiresScalingFix = storyMeta.requiresScalingFix;
+            fullWidth = storyMeta.fullWidth;
           }
         }
         i++;
@@ -96,8 +101,8 @@ export default {
       appMap,
       game: activeApp,
       showGameDialog,
-      requiresScalingFix: false,
-      fullWidth: false,
+      requiresScalingFix,
+      fullWidth,
       isGameLoading: true,
       iframeStyle: '',
       previousKey: null,
@@ -131,12 +136,17 @@ export default {
         if (isShown && !wasShown) {
           setTimeout(() => {
             this.setScaling();
-          }, 1000); // TODO: ?
+          }, 1000);
         }
       }
     }
   },
   mounted() {
+    if (this.showGameDialog) {
+      setTimeout(() => {
+        this.setScaling();
+      }, 1000);
+    }
     window.addEventListener('resize', this.setScaling);
   },
   beforeDestroy() {
@@ -161,7 +171,7 @@ export default {
 
       if (bodyWidth > elementWidth && bodyHeight > elementHeight) {
         this.isGameLoading = false;
-        this.iframeStyle = '';
+        this.iframeStyle = `left: ${(bodyWidth - elementWidth) / 2}px`;
         return false;
       }
 
@@ -170,13 +180,15 @@ export default {
       let rect = el.getBoundingClientRect();
       let horizontalOrigin = 'left';
 
+      let offset = 0;
       if (newHeight > (bodyHeight - rect.y)) {
         ratio = (bodyHeight - rect.y) / elementHeight;
         horizontalOrigin = 'left';
+        offset = 0.5 * (bodyWidth - elementWidth * ratio);
       }
       let newElementWidth = Math.floor(elementWidth / ratio);
       let newElementHeight = Math.floor(elementHeight / ratio);
-      this.iframeStyle = `width: ${newElementWidth}px; height: ${newElementHeight}px; transform: scale(${ratio}); transform-origin: ${horizontalOrigin} top;`;
+      this.iframeStyle = `left: ${offset}px; width: ${newElementWidth}px; height: ${newElementHeight}px; transform: scale(${ratio}); transform-origin: ${horizontalOrigin} top;`;
       this.$nextTick(() => {
         this.isGameLoading = false;
       });

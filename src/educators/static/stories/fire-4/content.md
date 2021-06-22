@@ -59,7 +59,7 @@ The apps have a list of examples of curves and surfaces, each one shows its form
 
 # About the apps
 
-## App 1 - Exploration
+## [App 1 - Exploration]($HUB_URL/apps/?appNumber=0&story=fire-4)
 The app plots the set of points `@(x,y)@` of the plane that satisfy `@F(x,y)=0@` (the zeroset), for any polynomial function `@F(x,y)@` that the user introduces or selects from an example list.
 
 A small animation is played to draw the curve, that is triggered when the user touches the screen. Sparkbugs are points of light. At the beginning of the animation, these light points are placed randomly around the touch points of the user. As the animation progresses, the points move in the direction where the value of the function is closer to zero. After a few seconds, all the sparkbugs are placed on the zeroset.
@@ -68,12 +68,12 @@ A list of examples is available on the side, and the user can write any polynomi
 
 @[youtube](XoGBCCIlgnc?_align-center_)
 
-## App 2 - Guess the equation
+## [App 2 - Guess the equation]($HUB_URL/apps/?appNumber=1&story=fire-4)
 This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug (sitting on the top of the parchment). After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
 
 @[youtube](RI82ffVucEA?_align-center_)
 
-## App 3 - Surfaces
+## [App 3 - Surfaces]($HUB_URL/apps/?appNumber=2&story=fire-4)
 This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.
 
 A list of example equations is available on the right, as well as the text box where the user can enter her or his own equation. (For a start, you can adapt the equations of the listed surfaces and observe the changes.)
