@@ -125,7 +125,7 @@ export default {
   async asyncData({ $axios, params, app: { i18n } }) {
     const locale = i18n.locale === i18n.defaultLocale ? '' : `-${i18n.locale}`;
     const story = constants.STORIES.find(({ slug }) => slug === params.slug);
-    const { data } = await $axios.get(`/stories/${story.id}/actions${locale}.yaml`);
+    const { data } = await $axios.get(`stories/${story.id}/actions${locale}.yaml`);
     const { actions } = yaml.load(data);
 
     const parsedActions = actions.map(action => ActionFactory.create(action));
@@ -197,10 +197,10 @@ export default {
       return this.action instanceof VideoAction;
     },
     imgRoot() {
-      return `/stories/${this.story.id}/img`;
+      return `stories/${this.story.id}/img`;
     },
     storyRoot() {
-      return `/stories/${this.story.id}`;
+      return `stories/${this.story.id}`;
     },
     isFirstAction() {
       // Find first action without auto progress
@@ -269,7 +269,7 @@ export default {
         if (action instanceof DialogAction) {
           for (let dialog of action.entries) {
             const mood = dialog.mood ? dialog.mood : 'normal';
-            const portrait = `/portraits/${dialog.char.toLocaleLowerCase()}/${mood}00.data.png`;
+            const portrait = `portraits/${dialog.char.toLocaleLowerCase()}/${mood}00.data.png`;
             images.add(portrait);
           }
         }

@@ -22,7 +22,7 @@ export default {
     const locale = this.$i18n.locale === this.$i18n.defaultLocale ? '' : `-${this.$i18n.locale}`;
 
     return {
-      mdPath: `/stories/${story.id}/content${locale}.md`,
+      mdPath: `stories/${story.id}/content${locale}.md`,
       story,
     };
   },
