@@ -172,7 +172,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_formcilindro.html
+    url: /apps/anims/anim_formcilindro.html
   - type: clearBackground
     id: 'fundo'
   - type: background
@@ -186,7 +186,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_cilindro.html 
+    url: /apps/anims/anim_cilindro.html 
   - type: dialog
     entries:    
       - text: "Oh, no! We have to catch the roll."
@@ -238,7 +238,7 @@ actions:
     text: "Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
     toolbarText: "Choose an image and watch the creation of the cylinder (“roll”)"
     cta: "Try stamping other friezes using a “roll”!"
-    url: apps/Scilindro/index.html
+    url: /apps/Scilindro/index.html
     img:
       src: stamp.png
       height: 40
@@ -383,7 +383,7 @@ actions:
     text: "Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Choose 4 friezes with symmetry axes"
     cta: "Try separating the friezes!"
-    url: apps/EscolheFrisos_ref/?lang=en
+    url: /apps/EscolheFrisos_ref/?lang=en
     img:
       src: confirm.png
       height: 40
@@ -410,7 +410,7 @@ actions:
     tag: tg5
     text: "Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Try it!"
-    url: apps/frisos_simref-_en/
+    url: /apps/frisos_simref-_en/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -507,7 +507,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_cilindro2.html
+    url: /apps/anims/anim_cilindro2.html
   - type: clearBackground
     id: fundo
   - type: background
@@ -526,7 +526,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_friso_refV.html
+    url: /apps/anims/anim_friso_refV.html
   - type: dialog
     entries:    
       - text: "Yes, Mathina, that way is much easier. This works because this frieze has vertical reflection symmetry (or vertical symmetry axis)."
@@ -538,7 +538,7 @@ actions:
     tag: tg11
     text: "Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
     cta: "Play!"
-    url: apps/Sfriso_refVH/
+    url: /apps/Sfriso_refVH/
   - type: clearBackground
     id: fundo
   - type: background
@@ -610,7 +610,7 @@ actions:
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Choose 3 friezes with rotation symmetry"
     cta: "Try separating the friezes!"
-    url: apps/EscolheFrisos_rot/?lang=en
+    url: /apps/EscolheFrisos_rot/?lang=en
     img:
       src: confirm.png
       height: 40
@@ -655,7 +655,7 @@ actions:
     text: "Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Choose 3 friezes with reflection and rotation symmetry"
     cta: "Try separating the friezes!"
-    url: apps/EscolheFrisos_ref_rot/?lang=en
+    url: /apps/EscolheFrisos_ref_rot/?lang=en
     img:
       src: confirm.png
       height: 40
@@ -755,7 +755,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_cilindro3.html
+    url: /apps/anims/anim_cilindro3.html
   #
   # Mathina pensa em carimbar o friso3 usando metade do carimbo
   - type: dialog
@@ -810,7 +810,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_cilindros_parte1.html
+    url: /apps/anims/anim_cilindros_parte1.html
   #
   # Leo questiona Mathina sobre como carimbar a parte 2 do friso
   - type: dialog
@@ -875,7 +875,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_cilindros_parte2.html
+    url: /apps/anims/anim_cilindros_parte2.html
   #
   # Leo também quer carimbar
   - type: clearImage
@@ -901,7 +901,7 @@ actions:
     tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/anim_refdeslizante_leo.html
+    url: /apps/anims/anim_refdeslizante_leo.html
   #
   # Leo terminou!
   - type: clearImage
@@ -1020,7 +1020,7 @@ actions:
     text: "Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Choose 3 friezes with glide reflection symmetry"
     cta: "Try separating the friezes!"
-    url: apps/EscolheFrisos_refDesl/?lang=en
+    url: /apps/EscolheFrisos_refDesl/?lang=en
     img:
       src: confirm.png
       height: 40
@@ -1117,7 +1117,7 @@ actions:
     tag: tg9
     text: "Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     cta: "Play!"
-    url: apps/RotularFrisos/?lang=en
+    url: /apps/RotularFrisos/?lang=en
   #
   # Parte final da história
   - type: clearBackground

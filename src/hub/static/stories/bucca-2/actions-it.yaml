@@ -621,7 +621,7 @@ actions:
     toolbarText: "Codifica la parola. Ricorda, spostati dal cerchio interno a quello esterno per cifrare"
     cta: "Provaci tu!"
     tag: app1
-    url: apps/bucca-2-app/bucca-2-app-1.htm?l=2
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=2
 
   - type: sceneText
     text: >
@@ -834,7 +834,7 @@ actions:
     toolbarText: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
     cta: "Provaci tu!"
     tag: app2
-    url: apps/bucca-2-app/bucca-2-app-2.htm?l=2
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=2
     
   - type: sceneText
     text: >

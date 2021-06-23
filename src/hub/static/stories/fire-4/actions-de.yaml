@@ -316,7 +316,7 @@ actions:
     text: Wähle eine Gleichung. Durch klicken und ziehen kannst Du die Funkelflöhe dort absetzen, wo Du magst. Sie positionieren sich dann entsprechend der Gleichung, die Du ausgewählt hast. Probiere auch die anderen Gleichungen aus. Am unteren Rand kannst Du sogar eine eigene Gleichung eingeben.
     toolbarText: Wähle eine Gleichung und lasse die Funkelflöhe auf der dazugehörigen Kurve tanzen.
     cta: Lass die Funkelflöhe tanzen!
-    url: apps/imaginary/app_4/4_1/index.html?lang=de
+    url: /apps/imaginary/app_4/4_1/index.html?lang=de
 
   - type: dialog
     avatarAlign:
@@ -447,7 +447,7 @@ actions:
     text: Setze die Funkelflöhe durch klicken und ziehen in der Luft ab. Sie werden Dir eine Kurve zeigen. Du hast jeweils drei Versuche, die Gleichung zur Kurve zu erraten.
     toolbarText: Welche Kurve zeigen Dir die Funkelflöhe?
     cta: Löse die Rätsel der Funkelflöhe!
-    url: apps/imaginary/app_4/4_2/index.html?lang=de
+    url: /apps/imaginary/app_4/4_2/index.html?lang=de
 
   - type: dialog
     avatarAlign:
@@ -478,7 +478,7 @@ actions:
     text: "Hier kannst Du Flächen anschauen, die durch Gleichungen mit drei Variablen (x, y und z) bestimmt werden. Unten kannst Du auch eine eigene Gleichung erfinden und Dir dann die Fläche dazu anschauen. Du kannst die Fläche mit den Schiebereglern verändern und mit klicken und ziehen auch drehen."
     toolbarText: Schaue Dir die Flächen und ihre Gleichungen an.
     cta: Zu den Flächen im Raum.
-    url: apps/imaginary/app_4/4_3/index.html?lang=de
+    url: /apps/imaginary/app_4/4_3/index.html?lang=de
 
   - type: dialog
     avatarAlign:

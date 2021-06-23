@@ -323,7 +323,7 @@ actions:
     text: Disponi i due poliziotti sulla mappa. Basteranno per pattugliare tutta la città? Quando vuoi, esci.
     tag: firstGame
     cta: Aiuta Mathina!
-    url: apps/logi-3-app/logi-3-app.htm?v=1
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"
     entries:
@@ -409,7 +409,7 @@ actions:
     text: Aiuta Mathina e Leo a trovare un buon piano posizionando i cubetti di zucchero sulla mappa.
     toolbarText:
     cta: Provaci!
-    url: apps/logi-3-app/logi-3-app.htm?v=2
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
     vars:
@@ -591,4 +591,4 @@ actions:
     text: Vuoi provare a disporre i poliziotti per pattugliare le strade di altre città?
     toolbarText:
     cta: Clicca qui!
-    url: apps/logi-3-app/logi-3-app.htm?v=3
+    url: /apps/logi-3-app/logi-3-app.htm?v=3

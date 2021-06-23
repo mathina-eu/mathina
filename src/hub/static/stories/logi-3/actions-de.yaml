@@ -365,7 +365,7 @@ actions:
     toolbarText: Wo sollen die Polizisten stehen?
     cta: Probiere es aus!
     #Try it yourself!
-    url: apps/logi-3-app/logi-3-app.htm?v=1
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -471,7 +471,7 @@ actions:
     toolbarText: Wo sollten die Polizisten stehen?
     cta: Probiere es aus!
     #Try it yourself!
-    url: apps/logi-3-app/logi-3-app.htm?v=2
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
     vars:
@@ -666,4 +666,4 @@ actions:
     toolbarText: 
     cta: Hier klicken!
     #Click here!
-    url: apps/logi-3-app/logi-3-app.htm?v=3
+    url: /apps/logi-3-app/logi-3-app.htm?v=3

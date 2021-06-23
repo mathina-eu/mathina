@@ -311,7 +311,7 @@ actions:
     text: Escolhe uma equação. Podes espalhar os insetos de fogo onde quiseres clicando e arrastando. Eles próprios tomam posições de acordo com a equação que escolheste. Tenta também outras equações. No écran em baixo podes até dar tu mesmo uma equação.
     toolbarText: Escolhe uma equação e deixa que os insetos de fogo dancem ao longo da curva correspondente.
     cta: Que os insetos de fogo dancem!
-    url: apps/imaginary/app_4/4_1/index.html?lang=pt
+    url: /apps/imaginary/app_4/4_1/index.html?lang=pt
 
   - type: dialog
     avatarAlign:
@@ -422,7 +422,7 @@ actions:
     text: Coloca os insetos de fogo no ar clicando e arrastando.  Eles mostrarão uma curva. Tens três tentativas para descobrir a equação correta dessa curva.
     toolbarText: Que curva estão os insetos de fogo a formar? Escolhe a equação correta.
     cta: Resolve as adivinhas dos insetos de fogo!
-    url: apps/imaginary/app_4/4_2/index.html?lang=pt
+    url: /apps/imaginary/app_4/4_2/index.html?lang=pt
 
   - type: dialog
     avatarAlign:
@@ -449,7 +449,7 @@ actions:
     text: "Aqui podes observar superfícies que são definidas por três variáveis (x, y e z).  Abaixo da superfície podes inventar a tua própria equação e ver a superfície correspondente. Podes alterar cada superfície usando  os controlos deslizantes, e rodá-la clicando e arrastando."
     toolbarText: Observa as superfícies e as suas equações.
     cta: Segue para a superfície no espaço!
-    url: apps/imaginary/app_4/4_3/index.html?lang=pt
+    url: /apps/imaginary/app_4/4_3/index.html?lang=pt
 
   - type: dialog
     avatarAlign:

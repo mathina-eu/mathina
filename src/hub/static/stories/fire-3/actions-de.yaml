@@ -436,7 +436,7 @@ actions:
     toolbarText: Passe die Flugbahn mit Hilfe der Funktion unten an.
     #Adjust the flight path through the function below.
     cta: "Fliege mit Flick! (noch nicht fertig)"
-    url: apps/imaginary/app_3/3_1/index.html?lang=de
+    url: /apps/imaginary/app_3/3_1/index.html?lang=de
 
   - type: game
     text: "Flicks Flugbahn wird wieder durch ein Polynom beschrieben. Dieses Mal kannst nicht die Koeffizienten anpassen, sondern du kannst die gelben Punkte bewegen. Die Bahn wird genau durch diese Punkte führen. Du kannst die Bahn allerdings erst sehen, wenn du Flick losgeschickt hast. Tipp: Wenn du alle Punkte positioniert hast, gibt es nur eine einzige mögliche Bahn, sie könnte allerdings anders verlaufen, als du sie dir vorstellst..."
@@ -444,7 +444,7 @@ actions:
     cta:  "Fliege mit Flick!"
     toolbarText: Bewege die Punkte, so dass Flick keines der Hindernisse auf seiner Bahn trifft.
     #Move the points so Flick will not hit any obstacles during his flight.
-    url: apps/imaginary/app_3/3_2/index.html?lang=de
+    url: /apps/imaginary/app_3/3_2/index.html?lang=de
 
   # - type: clearImage
     # id: leo
@@ -561,7 +561,7 @@ actions:
     #To fly this phoenix, you tell how much it should ascend or descend. Fly it avoiding the obstacles.
     toolbarText: Fliege um die Hindernisse bis auf die rechte Seite.
     #Avoid the obstacles and reach the right side.
-    url: apps/imaginary/app_3/3_3/index.html?lang=de
+    url: /apps/imaginary/app_3/3_3/index.html?lang=de
     cta: Fliege mit Liz!
   - type: clearImage
     id: phoe2
@@ -615,7 +615,7 @@ actions:
     toolbarText: Stelle den Verlauf für Steig- und Sinkflug so ein, dass der Phönix die Feuerbälle fängt.
     #Adjust the line that tells the ascend or descend of the phoenix. Eat all the fireballs.
     cta: Fliege mit Liz!
-    url: apps/imaginary/app_3/3_4/index.html?lang=de
+    url: /apps/imaginary/app_3/3_4/index.html?lang=de
 
 
   - type: image

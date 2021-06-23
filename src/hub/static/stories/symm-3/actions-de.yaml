@@ -182,7 +182,7 @@ actions:
     text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
-    url: apps/anims/anim_formcilindro.html
+    url: /apps/anims/anim_formcilindro.html
   - type: clearBackground
     id: 'fundo'
   - type: background
@@ -198,7 +198,7 @@ actions:
     text: "Schau's dir an!" #"Watch the movie!"
     cta: Abspielen
     #"Play!"
-    url: apps/anims/anim_cilindro.html 
+    url: /apps/anims/anim_cilindro.html 
   - type: dialog
     entries:    
       - text: "Oh nein, Achtung! Wir müssen die Rolle aufhalten." #"Oh, no! We have to catch the roll."
@@ -254,7 +254,7 @@ actions:
     #"Choose an image, watch the creation of the cylinder (“roll”) and, then, click"
     toolbarText: Such dir ein Bild aus und schau dir an, wie der Zylinder entsteht! #"Choose an image and watch the creation of the cylinder (“roll”)"
     cta: "Probiere unterschiedliche Muster aus!" #"Try stamping other friezes using a “roll”!"
-    url: apps/Scilindro/index.html
+    url: /apps/Scilindro/index.html
     img:
       src: stamp.png
       height: 40
@@ -402,7 +402,7 @@ actions:
     text: "Wähle die vier Muster aus, die Symmetrieachsen haben, und klicke danach auf dieses Symbol:" #"Each time, choose the 4 friezes with symmetry axes and click"
     toolbarText: "Welche Muster haben Symmetrieachsen?" #"Choose 4 friezes with symmetry axes"
     cta: "Wähle aus!" #"Try separating the friezes!"
-    url: apps/EscolheFrisos_ref/?lang=de
+    url: /apps/EscolheFrisos_ref/?lang=de
     img:
       src: confirm.png
       height: 40
@@ -429,7 +429,7 @@ actions:
     tag: tg5
     text: "Sortiere die Muster, indem du sie in verschiedene Taschen legst." #"Separate the friezes by dragging each frieze to the corresponding bag."
     cta: "Probiere es aus!" #"Try it!"
-    url: apps/frisos_simref-_de/
+    url: /apps/frisos_simref-_de/
   - type: clearBackground
     id: 'fundo'
   - type: clearImage
@@ -527,7 +527,7 @@ actions:
     doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_cilindro2.html
+    url: /apps/anims/anim_cilindro2.html
   - type: clearBackground
     id: fundo
   - type: background
@@ -546,7 +546,7 @@ actions:
     doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_friso_refV.html
+    url: /apps/anims/anim_friso_refV.html
   - type: dialog
     entries:    
       - text: "Stimmt, Mathina, so geht das genauso gut. Es funktioniert, weil unser Muster eine senkrechte Symmetrieachse hat." #"Yes, Mathina, that way is much easier. This works because this frieze has vertical reflection symmetry (or vertical symmetry axis)."
@@ -559,7 +559,7 @@ actions:
     text: Versuche mit einer Platte Muster mit horizontaler und vertikaler Spiegelsymmetrie zu drucken. Suche dir dafür ein Bild aus und schaue dir die Animation an.
     #"Try stamping friezes with horizontal and vertical reflection symmetry using a “board”. Choose an image and watch the animation presented in the app."
     cta: "Probiere es aus!"
-    url: apps/Sfriso_refVH/
+    url: /apps/Sfriso_refVH/
   - type: clearBackground
     id: fundo
   - type: background
@@ -634,7 +634,7 @@ actions:
     text: "Finde die drei Muster mit Rotationssymmetrie, wähle sie aus und klicke dann dieses Symbol an:" #"Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Wähle drei Muster mit Rotationssymmetrie!" #"Choose 3 friezes with rotation symmetry"
     cta: "Probiere es aus!" #"Try separating the friezes!"
-    url: apps/EscolheFrisos_rot/?lang=de
+    url: /apps/EscolheFrisos_rot/?lang=de
     img:
       src: confirm.png
       height: 40
@@ -680,7 +680,7 @@ actions:
     text: "Wähle die drei Muster mit Rotationssymmetrie aus und klicke dann dieses Symbol an:" #"Select the 3 friezes with rotation symmetry and click"
     toolbarText: "Wähle die drei Muster mit Rotationssymmetrie!" #"Choose 3 friezes with reflection and rotation symmetry"
     cta: "Probiere es aus!" #"Try separating the friezes!"
-    url: apps/EscolheFrisos_ref_rot/?lang=de
+    url: /apps/EscolheFrisos_ref_rot/?lang=de
     img:
       src: confirm.png
       height: 40
@@ -782,7 +782,7 @@ actions:
     text: Schau's dir an!
     #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_cilindro3.html
+    url: /apps/anims/anim_cilindro3.html
   #
   # Mathina pensa em carimbar o friso3 usando metade do carimbo
   - type: dialog
@@ -837,7 +837,7 @@ actions:
     doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_cilindros_parte1.html
+    url: /apps/anims/anim_cilindros_parte1.html
   #
   # Leo questiona Mathina sobre como carimbar a parte 2 do friso
   - type: dialog
@@ -902,7 +902,7 @@ actions:
     doNotList: true
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_cilindros_parte2.html
+    url: /apps/anims/anim_cilindros_parte2.html
   #
   # Leo também quer carimbar
   - type: clearImage
@@ -929,7 +929,7 @@ actions:
     tag: tg8
     text: "Schau's dir an!" #"Watch the movie!"
     cta: "Abspielen"
-    url: apps/anims/anim_refdeslizante_leo.html
+    url: /apps/anims/anim_refdeslizante_leo.html
   #
   # Leo terminou!
   - type: clearImage
@@ -1048,7 +1048,7 @@ actions:
     text: "Wähle die drei Muster mit Gleitspiegelung aus und klicke dann auf dieses Symbol:" #"Choose the 3 friezes with glide reflection symmetry and click"
     toolbarText: "Wähle die Muster mit Gleitspiegelung" #"Choose 3 friezes with glide reflection symmetry"
     cta: "Wähle die Muster!" #"Try separating the friezes!"
-    url: apps/EscolheFrisos_refDesl/?lang=de
+    url: /apps/EscolheFrisos_refDesl/?lang=de
     img:
       src: confirm.png
       height: 40
@@ -1147,7 +1147,7 @@ actions:
     text: "Betrachte die Muster in den sieben Taschen. Suche für jede Tasche die entsprechenden Symbole, die für die Symmetrien der Muster stehen." #"Watch the friezes in each of the 7 bags which were obtained. For each bag, drag the symbols which correspond to the symmetries on the friezes presented."
     toolbarText: Suche für jede Tasche die passenden Symbole!
     cta: "Los!"
-    url: apps/RotularFrisos/?lang=de
+    url: /apps/RotularFrisos/?lang=de
   #
   # Parte final da história
   - type: clearBackground

@@ -85,7 +85,7 @@ actions:
     tag: tg1
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/icosaedro_concavo.html
+    url: /apps/anims/icosaedro_concavo.html
   - type: animation
     target: tecnico
     vars:
@@ -247,7 +247,7 @@ actions:
     text: "Choose the convex polyhedra. Each time, choose the 4 polyhedra and click"
     toolbarText: "Choose 4 convex polyhedra"
     cta: "Try separating the convex polyhedra!"
-    url: apps/EscolhePoliConvexos/index.html?lang=en
+    url: /apps/EscolhePoliConvexos/index.html?lang=en
     img:
       src: confirm.png
       height: 40
@@ -390,7 +390,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/6quadrados.html
+    url: /apps/anims/6quadrados.html
   - type: dialog
     entries:        
       - text: "That’s not possible! The strip can only have a maximum of 4 squares aligned in a row."
@@ -417,7 +417,7 @@ actions:
     tag: tg4
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=p2pol_24
+    url: /apps/anims/poliedros.html?pre=p2pol_24
   - type: sceneText
     text: >
       <p>Meanwhile, amused by his discovery of a cube net, Leo created other proposals for cube nets.</p>
@@ -429,7 +429,7 @@ actions:
     text: "Choose the right nets for the cube. Each time, choose the 3 “good” nets and click"
     toolbarText: "Choose the 3 right nets for the cube."
     cta: "Try separating the right nets for the cube!"
-    url: apps/EscolhePlanCubo/index.html?lang=en
+    url: /apps/EscolhePlanCubo/index.html?lang=en
     img:
       src: confirm.png
       height: 40
@@ -476,7 +476,7 @@ actions:
     tag: tg6
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/tetraedro_form.html
+    url: /apps/anims/tetraedro_form.html
   - type: dialog
     entries:        
       - text: "I know this polyhedron. It’s a Platonic solid and it’s called tetrahedron."
@@ -504,7 +504,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_169
+    url: /apps/anims/poliedros.html?pre=pol2p_169
   - type: sceneText
     text: >
       <p>They both continued their quest to find new Platonic solids, moving on to 4 triangles at each vertex.</p>
@@ -521,7 +521,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/octaedro_form_1.html      
+    url: /apps/anims/octaedro_form_1.html      
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -539,7 +539,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/octaedro_form_2.html
+    url: /apps/anims/octaedro_form_2.html
   - type: clearBackground
     id: c1-bg12
   - type: background
@@ -554,7 +554,7 @@ actions:
     tag: tg7
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/octaedro_form_3.html
+    url: /apps/anims/octaedro_form_3.html
   - type: clearBackground
     id: c1-bg30    
   - type: background
@@ -576,7 +576,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_113&md=mo
+    url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
   - type: sceneText
     text: >
       <p>Leo then decided to proceed as before (for the cube), creating alternative examples of nets for the polyhedron.</p>
@@ -586,7 +586,7 @@ actions:
     text: "Choose the right nets for the octahedron. Each time, choose the 3 “good” nets and click"
     toolbarText: "Choose the 3 right nets for the octahedron."
     cta: "Try separating the right nets for the octahedron!"
-    url: apps/EscolhePlanOcta/index.html?lang=en
+    url: /apps/EscolhePlanOcta/index.html?lang=en
     img:
       src: confirm.png
       height: 40
@@ -613,7 +613,7 @@ actions:
     tag: tg8
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/icosaedro_form.html
+    url: /apps/anims/icosaedro_form.html
   - type: clearBackground
     id: c1-bg10
   - type: clearImage
@@ -637,7 +637,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_98
+    url: /apps/anims/poliedros.html?pre=pol2p_98
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -686,7 +686,7 @@ actions:
     tag: tg10
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/dodecaedro_form.html
+    url: /apps/anims/dodecaedro_form.html
   - type: clearBackground
     id: c1-bg14
   - type: background
@@ -708,7 +708,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_47&md=mo
+    url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
   - type: clearImage
     id: Leo2-2-dodeca
   - type: image
@@ -723,7 +723,7 @@ actions:
     tag: tg11
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/4poligonos_5.html
+    url: /apps/anims/4poligonos_5.html
   - type: clearImage
     id: Leo2-2-pentagonos
   - type: clearBackground
@@ -771,7 +771,7 @@ actions:
     tag: tg12
     text: "Watch the Platonic solids!"
     cta: "Play!"
-    url: apps/anims/5platonicosi.html
+    url: /apps/anims/5platonicosi.html
   - type: dialog
     entries:        
       - text: "You’ve found all Platonic solids: cube, tetrahedron, octahedron, icosahedron and dodecahedron."
@@ -789,7 +789,7 @@ actions:
     text: "Choose the non-platonic polyhedra whose faces are all regular and equal polygons. Each time, choose the 2 polyhedra and click"
     toolbarText: "Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
     cta: "Try separating the non-platonic polyhedra whose faces are all regular and equal polygons!"
-    url: apps/EscolhePoliNPRegulares/index.html?lang=en
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=en
     img:
       src: confirm.png
       height: 40
@@ -823,7 +823,7 @@ actions:
     tag: tg14
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol_35
+    url: /apps/anims/poliedros.html?pre=pol_35
   - type: clearImage
     id: technician-cubocta 
   - type: clearBackground
@@ -872,7 +872,7 @@ actions:
     doNotList: true
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol_80        
+    url: /apps/anims/poliedros.html?pre=pol_80        
   - type: dialog
     entries:        
       - text: "Well, as before, all faces are regular polygons, but not all have the same number of sides. Let me just check if the solid angles at each vertex are equal."
@@ -943,7 +943,7 @@ actions:
     tag: tg19
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/poliedros.html?pre=pol_68
+    url: /apps/anims/poliedros.html?pre=pol_68
   - type: sceneText
     text: >
       <p>Mathina examined the polyhedron. She noticed that all faces were regular polygons. Then, by using moulds, she also concluded that the vertices were of the same type. For her, it seemed a good candidate…</p>
@@ -990,7 +990,7 @@ actions:
     tag: tg22
     text: "Watch the movie!"
     cta: "Play!"
-    url: apps/anims/transfMiller.html
+    url: /apps/anims/transfMiller.html
   - type: dialog
     entries:        
       - text: "This is what I wanted to do! This way we now get a uniform polyhedron."
@@ -1061,7 +1061,7 @@ actions:
     doNotList: true
     text: "Watch the polyhedron!"
     cta: "Play!"
-    url: apps/anims/MillerRot.html
+    url: /apps/anims/MillerRot.html
   - type: dialog
     entries:        
       - text: "That’s not the point, Leo: to show it’s uniform, we have to consider all different pairs of vertices of the polyhedron! One pair is not enough!"
@@ -1119,7 +1119,7 @@ actions:
     text: "Choose the uniform polyhedra. Each time, choose the 4 polyhedra and click"
     toolbarText: "Choose 4 uniform polyhedra"
     cta: "Try separating the uniform polyhedra!"
-    url: apps/EscolhePoliUnif/index.html?lang=en
+    url: /apps/EscolhePoliUnif/index.html?lang=en
     img:
       src: confirm.png
       height: 40
@@ -1162,7 +1162,7 @@ actions:
     doNotList: true
     text: "Watch the polyhedra!"
     cta: "Play!"
-    url: apps/anims/prismas_antiprismas.html
+    url: /apps/anims/prismas_antiprismas.html
   - type: dialog
     entries:    
       - text: "Do you want to help me finish the carousel model? We just need to glue all the uniform polyhedra models you have selected in addition to the Platonic solids you've built."
@@ -1181,4 +1181,4 @@ actions:
     tag: tg25
     text: "Watch the polyhedra!"
     cta: "Play!"
-    url: apps/anims/carrossel.html      
+    url: /apps/anims/carrossel.html      

@@ -497,7 +497,7 @@ actions:
 #Game 1.1
   - type: game
     text: "Drehe das Horn, um den Einhorndrachen zu steuern. Versuche, ein paar schöne Bahnen zu fliegen."
-    url: apps/imaginary/app_1/1_1/index.html?lang=de
+    url: /apps/imaginary/app_1/1_1/index.html?lang=de
     toolbarText: Fliege den Einhorndrachen!
     cta: "Fliege den Einhorndrachen!"
   - type: image
@@ -573,7 +573,7 @@ actions:
 #Game 1.2
   - type: game
     text: "Fliege mit dem Einhorndrachen zu den Feuerbällen, damit er sie fressen kann. Mache einen Bogen um die Wolken, Einhorndrachen mögen sie nicht."
-    url: apps/imaginary/app_1/1_2/index.html?lang=de
+    url: /apps/imaginary/app_1/1_2/index.html?lang=de
     toolbarText: Fange die Feuerbälle ein!
     cta: "Fange die Feuerbälle!"
 
@@ -599,7 +599,7 @@ actions:
 #Game 1.3
   - type: game
     text: "Fliege so dicht wie möglich entlang der Kurven am Himmel."
-    url: apps/imaginary/app_1/1_3/index.html?lang=de
+    url: /apps/imaginary/app_1/1_3/index.html?lang=de
     toolbarText: "Einhorndrachen-Flugschule: Fliege entlang der Kurven!"
     cta: "Einhorndrachen-Flugschule!"
 
@@ -664,4 +664,4 @@ actions:
   - type: game
     text: "Freier Einhorndrachen-Flugplatz"
     cta: "Probiere alles aus, was Du möchtest!"
-    url: apps/imaginary/app_1/1_1/index.html?lang=de
+    url: /apps/imaginary/app_1/1_1/index.html?lang=de

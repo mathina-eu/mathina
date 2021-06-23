@@ -348,7 +348,7 @@ actions:
     toolbarText: "Follow the steps and try to create the shared secret"
     cta: "Try it yourself!"
     tag: app1
-    url: apps/bucca-4-app/bucca-4-app-1.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=1
   - type: dialog
     entries:     
       - text: "See, now we have the common secret which we can use as the key for all the ciphers you already encountered before."
@@ -411,7 +411,7 @@ actions:
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
     tag: app2
-    url: apps/bucca-4-app/bucca-4-app-2.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=1
   - type: dialog
     entries:     
       - text: "WOW! Do you know anything about that, Angela?"
@@ -465,7 +465,7 @@ actions:
     toolbarText: "Follow the steps to help Leo understand how secure the system is"
     cta: "Try it yourself!"
     tag: app3
-    url: apps/bucca-4-app/bucca-4-app-3.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=1
   - type: clearImage
     id: Leo2  
   - type: clearImage
@@ -595,7 +595,7 @@ actions:
     toolbarText: "Follow the steps to decode Mathina's message"
     cta: "Try it yourself!"
     tag: app4
-    url: apps/bucca-4-app/bucca-4-app-4.htm?l=1
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=1
      
   - type: dialog
     entries:      

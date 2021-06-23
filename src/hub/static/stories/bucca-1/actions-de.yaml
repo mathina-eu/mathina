@@ -459,7 +459,7 @@ actions:
     cta: Probiere es aus!
     #"Let's try!"
     tag: app1
-    url: apps/bucca-1-app/bucca-1-app-1.htm?l=4
+    url: /apps/bucca-1-app/bucca-1-app-1.htm?l=4
   - type: dialog
     entries:
       - text: Aber was ist, wenn jemand die Botschaften entdeckt und dann einfach an allen vier Stellen nachschaut?
@@ -510,7 +510,7 @@ actions:
     cta: Probiere es aus!
     # "Let's try!"
     tag: app2
-    url: apps/bucca-1-app/bucca-1-app-2.htm?l=4
+    url: /apps/bucca-1-app/bucca-1-app-2.htm?l=4
   - type: clearImage
     id: leo1
   - type: clearImage
@@ -822,7 +822,7 @@ actions:
     cta: Finde die geheime Botschaft heraus!
     #"Find the secret message!"
     tag: app3
-    url: apps/bucca-1-app/bucca-1-app-3.htm?l=4
+    url: /apps/bucca-1-app/bucca-1-app-3.htm?l=4
   - type: sceneText
     text: Mathina und ihre Freunde haben einen super Weg gefunden, um geheime Botschaften zu hinterlassen. Und auch die geheimnisvollen Symbole, die Rashas Mutter entdeckt hat, waren total spannend. Sie werden Mathina und den anderen Kindern bestimmt neue und verrückte Abenteuer bescheren!
       #<p>For sure they have found an interesting way to communicate, but the mysterious symbols Rasha's mom found inside the tree were very interesting, too. They will definitely bring Mathina and her little friends new and exciting adventures!</p>

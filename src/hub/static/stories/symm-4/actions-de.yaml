@@ -97,7 +97,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/icosaedro_concavo.html
+    url: /apps/anims/icosaedro_concavo.html
   - type: animation
     target: tecnico
     vars:
@@ -278,7 +278,7 @@ actions:
     #"Choose 4 convex polyhedra"
     cta: "Auswählen"
     #"Try separating the convex polyhedra!"
-    url: apps/EscolhePoliConvexos/index.html?lang=de
+    url: /apps/EscolhePoliConvexos/index.html?lang=de
     img:
       src: confirm.png
       height: 40
@@ -446,7 +446,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/6quadrados.html
+    url: /apps/anims/6quadrados.html
   - type: dialog
     entries:        
       - text: "Das wird nicht klappen! Der Streifen kann nur vier Quadrate hintereinander haben."
@@ -479,7 +479,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=p2pol_24
+    url: /apps/anims/poliedros.html?pre=p2pol_24
   - type: sceneText
     text: >
       <p>Weil das soviel Spaß gemacht hatte, versuchte Leo noch andere mögliche Würfelnetze zu finden.</p>
@@ -495,7 +495,7 @@ actions:
     #"Choose the 3 right nets for the cube."
     cta: "Probiere es aus!"
     #"Try separating the right nets for the cube!"
-    url: apps/EscolhePlanCubo/index.html?lang=de
+    url: /apps/EscolhePlanCubo/index.html?lang=de
     img:
       src: confirm.png
       height: 40
@@ -548,7 +548,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/tetraedro_form.html
+    url: /apps/anims/tetraedro_form.html
   - type: dialog
     entries:        
       - text: "Ich kenne dieses Polyeder. Es ist ein Platonischer Körper, und sein Name ist Tetraeder."
@@ -580,7 +580,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_169
+    url: /apps/anims/poliedros.html?pre=pol2p_169
   - type: sceneText
     text: >
       <p>Nun setzten Mathina und Leo ihre Suche nach weiteren Platonischen Körpern fort, indem sie vier Dreiecken an jedem Eckpunkt zusammenbrachten.</p>
@@ -601,7 +601,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/octaedro_form_1.html      
+    url: /apps/anims/octaedro_form_1.html      
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -622,7 +622,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspsielen"
     #"Play!"
-    url: apps/anims/octaedro_form_2.html
+    url: /apps/anims/octaedro_form_2.html
   - type: clearBackground
     id: c1-bg12
   - type: background
@@ -640,7 +640,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/octaedro_form_3.html
+    url: /apps/anims/octaedro_form_3.html
   - type: clearBackground
     id: c1-bg30    
   - type: background
@@ -665,7 +665,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_113&md=mo
+    url: /apps/anims/poliedros.html?pre=pol2p_113&md=mo
   - type: sceneText
     text: >
       <p>Wie schon vorher beim Würfel, versuchte Leo noch andere Netze des Polyeders zu finden, die auch funktionierten.</p>
@@ -679,7 +679,7 @@ actions:
     #"Choose the 3 right nets for the octahedron."
     cta: "Probiere es aus!"
     #"Try separating the right nets for the octahedron!"
-    url: apps/EscolhePlanOcta/index.html?lang=de
+    url: /apps/EscolhePlanOcta/index.html?lang=de
     img:
       src: confirm.png
       height: 40
@@ -709,7 +709,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/icosaedro_form.html
+    url: /apps/anims/icosaedro_form.html
   - type: clearBackground
     id: c1-bg10
   - type: clearImage
@@ -736,7 +736,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_98
+    url: /apps/anims/poliedros.html?pre=pol2p_98
   - type: clearBackground
     id: c1-bg11
   - type: clearImage
@@ -791,7 +791,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/dodecaedro_form.html
+    url: /apps/anims/dodecaedro_form.html
   - type: clearBackground
     id: c1-bg14
   - type: background
@@ -816,7 +816,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol2p_47&md=mo
+    url: /apps/anims/poliedros.html?pre=pol2p_47&md=mo
   - type: clearImage
     id: Leo2-2-dodeca
   - type: image
@@ -834,7 +834,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/4poligonos_5.html
+    url: /apps/anims/4poligonos_5.html
   - type: clearImage
     id: Leo2-2-pentagonos
   - type: clearBackground
@@ -893,7 +893,7 @@ actions:
     #"Watch the Platonic solids!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/5platonicosi.html
+    url: /apps/anims/5platonicosi.html
   - type: dialog
     entries:        
       - text: "Ihr habt alle fünf Platonischen Körper gefunden: Würfel, Tetraeder, Oktaeder, Ikosaeder und Dodekaeder."
@@ -919,7 +919,7 @@ actions:
     #"Choose 2 non-platonic polyhedra whose faces are all regular and equal polygons"
     cta: "Probiere es aus!"
     #"Try separating the non-platonic polyhedra whose faces are all regular and equal polygons!"
-    url: apps/EscolhePoliNPRegulares/index.html?lang=de
+    url: /apps/EscolhePoliNPRegulares/index.html?lang=de
     img:
       src: confirm.png
       height: 40
@@ -958,7 +958,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol_35
+    url: /apps/anims/poliedros.html?pre=pol_35
   - type: clearImage
     id: technician-cubocta 
   - type: clearBackground
@@ -1016,7 +1016,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol_80        
+    url: /apps/anims/poliedros.html?pre=pol_80        
   - type: dialog
     entries:        
       - text: "Na, das ist fast wie das davor. Alle Seitenflächen sind regelmäßige Polygone, aber nicht alle haben die gleiche Anzahl von Ecken. Lass mich mal überprüfen, ob die Raumwinkel an jedem Eckpunkt gleich sind."
@@ -1101,7 +1101,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/poliedros.html?pre=pol_68
+    url: /apps/anims/poliedros.html?pre=pol_68
   - type: sceneText
     text: >
       <p>Mathina schaute sich das Polyeder genau an. Sie konnte sehen, dass alle Flächen regelmäßige Polygone waren. Dann schlussfolgerte sie anhand der Formen auch, dass die Eckpunkte alle vom gleichen Typ waren. Für sie schien es ein guter Kandidat zu sein...</p>
@@ -1156,7 +1156,7 @@ actions:
     #"Watch the movie!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/transfMiller.html
+    url: /apps/anims/transfMiller.html
   - type: dialog
     entries:        
       - text: "So wollte ich das schon von Anfang an machen. Auf diese Weise bekommen wir ein uniformes Polyeder,"
@@ -1248,7 +1248,7 @@ actions:
     #"Watch the polyhedron!"
     cta: "Schau es an und drehe es."
     #"Play!"
-    url: apps/anims/MillerRot.html
+    url: /apps/anims/MillerRot.html
   - type: dialog
     entries:        
       - text: "Darum geht es aber nicht, Leo! Um zu zeigen, dass es uniform ist, müssen wir alle verschiedenen Paare von Eckpunkten des Polyeders betrachten! Ein einzelnes Paar ist nicht genug!"
@@ -1321,7 +1321,7 @@ actions:
     #"Choose 4 uniform polyhedra"
     cta: "Probiere es aus!"
     #"Try separating the uniform polyhedra!"
-    url: apps/EscolhePoliUnif/index.html?lang=de
+    url: /apps/EscolhePoliUnif/index.html?lang=de
     img:
       src: confirm.png
       height: 40
@@ -1375,7 +1375,7 @@ actions:
     #"Watch the polyhedra!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/prismas_antiprismas.html
+    url: /apps/anims/prismas_antiprismas.html
   - type: dialog
     entries:    
       - text: "Wollt ihr mir helfen, das Karussellmodell fertigzustellen? Wir müssen nur noch alle uniformen Polyedermodelle festkleben, die ihr ausgewählt habt. Zusätzlich zu den Platonischen Körpern, die ihr ja vorhin schon gebaut habt."
@@ -1398,4 +1398,4 @@ actions:
     #"Watch the polyhedra!"
     cta: "Abspielen"
     #"Play!"
-    url: apps/anims/carrossel.html      
+    url: /apps/anims/carrossel.html      

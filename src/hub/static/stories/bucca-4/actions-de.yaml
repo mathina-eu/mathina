@@ -381,7 +381,7 @@ actions:
     cta: Probiere es aus.
     #"Try it yourself!"
     tag: app1
-    url: apps/bucca-4-app/bucca-4-app-1.htm?l=4
+    url: /apps/bucca-4-app/bucca-4-app-1.htm?l=4
   - type: dialog
     entries:     
       - text: Seht ihr, jetzt haben wir das gemeinsame Geheimnis. Das können wir als Schlüssel für alle Verschlüsselungsverfahren verwenden, die ihr schon auf dieser Insel kennengelernt habt.
@@ -453,7 +453,7 @@ actions:
     cta: Schau nach und entschlüssele sie!
     #"Try it yourself!"
     tag: app2
-    url: apps/bucca-4-app/bucca-4-app-2.htm?l=4
+    url: /apps/bucca-4-app/bucca-4-app-2.htm?l=4
   - type: dialog
     entries:     
       - text: Wow! Weißt du etwas darüber, Angela?
@@ -517,7 +517,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app3
-    url: apps/bucca-4-app/bucca-4-app-3.htm?l=4
+    url: /apps/bucca-4-app/bucca-4-app-3.htm?l=4
   - type: clearImage
     id: Leo2  
   - type: clearImage
@@ -663,7 +663,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app4
-    url: apps/bucca-4-app/bucca-4-app-4.htm?l=4
+    url: /apps/bucca-4-app/bucca-4-app-4.htm?l=4
      
   - type: dialog
     entries:      

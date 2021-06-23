@@ -620,7 +620,7 @@ actions:
     toolbarText: "Encode the word. Remember: to encode you have to start from the inner circle"
     cta: "Try it yourself!"
     tag: app1
-    url: apps/bucca-2-app/bucca-2-app-1.htm?l=1
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=1
 
 
   - type: sceneText
@@ -835,7 +835,7 @@ actions:
     toolbarText: "Try to decipher the secret message with the help of the jewel"
     cta: "Try it yourself!"
     tag: app2
-    url: apps/bucca-2-app/bucca-2-app-2.htm?l=1
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=1
     
   - type: sceneText
     text: >

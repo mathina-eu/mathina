@@ -103,7 +103,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app1
-    url: apps/bucca-3-app/bucca-3-app-1.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-1.htm?l=4
 
   - type: clearImage
     id: CaesarJewel
@@ -159,7 +159,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app2
-    url: apps/bucca-3-app/bucca-3-app-2.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-2.htm?l=4
 
   - type: dialog
     entries:
@@ -617,7 +617,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app3
-    url: apps/bucca-3-app/bucca-3-app-3.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-3.htm?l=4
 
   - type: image
     id: Angela3
@@ -969,7 +969,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app4
-    url: apps/bucca-3-app/bucca-3-app-4.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-4.htm?l=4
 
   - type: sceneText
     text: >
@@ -1042,7 +1042,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app5
-    url: apps/bucca-3-app/bucca-3-app-5.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-5.htm?l=4
     
   - type: clearImage
     id: Dipinto
@@ -1178,7 +1178,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app6
-    url: apps/bucca-3-app/bucca-3-app-6.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-6.htm?l=4
 
   - type: clearImage
     id: Angela6
@@ -1269,7 +1269,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app7
-    url: apps/bucca-3-app/bucca-3-app-7.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-7.htm?l=4
  
   - type: clearImage
     id: Angela7
@@ -1311,7 +1311,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app8
-    url: apps/bucca-3-app/bucca-3-app-8.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-8.htm?l=4
 
 
 
@@ -1340,7 +1340,7 @@ actions:
     cta: Probiere es aus!
     #"Try it yourself!"
     tag: app9
-    url: apps/bucca-3-app/bucca-3-app-9.htm?l=4
+    url: /apps/bucca-3-app/bucca-3-app-9.htm?l=4
 
 
   - type: dialog

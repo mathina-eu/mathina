@@ -869,7 +869,7 @@ actions:
     text: "Versuche, den Einhorndrachen mit Zahlenpaaren fliegen zu lassen."
     toolbarText: Fliege den Einhorndrachen mit Zahlenpaaren!
     #"Try to fly the unidragon with pairs of numbers"
-    url: apps/imaginary/app_2/2_1/index.html?lang=de
+    url: /apps/imaginary/app_2/2_1/index.html?lang=de
     cta: Fliege den Einhorndrachen!
 
   - type: sceneText
@@ -914,7 +914,7 @@ actions:
     #only fly over the blue sky, if you hit a cloud or a mountain, you
     #will have to start again."
     toolbarText: Fliege zum Schloss!
-    url: apps/imaginary/app_2/2_2/index.html?lang=de
+    url: /apps/imaginary/app_2/2_2/index.html?lang=de
     cta: Fliege den Einhorndrachen!
 
   - type: dialog
@@ -974,7 +974,7 @@ actions:
   - type: game
     text: "Schnapp dir alle Feuerbälle, ohne die Hindernisse zu berühren, und flieg dann zum Schloss. Wenn du es geschafft hast, kannst du es nocheinmal mit mehr Feuerbällen und mehr Wolken versuchen. Merke dir erst alle Anweisungen, du kannst den Drachen nur einmal los schicken."
     #"Eat all the fireballs without touching the clouds and then reach the castle"
-    url: apps/imaginary/app_2/2_3/index.html?lang=de
+    url: /apps/imaginary/app_2/2_3/index.html?lang=de
     toolbarText: Nimm die Feuerbälle mit und fliege in einem Rutsch zum Schloss!
     cta: Fliege den Einhorndrachen!
 

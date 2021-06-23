@@ -176,7 +176,7 @@ actions:
     text: Constrói uma tabela preenchendo a quantidade inicial de medalhas de ouro recebidas.
     toolbarText: 
     cta: Consegues descobrir quantas medalhas de ouro é que eles recebem?
-    url: apps/logi-4-app/logi-4-app.htm?c=1&l=3
+    url: /apps/logi-4-app/logi-4-app.htm?c=1&l=3
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -251,7 +251,7 @@ actions:
     text: Apercebeu-se de alguma regularidade com o número 116?
     toolbarText: 
     cta: Experimenta!
-    url: apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=3
+    url: /apps/logi-4-app/logi-4-app.htm?n=116&s=2&f=7&l=3
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -318,7 +318,7 @@ actions:
     text: Achas que o Jorge tem razão? 127 funciona?
     toolbarText: 
     cta: Experimenta com o número 127!
-    url: apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=3
+    url: /apps/logi-4-app/logi-4-app.htm?n=127&s=2&f=7&l=3
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:

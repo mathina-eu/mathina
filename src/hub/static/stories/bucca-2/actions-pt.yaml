@@ -619,7 +619,7 @@ actions:
     text: "Codifica corretamente a palavra."
     toolbarText: "Codifica a palavra. Lembra-te: para codificar deves começar do disco interno"
     cta: "Experimenta!"
-    url: apps/bucca-2-app/bucca-2-app-1.htm?l=3
+    url: /apps/bucca-2-app/bucca-2-app-1.htm?l=3
 
 
   - type: sceneText
@@ -833,7 +833,7 @@ actions:
     text: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     toolbarText: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     cta: "Tenta tu mesmo!"
-    url: apps/bucca-2-app/bucca-2-app-2.htm?l=3
+    url: /apps/bucca-2-app/bucca-2-app-2.htm?l=3
     
   - type: sceneText
     text: >

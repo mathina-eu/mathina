@@ -68,7 +68,7 @@ actions:
     text: "Prova a controllare se l'immagine ha un asse di simmetria. Per farlo sposta lo specchio, trascinandolo avanti e indietro con la barra di scorrimento"
     toolbarText: "Scopri se l'immagine ha un asse di simmetria."
     cta: "Giochiamo!"
-    url: apps/espelho_im1/index.html
+    url: /apps/espelho_im1/index.html
     img:
       src: move-icon.png
       height: 40
@@ -91,7 +91,7 @@ actions:
     text: "Controlla se l'immagine ha un asse di simmetria. Per farlo sposta lo specchio, trascinandolo avanti e indietro con la barra di scorrimento."
     toolbarText: "Scopri se l'immagine ha un asse di simmetria."
     cta: "Giochiamo!"
-    url: apps/espelho_im2/index.html
+    url: /apps/espelho_im2/index.html
     img:
       src: move-icon.png
       height: 40
@@ -119,7 +119,7 @@ actions:
     text: "Aiuta Mathina a scegliere i rosoni che hanno degli assi di simmetria."
     toolbarText: "Scegli 4 rosoni con asse di simmetria."
     cta: "Aiuta Mathina!"
-    url: apps/EscolheRosaceas/index.html?lang=it    
+    url: /apps/EscolheRosaceas/index.html?lang=it    
   - type: dialog
     entries:    
       - text: "Fatto! Posso tenerli?"
@@ -139,7 +139,7 @@ actions:
     text: "Mathina come può vincere i rosoni? Se hai dei dubbi, clicca qui"
     toolbarText: "Riponi i rosoni nelle borse corrette!"
     cta: "Prova a risolvere il gioco, mettendo i rosoni nelle borse corrette!"
-    url: apps/rosaceas_diedrais/index.html
+    url: /apps/rosaceas_diedrais/index.html
     img:
       src: vertical.png
       height: 40
@@ -212,7 +212,7 @@ actions:
     text: "Aiuta Mathina a vincere i rosoni! Se hai dubbi clicca su"
     toolbarText: "Metti i rosoni nella borsa corretta."
     cta: "Metti i rosoni nella borsa corretta!"
-    url: apps/rosaceas_ciclicas/index.html
+    url: /apps/rosaceas_ciclicas/index.html
     img:
       src: rodar.png
       height: 40
@@ -384,7 +384,7 @@ actions:
     tag: tg1
     text: "Dai una mano a Mathina ad uscire dal labirinto!"
     cta: "Provaci tu!"
-    url: apps/labirinto-s/index.html?lang=it&sim=ref
+    url: /apps/labirinto-s/index.html?lang=it&sim=ref
   - type: clearBackground
     id: c1-bg2     
   - type: background
@@ -467,7 +467,7 @@ actions:
     tag: tg2
     text: "Aiuta Mathina a uscire dal labirinto del mezzo giro!"
     cta: "Provaci tu!"
-    url: apps/labirinto-s/index.html?lang=it&sim=rot
+    url: /apps/labirinto-s/index.html?lang=it&sim=rot
   - type: clearImage
     id: HalfTurnrMaze
   - type: clearBackground

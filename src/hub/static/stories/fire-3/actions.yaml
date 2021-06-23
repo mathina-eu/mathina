@@ -417,7 +417,7 @@ actions:
     #Adjust the function to get the target graph.
     # "App 3-1 (not ready yet)"
     cta: Fly the phoenix!
-    url: apps/imaginary/app_3/3_1/index.html?lang=en
+    url: /apps/imaginary/app_3/3_1/index.html?lang=en
 
 # Game 3.2
   - type: game
@@ -427,7 +427,7 @@ actions:
     toolbarText: Move the points so Flick will not hit any obstacles during his flight.
     #Place the points so that the graph does not touch the obstacles.
     cta: Fly the phoenix!
-    url: apps/imaginary/app_3/3_2/index.html?lang=en
+    url: /apps/imaginary/app_3/3_2/index.html?lang=en
 
   # - type: clearImage
     # id: leo
@@ -535,7 +535,7 @@ actions:
     text: To fly this phoenix, you tell how much it should ascend or descend by moving the hand on the left up or down. Fly it avoiding the obstacles.
     toolbarText: Avoid the obstacles and reach the right side.
     cta: Fly the phoenix!
-    url: apps/imaginary/app_3/3_3/index.html?lang=en
+    url: /apps/imaginary/app_3/3_3/index.html?lang=en
 
   - type: clearImage
     id: phoe2
@@ -581,7 +581,7 @@ actions:
     text: Adjust the points to create a curve. It tells the amount of ascend or descend of the phoenix at each time. Using that technique, collect all the fireballs in your way.
     toolbarText: Adjust the curve that tells the ascend or descend of the phoenix. Eat all the fireballs.
     cta: Fly the phoenix!
-    url: apps/imaginary/app_3/3_4/index.html?lang=en
+    url: /apps/imaginary/app_3/3_4/index.html?lang=en
 
   - type: image
     src: wizard.png

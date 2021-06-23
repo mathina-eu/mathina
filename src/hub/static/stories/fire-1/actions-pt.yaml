@@ -372,7 +372,7 @@ actions:
       Usa o chifre para guiar o uni-dragão.
       Tenta desenhar algumas formas bonitas no ar.
     toolbarText: Faz voar o uni-dragão!
-    url: apps/imaginary/app_1/1_1/index.html?lang=pt
+    url: /apps/imaginary/app_1/1_1/index.html?lang=pt
     cta: Faz voar o uni-dragão!
 
 
@@ -445,7 +445,7 @@ actions:
   - type: game
     text: Faz voar o uni-dragão para comer todos os insetos de fogo. Não toques nas nuvens, os pássaros de fogo detestam-nas!
     toolbarText: Apanha os insetos de fogo!
-    url: apps/imaginary/app_1/1_2/index.html?lang=pt
+    url: /apps/imaginary/app_1/1_2/index.html?lang=pt
     cta: Apanha os insetos de fogo!
 
   - type: clearImage
@@ -466,7 +466,7 @@ actions:
   - type: game
     text: Tenta voar o mais próximo possível das linhas no céu
     toolbarText: Segue as linhas!
-    url: apps/imaginary/app_1/1_3/index.html?lang=pt
+    url: /apps/imaginary/app_1/1_3/index.html?lang=pt
     cta: Segue as linhas!
 
   - type: sceneText
@@ -501,4 +501,4 @@ actions:
   - type: game
     text: Podes treinar outra vez a pilotar o uni-dragão. Que formas consegues fazer?
     cta: "Treina!"
-    url: apps/imaginary/app_1/1_1/index.html?lang=pt
+    url: /apps/imaginary/app_1/1_1/index.html?lang=pt

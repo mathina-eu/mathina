@@ -293,7 +293,7 @@ actions:
     text: Ajuda a Mathina e o Leo a encontrarem um bom plano, movendo os 2 polícias no mapa.
     toolbarText: 
     cta: Experimenta!
-    url: apps/logi-3-app/logi-3-app.htm?v=1
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
     entries:
       - text: Claro, dois polícias não são suficientes!
@@ -371,7 +371,7 @@ actions:
     text: Ajuda a Mathina e o Leo a encontrarem um bom plano, colocando cubos de açúcar no mapa. 
     toolbarText: O utilizador pode mover cubos de açúcar no mapa.
     cta: Experimenta!
-    url: apps/logi-3-app/logi-3-app.htm?v=2
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
     vars:
@@ -542,4 +542,4 @@ actions:
     text: Gostaste da app? Continua a jogar com outros mapas..
     toolbarText: 
     cta: Clica aqui!
-    url: apps/logi-3-app/logi-3-app.htm?v=3
+    url: /apps/logi-3-app/logi-3-app.htm?v=3

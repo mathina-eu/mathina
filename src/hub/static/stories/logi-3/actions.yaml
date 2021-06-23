@@ -324,7 +324,7 @@ actions:
     text: Help Mathina and Leo find a good plan by moving 2 policemen on the map.
     toolbarText: 
     cta: Try it yourself!
-    url: apps/logi-3-app/logi-3-app.htm?v=1
+    url: /apps/logi-3-app/logi-3-app.htm?v=1
   - type: dialog
     style: "position: absolute; left: 600px; top: 5px;"  
     entries:
@@ -410,7 +410,7 @@ actions:
     text: Help Mathina and Leo find a good plan by placing sugar cubes on the map. 
     toolbarText: 
     cta: Try it yourself!
-    url: apps/logi-3-app/logi-3-app.htm?v=2
+    url: /apps/logi-3-app/logi-3-app.htm?v=2
   - type: animation
     target: sugar1
     vars:
@@ -592,4 +592,4 @@ actions:
     text: Have you enjoyed using the app? Continue playing with different maps.
     toolbarText: 
     cta: Click here!
-    url: apps/logi-3-app/logi-3-app.htm?v=3
+    url: /apps/logi-3-app/logi-3-app.htm?v=3
