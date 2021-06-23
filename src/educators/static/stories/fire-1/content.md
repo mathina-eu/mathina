@@ -16,18 +16,18 @@ The exercises for following a curve will pose a particular challenge on the coor
 
 All three apps in this story use the same control element - the magic wand held by a hand, which is fixed to the position in the middle of the lower edge of the screen. The unidragon will always fly in the direction the wand is pointing to. So the horn of the dragon and the magic wand (which is actually the milk horn of this unidragon, as explained in the story) will always be parallel. The direction of the flight of the unidragon can be changed by turning the wand.
 
-![Horn](stories/fire-1/img/_align-center_/horn.png)
+![Horn](/stories/fire-1/img/_align-center_/horn.png)
 
 The speed of the unidragon's flight can be controlled by touching the wand at different distances from the hand holding the wand. The speed is zero if the user touches it (with the mouse pointer or her/his own finger for touch devices) close to where the hand is holding the wand. The speed increases as the wand is touched further away from the hand (the hand is also the turning point for the wand). In the images below (from left to right) you see the aura of the wand increasing, which represents the speed. The larger the aura the higher the speed of the unidragon. If the user lets go (i.e. stopps clicking the mouse or does not touch the screen anymore) the dragon will also stop midair. This particular behavior was implemented to make it easier to control the flight and to reduce the stress level of the user.
 
-![Horn1](stories/fire-1/img/horn1.png)
-![Horn2](stories/fire-1/img/horn2.png)
-![Horn3](stories/fire-1/img/horn3.png)
-![Horn4](stories/fire-1/img/horn4.png)
+![Horn1](/stories/fire-1/img/horn1.png)
+![Horn2](/stories/fire-1/img/horn2.png)
+![Horn3](/stories/fire-1/img/horn3.png)
+![Horn4](/stories/fire-1/img/horn4.png)
 
 The dragon may fly off the screen but will return if the user guides him back using the wand. The user can also use the 'Back' button to teleport the dragon to his original position in the middle of the screen.
 
-![Back](stories/fire-1/img/_align-center_/back.png)
+![Back](/stories/fire-1/img/_align-center_/back.png)
 
 ## [App 1 - Fly the Unidragon]($HUB_URL/apps/?appNumber=0&story=fire-1)
 

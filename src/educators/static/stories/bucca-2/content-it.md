@@ -4,7 +4,7 @@ Da un punto di vista dei contenuti matematici, lo scopo di questa storia è quel
 Si tratta di un semplice cifrario a sostituzione monoalfabetico. Questo vuol dire che ogni lettera dell'alfabeto viene associata a una lettera dello stesso alfabeto in modo univoco e in modo che questa corrispondenza associ lettere diverse a lettere diverse. 
 
 
-![The Caesar jewel used in the story](stories/bucca-2/img/_align-center_/sostituzione.png =900x160)
+![The Caesar jewel used in the story](/stories/bucca-2/img/_align-center_/sostituzione.png =900x160)
 
 Il modo con cui si associano tra di loro le lettere in un cifrario a sostituzione è la chiave del cifrario, mentre il metodo per cifrare consiste semplicemente nel sostituire ogni lettera con quella corrispondente secondo la chiave. Il metodo di decodifica è analogo, ma si segue la corrispondenza al contrario. Per esempio, con la chiave dell'immagine precedente, la parola "MESSAGGIO" viene cifrata nella parola "MBUUCDDNS"
 
@@ -17,19 +17,19 @@ Il modo con cui si associano tra di loro le lettere in un cifrario a sostituzion
 Il cifrario di Cesare nella sua forma originale è, tra i cifrari a sostituzione, molto semplice: la chiave infatti consiste nell'associare a ogni lettera quella che la segue nell'alfabeto di 3 posti: alla "A" viene associata la "D", alla "B" la "E" e così via... Per conoscere la chiave ci basta sapere il numero di "salti", che dobbiamo fare, cioè 3. Se nel cercare la lettera dovessimo arrivare alla "Z", dovremo ricominciare dall'inizio dell'alfabeto. Ad esempio, alla lettera "Z" dovremo associare la "C".
 
 
-![The original Caesar circle](stories/bucca-2/img/_align-center_/caesarkey.png =620x295)
+![The original Caesar circle](/stories/bucca-2/img/_align-center_/caesarkey.png =620x295)
 
 
 Per questo motivo, per utilizzare un cifrario di Cesare velocemente, è spesso comodo rappresentare le lettere dell'alfabeto non su una riga, ma in cerchio in modo che saltando da una lettera all'altra non sia necessario ripartire mai dall'inizio perché le lettere si susseguono senza interruzioni.
 
-![The alphabet placed in a circle for use with Caesar cipher](stories/bucca-2/img/_align-center_/caesarcircle.png =300x300)
+![The alphabet placed in a circle for use with Caesar cipher](/stories/bucca-2/img/_align-center_/caesarcircle.png =300x300)
 
 Spesso, in letteratura, si parla di cifrario di Cesare anche quando i salti non sono 3 ma un numero scelto (la chiave del cifrario) arbitrariamente. Nella storia "Il pappagallo parlante", ad esempio, Mathina incontra un pappagallo che si esprime in un linguaggio particolare: il pappagallo risponde in codice utilizzando il cifrario di Cesare con 1 salto. Alla richiesta "Vuoi dei biscotti?", l'animale risponde "TJ!". La lettera che segue la "S" è la "T" mentre quella che segue la "I" è la "J": il goloso pennuto risponde prontamente "SI!" alla domanda di Mathina!
 
 Nella storia Mathina riceve in dono un gioiello con due cerchi concentrici, con incise le lettere dell'alfabeto su ciascun cerchio. Questo permette di cifrare e decifrare facilmente dei messaggi con il cifrario di Cesare. Per cifrare basta cercare una lettera nel disco interno e scegliere la lettera nella stessa posizione nel disco esterno. Per decifrare si fa la stessa cosa ma leggendo le lettere dall'esterno all'interno.
 
 
-![The Caesar jewel used in the story](stories/bucca-2/img/_align-center_/caesarjewel.png =300x300)
+![The Caesar jewel used in the story](/stories/bucca-2/img/_align-center_/caesarjewel.png =300x300)
 
 Nelle due esperienze interattive della storia, i lettori sono coinvolti rispettivamente nel processo di cifratura, [nota la chiave]($HUB_URL/story/the-talking-parrot/?actionLink=app1) e di decifratura, [senza conoscere la chiave]($HUB_URL/story/the-talking-parrot/?actionLink=app2).
 
@@ -66,7 +66,7 @@ Tutte le app sono programmate in Javascript e possono essere utilizzate su compu
 Nella prima esperienza, la chiave del metodo è quella usata dal pappagallo John, cioè il salto di una lettera. In questa app l'utente deve provare a cifrare correttamente alcune parole usando il cifrario di Cesare con un salto.
 
 @[youtube](rL_8zo54uOY?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-1/transcripts/Script2-it.pdf)
+[Script](/stories/symm-1/transcripts/Script2-it.pdf)
 
 &nbsp;
 
@@ -76,7 +76,7 @@ Nella seconda app l'utente deve invece cercare di decifrare un messaggio. L'unic
 
 
 @[youtube](djsCaPaiRlc?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-1/transcripts/Script2-it.pdf)
+[Script](/stories/symm-1/transcripts/Script2-it.pdf)
 
 &nbsp;
 

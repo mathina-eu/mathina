@@ -3,10 +3,10 @@ Der mathematische Hintergrund dieser Geschichte besteht darin, die Kryptografie 
 
 In dieser Geschichte wird eine einfache kryptografische Methode vorgestellt, die aber alle modernen und effektiven Merkmale besitzt. Es gibt ein Verfahren, die eigentliche Methode, die es erlaubt, die zu übermittelnde Nachricht zu verstecken, und es gibt den Schlüssel (also einen Code, eine Zahl oder ein Konzept), der es jedem, der ihn kennt, erlaubt, die versteckte Nachricht zu verstehen. Die kryptografische Methode, die Leo und seine Freunde verwenden, beinhaltet die Wahl eines Schlüssels. Zu diesem Zweck wählen sie eine Phrase, die es erlaubt, eine genaue Figur zu identifizieren. Mit dem Hinweis "es hat fünf Seiten" können wir das Fünfeck unter den folgenden Vorschlägen identifizieren:
 
-![Kreis](stories/bucca-1/img/circle.png =250x150)
-![Dreieck](stories/bucca-1/img/triangle.png =250x150)
-![Pentagon](stories/bucca-1/img/pentagon.png =250x150)
-![Viereck](stories/bucca-1/img/square.png =250x150)
+![Kreis](/stories/bucca-1/img/circle.png =250x150)
+![Dreieck](/stories/bucca-1/img/triangle.png =250x150)
+![Pentagon](/stories/bucca-1/img/pentagon.png =250x150)
+![Viereck](/stories/bucca-1/img/square.png =250x150)
 
 Die Methode zum Verschlüsseln der Nachricht besteht darin, weitere falsche Nachrichten zu schreiben, die der echten Nachricht, die man verstecken möchte, ähnlich sind, und auf jede Nachricht ein anderes Bild zu malen. An diesem Punkt können alle Nachrichten, die sich in ihrer Gesamtheit widersprechen, so platziert werden, dass jeder sie lesen kann. Nur wer den Schlüssel hat ("es hat fünf Seiten"), wird beim Anblick des aufgemalten Fünfecks sofort verstehen, was die richtige Botschaft ist. In den drei interaktiven Apps kennen die Spielenden den Schlüssel und sind bei den ersten beiden interaktiven Erlebnissen in den Kodierungsprozess eingebunden: [(erste App)]($HUB_URL/de/story/the-secret-messages/?actionLink=app1) und [(zweite App)]($HUB_URL/de/story/the-secret-messages/?actionLink=app2). In der dritten App geht es schließlich um den Dekodierungsprozess der Nachricht: [dritte App]($HUB_URL/de/story/the-secret-messages/?actionLink=app3).
 
@@ -32,7 +32,7 @@ Alle Apps wurden in JavaScript programmiert und sind sowohl für PCs als auch f�
 In der ersten App lautet der Schlüssel "es hat fünf Seiten", und die zu vermittelnde Botschaft lautet "Schau auf den dritten Baum, nördlich von den Brunnen". Die Spielenden müssen die zu übermittelnde Nachricht und die Figur, die durch den Schlüssel beschrieben wird (ein Fünfeck), in die Mitte des Bildschirms ziehen. In dieser App sind die verfügbaren Bilder abstrakte Figuren.
 
 @[youtube](v5bwEKkhqc0?_align-center_)
-[Script (PDF, engisch)](stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -41,7 +41,7 @@ In der ersten App lautet der Schlüssel "es hat fünf Seiten", und die zu vermit
 Was die Kodierung der Nachricht betrifft, hat die zweite App  die gleiche Ausgangssituation wie die erste. Nun ist der Schlüssel allerdings ein anderer ("der Himmel ist voll davon"). Außerdem gibt es, anders als bei der ersten App, mehr Bilder als Nachrichten und es gibt zwei mögliche Bilder, die die Anforderungen erfüllen: eine Abbildung mit Sternen und eine mit einer Wolke. Die Spielenden müssen eines dieser beiden Bilder mit der richtigen Nachricht assoziieren und die falschen Nachrichten mit anderen Bildern als diesen beiden kombinieren.
 
 @[youtube](Kh3v55aMQfk?_align-center_)
-[Script (PDF, engisch)](stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -50,7 +50,7 @@ Was die Kodierung der Nachricht betrifft, hat die zweite App  die gleiche Ausgan
 In der dritten und letzten App sind die Spielenden in den Prozess der Entschlüsselung der Nachricht involviert: Sie kennen den Schlüssel ("der Himmel ist voll davon") und müssen die geheime Nachricht unter den vorgeschlagenen auswählen.
 
 @[youtube](p2ehDaFkRFk?_align-center_)
-[Script (PDF, engisch)](stories/bucca-1/transcripts/Script1.pdf)
+[Script (PDF, engisch)](/stories/bucca-1/transcripts/Script1.pdf)
 
 &nbsp;
 

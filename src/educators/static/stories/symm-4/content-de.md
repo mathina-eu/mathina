@@ -12,7 +12,7 @@ Bevor wir in der Geschichte diese Polyeder vorstellen, gehen wir auf ein wichtig
 In der Geschichte wird zufällig ein Beispiel für ein nicht konvexes Polyeder gefunden, als Leo versucht, eine Kabine des Polyeder-Karussells zu schließen und [einige Kabinenteile sich nach innen drücken]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg1).
 
 
-| ![Ikosaeder](stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Nicht-konvexes Polyeder](stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
+| ![Ikosaeder](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Nicht-konvexes Polyeder](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
 
 | Ikosaeder | Nicht-konvexes Polyeder, erzeugt durch Platzieren eines Scheitelpunkts des Ikosaeders in sein Inneres ([Klicken Sie hier, um das Polyeder zu drehen]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)) |
@@ -21,7 +21,7 @@ Auf diese Weise erhält man statt eines Ikosaeders ein nicht-konvexes Polyeder.
 
 Die in der Geschichte verwendete Definition ist die folgende: **Ein Polyeder ist konvex**, wenn für jedes Paar von Punkten auf den Flächen das gesamte Segment, das die Punkte verbindet, im Polyeder enthalten ist.
 
-![Non convex polyhedron](stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
+![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
 
 ## Platonische Körper
 
@@ -56,7 +56,7 @@ Leo und Mathina stellen bald fest, dass es nicht nur unmöglich ist, platonische
 
 | Würfel | Tetraeder | Oktaeder | Ikosaeder | Dodekaeder |
 | ------ | ------ | ------ | ------ | ------ |
-|![Würfel](stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](stories/symm-4/img/_align-center_/dodeca.png =146x150)|
+|![Würfel](/stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](/stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](/stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](/stories/symm-4/img/_align-center_/dodeca.png =146x150)|
 
 ### Platonische Körper - Definition
 
@@ -80,7 +80,7 @@ Was ist ein uniformes Polyeder? Bei der Untersuchung eines bestimmten uniformen 
 
 | Kuboktaeder (uniformes Polyeder) | Großes Rhombikuboktaeder (uniformes Polyeder) | Miller-Polyeder (nicht uniformes Polyeder) | Kleines Rhombikuboktaeder (uniformes Polyeder) |
 | ------ | ------ | ------ | ------ |
-|![Cuboctahedon](stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
+|![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
 Nach "Mathinas Definition" kann jedoch ein Problem auftreten: Wenn wir einen Abdruck von einem Raumwinkel des großen Rhombikuboktaeders nehmen, [passt die Form nicht zu allen Raumwinkeln]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg15). In diesem Fall werden [zwei verschiedene Abdrücke benötigt]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg16).
 
@@ -100,14 +100,14 @@ In der Geschichte ist eine **Polyedersymmetrie** definiert als eine Isometrie (d
 
 Warum ist das Miller-Polyeder nicht uniform? Wenn wir die Eckpunkte *A* und *B* betrachten, wird jede Isometrie, die *A* auf *B* abbildet, den Ring der Quadrate vom Äquator entfernen und damit [das endgültige Aussehen des Polyeders verändern]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 
-![Miller polyhedron](stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
+![Miller polyhedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Drehe das Miller-Polyeder hier]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
 Wenn wir jedoch [die achteckige Kuppel an der Spitze des Miller-Polyeders um 45º drehen]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg22), erhalten wir ein neues uniformes Polyeder: das kleine Rhombikuboktaeder.
 
 Im Laufe der Geschichte lernen Mathina und Leo **alle uniformen Polyeder** kennen: 1) die unendliche Familie der Prismen, [deren Grundflächen regelmäßige Vielecke und deren Seitenflächen Quadrate sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23); 2) die unendliche Familie der Antiprismen, [deren Grundflächen regelmäßige Vielecke sind und deren Seitenflächen gleichseitige Dreiecke sind]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 3) 13 weitere Polyeder, die sogenannten archimedischen Körper:
 
-![Uniform polyhedra](stories/symm-4/img/_align-center_/uniformes.png =675x400)
+![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 Am Ende bauen Mathina und Leo zusammen mit dem Techniker ein Modell für das ["Polyeder"-Karussell]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg25). Es besteht aus hochsymmetrischen Polyedern. Tatsächlich gibt es für jedes Polyeder und für jedes Paar von Scheitelpunkten mindestens eine Symmetrie des Polyeders, die einen Scheitelpunkt auf den anderen überträgt.
 
@@ -151,22 +151,22 @@ Im Folgenden finden Sie eine kurze Beschreibung der Apps mit Links zu den Anleit
 ## [App 1 - Konvexe Polyeder aufteilen]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg26)
 
 Hier sind acht Polyeder zu sehen. Die Spielerin/der Spieler wird aufgefordert, die vier konvexen auszuwählen. Nach Auswahl der Polyeder und Klicken auf 
-![Bestätigen](stories/symm-4/img/confirm.png =40x40)
+![Bestätigen](/stories/symm-4/img/confirm.png =40x40)
 zeigt das Programm acht weitere Polyeder an. Es werden insgesamt 3 mal 8 Polyeder angezeigt. Das Spiel ist beendet, wenn alle konvexen Polyeder ausgewählt sind.
 
 @[youtube](GDYOL7SnfY0?_align-center_)
-[Script  (PDF, englisch)](stories/symm-4/transcripts/Script4.pdf)
+[Script  (PDF, englisch)](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
 ## [App 2 - Die richtigen Würfelnetze]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg27)
 
 Die App zeigt sechs unterschiedliche Netze. Die Spielerin/der Spieler wird aufgefordert, die drei auszuwählen, aus denen ein Würfel gebaut werden könnte. Nach Auswahl der richtigen Netze und dem Klicken auf 
-![Bestätigen](stories/symm-4/img/confirm.png =40x40)
+![Bestätigen](/stories/symm-4/img/confirm.png =40x40)
 zeigt das Programm sechs neue Netze an. Es werden insgesamt 2 mal 6 Würfelnetze angezeigt. Das Spiel ist beendet, wenn alle Würfelnetze ausgewählt sind.
 
 @[youtube](NspkoF8gH3k?_align-center_)
-[Script  (PDF, englisch)](stories/symm-4/transcripts/Script4.pdf)
+[Script  (PDF, englisch)](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 

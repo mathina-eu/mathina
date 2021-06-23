@@ -21,16 +21,16 @@ You can also link to the apps list either using a tag and the story id:
 
 ## How to include a video
 
-![Some text](stories/demo-story/video/video.mp4)
+![Some text](/stories/demo-story/video/video.mp4)
 
 You can center a video by either adding `?_align-center_` after the video path 
 or adding `_align-center_` to the video path itself.
 
-![Some text](stories/demo-story/video/video.mp4?_align-center_)
+![Some text](/stories/demo-story/video/video.mp4?_align-center_)
 
 You can set a video's dimensions by adding `=300x170` (width x height)
 
-![Some text](stories/demo-story/video/video.mp4 =300x170)
+![Some text](/stories/demo-story/video/video.mp4 =300x170)
 
 Note that this video should be added to `static/stories/<story-id>/video/<filename>` 
 but **static** is not used in the url itself.
@@ -48,20 +48,20 @@ You can center a youtube video by including `?_align-center_` after the video ID
 
 Transcripts can be added as links to files. Add the files to the stories /transcript/ directory (you'll probably need to create it).
 
-Example: [Transcript (PDF)](stories/demo-story/transcripts/video1.pdf)
+Example: [Transcript (PDF)](/stories/demo-story/transcripts/video1.pdf)
 
 ## Images
 
-![Some alt text](stories/demo-story/img/test.png)
+![Some alt text](/stories/demo-story/img/test.png)
 
 You can set an image's dimensions by adding `=300x300` (width x height)
 
-![Some alt text](stories/demo-story/img/test.png =300x300)
+![Some alt text](/stories/demo-story/img/test.png =300x300)
 
 You can center an image by including `_align-center_` in the image's path (filename or create a subdirectory).
 Note that the actual filename or directory should include the string `_align-center_`.
 
-![Some alt text](stories/demo-story/img/_align-center_test.png)
+![Some alt text](/stories/demo-story/img/_align-center_test.png)
 
 ## h2 Heading
 ### h3 Heading

@@ -16,7 +16,7 @@ Crianças desta idade são capazes de usar expressões simbólicas (funções e 
 
 Ao abrir a app, verá um sistema de coordenadas, um gráfico amarelo e um outro púrpura. O amarelo é o caminho de voo que a fénix deve seguir, ou seja o objetivo a atingir. A curva púrpura é o gráfico da função polinomial da variável `@x@`. Pode ser ajustada no painel de controlo. Para cada potência de `@x@`, pode alterar o coeficiente correspondente no polinómio.
 
-![App1](stories/fire-3/img/_align-center_/app1-pt.png)
+![App1](/stories/fire-3/img/_align-center_/app1-pt.png)
 
 O grau do polinómio - o valor máximo dos expoentes de `@x@` - aumenta à medida que progride (o máximo é 3). Cada coeficiente pode ser mudado usando os botões `@+@` e `@-@`, de cada vez variando de +/- 0.1. Premindo continuamente dá-se uma variação contínua do valor. Quando o caminho correto é dado, a fénix automaticamente segue-o, voando. Depois um novo desafio de caminho de voo é apresentado ao utilizador. Pode usar a última função, que está ainda a ser apresentada, ou pode usar o botão "Apagar" para colocar todos os coeficientes em zero e recomeçar do princípio.
 
@@ -26,12 +26,12 @@ O grau do polinómio - o valor máximo dos expoentes de `@x@` - aumenta à medid
 
 O objetivo desta app é também criar um caminho de voo para a fénix, o qual é ainda descrito por um polinómio. Precisa de encontrar um caminho para a fénix chegar ao lado direito sem tocar nos obstáculos (montanhas e nuvens). No entanto desta vez não pode ajustar diretamente os coeficientes, mas pode mover seis pontos (amarelos) no plano coordenado. Juntamente com a origem, que é o ponto de partida da fénix, estes sete pontos descrevem um polinómio único de grau 6 (potência máxima de `@x@`). Este polinómio - o caminho de voo criado - passará por todos esses pontos. A curva só ficará visível quando disser à fénix para voar.
 
-![App2_1](stories/fire-3/img/2_1.png)
-![App2_2](stories/fire-3/img/2_2.png)
+![App2_1](/stories/fire-3/img/2_1.png)
+![App2_2](/stories/fire-3/img/2_2.png)
 
 Se a fénix falhar, voltará para a origem, deixando visível o caminho de voo da última tentativa. Poderá então alterar a curva mudando outra vez os pontos. Em alguns desafios poderá precisar de várias tentativas, fazendo pequenos ajustes no caminho de voo em cada uma. Se o objetivo for atingido, um novo desafio é apresentado, com mais obstáculos.
 
-![App2_3](stories/fire-3/img/_align-center_/2_3.png)
+![App2_3](/stories/fire-3/img/_align-center_/2_3.png)
 
 @[youtube](4tz4YHZZWYY?_align-center_)
 
@@ -39,7 +39,7 @@ Se a fénix falhar, voltará para a origem, deixando visível o caminho de voo d
 
 Para esta fénix voar, tem de lhe dizer quanto é que deve subir ou descer movendo para cima e para baixo a mão que está à esquerda. O objetivo é chegar ao lado direito evitando os obstáculos (montanhas e nuvens). O caminho de voo é horizontal se a mão estiver no zero, e a fénix sobe/desce se a mão estiver acima/abaixo de zero. A fénix só se move enquanto a mão estiver a ser arrastada, caso contrário pára no meio do ar (como acontece nas apps da história "O Treinador do Pássaro de Fogo").
 
-![App3](stories/fire-3/img/_align-center_/3.png)
+![App3](/stories/fire-3/img/_align-center_/3.png)
 
 Quando a fénix chega ao lado direito, regressa à tua mão, aparecendo novos obstáculos (até o máximo de 3 montanhas e 3 grupos de nuvens).
 
@@ -49,15 +49,15 @@ Quando a fénix chega ao lado direito, regressa à tua mão, aparecendo novos ob
 
 Esta app combina os métodos usados nas duas apps anteriores. Como na app 2, manipula os pontos para ajustar uma curva que passa por eles. Só que neste caso essa curva dá os valores de subida ou descida da fénix a cada momento - é a derivada do caminho de voo (usada na app 3). Tente apanhar todas as bolas de fogo durante o voo.
 
-![App4](stories/fire-3/img/_align-center_/4_1.png)
+![App4](/stories/fire-3/img/_align-center_/4_1.png)
 
 Quando tiver ajustado os pontos brancos, pode carregar no botão "Vai" para que a fénix voe. Durante o voo, uma seta amarela indica a direção e a velocidade da fénix na posição em que está (como a varinha mágica que controla o uni-dragão nas apps da história do "Treinador do Pássaro de Fogo"). As setas púrpura indicam o valor da derivada na posição corrente. Há uma seta púrpura que aparece junto da fénix, e outra (idêntica) junto da curva.
 
-![App4](stories/fire-3/img/_align-center_/4_2-pt.png)
+![App4](/stories/fire-3/img/_align-center_/4_2-pt.png)
 
 A fénix pode voar para fora do écran, mas acabará eventualmente por chegar ao lado direito. Se demorar muito, pode carregar no botão "Voltar" (o que corresponde a desistir do voo). Depois de um voo em que a fénix não apanhou todas as bolas de fogo, o caminho de voo mantém-se visível para o ajudar a fazer correções. Verifique a correspondência entre as curvas amarela (caminho de voo) e púrpura (derivada do caminho de voo).
 
-![App4](stories/fire-3/img/_align-center_/4_3.png)
+![App4](/stories/fire-3/img/_align-center_/4_3.png)
 
 Sugestões:
 * Pode também mover o primeiro ponto branco, inicialmente na origem.

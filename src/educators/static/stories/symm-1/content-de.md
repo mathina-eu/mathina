@@ -11,7 +11,7 @@ Später können die Kinder lernen, wie sie selbst Bilder mit Symmetrieachsen kon
 
 In der App [Spielzeuge bauen (I)]($HUB_URL/de/story/mathina-wins-a-lot-of-new-toys/?actionLink=tg2) werden auch Begriffe eingeführt, die mit dem Erkennen einiger geometrischer Figuren - Dreiecke, Quadrate und Kreise - zusammenhängen, zum Beispiel die Unterscheidung von kongruenten Dreiecken mit unterschiedlichen Ausrichtungen:
 
-![Congruent Triangle](stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110).
+![Congruent Triangle](/stories/symm-1/img/_align-center_/building_toys_I-tri.png =225x110).
 
 &nbsp;
 
@@ -51,7 +51,7 @@ Alle Apps wurden in JavaScript programmiert und sind sowohl für PCs als auch f�
 Die Spielerin oder der Spieler prüft, ob das gezeigte Bild eine Symmetrieachse hat. Dazu kann man das Bild in der Hälfte falten (horizontal oder vertikal) und prüfen, ob sich die beiden Teile exakt überlappen.
 
 @[youtube](Dm1r2igNWPs?_align-center_)
-[Script (PDF, englisch)](stories/symm-1/transcripts/Script1.pdf)
+[Script (PDF, englisch)](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -60,7 +60,7 @@ Die Spielerin oder der Spieler prüft, ob das gezeigte Bild eine Symmetrieachse 
 Es werden 16 Zeichnungen von Tieren gezeigt. Die Spielerin/der Spieler wird aufgefordert, alle Bilder auszuwählen, die symmetrisch sind, und sie in eine Kiste zu legen.
 
 @[youtube](Tbhnd5IwoBs?_align-center_)
-[Script (PDF, englisch)](stories/symm-1/transcripts/Script1.pdf)
+[Script (PDF, englisch)](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -69,7 +69,7 @@ Es werden 16 Zeichnungen von Tieren gezeigt. Die Spielerin/der Spieler wird aufg
 Auf dem Bildschirm sind ein Hintergrund aus grauen Quadraten, eine vertikale rote Linie und ein unsymmetrische Anordnung von Bauklötzen angezeigt. Die Spielerin/der Spieler soll farbige Formen vom oberen Bildrand nehmen und sie so in die grauen Quadrate setzen, dass die Baukklötze auf der linken Seite vertikal gespiegelt werden.
 
 @[youtube](1Og0JeyURHs?_align-center_)
-[Script (PDF, englisch)](stories/symm-1/transcripts/Script1.pdf)
+[Script (PDF, englisch)](/stories/symm-1/transcripts/Script1.pdf)
 
 &nbsp;
 
@@ -78,4 +78,4 @@ Auf dem Bildschirm sind ein Hintergrund aus grauen Quadraten, eine vertikale rot
 Auf dem Bildschirm sind eine rote Linie, ein GeoBoard und eine Zeichnung zu sehen, die auf einer Seite der roten Linie zu sehen ist. Die Spielerin/der Spieler soll die fehlenden Segmente auf der rechten Seite zeichnen, um ein achsensymmetrisches Bild zu erhalten.
 
 @[youtube](0G862XD2Xzk?_align-center_)
-[Script (PDF, englisch)](stories/symm-1/transcripts/Script1.pdf)
+[Script (PDF, englisch)](/stories/symm-1/transcripts/Script1.pdf)

@@ -45,11 +45,11 @@ Per la fascia di età 4-6 possono essere proposti giochi di combinatorica che co
 
 Create 3 carte rosse, 3 blu e 3 verdi, quindi inserite i numeri 1, 2 e 3 in ciascun colore. Il compito è posizionare le carte in una tabella 3 × 3 in modo che tutti e tre i colori e tutti e tre i numeri siano rappresentati in ogni riga e ogni colonna. Una versione più avanzata del gioco viene creata con una tabella 4x4. 
 
-![Solitaire game](stories/logi-1/img/solitaire2.png)
+![Solitaire game](/stories/logi-1/img/solitaire2.png)
 
 Il **sudoku** affina le capacità di pensiero. Ecco un esempio: 1. Inserire i numeri 1, 2, 3, 4 nei campi vuoti in modo che tutti e quattro i numeri siano presenti in ogni riga, in ogni colonna e in ogni quadrato incorniciato. 
 
-![Sudoku game](stories/logi-1/img/sudoku.png)
+![Sudoku game](/stories/logi-1/img/sudoku.png)
 
 # Esperienze interattive
 Ci sono 3 app che accompagnano la storia. La prima app consente di giocare liberamente con sequenze di colori, la seconda mira a differenziare tra sequenze identiche e diverse. La terza app consente all'utente di trovare l'ultimo pezzo mancante nella sequenza.
@@ -62,14 +62,14 @@ Tutte le app sono state programmate in JavaScript e sono ottimizzate sia per PC 
 SI vede un semaforo con tre luci. In questa app si possono impostare i colori e aggiungere ulteriori semafori (fino a 8) da colorare. In caso di necessità è possibile resettare.
 
 @[youtube](zdFCyi9WLkY?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/logi-1/transcripts/Script1.pdf)
+[Script](/stories/logi-1/transcripts/Script1.pdf)
 
 ## [App 2 - La sfida dei semafori II]($HUB_URL/story/the-traffic-light-challenge/?actionLink=secondGame)
 
 Otto semafori sono mostrati in fila. Puoi unire tra loro i semafori identici trascinandoli uno sull'altro. Una volta che sono piazzati uno accanto all'altro i doppioni spariscono.
 
 @[youtube](o7GglqqoNMs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/logi-1/transcripts/Script1.pdf)
+[Script](/stories/logi-1/transcripts/Script1.pdf)
 
 ## [App 3 - La sfida dei semafori III]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Trova la sesta sequenza di colori! Le regole dell'app sono le stesse della App 1.

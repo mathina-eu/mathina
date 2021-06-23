@@ -10,7 +10,7 @@ In the story, before introducing these polyhedra, we dwell on an important geome
 
 In the story, an example of a non convex polyhedron is found by chance, when Leo tries to close a vehicle of a Polyhedron Carousel and [some of the vehicle components turn inward]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg1).
 
-| ![Icosahedron](stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
+| ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
 | Icosahedron | Non convex polyhedron, created by placing a vertex of the icosahedron into its interior and considering the polyhedron thus obtained ([Click here to manipulate the polyhedron]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)) |
 
@@ -18,7 +18,7 @@ This way, instead of getting an icosahedron, a non convex polyhedron is obtained
 
 The definition used in the story is the following: **a polyhedron is convex** if, for each couple of points on the faces, the whole segment joining the points is contained in the polyhedron.
 
-![Non convex polyhedron](stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
+![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
 
 ## Platonic Solids
 
@@ -55,7 +55,7 @@ Leo and Mathina soon conclude that not only it is impossible to build Platonic s
 
 | Cube | Tetrahedron | Octahedron | Icosahedron | Dodecahedron |
 | ------ | ------ | ------ | ------ | ------ |
-|![Cube](stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](stories/symm-4/img/_align-center_/dodeca.png =146x150)|
+|![Cube](/stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](/stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](/stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](/stories/symm-4/img/_align-center_/dodeca.png =146x150)|
 
 ### Platonic Solids - definition
 
@@ -77,7 +77,7 @@ What is a uniform polyhedron? Examining a uniform polyhedron, the cuboctahedron,
 
 | Cuboctahedron (uniform polyhedron) | Great rhombicuboctahedron (uniform polyhedron) | Miller polyhedron (non uniform polyhedron) | Small rhombicuboctahedron(uniform polyhedron) |
 | ------ | ------ | ------ | ------ |
-|![Cuboctahedon](stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
+|![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
 However, following “Mathina’s definition” a problem may arise: if we build a mould around a solid angle of the great rhombicuboctahedron,  [the mould won’t fit all the solid angles]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg15): in this case, [two moulds are needed]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg16).
 
@@ -97,14 +97,14 @@ In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a functi
 
 Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 
-![Miller polyhedron](stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
+![Miller polyhedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Manipulate the polyhedron here]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
 However if we [rotate the octagonal dome on the top of the Miller polyhedron by 45º]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg22), we get a new uniform polyhedron: the small rhombicuboctahedron.
 
 Throughout the story, the characters get acquainted with **all uniform polyhedra**: 1) an infinite family of prisms, [whose bases are regular polygons and whose side faces are squares]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg23); 2) an infinite family of anti-prisms, [whose bases are regular polygons and whose side faces are equilateral triangles]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg24); 3) other 13 polyhedron:
 
-![Uniform polyhedra](stories/symm-4/img/_align-center_/uniformes.png =675x400)
+![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg25). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
 
@@ -146,22 +146,22 @@ Below, we present a small description of each app. Links both for the apps and f
 ## [Game 1 - Separating convex polyhedra]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg26)
 
 A set of 8 polyhedra is presented. The user is invited to choose the 4 convex ones. After choosing the correct polyhedra and clicking 
-![Confirm](stories/symm-4/img/confirm.png =40x40)
+![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 8 polyhedra. A total of 3 sets are shown. The game is solved when all "good" polyhedra (i.e. convex) are selected.
 
 @[youtube](GDYOL7SnfY0?_align-center_)
-[Script](stories/symm-4/transcripts/Script4.pdf)
+[Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
 ## [Game 2 - Choosing the right nets for the cube]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg27)
 
 A set of 6 proposals for cube nets is presented. The user is invited to choose the 3 “right” ones. After choosing the correct nets and clicking 
-![Confirm](stories/symm-4/img/confirm.png =40x40)
+![Confirm](/stories/symm-4/img/confirm.png =40x40)
 , the program shows a new set of 6 nets. A total of 2 sets are shown. The game is solved when all "good" cube nets are selected.
 
 @[youtube](NspkoF8gH3k?_align-center_)
-[Script](stories/symm-4/transcripts/Script4.pdf)
+[Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 

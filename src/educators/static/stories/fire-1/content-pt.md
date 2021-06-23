@@ -17,18 +17,18 @@ Os exercícios para seguir uma curva porão um desafio particular na coordenaç�
 
 As três apps nesta história usam todos o mesmo tipo de controle - a varinha mágica numa mão, que está numa posição fixa na margem inferior do écran. O uni-dragão voará sempre na direção apontada pela varinha mágica. Portanto o chifre do dragão e a varinha mágica (que é de facto o chifre de leite deste uni-dragão, como explicado na história) serão sempre paralelos.
 
-![Chifre](stories/fire-1/img/_align-center_/horn.png)
+![Chifre](/stories/fire-1/img/_align-center_/horn.png)
 
 A velocidade do voo do uni-dragão pode ser controlada tocando com a varinha mágica a certas distâncias da mão que segura a varinha mágica. A velocidade é zero se o utilizador toca  (com o apontador do rato ou com um dedo em dispositivos com écran tátil) perto dessa mão. A velocidade aumenta quando a varinha mágica é tocada mais longe da mão (a mão é também o centro em torno do qual roda a varinha mágica). Nas imagens abaixo (da esquerda para a direita) vê-se a aura da varinha mágica a aumentar, o que representa o valor da velocidade. Quanto maior a aura, mais alta é a velocidade do uni-dragão. Se o utilizador não fizer nada (i.e., pára de tocar com o rato ou com o dedo) o dragão pára no ar. Este comportamento particular foi implementado para tornar mais fácil o controle do voo e para reduzir o nível de pressão sobre o utilizador.
 
-![Chifre1](stories/fire-1/img/horn1.png)
-![Chifre2](stories/fire-1/img/horn2.png)
-![Chifre3](stories/fire-1/img/horn3.png)
-![Chifre4](stories/fire-1/img/horn4.png)
+![Chifre1](/stories/fire-1/img/horn1.png)
+![Chifre2](/stories/fire-1/img/horn2.png)
+![Chifre3](/stories/fire-1/img/horn3.png)
+![Chifre4](/stories/fire-1/img/horn4.png)
 
 O dragão pode voar para fora do écran mas retornará se o utilizador o guiar para trás usando a varinha mágica. O utilizador pode também usar o botão ‘Voltar’ para teleportar o dragão para a sua posição inicial no centro do écran.
 
-![Voltar](stories/fire-1/img/_align-center_/voltar.jpg)
+![Voltar](/stories/fire-1/img/_align-center_/voltar.jpg)
 
 ## [App 1 - Guiando o uni-dragão]($HUB_URL/pt/apps/?appNumber=0&story=fire-1)
 

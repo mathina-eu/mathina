@@ -14,15 +14,15 @@ Se vogliamo formalizzare questo concetto, possiamo considerare un fregio come:
 
 `*` Una regione^[Notare che la "regione" menzionata del piano di un fregio è illimitata a sinistra e a destra. L'immagine mostra solo una parte limitata di quella regione.]
 del piano per il quale ci sono traslazioni (in una sola direzione), che non cambiano l'aspetto del fregio: il fregio ha lo stesso aspetto, prima e dopo la traslazione;
-![Guarda il video](stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
+![Guarda il video](/stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
 
 `*` Inoltre, esiste una tale traslazione in modo che qualsiasi altra traslazione del fregio sia un suo multiplo intero.
 
-![Guarda il video](stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
+![Guarda il video](/stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
 
 **Nota 1**: quest'ultima proprietà esclude una retta come esempio di fregio. Infatti, se consideriamo una traslazione associata ad un qualsiasi vettore *v* su quella retta, che ovviamente manda la retta su se stessa, allora la traslazione associata a *0.5v* (che non è un multiplo intero *v*) manda comunque la retta in se stessa.
 
-![Translation associated to 0.5*v](stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
+![Translation associated to 0.5*v](/stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
 
 **Nota 2**: dalla definizione data, segue che un fregio non è limitato.
 
@@ -30,7 +30,7 @@ del piano per il quale ci sono traslazioni (in una sola direzione), che non camb
 ## Cos'è una simmetria?
 
 Non si può parlare di simmetrie senza introdurre il concetto di isometria. Una **isometria** è una funzione che preserva le distanze: se due punti *A* e *B* vengono trasformati in *A'* e *B'*, allora *dist (A, B) = dist (A ', B ')*.
-![Isometry](stories/symm-3/img/_align-center_/iso.png =300x250)
+![Isometry](/stories/symm-3/img/_align-center_/iso.png =300x250)
 
 Nella storia, vengono menzionate quattro diverse isometrie (nel seguente ordine): riflessione, rotazione, glissoriflessione e traslazione. Questa è la lista completa delle isometrie del piano: è possibile dimostrare che non ce ne sono altre.
 
@@ -72,7 +72,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Bag 2](stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Bag 3](stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Bag 4](stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Bag 5](stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
 |Assi di simmetria verticali| Nessun asse di simmetria verticale | Assi di simmetria verticali | Nessun asse di simmetria verticale | Assi di simmetria verticali |
 |Nessun asse di simmetria orizzontale| Assi di simmetria orizzontali |Assi di simmetria orizzontali  | Nessun asse di simmetria orizzontale |  Nessun asse di simmetria orizzontale|
 |Nessuna rotazione |  |  | Rotazioni | Rotazioni |
@@ -89,7 +89,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 | Bag 6 | Bag 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Bag 2](stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Bag 3](stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Bag 4](stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Bag 5](stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Bag 6](stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Bag 7](stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Bag 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Bag 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
 |Assi di simmetria verticali| Nessun asse di simmetria verticale  | Assi di simmetria verticali| Nessun asse di simmetria verticale  | Assi di simmetria verticali | Nessun asse di simmetria verticale  | Nessun asse di simmetria verticale  |
 |Nessun asse di simmetria orizzontale|  Assi di simmetria orizzontali  | Assi di simmetria orizzontali  | Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale |
 |Nessuna rotazione|  |  | Rotazioni | Rotazioni | Nessuna rotazione | Nessuna rotazione |
@@ -139,22 +139,22 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 ## [App 1 - Stampando fregi con un rullo]($HUB_URL/it/story/stamping-friezes/?actionLink=tg10)
 
 In questa app, l'utente è invitato a scegliere un'immagine tra le venti proposte. Quindi, viene presentata la creazione di un cilindro, con l'immagine selezionata. Facendo clic
-![Stampa](stories/symm-3/img/stamp.png =40x40)
+![Stampa](/stories/symm-3/img/stamp.png =40x40)
 , l'utente può osservare il cilindro che timbra un fregio che ha come motivo l'immagine scelta.
 
 @[youtube](xKiCkxAxdEs?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
 ## [App 2 - Isolare i fregi con assi di simmetria]($HUB_URL/it/story/stamping-friezes/?actionLink=tg4)
 
 Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i quattro con assi di simmetria. Dopo aver scelto i fregi corretti e aver cliccato
-![Conferma](stories/symm-3/img/confirm.png =40x40)
+![Conferma](/stories/symm-3/img/confirm.png =40x40)
 , il programma mostra una nuova serie di sette fregi. Vengono mostrati un totale di 3 set. Il gioco è risolto quando tutti i fregi corretti (cioè con assi di simmetria) sono selezionati.
 
 @[youtube](ZRi96tPJW7Y?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -163,7 +163,7 @@ Viene presentato un insieme di sette fregi. L'utente è invitato a scegliere i q
 Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni fregio nel sacchetto corrispondente, secondo la sua simmetria di riflessione. Il **sacchetto 1** contiene i fregi che hanno solo assi di simmetria verticali, il **sacchetto 2** quelli solo con asse di simmetria orizzontale. Infine, il **sacchetto 3** contiene i fregi con entrambi i tipi di assi di simmetria.
 
 @[youtube](bIFqroBizaU?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -172,7 +172,7 @@ Viene presentato un set di dodici fregi. L'utente è invitato a trascinare ogni 
 In questa app, l'utente è invitato a scegliere un'immagine scelta tra venti. L'utente può guardare una tavola che timbra un fregio, con assi di simmetria sia verticale che orizzontale, che ha l'immagine scelta come modulo che si ripete.
 
 @[youtube](moNr-MDIUs0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -203,17 +203,17 @@ Questa app è simile alla **App 3**. Tuttavia, invece di scegliere fregi con ass
 ## [App 8 - Etichettatura delle borse]($HUB_URL/it/story/stamping-friezes/?actionLink=tg9)
 
 In questa app l'utente può osservare i sette sacchetti ottenuti e vedere i fregi posti all'interno. Per ogni borsa, l'utente è invitato a selezionare, da un elenco di simboli 
-![horizontal reflection](stories/symm-3/img/Icon-refH.png =40x40)
+![horizontal reflection](/stories/symm-3/img/Icon-refH.png =40x40)
  (simmetria assiale con asse orizzontale),
-![vertical reflection](stories/symm-3/img/Icon-refV.png =40x40)
+![vertical reflection](/stories/symm-3/img/Icon-refV.png =40x40)
  (simmetria assiale con asse verticale),
-![rotation](stories/symm-3/img/Icon-rot.png =40x40)
+![rotation](/stories/symm-3/img/Icon-rot.png =40x40)
  (rotazione),
-![glide reflection](stories/symm-3/img/Icon-refDesl.png =40x40)
+![glide reflection](/stories/symm-3/img/Icon-refDesl.png =40x40)
  (glissoriflessione),
-![translation](stories/symm-3/img/Icon-trans.png =40x40)
+![translation](/stories/symm-3/img/Icon-trans.png =40x40)
  (traslazione)
  quelli che corrispondono alle simmetrie esistenti sui fregi della borsa.
 
 @[youtube](gzhAUhgIVp0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)

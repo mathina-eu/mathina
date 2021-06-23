@@ -15,7 +15,7 @@ Ungefähr zur gleichen Zeit wie Lesen lernen Kinder addieren. Diese Geschichte z
 # Über die Apps
 Das Layout aller drei Apps ist ähnlich. Am unteren Rand ist der Boden. Darauf steht ein Berg (oder mehrere Berge), der umflogen werden muss. Der hellblaue Hintergrund stellt den Himmel dar (dort können sich Wolken befinden, die ebenfalls Hindernisse sind und umflogen werden müssen). Es gibt ein Gittermuster aus weißen Punkten, die die Punkte auf der Ebene mit ganzen Zahlen als Koordinaten darstellen. Wenn die App gestartet wird, sitzt der Einhorndrache unten links. Er kehrt dorthin zurück, wenn Sie auf die Schaltfläche "Zurück" klicken. Sie können eine Flugbahn für den Einhorndrachen erstellen, indem Sie Vektoren über das Bedienfeld am unteren Rand eingeben. Sobald Sie auf die Schaltfläche "Los" klicken, folgt der Drache dem erstellten Pfad.
 
-![flight](stories/fire-2/img/_align-center_/flight_de.png)
+![flight](/stories/fire-2/img/_align-center_/flight_de.png)
 
 
 ## [App 1 - Fliege den Einhorndrachen mit Zahlenpaaren]($HUB_URL/de/apps/?appNumber=0&story=fire-2)

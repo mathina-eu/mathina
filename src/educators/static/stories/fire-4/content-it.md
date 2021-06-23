@@ -7,7 +7,7 @@ Con la descrizione esplicita che abbiamo usato nella storia precedente, abbiamo 
 
 Prendiamo per esempio la circonferenza di raggio `@r=2@` e centrata nell'origine `@(0,0)@`. La descrizione come luogo geometrico ci dice che questa circonferenza è l'insieme di tutti i punti a distanza `@2@` dal centro.
 
-![Circonferenza di raggio 2 centrata nell'origine](stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Circonferenza di raggio 2 centrata nell'origine](/stories/fire-4/img/_align-center_circtrig.png =300x300)
 
 Usando il teorema di Pitagora, possiamo tradurre questa proprietà in coordinate, con l'equazione
 ```AsciiMath

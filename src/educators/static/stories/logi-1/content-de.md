@@ -38,11 +38,11 @@ Für die Altersgruppe 4-6 Jahre können Sortierspiele in Kombination mit Körper
 
 Legen Sie 3 rote, 3 blaue und 3 grüne Karten aus und ordnen Sie jeder Farbe die Zahlen 1, 2 und 3 zu. Die Aufgabe besteht darin, die Karten in einer 3 × 3-Tabelle so anzuordnen, dass alle drei Farben und alle drei Zahlen in jeder Zeile und jeder Spalte vertreten sind. Eine fortgeschrittenere Version des Spiels wird mit einer 4x4-Tabelle erstellt.
 
-![Solitaire-Spiel](stories/logi-1/img/solitaire2.png)
+![Solitaire-Spiel](/stories/logi-1/img/solitaire2.png)
 
 **Sudoku** verfeinert das Denkvermögen. Hier ein Beispiel: 1. Geben Sie die Zahlen 1, 2, 3, 4 in die leeren Felder ein, so dass alle vier Zahlen in jeder Zeile, jeder Spalte und jedem eingerahmten Quadrat vorhanden sind.
 
-![Sudoku](stories/logi-1/img//sudoku.png)
+![Sudoku](/stories/logi-1/img//sudoku.png)
 
 # Über die Apps
 Es gibt drei Apps, die die Geschichte begleiten. Die erste App ermöglicht das freie Spiel mit Farbreihenfolgen, die zweite zielt auf die Unterscheidung zwischen gleichen und unterschiedlichen Reihenfolgen ab. Das dritte Spiel lässt die Benutzerin und den Benutzer das letzte fehlende Stück in der Sequenz finden.
@@ -68,4 +68,4 @@ Auf dem Bildschirm der App sind acht Ampeln in einer Reihe zu sehen. Sie können
 [Dritte App in der Geschichte]($HUB_URL/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Finde die sechste richtige Farbfolge! Die Regeln der App sind die gleichen wie im ersten Spiel.
 
-[Script (PDF, englisch)](stories/logi-1/transcripts/Script1.pdf)
+[Script (PDF, englisch)](/stories/logi-1/transcripts/Script1.pdf)

@@ -10,7 +10,7 @@ Com a descrição explícita que usamos nas histórias anteriores, tinha-se um m
 
 Considere-se, por exemplo, a circunferência de raio `@r=2@` e centrado na origem `@(0,0)@`. Uma descrição geométrica afirma que uma circunferência é o conjunto de todos os pontos à distância `@2@` do centro.
 
-![Ponto (x,y) numa circunferência de raio r](stories/fire-4/img/_align-center_circtrig.png =300x300)
+![Ponto (x,y) numa circunferência de raio r](/stories/fire-4/img/_align-center_circtrig.png =300x300)
 
 Usando o teorema de Pitágoras, isto corresponde a que as coordenadas desses pontos seguem a equação
 
@@ -81,7 +81,7 @@ Uma lista de exemplos de equações está disponível à direita, tal como uma c
 
 Três controlos deslizantes estão disponíveis junto da superfície. Primeiro, para ajustar um parâmetro `@a@`, que pode ser usada nas fórmulas, com valores entre `@0@` e `@1@`. Segundo, para controlar a transparência da superfície podendo-a tornar translúcida. Terceiro, um nível de "zoom", que fixa a quantidade da superfície (em geral, infinita) que fica visível na esfera que delimita o gráfico.
 
-![Some alt text](stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
 
 Uma atividade complementar para explorar mais superfícies pode ser organizada usando 
 [SURFER](https://imaginary.org/program/surfer)

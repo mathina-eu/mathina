@@ -16,15 +16,15 @@ If we want to formalize this concept, we can consider a frieze as:
 region^[Note that the mentioned "region" in the plane for this frieze is unlimited on the left and on the right. The picture only shows a limited part of that region.]
  in the plane for which there are translations (in just one direction), which do not change the way the frieze looks: the frieze looks the same, before and after the translation;
 
-![Watch the movie here](stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
+![Watch the movie here](/stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
 
 `*` In addition, there is one such translation so that any other such translation is an integer multiple of that one.
 
-![Watch the movie here](stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
+![Watch the movie here](/stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
 
 **Remark 1**: this last property excludes a line as an example of a frieze. Indeed, if we consider a translation associated to any vector *v* of that line, which obviously sends the line onto itself, then the translation associated to *0.5 v* (which is not an integer multiple of that one) still sends the line onto itself.
 
-![Translation associated to 0.5*v](stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
+![Translation associated to 0.5*v](/stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
 
 **Remark 2**: from the given definition, it follows that a frieze is not bounded.
 
@@ -32,7 +32,7 @@ region^[Note that the mentioned "region" in the plane for this frieze is unlimit
 
 It is not possible to speak about symmetries without mentioning the concept of isometry. An isometry is a function which preserves distances: if two points *A* and *B* are transformed into *A’* and *B’*, then *dist(A,B)=dist(A’,B’)*.
 
-![Isometry](stories/symm-3/img/_align-center_/iso.png =300x250)
+![Isometry](/stories/symm-3/img/_align-center_/iso.png =300x250)
 
 In the story, four different isometries (in the following order) - reflection, rotation, glide reflection and translation - are mentioned. This is the complete list of isometries in the plane: it is possible to prove that there are no other ones.
 
@@ -76,7 +76,7 @@ Let us now consider 2 different cases: 1) the friezes without reflection symmetr
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Bag 2](stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Bag 3](stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Bag 4](stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Bag 5](stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
 |Vertical reflection symmetry| No vertical reflection symmetry  | Vertical reflection symmetry | No vertical reflection symmetry | Vertical reflection symmetry |
 |No horizontal reflection symmetry| Horizontal reflection symmetry | Horizontal reflection symmetry | No horizontal reflection symmetry | No horizontal reflection symmetry |
 |No rotation symmetry|  |  | Rotation symmetry | Rotation symmetry |
@@ -93,7 +93,7 @@ Let us now consider 2 different cases: 1) the friezes without reflection symmetr
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 | Bag 6 | Bag 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Bag 2](stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Bag 3](stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Bag 4](stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Bag 5](stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Bag 6](stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Bag 7](stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Bag 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Bag 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
 |Vertical reflection symmetry| No vertical reflection symmetry  | Vertical reflection symmetry | No vertical reflection symmetry | Vertical reflection symmetry | No vertical reflection symmetry | No vertical reflection symmetry |
 |No horizontal reflection symmetry| Horizontal reflection symmetry | Horizontal reflection symmetry | No horizontal reflection symmetry | No horizontal reflection symmetry | No horizontal reflection symmetry | No horizontal reflection symmetry |
 |No rotation symmetry|  |  | Rotation symmetry | Rotation symmetry | No rotation symmetry | No rotation symmetry |
@@ -143,22 +143,22 @@ Below, we present a small description of each app. Links both for the apps and f
 ## [Game 1 - Stamping friezes with a “roll”]($HUB_URL/story/stamping-friezes/?actionLink=tg10)
 
 In this app, the user is invited to choose an image from a total of 20 figures. Then, the creation of a cylinder with the selected image is presented. Clicking 
-![Stamp](stories/symm-3/img/stamp.png =40x40)
+![Stamp](/stories/symm-3/img/stamp.png =40x40)
 , the user can watch the cylinder stamping a frieze which has the chosen image as motif.
 
 @[youtube](xKiCkxAxdEs?_align-center_)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
 ## [Game 2 - Separating friezes with symmetry axes]($HUB_URL/story/stamping-friezes/?actionLink=tg4)
 
 A set of 7 friezes is presented. The user is invited to choose the 4 friezes with symmetry axes. After choosing the correct friezes and clicking
-![Confirm](stories/symm-3/img/confirm.png =40x40)
+![Confirm](/stories/symm-3/img/confirm.png =40x40)
 , the program shows a new set of 7 friezes. A total of 3 sets are shown. The game is solved when all "good" friezes (i.e. with symmetry axes) are selected.
 
 @[youtube](ZRi96tPJW7Y?_align-center_)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -167,7 +167,7 @@ A set of 7 friezes is presented. The user is invited to choose the 4 friezes wit
 A set of 12 friezes is presented. The user is invited to drag each frieze to the corresponding bag, according to its reflection symmetry: **bag 1** contains the friezes which only have vertical symmetry axes; **bag 2**, those only with a horizontal symmetry axis; and **bag 3** those with vertical and horizontal axes.
 
 @[youtube](bIFqroBizaU?_align-center_)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -176,7 +176,7 @@ A set of 12 friezes is presented. The user is invited to drag each frieze to the
 In this app, the user is invited to choose an image from a total of 20 figures. Then, the user can watch a board stamping a frieze, with both vertical and horizontal symmetry axes, which has the chosen image as motif.
 
 @[youtube](moNr-MDIUs0?_align-center_)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)
 
 &nbsp;
 
@@ -204,17 +204,17 @@ This app is similar to **Game 3**. However, instead of choosing friezes with sym
 ## [Game 8 - Labeling the bags]($HUB_URL/story/stamping-friezes/?actionLink=tg9)
 
 In this app, the user can observe the 7 bags obtained and see the friezes inside. For each bag, the user is invited to select, from a list of symbols – 
-![horizontal reflection](stories/symm-3/img/Icon-refH.png =40x40)
+![horizontal reflection](/stories/symm-3/img/Icon-refH.png =40x40)
  (horizontal reflection),
-![vertical reflection](stories/symm-3/img/Icon-refV.png =40x40)
+![vertical reflection](/stories/symm-3/img/Icon-refV.png =40x40)
  (vertical reflection),
-![rotation](stories/symm-3/img/Icon-rot.png =40x40)
+![rotation](/stories/symm-3/img/Icon-rot.png =40x40)
  (rotation),
-![glide reflection](stories/symm-3/img/Icon-refDesl.png =40x40)
+![glide reflection](/stories/symm-3/img/Icon-refDesl.png =40x40)
  (glide reflection),
-![translation](stories/symm-3/img/Icon-trans.png =40x40)
+![translation](/stories/symm-3/img/Icon-trans.png =40x40)
  (translation)
  –,  those which correspond to the existing symmetries on the friezes of the bag.
 
 @[youtube](gzhAUhgIVp0?_align-center_)
-[Script](stories/symm-3/transcripts/Script3.pdf)
+[Script](/stories/symm-3/transcripts/Script3.pdf)

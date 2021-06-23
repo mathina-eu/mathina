@@ -40,10 +40,10 @@ Il toolkit didattico **Dienes logic blocks** può essere utilizzato per creare e
 
 Possiamo creare un gioco per due giocatori: entrambi i giocatori ricevono 10 tessere. I giocatori dispongono un pezzo uno dopo l'altro sul tavolo. La regola di posizionamento è che le tessere vicine devono differire l'una dall'altra solo in un singolo attributo. Il giocatore che non può più disporre pezzi su tavolo perde. 
 
-![Per 2 giocatori](stories/logi-2/img/dienes1.png)
+![Per 2 giocatori](/stories/logi-2/img/dienes1.png)
 
 Un altro esercizio realizzabile con lo stesso set è quello di completare la serie seguente:
-![Completa la serie](stories/logi-2/img/dienes2.png)
+![Completa la serie](/stories/logi-2/img/dienes2.png)
 
 # Esperienze interattive
 
@@ -57,5 +57,5 @@ La app è programmata in JavaScript ed è ottimizzata sia per PC che per tablet/
 In entrambe le app la regola del gioco è che gli utenti possono solo passare da un campo rosso a un campo rosso, da uno blu a uno blu, da uno verde a uno verde, da uno giallo a uno giallo oppure da cerchio a cerchio, da quadrato a quadrato, da triangolo a triangolo.
 
 @[youtube](ORR614pbLzk?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/logi-2/transcripts/Script2.pdf)
+[Script](/stories/logi-2/transcripts/Script2.pdf)
 

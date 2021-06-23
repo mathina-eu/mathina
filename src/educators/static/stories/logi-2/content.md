@@ -38,11 +38,11 @@ The widely used mathematics educational toolkit called **Dienes logic blocks** c
 
 We can play a two-player game with the tiles. Both players receive 10-10 tiles. The rule is that neighbouring tiles should only differ from each other in one single attribute. Players lay down a piece one after the other on the table. The player who cannot continue the game, loses. 
 
-![Two-player-game](stories/logi-2/img/dienes1.png)
+![Two-player-game](/stories/logi-2/img/dienes1.png)
 
 Another exercise with the same set is to complete the series below:
 
-![Complete the series](stories/logi-2/img/dienes2.png)
+![Complete the series](/stories/logi-2/img/dienes2.png)
 
 # About the apps
 
@@ -64,4 +64,4 @@ The rule of this game is that users can only step from red field to red field, f
 
 @[youtube](ORR614pbLzk)
 
-[Script (PDF)](stories/logi-2/transcripts/Script2.pdf)
+[Script (PDF)](/stories/logi-2/transcripts/Script2.pdf)

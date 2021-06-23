@@ -30,11 +30,11 @@ Die Herangehensweise an Mathematik unterscheidet sich jedoch von der formalen Le
 ## Vorschläge für zusätzliche Übungen 
 Wähle so viele der 36 Punkte wie möglich, ohne zwei Punkte auf derselben Geraden zu wählen. 
 
-![36 Punkte](stories/logi-3/img/logi3.png)
+![36 Punkte](/stories/logi-3/img/logi3.png)
 
 Platziere so viele Damen wie möglich auf das Schachbrett, ohne dass sie sich gegenseitig schlagen können.
 
-![Schach](stories/logi-3/img/sakk.png)
+![Schach](/stories/logi-3/img/sakk.png)
 
 Eine mögliche Lösung für das [sogenannte Damenproblem (englisch)](https://en.wikibooks.org/wiki/Puzzles/Chess_puzzles/Eight_Queens). 
 [Grafik: Encik Tekateki](https://commons.wikimedia.org/wiki/File:Solution_K_for_8_Queen_Puzzles.png)
@@ -65,4 +65,4 @@ Sie sehen den Straßenplan von Logi-City und drei Zuckerwürfel. Das Ziel ist es
 
 Sie sehen einen Straßenplan und drei Polizeimützen. Das Ziel ist es herauszufinden, wie drei Polizisten alle Straßen der Stadt patrouillieren können. Die Mützen können auf der Karte verschoben werden und die jeweils patrouillierten Straßen erscheinen hervorgehoben. Wenn Sie auf die Schaltfläche "Aktualisieren" klicken, wird eine neue Karte erstellt.
 
-[Script (PDF, englisch)](stories/logi-3/transcripts/Script3.pdf)
+[Script (PDF, englisch)](/stories/logi-3/transcripts/Script3.pdf)

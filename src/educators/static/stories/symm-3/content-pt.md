@@ -16,15 +16,15 @@ Se quisermos formalizar este conceito, podemos considerar um friso como:
 região^[Note que a referida "região" no plano para este friso é ilimitada à esquerda e à direita. A imagem mostra apenas uma parte limitada dessa região.]
  no plano para a qual há translações (em apenas uma direção) que não mudam o aspeto do friso: o friso parece o mesmo, antes e depois da translação;
 
-![Ver o filme aqui](stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
+![Ver o filme aqui](/stories/symm-3/video/_align-center_/Anim_Translacao_2.mp4 =640x360)
 
 `*` além disso, existe uma tal translação de modo que qualquer outra translação é um múltiplo inteiro dela.
 
-![Ver o filme aqui](stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
+![Ver o filme aqui](/stories/symm-3/video/_align-center_/Anim_Translacao_3.mp4 =640x360)
 
 **Nota 1**: esta segunda propriedade exclui uma reta como exemplo de um friso. Com efeito, se considerarmos uma translação associada a qualquer vetor *v* dessa reta, translação essa que obviamente envia a reta sobre si mesma, então a translação associada a *0,5 v* (que não é um múltiplo inteiro dela) ainda envia a reta sobre si mesma.
 
-![Translação associada a *0,5 v*](stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
+![Translação associada a *0,5 v*](/stories/symm-3/img/_align-center_/Reta_Vetores2.png =369x150)
 
 **Nota 2**: da definição dada, conclui-se que um friso não é delimitado.
 
@@ -32,7 +32,7 @@ região^[Note que a referida "região" no plano para este friso é ilimitada à 
 
 Quando se fala em simetria, é natural introduzir o conceito de isometria. Uma isometria é uma função que preserva distâncias: se dois pontos *A* e *B* são transformados em *A’* e *B’*, então *dist(A,B)=dist(A’,B’)*.
 
-![Isometry](stories/symm-3/img/_align-center_/iso.png =300x250)
+![Isometry](/stories/symm-3/img/_align-center_/iso.png =300x250)
 
 Na história, são referidas quatro isometrias diferentes (na ordem seguinte) - reflexão, rotação, reflexão deslizante e translação. Trata-se da lista completa das isometrias no plano: é possível provar que não existem outras.
 
@@ -75,7 +75,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Saco 2](stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Saco 3](stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Saco 4](stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Saco 5](stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
 | Há simetria de reflexão vertical | Não há simetria de reflexão vertical  | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical |
 |Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal| Há simetria de reflexão horizontal |  Há simetria de rotação |Não há simetria de reflexão horizontal |
 |Não há simetria de rotação |  |  |  | Há simetria de rotação |
@@ -92,7 +92,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 | Saco 6 | Saco 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Saco 2](stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Saco 3](stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Saco 4](stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Saco 5](stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Saco 6](stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Saco 7](stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Saco 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Saco 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
 |Há simetria de reflexão vertical| Não há simetria de reflexão vertical | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical | Não há simetria de reflexão | Não há simetria de reflexão |
 |Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de rotação | Não há simetria de reflexão horizontal | Há simetria de reflexão deslizante | Não há simetria de rotação |
 |Não há simetria de rotação |  |  | | Há simetria de rotação |  | Não há simetria de reflexão deslizante |
@@ -141,22 +141,22 @@ De seguida, apresentamos uma pequena descrição sobre cada app. São também fo
 ## [Jogo 1 - Carimbando frisos com um “rolo”]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg10)
 
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. A seguir, é apresentada a formação de um cilindro com a imagem selecionada. Clicando em 
-![Carimbar](stories/symm-3/img/stamp.png =40x40)
+![Carimbar](/stories/symm-3/img/stamp.png =40x40)
 , o utilizador pode visualizar o cilindro a carimbar um friso que tem como motivo a imagem escolhida.
 
 @[youtube](xKiCkxAxdEs?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](stories/symm-3/transcripts/Script3-pt.pdf)
+[Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
 
 ## [Jogo 2 - Separando os frisos com eixos de simetria]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg4)
 
 É exibido um conjunto de 7 frisos. O utilizador é convidado a escolher 4 frisos com eixos de simetria. Depois de escolher os frisos corretos e clicar
-![Confirmar](stories/symm-3/img/confirm.png =40x40)
+![Confirmar](/stories/symm-3/img/confirm.png =40x40)
 ,  programa mostra um novo conjunto de 7 frisos. São apresentados 3 conjuntos de frisos. O jogo fica resolvido se forem selecionados todos os "bons" frisos (i.e. com eixos de simetria).
 
 @[youtube](ZRi96tPJW7Y?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](stories/symm-3/transcripts/Script3-pt.pdf)
+[Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
 
@@ -165,7 +165,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 É exibido um conjunto de 12 frisos. O utilizador é convidado a arrastar cada friso para o saco correspondente, de acordo com as suas simetrias de reflexão: o **saco 1** contém os frisos que só têm eixos de simetria verticais; o **saco 2**, os que têm um eixo de simetria horizontal; e o **saco 3** os frisos com eixos de simetria verticais e horizontal.
 
 @[youtube](bIFqroBizaU?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](stories/symm-3/transcripts/Script3-pt.pdf)
+[Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
 
@@ -174,7 +174,7 @@ Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 fig
 Nesta app, o utilizador é convidado a escolher uma imagem de um total de 20 figuras. De seguida, o utilizador pode visualizar uma “placa” a carimbar um friso, com eixos de simetria verticais e horizontal, que tem como motivo a imagem escolhida.
 
 @[youtube](moNr-MDIUs0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](stories/symm-3/transcripts/Script3-pt.pdf)
+[Guião](/stories/symm-3/transcripts/Script3-pt.pdf)
 
 &nbsp;
 
@@ -202,17 +202,17 @@ Esta app é muito semelhante à do **Jogo 3**. Contudo, em vez de escolher os fr
 ## [Jogo 8 - Rotulando os sacos]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg9)
 
 Nesta app, o utilizador pode ver os 7 sacos obtidos e observar os frisos no interior desses sacos. Para cada saco, o utilizador é convidado a selecionar, de uma lista de símbolos – 
-![reflexão horizontal](stories/symm-3/img/Icon-refH.png =40x40)
+![reflexão horizontal](/stories/symm-3/img/Icon-refH.png =40x40)
  (reflexão horizontal),
-![reflexão vertical](stories/symm-3/img/Icon-refV.png =40x40)
+![reflexão vertical](/stories/symm-3/img/Icon-refV.png =40x40)
  (reflexão vertical),
-![rotação](stories/symm-3/img/Icon-rot.png =40x40)
+![rotação](/stories/symm-3/img/Icon-rot.png =40x40)
  (rotação),
-![reflexão deslizante](stories/symm-3/img/Icon-refDesl.png =40x40)
+![reflexão deslizante](/stories/symm-3/img/Icon-refDesl.png =40x40)
  (reflexão deslizante),
-![translação](stories/symm-3/img/Icon-trans.png =40x40)
+![translação](/stories/symm-3/img/Icon-trans.png =40x40)
  (translação)
  –,  aqueles que correspondem às simetrias existentes nos frisos do saco.
 
 @[youtube](gzhAUhgIVp0?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
-[Guião](stories/symm-3/transcripts/Script3-pt.pdf)
+[Guião](/stories/symm-3/transcripts/Script3-pt.pdf)

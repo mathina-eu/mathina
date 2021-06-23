@@ -12,13 +12,13 @@ Nella storia, un esempio di poliedro non convesso si trova per caso, quando Leo 
 
 Possiamo costruire un esempio di poliedro non convesso, ad esempio, partendo da un icosaedro e spostando al suo interno uno dei suoi vertici e le facce ad esso adiacenti ([Clicca qui per manipolare il poliedro]($HUB_URL/apps/anims/poliedros.html?pre=pol_1)).
 
-| ![Icosahedron](stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
+| ![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =207x200) | ![Non convex polyhedron](/stories/symm-4/img/_align-center_/nao-conv.png =246x200) |
 | ------ | ----------- |
 | Icosaedro | Esempio di poliedro non convesso |
 
 La definizione usata nel racconto è la seguente: un poliedro è **convesso** se, per ogni coppia di punti sulle facce, l'intero segmento che unisce i punti è contenuto nel poliedro.
 
-![Dimostrazione che il poliedro considerato nell'esempio non è convesso](stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
+![Dimostrazione che il poliedro considerato nell'esempio non è convesso](/stories/symm-4/img/_align-center_/nao-conv2.png =270x250)
 
 ## Solidi platonici
 
@@ -55,7 +55,7 @@ Leo e Mathina concludono facilmente che non solo è impossibile costruire solidi
 
 | Cubo | Tetraedro | Ottaedro | Icosaedro | Dodecaedro |
 | ------ | ------ | ------ | ------ | ------ |
-|![Cube](stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](stories/symm-4/img/_align-center_/dodeca.png =146x150)|
+|![Cube](/stories/symm-4/img/_align-center_/cubo.png =138x150)|![Tetrahedron](/stories/symm-4/img/_align-center_/tetra.png =126x150)|![Octahedron](/stories/symm-4/img/_align-center_/octa.png =162x150)|![Icosahedron](/stories/symm-4/img/_align-center_/icosa.png =155x150)|![Dodecahedron](/stories/symm-4/img/_align-center_/dodeca.png =146x150)|
 
 ### Solidi platonici - definizione
 
@@ -77,7 +77,7 @@ Cos'è un poliedro uniforme? Esaminando un poliedro uniforme, il cubottaedro, Ma
 
 | Cubottaedro (poliedro uniforme) | Grande rombicubottaedro (poliedro uniforme) | Poliedro di Miller (poliedro non uniforme) | Piccolo rombicubottaedro (poliedro uniforme) |
 | ------ | ------ | ------ | ------ |
-|![Cuboctahedon](stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
+|![Cuboctahedon](/stories/symm-4/img/_align-center_/cubocta.png =137x150)|![4-6-8](/stories/symm-4/img/_align-center_/4-6-8.png =149x150)|![Miller Polyhedron](/stories/symm-4/img/_align-center_/Miller.png =151x150)|![3-4-4-4](/stories/symm-4/img/_align-center_/3-4-4-4.png =150x150)|
 
 Tuttavia, seguendo la "definizione di Mathina" può sorgere un problema: se costruiamo uno stampo attorno a un angolo solido del grande rombicubottaedro, [lo stampo non si adatterà a tutti gli angoli solidi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg15): in questo caso, [due stampi saranno necessari]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg16).
 
@@ -97,14 +97,14 @@ Nella storia, una **simmetria di un poliedro** è definita come un'isometria (ci
 
 Perché il poliedro di Miller non è uniforme? Possiamo convincerci di questo fatto, ad esempio, osservando che se consideriamo i vertici *A* e *B* in figura, qualsiasi isometria che manda *A* in *B* rimuoverà "l'anello" dei quadrati dall'equatore, quindi [cambierà l'aspetto finale del poliedro]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg21).
 
-![Icosahedron](stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
+![Icosahedron](/stories/symm-4/img/_align-center_/Miller-anel-quadrados-e-pontos.png =269x250)
 [Manipola il poliedro]($HUB_URL/apps/anims/poliedros.html?pre=pol_68).
 
 Tuttavia, se [ruotiamo la cupola ottagonale sulla sommità del poliedro di Miller di 45 gradi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg22), otteniamo un nuovo poliedro uniforme: il piccolo rombicubottaedro.
 
 Nel corso della storia, il tecnico dice a Mathina e Leo quali sono **tutti i poliedri uniformi**. Essi sono costituiti da una famiglia infinita di prismi, [le cui basi sono poligoni regolari e le cui facce laterali sono quadrati]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg23), una famiglia infinita di antiprismi, [le cui basi sono poligoni regolari e le cui facce laterali sono triangoli equilateri]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg24) più altri tredici poliedri che non ricadono nelle due famiglie appena citate.
 
-![Uniform polyhedra](stories/symm-4/img/_align-center_/uniformes.png =675x400)
+![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 Alla fine, i personaggi costruiscono un modello per la giostra ["poliedri platonici e uniformi"]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg25). Esso è costituito da poliedri altamente simmetrici: infatti, per ogni poliedro, e per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro.
 
@@ -143,22 +143,22 @@ Di seguito, presentiamo una piccola descrizione di ciascuna app. Sono inoltre fo
 ## [App 1 - Isola i poliedri convessi]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg26)
 
 Viene presentato un insieme di otto poliedri. L'utente è invitato a scegliere i quattro convessi. Dopo aver scelto i poliedri corretti e aver cliccato
-![conferma](stories/symm-4/img/confirm.png =40x40)
+![conferma](/stories/symm-4/img/confirm.png =40x40)
 , il programma mostra una nuova serie di otto poliedri. Vengono mostrati tre set di questo tipo in totale. Il gioco è risolto quando tutti i poliedri convessi sono selezionati.
 
 @[youtube](GDYOL7SnfY0?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-4/transcripts/Script4.pdf)
+[Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
 ## [App 2 - Scegliere gli sviluppi corretti del cubo]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg27)
 
 Viene presentato un set di sei proposte di sviluppi del cubo. L'utente è invitato a scegliere i 3 corretti. Dopo aver scelto gli sviluppi e aver fatto clic su
-![conferma](stories/symm-4/img/confirm.png =40x40)
+![conferma](/stories/symm-4/img/confirm.png =40x40)
 , il programma mostra un nuovo set di sei sviluppi. Vengono mostrati due set di questo tipo in totale. Il gioco è risolto quando gli sviluppi corretti sono selezionati.
 
 @[youtube](NspkoF8gH3k?_align-center_&hl=it&cc_lang_pref=it&cc=1)
-[Script](stories/symm-4/transcripts/Script4.pdf)
+[Script](/stories/symm-4/transcripts/Script4.pdf)
 
 &nbsp;
 
