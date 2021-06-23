@@ -4,6 +4,23 @@ const path = require('path');
 const srcDir = path.join(__dirname, 'src');
 const rootDir = __dirname;
 
+/*Additions to handle multiple repositories*/
+const DevPath = 'http://localhost:3000';
+const IS_EDU = process.env.npm_lifecycle_event.includes('edu');
+const HubUrlPath = 'https://mathina-hub.netlify.app';
+const EduUrlPath = 'https://mathina-edu.netlify.app';
+//const HubUrlPath = 'http://localhost:8080';
+//const EduUrlPath = 'http://localhost:8080';
+const HubBase = '';
+const EduBase = '';
+
+
+const EduUrlCom = IS_DEV ? DevPath : EduUrlPath + EduBase;
+const HubUrlCom = IS_DEV ? DevPath : HubUrlPath + HubBase;
+const EduBaseCom =  IS_DEV ? '' : EduBase + '/';
+const HubBaseCom =  IS_DEV ? '' : HubBase + '/';
+
+
 export default {
   // mode: 'spa',
   // target: 'spa',
@@ -11,8 +28,12 @@ export default {
   target: 'static',
   env: {
     IS_DEV,
-    HUB_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
-    BASE_URL: IS_DEV ? 'http://localhost:3000' : 'https://mathina-hub.netlify.app',
+	EDU_URL: EduUrlCom,
+    HUB_URL: HubUrlCom,
+    BASE_URL: HubUrlCom,
+  },
+  router: {
+	base: IS_EDU ? EduBaseCom : HubBaseCom,
   },
 
   /*
@@ -45,6 +66,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
+  
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
@@ -64,6 +86,7 @@ export default {
   /*
   ** Nuxt.js modules
   */
+
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
@@ -76,7 +99,7 @@ export default {
     ],
   ],
   axios: {
-    baseURL: process.env.BASE_URL,
+    baseURL: IS_EDU ? EduUrlCom + "/" : HubUrlCom + "/",//,
   },
   i18n: {
     locales: [
@@ -97,17 +120,20 @@ export default {
   ** Build configuration
   */
   build: {
+	 publicPath: IS_EDU ? EduUrlCom + "/" : HubUrlCom + "/",
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
       // TODO: Not sure if we need .yaml webpack loader support if loading stories via ajax
-      config.resolve.extensions.push('.yaml');
+      
+	  config.resolve.extensions.push('.yaml');
       config.module.rules.push({
         test: /\.ya?ml$/,
         type: 'json',
         use: 'yaml-loader',
       });
+	  
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',

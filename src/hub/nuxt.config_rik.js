@@ -1,13 +1,11 @@
-import { resolve } from 'path';
 // eslint-disable-next-line no-restricted-imports
 import sharedConfig from '../shared/nuxt.config';
-// eslint-disable-next-line no-restricted-imports
-import constants from '../hub/constants';
+import constants from './constants';
 
 // TODO: fix no .env file found error
 // const BASE_PATH = '/';
 // const PUBLIC_PATH = '/';
-const distFolder = 'educators';
+const distFolder = 'hub';
 
 // const IS_DEV = process.env.NODE_ENV !== 'production';
 const generateRoutes = () => {
@@ -18,10 +16,10 @@ const generateRoutes = () => {
   let stories = [];
   for (let locale of locales) {
     let localCities = Object.values(constants.CITIES).map(
-      ({ slug }) => `/${locale}city/${slug}/`
+      ({ slug }) => `${locale}city/${slug}/`
     );
     let localStories = constants.STORIES.map(
-      ({ slug }) => `/${locale}story/${slug}`
+      ({ slug }) => `${locale}story/${slug}`
     );
     cities = [...cities, ...localCities];
     stories = [...stories, ...localStories];
@@ -31,19 +29,17 @@ const generateRoutes = () => {
 
 export default {
   ...sharedConfig,
-  // TODO: Need to tweak to allow educators platform assets
-  alias: {
-    '~': resolve(__dirname, '../hub'),
-    'assets': resolve(__dirname, '../hub/assets/'),
-  },
-  css: ['../shared/assets/styles/main.pcss'],
   srcDir: __dirname,
-  buildDir: '.nuxt/educators',
+  buildDir: '.nuxt/hub',
   generate: {
     dir: `dist/${distFolder}`,
     routes: generateRoutes(),
   },
-  globalName: 'educators',
+  globalName: 'hub',
+  modules: [
+    ...sharedConfig.modules,
+    'modules/app-list',
+  ],
   build: {
     ...sharedConfig.build,
   }
