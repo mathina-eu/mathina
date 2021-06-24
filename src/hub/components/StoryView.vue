@@ -130,6 +130,10 @@ export default {
     align-self: start;
     margin-top: -20px;
 
+    >>> .v-progress-circular {
+      margin-top: 250px;
+    }
+
     >>> .navigation {
       width: 100%;
       left: 0;

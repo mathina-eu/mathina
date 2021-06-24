@@ -103,6 +103,7 @@ actions:
       #"If we fold the image in a certain way, the two parts overlap!"
         char: wizard
   - type: game
+    listTitle: "Bilder falten I"
     tag: tg1
     text: Ist der Teddy für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
             ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
@@ -144,6 +145,7 @@ actions:
       #"I'll show you another example! Now look at this bee image!"
         char: wizard        
   - type: game
+    listTitle: "Bilder falten II"
     text: Könnte ich diese Biene in den Marktstand stellen, ohne dass sie die Symmel-Wichtel anlockt? Kannst Du sie so falten, dass zwei gleiche Hälften übereinander liegen, ist sie also symmetrisch?
     #"Is the following image good (i.e. symmetric)?"
     toolbarText: Falte die Biene.
@@ -169,8 +171,8 @@ actions:
         char: wizard
     position: center
   - type: game
-    text:  Ist dieses Kuscheltier für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen,
-            ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
+    listTitle: "Bilder falten III"
+    text:  Ist dieses Kuscheltier für den Symmel-Rummel geeignet? Wenn Du das Bild so falten kannst, dass zwei gleiche Hälften übereinander liegen, ist es symmetrisch, und dann lockt es die Symmel-Wichtel nicht an.
     #"Is the following image good (i.e. symmetric)?"
     toolbarText: Falte die Katze.
     cta: Probiere es aus!
@@ -237,6 +239,7 @@ actions:
         char: wizard
         mood: happy
   - type: game
+    listTitle: "Finde die richtigen Spielzeuge"
     tag: tg4
     text: Schiebe die symmetrischen Kuscheltiere in die Kiste.
     #"Put the \"good\" toys in the box"
@@ -415,6 +418,7 @@ actions:
 #        char: mathina
 #        mood: excited            
   - type: game
+    listTitle: "Spielzeuge bauen I"
     tag: tg2
     text: Wie sieht das fertige Spielzeug aus? Ziehe die bunten Bausteine in das Bild und setze sie auf die grauen Felder.
     #"How can Mathina finish the toys? You just need to drag some of the colored figures to the adequate gray squares."
@@ -519,6 +523,7 @@ actions:
         exposition: wiederholte Mathina die Worte des Zauberers.
         #"Mathina said, repeating the wizard’s words."        
   - type: game
+    listTitle: "Spielzeuge bauen II"
     tag: tg3
     text: Wie muss das Spielzeug fertig gebaut werden? Zeichne die fehlenden Linien ein.
     #"How can Mathina finish the toys? You just need to draw the missing lines."

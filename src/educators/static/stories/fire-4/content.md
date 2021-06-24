@@ -5,7 +5,7 @@ With the implicit description, in contrast, we have a two-variable function `@F(
 
 With the explicit description we used in previous stories, we had a constructive method for obtaining all the points in the curve: we just fed in values of x and we obtain points on the curve. On the other hand, with the implicit description, we have just a test method to decide whether a point belongs to the curve or not. This makes the implicit method more appropriate for describing relationships than to describe construction methods.
 
-Take for instance the circle of radius `@r=2@` and centered at the origin `@(0,0)@`. The geometrical description states that a circle is the set of all points at distance `@2@` from the center.
+Take for instance the circle of radius `@r=2@` and centered at the origin `@(0,0)@`. The geometrical description states that this circle is the set of all points at distance `@2@` from the center.
 
 ![Some alt text](/stories/fire-4/img/_align-center_circtrig.png =300x300)
 
@@ -38,7 +38,7 @@ Lines and circles are some easy examples to try with implicit functions. Additio
 
 * **Deformation:** Given a curve defined by `@F(x,y)=0@`, we can obtain a small deformation by changing the equation to `@F(x,y)=a@`, or equivalently `@F(x,y)-a=0@`, if the value of a is small (close to zero). Since the function `@F@` is continuous, the points that make `@F(x,y)=a@` will be close to the points that make `@F(x,y)=0@`. We obtain thus a deformation of the curve.
 
-	Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
+Given two curves defined by `@F(x,y)=0@` and `@G(x,y)=0@`, we can obtain the curve that contains all the points of both (union), or the set of points that belong to both curves at the same time (intersection).
 
 * **Union:** We can obtain that curve multiplying `@F(x,y)*G(x,y)=0@`. Indeed, if the product `@F*G=0@`, then either `@F=0@`, or `@G=0@` (or both), and thus all the points that make `@F=0@` are part of the new curve, and all the points that make `@G=0@` are as well.
 
@@ -59,25 +59,21 @@ The apps have a list of examples of curves and surfaces, each one shows its form
 
 # About the apps
 
-## App 1 - Exploration
+## [App 1 - Exploration]($HUB_URL/apps/?appNumber=0&story=fire-4)
 The app plots the set of points `@(x,y)@` of the plane that satisfy `@F(x,y)=0@` (the zeroset), for any polynomial function `@F(x,y)@` that the user introduces or selects from an example list.
 
 A small animation is played to draw the curve, that is triggered when the user touches the screen. Sparkbugs are points of light. At the beginning of the animation, these light points are placed randomly around the touch points of the user. As the animation progresses, the points move in the direction where the value of the function is closer to zero. After a few seconds, all the sparkbugs are placed on the zeroset.
 
 A list of examples is available on the side, and the user can write any polynomial equation in the text box.
 
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-1.png =800x450)
-
 @[youtube](XoGBCCIlgnc?_align-center_)
 
-## App 2 - Guess the equation
+## [App 2 - Guess the equation]($HUB_URL/apps/?appNumber=1&story=fire-4)
 This apps displays the same function plotter as the previous app. In this case, the challenge is to guess which of the shown equations is the one that is plotted on the screen. Each wrong guess will remove one "life" represented by a sparkbug (sitting on the top of the parchment). After three wrong guesses the solution is revealed. The game continues with a new curve to guess.
-
-![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-2.png =800x450)
 
 @[youtube](RI82ffVucEA?_align-center_)
 
-## App 3 - Surfaces
+## [App 3 - Surfaces]($HUB_URL/apps/?appNumber=2&story=fire-4)
 This app is again a free exploration, in this case for 3D surfaces given as the zeroset of a function `@F(x,y,z)=0@`.
 
 A list of example equations is available on the right, as well as the text box where the user can enter her or his own equation. (For a start, you can adapt the equations of the listed surfaces and observe the changes.)
@@ -91,4 +87,4 @@ A complementary activity to explore further the surfaces can be organized using 
 
 ### References
 * The program [SURFER](https://imaginary.org/program/surfer) has more options and information about implicit algebraic surfaces and singularities.
-* The text [World record surfaces](https://imaginary.org/background-material/world-record-surfaces) (available in English and German at IMAGINARY) has a general public introduction to those singular surfaces.
+* The text [World record surfaces](https://imaginary.org/background-material/world-record-surfaces) (available in English and German at IMAGINARY) has a general public introduction to those surfaces with singularities.

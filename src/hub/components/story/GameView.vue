@@ -63,8 +63,11 @@
           </v-toolbar>
           <iframe
             v-if="showGameDialog"
+            ref="iframe"
             :src="url"
             class="game"
+            :class="{'game--loading': isGameLoading && requiresScalingFix}"
+            :style="iframeStyle"
           />
         </v-card>
       </v-dialog>
@@ -107,11 +110,23 @@ export default {
       type: String,
       required: false,
       default: '',
-    }
+    },
+    fullWidth: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    requiresScalingFix: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   data() {
     return {
       showGameDialog: false,
+      iframeStyle: '',
+      isGameLoading: true,
     };
   },
   computed: {
@@ -130,7 +145,63 @@ export default {
     textInToolbar() {
       return this.toolbarText || this.text;
     },
-  }
+  },
+  watch: {
+    showGameDialog: {
+      handler(isShown, wasShown) {
+        if (isShown && !wasShown) {
+          setTimeout(() => {
+            this.setScaling();
+          }, 1000); // TODO: ?
+        }
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.setScaling);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setScaling);
+  },
+  methods: {
+    setScaling() {
+      if (!this.requiresScalingFix || !this.fullWidth || !this.showGameDialog) {
+        return false;
+      }
+      let el = this.$refs.iframe;
+      // Hardcoded to fire story sizes
+      let elementWidth = 1920;
+      let elementHeight = 1080;
+      let bodyWidth = window.innerWidth;
+      let bodyHeight = window.innerHeight;
+      if (!elementWidth || !bodyWidth) {
+        return false;
+      }
+
+      if (bodyWidth > elementWidth && bodyHeight > elementHeight) {
+        this.isGameLoading = false;
+        this.iframeStyle = `left: ${(bodyWidth - elementWidth) / 2}px`;
+        return false;
+      }
+
+      let ratio = bodyWidth / elementWidth;
+      let newHeight = ratio * elementHeight;
+      let rect = el.getBoundingClientRect();
+      let horizontalOrigin = 'left';
+      let offset = 0;
+      if (newHeight > (bodyHeight - rect.y)) {
+        ratio = (bodyHeight - rect.y) / elementHeight;
+        offset = 0.5 * (bodyWidth - elementWidth * ratio);
+      }
+      let newElementWidth = Math.floor(elementWidth / ratio);
+      let newElementHeight = Math.floor(elementHeight / ratio);
+
+      this.iframeStyle = `left: ${offset}px; width: ${newElementWidth}px; height: ${newElementHeight}px; transform: scale(${ratio}); transform-origin: ${horizontalOrigin} top;`;
+      this.$nextTick(() => {
+        this.isGameLoading = false;
+      });
+    },
+  },
 };
 </script>
 
@@ -140,6 +211,10 @@ export default {
   width: 100%;
   height: calc(100% - 64px);
   overflow: hidden;
+
+  &--loading {
+    opacity: 0;
+  }
 }
 
 .game-cta {
@@ -151,5 +226,9 @@ export default {
     white-space: normal;
     padding: 1rem;
   }
+}
+
+>>> .v-dialog--active {
+  overflow: hidden;
 }
 </style>

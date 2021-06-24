@@ -150,6 +150,7 @@
 
 <script>
 import MenuCredits from '~~/src/hub/components/MenuCredits';
+
 export default {
   components: { MenuCredits },
   data() {

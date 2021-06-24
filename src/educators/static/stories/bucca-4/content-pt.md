@@ -7,9 +7,8 @@ O método de Diffie-Hellman de facto usa o logaritmo discreto, ou seja, o cálcu
 [aqui]($HUB_URL/pt/story/the-lost-treasure/)
 , uma operação que do ponto de vista de dificuldade computacional é extremamente mais complexa do que a exponenciação).
 
-A criptografia de chave pública, pelo seu lado, baseia-se na assimetria no uso de chaves. Uma, a chave privada, será mantida secreta pelo utilizador depois de ter sido gerada; servirá apenas para decifrar mensagens recebidas. A outra, a chave pública, pode ser tornada pública para quem queira comunicar com o utilizador e é apenas usada para cifrar mensagens (isto implica que quem cifra uma mensagem cujos recetores são apenas outras pessoas não será capaz de decifrar a sua própria mensagem).
-Este método elimina a necessidade de o utilizador enviar uma chave secreta diferente para cada pessoa que queira comunicar com ele: isto é particularmente útil no caso de comunicações "de um para vários", como acontece com instituições bancárias ou agências
-governamentais.
+A criptografia de chave pública, pelo seu lado, baseia-se na assimetria no uso de chaves. Uma, a chave privada, será mantida secreta pelo utilizador depois de ter sido gerada; servirá apenas para decifrar mensagens recebidas. A outra, a chave pública, pode ser tornada pública para quem queira comunicar com o utilizador e é apenas usada para cifrar mensagens (isto implica que se cifrar uma mensagem com a chave pública de outra pessoa, não será capaz de a ler mais, aliás ninguém será capaz de o fazer, exceto o the o recetor da mensagem).
+Este método elimina a necessidade de o utilizador enviar uma chave secreta diferente para cada pessoa que queira comunicar com ele: isto é particularmente útil no caso de comunicações "de vários para um", como acontece com instituições bancárias ou agências governamentais.
 
 A criptografia de chave pública pode também ser usada "às avessas" para verificar a identidade de um utilizador. Neste caso, na mensagem cifrada com a chave pública do recetor, a pessoa que envia adiciona uma assinatura a qual segue numa cópia cifrada com a sua própria chave privada. O recetor pode então usar a chave pública de quem enviou para verificar que a assinatura coincide com a contida na mensagem que recebeu, confirmando assim a identidade deste.
 
