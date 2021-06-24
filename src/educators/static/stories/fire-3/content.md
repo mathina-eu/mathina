@@ -1,7 +1,7 @@
 # Mathematical concepts
 Functions are transformations that take an input number `@x@` and give out an output value `@y=f(x)@`. We can make a graph of the function, by plotting the points `@(x, f(x))@` in cartesian coordinates, yielding a curve in the plane. Some important examples of such curves are polynomial curves, which include straight lines (first degree) and parabolas (second degree).
 
-Those polynomials can be defined by their coefficients. An interesting quest is to find the (only) polynomial of degree n that passes through (n+1) selected points. One of the methods to find the requested polynomial is called the Lagrange polynomial interpolation, and it is an algebraic manipulation exercise.
+Those polynomials can be defined by their coefficients. An interesting quest is to find the (only) polynomial of degree n that passes through (n+1) selected points (with different abscissas). One of the methods to find the requested polynomial is called the Lagrange polynomial interpolation, and it is an algebraic manipulation exercise.
 
 The polynomial curves can also be traced with their velocity vector. This vector is calculated from the derivative of the function that defines the curve. The derivative of a function describes the rate of change of the function, and thus, whether the function is increasing or decreasing when advancing in the variable.
 
@@ -53,20 +53,18 @@ This app combines the methods introduced in the two previous apps. As in App 2, 
 
 ![App4](/stories/fire-3/img/_align-center_/4_1.png)
 
-Once you have adjusted the white points, you can click the 'Go' button to let the phoenix fly. During the flight, a yellow arrow indicates the direction and speed of the phoenix at its current position (similar to the magic wand control for the unidragon in the apps of the story 'The Firebird Trainer'). Purple arrows indicate the value of the derivative at the current position. There is one purple arrow displayed at the phoenix and (the same) one at the curve. 
+Once you have adjusted the white points, you can click the 'Go' button to let the phoenix fly. During the flight, a yellow arrow indicates the direction and speed of the phoenix at its current position (similar to the magic wand control for the unidragon in the apps of the story 'The Firebird Trainer'). Purple arrows indicate the value of the derivative at the current position. There is one purple arrow displayed at the phoenix and (the same) one at the curve.
 
 ![App4](/stories/fire-3/img/_align-center_/4_2.png)
 
-The phoenix may fly outside the screen, but will always arrive at the right side eventually. If it takes too long, you can click the 'Back' button (in this case, the flight was not successful). After a flight, in which the phoenix did not collect all fireballs, his flight path stays visible in order to help you adjust it. Observe the correspondance between the yellow (flight path) and the purple curve (derivative of the flight path). 
+The phoenix may fly outside the screen, but will always arrive at the right side eventually. If it takes too long, you can click the 'Back' button (in this case, the flight was not successful). After a flight, in which the phoenix did not collect all fireballs, his flight path stays visible in order to help you adjust it. Observe the correspondance between the yellow (flight path) and the purple curve (derivative of the flight path).
 
 ![App4](/stories/fire-3/img/_align-center_/4_3.png)
 
 Hints:
 * You may also move the very first white dot, which is initially positioned at the origin.
 * If you want the flight path to have a maximum or minimum where a fireball is reached, put a white dot to the x-axis.
-* If a fireball is positioned at the x-axis, the area between the purple curve and the x-axis above and below the axis must be equal (from the origin to the fireball). 
+* If a fireball is positioned at the x-axis, the area between the purple curve and the x-axis above and below the axis must be equal (from the origin to the fireball).
 * If the areas above and below the x-axis are very different, the phonenix will end up far away from the x-axis.
 
 @[youtube](-z5_LG3fgTY?_align-center_)
-
-
