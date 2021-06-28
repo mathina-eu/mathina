@@ -343,6 +343,7 @@ actions:
         char: angela
         mood: normal
   - type: game
+    listTitle: "Scambio di chiavi I: Segui i passaggi e costruisci il segreto condiviso."
     text: "Aiuta Leo e Mathina a imparare questo metodo"
     toolbarText: "Segui i passi e costruisci il segreto condiviso"
     cta: "Provaci tu!"
@@ -405,6 +406,7 @@ actions:
     text: >
       <p> Un'ora più tardi Leo e Angela stavano ancora eplorando la costa, quando ricevettero un SMS da Mathina.</p>
   - type: game
+    listTitle: "Scambio di chiavi II: Segui i passaggi per decodificare il messaggio di Mathina."
     text: "Scopri quali interessanti novità ha Mathina per noi!"
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina"
     cta: "Provaci tu!"
@@ -458,6 +460,7 @@ actions:
        char: angela
        mood: normal
   - type: game
+    listTitle: "Rubando la chiave: Segui i passaggi e aiuta Leo a capire quanto è sicuro il sistema."
     text: "Prova ad aiutare Leo a violare il sistema"
     toolbarText: "Segui i passaggi e aiuta Leo a capire quanto è sicuro il sistema"
     cta: "Provaci tu!"
@@ -587,6 +590,7 @@ actions:
        char: leo
        mood: talking
   - type: game
+    listTitle: "Scambio di chiavi III: Segui i passaggi per decodificare il messaggio di Mathina."
     text: "Scopriamo le ultime novità da Mathina"
     toolbarText: "Segui i passaggi per decodificare il messaggio di Mathina."
     cta: "Provaci tu!"

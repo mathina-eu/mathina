@@ -616,6 +616,7 @@ actions:
         mood: normal
 	
   - type: game
+    listTitle: "Il gioiello I: Codifica la parola. Ricorda, spostati dal cerchio interno a quello esterno per cifrare."
     text: "Codifica correttamente la parola."
     toolbarText: "Codifica la parola. Ricorda, spostati dal cerchio interno a quello esterno per cifrare"
     cta: "Provaci tu!"
@@ -828,6 +829,7 @@ actions:
       <p> Mathina guardò il pezzo di carta: poche parole - ovviamente incomprensibili - che somigliavano molto a quelle che aveva imparato oggi da Angela e John. La aiuterai a tradurre il messaggio segreto? </p>
 
   - type: game
+    listTitle: "Il gioiello II: Prova a decifrare il messaggio segreto aiutandoti con il gioiello."
     text: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
     toolbarText: "Prova a decifrare il messaggio segreto aiutandoti con il gioiello"
     cta: "Provaci tu!"

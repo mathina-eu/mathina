@@ -23,7 +23,7 @@ Alle Apps sind in Javascript programmiert und können auf Computern, Tablets und
 
 &nbsp;
 
-## [App 1 - Nachrichten und Schlüssel I]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app1)
+## [App 1 - Schlüsselaustausch I]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app1)
 
 In der ersten App können die Schülerinnen und Schüler die Schritte nachvollziehen, die Mathina und Leo nach Angelas Erklärung ausführen müssen, um das gemeinsame Geheimnis zu erhalten. Zunächst wählen sie eine Primzahl p und dann eine Zufallszahl zwischen 2 und p-2, dann kommen sie durch eine vereinfachte Version des Algorithmus getrennt zur Kenntnis einer gemeinsamen Zahl, die sie aus öffentlich ausgetauschten Informationen erhalten. 
 
@@ -32,7 +32,7 @@ In der ersten App können die Schülerinnen und Schüler die Schritte nachvollzi
 
 &nbsp;
 
-## [App 2 - Nachrichten und Schlüssel II]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app2)
+## [App 2 - Schlüsselaustausch II]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app2)
 
 Die zweite App, die auf der ersten aufbaut, bietet eine praktische Anwendung der Schlüsselaustauschmethode. Die Benutzerin oder der Benutzer spielt in diesem Fall die Rolle von Leo, der die erste Nachricht von Mathina erhält und sie mit dem in der ersten App generierten gemeinsamen Geheimnis entschlüsselt. Diese App wird innerhalb der Geschichte zweimal verwendet, da Leo zwei Nachrichten von Mathina erhält. 
 
@@ -40,7 +40,7 @@ Die zweite App, die auf der ersten aufbaut, bietet eine praktische Anwendung der
 [Script (PDF, englisch)](/stories/bucca-4/transcripts/Script4.pdf)
 &nbsp;
 
-## [App 3 - Nachrichten und Schlüssel III]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app3)
+## [App 3 - Den Schlüssel stehlen]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app3)
 
 In der dritten App muss der Benutzer in der Rolle von Leo versuchen, das kryptografische System zu knacken, indem er versucht, das gemeinsame Geheimnis ausgehend von der Kenntnis des Teils des Schlüssels, der sich im Besitz eines der Benutzer befindet, abzuleiten. Die App soll den Unterschied zwischen der rechnerischen Schwierigkeit zwischen den Operationen, die ausgeführt werden müssen, um das gemeinsame Geheimnis zu erhalten, und denen, die notwendig sind, um zu versuchen, das System zu knacken, hervorheben. 
 
@@ -49,7 +49,7 @@ In der dritten App muss der Benutzer in der Rolle von Leo versuchen, das kryptog
 
 &nbsp;
 
-## [App 4 - Nachrichten und Schlüssel IV]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app4)
+## [App 4 - Schlüsselaustausch III]($HUB_URL/de/story/the-man-in-the-middle/?actionLink=app4)
 
 Die vierte App wiederholt die Vorgehensweise der zweiten App, nun mit einer neuen Nachricht. Der Benutzer spielt wieder die Rolle von Leo, der eine neue Nachricht von Mathina erhält und aus der empfangenen Botschaft eine Nachricht im Klartext generiert.
 

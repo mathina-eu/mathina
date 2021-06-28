@@ -48,7 +48,7 @@ A segunda app, partindo da primeira, permite o uso na prática do método de tro
 
 &nbsp;
 
-## [Jogo 3 - Troca de chaves III]($HUB_URL/pt/story/the-man-in-the-middle/?actionLink=app3)
+## [Jogo 3 - Roubando a chave]($HUB_URL/pt/story/the-man-in-the-middle/?actionLink=app3)
 
 Na terceira experiência, no papel de Leo, o leitor tem de tentar quebrar o sistema criptográfico, derivando o segredo partilhado a partir do conhecimento da parte da chave na posse de um dos utilizadores. A app é usada para tornar clara a diferença em dificuldade computacional entre as operações a efetuar para obter o segredo partilhado e as necessárias para tentar violar o sistema.
 
@@ -57,7 +57,7 @@ Na terceira experiência, no papel de Leo, o leitor tem de tentar quebrar o sist
 
 &nbsp;
 
-## [Jogo 4 - Roubando a chave]($HUB_URL/pt/story/the-man-in-the-middle/?actionLink=app4)
+## [Jogo 4 - Troca de chaves III]($HUB_URL/pt/story/the-man-in-the-middle/?actionLink=app4)
 
 A quarta app, volta a propor a experiência da segunda, com uma nova mensagem; o leitor continua no papel de Leo, o qual recebe uma nova mensagem de Mathina e volta a gerar a mensagem original a partir da que recebeu.
 

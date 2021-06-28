@@ -652,6 +652,7 @@ actions:
         mood: normal
 
   - type: game
+    listTitle: "Der Anhänger I: Um etwas zu verschlüsseln, musst du mit dem inneren Kreis beginnen."
     text: "Um etwas zu verschlüsseln, musst du mit dem inneren Kreis beginnen."
     #"Remember: to encode you have to start from the inner circle"
     toolbarText: Verschlüssle das Wort.
@@ -876,6 +877,7 @@ actions:
     text: Mathina schaute auf das Stück Papier. Da standen ein paar Worte - natürlich unverständlich. Die sahen der Sprache, die sie heute von Angela und John gelernt hatte, sehr ähnlich. Willst Du ihr helfen, die geheime Botschaft zu übersetzen?
     #<p> Mathina looked at the piece of paper: a few words - of course incomprehensible - which looked very similar to the one she learned from Angela and John today. Will you help her translate the secret message? </p>
   - type: game
+    listTitle: "Der Anhänger II: Versuche die Botschaft mit Hilfe des Anhängers zu entschlüsseln."
     text: Versuche die Botschaft mit Hilfe des Anhängers zu entschlüsseln.
     #"Try to decipher the secret message with the help of the jewel"
     toolbarText: Entschlüssle die Botschaft.
