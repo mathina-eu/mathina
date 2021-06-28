@@ -421,7 +421,7 @@ actions:
         char: carla
         mood: happy
   - type: game
-    listTitle: "Keys and messages I"
+    listTitle: "Keys and messages I: \r\n Associate to the correct message the image described by the key."
     text: "Want to help the kids?"
     toolbarText: "Associate to the correct message the image described by the key."
     cta: "Let's try!"
@@ -463,7 +463,7 @@ actions:
         char: leo
         mood: happy
   - type: game
-    listTitle: "Keys and messages II"
+    listTitle: "Keys and messages II: Associate an image to each message. Use an image described by the key only for the correct message."
     text: "Want to help the kids?"
     toolbarText: "Associate an image to each message. Use an image described by the key only for the correct message."
     cta: "Let's try!"
@@ -770,7 +770,7 @@ actions:
     text: >
       <p>They leave the answer as well as their four new messages.</p>
   - type: game
-    listTitle: "Keys and messages III"
+    listTitle: "Keys and messages III: Find the secret message!"
     text: "Which is the message that Rasha and Lucy wrote to Mathina and Leo?"
     cta: "Find the secret message!"
     tag: app3

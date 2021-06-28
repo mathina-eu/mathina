@@ -343,6 +343,7 @@ actions:
         char: angela
         mood: normal
   - type: game
+    listTitle: "Troca de chaves I: Siga os passos e tente criar o segredo partilhado."
     text: "Ajuda a Mathina e o Leo a entender o método"
     toolbarText: "Siga os passos e tente criar o segredo partilhado"
     cta: "Tenta tu!"
@@ -412,6 +413,7 @@ actions:
     text: >
       <p> Uma hora depois Leo e Ângela, que exploravam ainda a costa, receberam um SMS de Mathina.</p>
   - type: game
+    listTitle: "Troca de chaves II: Siga os passos para decifrar a mensagem de Mathina."
     text: "Vejamos que novidades interessantes Mathina tem para nos dar!"
     toolbarText: "Siga os passos para decifrar a mensagem de Mathina"
     cta: "Tenta tu!"
@@ -468,6 +470,7 @@ actions:
        char: angela
        mood: normal
   - type: game
+    listTitle: "Roubando a chave: Siga os passos para ajudar o Leo a perceber como o sistema é seguro."
     text: "Tenta ajudar Leo a quebrar o sistema"
     toolbarText: "Siga os passos para ajudar o Leo a perceber como o sistema é seguro"
     cta: "Tenta tu!"
@@ -604,6 +607,7 @@ actions:
        char: leo
        mood: talking
   - type: game
+    listTitle: "Troca de chaves III: Siga os passos para decifrar a mensagem de Mathina."
     text: "Vejamos que novidades interessantes a Mathina tem para nos dar!"
     toolbarText: "Siga os passos para decifrar a mensagem de Mathina"
     cta: "Tenta tu!"

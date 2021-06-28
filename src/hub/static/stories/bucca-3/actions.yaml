@@ -75,6 +75,7 @@ actions:
 
 
   - type: game
+    listTitle: "The jewel I: Try to decode some words using the suggested key."
     text: "Remember: to decode you have to start from the outer circle"
     toolbarText: "Try to decode some words using the suggested key"
     cta: "Try it yourself!"
@@ -122,6 +123,7 @@ actions:
       </p>
 
   - type: game
+    listTitle: "The jewel II: Try to select the correct plaintext."
     text: "Select the plaintext. Remember the hint “BACKWARD”..."
     toolbarText: "Try to select the correct plaintext"
     cta: "Try it yourself!"
@@ -528,6 +530,7 @@ actions:
  
 
   - type: game
+    listTitle: "Sum on the clock: Try to calculate the sum of some additions on the clocks."
     text: "Try to calculate the sum of some additions on the clocks"
     toolbarText: "Try to calculate the sum of some additions on the clocks"
     cta: "Try it yourself!"
@@ -848,6 +851,7 @@ actions:
         mood: normal
 
   - type: game
+    listTitle: "Caesar cipher repeated I: Select the correct result of the method applied two times with the given keys."
     text: "Select the correct result of the method applied two times with the given keys."
     toolbarText: "Select the correct result of the method applied two times with the given keys."
     cta: "Try it yourself!"
@@ -907,6 +911,7 @@ actions:
         mood: normal
 
   - type: game
+    listTitle: "Caesar cipher repeated II: The big disc has to cypher words as the two smaller ones used consecutively. Select the correct position."
     text: "The big disc has to cypher words as the two smaller ones used consecutively. Select the correct position."
     toolbarText: "Select the correct position for the big disc."
     cta: "Try it yourself!"
@@ -1014,6 +1019,7 @@ actions:
         mood: normal
  
   - type: game
+    listTitle: "The jewel III: Verify that the text has not been cyphered in the usual way."
     text: "Verify that the text has not been cyphered in the usual way."
     toolbarText: "Verify that the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
@@ -1085,6 +1091,7 @@ actions:
 
 
   - type: game
+    listTitle: "The jewel IV: Verify that, as before, the text has not been cyphered in the usual way."
     text: "Verify that, as before, the text has not been cyphered in the usual way."
     toolbarText: "Verify that, as before, the text has not been cyphered in the usual way."
     cta: "Try it yourself!"
@@ -1118,6 +1125,7 @@ actions:
         mood: excited
 
   - type: game
+    listTitle: "Word by word: Mathina suggest to use two jewels: one to cypher words at even position and one to cypher words at odd position. Convince yourself that also this method does not work."
     text: "Mathina suggest to use two jewels: one to cypher words at even position and one to cypher words at odd position. Convince yourself that also this method does not work."
     toolbarText: "Convince yourself that also this method does not work."
     cta: "Try it yourself!"
@@ -1140,6 +1148,7 @@ actions:
 
 
   - type: game
+    listTitle: "A new cipher: Finally the cypher has been understood: the two jewels have to be used to cypher letters at odd and even position respectively."
     text: "Finally the cypher has been understood: the two jewels have to be used to cypher letters at odd and even position respectively. "
     toolbarText: "Try to decode the message!"
     cta: "Try it yourself!"

@@ -421,6 +421,7 @@ actions:
         char: carla
         mood: happy
   - type: game
+    listTitle: "Chaves e mensagens I: Associa a mensagem correta à imagem descrita na chave."
     text: "Queres ajudar as crianças?"
     toolbartext: "Associa a mensagem correta à imagem descrita na chave."    
     cta: "Vamos tentar!"
@@ -462,6 +463,7 @@ actions:
         char: leo
         mood: happy      
   - type: game
+    listTitle: "Chaves e mensagens II: Associa uma imagem a cada mensagem. Usa a imagem indicada pela chave apenas para a mensagem correta."
     text: "Queres ajudar as crianças?"
     toolbartext: "Associa uma imagem a cada mensagem. Usa a imagem indicada pela chave apenas para a mensagem correta."    
     cta: "Vamos tentar!"
@@ -768,6 +770,7 @@ actions:
     text: >
       <p>Elas deixaram não só a sua resposta, assim como quatro novas mensagens.</p>
   - type: game
+    listTitle: "Chaves e mensagens III: Encontra a mensagem secreta!"
     text: "Qual foi a mensagem que a Rasha e a Lucy escreverem à Mathina e ao Leo?"
     cta: "Encontra a mensagem secreta!"
     tag: app3

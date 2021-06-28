@@ -1,7 +1,7 @@
 # Mathematische Konzepte
 Funktionen sind Transformationen, die eine Eingangszahl `@x@` auf einen Ausgangswert `@y=f(x)@` abbilden. Wir können einen Graphen der Funktion erstellen, indem wir die Punkte `@(x, f(x))@` in kartesischen Koordinaten abbilden, was eine Kurve in der Ebene ergibt. Einige wichtige Beispiele für solche Kurven sind Polynome, zu denen Geraden (Polynome ersten Grades) und Parabeln (Polynome zweiten Grades) gehören.
 
-Polynome können durch ihre Koeffizienten definiert werden. Eine interessante Aufgabe ist es, das (einzige) Polynom vom Grad n zu finden, das durch (n+1) ausgewählte Punkte geht. Eine Methode, das gesuchte Polynom zu finden, heißt Lagrange-Polynom-Interpolation und beinhaltet im Wesentlichen Äquivalenzumformungen algebraischer Gleichungen, ist also nicht schwer aber eine Fleißarbeit.
+Polynome können durch ihre Koeffizienten definiert werden. Eine interessante Aufgabe ist es, das (einzige) Polynom vom Grad n zu finden, das durch (n+1) ausgewählte Punkte (mit verschiedenen x-Koordinaten) geht. Eine Methode, das gesuchte Polynom zu finden, heißt Lagrange-Polynom-Interpolation und beinhaltet im Wesentlichen Äquivalenzumformungen algebraischer Gleichungen, ist also nicht schwer aber eine Fleißarbeit.
 
 Polynomkurven können auch durch ihren Geschwindigkeitsvektor beschrieben werden. Dieser Vektor wird aus der Ableitung der Funktion berechnet, die die Kurve definiert. Die Ableitung einer Funktion beschreibt die Änderungsrate der Funktion und somit, ob die Funktion in positiver x-Richtung steigend oder fallend ist.
 
