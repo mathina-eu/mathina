@@ -30,7 +30,7 @@ A ideia principal que pretendemos veicular sobre o assunto é que um **Sólido P
 `*` em cada vértice encontra-se o mesmo número de faces;
 
 `*` os [**ângulos diedrais**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg2)
-, ou seja, os ângulos entre faces contíguas, são iguais seja, os ângulos entre faces contíguas, são iguais;
+são iguais, ou seja os ângulos entre faces contíguas são iguais;
 
 `*` os [**ângulos sólidos**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg3)
  em cada vértice são iguais.
@@ -41,7 +41,7 @@ Na história, a Mathina e o Leo lembram-se de um poliedro que satisfaz todas est
 
 Ao tentar construir um cubo, o Leo descobre, experimentalmente, uma
 [**sua planificação**]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg4)
-, e, mais tarde, apercebe-se que essa planificação não é única (existem várias outras opções). Ao longo da história, são também exploradas, para os restantes Sólidos Platónicos, as relações entre um poliedro e as suas planificações.
+ e, mais tarde, apercebe-se que essa planificação não é única (existem várias outras opções). Ao longo da história, são também exploradas, para os restantes Sólidos Platónicos, as relações entre um poliedro e as suas planificações.
 
 As duas personagens decidem então aceitar o desafio de **encontrar, de forma construtiva, todos os restantes Sólidos Platónicos**. Eles observam que, num cubo, o número de faces que chegam a cada vértice -- **3** -- é sempre o mesmo (conforme mencionado numa das propriedades acima referidas). E se o número de quadrados fosse diferente de 3?
 [Facilmente concluem que isso não é possível]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg5)
