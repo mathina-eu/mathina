@@ -407,7 +407,7 @@ actions:
         mood: happy
   - type: dialog
     entries:
-      - text: "Olá! Este papagaio é teu?"
+      - text: "Olá! Este papagaio é seu?"
         char: mathina
         mood: happy
   - type: clearImage
@@ -562,7 +562,7 @@ actions:
       <p> Mathina ficou maravilhada, e também muito feliz por conseguir entender pelo menos uma parte deste código.</p>
   - type: dialog
     entries:
-      - text: "Como você sabe isto? E ... como conseguiu traduzir tão rápido?"
+      - text: "Como sabe isto? E ... como conseguiu traduzir tão rápido?"
         char: mathina
         mood: normal
   - type: dialog
@@ -615,7 +615,6 @@ actions:
         mood: normal
 
   - type: game
-    listTitle: "A jóia I: Codifica a palavra. Lembra-te: para codificar deves começar do disco interno."
     text: "Codifica corretamente a palavra."
     toolbarText: "Codifica a palavra. Lembra-te: para codificar deves começar do disco interno"
     cta: "Experimenta!"
@@ -829,7 +828,6 @@ actions:
       <p> Mathina olhou para o pedaço de papel: algumas palavras --- claro que incompreensíveis --- que pareciam muito semelhantes às que ela tinha aprendido com a Ângela e com o John. Ajudas a traduzir a mensagem secreta? </p>
 
   - type: game
-    listTitle: "A jóia II: Codifica a palavra. Tenta decifrar a mensagem secreta com a ajuda da jóia."
     text: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     toolbarText: "Tenta decifrar a mensagem secreta com a ajuda da jóia"
     cta: "Tenta tu mesmo!"
