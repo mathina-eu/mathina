@@ -12,7 +12,7 @@ export default {
   world: {
     'title': 'Mathina',
     'help': 'Visite um território!',
-    'map': 'Mapa mundial',
+    'map': 'Mapa global',
   },
   cities: {
     'island': 'Ilha do Corsário',
