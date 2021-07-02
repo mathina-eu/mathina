@@ -1,7 +1,7 @@
 #FIRE-1
 actions:
   - type: background
-    src: bg_full.jpg
+    src: bg_full.png
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     parallax: back1
 

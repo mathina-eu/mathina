@@ -45,7 +45,7 @@ La seconda app, evoluzione della prima, propone un utilizzo pratico del metodo d
 
 &nbsp;
 
-## [App 3 - Rubando la chiave]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
+## [App 3 - Scambio di chiavi III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app3)
 
 Nella terza ed ultima esperienza, nel ruolo di Leo, il lettore deve cercare di violare il sistema crittografico, cercando di ricavare il segreto condiviso a partire dalla conoscenza della porzione di chiave in possesso di uno degli utenti. La app è utilizzata per evidenziare la differenza di difficoltà computazionale tra le operazioni da svolgere per ricavare il segreto condiviso e quelle invece necessarie per tentare di violare il sistema.
 
@@ -54,7 +54,7 @@ Nella terza ed ultima esperienza, nel ruolo di Leo, il lettore deve cercare di v
 
 &nbsp;
 
-## [App 4 - Scambio di chiavi III]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
+## [App 4 - Rubando la chiave]($HUB_URL/story/the-man-in-the-middle/?actionLink=app4)
 
 La quarta app ripropone l'esperienza della seconda, con un nuovo messaggio; il lettore nuovamente ricopre il ruolo di Leo, che riceve un nuovo messaggio da Mathina e nuovamente genera il messaggio in chiaro a partire da quello ricevuto. 
 

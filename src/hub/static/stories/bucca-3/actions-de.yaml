@@ -95,7 +95,6 @@ actions:
 
 
   - type: game
-    listTitle: "Der Anhänger I: Versuche, einige Wörter mit Hilfe des vorgeschlagenen Schlüssels zu entschlüsseln."
     text: "Erinnere Dich: Um zu entschlüsseln, musst du mit dem äußeren Kreis beginnen."
     #"Remember: to decode you have to start from the outer circle"
     toolbarText: Versuche, einige Wörter mit Hilfe des vorgeschlagenen Schlüssels zu entschlüsseln.
@@ -151,7 +150,6 @@ actions:
     #  </p>
 
   - type: game
-    listTitle: "Der Anhänger II: Wähle die richtige Nachricht."
     text: Wähle die richtige Nachricht aus. Erinnere dich an den Hinweis "RÜCKWÄRTS“...
     #"Select the plaintext. Remember the hint “BACKWARD”..."
     toolbarText: Wähle die richtige Nachricht.
@@ -609,7 +607,6 @@ actions:
  
 
   - type: game
-    listTitle: "Die Summe der Uhr: Versuche, die Summe einiger Zahlen auf den gegebenen Uhren zu berechnen."
     text: Versuche, die Summe einiger Zahlen auf den gegebenen Uhren zu berechnen.
     #"Try to calculate the sum of some additions on the clocks"
     toolbarText: Versuche, die Summe zu berechnen.
@@ -961,7 +958,6 @@ actions:
         mood: normal
 
   - type: game
-    listTitle: "Noch einmal die Cäsar-Verschlüsselung I: Wähle das richtige Ergebnis, wenn Du die Nachricht mit den vorgegeben Schlüsseln zweimal verschlüsselst."
     text: Wähle das richtige Ergebnis, wenn Du die Nachricht mit den vorgegeben Schlüsseln zweimal verschlüsselst.
     #"Select the correct result of the method applied two times with the given keys."
     toolbarText: Wähle das richtige Ergebnis aus.
@@ -1034,7 +1030,6 @@ actions:
         mood: normal
 
   - type: game
-    listTitle: "Noch einmal die Cäsar-Verschlüsselung II: Die große Scheibe muss die Wörter genauso verschlüsseln, wie die beiden kleineren nacheinander. Wähle die richtige Position!"
     text: Die große Scheibe muss die Wörter genauso verschlüsseln, wie die beiden kleineren nacheinander. Wähle die richtige Position!
     #"The big disc has to cypher words as the two smaller ones used consecutively. Select the correct position."
     toolbarText: Wähle die richtige Position für die große Scheibe.
@@ -1170,7 +1165,6 @@ actions:
         mood: normal
  
   - type: game
-    listTitle: "Der Anhänger III: Vergewissere dich, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde."
     text: Vergewissere dich, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
     #"Verify that the text has not been cyphered in the usual way."
     toolbarText: Vergewissere dich, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
@@ -1261,7 +1255,6 @@ actions:
 
 
   - type: game
-    listTitle: "Der Anhänger IV: Vergewissere Dich, wie vorher, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde."
     text: Vergewissere Dich, wie vorher, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
     #"Verify that, as before, the text has not been cyphered in the usual way."
     toolbarText: Vergewissere Dich, wie vorher, dass der Text nicht auf die übliche Art und Weise verschlüsselt wurde.
@@ -1303,7 +1296,6 @@ actions:
         mood: excited
 
   - type: game
-    listTitle: "Wort für Wort: Mathina schlägt vor, zwei Anhängereinstellungen zu verwenden: einen zum Verschlüsseln von Wörtern an einer geraden Stelle (2. Wort, 4. Wort usw.) und einen zum Verschlüsseln von Wörtern an ungeraden Stellen im Satz (1. Wort, 3. Wort usw.). Überzeuge dich davon, dass auch diese Methode nicht funktioniert."
     text: "Mathina schlägt vor, zwei Anhängereinstellungen zu verwenden: einen zum Verschlüsseln von Wörtern an einer geraden Stelle (2. Wort, 4. Wort usw.) und einen zum Verschlüsseln von Wörtern an ungeraden Stellen im Satz (1. Wort, 3. Wort usw.). Überzeuge dich davon, dass auch diese Methode nicht funktioniert."
     #"Mathina suggest to use two jewels: one to cypher words at even position and one to cypher words at odd position. Convince yourself that also this method does not work."
     toolbarText: Funktioniert diese Methode?
@@ -1332,7 +1324,6 @@ actions:
 
 
   - type: game
-    listTitle: "Eine neue Verschlüsselung: Jetzt gibt es zwei Codierungen mit der Halskette. Eine übersetzt  Buchstaben an gerader Position, die andere Buchstaben an ungerader Position."
     text: Jetzt gibt es zwei Codierungen mit der Halskette. Eine übersetzt  Buchstaben an gerader Position, die andere Buchstaben an ungerader Position.
     #"Finally the cypher has been understood: the two jewels have to be used to cypher letters at odd and even position respectively. "
     toolbarText: Versuche die Nachricht zu entschlüsseln.

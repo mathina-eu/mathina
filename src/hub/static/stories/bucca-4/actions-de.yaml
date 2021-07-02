@@ -373,7 +373,6 @@ actions:
         char: angela
         mood: normal
   - type: game
-    listTitle: "Schlüsselaustausch I: Folge den Arbeitsschritten und erstelle das gemeinsame Geheimnis."
     text: Lerne zusammen mit Mathina und Leo die Methode kennen.
     #"Let's help Mathina and Leo understand the method"
     toolbarText: Folge den Arbeitsschritten und erstelle das gemeinsame Geheimnis.
@@ -446,7 +445,6 @@ actions:
       <p>Eine Stunde später waren Leo und Angela immer noch dabei, die Küste zu erkunden, als sie eine Nachricht von Mathina erhielten.</p>
     #An hour later Leo and Angela were still exploring the coast, when they received an SMS from Mathina.
   - type: game
-    listTitle: "Schlüsselaustausch II: Follow the steps to decode Mathina's message."
     text: Welche spannende Nachricht hat Mathina?
     #"Let's see what interesting news Mathina has for us!"
     toolbarText: "Follow the steps to decode Mathina's message"
@@ -509,7 +507,6 @@ actions:
        char: angela
        mood: normal
   - type: game
-    listTitle: "Den Schlüssel stehlen: Folge den Arbeitsschritten und finde zusammen mit Leo heraus, wie sicher das System ist."
     text: Versuche den Code zu entschlüsseln.
     #"Try help Leo to hack the system"
     toolbarText: Folge den Arbeitsschritten und finde zusammen mit Leo heraus, wie sicher das System ist.
@@ -655,7 +652,6 @@ actions:
        char: leo
        mood: talking
   - type: game
-    listTitle: "Schlüsselaustausch III: Folge den Anweisungen, um Mathinas Nachricht zu entschlüsseln."
     text: Was hat Mathina geschrieben?
     #"Let's see what interesting news Mathina has for us!"
     toolbarText: Folge den Anweisungen, um Mathinas Nachricht zu entschlüsseln.

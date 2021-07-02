@@ -76,7 +76,6 @@ actions:
 
 
   - type: game
-    listTitle: "A jóia I: Tenta descodificar algumas palavras usando a chave sugerida."
     text: "Recorda: para descodificar há que partir do disco externo"
     toolbarText: "Tenta descodificar algumas palavras usando a chave sugerida"
     cta: "Tenta tu!"
@@ -123,7 +122,6 @@ actions:
       </p>
 
   - type: game
-    listTitle: "A jóia II: Tenta selecionar o texto correto."
     text: "Seleciona o texto. Lembra-te da dica “INVERTIDA”..."
     toolbarText: "Tenta selecionar o texto correto"
     cta: "Tenta tu!"
@@ -529,7 +527,6 @@ actions:
  
 
   - type: game
-    listTitle: "Soma no relógio: Tente calcular a soma de algumas adições nos relógios."
     text: "Tenta calcular a soma de algumas adições nos relógios"
     toolbarText: "Tente calcular a soma de algumas adições nos relógios"
     cta: "Tenta tu!"
@@ -849,7 +846,6 @@ actions:
         mood: normal
 
   - type: game
-    listTitle: "Cifra de César repetida I: Selecione o resultado correto do método aplicado duas vezes com as chaves dadas."
     text: "Seleciona o resultado correto do método aplicado duas vezes com as chaves dadas."
     toolbarText: "Selecione o resultado correto do método aplicado duas vezes com as chaves dadas."
     cta: "Tenta tu!"
@@ -908,7 +904,6 @@ actions:
         mood: normal
 
   - type: game
-    listTitle: "Cifra de César repetida II: O disco maior tem que cifrar palavras da mesma forma que os dois menores quando usados duas vezes, consecutivamente. Selecione a posição correta."
     text: "O disco maior tem que cifrar palavras da mesma forma que os dois menores quando usados duas vezes, consecutivamente. Selecione a posição correta."
     toolbarText: "Selecione a posição correta para o disco grande."
     cta: "Tenta tu!"
@@ -1015,7 +1010,6 @@ actions:
         mood: normal
  
   - type: game
-    listTitle: "A jóia III: Verifica que o texto não foi cifrado da maneira usual."
     text: "Verifica que o texto não foi cifrado da maneira usual."
     toolbarText: "Verifica que o texto não foi cifrado da maneira usual."
     cta: "Tenta tu!"
@@ -1086,7 +1080,6 @@ actions:
 
 
   - type: game
-    listTitle: "A jóia IV: Verifique que, como antes, o texto não foi cifrado da maneira usual."
     text: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
     toolbarText: "Verifique que, como antes, o texto não foi cifrado da maneira usual."
     cta: "Tenta tu!"
@@ -1119,7 +1112,6 @@ actions:
         mood: excited
 
   - type: game
-    listTitle: "Palavra por palavra: Mathina sugere o uso de duas posições da jóia: uma para cifrar palavras em posições pares e outra para cifrar palavras em posições ímpares. Convença-se de que este método também não funciona."
     text: "Mathina sugere o uso de duas posições da jóia: uma para cifrar palavras em posições pares e outra para cifrar palavras em posições ímpares. Convença-se de que este método também não funciona."
     toolbarText: "Convença-se de que este método também não funciona."
     cta: "Tenta tu!"
@@ -1141,7 +1133,6 @@ actions:
 
 
   - type: game
-    listTitle: "Uma nova cifra: Finalmente a cifra foi compreendida: as duas jóias devem ser usadas para codificar as letras nas posições ímpares e pares, respectivamente."
     text: "Finalmente a cifra foi compreendida: as duas jóias devem ser usadas para codificar as letras nas posições ímpares e pares, respectivamente."
     toolbarText: "Tente descodificar a mensagem!"
     cta: "Tenta tu!"

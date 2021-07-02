@@ -615,7 +615,6 @@ actions:
         mood: normal
 	
   - type: game
-    listTitle: "The jewel I: Encode the word. Remember: to encode you have to start from the inner circle."
     text: "Encode correctly the word."
     toolbarText: "Encode the word. Remember: to encode you have to start from the inner circle"
     cta: "Try it yourself!"
@@ -830,7 +829,6 @@ actions:
       <p> Mathina looked at the piece of paper: a few words - of course incomprehensible - which looked very similar to the one she learned from Angela and John today. Will you help her translate the secret message? </p>
 
   - type: game
-    listTitle: "The jewel II: Encode the word. Try to decipher the secret message with the help of the jewel."
     text: "Try to decipher the secret message with the help of the jewel"
     toolbarText: "Try to decipher the secret message with the help of the jewel"
     cta: "Try it yourself!"

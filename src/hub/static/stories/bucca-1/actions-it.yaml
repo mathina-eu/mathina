@@ -421,7 +421,6 @@ actions:
         char: carla
         mood: happy
   - type: game
-    listTitle: "Messaggi e chiavi I: Associa al messaggio corretto l'immagine descritta dalla chiave."
     text: "Aiuta i bambini a creare i messaggi!"
     toolbarText: "Associa al messaggio corretto l'immagine descritta dalla chiave."
     cta: "Provaci!"
@@ -463,7 +462,6 @@ actions:
         char: leo
         mood: happy      
   - type: game
-    listTitle: "Messaggi e chiavi I: Associa un'immagine a ciascun messaggio. Usa un'immagine descritta dalla chiave solo per il messaggio corretto."
     text: "Aiuta i bambini, associando a ciascun messaggio un'immagine"
     toolbarText: "Associa un'immagine a ciascun messaggio. Usa un'immagine descritta dalla chiave solo per il messaggio corretto."
     cta: "Provaci!"
@@ -779,7 +777,6 @@ actions:
     text: >
       <p>Prima di andarsene quindi lasciarono un messaggio per comunicare agli amici il luogo del loro prossimo incontro, assieme ad altri messaggi falsi.</p>
   - type: game
-    listTitle: "Messaggi e chiavi III: Trova il messaggio segreto!"
     text: "Qual è il messaggio che Rasha e Lucy hanno scritto per Mathina e Leo?"
     cta: "Trova il messaggio segreto!"
     tag: app3
