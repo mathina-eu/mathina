@@ -4,31 +4,32 @@ button{
 }
 
 body {
-    margin: auto;
+    /*margin: auto;*/
+    margin-left: 100px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     background-image: url("../imgs/fundo-rosaceas1.jpg");
-    background-position: left top;
+    background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 1000px;
     background-color: #e5ba66;
 }
 
 /* For any viewports less than 1000px wide */
-@media (max-width: 1000px) {
-    body {
-        background-size: 1000px 675px; /* Force the image to its minimum width */
-    }
+/*@media (max-width: 800px) {
+    body {*/
+        /*background-size: 800px;*/ /* Force the image to its minimum width */
+    /*}
 
-}
+}*/
 
 /* Header/footer boxes */
 
 .wideBox {
     clear: both;
     text-align: center;
-    /*width: 1000px;*/
-    height: 100px;
-    margin: auto;
+    width: 800px;
+    height: 60px;
+    /*margin-left: 100px;*/
     /*border: 1px solid #333;*/
 }
 
@@ -41,30 +42,28 @@ body {
 }
 
 .buttons{
-    width: 1000px;
-    margin: auto;
+    width: 800px;
+    /*margin-left: 100px;*/
     /*max-width: 800px;*/
     /*border: 1px solid #333;*/
 }
 
 .line{
     /*width: 1000px;*/
-    margin: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    min-width: 800px;
-    border-top: 1px solid black;
+    /*margin-left: 100px;*/
+    width: 800px;
+    /*border-top: 1px solid black;*/
 }
 
 /* Main content area */
 .container {
-    margin: auto;
+    /*margin-left: 100px;*/
     width: 800px;
 	float: none;
     /*border: 1px solid #333;*/
 }
 #loaders,#rosaceas,#targets,#errados,#buts {
-    width: 800px;
+    max-width: 800px;
     /*border: 1px solid #333;*/
 }
 
