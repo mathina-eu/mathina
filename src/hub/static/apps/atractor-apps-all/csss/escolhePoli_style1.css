@@ -1,0 +1,8 @@
+ #conteudo div{
+    align: left;
+    width: 67%;
+    max-width: 800px;
+    margin: auto;
+    margin-left: 0px;
+    /*border: 1px solid #333;*/
+}

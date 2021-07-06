@@ -14,21 +14,20 @@ body {
 }
 
 /* For any viewports less than 1000px wide */
-@media (max-width: 1200px) {
+/*@media (max-width: 1200px) {
     body {
         background-size: 1200px 675px; /* Force the image to its minimum width */
     }
 
-}
+}*/
 
 /* Header/footer boxes */
 
 .wideBox {
     clear: both;
-    text-align: center;
+    text-align: left;
     max-width: 800px;
-    margin: 10px;
-    margin-left: 50px;
+    margin: auto;
     /*border: 1px solid #333;*/
 }
 
@@ -37,7 +36,6 @@ body {
     font-weight: bold;
     font-size: 1.5em;
     color: #6e503c;
-
 }
 
 .buttons{
@@ -48,18 +46,25 @@ body {
 .line{
     max-width: 800px;
     margin: 10px;
-    margin-left: 50px;
     border-top: 1px solid black;
 }
 
 /* Main content area */
-#content div{
-    padding: 0px;
+/*.content{
+    align: left;
+    width: 62.5%;
     max-width: 800px;
-    text-align: center;
-    margin-left: 50px;
-    /*border: 1px solid #333;*/
-}
+    margin-left: 0px;
+}*/
+
+/*#conteudo div{
+    align: left;
+    width: 67%;
+    max-width: 800px;
+    margin: auto;
+    margin-left: 0px;
+    border: 1px solid #333;
+}*/
 
 /* "You did it!" message */
 #successMessage, #errorMessage, #finalMessage {

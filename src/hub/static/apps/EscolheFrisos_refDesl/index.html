@@ -14,7 +14,9 @@
     <div align="center" class="buttons">
         <table>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
             </th>
         </table>
     </div>
@@ -135,6 +137,7 @@
     }
 
     window.onload = function() {
+        resize(3);
         init();
     }
 

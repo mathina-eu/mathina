@@ -10,16 +10,16 @@ body {
     background-position: left top;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-color: #fbd131;
+    background-color: #fbe37c;
 }
 
 /* For any viewports less than 1000px wide */
-@media (max-width: 1200px) {
+/*@media (max-width: 1200px) {
     body {
-        background-size: 1200px 675px; /* Force the image to its minimum width */
+        background-size: 1200px 675px;
     }
 
-}
+}*/
 
 /* Header/footer boxes */
 
@@ -39,29 +39,31 @@ body {
 }
 
 .buttons{
-    width: 1000px;
-    margin: auto;
-    /*max-width: 800px;*/
+    /*width: 1000px;
+    margin: auto;*/
+    margin-right: 20%;
+    margin-left: 20%;
     /*border: 1px solid #333;*/
 }
 
 .line{
     /*width: 1000px;*/
-    margin: 10px;
-    margin-left: 150px;
+    margin: 3%;
+    margin-right: 5%;
+    margin-left: 20%;
     border-top: 1px solid black;
 }
 
-/* Main content area 
-#conteudo div{
-    width: 1200px;
+/* Main content area */
+/*#conteudo div{
+    width: 900px;
     margin: auto;
 }
 .content{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
-}
-*/
+    border-top: 1px solid black;
+}*/
 
 /* "You did it!" message */
 #successMessage, #errorMessage, #finalMessage {

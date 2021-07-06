@@ -13,24 +13,30 @@
     <div align="center" class="buttons">
         <table>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
-                <button id="nextBut" onclick="novaJogada()" style="display:none"><image src='../atractor-apps-all/icons/next.png' width='60' height='60'></image></button>
-                <button id="resetBut" onclick="reloadApp()" style="display:none"><image src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
+                <button id="nextBut" onclick="novaJogada()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/next.png' width='60' height='60'>
+                </image></button>
+                <button id="resetBut" onclick="reloadApp()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image>
+                </button>
             </th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
             <th>
-                <image id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
-                <image id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
+                <image class="buttons_elem" id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
                 <!--<image id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>-->
             </th>
         </table>
     </div>
     <div class="line"></div>
 
-    <div id="content">
+    <div class="content" id="conteudo">
         <div id="loaders" style = 'position:absolute; z-index: 1'></div>
         <div id="rosaceas" style = 'position:absolute; z-index: 2'> </div>
         <div id="targets"  style = 'position:absolute; z-index: 3'> </div>
@@ -108,10 +114,33 @@
     var feedbacks = new Array(feedback1,feedback2/*,feedback3*/);
     var tentativas=0;
     var myInterval;
-    init();
+    //init();
 
     var width = window.innerWidth;
     var height = window.innerHeight;
+
+    function resize(nCol=3){
+        //console.log(window.innerWidth);
+        //
+        width = window.innerWidth;
+        imgWidth = 250;
+        imgHeight = 225;
+        var larg = width;    
+        scal = 1;
+        if(larg<1200){
+            var scal = larg/1200;
+        }
+        imgWidth = scal*imgWidth;
+        document.body.style.backgroundSize = larg+'px';
+        document.getElementsByClassName("wideBox")[0].style = 'width: '+imgWidth*(nCol)+'px;';
+        document.getElementsByClassName("buttons")[0].style = 'width: '+imgWidth*(nCol)+'px;';
+        document.getElementsByClassName("line")[0].style = 'width: '+scal*730+'px;';
+        var n = document.getElementsByClassName("buttons_elem").length;
+        for(var i=0; i<n; i++){
+            document.getElementsByClassName("buttons_elem")[i].width = scal*60;
+            document.getElementsByClassName("buttons_elem")[i].height = scal*60;
+        }
+    }
     
     function init() {
         // Hide the success message
@@ -446,6 +475,11 @@
             }
         }
         return k;
+    }
+
+    window.onload = function() {
+        resize(3);
+        init();
     }
 
 </script>
