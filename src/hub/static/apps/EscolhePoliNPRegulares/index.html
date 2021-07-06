@@ -5,6 +5,7 @@
 <title id="barra">Poliedros não platónicos cujas faces são todas polígonos regulares iguais entre si</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePoli_style.css">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolhePoli_style2.css">
 
 <body>
     <div class="wideBox">
@@ -13,24 +14,30 @@
     <div align="center" class="buttons">
         <table>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
-                <button id="nextBut" onclick="novaJogada()" style="display:none"><image src='../atractor-apps-all/icons/next.png' width='60' height='60'></image></button>
-                <button id="resetBut" onclick="reloadApp()" style="display:none"><image src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
+                <button id="nextBut" onclick="novaJogada()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/next.png' width='60' height='60'></image>
+                </button>
+                <button id="resetBut" onclick="reloadApp()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image>
+                </button>
             </th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
             <th>
-                <image id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
-                <image id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
+                <image class="buttons_elem" id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
                 <!--<image id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>-->
             </th>
         </table>
     </div>
     <div class="line"></div>
 
-    <div id="content">
+    <div class="content" id="conteudo">
         <div id="loaders" style = 'position:absolute; z-index: 1'></div>
         <div id="rosaceas" style = 'position:absolute; z-index: 2'> </div>
         <div id="targets"  style = 'position:absolute; z-index: 3'> </div>
@@ -96,10 +103,31 @@
     var feedbacks = new Array(feedback1,feedback2);
     var tentativas=0;
     var myInterval;
-    init();
 
     var width = window.innerWidth;
     var height = window.innerHeight;
+
+    function resize(nCol=3){
+        //console.log(window.innerWidth);
+        //
+        width = window.innerWidth;
+        imgWidth = 200;
+        var larg = width;    
+        scal = 1;
+        if(larg<1000){
+            var scal = larg/1000;
+        }
+        imgWidth = scal*imgWidth;
+        document.body.style.backgroundSize = larg+'px';
+        document.getElementsByClassName("wideBox")[0].style = 'width: '+imgWidth*(nCol)+'px;';
+        document.getElementsByClassName("buttons")[0].style = 'width: '+imgWidth*(nCol)+'px;';
+        document.getElementsByClassName("line")[0].style = 'width: '+scal*580+'px;';
+        var n = document.getElementsByClassName("buttons_elem").length;
+        for(var i=0; i<n; i++){
+            document.getElementsByClassName("buttons_elem")[i].width = scal*60;
+            document.getElementsByClassName("buttons_elem")[i].height = scal*60;
+        }
+    }
     
     function init() {
         // Hide the success message
@@ -423,6 +451,11 @@
 
     function dist(P,Q){
         return Math.sqrt(Math.pow(P.x-Q.x,2)+Math.pow(P.y-Q.y,2));
+    }
+
+    window.onload = function() {
+        resize(3);
+        init();
     }
 
 </script>

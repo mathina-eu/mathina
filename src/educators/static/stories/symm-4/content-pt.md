@@ -120,7 +120,7 @@ Esta discrepância está relacionada com a definição de poliedro uniforme. Par
 
 Na história, uma simetria de um poliedro é definida como uma isometria (ou seja, uma função que preserva distâncias) que leva o poliedro em si mesmo. Para mais informações sobre o assunto, consulte: 1) 
 [os exemplos fornecidos]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg20)
-, e 2) o “O que é uma simetria?” Capítulo apresentado no texto sobre a história ["Carimbando frisos"](https://mathina-edu.netlify.app/pt/story/stamping-friezes)
+, e 2) o “O que é uma simetria?” Capítulo apresentado no texto sobre a história ["Carimbando frisos"](./stamping-friezes)
 .
 
 Por que motivo o poliedro Miller não é uniforme? Se considerarmos os vértices *A* e *B*, qualquer isometria que leve *A* em *B* removerá o anel de quadrados do equador, 

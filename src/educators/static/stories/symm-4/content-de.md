@@ -96,7 +96,7 @@ Diese Meinungsverschiedenheit hängt mit der Definition der uniformen Polyeder z
 
 `*` für jedes Paar von Scheitelpunkten gibt es mindestens eine Symmetrie des Polyeders, die den einen Scheitelpunkt auf den anderen überträgt.
 
-In der Geschichte ist eine **Polyedersymmetrie** definiert als eine Isometrie (d.h. eine Funktion, die Abstände bewahrt), die das Polyeder auf sich selbst abbildet. Weitere Informationen zu diesem Thema finden Sie 1) [in den angegebenen Beispielen]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg20), und 2) im Kapitel "Was ist Symmetrie?" im Text zur Geschichte ["Zauberhafte Muster"](https://mathina-edu.netlify.app/de/story/stamping-friezes).
+In der Geschichte ist eine **Polyedersymmetrie** definiert als eine Isometrie (d.h. eine Funktion, die Abstände bewahrt), die das Polyeder auf sich selbst abbildet. Weitere Informationen zu diesem Thema finden Sie 1) [in den angegebenen Beispielen]($HUB_URL/de/story/the-polyhedron-carousel/?actionLink=tg20), und 2) im Kapitel "Was ist Symmetrie?" im Text zur Geschichte ["Zauberhafte Muster"](./stamping-friezes).
 
 Warum ist das Miller-Polyeder nicht uniform? Wenn wir die Eckpunkte *A* und *B* betrachten, wird jede Isometrie, die *A* auf *B* abbildet, den Ring der Quadrate vom Äquator entfernen und damit [das endgültige Aussehen des Polyeders verändern]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 

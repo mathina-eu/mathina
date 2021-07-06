@@ -10,21 +10,27 @@
     <div class="wideBox">
       <h1 id="titulo"></h1>
     </div>
-    <div align="center" class="buttons">
+    <div class="buttons" align="center">
         <table>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
-                <button id="nextBut" onclick="novaJogada()" style="display:none"><image src='../atractor-apps-all/icons/next.png' width='60' height='60'></image></button>
-                <button id="resetBut" onclick="reloadApp()" style="display:none"><image src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
+                <button id="nextBut" onclick="novaJogada()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/next.png' width='60' height='60'></image>
+                </button>
+                <button id="resetBut" onclick="reloadApp()" style="display:none">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/refresh.png' width='60' height='60'></image>
+                </button>
             </th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
             <th>
-                <image id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
-                <image id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
-                <image id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
+                <image class="buttons_elem" id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
             </th>
         </table>
     </div>
@@ -84,6 +90,8 @@
 	var jogada_imgs = 8;
 	
     var imgWidth = 200;
+    var margemTop = 60;
+    var margemLeft = 100;
     var assetDir = '../atractor-apps-all/imgs/';
     var iconsDir = '../atractor-apps-all/icons/';
     var imgs;
@@ -94,12 +102,17 @@
     var feedbacks = new Array(feedback1,feedback2,feedback3);
     var tentativas=0;
     var myInterval;
-    init();
+    
 
     var width = window.innerWidth;
     var height = window.innerHeight;
+    //var width = window.screen.availWidth;
+    //var height = window.screen.availHeight;
     
+    init();
+
     function init() {
+        resize();
         // Hide the success message
         setLanguage();
 
@@ -124,12 +137,39 @@
             loadImg('loaders',"../atractor-apps-all/icons/loading.gif",imgWidth*0.2);
         }
         loadImages();
+        
+    }
+
+    function resize(){
+        width = window.innerWidth;
+        imgWidth = 200;
+        margemTop = 60;
+        margemLeft = 100;
+        var larg = width;
+        if(larg<1000){
+            var scal = larg/1000;
+            imgWidth = scal*imgWidth;
+            margemTop = scal*margemTop;
+            margemLeft = scal*margemLeft;
+            document.body.style.marginLeft = margemLeft+'px';
+            document.body.style.backgroundSize = larg+'px';
+            document.getElementsByClassName("wideBox")[0].style = 'width: '+imgWidth*4+'px; height:'+ margemTop +'px';
+            document.getElementsByClassName("buttons")[0].style = 'width: '+imgWidth*4+'px; height:'+ scal*90 +'px';
+            var n = document.getElementsByClassName("buttons_elem").length;
+            for(var i=0; i<n; i++){
+                document.getElementsByClassName("buttons_elem")[i].width = scal*60;
+                document.getElementsByClassName("buttons_elem")[i].height = scal*60;
+            }
+            document.getElementsByClassName("line")[0].style = 'width: '+imgWidth*4+'px;';
+            document.getElementsByClassName("container")[0].style = 'width: '+imgWidth*4+'px;';
+        }else{
+            document.body.style.marginLeft = (larg-1000)*0.5+margemLeft+'px';
+        }
     }
     
     function reloadApp(){
         location.reload();
     }
-    
 
     function showImages(){
         var flag=true;
@@ -236,6 +276,7 @@
         document.getElementById(xdiv).appendChild(img);
         if(borderGross>0){            
             img.style.border = borderGross+"px solid rgba(111,111,111,0.001)";
+            //img.style.border = borderGross+"px solid rgba(111,111,111)";
         }
         return img
     }
@@ -406,8 +447,6 @@
         });
         return vars;
     }
-
-
 </script>
 
 </head>

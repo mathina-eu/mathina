@@ -93,7 +93,7 @@ Questa discrepanza è correlata alla definizione di poliedro uniforme. Per il te
 
 `*` per ogni coppia di vertici, c'è almeno una simmetria del poliedro che porta un vertice sull'altro.
 
-Nella storia, una **simmetria di un poliedro** è definita come un'isometria (cioè una funzione che preserva le distanze) che manda il poliedro in se stesso. Per ulteriori informazioni sull'argomento, consultare: 1) [gli esempi forniti]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg20), e 2) il capitolo "Cos'è una simmetria?" presentato nel testo sulla storia["Stampando i fregi"](https://mathina-edu.netlify.app/it/story/stamping-friezes).
+Nella storia, una **simmetria di un poliedro** è definita come un'isometria (cioè una funzione che preserva le distanze) che manda il poliedro in se stesso. Per ulteriori informazioni sull'argomento, consultare: 1) [gli esempi forniti]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg20), e 2) il capitolo "Cos'è una simmetria?" presentato nel testo sulla storia["Stampando i fregi"](./stamping-friezes).
 
 Perché il poliedro di Miller non è uniforme? Possiamo convincerci di questo fatto, ad esempio, osservando che se consideriamo i vertici *A* e *B* in figura, qualsiasi isometria che manda *A* in *B* rimuoverà "l'anello" dei quadrati dall'equatore, quindi [cambierà l'aspetto finale del poliedro]($HUB_URL/it/story/the-polyhedron-carousel/?actionLink=tg21).
 
