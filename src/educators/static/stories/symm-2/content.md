@@ -21,7 +21,7 @@ In the story, a
  is available.
 By using this tool, the user gets acquainted with: 1) the fact that the segment joining a point *A* and its reflected image *A’* is perpendicular to the reflection line *r* and 2) both points (*A* and *A’*) are at equal distance from *r*.
 
-![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
+![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =500x256)
 
 ## Rotation symmetry
 
@@ -33,7 +33,7 @@ In the story, a
 [“half-turn maze”]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg2)
 is also available. By exploring this tool, the user becomes more familiar to a specific kind of rotation, the one of *180* degrees. In particular, he/she may observe that the rotation center *O* is the midpoint of *[AA’]*.
 
-![Rotation](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
+![Rotation](/stories/symm-2/img/_align-center_/AOA1.jpg =500x190)
 
 &nbsp;
 

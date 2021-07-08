@@ -72,7 +72,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.png =150x150)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.png =150x150)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.png =150x150)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.png =150x150)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.png =150x150)|
 |Assi di simmetria verticali| Nessun asse di simmetria verticale | Assi di simmetria verticali | Nessun asse di simmetria verticale | Assi di simmetria verticali |
 |Nessun asse di simmetria orizzontale| Assi di simmetria orizzontali |Assi di simmetria orizzontali  | Nessun asse di simmetria orizzontale |  Nessun asse di simmetria orizzontale|
 |Nessuna rotazione |  |  | Rotazioni | Rotazioni |
@@ -89,7 +89,7 @@ Separiamo questi due tipi di fregi, aggiungendo una nuova borsa (la quinta) per 
 
 | Bag 1| Bag 2 | Bag 3 | Bag 4 | Bag 5 | Bag 6 | Bag 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Bag 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Bag 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Bag 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Bag 1](/stories/symm-3/img/_align-center_/bag1.png =100x100)|![Bag 2](/stories/symm-3/img/_align-center_/bag2.png =100x100)|![Bag 3](/stories/symm-3/img/_align-center_/bag3.png =100x100)|![Bag 4](/stories/symm-3/img/_align-center_/bag4.png =100x100)|![Bag 5](/stories/symm-3/img/_align-center_/bag5.png =100x100)|![Bag 6](/stories/symm-3/img/_align-center_/bag6.png =100x100)|![Bag 7](/stories/symm-3/img/_align-center_/bag7.png =100x100)|
 |Assi di simmetria verticali| Nessun asse di simmetria verticale  | Assi di simmetria verticali| Nessun asse di simmetria verticale  | Assi di simmetria verticali | Nessun asse di simmetria verticale  | Nessun asse di simmetria verticale  |
 |Nessun asse di simmetria orizzontale|  Assi di simmetria orizzontali  | Assi di simmetria orizzontali  | Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale| Nessun asse di simmetria orizzontale |
 |Nessuna rotazione|  |  | Rotazioni | Rotazioni | Nessuna rotazione | Nessuna rotazione |

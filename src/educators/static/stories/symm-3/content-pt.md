@@ -75,7 +75,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.png =150x150)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.png =150x150)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.png =150x150)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.png =150x150)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.png =150x150)|
 | Há simetria de reflexão vertical | Não há simetria de reflexão vertical  | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical |
 |Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal| Há simetria de reflexão horizontal |  Há simetria de rotação |Não há simetria de reflexão horizontal |
 |Não há simetria de rotação |  |  |  | Há simetria de rotação |
@@ -92,7 +92,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 | Saco 6 | Saco 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Saco 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Saco 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.png =100x100)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.png =100x100)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.png =100x100)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.png =100x100)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.png =100x100)|![Saco 6](/stories/symm-3/img/_align-center_/bag6.png =100x100)|![Saco 7](/stories/symm-3/img/_align-center_/bag7.png =100x100)|
 |Há simetria de reflexão vertical| Não há simetria de reflexão vertical | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical | Não há simetria de reflexão | Não há simetria de reflexão |
 |Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de rotação | Não há simetria de reflexão horizontal | Não há simetria de rotação | Não há simetria de rotação |
 |Não há simetria de rotação |  |  | | Há simetria de rotação | Há simetria de reflexão deslizante | Não há simetria de reflexão deslizante |

@@ -45,7 +45,7 @@ export default {
     },
   },
   index: {
-    title: 'Bem-vindos ao mundo da Mathina',
+    title: 'As aventuras da Mathina',
     subtitle: 'Selecione um grupo-etários e comece!',
     'start-exploring': 'Comece a explorar!',
     about: 'Sobre',
@@ -80,7 +80,7 @@ export default {
     'assist-mode': 'Modo de assistente',
     credits: 'Créditos',
     'credits-disclaimer': 'Este projeto foi financiado com o apoio da Comissão Europeia. Os conteúdos aqui presentes ' +
-      'são da responsabilidade dos autores, e a Comissão não pode ser responsabilizada por qualquer uso indevido que possa ser ' +
+      'traduzem as opiniões dos autores, e a Comissão não pode ser responsabilizada por qualquer uso que possa ser ' +
       'feito das informações nele contidas.'
   },
   chars: {
