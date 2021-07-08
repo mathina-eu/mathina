@@ -8,9 +8,9 @@ body {
     margin-left: 100px;
     font-family: "Comic Sans MS", cursive, sans-serif;
     background-image: url("../imgs/fundo-rosaceas1.jpg");
-    background-position: center top;
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: 1000px;
+    background-size: 100%;
     background-color: #e5ba66;
 }
 
