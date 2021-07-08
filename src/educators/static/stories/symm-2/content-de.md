@@ -19,7 +19,7 @@ Die Identifizierung einer Spiegelsymmetrie ist gleichbedeutend mit dem Auffinden
 
 In der Geschichte gibt es ein ["Spiegellabyrinth"]($HUB_URL/de/story/mathina-the-rossete-game/?actionLink=tg1). Dadurch wird folgendes veranschaulicht: 1) die Strecke, die einen Punkt *A* und sein Spiegelbild *A'* verbindet, steht senkrecht auf der Spiegelachse. 2) beide Punkte (*A* und *A'*) haben den gleichen Abstand zur Spiegelachse.
 
-![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
+![Reflection](/stories/symm-2/img/_align-center_/AA1.jpg =500x256)
 
 ## Rotationsymmetrie
 
@@ -29,7 +29,7 @@ Die Rotationssymmetrie eines Bildes ist eine Drehung um die eigene Achse.
 
 Im weiteren Verlauf der Geschichte wird ein ["Gedrehtes Labyrinth"]($HUB_URL/story/mathina-the-rossete-game/?actionLink=tg2) vorgestellt. Durch die Erkundung dieser App macht sich die Spielerin/der Spieler mit einer bestimmten Art der Drehung, nämlich der von *180* Grad, vertraut. Hier kann sie/er feststellen, dass der Drehpunkt *O* der Mittelpunkt von *[AA']* ist.
 
-![Rotation](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
+![Rotation](/stories/symm-2/img/_align-center_/AOA1.jpg =500x190)
 
 &nbsp;
 
