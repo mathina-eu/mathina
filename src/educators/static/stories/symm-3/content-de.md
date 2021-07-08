@@ -67,7 +67,7 @@ Betrachten wir zwei verschiedene Fälle: 1) Friese ohne Achsensymmetrie (die in 
 
 | Tasche 1| Tasche 2 | Tasche 3 | Tasche 4 | Tasche 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.png =150x150)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.png =150x150)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.png =150x150)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.png =150x150)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.png =150x150)|
 | vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie |
 | Keine horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie |
 | Keine Rotationssymmetrie |  |  | Rotationssymmetrie | Rotationssymmetrie |
@@ -86,7 +86,7 @@ Betrachten wir zwei verschiedene Fälle: 1) Friese ohne Achsensymmetrie (die in 
 
 | Tasche 1| Tasche 2 | Tasche 3 | Tasche 4 | Tasche 5 | Tasche 6 | Tasche 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Tasche 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Tasche 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Tasche 1](/stories/symm-3/img/_align-center_/bag1.png =100x100)|![Tasche 2](/stories/symm-3/img/_align-center_/bag2.png =100x100)|![Tasche 3](/stories/symm-3/img/_align-center_/bag3.png =100x100)|![Tasche 4](/stories/symm-3/img/_align-center_/bag4.png =100x100)|![Tasche 5](/stories/symm-3/img/_align-center_/bag5.png =100x100)|![Tasche 6](/stories/symm-3/img/_align-center_/bag6.png =100x100)|![Tasche 7](/stories/symm-3/img/_align-center_/bag7.png =100x100)|
 | vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | Vertikale Achsensymmetrie | keine vertikale Achsensymmetrie | keine vertikale Achsensymmetrie 
 | Keine horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie | Keine horizontale Achsensymmetrie
 |Keine Rotationssymmetrie|  |  | Rotationssymmetrie | Rotationssymmetrie | Keine Rotationssymmetrie | Keine Rotationssymmetrie
