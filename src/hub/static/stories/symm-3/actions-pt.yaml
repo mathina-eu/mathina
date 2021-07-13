@@ -545,6 +545,23 @@ actions:
     src: symm-bg5-01.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: fundo
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
   - type: clearImage
     id: friso
   - type: sceneText
@@ -563,6 +580,10 @@ actions:
   - type: sceneText
     text: >
       <p>Os três, encharcados, correram para a barraquinha mais próxima, à procura de abrigo.</p><p>Chovia torrencialmente na Feira da Simetria. A Mathina pensava para si mesma que nunca vira tanta chuva e só esperava que ela passasse rapidamente!</p>
+
+  - type: clearImage
+    id: clouds
+
   - type: clearBackground
     id: fundo
   - type: background
