@@ -69,4 +69,4 @@ O utilizador vê o mapa das ruas da cidade Logi e três cubos de açúcar. O obj
 
 O utilizador vê um mapa gerado aleatoriamente e três chapéus de polícia. O objetivo é saber como três polícias conseguem fiscalizar todas as ruas da cidade. O utilizador pode mover os ícones no mapa e as ruas supervisionadas aparecerão em destaque. O botão de "Refresh" faz com que seja gerado um novo mapa.
 
-[Guião]()
+[Guião](/stories/logi-3/transcripts/Script3-pt.pdf)

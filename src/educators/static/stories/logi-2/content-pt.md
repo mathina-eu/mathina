@@ -57,3 +57,5 @@ A regra para este jogo é que o utilizador apenas se pode deslocar de um mosaico
 
 
 @[youtube](ORR614pbLzk?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
+
+[Guião (PDF)](/stories/logi-2/transcripts/Script2-pt.pdf)
