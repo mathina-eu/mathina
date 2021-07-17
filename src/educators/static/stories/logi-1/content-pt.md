@@ -65,4 +65,4 @@ São exibidos oito semáforos, em fila, no ecrã. O utilizador deve sobrepor os 
 ## [Jogo 3]($HUB_URL/pt/story/the-traffic-light-challenge/?actionLink=thirdGame)
 Encontre a sequência correta para a sexta sequência! As regras da app são as mesmas que no primeiros jogo.
 
-[Script (PDF)](/stories/logi-1/transcripts/Script1-pt.pdf)
+[Guião (PDF)](/stories/logi-1/transcripts/Script1-pt.pdf)
