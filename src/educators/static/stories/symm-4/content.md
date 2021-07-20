@@ -107,6 +107,10 @@ Throughout the story, the characters get acquainted with **all uniform polyhedra
 ![Uniform polyhedra](/stories/symm-4/img/_align-center_/uniformes.png =675x400)
 
 In the end, the characters build a model for the [“Platonic and uniform polyhedra” carousel]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg25). It consists of highly symmetrical polyhedra: in fact, for each polyhedron, and for each pair of vertices, there is at least one symmetry of the polyhedron which takes one vertex onto the other.
+&nbsp;
+
+**To see additional information regarding the Symmetry part of the Mathina project,**
+[**click here**](https://www.atractor.pt/Mathina-extras/index-_en.html)
 
 &nbsp;
 
