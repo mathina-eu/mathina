@@ -93,7 +93,7 @@ This discrepancy is related to the definition of uniform polyhedron. For the tec
 
 `*` for each pair of vertices, there is at least one symmetry of the polyhedron that takes one vertex onto the other.
 
-In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg20), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"](https://mathina-edu.netlify.app/story/stamping-friezes).
+In the story, a **polyhedron symmetry** is defined as an isometry (i.e. a function that preserves distances) that takes the polyhedron onto itself. For further information on the subject, please consult: 1) [the given examples]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg20), and 2) the “What is a symmetry?” chapter presented in the text about the story ["Stamping friezes"](./stamping-friezes).
 
 Why is the Miller polyhedron non uniform? If we consider vertices *A* and *B*, any isometry taking *A* into *B* will remove the ring of squares from the equator, thus [changing the final aspect of the polyhedron]($HUB_URL/story/the-polyhedron-carousel/?actionLink=tg21).
 

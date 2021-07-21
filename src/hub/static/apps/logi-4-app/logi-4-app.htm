@@ -64,8 +64,7 @@
         #wrapper {
             margin-top: 5%;
             width: 100%;
-            //border: 1px solid black;
-            visibility: hidden;
+            display: none;
         }
 
         #first {
@@ -183,7 +182,7 @@
                 SoldiAmici = [];
                 for (let i = 0; i < Amici; i++) SoldiAmici.push(0);
                 GenerateBeginning(Numero, Step);
-                document.getElementById("wrapper").style.visibility = "visible";
+                document.getElementById("wrapper").style.display = "block";
             }
 document.getElementById("preloadcontainer").style.display = "none";
         }
@@ -208,7 +207,7 @@ document.getElementById("preloadcontainer").style.display = "none";
             GenerateBeginning(Numero, Step);
             Custom = 0;
             document.getElementById("Scelta").style.display = "none";
-            document.getElementById("wrapper").style.visibility = "visible";
+            document.getElementById("wrapper").style.display = "block";
 
         }
 

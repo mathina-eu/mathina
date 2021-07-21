@@ -60,7 +60,24 @@ actions:
   - type: background
     src: $COMMON/img/bg/SYMM/c1-bg5.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
-    id: c1-bg5        
+    id: c1-bg5
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 2;"
+    parallax: back3
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
   - type: sceneText
     text: >
       <p>Embora sentindo-se desconfortável, a Mathina decidiu acompanhar o Leo e entrar no carrossel. E mal os dois se sentaram em veículos diferentes, começou a chover. Contudo, isso não impediu o Leo de continuar a explorar o carrossel: dentro do veículo, encontrou uma alavanca com a palavra “fechar”, que imediatamente acionou.</p>
@@ -196,7 +213,7 @@ actions:
     entries:        
       - text: "Primeiro vamos sair daqui e vamos para o meu gabinete. Vocês não deviam estar sozinhos num local de construção! – sugeriu o técnico."
         char: technician
-        mood: worried        
+        mood: worried
   - type: animation
     target: Leo2
     vars:
@@ -221,6 +238,10 @@ actions:
   - type: sceneText
     text: >
       <p>A Mathina e o Leo acompanharam o técnico até ao gabinete.</p>
+
+  - type: clearImage
+    id: clouds
+
   - type: clearImage
     id: Mathina4
   - type: clearImage

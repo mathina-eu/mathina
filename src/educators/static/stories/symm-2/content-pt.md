@@ -21,7 +21,7 @@ Na história, está disponível um
 [“labirinto de espelhos”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg1)
 . Ao usar esta ferramenta, o utilizador familiariza-se com o facto de: 1) o segmento que une um ponto *A* à sua imagem refletida *A'* ser perpendicular à linha de reflexão e 2) ambos os pontos (*A* e *A'*) estarem à mesma distância de *r*.
 
-![Reflexão](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
+![Reflexão](/stories/symm-2/img/_align-center_/AA1.jpg =500x256)
 
 ## Simetria de rotação
 
@@ -33,7 +33,7 @@ Na história, também está disponível um
 [“labirinto de meia volta”]($HUB_URL/pt/story/mathina-the-rossete-game/?actionLink=tg2)
 . Ao explorar esta ferramenta, o utilizador familiariza-se com um tipo específico de rotação, a de 180 graus. Em particular, pode observar que o centro de rotação *O* é o ponto médio de *[AA ']*. 
 
-![Rotação](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
+![Rotação](/stories/symm-2/img/_align-center_/AOA1.jpg =500x190)
 
 &nbsp;
 

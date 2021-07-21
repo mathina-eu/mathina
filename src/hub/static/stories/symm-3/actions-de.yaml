@@ -1,6 +1,6 @@
 actions:
   - type: background
-    src: symm-bg1-de.png
+    src: symm-bg1-de.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: fundo
   - type: image
@@ -566,6 +566,23 @@ actions:
     src: symm-bg5-01.jpg
     style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
     id: fundo
+
+  - type: image
+    src: bg_clouds.png
+    id: clouds
+    style: "position: absolute; left: 0; width: 100%; height: 100%; z-index: 1;"
+    parallax: back3
+
+  - type: animation
+    target: clouds
+    vars:
+      duration: 40
+      xPercent: -40
+      yPercent: 0
+      ease: power1.inOut
+      repeat: -1
+      yoyo: true
+
   - type: clearImage
     id: friso
   - type: sceneText
@@ -586,6 +603,10 @@ actions:
     text: >
       <p>Sie waren natürlich schon ganz nass und rannten trotzdem noch zu einer der nahen Marktbuden, um dort Unterschlupf zu finden.</p><p>Es regnete wie wild auf dem Symmel-Rummel. Mathina hatte noch nie soviel Regen auf einmal erlebt, und sie hoffte einfach, dass es bald aufhören würde.</p>
     #<p>The three ran, all wet, to the nearest stall, looking for shelter.</p><p>It was raining hard at Symmetry Fair. Mathina thought to herself that she had never seen so much rain and just hoped that it would pass soon.</p>
+
+  - type: clearImage
+    id: clouds
+
   - type: clearBackground
     id: fundo
   - type: background

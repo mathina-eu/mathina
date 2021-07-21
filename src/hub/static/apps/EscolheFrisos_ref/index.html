@@ -13,17 +13,19 @@
     </div>
     <div align="center" class="buttons">
         <table>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
             </th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
-            <th><image src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
+            <th><image class="buttons_elem" src='../atractor-apps-all/icons/transp.png' width='60' height='60'></image></th>
             <th>
-                <image id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
-                <image id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
-                <image id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback1' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60' ></image>
+                <image class="buttons_elem" id='feedback2' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
+                <image class="buttons_elem" id='feedback3' src='../atractor-apps-all/icons/feedbackTalvez0.png' width='60' height='60'></image>
             </th>
         </table>
     </div>
@@ -138,6 +140,7 @@
     }
 
     window.onload = function() {
+        resize(4);
         init();
     }
 

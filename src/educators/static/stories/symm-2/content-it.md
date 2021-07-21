@@ -20,7 +20,7 @@ Nella storia, l'app
 è disponibile (collegamento al repository IO3).
 Utilizzando questo strumento, l'utente viene a conoscenza di: 1) il fatto che il segmento che unisce un punto *A* e la sua immagine riflessa *A'* è perpendicolare alla retta di riflessione *r* e 2) entrambi i punti (*A* e *A'*) sono alla stessa distanza da *r*.
 
-![Riflessione](/stories/symm-2/img/_align-center_/AA1.jpg =360x169)
+![Riflessione](/stories/symm-2/img/_align-center_/AA1.jpg =500x256)
 
 ## Simmetria di rotazione
 
@@ -31,7 +31,8 @@ Una simmetria di rotazione di un'immagine è una rotazione che porta l'immagine 
 Nella storia, l'app
 ["Il labirinto del mezzo giro"]($HUB_URL/it/story/mathina-the-rossete-game/?actionLink=tg2)
 è disponibile (collegamento al repository IO3). Esplorando questa app, l'utente acquisisce maggiore familiarità con un tipo specifico di rotazione, quello di *180* gradi. In particolare, può osservare che il centro di rotazione *O* è il punto medio di *[AA ’]*.
-![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =360x136)
+
+![Reflection](/stories/symm-2/img/_align-center_/AOA1.jpg =500x190)
 
 &nbsp;
 

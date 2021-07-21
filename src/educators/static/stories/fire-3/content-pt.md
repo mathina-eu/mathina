@@ -1,7 +1,7 @@
 # Conceitos matemáticos
 Funções são transformações que partem de um número dado `@x@` e produzem um valor `@y=f(x)@`. Pode-se fazer um gráfico da função marcando os pontos `@(x, f(x))@` em coordenadas cartesianas, resultando uma curva no plano. Alguns exemplos importantes de tais curvas são as linhas retas (primeiro grau), e as parábolas (segundo grau).
 
-Estas curvas polinomiais podem ser definidas pelos seus coeficientes. Um problema interessante é encontrar o (único) polinómio de grau `@n@` que passa por `@n+1@` pontos escolhidos. É o que se chama a interpolação polinomial de Lagrange e trata-se de um exercício de manipulação algébrica.
+Estas curvas polinomiais podem ser definidas pelos seus coeficientes. Um problema interessante é encontrar o (único) polinómio de grau `@n@` que passa por `@n+1@` pontos escolhidos (com abcissas diferentes). É o que se chama a interpolação polinomial de Lagrange e trata-se de um exercício de manipulação algébrica.
 
 As curvas polinomiais podem ser desenhadas conjuntamente com os vetores velocidade associados aos seus pontos. Esse vetor num ponto é calculado a partir da derivada da função que define a curva. A derivada de uma função descreve o grau de mudança dos valores da função e permite assim em particular saber em que pontos a função é crescente ou decrescente.
 

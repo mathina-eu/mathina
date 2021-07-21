@@ -1,5 +1,25 @@
+function resize(nCol=4){
+    //console.log(window.innerWidth);
+    //
+    width = window.innerWidth;
+    imgWidth = 300;
+    var larg = width;    
+    scal = 1;
+    if(larg<1200){
+        var scal = larg/1200;
+    }
+    imgWidth = scal*imgWidth;
+    document.body.style.backgroundSize = larg+'px';
+    var n = document.getElementsByClassName("buttons_elem").length;
+    for(var i=0; i<n; i++){
+        document.getElementsByClassName("buttons_elem")[i].width = scal*60;
+        document.getElementsByClassName("buttons_elem")[i].height = scal*60;
+    }
+    document.getElementsByClassName("content")[0].style = 'width: '+imgWidth*nCol+'px;';
+}
+
 function init() {
-    // Hide the success message
+
     setLanguage();
 
     $('#successMessage').hide();

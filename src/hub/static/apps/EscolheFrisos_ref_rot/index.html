@@ -5,7 +5,7 @@
 <title id="titBarra">Escolhe frisos com simetria de reflexão e de rotação</title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolheFris_style.css">
-<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolheFris_style2.css">
+<link rel="stylesheet" type="text/css" href="../atractor-apps-all/csss/escolheFris_style2.css"
 
 <body>
     <div class="wideBox">
@@ -14,13 +14,15 @@
     <div align="center" class="buttons">
         <table>
             <th>
-                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden"><image src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image></button>
+                <button id="confirmBut" onclick="confirmar()" style="visibility: hidden">
+                    <image class="buttons_elem" src='../atractor-apps-all/icons/confirm.png' width='60' height='60'></image>
+                </button>
             </th>
         </table>
     </div>
     <div class="line"></div>
 
-     <div class="content" id="conteudo" align="left" width="800px">
+     <div class="content" id="conteudo" align="left">
         <div id="loaders" style = 'position:absolute; z-index: 1'></div>
         <div id="frisos" style = 'position:absolute; z-index: 2'> </div>
         <div id="targets"  style = 'position:absolute; z-index: 3'> </div>
@@ -135,6 +137,7 @@
     }
 
     window.onload = function() {
+        resize(3);
         init();
     }
 

@@ -55,7 +55,7 @@ Essa descoberta é feita, de forma construtiva, através de uma análise das sim
 `*` **Simetria de reflexão**: a primeira diferença detetada pelas personagens é o facto de haver frisos que possuem eixos de simetria -- ou, noutra formulação, frisos que têm
 [simetria de reflexão]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg4)
  -- e outros que não os possuem. Examinando os frisos mais atentamente, surgem novas diferenças: há frisos que apenas têm eixos de simetria verticais^[Estamos a assumir que a direção das simetrias de translação é horizontal.]
-outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos os tipos de eixo. Na história, os frisos com eixos de simetria são separados em 3 sacos: 1, 2 e 3: 
+outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos os tipos de eixo. Na história, os frisos com eixos de simetria são separados em 3 sacos: 
 [1, 2 e 3]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg5)
 .
 
@@ -75,7 +75,7 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 |
 | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =150x150)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =150x150)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =150x150)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =150x150)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =150x150)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.png =150x150)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.png =150x150)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.png =150x150)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.png =150x150)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.png =150x150)|
 | Há simetria de reflexão vertical | Não há simetria de reflexão vertical  | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical |
 |Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal| Há simetria de reflexão horizontal |  Há simetria de rotação |Não há simetria de reflexão horizontal |
 |Não há simetria de rotação |  |  |  | Há simetria de rotação |
@@ -92,15 +92,15 @@ outros que apenas possuem um eixo de simetria horizontal e outros que têm ambos
 
 | Saco 1| Saco 2 | Saco 3 | Saco 4 | Saco 5 | Saco 6 | Saco 7 |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
-|![Saco 1](/stories/symm-3/img/_align-center_/bag1.jpg =100x100)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.jpg =100x100)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.jpg =100x100)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.jpg =100x100)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.jpg =100x100)|![Saco 6](/stories/symm-3/img/_align-center_/bag6.jpg =100x100)|![Saco 7](/stories/symm-3/img/_align-center_/bag7.jpg =100x100)|
+|![Saco 1](/stories/symm-3/img/_align-center_/bag1.png =100x100)|![Saco 2](/stories/symm-3/img/_align-center_/bag2.png =100x100)|![Saco 3](/stories/symm-3/img/_align-center_/bag3.png =100x100)|![Saco 4](/stories/symm-3/img/_align-center_/bag4.png =100x100)|![Saco 5](/stories/symm-3/img/_align-center_/bag5.png =100x100)|![Saco 6](/stories/symm-3/img/_align-center_/bag6.png =100x100)|![Saco 7](/stories/symm-3/img/_align-center_/bag7.png =100x100)|
 |Há simetria de reflexão vertical| Não há simetria de reflexão vertical | Há simetria de reflexão vertical | Não há simetria de reflexão | Há simetria de reflexão vertical | Não há simetria de reflexão | Não há simetria de reflexão |
-|Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de rotação | Não há simetria de reflexão horizontal | Há simetria de reflexão deslizante | Não há simetria de rotação |
-|Não há simetria de rotação |  |  | | Há simetria de rotação |  | Não há simetria de reflexão deslizante |
+|Não há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de reflexão horizontal | Há simetria de rotação | Não há simetria de reflexão horizontal | Não há simetria de rotação | Não há simetria de rotação |
+|Não há simetria de rotação |  |  | | Há simetria de rotação | Há simetria de reflexão deslizante | Não há simetria de reflexão deslizante |
 
 `*` **Simetria de Translação**: por definição, 
 [todos os frisos têm simetria de translação]($HUB_URL/pt/story/stamping-friezes/?actionLink=tg9)
 
-**Nota 5**: Os frisos no saco 7 correspondem aos **que apenas têm simetria de translação**.
+**Nota 5**: Os frisos no saco 7 correspondem aos que **apenas têm simetria de translação**.
 
 Ao estudarmos as simetrias dos frisos apresentados, concluímos que existem pelo menos 7 tipos de frisos de acordo com a sua simetria. Na verdade, é possível provar que **existem apenas esses 7 tipos**! No entanto, a demonstração desse resultado não cabe no âmbito deste texto.
 
