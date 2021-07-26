@@ -10,7 +10,7 @@ The guide will follows three main steps:
 2. Copy the package of the Mathina hub to the host.
 3. Play with Mathina.
 
-The last step, in particular, will contain three possible solutions for playing with the Project:
+The last step, in particular, will contain three possible solutions for playing with the Project: ([https://github.com/mathina-eu/mathina/releases](https://github.com/mathina-eu/mathina/releases))
 
 
 
