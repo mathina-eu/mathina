@@ -146,6 +146,10 @@ Ao longo da história, as personagens têm a oportunidade de conhecer **todos os
 No final, as personagens constroem um modelo para o carrossel dos 
 [“poliedros platónicos e uniformes”]($HUB_URL/pt/story/the-polyhedron-carousel/?actionLink=tg25)
 . Tratam-se de poliedros extremamente simétricos: de facto, para cada poliedro, e para cada par de vértices, há pelo menos uma simetria do poliedro que leva um vértice no outro.
+&nbsp;
+
+**Para consultar informação suplementar relativamente à parte da Simetria do projeto Mathina,**
+[**clique aqui**](https://www.atractor.pt/Mathina-extras/)
 
 &nbsp;
 
