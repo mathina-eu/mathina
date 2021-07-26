@@ -58,3 +58,30 @@ Gli strumenti forniti dalla app, insieme alle tecniche sopra indicate, sono abba
 La app ha un ampio elenco di esempi di curve, ognuno dei quali mostra formula e rappresentazione grafica. I primi esempi, più semplici, possono essere compresi e utilizzati come base per i ragionamenti successivi. Una casella di testo consente di introdurre e modificare qualsiasi equazione (polinomiale) in due variabili.
 
 # Esperienze interattive
+## [App 1 - Esplorazione]($HUB_URL/apps/?appNumber=0&story=fire-4)
+La app disegna l'insieme di punti `@(x,y)@` del piano che soddisfano `@F(x,y)=0@` (l'insieme degli zeri), per qualsiasi funzione polinomiale `@F(x,y) @` che l'utente introduce o seleziona da un elenco di esempio.
+
+Viene riprodotta una piccola animazione per disegnare la curva, che viene attivata quando l'utente tocca lo schermo. Le libellule scintillanti rappresentano dei punti di luce. All'inizio dell'animazione, questi punti luce sono posizionati casualmente, man mano che l'animazione avanza, i punti si spostano nella direzione in cui il valore della funzione è più vicino allo zero. Dopo pochi secondi, tutte le libellule scintillanti vengono posizionate sull'insieme degli zeri.
+
+A lato è disponibile un elenco di esempi e l'utente può scrivere qualsiasi equazione polinomiale nella casella di testo.
+
+@[youtube](XoGBCCIlgnc?_align-center_)
+
+## [App 2 - Indovina l'equazione]($HUB_URL/apps/?appNumber=1&story=fire-4)
+Questa app mostra la stessa funzionalità della app precedente. In questo caso, la sfida consiste nell'indovinare quale delle equazioni mostrate è quella tracciata sullo schermo. Ogni ipotesi sbagliata rimuoverà una "vita" rappresentata da una libellula scintillante (indicata sulla parte superiore della schermata). Dopo tre tentativi sbagliati la soluzione viene mostrata e il gioco continua con una nuova curva da indovinare.
+
+@[youtube](RI82ffVucEA?_align-center_)
+
+## [App 3 - Superfici]($HUB_URL/apps/?appNumber=2&story=fire-4)
+Anche questa app è un'esplorazione libera, in questo caso per superfici 3D date come insieme degli zeri di una funzione `@F(x,y,z)=0@`.
+
+Sulla destra è disponibile un elenco di equazioni di esempio, nonché la casella di testo in cui l'utente può inserire la propria equazione. (Per cominciare, puoi modificare le equazioni delle superfici elencate e osservare i risultati.)
+
+Accanto alla superficie sono disponibili tre cursori. Innanzitutto, un parametro `@a@`, che può essere utilizzato all'interno della formula, e il dispositivo di scorrimento regola il suo valore da `@0@` a `@1@`. In secondo luogo, un controllo della trasparenza che consente alla superficie di essere più o meno traslucida. Terzo, un livello di zoom, che imposta la quantità della superficie (generalmente infinita) che vediamo all'interno della sfera che ritaglia il grafico.
+
+![Some alt text](/stories/fire-4/img/_align-center_/screenshot-app-fire-4-3.png =800x450)
+
+Un'attività complementare per esplorare ulteriormente le superfici può essere organizzata utilizzando [SURFER](https://imaginary.org/program/surfer), un programma più completo che offre le stesse funzionalità di disegno di superfici. Le tecniche di costruzione sopra indicate (deformazione, unione, intersezione) sono particolarmente utili per realizzare superfici creative.
+
+
+
