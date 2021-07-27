@@ -643,7 +643,7 @@ If you want to use the example app, you should run `yarn app:generate`, then mov
 
 For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-#Landing page
+# Landing page
 
 To start a development server on port **3003** (localhost:3003) use:
 ``` bash
@@ -663,3 +663,4 @@ yarn lan:dev
 yarn lan:generate
 npx http-server dist/landing
 ```
+Related translation files can be found in `landing/i18n` folder.
