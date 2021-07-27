@@ -40,18 +40,6 @@
             target="_blank"
           >{{ $t('landing.bigButton') }}</a>
         </section>
-<!--        <section class="buttons-section buttons-section&#45;&#45;secondary">-->
-<!--          <a-->
-<!--            class="button button&#45;&#45;secondary"-->
-<!--            :href="$t('landing.eduButtonLink')"-->
-<!--            target="_blank"-->
-<!--          >Educator’s guide</a>-->
-<!--          <a-->
-<!--            class="button button&#45;&#45;secondary"-->
-<!--            :href="$t('landing.shareButtonLink')"-->
-<!--            target="_blank"-->
-<!--          >{{ $t('landing.shareButton') }}</a>-->
-<!--        </section>-->
         <div class="separator" />
         <section v-html="$t('landing.firstSection')" />
         <section class="video-section">
@@ -70,11 +58,8 @@
         <section class="partners">
           <p
             class="text--small"
-            v-html="$t('landing.logoSectionText')"
-          >
-            Mathina is realized in the framework of an Erasmus+ project between 2019-2021. <br>
-            Five partners collaborate to realize Mathina:
-          </p>
+            v-html="$t('landing.closingSectionText')"
+          />
           <a href="https://www.atractor.pt/">
             <img class="partners__image"
                  width="133"
@@ -82,7 +67,7 @@
                  src="~assets/images/atractor.png"
             >
           </a>
-          <span class="partners__name">Atractor (Portugal)</span>
+          <span class="partners__name">Atractor ({{ $t('country.portugal') }})</span>
           <a href="https://bragi.si/">
             <img class="partners__image"
                  width="93"
@@ -90,7 +75,7 @@
                  src="~assets/images/bragi.png"
             >
           </a>
-          <span class="partners__name">Bragi Vizualne Komunikacije (Slovenia)</span>
+          <span class="partners__name">Bragi Vizualne Komunikacije ({{ $t('country.slovenia') }})</span>
           <a href="https://www.curvilinea.org/">
             <img class="partners__image"
                  width="178"
@@ -98,7 +83,7 @@
                  src="~assets/images/curvilinea.png"
             >
           </a>
-          <span class="partners__name">Curvilinea Società Cooperativa (Italy)</span>
+          <span class="partners__name">Curvilinea Società Cooperativa ({{ $t('country.italy') }})</span>
           <a href="http://www.elmenymuhely.hu/">
             <img class="partners__image"
                  width="111"
@@ -106,7 +91,7 @@
                  src="~assets/images/experience_workshop.png"
             >
           </a>
-          <span class="partners__name">Experience Workshop (Finland)</span>
+          <span class="partners__name">Experience Workshop ({{ $t('country.finland') }})</span>
           <a href="https://imaginary.org/">
             <img class="partners__image"
                  width="138"
@@ -114,7 +99,7 @@
                  src="~assets/images/imaginary.png"
             >
           </a>
-          <span class="partners__name">IMAGINARY (Germany)</span>
+          <span class="partners__name">IMAGINARY ({{ $t('country.germany') }})</span>
         </section>
         <div class="separator"></div>
         <section  v-html="$t('landing.footerSection')" />
