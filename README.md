@@ -1,5 +1,5 @@
 * [Summary](#summary)
-  * [Mathian Hub Summary](#mathina-hub-summary)
+  * [Mathina Hub Summary](#mathina-hub-summary)
   * [Standalone Apps Summary](#standalone-apps-summary)
   * [The Educator's Repository Summary](#the-educators-repository-summary)
 * [Mathina Hub](#mathina-hub)
@@ -7,10 +7,12 @@
   * [Working with stories](#working-with-stories)
   * [Supported Actions](#supported-story-actions)
   * [Story localization](#story-localization)
+  * [Building for production](#preparing-a-hub-production-build)
 * [Educator's Repository](#educators-repository)
   * [Quick Start - Edu](#quick-start---edu)
   * [Working with Stories in Educator's Repository](#working-with-content-in-educators-repository)
   * [Educator content localization](#educator-content-localization)
+  * [Building for production](#preparing-a-repository-production-build)
 * [Standalone Apps](#standalone-apps)
 * [Extra: Example App](#extra-example-app)
 
@@ -516,12 +518,25 @@ german story to `/src/hub/static/stories/demo-story/img/de/some-german-specific-
 ### Supported locales
 
 * `de` - German
+* `it` - Italian
+* `pt` - Portuguese
 * `en` - English (Do not create an actions-en.yaml file as the default actions.yaml file will be used for english)
-* ...
+
+### Preparing a Hub production build
+
+```bash
+# optionally install dependencies
+yarn
+# generate production files in /dist/hub/
+yarn hub:generate
+```
+
+You will now have production files ready in `/dist/hub`. These are static HTML, JS, Image, Video, Content and CSS files
+which can be served from any web server without the need of a database or any server side rendering.
 
 # Educator's Repository
 
-The Educator's repository is code dependant on the Hub to allow for a single point of entry when
+The Educator's repository is code dependent on the Hub to allow for a single point of entry when
 defining cities, stories, urls etc.
 
 ## Quick start - Edu
@@ -542,14 +557,14 @@ To generate or preview production builds you can use:
 ``` bash
 $ yarn edu:generate
 # launch local server
-$ npx http-server dist/edu
+$ npx http-server dist/educators
 ```
 ```bash
 # dev
 yarn edu:dev
 # prod
 yarn edu:generate
-npx http-server dist/edu
+npx http-server dist/educators
 ```
 
 ## Working with Content in Educator's Repository
@@ -600,6 +615,19 @@ For example to add a german file, add `content-de.md` to `/src/educators/static/
 
 For supported locales see [here](#supported-locales)
 
+### Preparing a Repository production build
+
+```bash
+# optionally install dependencies
+yarn
+# generate production files in /dist/hub/
+yarn edu:generate
+```
+
+You will now have production files ready in `/dist/educators`. These are static HTML, JS, Image, Video, Content and CSS files
+which can be served from any web server without the need of a database or any server side rendering.
+
+
 # Standalone Apps
 
 Standalone Apps are prepackaged bundles meant to be executed within Hub stories via iframes.
@@ -642,3 +670,41 @@ If you want to use the example app, you should run `yarn app:generate`, then mov
 
 
 For detailed explanation on how Nuxt work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+# Project Description App
+
+To start a development server on port **3003** (localhost:3003) use:
+
+``` bash
+$ yarn lan:dev
+```
+
+To generate or preview production builds you can use:
+
+``` bash
+$ yarn lan:generate
+# launch local server
+$ npx http-server dist/landing
+```
+
+```bash
+# dev
+yarn lan:dev
+# prod
+yarn lan:generate
+npx http-server dist/landing
+```
+
+Related translation files can be found in the `src/landing/i18n` folder.
+
+## Preparing a Project Description App production build
+
+```bash
+# optionally install dependencies
+yarn
+# generate production files in /dist/hub/
+yarn lan:generate
+```
+
+You will now have production files ready in `/dist/landing`. These are static HTML, JS, Image, Video, Content and CSS files
+which can be served from any web server without the need of a database or any server side rendering.
