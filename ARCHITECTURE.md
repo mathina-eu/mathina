@@ -33,15 +33,6 @@ The core technology used is Javascript in various forms.
 
 See https://i18n.nuxtjs.org/basic-usage/ for using the internalization framework.
 
-### Adding a new language
-
-Let's say we're adding Slovenian (ISO639-1 code `sl`)
-
-1. In `src/shared/nuxt.config.js` under `i18n.locales` add a new entry
-2. Copy `en.js` to `sl.js` in `src/[landing|hub|educators]/` directories and start translating
-3. In `src/hub/static/stories/[story-name]/` add `actions-sl.yaml` files and populate them
-4. In `src/edu/static/stories/[story-name]/` add `content-sl.md` files and populate them
-
 ## Notes on shared files
 
 Files and configuration shared between the Hub and the Repository are located in `src/shared/`
@@ -57,20 +48,6 @@ See `README.md` for building and development commands.
 Located in `src/hub/`
 
 See `README.md` for building and development commands.
-
-### Adding a new story region / city
-
-1. Open `src/hub/constants.js` and add another entry to the `CITIES` variable
-2. Add translations of the city using its ID to `src/hub/i18n/[lang].js` files under the key `cities`.
-3. In `src/hub/pages/world.vue` add <style> CSS entries under `.ribbon` to position the city on the world map. 
-   See how this is done for the existing cities and follow their example.
-   
-### How to modify the world map to add a new story
-
-1. In `src/hub/pages/world.vue` in <script> under `data()` and `mapStories` add a new entry using the new stories ID 
-   and name a new CSS class that you will use to position a graphical element. See existing entries and follow suite.
-2. In the same file add a <style> CSS entry to position the new graphical asset representing the new story.
-   See existing classes like `.chest`, `.parrot`, etc as examples.
 
 ## Notes on The Educator's Repository
 

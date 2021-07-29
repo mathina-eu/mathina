@@ -11,8 +11,8 @@ export default {
   },
   world: {
     'title': 'Mathina',
-    'help': 'Visit any city!',
-    'map': 'The World Map',
+    'help': 'Visit a city!',
+    'map': 'World Map',
   },
   cities: {
     'island': 'Buccaneer Island',
