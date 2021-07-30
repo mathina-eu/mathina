@@ -24,8 +24,8 @@ export default {
       '</strong> un booklet di presentazione in pdf dei principi pedagogici su cui si basa il progetto Mathina, per ' +
       'genitori ed educatori. Perché l’utilizzo di racconti? Perché la scelta di questi specifici argomenti di ' +
       'matematica? Perché vorresti leggere Mathina ai tuoi figli o ai tuoi studenti?</li>' +
-      '<li><strong>L’Handbook per educatori</strong> (pdf, presto online), con spiegazioni, materiale addizionale e ' +
-      'altro ancora.</li>' +
+      '<li><strong><a href="/documents/handbook_mathina_ita.pdf" target="_blank">L’Handbook per educatori</a></strong> ' +
+      '(pdf), con spiegazioni, materiale addizionale e altro ancora.</li>' +
       '</ul>' +
       '<p>Visita anche il <a href="https://www.youtube.com/channel/UCHQLGzygvMILa7VJARAbEMg" target="_blank">' +
       'Canale YouTube</a> e la nostra <a href="https://www.facebook.com/Mathinaland" target="_blank">' +

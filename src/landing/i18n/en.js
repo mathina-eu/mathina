@@ -23,8 +23,8 @@ export default {
       '<li>The booklet <strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank">' +
       'Mathina’s World</a></strong> (pdf), a presentation of Mathina’s pedagogical principles, for parents and ' +
       'educators. Why fiction stories? Why these specific math topics? Why would you offer Mathina to your children?</li>' +
-      '<li>The <strong>Handbook for educators</strong> (pdf, soon online), with additional material, explanations,' +
-      ' and resources.</li>' +
+      '<li>The <strong><a href="/documents/handbook_mathina_eng.pdf" target="_blank">Handbook for educators</a></strong> ' +
+      '(pdf), with additional material, explanations, and resources.</li>' +
       '</ul>' +
       '<p>Find out also our <a href="https://www.youtube.com/channel/UCHQLGzygvMILa7VJARAbEMg" target="_blank">' +
       'YouTube channel</a> and our <a href="https://www.facebook.com/Mathinaland" target="_blank">Facebook page</a>.</p>',
