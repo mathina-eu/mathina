@@ -1,54 +1,52 @@
 export default {
   landing: {
-    headline: 'An interactive storybook between mathematics and fantasy',
+    headline: 'Eine interaktive Geschichte zwischen Mathematik und Fantasie',
     videoLink: 'https://www.youtube.com/embed/zBKHA9GSfNE',
-    bigButton: 'Discover the Adventures of Mathina',
-    bigButtonLink: 'https://mathina-hub.netlify.app/',
-    firstSection: '<h1 class="title">Mathina promotes mathematical thinking by developing, implementing, and ' +
-      'disseminating open educational tools adequate to the digital age.</h1>' +
-      '<p>Mathina is based on story-driven experiences, in which children and young learners encounter fictional ' +
-      'characters that find themselves in mathematical adventures. The stories bring up concepts, challenges, and ' +
-      'puzzles that the user can interact with, reflect on and learn from.</p>' +
-      '<p>Mathina can be used by parents to play with their kids, by teachers as a didactical tool, or directly by ' +
-      'young learners eager to discover more maths, reinforcing the connection between formal and non-formal ' +
-      'learning of mathematics.</p>',
-    secondSection: '<p>The Mathina project offers the following materials for young learners, parents, and educators:</p>' +
+    bigButton: 'Entdecke die Abenteuer von Mathina',
+    bigButtonLink: 'https://mathina-hub.netlify.app/de',
+    firstSection: '<h1 class="title">Mathina fördert mathematisches Denken durch die Entwicklung, Implementierung und '+
+      'Verbreitung offener Bildungsinhalte, die dem digitalen Zeitalter angemessen sind.</h1>' +
+      '<p>Mathina basiert auf Geschichten, in denen Kinder und junge Lernende auf fiktive '+
+       'Charaktere treffen, mit denen sie gemeinsam mathematische Abenteuer erleben. In den Geschichten finden sich Konzepte, Herausforderungen und '+
+       'Rätsel, mit denen die Benutzerinnen und Benutzer interagieren, über die sie nachdenken und von denen sie lernen können.</p>' +
+      '<p>Mathina kann sowohl von Eltern verwendet werden, um mit ihren Kindern zu spielen, von Lehrkräften als didaktisches Werkzeug oder direkt von ' +
+       'jungen Lernenden, die mehr Mathematik entdecken möchten, um die Verbindung zwischen formalem und nicht-formalem Lernen zu stärken.</p>',
+    secondSection: '<p>Das Mathina-Projekt bietet folgende Materialien für junge Lernende, Eltern sowie Pädagoginnen und Pädagogen:</p>' +
       '<ul>' +
-      '<li>The Interactive Storybook <strong><a href="https://mathina-hub.netlify.app/" target="_blank">The Adventures ' +
-      'of Mathina</a></strong>. With stories to read and interactive apps to play and learn. Stories have a recommended' +
-      ' minimum age: from 4 years old, from 7 years, from 11 years, and from 15 years.</li>' +
-      '<li>The <strong><a href="https://mathina-edu.netlify.app/" target="_blank">Educator’s online guide</a></strong>.' +
-      ' A companion for the interactive storybook that parents and teachers can use to extract the most out of the ' +
-      'mathematical ideas presented in the children’s book.</li>' +
-      '<li>The booklet <strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank">' +
-      'Mathina’s World</a></strong> (pdf), a presentation of Mathina’s pedagogical principles, for parents and ' +
-      'educators. Why fiction stories? Why these specific math topics? Why would you offer Mathina to your children?</li>' +
-      '<li>The <strong><a href="/documents/handbook_mathina_eng.pdf" target="_blank">Handbook for educators</a></strong> ' +
-      '(pdf), with additional material, explanations, and resources.</li>' +
+      '<li>Die interaktive Geschichte <strong><a href="https://mathina-hub.netlify.app/de" target="_blank">Die Abenteuer von Mathina' +
+      '</a></strong>. Mit Geschichten zum Lesen und interaktiven Apps zum Spielen und Lernen. Die Geschichten haben jeweils ein empfohlenes Mindestalter: ' +
+      'ab 4 Jahren, ab 7 Jahren, ab 11 Jahren und ab 15 Jahren.</li>' +
+      '<li>Der <strong><a href="https://mathina-edu.netlify.app/de" target="_blank">Didaktische online-Leitfaden</a></strong>.' +
+      ' Ein Begleiter für das interaktive Buch, mit dem Eltern und Lehrkräfte das Beste aus den mathematischen Ideen der Geschichten herausholen können.</li>' +
+      '<li>Das Heft <strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank">' +
+      'Mathina’s World</a></strong> (pdf), eine Präsentation der pädagogischen Prinzipien von Mathina für Eltern sowie Erzieherinnen und Erzieher. Warum fiktive Geschichten? Warum diese speziellen mathematischen Themen? Warum würden Sie Mathina Ihren Kindern anbieten?</li>' +
+      '<li>Das <strong><a href="/documents/handbook_mathina_eng.pdf" target="_blank">Handbuch für Pädagoginnen unf Pädagogen</a></strong> ' +
+      '(pdf), mit zusätzlichem Material, Erklärungen und weiteren pädagogischen Ressourcen.</li>' +
       '</ul>' +
-      '<p>Find out also our <a href="https://www.youtube.com/channel/UCHQLGzygvMILa7VJARAbEMg" target="_blank">' +
-      'YouTube channel</a> and our <a href="https://www.facebook.com/Mathinaland" target="_blank">Facebook page</a>.</p>',
-    closingSectionText: 'Mathina is realized in the framework of an ' +
+      '<p>Besuchen Sie auch unseren <a href="https://www.youtube.com/channel/UCHQLGzygvMILa7VJARAbEMg" target="_blank">' +
+      'YouTube Kanal</a> und unsere <a href="https://www.facebook.com/Mathinaland" target="_blank">Facebookseite</a>.</p>',
+    closingSectionText: 'Mathina wurde im Rahmen eines ' +
       '<a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2018-1-DE03-KA201-047397" ' +
-      'target="_blank">Erasmus+ project</a> between 2018-2021, funded by the European Commission. Five partners ' +
-      'collaborate to realize Mathina:',
-    footerSection: '<h1 class="title">The Open Educational Resources developed within Mathina are released under free ' +
-      'and open licenses (Creative Commons BY-NC-SA, Apache 2.0)</h1>' +
-      '<p>Contact: You can post your experiences and queries about using the materials on our ' +
-      '<a href="https://www.facebook.com/Mathinaland" target="_blank">Facebook page</a>. You can also contact us ' +
-      'privately at <a href="mailto:mathinaproject@gmail.com">MathinaProject@gmail.com</a>.</p>',
-    footerLinks: '<p><a href="https://mathina-hub.netlify.app/contributors" target="_blank">Credits page</a></p>' +
+      'target="_blank">Erasmus+ Projekt</a>s zwischen 2018-2021 realisiert, gefördert von der Europäischen Kommission. ' +
+      'Fünf Partnerorganisationen arbeiten zusammen, um Mathina zu realisieren:',
+    footerSection: '<h1 class="title">Die in Mathina entwickelten offenen Bildungsinhalte werden unter freien und offenen Lizenzen veröffentlicht '+
+	  '(Creative Commons BY-NC-SA, Apache 2.0)</h1>' +
+      '<p>Kontakt: Sie können Ihre Erfahrungen und Fragen zur Verwendung der Materialien auf unserer ' +
+      '<a href="https://www.facebook.com/Mathinaland" target="_blank">Facebookseite</a> posten.' +
+	  'Sie können uns auch privat unter ' +
+      ' <a href="mailto:mathinaproject@gmail.com">MathinaProject@gmail.com</a> kontaktieren.</p>',
+    footerLinks: '<p><a href="https://mathina-hub.netlify.app/de/contributors" target="_blank">Mitarbeiter*innen</a></p>' +
       '<p><a href="">Impressum</a></p>' +
       '<p><a href="">Privacy policy</a></p>',
   },
   country: {
     portugal: 'Portugal',
-    slovenia: 'Slovenia',
-    italy: 'Italy',
-    finland: 'Finland',
-    germany: 'Germany'
+    slovenia: 'Slowenien',
+    italy: 'Italien',
+    finland: 'Finnland',
+    germany: 'Deutschland'
   },
-  disclaimer: 'This project has been funded with support from the European Commission. This publication reflects the ' +
-    'views only of the author, and the Commission cannot be held responsible for any use which may be made of the ' +
-    'information contained therein.',
+  disclaimer: 'Dieses Projekt wurde mit Unterstützung der Europäischen Kommission finanziert. '+
+     'Diese Veröffentlichung gibt nur die Ansichten der Autorinnen und Autoren wieder, '+
+	 'die Kommission kann nicht für die Verwendung der darin enthaltenen Informationen verantwortlich gemacht werden.',
 };
