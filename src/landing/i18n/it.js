@@ -3,7 +3,7 @@ export default {
     headline: 'Storie interattive tra matematica e fantasia',
     videoLink: 'https://www.youtube.com/embed/zBKHA9GSfNE',
     bigButton: 'Scopri le avventure di Mathina',
-    bigButtonLink: 'https://mathina-hub.netlify.app/',
+    bigButtonLink: 'https://mathina-hub.netlify.app/it',
     firstSection: '<h1 class="title">Mathina promuove il pensiero matematico tramite lo sviluppo e la presentazione di ' +
       'strumenti di open education adatti all’era digitale.</h1>' +
       '<p>Mathina si basa su esperienze basate su delle storie, nelle quali il pubblico vivrà insieme ai personaggi dei ' +
@@ -14,10 +14,10 @@ export default {
       'connessione tra apprendimento formale e informale.</p>',
     secondSection: '<p>Questo è il materiale contenuto nel progetto Mathina:</p>' +
       '<ul>' +
-      '<li><strong><a href="https://mathina-hub.netlify.app/" target="_blank">Le avventure di Mathina</a></strong>: ' +
+      '<li><strong><a href="https://mathina-hub.netlify.app/it" target="_blank">Le avventure di Mathina</a></strong>: ' +
       'racconti da leggere e app interattive con cui giocare e imparare. Le storie hanno un’età minima consigliata: ' +
       'da 4 anni, da 7 anni, da 11 anni, da 15 anni.</li>' +
-      '<li><strong><a href="https://mathina-edu.netlify.app/" target="_blank">La guida per educator</a></strong>.' +
+      '<li><strong><a href="https://mathina-edu.netlify.app/it" target="_blank">La guida per educator</a></strong>.' +
       ' Una guida parallela ai racconti in cui genitori, educatori e insegnanti possono trovare materiale e idee ' +
       'collegate alle storie presenti nel progetto Mathina.</li>' +
       '<li><strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank"> Il mondo di Mathina</a>' +
@@ -40,7 +40,7 @@ export default {
       'nostra <a href="https://www.facebook.com/Mathinaland" target="_blank">pagina Facebook</a>. Puoi anche ' +
       'contattarci privatamente all’indirizzo mail ' +
       '<a href="mailto:mathinaproject@gmail.com">MathinaProject@gmail.com</a>.</p>',
-    footerLinks: '<p><a href="https://mathina-hub.netlify.app/contributors" target="_blank">Credits page</a></p>' +
+    footerLinks: '<p><a href="https://mathina-hub.netlify.app/it/contributors" target="_blank">Credits page</a></p>' +
       '<p><a href="">Impressum</a></p>' +
       '<p><a href="">Privacy policy</a></p>',
   },
