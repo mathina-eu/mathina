@@ -3,7 +3,7 @@ export default {
     headline: 'Um livro de histórias interativo entre a Matemática e a fantasia\n',
     videoLink: 'https://www.youtube.com/embed/zBKHA9GSfNE',
     bigButton: 'Descubra as Aventuras da Mathina',
-    bigButtonLink: 'https://mathina-hub.netlify.app/',
+    bigButtonLink: 'https://mathina-hub.netlify.app/pt',
     firstSection: '<h1 class="title">Mathina promove o pensamento matemático por meio do desenvolvimento, implementação ' +
       'e disseminação de ferramentas educacionais de livre uso e adequadas à era digital.</h1>' +
       '<p>Mathina baseia-se em experiências ligadas a histórias, nas quais as crianças e os jovens se deparam com ' +
@@ -14,10 +14,10 @@ export default {
       'o ensino formal e não formal da Matemática.</p>',
     secondSection: '<p>O projeto Mathina oferece os seguintes materiais para alunos, pais e educadores:</p>' +
       '<ul>' +
-      '<li>O livro de histórias interativo <strong><a href="https://mathina-hub.netlify.app/" target="_blank"> As ' +
+      '<li>O livro de histórias interativo <strong><a href="https://mathina-hub.netlify.app/pt" target="_blank"> As ' +
       'Aventuras da Mathina</a></strong>. Com histórias para ler e apps interativas para brincar e aprender. As ' +
       'histórias têm uma idade mínima recomendada: a partir de 4, 7, 11 e 15 anos.</li>' +
-      '<li>O <strong><a href="https://mathina-edu.netlify.app/" target="_blank">Repositório para os Educadores</a></strong>.' +
+      '<li>O <strong><a href="https://mathina-edu.netlify.app/pt" target="_blank">Repositório para os Educadores</a></strong>.' +
       'Um guia de suporte para o livro de histórias interativo que pais e professores podem utilizar retirando o ' +
       'máximo das ideias matemáticas apresentadas no livro de histórias.</li>' +
       '<li>A brochura <strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank">' +
@@ -38,7 +38,7 @@ export default {
       '<p>Contacto: pode exprimir as suas experiências e dúvidas sobre o uso dos materiais na nossa página de ' +
       '<a href="https://www.facebook.com/Mathinaland" target="_blank">Facebook</a>. Também pode contactar-nos por ' +
       '<a href="mailto:mathinaproject@gmail.com">MathinaProject@gmail.com</a>.</p>',
-    footerLinks: '<p><a href="https://mathina-hub.netlify.app/contributors" target="_blank">Página de créditos</a></p>' +
+    footerLinks: '<p><a href="https://mathina-hub.netlify.app/pt/contributors" target="_blank">Página de créditos</a></p>' +
       '<p><a href="">Impressum</a></p>' +
       '<p><a href="">Privacy policy</a></p>',
   },
