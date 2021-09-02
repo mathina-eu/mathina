@@ -20,7 +20,7 @@ export default {
       ' Ein Begleiter für das interaktive Buch, mit dem Eltern und Lehrkräfte das Beste aus den mathematischen Ideen der Geschichten herausholen können.</li>' +
       '<li>Das Heft <strong><a href="/documents/Booklet_Mathina.pdf?v=1584032400" target="_blank">' +
       'Mathina’s World</a></strong> (pdf), eine Präsentation der pädagogischen Prinzipien von Mathina für Eltern sowie Erzieherinnen und Erzieher. Warum fiktive Geschichten? Warum diese speziellen mathematischen Themen? Warum würden Sie Mathina Ihren Kindern anbieten?</li>' +
-      '<li>Das <strong><a href="/documents/handbook_mathina_eng.pdf" target="_blank">Handbuch für Pädagoginnen unf Pädagogen</a></strong> ' +
+      '<li>Das <strong><a href="/documents/handbook_mathina_ger.pdf" target="_blank">Handbuch für Pädagoginnen und Pädagogen</a></strong> ' +
       '(pdf), mit zusätzlichem Material, Erklärungen und weiteren pädagogischen Ressourcen.</li>' +
       '</ul>' +
       '<p>Besuchen Sie auch unseren <a href="https://www.youtube.com/channel/UCHQLGzygvMILa7VJARAbEMg" target="_blank">' +
