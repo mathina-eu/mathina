@@ -122,7 +122,7 @@ export default {
       experienceWorkshop: 'Experience Workshop (Finlândia)',
       bragi: 'Bragi Vizualne Komunikacije (Eslovénia)',
     },
-    management: 'Gestão',
+    management: 'Coordenação & Gestão',
     cordinationManagement: 'Coordenação & Gestão',
     cordinationManagementDesign: 'Coordenação, gestão & design',
     projectManagement: 'Gestão do projeto',
