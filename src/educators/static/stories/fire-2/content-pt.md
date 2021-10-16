@@ -23,11 +23,16 @@ As três apps têm o mesmo cenário. O lado de baixo representa o chão. Pode te
 
 Nesta app, o utilizador pode habituar-se a usar o painel de controlo e a criar um caminho para o dragão. Não há nenhum outro objetivo explícito a atingir. O uni-dragão voa correspondente a um vetor de cada vez, pelo que o utilizador deve adoptar a seguinte sequência: pensar para onde quer que o dragão voe, dar um vetor, carregar em "Vai", e assim sucessivamente.
 
+@[youtube](bI3p7GuIWUw?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
+
 ## App 2 - Voa para o castelo
 
 Nesta app, o objetivo é chegar ao castelo no canto inferior direito do écran. O uni-dragão pode receber vários vetores antes do seu voo. O botão "Adicionar" foi acrescentado ao painel de controlo e dá um novo vetor (comando) ao dragão sem que o voo comece. O utilizador pode juntar vários comandos à memória do uni-dragão (que são apresentados à esquerda em cima) antes de premir o botão "Vai". Depois de um voo o utilizador pode juntar mais vetores (comandos) e continuar o voo. Quando chega ao castelo, o uni-dragão volta ao seu ponto de partida, as nuvens são recolocadas e o utilizador pode voar novamente para o castelo, desta vez por um caminho diferente. O número de nuvens aumenta (até quatro) para que a cada volta o desafio de criar o caminho de voo seja mais difícil.
 
+@[youtube](lF0J5v_--9E?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
 
 ## App 3 - Voa para o castelo de uma só vez
 
 Esta app é essencialmente a mesma que a App 2. No entanto, agora o dragão tem de apanhar as bolas de fogo  e chegar ao castelo tudo numa só etapa. O utilizador tem de dar todos os vetores (comandos) ao uni-dragão antes do voo. As bolas de fogo podem ser apanhadas em voo, o que significa que o dragão não precisa de parar na posição de uma bola de fogo para a apanhar, podendo apenas passar por essa posição. Se o voo começa e o uni-dragão não atinge o objetivo, retorna para o seu ponto de partida, ficando os obstáculos e as bolas de fogo onde estavam. Quando o objetivo é atingido, o número de obstáculos e de bolas de fogo aumenta (até um máximo de 3) e mudam as posições, criando um novo desafio ao utilizador.
+
+@[youtube](cWujLpATMPI?_align-center_&hl=pt&cc_lang_pref=pt&cc=1)
