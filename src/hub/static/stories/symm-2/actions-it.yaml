@@ -189,7 +189,7 @@ actions:
       type: 'video/mp4'
   - type: dialog
     entries:
-      - text: "Hai visto? I due rosoni si sono sovrapposte tre volte. Quindi questo rosone va alla borsa con sopra il numero 3."
+      - text: "Hai visto? I due rosoni si sono sovrapposti tre volte. Quindi questo rosone va nella borsa con sopra il numero 3."
         char: wizard
   - type: clearImage
     id: filme1
@@ -374,7 +374,7 @@ actions:
       ease: power3.out      
   - type: dialog
     entries:         
-      - text: "Here I go."
+      - text: "Leo, sto arrivando!"
         char: mathina
         mood: excited
   - type: clearImage
